@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { ThemeProvider, Flex, Text, Box, Icon, Skeleton } from '@vtex/brand-ui'
+import { Flex, Text, Box, Icon, Skeleton } from '@vtex/brand-ui'
 import type { IconProps } from '@vtex/brand-ui'
 
 const IconVTEXHelp = (props: IconProps) => (
@@ -16,25 +16,23 @@ const IconVTEXHelp = (props: IconProps) => (
 
 const Home: NextPage = () => {
   return (
-    <ThemeProvider>
-      <Flex sx={{ flexDirection: 'column', height: '100vh' }}>
-        <Box sx={{ mx: 'auto', mt: '4%' }}>
-          <Text sx={{ fontSize: '3vw' }}>New Developer Portal is coming</Text>
-        </Box>
-        <Flex sx={{ height: '100%', justifyContent: 'center' }}>
-          <IconVTEXHelp sx={{ height: 'auto', width: '30%' }} />
-        </Flex>
-        <Skeleton
-          sx={{
-            position: 'absolute',
-            width: '50%',
-            height: '20px',
-            left: 'calc(50% / 2)',
-            bottom: '5%',
-          }}
-        />
+    <Flex sx={{ flexDirection: 'column', height: '100vh' }}>
+      <Box sx={{ mx: 'auto', mt: '4%' }}>
+        <Text sx={{ fontSize: '3vw' }}>New Developer Portal is coming</Text>
+      </Box>
+      <Flex sx={{ height: '100%', justifyContent: 'center' }}>
+        <IconVTEXHelp sx={{ height: 'auto', width: '30%' }} />
       </Flex>
-    </ThemeProvider>
+      <Skeleton
+        sx={{
+          position: 'absolute',
+          width: '50%',
+          height: '20px',
+          left: 'calc(50% / 2)',
+          bottom: '5%',
+        }}
+      />
+    </Flex>
   )
 }
 
