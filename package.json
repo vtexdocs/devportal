@@ -8,7 +8,8 @@
     "start": "next start",
     "format": "prettier --write \"src/**/*.{ts,js,tsx,jsx,json}\"",
     "lint": "next lint",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "cz-commit": "cz"
   },
   "dependencies": {
     "@vtex/brand-ui": "^0.45.5",
@@ -25,6 +26,7 @@
     "@typescript-eslint/parser": "^5.14.0",
     "@vtex/prettier-config": "^1.0.0",
     "@vtex/tsconfig": "^0.6.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "12.1.0",
     "eslint-config-prettier": "^8.5.0",
@@ -44,5 +46,10 @@
     "*.json": [
       "prettier --write"
     ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
