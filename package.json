@@ -9,7 +9,8 @@
     "format": "prettier --write \"src/**/*.{ts,js,tsx,jsx,json}\"",
     "lint": "next lint",
     "postinstall": "husky install",
-    "cz-commit": "cz"
+    "cz-commit": "cz",
+    "release": "standard-version"
   },
   "dependencies": {
     "@vtex/brand-ui": "^0.45.5",
@@ -36,6 +37,7 @@
     "i": "^0.3.7",
     "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
+    "standard-version": "^9.3.2",
     "typescript": "^4.6.2"
   },
   "lint-staged": {
