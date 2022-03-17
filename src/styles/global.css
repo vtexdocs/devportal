@@ -2,3 +2,8 @@
 .searchComponent:focus {
   outline: none;
 }
+
+footer > div {
+  margin-inline: 0 !important;
+  max-width: 100% !important;
+}
