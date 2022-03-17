@@ -1,0 +1,4 @@
+
+.searchComponent:focus {
+  outline: none;
+}
