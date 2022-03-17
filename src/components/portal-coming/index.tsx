@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Text, Skeleton, Flex } from '@vtex/brand-ui'
 
-import IconVTEX from 'public/icons/iconVTEX'
+import IconVTEX from 'public/icons/vtex-icon'
 import styles from './styles'
 
 const DevPortalIsComing = () => {

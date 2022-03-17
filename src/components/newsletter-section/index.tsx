@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Input, Text } from '@vtex/brand-ui'
 
-import LandingProduct from 'public/images/landingProduct'
-import styles from 'components/newsletter/style'
+import LandingProduct from 'public/images/landing-product'
+import styles from 'components/newsletter-section/style'
 
 const NewsletterSection = () => {
   return (
