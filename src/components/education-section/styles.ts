@@ -24,19 +24,19 @@ const channelBox: SxStyleProp = {
   flexDirection: 'column',
   alignItems: 'center',
   '.channelIcon > path, .channelArrow > path': {
-    transition: 'all 0.3s ease-in-out',
+    transition: 'all 0.3s ease-out',
   },
   '.channelTitle, .channelDescription, .channelLink': {
-    transition: 'all 0.3s ease-in-out',
+    transition: 'all 0.3s ease-out',
   },
   ':hover': {
     '.channelIcon > path, .channelArrow > path': {
       stroke: '#000711',
-      transition: 'all 0.3s ease-in',
+      transition: 'all 0.3s ease-out',
     },
     '.channelTitle, .channelDescription, .channelLink': {
       color: '#000711',
-      transition: 'all 0.3s ease-in',
+      transition: 'all 0.3s ease-out',
     },
   },
 }

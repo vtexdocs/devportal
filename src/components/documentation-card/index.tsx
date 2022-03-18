@@ -28,7 +28,9 @@ const DocumentationCard = ({ Icon, title, description }: CardProps) => {
             className="quickStartedContainer"
             sx={styles.quickStartedContainer}
           >
-            <Text sx={styles.quickStartedText}>Quick Started</Text>
+            <Text className="quickStartedText" sx={styles.quickStartedText}>
+              Quick Started
+            </Text>
           </Flex>
         </Box>
       </a>
