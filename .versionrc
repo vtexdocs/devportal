@@ -1,0 +1,15 @@
+{
+    "types": [
+        {"type": "feat", "section": "Features"},
+        {"type": "fix", "section": "Bug Fixes"},
+        {"type": "chore", "section": "Chore"},
+        {"type": "docs", "section": "Docs"},
+        {"type": "style", "section": "Style"},
+        {"type": "refactor", "section": "Refactoring"},
+        {"type": "perf", "section": "Performance"},
+        {"type": "test", "section": "Tests"},
+        {"type": "build", "section": "Build"},
+        {"type": "revert", "section": "Revert Changes"},
+        {"type": "ci", "section": "CI"}
+    ]
+}
