@@ -2,6 +2,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const newsletterContainer: SxStyleProp = {
   position: 'relative',
+  mt: '5rem',
   pl: '223px',
   borderBottom: '1px solid #E7E9EE',
 }
@@ -55,6 +56,16 @@ const image: SxStyleProp = {
   top: '0',
 }
 
+const policyText: SxStyleProp = {
+  mt: '8px',
+  fontSize: '12px',
+  lineHeight: '16px',
+  color: 'muted.0',
+}
+const policyLink: SxStyleProp = {
+  color: '#E31C58',
+}
+
 export default {
   newsletterContainer,
   newsletterBackground,
@@ -64,4 +75,6 @@ export default {
   newsletterInputBox,
   newsletterInput,
   image,
+  policyText,
+  policyLink,
 }

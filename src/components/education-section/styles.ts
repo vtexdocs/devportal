@@ -3,7 +3,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const container: SxStyleProp = {
   pt: '64px',
   pb: '128px',
-  px: '64px',
+  px: '128px',
 }
 
 const title: SxStyleProp = {

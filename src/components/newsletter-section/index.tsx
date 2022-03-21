@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Input, Text } from '@vtex/brand-ui'
+import { Box, Button, Flex, Input, Link, Text } from '@vtex/brand-ui'
 
 import LandingProduct from 'public/images/landing-product'
 import styles from 'components/newsletter-section/style'
@@ -20,9 +20,13 @@ const NewsletterSection = () => {
               sx={styles.newsletterInput}
               id="newsletter-mail"
               label="E-mail"
+              type={'email'}
             ></Input>
             <Button variant="primary">Subscribe</Button>
           </Flex>
+          <Text sx={styles.policyText}>
+            Read our <Link sx={styles.policyLink}>privacy policy</Link>
+          </Text>
         </Flex>
       </Flex>
       <LandingProduct sx={styles.image} />

@@ -1,22 +1,28 @@
 import { FooterLanding } from '@vtex/brand-ui'
 import styles from './styles'
+import {
+  getGithubURL,
+  getHelpCenterURL,
+  getCommunityURL,
+  getFeedbackURL,
+} from 'utils/get-url'
 
 const links = [
   {
     message: 'Github',
-    to: () => '',
+    to: () => getGithubURL(),
   },
   {
     message: 'Help Center',
-    to: () => '',
+    to: () => getHelpCenterURL(),
   },
   {
     message: 'Community',
-    to: () => '',
+    to: () => getCommunityURL(),
   },
   {
     message: 'Feedback',
-    to: () => '',
+    to: () => getFeedbackURL(),
   },
 ]
 

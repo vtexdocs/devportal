@@ -1,12 +1,16 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
-const headerBrand: SxStyleProp = {
-  position: ['fixed', 'fixed', 'fixed', 'relative'],
-  gridTemplateColumns: '1fr 2fr 0fr 1fr',
-  width: '100%',
+const headerContainer: SxStyleProp = {
+  position: 'fixed',
   zIndex: 3,
+  width: '100%',
+  transition: 'top 0.3s',
 }
 
+const headerBrand: SxStyleProp = {
+  gridTemplateColumns: '1fr 2fr 0fr 1fr',
+  position: 'relative',
+}
 const logoSize: SxStyleProp = { width: '200px', height: 'auto' }
 
 const rightLinks: SxStyleProp = { height: '100%', pr: '64px' }
@@ -35,15 +39,19 @@ const searchInput: SxStyleProp = {
   background: '#F4F4F4',
   border: '#F4F4F4',
   color: '#545454',
+  fontSize: ['14px'],
 }
 
 const searchIcon: SxStyleProp = {
+  minWidth: '16px',
+  minHeight: '16px',
   width: '16px',
   mr: '8px',
 }
 
 export default {
   logoSize,
+  headerContainer,
   headerBrand,
   rightLinks,
   iconContainer,
