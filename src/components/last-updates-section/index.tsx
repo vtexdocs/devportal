@@ -19,7 +19,7 @@ const updates: CardProps[] = [
       type: 'fixed',
       description:
         'Secure Proxy: An alternative option for card payment integrations',
-      date: new Date('03/14/2022'),
+      date: new Date('03/11/2022'),
     },
     updateType: 'documentation-updates',
   },
@@ -31,7 +31,7 @@ const LastUpdatesSection = () => {
       <Text sx={styles.title}>Last Updates</Text>
       <Flex sx={styles.cardsContainer}>
         {updates.map((update) => (
-          <LastUpdatesCard key={update.action.description} {...update} />
+          <LastUpdatesCard key={`${update.action.date}`} {...update} />
         ))}
       </Flex>
     </Box>
