@@ -1,11 +1,12 @@
-import type { IconProps } from '@vtex/brand-ui'
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import type { IconComponent } from 'utils/typings/types'
+
 import Link from 'next/link'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import styles from './styles'
 
 export interface CardProps {
-  Icon: (props: IconProps) => JSX.Element
+  Icon: IconComponent
   title: string
   description: string
 }

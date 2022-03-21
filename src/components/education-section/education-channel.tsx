@@ -1,6 +1,9 @@
-import { Flex, IconProps, Text, Link } from '@vtex/brand-ui'
+import type { IconComponent } from 'utils/typings/types'
+
+import { Flex, Text, Link } from '@vtex/brand-ui'
 
 import ArrowRightIcon from 'public/icons/arrow-right-icon'
+
 import styles from './styles'
 
 export interface props {
@@ -8,7 +11,7 @@ export interface props {
   description: string
   textLink: string
   link: string
-  Icon: (props: IconProps) => JSX.Element
+  Icon: IconComponent
 }
 
 const EducationChannel = ({
