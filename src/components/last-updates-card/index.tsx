@@ -1,0 +1,59 @@
+import Link from 'next/link'
+import { Box, Flex, Text } from '@vtex/brand-ui'
+
+import type { ActionType, UpdateType } from './functions'
+import { getAction, getDaysElapsed, getUpdate } from './functions'
+
+import styles from './styles'
+
+export interface CardProps {
+  action: {
+    type: ActionType
+    description: string
+    date: Date
+  }
+  updateType: UpdateType
+}
+
+const LastUpdatesCard = ({ action, updateType }: CardProps) => {
+  const { title: actionTitle, Icon: ActionIcon } = getAction(action.type)
+  const {
+    title: updateTitle,
+    description: updateDescription,
+    Icon: UpdateIcon,
+  } = getUpdate(updateType)
+
+  return (
+    <Link href="/">
+      <a style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+        <Flex sx={styles.cardContainer}>
+          <Flex sx={styles.updateContainer}>
+            <UpdateIcon sx={styles.updateIcon} />
+            <Box>
+              <Text className="updateTitle" sx={styles.updateTitle}>
+                {updateTitle}
+              </Text>
+              <Text className="updateDescription" sx={styles.updateDescription}>
+                {updateDescription}
+              </Text>
+            </Box>
+          </Flex>
+          <Box sx={styles.actionContainer}>
+            <Flex sx={styles.actionTypeContainer}>
+              <ActionIcon sx={styles.actionIcon} />
+              <Text sx={styles.actionType}>{actionTitle}</Text>
+            </Flex>
+            <Box sx={styles.actionDescriptionContainer}>
+              <Text sx={styles.actionDescription}>{action.description}</Text>
+              <Text sx={styles.actionTime}>
+                {`${getDaysElapsed(action.date)} days ago`}
+              </Text>
+            </Box>
+          </Box>
+        </Flex>
+      </a>
+    </Link>
+  )
+}
+
+export default LastUpdatesCard
