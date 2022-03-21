@@ -1,4 +1,10 @@
-import { Header as HeaderBrand, Flex, Link, Text, Box } from '@vtex/brand-ui'
+import {
+  Header as HeaderBrand,
+  Link as VtexLink,
+  Flex,
+  Text,
+  Box,
+} from '@vtex/brand-ui'
 import { useEffect, useState } from 'react'
 
 import { toggleHeader } from './functions'
@@ -7,6 +13,7 @@ import SearchIcon from 'public/icons/search-icon'
 import { getFeedbackURL } from 'utils/get-url'
 
 import styles from './styles'
+import Link from 'next/link'
 
 export const rightLinks = [
   {
@@ -48,7 +55,9 @@ const Header = () => {
       <HeaderBrand sx={styles.headerBrand}>
         <HeaderBrand.Brand>
           <Link href="./">
-            <VTEXDevportalIcon sx={styles.logoSize} />
+            <a>
+              <VTEXDevportalIcon sx={styles.logoSize} />
+            </a>
           </Link>
         </HeaderBrand.Brand>
 
@@ -68,14 +77,14 @@ const Header = () => {
 
         <HeaderBrand.RightLinks sx={styles.rightLinks}>
           {rightLinks.map((link, key) => (
-            <Link
+            <VtexLink
               sx={styles.rightLinksItem}
               key={key}
               href={link.to()}
               target={link.target}
             >
               <Text>{link.title}</Text>
-            </Link>
+            </VtexLink>
           ))}
         </HeaderBrand.RightLinks>
       </HeaderBrand>
