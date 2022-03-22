@@ -5,9 +5,8 @@ import {
   Text,
   Box,
 } from '@vtex/brand-ui'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-import { toggleHeader } from './functions'
 import VTEXDevportalIcon from 'public/icons/vtex-devportal-icon'
 import SearchIcon from 'public/icons/search-icon'
 import { getFeedbackURL } from 'utils/get-url'
@@ -15,22 +14,9 @@ import { getFeedbackURL } from 'utils/get-url'
 import styles from './styles'
 import Link from 'next/link'
 
-export const rightLinks = [
-  {
-    to: () => '/docs',
-    title: 'Docs',
-    target: '_blank',
-  },
-  {
-    to: () => getFeedbackURL(),
-    title: 'Feedback',
-    target: '_blank',
-  },
-]
-
 const Header = () => {
   const [searchValue, setSearchValue] = useState('')
-  const [lastScroll, setLastScroll] = useState(0)
+  const lastScroll = useRef(0)
 
   const [headerElement, setHeaderElement] = useState<HTMLElement | null>()
 
@@ -39,22 +25,29 @@ const Header = () => {
   }, [])
 
   useEffect(() => {
-    window.addEventListener('scroll', () => {
-      toggleHeader(setLastScroll, lastScroll, headerElement)
-    })
-
-    return () => {
-      window.removeEventListener('scroll', () => {
-        toggleHeader(setLastScroll, lastScroll, headerElement)
-      })
+    const onScroll = () => {
+      if (headerElement) {
+        const height = headerElement.children[0].clientHeight
+        if (window.scrollY > height && window.scrollY > lastScroll.current) {
+          headerElement.style.top = `-${height}px`
+        } else {
+          headerElement.style.top = '0'
+        }
+        lastScroll.current = window.scrollY
+      }
     }
-  })
+
+    window.removeEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
+
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [headerElement])
 
   return (
     <Box id="header" sx={styles.headerContainer}>
       <HeaderBrand sx={styles.headerBrand}>
         <HeaderBrand.Brand>
-          <Link href="./">
+          <Link href="/">
             <a>
               <VTEXDevportalIcon sx={styles.logoSize} />
             </a>
@@ -76,16 +69,14 @@ const Header = () => {
         </Flex>
 
         <HeaderBrand.RightLinks sx={styles.rightLinks}>
-          {rightLinks.map((link, key) => (
-            <VtexLink
-              sx={styles.rightLinksItem}
-              key={key}
-              href={link.to()}
-              target={link.target}
-            >
-              <Text>{link.title}</Text>
-            </VtexLink>
-          ))}
+          <Text sx={styles.docsDropDown}>Docs</Text>
+          <VtexLink
+            sx={styles.rightLinksItem}
+            href={getFeedbackURL()}
+            target="_blank"
+          >
+            <Text>FeedBack</Text>
+          </VtexLink>
         </HeaderBrand.RightLinks>
       </HeaderBrand>
     </Box>

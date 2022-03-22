@@ -17,6 +17,16 @@ const rightLinks: SxStyleProp = { height: '100%', pr: '64px' }
 
 const rightLinksItem: SxStyleProp = { alignItems: 'center' }
 
+const docsDropDown: SxStyleProp = {
+  my: 'auto',
+  mx: '32px',
+  color: '#4A596B',
+  fontWeight: '600',
+  fontSize: '14px',
+  lineHeight: '20px',
+  letterSpacing: '0.5px',
+}
+
 const iconContainer: SxStyleProp = { paddingLeft: 3, color: 'primary.base' }
 
 const searchContainer: SxStyleProp = {
@@ -53,11 +63,12 @@ export default {
   logoSize,
   headerContainer,
   headerBrand,
-  rightLinks,
-  iconContainer,
-  rightLinksItem,
   searchContainer,
   searchBox,
   searchInput,
   searchIcon,
+  rightLinks,
+  iconContainer,
+  rightLinksItem,
+  docsDropDown,
 }
