@@ -15,26 +15,31 @@ const cards: CardProps[] = [
     Icon: APIGuidesIcon,
     title: 'API Guides',
     description: 'Explore the capabilities of our Rest APIs',
+    link: '/docs/api-guides',
   },
   {
     Icon: APIReferenceIcon,
     title: 'API Reference',
     description: "Extend VTEX's platform to fit your business",
+    link: '/docs/api-reference',
   },
   {
     Icon: VTEXIOIcon,
     title: 'VTEX IO',
     description: 'Quickly build high-performance stores and IO apps',
+    link: '/docs/vtex-io',
   },
   {
     Icon: FastStoreIcon,
     title: 'FastStore',
     description: 'Build your storefront with e-commerce components',
+    link: '/docs/fast-store',
   },
   {
     Icon: WebOpsIcon,
     title: 'WebOps',
     description: "Improve team's productivity by automating processes",
+    link: '/docs/webops',
   },
 ]
 

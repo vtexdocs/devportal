@@ -9,11 +9,12 @@ export interface CardProps {
   Icon: IconComponent
   title: string
   description: string
+  link: string
 }
 
-const DocumentationCard = ({ Icon, title, description }: CardProps) => {
+const DocumentationCard = ({ Icon, title, description, link }: CardProps) => {
   return (
-    <Link href="/">
+    <Link href={link}>
       <a>
         <Box sx={styles.cardContainer}>
           <Flex sx={styles.infoContainer}>
