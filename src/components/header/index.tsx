@@ -27,9 +27,12 @@ const Header = () => {
   useEffect(() => {
     const onScroll = () => {
       if (headerElement) {
-        const height = headerElement.children[0].clientHeight
-        if (window.scrollY > height && window.scrollY > lastScroll.current) {
-          headerElement.style.top = `-${height}px`
+        const headerHeight = headerElement.children[0].clientHeight
+        if (
+          window.scrollY > headerHeight &&
+          window.scrollY > lastScroll.current
+        ) {
+          headerElement.style.top = `-${headerHeight}px`
         } else {
           headerElement.style.top = '0'
         }
