@@ -26,7 +26,7 @@ const channelBox: SxStyleProp = {
   '.channelIcon > path, .channelArrow > path': {
     transition: 'all 0.3s ease-out',
   },
-  '.channelTitle, .channelDescription, .channelLink': {
+  '.channelTitle, .channelDescription, .channelLinkText': {
     transition: 'all 0.3s ease-out',
   },
   ':hover': {
@@ -34,7 +34,7 @@ const channelBox: SxStyleProp = {
       stroke: '#000711',
       transition: 'all 0.3s ease-out',
     },
-    '.channelTitle, .channelDescription, .channelLink': {
+    '.channelTitle, .channelDescription, .channelLinkText': {
       color: '#000711',
       transition: 'all 0.3s ease-out',
     },
@@ -56,7 +56,7 @@ const channelDescription: SxStyleProp = {
   mb: '16px',
 }
 
-const channelLink: SxStyleProp = {
+const channelLinkText: SxStyleProp = {
   fontSize: '16px',
   lineHeight: '22px',
   color: 'muted.0',
@@ -69,7 +69,7 @@ const channelIcon: SxStyleProp = {
   mb: '6px',
 }
 
-const arrowIcon: SxStyleProp = {
+const channelArrowIcon: SxStyleProp = {
   height: 'auto',
   width: '16px',
   minHeight: '16px',
@@ -83,7 +83,7 @@ export default {
   channelBox,
   channelTitle,
   channelDescription,
-  channelLink,
+  channelLinkText,
   channelIcon,
-  arrowIcon,
+  channelArrowIcon,
 }

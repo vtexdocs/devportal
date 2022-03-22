@@ -32,10 +32,13 @@ const EducationChannel = ({
           {description}
         </Text>
         <Flex>
-          <Text className="channelLink" sx={styles.channelLink}>
+          <Text className="channelLinkText" sx={styles.channelLinkText}>
             {textLink}
           </Text>
-          <ArrowRightIcon className="channelArrow" sx={styles.arrowIcon} />
+          <ArrowRightIcon
+            className="channelArrow"
+            sx={styles.channelArrowIcon}
+          />
         </Flex>
       </Flex>
     </Link>
