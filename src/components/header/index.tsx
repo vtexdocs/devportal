@@ -54,7 +54,7 @@ const Header = () => {
           </Link>
         </HeaderBrand.Brand>
 
-        <Flex sx={styles.searchContainer}>
+        <Box sx={styles.searchContainer}>
           <Flex sx={styles.searchBox}>
             <SearchIcon sx={styles.searchIcon} />
             <input
@@ -66,7 +66,7 @@ const Header = () => {
               onChange={(e) => setSearchValue(e.currentTarget.value)}
             />
           </Flex>
-        </Flex>
+        </Box>
 
         <HeaderBrand.RightLinks sx={styles.rightLinks}>
           <Text sx={styles.docsDropDown}>Docs</Text>

@@ -9,11 +9,17 @@ const headerContainer: SxStyleProp = {
 
 const headerBrand: SxStyleProp = {
   gridTemplateColumns: '1fr 2fr 0fr 1fr',
+  width: '100%',
   position: 'relative',
 }
 const logoSize: SxStyleProp = { width: '200px', height: 'auto' }
 
-const rightLinks: SxStyleProp = { height: '100%', pr: '64px' }
+const rightLinks: SxStyleProp = {
+  display: ['none', 'flex !important'],
+  width: 'auto',
+  height: '100%',
+  pr: '64px',
+}
 
 const rightLinksItem: SxStyleProp = { alignItems: 'center' }
 
@@ -30,6 +36,7 @@ const docsDropDown: SxStyleProp = {
 const iconContainer: SxStyleProp = { paddingLeft: 3, color: 'primary.base' }
 
 const searchContainer: SxStyleProp = {
+  display: ['none', 'flex', 'flex', 'flex'],
   justifyContent: 'center',
   paddingBlock: '18px',
   height: 'auto',
