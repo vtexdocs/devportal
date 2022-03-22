@@ -1,6 +1,6 @@
 import { Box, Text, Grid } from '@vtex/brand-ui'
 
-import EducationChannel from './education-channel'
+import EducationChannel from 'components/education-channel'
 import GithubIcon from 'public/icons/github-icon'
 import HelpCenterIcon from 'public/icons/helpcenter-icon'
 import CommunityIcon from 'public/icons/community-icon'
