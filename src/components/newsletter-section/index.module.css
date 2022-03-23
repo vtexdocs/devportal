@@ -1,0 +1,21 @@
+.wrapper {
+    box-sizing: content-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: none;
+}
+
+.wrapper > span {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+@media (min-width: 1024px) {
+    .wrapper {
+        display: block;
+        width: 600px;
+    }
+}

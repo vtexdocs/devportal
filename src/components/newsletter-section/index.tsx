@@ -1,35 +1,39 @@
 import { Box, Button, Flex, Input, Link, Text } from '@vtex/brand-ui'
 
-import LandingProduct from 'public/images/landing-product'
-import styles from 'components/newsletter-section/style'
+import Image from 'next/image'
+import landingProduct from 'public/images/landing-product.png'
+import styles2 from 'components/newsletter-section/style'
+import styles from './index.module.css'
 
 const NewsletterSection = () => {
   return (
-    <Box sx={styles.newsletterContainer}>
-      <Flex sx={styles.newsletterBackground}>
-        <Flex sx={styles.newsletterBox}>
-          <Text sx={styles.newsletterTitle}>
+    <Box sx={styles2.newsletterContainer}>
+      <Flex sx={styles2.newsletterBackground}>
+        <Flex sx={styles2.newsletterBox}>
+          <Text sx={styles2.newsletterTitle}>
             Build first-class commerce experiences with VTEX.
           </Text>
-          <Text sx={styles.newsletterDescription}>
+          <Text sx={styles2.newsletterDescription}>
             Subscribe to our developer newsletter and stay on top of the
             practices and technologies that are transforming commerce.
           </Text>
-          <Flex sx={styles.newsletterInputBox}>
+          <Flex sx={styles2.newsletterInputBox}>
             <Input
-              sx={styles.newsletterInput}
+              sx={styles2.newsletterInput}
               id="newsletter-mail"
               label="E-mail"
               type={'email'}
             ></Input>
             <Button variant="primary">Subscribe</Button>
           </Flex>
-          <Text sx={styles.policyText}>
-            Read our <Link sx={styles.policyLink}>privacy policy</Link>
+          <Text sx={styles2.policyText}>
+            Read our <Link sx={styles2.policyLink}>privacy policy</Link>
           </Text>
         </Flex>
       </Flex>
-      <LandingProduct sx={styles.image} />
+      <div className={styles.wrapper}>
+        <Image src={landingProduct} />
+      </div>
     </Box>
   )
 }

@@ -12,7 +12,7 @@ const newsletterBackground: SxStyleProp = {
   height: '100%',
   py: '86px',
   background:
-    '-webkit-linear-gradient(left, #FFFFFF 13.92%, rgba(255, 255, 255, 0) 100%);',
+    '-webkit-linear-gradient(left, #FFFFFF 40%, rgba(255, 255, 255, 0) 100%);',
   zIndex: '1',
 }
 
