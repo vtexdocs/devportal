@@ -43,6 +43,7 @@ const cardContainer: SxStyleProp = {
 
 const updateContainer: SxStyleProp = {
   mr: '16px',
+  width: '41%',
   padding: '8px',
   alignItems: 'flex-start',
 }
