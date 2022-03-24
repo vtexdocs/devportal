@@ -1,0 +1,12 @@
+a {
+  text-decoration: none !important;
+}
+
+footer > div {
+  margin-inline: 0 !important;
+  max-width: 100% !important;
+}
+
+.searchComponent:focus {
+  outline: none;
+}
