@@ -29,7 +29,12 @@ const links = [
 const Footer = () => (
   <FooterLanding>
     {links.map((link, index) => (
-      <FooterLanding.Link sx={styles.footerLinks} key={index} href={link.to()}>
+      <FooterLanding.Link
+        sx={styles.footerLinks}
+        key={index}
+        href={link.to()}
+        target="_blank"
+      >
         {link.message}
       </FooterLanding.Link>
     ))}
