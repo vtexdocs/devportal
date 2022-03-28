@@ -1,6 +1,7 @@
 import type { IconComponent } from 'utils/typings/types'
 
-import { Flex, Text, Link } from '@vtex/brand-ui'
+import Link from 'next/link'
+import { Flex, Text } from '@vtex/brand-ui'
 
 import ArrowRightIcon from 'public/icons/arrow-right-icon'
 
@@ -23,24 +24,26 @@ const EducationChannel = ({
 }: props) => {
   return (
     <Link href={link}>
-      <Flex sx={styles.channelBox}>
-        <Icon className="channelIcon" sx={styles.channelIcon} />
-        <Text className="channelTitle" sx={styles.channelTitle}>
-          {title}
-        </Text>
-        <Text className="channelDescription" sx={styles.channelDescription}>
-          {description}
-        </Text>
-        <Flex>
-          <Text className="channelLinkText" sx={styles.channelLinkText}>
-            {textLink}
+      <a target="_blank">
+        <Flex sx={styles.channelBox}>
+          <Icon className="channelIcon" sx={styles.channelIcon} />
+          <Text className="channelTitle" sx={styles.channelTitle}>
+            {title}
           </Text>
-          <ArrowRightIcon
-            className="channelArrow"
-            sx={styles.channelArrowIcon}
-          />
+          <Text className="channelDescription" sx={styles.channelDescription}>
+            {description}
+          </Text>
+          <Flex>
+            <Text className="channelLinkText" sx={styles.channelLinkText}>
+              {textLink}
+            </Text>
+            <ArrowRightIcon
+              className="channelArrow"
+              sx={styles.channelArrowIcon}
+            />
+          </Flex>
         </Flex>
-      </Flex>
+      </a>
     </Link>
   )
 }
