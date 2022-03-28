@@ -29,12 +29,14 @@ const cardContainer: SxStyleProp = {
   },
 
   ':active': {
+    'box-shadow': '0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #96B2F2',
     '.updateTitle': {
       color: '#0C1522',
     },
   },
 
   ':hover': {
+    'box-shadow': '0px 0px 16px rgba(0, 0, 0, 0.1)',
     '.updateTitle': {
       color: '#000711',
     },
