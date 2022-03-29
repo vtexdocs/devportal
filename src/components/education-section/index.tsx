@@ -1,4 +1,4 @@
-import { Box, Text, Grid } from '@vtex/brand-ui'
+import { Box, Text, Flex } from '@vtex/brand-ui'
 
 import EducationChannel from 'components/education-channel'
 import GithubIcon from 'public/icons/github-icon'
@@ -37,7 +37,7 @@ const EducationSection = () => {
   return (
     <Box sx={styles.container}>
       <Text sx={styles.title}>Education channels</Text>
-      <Grid sx={styles.channelsContainer}>
+      <Flex sx={styles.channelsContainer}>
         {educationChannels.map((channel) => (
           <EducationChannel
             title={channel.title}
@@ -48,7 +48,7 @@ const EducationSection = () => {
             key={channel.title}
           />
         ))}
-      </Grid>
+      </Flex>
     </Box>
   )
 }

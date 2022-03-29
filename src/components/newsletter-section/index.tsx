@@ -2,8 +2,8 @@ import { Box, Button, Flex, Input, Link, Text } from '@vtex/brand-ui'
 
 import Image from 'next/image'
 import landingProduct from 'public/images/landing-product.png'
-import styles from 'components/newsletter-section/style'
-import imgStyle from './index.module.css'
+import styles from 'components/newsletter-section/styles'
+import imgStyle from './styles.module.css'
 
 const NewsletterSection = () => {
   return (
