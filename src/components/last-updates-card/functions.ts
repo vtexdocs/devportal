@@ -1,12 +1,12 @@
 import type { IconComponent } from 'utils/typings/types'
 
-import AddedIcon from 'public/icons/added-icon'
-import DeprecatedIcon from 'public/icons/deprecated-icon'
-import DocumentationUpdatesIcon from 'public/icons/documentation-updates-icon'
-import FixedIcon from 'public/icons/fixed-icon'
-import ImprovedIcon from 'public/icons/improved-icon'
-import ReleaseNotesIcon from 'public/icons/release-notes-icon'
-import RemovedIcon from 'public/icons/removed-icon'
+import AddedIcon from 'components/icons/added-icon'
+import DeprecatedIcon from 'components/icons/deprecated-icon'
+import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
+import FixedIcon from 'components/icons/fixed-icon'
+import ImprovedIcon from 'components/icons/improved-icon'
+import ReleaseNotesIcon from 'components/icons/release-notes-icon'
+import RemovedIcon from 'components/icons/removed-icon'
 
 export type ActionType =
   | 'added'

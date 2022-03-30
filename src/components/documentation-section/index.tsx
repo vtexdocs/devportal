@@ -2,11 +2,11 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import DocumentationCard, { CardProps } from '../documentation-card'
 
-import APIGuidesIcon from 'public/icons/api-guides-icon'
-import APIReferenceIcon from 'public/icons/api-reference-icon'
-import VTEXIOIcon from 'public/icons/vtex-io-icon'
-import FastStoreIcon from 'public/icons/fast-store-icon'
-import WebOpsIcon from 'public/icons/webops-icon'
+import APIGuidesIcon from 'components/icons/api-guides-icon'
+import APIReferenceIcon from 'components/icons/api-reference-icon'
+import VTEXIOIcon from 'components/icons/vtex-io-icon'
+import FastStoreIcon from 'components/icons/fast-store-icon'
+import WebOpsIcon from 'components/icons/webops-icon'
 
 import styles from './styles'
 

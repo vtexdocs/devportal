@@ -1,9 +1,9 @@
 import { Box, Text, Flex } from '@vtex/brand-ui'
 
 import EducationChannel from 'components/education-channel'
-import GithubIcon from 'public/icons/github-icon'
-import HelpCenterIcon from 'public/icons/helpcenter-icon'
-import CommunityIcon from 'public/icons/community-icon'
+import GithubIcon from 'components/icons/github-icon'
+import HelpCenterIcon from 'components/icons/helpcenter-icon'
+import CommunityIcon from 'components/icons/community-icon'
 import { getGithubURL, getHelpCenterURL, getCommunityURL } from 'utils/get-url'
 
 import styles from './styles'
