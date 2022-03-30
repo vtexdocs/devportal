@@ -3,7 +3,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const container: SxStyleProp = {
   pt: '64px',
   pb: '128px',
-  px: '128px',
+  px: '96px',
 }
 
 const title: SxStyleProp = {
@@ -16,8 +16,8 @@ const title: SxStyleProp = {
 
 const channelsContainer: SxStyleProp = {
   flexDirection: 'row',
-  columnGap: '64px',
-  gridTemplateColumns: 'repeat(3, 1fr)',
+  justifyContent: 'center',
+  alignItems: 'center',
 }
 
 export default {

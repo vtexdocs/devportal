@@ -2,6 +2,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const channelBox: SxStyleProp = {
   flexDirection: 'column',
+  mx: ['32px'],
   alignItems: 'center',
   '.channelIcon > path, .channelArrow > path': {
     transition: 'all 0.3s ease-out',
@@ -10,6 +11,10 @@ const channelBox: SxStyleProp = {
     transition: 'all 0.3s ease-out',
   },
   ':hover': {
+    '.channelArrow': {
+      transition: 'all 0.3s ease-out',
+      ml: '2px',
+    },
     '.channelIcon > path, .channelArrow > path': {
       stroke: '#000711',
       transition: 'all 0.3s ease-out',
