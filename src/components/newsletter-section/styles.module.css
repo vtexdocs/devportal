@@ -1,21 +1,33 @@
-.wrapper {
-    box-sizing: content-box;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    display: none;
+.imageGradient {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 38%, #FFFFFF 100%);
 }
 
-.wrapper > span {
+.wrapper {
+  position: relative;
+  box-sizing: content-box;
+  height: 200px;
+  overflow-y: hidden;
+  background: -webkit-linear-gradient(
+    left,
+    #ffffff 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+@media (min-width: 40em) {
+  .wrapper {
+    position: absolute;
+    display: block;
+    width: 600px;
+  }
+
+  .wrapper > span {
     position: absolute;
     width: 100% !important;
     height: 100% !important;
-}
-
-@media (min-width: 1024px) {
-    .wrapper {
-        display: block;
-        width: 600px;
-    }
+  }
 }

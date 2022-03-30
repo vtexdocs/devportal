@@ -1,9 +1,9 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const cardContainer: SxStyleProp = {
-  margin: '16px',
-  width: '284px',
-  height: '227px',
+  margin: ['8px', '16px'],
+  width: ['151px', '284px'],
+  height: ['120px', '227px'],
   boxSizing: 'initial',
   borderRadius: '8px',
   border: '1px solid #E7E9EE',
@@ -38,7 +38,7 @@ const cardContainer: SxStyleProp = {
 }
 
 const infoContainer: SxStyleProp = {
-  padding: '24px',
+  padding: ['16px', '24px'],
   flexDirection: 'column',
   alignItems: 'center',
   textAlign: 'center',
@@ -48,19 +48,21 @@ const infoContainer: SxStyleProp = {
 }
 
 const icon: SxStyleProp = {
-  width: '32px',
+  width: ['24px', '32px'],
   height: 'auto',
 }
 
 const title: SxStyleProp = {
-  my: '8px',
-  fontSize: '22px',
+  mt: ['8px'],
+  mb: ['0px', '8px'],
+  fontSize: ['16px', '22px'],
+  lineHeight: ['22px', '32px'],
   fontWeight: '400',
-  lineHeight: '32px',
   color: 'muted.0',
 }
 
 const description: SxStyleProp = {
+  display: ['none', 'block'],
   fontSize: '16px',
   fontWeight: '400',
   lineHeight: '22px',
@@ -90,10 +92,10 @@ const quickStartedContainer: SxStyleProp = {
 
 const quickStartedText: SxStyleProp = {
   mx: 'auto',
-  my: '16px',
-  fontSize: '16px',
+  my: ['8px', '16px'],
+  fontSize: ['12px', '16px'],
+  lineHeight: ['16px', '22px'],
   fontWeight: '400',
-  lineHeight: '22px',
   color: 'muted.0',
 }
 

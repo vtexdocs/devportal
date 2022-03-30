@@ -18,20 +18,25 @@ const NewsletterSection = () => {
             practices and technologies that are transforming commerce.
           </Text>
           <Flex sx={styles.newsletterInputBox}>
-            <Input
-              sx={styles.newsletterInput}
-              id="newsletter-mail"
-              label="E-mail"
-              type={'email'}
-            ></Input>
-            <Button variant="primary">Subscribe</Button>
+            <Box>
+              <Input
+                sx={styles.newsletterInput}
+                id="newsletter-mail"
+                label="E-mail"
+                type={'email'}
+              ></Input>
+              <Text sx={styles.policyText}>
+                Read our <Link sx={styles.policyLink}>privacy policy</Link>
+              </Text>
+            </Box>
+            <Button sx={styles.newsletterButton} variant="primary">
+              Subscribe
+            </Button>
           </Flex>
-          <Text sx={styles.policyText}>
-            Read our <Link sx={styles.policyLink}>privacy policy</Link>
-          </Text>
         </Flex>
       </Flex>
       <div className={imgStyle.wrapper}>
+        <div className={imgStyle.imageGradient}></div>
         <Image src={landingProduct} />
       </div>
     </Box>

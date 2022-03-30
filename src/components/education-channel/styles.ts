@@ -2,7 +2,8 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const channelBox: SxStyleProp = {
   flexDirection: 'column',
-  mx: ['32px'],
+  mx: ['0px', '32px'],
+  mt: ['32px', '0px'],
   alignItems: 'center',
   '.channelIcon > path, .channelArrow > path': {
     transition: 'all 0.3s ease-out',
@@ -27,18 +28,23 @@ const channelBox: SxStyleProp = {
 }
 
 const channelTitle: SxStyleProp = {
-  fontSize: '28px',
-  lineHeight: '38px',
+  fontSize: ['16px', '28px'],
+  lineHeight: ['22px', '38px'],
   color: 'muted.0',
+  display: 'flex',
 }
 
 const channelDescription: SxStyleProp = {
-  fontSize: '18px',
-  lineHeight: '24px',
-  color: 'muted.0',
+  fontSize: ['16px', '18px'],
+  lineHeight: ['22px', '24px'],
+  color: ['muted.1', 'muted.0'],
   textAlign: 'center',
-  mt: '6px',
-  mb: '16px',
+  mt: ['4px', '6px'],
+  mb: ['0px', '16px'],
+}
+
+const channelLinkContainer: SxStyleProp = {
+  display: ['none !important', 'block !important'],
 }
 
 const channelLinkText: SxStyleProp = {
@@ -51,7 +57,7 @@ const channelLinkText: SxStyleProp = {
 const channelIcon: SxStyleProp = {
   height: 'auto',
   width: '64px',
-  mb: '6px',
+  mb: ['4px', '6px'],
 }
 
 const channelArrowIcon: SxStyleProp = {
@@ -59,12 +65,14 @@ const channelArrowIcon: SxStyleProp = {
   width: '16px',
   minHeight: '16px',
   minWidth: '16px',
+  ml: ['4px', '0px'],
 }
 
 export default {
   channelBox,
   channelTitle,
   channelDescription,
+  channelLinkContainer,
   channelLinkText,
   channelIcon,
   channelArrowIcon,

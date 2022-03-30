@@ -1,9 +1,9 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const cardContainer: SxStyleProp = {
-  mt: '24px',
-  px: '24px',
-  py: '64px',
+  mt: ['16px', '24px'],
+  px: ['0px', '24px'],
+  py: ['0px', '64px'],
   width: '100%',
   maxWidth: '1084px',
   backgroundColor: 'white',
@@ -44,35 +44,38 @@ const cardContainer: SxStyleProp = {
 }
 
 const updateContainer: SxStyleProp = {
-  mr: '16px',
-  width: '41%',
-  padding: '8px',
+  mr: ['0px', '16px'],
+  width: ['100%', '41%'],
+  padding: ['16px', '8px'],
   alignItems: 'flex-start',
 }
 
 const updateIcon: SxStyleProp = {
-  my: '4px',
-  mr: '8px',
-  width: '24px',
+  my: '2px',
+  mr: ['6px', '8px'],
+  width: ['16px', '24px'],
+  minWidth: '12px',
+  minHeight: '12px',
   height: 'auto',
 }
 
 const updateTitle: SxStyleProp = {
-  fontSize: '22px',
+  fontSize: ['16px', '22px'],
+  lineHeight: ['22px', '32px'],
   fontWeight: '400',
-  lineHeight: '32px',
   color: 'muted.0',
 }
 
 const updateDescription: SxStyleProp = {
-  fontSize: '16px',
+  fontSize: ['12px', '16px'],
+  lineHeight: ['16px', '22px'],
   fontWeight: '400',
-  lineHeight: '22px',
   color: 'muted.1',
 }
 
 const actionContainer: SxStyleProp = {
   alignItems: 'flex-start',
+  display: ['none', 'block'],
 }
 
 const actionTypeContainer: SxStyleProp = {
