@@ -31,7 +31,7 @@ const EducationChannel = ({
             {title}
             <ArrowRightIcon
               className="channelArrow"
-              sx={styles.channelArrowIcon}
+              sx={styles.channelTitleArrowIcon}
             />
           </Text>
           <Text className="channelDescription" sx={styles.channelDescription}>

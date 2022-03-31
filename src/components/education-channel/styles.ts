@@ -2,8 +2,9 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const channelBox: SxStyleProp = {
   flexDirection: 'column',
-  mx: ['0px', '32px'],
-  mt: ['32px', '0px'],
+  width: ['auto', '327px', 'auto'],
+  mx: ['0px', '0px', '32px'],
+  mt: ['32px', '64px', '0px'],
   alignItems: 'center',
   '.channelIcon > path, .channelArrow > path': {
     transition: 'all 0.3s ease-out',
@@ -44,7 +45,7 @@ const channelDescription: SxStyleProp = {
 }
 
 const channelLinkContainer: SxStyleProp = {
-  display: ['none !important', 'block !important'],
+  display: ['none !important', 'flex !important'],
 }
 
 const channelLinkText: SxStyleProp = {
@@ -68,6 +69,11 @@ const channelArrowIcon: SxStyleProp = {
   ml: ['4px', '0px'],
 }
 
+const channelTitleArrowIcon: SxStyleProp = {
+  ...channelArrowIcon,
+  display: ['block', 'none'],
+}
+
 export default {
   channelBox,
   channelTitle,
@@ -76,4 +82,5 @@ export default {
   channelLinkText,
   channelIcon,
   channelArrowIcon,
+  channelTitleArrowIcon,
 }

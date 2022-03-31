@@ -17,8 +17,8 @@ const NewsletterSection = () => {
             Subscribe to our developer newsletter and stay on top of the
             practices and technologies that are transforming commerce.
           </Text>
-          <Flex sx={styles.newsletterInputBox}>
-            <Box>
+          <Flex sx={styles.newsletterInputContainer}>
+            <Box sx={styles.newsletterInputBox}>
               <Input
                 sx={styles.newsletterInput}
                 id="newsletter-mail"

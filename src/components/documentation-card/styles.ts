@@ -1,9 +1,9 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const cardContainer: SxStyleProp = {
-  margin: ['8px', '16px'],
-  width: ['151px', '284px'],
-  height: ['120px', '227px'],
+  margin: ['8px', '12px', '16px'],
+  width: ['151px', '282px'],
+  height: ['120px', '225px'],
   boxSizing: 'initial',
   borderRadius: '8px',
   border: '1px solid #E7E9EE',
