@@ -7,15 +7,15 @@ const container: SxStyleProp = {
 }
 
 const title: SxStyleProp = {
-  fontSize: ['20px', '28px', '40px'],
-  lineHeight: ['30px', '38px', '50px'],
+  fontSize: ['20px', '28px', '28px', '40px'],
+  lineHeight: ['30px', '38px', '38px', '50px'],
   color: 'text',
   textAlign: 'center',
-  mb: ['0px', '0px', '64px'],
+  mb: ['0px', '0px'],
 }
 
 const channelsContainer: SxStyleProp = {
-  flexDirection: ['column', 'column', 'row'],
+  flexDirection: ['column', 'column', 'column', 'row'],
   justifyContent: 'center',
   alignItems: 'center',
 }

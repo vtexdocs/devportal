@@ -5,6 +5,7 @@ const cardContainer: SxStyleProp = {
   px: ['16px', '32px', '24px'],
   py: ['16px', '40px', '64px'],
   width: ['100%', 'auto', '100%'],
+  justifyContent: 'space-between',
   maxWidth: '1084px',
   backgroundColor: 'white',
   borderRadius: '8px',
@@ -45,27 +46,27 @@ const cardContainer: SxStyleProp = {
 
 const updateContainer: SxStyleProp = {
   mr: ['0px', '0px', '16px'],
-  width: ['100%', '100%', '41%'],
+  width: ['100%', '100%', '100%', '41%'],
   alignItems: 'flex-start',
 }
 
 const updateIcon: SxStyleProp = {
-  my: ['2px', '0px'],
   mr: ['6px', '8px'],
-  width: ['16px', '24px'],
-  minWidth: '12px',
-  minHeight: '12px',
+  minWidth: ['16px', '24px'],
+  minHeight: 'auto',
   height: 'auto',
 }
 
 const updateTitle: SxStyleProp = {
-  fontSize: ['16px', '18px', '22px'],
-  lineHeight: ['22px', '24px', '32px'],
+  fontSize: ['16px', '18px', '18px', '22px'],
+  lineHeight: ['22px', '24px', '24px', '32px'],
   fontWeight: '400',
   color: 'muted.0',
+  display: 'flex',
 }
 
 const updateDescription: SxStyleProp = {
+  pl: ['22px', '32px'],
   fontSize: ['12px', '16px'],
   lineHeight: ['16px', '22px'],
   fontWeight: '400',
@@ -75,6 +76,7 @@ const updateDescription: SxStyleProp = {
 const actionContainer: SxStyleProp = {
   alignItems: 'flex-start',
   display: ['none', 'none', 'block'],
+  width: ['277px'],
 }
 
 const actionTypeContainer: SxStyleProp = {
@@ -91,8 +93,8 @@ const actionIcon: SxStyleProp = {
 const actionType: SxStyleProp = {
   ml: '8px',
   fontSize: '16px',
-  fontWeight: '400',
   lineHeight: '18px',
+  fontWeight: '400',
   color: '#4A4A4A',
 }
 
@@ -104,16 +106,16 @@ const actionDescriptionContainer: SxStyleProp = {
 }
 
 const actionDescription: SxStyleProp = {
-  fontSize: '18px',
+  fontSize: ['16px', '16px', '16px', '18px'],
+  lineHeight: ['22px', '22px', '22px', '24px'],
   fontWeight: '400',
-  lineHeight: '24px',
   color: 'muted.0',
 }
 
 const actionTime: SxStyleProp = {
   fontSize: '16px',
-  fontWeight: '400',
   lineHeight: '22px',
+  fontWeight: '400',
   color: 'muted.1',
 }
 

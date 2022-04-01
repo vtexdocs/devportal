@@ -3,12 +3,12 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const newsletterContainer: SxStyleProp = {
   position: 'relative',
   mt: '5rem',
-  pl: ['0px', '0px', '223px'],
+  pl: ['0px', '0px', '0px', '223px'],
   borderBottom: '1px solid #E7E9EE',
-  display: ['flex', 'flex', 'block'],
+  display: ['flex', 'flex', 'flex', 'block'],
   flexDirection: ['column-reverse', 'row'],
   overflow: 'hidden',
-  width: ['100%', '100%', 'auto'],
+  width: ['100%', '100%', '100%', 'auto'],
   justifyContent: 'center',
 }
 
@@ -30,25 +30,26 @@ const newsletterBox: SxStyleProp = {
 }
 
 const newsletterTitle: SxStyleProp = {
-  width: ['auto', '434px'],
+  width: ['auto', '434px', '100%'],
   mx: ['0px', 'auto'],
-  textAlign: ['center', 'center', 'initial'],
-  fontSize: ['24px', '40px', '52px'],
-  lineHeight: ['34px', '50px', '62px'],
+  textAlign: ['center', 'center', 'center', 'initial'],
+  fontSize: ['24px', '40px', '40px', '52px'],
+  lineHeight: ['34px', '50px', '50px', '62px'],
 }
 
 const newsletterDescription: SxStyleProp = {
-  textAlign: ['center', 'center', 'initial'],
-  mx: ['0px', '24px', '0px'],
-  pr: ['0px', '0px', '78px'],
-  fontSize: ['16px', '16px', '18px'],
-  lineHeight: ['22px', '22px', '24px'],
-  marginBlock: ['12px 16px', '24px', '24px 16px'],
+  textAlign: ['center', 'center', 'center', 'initial'],
+  mx: ['0px', '24px', '62px', '0px'],
+  pr: ['0px', '0px', '0px', '78px'],
+  fontSize: ['16px', '16px', '16px', '18px'],
+  lineHeight: ['22px', '22px', '22px', '24px'],
+  marginBlock: ['12px 16px', '24px', '24px', '24px 16px'],
 }
 
 const newsletterInputContainer: SxStyleProp = {
   flexDirection: ['column', 'row'],
-  pr: ['0px', '0px', '78px'],
+  pr: ['0px', '0px', '39px', '78px'],
+  pl: ['0px', '0px', '39px', '0px'],
 }
 
 const newsletterInputBox: SxStyleProp = {

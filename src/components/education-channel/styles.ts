@@ -3,8 +3,8 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const channelBox: SxStyleProp = {
   flexDirection: 'column',
   width: ['auto', '327px', 'auto'],
-  mx: ['0px', '0px', '32px'],
-  mt: ['32px', '64px', '0px'],
+  mx: ['0px', '0px', '0px', '32px'],
+  mt: ['32px', '64px', '64px', '0px'],
   alignItems: 'center',
   '.channelIcon > path, .channelArrow > path': {
     transition: 'all 0.3s ease-out',
@@ -36,12 +36,12 @@ const channelTitle: SxStyleProp = {
 }
 
 const channelDescription: SxStyleProp = {
-  fontSize: ['16px', '18px'],
-  lineHeight: ['22px', '24px'],
+  fontSize: ['16px', '18px', '22px'],
+  lineHeight: ['22px', '24px', '32px'],
   color: ['muted.1', 'muted.0'],
   textAlign: 'center',
   mt: ['4px', '6px'],
-  mb: ['0px', '16px'],
+  mb: ['0px', '16px', '8px'],
 }
 
 const channelLinkContainer: SxStyleProp = {
@@ -49,8 +49,8 @@ const channelLinkContainer: SxStyleProp = {
 }
 
 const channelLinkText: SxStyleProp = {
-  fontSize: '16px',
-  lineHeight: '22px',
+  fontSize: ['16px', '16px', '22px'],
+  lineHeight: ['22px', '22px', '32px'],
   color: 'muted.0',
   mr: '4px',
 }
