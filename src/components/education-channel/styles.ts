@@ -36,12 +36,12 @@ const channelTitle: SxStyleProp = {
 }
 
 const channelDescription: SxStyleProp = {
-  fontSize: ['16px', '18px', '22px'],
-  lineHeight: ['22px', '24px', '32px'],
+  fontSize: ['16px', '18px', '22px', '22px', '18px'],
+  lineHeight: ['22px', '24px', '32px', '32px', '24px'],
   color: ['muted.1', 'muted.0'],
   textAlign: 'center',
   mt: ['4px', '6px'],
-  mb: ['0px', '16px', '8px'],
+  mb: ['0px', '16px', '8px', '8px', '16px'],
 }
 
 const channelLinkContainer: SxStyleProp = {
@@ -49,8 +49,8 @@ const channelLinkContainer: SxStyleProp = {
 }
 
 const channelLinkText: SxStyleProp = {
-  fontSize: ['16px', '16px', '22px'],
-  lineHeight: ['22px', '22px', '32px'],
+  fontSize: ['16px', '16px', '22px', '22px', '16px'],
+  lineHeight: ['22px', '22px', '32px', '32px', '22px'],
   color: 'muted.0',
   mr: '4px',
 }

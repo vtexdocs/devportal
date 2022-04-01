@@ -2,7 +2,8 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const sectionContainer: SxStyleProp = {
   px: ['8px', '12px', '96px', '38px'],
-  paddingBlock: ['0px 24px', '32px 52px', '32px 52px', '32px 48px', '32px'],
+  paddingTop: ['0px', '32px'],
+  paddingBottom: ['24px', '52px', '52px', '48px'],
 }
 
 const title: SxStyleProp = {

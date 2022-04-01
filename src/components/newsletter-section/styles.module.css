@@ -53,3 +53,42 @@
     right: -200px
   }
 }
+
+@media (min-width: 80em) {
+  .imageGradient {
+    background: 
+      linear-gradient(to left, rgba(255, 255, 255, 0) 25%, #FFFFFF 95%),
+      linear-gradient(to right, rgba(255, 255, 255, 0) 85%, #FFFFFF 89%);
+  } 
+
+  .wrapper {
+    position: absolute;
+    top: initial;
+    right: initial;
+    left: 600px;
+    height: 100%;
+  }
+
+  .wrapper > span {
+    height: 100% !important;
+  }
+}
+
+@media (min-width: 120em) {
+  .wrapper {
+    right: 200px;
+    left: initial;
+  }
+}
+
+@media (min-width: 160em) {
+  .imageGradient {
+    background: 
+      linear-gradient(to left, rgba(255, 255, 255, 0) 25%, #FFFFFF 95%),
+      linear-gradient(to right, rgba(255, 255, 255, 0) 88%, #FFFFFF 107%);
+  } 
+
+  .wrapper {
+    right: 460px;
+  }
+}

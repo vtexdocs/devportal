@@ -7,38 +7,40 @@ import imgStyle from './styles.module.css'
 
 const NewsletterSection = () => {
   return (
-    <Box sx={styles.newsletterContainer}>
-      <Flex sx={styles.newsletterBackground}>
-        <Flex sx={styles.newsletterBox}>
-          <Text sx={styles.newsletterTitle}>
-            Build first-class commerce experiences with VTEX.
-          </Text>
-          <Text sx={styles.newsletterDescription}>
-            Subscribe to our developer newsletter and stay on top of the
-            practices and technologies that are transforming commerce.
-          </Text>
-          <Flex sx={styles.newsletterInputContainer}>
-            <Box sx={styles.newsletterInputBox}>
-              <Input
-                sx={styles.newsletterInput}
-                id="newsletter-mail"
-                label="E-mail"
-                type={'email'}
-              ></Input>
-              <Text sx={styles.policyText}>
-                Read our <Link sx={styles.policyLink}>privacy policy</Link>
-              </Text>
-            </Box>
-            <Button sx={styles.newsletterButton} variant="primary">
-              Subscribe
-            </Button>
+    <Box sx={styles.newsletter}>
+      <Box sx={styles.newsletterContainer}>
+        <Flex sx={styles.newsletterBackground}>
+          <Flex sx={styles.newsletterBox}>
+            <Text sx={styles.newsletterTitle}>
+              Build first-class commerce experiences with VTEX.
+            </Text>
+            <Text sx={styles.newsletterDescription}>
+              Subscribe to our developer newsletter and stay on top of the
+              practices and technologies that are transforming commerce.
+            </Text>
+            <Flex sx={styles.newsletterInputContainer}>
+              <Box sx={styles.newsletterInputBox}>
+                <Input
+                  sx={styles.newsletterInput}
+                  id="newsletter-mail"
+                  label="E-mail"
+                  type={'email'}
+                ></Input>
+                <Text sx={styles.policyText}>
+                  Read our <Link sx={styles.policyLink}>privacy policy</Link>
+                </Text>
+              </Box>
+              <Button sx={styles.newsletterButton} variant="primary">
+                Subscribe
+              </Button>
+            </Flex>
           </Flex>
         </Flex>
-      </Flex>
-      <div className={imgStyle.wrapper}>
-        <div className={imgStyle.imageGradient}></div>
-        <Image src={landingProduct} />
-      </div>
+        <div className={imgStyle.wrapper}>
+          <div className={imgStyle.imageGradient}></div>
+          <Image src={landingProduct} />
+        </div>
+      </Box>
     </Box>
   )
 }

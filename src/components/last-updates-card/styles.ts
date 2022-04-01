@@ -1,8 +1,9 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const cardContainer: SxStyleProp = {
-  mt: ['16px', '24px'],
-  px: ['16px', '32px', '24px'],
+  mt: ['16px', '24px', '24px', '32px'],
+  paddingLeft: ['16px', '32px', '24px', '32px'],
+  paddingRight: ['16px', '32px', '24px', '32px', '0px'],
   py: ['16px', '40px', '64px'],
   width: ['100%', 'auto', '100%'],
   justifyContent: 'space-between',
@@ -67,9 +68,9 @@ const updateTitle: SxStyleProp = {
 }
 
 const updateDescription: SxStyleProp = {
-  pl: ['22px', '32px'],
   fontSize: ['12px', '16px'],
   lineHeight: ['16px', '22px'],
+  pl: ['22px', '32px'],
   fontWeight: '400',
   color: 'muted.1',
 }
@@ -77,7 +78,7 @@ const updateDescription: SxStyleProp = {
 const actionContainer: SxStyleProp = {
   alignItems: 'flex-start',
   display: ['none', 'none', 'block'],
-  width: ['277px', '277px', '277px', '469px'],
+  width: ['277px', '277px', '277px', '469px', '580px'],
 }
 
 const actionTypeContainer: SxStyleProp = {

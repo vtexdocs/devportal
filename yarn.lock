@@ -907,10 +907,10 @@
     "@typescript-eslint/types" "5.14.0"
     "eslint-visitor-keys" "^3.0.0"
 
-"@vtex/brand-ui@^0.45.5":
-  "integrity" "sha512-6tpwEYFnJjAvODEf1nHujLoHNO3yY1Q4zd440vFgm0O5wPfWfgGAas/IBRpl6esos2NlMqbOJfiVNDvNa1eTzw=="
-  "resolved" "https://registry.npmjs.org/@vtex/brand-ui/-/brand-ui-0.45.5.tgz"
-  "version" "0.45.5"
+"@vtex/brand-ui@^0.46.0":
+  "integrity" "sha512-tMIS5DhX7EScjCwf+bQouc4iCJH/3fL76+qNlkO8NDUmkKI2jSiDVDWTZoEP+MagJ0ghX1a1LnosPwKOj3FG+w=="
+  "resolved" "https://registry.npmjs.org/@vtex/brand-ui/-/brand-ui-0.46.0.tgz"
+  "version" "0.46.0"
   dependencies:
     "@emotion/core" "^10.0.35"
     "@react-aria/focus" "3.2.0"

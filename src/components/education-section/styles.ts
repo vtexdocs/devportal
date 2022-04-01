@@ -11,7 +11,7 @@ const title: SxStyleProp = {
   lineHeight: ['30px', '38px', '38px', '38px', '50px'],
   color: 'text',
   textAlign: 'center',
-  mb: ['0px', '0px'],
+  mb: ['0px', '0px', '0px', '0px', '64px'],
 }
 
 const channelsContainer: SxStyleProp = {
