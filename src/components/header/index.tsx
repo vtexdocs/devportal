@@ -7,8 +7,8 @@ import {
 } from '@vtex/brand-ui'
 import { useEffect, useRef, useState } from 'react'
 
-import VTEXDevportalIcon from 'public/icons/vtex-devportal-icon'
-import SearchIcon from 'public/icons/search-icon'
+import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
+import SearchIcon from 'components/icons/search-icon'
 import { getFeedbackURL } from 'utils/get-url'
 
 import styles from './styles'
