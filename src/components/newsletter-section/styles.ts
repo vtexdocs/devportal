@@ -40,9 +40,9 @@ const newsletterTitle: SxStyleProp = {
 const newsletterDescription: SxStyleProp = {
   textAlign: ['center', 'center', 'center', 'initial'],
   mx: ['0px', '24px', '62px', '0px'],
-  pr: ['0px', '0px', '0px', '78px'],
-  fontSize: ['16px', '16px', '16px', '18px'],
-  lineHeight: ['22px', '22px', '22px', '24px'],
+  pr: ['0px', '0px', '0px', '0px', '78px'],
+  fontSize: ['16px', '16px', '16px', '22px', '18px'],
+  lineHeight: ['22px', '22px', '22px', '32px', '24px'],
   marginBlock: ['12px 16px', '24px', '24px', '24px 16px'],
 }
 

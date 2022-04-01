@@ -3,8 +3,8 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const channelBox: SxStyleProp = {
   flexDirection: 'column',
   width: ['auto', '327px', 'auto'],
-  mx: ['0px', '0px', '0px', '32px'],
-  mt: ['32px', '64px', '64px', '0px'],
+  mx: ['0px', '0px', '0px', '0px', '32px'],
+  mt: ['32px', '64px', '64px', '64px', '0px'],
   alignItems: 'center',
   '.channelIcon > path, .channelArrow > path': {
     transition: 'all 0.3s ease-out',

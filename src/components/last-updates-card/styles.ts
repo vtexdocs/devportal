@@ -46,20 +46,21 @@ const cardContainer: SxStyleProp = {
 
 const updateContainer: SxStyleProp = {
   mr: ['0px', '0px', '16px'],
-  width: ['100%', '100%', '100%', '41%'],
-  alignItems: 'flex-start',
+  width: ['100%', '100%', 'auto', 'auto', '41%'],
+  alignItems: 'center',
 }
 
 const updateIcon: SxStyleProp = {
   mr: ['6px', '8px'],
   minWidth: ['16px', '24px'],
+  width: ['16px', '24px'],
   minHeight: 'auto',
   height: 'auto',
 }
 
 const updateTitle: SxStyleProp = {
-  fontSize: ['16px', '18px', '18px', '22px'],
-  lineHeight: ['22px', '24px', '24px', '32px'],
+  fontSize: ['16px', '18px', '18px', '18px', '22px'],
+  lineHeight: ['22px', '24px', '24px', '24px', '32px'],
   fontWeight: '400',
   color: 'muted.0',
   display: 'flex',
@@ -76,7 +77,7 @@ const updateDescription: SxStyleProp = {
 const actionContainer: SxStyleProp = {
   alignItems: 'flex-start',
   display: ['none', 'none', 'block'],
-  width: ['277px'],
+  width: ['277px', '277px', '277px', '469px'],
 }
 
 const actionTypeContainer: SxStyleProp = {
@@ -106,8 +107,8 @@ const actionDescriptionContainer: SxStyleProp = {
 }
 
 const actionDescription: SxStyleProp = {
-  fontSize: ['16px', '16px', '16px', '18px'],
-  lineHeight: ['22px', '22px', '22px', '24px'],
+  fontSize: ['16px', '16px', '16px', '16px', '18px'],
+  lineHeight: ['22px', '22px', '22px', '22px', '24px'],
   fontWeight: '400',
   color: 'muted.0',
 }
