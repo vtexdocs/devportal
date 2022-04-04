@@ -6,11 +6,15 @@ import DocumentationSection from 'components/documentation-section'
 import LastUpdatesSection from 'components/last-updates-section'
 import EducationSection from 'components/education-section'
 
+import Head from 'next/head'
 import styles from 'styles/landing-page'
 
 const Home: NextPage = () => {
   return (
     <>
+      <Head>
+        <title>Developers portal | Home</title>
+      </Head>
       <Grid sx={styles.grid}>
         <NewsletterSection />
         <DocumentationSection />
