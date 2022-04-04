@@ -1,0 +1,97 @@
+# This is a workflow that runs Standard Version release script, push its changes (including a new version tag) and create a new GitHub release
+
+name: Release Version Workflow
+
+# Action will run every closed PR
+on:
+  pull_request:
+    branches:
+      - main
+    types: [closed]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # Job to release a new version
+  release-version:
+    if: github.event.pull_request.merged == true
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: main
+        fetch-depth: 0
+    - name: Setup
+      # Git configs and environment preparation
+      run: |
+        git checkout main
+        git config user.name "${{ github.event.pull_request.user.login }}"
+        git config user.email "${{ github.event.pull_request.user.id }}+${{ github.event.pull_request.user.login }}@users.noreply.github.com"
+        chmod +x .husky/*
+        yarn install
+    - name: Set major release env var
+      if: contains(github.event.pull_request.labels.*.name, 'release-major')
+      run: echo "RELEASE=major" >> $GITHUB_ENV
+    - name: Set minor release env var
+      if: contains(github.event.pull_request.labels.*.name, 'release-minor')
+      run: echo "RELEASE=minor" >> $GITHUB_ENV
+    - name: Set patch release env var
+      if: contains(github.event.pull_request.labels.*.name, 'release-patch')
+      run: echo "RELEASE=patch" >> $GITHUB_ENV
+    - name: Set auto release env var
+      if: contains(github.event.pull_request.labels.*.name, 'release-auto')
+      run: echo "RELEASE=auto" >> $GITHUB_ENV
+    - name: Set no release env var
+      if: contains(github.event.pull_request.labels.*.name, 'release-no')
+      run: echo "RELEASE=no" >> $GITHUB_ENV
+    - name: Default release env var to auto
+      # If no label is provided, it will generate an automatic released version (based on PR semantic commits)
+      run: |
+        if [[ -z "${{ env.RELEASE }}" ]];
+        then
+          echo "RELEASE=auto" >> $GITHUB_ENV
+        else
+          exit 0
+        fi
+    - name: Patch version
+      if: ${{ env.RELEASE == 'patch' }}
+      # Run Standard Version script to release new patch version
+      run: |
+        yarn release -- --release-as patch
+    - name: Minor version
+      if: ${{ env.RELEASE == 'minor' }}
+      # Run Standard Version script to release new minor version
+      run: |
+        yarn release -- --release-as minor
+    - name: Major version
+      if: ${{ env.RELEASE == 'major' }}
+      # Run Standard Version script to release new major version
+      run: |
+        yarn release -- --release-as major
+    - name: Automatic version
+      if: ${{ env.RELEASE == 'auto' }}
+      # Run Standard Version script to release new version
+      run: |
+        yarn release
+    - name: Push new version
+      if: ${{ env.RELEASE != 'no' }}
+      id: publish_tag
+      # Push new commits and new version tags to main branch
+      run: |
+        git push --follow-tags
+        echo ::set-output name=tag_name::$(git describe HEAD --abbrev=0)
+    - name: Generate release body
+      # Extracts the CHANGELOG.md latest version snippet
+      if: ${{ env.RELEASE != 'no' }}
+      run: npx extract-changelog-release > RELEASE_BODY.md
+    - name: Create release
+      # Creates a GitHub Release based on the published version tag
+      if: ${{ env.RELEASE != 'no' }}
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
+        tag_name: ${{ steps.publish_tag.outputs.tag_name }}
+        body_path: RELEASE_BODY.md
