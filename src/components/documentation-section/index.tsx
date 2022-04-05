@@ -32,7 +32,7 @@ const cards: CardProps[] = [
   {
     Icon: FastStoreIcon,
     title: 'FastStore',
-    description: 'Build your storefront with e-commerce components',
+    description: 'Build your storefront with ecommerce components',
     link: '/docs/fast-store',
   },
   {

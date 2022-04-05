@@ -3,9 +3,9 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const cardContainer: SxStyleProp = {
   mt: ['16px', '24px', '24px', '32px'],
   paddingLeft: ['16px', '32px', '24px', '32px'],
-  paddingRight: ['16px', '32px', '24px', '32px', '0px'],
+  paddingRight: ['16px', '32px', '24px', '32px', '24px'],
   py: ['16px', '40px', '64px'],
-  width: ['100%', 'auto', '100%'],
+  width: ['auto', 'auto', '100%'],
   justifyContent: 'space-between',
   maxWidth: '1084px',
   backgroundColor: 'white',
@@ -31,14 +31,14 @@ const cardContainer: SxStyleProp = {
   },
 
   ':active': {
-    'box-shadow': '0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #96B2F2',
+    boxShadow: '0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #96B2F2',
     '.updateTitle': {
       color: '#0C1522',
     },
   },
 
   ':hover': {
-    'box-shadow': '0px 0px 16px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
     '.updateTitle': {
       color: '#000711',
     },
@@ -47,7 +47,8 @@ const cardContainer: SxStyleProp = {
 
 const updateContainer: SxStyleProp = {
   mr: ['0px', '0px', '16px'],
-  width: ['100%', '100%', 'auto', 'auto', '41%'],
+  width: ['100%', '100%', 'auto', '427px', '41%'],
+  minWidth: ['0', '0', '0', '427px', '41%'],
   alignItems: 'center',
 }
 
@@ -78,7 +79,7 @@ const updateDescription: SxStyleProp = {
 const actionContainer: SxStyleProp = {
   alignItems: 'flex-start',
   display: ['none', 'none', 'block'],
-  width: ['277px', '277px', '277px', '469px', '580px'],
+  width: ['277px', '277px', '277px', '100%', '580px'],
 }
 
 const actionTypeContainer: SxStyleProp = {

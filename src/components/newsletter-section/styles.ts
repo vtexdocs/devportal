@@ -24,11 +24,12 @@ const newsletterBackground: SxStyleProp = {
   background: ['#FFFFFF', 'transparent'],
   mt: ['-80px', '0'],
   zIndex: '3',
+  justifyContent: ['center', 'normal'],
 }
 
 const newsletterBox: SxStyleProp = {
   flexDirection: 'column',
-  maxWidth: ['100%', '650px', '650px', '650px', '650px', '650px', '868px'],
+  maxWidth: ['472px', '650px', '650px', '650px', '650px', '650px', '868px'],
   px: ['16px', '32px', '0px'],
   position: 'relative',
   zIndex: '1',

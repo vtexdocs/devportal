@@ -1,7 +1,7 @@
 import type { IconComponent } from 'utils/typings/types'
 
 import Link from 'next/link'
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Flex, Text } from '@vtex/brand-ui'
 
 import styles from './styles'
 
@@ -16,7 +16,7 @@ const DocumentationCard = ({ Icon, title, description, link }: CardProps) => {
   return (
     <Link href={link}>
       <a>
-        <Box sx={styles.cardContainer}>
+        <Flex sx={styles.cardContainer}>
           <Flex sx={styles.infoContainer}>
             <Icon sx={styles.icon} />
             <Text className="title" sx={styles.title}>
@@ -34,7 +34,7 @@ const DocumentationCard = ({ Icon, title, description, link }: CardProps) => {
               Quick Started
             </Text>
           </Flex>
-        </Box>
+        </Flex>
       </a>
     </Link>
   )

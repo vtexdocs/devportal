@@ -1,6 +1,7 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const cardContainer: SxStyleProp = {
+  flexDirection: 'column',
   margin: ['8px', '12px', '12px', '16px'],
   width: ['151px', '282px', '282px'],
   height: ['120px', '225px', '225px'],
@@ -70,6 +71,9 @@ const description: SxStyleProp = {
 }
 
 const quickStartedContainer: SxStyleProp = {
+  height: '100%',
+  justifyContent: 'center',
+  alignItems: 'center',
   borderTop: '1px solid #E7E9EE',
   borderBottomLeftRadius: '8px',
   borderBottomRightRadius: '8px',
@@ -91,8 +95,6 @@ const quickStartedContainer: SxStyleProp = {
 }
 
 const quickStartedText: SxStyleProp = {
-  mx: 'auto',
-  my: ['8px', '16px'],
   fontSize: ['12px', '16px'],
   lineHeight: ['16px', '22px'],
   fontWeight: '400',
