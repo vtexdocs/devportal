@@ -7,6 +7,7 @@ import {
 } from '@vtex/brand-ui'
 import { useEffect, useRef, useState } from 'react'
 
+import DropdownMenu from 'components/dropdown-menu'
 import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
 import SearchIcon from 'components/icons/search-icon'
 import { getFeedbackURL } from 'utils/get-url'
@@ -19,9 +20,11 @@ import HamburgerMenu from './hamburger-menu'
 
 const Header = () => {
   const router = useRouter()
-  const [searchValue, setSearchValue] = useState('')
   const lastScroll = useRef(0)
+  const dropdownButton = useRef<HTMLSpanElement>(null)
 
+  const [searchValue, setSearchValue] = useState('')
+  const [showDropdown, setShowDropdown] = useState(false)
   const [headerElement, setHeaderElement] = useState<HTMLElement | null>()
 
   const messages = getMessages()
@@ -59,6 +62,20 @@ const Header = () => {
     return () => window.removeEventListener('scroll', onScroll)
   }, [headerElement])
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (
+        dropdownButton.current &&
+        !dropdownButton.current.contains(e.target as Node)
+      ) {
+        setShowDropdown(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [dropdownButton])
+
   return (
     <Box id="header" sx={styles.headerContainer}>
       <HeaderBrand sx={styles.headerBrand}>
@@ -89,9 +106,16 @@ const Header = () => {
         </Box>
 
         <HeaderBrand.RightLinks sx={styles.rightLinks}>
-          <Text sx={styles.docsDropDown}>
+          <Text
+            ref={dropdownButton}
+            sx={styles.docsDropDown(showDropdown)}
+            onClick={() => setShowDropdown(!showDropdown)}
+          >
             {messages['landing_page_header_docs.message']}
           </Text>
+
+          {showDropdown && <DropdownMenu />}
+
           <VtexLink
             sx={styles.rightLinksItem}
             href={getFeedbackURL()}
