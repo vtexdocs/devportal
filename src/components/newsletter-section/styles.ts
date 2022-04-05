@@ -1,5 +1,10 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
+const section: SxStyleProp = {
+  width: '100%',
+  borderBottom: '1px solid #E7E9EE',
+}
+
 const newsletter: SxStyleProp = {
   width: ['100%', '100%', '100%', '100%', '1280px', '1920px', '2560px'],
   margin: 'auto',
@@ -99,6 +104,7 @@ const policyLink: SxStyleProp = {
 }
 
 export default {
+  section,
   newsletter,
   newsletterContainer,
   newsletterBackground,

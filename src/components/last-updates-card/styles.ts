@@ -47,8 +47,8 @@ const cardContainer: SxStyleProp = {
 
 const updateContainer: SxStyleProp = {
   mr: ['0px', '0px', '16px'],
-  width: ['100%', '100%', 'auto', '427px', '41%'],
-  minWidth: ['0', '0', '0', '427px', '41%'],
+  width: ['100%', '100%', '427px', '427px', '41%'],
+  minWidth: ['0', '0', '427px', '427px', '41%'],
   alignItems: 'center',
 }
 
@@ -79,7 +79,7 @@ const updateDescription: SxStyleProp = {
 const actionContainer: SxStyleProp = {
   alignItems: 'flex-start',
   display: ['none', 'none', 'block'],
-  width: ['277px', '277px', '277px', '100%', '580px'],
+  width: ['277px', '277px', '100%', '100%', '580px'],
 }
 
 const actionTypeContainer: SxStyleProp = {
