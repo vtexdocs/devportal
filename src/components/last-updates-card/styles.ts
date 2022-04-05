@@ -56,8 +56,8 @@ const updateIcon: SxStyleProp = {
   mr: ['6px', '8px'],
   minWidth: ['16px', '24px'],
   width: ['16px', '24px'],
-  minHeight: 'auto',
-  height: 'auto',
+  minHeight: '100%',
+  height: '100%',
 }
 
 const updateTitle: SxStyleProp = {

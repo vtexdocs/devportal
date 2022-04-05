@@ -33,6 +33,7 @@ const channelTitle: SxStyleProp = {
   lineHeight: ['22px', '38px'],
   color: 'muted.0',
   display: 'flex',
+  alignItems: 'center',
 }
 
 const channelDescription: SxStyleProp = {
@@ -46,6 +47,7 @@ const channelDescription: SxStyleProp = {
 
 const channelLinkContainer: SxStyleProp = {
   display: ['none !important', 'flex !important'],
+  alignItems: 'center',
 }
 
 const channelLinkText: SxStyleProp = {
@@ -62,7 +64,7 @@ const channelIcon: SxStyleProp = {
 }
 
 const channelArrowIcon: SxStyleProp = {
-  height: 'auto',
+  height: '100%',
   width: '16px',
   minHeight: '16px',
   minWidth: '16px',
