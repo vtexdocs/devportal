@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/vtex/devportal/compare/v0.1.1...v0.1.2) (2022-04-05)
+
+
+### Features
+
+* **api-reference:** add default rendering of Catalog and Checkout APIs ([2d6264b](https://github.com/vtex/devportal/commit/2d6264b3e45f9360f532adc2b07da684bc6da42b))
+
 ### 0.1.1 (2022-04-04)
 
 
