@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/vtex/devportal/compare/v0.1.2...v0.1.3) (2022-04-05)
+
+
+### Features
+
+* **src/pages/index.tsx:** add page title ([579a648](https://github.com/vtex/devportal/commit/579a6484980d6fef47fff8cd0d4c6179e8537506))
+
+
+### Chore
+
+* add favicon ([4e97b32](https://github.com/vtex/devportal/commit/4e97b3291ec1c8e2ae48ef008be80b02a834d3a7))
+
 ### [0.1.2](https://github.com/vtex/devportal/compare/v0.1.1...v0.1.2) (2022-04-05)
 
 
