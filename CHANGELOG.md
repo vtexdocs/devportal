@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/vtex/devportal/compare/v0.1.3...v0.1.4) (2022-04-06)
+
+
+### CI
+
+* **lighthouse:** fix lighthouse mobile and adds desktop ([d380e46](https://github.com/vtex/devportal/commit/d380e46844bdafa3296596b68c50b24753518739))
+
 ### [0.1.3](https://github.com/vtex/devportal/compare/v0.1.2...v0.1.3) (2022-04-05)
 
 
