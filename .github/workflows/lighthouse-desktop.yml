@@ -1,4 +1,4 @@
-name: Lighthouse
+name: Lighthouse Desktop
 
 on: [pull_request]
 
@@ -14,10 +14,10 @@ jobs:
           node-version: 12.x
       - name: Install
         run: |
-          npm ci
+          yarn install --frozen-lockfile
       - name: Build
         run: |
-          npm run build
+          yarn run build
       - name: Waiting for 200 from the Netlify Preview
         uses: kamranayub/wait-for-netlify-action@2.0.0
         id: wait-for-netflify-preview
@@ -27,7 +27,7 @@ jobs:
           NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
       - name: Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.3.x
-          lhci autorun --upload.target=temporary-public-storage --collect.url=${{ steps.wait-for-netflify-preview.outputs.url }} || echo "LHCI failed!"
+          yarn global add @lhci/cli@0.8.x
+          lhci autorun --upload.target=temporary-public-storage --collect.url=${{ steps.wait-for-netflify-preview.outputs.url }} --collect.settings.preset="desktop" || echo "LHCI failed!"
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
