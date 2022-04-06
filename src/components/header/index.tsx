@@ -21,7 +21,7 @@ import HamburgerMenu from './hamburger-menu'
 const Header = () => {
   const router = useRouter()
   const lastScroll = useRef(0)
-  const dropdownButton = useRef<HTMLSpanElement>(null)
+  const dropdownMenu = useRef<HTMLDivElement>(null)
 
   const [searchValue, setSearchValue] = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
@@ -65,8 +65,8 @@ const Header = () => {
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
-        dropdownButton.current &&
-        !dropdownButton.current.contains(e.target as Node)
+        dropdownMenu.current &&
+        !dropdownMenu.current.contains(e.target as Node)
       ) {
         setShowDropdown(false)
       }
@@ -74,7 +74,7 @@ const Header = () => {
 
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [dropdownButton])
+  }, [dropdownMenu])
 
   return (
     <Box id="header" sx={styles.headerContainer}>
@@ -106,15 +106,16 @@ const Header = () => {
         </Box>
 
         <HeaderBrand.RightLinks sx={styles.rightLinks}>
-          <Text
-            ref={dropdownButton}
-            sx={styles.docsDropDown(showDropdown)}
-            onClick={() => setShowDropdown(!showDropdown)}
-          >
-            {messages['landing_page_header_docs.message']}
-          </Text>
+          <Flex sx={styles.dropdownContainer} ref={dropdownMenu}>
+            <Text
+              sx={styles.dropdownButton(showDropdown)}
+              onClick={() => setShowDropdown(!showDropdown)}
+            >
+              {messages['landing_page_header_docs.message']}
+            </Text>
 
-          {showDropdown && <DropdownMenu />}
+            {showDropdown && <DropdownMenu />}
+          </Flex>
 
           <VtexLink
             sx={styles.rightLinksItem}

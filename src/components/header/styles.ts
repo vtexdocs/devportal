@@ -26,7 +26,11 @@ const rightLinks: SxStyleProp = {
 
 const rightLinksItem: SxStyleProp = { alignItems: 'center' }
 
-const docsDropDown: (active: boolean) => SxStyleProp = (active: boolean) => ({
+const dropdownContainer: SxStyleProp = {
+  justifyContent: 'end',
+}
+
+const dropdownButton: (active: boolean) => SxStyleProp = (active: boolean) => ({
   my: 'auto',
   mx: '32px',
   cursor: 'pointer',
@@ -85,5 +89,6 @@ export default {
   rightLinks,
   iconContainer,
   rightLinksItem,
-  docsDropDown,
+  dropdownButton,
+  dropdownContainer,
 }
