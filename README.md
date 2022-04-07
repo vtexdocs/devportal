@@ -28,8 +28,10 @@ This repository implements the new VTEX Developers Portal with better navigabili
 ### Concepts and Features
 As the Developer Portal provides VTEX documentation to users, some of its main features are:
 - OpenAPI documentations rendering
+
   The [OpenAPI](https://www.openapis.org/) specification was chosen by VTEX to generate its API references guides since it defines a standard interface to describe RESTful APIs, as well as it can be easily understood, consumed and rendered by tools like [ReadMe](https://readme.com/) (used in the initial Developers Portal).
 - Markdown files rendering
+
   [Markdown](https://www.markdownguide.org/) is a very popular markup language that helps making plaintext documents more semantic by adding formatting elements defined in its syntax. VTEX developers and many tech writers reccur to Markdown to write documentation, including those served by the Developers Portal.
 
 ## Versioning
