@@ -120,11 +120,13 @@ flowchart TB
 
 - [ESLint](https://eslint.org/) is used to lint code and identify errors based on a pre-defined ruleset (`.eslintrc.json` file)
 
-    Run `yarn lint` to execute the lint script defined at `package.json`, it will run the ESLint config against the Next.js pre-defined paths (such as files inside `src/pages`, `src/components` etc) and ignore the paths included into `.eslintignore`.
+    Before any change is committed, a pre-commit hook will run the ESLint on JavaScript and TypeScript files located at pre-defined paths (such as `src/pages`, `src/components` etc) to fix their errors (ignored paths are described in `.eslintignore`).
 
 - [Prettier](https://prettier.io/) is used to standardize the code formatting based on a pre-defined ruleset (`.prettierrc` file)
 
-    Run `yarn format` to execute the format script defined at `package.json`, it will run the Prettier config and correct the found errors in the appropriate files - ignored paths are included into `.prettierignore`.
+    Before any change is committed, a pre-commit hook will run Prettier and correct errors found in the appropriate files (ignored paths are included in `.prettierignore`).
+
+You might want to configure ESLint and Prettier in your code editor to see errors and correction suggestions at development time.
 
 ### Commits
 
