@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/vtex/devportal/compare/v0.1.4...v0.1.5) (2022-04-07)
+
+
+### Features
+
+* **landing-page:** add responsivity for tablet screens ([b6290ad](https://github.com/vtex/devportal/commit/b6290ad8cf51d540fd814fcc4efce4b99e8fe102))
+* **landing-page:** add responsivity for the fourth breakpoint ([ed45c55](https://github.com/vtex/devportal/commit/ed45c55b4e175625851c3e761407a5aa7f28aca6))
+* **landing-page:** add responsivity for the third breakpoint ([12e2818](https://github.com/vtex/devportal/commit/12e2818e4d2de6c3fbdd146154ec6cfc79437670))
+* **landing-page:** add responsivity to large screens ([94f006e](https://github.com/vtex/devportal/commit/94f006ef74b7533656f7c8a55c4239437677eae0))
+* **landing-page:** add the landing page version for mobile screens ([7c29f9f](https://github.com/vtex/devportal/commit/7c29f9f6d9555a426f01154e5a656d99b1c54d9d))
+
+
+### Bug Fixes
+
+* **landing-page:** fix card icons in safari browser ([c5a02f9](https://github.com/vtex/devportal/commit/c5a02f9b06ab4db3864b3b5568af6376d37cabc4))
+* **landing-page:** fix last updates card width ([c18b9b4](https://github.com/vtex/devportal/commit/c18b9b49aec7fd833af42806ea8e7429bc483302))
+* **landing-page:** fix newsletter border and last updates card structure ([1af7b1f](https://github.com/vtex/devportal/commit/1af7b1f83c6824387c4a26e8678019f3eb5ce8c7))
+* **landing-page:** responsive style adjustments ([fa89513](https://github.com/vtex/devportal/commit/fa89513b3b3a500abb35e72570197c3a2b2f9240))
+
 ### [0.1.4](https://github.com/vtex/devportal/compare/v0.1.3...v0.1.4) (2022-04-06)
 
 
