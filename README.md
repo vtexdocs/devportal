@@ -95,7 +95,8 @@ The diagram below represents the base structure defined to organize the files an
 
 ```mermaid
 flowchart TB
-    src --> messages & components & pages & public & styles & posts & utils & tests
+    devportal --> src & public
+    src --> messages & components & pages & styles & posts & utils & tests
     messages --> msgJson{{messages.json}}
     components --> some-component --> stylesCompCss{{styles.component.css}} & compOther{{functions/other.ts}} & compIndex{{indext.tsx}} & compStyle{{styles.ts}}
     pages --> search & pagesLanding{{landing-page}} & docs
