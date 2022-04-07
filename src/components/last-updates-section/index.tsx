@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Text } from '@vtex/brand-ui'
 
 import LastUpdatesCard, { CardProps } from '../last-updates-card'
 
@@ -29,11 +29,11 @@ const LastUpdatesSection = () => {
   return (
     <Box sx={styles.sectionContainer}>
       <Text sx={styles.title}>Last Updates</Text>
-      <Flex sx={styles.cardsContainer}>
+      <Box sx={styles.cardsContainer}>
         {updates.map((update) => (
           <LastUpdatesCard key={`${update.action.date}`} {...update} />
         ))}
-      </Flex>
+      </Box>
     </Box>
   )
 }
