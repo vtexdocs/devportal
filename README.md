@@ -47,7 +47,7 @@ The versioning process of this repository was built to automate version releases
 
 - Automate new version releases when Pull Requests (PR) are merged into the `main` branch
  
-  A GitHub action named **Release Version Workflow** is triggered whenever a PR is merged into the `main` branch. The action's workflow is represented by the diagram below, its steps identify whether the PR should release a new version - and of what type - to run the release script, push its results and generate a new GitHub Release corresponding to the new version tag. The type of the new version may be automatically deduced from the semantic commits or determined by the user as a PATCH, MINOR or MAJOR.
+  A GitHub action named **Release Version Workflow** is triggered whenever a PR is merged into the `main` branch. The action's workflow is represented by the diagram below, its steps identify whether the PR should release a new version - and of what type - to run the release script, push its results and generate a new GitHub Release corresponding to the new version tag. The type of the new version may be automatically deducted from the semantic commits or determined by the user as a PATCH, MINOR or MAJOR.
 
 ```mermaid
 flowchart TB
@@ -237,8 +237,8 @@ Ex: `git checkout -b feature/landing-page`.
 
 - **Step 4.** Open a Pull Request (PR), select its reviewers and add it one of the release labels:
 
-    Release Labels | Description | Release
-    ---------------|-------------|---------
+    Release Labels | Description | Release Type
+    ---------------|-------------|-------------
     `release-no` | When no new version should be released when the PR is merged into the `main` branch | None
     `release-auto` | When the new version to be released should be deducted automatically based on the PR semantic commits when it is merged (see [Commits](#commits) section) | [PATCH, MINOR, MAJOR]
     `release-patch` | When the new version should be released as a patch | PATCH
