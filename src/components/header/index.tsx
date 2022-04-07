@@ -6,7 +6,10 @@ import {
   Box,
 } from '@vtex/brand-ui'
 import { useEffect, useRef, useState } from 'react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
+import HamburgerMenu from './hamburger-menu'
 import DropdownMenu from 'components/dropdown-menu'
 import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
 import SearchIcon from 'components/icons/search-icon'
@@ -14,9 +17,6 @@ import { getFeedbackURL } from 'utils/get-url'
 import { getMessages } from 'utils/get-messages'
 
 import styles from './styles'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import HamburgerMenu from './hamburger-menu'
 
 const Header = () => {
   const router = useRouter()
@@ -75,6 +75,15 @@ const Header = () => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [dropdownMenu])
+
+  useEffect(() => {
+    const hideDropdown = () => {
+      setShowDropdown(false)
+    }
+
+    router.events.on('routeChangeStart', hideDropdown)
+    return () => router.events.off('routeChangeStart', hideDropdown)
+  }, [])
 
   return (
     <Box id="header" sx={styles.headerContainer}>
