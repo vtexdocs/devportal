@@ -91,7 +91,7 @@ The Developers Portal is a [Next.js](https://nextjs.org/) app based on [React](h
 
 #### Directory tree
 
-The diagram below represents the base structure defined to organize the files and folders of the repository.
+The diagram below represents the base structure defined to organize the files and folders of the repository, where all file names must follow the kebab-case convention.
 
 ```mermaid
 flowchart TB
