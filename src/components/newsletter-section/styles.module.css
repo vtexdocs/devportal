@@ -1,21 +1,94 @@
+.imageGradient {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  box-shadow: 0px 0px 80px #ffffff inset;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 15%, #FFFFFF 55%);
+}
+
 .wrapper {
-    box-sizing: content-box;
+  position: relative;
+  box-sizing: content-box;
+  height: 209px;
+  width: 320px;
+  overflow-y: hidden;
+  background: -webkit-linear-gradient(
+    left,
+    #ffffff 40%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 40em) {
+  .imageGradient {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0) 25%, #FFFFFF 62%);
+  }
+
+  .wrapper {
     position: absolute;
-    top: 0;
-    right: 0;
+    display: block;
+    right: -220px;
+    top: -115px;
+    width: 640px;
+    height: 418px;
+    left: initial;
+    transform: none;
+  }
+}
+
+@media (min-width: 52em) {
+  .wrapper {
+    right: -128px;
+  }
+}
+
+@media (min-width: 64em) {
+  .wrapper {
+    width: 768px;
+    height: 500px;
+    top: -160px;
+    right: -200px
+  }
+}
+
+@media (min-width: 80em) {
+  .imageGradient {
+    background: 
+      linear-gradient(to left, rgba(255, 255, 255, 0) 25%, #FFFFFF 95%),
+      linear-gradient(to right, rgba(255, 255, 255, 0) 85%, #FFFFFF 89%);
+  } 
+
+  .wrapper {
+    position: absolute;
+    top: initial;
+    right: initial;
+    left: 600px;
     height: 100%;
-    display: none;
-}
+  }
 
-.wrapper > span {
-    position: absolute;
-    width: 100% !important;
+  .wrapper > span {
     height: 100% !important;
+  }
 }
 
-@media (min-width: 1024px) {
-    .wrapper {
-        display: block;
-        width: 600px;
-    }
+@media (min-width: 120em) {
+  .wrapper {
+    right: 200px;
+    left: initial;
+  }
+}
+
+@media (min-width: 160em) {
+  .imageGradient {
+    background: 
+      linear-gradient(to left, rgba(255, 255, 255, 0) 25%, #FFFFFF 95%),
+      linear-gradient(to right, rgba(255, 255, 255, 0) 88%, #FFFFFF 107%);
+  } 
+
+  .wrapper {
+    right: 460px;
+  }
 }

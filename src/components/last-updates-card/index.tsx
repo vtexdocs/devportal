@@ -28,9 +28,9 @@ const LastUpdatesCard = ({ action, updateType }: CardProps) => {
       <a style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
         <Flex sx={styles.cardContainer}>
           <Flex sx={styles.updateContainer}>
-            <UpdateIcon sx={styles.updateIcon} />
             <Box>
               <Text className="updateTitle" sx={styles.updateTitle}>
+                <UpdateIcon sx={styles.updateIcon} />
                 {updateTitle}
               </Text>
               <Text className="updateDescription" sx={styles.updateDescription}>

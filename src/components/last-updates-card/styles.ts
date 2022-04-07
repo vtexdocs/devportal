@@ -1,11 +1,13 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const cardContainer: SxStyleProp = {
-  mt: '24px',
-  px: '24px',
-  py: '64px',
+  mt: ['16px', '24px', '24px', '32px'],
+  paddingLeft: ['16px', '32px', '24px', '32px'],
+  paddingRight: ['16px', '32px', '24px', '32px', '24px'],
+  py: ['16px', '40px', '64px'],
   width: '100%',
-  maxWidth: '1084px',
+  justifyContent: 'space-between',
+  maxWidth: '1035px',
   backgroundColor: 'white',
   borderRadius: '8px',
   border: '1px solid #E7E9EE',
@@ -29,14 +31,14 @@ const cardContainer: SxStyleProp = {
   },
 
   ':active': {
-    'box-shadow': '0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #96B2F2',
+    boxShadow: '0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #96B2F2',
     '.updateTitle': {
       color: '#0C1522',
     },
   },
 
   ':hover': {
-    'box-shadow': '0px 0px 16px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
     '.updateTitle': {
       color: '#000711',
     },
@@ -44,35 +46,40 @@ const cardContainer: SxStyleProp = {
 }
 
 const updateContainer: SxStyleProp = {
-  mr: '16px',
-  width: '41%',
-  padding: '8px',
-  alignItems: 'flex-start',
+  mr: ['0px', '0px', '16px'],
+  width: ['100%', '100%', '427px', '427px', '41%'],
+  minWidth: ['0', '0', '427px', '427px', '41%'],
+  alignItems: 'center',
 }
 
 const updateIcon: SxStyleProp = {
-  my: '4px',
-  mr: '8px',
-  width: '24px',
-  height: 'auto',
+  mr: ['6px', '8px'],
+  minWidth: ['16px', '24px'],
+  width: ['16px', '24px'],
+  minHeight: '100%',
+  height: '100%',
 }
 
 const updateTitle: SxStyleProp = {
-  fontSize: '22px',
+  fontSize: ['16px', '18px', '18px', '18px', '22px'],
+  lineHeight: ['22px', '24px', '24px', '24px', '32px'],
   fontWeight: '400',
-  lineHeight: '32px',
   color: 'muted.0',
+  display: 'flex',
 }
 
 const updateDescription: SxStyleProp = {
-  fontSize: '16px',
+  fontSize: ['12px', '16px'],
+  lineHeight: ['16px', '22px'],
+  pl: ['22px', '32px'],
   fontWeight: '400',
-  lineHeight: '22px',
   color: 'muted.1',
 }
 
 const actionContainer: SxStyleProp = {
   alignItems: 'flex-start',
+  display: ['none', 'none', 'block'],
+  width: ['277px', '277px', '100%', '100%', '580px'],
 }
 
 const actionTypeContainer: SxStyleProp = {
@@ -89,8 +96,8 @@ const actionIcon: SxStyleProp = {
 const actionType: SxStyleProp = {
   ml: '8px',
   fontSize: '16px',
-  fontWeight: '400',
   lineHeight: '18px',
+  fontWeight: '400',
   color: '#4A4A4A',
 }
 
@@ -102,16 +109,16 @@ const actionDescriptionContainer: SxStyleProp = {
 }
 
 const actionDescription: SxStyleProp = {
-  fontSize: '18px',
+  fontSize: ['16px', '16px', '16px', '16px', '18px'],
+  lineHeight: ['22px', '22px', '22px', '22px', '24px'],
   fontWeight: '400',
-  lineHeight: '24px',
   color: 'muted.0',
 }
 
 const actionTime: SxStyleProp = {
   fontSize: '16px',
-  fontWeight: '400',
   lineHeight: '22px',
+  fontWeight: '400',
   color: 'muted.1',
 }
 

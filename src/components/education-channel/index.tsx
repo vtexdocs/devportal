@@ -29,11 +29,15 @@ const EducationChannel = ({
           <Icon className="channelIcon" sx={styles.channelIcon} />
           <Text className="channelTitle" sx={styles.channelTitle}>
             {title}
+            <ArrowRightIcon
+              className="channelArrow"
+              sx={styles.channelTitleArrowIcon}
+            />
           </Text>
           <Text className="channelDescription" sx={styles.channelDescription}>
             {description}
           </Text>
-          <Flex>
+          <Flex sx={styles.channelLinkContainer}>
             <Text className="channelLinkText" sx={styles.channelLinkText}>
               {textLink}
             </Text>
