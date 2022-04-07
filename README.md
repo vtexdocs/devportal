@@ -71,7 +71,7 @@ flowchart TB
 
 ## Development
 
-Clone this repo, acces the command line at its root directory and install all dependencies:
+Clone this repo, access the command line at its root directory and install all dependencies:
 
 ```bash
 yarn install
@@ -113,7 +113,7 @@ flowchart TB
 
 - It is preferable to use **arrow functions**
 - It is preferable to use **functional components** instead of class components
-- It is preferable to use **Hooks** over High Order Components (HOCs)
+- It is preferable to use **Hooks** over Higher Order Components (HOCs)
 
 #### Code linting and format
 
