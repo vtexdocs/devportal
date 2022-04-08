@@ -21,7 +21,6 @@ import styles from './styles'
 const Header = () => {
   const router = useRouter()
   const lastScroll = useRef(0)
-  const dropdownMenu = useRef<HTMLDivElement>(null)
 
   const [searchValue, setSearchValue] = useState('')
   const [showDropdown, setShowDropdown] = useState(false)
@@ -42,6 +41,7 @@ const Header = () => {
 
   useEffect(() => {
     const onScroll = () => {
+      setShowDropdown(false)
       if (headerElement) {
         const headerHeight = headerElement.children[0].clientHeight
         if (
@@ -61,20 +61,6 @@ const Header = () => {
 
     return () => window.removeEventListener('scroll', onScroll)
   }, [headerElement])
-
-  useEffect(() => {
-    const handleClickOutside = (e: MouseEvent) => {
-      if (
-        dropdownMenu.current &&
-        !dropdownMenu.current.contains(e.target as Node)
-      ) {
-        setShowDropdown(false)
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [dropdownMenu])
 
   useEffect(() => {
     const hideDropdown = () => {
@@ -115,11 +101,12 @@ const Header = () => {
         </Box>
 
         <HeaderBrand.RightLinks sx={styles.rightLinks}>
-          <Flex sx={styles.dropdownContainer} ref={dropdownMenu}>
-            <Text
-              sx={styles.dropdownButton(showDropdown)}
-              onClick={() => setShowDropdown(!showDropdown)}
-            >
+          <Flex
+            sx={styles.dropdownContainer}
+            onMouseOver={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
+          >
+            <Text sx={styles.dropdownButton(showDropdown)}>
               {messages['landing_page_header_docs.message']}
             </Text>
 
