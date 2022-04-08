@@ -14,7 +14,7 @@ import DocumentationUpdatesIcon from 'components/icons/documentation-updates-ico
 import SidebarSection from 'components/sidebar-section'
 
 const Sidebar = () => {
-  const [sideBarDataIndex, setSideBarDataIndex] = useState(-1)
+  const [sideBarDataIndex, setSideBarDataIndex] = useState(0)
 
   const icons = [
     {
@@ -155,6 +155,61 @@ const Sidebar = () => {
             },
           ],
         },
+        {
+          title: 'Integration Guides',
+          url: '',
+          subItems: [
+            {
+              title: 'Back-office (ERP/PIM/WMS)',
+              url: '',
+              subItems: [
+                {
+                  title: 'item 1',
+                  url: '',
+                  subItems: [],
+                },
+              ],
+            },
+            {
+              title: 'External Marketplace',
+              url: '',
+              subItems: [
+                {
+                  title: 'Marketplace / Seller architecture',
+                  url: '',
+                  subItems: [],
+                },
+                {
+                  title: 'Store setup for VTEX Seller',
+                  url: '',
+                  subItems: [],
+                },
+              ],
+            },
+            {
+              title: 'External Seller',
+              url: '',
+              subItems: [
+                {
+                  title: 'Item 1',
+                  url: '',
+                  subItems: [],
+                },
+              ],
+            },
+            {
+              title: 'Gift Card',
+              url: '',
+              subItems: [
+                {
+                  title: 'Item 1',
+                  url: '',
+                  subItems: [],
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
     {
@@ -173,10 +228,18 @@ const Sidebar = () => {
       title: 'WebOps',
       data: [],
     },
+    {
+      title: 'Release Notes',
+      data: [],
+    },
+    {
+      title: 'Documentation Updates',
+      data: [],
+    },
   ]
 
   return (
-    <Flex sx={styles.init}>
+    <Flex sx={styles.sidebar}>
       <Flex sx={styles.sidebarIcons}>
         <Flex sx={styles.sidebarIconsContainer}>
           {icons.map((iconsElement, index) => (
@@ -186,11 +249,11 @@ const Sidebar = () => {
                   ? styles.iconBoxActive
                   : styles.iconBox
               }
+              onClick={() => {
+                setSideBarDataIndex(index)
+              }}
             >
               <iconsElement.Icon
-                onClick={() => {
-                  setSideBarDataIndex(index)
-                }}
                 sx={
                   sideBarDataIndex === index ? styles.iconActive : styles.icon
                 }
@@ -199,16 +262,32 @@ const Sidebar = () => {
           ))}
         </Flex>
         <Flex sx={styles.sidebarIconsContainer}>
-          <ReleaseNotesIcon sx={styles.icon} />
-          <DocumentationUpdatesIcon sx={styles.icon} />
+          <Flex
+            sx={sideBarDataIndex === 5 ? styles.iconBoxActive : styles.iconBox}
+            onClick={() => {
+              setSideBarDataIndex(5)
+            }}
+          >
+            <ReleaseNotesIcon
+              sx={sideBarDataIndex === 5 ? styles.iconActive : styles.icon}
+            />
+          </Flex>
+          <Flex
+            sx={sideBarDataIndex === 6 ? styles.iconBoxActive : styles.iconBox}
+            onClick={() => {
+              setSideBarDataIndex(6)
+            }}
+          >
+            <DocumentationUpdatesIcon
+              sx={sideBarDataIndex === 6 ? styles.iconActive : styles.icon}
+            />
+          </Flex>
         </Flex>
       </Flex>
-      {sideBarDataIndex >= 0 ? (
-        <SidebarSection
-          title={sidebarData[sideBarDataIndex].title}
-          data={sidebarData[sideBarDataIndex].data}
-        />
-      ) : null}
+      <SidebarSection
+        title={sidebarData[sideBarDataIndex].title}
+        data={sidebarData[sideBarDataIndex].data}
+      />
     </Flex>
   )
 }

@@ -1,13 +1,35 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const sidebarElementsContainer: SxStyleProp = {
+  position: 'relative',
   width: '300px',
   minHeight: '692px',
   paddingTop: '34px',
   paddingBottom: '24px',
   px: '17px',
   borderRight: '1px solid #E7E9EE',
-  transition: 'left 0.3s',
+  zIndex: '1',
+  left: '0',
+  transition: 'all 0.3s ease-in-out',
+  '.toggleIcon': {
+    opacity: '0',
+    transition: 'all 0.3s ease-out',
+  },
+  '.sidebarHide': {
+    opacity: '0',
+    transition: 'all 0.5s ease-out',
+  },
+  ':hover': {
+    '.toggleIcon': {
+      opacity: '100',
+      transition: 'all 0.3s ease-out',
+    },
+  },
+}
+
+const sidebarElementsBox: SxStyleProp = {
+  opacity: '100',
+  transition: 'all 1s ease-out',
 }
 
 const sidebarTitle: SxStyleProp = {
@@ -49,11 +71,39 @@ const searchIcon: SxStyleProp = {
   mr: '8px',
 }
 
+const toggleIconBox: SxStyleProp = {
+  justifyContent: 'center',
+  alignItems: 'center',
+  width: '32px',
+  height: '32px',
+  borderRadius: '50%',
+  border: '1px solid #E7E9EE',
+  background: '#FFFFFF',
+  boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
+  position: 'absolute',
+  top: '32px',
+  right: '-16px',
+  cursor: 'pointer',
+}
+
+const toggleIconBoxActive: SxStyleProp = {
+  ...toggleIconBox,
+  opacity: '100 !important',
+}
+
+const toggleIcon: SxStyleProp = {
+  transform: 'scaleX(-1)',
+}
+
 export default {
   sidebarElementsContainer,
+  sidebarElementsBox,
   sidebarTitle,
   sidebarHelpIcon,
   searchBox,
   searchInput,
   searchIcon,
+  toggleIconBox,
+  toggleIconBoxActive,
+  toggleIcon,
 }
