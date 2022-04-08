@@ -80,7 +80,7 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
       arrowState.get(title)?.open ? (
       <Box>
         <SideBarElements
-          items={subItems!}
+          items={subItems || []}
           subItemLevel={subItemLevel + 1}
           key={`${title}sd`}
         />

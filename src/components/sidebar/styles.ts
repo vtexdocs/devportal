@@ -1,9 +1,11 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const sidebar: SxStyleProp = {
+  display: ['none', 'none', 'none', 'flex'],
   width: 'auto',
   '.active': {
     left: '-276px',
+    marginRight: '-120px',
     transition: 'all 0.3s ease-in-out',
   },
 }
