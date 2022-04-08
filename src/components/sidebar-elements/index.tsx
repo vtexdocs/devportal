@@ -25,53 +25,50 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
     const isExpandable = subItems && subItems.length > 0
 
     return (
-      <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
-        {isExpandable && (
-          <Button
-            size="regular"
-            variant="tertiary"
-            sx={
-              arrowState.has(title) && arrowState.get(title)?.open
-                ? styles.arrowIconActive
-                : styles.arrowIcon
-            }
-            icon={() => (
-              <IconCaret
-                direction={
-                  arrowState.has(title) && arrowState.get(title)?.open
-                    ? 'down'
-                    : 'right'
-                }
-                size={24}
-              />
-            )}
-            onClick={() => {
-              arrowState.has(title)
-                ? toggleArrow(title, !arrowState.get(title)?.open, subItemLevel)
-                : toggleArrow(title, true, subItemLevel)
-            }}
-          />
-        )}
-        <Button
-          size="regular"
-          variant="tertiary"
-          sx={styles.elementButton}
-          onClick={() => {
-            arrowState.has(title)
-              ? toggleArrow(title, !arrowState.get(title)?.open, subItemLevel)
-              : toggleArrow(title, true, subItemLevel)
-
-            toggleActive(title, subItemLevel)
-          }}
-        >
+      <Box sx={styles.elementContainer}>
+        <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
+          {isExpandable && (
+            <Button
+              size="regular"
+              variant="tertiary"
+              sx={
+                arrowState.has(title) && arrowState.get(title)?.open
+                  ? styles.arrowIconActive
+                  : styles.arrowIcon
+              }
+              icon={() => (
+                <IconCaret
+                  direction={
+                    arrowState.has(title) && arrowState.get(title)?.open
+                      ? 'down'
+                      : 'right'
+                  }
+                  size={24}
+                />
+              )}
+              onClick={() => {
+                arrowState.has(title)
+                  ? toggleArrow(
+                      title,
+                      !arrowState.get(title)?.open,
+                      subItemLevel
+                    )
+                  : toggleArrow(title, true, subItemLevel)
+              }}
+            />
+          )}
           <Link
             sx={textStyle(appState.has(title), isExpandable || false)}
             target="_self"
+            onClick={() => {
+              toggleArrow(title, true, subItemLevel)
+              toggleActive(title, subItemLevel)
+            }}
           >
             {title}
           </Link>
-        </Button>
-      </Flex>
+        </Flex>
+      </Box>
     )
   }
 

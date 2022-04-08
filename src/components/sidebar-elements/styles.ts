@@ -1,16 +1,30 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
+const elementContainer: SxStyleProp = {
+  background: '#FFFFFF',
+  cursor: 'pointer',
+  ':hover': {
+    background: '#F8F7FC',
+    a: {
+      color: '#142032',
+    },
+  },
+}
+
 const elementText: SxStyleProp = {
   color: 'muted.0',
   fontSize: '14px',
   lineHeight: '20px',
   fontWeight: '400',
   textAlign: 'initial',
+  paddingBlock: '7px',
+  display: 'flex',
+  alignItems: 'center',
 }
 
 const elementActive: SxStyleProp = {
   ...elementText,
-  color: 'primary.active',
+  color: '#D71D55 !important',
 }
 
 const arrowIcon: SxStyleProp = {
@@ -20,7 +34,7 @@ const arrowIcon: SxStyleProp = {
 
 const arrowIconActive: SxStyleProp = {
   ...arrowIcon,
-  color: 'primary.active',
+  color: '#D71D55',
 }
 
 const elementButton: SxStyleProp = {
@@ -29,11 +43,6 @@ const elementButton: SxStyleProp = {
   padding: '0',
   margin: '0',
   textDecoration: 'none !important',
-  ':hover': {
-    a: {
-      color: 'primary.active',
-    },
-  },
 }
 
 const sectionDivider: SxStyleProp = {
@@ -44,6 +53,7 @@ const sectionDivider: SxStyleProp = {
 }
 
 export default {
+  elementContainer,
   elementText,
   elementActive,
   arrowIcon,
