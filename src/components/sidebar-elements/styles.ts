@@ -2,7 +2,6 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const elementContainer: SxStyleProp = {
   background: '#FFFFFF',
-  cursor: 'pointer',
   ':hover': {
     background: '#F8F7FC',
     a: {
@@ -20,6 +19,7 @@ const elementText: SxStyleProp = {
   paddingBlock: '7px',
   display: 'flex',
   alignItems: 'center',
+  cursor: 'pointer',
 }
 
 const elementActive: SxStyleProp = {
