@@ -29,6 +29,11 @@ const elementButton: SxStyleProp = {
   padding: '0',
   margin: '0',
   textDecoration: 'none !important',
+  ':hover': {
+    a: {
+      color: 'primary.active',
+    },
+  },
 }
 
 const sectionDivider: SxStyleProp = {

@@ -21,7 +21,7 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
   const { appState, arrowState, toggleActive, toggleArrow } =
     useContext(Context)
 
-  const ItemRoot = ({ title, url, subItems }: SideBarItemPropTypes) => {
+  const ItemRoot = ({ title, subItems }: SideBarItemPropTypes) => {
     const isExpandable = subItems && subItems.length > 0
 
     return (
@@ -57,13 +57,16 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
           variant="tertiary"
           sx={styles.elementButton}
           onClick={() => {
+            arrowState.has(title)
+              ? toggleArrow(title, !arrowState.get(title)?.open, subItemLevel)
+              : toggleArrow(title, true, subItemLevel)
+
             toggleActive(title, subItemLevel)
           }}
         >
           <Link
             sx={textStyle(appState.has(title), isExpandable || false)}
             target="_self"
-            href={url}
           >
             {title}
           </Link>
