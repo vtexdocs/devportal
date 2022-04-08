@@ -159,6 +159,11 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
                 </Box>
               </>
             )}
+            {subItemLevel == 0 ? (
+              <Box sx={styles.sectionDivider}>
+                <hr />
+              </Box>
+            ) : null}
           </Fragment>
         )
       })}

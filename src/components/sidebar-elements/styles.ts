@@ -1,14 +1,11 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
-const init: SxStyleProp = {
-  width: 'auto',
-}
-
 const elementText: SxStyleProp = {
   color: 'muted.0',
   fontSize: '14px',
   lineHeight: '20px',
   fontWeight: '400',
+  textAlign: 'initial',
 }
 
 const elementActive: SxStyleProp = {
@@ -33,11 +30,18 @@ const elementButton: SxStyleProp = {
   margin: '0',
 }
 
+const sectionDivider: SxStyleProp = {
+  hr: {
+    border: '1px solid #E7E9EE',
+    borderTop: 'none',
+  },
+}
+
 export default {
-  init,
   elementText,
   elementActive,
   arrowIcon,
   arrowIconActive,
   elementButton,
+  sectionDivider,
 }
