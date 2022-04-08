@@ -28,6 +28,7 @@ const elementButton: SxStyleProp = {
   fontVariationSettings: 'unset',
   padding: '0',
   margin: '0',
+  textDecoration: 'none !important',
 }
 
 const sectionDivider: SxStyleProp = {

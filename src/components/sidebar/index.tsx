@@ -16,7 +16,7 @@ import SidebarSection from 'components/sidebar-section'
 const Sidebar = () => {
   const [sideBarDataIndex, setSideBarDataIndex] = useState(0)
 
-  const icons = [
+  const docsIcons = [
     {
       Icon: APIGuidesIcon,
     },
@@ -31,6 +31,15 @@ const Sidebar = () => {
     },
     {
       Icon: WebOpsIcon,
+    },
+  ]
+
+  const notesIcons = [
+    {
+      Icon: ReleaseNotesIcon,
+    },
+    {
+      Icon: DocumentationUpdatesIcon,
     },
   ]
 
@@ -242,46 +251,48 @@ const Sidebar = () => {
     <Flex sx={styles.sidebar}>
       <Flex sx={styles.sidebarIcons}>
         <Flex sx={styles.sidebarIconsContainer}>
-          {icons.map((iconsElement, index) => (
+          {docsIcons.map((docsIconElement, docsIconIndex) => (
             <Flex
               sx={
-                sideBarDataIndex === index
+                sideBarDataIndex === docsIconIndex
                   ? styles.iconBoxActive
                   : styles.iconBox
               }
               onClick={() => {
-                setSideBarDataIndex(index)
+                setSideBarDataIndex(docsIconIndex)
               }}
             >
-              <iconsElement.Icon
+              <docsIconElement.Icon
                 sx={
-                  sideBarDataIndex === index ? styles.iconActive : styles.icon
+                  sideBarDataIndex === docsIconIndex
+                    ? styles.iconActive
+                    : styles.icon
                 }
               />
             </Flex>
           ))}
         </Flex>
         <Flex sx={styles.sidebarIconsContainer}>
-          <Flex
-            sx={sideBarDataIndex === 5 ? styles.iconBoxActive : styles.iconBox}
-            onClick={() => {
-              setSideBarDataIndex(5)
-            }}
-          >
-            <ReleaseNotesIcon
-              sx={sideBarDataIndex === 5 ? styles.iconActive : styles.icon}
-            />
-          </Flex>
-          <Flex
-            sx={sideBarDataIndex === 6 ? styles.iconBoxActive : styles.iconBox}
-            onClick={() => {
-              setSideBarDataIndex(6)
-            }}
-          >
-            <DocumentationUpdatesIcon
-              sx={sideBarDataIndex === 6 ? styles.iconActive : styles.icon}
-            />
-          </Flex>
+          {notesIcons.map((notesIconElement, notesIconIndex) => (
+            <Flex
+              sx={
+                sideBarDataIndex === docsIcons.length + notesIconIndex
+                  ? styles.iconBoxActive
+                  : styles.iconBox
+              }
+              onClick={() => {
+                setSideBarDataIndex(docsIcons.length + notesIconIndex)
+              }}
+            >
+              <notesIconElement.Icon
+                sx={
+                  sideBarDataIndex === docsIcons.length + notesIconIndex
+                    ? styles.iconActive
+                    : styles.icon
+                }
+              />
+            </Flex>
+          ))}
         </Flex>
       </Flex>
       <SidebarSection

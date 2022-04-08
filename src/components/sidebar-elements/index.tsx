@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from 'react'
-import { Box, Flex, Button, Tooltip, Link, IconCaret } from '@vtex/brand-ui'
+import { Box, Flex, Button, Link, IconCaret } from '@vtex/brand-ui'
 
 import { styleByLevelNormal, textStyle } from './functions'
 import { Context } from 'utils/contexts/context'
@@ -25,7 +25,7 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
     const isExpandable = subItems && subItems.length > 0
 
     return (
-      <Flex>
+      <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
         {isExpandable && (
           <Button
             size="regular"
@@ -45,6 +45,11 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
                 size={24}
               />
             )}
+            onClick={() => {
+              arrowState.has(title)
+                ? toggleArrow(title, !arrowState.get(title)?.open, subItemLevel)
+                : toggleArrow(title, true, subItemLevel)
+            }}
           />
         )}
         <Button
@@ -56,65 +61,13 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
           }}
         >
           <Link
-            target="_self"
             sx={textStyle(appState.has(title), isExpandable || false)}
+            target="_self"
             href={url}
           >
             {title}
           </Link>
         </Button>
-      </Flex>
-    )
-  }
-
-  const ItemDisabled = ({ title, url, subItems }: SideBarItemPropTypes) => {
-    const isExpandable = subItems && subItems.length > 0
-
-    return (
-      <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
-        <Flex>
-          {isExpandable && (
-            <Button
-              size="regular"
-              variant="tertiary"
-              sx={
-                arrowState.has(title) && arrowState.get(title)?.open
-                  ? styles.arrowIconActive
-                  : styles.arrowIcon
-              }
-              icon={() => (
-                <IconCaret
-                  direction={
-                    arrowState.has(title) && arrowState.get(title)?.open
-                      ? 'down'
-                      : 'right'
-                  }
-                  size={24}
-                />
-              )}
-              onClick={() => {
-                arrowState.has(title)
-                  ? toggleArrow(
-                      title,
-                      !arrowState.get(title)?.open,
-                      subItemLevel
-                    )
-                  : toggleArrow(title, true, subItemLevel)
-              }}
-            />
-          )}
-          <Tooltip label="teste" placement="right">
-            <Button size="regular" variant="tertiary" sx={styles.elementButton}>
-              <Link
-                sx={textStyle(appState.has(title), isExpandable || false)}
-                target="_self"
-                href={url}
-              >
-                {title}
-              </Link>
-            </Button>
-          </Tooltip>
-        </Flex>
       </Flex>
     )
   }
@@ -142,23 +95,12 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
 
         return (
           <Fragment key={String(key)}>
-            {!item.url ? (
-              <>
-                <ItemDisabled {...item} />
-                {item.subItems ? (
-                  <Box>
-                    <ItemChildren {...item} />
-                  </Box>
-                ) : null}
-              </>
-            ) : (
-              <>
-                <ItemRoot {...item} />
-                <Box>
-                  <ItemChildren {...item} />
-                </Box>
-              </>
-            )}
+            <>
+              <ItemRoot {...item} />
+              <Box>
+                <ItemChildren {...item} />
+              </Box>
+            </>
             {subItemLevel == 0 ? (
               <Box sx={styles.sectionDivider}>
                 <hr />
