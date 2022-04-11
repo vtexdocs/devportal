@@ -5,29 +5,31 @@ import GithubIcon from 'components/icons/github-icon'
 import HelpCenterIcon from 'components/icons/helpcenter-icon'
 import CommunityIcon from 'components/icons/community-icon'
 import { getGithubURL, getHelpCenterURL, getCommunityURL } from 'utils/get-url'
+import { getMessages } from 'utils/get-messages'
 
 import styles from './styles'
 
+const messages = getMessages()
+
 const educationChannels = [
   {
-    title: 'Github',
-    description: 'Follow our code and contribute with VTEX on GitHub.',
-    textLink: 'Go to Github',
+    title: messages['landing_page_education_github.title'],
+    description: messages['landing_page_education_github.description'],
+    textLink: messages['landing_page_education_github.textLink'],
     link: getGithubURL(),
     icon: GithubIcon,
   },
   {
-    title: 'Help Center',
-    description:
-      'Explore our beginner tutorials, reference guides and articles.',
-    textLink: 'Explore Help Center',
+    title: messages['landing_page_education_help_center.title'],
+    description: messages['landing_page_education_help_center.description'],
+    textLink: messages['landing_page_education_help_center.textLink'],
     link: getHelpCenterURL(),
     icon: HelpCenterIcon,
   },
   {
-    title: 'Community',
-    description: 'Find solutions and share ideas on VTEX community.',
-    textLink: 'Meet the Community',
+    title: messages['landing_page_education_community.title'],
+    description: messages['landing_page_education_community.description'],
+    textLink: messages['landing_page_education_community.textLink'],
     link: getCommunityURL(),
     icon: CommunityIcon,
   },
@@ -36,7 +38,7 @@ const educationChannels = [
 const EducationSection = () => {
   return (
     <Box sx={styles.container}>
-      <Text sx={styles.title}>Education channels</Text>
+      <Text sx={styles.title}>{messages['landing_page_education.title']}</Text>
       <Flex sx={styles.channelsContainer}>
         {educationChannels.map((channel) => (
           <EducationChannel
