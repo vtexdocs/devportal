@@ -5,24 +5,28 @@ import { styleByLevelNormal, textStyle } from './functions'
 import { Context } from 'utils/contexts/context'
 import styles from './styles'
 
-export interface SideBarItemPropTypes {
+export interface SidebarItemPropTypes {
   title: string
   url: string
-  subItems?: SideBarItemPropTypes[]
+  subItems: SidebarItemPropTypes[]
 }
 
-export interface SideBarProps {
-  items: SideBarItemPropTypes[]
+export interface SidebarProps {
+  items: SidebarItemPropTypes[]
   firstActive?: number
   subItemLevel: number
 }
 
-const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
-  const { appState, arrowState, toggleActive, toggleArrow } =
-    useContext(Context)
+const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
+  const {
+    sidebarElementActive,
+    sidebarElementStatus,
+    toggleSidebarElementActive,
+    toggleSidebarElementStatus,
+  } = useContext(Context)
 
-  const ItemRoot = ({ title, subItems }: SideBarItemPropTypes) => {
-    const isExpandable = subItems && subItems.length > 0
+  const ItemRoot = ({ title, subItems }: SidebarItemPropTypes) => {
+    const isExpandable = subItems.length > 0
 
     return (
       <Box sx={styles.elementContainer}>
@@ -32,14 +36,16 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
               size="regular"
               variant="tertiary"
               sx={
-                arrowState.has(title) && arrowState.get(title)?.open
+                sidebarElementStatus.has(title) &&
+                sidebarElementStatus.get(title)?.open
                   ? styles.arrowIconActive
                   : styles.arrowIcon
               }
               icon={() => (
                 <IconCaret
                   direction={
-                    arrowState.has(title) && arrowState.get(title)?.open
+                    sidebarElementStatus.has(title) &&
+                    sidebarElementStatus.get(title)?.open
                       ? 'down'
                       : 'right'
                   }
@@ -47,22 +53,22 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
                 />
               )}
               onClick={() => {
-                arrowState.has(title)
-                  ? toggleArrow(
+                sidebarElementStatus.has(title)
+                  ? toggleSidebarElementStatus(
                       title,
-                      !arrowState.get(title)?.open,
+                      !sidebarElementStatus.get(title)?.open,
                       subItemLevel
                     )
-                  : toggleArrow(title, true, subItemLevel)
+                  : toggleSidebarElementStatus(title, true, subItemLevel)
               }}
             />
           )}
           <Link
-            sx={textStyle(appState.has(title), isExpandable || false)}
+            sx={textStyle(sidebarElementActive.has(title), isExpandable)}
             target="_self"
             onClick={() => {
-              toggleArrow(title, true, subItemLevel)
-              toggleActive(title, subItemLevel)
+              toggleSidebarElementStatus(title, true, subItemLevel)
+              toggleSidebarElementActive(title, subItemLevel)
             }}
           >
             {title}
@@ -72,15 +78,15 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
     )
   }
 
-  const ItemChildren = ({ title, subItems }: SideBarItemPropTypes) => {
-    const isExpandable = subItems && subItems.length > 0
+  const ItemChildren = ({ title, subItems }: SidebarItemPropTypes) => {
+    const isExpandable = subItems.length > 0
 
     return isExpandable &&
-      arrowState.has(title) &&
-      arrowState.get(title)?.open ? (
+      sidebarElementStatus.has(title) &&
+      sidebarElementStatus.get(title)?.open ? (
       <Box>
-        <SideBarElements
-          items={subItems || []}
+        <SidebarElements
+          items={subItems}
           subItemLevel={subItemLevel + 1}
           key={`${title}sd`}
         />
@@ -113,4 +119,4 @@ const SideBarElements = ({ items, subItemLevel }: SideBarProps) => {
   )
 }
 
-export default SideBarElements
+export default SidebarElements

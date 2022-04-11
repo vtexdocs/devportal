@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Flex } from '@vtex/brand-ui'
 
 import styles from './styles'
-import type { SideBarSection } from 'components/sidebar-section'
+import type { SidebarSectionProps } from 'components/sidebar-section'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
@@ -14,36 +14,43 @@ import DocumentationUpdatesIcon from 'components/icons/documentation-updates-ico
 import SidebarSection from 'components/sidebar-section'
 
 const Sidebar = () => {
-  const [sideBarDataIndex, setSideBarDataIndex] = useState(0)
+  const [activeSectionName, setActiveSectionName] = useState('API Guides')
 
   const docsIcons = [
     {
       Icon: APIGuidesIcon,
+      title: 'API Guides',
     },
     {
       Icon: APIReferenceIcon,
+      title: 'API Reference',
     },
     {
       Icon: VTEXIOIcon,
+      title: 'VTEX IO',
     },
     {
       Icon: FastStoreIcon,
+      title: 'FastStore',
     },
     {
       Icon: WebOpsIcon,
+      title: 'WebOps',
     },
   ]
 
   const notesIcons = [
     {
       Icon: ReleaseNotesIcon,
+      title: 'Release Notes',
     },
     {
       Icon: DocumentationUpdatesIcon,
+      title: 'Documentation Updates',
     },
   ]
 
-  const sidebarData: SideBarSection[] = [
+  const sidebarData: SidebarSectionProps[] = [
     {
       title: 'API Guides',
       data: [
@@ -251,20 +258,20 @@ const Sidebar = () => {
     <Flex sx={styles.sidebar}>
       <Flex sx={styles.sidebarIcons}>
         <Flex sx={styles.sidebarIconsContainer}>
-          {docsIcons.map((docsIconElement, docsIconIndex) => (
+          {docsIcons.map((docsIconElement) => (
             <Flex
               sx={
-                sideBarDataIndex === docsIconIndex
+                activeSectionName === docsIconElement.title
                   ? styles.iconBoxActive
                   : styles.iconBox
               }
               onClick={() => {
-                setSideBarDataIndex(docsIconIndex)
+                setActiveSectionName(docsIconElement.title)
               }}
             >
               <docsIconElement.Icon
                 sx={
-                  sideBarDataIndex === docsIconIndex
+                  activeSectionName === docsIconElement.title
                     ? styles.iconActive
                     : styles.icon
                 }
@@ -273,20 +280,20 @@ const Sidebar = () => {
           ))}
         </Flex>
         <Flex sx={styles.sidebarIconsContainer}>
-          {notesIcons.map((notesIconElement, notesIconIndex) => (
+          {notesIcons.map((notesIconElement) => (
             <Flex
               sx={
-                sideBarDataIndex === docsIcons.length + notesIconIndex
+                activeSectionName === notesIconElement.title
                   ? styles.iconBoxActive
                   : styles.iconBox
               }
               onClick={() => {
-                setSideBarDataIndex(docsIcons.length + notesIconIndex)
+                setActiveSectionName(notesIconElement.title)
               }}
             >
               <notesIconElement.Icon
                 sx={
-                  sideBarDataIndex === docsIcons.length + notesIconIndex
+                  activeSectionName === notesIconElement.title
                     ? styles.iconActive
                     : styles.icon
                 }
@@ -296,8 +303,9 @@ const Sidebar = () => {
         </Flex>
       </Flex>
       <SidebarSection
-        title={sidebarData[sideBarDataIndex].title}
-        data={sidebarData[sideBarDataIndex].data}
+        {...(sidebarData.find(
+          (section) => section.title === activeSectionName
+        ) as SidebarSectionProps)}
       />
     </Flex>
   )

@@ -6,15 +6,16 @@ import SearchIcon from 'components/icons/search-icon'
 import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
 import SideBarElements from 'components/sidebar-elements'
 
-import type { SideBarItemPropTypes } from 'components/sidebar-elements'
+import type { SidebarItemPropTypes } from 'components/sidebar-elements'
+import type { DocTitle } from 'utils/typings/unionTypes'
 import styles from './styles'
 
-export interface SideBarSection {
-  title: string
-  data: SideBarItemPropTypes[]
+export interface SidebarSectionProps {
+  title: DocTitle
+  data: SidebarItemPropTypes[]
 }
 
-const SidebarSection = ({ title, data }: SideBarSection) => {
+const SidebarSection = ({ title, data }: SidebarSectionProps) => {
   const [searchValue, setSearchValue] = useState('')
   const [sideBarToggle, setSideBarToggle] = useState(false)
   return (

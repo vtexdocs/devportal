@@ -1,35 +1,50 @@
 import { createContext, useState } from 'react'
 
 type ContextType = {
-  appState: Map<string, number>
-  arrowState: Map<string, { open: boolean; level: number }>
-  toggleActive: (title: string, level: number) => void
-  toggleArrow: (title: string, open: boolean, level: number) => void
+  sidebarElementActive: Map<string, number>
+  sidebarElementStatus: Map<string, { open: boolean; level: number }>
+  toggleSidebarElementActive: (title: string, level: number) => void
+  toggleSidebarElementStatus: (
+    title: string,
+    open: boolean,
+    level: number
+  ) => void
 }
 
 export const Context = createContext<ContextType>({
-  appState: new Map(),
-  arrowState: new Map(),
-  toggleActive: () => undefined,
-  toggleArrow: () => undefined,
+  sidebarElementActive: new Map(),
+  sidebarElementStatus: new Map(),
+  toggleSidebarElementActive: () => undefined,
+  toggleSidebarElementStatus: () => undefined,
 })
 
 const ContextProvider: React.FC = ({ children }) => {
-  const [appState, changeState] = useState(new Map())
-  const [arrowState, changeArrow] = useState(new Map())
+  const [sidebarElementActive, changeSidebarElementActive] = useState(new Map())
+  const [sidebarElementStatus, changeSidebarElementStatus] = useState(new Map())
 
-  const toggleActive = (title: string, level: number) => {
-    appState.clear()
-    changeState(new Map(appState.set(title, level)))
+  const toggleSidebarElementActive = (title: string, level: number) => {
+    sidebarElementActive.clear()
+    changeSidebarElementActive(new Map(sidebarElementActive.set(title, level)))
   }
 
-  const toggleArrow = (title: string, open: boolean, level: number) => {
-    changeArrow(new Map(arrowState.set(title, { open, level })))
+  const toggleSidebarElementStatus = (
+    title: string,
+    open: boolean,
+    level: number
+  ) => {
+    changeSidebarElementStatus(
+      new Map(sidebarElementStatus.set(title, { open, level }))
+    )
   }
 
   return (
     <Context.Provider
-      value={{ appState, arrowState, toggleActive, toggleArrow }}
+      value={{
+        sidebarElementActive,
+        sidebarElementStatus,
+        toggleSidebarElementActive,
+        toggleSidebarElementStatus,
+      }}
     >
       {children}
     </Context.Provider>
