@@ -67,7 +67,7 @@ const Header = () => {
               style={styles.searchInput}
               className="searchComponent"
               type="text"
-              placeholder="Search in Developers"
+              placeholder={messages['landing_page_header_searchInput.message']}
               value={searchValue}
               onChange={(e) => setSearchValue(e.currentTarget.value)}
             />
