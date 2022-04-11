@@ -13,11 +13,12 @@
     - [React Preferences](#react-preferences)
     - [Code Linting and Format](#code-linting-and-format)
   - [Commits](#commits)
+    - [How to make a commit](#how-to-make-a-commit)
   - [Branches](#branches)
     - [Feature Branches](#feature-branches)
 - [Contributing](#contributing)
-  - [Scenario: I want to develop and propose a new contribution](#scenario-i-want-to-develop-and-propose-a-new-contribution)
-  - [Scenario: Someone updated the `main` branch, and I'm developing something on my *feature branch*](#scenario-someone-updated-the-main-branch-and-im-developing-something-on-my-feature-branch)
+  - [How to develop and propose a new contribution](#how-to-develop-and-propose-a-new-contribution)
+  - [What to do when someone updated the `main` branch and I'm developing something on my *feature branch*](#what-to-do-when-someone-updated-the-main-branch-and-im-developing-something-on-my-feature-branch)
 
 
 ## About
@@ -37,7 +38,7 @@ As the Developer Portal provides VTEX documentation to users, some of its main f
 ## Versioning
 
 The versioning process of this repository was built to automate version releases and standardize its contributions. The following goals are currently implemented:
-- Standardize the repository history by adopting a commit messaging convention that make commits more semantic
+- Standardize the repository history by adopting a commit messaging convention that makes commits more semantic
 
   [Commitlint](https://commitlint.js.org/#/) is a tool that lints commit messages according to Conventional Commits. [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), on the other hand, is based on the [SemVer (Semantic-Versioning)](https://semver.org/) standard.
 
@@ -137,62 +138,88 @@ By simplicity, we have three types of commits:
 - __*merge commits*__: commits through the command `git merge <branch> --no-ff` (it is also generated when merging a Pull Request without squashing)
 - __*release commits*__: commits using [Standard Version](https://github.com/conventional-changelog/standard-version) tool
 
-[Standard Version](https://github.com/conventional-changelog/standard-version) is a tool that simplifies the versioning process of a project. It has a release script that creates a __*release commit*__ containing a new version in `package.json`, updates in `CHANGELOG.md` based on changes introduced by the latest __*commits*__ and a new version tag.
+  [Standard Version](https://github.com/conventional-changelog/standard-version) is a tool that simplifies the versioning process of a project. It has a release script that generates a new version tag and creates a __*release commit*__ containing: a new version in `package.json` and updates in `CHANGELOG.md` based on changes introduced by the latest __*commits*__.
 
-Because the `CHANGELOG.md` changes applied by the __*release commit*__ are automatically generated based on the [Conventional Commits](https://conventionalcommits.org/) convention, supported by [Semantic Versioning](https://semver.org/), the __*commits*__ messages should be written in English following the model:
-```
-<type>[optional scope]: <description>
+#### How to make a commit
 
-[optional body]
+- **Step 1.** Stage the desired changes:
+  ```bash
+  git add <filenames>
+  ```
+- **Step 2.** Commit your staged files:
+  - **Option 1:** Use the [Commitizen](https://github.com/commitizen/cz-cli) script to make your **commit** with an interactive step-by-step via command line that helps generating semantic descriptions that follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) model. Instead of runing `git commit`, run the command below and follow the instructions that will appear:
+    ```bash
+    yarn cz-commit
+    ```
+  - **Option 2:** Make your **commit** manually following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) model:
+    ```
+    <type>[optional scope]: <description>
 
-[optional footer(s)]
-```
+    [optional body]
 
-A `BREAKING CHANGE` may be present in any type of commit, and is represented by a commit message that has a footer `BREAKING CHANGE: <description>`, or by a commit message that appends a `!` after the type/scope, which introduces a breaking API change (correlating with a __MAJOR*__ release in Semantic Versioning).
+    [optional footer(s)]
+    ```
 
-The `<scope>` may specify the context of the applied changes (e.g. subject, component or file name), as well as the `<body>` may help explaning in more details the commit.
+    If there are any breaking changes introduced by your changes, follow one of the options:
+    - Append a `!` after `<type>[optional scope]`
+      ```
+      <type>[optional scope]!: <description>
 
-If you wish some help to write your commits, don't hesitate to use the [Commitizen](https://github.com/commitizen/cz-cli) script: it provides an interactive step-by-step way of generating descriptions that follow the defined model via command line. You only have to run `yarn cz-commit` instead of `git commit`.
+      [optional body]
 
-Commit `<type>` Options | Description | Release*
------|-------------|---------------
-`fix` | fixes bugs in your codebase | PATCH
-`feat` | introduces a new feature to the codebase | MINOR
-`docs` | documentation only changes | PATCH
-`style` | changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) | PATCH
-`refactor` | a code change that neither fixes a bug nor adds a feature | PATCH
-`perf` | a code change that improves performance | PATCH
-`test` | adds missing tests or corrects existing tests | PATCH
-`build` | changes that affect the build system or external dependencies (scope examples: gulp, broccoli, npm) | PATCH
-`ci` | changes to CI configuration files and scripts (scope examples: Travis, Circle, BrowserStack, SauceLabs) | PATCH
-`chore` | other changes that don't modify src or test files | PATCH
-`revert` | changes that revert previous commits | PATCH
+      [optional footer(s)]
+      ```
+    - Add `BREAKING CHANGE: < breaking change description>` to the footer
+      ```
+      <type>[optional scope]: <description>
+
+      [optional body]
+
+      BREAKING CHANGE: <breaking change description>
+      ```
+
+    The `<scope>` may specify the context of the applied changes (e.g. subject, component or file name), as well as the `<body>` may help explaning the commit in more details. The `<type>` helps making commit messages more semantic and all options are described in the table below.
+
+    <a href="commit-types-table" id="commit-types-table"></a>
+    Commit `<type>` Options | Description | Release*
+    -----|-------------|---------------
+    `fix` | fixes bugs in your codebase | PATCH
+    `feat` | introduces a new feature to the codebase | MINOR
+    `docs` | documentation only changes | PATCH
+    `style` | changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) | PATCH
+    `refactor` | a code change that neither fixes a bug nor adds a feature | PATCH
+    `perf` | a code change that improves performance | PATCH
+    `test` | adds missing tests or corrects existing tests | PATCH
+    `build` | changes that affect the build system or external dependencies (scope examples: gulp, broccoli, npm) | PATCH
+    `ci` | changes to CI configuration files and scripts (scope examples: Travis, Circle, BrowserStack, SauceLabs) | PATCH
+    `chore` | other changes that don't modify src or test files | PATCH
+    `revert` | changes that revert previous commits | PATCH
 
 
-__* [SemVer specification says the MAJOR version zero (0.y.z) is for initial development](https://semver.org/#spec-item-4). Because of this, until this repository reaches a first stable version of the Developers Portal (with a specified major release), the automatic release won't lead to any MAJOR version, but only PATCH and MINOR (breaking changes commits will result in MINOR bumps).__
+    __* [SemVer specification says the MAJOR version zero (0.y.z) is for initial development](https://semver.org/#spec-item-4). Because of this, until this repository reaches a first stable version of the Developers Portal (with a specified major release), the automatic release won't lead to any MAJOR version, but only PATCH and MINOR (breaking changes commits will result in MINOR bumps).__
 
 
-**Examples:**
-```bash
-# Commit message without scope, body, footer or breaking change
-chore: add favicon
+    **Examples:**
+    ```bash
+    # Commit message without scope, body, footer or breaking change
+    chore: add favicon
 
-# Commit message with scope
-ci(versioning): add Release-Version GitHub workflow
+    # Commit message with scope
+    ci(versioning): add Release-Version GitHub workflow
 
-# Commit message with scope and breaking change
-feat(api)!: send an email to user when a request is submitted
+    # Commit message with scope and breaking change
+    feat(api)!: send an email to user when a request is submitted
 
-# Commit message with breaking change (footer)
-chore: drop support for Node 6
+    # Commit message with breaking change (footer)
+    chore: drop support for Node 6
 
-BREAKING CHANGE: use JavaScript features not available in Node 6.
-```
+    BREAKING CHANGE: use JavaScript features not available in Node 6.
+    ```
 
-**What *not* to do:**
-- Add dot in the end of text Ex: "Update React Router."
-- Start with uppercase
-- Write in Portuguese
+  **What *not* to do:**
+  - Add dot in the end of text. E.g.: `chore: add favicon.`
+  - Start with uppercase
+  - Write in Portuguese
 
 ### Branches
 
@@ -200,38 +227,39 @@ Currently, we have one fixed branch: `main` .
 
 The `main` branch must reflect exactly what is deployed in production, it should be treated as __*the single source of truth*__. It is from `main` where every development branch is created.
 
-**Important note:** Only *merge commits* should be made by developers on `main` branch.
+>**Important note:** Only *merge commits* should be made by developers on `main` branch.
 
 #### Feature branches
 
 You must create a branch based on `main` to start a feature, improvement, or fix. This branch is called a *feature branch*. It must have the following structure name: `<type>/<description>`
-The `types` are the same described at [Commits](#commits) section.
+Choose the `type` that best summarizes your contribution at the [Commit Types Table](#commit-types-table).
  
 The *feature branch* description must be short and written with kebab-case. It should give a basic understanding of what is being developed on the branch.
 
-Ex: `git checkout -b feature/landing-page`.
+E.g.: `git checkout -b feature/landing-page`.
 
-**Important note:** Only *commits* should be made in a *feature branch*. None *release or merge commits* should be made.
+>**Important note:** Only *commits* should be made in a *feature branch*. None *release or merge commits* should be made.
 
 ## Contributing
 
-### Scenario: I want to develop and propose a new contribution
+### How to develop and propose a new contribution
 
-- **Step 1.** Create a *feature branch* based on `main`.
-    ```sh
+- **Step 1.** Create a *feature branch* based on `main` (follow the naming pattern defined at [Feature Branches](#feature-branches) section).
+    ```bash
     git checkout main
     git checkout -b feature/nice-new-thing
     ```
 
-- **Step 2.** Develop the improvement in this *branch* making commits (see [Commits](#commits) section if you have questions on how to write your commit message).
+- **Step 2.** Develop the contribution in your *feature branch* by making commits (see [How to make a commit](#how-to-make-a-commit) section).
 
-    ```sh
+    ```bash
+    git add <filenames>
     git commit -m "feat: add nice new thing"
     ```
 
 - **Step 3.** Push your *feature branch* to the remote repository (in the following example represented by the *origin* alias)
 
-    ```sh
+    ```bash
     git push origin feature/nice-new-thing
     ```
 
@@ -240,16 +268,16 @@ Ex: `git checkout -b feature/landing-page`.
     Release Labels | Description | Release Type
     ---------------|-------------|-------------
     `release-no` | When no new version should be released when the PR is merged into the `main` branch | None
-    `release-auto` | When the new version to be released should be deducted automatically based on the PR semantic commits when it is merged (see [Commits](#commits) section) | [PATCH, MINOR, MAJOR]
+    `release-auto` | When the new version to be released should be deducted automatically based on the PR semantic commits when it is merged | [PATCH, MINOR, MAJOR]
     `release-patch` | When the new version should be released as a patch | PATCH
     `release-minor` | When the new version should be released as a minor | MINOR
     `release-major` | When the new version should be released as a major | MAJOR
 
-    **Important:** If none of the labels are added, a version release corresponding to `release-auto` will be triggered.
+    >**Important note:** If none of the labels are added, a version release corresponding to `release-auto` will be triggered.
 
 - **Step 5.** Verify if your Pull Request passed all checks that run against opened Pull Requests. In case any of them fails, look for a solution and update your *feature branch*.
 
-    **Important:** If your branch has been updated with new commits, you should request new reviews to your PR.
+    >**Important note:** If your branch has been updated with new commits, you should request new reviews to your PR.
 
 - **Step 6.** When your PR has been approved by reviewers, make sure your feature branch is still rebased on the `main` branch. If it needs to be rebased, run:
 
@@ -268,15 +296,15 @@ Ex: `git checkout -b feature/landing-page`.
     
     Go back to **Step 5**.
 
-    **Important:** If your rebase process generated conflicts, new reviews must be requested.
+    >**Important note:** If your rebase process generated conflicts, new reviews must be requested.
 
-- **Step 7.** After your PR has been rebased onto `main`, passed all checks and been approved by reviewers, click on **Merge Pull Request** option. This way all commits from the *feature branch* will be added to the base branch via a merge commit and their semantic messages will be considered to update `CHANGELOG.md` and release a new version.
+- **Step 7.** After your PR has been rebased onto `main`, passed all checks and been approved by reviewers, click on **Merge Pull Request** option (the one that generates a merge commit). This way all commits from the *feature branch* will be added to the base branch and their semantic messages will be considered to update `CHANGELOG.md` when releasing a new version.
 
-- **Step 8.** The merged PR, if set to release a new version in **Step 4**, will trigger a GitHub action that results in a new commit `chore(release): v*.*.*`, a new version tag and its corresponding GitHub Release. Verify those changes in the repository initial page. Wait for the build in Netlify to end and your released version will be deployed.
+- **Step 8.** The merged PR, if set to release a new version in **Step 4**, will trigger a GitHub action that results in a new commit `chore(release): v*.*.*`, a new version tag and its corresponding GitHub Release (see [Versioning](#versioning) section for more details) - you can verify those changes in the repository initial page after the workflow has finished. Wait for the build in Netlify to end and your released version will be deployed.
 
 - **Step 9.** Celebrate! You have just finished your contribution to the VTEX Developers Portal repository.
 
-### Scenario: Someone updated the `main` branch, and I'm developing something on my *feature branch*
+### What to do when someone updated the `main` branch and I'm developing something on my *feature branch*
 
 Make *rebase* of your *feature branch* on `main`:
 
@@ -293,4 +321,4 @@ git rebase main
 git push --force origin feature/new-nice-thing
 ```
 
-**Important** Always maintain your *feature branch* rebased on `main`.
+>**Important note:** Always maintain your *feature branch* rebased on `main`.
