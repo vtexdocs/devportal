@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/vtex/devportal/compare/v0.1.5...v0.2.0) (2022-04-11)
+
+
+### Features
+
+* **icons:** add the sidebar toggle icon ([5662f0b](https://github.com/vtex/devportal/commit/5662f0b823f5867e08b29f1653d6c444aa3a99a3))
+* **sidebar:** add sidebar component ([cab8fbc](https://github.com/vtex/devportal/commit/cab8fbc1940acb667160014558d7a683b6693e1f))
+* **sidebar:** add sidebar to api-guides page ([1bea6a6](https://github.com/vtex/devportal/commit/1bea6a6776bbdeecbbad31d3cf8d2e015f4a3a07))
+* **sidebar:** add the initial structure of sidebar section and add the help icon ([1f63110](https://github.com/vtex/devportal/commit/1f63110ef5bb0377de9ee17815ae4ef75ff446ff))
+* **sidebar:** add the section divider ([6034326](https://github.com/vtex/devportal/commit/6034326af3a6a08d5c6f0b17106deb3680a96e2e))
+* **sidebar:** add the sidebar elements component ([034100b](https://github.com/vtex/devportal/commit/034100b1dbe88c73e36c384a211b4276277a3689))
+* **sidebar:** add the sidebar toggle animation ([6fbd14b](https://github.com/vtex/devportal/commit/6fbd14b1fe576f4ed4efffbcfdd55558cc39c817))
+* **sidebar:** create a context to manipulate sidebar logic ([fa38b07](https://github.com/vtex/devportal/commit/fa38b0752296c409bd554d2a0f4f57e3f2052eba))
+
+
+### Bug Fixes
+
+* **sidebar:** add element hover and toggle subitem list on click in parent ([d6e96f8](https://github.com/vtex/devportal/commit/d6e96f8fd1691a126fa40e45a44978c0fb1af97d))
+* **sidebar:** fix element pointer on hover ([4d4f65d](https://github.com/vtex/devportal/commit/4d4f65db47d7abb27502bea27859477982506cbd))
+* **sidebar:** fix sidebar element hover ([2d4d449](https://github.com/vtex/devportal/commit/2d4d449a61504281ca52d293fc0043688bf2708a))
+* **sidebar:** fix the screen adjust when sidebar is closed ([6c117b5](https://github.com/vtex/devportal/commit/6c117b514d86904e056d85028555c44934e9dc35))
+
+
+### Refactoring
+
+* **sidebar:** change variable names and add union type ([cbf45ac](https://github.com/vtex/devportal/commit/cbf45ac63099a19c00ac9de94592983db8d48e3d))
+* **sidebar:** remove unecessary code and adjust sidebar elements structure ([1d799aa](https://github.com/vtex/devportal/commit/1d799aadae4d4c0d795659ba969fe9b6076d60a7))
+
 ### [0.1.5](https://github.com/vtex/devportal/compare/v0.1.4...v0.1.5) (2022-04-07)
 
 
