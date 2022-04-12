@@ -36,7 +36,7 @@ const docsDropDown: SxStyleProp = {
 const iconContainer: SxStyleProp = { paddingLeft: 3, color: 'primary.base' }
 
 const searchContainer: SxStyleProp = {
-  display: ['none', 'flex', 'flex', 'flex'],
+  display: ['none', 'none', 'none', 'flex'],
   justifyContent: 'center',
   paddingBlock: '18px',
   height: 'auto',
