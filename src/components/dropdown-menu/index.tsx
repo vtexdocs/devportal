@@ -69,7 +69,6 @@ const DropdownMenu = () => {
             <DropdownCard key={card.title} {...card} />
           ))}
         </Box>
-        <div style={styles.divisor} />
         <Box sx={styles.updatesContainer}>
           {updatesCards.map((card) => (
             <DropdownCard key={card.title} {...card} />

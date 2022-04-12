@@ -37,20 +37,14 @@ const documentationContainer: SxStyleProp = {
   paddingBottom: '8px',
 }
 
-const divisor: SxStyleProp = {
-  height: '1px',
-  width: '100%',
-  background: '#E7E9EE',
-}
-
 const updatesContainer: SxStyleProp = {
   px: '16px',
   paddingTop: '8px',
   borderRadius: '0px 0px 8px 8px',
+  borderTop: '1px solid #E7E9EE',
 }
 
 export default {
-  divisor,
   documentationContainer,
   innerContainer,
   outerContainer,
