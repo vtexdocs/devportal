@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/vtex/devportal/compare/v0.2.0...v0.2.1) (2022-04-12)
+
+
+### Docs
+
+* **readme:** add a project summary (features, patterns...) and contribution guide ([01307bc](https://github.com/vtex/devportal/commit/01307bc467609c0609a01a12df8971d0cfd3511c))
+* **readme:** define a file naming convention ([43f922d](https://github.com/vtex/devportal/commit/43f922d01d269217451a8c5e67400ca4a15cdf8d))
+* **readme:** fix 'concepts and features' section topics spacing ([4dbb378](https://github.com/vtex/devportal/commit/4dbb378c4006bfc97bffd4d7740bf9ebc5025ccd))
+* **readme:** fix typo and release labels table column ([9a207f4](https://github.com/vtex/devportal/commit/9a207f425cd78141b152088d655c68b634c688ce))
+* **readme:** fix typos ([547161a](https://github.com/vtex/devportal/commit/547161a335d0ec1bfb75a8e0ba31e287f1edf21e))
+* **readme:** refactor some sections to make them more practical ([5a3a9aa](https://github.com/vtex/devportal/commit/5a3a9aada22d2baa925d452651dff97dd2b7b758))
+* **readme:** update 'code linting and format' section ([38f3851](https://github.com/vtex/devportal/commit/38f385150f1b0c6e9b0a4a7d49c74e5a094a6e2d))
+* **readme:** update directory tree to remove 'public/' from 'src/' ([7fb2fad](https://github.com/vtex/devportal/commit/7fb2fad39deca1328feb171936ce16e9f2c423e9))
+
 ## [0.2.0](https://github.com/vtex/devportal/compare/v0.1.5...v0.2.0) (2022-04-11)
 
 
