@@ -27,7 +27,7 @@ const rightLinks: SxStyleProp = {
 const rightLinksItem: SxStyleProp = { alignItems: 'center' }
 
 const dropdownContainer: SxStyleProp = {
-  justifyContent: 'end',
+  justifyContent: 'flex-end',
   height: 'calc(100% + 1px)',
 }
 
