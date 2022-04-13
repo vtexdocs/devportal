@@ -8,6 +8,10 @@ const cardContainer: SxStyleProp = {
   ':active, :hover': {
     borderRadius: '4px',
     backgroundColor: '#F8F7FC',
+
+    '.description': {
+      color: 'muted.0',
+    },
   },
 
   ':active .title': {

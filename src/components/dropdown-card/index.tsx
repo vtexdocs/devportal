@@ -23,7 +23,9 @@ const DropdownCard = ({ title, description, to, Icon }: CardProps) => {
               {title}
             </Text>
           </Flex>
-          <Text sx={styles.description}>{description}</Text>
+          <Text className="description" sx={styles.description}>
+            {description}
+          </Text>
         </Box>
       </a>
     </Link>
