@@ -22,14 +22,12 @@ const innerContainer: SxStyleProp = {
     width: '5px',
   },
 
-  '::-webkit-scrollbar-track': {
-    borderRadius: '100px',
-  },
-
   '::-webkit-scrollbar-thumb': {
-    background: '#CCCED8',
     borderRadius: '100px',
-    height: '30px',
+
+    ':hover': {
+      background: '#CCCED8',
+    },
   },
 }
 
