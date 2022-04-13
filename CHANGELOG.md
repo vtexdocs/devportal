@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/vtex/devportal/compare/v0.2.2...v0.3.0) (2022-04-13)
+
+
+### Features
+
+* **search-bar:** add the redirect on enter click ([023b2a4](https://github.com/vtex/devportal/commit/023b2a4bf4abd0437a7a55e5eb3458cae1c1a6c3))
+* **search-component:** add the search card component ([4822982](https://github.com/vtex/devportal/commit/4822982fd4bcc8f37cf7dbf270d447f3f73fe216))
+* **search-page:** first version of search page structure ([0bcc086](https://github.com/vtex/devportal/commit/0bcc086e809be62dff730815ae3177d0d4eaed3c))
+
+
+### Bug Fixes
+
+* fix some warnings ([2dc4fd9](https://github.com/vtex/devportal/commit/2dc4fd9ef2b8bd02deda96cfad1f770673d4bd8c))
+
+
+### Refactoring
+
+* **typings:** add the methods type ([5034383](https://github.com/vtex/devportal/commit/5034383267f9176efadc5ddb72d982335e78a6ef))
+
+
+### Style
+
+* **search-page:** fix the divider style ([d26d4c1](https://github.com/vtex/devportal/commit/d26d4c123b183cabc1e1b5b8e625f941038ddde2))
+
 ### [0.2.2](https://github.com/vtex/devportal/compare/v0.2.1...v0.2.2) (2022-04-13)
 
 
