@@ -11,7 +11,7 @@ const SideBarToggleIcon = (props: IconProps) => (
     <path
       d="M12 16.332L7 16.332"
       stroke="#A1A8B3"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />

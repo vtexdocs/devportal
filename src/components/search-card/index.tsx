@@ -33,7 +33,7 @@ const SearchCard = ({
         <Flex sx={styles.filterContainer}>
           <Text sx={styles.filterIn}>In</Text>
           {filters.map((filter, index) => (
-            <Text sx={styles.filter}>
+            <Text sx={styles.filter} key={`${filter}${index}`}>
               {filter}
               {index < filters.length - 1 ? (
                 <IconCaret direction="right" sx={styles.filterArrow} />

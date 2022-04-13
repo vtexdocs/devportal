@@ -100,8 +100,12 @@ const SearchPage = () => {
         </Text>
         <hr />
         <Box>
-          {searchData.map((result) => (
-            <SearchCard Icon={getIcon(result.doc)!} {...result} />
+          {searchData.map((result, index) => (
+            <SearchCard
+              key={`${result.doc}${result.title}${index}`}
+              Icon={getIcon(result.doc)!}
+              {...result}
+            />
           ))}
         </Box>
       </Box>
