@@ -258,8 +258,9 @@ const Sidebar = () => {
     <Flex sx={styles.sidebar}>
       <Flex sx={styles.sidebarIcons}>
         <Flex sx={styles.sidebarIconsContainer}>
-          {docsIcons.map((docsIconElement) => (
+          {docsIcons.map((docsIconElement, index) => (
             <Flex
+              key={`${docsIconElement.title}${index}`}
               sx={
                 activeSectionName === docsIconElement.title
                   ? styles.iconBoxActive
@@ -280,8 +281,9 @@ const Sidebar = () => {
           ))}
         </Flex>
         <Flex sx={styles.sidebarIconsContainer}>
-          {notesIcons.map((notesIconElement) => (
+          {notesIcons.map((notesIconElement, index) => (
             <Flex
+              key={`${notesIconElement.title}${index}`}
               sx={
                 activeSectionName === notesIconElement.title
                   ? styles.iconBoxActive

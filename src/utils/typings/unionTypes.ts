@@ -8,3 +8,5 @@ export type DocTitle =
   | 'WebOps'
   | 'Release Notes'
   | 'Documentation Updates'
+
+export type MethodType = 'POST' | 'GET' | 'PUT' | 'DELETE'

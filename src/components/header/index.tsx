@@ -14,8 +14,10 @@ import { getMessages } from 'utils/get-messages'
 
 import styles from './styles'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Header = () => {
+  const router = useRouter()
   const [searchValue, setSearchValue] = useState('')
   const lastScroll = useRef(0)
 
@@ -23,6 +25,13 @@ const Header = () => {
 
   const messages = getMessages()
 
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+    router.push({
+      pathname: '/search',
+      query: { keyword: 'SKU' },
+    })
+  }
   useEffect(() => {
     return setHeaderElement(document.getElementById('header'))
   }, [])
@@ -63,14 +72,18 @@ const Header = () => {
         <Box sx={styles.searchContainer}>
           <Flex sx={styles.searchBox}>
             <SearchIcon sx={styles.searchIcon} />
-            <input
-              style={styles.searchInput}
-              className="searchComponent"
-              type="text"
-              placeholder={messages['landing_page_header_searchInput.message']}
-              value={searchValue}
-              onChange={(e) => setSearchValue(e.currentTarget.value)}
-            />
+            <form onSubmit={onSubmit}>
+              <input
+                style={styles.searchInput}
+                className="searchComponent"
+                type="text"
+                placeholder={
+                  messages['landing_page_header_searchInput.message']
+                }
+                value={searchValue}
+                onChange={(e) => setSearchValue(e.currentTarget.value)}
+              />
+            </form>
           </Flex>
         </Box>
 
