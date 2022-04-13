@@ -1,7 +1,7 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const outerContainer: SxStyleProp = {
-  top: '5rem',
+  top: 'calc(5rem - 1px)',
   position: 'absolute',
   filter: 'drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.1))',
   borderRadius: '0px 0px 8px 8px',
@@ -9,6 +9,7 @@ const outerContainer: SxStyleProp = {
   background: 'white',
   padding: '8px',
   maxHeight: 'calc(100vh - 5rem)',
+  zIndex: -1,
 }
 
 const innerContainer: SxStyleProp = {

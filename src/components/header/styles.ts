@@ -28,6 +28,7 @@ const rightLinksItem: SxStyleProp = { alignItems: 'center' }
 
 const dropdownContainer: SxStyleProp = {
   justifyContent: 'end',
+  height: 'calc(100% + 1px)',
 }
 
 const dropdownButton: (active: boolean) => SxStyleProp = (active: boolean) => ({
