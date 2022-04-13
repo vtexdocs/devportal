@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/vtex/devportal/compare/v0.2.1...v0.2.2) (2022-04-13)
+
+
+### Bug Fixes
+
+* move search box placeholder string to json ([3483b4a](https://github.com/vtex/devportal/commit/3483b4a9351dd93d4280ef93aed596c4c3205ebc))
+* move the hard-coded strings to a json file ([33f4182](https://github.com/vtex/devportal/commit/33f4182ad119f3e281342d84118dd9b611754b25))
+
 ### [0.2.1](https://github.com/vtex/devportal/compare/v0.2.0...v0.2.1) (2022-04-12)
 
 
