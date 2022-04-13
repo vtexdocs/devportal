@@ -8,37 +8,42 @@ import VTEXIOIcon from 'components/icons/vtex-io-icon'
 import FastStoreIcon from 'components/icons/fast-store-icon'
 import WebOpsIcon from 'components/icons/webops-icon'
 
+import { getMessages } from 'utils/get-messages'
+
 import styles from './styles'
+
+const messages = getMessages()
 
 const cards: CardProps[] = [
   {
     Icon: APIGuidesIcon,
-    title: 'API Guides',
-    description: 'Explore the capabilities of our Rest APIs',
+    title: messages['landing_page_documentation_api_guides.title'],
+    description: messages['landing_page_documentation_api_guides.description'],
     link: '/docs/api-guides',
   },
   {
     Icon: APIReferenceIcon,
-    title: 'API Reference',
-    description: "Extend VTEX's platform to fit your business",
+    title: messages['landing_page_documentation_api_reference.title'],
+    description:
+      messages['landing_page_documentation_api_reference.description'],
     link: '/docs/api-reference',
   },
   {
     Icon: VTEXIOIcon,
-    title: 'VTEX IO',
-    description: 'Quickly build high-performance stores and IO apps',
+    title: messages['landing_page_documentation_vtex_io.title'],
+    description: messages['landing_page_documentation_vtex_io.description'],
     link: '/docs/vtex-io',
   },
   {
     Icon: FastStoreIcon,
-    title: 'FastStore',
-    description: 'Build your storefront with ecommerce components',
+    title: messages['landing_page_documentation_fast_store.title'],
+    description: messages['landing_page_documentation_fast_store.description'],
     link: '/docs/fast-store',
   },
   {
     Icon: WebOpsIcon,
-    title: 'WebOps',
-    description: "Improve team's productivity by automating processes",
+    title: messages['landing_page_documentation_webops.title'],
+    description: messages['landing_page_documentation_webops.description'],
     link: '/docs/webops',
   },
 ]
@@ -46,7 +51,9 @@ const cards: CardProps[] = [
 const DocumentationSection = () => {
   return (
     <Box sx={styles.sectionContainer}>
-      <Text sx={styles.title}>Documentation</Text>
+      <Text sx={styles.title}>
+        {messages['landing_page_documentation.title']}
+      </Text>
       <Flex sx={styles.cardsContainer}>
         {cards.map((card) => (
           <DocumentationCard key={card.title} {...card} />

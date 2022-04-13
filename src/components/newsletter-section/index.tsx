@@ -5,7 +5,11 @@ import landingProduct from '../../../public/images/landing-product.png'
 import styles from 'components/newsletter-section/styles'
 import imgStyle from './styles.module.css'
 
+import { getMessages } from 'utils/get-messages'
+
 const NewsletterSection = () => {
+  const messages = getMessages()
+
   return (
     <Box sx={styles.section}>
       <Box sx={styles.newsletter}>
@@ -13,11 +17,10 @@ const NewsletterSection = () => {
           <Flex sx={styles.newsletterBackground}>
             <Flex sx={styles.newsletterBox}>
               <Text sx={styles.newsletterTitle}>
-                Build first-class commerce experiences with VTEX.
+                {messages['landing_page_newsletter.title']}
               </Text>
               <Text sx={styles.newsletterDescription}>
-                Subscribe to our developer newsletter and stay on top of the
-                practices and technologies that are transforming commerce.
+                {messages['landing_page_newsletter.description']}
               </Text>
               <Flex sx={styles.newsletterInputContainer}>
                 <Box sx={styles.newsletterInputBox}>
@@ -28,11 +31,14 @@ const NewsletterSection = () => {
                     type={'email'}
                   ></Input>
                   <Text sx={styles.policyText}>
-                    Read our <Link sx={styles.policyLink}>privacy policy</Link>
+                    {messages['landing_page_newsletter.policyText']}
+                    <Link sx={styles.policyLink}>
+                      {messages['landing_page_newsletter.policyLink']}
+                    </Link>
                   </Text>
                 </Box>
                 <Button sx={styles.newsletterButton} variant="primary">
-                  Subscribe
+                  {messages['landing_page_newsletter.Button']}
                 </Button>
               </Flex>
             </Flex>

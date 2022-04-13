@@ -1,4 +1,5 @@
 import { FooterLanding } from '@vtex/brand-ui'
+import { getMessages } from 'utils/get-messages'
 import styles from './styles'
 import {
   getGithubURL,
@@ -7,21 +8,23 @@ import {
   getFeedbackURL,
 } from 'utils/get-url'
 
+const messages = getMessages()
+
 const links = [
   {
-    message: 'Github',
+    message: messages['landing_page_footer_github.message'],
     to: () => getGithubURL(),
   },
   {
-    message: 'Help Center',
+    message: messages['landing_page_footer_help_center.message'],
     to: () => getHelpCenterURL(),
   },
   {
-    message: 'Community',
+    message: messages['landing_page_footer_community.message'],
     to: () => getCommunityURL(),
   },
   {
-    message: 'Feedback',
+    message: messages['landing_page_footer_feedback.message'],
     to: () => getFeedbackURL(),
   },
 ]

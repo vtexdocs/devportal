@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from 'react'
 import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
 import SearchIcon from 'components/icons/search-icon'
 import { getFeedbackURL } from 'utils/get-url'
+import { getMessages } from 'utils/get-messages'
 
 import styles from './styles'
 import Link from 'next/link'
@@ -19,6 +20,8 @@ const Header = () => {
   const lastScroll = useRef(0)
 
   const [headerElement, setHeaderElement] = useState<HTMLElement | null>()
+
+  const messages = getMessages()
 
   useEffect(() => {
     return setHeaderElement(document.getElementById('header'))
@@ -64,7 +67,7 @@ const Header = () => {
               style={styles.searchInput}
               className="searchComponent"
               type="text"
-              placeholder="Search in Developers"
+              placeholder={messages['landing_page_header_searchInput.message']}
               value={searchValue}
               onChange={(e) => setSearchValue(e.currentTarget.value)}
             />
@@ -72,13 +75,15 @@ const Header = () => {
         </Box>
 
         <HeaderBrand.RightLinks sx={styles.rightLinks}>
-          <Text sx={styles.docsDropDown}>Docs</Text>
+          <Text sx={styles.docsDropDown}>
+            {messages['landing_page_header_docs.message']}
+          </Text>
           <VtexLink
             sx={styles.rightLinksItem}
             href={getFeedbackURL()}
             target="_blank"
           >
-            <Text>FeedBack</Text>
+            <Text>{messages['landing_page_header_feedback.message']}</Text>
           </VtexLink>
         </HeaderBrand.RightLinks>
       </HeaderBrand>

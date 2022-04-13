@@ -3,6 +3,8 @@ import type { IconComponent } from 'utils/typings/types'
 import Link from 'next/link'
 import { Flex, Text } from '@vtex/brand-ui'
 
+import { getMessages } from 'utils/get-messages'
+
 import styles from './styles'
 
 export interface CardProps {
@@ -13,6 +15,7 @@ export interface CardProps {
 }
 
 const DocumentationCard = ({ Icon, title, description, link }: CardProps) => {
+  const messages = getMessages()
   return (
     <Link href={link}>
       <a>
@@ -31,7 +34,11 @@ const DocumentationCard = ({ Icon, title, description, link }: CardProps) => {
             sx={styles.quickStartedContainer}
           >
             <Text className="quickStartedText" sx={styles.quickStartedText}>
-              Quick Started
+              {
+                messages[
+                  'landing_page_documentation_documentation_card.quickStartedText'
+                ]
+              }
             </Text>
           </Flex>
         </Flex>
