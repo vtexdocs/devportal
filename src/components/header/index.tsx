@@ -15,6 +15,7 @@ import { getMessages } from 'utils/get-messages'
 import styles from './styles'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import HamburgerMenu from './hamburger-menu'
 
 const Header = () => {
   const router = useRouter()
@@ -99,6 +100,7 @@ const Header = () => {
             <Text>{messages['landing_page_header_feedback.message']}</Text>
           </VtexLink>
         </HeaderBrand.RightLinks>
+        <HamburgerMenu />
       </HeaderBrand>
     </Box>
   )

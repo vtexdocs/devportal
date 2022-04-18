@@ -12,10 +12,13 @@ const headerBrand: SxStyleProp = {
   width: '100%',
   position: 'relative',
 }
-const logoSize: SxStyleProp = { width: '200px', height: 'auto' }
+const logoSize: SxStyleProp = {
+  width: ['172px', '172px', '204px'],
+  height: ['24px', '24px', '32px'],
+}
 
 const rightLinks: SxStyleProp = {
-  display: ['none', 'flex !important'],
+  display: ['none', 'none', 'none', 'flex !important'],
   width: 'auto',
   height: '100%',
   pr: '64px',
@@ -36,7 +39,7 @@ const docsDropDown: SxStyleProp = {
 const iconContainer: SxStyleProp = { paddingLeft: 3, color: 'primary.base' }
 
 const searchContainer: SxStyleProp = {
-  display: ['none', 'flex', 'flex', 'flex'],
+  display: ['none', 'none', 'none', 'flex'],
   justifyContent: 'center',
   paddingBlock: '18px',
   height: 'auto',
