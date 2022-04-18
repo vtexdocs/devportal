@@ -18,6 +18,7 @@ const footerLinks: SxStyleProp = {
       flexDirection: ['column', 'row'],
       alignItems: ['flex-start', 'center'],
       px: ['32px', '0px'],
+      py: ['32px'],
       width: ['100vw', '100%'],
       '& > :last-child': {
         mt: ['32px', '0px'],
