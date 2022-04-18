@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/vtex/devportal/compare/v0.3.0...v0.3.1) (2022-04-18)
+
+
+### Bug Fixes
+
+* **hamburger-menu:** fix the portuguese name ([cdbe7c2](https://github.com/vtex/devportal/commit/cdbe7c2ac974b02825a208be9e8bcc92f1d45864))
+* **hamburguer-menu:** change name component and file ([246d612](https://github.com/vtex/devportal/commit/246d6120bde776d63500cdd37f9c1992ca74ad33))
+* **header:** adds hamburguer menu to header ([762da5a](https://github.com/vtex/devportal/commit/762da5acf6d57fa48322103ec3e869ae04433744))
+* **header:** fix header responsiveness ([1324f72](https://github.com/vtex/devportal/commit/1324f7299cdba2f54d00e34d8dbda81265b74cf4))
+* **header:** remove right links and fix logo size ([9eb4af0](https://github.com/vtex/devportal/commit/9eb4af02feaf09e3938781559aea8c34836343cc))
+
 ## [0.3.0](https://github.com/vtex/devportal/compare/v0.2.2...v0.3.0) (2022-04-13)
 
 
