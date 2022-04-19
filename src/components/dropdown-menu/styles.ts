@@ -14,6 +14,7 @@ const outerContainer: SxStyleProp = {
 
 const innerContainer: SxStyleProp = {
   overflowY: 'scroll',
+  overscrollBehavior: 'contain',
   maxHeight: 'calc(100vh - 5rem - 16px)',
   scrollbarWidth: 'thin',
   scrollbarColor: 'white white',
