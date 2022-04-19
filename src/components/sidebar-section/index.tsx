@@ -7,11 +7,11 @@ import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
 import SideBarElements from 'components/sidebar-elements'
 
 import type { SidebarItemPropTypes } from 'components/sidebar-elements'
-import type { DocTitle } from 'utils/typings/unionTypes'
+import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import styles from './styles'
 
 export interface SidebarSectionProps {
-  title: DocTitle
+  title: DocumentationTitle | UpdatesTitle
   data: SidebarItemPropTypes[]
 }
 
