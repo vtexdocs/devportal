@@ -4,6 +4,16 @@ const sectionContainer: SxStyleProp = {
   justifyContent: 'space-between',
   padding: '8px',
   mb: '8px',
+  cursor: 'pointer',
+  ':active, :hover': {
+    backgroundColor: '#F8F7FC',
+    '.search-section-title': {
+      color: '#000711',
+    },
+    '.search-section-count': {
+      background: '#E7E9EE',
+    },
+  },
 }
 
 const sectionIconTitleBox: SxStyleProp = {

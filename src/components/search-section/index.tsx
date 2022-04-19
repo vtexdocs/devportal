@@ -11,13 +11,17 @@ const SearchSection = ({ iconElement, index }: SearchSectionProps) => {
   return (
     <Flex
       sx={styles.sectionContainer}
-      key={`section-${iconElement.title}${index}`}
+      key={`search-section-${iconElement.title}${index}`}
     >
       <Flex sx={styles.sectionIconTitleBox}>
         <iconElement.Icon sx={styles.sectionIcon} />
-        <Text sx={styles.sectionTitle}>{iconElement.title}</Text>
+        <Text className="search-section-title" sx={styles.sectionTitle}>
+          {iconElement.title}
+        </Text>
       </Flex>
-      <Box sx={styles.sectionCount}>25</Box>
+      <Box className="search-section-count" sx={styles.sectionCount}>
+        100
+      </Box>
     </Flex>
   )
 }
