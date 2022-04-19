@@ -19,31 +19,25 @@ const docsSection: SxStyleProp = {
   borderBottom: '1px solid #E7E9EE',
 }
 
-const sectionContainer: SxStyleProp = {
+const allResultsContainer: SxStyleProp = {
   justifyContent: 'space-between',
   padding: '8px',
   mb: '8px',
+  cursor: 'pointer',
+  ':active, :hover': {
+    backgroundColor: '#F8F7FC',
+    '.search-section-title': {
+      color: '#000711',
+    },
+    '.search-section-count': {
+      background: '#E7E9EE',
+    },
+  },
 }
 
-const sectionIconTitleBox: SxStyleProp = {
-  alignItems: 'center',
-}
-
-const sectionIcon: SxStyleProp = {
-  width: '16px',
-  height: '16px',
-  minWidth: '16px',
-  minHeight: '16px',
-  mr: '8px',
-}
-
-const sectionTitle: SxStyleProp = {
+const allResultsText: SxStyleProp = {
   fontSize: '12px',
   lineHeight: '16px',
-}
-
-const allResults: SxStyleProp = {
-  ...sectionTitle,
   ml: '24px',
   fontWeight: 'bold',
   color: '#0C1522',
@@ -63,10 +57,7 @@ export default {
   container,
   notesSection,
   docsSection,
-  allResults,
-  sectionContainer,
-  sectionIconTitleBox,
-  sectionIcon,
-  sectionTitle,
+  allResultsText,
+  allResultsContainer,
   sectionCount,
 }

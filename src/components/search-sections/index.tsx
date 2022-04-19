@@ -8,9 +8,13 @@ const SearchSections = () => {
   return (
     <Box sx={styles.container}>
       <Box sx={styles.docsSection}>
-        <Flex sx={styles.sectionContainer}>
-          <Text sx={styles.allResults}>All results</Text>
-          <Box sx={styles.sectionCount}>25</Box>
+        <Flex sx={styles.allResultsContainer}>
+          <Text className="search-section-title" sx={styles.allResultsText}>
+            All results
+          </Text>
+          <Box className="search-section-count" sx={styles.sectionCount}>
+            25
+          </Box>
         </Flex>
         {docsIcons.map((docsIcon, index) => (
           <SearchSection dataElement={docsIcon} index={index} />
