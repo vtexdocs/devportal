@@ -1,22 +1,23 @@
-import { Box, Flex, IconProps, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtex/brand-ui'
+import { DocDataElement, UpdatesDataElement } from 'pages/search'
 
 import styles from './styles'
 
 interface SearchSectionProps {
-  iconElement: { Icon: (props: IconProps) => JSX.Element; title: string }
+  dataElement: DocDataElement | UpdatesDataElement
   index: number
 }
 
-const SearchSection = ({ iconElement, index }: SearchSectionProps) => {
+const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
   return (
     <Flex
       sx={styles.sectionContainer}
-      key={`search-section-${iconElement.title}${index}`}
+      key={`search-section-${dataElement.title}${index}`}
     >
       <Flex sx={styles.sectionIconTitleBox}>
-        <iconElement.Icon sx={styles.sectionIcon} />
+        <dataElement.Icon sx={styles.sectionIcon} />
         <Text className="search-section-title" sx={styles.sectionTitle}>
-          {iconElement.title}
+          {dataElement.title}
         </Text>
       </Flex>
       <Box className="search-section-count" sx={styles.sectionCount}>

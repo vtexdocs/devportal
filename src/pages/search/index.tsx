@@ -11,9 +11,14 @@ import ReleaseNotesIcon from 'components/icons/release-notes-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 import Sidebar from 'components/sidebar'
 import SearchCard from 'components/search-card'
-import { MethodType } from 'utils/typings/unionTypes'
+import {
+  DocumentationTitle,
+  UpdatesTitle,
+  MethodType,
+} from 'utils/typings/unionTypes'
 import { ActionType } from 'components/last-updates-card/functions'
 import SearchSections from 'components/search-sections'
+import { IconComponent } from 'utils/typings/types'
 
 export interface SearchDataItemProps {
   doc: string
@@ -24,7 +29,17 @@ export interface SearchDataItemProps {
   actionType?: ActionType
 }
 
-export const docsIcons = [
+export interface DocDataElement {
+  Icon: IconComponent
+  title: DocumentationTitle
+}
+
+export interface UpdatesDataElement {
+  Icon: IconComponent
+  title: UpdatesTitle
+}
+
+export const docsIcons: DocDataElement[] = [
   {
     Icon: APIGuidesIcon,
     title: 'API Guides',
@@ -47,7 +62,7 @@ export const docsIcons = [
   },
 ]
 
-export const notesIcons = [
+export const notesIcons: UpdatesDataElement[] = [
   {
     Icon: ReleaseNotesIcon,
     title: 'Release Notes',

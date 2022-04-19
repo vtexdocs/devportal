@@ -13,12 +13,12 @@ const SearchSections = () => {
           <Box sx={styles.sectionCount}>25</Box>
         </Flex>
         {docsIcons.map((docsIcon, index) => (
-          <SearchSection iconElement={docsIcon} index={index} />
+          <SearchSection dataElement={docsIcon} index={index} />
         ))}
       </Box>
       <Box sx={styles.notesSection}>
         {notesIcons.map((notesIcon, index) => (
-          <SearchSection iconElement={notesIcon} index={index} />
+          <SearchSection dataElement={notesIcon} index={index} />
         ))}
       </Box>
     </Box>
