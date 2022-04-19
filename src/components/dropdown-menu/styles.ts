@@ -16,7 +16,7 @@ const innerContainer: SxStyleProp = {
   overflowY: 'scroll',
   maxHeight: 'calc(100vh - 5rem - 16px)',
   scrollbarWidth: 'thin',
-  scrollbarColor: '#CCCED8 white',
+  scrollbarColor: 'white white',
 
   '::-webkit-scrollbar': {
     width: '5px',
@@ -24,8 +24,13 @@ const innerContainer: SxStyleProp = {
 
   '::-webkit-scrollbar-thumb': {
     borderRadius: '100px',
+    background: 'white',
+  },
 
-    ':hover': {
+  ':hover': {
+    scrollbarColor: '#CCCED8 white',
+
+    '::-webkit-scrollbar-thumb': {
       background: '#CCCED8',
     },
   },
