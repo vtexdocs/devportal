@@ -13,6 +13,7 @@ import Sidebar from 'components/sidebar'
 import SearchCard from 'components/search-card'
 import { MethodType } from 'utils/typings/unionTypes'
 import { ActionType } from 'components/last-updates-card/functions'
+import SearchSections from 'components/search-sections'
 
 export interface SearchDataItemProps {
   doc: string
@@ -23,7 +24,7 @@ export interface SearchDataItemProps {
   actionType?: ActionType
 }
 
-const docsIcons = [
+export const docsIcons = [
   {
     Icon: APIGuidesIcon,
     title: 'API Guides',
@@ -46,7 +47,7 @@ const docsIcons = [
   },
 ]
 
-const notesIcons = [
+export const notesIcons = [
   {
     Icon: ReleaseNotesIcon,
     title: 'Release Notes',
@@ -93,6 +94,7 @@ const SearchPage = () => {
   return (
     <Flex sx={styles.body}>
       <Sidebar />
+      <SearchSections />
       <Box sx={styles.resultContainer}>
         <Text sx={styles.resultText}>
           Showing {searchData.length} results for "{router.query.keyword}" in
