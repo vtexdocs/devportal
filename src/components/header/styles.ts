@@ -26,15 +26,25 @@ const rightLinks: SxStyleProp = {
 
 const rightLinksItem: SxStyleProp = { alignItems: 'center' }
 
-const docsDropDown: SxStyleProp = {
+const dropdownContainer: SxStyleProp = {
+  justifyContent: 'flex-end',
+  height: 'calc(100% + 1px)',
+  cursor: 'pointer',
+}
+
+const dropdownButton: (active: boolean) => SxStyleProp = (active: boolean) => ({
   my: 'auto',
   mx: '32px',
-  color: '#4A596B',
   fontWeight: '600',
   fontSize: '14px',
   lineHeight: '20px',
   letterSpacing: '0.5px',
-}
+  color: active ? '#D71D55' : '#4A596B',
+
+  ':hover': {
+    color: '#C81E51',
+  },
+})
 
 const iconContainer: SxStyleProp = { paddingLeft: 3, color: 'primary.base' }
 
@@ -80,5 +90,6 @@ export default {
   rightLinks,
   iconContainer,
   rightLinksItem,
-  docsDropDown,
+  dropdownButton,
+  dropdownContainer,
 }
