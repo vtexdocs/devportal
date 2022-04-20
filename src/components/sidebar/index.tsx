@@ -268,58 +268,46 @@ const SideBar = ({ sectionSelected }: SideBarSectionState) => {
     },
   ]
 
+  const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
+    return (
+      <Link href={iconElement.link}>
+        <a
+          onClick={() => {
+            setActiveSectionName(iconElement.title)
+          }}
+        >
+          <Flex
+            key={`sidebar-icon-${iconElement.title}`}
+            sx={
+              activeSectionName === iconElement.title
+                ? styles.iconBoxActive
+                : styles.iconBox
+            }
+          >
+            <iconElement.Icon
+              sx={
+                activeSectionName === iconElement.title
+                  ? styles.iconActive
+                  : styles.icon
+              }
+            />
+          </Flex>
+        </a>
+      </Link>
+    )
+  }
+
   return (
     <Flex sx={styles.sidebar}>
       <Flex sx={styles.sidebarIcons}>
         <Flex sx={styles.sidebarIconsContainer}>
-          {docsIcons.map((docsIconElement, index) => (
-            <Link href={docsIconElement.link}>
-              <a
-                onClick={() => {
-                  setActiveSectionName(docsIconElement.title)
-                }}
-              >
-                <Flex
-                  key={`${docsIconElement.title}${index}`}
-                  sx={
-                    activeSectionName === docsIconElement.title
-                      ? styles.iconBoxActive
-                      : styles.iconBox
-                  }
-                >
-                  <docsIconElement.Icon
-                    sx={
-                      activeSectionName === docsIconElement.title
-                        ? styles.iconActive
-                        : styles.icon
-                    }
-                  />
-                </Flex>
-              </a>
-            </Link>
+          {docsIcons.map((docsIconElement) => (
+            <SideBarIcon {...docsIconElement} />
           ))}
         </Flex>
         <Flex sx={styles.sidebarIconsContainer}>
-          {notesIcons.map((notesIconElement, index) => (
-            <Flex
-              key={`${notesIconElement.title}${index}`}
-              sx={
-                activeSectionName === notesIconElement.title
-                  ? styles.iconBoxActive
-                  : styles.iconBox
-              }
-              onClick={() => {
-                setActiveSectionName(notesIconElement.title)
-              }}
-            >
-              <notesIconElement.Icon
-                sx={
-                  activeSectionName === notesIconElement.title
-                    ? styles.iconActive
-                    : styles.icon
-                }
-              />
-            </Flex>
+          {notesIcons.map((notesIconElement) => (
+            <SideBarIcon {...notesIconElement} />
           ))}
         </Flex>
       </Flex>
