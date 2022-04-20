@@ -9,7 +9,7 @@ import FastStoreIcon from 'components/icons/fast-store-icon'
 import WebOpsIcon from 'components/icons/webops-icon'
 import ReleaseNotesIcon from 'components/icons/release-notes-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
-import Sidebar from 'components/sidebar'
+import SideBar from 'components/sidebar'
 import SearchCard from 'components/search-card'
 import {
   DocumentationTitle,
@@ -32,33 +32,40 @@ export interface SearchDataItemProps {
 export interface DocDataElement {
   Icon: IconComponent
   title: DocumentationTitle
+  link: string
 }
 
 export interface UpdatesDataElement {
   Icon: IconComponent
   title: UpdatesTitle
+  link: string
 }
 
 export const docsIcons: DocDataElement[] = [
   {
     Icon: APIGuidesIcon,
     title: 'API Guides',
+    link: '/docs/api-guides',
   },
   {
     Icon: APIReferenceIcon,
     title: 'API Reference',
+    link: '/docs/api-reference',
   },
   {
     Icon: VTEXIOIcon,
     title: 'VTEX IO',
+    link: '/docs/vtex-io',
   },
   {
     Icon: FastStoreIcon,
     title: 'FastStore',
+    link: '/docs/fast-store',
   },
   {
     Icon: WebOpsIcon,
     title: 'WebOps',
+    link: '/docs/webops',
   },
 ]
 
@@ -66,10 +73,12 @@ export const notesIcons: UpdatesDataElement[] = [
   {
     Icon: ReleaseNotesIcon,
     title: 'Release Notes',
+    link: '/',
   },
   {
     Icon: DocumentationUpdatesIcon,
     title: 'Documentation Updates',
+    link: '/',
   },
 ]
 
@@ -108,7 +117,7 @@ const SearchPage = () => {
   ]
   return (
     <Flex sx={styles.body}>
-      <Sidebar />
+      <SideBar sectionSelected={''} />
       <SearchSections />
       <Box sx={styles.resultContainer}>
         <Text sx={styles.resultText}>

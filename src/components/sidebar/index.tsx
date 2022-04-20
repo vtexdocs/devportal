@@ -3,6 +3,8 @@ import { Flex } from '@vtex/brand-ui'
 
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
+import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
+import type { DocDataElement, UpdatesDataElement } from 'pages/search'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
@@ -12,41 +14,53 @@ import WebOpsIcon from 'components/icons/webops-icon'
 import ReleaseNotesIcon from 'components/icons/release-notes-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 import SidebarSection from 'components/sidebar-section'
+import Link from 'next/link'
 
-const Sidebar = () => {
-  const [activeSectionName, setActiveSectionName] = useState('API Guides')
+interface SideBarSectionState {
+  sectionSelected: DocumentationTitle | UpdatesTitle | ''
+}
 
-  const docsIcons = [
+const SideBar = ({ sectionSelected }: SideBarSectionState) => {
+  const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
+
+  const docsIcons: DocDataElement[] = [
     {
       Icon: APIGuidesIcon,
       title: 'API Guides',
+      link: '/docs/api-guides',
     },
     {
       Icon: APIReferenceIcon,
       title: 'API Reference',
+      link: '/docs/api-reference',
     },
     {
       Icon: VTEXIOIcon,
       title: 'VTEX IO',
+      link: '/docs/vtex-io',
     },
     {
       Icon: FastStoreIcon,
       title: 'FastStore',
+      link: '/docs/fast-store',
     },
     {
       Icon: WebOpsIcon,
       title: 'WebOps',
+      link: '/docs/webops',
     },
   ]
 
-  const notesIcons = [
+  const notesIcons: UpdatesDataElement[] = [
     {
       Icon: ReleaseNotesIcon,
       title: 'Release Notes',
+      link: '/',
     },
     {
       Icon: DocumentationUpdatesIcon,
       title: 'Documentation Updates',
+      link: '/',
     },
   ]
 
@@ -259,25 +273,30 @@ const Sidebar = () => {
       <Flex sx={styles.sidebarIcons}>
         <Flex sx={styles.sidebarIconsContainer}>
           {docsIcons.map((docsIconElement, index) => (
-            <Flex
-              key={`${docsIconElement.title}${index}`}
-              sx={
-                activeSectionName === docsIconElement.title
-                  ? styles.iconBoxActive
-                  : styles.iconBox
-              }
-              onClick={() => {
-                setActiveSectionName(docsIconElement.title)
-              }}
-            >
-              <docsIconElement.Icon
-                sx={
-                  activeSectionName === docsIconElement.title
-                    ? styles.iconActive
-                    : styles.icon
-                }
-              />
-            </Flex>
+            <Link href={docsIconElement.link}>
+              <a
+                onClick={() => {
+                  setActiveSectionName(docsIconElement.title)
+                }}
+              >
+                <Flex
+                  key={`${docsIconElement.title}${index}`}
+                  sx={
+                    activeSectionName === docsIconElement.title
+                      ? styles.iconBoxActive
+                      : styles.iconBox
+                  }
+                >
+                  <docsIconElement.Icon
+                    sx={
+                      activeSectionName === docsIconElement.title
+                        ? styles.iconActive
+                        : styles.icon
+                    }
+                  />
+                </Flex>
+              </a>
+            </Link>
           ))}
         </Flex>
         <Flex sx={styles.sidebarIconsContainer}>
@@ -304,13 +323,15 @@ const Sidebar = () => {
           ))}
         </Flex>
       </Flex>
-      <SidebarSection
-        {...(sidebarData.find(
-          (section) => section.title === activeSectionName
-        ) as SidebarSectionProps)}
-      />
+      {activeSectionName ? (
+        <SidebarSection
+          {...(sidebarData.find(
+            (section) => section.title === activeSectionName
+          ) as SidebarSectionProps)}
+        />
+      ) : null}
     </Flex>
   )
 }
 
-export default Sidebar
+export default SideBar
