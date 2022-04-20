@@ -1,6 +1,6 @@
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import { docsIcons, notesIcons } from 'pages/search/index'
+import { documentationData, updatesData } from 'utils/constants'
 import SearchSection from 'components/search-section'
 import styles from './styles'
 
@@ -16,12 +16,12 @@ const SearchSections = () => {
             25
           </Box>
         </Flex>
-        {docsIcons.map((docsIcon, index) => (
+        {documentationData.map((docsIcon, index) => (
           <SearchSection dataElement={docsIcon} index={index} />
         ))}
       </Box>
       <Box sx={styles.notesSection}>
-        {notesIcons.map((notesIcon, index) => (
+        {updatesData.map((notesIcon, index) => (
           <SearchSection dataElement={notesIcon} index={index} />
         ))}
       </Box>

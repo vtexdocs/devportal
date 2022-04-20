@@ -4,15 +4,12 @@ import { Flex } from '@vtex/brand-ui'
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
-import type { DocDataElement, UpdatesDataElement } from 'pages/search'
+import type { DocDataElement, UpdatesDataElement } from 'utils/typings/types'
+import {
+  documentationData as docsIcons,
+  updatesData as notesIcons,
+} from 'utils/constants'
 
-import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
-import VTEXIOIcon from 'components/icons/vtex-io-icon'
-import FastStoreIcon from 'components/icons/fast-store-icon'
-import WebOpsIcon from 'components/icons/webops-icon'
-import ReleaseNotesIcon from 'components/icons/release-notes-icon'
-import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 import SidebarSection from 'components/sidebar-section'
 import Link from 'next/link'
 
@@ -22,47 +19,6 @@ interface SideBarSectionState {
 
 const SideBar = ({ sectionSelected }: SideBarSectionState) => {
   const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
-
-  const docsIcons: DocDataElement[] = [
-    {
-      Icon: APIGuidesIcon,
-      title: 'API Guides',
-      link: '/docs/api-guides',
-    },
-    {
-      Icon: APIReferenceIcon,
-      title: 'API Reference',
-      link: '/docs/api-reference',
-    },
-    {
-      Icon: VTEXIOIcon,
-      title: 'VTEX IO',
-      link: '/docs/vtex-io',
-    },
-    {
-      Icon: FastStoreIcon,
-      title: 'FastStore',
-      link: '/docs/fast-store',
-    },
-    {
-      Icon: WebOpsIcon,
-      title: 'WebOps',
-      link: '/docs/webops',
-    },
-  ]
-
-  const notesIcons: UpdatesDataElement[] = [
-    {
-      Icon: ReleaseNotesIcon,
-      title: 'Release Notes',
-      link: '/',
-    },
-    {
-      Icon: DocumentationUpdatesIcon,
-      title: 'Documentation Updates',
-      link: '/',
-    },
-  ]
 
   const sidebarData: SidebarSectionProps[] = [
     {
@@ -270,14 +226,13 @@ const SideBar = ({ sectionSelected }: SideBarSectionState) => {
 
   const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
     return (
-      <Link href={iconElement.link}>
+      <Link href={iconElement.link} key={`sidebar-icon-${iconElement.title}`}>
         <a
           onClick={() => {
             setActiveSectionName(iconElement.title)
           }}
         >
           <Flex
-            key={`sidebar-icon-${iconElement.title}`}
             sx={
               activeSectionName === iconElement.title
                 ? styles.iconBoxActive
