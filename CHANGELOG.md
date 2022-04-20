@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/vtex/devportal/compare/v0.3.1...v0.4.0) (2022-04-20)
+
+
+### Features
+
+* **header:** add custom scrollbar to dropdown menu ([712ef8d](https://github.com/vtex/devportal/commit/712ef8d2ef44175f0455075e0769dbfaa5f52588))
+* **header:** add Docs dropdown menu ([96eb711](https://github.com/vtex/devportal/commit/96eb711fd1e71413d8aa9d16c4d85aad04318f16))
+* **header:** add interactivity to Docs button ([939a1c3](https://github.com/vtex/devportal/commit/939a1c3e89ee9161be293348bf9367de55081081))
+* **header:** hide dropdown on route change ([0f9afe2](https://github.com/vtex/devportal/commit/0f9afe2b680f5c4deece25a494394499d9517527))
+* **header:** show dropdown menu on hover and fix its styles ([5aa1830](https://github.com/vtex/devportal/commit/5aa1830433f60c6e6eb9e6205f8ddff71d124da6))
+
+
+### Bug Fixes
+
+* **header:** add pointer cursor to Docs button ([e28964d](https://github.com/vtex/devportal/commit/e28964d1afafb3a72d4d3609153bfd542dd069a5))
+* **header:** fix dropdown menu card description text color on hover ([143237a](https://github.com/vtex/devportal/commit/143237ab87bd996268f3b529165e3ec470116f9c))
+* **header:** fix dropdown menu position on Safari ([9faf99f](https://github.com/vtex/devportal/commit/9faf99f0e55d8fd5a02f695627507682c3396675))
+* **header:** fix scroll propagation from dropdown menu ([5a253f9](https://github.com/vtex/devportal/commit/5a253f99acc79a2abdc30a87dbcccf2bd5abbf63))
+* **header:** remove shadow from top of dropdown menu and fix hiding bug ([33df8b8](https://github.com/vtex/devportal/commit/33df8b8d6676fa2ec3f945e4c6a909b8851621b0))
+* **header:** show dropdown menu scrollbar only on dropdown hover ([39082ca](https://github.com/vtex/devportal/commit/39082ca437c0e285b7f67b0531628bf9b64dd82f))
+* **header:** show dropdown menu scrollbar only on hover ([c2c68bb](https://github.com/vtex/devportal/commit/c2c68bb98ee93b4d56068de02812f803d47511b2))
+
+
+### Refactoring
+
+* **header:** replace line with border ([0f24929](https://github.com/vtex/devportal/commit/0f24929fdcb74a93d508695ecadacf7d0daa5219))
+
 ### [0.3.1](https://github.com/vtex/devportal/compare/v0.3.0...v0.3.1) (2022-04-18)
 
 
