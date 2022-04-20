@@ -29,12 +29,12 @@ const rightLinksItem: SxStyleProp = { alignItems: 'center' }
 const dropdownContainer: SxStyleProp = {
   justifyContent: 'flex-end',
   height: 'calc(100% + 1px)',
+  cursor: 'pointer',
 }
 
 const dropdownButton: (active: boolean) => SxStyleProp = (active: boolean) => ({
   my: 'auto',
   mx: '32px',
-  cursor: 'pointer',
   fontWeight: '600',
   fontSize: '14px',
   lineHeight: '20px',
