@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/vtex/devportal/compare/v0.4.0...v0.4.1) (2022-04-25)
+
+
+### Bug Fixes
+
+* **footer:** adds a box on footer component and fix responsiveness ([a900854](https://github.com/vtex/devportal/commit/a900854087bf64bd4a5ff9d968cab44008901ed0))
+* **footer:** adjust link padding ([402304e](https://github.com/vtex/devportal/commit/402304eab89c018bf19fda2f450381c084b7817a))
+
 ## [0.4.0](https://github.com/vtex/devportal/compare/v0.3.1...v0.4.0) (2022-04-20)
 
 
