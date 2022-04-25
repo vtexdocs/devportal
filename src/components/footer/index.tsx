@@ -1,4 +1,4 @@
-import { FooterLanding } from '@vtex/brand-ui'
+import { Box, FooterLanding } from '@vtex/brand-ui'
 import { getMessages } from 'utils/get-messages'
 import styles from './styles'
 import {
@@ -30,18 +30,20 @@ const links = [
 ]
 
 const Footer = () => (
-  <FooterLanding>
-    {links.map((link, index) => (
-      <FooterLanding.Link
-        sx={styles.footerLinks}
-        key={index}
-        href={link.to()}
-        target="_blank"
-      >
-        {link.message}
-      </FooterLanding.Link>
-    ))}
-  </FooterLanding>
+  <Box sx={styles.footerLinks}>
+    <FooterLanding>
+      {links.map((link, index) => (
+        <FooterLanding.Link
+          key={index}
+          href={link.to()}
+          target="_blank"
+          sx={index % 2 ? styles.footerRightLinks : styles.footerLeftLinks}
+        >
+          {link.message}
+        </FooterLanding.Link>
+      ))}
+    </FooterLanding>
+  </Box>
 )
 
 export default Footer
