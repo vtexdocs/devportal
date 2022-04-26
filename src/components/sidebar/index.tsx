@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Flex, Link } from '@vtex/brand-ui'
+import { Flex } from '@vtex/brand-ui'
+import Link from 'next/link'
 
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
