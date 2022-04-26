@@ -5,6 +5,7 @@ import Link from 'next/link'
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
 import type { DocDataElement, UpdatesDataElement } from 'utils/typings/types'
+import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import {
   documentationData as docsIcons,
   updatesData as notesIcons,
@@ -12,8 +13,12 @@ import {
 
 import SidebarSection from 'components/sidebar-section'
 
-const Sidebar = () => {
-  const [activeSectionName, setActiveSectionName] = useState('API Guides')
+interface SideBarSectionState {
+  sectionSelected: DocumentationTitle | UpdatesTitle | ''
+}
+
+const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
+  const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
 
   const sidebarData: SidebarSectionProps[] = [
     {
@@ -267,11 +272,13 @@ const Sidebar = () => {
           ))}
         </Flex>
       </Flex>
-      <SidebarSection
-        {...(sidebarData.find(
-          (section) => section.title === activeSectionName
-        ) as SidebarSectionProps)}
-      />
+      {activeSectionName ? (
+        <SidebarSection
+          {...(sidebarData.find(
+            (section) => section.title === activeSectionName
+          ) as SidebarSectionProps)}
+        />
+      ) : null}
     </Flex>
   )
 }

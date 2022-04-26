@@ -47,7 +47,7 @@ const SearchPage = () => {
   ]
   return (
     <Flex sx={styles.body}>
-      <SideBar />
+      <SideBar sectionSelected={''} />
       <SearchSections />
       <Box sx={styles.resultContainer}>
         <Text sx={styles.resultText}>
