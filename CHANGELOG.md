@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/vtex/devportal/compare/v0.4.1...v0.5.0) (2022-04-26)
+
+
+### Features
+
+* **search-page:** export icon data and call the searchsection component ([bb18fda](https://github.com/vtex/devportal/commit/bb18fda0cbb4481e257d0370f6ab995f0d7ab465))
+* **search-section:** create the search-section component ([449140b](https://github.com/vtex/devportal/commit/449140bf8af4c7072014e79e47aba955d038817b))
+* **search-section:** implement hover effect ([881b857](https://github.com/vtex/devportal/commit/881b857987492ba8455c2284fe0bbb4f378ae42c))
+* **search-sections:** create the search-sections component ([0756d9c](https://github.com/vtex/devportal/commit/0756d9c6a45afe9c7b8bc6d837437f1d6869ea16))
+
+
+### Bug Fixes
+
+* **search-sections:** make the all-results element clickable ([3c4336a](https://github.com/vtex/devportal/commit/3c4336a330952946fceabde239a405699aac296d))
+* **sidebar:** fix items title type ([a480b45](https://github.com/vtex/devportal/commit/a480b452c3e72db414acb9296f6949237d3b0bd4))
+
+
+### Refactoring
+
+* **types:** split the DocTitle type and refact the search components types ([5735dec](https://github.com/vtex/devportal/commit/5735decdb09c1c7c96b2c8d3fc0b6d44f6e0ac39))
+
+
+### Style
+
+* **search-section:** add the border-radius to this component on hover ([13ed2c9](https://github.com/vtex/devportal/commit/13ed2c913f47067c9e71c19cd92e0781e71ca4a0))
+
 ### [0.4.1](https://github.com/vtex/devportal/compare/v0.4.0...v0.4.1) (2022-04-25)
 
 
