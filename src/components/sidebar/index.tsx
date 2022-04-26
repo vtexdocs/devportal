@@ -221,7 +221,7 @@ const Sidebar = () => {
 
   const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
     return (
-      <Link href={iconElement.link} key={`sidebar-icon-${iconElement.title}`}>
+      <Link href={iconElement.link}>
         <a
           onClick={() => {
             setActiveSectionName(iconElement.title)
@@ -252,12 +252,18 @@ const Sidebar = () => {
       <Flex sx={styles.sidebarIcons}>
         <Flex sx={styles.sidebarIconsContainer}>
           {docsIcons.map((docsIconElement) => (
-            <SideBarIcon {...docsIconElement} />
+            <SideBarIcon
+              {...docsIconElement}
+              key={`sidebar-icon-${docsIconElement.title}`}
+            />
           ))}
         </Flex>
         <Flex sx={styles.sidebarIconsContainer}>
           {notesIcons.map((notesIconElement) => (
-            <SideBarIcon {...notesIconElement} />
+            <SideBarIcon
+              {...notesIconElement}
+              key={`sidebar-icon-${notesIconElement.title}`}
+            />
           ))}
         </Flex>
       </Flex>
