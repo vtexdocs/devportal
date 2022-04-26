@@ -7,6 +7,7 @@ const sectionContainer: SxStyleProp = {
   cursor: 'pointer',
   ':active, :hover': {
     backgroundColor: '#F8F7FC',
+    borderRadius: '4px',
     '.search-section-title': {
       color: '#000711',
     },
