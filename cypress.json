@@ -5,5 +5,6 @@
   "screenshotsFolder": "src/tests/cypress/screenshots",
   "videosFolder": "src/tests/cypress/videos",
   "downloadsFolder": "src/tests/cypress/downloads",
-  "supportFile": "src/tests/cypress/support/index.js"
+  "supportFile": "src/tests/cypress/support/index.js",
+  "baseUrl": "http://localhost:3000"
 }
