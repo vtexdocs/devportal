@@ -1,5 +1,5 @@
 import { Box, Flex, Text } from '@vtex/brand-ui'
-import { DocDataElement, UpdatesDataElement } from 'pages/search'
+import type { DocDataElement, UpdatesDataElement } from 'utils/typings/types'
 
 import styles from './styles'
 

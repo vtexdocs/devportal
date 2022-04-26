@@ -2,23 +2,13 @@ import { useRouter } from 'next/router'
 import { Flex, Box, Text } from '@vtex/brand-ui'
 import styles from 'styles/search-page'
 
-import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
-import VTEXIOIcon from 'components/icons/vtex-io-icon'
-import FastStoreIcon from 'components/icons/fast-store-icon'
-import WebOpsIcon from 'components/icons/webops-icon'
-import ReleaseNotesIcon from 'components/icons/release-notes-icon'
-import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
-import Sidebar from 'components/sidebar'
-import SearchCard from 'components/search-card'
-import {
-  DocumentationTitle,
-  UpdatesTitle,
-  MethodType,
-} from 'utils/typings/unionTypes'
+import { getIcon } from 'utils/constants'
+import { MethodType } from 'utils/typings/unionTypes'
 import { ActionType } from 'components/last-updates-card/functions'
+
+import SideBar from 'components/sidebar'
+import SearchCard from 'components/search-card'
 import SearchSections from 'components/search-sections'
-import { IconComponent } from 'utils/typings/types'
 
 export interface SearchDataItemProps {
   doc: string
@@ -27,57 +17,6 @@ export interface SearchDataItemProps {
   filters?: string[]
   http?: MethodType
   actionType?: ActionType
-}
-
-export interface DocDataElement {
-  Icon: IconComponent
-  title: DocumentationTitle
-}
-
-export interface UpdatesDataElement {
-  Icon: IconComponent
-  title: UpdatesTitle
-}
-
-export const docsIcons: DocDataElement[] = [
-  {
-    Icon: APIGuidesIcon,
-    title: 'API Guides',
-  },
-  {
-    Icon: APIReferenceIcon,
-    title: 'API Reference',
-  },
-  {
-    Icon: VTEXIOIcon,
-    title: 'VTEX IO',
-  },
-  {
-    Icon: FastStoreIcon,
-    title: 'FastStore',
-  },
-  {
-    Icon: WebOpsIcon,
-    title: 'WebOps',
-  },
-]
-
-export const notesIcons: UpdatesDataElement[] = [
-  {
-    Icon: ReleaseNotesIcon,
-    title: 'Release Notes',
-  },
-  {
-    Icon: DocumentationUpdatesIcon,
-    title: 'Documentation Updates',
-  },
-]
-
-const getIcon = (doc: string) => {
-  return (
-    docsIcons.find((icon) => icon.title === doc)?.Icon ||
-    notesIcons.find((icon) => icon.title === doc)?.Icon
-  )
 }
 
 const SearchPage = () => {
@@ -108,7 +47,7 @@ const SearchPage = () => {
   ]
   return (
     <Flex sx={styles.body}>
-      <Sidebar />
+      <SideBar />
       <SearchSections />
       <Box sx={styles.resultContainer}>
         <Text sx={styles.resultText}>
