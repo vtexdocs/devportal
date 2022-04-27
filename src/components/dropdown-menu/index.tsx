@@ -63,13 +63,19 @@ const updatesCards: CardProps[] = [
 const DropdownMenu = () => {
   return (
     <Box sx={styles.outerContainer}>
-      <Box sx={styles.innerContainer}>
-        <Box sx={styles.documentationContainer}>
+      <Box sx={styles.innerContainer} data-cy="dropdown-menu">
+        <Box
+          sx={styles.documentationContainer}
+          data-cy="dropdown-menu-first-section"
+        >
           {documentationCards.map((card) => (
             <DropdownCard key={card.title} {...card} />
           ))}
         </Box>
-        <Box sx={styles.updatesContainer}>
+        <Box
+          sx={styles.updatesContainer}
+          data-cy="dropdown-menu-second-section"
+        >
           {updatesCards.map((card) => (
             <DropdownCard key={card.title} {...card} />
           ))}

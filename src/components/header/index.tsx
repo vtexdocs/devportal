@@ -94,6 +94,7 @@ const Header = () => {
                   messages['landing_page_header_searchInput.message']
                 }
                 value={searchValue}
+                data-cy="search"
                 onChange={(e) => setSearchValue(e.currentTarget.value)}
               />
             </form>
@@ -106,7 +107,10 @@ const Header = () => {
             onMouseOver={() => setShowDropdown(true)}
             onMouseLeave={() => setShowDropdown(false)}
           >
-            <Text sx={styles.dropdownButton(showDropdown)}>
+            <Text
+              sx={styles.dropdownButton(showDropdown)}
+              data-cy="docs-dropdown"
+            >
               {messages['landing_page_header_docs.message']}
             </Text>
 
