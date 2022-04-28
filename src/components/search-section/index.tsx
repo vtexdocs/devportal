@@ -14,8 +14,18 @@ const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
   const { filterSelectedSection, toggleFilterSelectedSection } =
     useContext(SearchContext)
   return !dataElement ? (
-    <Flex sx={styles.sectionContainer}>
-      <Text className="search-section-title" sx={styles.allResultsText}>
+    <Flex
+      sx={styles.sectionContainer}
+      onClick={() => toggleFilterSelectedSection('')}
+    >
+      <Text
+        className="search-section-title"
+        sx={
+          filterSelectedSection
+            ? styles.allResultsText
+            : styles.allResultsTextActive
+        }
+      >
         All results
       </Text>
       <Box className="search-section-count" sx={styles.sectionCount}>

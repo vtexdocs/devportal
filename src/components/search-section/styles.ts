@@ -53,6 +53,10 @@ const sectionCount: SxStyleProp = {
 const allResultsText: SxStyleProp = {
   ...sectionTitle,
   ml: '24px',
+}
+
+const allResultsTextActive: SxStyleProp = {
+  ...allResultsText,
   fontWeight: 'bold',
   color: '#0C1522',
 }
@@ -65,4 +69,5 @@ export default {
   sectionTitleActive,
   sectionCount,
   allResultsText,
+  allResultsTextActive,
 }
