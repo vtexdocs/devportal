@@ -13,7 +13,7 @@ const DocumentationSection = () => {
       <Text sx={styles.title}>
         {messages['landing_page_documentation.title']}
       </Text>
-      <Flex sx={styles.cardsContainer}>
+      <Flex sx={styles.cardsContainer} data-cy="documentation-card-list">
         {cards.map((card) => (
           <DocumentationCard key={card.title} {...card} />
         ))}
