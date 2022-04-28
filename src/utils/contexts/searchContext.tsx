@@ -1,8 +1,11 @@
 import { createContext, useState } from 'react'
+import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
+
+type FilterType = DocumentationTitle | UpdatesTitle | ''
 
 type ContextType = {
-  filterSelectedSection: string
-  toggleFilterSelectedSection: (filterSelected: string) => void
+  filterSelectedSection: FilterType
+  toggleFilterSelectedSection: (filterSelected: FilterType) => void
 }
 
 export const SearchContext = createContext<ContextType>({
@@ -11,10 +14,10 @@ export const SearchContext = createContext<ContextType>({
 })
 
 const SearchContextProvider: React.FC = ({ children }) => {
-  const [filterSelectedSection, changefilterSelectedSection] = useState('')
+  const [filterSelectedSection, changefilterSelectedSection] =
+    useState<FilterType>('')
 
-  const toggleFilterSelectedSection = (filterSelected: string) => {
-    console.log(filterSelected)
+  const toggleFilterSelectedSection = (filterSelected: FilterType) => {
     changefilterSelectedSection(filterSelected)
   }
 
