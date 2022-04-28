@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router'
-import { useContext, useMemo } from 'react'
+import { useContext, useEffect, useMemo } from 'react'
 
 import { Box, Text } from '@vtex/brand-ui'
 import { SearchContext } from 'utils/contexts/searchContext'
@@ -8,11 +8,12 @@ import { getIcon } from 'utils/constants'
 
 import type { MethodType } from 'utils/typings/unionTypes'
 import type { ActionType } from 'components/last-updates-card/functions'
+import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 
 import styles from './styles'
 
 export interface SearchDataItemProps {
-  doc: string
+  doc: DocumentationTitle | UpdatesTitle
   title: string
   description: string
   filters?: string[]
@@ -22,7 +23,8 @@ export interface SearchDataItemProps {
 
 const SearchResults = () => {
   const router = useRouter()
-  const { filterSelectedSection } = useContext(SearchContext)
+  const { filterSelectedSection, updateOcurrenceCount } =
+    useContext(SearchContext)
 
   const searchData: SearchDataItemProps[] = [
     {
@@ -48,6 +50,11 @@ const SearchResults = () => {
       actionType: 'removed',
     },
   ]
+
+  useEffect(() => {
+    updateOcurrenceCount(searchData)
+  }, [searchData])
+
   const filteredResult = useMemo(() => {
     return searchData.filter(
       (resultElement) =>
