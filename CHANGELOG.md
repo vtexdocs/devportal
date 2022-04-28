@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.5.1](https://github.com/vtex/devportal/compare/v0.5.0...v0.5.1) (2022-04-28)
+
+
+### Features
+
+* **sidebar:** add the sidebar props ([6da63ff](https://github.com/vtex/devportal/commit/6da63ff99ebe5b21e8566b92c7a4a8c067fa6408))
+
+
+### Bug Fixes
+
+* **sidebar:** fix key warning ([9dae009](https://github.com/vtex/devportal/commit/9dae009dedd1ddd4c8592e285c37a1c803c957ed))
+* **sidebar:** use the Link component from next ([fe8d0ab](https://github.com/vtex/devportal/commit/fe8d0abc50bd5050802b12760dfdb8fc035bf35d))
+
+
+### Refactoring
+
+* create constants.ts and refact the typings ([c06bb03](https://github.com/vtex/devportal/commit/c06bb03d69e9058a73684c4fe40d48fee1181c36))
+* **documentation:** refactoring the cards data structure and update the type ([ff98bdf](https://github.com/vtex/devportal/commit/ff98bdf329950c85e8b7132bd923a91ebf3a5a86))
+* **search:** update the documentation/notes data and update the types ([4cff017](https://github.com/vtex/devportal/commit/4cff01735d5c1ac2240f2d1f8cc16789edbd3bc8))
+* **sidebar:** create the SideBarIcon component and refactor the data structure ([83bb99f](https://github.com/vtex/devportal/commit/83bb99f9dedcbeacf5f765fb61030da54d61735b))
+
 ## [0.5.0](https://github.com/vtex/devportal/compare/v0.4.1...v0.5.0) (2022-04-26)
 
 
