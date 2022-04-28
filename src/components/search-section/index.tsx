@@ -1,5 +1,7 @@
 import { Box, Flex, Text } from '@vtex/brand-ui'
 import type { DocDataElement, UpdatesDataElement } from 'utils/typings/types'
+import { useContext } from 'react'
+import { SearchContext } from 'utils/contexts/searchContext'
 
 import styles from './styles'
 
@@ -9,6 +11,8 @@ interface SearchSectionProps {
 }
 
 const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
+  const { filterSelectedSection, toggleFilterSelectedSection } =
+    useContext(SearchContext)
   return !dataElement ? (
     <Flex sx={styles.sectionContainer}>
       <Text className="search-section-title" sx={styles.allResultsText}>
@@ -22,10 +26,18 @@ const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
     <Flex
       sx={styles.sectionContainer}
       key={`search-section-${dataElement.title}${index}`}
+      onClick={() => toggleFilterSelectedSection(dataElement.title)}
     >
       <Flex sx={styles.sectionIconTitleBox}>
         <dataElement.Icon sx={styles.sectionIcon} />
-        <Text className="search-section-title" sx={styles.sectionTitle}>
+        <Text
+          className="search-section-title"
+          sx={
+            filterSelectedSection === dataElement.title
+              ? styles.sectionTitleActive
+              : styles.sectionTitle
+          }
+        >
           {dataElement.title}
         </Text>
       </Flex>

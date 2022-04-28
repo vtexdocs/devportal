@@ -1,12 +1,14 @@
 import { useRouter } from 'next/router'
+import { useContext, useMemo } from 'react'
+
 import { Box, Text } from '@vtex/brand-ui'
-
-import { MethodType } from 'utils/typings/unionTypes'
-
-import { getIcon } from 'utils/constants'
+import { SearchContext } from 'utils/contexts/searchContext'
 import SearchCard from 'components/search-card'
+import { getIcon } from 'utils/constants'
 
-import { ActionType } from 'components/last-updates-card/functions'
+import type { MethodType } from 'utils/typings/unionTypes'
+import type { ActionType } from 'components/last-updates-card/functions'
+
 import styles from './styles'
 
 export interface SearchDataItemProps {
@@ -20,6 +22,7 @@ export interface SearchDataItemProps {
 
 const SearchResults = () => {
   const router = useRouter()
+  const { filterSelectedSection } = useContext(SearchContext)
 
   const searchData: SearchDataItemProps[] = [
     {
@@ -45,6 +48,12 @@ const SearchResults = () => {
       actionType: 'removed',
     },
   ]
+  const filteredResult = useMemo(() => {
+    return searchData.filter(
+      (resultElement) =>
+        !filterSelectedSection || resultElement.doc == filterSelectedSection
+    )
+  }, [filterSelectedSection, searchData])
   return (
     <Box sx={styles.resultContainer}>
       <Text sx={styles.resultText}>
@@ -53,7 +62,7 @@ const SearchResults = () => {
       </Text>
       <hr />
       <Box>
-        {searchData.map((result, index) => (
+        {filteredResult.map((result, index) => (
           <SearchCard
             key={`${result.doc}${result.title}${index}`}
             Icon={getIcon(result.doc)!}
