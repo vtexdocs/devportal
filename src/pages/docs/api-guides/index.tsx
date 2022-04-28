@@ -8,7 +8,7 @@ const ApiGuidesPage = () => {
   return (
     <ContextProvider>
       <Flex sx={styles.container}>
-        <Sidebar />
+        <Sidebar sectionSelected={'API Guides'} />
         <h2>Hello world</h2>
       </Flex>
     </ContextProvider>

@@ -1,54 +1,24 @@
 import { useState } from 'react'
 import { Flex } from '@vtex/brand-ui'
+import Link from 'next/link'
 
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
+import type { DocDataElement, UpdatesDataElement } from 'utils/typings/types'
+import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
+import {
+  documentationData as docsIcons,
+  updatesData as notesIcons,
+} from 'utils/constants'
 
-import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
-import VTEXIOIcon from 'components/icons/vtex-io-icon'
-import FastStoreIcon from 'components/icons/fast-store-icon'
-import WebOpsIcon from 'components/icons/webops-icon'
-import ReleaseNotesIcon from 'components/icons/release-notes-icon'
-import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 import SidebarSection from 'components/sidebar-section'
 
-const Sidebar = () => {
-  const [activeSectionName, setActiveSectionName] = useState('API Guides')
+interface SideBarSectionState {
+  sectionSelected: DocumentationTitle | UpdatesTitle | ''
+}
 
-  const docsIcons = [
-    {
-      Icon: APIGuidesIcon,
-      title: 'API Guides',
-    },
-    {
-      Icon: APIReferenceIcon,
-      title: 'API Reference',
-    },
-    {
-      Icon: VTEXIOIcon,
-      title: 'VTEX IO',
-    },
-    {
-      Icon: FastStoreIcon,
-      title: 'FastStore',
-    },
-    {
-      Icon: WebOpsIcon,
-      title: 'WebOps',
-    },
-  ]
-
-  const notesIcons = [
-    {
-      Icon: ReleaseNotesIcon,
-      title: 'Release Notes',
-    },
-    {
-      Icon: DocumentationUpdatesIcon,
-      title: 'Documentation Updates',
-    },
-  ]
+const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
+  const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
 
   const sidebarData: SidebarSectionProps[] = [
     {
@@ -254,61 +224,61 @@ const Sidebar = () => {
     },
   ]
 
+  const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
+    return (
+      <Link href={iconElement.link}>
+        <a
+          onClick={() => {
+            setActiveSectionName(iconElement.title)
+          }}
+        >
+          <Flex
+            sx={
+              activeSectionName === iconElement.title
+                ? styles.iconBoxActive
+                : styles.iconBox
+            }
+          >
+            <iconElement.Icon
+              sx={
+                activeSectionName === iconElement.title
+                  ? styles.iconActive
+                  : styles.icon
+              }
+            />
+          </Flex>
+        </a>
+      </Link>
+    )
+  }
+
   return (
     <Flex sx={styles.sidebar}>
       <Flex sx={styles.sidebarIcons}>
         <Flex sx={styles.sidebarIconsContainer}>
-          {docsIcons.map((docsIconElement, index) => (
-            <Flex
-              key={`${docsIconElement.title}${index}`}
-              sx={
-                activeSectionName === docsIconElement.title
-                  ? styles.iconBoxActive
-                  : styles.iconBox
-              }
-              onClick={() => {
-                setActiveSectionName(docsIconElement.title)
-              }}
-            >
-              <docsIconElement.Icon
-                sx={
-                  activeSectionName === docsIconElement.title
-                    ? styles.iconActive
-                    : styles.icon
-                }
-              />
-            </Flex>
+          {docsIcons.map((docsIconElement) => (
+            <SideBarIcon
+              {...docsIconElement}
+              key={`sidebar-icon-${docsIconElement.title}`}
+            />
           ))}
         </Flex>
         <Flex sx={styles.sidebarIconsContainer}>
-          {notesIcons.map((notesIconElement, index) => (
-            <Flex
-              key={`${notesIconElement.title}${index}`}
-              sx={
-                activeSectionName === notesIconElement.title
-                  ? styles.iconBoxActive
-                  : styles.iconBox
-              }
-              onClick={() => {
-                setActiveSectionName(notesIconElement.title)
-              }}
-            >
-              <notesIconElement.Icon
-                sx={
-                  activeSectionName === notesIconElement.title
-                    ? styles.iconActive
-                    : styles.icon
-                }
-              />
-            </Flex>
+          {notesIcons.map((notesIconElement) => (
+            <SideBarIcon
+              {...notesIconElement}
+              key={`sidebar-icon-${notesIconElement.title}`}
+            />
           ))}
         </Flex>
       </Flex>
-      <SidebarSection
-        {...(sidebarData.find(
-          (section) => section.title === activeSectionName
-        ) as SidebarSectionProps)}
-      />
+      {activeSectionName ? (
+        <SidebarSection
+          {...(sidebarData.find(
+            (section) => section.title === activeSectionName
+          ) as SidebarSectionProps)}
+        />
+      ) : null}
     </Flex>
   )
 }
