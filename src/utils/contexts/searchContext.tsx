@@ -1,31 +1,27 @@
-import { createContext, useState } from 'react'
+import { createContext, Dispatch, SetStateAction, useState } from 'react'
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 
 type FilterType = DocumentationTitle | UpdatesTitle | ''
 
-type ContextType = {
+type SearchContextType = {
   filterSelectedSection: FilterType
-  toggleFilterSelectedSection: (filterSelected: FilterType) => void
+  changeFilterSelectedSection: Dispatch<SetStateAction<FilterType>>
 }
 
-export const SearchContext = createContext<ContextType>({
+export const SearchContext = createContext<SearchContextType>({
   filterSelectedSection: '',
-  toggleFilterSelectedSection: () => undefined,
+  changeFilterSelectedSection: () => undefined,
 })
 
 const SearchContextProvider: React.FC = ({ children }) => {
-  const [filterSelectedSection, changefilterSelectedSection] =
+  const [filterSelectedSection, changeFilterSelectedSection] =
     useState<FilterType>('')
-
-  const toggleFilterSelectedSection = (filterSelected: FilterType) => {
-    changefilterSelectedSection(filterSelected)
-  }
 
   return (
     <SearchContext.Provider
       value={{
         filterSelectedSection,
-        toggleFilterSelectedSection,
+        changeFilterSelectedSection,
       }}
     >
       {children}
