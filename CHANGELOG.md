@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/vtex/devportal/compare/v0.6.0...v0.7.0) (2022-05-02)
+
+
+### Features
+
+* **searchcontext:** create the SearchContext ([262bf3b](https://github.com/vtex/devportal/commit/262bf3babfd8ae266da71e06c053efff1ec00060))
+
+
+### Bug Fixes
+
+* **search-components:** update paths after rebase ([7300bfc](https://github.com/vtex/devportal/commit/7300bfc45df9c6102b5822e664364f1699d84b36))
+
+
+### Refactoring
+
+* **allresults section:** code refactoring to make all-results section as SearchSection componen ([e8c881c](https://github.com/vtex/devportal/commit/e8c881c9c3499e53680751f06f44f5527d1dfc84))
+* **search-results:** create the SearchResults component ([5ead14b](https://github.com/vtex/devportal/commit/5ead14bce6e7492cb4ac02fd79eaaf6db4fb0984))
+* **searchcontext:** remove unnecessary function ([b82b43e](https://github.com/vtex/devportal/commit/b82b43e52a1d32acf73d61494e0029406a99b4a7))
+* **searchcontext:** update the filter type in searchContext ([658f2ba](https://github.com/vtex/devportal/commit/658f2ba4e7717311dc613f323f41660ab3cfc569))
+
+
+### Chore
+
+* update rebase ([81dd140](https://github.com/vtex/devportal/commit/81dd1408479a51e5429eadf4d85d552343e659ab))
+
 ## [0.6.0](https://github.com/vtex/devportal/compare/v0.5.2...v0.6.0) (2022-05-02)
 
 
