@@ -14,7 +14,7 @@ const APIPage: NextPage<Props> = ({ slug }) => {
       />
 
       <rapi-doc
-        spec-url={`/docs/${slug}.json`}
+        spec-url={`/docs/api-reference/${slug}.json`}
         theme="light"
         show-header={false}
         render-style="focused"
