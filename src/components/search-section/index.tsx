@@ -4,12 +4,21 @@ import type { DocDataElement, UpdatesDataElement } from 'utils/typings/types'
 import styles from './styles'
 
 interface SearchSectionProps {
-  dataElement: DocDataElement | UpdatesDataElement
-  index: number
+  dataElement: DocDataElement | UpdatesDataElement | null
+  index?: number
 }
 
 const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
-  return (
+  return !dataElement ? (
+    <Flex sx={styles.sectionContainer}>
+      <Text className="search-section-title" sx={styles.allResultsText}>
+        All results
+      </Text>
+      <Box className="search-section-count" sx={styles.sectionCount}>
+        25
+      </Box>
+    </Flex>
+  ) : (
     <Flex
       sx={styles.sectionContainer}
       key={`search-section-${dataElement.title}${index}`}

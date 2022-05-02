@@ -44,10 +44,18 @@ const sectionCount: SxStyleProp = {
   lineHeight: '16px',
 }
 
+const allResultsText: SxStyleProp = {
+  ...sectionTitle,
+  ml: '24px',
+  fontWeight: 'bold',
+  color: '#0C1522',
+}
+
 export default {
   sectionContainer,
   sectionIconTitleBox,
   sectionIcon,
   sectionTitle,
   sectionCount,
+  allResultsText,
 }

@@ -1,6 +1,6 @@
 import { Box, Flex, Text, IconCaret } from '@vtex/brand-ui'
 import { IconComponent } from 'utils/typings/types'
-import type { SearchDataItemProps } from 'pages/search'
+import type { SearchDataItemProps } from 'components/search-results'
 
 import { methodStyle } from './functions'
 import styles from './styles'

@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box } from '@vtex/brand-ui'
 
 import { documentationData, updatesData } from 'utils/constants'
 import SearchSection from 'components/search-section'
@@ -8,14 +8,7 @@ const SearchSections = () => {
   return (
     <Box sx={styles.container}>
       <Box sx={styles.docsSection}>
-        <Flex sx={styles.allResultsContainer}>
-          <Text className="search-section-title" sx={styles.allResultsText}>
-            All results
-          </Text>
-          <Box className="search-section-count" sx={styles.sectionCount}>
-            25
-          </Box>
-        </Flex>
+        <SearchSection dataElement={null} />
         {documentationData.map((docsIcon, index) => (
           <SearchSection dataElement={docsIcon} index={index} />
         ))}
