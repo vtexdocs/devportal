@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/vtex/devportal/compare/v0.5.2...v0.6.0) (2022-05-02)
+
+
+### Features
+
+* **markdown:** add two markdown example files ([f4d2e6f](https://github.com/vtex/devportal/commit/f4d2e6fccb348e3dfe21d27c01f9a430e8b1973a))
+* **markdown:** render example markdowns ([03c7308](https://github.com/vtex/devportal/commit/03c7308d9c5d0c70b223e7a45e89c9827c17d0ee))
+
+
+### Refactoring
+
+* **api-reference:** move OpenAPI specs to /docs/api-reference ([5829e87](https://github.com/vtex/devportal/commit/5829e87c76fef21e71c57148dfb778f7b5d4c103))
+
 ### [0.5.2](https://github.com/vtex/devportal/compare/v0.5.1...v0.5.2) (2022-04-28)
 
 
