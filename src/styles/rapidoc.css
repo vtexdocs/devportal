@@ -1,0 +1,89 @@
+rapi-doc::part(section-navbar) {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  background: #FFFFFF;
+  align-self: stretch;
+  margin: 0 15px 0 0;
+}
+
+rapi-doc::part(section-navbar-scroll) {
+  padding: 0px;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-grow: 0;
+  gap: 11px;
+  overflow-y: scroll;
+  background: #FFFFFF;
+  align-self: stretch;
+}
+
+rapi-doc::part(section-main-content) {
+  background: #FFFFFF;
+  padding: 42px 64px;
+}
+
+rapi-doc::part(section-operations-in-tag) {
+  padding: 24px 0px;
+}
+
+rapi-doc::part(textbox), rapi-doc::part(textbox-param), rapi-doc::part(textarea), rapi-doc::part(textarea-param) {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 8px 8px 12px;
+  position: static;
+  background: rgba(255, 255, 255, 0.0001);
+  border: 1px solid #B9B9B9;
+  box-sizing: border-box;
+  border-radius: 4px;
+  flex: none;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+rapi-doc::part(btn) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 4px;
+  background: #142032;
+  color: #FFFFFF;
+}
+
+rapi-doc::part(label-operation-path) {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px;
+  position: static;
+  width: auto;
+  height: 28px;
+  left: 0px;
+  top: 0px;
+  border: 1px solid #B9B9B9;
+  border-radius: 0px 4px 4px 0px;
+  margin: 4px 0px;
+}
+
+rapi-doc::part(label-operation-method) {
+  display: inline-flex;
+  flex-direction: row;
+  float: left;
+  align-items: center;
+  padding: 4px 8px;
+  position: static;
+  width: auto;
+  height: 28px;
+  left: 0px;
+  top: 0px;
+  border: 1px solid;
+  border-radius: 4px 0px 0px 4px;
+  margin: 4px 0px;
+}
