@@ -21,35 +21,35 @@ export interface SearchDataItemProps {
   actionType?: ActionType
 }
 
+const searchData: SearchDataItemProps[] = [
+  {
+    doc: 'API Guides',
+    title: 'SKU Selector',
+    description:
+      'The SKU Selector is a product details page block responsible for displaying every SKU available for a given product.',
+    filters: ['label', 'label', 'label'],
+  },
+  {
+    doc: 'API Reference',
+    title: 'GET SKU seller',
+    http: 'POST',
+    description:
+      'The SKU Selector is a product details page block responsible for displaying every SKU available for a given product.',
+    filters: ['label', 'label', 'label'],
+  },
+  {
+    doc: 'Release Notes',
+    title: 'SKU Selector',
+    description:
+      'The SKU Selector is a product details page block responsible for displaying every SKU available for a given product.',
+    actionType: 'removed',
+  },
+]
+
 const SearchResults = () => {
   const router = useRouter()
   const { filterSelectedSection, updateOcurrenceCount } =
     useContext(SearchContext)
-
-  const searchData: SearchDataItemProps[] = [
-    {
-      doc: 'API Guides',
-      title: 'SKU Selector',
-      description:
-        'The SKU Selector is a product details page block responsible for displaying every SKU available for a given product.',
-      filters: ['label', 'label', 'label'],
-    },
-    {
-      doc: 'API Reference',
-      title: 'GET SKU seller',
-      http: 'POST',
-      description:
-        'The SKU Selector is a product details page block responsible for displaying every SKU available for a given product.',
-      filters: ['label', 'label', 'label'],
-    },
-    {
-      doc: 'Release Notes',
-      title: 'SKU Selector',
-      description:
-        'The SKU Selector is a product details page block responsible for displaying every SKU available for a given product.',
-      actionType: 'removed',
-    },
-  ]
 
   useEffect(() => {
     updateOcurrenceCount(searchData)
