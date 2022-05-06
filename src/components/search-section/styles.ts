@@ -34,6 +34,12 @@ const sectionTitle: SxStyleProp = {
   lineHeight: '16px',
 }
 
+const sectionTitleActive: SxStyleProp = {
+  ...sectionTitle,
+  color: '#142032',
+  fontWeight: '600',
+}
+
 const sectionCount: SxStyleProp = {
   background: '#F8F7FC',
   borderRadius: '24px',
@@ -47,6 +53,10 @@ const sectionCount: SxStyleProp = {
 const allResultsText: SxStyleProp = {
   ...sectionTitle,
   ml: '24px',
+}
+
+const allResultsTextActive: SxStyleProp = {
+  ...allResultsText,
   fontWeight: 'bold',
   color: '#0C1522',
 }
@@ -56,6 +66,8 @@ export default {
   sectionIconTitleBox,
   sectionIcon,
   sectionTitle,
+  sectionTitleActive,
   sectionCount,
   allResultsText,
+  allResultsTextActive,
 }
