@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/vtex/devportal/compare/v0.7.0...v0.8.0) (2022-05-06)
+
+
+### Features
+
+* **search-page-filter:** add the filter logic ([f217f27](https://github.com/vtex/devportal/commit/f217f27c9f326b85131886a5e9f6d27380f3ffe8))
+* **search-page-filter:** add the occurrence count feature ([536484e](https://github.com/vtex/devportal/commit/536484e807099118ab54abbb0dd6eb94ae849124))
+
+
+### Bug Fixes
+
+* **search-section:** fix the all-results filter ([81ecd55](https://github.com/vtex/devportal/commit/81ecd55ebf6b581b3a27b6c8980ee3ef0a98873e))
+
+
+### Refactoring
+
+* **search-resuls:** move the mocked data to outside of component ([cda163e](https://github.com/vtex/devportal/commit/cda163e8c3517e10bbb18364287e7458da7ddcc9))
+
 ## [0.7.0](https://github.com/vtex/devportal/compare/v0.6.0...v0.7.0) (2022-05-02)
 
 
