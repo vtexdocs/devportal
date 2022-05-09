@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Developers portal | Home</title>
+        <title>VTEX Developers</title>
       </Head>
       <Grid sx={styles.grid}>
         <NewsletterSection />
