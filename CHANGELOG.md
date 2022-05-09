@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.1](https://github.com/vtex/devportal/compare/v0.8.0...v0.8.1) (2022-05-09)
+
+
+### Refactoring
+
+* change landing page title ([d220a0a](https://github.com/vtex/devportal/commit/d220a0ae0ec759c3542edbf12cf76c8b37b5081d))
+
+
+### Tests
+
+* add a test to simulate user navigation in an API reference page ([07db875](https://github.com/vtex/devportal/commit/07db875664b65eacd3c87c68e2f315b2d673a340))
+
 ## [0.8.0](https://github.com/vtex/devportal/compare/v0.7.0...v0.8.0) (2022-05-06)
 
 
