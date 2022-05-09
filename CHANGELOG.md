@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.2](https://github.com/vtex/devportal/compare/v0.8.1...v0.8.2) (2022-05-09)
+
+
+### Style
+
+* **rapidoc:** add tag attributes and css styles to RapiDoc elements ([f1a5364](https://github.com/vtex/devportal/commit/f1a53647809129dd05c4d72e36d51510944862e9))
+
 ### [0.8.1](https://github.com/vtex/devportal/compare/v0.8.0...v0.8.1) (2022-05-09)
 
 
