@@ -24,7 +24,7 @@ const LastUpdatesCard = ({ action, updateType }: CardProps) => {
   } = getUpdate(updateType)
 
   return (
-    <Link href="/">
+    <Link href={`/updates/${updateType}`}>
       <a style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
         <Flex sx={styles.cardContainer}>
           <Flex sx={styles.updateContainer}>

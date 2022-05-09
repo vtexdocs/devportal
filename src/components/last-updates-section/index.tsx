@@ -5,26 +5,25 @@ import { getMessages } from 'utils/get-messages'
 
 import styles from './styles'
 
-const updates: CardProps[] = [
-  {
-    action: {
-      type: 'added',
-      description:
-        'Secure Proxy: An alternative option for card payment integrations',
-      date: new Date('03/14/2022'),
-    },
-    updateType: 'release-notes',
+const lastReleaseNote: CardProps = {
+  action: {
+    type: 'added',
+    description:
+      'Secure Proxy: An alternative option for card payment integrations',
+    date: new Date('03/14/2022'),
   },
-  {
-    action: {
-      type: 'fixed',
-      description:
-        'Secure Proxy: An alternative option for card payment integrations',
-      date: new Date('03/11/2022'),
-    },
-    updateType: 'documentation-updates',
+  updateType: 'release-notes',
+}
+
+const lastDocumentationUpdate: CardProps = {
+  action: {
+    type: 'fixed',
+    description:
+      'Secure Proxy: An alternative option for card payment integrations',
+    date: new Date('03/11/2022'),
   },
-]
+  updateType: 'documentation-updates',
+}
 
 const LastUpdatesSection = () => {
   const messages = getMessages()
@@ -35,9 +34,8 @@ const LastUpdatesSection = () => {
         {messages['landing_page_last_updates.title']}
       </Text>
       <Box sx={styles.cardsContainer}>
-        {updates.map((update) => (
-          <LastUpdatesCard key={`${update.action.date}`} {...update} />
-        ))}
+        <LastUpdatesCard {...lastReleaseNote} />
+        <LastUpdatesCard {...lastDocumentationUpdate} />
       </Box>
     </Box>
   )
