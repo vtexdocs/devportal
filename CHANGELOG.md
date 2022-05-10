@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.8.3](https://github.com/vtex/devportal/compare/v0.8.2...v0.8.3) (2022-05-10)
+
+
+### Features
+
+* **last-updates:** add documentation updates and release notes pages ([d8bbbd4](https://github.com/vtex/devportal/commit/d8bbbd416ea9461e14f9a89677802a313440e4bd))
+
+
+### Bug Fixes
+
+* **last-updates:** render one card for each type of update ([ed9aa2c](https://github.com/vtex/devportal/commit/ed9aa2c3ca8449f9934e5cd11285525960c5c711))
+
 ### [0.8.2](https://github.com/vtex/devportal/compare/v0.8.1...v0.8.2) (2022-05-09)
 
 
