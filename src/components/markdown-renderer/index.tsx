@@ -17,6 +17,9 @@ const components = {
   td: ({ node, ...props }: Component) => (
     <td className={styles.td} {...props} />
   ),
+  img: ({ node, ...props }: Component) => (
+    <img className={styles.img} {...props} />
+  ),
 }
 
 interface Props {
