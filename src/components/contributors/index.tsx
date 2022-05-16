@@ -42,9 +42,15 @@ const Contributors = ({ contributors }: Props) => {
         <Text sx={styles.count}>{contributors.length}</Text>
       </Flex>
 
-      <Grid sx={styles.photosContainer} ref={photosContainer}>
-        {contributors.map((contributor, index) => {
-          if (!showAll && index >= 2 * photosPerRow) return null
+      <Grid
+        sx={styles.photosContainer(
+          showAll
+            ? Math.ceil(contributors.length / photosPerRow)
+            : Math.min(Math.ceil(contributors.length / photosPerRow), 2)
+        )}
+        ref={photosContainer}
+      >
+        {contributors.map((contributor) => {
           return (
             <a key={contributor} href="#">
               <Tooltip label={contributor}>

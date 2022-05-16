@@ -2,13 +2,13 @@ import { Box, Flex } from '@vtex/brand-ui'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import ContextProvider from 'utils/contexts/context'
+import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import Sidebar from 'components/sidebar'
 
 import { getSlugs, readFile } from 'utils/read-files'
 
 import styles from 'styles/documentation-page'
-import Contributors from 'components/contributors'
 
 const markdownDir = '/public/docs/api-guides'
 

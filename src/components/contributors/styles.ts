@@ -21,7 +21,7 @@ const count: SxStyleProp = {
   color: '#4A4A4A',
 }
 
-const photosContainer: SxStyleProp = {
+const photosContainer: (rows: number) => SxStyleProp = (rows) => ({
   mt: '16px',
   gap: '8px',
   gridTemplateColumns: [
@@ -32,7 +32,10 @@ const photosContainer: SxStyleProp = {
     '1fr 1fr 1fr 1fr',
     '1fr 1fr 1fr 1fr 1fr',
   ],
-}
+  overflow: 'hidden',
+  maxHeight: `${32 * rows + 8 * (rows - 1)}px`,
+  transition: 'max-height 0.5s ease-in-out',
+})
 
 const photo: SxStyleProp = {
   width: '32px',
