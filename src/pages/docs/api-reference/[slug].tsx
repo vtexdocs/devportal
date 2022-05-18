@@ -22,7 +22,8 @@ const APIPage: NextPage<Props> = ({ slug }) => {
   return (
     <>
       <Script
-        src="https://unpkg.com/rapidoc/dist/rapidoc-min.js"
+        type="text/javascript"
+        src="/rapidoc/rapidoc-min.js"
         strategy="beforeInteractive"
       />
 

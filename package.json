@@ -3,7 +3,9 @@
   "version": "0.9.1",
   "private": true,
   "scripts": {
+    "predev": "node src/utils/get-rapidoc.mjs",
     "dev": "next dev",
+    "prebuild": "node src/utils/get-rapidoc.mjs",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"src/**/*.{ts,js,tsx,jsx,json}\"",
@@ -15,6 +17,7 @@
   "dependencies": {
     "@vtex/brand-ui": "^0.46.0",
     "next": "^12.1.0",
+    "node-fetch": "^3.2.4",
     "rapidoc": "^9.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -56,6 +59,9 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    },
+    "rapidoc": {
+      "version": "1.0.0"
     }
   }
 }
