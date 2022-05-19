@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.9.0](https://github.com/vtexdocs/devportal/compare/v0.8.3...v0.9.0) (2022-05-19)
+
+
+### Features
+
+* **api-guides:** add contributors component ([b8482e4](https://github.com/vtexdocs/devportal/commit/b8482e467b79cf5293e92c8d8f5b2b140bfb8bbd))
+* **api-guides:** add transition effect to contributors component toggle ([11f27d3](https://github.com/vtexdocs/devportal/commit/11f27d3df85ce447a4a7c86ad7927b0d3b181508))
+* **api-guides:** change API guides documentation page layout ([3f87916](https://github.com/vtexdocs/devportal/commit/3f8791633cfef253852c6048afb2787b567f93a1))
+
+
+### Bug Fixes
+
+* **api-guides:** fix contributors component toggle animation speed ([584f8a8](https://github.com/vtexdocs/devportal/commit/584f8a8429e5c6e5c60750ae21f217a2724aa595))
+* **markdown-renderer:** fix image width inside markdown ([d82dc58](https://github.com/vtexdocs/devportal/commit/d82dc58cd165de99677f61172913d1f9afcb4924))
+* **sidebar:** fix sidebar changing width and appearing ing first breakpoint ([6e2ed6d](https://github.com/vtexdocs/devportal/commit/6e2ed6d0e56b0a4f8e3215a6816a63ebfc9e1d97))
+
+
+### Style
+
+* **markdown-renderer:** disable no-img-element ([aa4babd](https://github.com/vtexdocs/devportal/commit/aa4babdaf6fda6f2efcc9765b7329f2413ef56e3))
+
 ### [0.8.3](https://github.com/vtex/devportal/compare/v0.8.2...v0.8.3) (2022-05-10)
 
 
