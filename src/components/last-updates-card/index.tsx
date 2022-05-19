@@ -2,7 +2,8 @@ import Link from 'next/link'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import type { ActionType, UpdateType } from './functions'
-import { getAction, getDaysElapsed, getUpdate } from './functions'
+import { getAction, getUpdate } from './functions'
+import { getDaysElapsed } from './../../utils/get-days-elapsed'
 
 import styles from './styles'
 
