@@ -17,6 +17,10 @@ const components = {
   td: ({ node, ...props }: Component) => (
     <td className={styles.td} {...props} />
   ),
+  img: ({ node, ...props }: Component) => (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img className={styles.img} {...props} />
+  ),
 }
 
 interface Props {

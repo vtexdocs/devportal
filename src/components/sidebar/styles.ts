@@ -1,8 +1,14 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const sidebar: SxStyleProp = {
-  display: ['none', 'none', 'none', 'flex'],
+  display: [
+    'none !important',
+    'none !important',
+    'none !important',
+    'flex !important',
+  ],
   width: 'auto',
+  minWidth: 'auto',
   '.active': {
     left: '-276px',
     marginRight: '-120px',
@@ -11,7 +17,6 @@ const sidebar: SxStyleProp = {
 }
 
 const sidebarIcons: SxStyleProp = {
-  display: ['none', 'none', 'none', 'flex'],
   width: '56px',
   height: '692px',
   flexDirection: 'column',

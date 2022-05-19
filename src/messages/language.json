@@ -33,5 +33,7 @@
   "landing_page_footer_feedback.message": "Feedback",
   "landing_page_header_feedback.message": "FeedBack",
   "landing_page_header_docs.message": "Docs",
-  "landing_page_header_searchInput.message": "Search in Developers"
+  "landing_page_header_searchInput.message": "Search in Developers",
+  "api_guide_documentation_page_contributors.title": "Contributors",
+  "api_guide_documentation_page_contributors.toggleText": "See less"
 }
