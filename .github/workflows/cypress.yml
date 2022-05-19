@@ -12,10 +12,10 @@ jobs:
           node-version: 12.x
       - name: Install
         run: |
-          npm ci
+          yarn install --frozen-lockfile
       - name: Build
         run: |
-          npm run build
+          yarn build
       - name: Waiting for 200 from the Netlify Preview
         uses: kamranayub/wait-for-netlify-action@2.0.0
         id: wait-for-netflify-preview
