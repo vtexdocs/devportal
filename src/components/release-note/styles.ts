@@ -24,20 +24,20 @@ const content: SxStyleProp = {
   mb: '-32px',
 }
 
-const time: SxStyleProp = {
+const releaseDate: SxStyleProp = {
   color: 'muted.1',
   fontSize: ['12px', '16px'],
   lineHeight: '22px',
   mb: '8px',
 }
 
-const title: SxStyleProp = {
+const releaseTitle: SxStyleProp = {
   color: '#0C1522',
   fontSize: ['16px', '18px'],
   lineHeight: '24px',
 }
 
-const description: SxStyleProp = {
+const releaseDescription: SxStyleProp = {
   color: '#4A4A4A',
   fontSize: ['12px', '16px'],
   lineHeight: '22px',
@@ -46,10 +46,10 @@ const description: SxStyleProp = {
 
 export default {
   releaseContainer,
+  actionType,
   actionIcon,
   content,
-  actionType,
-  time,
-  title,
-  description,
+  releaseTitle,
+  releaseDate,
+  releaseDescription,
 }

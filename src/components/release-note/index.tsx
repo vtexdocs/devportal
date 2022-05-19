@@ -33,9 +33,11 @@ const ReleaseNote = ({
         }
       >
         <Flex sx={styles.content}>
-          <Text sx={styles.title}>{title}</Text>
-          <Text sx={styles.time}>{`${getDaysElapsed(date)} days ago`}</Text>
-          <Text sx={styles.description}>{description}</Text>
+          <Text sx={styles.releaseTitle}>{title}</Text>
+          <Text sx={styles.releaseDate}>{`${getDaysElapsed(
+            date
+          )} days ago`}</Text>
+          <Text sx={styles.releaseDescription}>{description}</Text>
         </Flex>
       </Timeline.Event>
     </Box>
