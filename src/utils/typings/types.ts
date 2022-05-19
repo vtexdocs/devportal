@@ -15,3 +15,10 @@ export type UpdatesDataElement = {
   title: UpdatesTitle
   link: string
 }
+
+export type ReleaseElement = {
+  title: string
+  date: Date
+  description: string
+  actionType: ActionType
+}
