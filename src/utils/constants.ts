@@ -8,7 +8,11 @@ import ReleaseNotesIcon from 'components/icons/release-notes-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 
 import { getMessages } from 'utils/get-messages'
-import { DocDataElement, UpdatesDataElement } from './typings/types'
+import {
+  DocDataElement,
+  UpdatesDataElement,
+  ReleaseElement,
+} from './typings/types'
 
 export const messages = getMessages()
 
@@ -50,7 +54,7 @@ export const updatesData: UpdatesDataElement[] = [
   {
     Icon: ReleaseNotesIcon,
     title: 'Release Notes',
-    link: '/',
+    link: '/docs/release-notes',
   },
   {
     Icon: DocumentationUpdatesIcon,
@@ -65,3 +69,27 @@ export const getIcon = (doc: string) => {
     updatesData.find((icon) => icon.title === doc)?.Icon
   )
 }
+
+export const releaseData: ReleaseElement[] = [
+  {
+    title: 'Secure Proxy: An alternative option for card payment integrations',
+    date: new Date('05/14/2022'),
+    description:
+      'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
+    actionType: 'removed',
+  },
+  {
+    title: 'Update on search-resolver@0.x API response',
+    date: new Date('03/30/2022'),
+    description:
+      'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
+    actionType: 'added',
+  },
+  {
+    title: 'New Payment App documentation',
+    date: new Date('03/14/2022'),
+    description:
+      'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
+    actionType: 'fixed',
+  },
+]

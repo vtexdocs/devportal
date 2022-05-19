@@ -1,4 +1,5 @@
 import { IconProps } from '@vtex/brand-ui'
+import { ActionType } from 'components/last-updates-card/functions'
 import { DocumentationTitle, UpdatesTitle } from './unionTypes'
 
 export type IconComponent = (props: IconProps) => JSX.Element
