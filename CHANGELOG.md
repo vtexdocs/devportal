@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.1](https://github.com/vtexdocs/devportal/compare/v0.9.0...v0.9.1) (2022-05-19)
+
+
+### Bug Fixes
+
+* **cypress-workflow:** replace npm commands with yarn ([ad280d8](https://github.com/vtexdocs/devportal/commit/ad280d878318125bc9c9fc4ef3f3264a718f9218))
+* **cypress-workflow:** update yarn install command ([5c05067](https://github.com/vtexdocs/devportal/commit/5c050673d0e4d0e26510f21f64c5eab7a5824b62))
+
 ## [0.9.0](https://github.com/vtexdocs/devportal/compare/v0.8.3...v0.9.0) (2022-05-19)
 
 
