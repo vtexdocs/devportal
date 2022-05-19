@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.9.2](https://github.com/vtexdocs/devportal/compare/v0.9.1...v0.9.2) (2022-05-19)
+
+
+### Build
+
+* **rapidoc:** add script to fetch rapidoc-min.js from vtexdocs/RapiDoc ([7ea1238](https://github.com/vtexdocs/devportal/commit/7ea1238647723bd58a079c8426ca3351333c866e))
+
 ### [0.9.1](https://github.com/vtexdocs/devportal/compare/v0.9.0...v0.9.1) (2022-05-19)
 
 
