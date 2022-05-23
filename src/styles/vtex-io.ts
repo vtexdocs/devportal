@@ -1,0 +1,115 @@
+import type { SxStyleProp } from '@vtex/brand-ui'
+
+const container: SxStyleProp = {
+  pt: '5rem',
+  width: '100%',
+  backgroundColor: 'white',
+}
+
+const mainContainer: SxStyleProp = {
+  width: '100%',
+}
+
+const welcomeOuterContainer: SxStyleProp = {
+  overflow: 'hidden',
+  borderBottom: ['none', '1px solid #E7E9EE'],
+}
+
+const welcomeInnerContainer: SxStyleProp = {
+  flexDirection: ['column-reverse', 'row'],
+  position: ['initial', 'relative'],
+  left: [
+    'initial',
+    'calc(50% - 1194px / 2 + 325px)',
+    'calc(50% - 1194px / 2 + 325px)',
+    'calc(50% - 1194px / 2 + 325px)',
+    'calc(50% - 1280px / 2 + 280px)',
+    'calc(50% - 1213px / 2 + 247px)',
+  ],
+  justifyContent: 'space-between',
+  alignItems: ['center', 'initial'],
+}
+
+const welcomeText: SxStyleProp = {
+  width: ['324px', '345px', '345px', '345px', '345px', '720px'],
+  textAlign: ['center', 'initial'],
+  fontSize: ['20px', '28px'],
+  lineHeight: ['30px', '38px'],
+  fontWeight: '400',
+  color: '#4A4A4A',
+  position: ['initial', 'absolute'],
+  pt: ['initial', '115px'],
+  mt: ['32px', 'initial'],
+}
+
+const welcomeImageOuterContainer: SxStyleProp = {
+  width: '100%',
+  overflow: 'hidden',
+}
+
+const welcomeImageInnerContainer: SxStyleProp = {
+  position: 'relative',
+  left: ['initial', '308px', '308px', '308px', '339px', '621px', '863px'],
+  top: ['-92px', '-122px'],
+  width: ['360px', '592px'],
+  height: ['128px', '222px'],
+}
+
+const contentContainer: SxStyleProp = {
+  mx: 'auto',
+  mt: ['16px', '32px'],
+  mb: ['32px', '64px'],
+  width: ['324px', '544px', '544px', '544px', '720px'],
+}
+
+const subtitle: SxStyleProp = {
+  textAlign: ['center', 'initial'],
+  fontSize: ['16px', '18px'],
+  lineHeight: ['22px', '24px'],
+  fontWeight: '400',
+  color: '#4A4A4A',
+}
+
+const resourcesSectionContainer: SxStyleProp = {
+  mt: '24px',
+}
+
+const resourcesSectionTitle: SxStyleProp = {
+  fontSize: ['18px', '22px'],
+  lineHeight: ['30px', '32px'],
+  fontWeight: '400',
+  color: '#4A4A4A',
+}
+
+const resourceContainer: SxStyleProp = {
+  mt: '24px',
+  fontSize: '16px',
+  fontWeight: '400',
+  lineHeight: '22px',
+}
+
+const resourceTitle: SxStyleProp = {
+  color: '#E31C58',
+}
+
+const resourceDescription: SxStyleProp = {
+  mt: '8px',
+  color: '#4A4A4A',
+}
+
+export default {
+  container,
+  mainContainer,
+  welcomeOuterContainer,
+  welcomeInnerContainer,
+  welcomeText,
+  welcomeImageOuterContainer,
+  welcomeImageInnerContainer,
+  contentContainer,
+  subtitle,
+  resourcesSectionContainer,
+  resourcesSectionTitle,
+  resourceContainer,
+  resourceTitle,
+  resourceDescription,
+}

@@ -9,4 +9,11 @@ export type DocumentationTitle =
 
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
+export type ResourceTitle =
+  | 'Community'
+  | 'Learning Center'
+  | 'GitHub'
+  | 'Help Center'
+  | 'Support'
+
 export type MethodType = 'POST' | 'GET' | 'PUT' | 'DELETE'
