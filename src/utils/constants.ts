@@ -54,7 +54,7 @@ export const updatesData: UpdatesDataElement[] = [
   {
     Icon: ReleaseNotesIcon,
     title: 'Release Notes',
-    link: '/docs/release-notes',
+    link: '/updates/release-notes',
   },
   {
     Icon: DocumentationUpdatesIcon,

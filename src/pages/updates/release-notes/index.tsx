@@ -1,13 +1,19 @@
-import { Flex, Text } from '@vtex/brand-ui'
+import { Flex } from '@vtex/brand-ui'
 
-import styles from 'styles/release-notes'
+import Sidebar from 'components/sidebar'
+import styles from 'styles/api-guides'
+import ContextProvider from 'utils/contexts/context'
+import ReleaseSection from '../../../components/release-section'
 
-const ReleaseNotes = () => {
+const ReleasePage = () => {
   return (
-    <Flex sx={styles.container}>
-      <Text>Release Notes</Text>
-    </Flex>
+    <ContextProvider>
+      <Flex sx={styles.container}>
+        <Sidebar sectionSelected={'Release Notes'} />
+        <ReleaseSection />
+      </Flex>
+    </ContextProvider>
   )
 }
 
-export default ReleaseNotes
+export default ReleasePage

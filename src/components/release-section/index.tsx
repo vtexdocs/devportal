@@ -1,7 +1,7 @@
 import ReleaseNote from '../release-note'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import { releaseData as release } from 'utils/constants'
+import { releaseData as releases } from 'utils/constants'
 import styles from 'components/release-section/styles'
 import { getMessages } from 'utils/get-messages'
 
@@ -20,7 +20,7 @@ const ReleaseSection = () => {
         <Box sx={styles.sectionDivider}>
           <hr />
         </Box>
-        {release.map((release) => (
+        {releases.map((release) => (
           <ReleaseNote key={release.title} {...release} />
         ))}
       </Box>

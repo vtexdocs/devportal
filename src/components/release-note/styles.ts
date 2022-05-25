@@ -20,7 +20,7 @@ const content: SxStyleProp = {
   flexDirection: 'column',
   pt: 0,
   ml: '-16px',
-  mt: '-16px',
+  mt: '-32px',
   mb: '-32px',
 }
 
@@ -35,13 +35,14 @@ const releaseTitle: SxStyleProp = {
   color: '#0C1522',
   fontSize: ['16px', '18px'],
   lineHeight: '24px',
+  mt: '8px',
 }
 
 const releaseDescription: SxStyleProp = {
   color: '#4A4A4A',
   fontSize: ['12px', '16px'],
   lineHeight: '22px',
-  maxWidth: '650px',
+  maxWidth: '671px',
 }
 
 export default {

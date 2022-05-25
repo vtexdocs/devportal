@@ -49,7 +49,7 @@ const updatesCards: CardProps[] = [
   {
     title: 'Release Notes',
     description: 'From ERP to custom-built integrations — extend',
-    to: '/docs/release-notes',
+    to: '/updates/release-notes',
     Icon: ReleaseNotesIcon,
   },
   {
