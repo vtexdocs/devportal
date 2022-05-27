@@ -1,6 +1,6 @@
 import { Box } from '@vtex/brand-ui'
 
-import DropdownCard, { CardProps } from 'components/dropdown-card'
+import DocumentationCard, { CardProps } from 'components/documentation-card'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
@@ -69,7 +69,7 @@ const DropdownMenu = () => {
           data-cy="dropdown-menu-first-section"
         >
           {documentationCards.map((card) => (
-            <DropdownCard key={card.title} {...card} />
+            <DocumentationCard key={card.title} {...card} />
           ))}
         </Box>
         <Box
@@ -77,7 +77,7 @@ const DropdownMenu = () => {
           data-cy="dropdown-menu-second-section"
         >
           {updatesCards.map((card) => (
-            <DropdownCard key={card.title} {...card} />
+            <DocumentationCard key={card.title} {...card} />
           ))}
         </Box>
       </Box>
