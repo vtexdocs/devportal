@@ -35,5 +35,7 @@
   "landing_page_header_docs.message": "Docs",
   "landing_page_header_searchInput.message": "Search in Developers",
   "api_guide_documentation_page_contributors.title": "Contributors",
-  "api_guide_documentation_page_contributors.toggleText": "See less"
+  "api_guide_documentation_page_contributors.toggleText": "See less",
+  "release_notes_page.title": "Release Notes",
+  "release_notes_page.subtitle": "VTEX platform documentation release notes"
 }
