@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.11.0](https://github.com/vtexdocs/devportal/compare/v0.10.0...v0.11.0) (2022-05-27)
+
+
+### Features
+
+* add custom tooltip component ([02f5a82](https://github.com/vtexdocs/devportal/commit/02f5a823832270d4bced972bc7dd358d1d1338b0))
+
+
+### Bug Fixes
+
+* **api-guides:** fix tooltip in contributors component ([3cc7b83](https://github.com/vtexdocs/devportal/commit/3cc7b839a8d18a9835f75de45307fdf14de860bb))
+
 ## [0.10.0](https://github.com/vtexdocs/devportal/compare/v0.9.2...v0.10.0) (2022-05-27)
 
 
