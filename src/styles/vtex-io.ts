@@ -30,7 +30,9 @@ const welcomeInnerContainer: SxStyleProp = {
 }
 
 const welcomeText: SxStyleProp = {
-  width: ['324px', '345px', '345px', '345px', '345px', '720px'],
+  boxSizing: 'initial',
+  maxWidth: ['324px', 'initial'],
+  width: ['auto', '345px', '345px', '345px', '345px', '720px'],
   textAlign: ['center', 'initial'],
   fontSize: ['20px', '28px'],
   lineHeight: ['30px', '38px'],
@@ -38,6 +40,7 @@ const welcomeText: SxStyleProp = {
   color: '#4A4A4A',
   position: ['initial', 'absolute'],
   pt: ['initial', '115px'],
+  px: ['18px', 'initial'],
   mt: ['32px', 'initial'],
 }
 
@@ -48,6 +51,7 @@ const welcomeImageOuterContainer: SxStyleProp = {
 
 const welcomeImageInnerContainer: SxStyleProp = {
   position: 'relative',
+  mx: ['auto', 'initial'],
   left: ['initial', '308px', '308px', '308px', '339px', '621px', '863px'],
   top: ['-92px', '-122px'],
   width: ['360px', '592px'],
@@ -75,7 +79,10 @@ const contentContainer: SxStyleProp = {
   mx: 'auto',
   mt: ['16px', '32px'],
   mb: ['32px', '64px'],
-  width: ['324px', '544px', '544px', '544px', '720px'],
+  px: ['18px', 'initial'],
+  maxWidth: ['324px', 'initial'],
+  width: ['auto', '544px', '544px', '544px', '720px'],
+  boxSizing: 'initial',
 }
 
 const subtitle: SxStyleProp = {

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useState } from 'react'
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 
 import ContextProvider from 'utils/contexts/context'
 import Sidebar from 'components/sidebar'
@@ -51,9 +51,13 @@ const VTEXIOPage = () => {
               <Box>
                 {resources.map((resource) => (
                   <Box key={resource.title} sx={styles.resourceContainer}>
-                    <a href={resource.link} target="_blank">
-                      <Text sx={styles.resourceTitle}>{resource.title}</Text>
-                    </a>
+                    <Link
+                      target="_blank"
+                      href={resource.link}
+                      sx={styles.resourceTitle}
+                    >
+                      {resource.title}
+                    </Link>
                     <Text sx={styles.resourceDescription}>
                       {resource.description}
                     </Text>
