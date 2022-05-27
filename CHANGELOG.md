@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/vtexdocs/devportal/compare/v0.9.2...v0.10.0) (2022-05-27)
+
+
+### Features
+
+* **messages:** adds release messages ([754d1d7](https://github.com/vtexdocs/devportal/commit/754d1d76083e0b32e2e32444bec8b51e7a4bee38))
+* **release-note:** create release component and styles ([e6150aa](https://github.com/vtexdocs/devportal/commit/e6150aaef9c84288caa870ed2a6782163f9d197d))
+* **release-note:** create release temporary data ([9778224](https://github.com/vtexdocs/devportal/commit/97782248d77439d56770608eb2f83e035256df9c))
+* **release-note:** create release type ([c0d41b9](https://github.com/vtexdocs/devportal/commit/c0d41b95f5315ba9c2288b7249d9c444137f2a35))
+* **release-page:** create release page and route ([a1fb7bc](https://github.com/vtexdocs/devportal/commit/a1fb7bc4956fb6d74de6a0a6079f0fda8ab69124))
+* **release-section:** create release section and styles ([4d5217d](https://github.com/vtexdocs/devportal/commit/4d5217d4191306a151f69b5ed53f8faaa0519699))
+* **styles:** create release styles ([3f973cd](https://github.com/vtexdocs/devportal/commit/3f973cd8ece31a2e8b05d9b02a10de85b7b2a8ff))
+* **update-functions:** moves days elapsed function to utils ([ee1e003](https://github.com/vtexdocs/devportal/commit/ee1e00360ef50223874b18dbca6908cb3932cda8))
+
+
+### Bug Fixes
+
+* **release-note:** fix styles names ([84aaf7c](https://github.com/vtexdocs/devportal/commit/84aaf7c37f2d44bcce7e03b9304dbf674faa58f7))
+* **release-note:** styles adjusts and move release notes to the correct page ([199b5ce](https://github.com/vtexdocs/devportal/commit/199b5ce7abd124df77803d4d3d2c6107bcab32f0))
+
 ### [0.9.2](https://github.com/vtexdocs/devportal/compare/v0.9.1...v0.9.2) (2022-05-19)
 
 
