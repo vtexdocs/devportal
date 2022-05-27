@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useState } from 'react'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import ContextProvider from 'utils/contexts/context'
@@ -13,8 +14,13 @@ import styles from 'styles/vtex-io'
 
 const VTEXIOPage = () => {
   const messages = getMessages()
+  const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
+
   return (
-    <ContextProvider>
+    <ContextProvider
+      sidebarSectionHidden={sidebarSectionHidden}
+      setSidebarSectionHidden={setSidebarSectionHidden}
+    >
       <Flex sx={styles.container}>
         <Sidebar sectionSelected="VTEX IO" />
         <Box sx={styles.mainContainer}>
@@ -30,6 +36,8 @@ const VTEXIOPage = () => {
               </Box>
             </Flex>
           </Box>
+
+          <Box sx={styles.divider(sidebarSectionHidden)}></Box>
 
           <Box sx={styles.contentContainer}>
             <Text sx={styles.subtitle}>

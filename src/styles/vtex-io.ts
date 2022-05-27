@@ -12,7 +12,6 @@ const mainContainer: SxStyleProp = {
 
 const welcomeOuterContainer: SxStyleProp = {
   overflow: 'hidden',
-  borderBottom: ['none', '1px solid #E7E9EE'],
 }
 
 const welcomeInnerContainer: SxStyleProp = {
@@ -54,6 +53,23 @@ const welcomeImageInnerContainer: SxStyleProp = {
   width: ['360px', '592px'],
   height: ['128px', '222px'],
 }
+
+const divider: (sidebarSectionHidden: boolean) => SxStyleProp = (
+  sidebarSectionHidden
+) => ({
+  margin: 0,
+  padding: 0,
+  float: 'right',
+  borderWidth: 0,
+  borderBottom: '1px solid #E7E9EE',
+  transition: 'width 0.3s ease-in-out',
+  width: [
+    0,
+    '100%',
+    '100%',
+    `calc(100vw - 72px - ${sidebarSectionHidden ? 24 : 300}px)`,
+  ],
+})
 
 const contentContainer: SxStyleProp = {
   mx: 'auto',
@@ -105,6 +121,7 @@ export default {
   welcomeText,
   welcomeImageOuterContainer,
   welcomeImageInnerContainer,
+  divider,
   contentContainer,
   subtitle,
   resourcesSectionContainer,
