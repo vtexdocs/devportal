@@ -10,14 +10,6 @@ const APIPage: NextPage<Props> = ({ slug }) => {
     width: '100%',
     height: '100%',
     marginTop: '5rem',
-    '--nav-get-color': '#38853C',
-    '--nav-put-color': '#D56A00',
-    '--nav-post-color': '#2978B5',
-    '--nav-delete-color': '#CC3D3D',
-    '--red': '#CC3D3D',
-    '--orange': '#D56A00',
-    '--green': '#2978B5',
-    '--blue': '#38853C',
   }
   return (
     <>
