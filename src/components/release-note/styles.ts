@@ -18,6 +18,8 @@ const actionIcon: SxStyleProp = {
 
 const content: SxStyleProp = {
   flexDirection: 'column',
+  maxWidth: ['272px', '495px', '495px', '495px', '671px'],
+  minWidth: ['272px', '495px', '495px', '495px', '671px'],
   pt: 0,
   ml: '-16px',
   mt: '-32px',
@@ -42,7 +44,17 @@ const releaseDescription: SxStyleProp = {
   color: '#4A4A4A',
   fontSize: ['12px', '16px'],
   lineHeight: '22px',
-  maxWidth: '671px',
+}
+
+const arrowIcon: SxStyleProp = {
+  pb: '30px',
+  pr: '0px',
+  color: 'muted.1',
+}
+
+const arrowIconActive: SxStyleProp = {
+  ...arrowIcon,
+  color: '#D71D55',
 }
 
 export default {
@@ -53,4 +65,6 @@ export default {
   releaseTitle,
   releaseDate,
   releaseDescription,
+  arrowIcon,
+  arrowIconActive,
 }
