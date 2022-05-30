@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/vtexdocs/devportal/compare/v0.11.0...v0.12.0) (2022-05-30)
+
+
+### Features
+
+* **vtex-io:** add correct layout to VTEX IO page ([eb9d444](https://github.com/vtexdocs/devportal/commit/eb9d444ea83fe33f386de401bcb6ff324ba54d04))
+* **vtex-io:** add linear gradient to welcome image ([4528650](https://github.com/vtexdocs/devportal/commit/452865025e0ac77f79d4457020103e470294ee48))
+
+
+### Bug Fixes
+
+* **vtex-io:** fix style bugs on first breakpoint ([ee4ffd3](https://github.com/vtexdocs/devportal/commit/ee4ffd38ddf7ac3f961e6a6ea583edcc1429d041))
+* **vtex-io:** fix width of line that separates the welcome and content sections ([d1d32c8](https://github.com/vtexdocs/devportal/commit/d1d32c8be48054cef751e3f1e7d263da8d0b9ad0))
+
 ## [0.11.0](https://github.com/vtexdocs/devportal/compare/v0.10.0...v0.11.0) (2022-05-27)
 
 
