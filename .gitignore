@@ -14,6 +14,7 @@
 
 # production
 /build
+/public/rapidoc/rapidoc-min.js
 
 # misc
 .DS_Store
