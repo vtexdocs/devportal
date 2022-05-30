@@ -1,8 +1,11 @@
+import type { Dispatch, ReactNode, SetStateAction } from 'react'
 import { createContext, useState } from 'react'
 
 type ContextType = {
+  sidebarSectionHidden: boolean
   sidebarElementActive: Map<string, number>
   sidebarElementStatus: Map<string, { open: boolean; level: number }>
+  setSidebarSectionHidden: Dispatch<SetStateAction<boolean>>
   toggleSidebarElementActive: (title: string, level: number) => void
   toggleSidebarElementStatus: (
     title: string,
@@ -12,13 +15,20 @@ type ContextType = {
 }
 
 export const Context = createContext<ContextType>({
+  sidebarSectionHidden: false,
   sidebarElementActive: new Map(),
   sidebarElementStatus: new Map(),
+  setSidebarSectionHidden: () => undefined,
   toggleSidebarElementActive: () => undefined,
   toggleSidebarElementStatus: () => undefined,
 })
 
-const ContextProvider: React.FC = ({ children }) => {
+interface Props extends Partial<ContextType> {
+  children: ReactNode
+}
+
+const ContextProvider = ({ children, ...props }: Props) => {
+  const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
   const [sidebarElementActive, changeSidebarElementActive] = useState(new Map())
   const [sidebarElementStatus, changeSidebarElementStatus] = useState(new Map())
 
@@ -40,10 +50,13 @@ const ContextProvider: React.FC = ({ children }) => {
   return (
     <Context.Provider
       value={{
+        sidebarSectionHidden,
         sidebarElementActive,
         sidebarElementStatus,
+        setSidebarSectionHidden,
         toggleSidebarElementActive,
         toggleSidebarElementStatus,
+        ...props,
       }}
     >
       {children}

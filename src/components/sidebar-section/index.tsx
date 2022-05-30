@@ -1,11 +1,12 @@
 import { Flex, Box, Text } from '@vtex/brand-ui'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 
 import HelpIcon from 'components/icons/help-icon'
 import SearchIcon from 'components/icons/search-icon'
 import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
 import SideBarElements from 'components/sidebar-elements'
 
+import { Context } from 'utils/contexts/context'
 import type { SidebarItemPropTypes } from 'components/sidebar-elements'
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import styles from './styles'
@@ -17,14 +18,15 @@ export interface SidebarSectionProps {
 
 const SidebarSection = ({ title, data }: SidebarSectionProps) => {
   const [searchValue, setSearchValue] = useState('')
-  const [sideBarToggle, setSideBarToggle] = useState(false)
+  const { sidebarSectionHidden, setSidebarSectionHidden } = useContext(Context)
+
   return (
     <Box
-      className={sideBarToggle ? 'active' : ''}
+      className={sidebarSectionHidden ? 'active' : ''}
       sx={styles.sidebarElementsContainer}
     >
       <Box
-        className={sideBarToggle ? 'sidebarHide' : ''}
+        className={sidebarSectionHidden ? 'sidebarHide' : ''}
         sx={styles.sidebarElementsBox}
       >
         <Text sx={styles.sidebarTitle}>
@@ -46,13 +48,19 @@ const SidebarSection = ({ title, data }: SidebarSectionProps) => {
       </Box>
       <Flex
         className="toggleIcon"
-        sx={sideBarToggle ? styles.toggleIconBoxActive : styles.toggleIconBox}
+        sx={
+          sidebarSectionHidden
+            ? styles.toggleIconBoxActive
+            : styles.toggleIconBox
+        }
       >
         <SideBarToggleIcon
           onClick={() => {
-            setSideBarToggle(!sideBarToggle)
+            setSidebarSectionHidden(
+              (sidebarSectionHidden) => !sidebarSectionHidden
+            )
           }}
-          sx={sideBarToggle ? styles.toggleIcon : {}}
+          sx={sidebarSectionHidden ? styles.toggleIcon : {}}
         />
       </Flex>
     </Box>

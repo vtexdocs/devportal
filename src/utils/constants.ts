@@ -9,9 +9,18 @@ import DocumentationUpdatesIcon from 'components/icons/documentation-updates-ico
 
 import { getMessages } from 'utils/get-messages'
 import {
+  getCommunityURL,
+  getLearningCenterURL,
+  getGithubURL,
+  getHelpCenterURL,
+  getSupportURL,
+} from 'utils/get-url'
+
+import {
   DocDataElement,
   UpdatesDataElement,
   ReleaseElement,
+  ResourceDataElement,
 } from './typings/types'
 
 export const messages = getMessages()
@@ -91,5 +100,35 @@ export const releaseData: ReleaseElement[] = [
     description:
       'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
     actionType: 'fixed',
+  },
+]
+
+export const resources: ResourceDataElement[] = [
+  {
+    title: 'Community',
+    description: messages['vtex_io_page_other_resources_community.description'],
+    link: getCommunityURL(),
+  },
+  {
+    title: 'Learning Center',
+    description:
+      messages['vtex_io_page_other_resources_learning_center.description'],
+    link: getLearningCenterURL(),
+  },
+  {
+    title: 'GitHub',
+    description: messages['vtex_io_page_other_resources_github.description'],
+    link: getGithubURL(),
+  },
+  {
+    title: 'Help Center',
+    description:
+      messages['vtex_io_page_other_resources_help_center.description'],
+    link: getHelpCenterURL(),
+  },
+  {
+    title: 'Support',
+    description: messages['vtex_io_page_other_resources_support.description'],
+    link: getSupportURL(),
   },
 ]
