@@ -58,6 +58,18 @@ const welcomeImageInnerContainer: SxStyleProp = {
   height: ['128px', '222px'],
 }
 
+const welcomeImageGradient: SxStyleProp = {
+  zIndex: 1,
+  width: '100%',
+  height: '100%',
+  position: 'absolute',
+  top: ['92px', '122px'],
+  background: [
+    'linear-gradient(180deg, rgba(255, 255, 255, 0) -3.42%, #FFFFFF 103.17%)',
+    'linear-gradient(47.76deg, #FFFFFF -41.03%, rgba(255, 255, 255, 0) 28.93%)',
+  ],
+}
+
 const divider: (sidebarSectionHidden: boolean) => SxStyleProp = (
   sidebarSectionHidden
 ) => ({
@@ -128,6 +140,7 @@ export default {
   welcomeText,
   welcomeImageOuterContainer,
   welcomeImageInnerContainer,
+  welcomeImageGradient,
   divider,
   contentContainer,
   subtitle,

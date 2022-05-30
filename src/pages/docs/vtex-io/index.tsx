@@ -31,6 +31,7 @@ const VTEXIOPage = () => {
               </Text>
               <Box sx={styles.welcomeImageOuterContainer}>
                 <Box sx={styles.welcomeImageInnerContainer}>
+                  <Box sx={styles.welcomeImageGradient}></Box>
                   <Image src={image} />
                 </Box>
               </Box>
