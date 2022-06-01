@@ -9,7 +9,6 @@ interface SeeAlsoSectionProps {
 }
 
 const SeeAlsoSection = ({ cards }: SeeAlsoSectionProps) => {
-  console.log(cards)
   return (
     <Box sx={styles.seeAlsoContainer}>
       <Text sx={styles.sectionTitle}>See also</Text>

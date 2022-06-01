@@ -28,12 +28,14 @@ const documentationCards: CardProps[] = [
     description: 'API Guides',
     to: '/docs/api-guides/billing-options',
     Icon: APIGuidesIcon,
+    containerType: 'see-also',
   },
   {
     title: 'Catalog API',
     description: 'API Reference',
     to: '/docs/api-reference/catalog',
     Icon: APIReferenceIcon,
+    containerType: 'see-also',
   },
 ]
 

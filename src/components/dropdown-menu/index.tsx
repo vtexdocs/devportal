@@ -18,30 +18,35 @@ const documentationCards: CardProps[] = [
     description: 'Quickly build and launch high-performance stores',
     to: '/docs/api-guides',
     Icon: APIGuidesIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'API Reference',
     description: 'From ERP to custom-built integrations — extend',
     to: '/docs/api-reference',
     Icon: APIReferenceIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'VTEX IO',
     description: 'VTEX IO is an enterprise low-code development',
     to: '/docs/vtex-io',
     Icon: VTEXIOIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'FastStore',
     description: 'Quickly build and launch high-performance stores',
     to: '/docs/fast-store',
     Icon: FastStoreIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'WebOps',
     description: 'From ERP to custom-built integrations — extend',
     to: '/docs/webops',
     Icon: WebOpsIcon,
+    containerType: 'dropdown',
   },
 ]
 
@@ -51,12 +56,14 @@ const updatesCards: CardProps[] = [
     description: 'From ERP to custom-built integrations — extend',
     to: '/updates/release-notes',
     Icon: ReleaseNotesIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'Documentation Updates',
     description: 'From ERP to custom-built integrations — extend',
     to: '/',
     Icon: DocumentationUpdatesIcon,
+    containerType: 'dropdown',
   },
 ]
 
