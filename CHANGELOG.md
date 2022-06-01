@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.12.1](https://github.com/vtexdocs/devportal/compare/v0.12.0...v0.12.1) (2022-06-01)
+
+
+### Chore
+
+* **gitignore:** remove rapidoc-min.js file from version control ([40dc2fd](https://github.com/vtexdocs/devportal/commit/40dc2fda96d38b46f570e4415c6de31db3538d1b))
+
+
+### Style
+
+* **rapidoc:** remove style overrides related to method-path section ([8f136fe](https://github.com/vtexdocs/devportal/commit/8f136fe5c8938645effdc8f0465e9000499c6187))
+
+
+### Build
+
+* **rapidoc:** update rapidoc version ([4415654](https://github.com/vtexdocs/devportal/commit/4415654f2e75e74935db2c41eb9b07686abe0056))
+
 ## [0.12.0](https://github.com/vtexdocs/devportal/compare/v0.11.0...v0.12.0) (2022-05-30)
 
 
