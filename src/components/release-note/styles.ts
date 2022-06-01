@@ -30,7 +30,6 @@ const releaseDate: SxStyleProp = {
   color: 'muted.1',
   fontSize: ['12px', '16px'],
   lineHeight: '22px',
-  mb: '8px',
 }
 
 const releaseTitle: SxStyleProp = {
@@ -44,17 +43,14 @@ const releaseDescription: SxStyleProp = {
   color: '#4A4A4A',
   fontSize: ['12px', '16px'],
   lineHeight: '22px',
+  mt: '8px',
 }
 
 const arrowIcon: SxStyleProp = {
   pb: '30px',
   pr: '0px',
-  color: 'muted.1',
-}
-
-const arrowIconActive: SxStyleProp = {
-  ...arrowIcon,
-  color: '#D71D55',
+  pl: 0,
+  color: 'muted.0',
 }
 
 export default {
@@ -66,5 +62,4 @@ export default {
   releaseDate,
   releaseDescription,
   arrowIcon,
-  arrowIconActive,
 }
