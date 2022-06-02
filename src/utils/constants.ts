@@ -111,25 +111,25 @@ export const releaseData: ReleaseElement[] = [
     slug: 'new-payment',
     title: 'New Payment',
     createdAt: new Date('03/14/2022'),
-    hidden: true,
+    hidden: false,
     description:
       'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
     actionType: 'fixed',
   },
   {
-    slug: 'new-payment',
-    title: 'New Payment',
-    createdAt: new Date('09/14/2021'),
-    hidden: true,
-    description:
-      'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
-    actionType: 'fixed',
-  },
-  {
-    slug: 'new-payment',
-    title: 'New Payment',
+    slug: 'google-tag-manager',
+    title: 'Google Tag Manager',
     createdAt: new Date('03/14/2021'),
     hidden: true,
+    description:
+      'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
+    actionType: 'fixed',
+  },
+  {
+    slug: 'google-analitcs',
+    title: 'Google Analytics',
+    createdAt: new Date('03/14/2021'),
+    hidden: false,
     description:
       'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
     actionType: 'fixed',

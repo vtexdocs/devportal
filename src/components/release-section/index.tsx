@@ -28,11 +28,13 @@ const ReleaseSection = () => {
                 ? getDate(release.createdAt)
                 : null
               : getDate(release.createdAt)}
-            <ReleaseNote
-              key={`${release.slug}`}
-              isFirst={index == 0}
-              {...release}
-            />
+            {!release.hidden && (
+              <ReleaseNote
+                key={`${release.slug}`}
+                isFirst={index == 0}
+                {...release}
+              />
+            )}
           </>
         ))}
       </Box>
