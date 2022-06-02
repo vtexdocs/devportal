@@ -1,24 +1,19 @@
-import React, { useContext } from 'react'
+import React, { useState } from 'react'
+import Link from 'next/link'
 import { Flex, Timeline, Text, Box, Button, IconCaret } from '@vtex/brand-ui'
 
-import type { ReleaseElement } from 'utils/typings/types'
-import type { ActionType } from 'components/last-updates-card/functions'
+import type { UpdateElement } from 'utils/typings/types'
 import { getAction } from './../last-updates-card/functions'
 import { getDaysElapsed } from './../../utils/get-days-elapsed'
-import { Context } from 'utils/contexts/context'
 import styles from './styles'
-
-export interface ReleaseProps {
-  title: string
-  date: Date
-  description: string
-  actionType?: ActionType
-}
 
 interface DescriptionProps {
   description: string
   releaseStatus?: boolean
-  first?: boolean
+}
+
+interface ReleaseNoteProps extends UpdateElement {
+  isFirst: boolean
 }
 
 const Description = ({ description, releaseStatus }: DescriptionProps) => {
@@ -30,43 +25,29 @@ const Description = ({ description, releaseStatus }: DescriptionProps) => {
 }
 
 const ReleaseNote = ({
+  slug,
   title,
-  date,
+  createdAt,
   description,
   actionType,
-}: ReleaseElement) => {
+  isFirst,
+}: ReleaseNoteProps) => {
   const actionValue = actionType ? getAction(actionType) : null
-  const { releaseElementStatus, toggleReleaseElementStatus } =
-    useContext(Context)
+  const [releaseElementStatus, toggleReleaseElementStatus] = useState(isFirst)
   return (
     <Flex sx={styles.releaseContainer}>
       <Button
         size="regular"
         variant="tertiary"
-        sx={
-          releaseElementStatus.has(title) &&
-          releaseElementStatus.get(title)?.open
-            ? styles.arrowIconActive
-            : styles.arrowIcon
-        }
+        sx={styles.arrowIcon}
         icon={() => (
           <IconCaret
-            direction={
-              releaseElementStatus.has(title) &&
-              releaseElementStatus.get(title)?.open
-                ? 'down'
-                : 'right'
-            }
+            direction={releaseElementStatus ? 'down' : 'right'}
             size={24}
           />
         )}
         onClick={() => {
-          releaseElementStatus.has(title)
-            ? toggleReleaseElementStatus(
-                title,
-                !releaseElementStatus.get(title)?.open
-              )
-            : toggleReleaseElementStatus(title, true)
+          toggleReleaseElementStatus(!releaseElementStatus)
         }}
       />
       <Timeline.Event
@@ -80,13 +61,17 @@ const ReleaseNote = ({
         }
       >
         <Flex sx={styles.content}>
-          <Text sx={styles.releaseTitle}>{title}</Text>
+          <Link href={slug}>
+            <a>
+              <Text sx={styles.releaseTitle}>{title}</Text>
+            </a>
+          </Link>
           <Text sx={styles.releaseDate}>{`${getDaysElapsed(
-            date
+            createdAt
           )} days ago`}</Text>
           <Description
             description={description}
-            releaseStatus={releaseElementStatus.get(title)?.open}
+            releaseStatus={releaseElementStatus}
           ></Description>
         </Flex>
       </Timeline.Event>
