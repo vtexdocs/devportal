@@ -18,9 +18,11 @@ export type UpdatesDataElement = {
   link: string
 }
 
-export type ReleaseElement = {
+export type UpdateElement = {
+  slug: string
   title: string
-  date: Date
+  createdAt: Date
+  hidden: boolean
   description: string
   actionType: ActionType
 }
