@@ -19,7 +19,7 @@ import {
 import {
   DocDataElement,
   UpdatesDataElement,
-  ReleaseElement,
+  UpdateElement,
   ResourceDataElement,
 } from './typings/types'
 
@@ -79,7 +79,7 @@ export const getIcon = (doc: string) => {
   )
 }
 
-export const releaseData: ReleaseElement[] = [
+export const releaseData: UpdateElement[] = [
   {
     slug: 'secury-proxy-an-alternative-option',
     title: 'Secure Proxy: An alternative option for card payment integrations',
