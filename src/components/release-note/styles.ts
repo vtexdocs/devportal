@@ -2,6 +2,13 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const releaseContainer: SxStyleProp = {
   mb: '28px',
+  '& > :nth-child(2)': {
+    '& > :first-child': {
+      '& > :nth-child(2)': {
+        width: '1px',
+      },
+    },
+  },
 }
 
 const actionType: SxStyleProp = {
