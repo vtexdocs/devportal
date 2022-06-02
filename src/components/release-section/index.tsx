@@ -4,6 +4,7 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 import { releaseData as releases } from 'utils/constants'
 import styles from 'components/release-section/styles'
 import { getMessages } from 'utils/get-messages'
+import { compareDates, getDate } from './functions'
 
 const messages = getMessages()
 
@@ -20,8 +21,19 @@ const ReleaseSection = () => {
         <Box sx={styles.sectionDivider}>
           <hr />
         </Box>
-        {releases.map((release) => (
-          <ReleaseNote key={release.title} {...release} />
+        {releases.map((release, index) => (
+          <>
+            {index > 0
+              ? compareDates(release.createdAt, releases[index - 1].createdAt)
+                ? getDate(release.createdAt)
+                : null
+              : getDate(release.createdAt)}
+            <ReleaseNote
+              key={`${release.slug}`}
+              isFirst={index == 0}
+              {...release}
+            />
+          </>
         ))}
       </Box>
     </Flex>
