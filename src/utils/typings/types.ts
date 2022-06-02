@@ -21,7 +21,7 @@ export type UpdatesDataElement = {
 export type UpdateElement = {
   slug: string
   title: string
-  createdAt: Date
+  createdAt: string
   hidden: boolean
   description: string
   actionType: ActionType

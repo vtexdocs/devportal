@@ -67,7 +67,7 @@ const ReleaseNote = ({
             </a>
           </Link>
           <Text sx={styles.releaseDate}>{`${getDaysElapsed(
-            createdAt
+            new Date(createdAt)
           )} days ago`}</Text>
           <Description
             description={description}
