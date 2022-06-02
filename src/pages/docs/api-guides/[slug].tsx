@@ -31,7 +31,8 @@ const documentationCards: CardProps[] = [
     containerType: 'see-also',
   },
   {
-    title: 'Catalog API',
+    title:
+      'Catalog API - A long documentation title aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     description: 'API Reference',
     to: '/docs/api-reference/catalog',
     Icon: APIReferenceIcon,

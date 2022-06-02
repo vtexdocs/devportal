@@ -6,7 +6,7 @@ describe('Landing page', () => {
   })
 
   it('Documentation categories', () => {
-    cy.get('[data-cy="documentation-card-list"] a')
+    cy.get('[data-cy="documentation-section-card-list"] a')
       .should('have.length', 5)
       .eq(0)
       .click()

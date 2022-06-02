@@ -10,7 +10,7 @@ interface SeeAlsoSectionProps {
 
 const SeeAlsoSection = ({ cards }: SeeAlsoSectionProps) => {
   return (
-    <Box sx={styles.seeAlsoContainer}>
+    <Box sx={styles.seeAlsoContainer} data-cy="see-also-section">
       <Text sx={styles.sectionTitle}>See also</Text>
       {cards.map((card) => (
         <DocumentationCard {...card} />
