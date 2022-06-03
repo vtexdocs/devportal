@@ -24,6 +24,18 @@ const cardContainer = (containerType: string) => {
   return cardContainer
 }
 
+const titleContainer = (containerType: string) => {
+  const marginBottom =
+    containerType === 'dropdown' ? ['5px', '5px', '5px', '1px'] : '8px'
+
+  const titleContainer: SxStyleProp = {
+    ...styles.titleContainer,
+    marginBottom,
+  }
+
+  return titleContainer
+}
+
 const cardTitle = (containerType: string) => {
   const titleAttributes =
     containerType === 'see-also'
@@ -31,7 +43,6 @@ const cardTitle = (containerType: string) => {
           textOverflow: 'ellipsis',
           whiteSpace: 'nowrap',
           overflow: 'hidden',
-          marginBottom: '8px',
         }
       : {}
 
@@ -43,4 +54,4 @@ const cardTitle = (containerType: string) => {
   return cardTitle
 }
 
-export { cardContainer, cardTitle }
+export { cardContainer, cardTitle, titleContainer }
