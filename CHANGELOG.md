@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0](https://github.com/vtexdocs/devportal/compare/v0.12.1...v0.13.0) (2022-06-06)
+
+
+### Features
+
+* add see also section at the bottom of an api-guide documentation ([ad9db35](https://github.com/vtexdocs/devportal/commit/ad9db35286e714940e06de6e5e0d5d09fcf1f1f0))
+
+
+### Bug Fixes
+
+* adjust the width of see-also-section and documentation-card components ([271f0e0](https://github.com/vtexdocs/devportal/commit/271f0e04c6fb0808d79781ae3162623461df95b3))
+* **documentation-card:** adjust titleContainer marginBottom attribute ([bf6c6d7](https://github.com/vtexdocs/devportal/commit/bf6c6d7f4d374fdf3b7de5c417de6acf106f0c22))
+* **see-also-section:** adjust section margin and title font-weight ([cd9d091](https://github.com/vtexdocs/devportal/commit/cd9d091a2cc64ab419feda0d6ab89bd68c30d64f))
+
+
+### Refactoring
+
+* adapt documentation-card component to work properly in the see-also-section component ([ab578ff](https://github.com/vtexdocs/devportal/commit/ab578ff005f421273ec8f5716d2f449bcd685a95))
+* rename two components ([130e1d7](https://github.com/vtexdocs/devportal/commit/130e1d75ba01577bdd5be80943b21aeb89b5c128))
+
+
+### Tests
+
+* add a test for an api guides page and update the value of a selector ([dcff4d0](https://github.com/vtexdocs/devportal/commit/dcff4d003ee5f3a9eca583934ea8a69e44194d5f))
+
 ### [0.12.1](https://github.com/vtexdocs/devportal/compare/v0.12.0...v0.12.1) (2022-06-01)
 
 
