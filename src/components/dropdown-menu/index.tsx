@@ -1,6 +1,6 @@
 import { Box } from '@vtex/brand-ui'
 
-import DropdownCard, { CardProps } from 'components/dropdown-card'
+import DocumentationCard, { CardProps } from 'components/documentation-card'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
@@ -18,30 +18,35 @@ const documentationCards: CardProps[] = [
     description: 'Quickly build and launch high-performance stores',
     to: '/docs/api-guides',
     Icon: APIGuidesIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'API Reference',
     description: 'From ERP to custom-built integrations — extend',
     to: '/docs/api-reference',
     Icon: APIReferenceIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'VTEX IO',
     description: 'VTEX IO is an enterprise low-code development',
     to: '/docs/vtex-io',
     Icon: VTEXIOIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'FastStore',
     description: 'Quickly build and launch high-performance stores',
     to: '/docs/fast-store',
     Icon: FastStoreIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'WebOps',
     description: 'From ERP to custom-built integrations — extend',
     to: '/docs/webops',
     Icon: WebOpsIcon,
+    containerType: 'dropdown',
   },
 ]
 
@@ -51,12 +56,14 @@ const updatesCards: CardProps[] = [
     description: 'From ERP to custom-built integrations — extend',
     to: '/updates/release-notes',
     Icon: ReleaseNotesIcon,
+    containerType: 'dropdown',
   },
   {
     title: 'Documentation Updates',
     description: 'From ERP to custom-built integrations — extend',
     to: '/',
     Icon: DocumentationUpdatesIcon,
+    containerType: 'dropdown',
   },
 ]
 
@@ -69,7 +76,7 @@ const DropdownMenu = () => {
           data-cy="dropdown-menu-first-section"
         >
           {documentationCards.map((card) => (
-            <DropdownCard key={card.title} {...card} />
+            <DocumentationCard key={card.title} {...card} />
           ))}
         </Box>
         <Box
@@ -77,7 +84,7 @@ const DropdownMenu = () => {
           data-cy="dropdown-menu-second-section"
         >
           {updatesCards.map((card) => (
-            <DropdownCard key={card.title} {...card} />
+            <DocumentationCard key={card.title} {...card} />
           ))}
         </Box>
       </Box>

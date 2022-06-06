@@ -1,44 +1,40 @@
 import Link from 'next/link'
-import { Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import { getMessages } from 'utils/get-messages'
-import type { DocDataElement } from 'utils/typings/types'
+import type { IconComponent } from 'utils/typings/types'
 
 import styles from './styles'
+import { cardContainer, cardTitle, titleContainer } from './functions'
+
+export interface CardProps {
+  title: string
+  description: string
+  to: string
+  Icon: IconComponent
+  containerType: string
+}
 
 const DocumentationCard = ({
-  Icon,
   title,
   description,
-  link,
-}: DocDataElement) => {
-  const messages = getMessages()
+  to,
+  Icon,
+  containerType,
+}: CardProps) => {
   return (
-    <Link href={link}>
+    <Link href={to}>
       <a>
-        <Flex sx={styles.cardContainer}>
-          <Flex sx={styles.infoContainer}>
+        <Box sx={cardContainer(containerType)}>
+          <Flex sx={titleContainer(containerType)}>
             <Icon sx={styles.icon} />
-            <Text className="title" sx={styles.title}>
+            <Text className="title" sx={cardTitle(containerType)}>
               {title}
             </Text>
-            <Text className="description" sx={styles.description}>
-              {description}
-            </Text>
           </Flex>
-          <Flex
-            className="quickStartedContainer"
-            sx={styles.quickStartedContainer}
-          >
-            <Text className="quickStartedText" sx={styles.quickStartedText}>
-              {
-                messages[
-                  'landing_page_documentation_documentation_card.quickStartedText'
-                ]
-              }
-            </Text>
-          </Flex>
-        </Flex>
+          <Text className="description" sx={styles.description}>
+            {description}
+          </Text>
+        </Box>
       </a>
     </Link>
   )
