@@ -8,20 +8,20 @@ const RemovedIcon = (props: IconProps) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="8" cy="8" r="8" fill="#FDEFEF" />
+    <circle cx="8.5" cy="8" r="8" fill="#F8E3E3" />
     <path
-      d="M5.3335 5.33325L10.6668 10.6666"
-      stroke="#DC5A41"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      d="M5.83203 5.33594L11.1654 10.6693"
+      stroke="#CC3D3D"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
     <path
-      d="M10.6668 5.33325L5.3335 10.6666"
-      stroke="#DC5A41"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      d="M11.1654 5.33594L5.83203 10.6693"
+      stroke="#CC3D3D"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </Icon>
 )

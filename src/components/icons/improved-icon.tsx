@@ -8,13 +8,13 @@ const ImprovedIcon = (props: IconProps) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <circle cx="8" cy="8" r="8" fill="#FFF2D4" />
+    <circle cx="8.5" cy="8" r="8" fill="#FFEBD7" />
     <path
-      d="M12 10L7.99511 6L4 10"
-      stroke="#FFB100"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
+      d="M12.5 10L8.49511 6L4.5 10"
+      stroke="#D56A00"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </Icon>
 )
