@@ -39,7 +39,7 @@ const ReleaseNote = ({
       <Button
         size="regular"
         variant="tertiary"
-        sx={styles.arrowIcon}
+        sx={releaseElementStatus ? styles.arrowIconActive : styles.arrowIcon}
         icon={() => (
           <IconCaret
             direction={releaseElementStatus ? 'down' : 'right'}
@@ -63,7 +63,15 @@ const ReleaseNote = ({
         <Flex sx={styles.content}>
           <Link href={slug}>
             <a>
-              <Text sx={styles.releaseTitle}>{title}</Text>
+              <Text
+                sx={
+                  releaseElementStatus
+                    ? styles.releaseTitleActive
+                    : styles.releaseTitle
+                }
+              >
+                {title}
+              </Text>
             </a>
           </Link>
           <Text sx={styles.releaseDate}>{`${getDaysElapsed(

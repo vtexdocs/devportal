@@ -1,7 +1,7 @@
 import ReleaseNote from '../release-note'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import { releaseData as releases } from 'utils/constants'
+import { releaseData } from 'utils/constants'
 import styles from 'components/release-section/styles'
 import { getMessages } from 'utils/get-messages'
 import { compareDates, getDate } from './functions'
@@ -9,6 +9,7 @@ import { compareDates, getDate } from './functions'
 const messages = getMessages()
 
 const ReleaseSection = () => {
+  const releases = releaseData.filter((release) => !release.hidden)
   return (
     <Flex sx={styles.container}>
       <Box>
@@ -28,13 +29,11 @@ const ReleaseSection = () => {
                 ? getDate(release.createdAt)
                 : null
               : getDate(release.createdAt)}
-            {!release.hidden && (
-              <ReleaseNote
-                key={`${release.slug}`}
-                isFirst={index == 0}
-                {...release}
-              />
-            )}
+            <ReleaseNote
+              key={`${release.slug}`}
+              isFirst={index == 0}
+              {...release}
+            />
           </>
         ))}
       </Box>

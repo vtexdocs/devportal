@@ -1,11 +1,12 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const releaseContainer: SxStyleProp = {
-  mb: '28px',
+  mb: ['32px', '48px'],
   '& > :nth-child(2)': {
     '& > :first-child': {
       '& > :nth-child(2)': {
         width: '1px',
+        borderRadius: '8px',
       },
     },
   },
@@ -40,16 +41,21 @@ const releaseDate: SxStyleProp = {
 }
 
 const releaseTitle: SxStyleProp = {
-  color: '#0C1522',
+  color: '#4A596B',
   fontSize: ['16px', '18px'],
-  lineHeight: '24px',
-  mt: '8px',
+  lineHeight: ['22px', '24px'],
+  pt: '8px',
+}
+
+const releaseTitleActive: SxStyleProp = {
+  ...releaseTitle,
+  color: '#0C1522',
 }
 
 const releaseDescription: SxStyleProp = {
   color: '#4A4A4A',
   fontSize: ['12px', '16px'],
-  lineHeight: '22px',
+  lineHeight: ['16px', '22px'],
   mt: '8px',
 }
 
@@ -60,13 +66,20 @@ const arrowIcon: SxStyleProp = {
   color: 'muted.0',
 }
 
+const arrowIconActive: SxStyleProp = {
+  ...arrowIcon,
+  color: '#0C1522',
+}
+
 export default {
   releaseContainer,
   actionType,
   actionIcon,
   content,
   releaseTitle,
+  releaseTitleActive,
   releaseDate,
   releaseDescription,
   arrowIcon,
+  arrowIconActive,
 }

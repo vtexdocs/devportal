@@ -92,7 +92,7 @@ export const releaseData: UpdateElement[] = [
   {
     slug: 'update-on-search-resolver',
     title: 'Update on search-resolver@0.x API response',
-    createdAt: '2022-03-30T18:43:15.322Z',
+    createdAt: '2022-04-30T18:43:15.322Z',
     hidden: false,
     description:
       'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
@@ -114,7 +114,7 @@ export const releaseData: UpdateElement[] = [
     hidden: false,
     description:
       'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
-    actionType: 'fixed',
+    actionType: 'removed',
   },
   {
     slug: 'google-tag-manager',
@@ -132,7 +132,7 @@ export const releaseData: UpdateElement[] = [
     hidden: false,
     description:
       'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
-    actionType: 'fixed',
+    actionType: 'improved',
   },
 ]
 
