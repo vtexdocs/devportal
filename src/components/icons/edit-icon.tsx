@@ -22,7 +22,7 @@ const EditIcon = (props: IconProps) => (
     <path
       d="M14.25 8.15234L17.34 11.2423"
       stroke="#4A596B"
-      stroke-width="1.5"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />

@@ -35,6 +35,7 @@
   "landing_page_header_docs.message": "Docs",
   "landing_page_header_searchInput.message": "Search in Developers",
   "api_guide_documentation_page_feedback.question": "Este artigo foi útil?",
+  "api_guide_documentation_page_feedback.response": "Agradecemos seu feedback",
   "api_guide_documentation_page_feedback.positive": "Yes",
   "api_guide_documentation_page_feedback.negative": "No",
   "api_guide_documentation_page_feedback.edit": "Sugerir edições (Github)",
