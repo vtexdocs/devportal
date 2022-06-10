@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.13.1](https://github.com/vtexdocs/devportal/compare/v0.13.0...v0.13.1) (2022-06-10)
+
+
+### Features
+
+* **rapidoc-auth:** add correct styles to rapidoc's authentication page ([b59e575](https://github.com/vtexdocs/devportal/commit/b59e575b51182288d2008edbc5c2e70d4d50852d))
+
 ## [0.13.0](https://github.com/vtexdocs/devportal/compare/v0.12.1...v0.13.0) (2022-06-06)
 
 
