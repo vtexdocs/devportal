@@ -61,7 +61,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "1.0.1-vtex"
+      "version": "1.0.1-auth-page.0"
     }
   }
 }
