@@ -21,12 +21,10 @@ const likeContainer: SxStyleProp = {
 
 const likeIcon: SxStyleProp = {
   mr: '2px',
-  ml: ['0', '8px'],
 }
 
 const dislikeIcon: SxStyleProp = {
   mr: '2px',
-  ml: ['32px', '16px'],
   transform: 'rotateX(180deg) rotateY(180deg)',
 }
 
