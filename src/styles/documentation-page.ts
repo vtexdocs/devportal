@@ -12,8 +12,13 @@ const mainContainer: SxStyleProp = {
   pt: '64px',
 }
 
+const articleBox: SxStyleProp = {
+  width: ['100%', 'initial'],
+}
+
 const contentContainer: SxStyleProp = {
   width: ['322px', '544px', '544px', '544px', '544px', '720px'],
+  margin: ['auto', 'initial'],
 }
 
 const rightContainer: SxStyleProp = {
@@ -28,4 +33,10 @@ const rightContainer: SxStyleProp = {
   ],
 }
 
-export default { container, mainContainer, contentContainer, rightContainer }
+export default {
+  container,
+  mainContainer,
+  articleBox,
+  contentContainer,
+  rightContainer,
+}

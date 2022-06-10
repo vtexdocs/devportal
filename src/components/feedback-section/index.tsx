@@ -1,31 +1,34 @@
 import { Flex, Text, Link } from '@vtex/brand-ui'
-
 import EditIcon from 'components/icons/edit-icon'
 import LikeIcon from 'components/icons/like-icon'
 import LikeSelectedIcon from 'components/icons/like-selected-icon'
 import { useState } from 'react'
 import { getMessages } from 'utils/get-messages'
-import { buttonStyle } from './functions'
+import { setButtonStyle } from './functions'
 
 import styles from './styles'
 
 const messages = getMessages()
 
-const FeedBackSection = () => {
-  const [feedBackSelect, setFeedBackSelect] = useState<boolean>()
+const FeedbackSection = () => {
+  const [feedback, changeFeedback] = useState<boolean>()
+
+  const urlToEdit =
+    'https://github.com/vtexdocs/dev-portal-content/edit/main/docs/release-notes/assets-builder.md'
+
   return (
     <Flex sx={styles.container}>
       <Text>
-        {feedBackSelect !== undefined
+        {feedback !== undefined
           ? messages['api_guide_documentation_page_feedback.response']
           : messages['api_guide_documentation_page_feedback.question']}
       </Text>
-      <Flex>
+      <Flex sx={styles.likeContainer}>
         <Flex
-          sx={buttonStyle(feedBackSelect, true)}
-          onClick={() => setFeedBackSelect(true)}
+          sx={setButtonStyle(feedback, true)}
+          onClick={() => changeFeedback(true)}
         >
-          {feedBackSelect === undefined || !feedBackSelect ? (
+          {feedback === undefined || !feedback ? (
             <LikeIcon sx={styles.likeIcon} />
           ) : (
             <LikeSelectedIcon sx={styles.likeIcon} />
@@ -35,10 +38,10 @@ const FeedBackSection = () => {
           </Text>
         </Flex>
         <Flex
-          sx={buttonStyle(feedBackSelect, false)}
-          onClick={() => setFeedBackSelect(false)}
+          sx={setButtonStyle(feedback, false)}
+          onClick={() => changeFeedback(false)}
         >
-          {feedBackSelect === undefined || feedBackSelect ? (
+          {feedback === undefined || feedback ? (
             <LikeIcon sx={styles.dislikeIcon} />
           ) : (
             <LikeSelectedIcon sx={styles.dislikeIcon} />
@@ -48,7 +51,7 @@ const FeedBackSection = () => {
           </Text>
         </Flex>
       </Flex>
-      <Link sx={styles.editContainer}>
+      <Link target="_blank" href={urlToEdit} sx={styles.editContainer}>
         <EditIcon sx={styles.editIcon} />
         <Text>{messages['api_guide_documentation_page_feedback.edit']}</Text>
       </Link>
@@ -56,4 +59,4 @@ const FeedBackSection = () => {
   )
 }
 
-export default FeedBackSection
+export default FeedbackSection

@@ -16,6 +16,7 @@ const markdownDir = '/public/docs/api-guides'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
+import FeedbackSection from 'components/feedback-section'
 interface Props {
   content: string
 }
@@ -46,8 +47,11 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
       <Flex sx={styles.container}>
         <Sidebar sectionSelected="API Guides" />
         <Flex sx={styles.mainContainer}>
-          <Box sx={styles.contentContainer}>
-            <MarkdownRenderer markdown={content} />
+          <Box sx={styles.articleBox}>
+            <Box sx={styles.contentContainer}>
+              <MarkdownRenderer markdown={content} />
+            </Box>
+            <FeedbackSection />
             <SeeAlsoSection cards={documentationCards} />
           </Box>
           <Box sx={styles.rightContainer}>

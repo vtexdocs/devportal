@@ -1,7 +1,7 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 import styles from './styles'
 
-export const buttonStyle = (
+export const setButtonStyle = (
   feedbackSelected: boolean | undefined,
   like: boolean
 ): SxStyleProp => {
