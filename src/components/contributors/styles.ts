@@ -33,6 +33,7 @@ const photosContainer: (rows: number) => SxStyleProp = (rows) => ({
     '1fr 1fr 1fr 1fr 1fr',
   ],
   overflow: 'hidden',
+  width: [0, 0, 0, 0, '152px', '192px'],
   maxHeight: `${32 * rows + 8 * (rows - 1)}px`,
   transition: 'max-height 0.3s ease-in-out',
 })
