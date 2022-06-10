@@ -21,6 +21,11 @@ const ApiGuidesPage = () => {
               <a>Clients</a>
             </Link>
           </li>
+          <li>
+            <Link href="/docs/api-guides/developing-an-app">
+              <a>Developing an App</a>
+            </Link>
+          </li>
         </ul>
       </Flex>
     </ContextProvider>
