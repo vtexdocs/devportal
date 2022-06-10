@@ -76,7 +76,7 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
 
   return (
     <ContextProvider>
-      <APIGuideContextProvider>
+      <APIGuideContextProvider headers={headers}>
         <Flex sx={styles.container}>
           <Sidebar sectionSelected="API Guides" />
           <Flex sx={styles.mainContainer}>

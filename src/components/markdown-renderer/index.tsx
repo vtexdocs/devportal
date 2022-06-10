@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useContext } from 'react'
 import remarkGFM from 'remark-gfm'
 import ReactMarkdown from 'react-markdown'
+import { useContext, useState } from 'react'
 import { InView } from 'react-intersection-observer'
 
 import { APIGuideContext } from 'utils/contexts/api-guide'
@@ -27,19 +27,25 @@ const components = {
     <img className={styles.img} {...props} />
   ),
   h2: ({ node, ...props }: Component) => {
-    const slug = slugify(childrenToString(props.children))
-    const { activeItem, setActiveItem, setActiveSubItem } =
+    const [y, setY] = useState(Infinity)
+    const { activeItem, setActiveItem, setActiveSubItem, goToPreviousItem } =
       useContext(APIGuideContext)
 
+    const slug = slugify(childrenToString(props.children))
     return (
       <InView
-        onChange={(inView) => {
+        rootMargin="-40% 0px"
+        onChange={(inView, entry) => {
           if (inView) {
             setActiveItem(slug)
             if (activeItem !== slug) {
               setActiveSubItem('')
             }
+          } else if (entry.boundingClientRect.y > y && activeItem === slug) {
+            goToPreviousItem()
           }
+
+          setY(entry.boundingClientRect.y)
         }}
       >
         <h2 id={slug} {...props} />
@@ -47,15 +53,22 @@ const components = {
     )
   },
   h3: ({ node, ...props }: Component) => {
-    const slug = slugify(childrenToString(props.children))
-    const { setActiveSubItem } = useContext(APIGuideContext)
+    const [y, setY] = useState(Infinity)
+    const { activeSubItem, setActiveSubItem, goToPreviousSubItem } =
+      useContext(APIGuideContext)
 
+    const slug = slugify(childrenToString(props.children))
     return (
       <InView
-        onChange={(inView) => {
+        rootMargin="-40% 0px"
+        onChange={(inView, entry) => {
           if (inView) {
             setActiveSubItem(slug)
+          } else if (entry.boundingClientRect.y > y && activeSubItem === slug) {
+            goToPreviousSubItem()
           }
+
+          setY(entry.boundingClientRect.y)
         }}
       >
         <h3 id={slug} {...props} />
