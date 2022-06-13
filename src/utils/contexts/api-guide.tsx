@@ -1,9 +1,10 @@
-import { Dispatch, SetStateAction, useState } from 'react'
-import { createContext } from 'react'
+import type { Dispatch, SetStateAction } from 'react'
+import { createContext, useState } from 'react'
 
-import { Item } from 'components/table-of-contents'
+import type { Item } from 'components/table-of-contents'
 
 type ContextType = {
+  headers: Item[]
   activeItem: string
   activeSubItem: string
   setActiveItem: Dispatch<SetStateAction<string>>
@@ -13,6 +14,7 @@ type ContextType = {
 }
 
 export const APIGuideContext = createContext<ContextType>({
+  headers: [],
   activeItem: '',
   activeSubItem: '',
   setActiveItem: () => undefined,
@@ -55,6 +57,7 @@ const APIGuideContextProvider: React.FC<Props> = ({ children, headers }) => {
   return (
     <APIGuideContext.Provider
       value={{
+        headers,
         activeItem,
         activeSubItem,
         setActiveItem,

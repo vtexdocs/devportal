@@ -15,12 +15,8 @@ export interface Item extends SubItem {
   children: SubItem[]
 }
 
-interface Props {
-  items: Item[]
-}
-
-const TableOfContents = ({ items }: Props) => {
-  const { activeItem, activeSubItem } = useContext(APIGuideContext)
+const TableOfContents = () => {
+  const { headers, activeItem, activeSubItem } = useContext(APIGuideContext)
 
   const Item = ({
     title,
@@ -44,7 +40,7 @@ const TableOfContents = ({ items }: Props) => {
 
   return (
     <Box sx={styles.itemsContainer}>
-      {items.map((item) => (
+      {headers.map((item) => (
         <Box key={item.slug}>
           <Item
             title={item.title}

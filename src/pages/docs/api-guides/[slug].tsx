@@ -90,7 +90,7 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
             </Box>
             <Box sx={styles.rightContainer}>
               <Contributors contributors={contributors} />
-              <TableOfContents items={headers} />
+              <TableOfContents />
             </Box>
           </Flex>
         </Flex>
