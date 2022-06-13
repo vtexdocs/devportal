@@ -5,6 +5,7 @@ import LikeSelectedIcon from 'components/icons/like-selected-icon'
 import { useState } from 'react'
 import { getMessages } from 'utils/get-messages'
 import { setButtonStyle } from './functions'
+import FeedbackModal, { ModalProps } from 'components/feedback-modal'
 
 import styles from './styles'
 
@@ -12,6 +13,20 @@ const messages = getMessages()
 
 const FeedbackSection = () => {
   const [feedback, changeFeedback] = useState<boolean>()
+  const [modalState, changeModalState] = useState<ModalProps>({
+    modalToggle: false,
+  })
+
+  const openModal = (event: MouseEvent, choice: boolean) => {
+    changeModalState({
+      modalToggle: true,
+      feedback: choice,
+      position: {
+        posX: event.clientX,
+        posY: event.clientY,
+      },
+    })
+  }
 
   const urlToEdit =
     'https://github.com/vtexdocs/dev-portal-content/edit/main/docs/release-notes/assets-builder.md'
@@ -26,7 +41,7 @@ const FeedbackSection = () => {
       <Flex sx={styles.likeContainer}>
         <Flex
           sx={setButtonStyle(feedback, true)}
-          onClick={() => changeFeedback(true)}
+          onClick={(event: MouseEvent) => openModal(event, true)}
         >
           {feedback === undefined || !feedback ? (
             <LikeIcon sx={styles.likeIcon} />
@@ -39,7 +54,7 @@ const FeedbackSection = () => {
         </Flex>
         <Flex
           sx={setButtonStyle(feedback, false)}
-          onClick={() => changeFeedback(false)}
+          onClick={(event: MouseEvent) => openModal(event, false)}
         >
           {feedback === undefined || feedback ? (
             <LikeIcon sx={styles.dislikeIcon} />
@@ -60,6 +75,13 @@ const FeedbackSection = () => {
         <EditIcon sx={styles.editIcon} />
         <Text>{messages['api_guide_documentation_page_feedback.edit']}</Text>
       </Link>
+      {modalState.modalToggle ? (
+        <FeedbackModal
+          changeFeedBack={changeFeedback}
+          changeModalState={changeModalState}
+          modalState={modalState}
+        />
+      ) : null}
     </Flex>
   )
 }
