@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0](https://github.com/vtexdocs/devportal/compare/v0.13.1...v0.14.0) (2022-06-13)
+
+
+### Features
+
+* **constants:** adds new release examples ([2236abe](https://github.com/vtexdocs/devportal/commit/2236abeeda2f602cb3a74628f4ad755d0debbdb4))
+* **release-note:** adds new props ([556f6af](https://github.com/vtexdocs/devportal/commit/556f6afdff6790c351d6544971774583af3f74b7))
+* **release-note:** calls date function and adds styles ([cb07760](https://github.com/vtexdocs/devportal/commit/cb077604853ade089c363746b83d9e9579994e98))
+* **release-note:** create getDate function ([f92a9db](https://github.com/vtexdocs/devportal/commit/f92a9db9f4d1f16717da6230a4ed879493807696))
+* **release-note:** hides releases that shouldn't appear ([b64337d](https://github.com/vtexdocs/devportal/commit/b64337dc89d2757bc9dfae92fd4983ac75cbe242))
+* **release-styles:** create arrow styles and fix description width ([0126e2e](https://github.com/vtexdocs/devportal/commit/0126e2e2dcb43d22a02728321c2ff7c68d566038))
+* **release-toggle:** create toggle for open and close the release description ([edd2c2e](https://github.com/vtexdocs/devportal/commit/edd2c2ee5af0af76bec57fd0fbb3d90f6094f59d))
+
+
+### Bug Fixes
+
+* **context:** remove unnecessary values from context ([ed208d9](https://github.com/vtexdocs/devportal/commit/ed208d99d0a7f08f4b7146dab2412a18bace035e))
+* **release-icons:** fix icons color ([f7df051](https://github.com/vtexdocs/devportal/commit/f7df051ca8cad81cc5cd1a9bee6edef2912120e4))
+* **release-note:** changes type date to string ([70bd1b5](https://github.com/vtexdocs/devportal/commit/70bd1b5f82e05c772b0bc0f65c11be1d4f001d84))
+* **release-note:** fix spacing ([a29314c](https://github.com/vtexdocs/devportal/commit/a29314cf10d066d4577c6331dd57fde5d91a65f6))
+* **release-note:** fix timeline width ([0090705](https://github.com/vtexdocs/devportal/commit/00907059af0e8dc053a4c148ecbb5250cd60c896))
+* **release-note:** fix update type ([0ad0e70](https://github.com/vtexdocs/devportal/commit/0ad0e7002c6019b6d985c1f35887be7b84da4606))
+* **release-notes:** fix spacing and color ([db2e8ba](https://github.com/vtexdocs/devportal/commit/db2e8ba0f6f6648d65bdc8c7894dec9f18915303))
+
+
+### Chore
+
+* **rapidoc:** update rapidoc version ([60f85c8](https://github.com/vtexdocs/devportal/commit/60f85c8c436ec3fdf45a4d325dec92bb0f043ab2))
+
 ### [0.13.1](https://github.com/vtexdocs/devportal/compare/v0.13.0...v0.13.1) (2022-06-10)
 
 
