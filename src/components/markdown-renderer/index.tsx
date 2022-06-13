@@ -28,50 +28,61 @@ const components = {
   ),
   h2: ({ node, ...props }: Component) => {
     const [y, setY] = useState(Infinity)
-    const { activeItem, setActiveItem, setActiveSubItem, goToPreviousItem } =
+    const { activeItem, setActiveItem, goToPreviousItem } =
       useContext(APIGuideContext)
 
     const slug = slugify(childrenToString(props.children))
     return (
       <InView
-        rootMargin="-40% 0px"
+        threshold={1}
+        rootMargin="0px 0px -50% 0px"
         onChange={(inView, entry) => {
           if (inView) {
-            setActiveItem(slug)
-            if (activeItem !== slug) {
-              setActiveSubItem('')
-            }
-          } else if (entry.boundingClientRect.y > y && activeItem === slug) {
+            setActiveItem(({ item, subItem }) => ({
+              item: slug,
+              subItem: item !== slug ? '' : subItem,
+            }))
+          } else if (
+            entry.boundingClientRect.y > y &&
+            activeItem.item === slug
+          ) {
             goToPreviousItem()
           }
 
           setY(entry.boundingClientRect.y)
         }}
       >
-        <h2 id={slug} {...props} />
+        <h2 id={slug} className={styles.header} {...props} />
       </InView>
     )
   },
   h3: ({ node, ...props }: Component) => {
     const [y, setY] = useState(Infinity)
-    const { activeSubItem, setActiveSubItem, goToPreviousSubItem } =
+    const { activeItem, setActiveItem, goToPreviousSubItem } =
       useContext(APIGuideContext)
 
     const slug = slugify(childrenToString(props.children))
     return (
       <InView
-        rootMargin="-40% 0px"
+        threshold={1}
+        rootMargin="0px 0px -50% 0px"
         onChange={(inView, entry) => {
           if (inView) {
-            setActiveSubItem(slug)
-          } else if (entry.boundingClientRect.y > y && activeSubItem === slug) {
+            setActiveItem(({ item }) => ({
+              item,
+              subItem: slug,
+            }))
+          } else if (
+            entry.boundingClientRect.y > y &&
+            activeItem.subItem === slug
+          ) {
             goToPreviousSubItem()
           }
 
           setY(entry.boundingClientRect.y)
         }}
       >
-        <h3 id={slug} {...props} />
+        <h3 id={slug} className={styles.header} {...props} />
       </InView>
     )
   },

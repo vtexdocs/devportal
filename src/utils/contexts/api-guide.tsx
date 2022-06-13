@@ -3,22 +3,26 @@ import { createContext, useState } from 'react'
 
 import type { Item } from 'components/table-of-contents'
 
+type ActiveItem = {
+  item: string
+  subItem: string
+}
+
 type ContextType = {
   headers: Item[]
-  activeItem: string
-  activeSubItem: string
-  setActiveItem: Dispatch<SetStateAction<string>>
-  setActiveSubItem: Dispatch<SetStateAction<string>>
+  activeItem: ActiveItem
+  setActiveItem: Dispatch<SetStateAction<ActiveItem>>
   goToPreviousItem: () => void
   goToPreviousSubItem: () => void
 }
 
 export const APIGuideContext = createContext<ContextType>({
   headers: [],
-  activeItem: '',
-  activeSubItem: '',
+  activeItem: {
+    item: '',
+    subItem: '',
+  },
   setActiveItem: () => undefined,
-  setActiveSubItem: () => undefined,
   goToPreviousItem: () => undefined,
   goToPreviousSubItem: () => undefined,
 })
@@ -28,30 +32,43 @@ interface Props {
 }
 
 const APIGuideContextProvider: React.FC<Props> = ({ children, headers }) => {
-  const [activeItem, setActiveItem] = useState('')
-  const [activeSubItem, setActiveSubItem] = useState('')
+  const [activeItem, setActiveItem] = useState<ActiveItem>({
+    item: '',
+    subItem: '',
+  })
 
   const goToPreviousItem = () => {
-    const index = headers.findIndex((header) => header.slug === activeItem)
-    const previousSlug = !index ? '' : headers[index - 1].slug
+    setActiveItem(({ item, subItem }) => {
+      const index = headers.findIndex((header) => header.slug === item)
+      if (index === -1) return { item, subItem }
 
-    const previousChildren = !index ? [] : headers[index - 1].children
-    const subItem = !previousChildren.length
-      ? ''
-      : previousChildren.slice(-1)[0].slug
+      const previousItem = !index ? '' : headers[index - 1].slug
+      const previousChildren = !index ? [] : headers[index - 1].children
+      const previousSubItem = !previousChildren.length
+        ? ''
+        : previousChildren.slice(-1)[0].slug
 
-    setActiveItem(previousSlug)
-    setActiveSubItem(subItem)
+      return {
+        item: previousItem,
+        subItem: previousSubItem,
+      }
+    })
   }
 
   const goToPreviousSubItem = () => {
-    const { children } = headers.find(
-      (header) => header.slug === activeItem
-    ) as Item
+    setActiveItem(({ item, subItem }) => {
+      const header = headers.find((header) => header.slug === item)
+      const index = header?.children.findIndex(
+        (child) => child.slug === subItem
+      )
 
-    const index = children.findIndex((child) => child.slug === activeSubItem)
-    const previousSlug = !index ? '' : children[index - 1].slug
-    setActiveSubItem(previousSlug)
+      if (!header || index === -1) return { item, subItem }
+
+      return {
+        item,
+        subItem: !index ? '' : header.children[index - 1].slug,
+      }
+    })
   }
 
   return (
@@ -59,9 +76,7 @@ const APIGuideContextProvider: React.FC<Props> = ({ children, headers }) => {
       value={{
         headers,
         activeItem,
-        activeSubItem,
         setActiveItem,
-        setActiveSubItem,
         goToPreviousItem,
         goToPreviousSubItem,
       }}

@@ -9,3 +9,12 @@
 .img {
   max-width: 100%;
 }
+
+.header::before {
+  content: "";
+  display: block;
+  height: calc(5rem + 16px);
+  margin-top: calc(-5rem - 16px);
+  visibility: hidden;
+  pointer-events: none;
+}

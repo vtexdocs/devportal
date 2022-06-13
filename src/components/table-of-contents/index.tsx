@@ -16,7 +16,7 @@ export interface Item extends SubItem {
 }
 
 const TableOfContents = () => {
-  const { headers, activeItem, activeSubItem } = useContext(APIGuideContext)
+  const { headers, activeItem, setActiveItem } = useContext(APIGuideContext)
 
   const Item = ({
     title,
@@ -31,7 +31,14 @@ const TableOfContents = () => {
   }) => {
     return (
       <Link href={`#${slug}`}>
-        <a>
+        <a
+          onClick={() => {
+            setActiveItem(({ item }) => ({
+              item: level === 1 ? slug : item,
+              subItem: level === 1 ? '' : slug,
+            }))
+          }}
+        >
           <Text sx={styles.item(level, active)}>{title}</Text>
         </a>
       </Link>
@@ -46,9 +53,9 @@ const TableOfContents = () => {
             title={item.title}
             slug={item.slug}
             level={1}
-            active={item.slug === activeItem}
+            active={item.slug === activeItem.item}
           />
-          {item.slug === activeItem && (
+          {item.slug === activeItem.item && (
             <Box sx={styles.subItemsContainer}>
               {item.children.map((subItem) => (
                 <Item
@@ -56,7 +63,7 @@ const TableOfContents = () => {
                   title={subItem.title}
                   slug={subItem.slug}
                   level={2}
-                  active={subItem.slug === activeSubItem}
+                  active={subItem.slug === activeItem.subItem}
                 />
               ))}
             </Box>
