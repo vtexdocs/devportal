@@ -4,7 +4,8 @@ import useClickOutside from 'utils/hooks/useClickOutside'
 
 import styles from './styles'
 export interface ModalProps {
-  modal: boolean
+  modalToggle: boolean
+  feedback?: boolean
   position?: {
     posX: number
     posY: number
@@ -12,29 +13,28 @@ export interface ModalProps {
 }
 
 const FeedBackModal = ({
-  modalPos,
-  feedBackSelect,
-  changeModalPos,
-  changeFeedBackSelected,
+  modalState,
+  changeModalState,
+  changeFeedBack,
 }: {
-  modalPos: ModalProps | undefined
-  feedBackSelect: boolean | undefined
-  changeModalPos: Dispatch<SetStateAction<ModalProps | undefined>>
-  changeFeedBackSelected: Dispatch<SetStateAction<boolean | undefined>>
+  modalState: ModalProps
+  changeModalState: Dispatch<SetStateAction<ModalProps>>
+  changeFeedBack: Dispatch<SetStateAction<boolean | undefined>>
 }) => {
   const cardRef = useRef<HTMLDivElement>()
 
   const closeModal = () => {
+    const feedback = modalState?.feedback
     document.getElementsByTagName('body')[0].classList.remove('modal-open')
-    changeModalPos({ modal: false })
-    changeFeedBackSelected(feedBackSelect)
+    changeModalState({ modalToggle: false })
+    changeFeedBack(feedback)
   }
 
   useEffect(() => {
     document.getElementsByTagName('body')[0].classList.add('modal-open')
   }, [])
 
-  useClickOutside(cardRef, changeModalPos)
+  useClickOutside(cardRef, changeModalState)
   return (
     <Box sx={styles.container}>
       <Box ref={cardRef} sx={styles.box}>
@@ -49,7 +49,8 @@ const FeedBackModal = ({
             send feedback
           </Button>
         </Box>
-        <h2>{modalPos?.position?.posX}</h2>
+        <h2>{modalState?.position?.posX}</h2>
+        <h2>{modalState?.position?.posY}</h2>
       </Box>
     </Box>
   )

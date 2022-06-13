@@ -1,7 +1,7 @@
 import { useEffect, MutableRefObject, SetStateAction, Dispatch } from 'react'
 
 export default function useClickOutside(
-  ref: MutableRefObject<HTMLDivElement | undefined>,
+  ref: MutableRefObject<HTMLElement | undefined>,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   toggleModal: Dispatch<SetStateAction<any>>
 ) {
@@ -12,8 +12,8 @@ export default function useClickOutside(
         event.target instanceof Node &&
         !ref.current.contains(event.target)
       ) {
+        toggleModal({ modalToggle: false })
         document.getElementsByTagName('body')[0].classList.remove('modal-open')
-        toggleModal(false)
       }
     }
     document.addEventListener('mousedown', handleClickOutside)
