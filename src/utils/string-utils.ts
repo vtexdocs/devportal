@@ -3,8 +3,9 @@ export const removeHTML = (str: string) => str.replace(/<\/?[a-z]+>/g, '')
 export const slugify = (str: string) => {
   return str
     .toLowerCase()
-    .replace(' ', '-')
-    .replace(/[^a-z\-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/\-+/g, '-')
+    .replace(/[^a-z0-9\-]/g, '')
 }
 
 type Child = string | { props: { children: Child[] } }
