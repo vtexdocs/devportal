@@ -1,27 +1,55 @@
-import { Flex, Timeline, Text, Box } from '@vtex/brand-ui'
+import React, { useState } from 'react'
+import Link from 'next/link'
+import { Flex, Timeline, Text, Box, Button, IconCaret } from '@vtex/brand-ui'
 
-import type { ReleaseElement } from 'utils/typings/types'
-import type { ActionType } from 'components/last-updates-card/functions'
+import type { UpdateElement } from 'utils/typings/types'
 import { getAction } from './../last-updates-card/functions'
 import { getDaysElapsed } from './../../utils/get-days-elapsed'
 import styles from './styles'
 
-export interface ReleaseProps {
-  title: string
-  date: Date
+interface DescriptionProps {
   description: string
-  actionType?: ActionType
+  releaseStatus?: boolean
+}
+
+interface ReleaseNoteProps extends UpdateElement {
+  isFirst: boolean
+}
+
+const Description = ({ description, releaseStatus }: DescriptionProps) => {
+  if (releaseStatus) {
+    return <Text sx={styles.releaseDescription}>{description}</Text>
+  } else {
+    return <></>
+  }
 }
 
 const ReleaseNote = ({
+  slug,
   title,
-  date,
+  createdAt,
   description,
   actionType,
-}: ReleaseElement) => {
+  isFirst,
+}: ReleaseNoteProps) => {
   const actionValue = actionType ? getAction(actionType) : null
+  const [releaseElementStatus, toggleReleaseElementStatus] = useState(isFirst)
   return (
-    <Box sx={styles.releaseContainer}>
+    <Flex sx={styles.releaseContainer}>
+      <Button
+        size="regular"
+        variant="tertiary"
+        sx={releaseElementStatus ? styles.arrowIconActive : styles.arrowIcon}
+        icon={() => (
+          <IconCaret
+            direction={releaseElementStatus ? 'down' : 'right'}
+            size={24}
+          />
+        )}
+        onClick={() => {
+          toggleReleaseElementStatus(!releaseElementStatus)
+        }}
+      />
       <Timeline.Event
         title={<Text sx={styles.actionType}>{actionValue?.title}</Text>}
         icon={
@@ -33,14 +61,29 @@ const ReleaseNote = ({
         }
       >
         <Flex sx={styles.content}>
-          <Text sx={styles.releaseTitle}>{title}</Text>
+          <Link href={slug}>
+            <a>
+              <Text
+                sx={
+                  releaseElementStatus
+                    ? styles.releaseTitleActive
+                    : styles.releaseTitle
+                }
+              >
+                {title}
+              </Text>
+            </a>
+          </Link>
           <Text sx={styles.releaseDate}>{`${getDaysElapsed(
-            date
+            new Date(createdAt)
           )} days ago`}</Text>
-          <Text sx={styles.releaseDescription}>{description}</Text>
+          <Description
+            description={description}
+            releaseStatus={releaseElementStatus}
+          ></Description>
         </Flex>
       </Timeline.Event>
-    </Box>
+    </Flex>
   )
 }
 

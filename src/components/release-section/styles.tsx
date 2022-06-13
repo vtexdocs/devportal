@@ -30,9 +30,15 @@ const sectionDivider: SxStyleProp = {
   },
 }
 
+const releaseDate: SxStyleProp = {
+  fontSize: ['14px', '18px'],
+  mb: ['16px', '24px'],
+}
+
 export default {
   container,
   sectionTitle,
   sectionSubtitle,
   sectionDivider,
+  releaseDate,
 }
