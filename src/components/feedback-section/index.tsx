@@ -51,7 +51,12 @@ const FeedbackSection = () => {
           </Text>
         </Flex>
       </Flex>
-      <Link target="_blank" href={urlToEdit} sx={styles.editContainer}>
+      <Link
+        target="_blank"
+        rel="noopener noreferrer"
+        href={urlToEdit}
+        sx={styles.editContainer}
+      >
         <EditIcon sx={styles.editIcon} />
         <Text>{messages['api_guide_documentation_page_feedback.edit']}</Text>
       </Link>
