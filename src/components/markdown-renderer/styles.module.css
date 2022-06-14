@@ -10,7 +10,7 @@
   max-width: 100%;
 }
 
-.header::before {
+.heading::before {
   content: "";
   display: block;
   height: calc(5rem + 16px);

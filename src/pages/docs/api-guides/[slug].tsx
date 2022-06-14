@@ -51,23 +51,23 @@ const documentationCards: CardProps[] = [
 ]
 
 const DocumentationPage: NextPage<Props> = ({ content }) => {
-  const [headers, setHeaders] = useState<Item[]>([])
+  const [headings, setHeadings] = useState<Item[]>([])
 
   useEffect(() => {
-    document.querySelectorAll('h2, h3').forEach((header) => {
+    document.querySelectorAll('h2, h3').forEach((heading) => {
       const item = {
-        title: removeHTML(header.innerHTML),
-        slug: header.id,
+        title: removeHTML(heading.innerHTML),
+        slug: heading.id,
       }
 
-      setHeaders((headers) => {
-        if (header.tagName === 'H2') {
-          return [...headers, { ...item, children: [] }]
+      setHeadings((headings) => {
+        if (heading.tagName === 'H2') {
+          return [...headings, { ...item, children: [] }]
         }
 
-        const { title, slug, children } = headers[headers.length - 1]
+        const { title, slug, children } = headings[headings.length - 1]
         return [
-          ...headers.slice(0, -1),
+          ...headings.slice(0, -1),
           { title, slug, children: [...children, item] },
         ]
       })
@@ -76,7 +76,7 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
 
   return (
     <ContextProvider>
-      <APIGuideContextProvider headers={headers}>
+      <APIGuideContextProvider headings={headings}>
         <Flex sx={styles.container}>
           <Sidebar sectionSelected="API Guides" />
           <Flex sx={styles.mainContainer}>

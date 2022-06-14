@@ -16,7 +16,7 @@ export interface Item extends SubItem {
 }
 
 const TableOfContents = () => {
-  const { headers, activeItem, setActiveItem } = useContext(APIGuideContext)
+  const { headings, activeItem, setActiveItem } = useContext(APIGuideContext)
 
   const Item = ({
     title,
@@ -47,7 +47,7 @@ const TableOfContents = () => {
 
   return (
     <Box sx={styles.itemsContainer}>
-      {headers.map((item) => (
+      {headings.map((item) => (
         <Box key={item.slug}>
           <Item
             title={item.title}

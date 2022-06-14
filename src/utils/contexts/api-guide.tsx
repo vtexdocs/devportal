@@ -9,7 +9,7 @@ type ActiveItem = {
 }
 
 type ContextType = {
-  headers: Item[]
+  headings: Item[]
   activeItem: ActiveItem
   setActiveItem: Dispatch<SetStateAction<ActiveItem>>
   goToPreviousItem: () => void
@@ -17,7 +17,7 @@ type ContextType = {
 }
 
 export const APIGuideContext = createContext<ContextType>({
-  headers: [],
+  headings: [],
   activeItem: {
     item: '',
     subItem: '',
@@ -28,10 +28,10 @@ export const APIGuideContext = createContext<ContextType>({
 })
 
 interface Props {
-  headers: Item[]
+  headings: Item[]
 }
 
-const APIGuideContextProvider: React.FC<Props> = ({ children, headers }) => {
+const APIGuideContextProvider: React.FC<Props> = ({ children, headings }) => {
   const [activeItem, setActiveItem] = useState<ActiveItem>({
     item: '',
     subItem: '',
@@ -39,11 +39,11 @@ const APIGuideContextProvider: React.FC<Props> = ({ children, headers }) => {
 
   const goToPreviousItem = () => {
     setActiveItem(({ item, subItem }) => {
-      const index = headers.findIndex((header) => header.slug === item)
+      const index = headings.findIndex((heading) => heading.slug === item)
       if (index === -1) return { item, subItem }
 
-      const previousItem = !index ? '' : headers[index - 1].slug
-      const previousChildren = !index ? [] : headers[index - 1].children
+      const previousItem = !index ? '' : headings[index - 1].slug
+      const previousChildren = !index ? [] : headings[index - 1].children
       const previousSubItem = !previousChildren.length
         ? ''
         : previousChildren.slice(-1)[0].slug
@@ -57,16 +57,16 @@ const APIGuideContextProvider: React.FC<Props> = ({ children, headers }) => {
 
   const goToPreviousSubItem = () => {
     setActiveItem(({ item, subItem }) => {
-      const header = headers.find((header) => header.slug === item)
-      const index = header?.children.findIndex(
+      const heading = headings.find((heading) => heading.slug === item)
+      const index = heading?.children.findIndex(
         (child) => child.slug === subItem
       )
 
-      if (!header || index === -1) return { item, subItem }
+      if (!heading || index === -1) return { item, subItem }
 
       return {
         item,
-        subItem: !index ? '' : header.children[index - 1].slug,
+        subItem: !index ? '' : heading.children[index - 1].slug,
       }
     })
   }
@@ -74,7 +74,7 @@ const APIGuideContextProvider: React.FC<Props> = ({ children, headers }) => {
   return (
     <APIGuideContext.Provider
       value={{
-        headers,
+        headings,
         activeItem,
         setActiveItem,
         goToPreviousItem,
