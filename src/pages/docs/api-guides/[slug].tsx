@@ -23,7 +23,6 @@ import { getSlugs, readFile } from 'utils/read-files'
 
 import styles from 'styles/documentation-page'
 
-
 interface Props {
   content: string
 }
