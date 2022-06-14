@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.15.1](https://github.com/vtexdocs/devportal/compare/v0.15.0...v0.15.1) (2022-06-14)
+
+
+### Build
+
+* **rapidoc-request-section:** update rapidoc version ([36f681d](https://github.com/vtexdocs/devportal/commit/36f681d2c7133ca9a07131db509a7bcc5b0be1bd))
+* **rapidoc:** update rapidoc version ([fde9a03](https://github.com/vtexdocs/devportal/commit/fde9a03ebed447a4b29132adfb703ceaf20b0f01))
+* **rapidoc:** update rapidoc version ([d547e0e](https://github.com/vtexdocs/devportal/commit/d547e0e95204c71919d6c08427b101a618baea0e))
+
 ## [0.15.0](https://github.com/vtexdocs/devportal/compare/v0.14.0...v0.15.0) (2022-06-14)
 
 
