@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.15.0](https://github.com/vtexdocs/devportal/compare/v0.14.0...v0.15.0) (2022-06-14)
+
+
+### Features
+
+* **feedback icons:** add the edit and like icons ([e1170a8](https://github.com/vtexdocs/devportal/commit/e1170a8dce475609517dc6e5f3316c69ea468097))
+* **feedback-section:** add the component to api-guides page ([791b988](https://github.com/vtexdocs/devportal/commit/791b988544c73189a440840dc060995397f7f896))
+* **feedbacksection:** create the feedback section ([89d45ad](https://github.com/vtexdocs/devportal/commit/89d45ad9f89427bdd30a097250b8934c162ee068))
+* **feedbacksection:** the logic of the feedback choice ([f69475f](https://github.com/vtexdocs/devportal/commit/f69475f5c2453d21ff4e0a5f03ef586c686a5005))
+* **likeselectedicon:** add the icon with the feedback response ([49e3df3](https://github.com/vtexdocs/devportal/commit/49e3df35365ff4b849b581fa2ba7d222fc63de84))
+
+
+### Bug Fixes
+
+* **feedback-section:** fix like button margin ([b3a3d56](https://github.com/vtexdocs/devportal/commit/b3a3d5690227fc5893218df18d08cdd6e3af0bbe))
+
+
+### Style
+
+* **feedback-section:** external link security and like margin ([0bca739](https://github.com/vtexdocs/devportal/commit/0bca7396220080dd1f6126ab7b937e478fdb36e8))
+* **language.json:** add the feedback texts to language file ([ba97a09](https://github.com/vtexdocs/devportal/commit/ba97a09749124679a13cdadf8385bcd27c96f165))
+
 ## [0.14.0](https://github.com/vtexdocs/devportal/compare/v0.13.1...v0.14.0) (2022-06-13)
 
 
