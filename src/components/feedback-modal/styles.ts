@@ -5,6 +5,7 @@ const container: SxStyleProp = {
   alignItems: 'center',
   justifyContent: 'center',
   top: '0',
+  left: '0',
   position: 'fixed',
   width: '100%',
   minHeight: '100%',
@@ -14,15 +15,15 @@ const container: SxStyleProp = {
 }
 
 const box: SxStyleProp = {
-  maxWidth: '320px',
-  maxHeight: '179px',
+  width: '320px',
+  height: '179px',
 }
 
 const card: SxStyleProp = {
   background: '#FFFFFF',
   border: '1px solid #E7E9EE',
   borderRadius: '4px',
-  padding: '16px',
+  padding: '15px',
 }
 
 const input: SxStyleProp = {
@@ -48,10 +49,20 @@ const button: SxStyleProp = {
   fontSize: '14px',
 }
 
+const arrow: SxStyleProp = {
+  display: ['none', 'initial'],
+  minWidth: 'max-content',
+  position: 'absolute',
+  bottom: '0',
+  left: 'calc(50% - 24px)',
+  height: '14px',
+}
+
 export default {
   container,
   box,
   card,
   input,
   button,
+  arrow,
 }

@@ -7,13 +7,17 @@ export default function useClickOutside(
 ) {
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
+      const { body, documentElement } = document
       if (
         ref.current &&
         event.target instanceof Node &&
         !ref.current.contains(event.target)
       ) {
         toggleModal({ modalToggle: false })
-        document.getElementsByTagName('body')[0].classList.remove('modal-open')
+        const scrollTop = body.getBoundingClientRect().top * -1
+        body.classList.remove('modal-open')
+        documentElement.scrollTop = scrollTop
+        body.style.removeProperty('top')
       }
     }
     document.addEventListener('mousedown', handleClickOutside)

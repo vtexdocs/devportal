@@ -1,5 +1,7 @@
 body.modal-open {
-  overflow: hidden;
+  position: fixed;
+  overflow-y:scroll;
+  width: 100%;
 }
 
 a {

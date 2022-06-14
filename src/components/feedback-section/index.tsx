@@ -17,14 +17,10 @@ const FeedbackSection = () => {
     modalToggle: false,
   })
 
-  const openModal = (event: MouseEvent, choice: boolean) => {
+  const openModal = (choice: boolean) => {
     changeModalState({
       modalToggle: true,
       feedback: choice,
-      position: {
-        posX: event.clientX,
-        posY: event.clientY,
-      },
     })
   }
 
@@ -40,8 +36,9 @@ const FeedbackSection = () => {
       </Text>
       <Flex sx={styles.likeContainer}>
         <Flex
+          className="feedback-button-positive"
           sx={setButtonStyle(feedback, true)}
-          onClick={(event: MouseEvent) => openModal(event, true)}
+          onClick={() => openModal(true)}
         >
           {feedback === undefined || !feedback ? (
             <LikeIcon sx={styles.likeIcon} />
@@ -53,8 +50,9 @@ const FeedbackSection = () => {
           </Text>
         </Flex>
         <Flex
+          className="feedback-button-negative"
           sx={setButtonStyle(feedback, false)}
-          onClick={(event: MouseEvent) => openModal(event, false)}
+          onClick={() => openModal(false)}
         >
           {feedback === undefined || feedback ? (
             <LikeIcon sx={styles.dislikeIcon} />
