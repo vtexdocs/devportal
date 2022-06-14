@@ -2,7 +2,7 @@ import { Flex, Text, Link } from '@vtex/brand-ui'
 import EditIcon from 'components/icons/edit-icon'
 import LikeIcon from 'components/icons/like-icon'
 import LikeSelectedIcon from 'components/icons/like-selected-icon'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { getMessages } from 'utils/get-messages'
 import { setButtonStyle } from './functions'
 import FeedbackModal, { ModalProps } from 'components/feedback-modal'
@@ -16,6 +16,8 @@ const FeedbackSection = () => {
   const [modalState, changeModalState] = useState<ModalProps>({
     modalToggle: false,
   })
+  const likeButton = useRef<HTMLElement>()
+  const dislikeButton = useRef<HTMLElement>()
 
   const openModal = (choice: boolean) => {
     changeModalState({
@@ -36,9 +38,9 @@ const FeedbackSection = () => {
       </Text>
       <Flex sx={styles.likeContainer}>
         <Flex
-          className="feedback-button-positive"
+          ref={likeButton}
           sx={setButtonStyle(feedback, true)}
-          onClick={() => openModal(true)}
+          onClick={feedback === undefined ? () => openModal(true) : null}
         >
           {feedback === undefined || !feedback ? (
             <LikeIcon sx={styles.likeIcon} />
@@ -50,9 +52,9 @@ const FeedbackSection = () => {
           </Text>
         </Flex>
         <Flex
-          className="feedback-button-negative"
+          ref={dislikeButton}
           sx={setButtonStyle(feedback, false)}
-          onClick={() => openModal(false)}
+          onClick={feedback === undefined ? () => openModal(false) : null}
         >
           {feedback === undefined || feedback ? (
             <LikeIcon sx={styles.dislikeIcon} />
@@ -78,6 +80,7 @@ const FeedbackSection = () => {
           changeFeedBack={changeFeedback}
           changeModalState={changeModalState}
           modalState={modalState}
+          buttonChoosedRef={modalState.feedback ? likeButton : dislikeButton}
         />
       ) : null}
     </Flex>
