@@ -2,6 +2,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const seeAlsoContainer: SxStyleProp = {
   maxWidth: ['324px', '544px', '544px', '544px', '544px', '720px'],
+  margin: ['auto', 'initial'],
 }
 
 const sectionTitle: SxStyleProp = {
