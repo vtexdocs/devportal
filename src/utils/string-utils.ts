@@ -1,4 +1,4 @@
-export const removeHTML = (str: string) => str.replace(/<\/?[a-z]+>/g, '')
+export const removeHTML = (str: string) => str.replace(/<\/?[^>]+>/g, '')
 
 export const slugify = (str: string) => {
   return str
