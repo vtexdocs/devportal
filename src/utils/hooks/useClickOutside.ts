@@ -22,7 +22,7 @@ export default function useClickOutside(
     }
     document.addEventListener('mousedown', handleClickOutside)
     return () => {
-      document.addEventListener('mousedown', handleClickOutside)
+      document.removeEventListener('mousedown', handleClickOutside)
     }
-  })
+  }, [])
 }
