@@ -26,20 +26,23 @@ const card: SxStyleProp = {
   padding: '15px',
 }
 
-const input: SxStyleProp = {
+const textarea: SxStyleProp = {
   marginBlock: '4px 10px',
   height: '68px',
-  'div:first-of-type': {
+  textarea: {
     height: '100%',
+    fontSize: '14px',
+    fontWeight: 'normal',
+    lineHeight: '19.6px',
+    color: '#000000',
     px: '16px',
     paddingTop: '12px',
-    alignItems: 'flex-start',
-    input: {
-      margin: '0',
-    },
     ':focus-within': {
       boxShadow: '0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #B9B9B9',
     },
+  },
+  ':before': {
+    display: 'none',
   },
 }
 
@@ -62,7 +65,7 @@ export default {
   container,
   box,
   card,
-  input,
+  textarea,
   button,
   arrow,
 }

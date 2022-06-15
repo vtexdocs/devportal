@@ -1,4 +1,4 @@
-import { Box, Button, Input, Text, Icon, IconProps } from '@vtex/brand-ui'
+import { Box, Button, Textarea, Text, Icon, IconProps } from '@vtex/brand-ui'
 import {
   Dispatch,
   MutableRefObject,
@@ -78,7 +78,12 @@ const FeedBackModal = ({
           }
         >
           <Text>Leave a comment</Text>
-          <Input sx={styles.input} id="feedback-modal-input" label="" />
+          <Textarea
+            id="feedback-modal-input"
+            sx={styles.textarea}
+            label=""
+            rows={7}
+          />
           <Button
             onClick={() => closeModal()}
             sx={styles.button}
