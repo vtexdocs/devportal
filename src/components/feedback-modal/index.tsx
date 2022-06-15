@@ -38,12 +38,12 @@ const FeedBackModal = ({
   modalState,
   changeModalState,
   changeFeedBack,
-  buttonChoosedRef,
+  chosenButtonRef,
 }: {
   modalState: ModalProps
   changeModalState: Dispatch<SetStateAction<ModalProps>>
   changeFeedBack: Dispatch<SetStateAction<boolean | undefined>>
-  buttonChoosedRef: MutableRefObject<HTMLElement | undefined>
+  chosenButtonRef: MutableRefObject<HTMLElement | undefined>
 }) => {
   const cardRef = useRef<HTMLDivElement>()
   const { body, documentElement } = document
@@ -70,11 +70,11 @@ const FeedBackModal = ({
     <Box sx={styles.container}>
       <Box
         ref={cardRef}
-        sx={modalPositionStyle(buttonChoosedRef.current) || styles.box}
+        sx={modalPositionStyle(chosenButtonRef.current) || styles.box}
       >
         <Box
           sx={
-            arrowDirectionStyle(buttonChoosedRef.current, 'card') || styles.card
+            arrowDirectionStyle(chosenButtonRef.current, 'card') || styles.card
           }
         >
           <Text>Leave a comment</Text>
@@ -94,7 +94,7 @@ const FeedBackModal = ({
         </Box>
         <FeedBackModalArrow
           sx={
-            arrowDirectionStyle(buttonChoosedRef.current, 'arrow') ||
+            arrowDirectionStyle(chosenButtonRef.current, 'arrow') ||
             styles.arrow
           }
         />

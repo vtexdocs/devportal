@@ -80,7 +80,7 @@ const FeedbackSection = () => {
           changeFeedBack={changeFeedback}
           changeModalState={changeModalState}
           modalState={modalState}
-          buttonChoosedRef={modalState.feedback ? likeButton : dislikeButton}
+          chosenButtonRef={modalState.feedback ? likeButton : dislikeButton}
         />
       ) : null}
     </Flex>
