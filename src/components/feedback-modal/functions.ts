@@ -18,7 +18,7 @@ export const modalPositionStyle = (
 
   const modalLeft = [
     'initial',
-    `${buttonLeft - (modalWidth - buttonWidth) / 2 + 8}px`,
+    `${buttonLeft - (modalWidth - buttonWidth) / 2}px`,
   ]
   const modalTop = [
     'initial',
