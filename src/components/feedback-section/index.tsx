@@ -39,7 +39,7 @@ const FeedbackSection = () => {
       <Flex sx={styles.likeContainer}>
         <Flex
           ref={likeButton}
-          sx={setButtonStyle(feedback, true)}
+          sx={setButtonStyle(feedback, modalState, true)}
           onClick={feedback === undefined ? () => openModal(true) : null}
         >
           {feedback === undefined || !feedback ? (
@@ -53,7 +53,7 @@ const FeedbackSection = () => {
         </Flex>
         <Flex
           ref={dislikeButton}
-          sx={setButtonStyle(feedback, false)}
+          sx={setButtonStyle(feedback, modalState, false)}
           onClick={feedback === undefined ? () => openModal(false) : null}
         >
           {feedback === undefined || feedback ? (

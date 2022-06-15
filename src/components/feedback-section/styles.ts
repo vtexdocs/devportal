@@ -38,6 +38,14 @@ const button: SxStyleProp = {
   },
 }
 
+const buttonActive: SxStyleProp = {
+  cursor: 'pointer',
+  color: '#000711',
+  'svg > path': {
+    stroke: '#000711',
+  },
+}
+
 const selectedButton: SxStyleProp = {
   color: 'muted.1',
 }
@@ -67,5 +75,6 @@ export default {
   editIcon,
   box,
   button,
+  buttonActive,
   selectedButton,
 }
