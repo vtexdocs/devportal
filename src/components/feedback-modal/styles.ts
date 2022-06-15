@@ -54,10 +54,11 @@ const button: SxStyleProp = {
 
 const arrow: SxStyleProp = {
   display: ['none', 'initial'],
-  minWidth: 'max-content',
+  minWidth: 'initial',
+  minHeight: 'initial',
   position: 'absolute',
   bottom: '0',
-  left: 'calc(50% - 24px)',
+  left: 'calc(50% - 12px)',
   height: '14px',
 }
 
