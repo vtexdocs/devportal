@@ -37,7 +37,7 @@ const ObservableHeading = ({
   return (
     <InView
       threshold={0.5}
-      rootMargin="0px 0px -50% 0px"
+      rootMargin="0px 0px -80% 0px"
       onChange={(inView, entry) => {
         if (inView) onEnterView(slug)
         else onLeaveView(slug, entry, y)
