@@ -55,7 +55,7 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
   useEffect(() => {
     document.querySelectorAll('h2, h3').forEach((heading) => {
       const item = {
-        title: removeHTML(heading.innerHTML),
+        title: removeHTML(heading.innerHTML).replace(':', ''),
         slug: heading.id,
       }
 
