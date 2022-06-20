@@ -8,7 +8,7 @@ export const setButtonStyle = (
   like: boolean
 ): SxStyleProp => {
   const buttonactive =
-    modalState.modalToggle && like === modalState.feedback
+    modalState.modalOpen && like === modalState.liked
       ? styles.buttonActive
       : styles.button
   const ml = like

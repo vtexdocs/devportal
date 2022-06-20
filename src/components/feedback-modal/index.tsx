@@ -6,14 +6,17 @@ import {
   useEffect,
   useRef,
 } from 'react'
+import { getMessages } from 'utils/get-messages'
 import useClickOutside from 'utils/hooks/useClickOutside'
 
 import { arrowDirectionStyle, modalPositionStyle } from './functions'
 import styles from './styles'
 export interface ModalProps {
-  modalToggle: boolean
-  feedback?: boolean
+  modalOpen: boolean
+  liked?: boolean
 }
+
+const messages = getMessages()
 
 const FeedBackModalArrow = (props: IconProps) => {
   return (
@@ -49,14 +52,14 @@ const FeedBackModal = ({
   const { body, documentElement } = document
 
   const closeModal = () => {
-    const feedback = modalState?.feedback
+    const feedback = modalState?.liked
     const scrollTop = body.getBoundingClientRect().top * -1
 
     body.classList.remove('modal-open')
     documentElement.scrollTop = scrollTop
     body.style.removeProperty('top')
 
-    changeModalState({ modalToggle: false })
+    changeModalState({ modalOpen: false })
     changeFeedBack(feedback)
   }
 
@@ -77,7 +80,7 @@ const FeedBackModal = ({
             arrowDirectionStyle(chosenButtonRef.current, 'card') || styles.card
           }
         >
-          <Text>Leave a comment</Text>
+          <Text sx={styles.title}>{messages['feedback_modal.title']}</Text>
           <Textarea
             id="feedback-modal-input"
             sx={styles.textarea}
@@ -89,7 +92,7 @@ const FeedBackModal = ({
             sx={styles.button}
             variant="secondary"
           >
-            send feedback
+            {messages['feedback_modal.button']}
           </Button>
         </Box>
         <FeedBackModalArrow

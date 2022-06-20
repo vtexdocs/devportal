@@ -14,15 +14,15 @@ const messages = getMessages()
 const FeedbackSection = () => {
   const [feedback, changeFeedback] = useState<boolean>()
   const [modalState, changeModalState] = useState<ModalProps>({
-    modalToggle: false,
+    modalOpen: false,
   })
   const likeButton = useRef<HTMLElement>()
   const dislikeButton = useRef<HTMLElement>()
 
   const openModal = (choice: boolean) => {
     changeModalState({
-      modalToggle: true,
-      feedback: choice,
+      modalOpen: true,
+      liked: choice,
     })
   }
 
@@ -33,8 +33,8 @@ const FeedbackSection = () => {
     <Flex sx={styles.container}>
       <Text>
         {feedback !== undefined
-          ? messages['api_guide_documentation_page_feedback.response']
-          : messages['api_guide_documentation_page_feedback.question']}
+          ? messages['feedback_section.response']
+          : messages['feedback_section.question']}
       </Text>
       <Flex sx={styles.likeContainer}>
         <Flex
@@ -47,9 +47,7 @@ const FeedbackSection = () => {
           ) : (
             <LikeSelectedIcon sx={styles.likeIcon} />
           )}
-          <Text>
-            {messages['api_guide_documentation_page_feedback.positive']}
-          </Text>
+          <Text>{messages['feedback_section.positive']}</Text>
         </Flex>
         <Flex
           ref={dislikeButton}
@@ -61,9 +59,7 @@ const FeedbackSection = () => {
           ) : (
             <LikeSelectedIcon sx={styles.dislikeIcon} />
           )}
-          <Text>
-            {messages['api_guide_documentation_page_feedback.negative']}
-          </Text>
+          <Text>{messages['feedback_section.negative']}</Text>
         </Flex>
       </Flex>
       <Link
@@ -73,14 +69,14 @@ const FeedbackSection = () => {
         sx={styles.editContainer}
       >
         <EditIcon sx={styles.editIcon} />
-        <Text>{messages['api_guide_documentation_page_feedback.edit']}</Text>
+        <Text>{messages['feedback_section.edit']}</Text>
       </Link>
-      {modalState.modalToggle ? (
+      {modalState.modalOpen ? (
         <FeedbackModal
           changeFeedBack={changeFeedback}
           changeModalState={changeModalState}
           modalState={modalState}
-          chosenButtonRef={modalState.feedback ? likeButton : dislikeButton}
+          chosenButtonRef={modalState.liked ? likeButton : dislikeButton}
         />
       ) : null}
     </Flex>

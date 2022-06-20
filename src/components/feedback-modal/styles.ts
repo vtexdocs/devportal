@@ -16,7 +16,7 @@ const container: SxStyleProp = {
 
 const box: SxStyleProp = {
   width: '320px',
-  height: '179px',
+  height: '176px',
 }
 
 const card: SxStyleProp = {
@@ -24,6 +24,11 @@ const card: SxStyleProp = {
   border: '1px solid #E7E9EE',
   borderRadius: '4px',
   padding: '15px',
+}
+
+const title: SxStyleProp = {
+  fontSize: '14px',
+  color: '#545454',
 }
 
 const textarea: SxStyleProp = {
@@ -66,6 +71,7 @@ export default {
   container,
   box,
   card,
+  title,
   textarea,
   button,
   arrow,
