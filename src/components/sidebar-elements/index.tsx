@@ -2,7 +2,7 @@ import React, { Fragment, useContext } from 'react'
 import { Box, Flex, Button, Link, IconCaret } from '@vtex/brand-ui'
 
 import { styleByLevelNormal, textStyle } from './functions'
-import { Context } from 'utils/contexts/context'
+import { SidebarContext } from 'utils/contexts/sidebar'
 import styles from './styles'
 
 export interface SidebarItemPropTypes {
@@ -23,7 +23,7 @@ const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
     sidebarElementStatus,
     toggleSidebarElementActive,
     toggleSidebarElementStatus,
-  } = useContext(Context)
+  } = useContext(SidebarContext)
 
   const ItemRoot = ({ title, subItems }: SidebarItemPropTypes) => {
     const isExpandable = subItems.length > 0

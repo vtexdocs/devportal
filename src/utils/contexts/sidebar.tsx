@@ -14,7 +14,7 @@ type ContextType = {
   ) => void
 }
 
-export const Context = createContext<ContextType>({
+export const SidebarContext = createContext<ContextType>({
   sidebarSectionHidden: false,
   sidebarElementActive: new Map(),
   sidebarElementStatus: new Map(),
@@ -27,7 +27,7 @@ interface Props extends Partial<ContextType> {
   children: ReactNode
 }
 
-const ContextProvider = ({ children, ...props }: Props) => {
+const SidebarContextProvider = ({ children, ...props }: Props) => {
   const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
   const [sidebarElementActive, changeSidebarElementActive] = useState(new Map())
   const [sidebarElementStatus, changeSidebarElementStatus] = useState(new Map())
@@ -48,7 +48,7 @@ const ContextProvider = ({ children, ...props }: Props) => {
   }
 
   return (
-    <Context.Provider
+    <SidebarContext.Provider
       value={{
         sidebarSectionHidden,
         sidebarElementActive,
@@ -60,8 +60,8 @@ const ContextProvider = ({ children, ...props }: Props) => {
       }}
     >
       {children}
-    </Context.Provider>
+    </SidebarContext.Provider>
   )
 }
 
-export default ContextProvider
+export default SidebarContextProvider

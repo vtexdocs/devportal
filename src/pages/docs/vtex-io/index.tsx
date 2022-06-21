@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 
-import ContextProvider from 'utils/contexts/context'
+import SidebarContextProvider from 'utils/contexts/sidebar'
 import Sidebar from 'components/sidebar'
 
 import { getMessages } from 'utils/get-messages'
@@ -17,7 +17,7 @@ const VTEXIOPage = () => {
   const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
 
   return (
-    <ContextProvider
+    <SidebarContextProvider
       sidebarSectionHidden={sidebarSectionHidden}
       setSidebarSectionHidden={setSidebarSectionHidden}
     >
@@ -69,7 +69,7 @@ const VTEXIOPage = () => {
           </Box>
         </Box>
       </Flex>
-    </ContextProvider>
+    </SidebarContextProvider>
   )
 }
 
