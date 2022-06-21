@@ -17,12 +17,12 @@ import { getFeedbackURL } from 'utils/get-url'
 import { getMessages } from 'utils/get-messages'
 
 import styles from './styles'
-
 const Header = () => {
   const router = useRouter()
   const lastScroll = useRef(0)
 
   const [searchValue, setSearchValue] = useState('')
+  const modalOpen = useRef(false)
   const [showDropdown, setShowDropdown] = useState(false)
   const [headerElement, setHeaderElement] = useState<HTMLElement | null>()
 
@@ -35,14 +35,24 @@ const Header = () => {
       query: { keyword: 'SKU' },
     })
   }
+
   useEffect(() => {
+    const body = document.body
+
+    const observer = new MutationObserver(() => {
+      modalOpen.current = !modalOpen.current
+    })
+    observer.observe(body, {
+      attributeFilter: ['class'],
+    })
+
     return setHeaderElement(document.getElementById('header'))
   }, [])
 
   useEffect(() => {
     const onScroll = () => {
       setShowDropdown(false)
-      if (headerElement) {
+      if (headerElement && !modalOpen.current) {
         const headerHeight = headerElement.children[0].clientHeight
         if (
           window.scrollY > headerHeight &&
