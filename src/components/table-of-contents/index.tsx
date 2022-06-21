@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useContext } from 'react'
 import { Box, Text } from '@vtex/brand-ui'
+import AnimateHeight from 'react-animate-height'
 
 import { APIGuideContext } from 'utils/contexts/api-guide'
 
@@ -55,7 +56,10 @@ const TableOfContents = () => {
             level={1}
             active={item.slug === activeItem.item}
           />
-          {item.slug === activeItem.item && (
+          <AnimateHeight
+            duration={300}
+            height={item.slug === activeItem.item ? 'auto' : 0}
+          >
             <Box sx={styles.subItemsContainer}>
               {item.children.map((subItem) => (
                 <Item
@@ -67,7 +71,7 @@ const TableOfContents = () => {
                 />
               ))}
             </Box>
-          )}
+          </AnimateHeight>
         </Box>
       ))}
     </Box>
