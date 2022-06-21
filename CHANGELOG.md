@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.16.0](https://github.com/vtexdocs/devportal/compare/v0.15.2...v0.16.0) (2022-06-21)
+
+
+### Features
+
+* **feedback-modal:** add the feedback modal component ([cbd3290](https://github.com/vtexdocs/devportal/commit/cbd329037d4abbae7f5c644bea1923ab678ced6f))
+* **feedback-modal:** add the modal position on large screens ([fc72a53](https://github.com/vtexdocs/devportal/commit/fc72a53a45b14b5ff5e93a8582d897ee298ba672))
+* **feedback-section:** link the modal component in the feedback section ([75bb86d](https://github.com/vtexdocs/devportal/commit/75bb86d77cb381d0c2f7f812fbf7e8b7d336d3f4))
+* **hooks:** add the useClickOutside hook ([67bf548](https://github.com/vtexdocs/devportal/commit/67bf54807cc91533d53bea52e68fc3e3584056be))
+
+
+### Bug Fixes
+
+* **feedback-modal:** change the input to textarea ([45d4299](https://github.com/vtexdocs/devportal/commit/45d4299222ce6d893b7d9a72c4c2cd6a68f903bb))
+* **feedback-modal:** feedback modal props ([ec1db9f](https://github.com/vtexdocs/devportal/commit/ec1db9f840de9f86ad4087ecc33a9342e4eed41e))
+* **feedback-modal:** fix the modal arrow position on cross-browser ([c6af71f](https://github.com/vtexdocs/devportal/commit/c6af71ffc0024408bfb3073c2b64b507e1e73b66))
+* **feedback-section:** fix the dislike button margin ([b20506a](https://github.com/vtexdocs/devportal/commit/b20506ab078437c17253442fc90f2fba7fbe18b7))
+* **feedback-section:** requested changes ([d60b65a](https://github.com/vtexdocs/devportal/commit/d60b65ac788d9eeef4579626a6485144acf43330))
+* **feedback-section:** set button active when modal is open ([dff88cc](https://github.com/vtexdocs/devportal/commit/dff88ccba25630e4ba2aa29d5b52dd6557981081))
+* **header:** fix header opening when the modal opens ([69a8c3a](https://github.com/vtexdocs/devportal/commit/69a8c3ab250bc31c5bbb076dfe8bbca27b3d172e))
+* **useclickoutside:** remove eventListener on cleanup function ([f7570f5](https://github.com/vtexdocs/devportal/commit/f7570f5296075e77a8a28af91eaee8d79a8ec84f))
+
+
+### Refactoring
+
+* **feedback-modal:** use Refs for DOM elements ([1e2dfa3](https://github.com/vtexdocs/devportal/commit/1e2dfa3a9d1a3cbfff6269f88adfb4834bf3f5a2))
+* **feedback-modal:** variable names ([aafebb6](https://github.com/vtexdocs/devportal/commit/aafebb625f121cd16a44ccd82a1c04942a770155))
+
+
+### Style
+
+* **feedback-modal:** centralize the modal with the chosen button ([29995b6](https://github.com/vtexdocs/devportal/commit/29995b636d9523a99bd392aa15750750e2b101fe))
+* **global.css:** add the body class to block scrolling ([6b57679](https://github.com/vtexdocs/devportal/commit/6b57679ef858080844ec102ee8ff5419ff3d04b6))
+
 ### [0.15.2](https://github.com/vtexdocs/devportal/compare/v0.15.1...v0.15.2) (2022-06-14)
 
 
