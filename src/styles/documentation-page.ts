@@ -23,7 +23,6 @@ const contentContainer: SxStyleProp = {
 
 const rightContainer: SxStyleProp = {
   ml: '64px',
-  minWidth: 'auto',
   display: [
     'none !important',
     'none !important',
@@ -31,6 +30,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
+  width: [0, 0, 0, 0, '189px', '284px'],
 }
 
 export default {

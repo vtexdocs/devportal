@@ -9,3 +9,12 @@
 .img {
   max-width: 100%;
 }
+
+.heading::before {
+  content: "";
+  display: block;
+  height: 20vh;
+  margin-top: -20vh;
+  visibility: hidden;
+  pointer-events: none;
+}
