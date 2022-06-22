@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.17.0](https://github.com/vtexdocs/devportal/compare/v0.16.0...v0.17.0) (2022-06-22)
+
+
+### Features
+
+* add string utils ([a63d1b2](https://github.com/vtexdocs/devportal/commit/a63d1b266851ec01b4132e91343a84ab837558c1))
+* **api-guide:** add table of contents component ([a25f3e7](https://github.com/vtexdocs/devportal/commit/a25f3e731c6a53bc8e89ad72a861c9c2f859b3b6))
+* **api-guides:** add another API guide example page ([73b9bbd](https://github.com/vtexdocs/devportal/commit/73b9bbd6fe93238bf493415b76aa92f7f2c4491d))
+* **api-guides:** add table of contents to documentation pages ([bad66b9](https://github.com/vtexdocs/devportal/commit/bad66b958c895800cd4b9959e1dc16aea32eabc8))
+* **api-guides:** track visible headers and allow anchor links ([0d66276](https://github.com/vtexdocs/devportal/commit/0d66276c66936a5671dee6fb188bbb795b5a55f5))
+* **table-of-contents:** add height transition animation ([7c68d91](https://github.com/vtexdocs/devportal/commit/7c68d9122055f890fa64b2953c6487edd1bb852c))
+
+
+### Bug Fixes
+
+* **api-guides:** fix active item when clicking a title inside the table of contents ([6a324cf](https://github.com/vtexdocs/devportal/commit/6a324cf6e032b73418affb7b27e0df41226d97ae))
+* **api-guides:** fix API guide pages right container width ([ec2ac63](https://github.com/vtexdocs/devportal/commit/ec2ac637800525b2dd0055a712d7859eadf6ef8d))
+* **string-utils:** fix bug in removeHTML ([149438b](https://github.com/vtexdocs/devportal/commit/149438bc80a1ec1f441a3b84b1ecf17fb530c4a6))
+* **string-utils:** fix slugify bugs ([b6a556e](https://github.com/vtexdocs/devportal/commit/b6a556eaba8ae976d08319c803374fd0eeb1c1d5))
+* **table-of-contents:** fix bugs when scrolling fast or following anchor links ([2335fcc](https://github.com/vtexdocs/devportal/commit/2335fcc79c5a1f5270c629c13a719a77bd670415))
+* **table-of-contents:** fix style bugs and add responsivity ([006dfb3](https://github.com/vtexdocs/devportal/commit/006dfb311b0eb52b7498e65db3c0eb2e48d2b893))
+* **table-of-contents:** fix viewport margins and scrolling-up bugs ([3800ff0](https://github.com/vtexdocs/devportal/commit/3800ff0b21b3115ab4981ff67caba35bf4a90608))
+* **table-of-contents:** remove ':' from title ([072e01b](https://github.com/vtexdocs/devportal/commit/072e01b4205695c0d616bf026a9dbcd2ad54f9f2))
+
+
+### Refactoring
+
+* **api-guides:** move markdown components to another file and rename headers to headings ([66026d2](https://github.com/vtexdocs/devportal/commit/66026d28d504da6ca4339c8aec9c5d47e221af12))
+* **table-of-contents:** move headers array to context ([62f1059](https://github.com/vtexdocs/devportal/commit/62f1059864c0f3b452836cbf3cb606cb0c616675))
+
+
+### Style
+
+* **api-guides:** fix prettier issue ([6572084](https://github.com/vtexdocs/devportal/commit/657208402a046d21115a516de5ae2d6bc22bc953))
+
+
+### Chore
+
+* **dependencies:** add react-animate-height ([e13fac6](https://github.com/vtexdocs/devportal/commit/e13fac6c462cab54af4ec92f4e519ef12411e957))
+
 ## [0.16.0](https://github.com/vtexdocs/devportal/compare/v0.15.2...v0.16.0) (2022-06-21)
 
 
