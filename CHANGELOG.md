@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.17.1](https://github.com/vtexdocs/devportal/compare/v0.17.0...v0.17.1) (2022-06-22)
+
+
+### Refactoring
+
+* **header:** change DOM access to reference access ([232343c](https://github.com/vtexdocs/devportal/commit/232343cb50504c5ca587f966beee764b628824aa))
+
 ## [0.17.0](https://github.com/vtexdocs/devportal/compare/v0.16.0...v0.17.0) (2022-06-22)
 
 
