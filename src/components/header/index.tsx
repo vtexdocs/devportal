@@ -24,7 +24,7 @@ const Header = () => {
   const [searchValue, setSearchValue] = useState('')
   const modalOpen = useRef(false)
   const [showDropdown, setShowDropdown] = useState(false)
-  const [headerElement, setHeaderElement] = useState<HTMLElement | null>()
+  const headerElement = useRef<HTMLElement>()
 
   const messages = getMessages()
 
@@ -45,22 +45,20 @@ const Header = () => {
     observer.observe(body, {
       attributeFilter: ['class'],
     })
-
-    return setHeaderElement(document.getElementById('header'))
   }, [])
 
   useEffect(() => {
     const onScroll = () => {
       setShowDropdown(false)
-      if (headerElement && !modalOpen.current) {
-        const headerHeight = headerElement.children[0].clientHeight
+      if (headerElement.current && !modalOpen.current) {
+        const headerHeight = headerElement.current.children[0].clientHeight
         if (
           window.scrollY > headerHeight &&
           window.scrollY > lastScroll.current
         ) {
-          headerElement.style.top = `-${headerHeight}px`
+          headerElement.current.style.top = `-${headerHeight}px`
         } else {
-          headerElement.style.top = '0'
+          headerElement.current.style.top = '0'
         }
         lastScroll.current = window.scrollY
       }
@@ -70,7 +68,7 @@ const Header = () => {
     window.addEventListener('scroll', onScroll, { passive: true })
 
     return () => window.removeEventListener('scroll', onScroll)
-  }, [headerElement])
+  }, [headerElement.current])
 
   useEffect(() => {
     const hideDropdown = () => {
@@ -82,7 +80,7 @@ const Header = () => {
   }, [])
 
   return (
-    <Box id="header" sx={styles.headerContainer}>
+    <Box ref={headerElement} sx={styles.headerContainer}>
       <HeaderBrand sx={styles.headerBrand}>
         <HeaderBrand.Brand>
           <Link href="/">
