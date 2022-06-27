@@ -3,24 +3,22 @@ import { createContext, useState } from 'react'
 
 type ContextType = {
   sidebarSectionHidden: boolean
-  sidebarElementActive: Map<string, number>
-  sidebarElementStatus: Map<string, { open: boolean; level: number }>
+  activeSidebarElement: string
+  sidebarElementStatus: Map<string, boolean>
   setSidebarSectionHidden: Dispatch<SetStateAction<boolean>>
-  toggleSidebarElementActive: (title: string, level: number) => void
-  toggleSidebarElementStatus: (
-    title: string,
-    open: boolean,
-    level: number
-  ) => void
+  setActiveSidebarElement: Dispatch<SetStateAction<string>>
+  toggleSidebarElementStatus: (title: string) => void
+  openSidebarElement: (title: string) => void
 }
 
 export const SidebarContext = createContext<ContextType>({
   sidebarSectionHidden: false,
-  sidebarElementActive: new Map(),
+  activeSidebarElement: '',
   sidebarElementStatus: new Map(),
   setSidebarSectionHidden: () => undefined,
-  toggleSidebarElementActive: () => undefined,
+  setActiveSidebarElement: () => undefined,
   toggleSidebarElementStatus: () => undefined,
+  openSidebarElement: () => undefined,
 })
 
 interface Props extends Partial<ContextType> {
@@ -29,33 +27,34 @@ interface Props extends Partial<ContextType> {
 
 const SidebarContextProvider = ({ children, ...props }: Props) => {
   const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
-  const [sidebarElementActive, changeSidebarElementActive] = useState(new Map())
-  const [sidebarElementStatus, changeSidebarElementStatus] = useState(new Map())
+  const [activeSidebarElement, setActiveSidebarElement] = useState('')
+  const [sidebarElementStatus, setSidebarElementStatus] = useState(new Map())
 
-  const toggleSidebarElementActive = (title: string, level: number) => {
-    sidebarElementActive.clear()
-    changeSidebarElementActive(new Map(sidebarElementActive.set(title, level)))
+  const toggleSidebarElementStatus = (title: string) => {
+    setSidebarElementStatus((sidebarElementStatus) => {
+      const open =
+        !sidebarElementStatus.has(title) || !sidebarElementStatus.get(title)
+
+      return new Map(sidebarElementStatus.set(title, open))
+    })
   }
 
-  const toggleSidebarElementStatus = (
-    title: string,
-    open: boolean,
-    level: number
-  ) => {
-    changeSidebarElementStatus(
-      new Map(sidebarElementStatus.set(title, { open, level }))
-    )
+  const openSidebarElement = (title: string) => {
+    setSidebarElementStatus((sidebarElementStatus) => {
+      return new Map(sidebarElementStatus.set(title, true))
+    })
   }
 
   return (
     <SidebarContext.Provider
       value={{
         sidebarSectionHidden,
-        sidebarElementActive,
+        activeSidebarElement,
         sidebarElementStatus,
         setSidebarSectionHidden,
-        toggleSidebarElementActive,
+        setActiveSidebarElement,
         toggleSidebarElementStatus,
+        openSidebarElement,
         ...props,
       }}
     >

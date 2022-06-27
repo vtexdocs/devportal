@@ -19,10 +19,11 @@ export interface SidebarProps {
 
 const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
   const {
-    sidebarElementActive,
+    activeSidebarElement,
     sidebarElementStatus,
-    toggleSidebarElementActive,
+    setActiveSidebarElement,
     toggleSidebarElementStatus,
+    openSidebarElement,
   } = useContext(SidebarContext)
 
   const ItemRoot = ({ title, subItems }: SidebarItemPropTypes) => {
@@ -37,7 +38,7 @@ const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
               variant="tertiary"
               sx={
                 sidebarElementStatus.has(title) &&
-                sidebarElementStatus.get(title)?.open
+                sidebarElementStatus.get(title)
                   ? styles.arrowIconActive
                   : styles.arrowIcon
               }
@@ -45,30 +46,22 @@ const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
                 <IconCaret
                   direction={
                     sidebarElementStatus.has(title) &&
-                    sidebarElementStatus.get(title)?.open
+                    sidebarElementStatus.get(title)
                       ? 'down'
                       : 'right'
                   }
                   size={24}
                 />
               )}
-              onClick={() => {
-                sidebarElementStatus.has(title)
-                  ? toggleSidebarElementStatus(
-                      title,
-                      !sidebarElementStatus.get(title)?.open,
-                      subItemLevel
-                    )
-                  : toggleSidebarElementStatus(title, true, subItemLevel)
-              }}
+              onClick={() => toggleSidebarElementStatus(title)}
             />
           )}
           <Link
-            sx={textStyle(sidebarElementActive.has(title), isExpandable)}
+            sx={textStyle(activeSidebarElement === title, isExpandable)}
             target="_self"
             onClick={() => {
-              toggleSidebarElementStatus(title, true, subItemLevel)
-              toggleSidebarElementActive(title, subItemLevel)
+              openSidebarElement(title)
+              setActiveSidebarElement(title)
             }}
           >
             {title}
@@ -83,7 +76,7 @@ const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
 
     return isExpandable &&
       sidebarElementStatus.has(title) &&
-      sidebarElementStatus.get(title)?.open ? (
+      sidebarElementStatus.get(title) ? (
       <Box>
         <SidebarElements
           items={subItems}
@@ -101,12 +94,10 @@ const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
 
         return (
           <Fragment key={String(key)}>
-            <>
-              <ItemRoot {...item} />
-              <Box>
-                <ItemChildren {...item} />
-              </Box>
-            </>
+            <ItemRoot {...item} />
+            <Box>
+              <ItemChildren {...item} />
+            </Box>
             {subItemLevel == 0 ? (
               <Box sx={styles.sectionDivider}>
                 <hr />
