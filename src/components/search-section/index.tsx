@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from '@vtex/brand-ui'
 import type { DocDataElement, UpdatesDataElement } from 'utils/typings/types'
 import { useContext } from 'react'
-import { SearchContext } from 'utils/contexts/searchContext'
+import { SearchContext } from 'utils/contexts/search'
 
 import styles from './styles'
 

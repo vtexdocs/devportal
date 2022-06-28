@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { useContext, useEffect, useMemo } from 'react'
 
 import { Box, Text } from '@vtex/brand-ui'
-import { SearchContext } from 'utils/contexts/searchContext'
+import { SearchContext } from 'utils/contexts/search'
 import SearchCard from 'components/search-card'
 import { getIcon } from 'utils/constants'
 
