@@ -15,7 +15,6 @@ export interface SidebarElement {
 export interface SidebarProps {
   slugPrefix?: string
   items: SidebarElement[]
-  firstActive?: number
   subItemLevel: number
 }
 
