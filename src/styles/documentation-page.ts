@@ -17,8 +17,8 @@ const articleBox: SxStyleProp = {
 }
 
 const contentContainer: SxStyleProp = {
-  width: ['322px', '544px', '544px', '544px', '544px', '720px'],
-  margin: ['auto', 'initial'],
+  width: ['auto', '544px', '544px', '544px', '544px', '720px'],
+  mx: ['18px', 'initial'],
 }
 
 const rightContainer: SxStyleProp = {
