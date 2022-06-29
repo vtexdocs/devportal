@@ -1,4 +1,3 @@
-import { CSSProperties } from 'react'
 import type { SxStyleProp } from '@vtex/brand-ui'
 
 const container: SxStyleProp = {
@@ -12,7 +11,7 @@ const title: SxStyleProp = {
   mb: '8px',
   fontSize: '16px',
   fontWeight: '400',
-  lineHeight: '18px',
+  lineHeight: ['22px', '18px'],
   color: 'muted.0',
 }
 
@@ -23,11 +22,14 @@ const description: SxStyleProp = {
   color: 'muted.0',
 }
 
-const link: CSSProperties = {
-  ...description,
-  display: 'block',
-  marginTop: '8px',
-  color: '#A1AB83',
+const linkContainer: SxStyleProp = {
+  mt: '8px',
+  alignItems: 'center',
 }
 
-export default { container, title, description, link }
+const link: SxStyleProp = {
+  ...description,
+  color: 'muted.1',
+}
+
+export default { container, title, description, linkContainer, link }

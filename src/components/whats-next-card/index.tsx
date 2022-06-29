@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Box, Text } from '@vtex/brand-ui'
+import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
 
 import styles from './styles'
 
@@ -19,7 +19,10 @@ const WhatsNextCard = ({ title, description, link }: Props) => {
         <Box sx={styles.container}>
           <Text sx={styles.title}>{title}</Text>
           <Text sx={styles.description}>{description}</Text>
-          <Text sx={styles.link}>{link.title}</Text>
+          <Flex sx={styles.linkContainer}>
+            <Text sx={styles.link}>{link.title}</Text>
+            <IconCaret direction="right" size={16} />
+          </Flex>
         </Box>
       </a>
     </Link>
