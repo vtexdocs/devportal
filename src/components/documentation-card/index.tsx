@@ -1,28 +1,25 @@
 import Link from 'next/link'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import type { IconComponent } from 'utils/typings/types'
-
 import styles from './styles'
 import { cardContainer, cardTitle, titleContainer } from './functions'
+import { DataElement } from 'utils/typings/types'
 
-export interface CardProps {
+export interface DocumentProps extends DataElement {
   title: string
-  description: string
-  to: string
-  Icon: IconComponent
+}
+export interface CardProps extends DocumentProps {
   containerType: string
 }
-
 const DocumentationCard = ({
   title,
   description,
-  to,
-  Icon,
+  link,
   containerType,
+  Icon,
 }: CardProps) => {
   return (
-    <Link href={to}>
+    <Link href={link}>
       <a>
         <Box sx={cardContainer(containerType)}>
           <Flex sx={titleContainer(containerType)}>

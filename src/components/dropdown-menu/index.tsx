@@ -1,71 +1,9 @@
 import { Box } from '@vtex/brand-ui'
 
-import DocumentationCard, { CardProps } from 'components/documentation-card'
-
-import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
-import VTEXIOIcon from 'components/icons/vtex-io-icon'
-import FastStoreIcon from 'components/icons/fast-store-icon'
-import WebOpsIcon from 'components/icons/webops-icon'
-import ReleaseNotesIcon from 'components/icons/release-notes-icon'
-import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
+import DocumentationCard from 'components/documentation-card'
+import { documentationData, updatesData } from 'utils/constants'
 
 import styles from './styles'
-
-const documentationCards: CardProps[] = [
-  {
-    title: 'API Guides',
-    description: 'Quickly build and launch high-performance stores',
-    to: '/docs/api-guides',
-    Icon: APIGuidesIcon,
-    containerType: 'dropdown',
-  },
-  {
-    title: 'API Reference',
-    description: 'From ERP to custom-built integrations — extend',
-    to: '/docs/api-reference',
-    Icon: APIReferenceIcon,
-    containerType: 'dropdown',
-  },
-  {
-    title: 'VTEX IO',
-    description: 'VTEX IO is an enterprise low-code development',
-    to: '/docs/vtex-io',
-    Icon: VTEXIOIcon,
-    containerType: 'dropdown',
-  },
-  {
-    title: 'FastStore',
-    description: 'Quickly build and launch high-performance stores',
-    to: '/docs/fast-store',
-    Icon: FastStoreIcon,
-    containerType: 'dropdown',
-  },
-  {
-    title: 'WebOps',
-    description: 'From ERP to custom-built integrations — extend',
-    to: '/docs/webops',
-    Icon: WebOpsIcon,
-    containerType: 'dropdown',
-  },
-]
-
-const updatesCards: CardProps[] = [
-  {
-    title: 'Release Notes',
-    description: 'From ERP to custom-built integrations — extend',
-    to: '/updates/release-notes',
-    Icon: ReleaseNotesIcon,
-    containerType: 'dropdown',
-  },
-  {
-    title: 'Documentation Updates',
-    description: 'From ERP to custom-built integrations — extend',
-    to: '/',
-    Icon: DocumentationUpdatesIcon,
-    containerType: 'dropdown',
-  },
-]
 
 const DropdownMenu = () => {
   return (
@@ -75,16 +13,24 @@ const DropdownMenu = () => {
           sx={styles.documentationContainer}
           data-cy="dropdown-menu-first-section"
         >
-          {documentationCards.map((card) => (
-            <DocumentationCard key={card.title} {...card} />
+          {documentationData.map((card) => (
+            <DocumentationCard
+              containerType="dropdown"
+              key={card.title}
+              {...card}
+            />
           ))}
         </Box>
         <Box
           sx={styles.updatesContainer}
           data-cy="dropdown-menu-second-section"
         >
-          {updatesCards.map((card) => (
-            <DocumentationCard key={card.title} {...card} />
+          {updatesData.map((card) => (
+            <DocumentationCard
+              containerType="dropdown"
+              key={card.title}
+              {...card}
+            />
           ))}
         </Box>
       </Box>

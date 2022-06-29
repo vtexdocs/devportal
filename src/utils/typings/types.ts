@@ -5,17 +5,16 @@ import { DocumentationTitle, UpdatesTitle, ResourceTitle } from './unionTypes'
 
 export type IconComponent = (props: IconProps) => JSX.Element
 
-export type DocDataElement = {
+export type DataElement = {
+  link: string
   Icon: IconComponent
   description: string
-  title: DocumentationTitle
-  link: string
 }
-
-export type UpdatesDataElement = {
-  Icon: IconComponent
+export interface DocDataElement extends DataElement {
+  title: DocumentationTitle
+}
+export interface UpdatesDataElement extends DataElement {
   title: UpdatesTitle
-  link: string
 }
 
 export type UpdateElement = {
