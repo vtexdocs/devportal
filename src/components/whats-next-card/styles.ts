@@ -5,6 +5,23 @@ const container: SxStyleProp = {
   borderRadius: '4px',
   border: '1px solid #E7E9EE',
   width: ['324px', '264px', '264px', '264px', '352px'],
+  transition: 'all 0.3s ease-out',
+
+  ':active, :hover': {
+    borderColor: 'muted.2',
+    filter: 'drop-shadow(0px 0px 16px rgba(0, 0, 0, 0.1))',
+    transition: 'all 0.3 ease-out',
+
+    '.title, .description': {
+      transition: 'all 0.3s ease-out',
+      color: '#000711',
+    },
+
+    '.link': {
+      transition: 'all 0.3s ease-out',
+      color: 'muted.0',
+    },
+  },
 }
 
 const title: SxStyleProp = {

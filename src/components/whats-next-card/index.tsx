@@ -17,10 +17,16 @@ const WhatsNextCard = ({ title, description, link }: Props) => {
     <Link href={link.to}>
       <a>
         <Box sx={styles.container}>
-          <Text sx={styles.title}>{title}</Text>
-          <Text sx={styles.description}>{description}</Text>
+          <Text sx={styles.title} className="title">
+            {title}
+          </Text>
+          <Text sx={styles.description} className="description">
+            {description}
+          </Text>
           <Flex sx={styles.linkContainer}>
-            <Text sx={styles.link}>{link.title}</Text>
+            <Text sx={styles.link} className="link">
+              {link.title}
+            </Text>
             <IconCaret direction="right" size={16} />
           </Flex>
         </Box>
