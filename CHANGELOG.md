@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.17.2](https://github.com/vtexdocs/devportal/compare/v0.17.1...v0.17.2) (2022-06-30)
+
+
+### Bug Fixes
+
+* **documentation-page:** page margin in mobile screen ([d2d5c13](https://github.com/vtexdocs/devportal/commit/d2d5c1340a4814b8f0b59efc6ae58bb6979c316f))
+
 ### [0.17.1](https://github.com/vtexdocs/devportal/compare/v0.17.0...v0.17.1) (2022-06-22)
 
 
