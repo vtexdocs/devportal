@@ -17,7 +17,7 @@ const cardContainer = (containerType: string) => {
     width: containerWidth,
 
     '.title, .description': {
-      maxWidth: textWidth,
+      width: textWidth,
     },
   }
 
