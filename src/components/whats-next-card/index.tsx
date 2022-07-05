@@ -1,18 +1,11 @@
 import Link from 'next/link'
 import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
 
+import type { WhatsNextDataElement } from 'utils/typings/types'
+
 import styles from './styles'
 
-interface Props {
-  title: string
-  description: string
-  link: {
-    title: string
-    to: string
-  }
-}
-
-const WhatsNextCard = ({ title, description, link }: Props) => {
+const WhatsNextCard = ({ title, description, link }: WhatsNextDataElement) => {
   return (
     <Link href={link.to}>
       <a>
