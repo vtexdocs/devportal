@@ -9,7 +9,7 @@ import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
-import ContextProvider from 'utils/contexts/context'
+import SidebarContextProvider from 'utils/contexts/sidebar'
 
 import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
@@ -74,7 +74,7 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
   }, [])
 
   return (
-    <ContextProvider>
+    <SidebarContextProvider>
       <APIGuideContextProvider headings={headings}>
         <Flex sx={styles.container}>
           <Sidebar sectionSelected="API Guides" />
@@ -94,7 +94,7 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
           </Flex>
         </Flex>
       </APIGuideContextProvider>
-    </ContextProvider>
+    </SidebarContextProvider>
   )
 }
 

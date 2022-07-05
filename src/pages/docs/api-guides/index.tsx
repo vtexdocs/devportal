@@ -3,11 +3,11 @@ import { Flex } from '@vtex/brand-ui'
 import Sidebar from 'components/sidebar'
 import Link from 'next/link'
 import styles from 'styles/api-guides'
-import ContextProvider from 'utils/contexts/context'
+import SidebarContextProvider from 'utils/contexts/sidebar'
 
 const ApiGuidesPage = () => {
   return (
-    <ContextProvider>
+    <SidebarContextProvider>
       <Flex sx={styles.container}>
         <Sidebar sectionSelected={'API Guides'} />
         <ul>
@@ -28,7 +28,7 @@ const ApiGuidesPage = () => {
           </li>
         </ul>
       </Flex>
-    </ContextProvider>
+    </SidebarContextProvider>
   )
 }
 

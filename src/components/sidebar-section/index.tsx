@@ -6,19 +6,20 @@ import SearchIcon from 'components/icons/search-icon'
 import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
 import SideBarElements from 'components/sidebar-elements'
 
-import { Context } from 'utils/contexts/context'
-import type { SidebarItemPropTypes } from 'components/sidebar-elements'
+import { SidebarContext } from 'utils/contexts/sidebar'
+import type { SidebarElement } from 'components/sidebar-elements'
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import styles from './styles'
 
 export interface SidebarSectionProps {
   title: DocumentationTitle | UpdatesTitle
-  data: SidebarItemPropTypes[]
+  data: SidebarElement[]
 }
 
 const SidebarSection = ({ title, data }: SidebarSectionProps) => {
   const [searchValue, setSearchValue] = useState('')
-  const { sidebarSectionHidden, setSidebarSectionHidden } = useContext(Context)
+  const { sidebarSectionHidden, setSidebarSectionHidden } =
+    useContext(SidebarContext)
 
   return (
     <Box

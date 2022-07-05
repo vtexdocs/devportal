@@ -1,31 +1,37 @@
 import React, { Fragment, useContext } from 'react'
 import { Box, Flex, Button, Link, IconCaret } from '@vtex/brand-ui'
 
+import { SidebarContext } from 'utils/contexts/sidebar'
+
 import { styleByLevelNormal, textStyle } from './functions'
-import { Context } from 'utils/contexts/context'
 import styles from './styles'
 
-export interface SidebarItemPropTypes {
+export interface SidebarElement {
   title: string
   url: string
-  subItems: SidebarItemPropTypes[]
+  subItems: SidebarElement[]
 }
 
 export interface SidebarProps {
-  items: SidebarItemPropTypes[]
-  firstActive?: number
+  slugPrefix?: string
+  items: SidebarElement[]
   subItemLevel: number
 }
 
-const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
-  const {
-    sidebarElementActive,
-    sidebarElementStatus,
-    toggleSidebarElementActive,
-    toggleSidebarElementStatus,
-  } = useContext(Context)
+interface SidebarElementProps extends SidebarElement {
+  slug: string
+}
 
-  const ItemRoot = ({ title, subItems }: SidebarItemPropTypes) => {
+const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
+  const {
+    activeSidebarElement,
+    sidebarElementStatus,
+    setActiveSidebarElement,
+    toggleSidebarElementStatus,
+    openSidebarElement,
+  } = useContext(SidebarContext)
+
+  const ElementRoot = ({ slug, title, subItems }: SidebarElementProps) => {
     const isExpandable = subItems.length > 0
 
     return (
@@ -36,39 +42,30 @@ const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
               size="regular"
               variant="tertiary"
               sx={
-                sidebarElementStatus.has(title) &&
-                sidebarElementStatus.get(title)?.open
+                sidebarElementStatus.has(slug) && sidebarElementStatus.get(slug)
                   ? styles.arrowIconActive
                   : styles.arrowIcon
               }
               icon={() => (
                 <IconCaret
                   direction={
-                    sidebarElementStatus.has(title) &&
-                    sidebarElementStatus.get(title)?.open
+                    sidebarElementStatus.has(slug) &&
+                    sidebarElementStatus.get(slug)
                       ? 'down'
                       : 'right'
                   }
                   size={24}
                 />
               )}
-              onClick={() => {
-                sidebarElementStatus.has(title)
-                  ? toggleSidebarElementStatus(
-                      title,
-                      !sidebarElementStatus.get(title)?.open,
-                      subItemLevel
-                    )
-                  : toggleSidebarElementStatus(title, true, subItemLevel)
-              }}
+              onClick={() => toggleSidebarElementStatus(slug)}
             />
           )}
           <Link
-            sx={textStyle(sidebarElementActive.has(title), isExpandable)}
+            sx={textStyle(activeSidebarElement === slug, isExpandable)}
             target="_self"
             onClick={() => {
-              toggleSidebarElementStatus(title, true, subItemLevel)
-              toggleSidebarElementActive(title, subItemLevel)
+              openSidebarElement(slug)
+              setActiveSidebarElement(slug)
             }}
           >
             {title}
@@ -78,17 +75,18 @@ const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
     )
   }
 
-  const ItemChildren = ({ title, subItems }: SidebarItemPropTypes) => {
+  const ElementChildren = ({ slug, subItems }: SidebarElementProps) => {
     const isExpandable = subItems.length > 0
 
     return isExpandable &&
-      sidebarElementStatus.has(title) &&
-      sidebarElementStatus.get(title)?.open ? (
+      sidebarElementStatus.has(slug) &&
+      sidebarElementStatus.get(slug) ? (
       <Box>
         <SidebarElements
+          slugPrefix={slug}
           items={subItems}
           subItemLevel={subItemLevel + 1}
-          key={`${title}sd`}
+          key={`${slug}sd`}
         />
       </Box>
     ) : null
@@ -98,15 +96,14 @@ const SidebarElements = ({ items, subItemLevel }: SidebarProps) => {
     <Box>
       {items?.map((item, index) => {
         const key = String(item.title) + String(index)
+        const slug = `${slugPrefix || ''}${item.title}`
 
         return (
           <Fragment key={String(key)}>
-            <>
-              <ItemRoot {...item} />
-              <Box>
-                <ItemChildren {...item} />
-              </Box>
-            </>
+            <ElementRoot {...item} slug={slug} />
+            <Box>
+              <ElementChildren {...item} slug={slug} />
+            </Box>
             {subItemLevel == 0 ? (
               <Box sx={styles.sectionDivider}>
                 <hr />
