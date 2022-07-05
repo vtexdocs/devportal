@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.17.3](https://github.com/vtexdocs/devportal/compare/v0.17.2...v0.17.3) (2022-07-05)
+
+
+### Bug Fixes
+
+* **sidebar:** fix multiple active elements ([b1f7672](https://github.com/vtexdocs/devportal/commit/b1f76727262cc55a39d8b609e509d0c04575eb32))
+
+
+### Refactoring
+
+* **search:** rename search context file ([071d28e](https://github.com/vtexdocs/devportal/commit/071d28e129f5c1788852024b4b81339fd0475358))
+* **sidebar:** remove firstActive from sidebar elements props ([9747b63](https://github.com/vtexdocs/devportal/commit/9747b63550ee28e97c12190bc43b8e13eb3d51c0))
+* **sidebar:** remove unecessary variables from sidebar context ([4d03501](https://github.com/vtexdocs/devportal/commit/4d0350145b9691f896ba8992a9aa1c21a1b18a55))
+* **sidebar:** rename sidebar context ([68389de](https://github.com/vtexdocs/devportal/commit/68389de3c62d6bba708967293b51004e86681188))
+
 ### [0.17.2](https://github.com/vtexdocs/devportal/compare/v0.17.1...v0.17.2) (2022-06-30)
 
 
