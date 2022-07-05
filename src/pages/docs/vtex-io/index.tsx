@@ -4,9 +4,10 @@ import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 
 import SidebarContextProvider from 'utils/contexts/sidebar'
 import Sidebar from 'components/sidebar'
+import WhatsNextCard from 'components/whats-next-card'
 
 import { getMessages } from 'utils/get-messages'
-import { resources } from 'utils/constants'
+import { whatsNextData, resources } from 'utils/constants'
 
 import image from '../../../../public/images/vtex-io.png'
 
@@ -44,6 +45,12 @@ const VTEXIOPage = () => {
             <Text sx={styles.subtitle}>
               {messages['vtex_io_page.subtitle']}
             </Text>
+
+            <Flex sx={styles.cardsContainer}>
+              {whatsNextData.map((whatsNext) => (
+                <WhatsNextCard {...whatsNext} />
+              ))}
+            </Flex>
 
             <Box sx={styles.resourcesSectionContainer}>
               <Text sx={styles.resourcesSectionTitle}>

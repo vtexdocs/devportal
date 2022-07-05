@@ -98,11 +98,17 @@ const contentContainer: SxStyleProp = {
 }
 
 const subtitle: SxStyleProp = {
+  mb: ['16px', '8px'],
   textAlign: ['center', 'initial'],
   fontSize: ['16px', '18px'],
   lineHeight: ['22px', '24px'],
   fontWeight: '400',
   color: '#4A4A4A',
+}
+
+const cardsContainer: SxStyleProp = {
+  flexWrap: 'wrap',
+  justifyContent: 'space-between',
 }
 
 const resourcesSectionContainer: SxStyleProp = {
@@ -144,6 +150,7 @@ export default {
   divider,
   contentContainer,
   subtitle,
+  cardsContainer,
   resourcesSectionContainer,
   resourcesSectionTitle,
   resourceContainer,
