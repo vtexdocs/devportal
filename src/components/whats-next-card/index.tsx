@@ -20,7 +20,12 @@ const WhatsNextCard = ({ title, description, link }: WhatsNextDataElement) => {
             <Text sx={styles.link} className="link">
               {link.title}
             </Text>
-            <IconCaret direction="right" size={16} />
+            <IconCaret
+              className="caret"
+              color="#A1A8B3"
+              direction="right"
+              size={16}
+            />
           </Flex>
         </Box>
       </a>

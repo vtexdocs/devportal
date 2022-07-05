@@ -18,7 +18,7 @@ const container: SxStyleProp = {
       color: '#000711',
     },
 
-    '.link': {
+    '.link, .caret': {
       transition: 'all 0.3s ease-out',
       color: 'muted.0',
     },
