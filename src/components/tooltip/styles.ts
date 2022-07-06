@@ -77,8 +77,7 @@ const caret: (placement: Placement) => SxStyleProp = (placement) => {
   }
 }
 
-const labelContainer: SxStyleProp = {
-  padding: '4px 8px',
+const label: SxStyleProp = {
   borderRadius: '4px',
   backgroundColor: 'black',
   color: 'white',
@@ -87,4 +86,21 @@ const labelContainer: SxStyleProp = {
   lineHeight: '130%',
 }
 
-export default { tooltipContainer, caret, labelContainer }
+const labelContibutorsContainer: SxStyleProp = {
+  ...label,
+  padding: '4px 8px',
+}
+
+const labelDocumentationContainer: SxStyleProp = {
+  ...label,
+  width: '284px',
+  textAlign: 'center',
+  px: '12px',
+  py: '8px',
+}
+
+const labelStyle = (documentationSection: boolean): SxStyleProp => {
+  if (documentationSection) return labelDocumentationContainer
+  return labelContibutorsContainer
+}
+export default { tooltipContainer, caret, labelStyle }
