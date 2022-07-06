@@ -3,8 +3,9 @@ import { Flex, Text } from '@vtex/brand-ui'
 
 import { getMessages } from 'utils/get-messages'
 import type { DocDataElement } from 'utils/typings/types'
-
+import Tooltip from 'components/tooltip'
 import styles from './styles'
+import { useEffect, useRef, useState } from 'react'
 
 const DocumentationSectionCard = ({
   Icon,
@@ -13,34 +14,59 @@ const DocumentationSectionCard = ({
   link,
 }: DocDataElement) => {
   const messages = getMessages()
+  const [tooltipState, setTooltipState] = useState(false)
+  const descriptionRef = useRef<HTMLElement>()
+
+  useEffect(() => {
+    const resizeObserver = new MutationObserver(function (entries) {
+      const target = entries[0].target as HTMLElement
+      if (target.offsetHeight < target.scrollHeight) setTooltipState(true)
+      else setTooltipState(false)
+    })
+    if (descriptionRef.current) {
+      resizeObserver.observe(descriptionRef.current, {
+        childList: true,
+      })
+    }
+    return () => {
+      resizeObserver.disconnect
+    }
+  }, [descriptionRef.current])
+
   return (
-    <Link href={link}>
-      <a>
-        <Flex sx={styles.cardContainer}>
-          <Flex sx={styles.infoContainer}>
-            <Icon sx={styles.icon} />
-            <Text className="title" sx={styles.title}>
-              {title}
-            </Text>
-            <Text className="description" sx={styles.description}>
-              {description}
-            </Text>
+    <Tooltip placement="top" label={description} isCard={tooltipState}>
+      <Link href={link}>
+        <a>
+          <Flex sx={styles.cardContainer}>
+            <Flex sx={styles.infoContainer}>
+              <Icon sx={styles.icon} />
+              <Text className="title" sx={styles.title}>
+                {title}
+              </Text>
+              <Text
+                ref={descriptionRef}
+                className="description"
+                sx={styles.description}
+              >
+                {description}
+              </Text>
+            </Flex>
+            <Flex
+              className="quickStartedContainer"
+              sx={styles.quickStartedContainer}
+            >
+              <Text className="quickStartedText" sx={styles.quickStartedText}>
+                {
+                  messages[
+                    'landing_page_documentation_documentation_card.quickStartedText'
+                  ]
+                }
+              </Text>
+            </Flex>
           </Flex>
-          <Flex
-            className="quickStartedContainer"
-            sx={styles.quickStartedContainer}
-          >
-            <Text className="quickStartedText" sx={styles.quickStartedText}>
-              {
-                messages[
-                  'landing_page_documentation_documentation_card.quickStartedText'
-                ]
-              }
-            </Text>
-          </Flex>
-        </Flex>
-      </a>
-    </Link>
+        </a>
+      </Link>
+    </Tooltip>
   )
 }
 

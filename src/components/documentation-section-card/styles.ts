@@ -63,11 +63,16 @@ const title: SxStyleProp = {
 }
 
 const description: SxStyleProp = {
-  display: ['none', 'block'],
+  display: ['none', '-webkit-box'],
   fontSize: '16px',
   lineHeight: '22px',
   fontWeight: '400',
   color: 'muted.1',
+  minHeight: '44px',
+  overflow: 'hidden',
+  WebkitLineClamp: 2,
+  WebkitBoxOrient: 'vertical',
+  width: '100%',
 }
 
 const quickStartedContainer: SxStyleProp = {
@@ -101,6 +106,13 @@ const quickStartedText: SxStyleProp = {
   color: 'muted.0',
 }
 
+const tooltipStyle: SxStyleProp = {
+  width: '284px',
+  textAlign: 'center',
+  px: '12px',
+  py: '8px',
+}
+
 export default {
   cardContainer,
   description,
@@ -109,4 +121,5 @@ export default {
   quickStartedContainer,
   quickStartedText,
   title,
+  tooltipStyle,
 }
