@@ -106,13 +106,6 @@ const quickStartedText: SxStyleProp = {
   color: 'muted.0',
 }
 
-const tooltipStyle: SxStyleProp = {
-  width: '284px',
-  textAlign: 'center',
-  px: '12px',
-  py: '8px',
-}
-
 export default {
   cardContainer,
   description,
@@ -121,5 +114,4 @@ export default {
   quickStartedContainer,
   quickStartedText,
   title,
-  tooltipStyle,
 }

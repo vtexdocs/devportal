@@ -15,6 +15,7 @@ const DocumentationSectionCard = ({
 }: DocDataElement) => {
   const messages = getMessages()
   const [tooltipState, setTooltipState] = useState(false)
+  const [tooltipDescription, setTooltipDescription] = useState(description)
   const descriptionRef = useRef<HTMLElement>()
 
   useEffect(() => {
@@ -22,6 +23,7 @@ const DocumentationSectionCard = ({
       const target = entries[0].target as HTMLElement
       if (target.offsetHeight < target.scrollHeight) setTooltipState(true)
       else setTooltipState(false)
+      setTooltipDescription(target.innerText)
     })
     if (descriptionRef.current) {
       resizeObserver.observe(descriptionRef.current, {
@@ -34,7 +36,7 @@ const DocumentationSectionCard = ({
   }, [descriptionRef.current])
 
   return (
-    <Tooltip placement="top" label={description} isCard={tooltipState}>
+    <Tooltip placement="top" label={tooltipDescription} isCard={tooltipState}>
       <Link href={link}>
         <a>
           <Flex sx={styles.cardContainer}>
