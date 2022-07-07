@@ -993,10 +993,10 @@
     "@typescript-eslint/types" "5.14.0"
     eslint-visitor-keys "^3.0.0"
 
-"@vtex/brand-ui@^0.46.0":
-  version "0.46.0"
-  resolved "https://registry.npmjs.org/@vtex/brand-ui/-/brand-ui-0.46.0.tgz"
-  integrity sha512-tMIS5DhX7EScjCwf+bQouc4iCJH/3fL76+qNlkO8NDUmkKI2jSiDVDWTZoEP+MagJ0ghX1a1LnosPwKOj3FG+w==
+"@vtex/brand-ui@^0.46.1":
+  version "0.46.1"
+  resolved "https://registry.yarnpkg.com/@vtex/brand-ui/-/brand-ui-0.46.1.tgz#e08e2517a4369f06abbad5642dddef81eef807c4"
+  integrity sha512-YSjf9H4snG2sEHlofCasmkiu0MMZ9v7PBtaoB0kdV19zdk4R+N6OEu4glbI0o7UjVIiEAkr79aaT4a4dwWG0DQ==
   dependencies:
     "@emotion/core" "^10.0.35"
     "@react-aria/focus" "3.2.0"
