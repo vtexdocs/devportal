@@ -27,6 +27,15 @@ export type UpdateElement = {
   actionType: ActionType
 }
 
+export type WhatsNextDataElement = {
+  title: string
+  description: string
+  link: {
+    title: string
+    to: string
+  }
+}
+
 export type ResourceDataElement = {
   title: ResourceTitle
   description: string

@@ -20,6 +20,7 @@ import {
   DocDataElement,
   UpdatesDataElement,
   UpdateElement,
+  WhatsNextDataElement,
   ResourceDataElement,
 } from './typings/types'
 
@@ -133,6 +134,41 @@ export const releaseData: UpdateElement[] = [
     description:
       'To persist campaign data throughout a user session and avoid providing inconsistent campaign data to Google Analytics, you must add the variable OriginalLocation to your Google Tag Manager (GTM) container and configure your store’s Google Analytics tags.',
     actionType: 'improved',
+  },
+]
+
+export const whatsNextData: WhatsNextDataElement[] = [
+  {
+    title: messages['vtex_io_page_new_to_vtex_io.title'],
+    description: messages['vtex_io_page_new_to_vtex_io.description'],
+    link: {
+      title: messages['vtex_io_page_new_to_vtex_io.link'],
+      to: '/',
+    },
+  },
+  {
+    title: messages['vtex_io_page_solve_real_world_issues.title'],
+    description: messages['vtex_io_page_solve_real_world_issues.description'],
+    link: {
+      title: messages['vtex_io_page_solve_real_world_issues.link'],
+      to: '/',
+    },
+  },
+  {
+    title: messages['vtex_io_page_build_foundations.title'],
+    description: messages['vtex_io_page_build_foundations.description'],
+    link: {
+      title: messages['vtex_io_page_build_foundations.link'],
+      to: '/',
+    },
+  },
+  {
+    title: messages['vtex_io_page_go_further.title'],
+    description: messages['vtex_io_page_go_further.description'],
+    link: {
+      title: messages['vtex_io_page_go_further.link'],
+      to: '/',
+    },
   },
 ]
 
