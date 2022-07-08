@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.18.0](https://github.com/vtexdocs/devportal/compare/v0.17.3...v0.18.0) (2022-07-08)
+
+
+### Features
+
+* **vtex-io:** add hover and active animations to whats next cards ([d8cd9df](https://github.com/vtexdocs/devportal/commit/d8cd9df2f5d87a7db1d2e9b053a69b51731ab141))
+* **vtex-io:** add whats next card component ([45990ba](https://github.com/vtexdocs/devportal/commit/45990ba7cfa5b9b690d66b2461cf02a8210d3a1c))
+* **vtex-io:** add whats next cards data ([42befc0](https://github.com/vtexdocs/devportal/commit/42befc042f97bce7f407de1310c4c9ea82353f48))
+* **vtex-io:** add whats next cards to VTEX IO page ([2459341](https://github.com/vtexdocs/devportal/commit/2459341339917b02852cb3140b66c5004a0bb4a0))
+
+
+### Bug Fixes
+
+* **vtex-io:** add caret and fix card styles ([a072d35](https://github.com/vtexdocs/devportal/commit/a072d35804fa9b3dcb881f99aaf034652760c75a))
+* **whats-next-card:** fix shadow on hover ([fc725a9](https://github.com/vtexdocs/devportal/commit/fc725a92aab32348e5450e3426ee2d1553aae510))
+* **whats-next-cards:** fix caret color ([2f6f0b1](https://github.com/vtexdocs/devportal/commit/2f6f0b1a0d95cede67435792c8a8d024935d8874))
+
+
+### Refactoring
+
+* **whats-next-card:** remove duplicate type ([564737c](https://github.com/vtexdocs/devportal/commit/564737cb63c8f20b445a43f76aa4759079bee760))
+
 ### [0.17.3](https://github.com/vtexdocs/devportal/compare/v0.17.2...v0.17.3) (2022-07-05)
 
 
