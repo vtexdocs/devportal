@@ -4,7 +4,7 @@ import styles from './styles'
 const cardContainer = (containerType: string) => {
   const containerWidth =
     containerType === 'dropdown'
-      ? ['308px', '442px', '444px', '464px']
+      ? ['308px', '442px', '444px', '480px']
       : ['324px', '544px', '544px', '544px', '544px', '720px']
 
   const textWidth =
