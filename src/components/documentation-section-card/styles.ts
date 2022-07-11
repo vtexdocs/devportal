@@ -3,7 +3,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const cardContainer: SxStyleProp = {
   flexDirection: 'column',
   margin: ['8px', '12px', '12px', '16px'],
-  width: ['151px', '282px', '282px'],
+  width: ['151px', '282px'],
   height: ['120px', '225px', '225px'],
   boxSizing: 'initial',
   borderRadius: '8px',
@@ -39,7 +39,8 @@ const cardContainer: SxStyleProp = {
 }
 
 const infoContainer: SxStyleProp = {
-  padding: ['16px', '24px'],
+  py: ['16px', '24px'],
+  px: '16px',
   flexDirection: 'column',
   alignItems: 'center',
   textAlign: 'center',

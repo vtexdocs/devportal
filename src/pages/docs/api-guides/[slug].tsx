@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Box, Flex } from '@vtex/brand-ui'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
-import type { CardProps } from 'components/documentation-card'
 import type { Item } from 'components/table-of-contents'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
@@ -31,21 +30,19 @@ const markdownDir = '/public/docs/api-guides'
 
 const contributors = 'ABCDEFGHIJKL'.split('')
 
-const documentationCards: CardProps[] = [
+const documentationCards = [
   {
     title: 'Billing Options',
     description: 'API Guides',
-    to: '/docs/api-guides/billing-options',
+    link: '/docs/api-guides/billing-options',
     Icon: APIGuidesIcon,
-    containerType: 'see-also',
   },
   {
     title:
       'Catalog API - A long documentation title aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
     description: 'API Reference',
-    to: '/docs/api-reference/catalog',
+    link: '/docs/api-reference/catalog',
     Icon: APIReferenceIcon,
-    containerType: 'see-also',
   },
 ]
 

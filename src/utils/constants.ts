@@ -30,32 +30,31 @@ export const documentationData: DocDataElement[] = [
   {
     Icon: APIGuidesIcon,
     title: 'API Guides',
-    description: messages['landing_page_documentation_api_guides.description'],
+    description: messages['documentation_api_guides.description'],
     link: '/docs/api-guides',
   },
   {
     Icon: APIReferenceIcon,
     title: 'API Reference',
-    description:
-      messages['landing_page_documentation_api_reference.description'],
+    description: messages['documentation_api_reference.description'],
     link: '/docs/api-reference',
   },
   {
     Icon: VTEXIOIcon,
     title: 'VTEX IO',
-    description: messages['landing_page_documentation_vtex_io.description'],
+    description: messages['documentation_vtex_io.description'],
     link: '/docs/vtex-io',
   },
   {
     Icon: FastStoreIcon,
     title: 'FastStore',
-    description: messages['landing_page_documentation_fast_store.description'],
+    description: messages['documentation_fast_store.description'],
     link: '/docs/fast-store',
   },
   {
     Icon: WebOpsIcon,
     title: 'WebOps',
-    description: messages['landing_page_documentation_webops.description'],
+    description: messages['documentation_webops.description'],
     link: '/docs/webops',
   },
 ]
@@ -64,12 +63,14 @@ export const updatesData: UpdatesDataElement[] = [
   {
     Icon: ReleaseNotesIcon,
     title: 'Release Notes',
+    description: messages['updates_release_notes.description'],
     link: '/updates/release-notes',
   },
   {
     Icon: DocumentationUpdatesIcon,
     title: 'Documentation Updates',
-    link: '/',
+    description: messages['updates_documentation_updates.description'],
+    link: '/updates/documentation-updates',
   },
 ]
 
