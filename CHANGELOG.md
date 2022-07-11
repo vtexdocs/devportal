@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.18.1](https://github.com/vtexdocs/devportal/compare/v0.18.0...v0.18.1) (2022-07-11)
+
+
+### Features
+
+* **documentation-section-card:** add tooltip on description overflow ([a8af997](https://github.com/vtexdocs/devportal/commit/a8af9974ad5631054b69bd0146e8244849ef6b77))
+
+
+### Bug Fixes
+
+* **documentation-section-card:** use the translated description as tooltip label ([65bcafb](https://github.com/vtexdocs/devportal/commit/65bcafb54fb615a0ded4c149462e1f6c1d746f89))
+* **tooltip:** update tooltip on cards ([7fab2d9](https://github.com/vtexdocs/devportal/commit/7fab2d9f132ff930c8c8b990dc2b8b517ef7ab03))
+
 ## [0.18.0](https://github.com/vtexdocs/devportal/compare/v0.17.3...v0.18.0) (2022-07-08)
 
 
