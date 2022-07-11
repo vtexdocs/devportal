@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.19.1](https://github.com/vtexdocs/devportal/compare/v0.19.0...v0.19.1) (2022-07-11)
+
+
+### Bug Fixes
+
+* **documentation-card:** fix description size on large screens ([f66b3b3](https://github.com/vtexdocs/devportal/commit/f66b3b3993a0f9b61072b6b6a7e249ad5352a8e3))
+* **documentation-section-card:** fix card margin and description size ([7a84191](https://github.com/vtexdocs/devportal/commit/7a84191c499e4d7296f5b8595ddc9a5f78f861ac))
+* **language.json:** update documentation cards description ([de39630](https://github.com/vtexdocs/devportal/commit/de39630a2688740139a6a0ac9a1ced1057759906))
+
+
+### Refactoring
+
+* **constants:** update the documentation/updates description messages ([ebb7ee8](https://github.com/vtexdocs/devportal/commit/ebb7ee855a98d4ef815fa29df950a17b002588e4))
+* **documentation-card:** card type ([fc46fc6](https://github.com/vtexdocs/devportal/commit/fc46fc67cbb7aa359a0a377ed1d171ba1c102f01))
+* **documentation-card:** enforce the containerType ([4823f68](https://github.com/vtexdocs/devportal/commit/4823f689a5218c176ba4d0b6cb9654be32d63bb7))
+
 ## [0.19.0](https://github.com/vtexdocs/devportal/compare/v0.18.1...v0.19.0) (2022-07-11)
 
 
