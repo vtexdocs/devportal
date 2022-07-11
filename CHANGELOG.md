@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.19.0](https://github.com/vtexdocs/devportal/compare/v0.18.1...v0.19.0) (2022-07-11)
+
+
+### Bug Fixes
+
+* **font:** update brand-ui version with new font ([7fafd26](https://github.com/vtexdocs/devportal/commit/7fafd2692ada10d6652884f2b6adf8dad16a8d35))
+
 ### [0.18.1](https://github.com/vtexdocs/devportal/compare/v0.18.0...v0.18.1) (2022-07-11)
 
 
