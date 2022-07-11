@@ -63,11 +63,16 @@ const title: SxStyleProp = {
 }
 
 const description: SxStyleProp = {
-  display: ['none', 'block'],
+  display: ['none', '-webkit-box'],
   fontSize: '16px',
   lineHeight: '22px',
   fontWeight: '400',
   color: 'muted.1',
+  minHeight: '44px',
+  overflow: 'hidden',
+  WebkitLineClamp: 2,
+  WebkitBoxOrient: 'vertical',
+  width: '100%',
 }
 
 const quickStartedContainer: SxStyleProp = {
