@@ -8,7 +8,7 @@ const headerContainer: SxStyleProp = {
 }
 
 const headerBrand: SxStyleProp = {
-  gridTemplateColumns: '1fr 2fr 0fr 1fr',
+  gridTemplateColumns: '1fr 1fr 0fr 1fr',
   width: '100%',
   position: 'relative',
 }
@@ -21,10 +21,24 @@ const rightLinks: SxStyleProp = {
   display: ['none', 'none', 'none', 'flex !important'],
   width: 'auto',
   height: '100%',
-  pr: '64px',
+  pr: '48px',
 }
 
-const rightLinksItem: SxStyleProp = { alignItems: 'center' }
+const rightLinksItem: SxStyleProp = {
+  alignItems: 'center',
+  padding: '0 !important',
+  margin: '0 0 0 32px !important',
+  svg: {
+    mr: '8px',
+  },
+
+  ':hover': {
+    color: '#C81E51',
+    'svg > path': {
+      stroke: '#C81E51',
+    },
+  },
+}
 
 const dropdownContainer: SxStyleProp = {
   justifyContent: 'flex-end',
@@ -33,18 +47,30 @@ const dropdownContainer: SxStyleProp = {
 }
 
 const dropdownButton: (active: boolean) => SxStyleProp = (active: boolean) => ({
-  my: 'auto',
-  mx: '32px',
-  fontWeight: '600',
-  fontSize: '14px',
-  lineHeight: '20px',
-  letterSpacing: '0.5px',
   color: active ? '#D71D55' : '#4A596B',
+  alignItems: 'center',
+  svg: {
+    mr: '8px',
+    path: {
+      fill: active ? '#D71D55' : '#4A596B',
+    },
+  },
 
   ':hover': {
     color: '#C81E51',
+    'svg > path': {
+      fill: '#C81E51',
+    },
   },
 })
+
+const rightButtonsText: SxStyleProp = {
+  fontWeight: 'normal',
+  fontSize: '16px',
+  lineHeight: '22px',
+  fontFamily: 'VTEX Trust Medium !important',
+  textTransform: 'none',
+}
 
 const iconContainer: SxStyleProp = { paddingLeft: 3, color: 'primary.base' }
 
@@ -90,6 +116,7 @@ export default {
   rightLinks,
   iconContainer,
   rightLinksItem,
+  rightButtonsText,
   dropdownButton,
   dropdownContainer,
 }

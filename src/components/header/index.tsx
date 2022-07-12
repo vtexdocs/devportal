@@ -13,6 +13,9 @@ import HamburgerMenu from './hamburger-menu'
 import DropdownMenu from 'components/dropdown-menu'
 import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
 import SearchIcon from 'components/icons/search-icon'
+import GridIcon from 'components/icons/grid-icon'
+import LongArrowIcon from 'components/icons/long-arrow-icon'
+
 import { getFeedbackURL } from 'utils/get-url'
 import { getMessages } from 'utils/get-messages'
 
@@ -115,12 +118,12 @@ const Header = () => {
             onMouseOver={() => setShowDropdown(true)}
             onMouseLeave={() => setShowDropdown(false)}
           >
-            <Text
-              sx={styles.dropdownButton(showDropdown)}
-              data-cy="docs-dropdown"
-            >
-              {messages['landing_page_header_docs.message']}
-            </Text>
+            <Flex sx={styles.dropdownButton(showDropdown)}>
+              <GridIcon />
+              <Text sx={styles.rightButtonsText} data-cy="docs-dropdown">
+                {messages['landing_page_header_docs.message']}
+              </Text>
+            </Flex>
 
             {showDropdown && <DropdownMenu />}
           </Flex>
@@ -130,7 +133,10 @@ const Header = () => {
             href={getFeedbackURL()}
             target="_blank"
           >
-            <Text>{messages['landing_page_header_feedback.message']}</Text>
+            <LongArrowIcon />
+            <Text sx={styles.rightButtonsText}>
+              {messages['landing_page_header_feedback.message']}
+            </Text>
           </VtexLink>
         </HeaderBrand.RightLinks>
         <HamburgerMenu />
