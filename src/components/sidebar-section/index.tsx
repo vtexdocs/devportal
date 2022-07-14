@@ -1,7 +1,6 @@
 import { Flex, Box, Text } from '@vtex/brand-ui'
 import { useContext, useState } from 'react'
 
-import HelpIcon from 'components/icons/help-icon'
 import SearchIcon from 'components/icons/search-icon'
 import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
 import SideBarElements from 'components/sidebar-elements'
@@ -30,10 +29,7 @@ const SidebarSection = ({ title, data }: SidebarSectionProps) => {
         className={sidebarSectionHidden ? 'sidebarHide' : ''}
         sx={styles.sidebarElementsBox}
       >
-        <Text sx={styles.sidebarTitle}>
-          {title}
-          <HelpIcon sx={styles.sidebarHelpIcon} />
-        </Text>
+        <Text sx={styles.sidebarTitle}>{title}</Text>
         <Flex sx={styles.searchBox}>
           <SearchIcon sx={styles.searchIcon} />
           <input

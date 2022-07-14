@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Flex } from '@vtex/brand-ui'
+import { Flex, Text, Box } from '@vtex/brand-ui'
 import Link from 'next/link'
 
 import styles from './styles'
@@ -246,6 +246,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
                   : styles.icon
               }
             />
+            <Text sx={styles.iconTitle}>{iconElement.title}</Text>
           </Flex>
         </a>
       </Link>
@@ -263,6 +264,9 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
             />
           ))}
         </Flex>
+        <Box sx={styles.sectionDivider}>
+          <hr />
+        </Box>
         <Flex sx={styles.sidebarIconsContainer}>
           {notesIcons.map((notesIconElement) => (
             <SideBarIcon

@@ -17,10 +17,9 @@ const sidebar: SxStyleProp = {
 }
 
 const sidebarIcons: SxStyleProp = {
-  width: '56px',
+  width: ['56px', '56px', '56px', '56px', '56px', '160px'],
   height: '692px',
   flexDirection: 'column',
-  justifyContent: 'space-between',
   borderRight: '1px solid #E7E9EE',
   background: '#FFFFFF',
   zIndex: '2',
@@ -29,15 +28,26 @@ const sidebarIcons: SxStyleProp = {
 
 const iconBox: SxStyleProp = {
   mt: ['16px'],
-  width: '40px',
+  width: ['40px', '40px', '40px', '40px', '40px', '144px'],
+  paddingLeft: ['0', '0', '0', '0', '0', '8px'],
+  py: ['0', '0', '0', '0', '0', '10px'],
   height: '40px',
   borderRadius: '4px',
   alignItems: 'center',
-  justifyContent: 'center',
+  justifyContent: [
+    'center',
+    'center',
+    'center',
+    'center',
+    'center',
+    'flex-start',
+  ],
   background: 'transparent',
+  color: 'muted.0',
   cursor: 'pointer',
   ':hover': {
     background: '#F8F7FC',
+    color: '#E31C58',
     path: {
       stroke: '#E31C58',
     },
@@ -46,13 +56,15 @@ const iconBox: SxStyleProp = {
 
 const iconBoxActive: SxStyleProp = {
   ...iconBox,
-  background: '#F8F7FC',
+  background: ['#F8F7FC', '#F8F7FC', '#F8F7FC', '#F8F7FC', '#F8F7FC', 'none'],
+  color: '#E31C58',
 }
 
 const sidebarIconsContainer: SxStyleProp = {
   width: '100%',
   flexDirection: 'column',
-  alignItems: 'center',
+  alignItems: ['center', 'center', 'center', 'center', 'center', 'flex-start'],
+  px: ['0', '0', '0', '0', '8px'],
 }
 
 const icon: SxStyleProp = {
@@ -67,6 +79,24 @@ const iconActive: SxStyleProp = {
   },
 }
 
+const sectionDivider: SxStyleProp = {
+  px: '8px',
+  marginTop: '16px',
+  hr: {
+    border: '1px solid #E7E9EE',
+    borderTop: 'none',
+  },
+}
+
+const iconTitle: SxStyleProp = {
+  display: ['none', 'none', 'none', 'none', 'none', 'initial'],
+  fontSize: '14px',
+  ml: '12px',
+  whiteSpace: 'nowrap',
+  overflowX: 'hidden',
+  textOverflow: 'ellipsis',
+}
+
 export default {
   sidebar,
   sidebarIcons,
@@ -75,4 +105,6 @@ export default {
   icon,
   iconActive,
   iconBoxActive,
+  sectionDivider,
+  iconTitle,
 }
