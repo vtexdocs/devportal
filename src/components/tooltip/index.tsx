@@ -1,17 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, Flex, TooltipProps } from '@vtex/brand-ui'
+import { Box, Flex, TooltipProps, SxStyleProp } from '@vtex/brand-ui'
 
 import CaretIcon from 'components/icons/caret'
 
 import styles from './styles'
-
-// type Props = Pick<TooltipProps, 'children' | 'label' | 'placement'>
-
 interface Props extends Pick<TooltipProps, 'children' | 'label' | 'placement'> {
+  sx?: SxStyleProp
   isCard?: boolean
 }
 
-const Tooltip = ({ children, label, placement, isCard }: Props) => {
+const Tooltip = ({ children, label, placement, sx, isCard }: Props) => {
   const box = useRef<HTMLDivElement>()
   const [boxWidth, setBoxWidth] = useState(0)
   const [boxHeight, setBoxHeight] = useState(0)
@@ -43,6 +41,7 @@ const Tooltip = ({ children, label, placement, isCard }: Props) => {
       {visible && (isCard ?? true) && (
         <Flex
           sx={styles.tooltipContainer(
+            sx,
             placement || 'top',
             boxWidth,
             boxHeight,

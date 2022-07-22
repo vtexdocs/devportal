@@ -3,12 +3,13 @@ import { SxStyleProp } from '@vtex/brand-ui'
 type Placement = 'top' | 'right' | 'bottom' | 'left'
 
 const tooltipContainer: (
+  sx: SxStyleProp,
   placement: Placement,
   width: number,
   height: number,
   x: number,
   y: number
-) => SxStyleProp = (placement, width, height, x, y) => {
+) => SxStyleProp = (sx, placement, width, height, x, y) => {
   const position = {
     bottom: {
       left: `${x + width / 2}px`,
@@ -43,6 +44,7 @@ const tooltipContainer: (
   }
 
   return {
+    ...sx,
     zIndex: '100',
     position: 'absolute',
     alignItems: 'center',
