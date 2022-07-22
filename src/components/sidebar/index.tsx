@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Flex, Text, Box } from '@vtex/brand-ui'
 import Link from 'next/link'
 
@@ -12,6 +12,8 @@ import {
 } from 'utils/constants'
 
 import SidebarSection from 'components/sidebar-section'
+import Tooltip from 'components/tooltip'
+import { iconTooltipStyle } from './functions'
 
 interface SideBarSectionState {
   sectionSelected: DocumentationTitle | UpdatesTitle | ''
@@ -19,6 +21,7 @@ interface SideBarSectionState {
 
 const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
+  const [expandDelayStatus, setExpandDelayStatus] = useState(true)
 
   const sidebarData: SidebarSectionProps[] = [
     {
@@ -224,38 +227,84 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
     },
   ]
 
+  useEffect(() => {
+    setTimeout(() => setExpandDelayStatus(false), 5000)
+  }, [])
+
   const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
+    const [iconTooltip, setIconTooltip] = useState(false)
+    const [tooltipLabel, setTooltipLabel] = useState(iconElement.title)
+    const titleRef = useRef<HTMLElement>()
+
+    useEffect(() => {
+      const resizeObserver = new MutationObserver(function (entries) {
+        const target = entries[0].target as HTMLElement
+        if (target.offsetWidth < target.scrollWidth) setIconTooltip(true)
+        else setIconTooltip(false)
+
+        if (target.offsetWidth > 0)
+          setTooltipLabel(target.innerText as DocumentationTitle | UpdatesTitle)
+      })
+      if (titleRef.current) {
+        if (titleRef.current.offsetWidth < titleRef.current.scrollWidth)
+          setIconTooltip(true)
+        resizeObserver.observe(titleRef.current, {
+          childList: true,
+        })
+      }
+      return () => {
+        resizeObserver.disconnect
+      }
+    }, [titleRef.current])
+
     return (
-      <Link href={iconElement.link}>
-        <a
-          onClick={() => {
-            setActiveSectionName(iconElement.title)
-          }}
+      <Box sx={styles.linkContainer}>
+        <Tooltip
+          sx={iconTooltipStyle(iconTooltip)}
+          placement="right"
+          label={tooltipLabel}
         >
-          <Flex
-            sx={
-              activeSectionName === iconElement.title
-                ? styles.iconBoxActive
-                : styles.iconBox
-            }
-          >
-            <iconElement.Icon
-              sx={
-                activeSectionName === iconElement.title
-                  ? styles.iconActive
-                  : styles.icon
-              }
-            />
-            <Text sx={styles.iconTitle}>{iconElement.title}</Text>
-          </Flex>
-        </a>
-      </Link>
+          <Link href={iconElement.link}>
+            <a
+              onClick={() => {
+                setActiveSectionName(iconElement.title)
+              }}
+            >
+              <Flex
+                sx={
+                  activeSectionName === iconElement.title
+                    ? styles.iconBoxActive
+                    : styles.iconBox
+                }
+              >
+                <iconElement.Icon
+                  sx={
+                    activeSectionName === iconElement.title
+                      ? styles.iconActive
+                      : styles.icon
+                  }
+                />
+                <Text
+                  className={expandDelayStatus ? 'iconDescriptionExpanded' : ''}
+                  ref={titleRef}
+                  sx={styles.iconTitle}
+                >
+                  {iconElement.title}
+                </Text>
+              </Flex>
+            </a>
+          </Link>
+        </Tooltip>
+      </Box>
     )
   }
 
   return (
     <Flex sx={styles.sidebar}>
-      <Flex sx={styles.sidebarIcons}>
+      <Flex
+        className={expandDelayStatus ? 'iconContainerExpanded' : ''}
+        sx={styles.sidebarIcons}
+      >
         <Flex sx={styles.sidebarIconsContainer}>
           {docsIcons.map((docsIconElement) => (
             <SideBarIcon

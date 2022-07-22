@@ -36,7 +36,7 @@ const SidebarSection = ({ title, data }: SidebarSectionProps) => {
             style={styles.searchInput}
             className="searchComponent"
             type="text"
-            placeholder="Filter in Title..."
+            placeholder={`Search in ${title}...`}
             value={searchValue}
             onChange={(e) => setSearchValue(e.currentTarget.value)}
           />
