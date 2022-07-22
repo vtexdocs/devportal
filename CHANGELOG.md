@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.21.0](https://github.com/vtexdocs/devportal/compare/v0.20.0...v0.21.0) (2022-07-22)
+
+
+### Bug Fixes
+
+* **header:** update header style ([add32a2](https://github.com/vtexdocs/devportal/commit/add32a2eec1c3ad323001a9546392123a9a723dc))
+
 ## [0.20.0](https://github.com/vtexdocs/devportal/compare/v0.19.1...v0.20.0) (2022-07-14)
 
 
