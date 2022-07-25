@@ -47,6 +47,7 @@ const photo: SxStyleProp = {
 
 const collapseButton: SxStyleProp = {
   mt: '8px',
+  mb: '32px',
   height: '24px',
   ...title,
   color: 'muted.0',

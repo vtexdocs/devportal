@@ -1,22 +1,21 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
 const itemsContainer: SxStyleProp = {
-  mt: '32px',
-  borderLeft: '1px solid #E7E9EE',
   position: 'sticky',
   top: 'calc(5rem + 32px)',
+  borderLeft: '1px solid #E7E9EE',
 }
 
 const item: (level: number, active: boolean) => SxStyleProp = (
   level,
   active
 ) => ({
-  py: '4px',
   ml: '-1px',
   pl: `${level * 8}px`,
+  py: ['6px', '6px', '6px', '6px', '4px'],
   borderLeft: `1px solid ${active && level === 1 ? '#E31C58' : '#E7E9EE'}`,
-  fontSize: [0, 0, 0, 0, '12px', '16px'],
-  lineHeight: [0, 0, 0, 0, '16px', '18px'],
+  fontSize: ['16px', '16px', '16px', '16px', '12px', '16px'],
+  lineHeight: ['22px', '22px', '22px', '22px', '16px', '18px'],
   fontWeight: `${active ? '600' : '400'}`,
   color: `${active ? '#0C1522' : 'muted.0'}`,
 
