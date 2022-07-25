@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.22.0](https://github.com/vtexdocs/devportal/compare/v0.21.0...v0.22.0) (2022-07-25)
+
+
+### Features
+
+* **tooltip:** add the sx prop to tooltip component ([d5db1d9](https://github.com/vtexdocs/devportal/commit/d5db1d95c98e5d2bff33aaf0d44877383f2f9a3c))
+
+
+### Bug Fixes
+
+* **sidebar:** sidebar-section title and the icon description behavior on medium screens ([df88d6b](https://github.com/vtexdocs/devportal/commit/df88d6bba9e23bcad484b34a7884cfd4877f7914))
+* **sidebar:** update the sidebar style ([65e7b30](https://github.com/vtexdocs/devportal/commit/65e7b30243e376953e20e2126e9a68220e36b8a8))
+
 ## [0.21.0](https://github.com/vtexdocs/devportal/compare/v0.20.0...v0.21.0) (2022-07-22)
 
 
