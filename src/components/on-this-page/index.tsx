@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Box, Flex, Grid, IconCaret, Text } from '@vtex/brand-ui'
 
-import ArrowsIcon from 'components/icons/arrows-icon'
+import MenuIcon from 'components/icons/menu-icon'
 import CloseIcon from 'components/icons/close-icon'
 
 import Tooltip from 'components/tooltip'
@@ -63,7 +63,7 @@ const OnThisPage = ({ contributors }: Props) => {
         onClick={() => setOpen((open) => !open)}
       >
         <Box sx={styles.iconContainer}>
-          {!open ? <ArrowsIcon size={32} /> : <CloseIcon size={32} />}
+          {!open ? <MenuIcon size={32} /> : <CloseIcon size={32} />}
         </Box>
         {!open && (
           <Box sx={styles.titlesContainer}>
