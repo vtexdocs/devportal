@@ -25,14 +25,10 @@ const OnThisPage = () => {
         sx={styles.buttonContainer}
         onClick={() => setOpen((open) => !open)}
       >
+        {!open && <Text sx={styles.title}>On this page</Text>}
         <Box sx={styles.iconContainer}>
           {!open ? <MenuIcon size={32} /> : <CloseIcon size={32} />}
         </Box>
-        {!open && (
-          <Box sx={styles.titlesContainer}>
-            <Text sx={styles.title}>On this page</Text>
-          </Box>
-        )}
       </Flex>
     </Flex>
   )
