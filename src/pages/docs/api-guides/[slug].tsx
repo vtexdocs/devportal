@@ -81,6 +81,11 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
                 <MarkdownRenderer markdown={content} />
               </Box>
 
+              <Box sx={styles.bottomContributorsContainer}>
+                <Box sx={styles.bottomContributorsDivider} />
+                <Contributors contributors={contributors} />
+              </Box>
+
               <FeedbackSection />
               <SeeAlsoSection cards={documentationCards} />
             </Box>
