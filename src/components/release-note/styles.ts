@@ -2,14 +2,6 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const releaseContainer: SxStyleProp = {
   mb: ['32px', '48px'],
-  '& > :nth-child(2)': {
-    '& > :first-child': {
-      '& > :nth-child(2)': {
-        width: '1px',
-        borderRadius: '8px',
-      },
-    },
-  },
 }
 
 const actionType: SxStyleProp = {
@@ -64,11 +56,23 @@ const arrowIcon: SxStyleProp = {
   pr: '0px',
   pl: 0,
   color: 'muted.0',
+  ':hover': {
+    color: '#0C1522',
+  },
 }
 
 const arrowIconActive: SxStyleProp = {
   ...arrowIcon,
   color: '#0C1522',
+}
+
+const timeLineBar: SxStyleProp = {
+  '& > :first-of-type': {
+    '& > :nth-of-type(2)': {
+      width: '1px',
+      borderRadius: '8px',
+    },
+  },
 }
 
 export default {
@@ -82,4 +86,5 @@ export default {
   releaseDescription,
   arrowIcon,
   arrowIconActive,
+  timeLineBar,
 }
