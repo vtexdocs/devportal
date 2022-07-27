@@ -4,6 +4,7 @@ const container: SxStyleProp = {
   right: '20px',
   position: 'fixed',
   alignItems: 'flex-end',
+  display: ['flex', 'flex', 'flex', 'flex', 'none'],
 }
 
 const contentContainer: SxStyleProp = {

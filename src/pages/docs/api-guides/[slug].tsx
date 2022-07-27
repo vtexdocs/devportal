@@ -13,6 +13,7 @@ import SidebarContextProvider from 'utils/contexts/sidebar'
 import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
+import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
 import Sidebar from 'components/sidebar'
 import TableOfContents from 'components/table-of-contents'
@@ -93,6 +94,8 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
               <Contributors contributors={contributors} />
               <TableOfContents />
             </Box>
+
+            <OnThisPage />
           </Flex>
         </Flex>
       </APIGuideContextProvider>
