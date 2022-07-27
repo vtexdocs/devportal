@@ -35,10 +35,17 @@ const releaseDate: SxStyleProp = {
   mb: ['16px', '24px'],
 }
 
+const releaseCreationDay: SxStyleProp = {
+  color: 'muted.1',
+  fontSize: ['12px', '16px'],
+  lineHeight: '22px',
+}
+
 export default {
   container,
   sectionTitle,
   sectionSubtitle,
   sectionDivider,
   releaseDate,
+  releaseCreationDay,
 }
