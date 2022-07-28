@@ -7,9 +7,10 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import styles from 'styles/documentation-page'
 interface Props {
   slug: string
+  matchPath: string
 }
 //<rapi-doc-mini spec-url={`/docs/api-reference/${slug}.json`} />
-const APIPage: NextPage<Props> = ({ slug }) => {
+const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
   return (
     <>
       <Script
@@ -22,7 +23,7 @@ const APIPage: NextPage<Props> = ({ slug }) => {
         <Sidebar sectionSelected="API Reference" />
         <rapi-doc-mini
           spec-url={`/docs/api-reference/${slug}.json`}
-          match-paths="get /api/catalog_system/pvt/products/GetProductAndSkuIds"
+          match-paths={matchPath}
           paths-expanded={true}
           layout="column"
           fill-request-fields-with-example={true}
@@ -62,9 +63,15 @@ export const getStaticPaths: GetStaticPaths = () => {
 }
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
+  const matchPath =
+    params?.slug === 'catalog'
+      ? 'get /api/catalog_system/pvt/products/GetProductAndSkuIds'
+      : 'post /api/checkout/pub/orderForms/simulation'
+
   return {
     props: {
       slug: params?.slug,
+      matchPath: matchPath,
     },
   }
 }
