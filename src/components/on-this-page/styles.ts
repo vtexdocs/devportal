@@ -2,6 +2,7 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 
 const container: SxStyleProp = {
   right: '20px',
+  bottom: '20px',
   position: 'fixed',
   alignItems: 'flex-end',
   display: ['flex', 'flex', 'flex', 'flex', 'none'],
@@ -44,13 +45,17 @@ const iconContainer: SxStyleProp = {
   borderLeft: '1px solid #CCCED8',
 }
 
-const title: SxStyleProp = {
-  padding: '8px',
+const title: (open: boolean) => SxStyleProp = (open) => ({
+  color: 'black',
   fontSize: '12px',
   fontWeight: '400',
   lineHeight: '16px',
-  color: 'black',
-}
+  padding: open ? '0px' : '8px',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+  width: open ? '0px' : '84px',
+  transition: 'width 0.3s ease-in-out',
+})
 
 export default {
   container,
