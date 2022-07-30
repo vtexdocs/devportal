@@ -17,7 +17,8 @@ export interface Item extends SubItem {
 }
 
 const TableOfContents = () => {
-  const { headings, activeItem, setActiveItem } = useContext(APIGuideContext)
+  const { headings, activeItem, setActiveItem, setOnThisPageOpenStatus } =
+    useContext(APIGuideContext)
 
   const Item = ({
     title,
@@ -34,6 +35,7 @@ const TableOfContents = () => {
       <Link href={`#${slug}`}>
         <a
           onClick={() => {
+            setOnThisPageOpenStatus(false)
             setActiveItem(({ item }) => ({
               item: level === 1 ? slug : item,
               subItem: level === 1 ? '' : slug,

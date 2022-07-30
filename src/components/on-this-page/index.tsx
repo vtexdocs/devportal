@@ -1,19 +1,23 @@
-import { useState } from 'react'
+import { useContext } from 'react'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 import AnimateHeight from 'react-animate-height'
+
+import { APIGuideContext } from 'utils/contexts/api-guide'
 
 import MenuIcon from 'components/icons/menu-icon'
 import CloseIcon from 'components/icons/close-icon'
 
-import styles from './styles'
 import TableOfContents from 'components/table-of-contents'
 
+import styles from './styles'
+
 const OnThisPage = () => {
-  const [open, setOpen] = useState(false)
+  const { onThisPageOpenStatus, setOnThisPageOpenStatus } =
+    useContext(APIGuideContext)
 
   return (
     <Flex sx={styles.container}>
-      <AnimateHeight duration={300} height={open ? 'auto' : 0}>
+      <AnimateHeight duration={300} height={onThisPageOpenStatus ? 'auto' : 0}>
         <Box sx={styles.contentContainer}>
           <Text sx={styles.onThisPageTitle}>On this page</Text>
           <Box>
@@ -24,11 +28,15 @@ const OnThisPage = () => {
 
       <Flex
         sx={styles.buttonContainer}
-        onClick={() => setOpen((open) => !open)}
+        onClick={() => setOnThisPageOpenStatus((open) => !open)}
       >
-        <Text sx={styles.title(open)}>On this page</Text>
+        <Text sx={styles.title(onThisPageOpenStatus)}>On this page</Text>
         <Box sx={styles.iconContainer}>
-          {!open ? <MenuIcon size={32} /> : <CloseIcon size={32} />}
+          {!onThisPageOpenStatus ? (
+            <MenuIcon size={32} />
+          ) : (
+            <CloseIcon size={32} />
+          )}
         </Box>
       </Flex>
     </Flex>
