@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.23.0](https://github.com/vtexdocs/devportal/compare/v0.22.1...v0.23.0) (2022-08-01)
+
+
+### Features
+
+* **release-section:** update the getData method to return release date inside of the release card ([9f647ef](https://github.com/vtexdocs/devportal/commit/9f647ef2c57b6c3a079e40805ff4385320e0952a))
+
+
+### Bug Fixes
+
+* **release-note:** add the hover behavior on release title/arrow and fix the days elapsed logic ([6225ac5](https://github.com/vtexdocs/devportal/commit/6225ac5d88972524b5d6611e72fd06c64a6227c6))
+
+
+### Refactoring
+
+* **release section:** add the days elapsed text in messages and add one example to release data ([24231e9](https://github.com/vtexdocs/devportal/commit/24231e93f8574004621d32f80661715ce88aff3d))
+
 ### [0.22.1](https://github.com/vtexdocs/devportal/compare/v0.22.0...v0.22.1) (2022-07-29)
 
 
