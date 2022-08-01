@@ -26,9 +26,9 @@ const ReleaseSection = () => {
           <>
             {index > 0
               ? compareDates(release.createdAt, releases[index - 1].createdAt)
-                ? getDate(release.createdAt)
+                ? getDate(release.createdAt, true)
                 : null
-              : getDate(release.createdAt)}
+              : getDate(release.createdAt, true)}
             <ReleaseNote
               key={`${release.slug}`}
               isFirst={index == 0}

@@ -4,7 +4,7 @@ import { Flex, Timeline, Text, Box, Button, IconCaret } from '@vtex/brand-ui'
 
 import type { UpdateElement } from 'utils/typings/types'
 import { getAction } from './../last-updates-card/functions'
-import { getDaysElapsed } from './../../utils/get-days-elapsed'
+import { getReleaseDate } from './functions'
 import styles from './styles'
 
 interface DescriptionProps {
@@ -34,12 +34,28 @@ const ReleaseNote = ({
 }: ReleaseNoteProps) => {
   const actionValue = actionType ? getAction(actionType) : null
   const [releaseElementStatus, toggleReleaseElementStatus] = useState(isFirst)
+  const [onHover, setOnHover] = useState(false)
+
+  const handleMouseOver = () => {
+    setOnHover(true)
+  }
+
+  const handleMouseOut = () => {
+    setOnHover(false)
+  }
+
   return (
     <Flex sx={styles.releaseContainer}>
       <Button
         size="regular"
         variant="tertiary"
-        sx={releaseElementStatus ? styles.arrowIconActive : styles.arrowIcon}
+        onMouseOver={handleMouseOver}
+        onMouseLeave={handleMouseOut}
+        sx={
+          releaseElementStatus || onHover
+            ? styles.arrowIconActive
+            : styles.arrowIcon
+        }
         icon={() => (
           <IconCaret
             direction={releaseElementStatus ? 'down' : 'right'}
@@ -51,6 +67,7 @@ const ReleaseNote = ({
         }}
       />
       <Timeline.Event
+        sx={styles.timeLineBar}
         title={<Text sx={styles.actionType}>{actionValue?.title}</Text>}
         icon={
           actionValue ? (
@@ -64,8 +81,10 @@ const ReleaseNote = ({
           <Link href={slug}>
             <a>
               <Text
+                onMouseOver={handleMouseOver}
+                onMouseLeave={handleMouseOut}
                 sx={
-                  releaseElementStatus
+                  releaseElementStatus || onHover
                     ? styles.releaseTitleActive
                     : styles.releaseTitle
                 }
@@ -74,9 +93,7 @@ const ReleaseNote = ({
               </Text>
             </a>
           </Link>
-          <Text sx={styles.releaseDate}>{`${getDaysElapsed(
-            new Date(createdAt)
-          )} days ago`}</Text>
+          {getReleaseDate(createdAt)}
           <Description
             description={description}
             releaseStatus={releaseElementStatus}
