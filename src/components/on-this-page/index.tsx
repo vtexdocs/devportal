@@ -9,9 +9,12 @@ import CloseIcon from 'components/icons/close-icon'
 
 import TableOfContents from 'components/table-of-contents'
 
+import { getMessages } from 'utils/get-messages'
+
 import styles from './styles'
 
 const OnThisPage = () => {
+  const messages = getMessages()
   const { onThisPageOpenStatus, setOnThisPageOpenStatus } =
     useContext(APIGuideContext)
 
@@ -23,7 +26,9 @@ const OnThisPage = () => {
         height={onThisPageOpenStatus ? 'auto' : 0}
       >
         <Box sx={styles.contentContainer}>
-          <Text sx={styles.onThisPageTitle}>On this page</Text>
+          <Text sx={styles.onThisPageTitle}>
+            {messages['api_guide_documentation_page_on_this_page.title']}
+          </Text>
           <Box>
             <TableOfContents />
           </Box>
@@ -34,7 +39,9 @@ const OnThisPage = () => {
         sx={styles.buttonContainer}
         onClick={() => setOnThisPageOpenStatus((open) => !open)}
       >
-        <Text sx={styles.title(onThisPageOpenStatus)}>On this page</Text>
+        <Text sx={styles.title(onThisPageOpenStatus)}>
+          {messages['api_guide_documentation_page_on_this_page.title']}
+        </Text>
         <Box sx={styles.iconContainer}>
           {!onThisPageOpenStatus ? (
             <MenuIcon size={32} />
