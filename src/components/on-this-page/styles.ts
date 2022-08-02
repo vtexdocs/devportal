@@ -6,13 +6,16 @@ const container: SxStyleProp = {
   position: 'fixed',
   alignItems: 'flex-end',
   display: ['flex', 'flex', 'flex', 'flex', 'none'],
+  flexDirection: ['column-reverse', 'row'],
 }
 
 const contentContainer: SxStyleProp = {
-  mr: '8px',
-  width: '360px',
+  mt: ['8px', 0],
+  mb: ['-20px', 0],
+  mr: ['-20px', '8px'],
+  width: ['100vw', '360px'],
   padding: '16px',
-  borderRadius: '8px',
+  borderRadius: ['8px 8px 0px 0px', '8px'],
   backgroundColor: 'white',
   border: '1px solid #CCCED8',
   boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
