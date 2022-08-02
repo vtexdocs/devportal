@@ -5,6 +5,7 @@ import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 import SidebarContextProvider from 'utils/contexts/sidebar'
 import Sidebar from 'components/sidebar'
 import WhatsNextCard from 'components/whats-next-card'
+import SubscribeNewsletterSection from 'components/subscribe-newsletter-section'
 
 import { getMessages } from 'utils/get-messages'
 import { whatsNextData, resources } from 'utils/constants'
@@ -51,6 +52,8 @@ const VTEXIOPage = () => {
                 <WhatsNextCard {...whatsNext} />
               ))}
             </Flex>
+
+            <SubscribeNewsletterSection />
 
             <Box sx={styles.resourcesSectionContainer}>
               <Text sx={styles.resourcesSectionTitle}>
