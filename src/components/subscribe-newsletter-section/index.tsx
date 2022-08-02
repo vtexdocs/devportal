@@ -1,18 +1,20 @@
 import { Flex, Text } from '@vtex/brand-ui'
 import ArrowRightIcon from 'components/icons/arrow-right-icon'
 
+import { getMessages } from 'utils/get-messages'
+
 import styles from './styles'
 
 const SubscribeNewsletterSection = () => {
+  const messages = getMessages()
   return (
     <Flex sx={styles.subscribeNewsletterContainer}>
       <Flex sx={styles.textContainer}>
         <Text className="title" sx={styles.text}>
-          Subscribe to our developer newsletter
+          {messages['subscribe_newsletter_section.title']}
         </Text>
         <Text className="subtitle" sx={styles.text}>
-          And stay on top of the practices and technologies that are
-          transforming commerce.
+          {messages['subscribe_newsletter_section.subtitle']}
         </Text>
       </Flex>
 
