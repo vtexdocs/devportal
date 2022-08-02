@@ -17,7 +17,11 @@ const OnThisPage = () => {
 
   return (
     <Flex sx={styles.container}>
-      <AnimateHeight duration={300} height={onThisPageOpenStatus ? 'auto' : 0}>
+      <AnimateHeight
+        duration={300}
+        delay={onThisPageOpenStatus ? 300 : 0}
+        height={onThisPageOpenStatus ? 'auto' : 0}
+      >
         <Box sx={styles.contentContainer}>
           <Text sx={styles.onThisPageTitle}>On this page</Text>
           <Box>
