@@ -1,5 +1,5 @@
 import { Flex, Box, Text } from '@vtex/brand-ui'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useMemo, useState } from 'react'
 
 import SearchIcon from 'components/icons/search-icon'
 import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
@@ -12,69 +12,111 @@ import { MethodType } from 'utils/typings/unionTypes'
 
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import styles from './styles'
+import { getMessages } from 'utils/get-messages'
 export interface SidebarSectionProps {
   documentation: DocumentationTitle | UpdatesTitle
   categories: SidebarElement[]
 }
 
 const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
+  const messages = getMessages()
   const [searchValue, setSearchValue] = useState('')
   const { sidebarSectionHidden, setSidebarSectionHidden } =
     useContext(SidebarContext)
+  const [filterStatus, setFilterStatus] = useState(false)
   const [methodFilter, setMethodFilter] = useState([
-    { method: 'POST', active: false },
-    { method: 'GET', active: false },
-    { method: 'PUT', active: false },
-    { method: 'DELETE', active: false },
+    { name: 'POST', active: false },
+    { name: 'GET', active: false },
+    { name: 'PUT', active: false },
+    { name: 'DELETE', active: false },
   ])
 
-  const setFilter = (method: MethodType) => {
+  const setFilter = (methodChanged: MethodType) => {
     setMethodFilter(
-      methodFilter.map((methodChanged) =>
-        methodChanged.method === method
-          ? { method: method, active: !methodChanged.active }
-          : methodChanged
+      methodFilter.map((method) =>
+        method.name === methodChanged
+          ? { name: methodChanged, active: !method.active }
+          : method
       )
     )
   }
 
+  useEffect(() => {
+    setFilterStatus(methodFilter.some((method) => method.active))
+  }, [methodFilter])
+
+  const filteredResult = useMemo(() => {
+    if (!filterStatus) return categories
+
+    const dataCopy = JSON.parse(JSON.stringify(categories))
+
+    const filteredCategories = dataCopy
+      .map((category: SidebarElement) => {
+        category.childrens = category.childrens
+          .map((subcategory) => {
+            subcategory.childrens = subcategory.childrens.filter(
+              (endpoint) =>
+                endpoint.method &&
+                filterStatus &&
+                methodFilter.find((method) => method.name === endpoint.method)
+                  ?.active
+            )
+            return subcategory
+          })
+          .filter((subcategory) => subcategory.childrens.length > 0)
+        return category
+      })
+      .filter((category: SidebarElement) => category.childrens.length > 0)
+
+    return filteredCategories
+  }, [filterStatus, methodFilter, categories])
+
   return (
     <Box
       className={sidebarSectionHidden ? 'active' : ''}
-      sx={styles.sidebarElementsContainer}
+      sx={styles.sidebarContainer}
     >
       <Box
         className={sidebarSectionHidden ? 'sidebarHide' : ''}
-        sx={styles.sidebarElementsBox}
+        sx={styles.sidebarContainerBox}
       >
-        <Text sx={styles.sidebarTitle}>{documentation}</Text>
-        <Flex sx={styles.searchBox}>
-          <SearchIcon sx={styles.searchIcon} />
-          <input
-            style={styles.searchInput}
-            className="searchComponent"
-            type="text"
-            placeholder={`Search in ${documentation}...`}
-            value={searchValue}
-            onChange={(e) => setSearchValue(e.currentTarget.value)}
-          />
-        </Flex>
-        <Box sx={styles.filterContainer}>
-          <Text sx={styles.filterText}>Filter by</Text>
-          <Flex>
-            {methodFilter.map((item) => (
-              <Box onClick={() => setFilter(item.method as MethodType)}>
-                <MethodCategory
-                  sx={styles.filterCategory}
-                  active={item.active}
-                  method={item.method as MethodType}
-                  origin={'filter'}
-                />
-              </Box>
-            ))}
+        <Box sx={styles.sidebarContainerHeader}>
+          <Text sx={styles.sidebarTitle}>{documentation}</Text>
+          <Flex sx={styles.searchBox}>
+            <SearchIcon sx={styles.searchIcon} />
+            <input
+              style={styles.searchInput}
+              className="searchComponent"
+              type="text"
+              placeholder={`Search in ${documentation}...`}
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.currentTarget.value)}
+            />
           </Flex>
+          <Box sx={styles.filterContainer}>
+            <Text sx={styles.filterText}>
+              {messages['api_reference_sidebar_filter']}
+            </Text>
+            <Flex>
+              {methodFilter.map((item) => (
+                <Box
+                  key={`filter-category-${item.name}`}
+                  onClick={() => setFilter(item.name as MethodType)}
+                >
+                  <MethodCategory
+                    sx={styles.filterCategory}
+                    active={item.active}
+                    method={item.name as MethodType}
+                    origin={'filter'}
+                  />
+                </Box>
+              ))}
+            </Flex>
+          </Box>
         </Box>
-        <SideBarElements items={categories} subItemLevel={0} />
+        <Box sx={styles.sidebarContainerBody}>
+          <SideBarElements items={filteredResult} subItemLevel={0} />
+        </Box>
       </Box>
       <Flex
         className="toggleIcon"
