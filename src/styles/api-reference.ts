@@ -1,7 +1,8 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const container: SxStyleProp = {
-  paddingTop: '5rem',
+  pt: '5rem',
+  background: '#FFFFFF',
 }
 
 export default {
