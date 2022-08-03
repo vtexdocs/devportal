@@ -104,8 +104,8 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   return (
     <Box>
       {items?.map((item, index) => {
-        const key = String(item.name) + String(index)
-        const slug = `${slugPrefix || ''}${item.name}`
+        const key = String(item.slug) + String(index)
+        const slug = `${slugPrefix || ''}${item.slug}`
 
         return (
           <Fragment key={String(key)}>

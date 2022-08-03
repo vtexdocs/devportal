@@ -33,6 +33,7 @@ const elementActive: SxStyleProp = {
 const arrowIcon: SxStyleProp = {
   padding: '0',
   color: 'muted.1',
+  height: '34px',
 }
 
 const arrowIconActive: SxStyleProp = {

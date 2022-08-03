@@ -270,19 +270,19 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
       categories: [
         {
           name: 'Catalog API',
-          slug: '',
+          slug: 'Catalog-API',
           origin: '',
           type: 'openapi',
           childrens: [
             {
               name: 'SKU Service Value',
-              slug: '',
+              slug: 'SKU-Service-Value',
               origin: '',
               type: '',
               childrens: [
                 {
                   name: 'SKU Service Value',
-                  slug: '',
+                  slug: 'SKU-Service-Value-post',
                   origin: '',
                   type: 'openapi',
                   method: 'POST',
@@ -290,7 +290,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
                 },
                 {
                   name: 'SKU Service Value',
-                  slug: '',
+                  slug: 'SKU-Service-Value-put',
                   origin: '',
                   type: 'openapi',
                   method: 'PUT',
@@ -298,10 +298,26 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
                 },
                 {
                   name: 'SKU Service Value',
-                  slug: '',
+                  slug: 'SKU-Service-Value-delete',
                   origin: '',
                   type: 'openapi',
                   method: 'DELETE',
+                  childrens: [],
+                },
+              ],
+            },
+            {
+              name: 'teste',
+              slug: 'teste',
+              origin: '',
+              type: '',
+              childrens: [
+                {
+                  name: 'testezinho',
+                  slug: 'testezinho',
+                  origin: '',
+                  type: 'openapi',
+                  method: 'GET',
                   childrens: [],
                 },
               ],
@@ -310,10 +326,51 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
         },
         {
           name: 'Checkout API',
-          slug: '',
+          slug: 'Checkout-API',
           origin: '',
           type: 'openapi',
-          childrens: [],
+          childrens: [
+            {
+              name: 'Configuration',
+              slug: 'Configuration',
+              origin: '',
+              type: '',
+              childrens: [
+                {
+                  name: 'orderForm configuration',
+                  slug: 'orderForm-configuration-get',
+                  origin: '',
+                  type: 'openapi',
+                  method: 'GET',
+                  childrens: [],
+                },
+                {
+                  name: 'orderForm configuration',
+                  slug: 'orderForm-configuration-put',
+                  origin: '',
+                  type: 'openapi',
+                  method: 'PUT',
+                  childrens: [],
+                },
+                {
+                  name: 'window to change seller',
+                  slug: 'window-to-change-seller-get',
+                  origin: '',
+                  type: 'openapi',
+                  method: 'GET',
+                  childrens: [],
+                },
+                {
+                  name: 'window to change seller',
+                  slug: 'window-to-change-seller-put',
+                  origin: '',
+                  type: 'openapi',
+                  method: 'PUT',
+                  childrens: [],
+                },
+              ],
+            },
+          ],
         },
       ],
     },
