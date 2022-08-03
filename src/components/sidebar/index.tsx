@@ -23,177 +23,241 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
 
-  const sidebarData: SidebarSectionProps[] = [
+  const sidebarDataMaster: SidebarSectionProps[] = [
     {
-      title: 'API Guides',
-      data: [
+      documentation: 'API Guides',
+      categories: [
         {
-          title: 'Getting Started',
-          url: '',
-          subItems: [
+          name: 'Getting Started',
+          slug: '',
+          origin: '',
+          type: 'markdown',
+          childrens: [
             {
-              title: 'Introduction',
-              url: '',
-              subItems: [
+              name: 'Introduction',
+              slug: '',
+              origin: '',
+              type: 'markdown',
+              childrens: [
                 {
-                  title: 'Platform overview',
-                  url: '',
-                  subItems: [],
+                  name: 'Platform overview',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
                 {
-                  title: 'List of REST APIs',
-                  url: '',
-                  subItems: [],
+                  name: 'List of REST APIs',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
                 {
-                  title: 'Authentication',
-                  url: '',
-                  subItems: [],
+                  name: 'Authentication',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
                 {
-                  title: 'Making your first request',
-                  url: '',
-                  subItems: [],
+                  name: 'Making your first request',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
               ],
             },
             {
-              title: 'API Guides',
-              url: '',
-              subItems: [
+              name: 'API Guides',
+              slug: '',
+              origin: '',
+              type: 'markdown',
+              childrens: [
                 {
-                  title: 'Item 1',
-                  url: '',
-                  subItems: [],
+                  name: 'Item 1',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
                 {
-                  title: 'Item 2',
-                  url: '',
-                  subItems: [],
-                },
-              ],
-            },
-            {
-              title: 'Catalog',
-              url: '',
-              subItems: [
-                {
-                  title: 'How to activate an SKU',
-                  url: '',
-                  subItems: [],
-                },
-                {
-                  title: 'How to create a specification',
-                  url: '',
-                  subItems: [],
-                },
-                {
-                  title: 'Update SKU',
-                  url: '',
-                  subItems: [],
+                  name: 'Item 2',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
               ],
             },
             {
-              title: 'Checkout',
-              url: '',
-              subItems: [
+              name: 'Catalog',
+              slug: '',
+              origin: '',
+              type: 'markdown',
+              childrens: [
                 {
-                  title: 'Item 1',
-                  url: '',
-                  subItems: [],
+                  name: 'How to activate an SKU',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
+                },
+                {
+                  name: 'How to create a specification',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
+                },
+                {
+                  name: 'Update SKU',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
               ],
             },
             {
-              title: 'Orders',
-              url: '',
-              subItems: [
+              name: 'Checkout',
+              slug: '',
+              origin: '',
+              type: 'markdown',
+              childrens: [
                 {
-                  title: 'Item 1',
-                  url: '',
-                  subItems: [],
-                },
-                {
-                  title: 'Item 2',
-                  url: '',
-                  subItems: [],
-                },
-                {
-                  title: 'Item 3',
-                  url: '',
-                  subItems: [],
+                  name: 'Item 1',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
               ],
             },
             {
-              title: 'Promotions',
-              url: '',
-              subItems: [
+              name: 'Orders',
+              slug: '',
+              origin: '',
+              type: 'markdown',
+              childrens: [
                 {
-                  title: 'Item 1',
-                  url: '',
-                  subItems: [],
+                  name: 'Item 1',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
                 {
-                  title: 'Item 2',
-                  url: '',
-                  subItems: [],
+                  name: 'Item 2',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
+                },
+                {
+                  name: 'Item 3',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
+                },
+              ],
+            },
+            {
+              name: 'Promotions',
+              slug: '',
+              origin: '',
+              type: 'markdown',
+              childrens: [
+                {
+                  name: 'Item 1',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
+                },
+                {
+                  name: 'Item 2',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
               ],
             },
           ],
         },
         {
-          title: 'Integration Guides',
-          url: '',
-          subItems: [
+          name: 'Integration Guides',
+          slug: '',
+          origin: '',
+          type: 'markdown',
+          childrens: [
             {
-              title: 'Back-office (ERP/PIM/WMS)',
-              url: '',
-              subItems: [
+              name: 'Back-office (ERP/PIM/WMS)',
+              slug: '',
+              origin: '',
+              type: '',
+              childrens: [
                 {
-                  title: 'item 1',
-                  url: '',
-                  subItems: [],
+                  name: 'item 1',
+                  slug: '',
+                  origin: '',
+                  type: 'markdown',
+                  childrens: [],
                 },
               ],
             },
             {
-              title: 'External Marketplace',
-              url: '',
-              subItems: [
+              name: 'External Marketplace',
+              slug: '',
+              origin: '',
+              type: '',
+              childrens: [
                 {
-                  title: 'Marketplace / Seller architecture',
-                  url: '',
-                  subItems: [],
+                  name: 'Marketplace / Seller architecture',
+                  slug: '',
+                  origin: '',
+                  type: '',
+                  childrens: [],
                 },
                 {
-                  title: 'Store setup for VTEX Seller',
-                  url: '',
-                  subItems: [],
-                },
-              ],
-            },
-            {
-              title: 'External Seller',
-              url: '',
-              subItems: [
-                {
-                  title: 'Item 1',
-                  url: '',
-                  subItems: [],
+                  name: 'Store setup for VTEX Seller',
+                  slug: '',
+                  origin: '',
+                  type: '',
+                  childrens: [],
                 },
               ],
             },
             {
-              title: 'Gift Card',
-              url: '',
-              subItems: [
+              name: 'External Seller',
+              slug: '',
+              origin: '',
+              type: '',
+              childrens: [
                 {
-                  title: 'Item 1',
-                  url: '',
-                  subItems: [],
+                  name: 'Item 1',
+                  slug: '',
+                  origin: '',
+                  type: '',
+                  childrens: [],
+                },
+              ],
+            },
+            {
+              name: 'Gift Card',
+              slug: '',
+              origin: '',
+              type: '',
+              childrens: [
+                {
+                  name: 'Item 1',
+                  slug: '',
+                  origin: '',
+                  type: '',
+                  childrens: [],
                 },
               ],
             },
@@ -202,28 +266,76 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
       ],
     },
     {
-      title: 'API Reference',
-      data: [],
+      documentation: 'API Reference',
+      categories: [
+        {
+          name: 'Catalog API',
+          slug: '',
+          origin: '',
+          type: 'openapi',
+          childrens: [
+            {
+              name: 'SKU Service Value',
+              slug: '',
+              origin: '',
+              type: '',
+              childrens: [
+                {
+                  name: 'SKU Service Value',
+                  slug: '',
+                  origin: '',
+                  type: 'openapi',
+                  method: 'POST',
+                  childrens: [],
+                },
+                {
+                  name: 'SKU Service Value',
+                  slug: '',
+                  origin: '',
+                  type: 'openapi',
+                  method: 'PUT',
+                  childrens: [],
+                },
+                {
+                  name: 'SKU Service Value',
+                  slug: '',
+                  origin: '',
+                  type: 'openapi',
+                  method: 'DELETE',
+                  childrens: [],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          name: 'Checkout API',
+          slug: '',
+          origin: '',
+          type: 'openapi',
+          childrens: [],
+        },
+      ],
     },
     {
-      title: 'VTEX IO',
-      data: [],
+      documentation: 'VTEX IO',
+      categories: [],
     },
     {
-      title: 'FastStore',
-      data: [],
+      documentation: 'FastStore',
+      categories: [],
     },
     {
-      title: 'WebOps',
-      data: [],
+      documentation: 'WebOps',
+      categories: [],
     },
     {
-      title: 'Release Notes',
-      data: [],
+      documentation: 'Release Notes',
+      categories: [],
     },
     {
-      title: 'Documentation Updates',
-      data: [],
+      documentation: 'Documentation Updates',
+      categories: [],
     },
   ]
 
@@ -327,8 +439,8 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
       </Flex>
       {activeSectionName ? (
         <SidebarSection
-          {...(sidebarData.find(
-            (section) => section.title === activeSectionName
+          {...(sidebarDataMaster.find(
+            (section) => section.documentation === activeSectionName
           ) as SidebarSectionProps)}
         />
       ) : null}

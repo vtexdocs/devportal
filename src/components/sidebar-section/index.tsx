@@ -7,18 +7,36 @@ import SideBarElements from 'components/sidebar-elements'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
 import type { SidebarElement } from 'components/sidebar-elements'
+import MethodCategory from 'components/method-category'
+import { MethodType } from 'utils/typings/unionTypes'
+
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import styles from './styles'
-
 export interface SidebarSectionProps {
-  title: DocumentationTitle | UpdatesTitle
-  data: SidebarElement[]
+  documentation: DocumentationTitle | UpdatesTitle
+  categories: SidebarElement[]
 }
 
-const SidebarSection = ({ title, data }: SidebarSectionProps) => {
+const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
   const [searchValue, setSearchValue] = useState('')
   const { sidebarSectionHidden, setSidebarSectionHidden } =
     useContext(SidebarContext)
+  const [methodFilter, setMethodFilter] = useState([
+    { method: 'POST', active: false },
+    { method: 'GET', active: false },
+    { method: 'PUT', active: false },
+    { method: 'DELETE', active: false },
+  ])
+
+  const setFilter = (method: MethodType) => {
+    setMethodFilter(
+      methodFilter.map((methodChanged) =>
+        methodChanged.method === method
+          ? { method: method, active: !methodChanged.active }
+          : methodChanged
+      )
+    )
+  }
 
   return (
     <Box
@@ -29,19 +47,34 @@ const SidebarSection = ({ title, data }: SidebarSectionProps) => {
         className={sidebarSectionHidden ? 'sidebarHide' : ''}
         sx={styles.sidebarElementsBox}
       >
-        <Text sx={styles.sidebarTitle}>{title}</Text>
+        <Text sx={styles.sidebarTitle}>{documentation}</Text>
         <Flex sx={styles.searchBox}>
           <SearchIcon sx={styles.searchIcon} />
           <input
             style={styles.searchInput}
             className="searchComponent"
             type="text"
-            placeholder={`Search in ${title}...`}
+            placeholder={`Search in ${documentation}...`}
             value={searchValue}
             onChange={(e) => setSearchValue(e.currentTarget.value)}
           />
         </Flex>
-        <SideBarElements items={data} subItemLevel={0} />
+        <Box sx={styles.filterContainer}>
+          <Text sx={styles.filterText}>Filter by</Text>
+          <Flex>
+            {methodFilter.map((item) => (
+              <Box onClick={() => setFilter(item.method as MethodType)}>
+                <MethodCategory
+                  sx={styles.filterCategory}
+                  active={item.active}
+                  method={item.method as MethodType}
+                  origin={'filter'}
+                />
+              </Box>
+            ))}
+          </Flex>
+        </Box>
+        <SideBarElements items={categories} subItemLevel={0} />
       </Box>
       <Flex
         className="toggleIcon"
