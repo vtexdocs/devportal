@@ -7,43 +7,32 @@ import SideBarElements from 'components/sidebar-elements'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
 import type { SidebarElement } from 'components/sidebar-elements'
-import MethodCategory from 'components/method-category'
-import { MethodType } from 'utils/typings/unionTypes'
 
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import styles from './styles'
-import { getMessages } from 'utils/get-messages'
+import SectionFilter from 'components/sidebar-section-filter'
 export interface SidebarSectionProps {
   documentation: DocumentationTitle | UpdatesTitle
   categories: SidebarElement[]
 }
 
 const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
-  const messages = getMessages()
   const [searchValue, setSearchValue] = useState('')
   const { sidebarSectionHidden, setSidebarSectionHidden } =
     useContext(SidebarContext)
   const [filterStatus, setFilterStatus] = useState(false)
-  const [methodFilter, setMethodFilter] = useState([
+  const [methodFilterList, setMethodFilterList] = useState([
     { name: 'POST', active: false },
     { name: 'GET', active: false },
     { name: 'PUT', active: false },
     { name: 'DELETE', active: false },
   ])
 
-  const setFilter = (methodChanged: MethodType) => {
-    setMethodFilter(
-      methodFilter.map((method) =>
-        method.name === methodChanged
-          ? { name: methodChanged, active: !method.active }
-          : method
-      )
-    )
-  }
-
   useEffect(() => {
-    setFilterStatus(methodFilter.some((method) => method.active))
-  }, [methodFilter])
+    setFilterStatus(
+      methodFilterList.some((methodFilter) => methodFilter.active)
+    )
+  }, [methodFilterList])
 
   const filteredResult = useMemo(() => {
     if (!filterStatus) return categories
@@ -58,8 +47,9 @@ const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
               (endpoint) =>
                 endpoint.method &&
                 filterStatus &&
-                methodFilter.find((method) => method.name === endpoint.method)
-                  ?.active
+                methodFilterList.find(
+                  (methodFilter) => methodFilter.name === endpoint.method
+                )?.active
             )
             return subcategory
           })
@@ -69,7 +59,7 @@ const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
       .filter((category: SidebarElement) => category.childrens.length > 0)
 
     return filteredCategories
-  }, [filterStatus, methodFilter, categories])
+  }, [filterStatus, methodFilterList, categories])
 
   return (
     <Box
@@ -95,26 +85,10 @@ const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
           </Flex>
         </Box>
         {documentation == 'API Reference' && (
-          <Box sx={styles.filterContainer}>
-            <Text sx={styles.filterText}>
-              {messages['api_reference_sidebar_filter']}
-            </Text>
-            <Flex>
-              {methodFilter.map((item) => (
-                <Box
-                  key={`filter-category-${item.name}`}
-                  onClick={() => setFilter(item.name as MethodType)}
-                >
-                  <MethodCategory
-                    sx={styles.filterCategory}
-                    active={item.active}
-                    method={item.name as MethodType}
-                    origin={'filter'}
-                  />
-                </Box>
-              ))}
-            </Flex>
-          </Box>
+          <SectionFilter
+            methodFilterList={methodFilterList}
+            setMethodFilter={setMethodFilterList}
+          />
         )}
         <Box sx={styles.sidebarContainerBody}>
           <SideBarElements items={filteredResult} subItemLevel={0} />

@@ -102,28 +102,6 @@ const toggleIcon: SxStyleProp = {
   transform: 'scaleX(-1)',
 }
 
-const filterContainer: SxStyleProp = {
-  px: '17px',
-  paddingTop: '6px',
-  borderBottom: '1px solid #E7E9EE',
-  paddingBottom: '16px',
-  mb: '24px',
-}
-
-const filterText: SxStyleProp = {
-  mb: '8px',
-}
-
-const filterCategory: SxStyleProp = {
-  mr: '8px',
-  px: '4px',
-  width: 'auto',
-  cursor: 'pointer',
-  ':hover': {
-    borderWidth: '2px',
-  },
-}
-
 export default {
   sidebarContainer,
   sidebarContainerBox,
@@ -137,7 +115,4 @@ export default {
   toggleIconBox,
   toggleIconBoxActive,
   toggleIcon,
-  filterContainer,
-  filterText,
-  filterCategory,
 }
