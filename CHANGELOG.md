@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.0](https://github.com/vtexdocs/devportal/compare/v0.23.0...v0.24.0) (2022-08-05)
+
+
+### Features
+
+* **contributors:** add contributors to mobile breakpoints ([09d9612](https://github.com/vtexdocs/devportal/commit/09d96124a51d9289dedad16f44bbd6b16737f50a))
+* **on-this-page:** add arrows and close icons ([cf60c14](https://github.com/vtexdocs/devportal/commit/cf60c14e891dbd673f68b6e9e1ee55260dd28028))
+* **on-this-page:** add component to API Guide pages ([edde134](https://github.com/vtexdocs/devportal/commit/edde134c5b63b94b959e9cfb50a325d023f0b290))
+* **on-this-page:** add height and with animation ([d229bd3](https://github.com/vtexdocs/devportal/commit/d229bd384d99dca4c95ed850594d8db116a261c9))
+* **on-this-page:** add mobile TOC and contributors component ([dd3b12c](https://github.com/vtexdocs/devportal/commit/dd3b12c6de63c53f6f4b613858f0bb99ab38567e))
+
+
+### Bug Fixes
+
+* **on-this-page:** change icon ([c782cff](https://github.com/vtexdocs/devportal/commit/c782cff54b7ee7082af3d182129e02601b01c044))
+* **on-this-page:** change layout on first breakpoint ([1b48e91](https://github.com/vtexdocs/devportal/commit/1b48e9187d47900c1f271925d138db4efbe98414))
+* **on-this-page:** close on this page when user clicks a heading ([8f5bc78](https://github.com/vtexdocs/devportal/commit/8f5bc7869986dabe0ca3f098a37692e9e0a2bc18))
+* **on-this-page:** fix button text-icon orientation ([9c6acb5](https://github.com/vtexdocs/devportal/commit/9c6acb51540acc66143bb9d1f6ba64ccf5e0a0c5))
+* **on-this-page:** fix style bugs on TOC and contributors component ([d413414](https://github.com/vtexdocs/devportal/commit/d413414ae76661c929a95a4691fbbe8cd161d188))
+* **on-this-page:** improve height and width animations ([b223188](https://github.com/vtexdocs/devportal/commit/b223188feaa0e1c573cc46d2418b5a0544832820))
+* **on-this-page:** remove contributors from component ([a8b2f7e](https://github.com/vtexdocs/devportal/commit/a8b2f7e8232cd0b6d5de78abe7535aa1119e19d4))
+
+
+### Refactoring
+
+* **on-this-page:** move strings to JSON ([b2df44d](https://github.com/vtexdocs/devportal/commit/b2df44d7e9c65d5db8e1e8b38e155c3b9b455c17))
+
 ## [0.23.0](https://github.com/vtexdocs/devportal/compare/v0.22.1...v0.23.0) (2022-08-01)
 
 
