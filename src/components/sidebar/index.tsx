@@ -32,40 +32,40 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
           slug: 'Getting-Started',
           origin: '',
           type: 'markdown',
-          childrens: [
+          children: [
             {
               name: 'Introduction',
               slug: 'Introduction',
               origin: '',
               type: 'markdown',
-              childrens: [
+              children: [
                 {
                   name: 'Platform overview',
                   slug: 'Platform-overview',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'List of REST APIs',
                   slug: 'List-of-REST-APIs',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'Authentication',
                   slug: 'Authentication',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'Making your first request',
                   slug: 'Making-your-first-request',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -74,20 +74,20 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
               slug: 'API-Guides',
               origin: '',
               type: 'markdown',
-              childrens: [
+              children: [
                 {
                   name: 'Item 1',
                   slug: 'Item-1',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'Item 2',
                   slug: 'Item-2',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -96,27 +96,27 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
               slug: 'Catalog',
               origin: '',
               type: 'markdown',
-              childrens: [
+              children: [
                 {
                   name: 'How to activate an SKU',
                   slug: 'How-to-activate-an-SKU',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'How to create a specification',
                   slug: 'How-to-create-a-specification',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'Update SKU',
                   slug: 'Update-SKU',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -125,13 +125,13 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
               slug: 'Checkout',
               origin: '',
               type: 'markdown',
-              childrens: [
+              children: [
                 {
                   name: 'Item 1',
                   slug: 'Item-1',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -140,27 +140,27 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
               slug: 'Orders',
               origin: '',
               type: 'markdown',
-              childrens: [
+              children: [
                 {
                   name: 'Item 1',
                   slug: 'Item-1',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'Item 2',
                   slug: 'Item-2',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'Item 3',
                   slug: 'Item-3',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -169,20 +169,20 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
               slug: 'Promotions',
               origin: '',
               type: 'markdown',
-              childrens: [
+              children: [
                 {
                   name: 'Item 1',
                   slug: 'Item-1',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'Item 2',
                   slug: 'Item-2',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -193,19 +193,19 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
           slug: 'Integration-Guides',
           origin: '',
           type: 'markdown',
-          childrens: [
+          children: [
             {
               name: 'Back-office (ERP/PIM/WMS)',
               slug: 'Back-office-(ERP/PIM/WMS)',
               origin: '',
               type: '',
-              childrens: [
+              children: [
                 {
                   name: 'item 1',
                   slug: 'item-1',
                   origin: '',
                   type: 'markdown',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -214,20 +214,20 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
               slug: 'External-Marketplace',
               origin: '',
               type: '',
-              childrens: [
+              children: [
                 {
                   name: 'Marketplace / Seller architecture',
                   slug: 'Marketplace-/-Seller architecture',
                   origin: '',
                   type: '',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'Store setup for VTEX Seller',
                   slug: 'Store-setup-for-VTEX-Seller',
                   origin: '',
                   type: '',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -236,13 +236,13 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
               slug: 'External-Seller',
               origin: '',
               type: '',
-              childrens: [
+              children: [
                 {
                   name: 'Item 1',
                   slug: 'Item-1',
                   origin: '',
                   type: '',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -251,13 +251,13 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
               slug: 'Gift-Card',
               origin: '',
               type: '',
-              childrens: [
+              children: [
                 {
                   name: 'Item 1',
                   slug: 'Item-1',
                   origin: '',
                   type: '',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -273,20 +273,20 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
           slug: 'Catalog-API',
           origin: '',
           type: 'openapi',
-          childrens: [
+          children: [
             {
               name: 'SKU Service Value',
               slug: 'SKU-Service-Value',
               origin: '',
               type: '',
-              childrens: [
+              children: [
                 {
                   name: 'SKU Service Value',
                   slug: 'SKU-Service-Value-post',
                   origin: '',
                   type: 'openapi',
                   method: 'POST',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'SKU Service Value',
@@ -294,7 +294,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
                   origin: '',
                   type: 'openapi',
                   method: 'PUT',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'SKU Service Value',
@@ -302,7 +302,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
                   origin: '',
                   type: 'openapi',
                   method: 'DELETE',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -311,14 +311,14 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
               slug: 'teste',
               origin: '',
               type: '',
-              childrens: [
+              children: [
                 {
                   name: 'testezinho',
                   slug: 'testezinho',
                   origin: '',
                   type: 'openapi',
                   method: 'GET',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },
@@ -329,20 +329,20 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
           slug: 'Checkout-API',
           origin: '',
           type: 'openapi',
-          childrens: [
+          children: [
             {
               name: 'Configuration',
               slug: 'Configuration',
               origin: '',
               type: '',
-              childrens: [
+              children: [
                 {
                   name: 'orderForm configuration',
                   slug: 'orderForm-configuration-get',
                   origin: '',
                   type: 'openapi',
                   method: 'GET',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'orderForm configuration',
@@ -350,7 +350,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
                   origin: '',
                   type: 'openapi',
                   method: 'PUT',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'window to change seller',
@@ -358,7 +358,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
                   origin: '',
                   type: 'openapi',
                   method: 'GET',
-                  childrens: [],
+                  children: [],
                 },
                 {
                   name: 'window to change seller',
@@ -366,7 +366,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
                   origin: '',
                   type: 'openapi',
                   method: 'PUT',
-                  childrens: [],
+                  children: [],
                 },
               ],
             },

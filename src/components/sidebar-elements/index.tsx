@@ -14,7 +14,7 @@ export interface SidebarElement {
   origin: string
   type: string
   method?: MethodType
-  childrens: SidebarElement[]
+  children: SidebarElement[]
 }
 
 export interface SidebarProps {
@@ -32,8 +32,8 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     openSidebarElement,
   } = useContext(SidebarContext)
 
-  const ElementRoot = ({ slug, name, method, childrens }: SidebarElement) => {
-    const isExpandable = childrens.length > 0
+  const ElementRoot = ({ slug, name, method, children }: SidebarElement) => {
+    const isExpandable = children.length > 0
 
     return (
       <Box sx={styles.elementContainer}>
@@ -84,8 +84,8 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     )
   }
 
-  const ElementChildren = ({ slug, childrens }: SidebarElement) => {
-    const isExpandable = childrens.length > 0
+  const ElementChildren = ({ slug, children }: SidebarElement) => {
+    const isExpandable = children.length > 0
 
     return isExpandable &&
       sidebarElementStatus.has(slug) &&
@@ -93,7 +93,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
       <Box>
         <SidebarElements
           slugPrefix={slug}
-          items={childrens}
+          items={children}
           subItemLevel={subItemLevel + 1}
           key={`${slug}sd`}
         />

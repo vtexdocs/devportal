@@ -41,9 +41,9 @@ const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
 
     const filteredCategories = dataCopy
       .map((category: SidebarElement) => {
-        category.childrens = category.childrens
+        category.children = category.children
           .map((subcategory) => {
-            subcategory.childrens = subcategory.childrens.filter(
+            subcategory.children = subcategory.children.filter(
               (endpoint) =>
                 endpoint.method &&
                 filterStatus &&
@@ -53,10 +53,10 @@ const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
             )
             return subcategory
           })
-          .filter((subcategory) => subcategory.childrens.length > 0)
+          .filter((subcategory) => subcategory.children.length > 0)
         return category
       })
-      .filter((category: SidebarElement) => category.childrens.length > 0)
+      .filter((category: SidebarElement) => category.children.length > 0)
 
     return filteredCategories
   }, [filterStatus, methodFilterList, categories])
