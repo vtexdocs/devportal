@@ -37,9 +37,6 @@ const sidebarContainerBody: SxStyleProp = {
 
 const sidebarContainerHeader: SxStyleProp = {
   ...sidebarContainerBody,
-  borderBottom: '1px solid #E7E9EE',
-  paddingBottom: '16px',
-  mb: '24px',
 }
 
 const sidebarTitle: SxStyleProp = {
@@ -106,7 +103,11 @@ const toggleIcon: SxStyleProp = {
 }
 
 const filterContainer: SxStyleProp = {
+  px: '17px',
   paddingTop: '6px',
+  borderBottom: '1px solid #E7E9EE',
+  paddingBottom: '16px',
+  mb: '24px',
 }
 
 const filterText: SxStyleProp = {

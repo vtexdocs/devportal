@@ -93,6 +93,8 @@ const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
               onChange={(e) => setSearchValue(e.currentTarget.value)}
             />
           </Flex>
+        </Box>
+        {documentation == 'API Reference' && (
           <Box sx={styles.filterContainer}>
             <Text sx={styles.filterText}>
               {messages['api_reference_sidebar_filter']}
@@ -113,7 +115,7 @@ const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
               ))}
             </Flex>
           </Box>
-        </Box>
+        )}
         <Box sx={styles.sidebarContainerBody}>
           <SideBarElements items={filteredResult} subItemLevel={0} />
         </Box>
