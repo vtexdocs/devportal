@@ -21,6 +21,18 @@ const contentContainer: SxStyleProp = {
   mx: ['18px', 'initial'],
 }
 
+const bottomContributorsContainer: SxStyleProp = {
+  display: ['none', 'initial', 'initial', 'initial', 'none'],
+}
+
+const bottomContributorsDivider: SxStyleProp = {
+  mx: 'auto',
+  my: '32px',
+  height: '1px',
+  width: '162px',
+  backgroundColor: '#E7E9EE',
+}
+
 const rightContainer: SxStyleProp = {
   ml: '64px',
   display: [
@@ -38,5 +50,7 @@ export default {
   mainContainer,
   articleBox,
   contentContainer,
+  bottomContributorsContainer,
+  bottomContributorsDivider,
   rightContainer,
 }

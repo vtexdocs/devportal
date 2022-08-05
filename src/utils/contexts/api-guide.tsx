@@ -11,7 +11,9 @@ type ActiveItem = {
 type ContextType = {
   headings: Item[]
   activeItem: ActiveItem
+  onThisPageOpenStatus: boolean
   setActiveItem: Dispatch<SetStateAction<ActiveItem>>
+  setOnThisPageOpenStatus: Dispatch<SetStateAction<boolean>>
   goToPreviousItem: () => void
   goToPreviousSubItem: () => void
 }
@@ -22,7 +24,9 @@ export const APIGuideContext = createContext<ContextType>({
     item: '',
     subItem: '',
   },
+  onThisPageOpenStatus: false,
   setActiveItem: () => undefined,
+  setOnThisPageOpenStatus: () => undefined,
   goToPreviousItem: () => undefined,
   goToPreviousSubItem: () => undefined,
 })
@@ -32,6 +36,7 @@ interface Props {
 }
 
 const APIGuideContextProvider: React.FC<Props> = ({ children, headings }) => {
+  const [onThisPageOpenStatus, setOnThisPageOpenStatus] = useState(false)
   const [activeItem, setActiveItem] = useState<ActiveItem>({
     item: '',
     subItem: '',
@@ -76,7 +81,9 @@ const APIGuideContextProvider: React.FC<Props> = ({ children, headings }) => {
       value={{
         headings,
         activeItem,
+        onThisPageOpenStatus,
         setActiveItem,
+        setOnThisPageOpenStatus,
         goToPreviousItem,
         goToPreviousSubItem,
       }}

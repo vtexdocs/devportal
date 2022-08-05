@@ -17,6 +17,7 @@ const Contributors = ({ contributors }: Props) => {
   const [showAll, setShowAll] = useState(false)
   const [pageWidth, setPageWidth] = useState(0)
   const [photosPerRow, setPhotosPerRow] = useState(0)
+  const [minRows, setMinRows] = useState(0)
   const photosContainer = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -35,9 +36,13 @@ const Contributors = ({ contributors }: Props) => {
     }
   }, [pageWidth])
 
+  useEffect(() => {
+    setMinRows(photosPerRow === 6 ? 1 : 2)
+  }, [photosPerRow])
+
   return (
-    <Box>
-      <Flex>
+    <Flex sx={styles.container}>
+      <Flex sx={styles.titleContainer}>
         <Text sx={styles.title}>
           {messages['api_guide_documentation_page_contributors.title']}
         </Text>
@@ -48,7 +53,7 @@ const Contributors = ({ contributors }: Props) => {
         sx={styles.photosContainer(
           showAll
             ? Math.ceil(contributors.length / photosPerRow)
-            : Math.min(Math.ceil(contributors.length / photosPerRow), 2)
+            : Math.min(Math.ceil(contributors.length / photosPerRow), minRows)
         )}
         ref={photosContainer}
       >
@@ -63,7 +68,7 @@ const Contributors = ({ contributors }: Props) => {
         })}
       </Grid>
 
-      {contributors.length > 2 * photosPerRow && (
+      {contributors.length > minRows * photosPerRow && (
         <Flex
           sx={styles.collapseButton}
           onClick={() => {
@@ -73,12 +78,14 @@ const Contributors = ({ contributors }: Props) => {
           <Text>
             {showAll
               ? messages['api_guide_documentation_page_contributors.toggleText']
-              : `+ ${contributors.length - 2 * photosPerRow} contributors`}
+              : `+ ${
+                  contributors.length - minRows * photosPerRow
+                } contributors`}
           </Text>
           <IconCaret direction={showAll ? 'up' : 'down'} size={24} />
         </Flex>
       )}
-    </Box>
+    </Flex>
   )
 }
 

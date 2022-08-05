@@ -1,9 +1,19 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
+const container: SxStyleProp = {
+  mb: '32px',
+  flexDirection: 'column',
+  alignItems: ['initial', 'center', 'center', 'center', 'initial'],
+}
+
+const titleContainer: SxStyleProp = {
+  alignItems: 'center',
+}
+
 const title: SxStyleProp = {
-  fontSize: ['12px', '12px', '12px', '12px', '12px', '16px'],
   fontWeight: '400',
-  lineHeight: ['16px', '16px', '16px', '16px', '16px', '18px'],
+  fontSize: ['12px', '16px', '16px', '16px', '12px', '16px'],
+  lineHeight: ['16px', '22px', '22px', '22px', '16px', '18px'],
   color: '#4A4A4A',
 }
 
@@ -26,14 +36,14 @@ const photosContainer: (rows: number) => SxStyleProp = (rows) => ({
   gap: '8px',
   gridTemplateColumns: [
     '1fr 1fr 1fr 1fr',
-    '1fr 1fr 1fr 1fr',
-    '1fr 1fr 1fr 1fr',
-    '1fr 1fr 1fr 1fr',
+    '1fr 1fr 1fr 1fr 1fr 1fr',
+    '1fr 1fr 1fr 1fr 1fr 1fr',
+    '1fr 1fr 1fr 1fr 1fr 1fr',
     '1fr 1fr 1fr 1fr',
     '1fr 1fr 1fr 1fr 1fr',
   ],
   overflow: 'hidden',
-  width: [0, 0, 0, 0, '152px', '192px'],
+  width: [0, '256px', '256px', '256px', '152px', '192px'],
   maxHeight: `${32 * rows + 8 * (rows - 1)}px`,
   transition: 'max-height 0.3s ease-in-out',
 })
@@ -48,7 +58,9 @@ const photo: SxStyleProp = {
 const collapseButton: SxStyleProp = {
   mt: '8px',
   height: '24px',
-  ...title,
+  fontWeight: '400',
+  fontSize: ['12px', '12px', '12px', '12px', '12px', '16px'],
+  lineHeight: ['16px', '16px', '16px', '16px', '16px', '18px'],
   color: 'muted.0',
   cursor: 'pointer',
   alignItems: 'center',
@@ -63,6 +75,8 @@ const collapseButton: SxStyleProp = {
 }
 
 export default {
+  container,
+  titleContainer,
   title,
   count,
   photosContainer,
