@@ -21,10 +21,15 @@ import TableOfContents from 'components/table-of-contents'
 import { removeHTML } from 'utils/string-utils'
 import { getSlugs, readFile } from 'utils/read-files'
 
+import { serialize } from 'next-mdx-remote/serialize'
+import remarkGFM from 'remark-gfm'
+
 import styles from 'styles/documentation-page'
+import imageSize from 'rehype-img-size'
 
 interface Props {
   content: string
+  serialized: string
 }
 
 const markdownDir = '/public/docs/api-guides'
@@ -47,7 +52,7 @@ const documentationCards = [
   },
 ]
 
-const DocumentationPage: NextPage<Props> = ({ content }) => {
+const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   const [headings, setHeadings] = useState<Item[]>([])
 
   useEffect(() => {
@@ -79,7 +84,7 @@ const DocumentationPage: NextPage<Props> = ({ content }) => {
           <Flex sx={styles.mainContainer}>
             <Box sx={styles.articleBox}>
               <Box sx={styles.contentContainer}>
-                <MarkdownRenderer markdown={content} />
+                <MarkdownRenderer serialized={serialized} />
               </Box>
 
               <Box sx={styles.bottomContributorsContainer}>
@@ -115,13 +120,21 @@ export const getStaticPaths: GetStaticPaths = () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
   const content = readFile(markdownDir, slug, 'md')
+  const serialized = await serialize(content, {
+    mdxOptions: {
+      remarkPlugins: [remarkGFM],
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      rehypePlugins: [[imageSize as any, { dir: 'public' }]],
+      format: 'md',
+    },
+  })
 
   return {
     props: {
-      content,
+      serialized,
     },
   }
 }
