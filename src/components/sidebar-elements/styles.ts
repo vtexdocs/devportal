@@ -6,6 +6,9 @@ const elementContainer: SxStyleProp = {
     background: '#F8F7FC',
     a: {
       color: '#142032',
+      '& > :first-of-type': {
+        borderWidth: '2px',
+      },
     },
   },
 }
@@ -30,6 +33,7 @@ const elementActive: SxStyleProp = {
 const arrowIcon: SxStyleProp = {
   padding: '0',
   color: 'muted.1',
+  height: '34px',
 }
 
 const arrowIconActive: SxStyleProp = {
@@ -52,6 +56,10 @@ const sectionDivider: SxStyleProp = {
   },
 }
 
+const methodBox: SxStyleProp = {
+  mr: '10px',
+}
+
 export default {
   elementContainer,
   elementText,
@@ -60,4 +68,5 @@ export default {
   arrowIconActive,
   elementButton,
   sectionDivider,
+  methodBox,
 }

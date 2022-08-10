@@ -2,24 +2,25 @@ import React, { Fragment, useContext } from 'react'
 import { Box, Flex, Button, Link, IconCaret } from '@vtex/brand-ui'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
+import { MethodType } from 'utils/typings/unionTypes'
+import MethodCategory from 'components/method-category'
 
 import { styleByLevelNormal, textStyle } from './functions'
 import styles from './styles'
 
 export interface SidebarElement {
-  title: string
-  url: string
-  subItems: SidebarElement[]
+  name: string
+  slug: string
+  origin: string
+  type: string
+  method?: MethodType
+  children: SidebarElement[]
 }
 
 export interface SidebarProps {
   slugPrefix?: string
   items: SidebarElement[]
   subItemLevel: number
-}
-
-interface SidebarElementProps extends SidebarElement {
-  slug: string
 }
 
 const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
@@ -31,8 +32,8 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     openSidebarElement,
   } = useContext(SidebarContext)
 
-  const ElementRoot = ({ slug, title, subItems }: SidebarElementProps) => {
-    const isExpandable = subItems.length > 0
+  const ElementRoot = ({ slug, name, method, children }: SidebarElement) => {
+    const isExpandable = children.length > 0
 
     return (
       <Box sx={styles.elementContainer}>
@@ -68,15 +69,23 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
               setActiveSidebarElement(slug)
             }}
           >
-            {title}
+            {method && (
+              <MethodCategory
+                sx={styles.methodBox}
+                active={activeSidebarElement === slug}
+                origin="sidebar"
+                method={method}
+              />
+            )}
+            {name}
           </Link>
         </Flex>
       </Box>
     )
   }
 
-  const ElementChildren = ({ slug, subItems }: SidebarElementProps) => {
-    const isExpandable = subItems.length > 0
+  const ElementChildren = ({ slug, children }: SidebarElement) => {
+    const isExpandable = children.length > 0
 
     return isExpandable &&
       sidebarElementStatus.has(slug) &&
@@ -84,7 +93,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
       <Box>
         <SidebarElements
           slugPrefix={slug}
-          items={subItems}
+          items={children}
           subItemLevel={subItemLevel + 1}
           key={`${slug}sd`}
         />
@@ -95,8 +104,8 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   return (
     <Box>
       {items?.map((item, index) => {
-        const key = String(item.title) + String(index)
-        const slug = `${slugPrefix || ''}${item.title}`
+        const key = String(item.slug) + String(index)
+        const slug = `${slugPrefix || ''}${item.slug}`
 
         return (
           <Fragment key={String(key)}>

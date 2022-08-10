@@ -1,12 +1,11 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
-const sidebarElementsContainer: SxStyleProp = {
+const sidebarContainer: SxStyleProp = {
   position: 'relative',
-  width: '300px',
+  width: 'auto',
   minHeight: '692px',
   paddingTop: '34px',
   paddingBottom: '24px',
-  px: '17px',
   borderRight: '1px solid #E7E9EE',
   zIndex: '1',
   left: '0',
@@ -27,9 +26,17 @@ const sidebarElementsContainer: SxStyleProp = {
   },
 }
 
-const sidebarElementsBox: SxStyleProp = {
+const sidebarContainerBox: SxStyleProp = {
   opacity: '100',
   transition: 'all 1s ease-out',
+}
+
+const sidebarContainerBody: SxStyleProp = {
+  px: '17px',
+}
+
+const sidebarContainerHeader: SxStyleProp = {
+  ...sidebarContainerBody,
 }
 
 const sidebarTitle: SxStyleProp = {
@@ -96,8 +103,10 @@ const toggleIcon: SxStyleProp = {
 }
 
 export default {
-  sidebarElementsContainer,
-  sidebarElementsBox,
+  sidebarContainer,
+  sidebarContainerBox,
+  sidebarContainerBody,
+  sidebarContainerHeader,
   sidebarTitle,
   sidebarHelpIcon,
   searchBox,
