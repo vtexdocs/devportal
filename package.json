@@ -63,7 +63,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "v1.0.6-vtex-8-g40617a0"
+      "version": "1.0.7-vtex"
     }
   }
 }
