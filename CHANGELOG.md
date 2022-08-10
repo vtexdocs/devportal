@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.25.0](https://github.com/vtexdocs/devportal/compare/v0.24.0...v0.25.0) (2022-08-10)
+
+
+### Features
+
+* **method-category:** create the MethodCategory component ([c4b7241](https://github.com/vtexdocs/devportal/commit/c4b7241952473493a1072da0f73ac7a4bcca9f89))
+* **sidebar-section:** add the method filter behavior ([3518899](https://github.com/vtexdocs/devportal/commit/3518899b0bcd200e80d7e5b14e5ccebc0841ef52))
+
+
+### Bug Fixes
+
+* **api-reference:** put the sidebar on this page ([b7238c8](https://github.com/vtexdocs/devportal/commit/b7238c80b788f5b85ec465104610dac0a69f8347))
+* **sidebar-section:** change the filter section to appear only in the API Reference section ([f0b9a83](https://github.com/vtexdocs/devportal/commit/f0b9a83f2baff3035b269a533e0ed231d929eda7))
+* **sidebar-section:** sidebar width to auto adjust ([0a5196e](https://github.com/vtexdocs/devportal/commit/0a5196e2ddc8e20b9b7d155203815611b35e2da3))
+* **sidebar:** put the right cleanup function to the sidebar timer ([6ccc4d0](https://github.com/vtexdocs/devportal/commit/6ccc4d00886aa01c76f90df58fcbe28d86603a50))
+* **sidebar:** sidebar-items style and update sidebar mock to testing ([95ea33e](https://github.com/vtexdocs/devportal/commit/95ea33ef3598c67cf1ea79b4793e4207ff133091))
+
+
+### Refactoring
+
+* **sidebar-section:** componentize the filter ([75fae03](https://github.com/vtexdocs/devportal/commit/75fae0374cc7f35100bc347c7dec8493a66222b7))
+* **sidebar:** fix typo in sidebar data prop ([f2058b0](https://github.com/vtexdocs/devportal/commit/f2058b018a62ddcba57ad7a4e739b4a5b48babd7))
+* **sidebar:** update the sidebar structure with the new json master ([1f94305](https://github.com/vtexdocs/devportal/commit/1f943050fd69f6b57bc56b32951413ebf5ffac49))
+
 ## [0.24.0](https://github.com/vtexdocs/devportal/compare/v0.23.0...v0.24.0) (2022-08-05)
 
 
