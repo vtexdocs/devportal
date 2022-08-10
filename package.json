@@ -19,6 +19,7 @@
     "next": "^12.1.0",
     "next-mdx-remote": "^4.1.0",
     "node-fetch": "^3.2.4",
+    "octokit": "^2.0.5",
     "rapidoc": "^9.2.0",
     "react": "17.0.2",
     "react-animate-height": "^3.0.4",
@@ -68,8 +69,8 @@
       "version": "1.0.6-vtex"
     }
   },
-	"resolutions": {
-		"@types/react": "17.0.2",
-		"@types/react-dom": "17.0.2"
-	}
+  "resolutions": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
+  }
 }

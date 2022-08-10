@@ -19,7 +19,6 @@ import Sidebar from 'components/sidebar'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
-import { getSlugs, readFile } from 'utils/read-files'
 
 import { serialize } from 'next-mdx-remote/serialize'
 import remarkGFM from 'remark-gfm'
@@ -27,12 +26,16 @@ import remarkGFM from 'remark-gfm'
 import styles from 'styles/documentation-page'
 import imageSize from 'rehype-img-size'
 
+import {
+  getFileList,
+  getFileByPath,
+  getFileSlugDict,
+} from 'utils/github-getter'
+
 interface Props {
   content: string
   serialized: string
 }
-
-const markdownDir = '/public/docs/api-guides'
 
 const contributors = 'ABCDEFGHIJKL'.split('')
 
@@ -108,11 +111,13 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   )
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
-  const slugs = getSlugs(markdownDir, 'md')
-  const paths = slugs.map((slug) => ({
-    params: { slug },
-  }))
+export const getStaticPaths: GetStaticPaths = async () => {
+  // const slugs = getSlugs(markdownDir, 'md')
+  // const paths = slugs.map((slug) => ({
+  //   params: { slug },
+  // }))
+
+  const paths = await getFileList('')
 
   return {
     paths,
@@ -122,7 +127,10 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
-  const content = readFile(markdownDir, slug, 'md')
+  const dictRead = await getFileSlugDict()
+  const path = dictRead[slug]
+  console.log(dictRead)
+  const content = await getFileByPath(path)
   const serialized = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [remarkGFM],
