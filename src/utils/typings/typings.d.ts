@@ -11,6 +11,8 @@ declare global {
     interface IntrinsicElements {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       'rapi-doc': any
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      'rapi-doc-mini': any
     }
   }
 }

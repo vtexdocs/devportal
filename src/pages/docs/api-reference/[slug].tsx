@@ -1,16 +1,18 @@
+import Sidebar from 'components/sidebar'
+import { Flex } from '@vtex/brand-ui'
+
 import Script from 'next/script'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
+import SidebarContextProvider from 'utils/contexts/sidebar'
+
+import styles from 'styles/documentation-page'
 interface Props {
   slug: string
+  matchPath: string
 }
-
-const APIPage: NextPage<Props> = ({ slug }) => {
-  const rapidocstyle = {
-    width: '100%',
-    height: '100%',
-    marginTop: '5rem',
-  }
+//<rapi-doc-mini spec-url={`/docs/api-reference/${slug}.json`} />
+const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
   return (
     <>
       <Script
@@ -19,31 +21,27 @@ const APIPage: NextPage<Props> = ({ slug }) => {
         strategy="beforeInteractive"
       />
 
-      <rapi-doc
-        spec-url={`/docs/api-reference/${slug}.json`}
-        style={rapidocstyle}
-        fill-request-fields-with-example={true}
-        theme="light"
-        render-style="focused"
-        bg-color="#FFFFFF"
-        nav-bg-color="#FFFFFF"
-        nav-hover-bg-color="#F8F7FC"
-        nav-hover-text-color="#000711"
-        show-method-in-nav-bar={true}
-        primary-color="#142032"
-        regular-font="VTEX Trust Variable"
-        mono-font="VTEX Trust Variable"
-        load-fonts={false}
-        use-path-in-nav-bar={false}
-        nav-text-color="#4A596B"
-        nav-accent-color="#D71D55"
-        nav-item-spacing="relaxed"
-        on-nav-tag-click="expand-collapse"
-        schema-style="table"
-        schema-description-expanded={true}
-        show-info={true}
-        show-header={false}
-      ></rapi-doc>
+      <SidebarContextProvider>
+        <Flex sx={styles.container}>
+          <Sidebar sectionSelected="API Reference" />
+          <rapi-doc-mini
+            spec-url={`/docs/api-reference/${slug}.json`}
+            match-paths={matchPath}
+            paths-expanded={true}
+            layout="column"
+            fill-request-fields-with-example={true}
+            theme="light"
+            bg-color="#FFFFFF"
+            primary-color="#142032"
+            regular-font="VTEX Trust Variable"
+            mono-font="VTEX Trust Variable"
+            load-fonts={false}
+            schema-style="table"
+            schema-description-expanded={true}
+            id="the-doc"
+          />
+        </Flex>
+      </SidebarContextProvider>
     </>
   )
 }
@@ -69,9 +67,15 @@ export const getStaticPaths: GetStaticPaths = () => {
 }
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
+  const matchPath =
+    params?.slug === 'catalog'
+      ? 'get /api/catalog_system/pvt/products/GetProductAndSkuIds'
+      : 'post /api/checkout/pub/orderForms/simulation'
+
   return {
     props: {
       slug: params?.slug,
+      matchPath: matchPath,
     },
   }
 }
