@@ -1,6 +1,6 @@
 {
   "name": "devportal",
-  "version": "0.25.1",
+  "version": "0.26.0",
   "private": true,
   "scripts": {
     "predev": "node src/utils/get-rapidoc.mjs",

@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.26.0](https://github.com/vtexdocs/devportal/compare/v0.25.1...v0.26.0) (2022-08-11)
+
+
+### Bug Fixes
+
+* add a match-path compatible with the checkout API page ([b5f99cd](https://github.com/vtexdocs/devportal/commit/b5f99cd8d10dbe0d5bf81f2d0252bbee4113de3e))
+* update api-reference page with sidebarContextProvider ([ec6fd4b](https://github.com/vtexdocs/devportal/commit/ec6fd4b4ae960674699b4451a3d3b1dadb6dbfd7))
+
+
+### Refactoring
+
+* switch from Rapidoc to Rapidoc-mini ([be9d142](https://github.com/vtexdocs/devportal/commit/be9d142f40fd20846e7ccb5db6ac6c1d453cc718))
+
+
+### Tests
+
+* update rapidoc test to suit rapidoc-mini's characteristics ([35d5c30](https://github.com/vtexdocs/devportal/commit/35d5c30fa5bdffd4b697321d4ff5cc7f6edb3dbd))
+
 ### [0.25.1](https://github.com/vtexdocs/devportal/compare/v0.25.0...v0.25.1) (2022-08-10)
 
 
