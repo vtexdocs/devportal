@@ -1,16 +1,15 @@
-import remarkGFM from 'remark-gfm'
-import ReactMarkdown from 'react-markdown'
+import { MDXRemote } from 'next-mdx-remote'
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const MDXRemote2: any = MDXRemote
 
 import components from './components'
 
 interface Props {
-  markdown: string
+  serialized: string
 }
 
-const MarkdownRenderer = ({ markdown }: Props) => (
-  <ReactMarkdown components={components} remarkPlugins={[remarkGFM]}>
-    {markdown}
-  </ReactMarkdown>
+const MarkdownRenderer = ({ serialized }: Props) => (
+  <MDXRemote2 components={components} lazy {...serialized} />
 )
 
 export default MarkdownRenderer

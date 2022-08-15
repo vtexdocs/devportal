@@ -17,6 +17,7 @@
   "dependencies": {
     "@vtex/brand-ui": "^0.46.1",
     "next": "^12.1.0",
+    "next-mdx-remote": "^4.1.0",
     "node-fetch": "^3.2.4",
     "rapidoc": "^9.2.0",
     "react": "17.0.2",
@@ -24,6 +25,7 @@
     "react-dom": "17.0.2",
     "react-intersection-observer": "^9.2.2",
     "react-markdown": "^8.0.3",
+    "rehype-img-size": "^1.0.1",
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
@@ -65,5 +67,9 @@
     "rapidoc": {
       "version": "1.0.7-vtex"
     }
-  }
+  },
+	"resolutions": {
+		"@types/react": "17.0.2",
+		"@types/react-dom": "17.0.2"
+	}
 }

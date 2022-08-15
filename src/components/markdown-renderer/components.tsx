@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useContext, useState } from 'react'
 import { InView } from 'react-intersection-observer'
+import Image from 'next/image'
 
 import { APIGuideContext } from 'utils/contexts/api-guide'
 import { childrenToString, slugify } from 'utils/string-utils'
@@ -32,8 +33,8 @@ const ObservableHeading = ({
   ...headingProps
 }: ObservableHeadingProps) => {
   const [y, setY] = useState(Infinity)
-  const slug = slugify(childrenToString(headingProps.children))
-
+  const toSlugify = childrenToString(headingProps.children)
+  const slug = slugify(toSlugify)
   return (
     <InView
       threshold={0.5}
@@ -61,10 +62,23 @@ export default {
   td: ({ node, ...props }: Component) => (
     <td className={styles.td} {...props} />
   ),
-  img: ({ node, ...props }: Component) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img className={styles.img} {...props} />
-  ),
+  img: ({ node, ...props }: Component) => {
+    if (props?.width)
+      return (
+        <Image
+          className={styles.img}
+          loading="lazy"
+          src={props.src}
+          {...props}
+        />
+      )
+    else {
+      return (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img className={styles.img} {...props} />
+      )
+    }
+  },
   h2: ({ node, ...props }: Component) => {
     const { activeItem, setActiveItem, goToPreviousItem } =
       useContext(APIGuideContext)
