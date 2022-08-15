@@ -1,6 +1,6 @@
 {
   "name": "devportal",
-  "version": "0.26.0",
+  "version": "0.26.1",
   "private": true,
   "scripts": {
     "predev": "node src/utils/get-rapidoc.mjs",
@@ -68,8 +68,8 @@
       "version": "1.0.7-vtex"
     }
   },
-	"resolutions": {
-		"@types/react": "17.0.2",
-		"@types/react-dom": "17.0.2"
-	}
+  "resolutions": {
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2"
+  }
 }

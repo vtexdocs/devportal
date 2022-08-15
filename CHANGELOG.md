@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.26.1](https://github.com/vtexdocs/devportal/compare/v0.26.0...v0.26.1) (2022-08-15)
+
+
+### Bug Fixes
+
+* **yarn.lock:** update ([f90c742](https://github.com/vtexdocs/devportal/commit/f90c742e650977c955febde57c813e3b902bece3))
+
+
+### Refactoring
+
+* **markdown-renderer:** use next-mdx-remote to render mdx ([1130536](https://github.com/vtexdocs/devportal/commit/1130536995c004116eeda5a981a9986fee2ceb22))
+
+
+### Chore
+
+* **github actions:** updated github actions to use node 14.x ([8e36eaa](https://github.com/vtexdocs/devportal/commit/8e36eaaaf971c4025859adb29fb6c34fb35d292d))
+* **next.config.js:** add valid image sources ([661e575](https://github.com/vtexdocs/devportal/commit/661e575d61fe9ea978551183f06ee09f7910011b))
+* **package.json:** add next-mdx-remote to dependencies ([5c9d9cc](https://github.com/vtexdocs/devportal/commit/5c9d9cc37aa91f996d670564bd95a10340e84bb7))
+
 ## [0.26.0](https://github.com/vtexdocs/devportal/compare/v0.25.1...v0.26.0) (2022-08-11)
 
 
