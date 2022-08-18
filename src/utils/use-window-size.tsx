@@ -25,6 +25,7 @@ function useWindowSize() {
       // Remove event listener on cleanup
       return () => window.removeEventListener('resize', handleResize)
     }
+    return undefined
   }, [])
   return windowSize
 }
