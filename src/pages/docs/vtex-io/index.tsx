@@ -53,7 +53,7 @@ const VTEXIOPage = () => {
               ))}
             </Flex>
 
-            <SubscribeNewsletterSection />
+            <SubscribeNewsletterSection containerType={'io'} />
 
             <Box sx={styles.resourcesSectionContainer}>
               <Text sx={styles.resourcesSectionTitle}>

@@ -5,6 +5,7 @@ import NewsletterSection from 'components/newsletter-section'
 import DocumentationSection from 'components/documentation-section'
 import LastUpdatesSection from 'components/last-updates-section'
 import EducationSection from 'components/education-section'
+import SubscribeNewsletterSection from 'components/subscribe-newsletter-section'
 
 import Head from 'next/head'
 import styles from 'styles/landing-page'
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
         <DocumentationSection />
         <LastUpdatesSection />
         <EducationSection />
+        <SubscribeNewsletterSection containerType={'landing-page'} />
       </Grid>
     </>
   )

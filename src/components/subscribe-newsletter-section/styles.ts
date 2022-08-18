@@ -1,35 +1,21 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
+const container: SxStyleProp = {
+  flexDirection: 'column',
+  alignItems: 'center',
+}
+
 const subscribeNewsletterContainer: SxStyleProp = {
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-  background: '#F8F7FC',
 
-  mt: '24px',
-
-  width: ['360px', '544px', '544px', '544px', '720px'],
-  height: ['162px', '176px', '176px', '176px', '154px'],
-
-  borderRadius: '8px',
-  border: '1px solid #E7E9EE',
+  position: 'relative',
+  zIndex: 2,
 }
 
 const textContainer: SxStyleProp = {
   flexDirection: 'column',
-  textAlign: ['flex-start', 'center'],
-  marginLeft: ['18px', '10px'],
-  marginRight: '10px',
-
-  '.title': {
-    fontSize: ['16px', '18px'],
-    lineHeight: ['22px'],
-  },
-
-  '.subtitle': {
-    fontSize: ['12px', '16px'],
-    lineHeight: ['16px', '22px'],
-  },
 }
 
 const text: SxStyleProp = {
@@ -66,18 +52,16 @@ const emailInput: SxStyleProp = {
   width: '257px',
   border: '#ffffff',
   outline: 'none',
-  height: '100%',
 
   fontSize: '14px',
   fontWeight: '400',
-  lineHeight: '140px',
 
   marginLeft: '16px',
 }
 
 const divider: SxStyleProp = {
   height: '42px',
-  width: '1px',
+  width: '4px',
   marginRight: '1px',
   background: '#DDDDDD',
 }
@@ -99,7 +83,16 @@ const submitArrow: SxStyleProp = {
   alignSelf: 'center',
 }
 
+const imageContainer: SxStyleProp = {
+  zIndex: 1,
+  position: 'absolute',
+
+  width: ['360px', '640px', '640px', '640px', '1280px'],
+  height: ['234px', '254px', '254px', '254px', '236px'],
+}
+
 export default {
+  container,
   subscribeNewsletterContainer,
   textContainer,
   text,
@@ -109,4 +102,5 @@ export default {
   divider,
   iconContainer,
   submitArrow,
+  imageContainer,
 }
