@@ -20,12 +20,13 @@ import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
 import { getSlugs, readFile } from 'utils/read-files'
+import { updateImages } from 'utils/doc-images'
 
 import { serialize } from 'next-mdx-remote/serialize'
+import imageSize from 'rehype-img-size'
 import remarkGFM from 'remark-gfm'
 
 import styles from 'styles/documentation-page'
-import imageSize from 'rehype-img-size'
 
 interface Props {
   content: string
@@ -123,7 +124,9 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
   const content = readFile(markdownDir, slug, 'md')
-  const serialized = await serialize(content, {
+  const newContent = await updateImages(slug, content)
+
+  const serialized = await serialize(newContent, {
     mdxOptions: {
       remarkPlugins: [remarkGFM],
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
