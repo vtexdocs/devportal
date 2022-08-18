@@ -8,8 +8,8 @@ const subscribeNewsletterContainer = (containerType: string) => {
           width: ['360px', '544px', '544px', '544px', '720px'],
           height: ['162px', '176px', '176px', '176px', '154px'],
           background: '#F8F7FC',
-          borderRadius: '8px',
-          border: '1px solid #E7E9EE',
+          border: ['none', '1px solid #E7E9EE'],
+          borderRadius: ['0px', '8px'],
 
           mt: '24px',
         }
