@@ -8,6 +8,8 @@ import EducationSection from 'components/education-section'
 import SubscribeNewsletterSection from 'components/subscribe-newsletter-section'
 
 import Head from 'next/head'
+
+import { Box } from '@vtex/brand-ui'
 import styles from 'styles/landing-page'
 
 const Home: NextPage = () => {
@@ -21,6 +23,9 @@ const Home: NextPage = () => {
         <DocumentationSection />
         <LastUpdatesSection />
         <EducationSection />
+        <Box sx={styles.divider}>
+          <hr />
+        </Box>
         <SubscribeNewsletterSection containerType={'landing-page'} />
       </Grid>
     </>
