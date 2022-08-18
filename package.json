@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@vtex/brand-ui": "^0.46.1",
+    "image-downloader": "^4.3.0",
     "next": "^12.1.0",
     "next-mdx-remote": "^4.1.0",
     "node-fetch": "^3.2.4",
