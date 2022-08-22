@@ -6,7 +6,7 @@ interface Image {
   url: string
 }
 
-const getExtension = (url: string) => {
+const getExtension: (url: string) => string = (url) => {
   let dotIndex = url.length - 1
   while (dotIndex >= 0 && url[dotIndex] !== '.') {
     dotIndex--
