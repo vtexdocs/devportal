@@ -1,5 +1,6 @@
 import type { Dispatch, ReactNode, SetStateAction } from 'react'
 import { createContext, useState } from 'react'
+import { SWRConfig } from 'swr'
 
 type ContextType = {
   sidebarSectionHidden: boolean
@@ -23,12 +24,15 @@ export const SidebarContext = createContext<ContextType>({
 
 interface Props extends Partial<ContextType> {
   children: ReactNode
+  fallback?: any //eslint-disable-line
 }
 
 const SidebarContextProvider = ({ children, ...props }: Props) => {
   const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
   const [activeSidebarElement, setActiveSidebarElement] = useState('')
   const [sidebarElementStatus, setSidebarElementStatus] = useState(new Map())
+
+  const { fallback } = props
 
   const toggleSidebarElementStatus = (title: string) => {
     setSidebarElementStatus((sidebarElementStatus) => {
@@ -58,7 +62,15 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
         ...props,
       }}
     >
-      {children}
+      <SWRConfig
+        value={{
+          fallback: {
+            '/api/navigation': fallback ? fallback : [],
+          },
+        }}
+      >
+        {children}
+      </SWRConfig>
     </SidebarContext.Provider>
   )
 }
