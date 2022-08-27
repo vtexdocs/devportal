@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import SidebarContextProvider from 'utils/contexts/sidebar'
+import getNavigation from 'utils/getNavigation'
 
 import styles from 'styles/documentation-page'
 interface Props {
@@ -21,7 +22,7 @@ const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
         strategy="beforeInteractive"
       />
 
-      <SidebarContextProvider>
+      <SidebarContextProvider fallback={getNavigation()}>
         <Flex sx={styles.container}>
           <Sidebar sectionSelected="API Reference" />
           <rapi-doc-mini

@@ -3,11 +3,17 @@ import { Flex } from '@vtex/brand-ui'
 import Sidebar from 'components/sidebar'
 import Link from 'next/link'
 import styles from 'styles/api-guides'
+import { GetStaticProps, NextPage } from 'next'
 import SidebarContextProvider from 'utils/contexts/sidebar'
+import getNavigation from 'utils/getNavigation'
 
-const ApiGuidesPage = () => {
+interface Props {
+  sidebarfallback: any //eslint-disable-line
+}
+
+const ApiGuidesPage: NextPage<Props> = ({ sidebarfallback }) => {
   return (
-    <SidebarContextProvider>
+    <SidebarContextProvider fallback={sidebarfallback}>
       <Flex sx={styles.container}>
         <Sidebar sectionSelected={'API Guides'} />
         <ul>
@@ -30,6 +36,16 @@ const ApiGuidesPage = () => {
       </Flex>
     </SidebarContextProvider>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const sidebarfallback = await getNavigation()
+
+  return {
+    props: {
+      sidebarfallback,
+    },
+  }
 }
 
 export default ApiGuidesPage
