@@ -26,7 +26,8 @@
     "react-intersection-observer": "^9.2.2",
     "react-markdown": "^8.0.3",
     "rehype-img-size": "^1.0.1",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^3.0.1",
+    "swr": "^1.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
