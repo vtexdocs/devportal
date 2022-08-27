@@ -12,6 +12,7 @@ import { whatsNextData, resources } from 'utils/constants'
 import image from '../../../../public/images/vtex-io.png'
 
 import styles from 'styles/vtex-io'
+import getNavigation from 'utils/getNavigation'
 
 const VTEXIOPage = () => {
   const messages = getMessages()
@@ -19,6 +20,7 @@ const VTEXIOPage = () => {
 
   return (
     <SidebarContextProvider
+      fallback={getNavigation()}
       sidebarSectionHidden={sidebarSectionHidden}
       setSidebarSectionHidden={setSidebarSectionHidden}
     >

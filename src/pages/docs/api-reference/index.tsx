@@ -4,10 +4,11 @@ import { Flex } from '@vtex/brand-ui'
 import Sidebar from 'components/sidebar'
 import SidebarContextProvider from 'utils/contexts/sidebar'
 import styles from 'styles/api-reference'
+import getNavigation from 'utils/getNavigation'
 
 const APIReferencePage = () => {
   return (
-    <SidebarContextProvider>
+    <SidebarContextProvider fallback={getNavigation()}>
       <Flex sx={styles.container}>
         <Sidebar sectionSelected={'API Reference'} />
         <ul>

@@ -27,13 +27,14 @@ import remarkGFM from 'remark-gfm'
 import styles from 'styles/documentation-page'
 import imageSize from 'rehype-img-size'
 
+import getNavigation from 'utils/getNavigation'
+
 interface Props {
   content: string
   serialized: string
+  sidebarfallback: any //eslint-disable-line
 }
-
 const markdownDir = '/public/docs/api-guides'
-
 const contributors = 'ABCDEFGHIJKL'.split('')
 
 const documentationCards = [
@@ -52,9 +53,11 @@ const documentationCards = [
   },
 ]
 
-const DocumentationPage: NextPage<Props> = ({ serialized }) => {
+const DocumentationPage: NextPage<Props> = ({
+  serialized,
+  sidebarfallback,
+}) => {
   const [headings, setHeadings] = useState<Item[]>([])
-
   useEffect(() => {
     document.querySelectorAll('h2, h3').forEach((heading) => {
       const item = {
@@ -77,7 +80,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   }, [])
 
   return (
-    <SidebarContextProvider>
+    <SidebarContextProvider fallback={sidebarfallback}>
       <APIGuideContextProvider headings={headings}>
         <Flex sx={styles.container}>
           <Sidebar sectionSelected="API Guides" />
@@ -123,6 +126,7 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
   const content = readFile(markdownDir, slug, 'md')
+  const sidebarfallback = await getNavigation()
   const serialized = await serialize(content, {
     mdxOptions: {
       remarkPlugins: [remarkGFM],
@@ -135,6 +139,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       serialized,
+      sidebarfallback,
     },
   }
 }
