@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.27.0](https://github.com/vtexdocs/devportal/compare/v0.26.1...v0.27.0) (2022-08-27)
+
+
+### Features
+
+* navigation api ([2839630](https://github.com/vtexdocs/devportal/commit/28396303cfa02c5aaf3df695fcac96732a373b21))
+* **next.config.js:** navigation s3 store url in config ([fbc6b62](https://github.com/vtexdocs/devportal/commit/fbc6b6290c8028b2efbd3e4c1544c3185bf5e601))
+* **package.json:** add swr ([1eeb1bf](https://github.com/vtexdocs/devportal/commit/1eeb1bf352c369ecccecbcc749c4c6245d568201))
+* **pages:** pages use sidebarfallback feature ([f893f14](https://github.com/vtexdocs/devportal/commit/f893f14bee38013f4c66015a68cab3322022857d))
+* **sidebar:** navigation data from api ([8d929f0](https://github.com/vtexdocs/devportal/commit/8d929f0db2adce4d117a30ef330fc90be97407b5))
+* **sidebar:** sidebar context uses swr config ([a09e972](https://github.com/vtexdocs/devportal/commit/a09e97205393fede1cc5cb226319f9f8bfa7a378))
+
+
+### Refactoring
+
+* **yarn.lock:** yarn lock ([1198850](https://github.com/vtexdocs/devportal/commit/1198850c1d5844de9d2a871a02b1d2f34f7f6f49))
+
 ### [0.26.1](https://github.com/vtexdocs/devportal/compare/v0.26.0...v0.26.1) (2022-08-15)
 
 
