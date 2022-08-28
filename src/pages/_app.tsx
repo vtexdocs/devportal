@@ -3,15 +3,15 @@ import { ThemeProvider } from '@vtex/brand-ui'
 
 import 'styles/global.css'
 import 'styles/rapidoc.css'
-import Footer from 'components/footer'
-import Header from 'components/header'
+
+import Layout from 'components/layout'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      <Layout sidebarfallback={pageProps.sidebarfallback}>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   )
 }
