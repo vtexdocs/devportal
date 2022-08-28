@@ -8,14 +8,12 @@ import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
-import SidebarContextProvider from 'utils/contexts/sidebar'
 
 import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
-import Sidebar from 'components/sidebar'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
@@ -53,10 +51,7 @@ const documentationCards = [
   },
 ]
 
-const DocumentationPage: NextPage<Props> = ({
-  serialized,
-  sidebarfallback,
-}) => {
+const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
     document.querySelectorAll('h2, h3').forEach((heading) => {
@@ -80,34 +75,28 @@ const DocumentationPage: NextPage<Props> = ({
   }, [])
 
   return (
-    <SidebarContextProvider fallback={sidebarfallback}>
-      <APIGuideContextProvider headings={headings}>
-        <Flex sx={styles.container}>
-          <Sidebar sectionSelected="API Guides" />
-          <Flex sx={styles.mainContainer}>
-            <Box sx={styles.articleBox}>
-              <Box sx={styles.contentContainer}>
-                <MarkdownRenderer serialized={serialized} />
-              </Box>
+    <APIGuideContextProvider headings={headings}>
+      <Flex sx={styles.mainContainer}>
+        <Box sx={styles.articleBox}>
+          <Box sx={styles.contentContainer}>
+            <MarkdownRenderer serialized={serialized} />
+          </Box>
 
-              <Box sx={styles.bottomContributorsContainer}>
-                <Box sx={styles.bottomContributorsDivider} />
-                <Contributors contributors={contributors} />
-              </Box>
+          <Box sx={styles.bottomContributorsContainer}>
+            <Box sx={styles.bottomContributorsDivider} />
+            <Contributors contributors={contributors} />
+          </Box>
 
-              <FeedbackSection />
-              <SeeAlsoSection cards={documentationCards} />
-            </Box>
-            <Box sx={styles.rightContainer}>
-              <Contributors contributors={contributors} />
-              <TableOfContents />
-            </Box>
-
-            <OnThisPage />
-          </Flex>
-        </Flex>
-      </APIGuideContextProvider>
-    </SidebarContextProvider>
+          <FeedbackSection />
+          <SeeAlsoSection cards={documentationCards} />
+        </Box>
+        <Box sx={styles.rightContainer}>
+          <Contributors contributors={contributors} />
+          <TableOfContents />
+        </Box>
+        <OnThisPage />
+      </Flex>
+    </APIGuideContextProvider>
   )
 }
 

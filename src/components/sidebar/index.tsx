@@ -18,11 +18,13 @@ import { iconTooltipStyle } from './functions'
 import useNavigation from 'utils/hooks/useNavigation'
 
 interface SideBarSectionState {
-  sectionSelected: DocumentationTitle | UpdatesTitle | ''
+  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
 }
 
 const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
-  const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
+  const [activeSectionName, setActiveSectionName] = useState(
+    sectionSelected ? sectionSelected : 'API Guides'
+  )
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
 
   useEffect(() => {
