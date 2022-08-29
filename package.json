@@ -2,6 +2,7 @@
   "name": "devportal",
   "version": "0.27.0",
   "private": true,
+  "sideEffects": false,
   "scripts": {
     "predev": "node src/utils/get-rapidoc.mjs",
     "dev": "next dev",
@@ -12,7 +13,8 @@
     "lint": "next lint",
     "postinstall": "husky install",
     "cz-commit": "cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
     "@vtex/brand-ui": "^0.46.1",
@@ -32,6 +34,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
+    "@next/bundle-analyzer": "^12.2.5",
     "@types/node": "17.0.21",
     "@types/react": "17.0.39",
     "@typescript-eslint/eslint-plugin": "^5.14.0",

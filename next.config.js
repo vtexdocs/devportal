@@ -1,8 +1,16 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('next').NextConfig} */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  //disable-eslint-line
+  enabled: process.env.ANALYZE === 'true',
+})
 const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['*'],
+  },
+  experiments: {
+    topLevelAwait: true,
   },
   webpack: (config) => {
     // this will override the experiments
@@ -17,4 +25,6 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer({
+  nextConfig,
+})
