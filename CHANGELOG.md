@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.27.1](https://github.com/vtexdocs/devportal/compare/v0.27.0...v0.27.1) (2022-08-29)
+
+
+### Features
+
+* **_app.tsx:** custom app uses shared Layout component ([c92f643](https://github.com/vtexdocs/devportal/commit/c92f643dc101e3305e7be998e02db36af8a8e738))
+* **layout.tsx:** adds Layout file ([045764a](https://github.com/vtexdocs/devportal/commit/045764a1eb302d2eac554136e5e1913863b808f1))
+* **layout:** layout includes theme provider ([6601d95](https://github.com/vtexdocs/devportal/commit/6601d951ec68c7720d32bbcc59230daec1b69f0a))
+
+
+### Chore
+
+* **header:** update mutationObserver to detect body style changes ([0e4b8a1](https://github.com/vtexdocs/devportal/commit/0e4b8a1a8c91de79f7eb779980144cc498f31533))
+
+
+### Build
+
+* **rapidoc:** update version ([17c534e](https://github.com/vtexdocs/devportal/commit/17c534e73cd1e44ecf0a1d6253841c58b7e8e264))
+
+
+### Refactoring
+
+* **pages:** use shared Layout component for every page ([a7f8bbe](https://github.com/vtexdocs/devportal/commit/a7f8bbec6fc4d39f63176a05e37469a2bf3aa51c))
+
 ## [0.27.0](https://github.com/vtexdocs/devportal/compare/v0.26.1...v0.27.0) (2022-08-27)
 
 
