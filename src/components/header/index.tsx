@@ -44,9 +44,17 @@ const Header = () => {
 
     const observer = new MutationObserver(() => {
       modalOpen.current = !modalOpen.current
+      if (headerElement.current) {
+        if (modalOpen.current) {
+          const headerHeight = headerElement.current.children[0].clientHeight
+          headerElement.current.style.top = `-${headerHeight}px`
+        } else {
+          headerElement.current.style.top = '0'
+        }
+      }
     })
     observer.observe(body, {
-      attributeFilter: ['class'],
+      attributeFilter: ['style'],
     })
   }, [])
 
