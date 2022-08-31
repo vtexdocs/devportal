@@ -25,6 +25,7 @@ const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
         primary-color="#142032"
         regular-font="VTEX Trust Variable"
         mono-font="VTEX Trust Variable"
+        medium-font="VTEX Trust Medium"
         load-fonts={false}
         schema-style="table"
         schema-description-expanded={true}
@@ -46,6 +47,16 @@ export const getStaticPaths: GetStaticPaths = () => {
         slug: 'checkout',
       },
     },
+    {
+      params: {
+        slug: 'antifraud',
+      },
+    },
+    {
+      params: {
+        slug: 'giftcard',
+      },
+    },
   ]
 
   return {
@@ -55,10 +66,14 @@ export const getStaticPaths: GetStaticPaths = () => {
 }
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
-  const matchPath =
+  let matchPath =
     params?.slug === 'catalog'
       ? 'get /api/catalog_system/pvt/products/GetProductAndSkuIds'
       : 'post /api/checkout/pub/orderForms/simulation'
+
+  if (params?.slug === 'antifraud') matchPath = 'post /authorization/token'
+  if (params?.slug === 'giftcard')
+    matchPath = 'get /giftcardproviders/{giftCardProviderId}'
 
   return {
     props: {
