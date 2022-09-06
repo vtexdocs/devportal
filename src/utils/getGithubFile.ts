@@ -2,15 +2,16 @@
 import { Octokit } from 'octokit'
 import { createAppAuth } from '@octokit/auth-app'
 import { throttling } from '@octokit/plugin-throttling'
+import { config } from 'utils/config'
 
 const MyOctokit = Octokit.plugin(throttling)
 
 const octokit = new MyOctokit({
   authStrategy: createAppAuth,
   auth: {
-    appId: process.env.GITHUB_APPID,
-    privateKey: process.env.GITHUB_PRIVATEKEY,
-    installationId: process.env.GITHUB_INSTALLATIONID,
+    appId: config.GITHUB_APPID,
+    privateKey: config.GITHUB_PRIVATEKEY,
+    installationId: config.GITHUB_INSTALLATIONID,
   },
   throttle: {
     onRateLimit: (retryAfter: any, options: any, octokit: any) => {
