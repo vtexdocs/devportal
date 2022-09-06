@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Box, Flex } from '@vtex/brand-ui'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 
 import type { Item } from 'components/table-of-contents'
 
@@ -17,22 +18,28 @@ import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
-import { getSlugs, readFile } from 'utils/read-files'
 
 import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
 
 import styles from 'styles/documentation-page'
-import imageSize from 'rehype-img-size'
 
 import getNavigation from 'utils/getNavigation'
+import getGithubFile from 'utils/getGithubFile'
+import getDocsList from 'utils/getDocsList'
+import getDocsListPreval from 'utils/getDocsList.preval'
 
+import replaceMagicBlocks from 'utils/replaceMagicBlocks'
+
+import rehypeHighlight from 'rehype-highlight'
+import hljsCurl from 'highlightjs-curl'
+import json from 'highlight.js/lib/languages/JSON.js'
 interface Props {
   content: string
-  serialized: string
+  serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
 }
-const markdownDir = '/public/docs/api-guides'
 const contributors = 'ABCDEFGHIJKL'.split('')
 
 const documentationCards = [
@@ -79,6 +86,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
       <Flex sx={styles.mainContainer}>
         <Box sx={styles.articleBox}>
           <Box sx={styles.contentContainer}>
+            <h1>{serialized.frontmatter?.title}</h1>
             <MarkdownRenderer serialized={serialized} />
           </Box>
 
@@ -100,31 +108,49 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   )
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
-  const slugs = getSlugs(markdownDir, 'md')
+export const getStaticPaths: GetStaticPaths = async () => {
+  const slugs = Object.keys(await getDocsList())
   const paths = slugs.map((slug) => ({
     params: { slug },
   }))
-
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
-  const content = readFile(markdownDir, slug, 'md')
+  let DocsList
+  if (process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD) {
+    DocsList = getDocsListPreval
+    console.log('Using getDocsListPreval')
+  } else {
+    DocsList = await getDocsList()
+  }
+
+  const path = (DocsList as any)[slug] //eslint-disable-line
+  if (!path) {
+    return {
+      notFound: true,
+    }
+  }
+  const gitHubFile = await getGithubFile(
+    'vtexdocs',
+    'dev-portal-content',
+    'first-docs',
+    path
+  )
+
   const sidebarfallback = await getNavigation()
-  const serialized = await serialize(content, {
+  const serialized = await serialize(await replaceMagicBlocks(gitHubFile), {
+    parseFrontmatter: true,
     mdxOptions: {
       remarkPlugins: [remarkGFM],
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      rehypePlugins: [[imageSize as any, { dir: 'public' }]],
+      rehypePlugins: [[rehypeHighlight, { languages: { hljsCurl, json } }]],
       format: 'md',
     },
   })
-
   return {
     props: {
       serialized,

@@ -16,6 +16,10 @@ jobs:
         run: |
           yarn install --frozen-lockfile
       - name: Build
+        env:
+          GITHUB_PRIVATEKEY: ${{ secrets.PRIVATEKEY }}
+          GITHUB_APPID: ${{ secrets.APPID }}
+          GITHUB_INSTALLATIONID: ${{ secrets.INSTALLATIONID }}
         run: |
           yarn run build
       - name: Waiting for 200 from the Netlify Preview

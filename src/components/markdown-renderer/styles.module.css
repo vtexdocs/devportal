@@ -18,3 +18,15 @@
   visibility: hidden;
   pointer-events: none;
 }
+
+.code {
+	background-color: #f6f8fa;
+	background-color: var(--md-code-background,#F6F8FA);
+	border-radius: 3px;
+	color: var(--md-code-text);
+	font-size: 85%;
+	margin: 0;
+	padding: 0.2em 0.4em;
+	font-family: var(--md-code-font,SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace);
+    font-size: 1em;
+}

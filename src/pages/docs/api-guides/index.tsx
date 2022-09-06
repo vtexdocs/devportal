@@ -1,29 +1,28 @@
 import Link from 'next/link'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
+import useSWR from 'swr'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
 }
 
 const ApiGuidesPage: NextPage<Props> = () => {
+  const fetcher = (url: string) => fetch(url).then((res) => res.json())
+  const { data, error } = useSWR('/api/docs', fetcher)
+  if (error) return <p>'Error'</p>
+  if (!data) return <p>'Loading'</p>
   return (
     <ul>
-      <li>
-        <Link href="/docs/api-guides/billing-options">
-          <a>Billing Options</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/docs/api-guides/clients">
-          <a>Clients</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/docs/api-guides/developing-an-app">
-          <a>Developing an App</a>
-        </Link>
-      </li>
+      {Object.keys(data).map((key) => {
+        return (
+          <li>
+            <Link href={'/docs/api-guides/' + key}>
+              <a>{key}</a>
+            </Link>
+          </li>
+        )
+      })}
     </ul>
   )
 }
