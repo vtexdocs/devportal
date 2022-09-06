@@ -66,7 +66,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "1.0.7-resp-modal"
+      "version": "1.0.8-vtex"
     }
   },
   "resolutions": {
