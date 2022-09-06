@@ -14,12 +14,12 @@ jobs:
         run: |
           yarn install --immutable --immutable-cache --check-cache
       - name: Build
+        run: |
+          yarn build
         env:
           GITHUB_PRIVATEKEY: ${{ secrets.PRIVATEKEY }}
           GITHUB_APPID: ${{ secrets.APPID }}
           GITHUB_INSTALLATIONID: ${{ secrets.INSTALLATIONID }}
-        run: |
-          yarn build
       - name: Waiting for 200 from the Netlify Preview
         uses: kamranayub/wait-for-netlify-action@2.0.0
         id: wait-for-netflify-preview
