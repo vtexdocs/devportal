@@ -34,7 +34,7 @@ import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
-import json from 'highlight.js/lib/languages/JSON.js'
+
 interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
@@ -147,7 +147,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     parseFrontmatter: true,
     mdxOptions: {
       remarkPlugins: [remarkGFM],
-      rehypePlugins: [[rehypeHighlight, { languages: { hljsCurl, json } }]],
+      rehypePlugins: [[rehypeHighlight, { languages: { hljsCurl } }]],
       format: 'md',
     },
   })
