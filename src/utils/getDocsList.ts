@@ -10,18 +10,15 @@ import { config } from 'utils/config'
 
 const MyOctokit = Octokit.plugin(throttling)
 
-function base64(data: string) {
-  const buff = Buffer.from(data, 'base64')
-  return buff.toString('utf-8')
+if (process.env.NETLIFY) {
+  console.log(JSON.stringify(config.GITHUB_PRIVATEKEY))
 }
 
 const octokit = new MyOctokit({
   authStrategy: createAppAuth,
   auth: {
     appId: config.GITHUB_APPID,
-    privateKey: process.env.NETLIFY
-      ? base64(config.GITHUB_PRIVATEKEY)
-      : config.GITHUB_PRIVATEKEY,
+    privateKey: config.GITHUB_PRIVATEKEY,
     installationId: config.GITHUB_INSTALLATIONID,
   },
   throttle: {

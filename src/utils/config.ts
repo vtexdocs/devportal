@@ -1,3 +1,8 @@
+function base64(data: string) {
+  const buff = Buffer.from(data, 'base64')
+  return buff.toString('utf-8')
+}
+
 const getEnvironmentVariable = (environmentVariable: string): string => {
   const unvalidatedEnvironmentVariable = process.env[environmentVariable]
   if (!unvalidatedEnvironmentVariable) {
@@ -15,6 +20,8 @@ const getEnvironmentVariable = (environmentVariable: string): string => {
 
 export const config = {
   GITHUB_APPID: getEnvironmentVariable('GITHUB_APPID'),
-  GITHUB_PRIVATEKEY: getEnvironmentVariable('GITHUB_PRIVATEKEY'),
+  GITHUB_PRIVATEKEY: process.env.NETLIFY
+    ? base64(getEnvironmentVariable('GITHUB_PRIVATEKEY'))
+    : getEnvironmentVariable('GITHUB_PRIVATEKEY'),
   GITHUB_INSTALLATIONID: getEnvironmentVariable('GITHUB_INSTALLATIONID'),
 }
