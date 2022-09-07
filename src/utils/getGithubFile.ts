@@ -14,7 +14,9 @@ const octokit = new MyOctokit({
   authStrategy: createAppAuth,
   auth: {
     appId: config.GITHUB_APPID,
-    privateKey: config.GITHUB_PRIVATEKEY,
+    privateKey: process.env.NETLIFY
+      ? config.GITHUB_PRIVATEKEY.split('\\n').join('\n') + '/n'
+      : config.GITHUB_PRIVATEKEY,
     installationId: config.GITHUB_INSTALLATIONID,
   },
   throttle: {

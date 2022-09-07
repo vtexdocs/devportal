@@ -6,8 +6,7 @@ const getEnvironmentVariable = (environmentVariable: string): string => {
     )
   } else {
     if (process.env.NETLIFY) {
-      console.log('NETLIFY')
-      return unvalidatedEnvironmentVariable.split('\\n').join('\n')
+      return unvalidatedEnvironmentVariable
     } else {
       return unvalidatedEnvironmentVariable
     }
