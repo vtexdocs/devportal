@@ -7,7 +7,7 @@ import { config } from 'utils/config'
 const MyOctokit = Octokit.plugin(throttling)
 
 if (process.env.NETLIFY) {
-  console.log(`Env variable: ${config}`)
+  console.log(`Env variable: ${JSON.stringify(config)}`)
 }
 
 const octokit = new MyOctokit({
