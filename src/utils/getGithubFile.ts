@@ -6,15 +6,17 @@ import { config } from 'utils/config'
 
 const MyOctokit = Octokit.plugin(throttling)
 
+function base64(data: string) {
+  const buff = Buffer.from(data, 'base64')
+  return buff.toString('utf-8')
+}
+
 const octokit = new MyOctokit({
   authStrategy: createAppAuth,
   auth: {
     appId: config.GITHUB_APPID,
     privateKey: process.env.NETLIFY
-      ? (config.GITHUB_PRIVATEKEY.split('\\n').join('\n') + '/n').replace(
-          /\\n/gm,
-          '\n'
-        )
+      ? base64(config.GITHUB_PRIVATEKEY)
       : config.GITHUB_PRIVATEKEY,
     installationId: config.GITHUB_INSTALLATIONID,
   },
