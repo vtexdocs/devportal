@@ -21,7 +21,7 @@ const getEnvironmentVariable = (environmentVariable: string): string => {
 export const config = {
   GITHUB_APPID: getEnvironmentVariable('GITHUB_APPID'),
   GITHUB_PRIVATEKEY: process.env.NETLIFY
-    ? base64(getEnvironmentVariable('GITHUB_PRIVATEKEY'))
+    ? base64(getEnvironmentVariable('GITHUB_PRIVATEKEY')).replace(/\\n/g, '\n')
     : getEnvironmentVariable('GITHUB_PRIVATEKEY'),
   GITHUB_INSTALLATIONID: getEnvironmentVariable('GITHUB_INSTALLATIONID'),
 }
