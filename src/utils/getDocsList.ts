@@ -10,11 +10,7 @@ import { config } from 'utils/config'
 
 const MyOctokit = Octokit.plugin(throttling)
 
-if (process.env.NETLIFY) {
-  console.log(config.GITHUB_PRIVATEKEY)
-}
-
-const octokit = new MyOctokit({
+const octokitConfig = {
   authStrategy: createAppAuth,
   auth: {
     appId: config.GITHUB_APPID,
@@ -37,7 +33,13 @@ const octokit = new MyOctokit({
       )
     },
   },
-})
+}
+
+if (process.env.NETLIFY) {
+  console.log(JSON.stringify(octokitConfig.auth))
+}
+
+const octokit = new MyOctokit(octokitConfig)
 async function getGithubTree(org: string, repo: string, ref: string) {
   const response = octokit.request(
     'GET /repos/{org}/{repo}/git/trees/{ref}?recursive=true',
