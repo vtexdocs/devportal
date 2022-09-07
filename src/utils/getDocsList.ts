@@ -15,7 +15,7 @@ const octokit = new MyOctokit({
   auth: {
     appId: config.GITHUB_APPID,
     privateKey: process.env.NETLIFY
-      ? unescape(config.GITHUB_PRIVATEKEY)
+      ? config.GITHUB_PRIVATEKEY.replace(/\\n/gm, '\n')
       : config.GITHUB_PRIVATEKEY,
     installationId: config.GITHUB_INSTALLATIONID,
   },
