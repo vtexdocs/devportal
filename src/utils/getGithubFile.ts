@@ -7,7 +7,7 @@ import { config } from 'utils/config'
 const MyOctokit = Octokit.plugin(throttling)
 
 if (process.env.NETLIFY) {
-  console.log(JSON.stringify(config.GITHUB_PRIVATEKEY))
+  console.log(config.GITHUB_PRIVATEKEY)
 }
 
 const octokit = new MyOctokit({
