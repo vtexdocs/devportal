@@ -1,6 +1,6 @@
 function base64(data: string) {
   const buff = Buffer.from(data, 'base64')
-  return buff.toString('ascii')
+  return buff.toString('utf8')
 }
 
 const getEnvironmentVariable = (environmentVariable: string): string => {
