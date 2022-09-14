@@ -13,6 +13,16 @@ const APIReferencePage = () => {
           <a>Checkout API</a>
         </Link>
       </li>
+      <li>
+        <Link href="/docs/api-reference/antifraud">
+          <a>antifraud API</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/docs/api-reference/giftcard">
+          <a>giftcard API</a>
+        </Link>
+      </li>
     </ul>
   )
 }
