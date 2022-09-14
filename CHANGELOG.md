@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.28.0](https://github.com/vtexdocs/devportal/compare/v0.27.2...v0.28.0) (2022-09-14)
+
+
+### Features
+
+* **api-reference:** add new open api examples and pass the Medium font to the rapidoc component ([66ee73e](https://github.com/vtexdocs/devportal/commit/66ee73e7936817b7ed5ba8d4b836ed42c6f0f5c8))
+
+
+### Chore
+
+* **docs:** add new open api examples ([0c49bdc](https://github.com/vtexdocs/devportal/commit/0c49bdcacfa1c5eabcebc69003f717953ff2adcc))
+
+
+### Build
+
+* **rapidoc:** update version ([d86f0a6](https://github.com/vtexdocs/devportal/commit/d86f0a615457ebd98af36ccc6f9a1cdbcc28a030))
+* **rapidoc:** update version ([9c96939](https://github.com/vtexdocs/devportal/commit/9c9693982e72af756bf42256916657de5529072f))
+
 ### [0.27.2](https://github.com/vtexdocs/devportal/compare/v0.27.1...v0.27.2) (2022-09-06)
 
 
