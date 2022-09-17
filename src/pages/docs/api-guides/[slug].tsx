@@ -28,12 +28,14 @@ import styles from 'styles/documentation-page'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsList from 'utils/getDocsList'
-import getDocsListPreval from 'utils/getDocsList.preval'
+// import getDocsListPreval from 'utils/getDocsList.preval'
 
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
+
+const DocsListGLOBAL = await getDocsList()
 
 interface Props {
   content: string
@@ -115,7 +117,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }))
   return {
     paths,
-    fallback: true,
+    fallback: 'blocking',
   }
 }
 
@@ -123,14 +125,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
   let DocsList
   if (process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD) {
-    DocsList = getDocsListPreval
-    console.log('Using getDocsListPreval')
+    DocsList = DocsListGLOBAL
   } else {
     DocsList = await getDocsList()
   }
 
+  console.log(slug)
+
   const path = (DocsList as any)[slug] //eslint-disable-line
   if (!path) {
+    console.log('NOT FOUND')
     return {
       notFound: true,
     }
@@ -143,14 +147,26 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   )
 
   const sidebarfallback = await getNavigation()
-  const serialized = await serialize(await replaceMagicBlocks(gitHubFile), {
-    parseFrontmatter: true,
-    mdxOptions: {
-      remarkPlugins: [remarkGFM],
-      rehypePlugins: [[rehypeHighlight, { languages: { hljsCurl } }]],
-      format: 'md',
-    },
-  })
+  let serialized
+  try {
+    serialized = await serialize(await replaceMagicBlocks(gitHubFile), {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [remarkGFM],
+        rehypePlugins: [
+          [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
+        ],
+        format: 'md',
+      },
+    })
+  } catch (error) {
+    return {
+      notFound: true,
+    }
+  }
+
+  serialized = JSON.parse(JSON.stringify(serialized))
+
   return {
     props: {
       serialized,

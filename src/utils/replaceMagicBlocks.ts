@@ -7,6 +7,16 @@ function replacer(match: string, p1: string, p2: string) {
   switch (p1) {
     case 'code':
       const code = JSON.parse(p2).codes[0]
+      switch (code.language) {
+        case 'jsonc':
+          code.language = 'json'
+          break
+        case 'curl':
+          code.language = 'curl'
+          break
+        default:
+          break
+      }
       return '\n```' + code.language + '\n' + code.code + '\n```\n'
       break
 
@@ -24,7 +34,6 @@ function replacer(match: string, p1: string, p2: string) {
 }
 
 export default async function replaceMagicBlocks(markdown: string) {
-  console.log('replaceMagicBlocks')
   const replacedMarkdown = markdown.replace(magicBlockRegex, replacer)
 
   return replacedMarkdown
