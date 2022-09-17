@@ -4,6 +4,7 @@
 // }
 
 import fs from 'fs'
+import preval from 'next-plugin-preval'
 
 const getEnvironmentVariable = (environmentVariable: string): string => {
   const unvalidatedEnvironmentVariable = process.env[environmentVariable]
@@ -20,10 +21,10 @@ const getEnvironmentVariable = (environmentVariable: string): string => {
   }
 }
 
-export const config = {
+export const config = preval({
   GITHUB_APPID: getEnvironmentVariable('GITHUB_APPID'),
   GITHUB_PRIVATEKEY: process.env.NETLIFY
     ? fs.readFileSync('github.pem')
     : getEnvironmentVariable('GITHUB_PRIVATEKEY'),
   GITHUB_INSTALLATIONID: getEnvironmentVariable('GITHUB_INSTALLATIONID'),
-}
+})
