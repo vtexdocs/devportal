@@ -3,9 +3,9 @@
   "version": "0.27.1",
   "private": true,
   "scripts": {
-    "predev": "node src/utils/get-rapidoc.mjs",
+    "predev": "./getPEM.sh && node src/utils/get-rapidoc.mjs",
     "dev": "next dev",
-    "prebuild": "node src/utils/get-rapidoc.mjs",
+    "prebuild": "./getPEM.sh && node src/utils/get-rapidoc.mjs",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"src/**/*.{ts,js,tsx,jsx,json}\"",
