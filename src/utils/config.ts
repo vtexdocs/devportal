@@ -13,11 +13,7 @@ const getEnvironmentVariable = (environmentVariable: string): string => {
       `Couldn't find environment variable: ${environmentVariable}`
     )
   } else {
-    if (process.env.NETLIFY) {
-      return unvalidatedEnvironmentVariable
-    } else {
-      return unvalidatedEnvironmentVariable
-    }
+    return unvalidatedEnvironmentVariable
   }
 }
 
