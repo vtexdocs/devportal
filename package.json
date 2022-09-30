@@ -72,7 +72,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "1.0.9-vtex"
+      "version": "1.0.9-vtex-5-g4152fcb"
     }
   },
   "resolutions": {
