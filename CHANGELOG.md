@@ -2,6 +2,74 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.29.0](https://github.com/vtexdocs/devportal/compare/v0.28.0...v0.29.0) (2022-10-01)
+
+
+### ⚠ BREAKING CHANGES
+
+* **project:** Project now needs `.env.local` file with github app parameters
+
+### Features
+
+* debug ([112ecea](https://github.com/vtexdocs/devportal/commit/112ecea7e28286c2b9c5dc7d46d479b157b868af))
+* debug ([46b41a1](https://github.com/vtexdocs/devportal/commit/46b41a1a19911d19d8ec0bf0e8bc98c64060d938))
+* debug ([4e4d50f](https://github.com/vtexdocs/devportal/commit/4e4d50f8528b1eeef214143f612342d1a6ac736c))
+* debug ([90a5ab6](https://github.com/vtexdocs/devportal/commit/90a5ab66d66e1c59b240fc6c253e95c2038901a6))
+* debug ([836b85a](https://github.com/vtexdocs/devportal/commit/836b85a2efa08ccb0b0844d654e4bb5097d1a1e7))
+* debug ([2a6bde2](https://github.com/vtexdocs/devportal/commit/2a6bde28b0ac1dde50c348fb122b5d239734372d))
+* debug ([d12724a](https://github.com/vtexdocs/devportal/commit/d12724a0a4f8ec6daaa1b31f7d6f0f3f26bf38d4))
+* debug ([b2d50e9](https://github.com/vtexdocs/devportal/commit/b2d50e9c7161140975d29cf59b69377165400b25))
+* debug ([0af82d8](https://github.com/vtexdocs/devportal/commit/0af82d8530153312f6f7a4107b7c901b03fbaddf))
+* debug ([9ac51f7](https://github.com/vtexdocs/devportal/commit/9ac51f7e4b8032584f10176415065c1dd458b318))
+* debug ([c0dadf3](https://github.com/vtexdocs/devportal/commit/c0dadf3a7010e83766b6f8c82378f748e542863d))
+* **debug:** debug ([2f308a4](https://github.com/vtexdocs/devportal/commit/2f308a44012be91bb28b863b58ddc927ebf4ce95))
+* debyg ([f4867ff](https://github.com/vtexdocs/devportal/commit/f4867ffd3d4ba268f74133ba88ebeda2bb003cb8))
+* **project:** refactors api-guides data fetching architecture ([432100d](https://github.com/vtexdocs/devportal/commit/432100da1d81841ab43243df1b39349008d48a6e))
+* rerun checks ([021c98b](https://github.com/vtexdocs/devportal/commit/021c98ba728049360ba3f6421d806b30a1795744))
+
+
+### Bug Fixes
+
+* **api-guides:** removes json library from highlight.js ([710b668](https://github.com/vtexdocs/devportal/commit/710b6686fb125982695cb0dbe6bede314e68948e))
+* debug ([17ce301](https://github.com/vtexdocs/devportal/commit/17ce30164a8d90f36fe3c23ce2b7d7cd9a788803))
+* debug ([f1507de](https://github.com/vtexdocs/devportal/commit/f1507dea9e62211233163661855545db43c930d0))
+* **octokit:** checks if netlify and unescapes env variable ([7a4f7cd](https://github.com/vtexdocs/devportal/commit/7a4f7cd4fd92c6e7dcdac31db40fd5a2a0256ea0))
+* **octokit:** uses replace instead of unescape ([17b594f](https://github.com/vtexdocs/devportal/commit/17b594f27479475e84bed03e4956160b70c14d9f))
+* replace env variables if needed ([45445bf](https://github.com/vtexdocs/devportal/commit/45445bf20d96f67ddb606b591c4a0dba43338060))
+* still debugging ([0f8e038](https://github.com/vtexdocs/devportal/commit/0f8e0386fe4dfcfec5e1e6650806114f190a1e45))
+* still debugging ([6ac9ed8](https://github.com/vtexdocs/devportal/commit/6ac9ed82d003876bd621d79a20c3584f6f4c46a2))
+* still debugging ([9d75c0a](https://github.com/vtexdocs/devportal/commit/9d75c0ab0b43d986fc9db448b33494146892882c))
+* use base64 for privatekey in netlify ([ae35a61](https://github.com/vtexdocs/devportal/commit/ae35a61c30b927c219c92440e955760119a51606))
+* use split/join instead of replace ([f440e59](https://github.com/vtexdocs/devportal/commit/f440e591d485755856c99aef9ad4e73ac4e3831f))
+* **workflows:** set env ([1b3e139](https://github.com/vtexdocs/devportal/commit/1b3e139735639e39b4cb4859f6973ff15f5329ef))
+* **yarn.lock:** easy rebase ([26fa0b8](https://github.com/vtexdocs/devportal/commit/26fa0b81f38aa7863c496761ee2ade4111aa5f33))
+
+
+### Build
+
+* **next.config:** increase staticstaticPageGenerationTimeout to 3600 so we can wait for github ([9f89163](https://github.com/vtexdocs/devportal/commit/9f891639f0937b88056bbac7db2cadfb5e1bd783))
+
+
+### Refactoring
+
+* debug netlify env variables ([e92a216](https://github.com/vtexdocs/devportal/commit/e92a2164cb26936269e14ddb571b00feef85d54a))
+* **navigation:** remove try catch ([8dc3333](https://github.com/vtexdocs/devportal/commit/8dc3333b0430c9bef100ae23e0fb0b556ece11d2))
+* **navigation:** removes top level async ([0668486](https://github.com/vtexdocs/devportal/commit/0668486bbcff1dd5f3569ee3807e96a3a72c93e3))
+* **octokit:** trow error for missing env variables ([586ab9d](https://github.com/vtexdocs/devportal/commit/586ab9dff0e9bc3115b88396e21e5019c606c47f))
+
+
+### Tests
+
+* still debuggin ([4b07c09](https://github.com/vtexdocs/devportal/commit/4b07c0920b01db243c18759c0947a36c367750a6))
+* still debugging ([6233b74](https://github.com/vtexdocs/devportal/commit/6233b7457ae316d59dcb5409ae45dd8abe8dd6cc))
+* still debugging ([e486931](https://github.com/vtexdocs/devportal/commit/e4869318aad12312c8484f269a3f453cd937e428))
+
+
+### Chore
+
+* **package:** add dependencies: `highlight.js, highlightjs-curl, next-plugin-preval, octokit` ([dedd884](https://github.com/vtexdocs/devportal/commit/dedd884523f890a63d1eecca459c0d34e7c12e1e))
+* refactor config ([2279958](https://github.com/vtexdocs/devportal/commit/2279958b1a1dc34fe2fd4df7b4c4911d165eb0e7))
+
 ## [0.28.0](https://github.com/vtexdocs/devportal/compare/v0.27.2...v0.28.0) (2022-09-14)
 
 
