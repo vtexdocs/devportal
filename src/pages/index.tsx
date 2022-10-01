@@ -1,5 +1,5 @@
-import type { NextPage } from 'next'
 import { Grid } from '@vtex/brand-ui'
+import type { Page } from 'utils/typings/types'
 
 import NewsletterSection from 'components/newsletter-section'
 import DocumentationSection from 'components/documentation-section'
@@ -9,7 +9,7 @@ import EducationSection from 'components/education-section'
 import Head from 'next/head'
 import styles from 'styles/landing-page'
 
-const Home: NextPage = () => {
+const Home: Page = () => {
   return (
     <>
       <Head>
@@ -24,5 +24,7 @@ const Home: NextPage = () => {
     </>
   )
 }
+
+Home.hideSidebar = true
 
 export default Home
