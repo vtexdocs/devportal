@@ -79,10 +79,12 @@ export default {
       )
     }
   },
+  code: ({ node, ...props }: Component) => {
+    return <code className={styles.code} {...props}></code>
+  },
   h2: ({ node, ...props }: Component) => {
     const { activeItem, setActiveItem, goToPreviousItem } =
       useContext(APIGuideContext)
-
     return (
       <ObservableHeading
         level={2}

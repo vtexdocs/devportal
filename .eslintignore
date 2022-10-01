@@ -7,3 +7,4 @@ public/
 .vscode/
 .cache/
 .next/
+src/utils/getGithubFile.ts

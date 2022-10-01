@@ -16,11 +16,15 @@ jobs:
       - name: Build
         run: |
           yarn build
+        env:
+          GITHUB_PRIVATEKEY: ${{ secrets.PRIVATEKEY }}
+          GITHUB_APPID: ${{ secrets.APPID }}
+          GITHUB_INSTALLATIONID: ${{ secrets.INSTALLATIONID }}
       - name: Waiting for 200 from the Netlify Preview
         uses: kamranayub/wait-for-netlify-action@2.0.0
         id: wait-for-netflify-preview
         with:
-          site_name: "elated-hoover-5c29bf"
+          site_name: 'elated-hoover-5c29bf'
         env:
           NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
       - name: Cypress run
