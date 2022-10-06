@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.29.1](https://github.com/vtexdocs/devportal/compare/v0.29.0...v0.29.1) (2022-10-06)
+
+
+### Bug Fixes
+
+* remove console.log from code ([b9568ad](https://github.com/vtexdocs/devportal/commit/b9568ad52c395d0b6ab159b3539f78a1d0891e90))
+
+
+### Build
+
+* **rapidoc:** update rapidoc version ([332fcb9](https://github.com/vtexdocs/devportal/commit/332fcb96cf42ba84e38dafbe89fdbf2bfe85f810))
+* **rapidoc:** update to v1.0.10-vtex ([85ecf98](https://github.com/vtexdocs/devportal/commit/85ecf98fe203d8c2546c4bb2316719bed91e90c7))
+
 ## [0.29.0](https://github.com/vtexdocs/devportal/compare/v0.28.0...v0.29.0) (2022-10-01)
 
 
