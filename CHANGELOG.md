@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.29.2](https://github.com/vtexdocs/devportal/compare/v0.29.1...v0.29.2) (2022-10-07)
+
+
+### Features
+
+* **layout:** add support for rendering the sidebar conditionally ([100f1bb](https://github.com/vtexdocs/devportal/commit/100f1bbb8791fa2a1cf9388095b071938731e399))
+
+
+### Bug Fixes
+
+* **sidebar:** remove duplicate sidebar from search and release notes pages ([b1c6bc9](https://github.com/vtexdocs/devportal/commit/b1c6bc9f540ed89b5f6d83998cb9f0bc1fbc5b39))
+
+
+### Chore
+
+* add yarn.lock ([9b6ee7c](https://github.com/vtexdocs/devportal/commit/9b6ee7c52f232eda15c7069ae142a66ddb705a92))
+
 ### [0.29.1](https://github.com/vtexdocs/devportal/compare/v0.29.0...v0.29.1) (2022-10-06)
 
 
