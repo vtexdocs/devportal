@@ -1,7 +1,13 @@
+import { NextPage } from 'next'
 import { IconProps } from '@vtex/brand-ui'
 
 import { ActionType } from 'components/last-updates-card/functions'
 import { DocumentationTitle, UpdatesTitle, ResourceTitle } from './unionTypes'
+
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type Page<P = {}, IP = P> = NextPage<P, IP> & {
+  hideSidebar?: boolean
+}
 
 export type IconComponent = (props: IconProps) => JSX.Element
 

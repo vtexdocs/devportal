@@ -13,15 +13,20 @@ import Sidebar from 'components/sidebar'
 interface Props {
   sidebarfallback: any //eslint-disable-line
   children: ReactElement
+  hideSidebar?: boolean
 }
 
-export default function Layout({ children, sidebarfallback }: Props) {
+export default function Layout({
+  children,
+  sidebarfallback,
+  hideSidebar,
+}: Props) {
   return (
     <ThemeProvider>
       <Header />
       <Flex sx={styles.container}>
         <SidebarContextProvider fallback={sidebarfallback}>
-          <Sidebar />
+          {!hideSidebar && <Sidebar />}
           <Box sx={styles.mainContainer}>{children}</Box>
         </SidebarContextProvider>
       </Flex>
