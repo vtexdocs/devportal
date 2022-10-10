@@ -156,7 +156,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
-        format: 'md',
+        format: 'mdx',
       },
     })
   } catch (error) {
