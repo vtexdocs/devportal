@@ -12,16 +12,16 @@ const RemovedIcon = (props: IconProps) => (
     <path
       d="M5.83203 5.33594L11.1654 10.6693"
       stroke="#CC3D3D"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M11.1654 5.33594L5.83203 10.6693"
       stroke="#CC3D3D"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </Icon>
 )

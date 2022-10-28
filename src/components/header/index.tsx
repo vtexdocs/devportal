@@ -39,6 +39,8 @@ const Header = () => {
     })
   }
 
+  const [mounted, setMounted] = useState(false)
+
   useEffect(() => {
     const body = document.body
 
@@ -56,6 +58,7 @@ const Header = () => {
     observer.observe(body, {
       attributeFilter: ['style'],
     })
+    setMounted(true)
   }, [])
 
   useEffect(() => {
@@ -91,65 +94,67 @@ const Header = () => {
   }, [])
 
   return (
-    <Box ref={headerElement} sx={styles.headerContainer}>
-      <HeaderBrand sx={styles.headerBrand}>
-        <HeaderBrand.Brand>
-          <Link href="/">
-            <a>
-              <VTEXDevportalIcon sx={styles.logoSize} />
-            </a>
-          </Link>
-        </HeaderBrand.Brand>
+    mounted && (
+      <Box ref={headerElement} sx={styles.headerContainer}>
+        <HeaderBrand sx={styles.headerBrand}>
+          <HeaderBrand.Brand>
+            <Link href="/" passHref>
+              <div>
+                <VTEXDevportalIcon sx={styles.logoSize} />
+              </div>
+            </Link>
+          </HeaderBrand.Brand>
 
-        <Box sx={styles.searchContainer}>
-          <Flex sx={styles.searchBox}>
-            <SearchIcon sx={styles.searchIcon} />
-            <form onSubmit={onSubmit}>
-              <input
-                style={styles.searchInput}
-                className="searchComponent"
-                type="text"
-                placeholder={
-                  messages['landing_page_header_searchInput.message']
-                }
-                value={searchValue}
-                data-cy="search"
-                onChange={(e) => setSearchValue(e.currentTarget.value)}
-              />
-            </form>
-          </Flex>
-        </Box>
+          <Box sx={styles.searchContainer}>
+            <Flex sx={styles.searchBox}>
+              <SearchIcon sx={styles.searchIcon} />
+              <form onSubmit={onSubmit}>
+                <input
+                  style={styles.searchInput}
+                  className="searchComponent"
+                  type="text"
+                  placeholder={
+                    messages['landing_page_header_searchInput.message']
+                  }
+                  value={searchValue}
+                  data-cy="search"
+                  onChange={(e) => setSearchValue(e.currentTarget.value)}
+                />
+              </form>
+            </Flex>
+          </Box>
 
-        <HeaderBrand.RightLinks sx={styles.rightLinks}>
-          <Flex
-            sx={styles.dropdownContainer}
-            onMouseOver={() => setShowDropdown(true)}
-            onMouseLeave={() => setShowDropdown(false)}
-          >
-            <Flex sx={styles.dropdownButton(showDropdown)}>
-              <GridIcon />
-              <Text sx={styles.rightButtonsText} data-cy="docs-dropdown">
-                {messages['landing_page_header_docs.message']}
-              </Text>
+          <HeaderBrand.RightLinks sx={styles.rightLinks}>
+            <Flex
+              sx={styles.dropdownContainer}
+              onMouseOver={() => setShowDropdown(true)}
+              onMouseLeave={() => setShowDropdown(false)}
+            >
+              <Flex sx={styles.dropdownButton(showDropdown)}>
+                <GridIcon />
+                <Text sx={styles.rightButtonsText} data-cy="docs-dropdown">
+                  {messages['landing_page_header_docs.message']}
+                </Text>
+              </Flex>
+
+              {showDropdown && <DropdownMenu />}
             </Flex>
 
-            {showDropdown && <DropdownMenu />}
-          </Flex>
-
-          <VtexLink
-            sx={styles.rightLinksItem}
-            href={getFeedbackURL()}
-            target="_blank"
-          >
-            <LongArrowIcon />
-            <Text sx={styles.rightButtonsText}>
-              {messages['landing_page_header_feedback.message']}
-            </Text>
-          </VtexLink>
-        </HeaderBrand.RightLinks>
-        <HamburgerMenu />
-      </HeaderBrand>
-    </Box>
+            <VtexLink
+              sx={styles.rightLinksItem}
+              href={getFeedbackURL()}
+              target="_blank"
+            >
+              <LongArrowIcon />
+              <Text sx={styles.rightButtonsText}>
+                {messages['landing_page_header_feedback.message']}
+              </Text>
+            </VtexLink>
+          </HeaderBrand.RightLinks>
+          <HamburgerMenu />
+        </HeaderBrand>
+      </Box>
+    )
   )
 }
 
