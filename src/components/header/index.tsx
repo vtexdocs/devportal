@@ -94,9 +94,9 @@ const Header = () => {
   }, [])
 
   return (
-    mounted && (
-      <Box ref={headerElement} sx={styles.headerContainer}>
-        <HeaderBrand sx={styles.headerBrand}>
+    <Box ref={headerElement} sx={styles.headerContainer}>
+      <HeaderBrand sx={styles.headerBrand}>
+        {mounted && (
           <HeaderBrand.Brand>
             <Link href="/" passHref>
               <div>
@@ -104,57 +104,57 @@ const Header = () => {
               </div>
             </Link>
           </HeaderBrand.Brand>
+        )}
 
-          <Box sx={styles.searchContainer}>
-            <Flex sx={styles.searchBox}>
-              <SearchIcon sx={styles.searchIcon} />
-              <form onSubmit={onSubmit}>
-                <input
-                  style={styles.searchInput}
-                  className="searchComponent"
-                  type="text"
-                  placeholder={
-                    messages['landing_page_header_searchInput.message']
-                  }
-                  value={searchValue}
-                  data-cy="search"
-                  onChange={(e) => setSearchValue(e.currentTarget.value)}
-                />
-              </form>
-            </Flex>
-          </Box>
+        <Box sx={styles.searchContainer}>
+          <Flex sx={styles.searchBox}>
+            <SearchIcon sx={styles.searchIcon} />
+            <form onSubmit={onSubmit}>
+              <input
+                style={styles.searchInput}
+                className="searchComponent"
+                type="text"
+                placeholder={
+                  messages['landing_page_header_searchInput.message']
+                }
+                value={searchValue}
+                data-cy="search"
+                onChange={(e) => setSearchValue(e.currentTarget.value)}
+              />
+            </form>
+          </Flex>
+        </Box>
 
-          <HeaderBrand.RightLinks sx={styles.rightLinks}>
-            <Flex
-              sx={styles.dropdownContainer}
-              onMouseOver={() => setShowDropdown(true)}
-              onMouseLeave={() => setShowDropdown(false)}
-            >
-              <Flex sx={styles.dropdownButton(showDropdown)}>
-                <GridIcon />
-                <Text sx={styles.rightButtonsText} data-cy="docs-dropdown">
-                  {messages['landing_page_header_docs.message']}
-                </Text>
-              </Flex>
-
-              {showDropdown && <DropdownMenu />}
-            </Flex>
-
-            <VtexLink
-              sx={styles.rightLinksItem}
-              href={getFeedbackURL()}
-              target="_blank"
-            >
-              <LongArrowIcon />
-              <Text sx={styles.rightButtonsText}>
-                {messages['landing_page_header_feedback.message']}
+        <HeaderBrand.RightLinks sx={styles.rightLinks}>
+          <Flex
+            sx={styles.dropdownContainer}
+            onMouseOver={() => setShowDropdown(true)}
+            onMouseLeave={() => setShowDropdown(false)}
+          >
+            <Flex sx={styles.dropdownButton(showDropdown)}>
+              <GridIcon />
+              <Text sx={styles.rightButtonsText} data-cy="docs-dropdown">
+                {messages['landing_page_header_docs.message']}
               </Text>
-            </VtexLink>
-          </HeaderBrand.RightLinks>
-          <HamburgerMenu />
-        </HeaderBrand>
-      </Box>
-    )
+            </Flex>
+
+            {showDropdown && <DropdownMenu />}
+          </Flex>
+
+          <VtexLink
+            sx={styles.rightLinksItem}
+            href={getFeedbackURL()}
+            target="_blank"
+          >
+            <LongArrowIcon />
+            <Text sx={styles.rightButtonsText}>
+              {messages['landing_page_header_feedback.message']}
+            </Text>
+          </VtexLink>
+        </HeaderBrand.RightLinks>
+        <HamburgerMenu />
+      </HeaderBrand>
+    </Box>
   )
 }
 
