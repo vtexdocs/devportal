@@ -81,28 +81,13 @@ const searchContainer: SxStyleProp = {
   height: 'auto',
 }
 
-const searchBox: SxStyleProp = {
-  alignItems: 'center',
-  justifyContent: 'center',
-  borderRadius: '4px',
-  background: '#F4F4F4',
-  width: '288px',
-  height: '40px',
-}
-
-const searchInput: SxStyleProp = {
-  width: 'auto',
-  background: '#F4F4F4',
-  border: '#F4F4F4',
-  color: '#545454',
-  fontSize: ['14px'],
-}
-
 const searchIcon: SxStyleProp = {
   minWidth: '16px',
   minHeight: '16px',
   width: '16px',
   mr: '8px',
+  flex: 0,
+  maxWidth: 'fit-content',
 }
 
 export default {
@@ -110,8 +95,6 @@ export default {
   headerContainer,
   headerBrand,
   searchContainer,
-  searchBox,
-  searchInput,
   searchIcon,
   rightLinks,
   iconContainer,
