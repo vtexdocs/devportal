@@ -35,10 +35,8 @@ const Hit = ({ hit, setSearchStateActive }: HitProps) => {
               <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
             )}
             {breadCrumbs.map((filter: string, index: number) => (
-              <Flex sx={styles.alignCenter}>
-                <Text sx={styles.hitBreadCrumb} key={`${filter}${index}`}>
-                  {filter}
-                </Text>
+              <Flex sx={styles.alignCenter} key={`${filter}${index}`}>
+                <Text sx={styles.hitBreadCrumb}>{filter}</Text>
                 {index < breadCrumbs.length - 1 ? (
                   <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
                 ) : null}

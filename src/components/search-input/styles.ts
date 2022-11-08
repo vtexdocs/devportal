@@ -5,7 +5,7 @@ const container: SxStyleProp = {
   width: '544px',
   border: '1px solid #B9B9B9',
   borderRadius: '0px 0px 4px 4px',
-  top: 'calc(5rem - 1px)',
+  top: 'calc(5rem - 18px)',
   background: '#FFFFFF',
 }
 
