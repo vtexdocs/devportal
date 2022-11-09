@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
-const docsList = {
+const docsPaths: { [slug: string]: string } = {
   'billing-options': 'docs/guides/Getting Started/catalog-overview.md',
 }
 
@@ -20,7 +20,7 @@ async function getGithubTree(org: string, repo: string, ref: string) {
 
 //https://api.github.com/repos/vtexdocs/devportal/commits?path=README.md
 
-export default async function getDocsList() {
+export default async function getDocsPaths() {
   const repoTree = await getGithubTree(
     'vtexdocs',
     'dev-portal-content',
@@ -34,9 +34,9 @@ export default async function getDocsList() {
       const match = path.match(re)
       const filename = match?.groups?.filename
       if (filename) {
-        ;(docsList as any)[filename] = path
+        ;(docsPaths as any)[filename] = path
       }
     }
   })
-  return docsList
+  return docsPaths
 }
