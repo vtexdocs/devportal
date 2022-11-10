@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import {
   Header as HeaderBrand,
   Link as VtexLink,

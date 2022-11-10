@@ -1,9 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import algoliasearch from 'algoliasearch/lite'
 import { InstantSearch } from 'react-instantsearch-dom'
 
 import SearchBox from './search-box'
-import Results from './results-component'
+import Results from './results-box'
 import { Box } from '@vtex/brand-ui'
 import { useRef, useState } from 'react'
 import useClickOutside from 'utils/hooks/useClickOutside'
@@ -20,19 +19,14 @@ export default function SearchInput() {
   const resultsBox = useRef<HTMLElement>()
   useClickOutside(resultsBox, setfocusOut)
   return (
-    <>
-      <InstantSearch
-        searchClient={searchClient}
-        indexName="docsearch-scraper-md-files"
-      >
-        <Box
-          onFocus={() => setfocusOut({ modaltoggle: true })}
-          ref={resultsBox}
-        >
-          <SearchBox />
-          {focusOut.modaltoggle && <Results />}
-        </Box>
-      </InstantSearch>
-    </>
+    <InstantSearch
+      searchClient={searchClient}
+      indexName="docsearch-scraper-md-files"
+    >
+      <Box onFocus={() => setfocusOut({ modaltoggle: true })} ref={resultsBox}>
+        <SearchBox />
+        {focusOut.modaltoggle && <Results />}
+      </Box>
+    </InstantSearch>
   )
 }

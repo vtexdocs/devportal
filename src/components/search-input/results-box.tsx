@@ -6,7 +6,7 @@ import { Hit, SearchState } from 'react-instantsearch-core'
 import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
 
 import { getIcon } from 'utils/constants'
-import { breadcrumbs } from './functions'
+import { getBreadcrumbs } from './functions'
 import styles from './styles'
 
 interface HitProps {
@@ -15,7 +15,7 @@ interface HitProps {
 }
 
 const Hit = ({ hit, setSearchStateActive }: HitProps) => {
-  const breadCrumbs = breadcrumbs(hit)
+  const breadcrumbsList = getBreadcrumbs(hit)
 
   const DocIcon = getIcon(hit.doctype)
 
@@ -31,13 +31,13 @@ const Hit = ({ hit, setSearchStateActive }: HitProps) => {
           </Flex>
           <Flex sx={styles.alignCenter}>
             <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.doctype}`}</Text>
-            {breadCrumbs.length > 0 && (
+            {breadcrumbsList.length > 0 && (
               <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
             )}
-            {breadCrumbs.map((filter: string, index: number) => (
+            {breadcrumbsList.map((filter: string, index: number) => (
               <Flex sx={styles.alignCenter} key={`${filter}${index}`}>
                 <Text sx={styles.hitBreadCrumb}>{filter}</Text>
-                {index < breadCrumbs.length - 1 ? (
+                {index < breadcrumbsList.length - 1 ? (
                   <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
                 ) : null}
               </Flex>
