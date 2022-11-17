@@ -69,7 +69,7 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
   return (
     <>
       {searchStateActive?.query && (
-        <Box sx={styles.container}>
+        <Box sx={styles.resultsContainer}>
           <Box sx={styles.resultsBox}>
             {searchResults.hits.map(
               (searchResult, index) =>

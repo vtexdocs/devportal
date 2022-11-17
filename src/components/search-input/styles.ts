@@ -1,8 +1,8 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
-const container: SxStyleProp = {
+const resultsContainer: SxStyleProp = {
   position: 'absolute',
-  width: '544px',
+  width: ['288px', '288px', '288px', '288px', '416px', '544px'],
   border: '1px solid #B9B9B9',
   borderRadius: '0px 0px 4px 4px',
   top: 'calc(5rem - 18px)',
@@ -111,12 +111,12 @@ const searchContainer: SxStyleProp = {
   cursor: 'pointer',
   ':hover': {
     transition: 'all 0.3s ease-out',
-    width: '544px',
+    width: ['288px', '288px', '288px', '288px', '416px', '544px'],
     border: '1px solid #3B3B3B',
   },
   ':focus-within': {
     background: '#FFFFFF',
-    width: '544px',
+    width: ['288px', '288px', '288px', '288px', '416px', '544px'],
     transition: 'all 0.3s ease-out',
     border: '1px solid #3B3B3B',
     boxShadow: '0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #B9B9B9',
@@ -128,7 +128,7 @@ const searchContainer: SxStyleProp = {
 }
 
 export default {
-  container,
+  resultsContainer,
   resultsBox,
   seeAll,
   hitBox,
