@@ -28,6 +28,7 @@ import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsPaths from 'utils/getDocsPaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
+import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 // import getDocsListPreval from 'utils/getDocsList.preval'
 
 import styles from 'styles/documentation-page'
@@ -140,8 +141,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     path
   )
 
+  const mdxContent = escapeCurlyBraces(gitHubFile)
+
   try {
-    let serialized = await serialize(await replaceMagicBlocks(gitHubFile), {
+    let serialized = await serialize(await replaceMagicBlocks(mdxContent), {
       parseFrontmatter: true,
       mdxOptions: {
         remarkPlugins: [remarkGFM],
