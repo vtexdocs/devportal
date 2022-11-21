@@ -12,32 +12,24 @@ import Link from 'next/link'
 import HamburgerMenu from './hamburger-menu'
 import DropdownMenu from 'components/dropdown-menu'
 import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
-import SearchIcon from 'components/icons/search-icon'
 import GridIcon from 'components/icons/grid-icon'
 import LongArrowIcon from 'components/icons/long-arrow-icon'
 
 import { getFeedbackURL } from 'utils/get-url'
 import { getMessages } from 'utils/get-messages'
 
+import SearchInput from 'components/search-input'
+
 import styles from './styles'
 const Header = () => {
   const router = useRouter()
-  const lastScroll = useRef(0)
 
-  const [searchValue, setSearchValue] = useState('')
+  const lastScroll = useRef(0)
   const modalOpen = useRef(false)
   const [showDropdown, setShowDropdown] = useState(false)
   const headerElement = useRef<HTMLElement>()
 
   const messages = getMessages()
-
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-    router.push({
-      pathname: '/search',
-      query: { keyword: 'SKU' },
-    })
-  }
 
   useEffect(() => {
     const body = document.body
@@ -102,22 +94,7 @@ const Header = () => {
         </HeaderBrand.Brand>
 
         <Box sx={styles.searchContainer}>
-          <Flex sx={styles.searchBox}>
-            <SearchIcon sx={styles.searchIcon} />
-            <form onSubmit={onSubmit}>
-              <input
-                style={styles.searchInput}
-                className="searchComponent"
-                type="text"
-                placeholder={
-                  messages['landing_page_header_searchInput.message']
-                }
-                value={searchValue}
-                data-cy="search"
-                onChange={(e) => setSearchValue(e.currentTarget.value)}
-              />
-            </form>
-          </Flex>
+          <SearchInput />
         </Box>
 
         <HeaderBrand.RightLinks sx={styles.rightLinks}>

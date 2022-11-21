@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { Box, Flex } from '@vtex/brand-ui'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
@@ -84,29 +85,34 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   }, [])
 
   return (
-    <APIGuideContextProvider headings={headings}>
-      <Flex sx={styles.mainContainer}>
-        <Box sx={styles.articleBox}>
-          <Box sx={styles.contentContainer}>
-            <h1>{serialized.frontmatter?.title}</h1>
-            <MarkdownRenderer serialized={serialized} />
-          </Box>
+    <>
+      <Head>
+        <meta name="docsearch:doctype" content="API Guides" />
+      </Head>
+      <APIGuideContextProvider headings={headings}>
+        <Flex sx={styles.mainContainer}>
+          <Box sx={styles.articleBox}>
+            <Box sx={styles.contentContainer}>
+              <h1>{serialized.frontmatter?.title}</h1>
+              <MarkdownRenderer serialized={serialized} />
+            </Box>
 
-          <Box sx={styles.bottomContributorsContainer}>
-            <Box sx={styles.bottomContributorsDivider} />
+            <Box sx={styles.bottomContributorsContainer}>
+              <Box sx={styles.bottomContributorsDivider} />
+              <Contributors contributors={contributors} />
+            </Box>
+
+            <FeedbackSection />
+            <SeeAlsoSection cards={documentationCards} />
+          </Box>
+          <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />
+            <TableOfContents />
           </Box>
-
-          <FeedbackSection />
-          <SeeAlsoSection cards={documentationCards} />
-        </Box>
-        <Box sx={styles.rightContainer}>
-          <Contributors contributors={contributors} />
-          <TableOfContents />
-        </Box>
-        <OnThisPage />
-      </Flex>
-    </APIGuideContextProvider>
+          <OnThisPage />
+        </Flex>
+      </APIGuideContextProvider>
+    </>
   )
 }
 

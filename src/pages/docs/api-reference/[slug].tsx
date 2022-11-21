@@ -1,4 +1,5 @@
 import Script from 'next/script'
+import Head from 'next/head'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 interface Props {
@@ -9,6 +10,9 @@ interface Props {
 const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
   return (
     <>
+      <Head>
+        <meta name="docsearch:doctype" content="API Reference" />
+      </Head>
       <Script
         type="text/javascript"
         src="/rapidoc/rapidoc-min.js"

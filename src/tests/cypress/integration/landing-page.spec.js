@@ -24,12 +24,4 @@ describe('Landing page', () => {
 
     cy.url().should('include', '/docs/api-guides')
   })
-
-  it('Search', () => {
-    const typedText = 'SKU'
-
-    cy.viewport(1200, 660)
-    cy.get('[data-cy="search"]').type(typedText).type('{enter}')
-    cy.url().should('include', `/search?keyword=${typedText}`)
-  })
 })
