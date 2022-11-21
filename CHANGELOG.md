@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.30.0](https://github.com/vtexdocs/devportal/compare/v0.29.2...v0.30.0) (2022-11-21)
+
+
+### Features
+
+* **docs:** add the doctype metatag to docs pages to crawling ([68dc438](https://github.com/vtexdocs/devportal/commit/68dc4380d9a57b43bee8ba19e8fe69e47e7eed49))
+* **search:** add search input and results components ([e645517](https://github.com/vtexdocs/devportal/commit/e6455177a9d27f1c8c311e1bddf8b7511d2f4973))
+
+
+### Bug Fixes
+
+* **search-input:** add hits keys ([6278f99](https://github.com/vtexdocs/devportal/commit/6278f9987ed5ad5e09f12363c3421a512397156d))
+* **search-input:** input size on hover overlapping docs button ([cb11b6d](https://github.com/vtexdocs/devportal/commit/cb11b6dfd8ff2a249a86f5de3b6eb0fae0592b25))
+
+
+### Chore
+
+* **package.json:** add search dependencies ([b043d96](https://github.com/vtexdocs/devportal/commit/b043d96cee67781df07138c0e3b8f745ba895c99))
+
+
+### Style
+
+* **search-input:** add clickOutSide behavior ([7e82f42](https://github.com/vtexdocs/devportal/commit/7e82f426a3ea7d29198ac038b9629e5746f09faa))
+
+
+### Refactoring
+
+* **header:** update the search component ([9596dc8](https://github.com/vtexdocs/devportal/commit/9596dc8e386aa56a094068ec2da9641bcb50f2a0))
+* **search-input:** rename variables and remove unnecessary ESLint rule disable ([7de2d02](https://github.com/vtexdocs/devportal/commit/7de2d02c3a666e79478aac901df9e50e056d519f))
+
+
+### Tests
+
+* **landing-page-tests:** remove conflicting and unnecessary testing ([f27c21f](https://github.com/vtexdocs/devportal/commit/f27c21f8a064e9c1c24fccebb8e3254222b2e8e1))
+
 ### [0.29.2](https://github.com/vtexdocs/devportal/compare/v0.29.1...v0.29.2) (2022-10-07)
 
 
