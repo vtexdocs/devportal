@@ -141,10 +141,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     path
   )
 
-  const mdxContent = escapeCurlyBraces(gitHubFile)
+  const noMagicBlocks = await replaceMagicBlocks(gitHubFile)
+  const mdxContent = escapeCurlyBraces(noMagicBlocks)
 
   try {
-    let serialized = await serialize(await replaceMagicBlocks(mdxContent), {
+    let serialized = await serialize(mdxContent, {
       parseFrontmatter: true,
       mdxOptions: {
         remarkPlugins: [remarkGFM],
