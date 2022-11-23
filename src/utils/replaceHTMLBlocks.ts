@@ -1,7 +1,7 @@
 import { toCamelCase } from './string-utils'
 
 const HTMLBlockRegex = /<([a-z-]+)(.+?)style="([^"]+)"([^>]*)>(.*?)<\/\1>/g
-const selfClosingHTMLTagRegex = /<(.+?)style="([^"]+)"(.*?)\/>/g
+const selfClosingHTMLTagRegex = /<([a-z-]+)(.+?)style="([^"]+)"(.*?)\/>/g
 
 const getStyleObject: (styleValue: string) => string = (styleValue) => {
   const styleProps = styleValue.split(';')
@@ -35,12 +35,13 @@ const HTMLBlockReplacer: (
 
 const selfClosingHTMLTagReplacer: (
   _match: string,
+  tag: string,
   stylePrefix: string,
   styleValue: string,
   styleSuffix: string
-) => string = (_match, stylePrefix, styleValue, styleSuffix) => {
+) => string = (_match, tag, stylePrefix, styleValue, styleSuffix) => {
   const styleObject = getStyleObject(styleValue)
-  return `<${stylePrefix}style={${styleObject}}${styleSuffix}/>`
+  return `<${tag}${stylePrefix}style={${styleObject}}${styleSuffix}/>`
 }
 
 const replaceHTMLBlocks: (content: string) => string = (content) => {
