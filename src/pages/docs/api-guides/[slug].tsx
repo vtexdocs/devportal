@@ -74,7 +74,13 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
           return [...headings, { ...item, children: [] }]
         }
 
-        const { title, slug, children } = headings[headings.length - 1]
+        const lastHeading = headings[headings.length - 1] || {
+          title: '',
+          slug: '',
+          children: [],
+        }
+        const { title, slug, children } = lastHeading
+
         return [
           ...headings.slice(0, -1),
           { title, slug, children: [...children, item] },
