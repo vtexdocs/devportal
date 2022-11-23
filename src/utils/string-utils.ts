@@ -20,7 +20,8 @@ export const slugify = (str: string) => {
 type Child = string | { props: { children: Child[] } }
 
 export const childrenToString: (children: Child[]) => string = (children) => {
-  if (Array.isArray(children))
+  if (!children) return ''
+  else if (Array.isArray(children))
     return children
       .map((child) => {
         if (typeof child === 'string') return child
