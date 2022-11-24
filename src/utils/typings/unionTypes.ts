@@ -9,6 +9,13 @@ export type DocumentationTitle =
 
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
+export type SlugPrefix =
+  | 'api-guides'
+  | 'api-reference'
+  | 'vtex-io'
+  | 'faststore'
+  | 'webOps'
+
 export type ResourceTitle =
   | 'Community'
   | 'Learning Center'

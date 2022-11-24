@@ -1,6 +1,6 @@
 import React, { Fragment, useContext } from 'react'
 import { Box, Flex, Button, Link, IconCaret } from '@vtex/brand-ui'
-
+import { useRouter } from 'next/router'
 import { SidebarContext } from 'utils/contexts/sidebar'
 import { MethodType } from 'utils/typings/unionTypes'
 import MethodCategory from 'components/method-category'
@@ -31,6 +31,12 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     toggleSidebarElementStatus,
     openSidebarElement,
   } = useContext(SidebarContext)
+
+  const router = useRouter()
+  const handleClick = (e: { preventDefault: () => void }, path: string) => {
+    e.preventDefault()
+    router.push(`/docs/${slugPrefix}/${path}`)
+  }
 
   const ElementRoot = ({ slug, name, method, children }: SidebarElement) => {
     const isExpandable = children.length > 0
@@ -64,9 +70,10 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
           <Link
             sx={textStyle(activeSidebarElement === slug, isExpandable)}
             target="_self"
-            onClick={() => {
+            onClick={(e: { preventDefault: () => void }) => {
               openSidebarElement(slug)
               setActiveSidebarElement(slug)
+              handleClick(e, slug)
             }}
           >
             {method && (
@@ -92,7 +99,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
       sidebarElementStatus.get(slug) ? (
       <Box>
         <SidebarElements
-          slugPrefix={slug}
+          slugPrefix={slugPrefix}
           items={children}
           subItemLevel={subItemLevel + 1}
           key={`${slug}sd`}
@@ -105,7 +112,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     <Box>
       {items?.map((item, index) => {
         const key = String(item.slug) + String(index)
-        const slug = `${slugPrefix || ''}${item.slug}`
+        const slug = `${item.slug}`
 
         return (
           <Fragment key={String(key)}>
