@@ -74,12 +74,11 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
           return [...headings, { ...item, children: [] }]
         }
 
-        const lastHeading = headings[headings.length - 1] || {
+        const { title, slug, children } = headings[headings.length - 1] || {
           title: '',
           slug: '',
           children: [],
         }
-        const { title, slug, children } = lastHeading
 
         return [
           ...headings.slice(0, -1),
@@ -148,11 +147,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     path
   )
 
-  const noMagicBlocks = await replaceMagicBlocks(gitHubFile)
-  const escapedCurlyBraces = escapeCurlyBraces(noMagicBlocks)
-  const noHTMLBlocks = replaceHTMLBlocks(escapedCurlyBraces)
-
   try {
+    const noMagicBlocks = await replaceMagicBlocks(gitHubFile)
+    const escapedCurlyBraces = escapeCurlyBraces(noMagicBlocks)
+    const noHTMLBlocks = replaceHTMLBlocks(escapedCurlyBraces)
+
     let serialized = await serialize(noHTMLBlocks, {
       parseFrontmatter: true,
       mdxOptions: {
@@ -174,6 +173,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     }
   } catch (error) {
+    console.log('Error:', error)
     return {
       notFound: true,
     }
