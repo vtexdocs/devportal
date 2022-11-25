@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.30.1](https://github.com/vtexdocs/devportal/compare/v0.30.0...v0.30.1) (2022-11-25)
+
+
+### Bug Fixes
+
+* implement handleclick and slugprefix ([cf99900](https://github.com/vtexdocs/devportal/commit/cf99900cd88cf387ae4b3df2cc79eb112e2494b7))
+
 ## [0.30.0](https://github.com/vtexdocs/devportal/compare/v0.29.2...v0.30.0) (2022-11-21)
 
 
