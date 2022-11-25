@@ -8,15 +8,24 @@ import SideBarElements from 'components/sidebar-elements'
 import { SidebarContext } from 'utils/contexts/sidebar'
 import type { SidebarElement } from 'components/sidebar-elements'
 
-import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
+import type {
+  DocumentationTitle,
+  UpdatesTitle,
+  SlugPrefix,
+} from 'utils/typings/unionTypes'
 import styles from './styles'
 import SectionFilter from 'components/sidebar-section-filter'
 export interface SidebarSectionProps {
   documentation: DocumentationTitle | UpdatesTitle
   categories: SidebarElement[]
+  slugPrefix: SlugPrefix
 }
 
-const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
+const SidebarSection = ({
+  documentation,
+  categories,
+  slugPrefix,
+}: SidebarSectionProps) => {
   const [searchValue, setSearchValue] = useState('')
   const { sidebarSectionHidden, setSidebarSectionHidden } =
     useContext(SidebarContext)
@@ -91,7 +100,11 @@ const SidebarSection = ({ documentation, categories }: SidebarSectionProps) => {
           />
         )}
         <Box sx={styles.sidebarContainerBody}>
-          <SideBarElements items={filteredResult} subItemLevel={0} />
+          <SideBarElements
+            items={filteredResult}
+            subItemLevel={0}
+            slugPrefix={slugPrefix}
+          />
         </Box>
       </Box>
       <Flex
