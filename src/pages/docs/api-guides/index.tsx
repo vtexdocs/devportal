@@ -225,16 +225,18 @@ const ApiGuidesPage: NextPage<Props> = () => {
           check out our <a href="https://help.vtex.com/"> Help Center </a>.
         </p>
       </blockquote>
-      {categoryData.map((category) => (
-        <OverviewCard
-          title={category.title}
-          href={category.href}
-          description={category.description}
-          docs={category.docs}
-          icon={category.icon}
-          seeMore={category.seeMore}
-        />
-      ))}
+      <>
+        {categoryData.map((category) => (
+          <OverviewCard
+            title={category.title}
+            href={category.href}
+            description={category.description}
+            docs={category.docs}
+            icon={category.icon}
+            seeMore={category.seeMore}
+          />
+        ))}
+      </>
 
       <h1 className={styles.title}>Getting to know our Core Services</h1>
       <p className={styles.details}>

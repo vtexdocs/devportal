@@ -1,7 +1,7 @@
 import styles from './styles.module.css'
 import type { ReactElement } from 'react'
 interface Props {
-  children: ReactElement
+  children: ReactElement[]
 }
 
 const Layout = ({ children }: Props) => {
