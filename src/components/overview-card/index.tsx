@@ -1,5 +1,5 @@
 import styles from './styles.module.css'
-import Link from 'next/Link'
+import Link from 'next/link'
 import * as Icons from './icons'
 import type { IconComponent } from 'utils/typings/types'
 
