@@ -38,18 +38,32 @@ const escapeCurlyBraces: (content: string) => string = (content) => {
   if (!correctlyFormattedCodeBlocks(content))
     throw new Error('There are incorrectly formatted code blocks in this file')
 
+  let idx = 0
   let newContent = ''
   let insideCodeBlock = false
+  let insideMagicBlock = false
 
-  for (let i = 0; i < content.length; i++) {
-    if (content.charAt(i) === '{' && !insideCodeBlock) newContent += '\\{'
-    else if (content.charAt(i) === '}' && !insideCodeBlock) newContent += '\\}'
+  while (idx < content.length) {
+    if (content.charAt(idx) === '{' && !insideCodeBlock && !insideMagicBlock)
+      newContent += '\\{'
+    else if (
+      content.charAt(idx) === '}' &&
+      !insideCodeBlock &&
+      !insideMagicBlock
+    )
+      newContent += '\\}'
     else {
-      newContent += content.charAt(i)
-      if (content.charAt(i) === '`') {
-        insideCodeBlock = !insideCodeBlock
+      newContent += content.charAt(idx)
+      if (content.charAt(idx) === '`') insideCodeBlock = !insideCodeBlock
+      else if (content.charAt(idx) === '[') {
+        if (content.substring(idx + 1, idx + 6) === 'block')
+          insideMagicBlock = true
+        else if (content.substring(idx + 1, idx + 7) === '/block')
+          insideMagicBlock = false
       }
     }
+
+    idx++
   }
 
   return newContent

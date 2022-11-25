@@ -140,7 +140,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 
-  const gitHubFile = await getGithubFile(
+  let documentationContent = await getGithubFile(
     'vtexdocs',
     'dev-portal-content',
     'first-docs',
@@ -148,11 +148,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   )
 
   try {
-    const noMagicBlocks = await replaceMagicBlocks(gitHubFile)
-    const escapedCurlyBraces = escapeCurlyBraces(noMagicBlocks)
-    const noHTMLBlocks = replaceHTMLBlocks(escapedCurlyBraces)
+    if (path.endsWith('.md')) {
+      documentationContent = escapeCurlyBraces(documentationContent)
+      documentationContent = replaceHTMLBlocks(documentationContent)
+      documentationContent = await replaceMagicBlocks(documentationContent)
+    }
 
-    let serialized = await serialize(noHTMLBlocks, {
+    let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
         remarkPlugins: [remarkGFM],
