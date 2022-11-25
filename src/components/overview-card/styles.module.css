@@ -1,0 +1,59 @@
+.categoryInfo {
+  display: flex;
+  align-items: flex-start;
+  margin: 40px 0px;
+}
+
+.icon {
+  margin-right: 20px;
+}
+
+.header a {
+  text-transform: uppercase;
+  color: #142032;
+}
+
+.header p {
+  color: #a1a8b3;
+  font-size:16px;
+  margin-top: 5px;
+}
+
+.listOfDocs {
+  border-left: 1px rgb(202, 203, 204) solid;
+  font-size: 14px;
+  padding-left: 1.5em;
+  list-style-type: none;
+  display: block;
+  text-decoration: none;
+}
+
+.listOfDocs a {
+  color: #f71963;
+}
+
+.seeMore {
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.seeMore a {
+  color: #a1a8b3;
+}
+
+.seeMore:after {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(120, 117, 122)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(120, 117, 122)'></path></svg>");
+  display: inline-block;
+  margin-left: 6px;
+  text-decoration: none;
+}
+
+.seeMore:hover:after {
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='14' viewBox='0 -8 59 14' fill='none'><path d='M0 7H57' stroke='rgb(20, 32, 50)'></path><path d='M49 1L57.5 7L49 13' stroke='rgb(20, 32, 50)'></path></svg>");
+  margin-left: 8px;
+}
+
+.seeMore:hover {
+  color: #0a1019;
+}
