@@ -3,10 +3,10 @@
 const magicBlockRegex =
   /\[block:(?<Type>[^\]]*)\](?<Content>[^]+?)\[\/block\]/gms
 
-function replacer(match: string, p1: string, p2: string) {
-  switch (p1) {
+function replacer(_match: string, blockType: string, blockContent: string) {
+  switch (blockType) {
     case 'code':
-      const code = JSON.parse(p2).codes[0]
+      const code = JSON.parse(blockContent).codes[0]
       switch (code.language) {
         case 'jsonc':
           code.language = 'json'
@@ -21,15 +21,29 @@ function replacer(match: string, p1: string, p2: string) {
       break
 
     case 'image':
-      const image = JSON.parse(p2).images[0].image
+      const image = JSON.parse(blockContent).images[0].image
       return `![${image[1]}](${image[0]})`
 
     case 'api-header':
-      const header = JSON.parse(p2).title
+      const header = JSON.parse(blockContent).title
       return `## ${header}\n`
     default:
-      return match
-      break
+      return ''
+    case 'callout':
+      const type = JSON.parse(blockContent).type
+      const body = JSON.parse(blockContent).body
+      switch (type) {
+        case 'info':
+          return `> ![${type}](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg) \n > \n > ${body}`
+        case 'danger':
+          return `> ![${type}](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/danger.svg) \n > \n > ${body}`
+        case 'warning':
+          return `> ![${type}](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/warning.svg) \n > \n > ${body}`
+        case 'success':
+          return `> ![${type}](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/success.svg) \n > \n > ${body}`
+        default:
+          return `> ![info](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg) \n > \n > ${body}`
+      }
   }
 }
 

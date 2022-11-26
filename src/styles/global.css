@@ -1,16 +1,23 @@
-html, body, * {
+html,
+body,
+* {
   font-family: 'VTEX Trust Regular', -apple-system, system-ui,
     BlinkMacSystemFont, sans-serif !important;
 }
 
 body.modal-open {
   position: fixed;
-  overflow-y:scroll;
+  overflow-y: scroll;
   width: 100%;
 }
 
 a {
+  color: #e31c58;
   text-decoration: none !important;
+}
+
+a:hover {
+  color: #c81e51;
 }
 
 footer > div {

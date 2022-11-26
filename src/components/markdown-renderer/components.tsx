@@ -79,6 +79,25 @@ export default {
       )
     }
   },
+  blockquote: ({ node, ...props }: Component) => {
+    const blockquoteType = props.children[1].props.children.props.alt
+    return (
+      <blockquote
+        className={`${styles.blockquote} ${
+          blockquoteType === 'info'
+            ? styles.blockquoteInfo
+            : blockquoteType === 'danger'
+            ? styles.blockquoteDanger
+            : blockquoteType === 'warning'
+            ? styles.blockquoteWarning
+            : blockquoteType === 'success'
+            ? styles.blockquoteSuccess
+            : ''
+        }`}
+        {...props}
+      ></blockquote>
+    )
+  },
   code: ({ node, ...props }: Component) => {
     return <code className={styles.code} {...props}></code>
   },
