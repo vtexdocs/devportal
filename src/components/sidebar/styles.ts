@@ -26,9 +26,8 @@ const sidebar: SxStyleProp = {
 
 const sidebarIcons: SxStyleProp = {
   width: ['56px', '56px', '56px', '56px', '56px', '160px'],
-  maxWidth: '160px',
+  minWidth: '160px',
   transition: 'all 0.3s ease-in-out',
-  height: '692px',
   flexDirection: 'column',
   borderRight: '1px solid #E7E9EE',
   background: '#FFFFFF',
