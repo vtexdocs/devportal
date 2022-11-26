@@ -87,9 +87,9 @@ const Board = (props: IconProps) => (
     size={35}
   >
     <g
-      stroke-linecap="square"
-      stroke-linejoin="miter"
-      stroke-width="2"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+      strokeWidth="2"
       fill="#f71963"
       stroke="#f71963"
     >
@@ -100,7 +100,7 @@ const Board = (props: IconProps) => (
         height="40"
         fill="none"
         stroke="#142032"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <rect
         x="10"
@@ -108,7 +108,7 @@ const Board = (props: IconProps) => (
         width="11"
         height="13"
         fill="none"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         data-color="color-2"
       />
       <rect
@@ -117,7 +117,7 @@ const Board = (props: IconProps) => (
         width="11"
         height="9"
         fill="none"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         data-color="color-2"
       />
       <rect
@@ -126,7 +126,7 @@ const Board = (props: IconProps) => (
         width="11"
         height="28"
         fill="none"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
         data-color="color-2"
       />
     </g>
@@ -143,9 +143,9 @@ const Composable = (props: IconProps) => (
   >
     <g
       className="nc-icon-wrapper"
-      stroke-linecap="square"
-      stroke-linejoin="miter"
-      stroke-width="2"
+      strokeLinecap="square"
+      strokeLinejoin="miter"
+      strokeWidth="2"
       fill="#f71963"
       stroke="#f71963"
     >
@@ -157,7 +157,7 @@ const Composable = (props: IconProps) => (
         rx="1"
         fill="none"
         stroke="#142032"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <rect
         data-color="color-2"
@@ -168,7 +168,7 @@ const Composable = (props: IconProps) => (
         rx="0.954"
         transform="translate(1.029 14.485) rotate(-45)"
         fill="none"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <rect
         x="14"
@@ -178,7 +178,7 @@ const Composable = (props: IconProps) => (
         rx="1"
         fill="none"
         stroke="#142032"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
       <rect
         x="2"
@@ -188,7 +188,7 @@ const Composable = (props: IconProps) => (
         rx="1"
         fill="none"
         stroke="#142032"
-        stroke-miterlimit="10"
+        strokeMiterlimit="10"
       />
     </g>
   </Icon>
