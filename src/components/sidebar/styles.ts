@@ -11,7 +11,7 @@ const sidebar: SxStyleProp = {
   minWidth: 'auto',
   transition: 'all 0.3s ease-in-out',
   '.active': {
-    left: '-276px',
+    left: '-330px',
     marginRight: '-120px',
     transition: 'all 0.3s ease-in-out',
   },
@@ -26,7 +26,7 @@ const sidebar: SxStyleProp = {
 
 const sidebarIcons: SxStyleProp = {
   width: ['56px', '56px', '56px', '56px', '56px', '160px'],
-  minWidth: '160px',
+  minWidth: 'max-content',
   transition: 'all 0.3s ease-in-out',
   flexDirection: 'column',
   borderRight: '1px solid #E7E9EE',
