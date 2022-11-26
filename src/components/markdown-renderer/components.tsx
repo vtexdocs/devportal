@@ -80,7 +80,9 @@ export default {
     }
   },
   blockquote: ({ node, ...props }: Component) => {
-    const blockquoteType = props.children[1].props.children.props.alt
+    const iconType: string | undefined =
+      props.children[1]?.props.children.props?.alt
+    const blockquoteType = iconType ? iconType : ''
     return (
       <blockquote
         className={`${styles.blockquote} ${
