@@ -43,6 +43,12 @@ const escapeCurlyBraces: (content: string) => string = (content) => {
   let insideCodeBlock = false
   let insideMagicBlock = false
 
+  if (content.startsWith('---')) {
+    idx += 3
+    while (content.substring(idx, idx + 3) !== '---') idx++
+    idx += 3
+  }
+
   while (idx < content.length) {
     if (content.charAt(idx) === '{' && !insideCodeBlock && !insideMagicBlock)
       newContent += '\\{'
