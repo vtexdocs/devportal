@@ -24,10 +24,12 @@ const correctlyFormattedCodeBlocks: (content: string) => boolean = (
         backtickCount++
       }
 
-      if (backtickCount === 3)
+      if (backtickCount === 3) {
+        if (insideSingleLineCodeBlock) return false
         insideMultiLineCodeBlock = !insideMultiLineCodeBlock
-      else if (backtickCount === 1)
+      } else if (backtickCount === 1 && !insideMultiLineCodeBlock) {
         insideSingleLineCodeBlock = !insideSingleLineCodeBlock
+      }
     }
   }
 
