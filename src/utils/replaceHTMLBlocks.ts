@@ -46,7 +46,7 @@ const selfClosingHTMLTagReplacer: (
 
 const replaceHTMLBlocks: (content: string) => string = (content) => {
   return content
-    .replace('<br>', '<br />')
+    .replace(/<br>/g, '<br />')
     .replace(/<!--.*?-->/gs, '')
     .replace(HTMLBlockRegex, HTMLBlockReplacer)
     .replace(selfClosingHTMLTagRegex, selfClosingHTMLTagReplacer)
