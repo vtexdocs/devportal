@@ -20,31 +20,33 @@ const Hit = ({ hit, setSearchStateActive }: HitProps) => {
   const DocIcon = getIcon(hit.doctype)
 
   return (
-    <Link href={hit.url}>
-      <a onClick={() => setSearchStateActive({})}>
-        <Box sx={styles.hitBox}>
-          <Flex>
-            {DocIcon && <DocIcon className="hit-icon" sx={styles.hitIcon} />}
-            <Text className="hit-content-title" sx={styles.hitContent}>
-              {hit.content}
-            </Text>
-          </Flex>
-          <Flex sx={styles.alignCenter}>
-            <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.doctype}`}</Text>
-            {breadcrumbsList.length > 0 && (
-              <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
-            )}
-            {breadcrumbsList.map((filter: string, index: number) => (
-              <Flex sx={styles.alignCenter} key={`${filter}${index}`}>
-                <Text sx={styles.hitBreadCrumb}>{filter}</Text>
-                {index < breadcrumbsList.length - 1 ? (
-                  <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
-                ) : null}
-              </Flex>
-            ))}
-          </Flex>
-        </Box>
-      </a>
+    <Link
+      href={hit.url}
+      onClick={() => setSearchStateActive({})}
+      legacyBehavior
+    >
+      <Box sx={styles.hitBox}>
+        <Flex>
+          {DocIcon && <DocIcon className="hit-icon" sx={styles.hitIcon} />}
+          <Text className="hit-content-title" sx={styles.hitContent}>
+            {hit.content}
+          </Text>
+        </Flex>
+        <Flex sx={styles.alignCenter}>
+          <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.doctype}`}</Text>
+          {breadcrumbsList.length > 0 && (
+            <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
+          )}
+          {breadcrumbsList.map((filter: string, index: number) => (
+            <Flex sx={styles.alignCenter} key={`${filter}${index}`}>
+              <Text sx={styles.hitBreadCrumb}>{filter}</Text>
+              {index < breadcrumbsList.length - 1 ? (
+                <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
+              ) : null}
+            </Flex>
+          ))}
+        </Flex>
+      </Box>
     </Link>
   )
 }

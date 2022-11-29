@@ -19,20 +19,18 @@ const DocumentationCard = ({
   Icon,
 }: CardProps) => {
   return (
-    <Link href={link}>
-      <a>
-        <Box sx={cardContainer(containerType)}>
-          <Flex sx={titleContainer(containerType)}>
-            <Icon sx={styles.icon} />
-            <Text className="title" sx={cardTitle(containerType)}>
-              {title}
-            </Text>
-          </Flex>
-          <Text className="description" sx={styles.description}>
-            {description}
+    <Link href={link} legacyBehavior>
+      <Box sx={cardContainer(containerType)}>
+        <Flex sx={titleContainer(containerType)}>
+          <Icon sx={styles.icon} />
+          <Text className="title" sx={cardTitle(containerType)}>
+            {title}
           </Text>
-        </Box>
-      </a>
+        </Flex>
+        <Text className="description" sx={styles.description}>
+          {description}
+        </Text>
+      </Box>
     </Link>
   )
 }

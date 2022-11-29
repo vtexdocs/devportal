@@ -45,7 +45,14 @@ const NewsletterSection = () => {
           </Flex>
           <div className={imgStyle.wrapper}>
             <div className={imgStyle.imageGradient}></div>
-            <Image src={landingProduct} />
+            <Image
+              src={landingProduct}
+              alt=""
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
         </Box>
       </Box>

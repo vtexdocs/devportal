@@ -17,8 +17,8 @@ const ApiGuidesPage: NextPage<Props> = () => {
       {Object.keys(data).map((key) => {
         return (
           <li>
-            <Link href={'/docs/api-guides/' + key}>
-              <a>{key}</a>
+            <Link href={'/docs/api-guides/' + key} legacyBehavior>
+              {key}
             </Link>
           </li>
         )
