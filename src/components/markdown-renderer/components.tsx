@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useContext, useState } from 'react'
 import { InView } from 'react-intersection-observer'
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 
 import { APIGuideContext } from 'utils/contexts/api-guide'
 import { childrenToString, slugify } from 'utils/string-utils'
 
 import styles from './styles.module.css'
+import probe from 'probe-image-size'
 
 type Component = {
   node: object
@@ -63,21 +64,20 @@ export default {
     <td className={styles.td} {...props} />
   ),
   img: ({ node, ...props }: Component) => {
-    if (props?.width)
-      return (
+    return (
+      <div
+        style={{ position: 'relative', width: '100%', paddingBottom: '20%' }}
+      >
         <Image
           className={styles.img}
           loading="lazy"
           src={props.src}
+          layout="fill"
+          objectFit="contain"
           {...props}
         />
-      )
-    else {
-      return (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img className={styles.img} {...props} />
-      )
-    }
+      </div>
+    )
   },
   code: ({ node, ...props }: Component) => {
     return <code className={styles.code} {...props}></code>

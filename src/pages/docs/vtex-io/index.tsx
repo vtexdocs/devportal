@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { Fragment } from 'react'
 import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 
