@@ -1,5 +1,3 @@
-// const magicBlockRegex =
-//   /\[block:(?<blockType>[^\]]*)\](?<blockContent>.*)\[\/block\]/gms
 const magicBlockRegex =
   /\[block:(?<Type>[^\]]*)\](?<Content>[^]+?)\[\/block\]/gms
 
@@ -17,8 +15,13 @@ function replacer(_match: string, blockType: string, blockContent: string) {
         default:
           break
       }
+
       return '\n```' + code.language + '\n' + code.code + '\n```\n'
-      break
+    case 'html':
+      const html = JSON.parse(blockContent)
+        .html.replace(/"/g, '\\"')
+        .replace(/\n/g, '')
+      return `<div dangerouslySetInnerHTML={{ __html: "${html}" }} />`
 
     case 'image':
       const image = JSON.parse(blockContent).images[0].image
@@ -27,8 +30,7 @@ function replacer(_match: string, blockType: string, blockContent: string) {
     case 'api-header':
       const header = JSON.parse(blockContent).title
       return `## ${header}\n`
-    default:
-      return ''
+
     case 'callout':
       const type = JSON.parse(blockContent).type
       const body = JSON.parse(blockContent).body
@@ -44,11 +46,13 @@ function replacer(_match: string, blockType: string, blockContent: string) {
         default:
           return `>ℹ️ ${body}`
       }
+      
+    default:
+      return ''
   }
 }
 
 export default async function replaceMagicBlocks(markdown: string) {
   const replacedMarkdown = markdown.replace(magicBlockRegex, replacer)
-
   return replacedMarkdown
 }

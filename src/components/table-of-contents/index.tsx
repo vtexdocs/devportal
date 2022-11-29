@@ -32,18 +32,18 @@ const TableOfContents = () => {
     active: boolean
   }) => {
     return (
-      <Link href={`#${slug}`}>
-        <a
-          onClick={() => {
-            setOnThisPageOpenStatus(false)
-            setActiveItem(({ item }) => ({
-              item: level === 1 ? slug : item,
-              subItem: level === 1 ? '' : slug,
-            }))
-          }}
-        >
-          <Text sx={styles.item(level, active)}>{title}</Text>
-        </a>
+      <Link
+        href={`#${slug}`}
+        onClick={() => {
+          setOnThisPageOpenStatus(false)
+          setActiveItem(({ item }) => ({
+            item: level === 1 ? slug : item,
+            subItem: level === 1 ? '' : slug,
+          }))
+        }}
+        legacyBehavior
+      >
+        <Text sx={styles.item(level, active)}>{title}</Text>
       </Link>
     )
   }

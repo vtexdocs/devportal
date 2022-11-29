@@ -86,10 +86,8 @@ const Header = () => {
     <Box ref={headerElement} sx={styles.headerContainer}>
       <HeaderBrand sx={styles.headerBrand}>
         <HeaderBrand.Brand>
-          <Link href="/">
-            <a>
-              <VTEXDevportalIcon sx={styles.logoSize} />
-            </a>
+          <Link href="/" legacyBehavior>
+            <VTEXDevportalIcon sx={styles.logoSize} />
           </Link>
         </HeaderBrand.Brand>
 

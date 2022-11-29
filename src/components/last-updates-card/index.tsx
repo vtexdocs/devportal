@@ -25,34 +25,36 @@ const LastUpdatesCard = ({ action, updateType }: CardProps) => {
   } = getUpdate(updateType)
 
   return (
-    <Link href={`/updates/${updateType}`}>
-      <a style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-        <Flex sx={styles.cardContainer}>
-          <Flex sx={styles.updateContainer}>
-            <Box>
-              <Text className="updateTitle" sx={styles.updateTitle}>
-                <UpdateIcon sx={styles.updateIcon} />
-                {updateTitle}
-              </Text>
-              <Text className="updateDescription" sx={styles.updateDescription}>
-                {updateDescription}
-              </Text>
-            </Box>
-          </Flex>
-          <Box sx={styles.actionContainer}>
-            <Flex sx={styles.actionTypeContainer}>
-              <ActionIcon sx={styles.actionIcon} />
-              <Text sx={styles.actionType}>{actionTitle}</Text>
-            </Flex>
-            <Box sx={styles.actionDescriptionContainer}>
-              <Text sx={styles.actionDescription}>{action.description}</Text>
-              <Text sx={styles.actionTime}>
-                {`${getDaysElapsed(action.date)} days ago`}
-              </Text>
-            </Box>
+    <Link
+      href={`/updates/${updateType}`}
+      style={{ display: 'flex', justifyContent: 'center', width: '100%' }}
+      legacyBehavior
+    >
+      <Flex sx={styles.cardContainer}>
+        <Flex sx={styles.updateContainer}>
+          <Box>
+            <Text className="updateTitle" sx={styles.updateTitle}>
+              <UpdateIcon sx={styles.updateIcon} />
+              {updateTitle}
+            </Text>
+            <Text className="updateDescription" sx={styles.updateDescription}>
+              {updateDescription}
+            </Text>
           </Box>
         </Flex>
-      </a>
+        <Box sx={styles.actionContainer}>
+          <Flex sx={styles.actionTypeContainer}>
+            <ActionIcon sx={styles.actionIcon} />
+            <Text sx={styles.actionType}>{actionTitle}</Text>
+          </Flex>
+          <Box sx={styles.actionDescriptionContainer}>
+            <Text sx={styles.actionDescription}>{action.description}</Text>
+            <Text sx={styles.actionTime}>
+              {`${getDaysElapsed(action.date)} days ago`}
+            </Text>
+          </Box>
+        </Box>
+      </Flex>
     </Link>
   )
 }

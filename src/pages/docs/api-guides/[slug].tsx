@@ -1,16 +1,23 @@
 import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import { Box, Flex } from '@vtex/brand-ui'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
+
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
+import remarkGFM from 'remark-gfm'
+import rehypeHighlight from 'rehype-highlight'
+import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from './rehypeBlockquote'
-import type { Item } from 'components/table-of-contents'
+
+import { Box, Flex } from '@vtex/brand-ui'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
+import type { Item } from 'components/table-of-contents'
 import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
@@ -19,30 +26,18 @@ import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
-
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import remarkGFM from 'remark-gfm'
+import getNavigation from 'utils/getNavigation'
+import getGithubFile from 'utils/getGithubFile'
+import getDocsPaths from 'utils/getDocsPaths'
+import replaceMagicBlocks from 'utils/replaceMagicBlocks'
+import escapeCurlyBraces from 'utils/escapeCurlyBraces'
+import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
+// import getDocsListPreval from 'utils/getDocsList.preval'
 
 import styles from 'styles/documentation-page'
 
-import getNavigation from 'utils/getNavigation'
-import getGithubFile from 'utils/getGithubFile'
-import getDocsList from 'utils/getDocsList'
-// import getDocsListPreval from 'utils/getDocsList.preval'
+const docsPathsGLOBAL = await getDocsPaths()
 
-import replaceMagicBlocks from 'utils/replaceMagicBlocks'
-
-import rehypeHighlight from 'rehype-highlight'
-import hljsCurl from 'highlightjs-curl'
-
-const DocsListGLOBAL = await getDocsList()
-
-interface Props {
-  content: string
-  serialized: MDXRemoteSerializeResult
-  sidebarfallback: any //eslint-disable-line
-}
 const contributors = 'ABCDEFGHIJKL'.split('')
 
 const documentationCards = [
@@ -61,6 +56,12 @@ const documentationCards = [
   },
 ]
 
+interface Props {
+  content: string
+  serialized: MDXRemoteSerializeResult
+  sidebarfallback: any //eslint-disable-line
+}
+
 const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
@@ -75,7 +76,12 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
           return [...headings, { ...item, children: [] }]
         }
 
-        const { title, slug, children } = headings[headings.length - 1]
+        const { title, slug, children } = headings[headings.length - 1] || {
+          title: '',
+          slug: '',
+          children: [],
+        }
+
         return [
           ...headings.slice(0, -1),
           { title, slug, children: [...children, item] },
@@ -117,7 +123,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = Object.keys(await getDocsList())
+  const slugs = Object.keys(await getDocsPaths())
   const paths = slugs.map((slug) => ({
     params: { slug },
   }))
@@ -129,55 +135,59 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string
-  let DocsList
-  if (process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD) {
-    DocsList = DocsListGLOBAL
-  } else {
-    DocsList = await getDocsList()
-  }
+  const docsPaths =
+    process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
+      ? docsPathsGLOBAL
+      : await getDocsPaths()
 
-  console.log(slug)
-
-  const path = (DocsList as any)[slug] //eslint-disable-line
+  const path = docsPaths[slug]
   if (!path) {
-    console.log('NOT FOUND')
     return {
       notFound: true,
     }
   }
-  const gitHubFile = await getGithubFile(
+
+  let documentationContent = await getGithubFile(
     'vtexdocs',
     'dev-portal-content',
     'first-docs',
     path
   )
 
-  const sidebarfallback = await getNavigation()
-  let serialized
   try {
-    serialized = await serialize(await replaceMagicBlocks(gitHubFile), {
+    if (path.endsWith('.md')) {
+      documentationContent = escapeCurlyBraces(documentationContent)
+      documentationContent = replaceHTMLBlocks(documentationContent)
+      documentationContent = await replaceMagicBlocks(documentationContent)
+    }
+
+    let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
         remarkPlugins: [remarkGFM, remarkBlockquote],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
-        format: 'md',
+        format: 'mdx',
       },
     })
+
+    const sidebarfallback = await getNavigation()
+    serialized = JSON.parse(JSON.stringify(serialized))
+
+    return {
+      props: {
+        serialized,
+        sidebarfallback,
+      },
+    }
   } catch (error) {
+    console.log('Error while processing', path)
+    console.log(error)
+
     return {
       notFound: true,
     }
-  }
-
-  serialized = JSON.parse(JSON.stringify(serialized))
-
-  return {
-    props: {
-      serialized,
-      sidebarfallback,
-    },
   }
 }
 

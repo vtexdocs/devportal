@@ -78,20 +78,18 @@ const ReleaseNote = ({
         }
       >
         <Flex sx={styles.content}>
-          <Link href={slug}>
-            <a>
-              <Text
-                onMouseOver={handleMouseOver}
-                onMouseLeave={handleMouseOut}
-                sx={
-                  releaseElementStatus || onHover
-                    ? styles.releaseTitleActive
-                    : styles.releaseTitle
-                }
-              >
-                {title}
-              </Text>
-            </a>
+          <Link href={slug} legacyBehavior>
+            <Text
+              onMouseOver={handleMouseOver}
+              onMouseLeave={handleMouseOut}
+              sx={
+                releaseElementStatus || onHover
+                  ? styles.releaseTitleActive
+                  : styles.releaseTitle
+              }
+            >
+              {title}
+            </Text>
           </Link>
           {getReleaseDate(createdAt)}
           <Description
