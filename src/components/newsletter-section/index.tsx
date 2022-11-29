@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Input, Link, Text } from '@vtex/brand-ui'
 
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 import landingProduct from '../../../public/images/landing-product.png'
 import styles from 'components/newsletter-section/styles'
 import imgStyle from './styles.module.css'
@@ -45,7 +45,14 @@ const NewsletterSection = () => {
           </Flex>
           <div className={imgStyle.wrapper}>
             <div className={imgStyle.imageGradient}></div>
-            <Image src={landingProduct} />
+            <Image
+              src={landingProduct}
+              alt=""
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
         </Box>
       </Box>

@@ -1,13 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useContext, useState } from 'react'
 import { InView } from 'react-intersection-observer'
-import Image from 'next/legacy/image'
+import Image from 'next/image'
 
 import { APIGuideContext } from 'utils/contexts/api-guide'
 import { childrenToString, slugify } from 'utils/string-utils'
 
 import styles from './styles.module.css'
-import probe from 'probe-image-size'
 
 type Component = {
   node: object
@@ -72,9 +71,12 @@ export default {
           className={styles.img}
           loading="lazy"
           src={props.src}
-          layout="fill"
-          objectFit="contain"
-          {...props}
+          fill
+          alt=""
+          sizes="100vw"
+          style={{
+            objectFit: 'contain',
+          }}
         />
       </div>
     )
