@@ -41,18 +41,13 @@
 
 .blockquote {
   display: grid;
-  padding: 5px 20px;
+  padding: 15px 20px;
   gap: 20px;
   width: 100%;
   margin: 20px 0;
   border-radius: 4px;
   align-items: center;
-  background: #f8f7fc;
   border: 1px solid #ccced8;
-}
-
-.blockquote p:first-child {
-  height: 20px;
 }
 
 .blockquoteInfo {
@@ -61,10 +56,30 @@
   grid-template-columns: 20px 1fr;
 }
 
+.blockquoteInfo:before {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  content: '';
+  background: url('https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg')
+    no-repeat 0 0;
+  background-size: 20px 20px;
+}
+
 .blockquoteDanger {
   background: #fdefef;
   border: 1px solid #dc5a41;
   grid-template-columns: 20px 1fr;
+}
+
+.blockquoteDanger:before {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  content: '';
+  background: url('https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/danger.svg')
+    no-repeat 0 0;
+  background-size: 20px 20px;
 }
 
 .blockquoteWarning {
@@ -73,8 +88,28 @@
   grid-template-columns: 20px 1fr;
 }
 
+.blockquoteWarning:before {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  content: '';
+  background: url('https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/warning.svg')
+    no-repeat 0 0;
+  background-size: 20px 20px;
+}
+
 .blockquoteSuccess {
   background: #f3f8f3;
   border: 1px solid #80be80;
   grid-template-columns: 20px 1fr;
+}
+
+.blockquoteSuccess:before {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  content: '';
+  background: url('https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/success.svg')
+    no-repeat 0 0;
+  background-size: 20px 20px;
 }

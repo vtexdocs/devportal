@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { Box, Flex } from '@vtex/brand-ui'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
-
+import remarkBlockquote from './rehypeBlockquote'
 import type { Item } from 'components/table-of-contents'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
@@ -158,7 +158,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     serialized = await serialize(await replaceMagicBlocks(gitHubFile), {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGFM],
+        remarkPlugins: [remarkGFM, remarkBlockquote],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],

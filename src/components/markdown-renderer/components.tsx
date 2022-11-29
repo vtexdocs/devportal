@@ -2,7 +2,6 @@
 import { useContext, useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import Image from 'next/image'
-
 import { APIGuideContext } from 'utils/contexts/api-guide'
 import { childrenToString, slugify } from 'utils/string-utils'
 
@@ -55,6 +54,27 @@ const ObservableHeading = ({
   )
 }
 
+const Callout = ({ node, icon, ...props }: Component) => {
+  const blockquoteType: string = icon ? icon : 'info'
+  console.log(props)
+  return (
+    <blockquote
+      className={`${styles.blockquote} ${
+        blockquoteType === 'info'
+          ? styles.blockquoteInfo
+          : blockquoteType === 'danger'
+          ? styles.blockquoteDanger
+          : blockquoteType === 'warning'
+          ? styles.blockquoteWarning
+          : blockquoteType === 'success'
+          ? styles.blockquoteSuccess
+          : ''
+      }`}
+      {...props}
+    />
+  )
+}
+
 export default {
   table: ({ node, ...props }: Component) => (
     <table className={styles.table} {...props} />
@@ -79,26 +99,8 @@ export default {
       )
     }
   },
-  blockquote: ({ node, ...props }: Component) => {
-    const iconType: string | undefined =
-      props.children[1]?.props.children.props?.alt
-    const blockquoteType = iconType ? iconType : ''
-    return (
-      <blockquote
-        className={`${styles.blockquote} ${
-          blockquoteType === 'info'
-            ? styles.blockquoteInfo
-            : blockquoteType === 'danger'
-            ? styles.blockquoteDanger
-            : blockquoteType === 'warning'
-            ? styles.blockquoteWarning
-            : blockquoteType === 'success'
-            ? styles.blockquoteSuccess
-            : ''
-        }`}
-        {...props}
-      ></blockquote>
-    )
+  blockquote: ({ ...props }: Component) => {
+    return <Callout {...props} />
   },
   code: ({ node, ...props }: Component) => {
     return <code className={styles.code} {...props}></code>

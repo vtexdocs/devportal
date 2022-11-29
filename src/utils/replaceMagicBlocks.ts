@@ -34,15 +34,15 @@ function replacer(_match: string, blockType: string, blockContent: string) {
       const body = JSON.parse(blockContent).body
       switch (type) {
         case 'info':
-          return `> ![${type}](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg) \n > \n > ${body}`
+          return `>ℹ️ ${body}`
         case 'danger':
-          return `> ![${type}](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/danger.svg) \n > \n > ${body}`
+          return `>❗ ${body}`
         case 'warning':
-          return `> ![${type}](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/warning.svg) \n > \n > ${body}`
+          return `>⚠️ ${body}`
         case 'success':
-          return `> ![${type}](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/success.svg) \n > \n > ${body}`
+          return `>✅ ${body}`
         default:
-          return `> ![info](https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg) \n > \n > ${body}`
+          return `>ℹ️ ${body}`
       }
   }
 }
