@@ -1,5 +1,14 @@
 export const removeHTML = (str: string) => str.replace(/<\/?[^>]+>/g, '')
 
+export const capitalizeFirstLetter = (str: string) => {
+  return str.charAt(0).toUpperCase() + str.slice(1)
+}
+
+export const toCamelCase = (str: string) => {
+  const [firstWord, ...otherWords] = str.split('-')
+  return `${firstWord}${otherWords.map(capitalizeFirstLetter).join('')}`
+}
+
 export const slugify = (str: string) => {
   return str
     .toLowerCase()
@@ -11,7 +20,8 @@ export const slugify = (str: string) => {
 type Child = string | { props: { children: Child[] } }
 
 export const childrenToString: (children: Child[]) => string = (children) => {
-  if (Array.isArray(children))
+  if (!children) return ''
+  else if (Array.isArray(children))
     return children
       .map((child) => {
         if (typeof child === 'string') return child

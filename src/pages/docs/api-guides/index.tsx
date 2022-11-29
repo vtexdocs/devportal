@@ -249,6 +249,7 @@ const ApiGuidesPage: NextPage<Props> = () => {
       </p>
       <Image2 />
     </Layout>
+
   )
 }
 
