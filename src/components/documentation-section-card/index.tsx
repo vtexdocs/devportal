@@ -37,36 +37,34 @@ const DocumentationSectionCard = ({
 
   return (
     <Tooltip placement="top" label={tooltipDescription} isCard={tooltipState}>
-      <Link href={link}>
-        <a>
-          <Flex sx={styles.cardContainer}>
-            <Flex sx={styles.infoContainer}>
-              <Icon sx={styles.icon} />
-              <Text className="title" sx={styles.title}>
-                {title}
-              </Text>
-              <Text
-                ref={descriptionRef}
-                className="description"
-                sx={styles.description}
-              >
-                {description}
-              </Text>
-            </Flex>
-            <Flex
-              className="quickStartedContainer"
-              sx={styles.quickStartedContainer}
+      <Link href={link} legacyBehavior>
+        <Flex sx={styles.cardContainer}>
+          <Flex sx={styles.infoContainer}>
+            <Icon sx={styles.icon} />
+            <Text className="title" sx={styles.title}>
+              {title}
+            </Text>
+            <Text
+              ref={descriptionRef}
+              className="description"
+              sx={styles.description}
             >
-              <Text className="quickStartedText" sx={styles.quickStartedText}>
-                {
-                  messages[
-                    'landing_page_documentation_documentation_card.quickStartedText'
-                  ]
-                }
-              </Text>
-            </Flex>
+              {description}
+            </Text>
           </Flex>
-        </a>
+          <Flex
+            className="quickStartedContainer"
+            sx={styles.quickStartedContainer}
+          >
+            <Text className="quickStartedText" sx={styles.quickStartedText}>
+              {
+                messages[
+                  'landing_page_documentation_documentation_card.quickStartedText'
+                ]
+              }
+            </Text>
+          </Flex>
+        </Flex>
       </Link>
     </Tooltip>
   )
