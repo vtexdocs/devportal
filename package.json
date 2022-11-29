@@ -12,7 +12,8 @@
     "lint": "next lint",
     "postinstall": "husky install",
     "cz-commit": "cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "index": "chmod +x ./algolia/scripts/scraper.sh && ./algolia/scripts/scraper.sh"
   },
   "dependencies": {
     "@plaiceholder/next": "^2.5.0",
