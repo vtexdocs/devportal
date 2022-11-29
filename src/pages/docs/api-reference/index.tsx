@@ -28,7 +28,6 @@ const APIReferencePage = () => {
         </li>
       </ul>
     </Layout>
-
   )
 }
 
