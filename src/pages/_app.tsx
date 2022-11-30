@@ -15,6 +15,7 @@ function MyApp({ Component, pageProps }: Props) {
     <Layout
       sidebarfallback={pageProps.sidebarfallback}
       hideSidebar={Component.hideSidebar}
+      sectionSelected={pageProps.sectionSelected}
     >
       <Component {...pageProps} />
     </Layout>
