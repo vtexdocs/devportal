@@ -1,21 +1,33 @@
 import Link from 'next/link'
+import Layout from 'components/category-layout'
 
 const APIReferencePage = () => {
   return (
-    <ul>
-      <li>
-        <Link href="/docs/api-reference/catalog">Catalog API</Link>
-      </li>
-      <li>
-        <Link href="/docs/api-reference/checkout">Checkout API</Link>
-      </li>
-      <li>
-        <Link href="/docs/api-reference/antifraud">antifraud API</Link>
-      </li>
-      <li>
-        <Link href="/docs/api-reference/giftcard">giftcard API</Link>
-      </li>
-    </ul>
+    <Layout>
+      <h1>API Reference</h1>
+      <ul>
+        <li>
+          <Link href="/docs/api-reference/catalog">
+            <a>Catalog API</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/docs/api-reference/checkout">
+            <a>Checkout API</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/docs/api-reference/antifraud">
+            <a>antifraud API</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/docs/api-reference/giftcard">
+            <a>giftcard API</a>
+          </Link>
+        </li>
+      </ul>
+    </Layout>
   )
 }
 

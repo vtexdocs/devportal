@@ -4,8 +4,8 @@ export type DocumentationTitle =
   | 'API Guides'
   | 'API Reference'
   | 'VTEX IO'
+  | 'Store Framework Apps'
   | 'FastStore'
-  | 'WebOps'
 
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
@@ -13,8 +13,8 @@ export type SlugPrefix =
   | 'api-guides'
   | 'api-reference'
   | 'vtex-io'
+  | 'store-framework-apps'
   | 'faststore'
-  | 'webOps'
 
 export type ResourceTitle =
   | 'Community'
