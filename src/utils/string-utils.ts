@@ -38,7 +38,9 @@ export const matrixToMarkdownTable: (matrix: string[][]) => string = (
   matrix
 ) => {
   const matrixRowToMarkdownTableRow = (matrixRow: string[]) =>
-    `|${matrixRow.map((matrixElement) => ` ${matrixElement} |`).join('')}`
+    `|${matrixRow
+      .map((matrixElement) => ` ${matrixElement.replace(/\n/g, '<br />')} |`)
+      .join('')}`
 
   let table = matrixRowToMarkdownTableRow(matrix[0]) + '\n|'
   for (let i = 0; i < matrix[0].length; i++) table += ' --- |'
