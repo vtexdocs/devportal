@@ -2,8 +2,8 @@ import { SxStyleProp } from '@vtex/brand-ui'
 import styles from './styles'
 
 export const styleByLevelNormal = (level: number, icon: boolean) => {
-  const ml = 8 + (icon ? level * 24 : (level - 1) * 24 + 12)
-  const borderLeft = icon ? 'none' : '1px solid #E7E9EE'
+  const ml = 8 + (icon ? level * 4 : (level - 1) * 20 + 14)
+  const borderLeft = icon ? 'none' : level >= 2 ? '1px solid #E7E9EE' : ''
   const normal: SxStyleProp = {
     marginLeft: `${ml}px`,
     borderLeft,
