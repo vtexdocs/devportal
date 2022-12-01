@@ -1,5 +1,8 @@
 import { visit } from 'unist-util-visit'
 import { getPlaiceholder } from 'plaiceholder'
+import probe from 'probe-image-size'
+
+const maxIMGSize = 1500 //To handle memory problems in netlify build
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function transformer(ast: any) {
@@ -8,13 +11,27 @@ async function transformer(ast: any) {
 
   function visitor(node: { url: string | Buffer; alt: string }) {
     promises.push(
-      getPlaiceholder(node.url).then((results) => {
+      probe(node.url as string).then((results) => {
         console.log(`Checking img:${node.url}`)
-        node.alt = JSON.stringify({
-          base64: results.base64,
-          img: results.img,
-          alt: node.alt,
-        })
+        const img = results
+        if (img.width < maxIMGSize && img.height < maxIMGSize) {
+          promises.push(
+            getPlaiceholder(node.url).then((results) => {
+              console.log(`Checking img:${node.url}`)
+              node.alt = JSON.stringify({
+                base64: results.base64,
+                img: results.img,
+                alt: node.alt,
+              })
+            })
+          )
+        } else {
+          node.alt = JSON.stringify({
+            base64: '  ',
+            img: img,
+            alt: node.alt,
+          })
+        }
       })
     )
   }
