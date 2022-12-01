@@ -2,9 +2,11 @@ import Link from 'next/link'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import useSWR from 'swr'
+import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
+  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
 }
 
 const ApiGuidesPage: NextPage<Props> = () => {
@@ -29,10 +31,12 @@ const ApiGuidesPage: NextPage<Props> = () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const sidebarfallback = await getNavigation()
+  const sectionSelected = 'API Guides'
 
   return {
     props: {
       sidebarfallback,
+      sectionSelected,
     },
   }
 }
