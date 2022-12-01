@@ -29,7 +29,6 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
   const {
     setActiveSidebarElement,
-    toggleSidebarElementStatus,
     openSidebarElement,
   } = useContext(SidebarContext)
   const sidebarDataMaster = useNavigation().data
@@ -63,7 +62,6 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
     setActiveSectionName(sectionName)
     getSlugPath()[0].forEach((slug: string) => {
       openSidebarElement(slug)
-      toggleSidebarElementStatus(slug)
     })
     setActiveSidebarElement(slug)
     return () => {
