@@ -67,7 +67,7 @@ export default {
     try {
       data = JSON.parse(props.alt)
     } catch (error) {
-      console.log(`Error parsing `)
+      console.log(`Error parsing`, error)
       return (
         <>
           <p>
