@@ -6,7 +6,6 @@ export default async function getGithubFile(
   ref: string,
   path: string
 ): Promise<string> {
-  console.log('getGithubFile')
   const response = await octokit.rest.repos.getContent({
     owner: owner,
     repo: repo,
