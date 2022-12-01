@@ -15,6 +15,6 @@ jobs:
     - name: Devportal Scraper
       uses: vtexdocs/devportal-docsearch-action@main
       with:
-        algolia_application_id: 'A4TXCBOC74'
+        algolia_application_id: '${{ secrets.ALGOLIA_APP_ID }}'
         algolia_api_key: ${{ secrets.ALGOLIA_WRITE_KEY }}
         file: './configs/scraper_md.json'
