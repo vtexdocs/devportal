@@ -63,22 +63,34 @@ export default {
     <td className={styles.td} {...props} />
   ),
   img: ({ node, ...props }: Component) => {
+    let data: { base64: string; img: object } = { base64: '', img: {} }
+    try {
+      data = JSON.parse(props.alt)
+    } catch (error) {
+      console.log(`Error parsing `)
+      return (
+        <>
+          <p>
+            <strong> Não pude carregar Imagem {props.src}</strong>
+          </p>
+        </>
+      )
+    }
     return (
-      <div
-        style={{ position: 'relative', width: '100%', paddingBottom: '20%' }}
-      >
-        <Image
-          className={styles.img}
-          loading="lazy"
-          src={props.src}
-          fill
-          alt=""
-          sizes="100vw"
-          style={{
-            objectFit: 'contain',
-          }}
-        />
-      </div>
+      <Image
+        className={styles.img}
+        loading="lazy"
+        src={props.src}
+        alt={props.alt}
+        sizes="100vw"
+        placeholder="blur"
+        blurDataURL={data.base64}
+        style={{
+          objectFit: 'contain',
+          height: 'auto',
+        }}
+        {...data?.img}
+      />
     )
   },
   code: ({ node, ...props }: Component) => {
