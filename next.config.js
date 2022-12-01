@@ -3,7 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   staticPageGenerationTimeout: 3600,
   images: {
-    domains: ['*'],
+    remotePatterns: [
+      {
+        hostname: '**',
+      },
+    ],
   },
   webpack: (config) => {
     // this will override the experiments

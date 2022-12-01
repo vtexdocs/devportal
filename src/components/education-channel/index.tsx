@@ -23,31 +23,29 @@ const EducationChannel = ({
   Icon,
 }: props) => {
   return (
-    <Link href={link}>
-      <a target="_blank">
-        <Flex sx={styles.channelBox}>
-          <Icon className="channelIcon" sx={styles.channelIcon} />
-          <Text className="channelTitle" sx={styles.channelTitle}>
-            {title}
-            <ArrowRightIcon
-              className="channelArrow"
-              sx={styles.channelTitleArrowIcon}
-            />
+    <Link href={link} target="_blank" legacyBehavior>
+      <Flex sx={styles.channelBox}>
+        <Icon className="channelIcon" sx={styles.channelIcon} />
+        <Text className="channelTitle" sx={styles.channelTitle}>
+          {title}
+          <ArrowRightIcon
+            className="channelArrow"
+            sx={styles.channelTitleArrowIcon}
+          />
+        </Text>
+        <Text className="channelDescription" sx={styles.channelDescription}>
+          {description}
+        </Text>
+        <Flex sx={styles.channelLinkContainer}>
+          <Text className="channelLinkText" sx={styles.channelLinkText}>
+            {textLink}
           </Text>
-          <Text className="channelDescription" sx={styles.channelDescription}>
-            {description}
-          </Text>
-          <Flex sx={styles.channelLinkContainer}>
-            <Text className="channelLinkText" sx={styles.channelLinkText}>
-              {textLink}
-            </Text>
-            <ArrowRightIcon
-              className="channelArrow"
-              sx={styles.channelArrowIcon}
-            />
-          </Flex>
+          <ArrowRightIcon
+            className="channelArrow"
+            sx={styles.channelArrowIcon}
+          />
         </Flex>
-      </a>
+      </Flex>
     </Link>
   )
 }

@@ -63,21 +63,23 @@ export default {
     <td className={styles.td} {...props} />
   ),
   img: ({ node, ...props }: Component) => {
-    if (props?.width)
-      return (
+    return (
+      <div
+        style={{ position: 'relative', width: '100%', paddingBottom: '20%' }}
+      >
         <Image
           className={styles.img}
           loading="lazy"
           src={props.src}
-          {...props}
+          fill
+          alt=""
+          sizes="100vw"
+          style={{
+            objectFit: 'contain',
+          }}
         />
-      )
-    else {
-      return (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img className={styles.img} {...props} />
-      )
-    }
+      </div>
+    )
   },
   code: ({ node, ...props }: Component) => {
     return <code className={styles.code} {...props}></code>

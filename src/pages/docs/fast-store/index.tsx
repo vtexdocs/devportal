@@ -1,5 +1,12 @@
+import Layout from 'components/category-layout'
+
 const FastStorePage = () => {
-  return <h2>FastStore</h2>
+  return (
+    <Layout>
+      <h1>FastStore</h1>
+      <p>FastStore</p>
+    </Layout>
+  )
 }
 
 export default FastStorePage

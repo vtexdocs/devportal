@@ -30,7 +30,14 @@ const VTEXIOPage: NextPage<Props> = () => {
           <Box sx={styles.welcomeImageOuterContainer}>
             <Box sx={styles.welcomeImageInnerContainer}>
               <Box sx={styles.welcomeImageGradient}></Box>
-              <Image src={image} />
+              <Image
+                alt=""
+                src={image}
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
             </Box>
           </Box>
         </Flex>
