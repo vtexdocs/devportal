@@ -1,6 +1,5 @@
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
-import useSWR from 'swr'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Layout from 'components/category-layout'
 import OverviewCard from 'components/overview-card'
