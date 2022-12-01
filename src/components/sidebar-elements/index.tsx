@@ -1,6 +1,5 @@
 import React, { Fragment, useContext } from 'react'
 import { Box, Flex, Button, Link, IconCaret } from '@vtex/brand-ui'
-import { useRouter } from 'next/router'
 import { SidebarContext } from 'utils/contexts/sidebar'
 import { MethodType } from 'utils/typings/unionTypes'
 import MethodCategory from 'components/method-category'
@@ -31,12 +30,6 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     toggleSidebarElementStatus,
     openSidebarElement,
   } = useContext(SidebarContext)
-
-  const router = useRouter()
-  const handleClick = (e: { preventDefault: () => void }, path: string) => {
-    e.preventDefault()
-    router.push(`/docs/${slugPrefix}/${path}`)
-  }
 
   const ElementRoot = ({ slug, name, method, children }: SidebarElement) => {
     const isExpandable = children.length > 0
@@ -70,10 +63,10 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
           <Link
             sx={textStyle(activeSidebarElement === slug, isExpandable)}
             target="_self"
-            onClick={(e: { preventDefault: () => void }) => {
+            href={`/docs/${slugPrefix}/${slug}`}
+            onClick={() => {
               openSidebarElement(slug)
               setActiveSidebarElement(slug)
-              handleClick(e, slug)
             }}
           >
             {method && (
