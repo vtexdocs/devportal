@@ -1798,6 +1798,11 @@
     "@octokit/webhooks-types" "6.5.0"
     aggregate-error "^3.1.0"
 
+"@plaiceholder/next@^2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@plaiceholder/next/-/next-2.5.0.tgz#b232315e96a27afd47bb88b5256a3dcd45c983a0"
+  integrity sha512-vT8YtPpgQEKFtz0QiiCnH3NfyVlldYpnxR6X2sqCJvHk+pi/Be1nb62CdYQ7RoNePPcjBQoRDSPpZpGmg8mEdw==
+
 "@popperjs/core@^2.4.4":
   version "2.11.2"
   resolved "https://registry.npmjs.org/@popperjs/core/-/core-2.11.2.tgz"
