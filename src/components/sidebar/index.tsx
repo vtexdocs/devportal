@@ -27,7 +27,8 @@ interface SideBarSectionState {
 const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   const [activeSectionName, setActiveSectionName] = useState('')
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
-  const { setActiveSidebarElement, openSidebarElement } = useContext(SidebarContext)
+  const { setActiveSidebarElement, openSidebarElement } =
+    useContext(SidebarContext)
   const sidebarDataMaster = useNavigation().data
   const { asPath } = useRouter()
   const slug = asPath.split('/')[3]
