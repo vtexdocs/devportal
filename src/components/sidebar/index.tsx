@@ -100,35 +100,35 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
           placement="right"
           label={tooltipLabel}
         >
-          <Link
-            href={iconElement.link}
-            onClick={() => {
-              setActiveSectionName(iconElement.title)
-            }}
-            legacyBehavior
-          >
-            <Flex
-              sx={
-                activeSectionName === iconElement.title
-                  ? styles.iconBoxActive
-                  : styles.iconBox
-              }
+          <Link href={iconElement.link}>
+            <a
+              onClick={() => {
+                setActiveSectionName(iconElement.title)
+              }}
             >
-              <iconElement.Icon
+              <Flex
                 sx={
                   activeSectionName === iconElement.title
-                    ? styles.iconActive
-                    : styles.icon
+                    ? styles.iconBoxActive
+                    : styles.iconBox
                 }
-              />
-              <Text
-                className={expandDelayStatus ? 'iconDescriptionExpanded' : ''}
-                ref={titleRef}
-                sx={styles.iconTitle}
               >
-                {iconElement.title}
-              </Text>
-            </Flex>
+                <iconElement.Icon
+                  sx={
+                    activeSectionName === iconElement.title
+                      ? styles.iconActive
+                      : styles.icon
+                  }
+                />
+                <Text
+                  className={expandDelayStatus ? 'iconDescriptionExpanded' : ''}
+                  ref={titleRef}
+                  sx={styles.iconTitle}
+                >
+                  {iconElement.title}
+                </Text>
+              </Flex>
+            </a>
           </Link>
         </Tooltip>
       </Box>
