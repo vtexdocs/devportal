@@ -2,6 +2,82 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.30.3](https://github.com/vtexdocs/devportal/compare/v0.30.0...v0.30.3) (2022-12-05)
+
+
+### Features
+
+* (wip) new comps for getting started page ([73569e7](https://github.com/vtexdocs/devportal/commit/73569e750152d6d02ef850b1746525dcdb92e898))
+* (wip) new comps for getting started page ([261756c](https://github.com/vtexdocs/devportal/commit/261756cbe5689791fb8f5eb808f3d2619304e3fc))
+* add-sfpage ([3e69ab1](https://github.com/vtexdocs/devportal/commit/3e69ab152f18828cbfd4625bf3e9f15ac7777521))
+* **api-guides:** turn parameters magic blocks into markdown tables ([ddca865](https://github.com/vtexdocs/devportal/commit/ddca8656fd9c70b4b8d0735389d89fc3144cc6e2))
+* **apis:** add proxy route ([b639e20](https://github.com/vtexdocs/devportal/commit/b639e20d229f952bc70b1162b23aa568e741e32e))
+* **devportal-scraper:** add scraper action and command to run locally ([7095029](https://github.com/vtexdocs/devportal/commit/7095029111b4126691fc781594a617ebf66053f1))
+* **images:** compiler gets image data before compiling and generates blured placeholder ([f7495fc](https://github.com/vtexdocs/devportal/commit/f7495fc5c38f527ab298edeb9f9c201ad3d987a4))
+* **markdown:** add support for rendering HTML magic blocks in markdown ([1e0fac1](https://github.com/vtexdocs/devportal/commit/1e0fac18efff0396d5cffadb2e8338ddcb5b48bf))
+
+
+### Bug Fixes
+
+* **api-guides:** add missing legacyBehavior attribute from Link component ([1b3c8fd](https://github.com/vtexdocs/devportal/commit/1b3c8fdc9a892b996bb93315e4b09d1fe14ce111))
+* **api-guides:** check if code blocks inside markdown file are correctly formatted ([ec5b382](https://github.com/vtexdocs/devportal/commit/ec5b38267062051fe8a0d6756b310f2ffcf1ce9f))
+* **api-guides:** escape <> occurrences ([18d6b36](https://github.com/vtexdocs/devportal/commit/18d6b36d39dc88b4e1bb17efdea29feb815f50db))
+* **api-guides:** escape curly braces inside markdown files ([f9491a3](https://github.com/vtexdocs/devportal/commit/f9491a3b123a9a127fad7174662fe12358b4f630))
+* **api-guides:** handle documentations with level-3 headings, but no level-2 headings ([3718a87](https://github.com/vtexdocs/devportal/commit/3718a873fcddc037ce5743cde30306f1caac28ee))
+* **api-guides:** only escape curly braces outside magic blocks ([3603439](https://github.com/vtexdocs/devportal/commit/3603439cf078c7b1f77925f03e903a8530680305))
+* **api-guides:** replace all occurrences of br HTML tags with JSX ([6544bb3](https://github.com/vtexdocs/devportal/commit/6544bb3e0471fd860c759a3322edce36a02b040d))
+* **api-guides:** replace br HTML tags with JSX and remove HTML comments ([baebbbc](https://github.com/vtexdocs/devportal/commit/baebbbcea2641af794fd739c8daedadd688c05e5))
+* **api-guides:** replace HTML blocks inside markdown files with JSX components ([e99c45b](https://github.com/vtexdocs/devportal/commit/e99c45bae24166070b7fc83fad041bfc73e1e095))
+* **api-guides:** replace line breaks in table cells with br tags ([a4c2ca8](https://github.com/vtexdocs/devportal/commit/a4c2ca8bd6f45b5239124209c1a54a69a71ed1a4))
+* **api-guides:** skip frontmatter when escaping curly braces ([e7cf028](https://github.com/vtexdocs/devportal/commit/e7cf0281c8527613e73c16cb6d364a5a3112307f))
+* **childrenToString:** fix childrenToString when given an undefined parameter ([8697d56](https://github.com/vtexdocs/devportal/commit/8697d56e00dac2e1770de27ed5b7a541cdf0a375))
+* **escapeCurlyBraces:** improve check for incorrectly formatted code blocks ([b5b65ea](https://github.com/vtexdocs/devportal/commit/b5b65eaa4660bdf23aa539a3bb2e752b48968311))
+* **escapeCurlyBraces:** only escape curly braces outside of code blocks ([ce1a3b5](https://github.com/vtexdocs/devportal/commit/ce1a3b52c254f538b05aeb3be6dadbaf7597b162))
+* **getgithubfile:** no longer logs each execution ([0c17258](https://github.com/vtexdocs/devportal/commit/0c17258dd3427be67797aacfedc4c93ba651b95c))
+* implement handleclick and slugprefix ([cf99900](https://github.com/vtexdocs/devportal/commit/cf99900cd88cf387ae4b3df2cc79eb112e2494b7))
+* improve sidebar styles ([a3cfc03](https://github.com/vtexdocs/devportal/commit/a3cfc0369b07d3d2ac1e757d539a13b22c06455e))
+* improve sidebar styles ([05cc1c3](https://github.com/vtexdocs/devportal/commit/05cc1c3aaedc18b779d15217e795160010ddbc61))
+* interface types ([6ac0099](https://github.com/vtexdocs/devportal/commit/6ac0099ef91d5531d05c6c8bbd4f2dbc536568a8))
+* interface types ([ca0389c](https://github.com/vtexdocs/devportal/commit/ca0389cb3b870eee3babc25fc0ca8f397e46a999))
+* **linting:** linting ([ba98d73](https://github.com/vtexdocs/devportal/commit/ba98d734569d3a73dfa12740c69d417ec213879a))
+* **plaiceholder:** adds fallback for everything ([398fc7b](https://github.com/vtexdocs/devportal/commit/398fc7b870006728744ec3a4d738047e326a3b9e))
+* **plaiceholder:** correclty handle promise termination ([f643fec](https://github.com/vtexdocs/devportal/commit/f643fec507bfa799412a2cf817ec9843672c6ed2))
+* **plaiceholder:** install nextjs plugin ([55aef75](https://github.com/vtexdocs/devportal/commit/55aef75037b404bbb231ec82fcdf15b78ef7f234))
+* **plaiceholder:** probes for img size before calling plaiceholder ([eab2320](https://github.com/vtexdocs/devportal/commit/eab23209790716a9e9d083a9668be2f847c63afd))
+* **replaceHTMLBlocks:** only match HTML tags, not JSX components ([186dea2](https://github.com/vtexdocs/devportal/commit/186dea2d1f558f6d5d25eccdfe9474aee3616f22))
+* sidebar-styles ([e7ffc30](https://github.com/vtexdocs/devportal/commit/e7ffc3084028b76ae7c2cbaaab00bc03e7363cbc))
+* sidebar-styles ([973e7f6](https://github.com/vtexdocs/devportal/commit/973e7f6d5fc2686e5b3f36f9f7974a39769860a2))
+* svg errors ([46dafca](https://github.com/vtexdocs/devportal/commit/46dafca008c1cdfc74ee86531154e1ff3caaf10b))
+* svg errors ([e87d875](https://github.com/vtexdocs/devportal/commit/e87d875207e5a07f531c9fd192cfc95a67ba0758))
+* typo ([9ae3b24](https://github.com/vtexdocs/devportal/commit/9ae3b24317a5509ccbf4d1b35f3de98108658939))
+* typo ([33d0ba8](https://github.com/vtexdocs/devportal/commit/33d0ba82ab43f4dc647574036b873020f8a414af))
+
+
+### Style
+
+* **api-guides:** log file path when logging error ([2ceb5ed](https://github.com/vtexdocs/devportal/commit/2ceb5edcccd4cdb670f0a1f9fea3291d784763ed))
+* refactor ([ef42d6c](https://github.com/vtexdocs/devportal/commit/ef42d6c966612349835a88500dfb5e576898848f))
+
+
+### Refactoring
+
+* **components:** updates links and images for nextjs@13 ([bd2b17e](https://github.com/vtexdocs/devportal/commit/bd2b17e94e62f28ddf169af6ae3e0490688ec2aa))
+* **images:** uses the latest next/image component ([dabf538](https://github.com/vtexdocs/devportal/commit/dabf5381fc299893473ab7f966b91f9c9842d29e))
+* **next.config.js:** add image remotePattern for all hosts ([d6ef6e7](https://github.com/vtexdocs/devportal/commit/d6ef6e7606bf6b3208a0c23594d23a5951797567))
+
+
+### CI
+
+* **docsearch-scraper:** change app id to be a secret key ([81ce325](https://github.com/vtexdocs/devportal/commit/81ce32579671451932d77c93964fe85e376cff3a))
+
+
+### Chore
+
+* **package.json:** add http-proxy ([00555d2](https://github.com/vtexdocs/devportal/commit/00555d209eb7da7a68e0de42a087278cee0368aa))
+* **release:** 0.30.1 ([9d518d2](https://github.com/vtexdocs/devportal/commit/9d518d2ec1ae4ffed9baba9fe67da1fd68f68bec))
+* **release:** 0.30.2 ([29a0132](https://github.com/vtexdocs/devportal/commit/29a01329d1622c5c30407253ea304c83052945a3))
+* update nextjs react ([2c1549c](https://github.com/vtexdocs/devportal/commit/2c1549ca8fdcb536d3e67fd4c5956c1dd424a956))
+
 ### [0.30.2](https://github.com/vtexdocs/devportal/compare/v0.30.0...v0.30.2) (2022-12-05)
 
 
