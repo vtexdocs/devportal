@@ -49,7 +49,7 @@ const ListOfDocs = ({ docs, seeMore, href }: ListOfDocsProps) => (
     ))}
     {seeMore && (
       <li className={styles.seeMore}>
-        <Link href={href}>
+        <Link href={href} legacyBehavior>
           <a>See more</a>
         </Link>
       </li>
