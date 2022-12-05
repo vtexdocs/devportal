@@ -1,6 +1,6 @@
 {
   "name": "devportal",
-  "version": "0.30.0",
+  "version": "0.30.2",
   "private": true,
   "engines": {
     "npm": "please-use-yarn",
@@ -16,15 +16,18 @@
     "lint": "next lint",
     "postinstall": "husky install",
     "cz-commit": "cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "index": "chmod +x ./algolia/scripts/scraper.sh && ./algolia/scripts/scraper.sh"
   },
   "dependencies": {
     "@plaiceholder/next": "^2.5.0",
+    "@types/http-proxy": "^1.17.9",
     "@types/probe-image-size": "^7.2.0",
     "@vtex/brand-ui": "^0.46.1",
     "algoliasearch": "^4.14.2",
     "highlight.js": "^11.6.0",
     "highlightjs-curl": "^1.3.0",
+    "http-proxy": "^1.18.1",
     "next": "^13.0.5",
     "next-mdx-remote": "^4.1.0",
     "next-plugin-preval": "^1.2.4",
