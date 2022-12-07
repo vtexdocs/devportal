@@ -1,3 +1,5 @@
+import { matrixToMarkdownTable } from './string-utils'
+
 const magicBlockRegex =
   /\[block:(?<Type>[^\]]*)\](?<Content>[^]+?)\[\/block\]/gms
 
@@ -30,7 +32,7 @@ function replacer(_match: string, blockType: string, blockContent: string) {
     case 'api-header':
       const header = JSON.parse(blockContent).title
       return `## ${header}\n`
-
+      
     case 'callout':
       const type = JSON.parse(blockContent).type
       const body = JSON.parse(blockContent).body
@@ -47,6 +49,25 @@ function replacer(_match: string, blockType: string, blockContent: string) {
           return `>ℹ️ ${body}`
       }
       
+    case 'parameters':
+      const { data, rows, cols } = JSON.parse(blockContent)
+
+      const matrix: string[][] = []
+      for (let i = 0; i <= rows; i++) {
+        const row: string[] = []
+        for (let j = 0; j < cols; j++) row.push('')
+
+        matrix.push(row)
+      }
+
+      for (const key in data) {
+        const [row, col] = key.split('-')
+        if (row === 'h') matrix[0][+col] = data[key]
+        else matrix[+row + 1][+col] = data[key]
+      }
+
+      return matrixToMarkdownTable(matrix)
+
     default:
       return ''
   }

@@ -2,7 +2,7 @@ import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
 import VTEXIOIcon from 'components/icons/vtex-io-icon'
 import FastStoreIcon from 'components/icons/fast-store-icon'
-import WebOpsIcon from 'components/icons/webops-icon'
+import SFAppsIcon from 'components/icons/sfapps-icon'
 
 import ReleaseNotesIcon from 'components/icons/release-notes-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
@@ -52,10 +52,10 @@ export const documentationData: DocDataElement[] = [
     link: '/docs/fast-store',
   },
   {
-    Icon: WebOpsIcon,
-    title: 'WebOps',
-    description: messages['documentation_webops.description'],
-    link: '/docs/webops',
+    Icon: SFAppsIcon,
+    title: 'Store Framework Apps',
+    description: messages['documentation_sfapps.description'],
+    link: '/docs/store-framework-apps',
   },
 ]
 

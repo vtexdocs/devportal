@@ -15,6 +15,8 @@
   "documentation_fast_store.description": "Fullstack toolkit for building high-performance stores",
   "documentation_webops.title": "WebOps",
   "documentation_webops.description": "Deployment platform optimized for storefront development",
+  "documentation_sfapps.title": "Store Framework Apps",
+  "documentation_sfapps.description": "Deployment platform optimized for storefront development",
   "updates_release_notes.title": "Release Notes",
   "updates_release_notes.description": "Technical updates on feature and bug fixes.",
   "updates_documentation_updates.title": "Documentation Updates",

@@ -1,7 +1,11 @@
 {
   "name": "devportal",
-  "version": "0.30.0",
+  "version": "0.30.2",
   "private": true,
+  "engines": {
+    "npm": "please-use-yarn",
+    "yarn": ">= 1.22.18"
+  },
   "scripts": {
     "predev": "./getPEM.sh && node src/utils/get-rapidoc.mjs",
     "dev": "next dev",
@@ -12,19 +16,24 @@
     "lint": "next lint",
     "postinstall": "husky install",
     "cz-commit": "cz",
-    "release": "standard-version"
+    "release": "standard-version",
+    "index": "chmod +x ./algolia/scripts/scraper.sh && ./algolia/scripts/scraper.sh"
   },
   "dependencies": {
+    "@plaiceholder/next": "^2.5.0",
+    "@types/http-proxy": "^1.17.9",
     "@types/probe-image-size": "^7.2.0",
     "@vtex/brand-ui": "^0.46.1",
     "algoliasearch": "^4.14.2",
     "highlight.js": "^11.6.0",
     "highlightjs-curl": "^1.3.0",
+    "http-proxy": "^1.18.1",
     "next": "^13.0.5",
     "next-mdx-remote": "^4.1.0",
     "next-plugin-preval": "^1.2.4",
     "node-fetch": "^3.2.4",
     "octokit": "^2.0.7",
+    "plaiceholder": "^2.5.0",
     "probe-image-size": "^7.2.3",
     "rapidoc": "^9.2.0",
     "react": "^18.2.0",
@@ -37,7 +46,10 @@
     "rehype-img-size": "^1.0.1",
     "remark-gfm": "^3.0.1",
     "remark-prism": "^1.3.6",
-    "swr": "^1.3.0"
+    "sharp": "^0.31.2",
+    "swr": "^1.3.0",
+    "unist-util-visit": "^4.1.1",
+    "use-yarn": "^2.4.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
@@ -52,7 +64,7 @@
     "cypress": "^9.5.2",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
-    "eslint-config-next": "12.1.0",
+    "eslint-config-next": "13.0.6",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-vtex-react": "^8.2.1",
     "eslint-plugin-prettier": "^4.0.0",
@@ -62,6 +74,11 @@
     "prettier": "^2.5.1",
     "standard-version": "^9.3.2",
     "typescript": "^4.6.2"
+  },
+	"overrides": {
+    "next-plugin-preval": {
+      "next": "$next"
+    }
   },
   "lint-staged": {
     "*.{ts,js,tsx,jsx}": [
@@ -77,10 +94,11 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "1.0.10-vtex"
+      "version": "1.0.10-vtex-8-g4da7b79"
     }
   },
   "resolutions": {
+    "next": "13.0.5",
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2"
   }

@@ -2,7 +2,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const sidebarContainer: SxStyleProp = {
   position: 'relative',
-  width: 'auto',
+  width: '300px',
   minHeight: '692px',
   paddingTop: '34px',
   paddingBottom: '24px',

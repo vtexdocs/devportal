@@ -10,6 +10,8 @@ import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from './rehypeBlockquote'
 
+import remarkImages from 'utils/remark_plugins/plaiceholder'
+
 import { Box, Flex } from '@vtex/brand-ui'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
@@ -164,7 +166,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGFM, remarkBlockquote],
+        remarkPlugins: [remarkGFM, remarkImages, remarkBlockquote],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
@@ -182,8 +184,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     }
   } catch (error) {
-    console.log('Error while processing', path)
-    console.log(error)
+    console.error('`\x1b[33m Error while processing \x1b[0m', path)
+    console.error(`\x1b[33m${error}\x1b[0m`)
 
     return {
       notFound: true,
