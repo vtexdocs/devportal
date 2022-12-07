@@ -1,8 +1,11 @@
 import React, { Fragment, useContext } from 'react'
 import { Box, Flex, Button, Link, IconCaret } from '@vtex/brand-ui'
+import { useRouter } from 'next/router'
 import { SidebarContext } from 'utils/contexts/sidebar'
 import { MethodType } from 'utils/typings/unionTypes'
 import MethodCategory from 'components/method-category'
+import jp from 'jsonpath'
+import useNavigation from 'utils/hooks/useNavigation'
 
 import { styleByLevelNormal, textStyle } from './functions'
 import styles from './styles'
@@ -31,9 +34,21 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     openSidebarElement,
   } = useContext(SidebarContext)
 
+  const router = useRouter()
+  const sidebarDataMaster = useNavigation().data
+
+  const handleClick = (e: { preventDefault: () => void }, path: string) => {
+    e.preventDefault()
+    router.push(`/docs/${slugPrefix}/${path}`)
+  }
+
   const ElementRoot = ({ slug, name, method, children }: SidebarElement) => {
     const isExpandable = children.length > 0
-
+    const isMarkdown: boolean =
+      jp.query(sidebarDataMaster, `$..*[?(@.slug=="${slug}")].type`)[0] ==
+      'markdown'
+        ? true
+        : false
     return (
       <Box sx={styles.elementContainer}>
         <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
@@ -60,24 +75,27 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
               onClick={() => toggleSidebarElementStatus(slug)}
             />
           )}
-          <Link
-            sx={textStyle(activeSidebarElement === slug, isExpandable)}
-            target="_self"
-            href={`/docs/${slugPrefix}/${slug}`}
-            onClick={() => {
-              openSidebarElement(slug)
-              setActiveSidebarElement(slug)
-            }}
-          >
-            {method && (
-              <MethodCategory
-                sx={styles.methodBox}
-                active={activeSidebarElement === slug}
-                origin="sidebar"
-                method={method}
-              />
-            )}
-            {name}
+
+          <Link sx={textStyle(activeSidebarElement === slug, isExpandable)}>
+            <a
+              onClick={(e) => {
+                setActiveSidebarElement(slug)
+                openSidebarElement(slug)
+                {
+                  isMarkdown && handleClick(e, slug)
+                }
+              }}
+            >
+              {method && (
+                <MethodCategory
+                  sx={styles.methodBox}
+                  active={activeSidebarElement === slug}
+                  origin="sidebar"
+                  method={method}
+                />
+              )}
+              {name}
+            </a>
           </Link>
         </Flex>
       </Box>
