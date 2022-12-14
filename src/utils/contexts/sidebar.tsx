@@ -38,7 +38,7 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
 
   const closeSidebarElements = (parents: string[]) => {
     const closeSidebar = sidebarElementStatus
-    closeSidebar.forEach((value: boolean, key: string) => {
+    closeSidebar.forEach((_value: boolean, key: string) => {
       parents.includes(key) ? '' : closeSidebar.set(key, false)
     })
     setSidebarElementStatus(closeSidebar)
