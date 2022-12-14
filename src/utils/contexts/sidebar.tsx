@@ -10,6 +10,7 @@ type ContextType = {
   setActiveSidebarElement: Dispatch<SetStateAction<string>>
   toggleSidebarElementStatus: (title: string) => void
   openSidebarElement: (title: string) => void
+  closeSidebarElements: (parents: string[]) => void
 }
 
 export const SidebarContext = createContext<ContextType>({
@@ -20,6 +21,7 @@ export const SidebarContext = createContext<ContextType>({
   setActiveSidebarElement: () => undefined,
   toggleSidebarElementStatus: () => undefined,
   openSidebarElement: () => undefined,
+  closeSidebarElements: () => undefined,
 })
 
 interface Props extends Partial<ContextType> {
@@ -34,10 +36,20 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
 
   const { fallback } = props
 
+  const closeSidebarElements = (parents: string[]) => {
+    const closeSidebar = sidebarElementStatus
+    closeSidebar.forEach((value: boolean, key: string) => {
+      parents.includes(key) ? '' : closeSidebar.set(key, false)
+    })
+    setSidebarElementStatus(closeSidebar)
+  }
+
   const toggleSidebarElementStatus = (title: string) => {
     setSidebarElementStatus((sidebarElementStatus) => {
       const open =
-        !sidebarElementStatus.has(title) || !sidebarElementStatus.get(title)
+        sidebarElementStatus.has(title) === false
+          ? true
+          : !sidebarElementStatus.get(title)
 
       return new Map(sidebarElementStatus.set(title, open))
     })
@@ -58,6 +70,7 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
         setSidebarSectionHidden,
         setActiveSidebarElement,
         toggleSidebarElementStatus,
+        closeSidebarElements,
         openSidebarElement,
         ...props,
       }}

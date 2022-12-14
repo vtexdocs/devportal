@@ -32,6 +32,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     setActiveSidebarElement,
     toggleSidebarElementStatus,
     openSidebarElement,
+    closeSidebarElements,
   } = useContext(SidebarContext)
 
   const router = useRouter()
@@ -42,13 +43,38 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     router.push(`/docs/${slugPrefix}/${path}`)
   }
 
-  const ElementRoot = ({ slug, name, method, children }: SidebarElement) => {
-    const isExpandable = children.length > 0
-    const isMarkdown: boolean =
+  const isMarkdown = (slug: string) => {
+    const boolMarkdown: boolean =
       jp.query(sidebarDataMaster, `$..*[?(@.slug=="${slug}")].type`)[0] ==
       'markdown'
         ? true
         : false
+    return boolMarkdown
+  }
+
+  const parents = (slug: string) => {
+    const findPath = jp.paths(
+      sidebarDataMaster,
+      `$..*[?(@.slug=='${slug}')]`
+    )[0]
+    let currentSidebar = sidebarDataMaster
+    const arrayOfSlugs: string[] = []
+    if (findPath?.length > 0) {
+      findPath.forEach((el: string | number) => {
+        if (typeof currentSidebar?.slug == 'string') {
+          arrayOfSlugs.push(currentSidebar.slug)
+        }
+        if (el != '$') {
+          currentSidebar = currentSidebar[el]
+        }
+      })
+      return arrayOfSlugs
+    }
+    return ['']
+  }
+
+  const ElementRoot = ({ slug, name, method, children }: SidebarElement) => {
+    const isExpandable = children.length > 0
     return (
       <Box sx={styles.elementContainer}>
         <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
@@ -76,26 +102,28 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
             />
           )}
 
-          <Link sx={textStyle(activeSidebarElement === slug, isExpandable)}>
-            <a
-              onClick={(e) => {
-                setActiveSidebarElement(slug)
-                openSidebarElement(slug)
-                {
-                  isMarkdown && handleClick(e, slug)
-                }
-              }}
-            >
-              {method && (
-                <MethodCategory
-                  sx={styles.methodBox}
-                  active={activeSidebarElement === slug}
-                  origin="sidebar"
-                  method={method}
-                />
-              )}
-              {name}
-            </a>
+          <Link
+            sx={textStyle(activeSidebarElement === slug, isExpandable)}
+            onClick={(e: { preventDefault: () => void }) => {
+              closeSidebarElements(parents(slug))
+              {
+                isMarkdown(slug) &&
+                  (handleClick(e, slug),
+                  openSidebarElement(slug),
+                  setActiveSidebarElement(slug))
+              }
+              toggleSidebarElementStatus(slug)
+            }}
+          >
+            {method && (
+              <MethodCategory
+                sx={styles.methodBox}
+                active={activeSidebarElement === slug}
+                origin="sidebar"
+                method={method}
+              />
+            )}
+            {name}
           </Link>
         </Flex>
       </Box>
