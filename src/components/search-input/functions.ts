@@ -5,3 +5,8 @@ export const getBreadcrumbs = (hit: Hit) => {
   const endpointSplit = urlSplit.map((e) => e.split('#'))
   return endpointSplit.flat()
 }
+
+export const getRelativeURL = (hit: Hit) => {
+  const relativeURL = hit.url.replace(/^(?:\/\/|[^/]+)*\//, '')
+  return relativeURL
+}
