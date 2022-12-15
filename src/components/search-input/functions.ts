@@ -8,5 +8,5 @@ export const getBreadcrumbs = (hit: Hit) => {
 
 export const getRelativeURL = (hit: Hit) => {
   const relativeURL = hit.url.replace(/^(?:\/\/|[^/]+)*\//, '')
-  return relativeURL
+  return '/' + relativeURL
 }
