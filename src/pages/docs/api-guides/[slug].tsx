@@ -100,8 +100,10 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
         <Flex sx={styles.mainContainer}>
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
-              <h1>{serialized.frontmatter?.title}</h1>
-              <MarkdownRenderer serialized={serialized} />
+              <article>
+                <h1>{serialized.frontmatter?.title}</h1>
+                <MarkdownRenderer serialized={serialized} />
+              </article>
             </Box>
 
             <Box sx={styles.bottomContributorsContainer}>
