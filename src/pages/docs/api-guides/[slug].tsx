@@ -185,8 +185,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     }
   } catch (error) {
-    console.log('Error while processing', path)
-    console.log(error)
+    console.error('`\x1b[33m Error while processing \x1b[0m', path)
+    console.error(`\x1b[33m${error}\x1b[0m`)
 
     return {
       notFound: true,
