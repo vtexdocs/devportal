@@ -29,10 +29,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   const {
     activeSidebarElement,
     sidebarElementStatus,
-    setActiveSidebarElement,
     toggleSidebarElementStatus,
-    openSidebarElement,
-    closeSidebarElements,
   } = useContext(SidebarContext)
 
   const router = useRouter()
@@ -50,27 +47,6 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
         ? true
         : false
     return boolMarkdown
-  }
-
-  const parents = (slug: string) => {
-    const findPath = jp.paths(
-      sidebarDataMaster,
-      `$..*[?(@.slug=='${slug}')]`
-    )[0]
-    let currentSidebar = sidebarDataMaster
-    const arrayOfSlugs: string[] = []
-    if (findPath?.length > 0) {
-      findPath.forEach((el: string | number) => {
-        if (typeof currentSidebar?.slug == 'string') {
-          arrayOfSlugs.push(currentSidebar.slug)
-        }
-        if (el != '$') {
-          currentSidebar = currentSidebar[el]
-        }
-      })
-      return arrayOfSlugs
-    }
-    return ['']
   }
 
   const ElementRoot = ({ slug, name, method, children }: SidebarElement) => {
@@ -105,12 +81,8 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
           <Link
             sx={textStyle(activeSidebarElement === slug, isExpandable)}
             onClick={(e: { preventDefault: () => void }) => {
-              closeSidebarElements(parents(slug))
               {
-                isMarkdown(slug) &&
-                  (handleClick(e, slug),
-                  openSidebarElement(slug),
-                  setActiveSidebarElement(slug))
+                isMarkdown(slug) && handleClick(e, slug)
               }
               toggleSidebarElementStatus(slug)
             }}

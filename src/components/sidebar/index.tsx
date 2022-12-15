@@ -27,7 +27,7 @@ interface SideBarSectionState {
 const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   const [activeSectionName, setActiveSectionName] = useState('')
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
-  const { setActiveSidebarElement, openSidebarElement } =
+  const { setActiveSidebarElement, openSidebarElement, closeSidebarElements } =
     useContext(SidebarContext)
   const sidebarDataMaster = useNavigation().data
   const { asPath } = useRouter()
@@ -57,15 +57,17 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   useEffect(() => {
     const timer = setTimeout(() => setExpandDelayStatus(false), 5000)
     const sectionName = getSlugPath()[1]
+    closeSidebarElements()
     setActiveSectionName(sectionName)
     getSlugPath()[0].forEach((slug: string) => {
       openSidebarElement(slug)
     })
+    openSidebarElement(slug)
     setActiveSidebarElement(slug)
     return () => {
       clearTimeout(timer)
     }
-  }, [])
+  }, [slug])
 
   const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
     const [iconTooltip, setIconTooltip] = useState(false)

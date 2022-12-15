@@ -10,7 +10,7 @@ type ContextType = {
   setActiveSidebarElement: Dispatch<SetStateAction<string>>
   toggleSidebarElementStatus: (title: string) => void
   openSidebarElement: (title: string) => void
-  closeSidebarElements: (parents: string[]) => void
+  closeSidebarElements: () => void
 }
 
 export const SidebarContext = createContext<ContextType>({
@@ -36,16 +36,6 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
 
   const { fallback } = props
 
-  const closeSidebarElements = (parents: string[]) => {
-    const closeSidebar = sidebarElementStatus
-    closeSidebar.forEach((_value: boolean, key: string) => {
-      if (!parents.includes(key)) {
-        closeSidebar.set(key, false)
-      }
-    })
-    setSidebarElementStatus(closeSidebar)
-  }
-
   const toggleSidebarElementStatus = (title: string) => {
     setSidebarElementStatus((sidebarElementStatus) => {
       const open =
@@ -55,6 +45,10 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
 
       return new Map(sidebarElementStatus.set(title, open))
     })
+  }
+
+  const closeSidebarElements = () => {
+    sidebarElementStatus.clear()
   }
 
   const openSidebarElement = (title: string) => {
@@ -72,8 +66,8 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
         setSidebarSectionHidden,
         setActiveSidebarElement,
         toggleSidebarElementStatus,
-        closeSidebarElements,
         openSidebarElement,
+        closeSidebarElements,
         ...props,
       }}
     >
