@@ -7,22 +7,25 @@ const APIReferencePage = () => {
       <h1>API Reference</h1>
       <ul>
         <li>
-          <Link href="/docs/api-reference/catalog">
+          <Link href="/docs/api-reference/Catalog-API" legacyBehavior>
             <a>Catalog API</a>
           </Link>
         </li>
         <li>
-          <Link href="/docs/api-reference/checkout">
+          <Link href="/docs/api-reference/Checkout-API" legacyBehavior>
             <a>Checkout API</a>
           </Link>
         </li>
         <li>
-          <Link href="/docs/api-reference/antifraud">
+          <Link
+            href="/docs/api-reference/antifraud-provider-protocol-overview"
+            legacyBehavior
+          >
             <a>antifraud API</a>
           </Link>
         </li>
         <li>
-          <Link href="/docs/api-reference/giftcard">
+          <Link href="/docs/api-reference/giftcard" legacyBehavior>
             <a>giftcard API</a>
           </Link>
         </li>
