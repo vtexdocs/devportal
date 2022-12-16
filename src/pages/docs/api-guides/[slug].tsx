@@ -153,7 +153,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   let documentationContent = await getGithubFile(
     'vtexdocs',
     'dev-portal-content',
-    'first-docs',
+    'readme-docs',
     path
   )
 

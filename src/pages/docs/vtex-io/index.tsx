@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { Fragment } from 'react'
 import { Box, Flex, Link, Text } from '@vtex/brand-ui'
+import { GetStaticProps, NextPage } from 'next'
+import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
+import getNavigation from 'utils/getNavigation'
 
 import WhatsNextCard from 'components/whats-next-card'
 
@@ -11,7 +14,12 @@ import image from '../../../../public/images/vtex-io.png'
 
 import styles from 'styles/vtex-io'
 
-const VTEXIOPage = () => {
+interface Props {
+  sidebarfallback: any //eslint-disable-line
+  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
+}
+
+const VTEXIOPage: NextPage<Props> = () => {
   const messages = getMessages()
 
   return (
@@ -68,6 +76,18 @@ const VTEXIOPage = () => {
       </Box>
     </Fragment>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const sidebarfallback = await getNavigation()
+  const sectionSelected = 'VTEX IO'
+
+  return {
+    props: {
+      sidebarfallback,
+      sectionSelected,
+    },
+  }
 }
 
 export default VTEXIOPage

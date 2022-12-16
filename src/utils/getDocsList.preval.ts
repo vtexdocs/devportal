@@ -26,7 +26,7 @@ async function getDocsList() {
   const repoTree = await getGithubTree(
     'vtexdocs',
     'dev-portal-content',
-    'first-docs'
+    'readme-docs'
   )
   // @ts-ignore
   repoTree.tree.map((node: any) => {

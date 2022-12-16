@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import { SidebarContext } from 'utils/contexts/sidebar'
 import { MethodType } from 'utils/typings/unionTypes'
 import MethodCategory from 'components/method-category'
+import jp from 'jsonpath'
+import useNavigation from 'utils/hooks/useNavigation'
 
 import { styleByLevelNormal, textStyle } from './functions'
 import styles from './styles'
@@ -27,20 +29,28 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   const {
     activeSidebarElement,
     sidebarElementStatus,
-    setActiveSidebarElement,
     toggleSidebarElementStatus,
-    openSidebarElement,
   } = useContext(SidebarContext)
 
   const router = useRouter()
+  const sidebarDataMaster = useNavigation().data
+
   const handleClick = (e: { preventDefault: () => void }, path: string) => {
     e.preventDefault()
     router.push(`/docs/${slugPrefix}/${path}`)
   }
 
+  const isMarkdown = (slug: string) => {
+    const boolMarkdown: boolean =
+      jp.query(sidebarDataMaster, `$..*[?(@.slug=="${slug}")].type`)[0] ==
+      'markdown'
+        ? true
+        : false
+    return boolMarkdown
+  }
+
   const ElementRoot = ({ slug, name, method, children }: SidebarElement) => {
     const isExpandable = children.length > 0
-
     return (
       <Box sx={styles.elementContainer}>
         <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
@@ -67,13 +77,14 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
               onClick={() => toggleSidebarElementStatus(slug)}
             />
           )}
+
           <Link
             sx={textStyle(activeSidebarElement === slug, isExpandable)}
-            target="_self"
             onClick={(e: { preventDefault: () => void }) => {
-              openSidebarElement(slug)
-              setActiveSidebarElement(slug)
-              handleClick(e, slug)
+              {
+                isMarkdown(slug) && handleClick(e, slug)
+              }
+              toggleSidebarElementStatus(slug)
             }}
           >
             {method && (

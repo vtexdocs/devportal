@@ -1,5 +1,6 @@
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
+import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Layout from 'components/category-layout'
 import OverviewCard from 'components/overview-card'
 import { Composable } from 'components/overview-card/icons'
@@ -8,6 +9,7 @@ import styles from './styles.module.css'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
+  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
 }
 
 const Image2 = () => (
@@ -254,10 +256,12 @@ const ApiGuidesPage: NextPage<Props> = () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const sidebarfallback = await getNavigation()
+  const sectionSelected = 'API Guides'
 
   return {
     props: {
       sidebarfallback,
+      sectionSelected,
     },
   }
 }

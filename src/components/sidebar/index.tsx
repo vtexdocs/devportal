@@ -1,6 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useContext } from 'react'
 import { Flex, Text, Box } from '@vtex/brand-ui'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
@@ -16,26 +17,57 @@ import Tooltip from 'components/tooltip'
 import { iconTooltipStyle } from './functions'
 
 import useNavigation from 'utils/hooks/useNavigation'
+import jp from 'jsonpath'
+import { SidebarContext } from 'utils/contexts/sidebar'
 
 interface SideBarSectionState {
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
 }
 
 const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
-  const [activeSectionName, setActiveSectionName] = useState(
-    sectionSelected ? sectionSelected : 'API Guides'
-  )
+  const [activeSectionName, setActiveSectionName] = useState('')
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
+  const { setActiveSidebarElement, openSidebarElement, closeSidebarElements } =
+    useContext(SidebarContext)
+  const sidebarDataMaster = useNavigation().data
+  const { asPath } = useRouter()
+  const slug = asPath.split('/')[3]
+
+  const getSlugPath = () => {
+    const findPath = jp.paths(
+      sidebarDataMaster,
+      `$..*[?(@.slug=='${slug}')]`
+    )[0]
+    let currentSidebar = sidebarDataMaster
+    const arrayOfSlugs: string[] = []
+    if (findPath?.length > 0) {
+      findPath.forEach((el: string | number) => {
+        if (typeof currentSidebar?.slug == 'string') {
+          arrayOfSlugs.push(currentSidebar.slug)
+        }
+        if (el != '$') {
+          currentSidebar = currentSidebar[el]
+        }
+      })
+      return [arrayOfSlugs, sidebarDataMaster[findPath[1]].documentation]
+    }
+    return [[''], sectionSelected ? sectionSelected : '']
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => setExpandDelayStatus(false), 5000)
-
+    const sectionName = getSlugPath()[1]
+    closeSidebarElements()
+    setActiveSectionName(sectionName)
+    getSlugPath()[0].forEach((slug: string) => {
+      openSidebarElement(slug)
+    })
+    openSidebarElement(slug)
+    setActiveSidebarElement(slug)
     return () => {
       clearTimeout(timer)
     }
-  }, [])
-
-  const sidebarDataMaster = useNavigation().data
+  }, [slug])
 
   const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
     const [iconTooltip, setIconTooltip] = useState(false)
@@ -75,7 +107,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
             onClick={() => {
               setActiveSectionName(iconElement.title)
             }}
-            legacyBehavior
+            passHref
           >
             <Flex
               sx={
