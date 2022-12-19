@@ -13,7 +13,6 @@ async function transformer(ast: any) {
     console.debug(`Checking img:${node.url}`)
     promises.push(
       probe(node.url as string).then((results) => {
-        console.debug(`Probed img:${node.url}`)
         const img = results
         node.alt = JSON.stringify({
           base64: '  ',
@@ -27,7 +26,6 @@ async function transformer(ast: any) {
                 base64: resultsPlaiceholder.base64,
                 img: resultsPlaiceholder.img,
               })
-              console.debug(node.alt)
             })
           )
         }
