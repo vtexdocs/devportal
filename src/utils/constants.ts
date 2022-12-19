@@ -3,6 +3,7 @@ import APIReferenceIcon from 'components/icons/api-reference-icon'
 import VTEXIOIcon from 'components/icons/vtex-io-icon'
 import FastStoreIcon from 'components/icons/fast-store-icon'
 import SFAppsIcon from 'components/icons/sfapps-icon'
+import LegacyCMSIcon from 'components/icons/legacy-cms-icon'
 
 import ReleaseNotesIcon from 'components/icons/release-notes-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
@@ -56,6 +57,12 @@ export const documentationData: DocDataElement[] = [
     title: 'Store Framework Apps',
     description: messages['documentation_sfapps.description'],
     link: '/docs/store-framework-apps',
+  },
+  {
+    Icon: LegacyCMSIcon,
+    title: 'Legacy CMS Portal',
+    description: messages['documentation_legacycms.description'],
+    link: '/docs/legacy-cms',
   },
 ]
 
