@@ -46,13 +46,10 @@ const SidebarElements = ({ pathPrefix, items, subItemLevel }: SidebarProps) => {
     router.push(`/docs/${pathPrefix}${pathSuffix}`)
   }
 
-  const isMarkdown = (slug: string) => {
-    const boolMarkdown: boolean =
-      jp.query(sidebarDataMaster, `$..*[?(@.slug=="${slug}")].type`)[0] ==
-      'markdown'
-        ? true
-        : false
-    return boolMarkdown
+  const checkDocumentationType = (slug: string, type: string) => {
+    return (
+      jp.query(sidebarDataMaster, `$..*[?(@.slug=="${slug}")].type`)[0] == type
+    )
   }
 
   const ElementRoot = ({
@@ -98,7 +95,9 @@ const SidebarElements = ({ pathPrefix, items, subItemLevel }: SidebarProps) => {
                 : `/${slug}`
 
               {
-                isMarkdown(slug) && handleClick(e, pathSuffix)
+                ;(checkDocumentationType(slug, 'markdown') ||
+                  checkDocumentationType(slug, 'openapi')) &&
+                  handleClick(e, pathSuffix)
               }
               toggleSidebarElementStatus(slug)
             }}
