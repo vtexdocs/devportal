@@ -37,7 +37,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
 
   const handleClick = (e: { preventDefault: () => void }, path: string) => {
     e.preventDefault()
-    router.push(`/docs/${slugPrefix}/${path}`)
+    router.push(`/${slugPrefix}/${path}`)
   }
 
   const isMarkdown = (slug: string) => {
