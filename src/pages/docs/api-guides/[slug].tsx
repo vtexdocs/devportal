@@ -36,10 +36,11 @@ import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
 // import getDocsListPreval from 'utils/getDocsList.preval'
 
 import styles from 'styles/documentation-page'
+import getFileContributors, {
+  ContributorsType,
+} from 'utils/getFileContributors'
 
 const docsPathsGLOBAL = await getDocsPaths()
-
-const contributors = 'ABCDEFGHIJKL'.split('')
 
 const documentationCards = [
   {
@@ -61,11 +62,13 @@ interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
+  contributors: ContributorsType[]
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized }) => {
+const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
+    if (headings) setHeadings([])
     document.querySelectorAll('h2, h3').forEach((heading) => {
       const item = {
         title: removeHTML(heading.innerHTML).replace(':', ''),
@@ -157,6 +160,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     path
   )
 
+  const contributors = await getFileContributors(
+    'vtexdocs',
+    'dev-portal-content',
+    'readme-docs',
+    path
+  )
+
   try {
     if (path.endsWith('.md')) {
       documentationContent = escapeCurlyBraces(documentationContent)
@@ -182,6 +192,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         serialized,
         sidebarfallback,
+        contributors,
       },
     }
   } catch (error) {
