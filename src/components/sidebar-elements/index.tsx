@@ -86,7 +86,6 @@ const SidebarElements = ({ pathPrefix, items, subItemLevel }: SidebarProps) => {
               onClick={() => toggleSidebarElementStatus(slug)}
             />
           )}
-
           <Box
             sx={textStyle(activeSidebarElement === slug, isExpandable)}
             onClick={(e: { preventDefault: () => void }) => {
