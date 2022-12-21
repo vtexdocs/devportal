@@ -1,7 +1,15 @@
 import Link from 'next/link'
 import Layout from 'components/category-layout'
+import { GetStaticProps, NextPage } from 'next'
+import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
+import getNavigation from 'utils/getNavigation'
 
-const APIReferencePage = () => {
+interface Props {
+  sidebarfallback: any //eslint-disable-line
+  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
+}
+
+const APIReferencePage: NextPage<Props> = () => {
   return (
     <Layout>
       <h1>API Reference</h1>
@@ -32,6 +40,18 @@ const APIReferencePage = () => {
       </ul>
     </Layout>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const sidebarfallback = await getNavigation()
+  const sectionSelected = 'API Reference'
+
+  return {
+    props: {
+      sidebarfallback,
+      sectionSelected,
+    },
+  }
 }
 
 export default APIReferencePage

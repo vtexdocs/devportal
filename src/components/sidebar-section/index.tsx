@@ -5,7 +5,7 @@ import type { SidebarElement } from 'components/sidebar-elements'
 import type {
   DocumentationTitle,
   UpdatesTitle,
-  DocumentationSlug,
+  SlugPrefix,
 } from 'utils/typings/unionTypes'
 
 import SearchIcon from 'components/icons/search-icon'
@@ -20,13 +20,13 @@ import styles from './styles'
 export interface SidebarSectionProps {
   documentation: DocumentationTitle | UpdatesTitle
   categories: SidebarElement[]
-  slug: DocumentationSlug
+  slugPrefix: SlugPrefix
 }
 
 const SidebarSection = ({
   documentation,
   categories,
-  slug,
+  slugPrefix,
 }: SidebarSectionProps) => {
   const [searchValue, setSearchValue] = useState('')
   const { sidebarSectionHidden, setSidebarSectionHidden } =
@@ -105,7 +105,7 @@ const SidebarSection = ({
           <SideBarElements
             items={filteredResult}
             subItemLevel={0}
-            pathPrefix={slug}
+            slugPrefix={slugPrefix}
           />
         </Box>
       </Box>

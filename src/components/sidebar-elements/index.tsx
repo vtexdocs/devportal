@@ -23,12 +23,12 @@ export interface SidebarElement {
 }
 
 export interface SidebarProps {
-  pathPrefix?: string
+  slugPrefix?: string
   items: SidebarElement[]
   subItemLevel: number
 }
 
-const SidebarElements = ({ pathPrefix, items, subItemLevel }: SidebarProps) => {
+const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   const {
     activeSidebarElement,
     sidebarElementStatus,
@@ -43,7 +43,7 @@ const SidebarElements = ({ pathPrefix, items, subItemLevel }: SidebarProps) => {
     pathSuffix: string
   ) => {
     e.preventDefault()
-    router.push(`/docs/${pathPrefix}${pathSuffix}`)
+    router.push(`/docs/${slugPrefix}${pathSuffix}`)
   }
 
   const checkDocumentationType = (slug: string, type: string) => {
@@ -118,16 +118,14 @@ const SidebarElements = ({ pathPrefix, items, subItemLevel }: SidebarProps) => {
 
   const ElementChildren = ({ slug, children }: SidebarElement) => {
     const isExpandable = children.length > 0
-    const newPathPrefix = `${pathPrefix}${
-      pathPrefix === 'api-reference' ? `/${slug}` : ''
-    }`
-
+    const newPathPrefix =
+      slugPrefix === 'api-reference' ? `/api-reference/${slug}` : slugPrefix
     return isExpandable &&
       sidebarElementStatus.has(slug) &&
       sidebarElementStatus.get(slug) ? (
       <Box>
         <SidebarElements
-          pathPrefix={newPathPrefix}
+          slugPrefix={newPathPrefix}
           items={children}
           subItemLevel={subItemLevel + 1}
           key={`${slug}sd`}

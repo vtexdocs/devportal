@@ -2,13 +2,13 @@
   "navbar": [
     {
       "documentation": "API Guides",
-      "slug": "api-guides",
+      "slugPrefix": "api-guides",
       "categories": [
         {
           "name": "Getting Started",
-          "slug": "",
+          "slug": "getting-started-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Introduction",
@@ -114,15 +114,15 @@
         },
         {
           "name": "Integration Guides",
-          "slug": "",
+          "slug": "integration-guides-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "API Guides",
-              "slug": "setting-up-dkim-for-transactional-emails",
+              "slug": "api-guides-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Setting up DKIM for transactional emails",
@@ -880,9 +880,9 @@
         },
         {
           "name": "Checkout",
-          "slug": "",
+          "slug": "checkout-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Custom Data",
@@ -1321,9 +1321,9 @@
         },
         {
           "name": "Payments",
-          "slug": "",
+          "slug": "payments-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Configuration Guides",
@@ -1358,9 +1358,9 @@
         },
         {
           "name": "Orders",
-          "slug": "",
+          "slug": "orders-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Actions in orders",
@@ -1416,9 +1416,9 @@
         },
         {
           "name": "VTEX inStore",
-          "slug": "",
+          "slug": "instore-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "How to customize inStore",
@@ -1588,9 +1588,9 @@
         },
         {
           "name": "UI Customization",
-          "slug": "",
+          "slug": "ui-customization-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "My Authentication",
@@ -1625,9 +1625,9 @@
         },
         {
           "name": "Message Center",
-          "slug": "",
+          "slug": "message-center-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "How to set up functions in the Message Center templates",
@@ -1647,9 +1647,9 @@
         },
         {
           "name": "Promotions",
-          "slug": "",
+          "slug": "promotions-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Using Policy Engine API on Promotion Alerts",
@@ -1669,9 +1669,9 @@
         },
         {
           "name": "Infrastructure",
-          "slug": "",
+          "slug": "infrastructure-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "How to load test a store",
@@ -1684,9 +1684,9 @@
         },
         {
           "name": "Conversational Commerce",
-          "slug": "",
+          "slug": "conversational-commerce-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Create Zendesk integration",
@@ -1699,9 +1699,9 @@
         },
         {
           "name": "Subscriptions",
-          "slug": "",
+          "slug": "subscriptions-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Enabling Manual Prices for Subscriptions v3",
@@ -1721,9 +1721,9 @@
         },
         {
           "name": "Search",
-          "slug": "",
+          "slug": "search-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "How search parameters work",
@@ -1750,9 +1750,9 @@
         },
         {
           "name": "Pricing",
-          "slug": "",
+          "slug": "pricing-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Scheduling prices for a range of hours",
@@ -1765,9 +1765,9 @@
         },
         {
           "name": "VTEX Session",
-          "slug": "",
+          "slug": "session-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Sessions System Overview",
@@ -1782,7 +1782,7 @@
     },
     {
       "documentation": "API Reference",
-      "slug": "api-reference",
+      "slugPrefix": "api-reference",
       "categories": [
         {
           "name": "Antifraud Provider",
@@ -1936,7 +1936,7 @@
     },
     {
       "documentation": "VTEX IO",
-      "slug": "api-guides",
+      "slugPrefix": "api-guides",
       "categories": [
         {
           "name": "Introduction",
@@ -2186,6 +2186,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Developing service configuration apps",
+                  "slug": "vtex-io-documentation-developing-service-configuration-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Managing Clients",
                   "slug": "vtex-io-documentation-how-to-create-and-use-clients",
                   "origin": "",
@@ -2294,7 +2301,7 @@
                 },
                 {
                   "name": "Peer Dependencies",
-                  "slug": "vtex-io-documentation-peer-dependencies",
+                  "slug": "vtex-io-documentation-peerdependencies",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2343,7 +2350,7 @@
                 },
                 {
                   "name": "Site Editor",
-                  "slug": "vtex-io-documentation-site=editor",
+                  "slug": "vtex-io-documentation-site-editor",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2524,9 +2531,9 @@
             },
             {
               "name": "Storefront development",
-              "slug": "SLUG",
+              "slug": "storefront-development-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Building a Carousel using Slider Layout",
@@ -2844,9 +2851,9 @@
             },
             {
               "name": "Performance",
-              "slug": "",
+              "slug": "performance-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Deactivating the VTEX IO native service worker",
@@ -2908,9 +2915,9 @@
             },
             {
               "name": "Styling",
-              "slug": "",
+              "slug": "styling-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Contributing with new CSS Handles",
@@ -3060,9 +3067,9 @@
             },
             {
               "name": "Local development",
-              "slug": "",
+              "slug": "local-development-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Creating a Development workspace",
@@ -3129,7 +3136,6 @@
                 }
               ]
             },
-
             {
               "name": "VTEX App Store",
               "slug": "vtex-app-store",
@@ -3219,9 +3225,9 @@
           "children": [
             {
               "name": "Best practices",
-              "slug": "",
+              "slug": "best-practices-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Developing custom storefront components",
@@ -3317,7 +3323,7 @@
     },
     {
       "documentation": "Store Framework Apps",
-      "slug": "api-guides",
+      "slugPrefix": "api-guides",
       "categories": [
         {
           "name": "Overview",
@@ -4651,7 +4657,6 @@
               "type": "markdown",
               "children": []
             },
-
             {
               "name": "My Authentication",
               "slug": "vtex-my-authentication",
@@ -4799,7 +4804,7 @@
     },
     {
       "documentation": "Legacy CMS Portal",
-      "slug": "legacy-cms",
+      "slugPrefix": "api-guides",
       "categories": [
         {
           "name": "Can I order my product as I want?",
@@ -4875,17 +4880,96 @@
     },
     {
       "documentation": "FastStore",
-      "slug": "faststore",
+      "slugPrefix": "faststore",
       "categories": []
     },
     {
       "documentation": "Release Notes",
-      "slug": "releases",
-      "categories": []
+      "slugPrefix": "releases",
+      "categories": [
+        {
+          "name": "2019",
+          "slug": "2019-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "VTEX IO Release Notes - December 2019",
+              "slug": "vtex-io-release-notes-december-2019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX IO Release Notes - Week 45&46/2019",
+              "slug": "vtex-io-release-notes-week-45462019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX IO Release Notes - Week 43&44/2019",
+              "slug": "vtex-io-release-notes-week-43442019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX IO Release Notes - Week 41&42/2019",
+              "slug": "vtex-io-release-notes-week-41422019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX IO Release Notes - Week 39&40/2019",
+              "slug": "vtex-io-release-notes-week-39402019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX IO Release Notes- Week 38/2019",
+              "slug": "vtex-io-release-notes-week-382019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX IO Release Notes - Week 37/2019",
+              "slug": "vtex-io-release-notes-week-372019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX IO Release Notes - Week 36/2019",
+              "slug": "vtex-io-release-notes-week-362019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX IO Release Notes - Week 35/2019",
+              "slug": "vtex-io-release-notes-week-542019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX IO Release Notes - Week 34/2019",
+              "slug": "vtex-io-release-notes-week-342019",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        }
+      ]
     },
     {
       "documentation": "Documentation Updates",
-      "slug": "doc-updates",
+      "slugPrefix": "doc-updates",
       "categories": []
     }
   ]
