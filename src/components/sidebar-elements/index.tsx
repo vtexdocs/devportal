@@ -77,26 +77,43 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
               onClick={() => toggleSidebarElementStatus(slug)}
             />
           )}
-
-          <Link
-            sx={textStyle(activeSidebarElement === slug, isExpandable)}
-            onClick={(e: { preventDefault: () => void }) => {
-              {
-                isMarkdown(slug) && handleClick(e, slug)
-              }
-              toggleSidebarElementStatus(slug)
-            }}
-          >
-            {method && (
-              <MethodCategory
-                sx={styles.methodBox}
-                active={activeSidebarElement === slug}
-                origin="sidebar"
-                method={method}
-              />
-            )}
-            {name}
-          </Link>
+          {isMarkdown(slug) ? (
+            <Link
+              sx={textStyle(activeSidebarElement === slug, isExpandable)}
+              onClick={(e: { preventDefault: () => void }) => {
+                handleClick(e, slug)
+                toggleSidebarElementStatus(slug)
+              }}
+              href={`/docs/${slugPrefix}/${slug}`}
+            >
+              {method && (
+                <MethodCategory
+                  sx={styles.methodBox}
+                  active={activeSidebarElement === slug}
+                  origin="sidebar"
+                  method={method}
+                />
+              )}
+              {name}
+            </Link>
+          ) : (
+            <Link
+              sx={textStyle(activeSidebarElement === slug, isExpandable)}
+              onClick={() => {
+                toggleSidebarElementStatus(slug)
+              }}
+            >
+              {method && (
+                <MethodCategory
+                  sx={styles.methodBox}
+                  active={activeSidebarElement === slug}
+                  origin="sidebar"
+                  method={method}
+                />
+              )}
+              {name}
+            </Link>
+          )}
         </Flex>
       </Box>
     )
