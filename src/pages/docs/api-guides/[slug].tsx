@@ -27,7 +27,7 @@ import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
 
-import { removeHTML } from 'utils/string-utils'
+import getHeadings from 'utils/getHeadings'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsPaths from 'utils/getDocsPaths'
@@ -37,10 +37,11 @@ import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
 // import getDocsListPreval from 'utils/getDocsList.preval'
 
 import styles from 'styles/documentation-page'
+import getFileContributors, {
+  ContributorsType,
+} from 'utils/getFileContributors'
 
 const docsPathsGLOBAL = await getDocsPaths()
-
-const contributors = 'ABCDEFGHIJKL'.split('')
 
 const documentationCards = [
   {
@@ -62,35 +63,19 @@ interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
+  contributors: ContributorsType[]
+  headingList: Item[]
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized }) => {
+const DocumentationPage: NextPage<Props> = ({
+  serialized,
+  headingList,
+  contributors,
+}) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
-    document.querySelectorAll('h2, h3').forEach((heading) => {
-      const item = {
-        title: removeHTML(heading.innerHTML).replace(':', ''),
-        slug: heading.id,
-      }
-
-      setHeadings((headings) => {
-        if (heading.tagName === 'H2') {
-          return [...headings, { ...item, children: [] }]
-        }
-
-        const { title, slug, children } = headings[headings.length - 1] || {
-          title: '',
-          slug: '',
-          children: [],
-        }
-
-        return [
-          ...headings.slice(0, -1),
-          { title, slug, children: [...children, item] },
-        ]
-      })
-    })
-  }, [])
+    setHeadings(headingList)
+  }, [serialized.frontmatter])
 
   return (
     <>
@@ -101,8 +86,10 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
         <Flex sx={styles.mainContainer}>
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
-              <h1>{serialized.frontmatter?.title}</h1>
-              <MarkdownRenderer serialized={serialized} />
+              <article>
+                <h1>{serialized.frontmatter?.title}</h1>
+                <MarkdownRenderer serialized={serialized} />
+              </article>
             </Box>
 
             <Box sx={styles.bottomContributorsContainer}>
@@ -152,7 +139,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   let documentationContent = await getGithubFile(
     'vtexdocs',
     'dev-portal-content',
-    'first-docs',
+    'readme-docs',
+    path
+  )
+
+  const contributors = await getFileContributors(
+    'vtexdocs',
+    'dev-portal-content',
+    'readme-docs',
     path
   )
 
@@ -163,17 +157,23 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       documentationContent = await replaceMagicBlocks(documentationContent)
     }
 
+    const headingList: Item[] = []
+
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGFM, remarkImages, remarkBlockquote],
+        remarkPlugins: [
+          remarkGFM,
+          remarkImages,
+          [getHeadings, { headingList }],
+          remarkBlockquote,
+        ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
         format: 'mdx',
       },
     })
-
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
@@ -181,6 +181,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         serialized,
         sidebarfallback,
+        headingList,
+        contributors,
       },
     }
   } catch (error) {

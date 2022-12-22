@@ -1,13 +1,35 @@
-import Script from 'next/script'
 import Head from 'next/head'
+import Script from 'next/script'
+import { useRouter } from 'next/router'
+import { useEffect, useRef } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import getReferencePaths from 'utils/getReferencePaths'
 
 interface Props {
   slug: string
-  matchPath: string
 }
-//<rapi-doc-mini spec-url={`/docs/api-reference/${slug}.json`} />
-const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
+
+const referencePaths = await getReferencePaths()
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const APIPage: NextPage<Props> = ({ url }) => {
+  const router = useRouter()
+  const rapidoc = useRef<{ scrollTo: (endpoint: string) => void }>(null)
+
+  useEffect(() => {
+    const scrollDoc = () => {
+      if (rapidoc.current) {
+        const endpoint = window.location.hash.slice(1) || 'overview'
+        rapidoc.current.scrollTo(endpoint)
+      }
+    }
+
+    router.events.on('hashChangeComplete', scrollDoc)
+    return () => {
+      router.events.off('hashChangeComplete', scrollDoc)
+    }
+  }, [rapidoc.current, router.events])
+
   return (
     <>
       <Head>
@@ -18,11 +40,13 @@ const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
         src="/rapidoc/rapidoc-min.js"
         strategy="beforeInteractive"
       />
-      <rapi-doc-mini
-        spec-url={`/docs/api-reference/${slug}.json`}
-        match-paths={matchPath}
-        paths-expanded={true}
+      <rapi-doc
+        ref={rapidoc}
+        spec-url={`${url}`}
         layout="column"
+        render-style="focused"
+        show-header="false"
+        show-side-nav="false"
         fill-request-fields-with-example={true}
         theme="light"
         bg-color="#FFFFFF"
@@ -39,29 +63,11 @@ const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
   )
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
-  const paths = [
-    {
-      params: {
-        slug: 'catalog',
-      },
-    },
-    {
-      params: {
-        slug: 'checkout',
-      },
-    },
-    {
-      params: {
-        slug: 'antifraud',
-      },
-    },
-    {
-      params: {
-        slug: 'giftcard',
-      },
-    },
-  ]
+export const getStaticPaths: GetStaticPaths = async () => {
+  const slugs = Object.keys(await getReferencePaths())
+  const paths = slugs.map((slug) => ({
+    params: { slug },
+  }))
 
   return {
     paths,
@@ -70,19 +76,12 @@ export const getStaticPaths: GetStaticPaths = () => {
 }
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
-  let matchPath =
-    params?.slug === 'catalog'
-      ? 'get /api/catalog_system/pvt/products/GetProductAndSkuIds'
-      : 'post /api/checkout/pub/orderForms/simulation'
-
-  if (params?.slug === 'antifraud') matchPath = 'post /authorization/token'
-  if (params?.slug === 'giftcard')
-    matchPath = 'get /giftcardproviders/{giftCardProviderId}'
-
+  const slug = params?.slug
+  const url = referencePaths[slug as string] || ''
   return {
     props: {
-      slug: params?.slug,
-      matchPath: matchPath,
+      slug,
+      url,
     },
   }
 }

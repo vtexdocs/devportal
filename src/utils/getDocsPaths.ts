@@ -24,7 +24,7 @@ export default async function getDocsPaths() {
   const repoTree = await getGithubTree(
     'vtexdocs',
     'dev-portal-content',
-    'first-docs'
+    'readme-docs'
   )
   // @ts-ignore
   repoTree.tree.map((node: any) => {
@@ -32,8 +32,9 @@ export default async function getDocsPaths() {
     const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
     if (path.startsWith('docs')) {
       const match = path.match(re)
-      const filename = match?.groups?.filename
-      if (filename) {
+      const filename = match?.groups?.filename ? match?.groups?.filename : ''
+      const filetype = match?.groups?.filetype ? match?.groups?.filetype : ''
+      if (filetype === 'md' || filetype === 'mdx') {
         ;(docsPaths as any)[filename] = path
       }
     }

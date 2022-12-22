@@ -6,7 +6,7 @@ import { Hit, SearchState } from 'react-instantsearch-core'
 import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
 
 import { getIcon } from 'utils/constants'
-import { getBreadcrumbs } from './functions'
+import { getBreadcrumbs, getRelativeURL } from './functions'
 import styles from './styles'
 
 interface HitProps {
@@ -21,7 +21,7 @@ const Hit = ({ hit, setSearchStateActive }: HitProps) => {
 
   return (
     <Link
-      href={hit.url}
+      href={getRelativeURL(hit)}
       onClick={() => setSearchStateActive({})}
       legacyBehavior
     >
