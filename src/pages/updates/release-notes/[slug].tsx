@@ -19,7 +19,6 @@ import APIReferenceIcon from 'components/icons/api-reference-icon'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from 'components/table-of-contents'
-import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
@@ -40,8 +39,6 @@ import { ActionType, getAction } from 'components/last-updates-card/functions'
 import styles from 'styles/documentation-page'
 
 const docsPathsGLOBAL = await getDocsPaths()
-
-const contributors = 'ABCDEFGHIJKL'.split('')
 
 const documentationCards = [
   {
@@ -68,6 +65,7 @@ interface Props {
 const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
+    if (headings) setHeadings([])
     document.querySelectorAll('h2, h3').forEach((heading) => {
       const item = {
         title: removeHTML(heading.innerHTML).replace(':', ''),
@@ -118,17 +116,10 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>
-
-            <Box sx={styles.bottomContributorsContainer}>
-              <Box sx={styles.bottomContributorsDivider} />
-              <Contributors contributors={contributors} />
-            </Box>
-
             <FeedbackSection />
             <SeeAlsoSection cards={documentationCards} />
           </Box>
           <Box sx={styles.rightContainer}>
-            <Contributors contributors={contributors} />
             <TableOfContents />
           </Box>
           <OnThisPage />
@@ -157,7 +148,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       : await getDocsPaths()
 
   const path = docsPaths[slug]
-
   if (!path) {
     return {
       notFound: true,
@@ -172,37 +162,31 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   )
 
   try {
-    if (path.startsWith('docs/release-notes')) {
-      if (path.endsWith('.md')) {
-        documentationContent = escapeCurlyBraces(documentationContent)
-        documentationContent = replaceHTMLBlocks(documentationContent)
-        documentationContent = await replaceMagicBlocks(documentationContent)
-      }
+    if (path.endsWith('.md')) {
+      documentationContent = escapeCurlyBraces(documentationContent)
+      documentationContent = replaceHTMLBlocks(documentationContent)
+      documentationContent = await replaceMagicBlocks(documentationContent)
+    }
 
-      let serialized = await serialize(documentationContent, {
-        parseFrontmatter: true,
-        mdxOptions: {
-          remarkPlugins: [remarkGFM, remarkImages],
-          rehypePlugins: [
-            [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
-          ],
-          format: 'mdx',
-        },
-      })
+    let serialized = await serialize(documentationContent, {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [remarkGFM, remarkImages],
+        rehypePlugins: [
+          [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
+        ],
+        format: 'mdx',
+      },
+    })
 
-      const sidebarfallback = await getNavigation()
-      serialized = JSON.parse(JSON.stringify(serialized))
+    const sidebarfallback = await getNavigation()
+    serialized = JSON.parse(JSON.stringify(serialized))
 
-      return {
-        props: {
-          serialized,
-          sidebarfallback,
-        },
-      }
-    } else {
-      return {
-        notFound: true,
-      }
+    return {
+      props: {
+        serialized,
+        sidebarfallback,
+      },
     }
   } catch (error) {
     console.error('`\x1b[33m Error while processing \x1b[0m', path)
