@@ -63,9 +63,14 @@ interface Props {
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
   contributors: ContributorsType[]
+  path: string
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
+const DocumentationPage: NextPage<Props> = ({
+  serialized,
+  contributors,
+  path,
+}) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
     if (headings) setHeadings([])
@@ -114,7 +119,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
               <Contributors contributors={contributors} />
             </Box>
 
-            <FeedbackSection />
+            <FeedbackSection docPath={path} />
             <SeeAlsoSection cards={documentationCards} />
           </Box>
           <Box sx={styles.rightContainer}>
@@ -193,6 +198,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         serialized,
         sidebarfallback,
         contributors,
+        path,
       },
     }
   } catch (error) {
