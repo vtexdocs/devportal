@@ -11,7 +11,11 @@ import styles from './styles'
 
 const messages = getMessages()
 
-const FeedbackSection = () => {
+interface DocPath {
+  docPath: string
+}
+
+const FeedbackSection = ({ docPath }: DocPath) => {
   const [feedback, changeFeedback] = useState<boolean>()
   const [modalState, changeModalState] = useState<ModalProps>({
     modalOpen: false,
@@ -26,8 +30,7 @@ const FeedbackSection = () => {
     })
   }
 
-  const urlToEdit =
-    'https://github.com/vtexdocs/dev-portal-content/edit/main/docs/release-notes/assets-builder.md'
+  const urlToEdit = `https://github.com/vtexdocs/dev-portal-content/edit/main/${docPath}`
 
   return (
     <Flex sx={styles.container}>
