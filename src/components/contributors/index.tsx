@@ -6,9 +6,11 @@ import Tooltip from 'components/tooltip'
 import { getMessages } from 'utils/get-messages'
 
 import styles from './styles'
+import { ContributorsType } from 'utils/getFileContributors'
+import Image from 'next/image'
 
 interface Props {
-  contributors: string[]
+  contributors: ContributorsType[]
 }
 
 const Contributors = ({ contributors }: Props) => {
@@ -59,11 +61,18 @@ const Contributors = ({ contributors }: Props) => {
       >
         {contributors.map((contributor) => {
           return (
-            <a key={contributor} href="#">
-              <Tooltip label={contributor}>
-                <Box sx={styles.photo} />
-              </Tooltip>
-            </a>
+            <Box sx={styles.photo}>
+              <a key={contributor.login} href={contributor.userPage}>
+                <Tooltip label={contributor.name}>
+                  <Image
+                    src={contributor.avatar}
+                    alt="Photo of the contributor"
+                    width={32}
+                    height={32}
+                  />
+                </Tooltip>
+              </a>
+            </Box>
           )
         })}
       </Grid>

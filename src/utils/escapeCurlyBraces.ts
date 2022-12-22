@@ -51,6 +51,7 @@ const escapeCurlyBraces: (content: string) => string = (content) => {
     idx += 3
   }
   newContent = content.substring(0, idx)
+
   while (idx < content.length) {
     if (content.charAt(idx) === '{' && !insideCodeBlock && !insideMagicBlock)
       newContent += '\\{'
