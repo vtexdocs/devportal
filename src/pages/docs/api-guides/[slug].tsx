@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
+import jp from 'jsonpath'
 
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
@@ -25,6 +26,7 @@ import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
+import Breadcrumb from 'components/breadcrumb'
 
 import { removeHTML } from 'utils/string-utils'
 import getNavigation from 'utils/getNavigation'
@@ -65,7 +67,11 @@ interface Props {
   contributors: ContributorsType[]
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
+const DocumentationPage: NextPage<Props> = ({
+  serialized,
+  contributors,
+  sidebarfallback,
+}) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
     if (headings) setHeadings([])
@@ -94,6 +100,25 @@ const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
     })
   }, [])
 
+  const breadcumb = jp.paths(
+    sidebarfallback,
+    `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
+  )[0]
+  let currentBreadcumb = sidebarfallback
+  const breadcumbList: { slug: string; name: string; type: string }[] = []
+  breadcumb?.forEach((el: string | number) => {
+    if (typeof currentBreadcumb?.slug == 'string') {
+      breadcumbList.push({
+        slug: currentBreadcumb.slug,
+        name: currentBreadcumb.name,
+        type: currentBreadcumb.type,
+      })
+    }
+    if (el != '$') {
+      currentBreadcumb = currentBreadcumb[el]
+    }
+  })
+
   return (
     <>
       <Head>
@@ -104,6 +129,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
+                <Breadcrumb breadcumbList={breadcumbList} />
                 <h1>{serialized.frontmatter?.title}</h1>
                 <MarkdownRenderer serialized={serialized} />
               </article>
@@ -184,7 +210,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         format: 'mdx',
       },
     })
-
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
