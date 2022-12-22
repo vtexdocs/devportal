@@ -1,18 +1,22 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
-import { useLayoutEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import getReferencePaths from 'utils/getReferencePaths'
 
 interface Props {
   slug: string
 }
 
-const APIPage: NextPage<Props> = ({ slug }) => {
+const referencePaths = await getReferencePaths()
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+const APIPage: NextPage<Props> = ({ url }) => {
   const router = useRouter()
   const rapidoc = useRef<{ scrollTo: (endpoint: string) => void }>(null)
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const scrollDoc = () => {
       if (rapidoc.current) {
         const endpoint = window.location.hash.slice(1) || 'overview'
@@ -38,7 +42,7 @@ const APIPage: NextPage<Props> = ({ slug }) => {
       />
       <rapi-doc
         ref={rapidoc}
-        spec-url={`/docs/api-reference/${slug}.json`}
+        spec-url={`${url}`}
         layout="column"
         render-style="focused"
         show-header="false"
@@ -59,29 +63,11 @@ const APIPage: NextPage<Props> = ({ slug }) => {
   )
 }
 
-export const getStaticPaths: GetStaticPaths = () => {
-  const paths = [
-    {
-      params: {
-        slug: 'Catalog-API',
-      },
-    },
-    {
-      params: {
-        slug: 'Checkout-API',
-      },
-    },
-    {
-      params: {
-        slug: 'antifraud-provider-protocol-overview',
-      },
-    },
-    {
-      params: {
-        slug: 'giftcard',
-      },
-    },
-  ]
+export const getStaticPaths: GetStaticPaths = async () => {
+  const slugs = Object.keys(await getReferencePaths())
+  const paths = slugs.map((slug) => ({
+    params: { slug },
+  }))
 
   return {
     paths,
@@ -90,9 +76,12 @@ export const getStaticPaths: GetStaticPaths = () => {
 }
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
+  const slug = params?.slug
+  const url = referencePaths[slug as string] || ''
   return {
     props: {
-      slug: params?.slug,
+      slug,
+      url,
     },
   }
 }
