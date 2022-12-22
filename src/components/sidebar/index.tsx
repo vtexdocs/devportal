@@ -30,8 +30,17 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   const { setActiveSidebarElement, openSidebarElement, closeSidebarElements } =
     useContext(SidebarContext)
   const sidebarDataMaster = useNavigation().data
-  const { asPath } = useRouter()
-  const slug = asPath.split('/')[3]
+  const router = useRouter()
+  let slug = ''
+
+  const querySlug = router.query.slug
+  if (querySlug) {
+    slug = router.pathname.replace('[slug]', querySlug as string)
+  } else {
+    slug = router.pathname
+  }
+
+  slug = slug.substring(slug.lastIndexOf('/') + 1)
 
   const getSlugPath = () => {
     const findPath = jp.paths(

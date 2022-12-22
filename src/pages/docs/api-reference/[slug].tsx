@@ -1,13 +1,31 @@
-import Script from 'next/script'
 import Head from 'next/head'
+import Script from 'next/script'
+import { useRouter } from 'next/router'
+import { useLayoutEffect, useRef } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 interface Props {
   slug: string
-  matchPath: string
 }
-//<rapi-doc-mini spec-url={`/docs/api-reference/${slug}.json`} />
-const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
+
+const APIPage: NextPage<Props> = ({ slug }) => {
+  const router = useRouter()
+  const rapidoc = useRef<{ scrollTo: (endpoint: string) => void }>(null)
+
+  useLayoutEffect(() => {
+    const scrollDoc = () => {
+      if (rapidoc.current) {
+        const endpoint = window.location.hash.slice(1) || 'overview'
+        rapidoc.current.scrollTo(endpoint)
+      }
+    }
+
+    router.events.on('hashChangeComplete', scrollDoc)
+    return () => {
+      router.events.off('hashChangeComplete', scrollDoc)
+    }
+  }, [rapidoc.current, router.events])
+
   return (
     <>
       <Head>
@@ -18,11 +36,13 @@ const APIPage: NextPage<Props> = ({ slug, matchPath }) => {
         src="/rapidoc/rapidoc-min.js"
         strategy="beforeInteractive"
       />
-      <rapi-doc-mini
+      <rapi-doc
+        ref={rapidoc}
         spec-url={`/docs/api-reference/${slug}.json`}
-        match-paths={matchPath}
-        paths-expanded={true}
         layout="column"
+        render-style="focused"
+        show-header="false"
+        show-side-nav="false"
         fill-request-fields-with-example={true}
         theme="light"
         bg-color="#FFFFFF"
@@ -43,17 +63,17 @@ export const getStaticPaths: GetStaticPaths = () => {
   const paths = [
     {
       params: {
-        slug: 'catalog',
+        slug: 'Catalog-API',
       },
     },
     {
       params: {
-        slug: 'checkout',
+        slug: 'Checkout-API',
       },
     },
     {
       params: {
-        slug: 'antifraud',
+        slug: 'antifraud-provider-protocol-overview',
       },
     },
     {
@@ -70,19 +90,9 @@ export const getStaticPaths: GetStaticPaths = () => {
 }
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
-  let matchPath =
-    params?.slug === 'catalog'
-      ? 'get /api/catalog_system/pvt/products/GetProductAndSkuIds'
-      : 'post /api/checkout/pub/orderForms/simulation'
-
-  if (params?.slug === 'antifraud') matchPath = 'post /authorization/token'
-  if (params?.slug === 'giftcard')
-    matchPath = 'get /giftcardproviders/{giftCardProviderId}'
-
   return {
     props: {
       slug: params?.slug,
-      matchPath: matchPath,
     },
   }
 }

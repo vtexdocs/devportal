@@ -1,20 +1,22 @@
 import { Flex, Box, Text } from '@vtex/brand-ui'
 import { useContext, useEffect, useMemo, useState } from 'react'
 
-import SearchIcon from 'components/icons/search-icon'
-import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
-import SideBarElements from 'components/sidebar-elements'
-
-import { SidebarContext } from 'utils/contexts/sidebar'
 import type { SidebarElement } from 'components/sidebar-elements'
-
 import type {
   DocumentationTitle,
   UpdatesTitle,
   SlugPrefix,
 } from 'utils/typings/unionTypes'
-import styles from './styles'
+
+import SearchIcon from 'components/icons/search-icon'
+import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
+import SideBarElements from 'components/sidebar-elements'
 import SectionFilter from 'components/sidebar-section-filter'
+
+import { SidebarContext } from 'utils/contexts/sidebar'
+
+import styles from './styles'
+
 export interface SidebarSectionProps {
   documentation: DocumentationTitle | UpdatesTitle
   categories: SidebarElement[]
