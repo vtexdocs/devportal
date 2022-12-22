@@ -26,7 +26,7 @@ import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
 
-import { removeHTML } from 'utils/string-utils'
+import getHeadings from 'utils/getHeadings'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsPaths from 'utils/getDocsPaths'
@@ -63,36 +63,18 @@ interface Props {
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
   contributors: ContributorsType[]
+  headingList: Item[]
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
+const DocumentationPage: NextPage<Props> = ({
+  serialized,
+  headingList,
+  contributors,
+}) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
-    if (headings) setHeadings([])
-    document.querySelectorAll('h2, h3').forEach((heading) => {
-      const item = {
-        title: removeHTML(heading.innerHTML).replace(':', ''),
-        slug: heading.id,
-      }
-
-      setHeadings((headings) => {
-        if (heading.tagName === 'H2') {
-          return [...headings, { ...item, children: [] }]
-        }
-
-        const { title, slug, children } = headings[headings.length - 1] || {
-          title: '',
-          slug: '',
-          children: [],
-        }
-
-        return [
-          ...headings.slice(0, -1),
-          { title, slug, children: [...children, item] },
-        ]
-      })
-    })
-  }, [])
+    setHeadings(headingList)
+  }, [serialized.frontmatter])
 
   return (
     <>
@@ -174,17 +156,22 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       documentationContent = await replaceMagicBlocks(documentationContent)
     }
 
+    const headingList: Item[] = []
+
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGFM, remarkImages],
+        remarkPlugins: [
+          remarkGFM,
+          remarkImages,
+          [getHeadings, { headingList }],
+        ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
         format: 'mdx',
       },
     })
-
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
@@ -192,6 +179,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         serialized,
         sidebarfallback,
+        headingList,
         contributors,
       },
     }
