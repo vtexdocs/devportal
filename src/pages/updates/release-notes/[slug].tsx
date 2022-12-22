@@ -11,38 +11,61 @@ import hljsCurl from 'highlightjs-curl'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtex/brand-ui'
+
+import APIGuidesIcon from 'components/icons/api-guides-icon'
+import APIReferenceIcon from 'components/icons/api-reference-icon'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from 'components/table-of-contents'
+import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
+import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
-import getDocsPaths from 'utils/getReleasePaths'
+import getDocsPaths from 'utils/getDocsPaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
 // import getDocsListPreval from 'utils/getDocsList.preval'
-import { getReleaseDate } from 'components/release-note/functions'
-import { ActionType, getAction } from 'components/last-updates-card/functions'
 
 import styles from 'styles/documentation-page'
+import getFileContributors, {
+  ContributorsType,
+} from 'utils/getFileContributors'
 
 const docsPathsGLOBAL = await getDocsPaths()
+
+const documentationCards = [
+  {
+    title: 'Billing Options',
+    description: 'API Guides',
+    link: '/docs/api-guides/billing-options',
+    Icon: APIGuidesIcon,
+  },
+  {
+    title:
+      'Catalog API - A long documentation title aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    description: 'API Reference',
+    link: '/docs/api-reference/catalog',
+    Icon: APIReferenceIcon,
+  },
+]
 
 interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
+  contributors: ContributorsType[]
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized }) => {
+const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
     if (headings) setHeadings([])
@@ -70,8 +93,6 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
       })
     })
   }, [])
-  const actionType: ActionType = serialized.frontmatter?.type as ActionType
-  const actionValue = actionType ? getAction(actionType) : null
 
   return (
     <>
@@ -83,22 +104,21 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
-                {actionValue ? (
-                  <Box sx={styles.releaseAction}>
-                    <actionValue.Icon />
-                    <Text>{actionValue?.title}</Text>
-                  </Box>
-                ) : null}
                 <h1>{serialized.frontmatter?.title}</h1>
-                <Text>
-                  {getReleaseDate(serialized.frontmatter?.createdAt || '')}
-                </Text>
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>
+
+            <Box sx={styles.bottomContributorsContainer}>
+              <Box sx={styles.bottomContributorsDivider} />
+              <Contributors contributors={contributors} />
+            </Box>
+
             <FeedbackSection />
+            <SeeAlsoSection cards={documentationCards} />
           </Box>
           <Box sx={styles.rightContainer}>
+            <Contributors contributors={contributors} />
             <TableOfContents />
           </Box>
           <OnThisPage />
@@ -140,6 +160,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     path
   )
 
+  const contributors = await getFileContributors(
+    'vtexdocs',
+    'dev-portal-content',
+    'readme-docs',
+    path
+  )
+
   try {
     if (path.endsWith('.md')) {
       documentationContent = escapeCurlyBraces(documentationContent)
@@ -165,6 +192,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         serialized,
         sidebarfallback,
+        contributors,
       },
     }
   } catch (error) {
