@@ -9,7 +9,7 @@ export type DocumentationTitle =
 
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
-export type DocumentationSlug =
+export type SlugPrefix =
   | 'api-guides'
   | 'api-reference'
   | 'vtex-io'

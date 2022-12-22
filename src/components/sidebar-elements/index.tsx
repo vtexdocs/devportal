@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import React, { Fragment, useContext } from 'react'
-import { Box, Flex, Button, IconCaret } from '@vtex/brand-ui'
+import { Box, Flex, Link, Button, IconCaret } from '@vtex/brand-ui'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
 import { MethodType } from 'utils/typings/unionTypes'
@@ -60,6 +60,9 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     children,
   }: SidebarElement) => {
     const isExpandable = children.length > 0
+    const pathSuffix = method
+      ? `#${method.toLowerCase()}-${endpoint}`
+      : `/${slug}`
     return (
       <Box sx={styles.elementContainer}>
         <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
@@ -86,31 +89,47 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
               onClick={() => toggleSidebarElementStatus(slug)}
             />
           )}
-          <Box
-            sx={textStyle(activeSidebarElement === slug, isExpandable)}
-            onClick={(e: { preventDefault: () => void }) => {
-              const pathSuffix = method
-                ? `#${method.toLowerCase()}-${endpoint}`
-                : `/${slug}`
-
-              {
-                ;(checkDocumentationType(slug, 'markdown') ||
-                  checkDocumentationType(slug, 'openapi')) &&
-                  handleClick(e, pathSuffix)
+          {!checkDocumentationType(slug, 'category') ? (
+            <Link
+              sx={textStyle(activeSidebarElement === slug, isExpandable)}
+              onClick={(e: { preventDefault: () => void }) => {
+                handleClick(e, pathSuffix)
+                toggleSidebarElementStatus(slug)
+              }}
+              href={
+                'api-reference'
+                  ? `/docs/${slugPrefix}/${pathSuffix}`
+                  : `/docs/${slugPrefix}/${slug}`
               }
-              toggleSidebarElementStatus(slug)
-            }}
-          >
-            {method && (
-              <MethodCategory
-                sx={styles.methodBox}
-                active={activeSidebarElement === slug}
-                origin="sidebar"
-                method={method}
-              />
-            )}
-            {name}
-          </Box>
+            >
+              {method && (
+                <MethodCategory
+                  sx={styles.methodBox}
+                  active={activeSidebarElement === slug}
+                  origin="sidebar"
+                  method={method}
+                />
+              )}
+              {name}
+            </Link>
+          ) : (
+            <Box
+              sx={textStyle(activeSidebarElement === slug, isExpandable)}
+              onClick={() => {
+                toggleSidebarElementStatus(slug)
+              }}
+            >
+              {method && (
+                <MethodCategory
+                  sx={styles.methodBox}
+                  active={activeSidebarElement === slug}
+                  origin="sidebar"
+                  method={method}
+                />
+              )}
+              {name}
+            </Box>
+          )}
         </Flex>
       </Box>
     )
