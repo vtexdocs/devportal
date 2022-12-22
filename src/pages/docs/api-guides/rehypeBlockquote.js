@@ -17,8 +17,6 @@ export default function remarkBlockquote() {
     visit(tree, (node, index, parent) => {
       if (node.type !== 'blockquote') return
 
-      console.log('HELOOOO')
-      console.log(node.children)
 
       const { children = [] } = node
       const [{ value, type }, ...siblings] = children[0].children
