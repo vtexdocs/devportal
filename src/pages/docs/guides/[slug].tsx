@@ -55,6 +55,10 @@ const DocumentationPage: NextPage<Props> = ({
   //@ts-ignore
   slug,
   serialized,
+<<<<<<< HEAD:src/pages/docs/guides/[slug].tsx
+=======
+  path,
+>>>>>>> Update [slug].tsx:src/pages/docs/api-guides/[slug].tsx
   sidebarfallback,
   headingList,
   contributors,
