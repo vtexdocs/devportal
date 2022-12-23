@@ -47,6 +47,7 @@ interface Props {
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
   contributors: ContributorsType[]
+  path: string
   headingList: Item[]
 }
 
@@ -55,10 +56,7 @@ const DocumentationPage: NextPage<Props> = ({
   //@ts-ignore
   slug,
   serialized,
-<<<<<<< HEAD:src/pages/docs/guides/[slug].tsx
-=======
   path,
->>>>>>> Update [slug].tsx:src/pages/docs/api-guides/[slug].tsx
   sidebarfallback,
   headingList,
   contributors,
@@ -122,7 +120,7 @@ const DocumentationPage: NextPage<Props> = ({
               <Contributors contributors={contributors} />
             </Box>
 
-            <FeedbackSection />
+            <FeedbackSection docPath={path} />
             {serialized.frontmatter?.seeAlso && (
               <SeeAlsoSection urls={seeAlsoUrls!} />
             )}
@@ -213,6 +211,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         headingList,
         contributors,
         sectionSelected,
+        path,
       },
     }
   } catch (error) {
