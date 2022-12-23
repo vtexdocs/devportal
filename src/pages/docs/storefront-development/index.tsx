@@ -12,6 +12,7 @@ const StorefrontDevelopmentPage: NextPage<Props> = () => {
   return (
     <Layout>
       <h1>Storefront Development</h1>
+      <p>Storefront Development</p>
     </Layout>
   )
 }
