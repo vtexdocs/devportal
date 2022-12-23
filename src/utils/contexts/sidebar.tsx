@@ -5,7 +5,11 @@ import { SWRConfig } from 'swr'
 type ContextType = {
   sidebarSectionHidden: boolean
   activeSidebarElement: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  sidebarDataMaster: any
   sidebarElementStatus: Map<string, boolean>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  setSidebarDataMaster: Dispatch<SetStateAction<any>>
   setSidebarSectionHidden: Dispatch<SetStateAction<boolean>>
   setActiveSidebarElement: Dispatch<SetStateAction<string>>
   toggleSidebarElementStatus: (title: string) => void
@@ -16,7 +20,9 @@ type ContextType = {
 export const SidebarContext = createContext<ContextType>({
   sidebarSectionHidden: false,
   activeSidebarElement: '',
+  sidebarDataMaster: {},
   sidebarElementStatus: new Map(),
+  setSidebarDataMaster: () => undefined,
   setSidebarSectionHidden: () => undefined,
   setActiveSidebarElement: () => undefined,
   toggleSidebarElementStatus: () => undefined,
@@ -33,6 +39,7 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
   const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
   const [activeSidebarElement, setActiveSidebarElement] = useState('')
   const [sidebarElementStatus, setSidebarElementStatus] = useState(new Map())
+  const [sidebarDataMaster, setSidebarDataMaster] = useState(new Map())
 
   const { fallback } = props
 
@@ -68,6 +75,8 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
         toggleSidebarElementStatus,
         openSidebarElement,
         closeSidebarElements,
+        sidebarDataMaster,
+        setSidebarDataMaster,
         ...props,
       }}
     >
