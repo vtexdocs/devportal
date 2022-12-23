@@ -28,7 +28,7 @@ const AppDevelopmentPage: NextPage<Props> = () => {
         <Flex sx={styles.welcomeInnerContainer}>
           <Box sx={styles.welcomeHeader}>
             <Text sx={styles.welcomeText}>
-              {messages['vtex_io_page.title']}
+              {messages['app_development_page.title']}
             </Text>
             <Text sx={styles.welcomeSubtitle}>
               Learn how to develop apps and integrations in the cloud with VTEX
