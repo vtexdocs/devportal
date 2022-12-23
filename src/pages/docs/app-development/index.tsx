@@ -60,7 +60,7 @@ const AppDevelopmentPage: NextPage<Props> = () => {
 
         <Box sx={styles.resourcesSectionContainer}>
           <Text sx={styles.resourcesSectionTitle}>
-            {messages['vtex_io_page_other_resources.title']}
+            {messages['app_development_page_other_resources.title']}
           </Text>
           <Box>
             {resources.map((resource) => (
