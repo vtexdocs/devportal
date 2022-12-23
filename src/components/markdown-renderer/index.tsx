@@ -1,3 +1,4 @@
+import { Box } from '@vtex/brand-ui'
 import { MDXRemote } from 'next-mdx-remote'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const MDXRemote2: any = MDXRemote
@@ -10,7 +11,19 @@ interface Props {
 }
 
 const MarkdownRenderer = ({ serialized }: Props) => (
-  <>
+  <Box
+    sx={{
+      fontSize: [
+        'initial',
+        'initial',
+        'initial',
+        'initial',
+        'initial',
+        'initial',
+        '28px',
+      ],
+    }}
+  >
     <Head>
       <link
         rel="stylesheet"
@@ -20,7 +33,7 @@ const MarkdownRenderer = ({ serialized }: Props) => (
       />
     </Head>
     <MDXRemote2 components={components} lazy {...serialized} />
-  </>
+  </Box>
 )
 
 export default MarkdownRenderer

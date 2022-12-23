@@ -34,7 +34,7 @@ const FeedbackSection = ({ docPath }: DocPath) => {
 
   return (
     <Flex sx={styles.container}>
-      <Text>
+      <Text sx={styles.question}>
         {feedback !== undefined
           ? messages['feedback_section.response']
           : messages['feedback_section.question']}
