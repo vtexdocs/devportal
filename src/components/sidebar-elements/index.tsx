@@ -7,7 +7,6 @@ import { MethodType } from 'utils/typings/unionTypes'
 
 import MethodCategory from 'components/method-category'
 import jp from 'jsonpath'
-import useNavigation from 'utils/hooks/useNavigation'
 
 import { styleByLevelNormal, textStyle } from './functions'
 import styles from './styles'
@@ -36,7 +35,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   } = useContext(SidebarContext)
 
   const router = useRouter()
-  const sidebarDataMaster = useNavigation().data
+  const { sidebarDataMaster } = useContext(SidebarContext)
 
   const handleClick = (
     e: { preventDefault: () => void },
