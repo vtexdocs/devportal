@@ -71,7 +71,6 @@ interface Props {
 
 const DocumentationPage: NextPage<Props> = ({
   serialized,
-  contributors,
   path,
   sidebarfallback,
   headingList,
