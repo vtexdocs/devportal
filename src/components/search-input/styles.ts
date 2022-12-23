@@ -127,6 +127,12 @@ const searchContainer: SxStyleProp = {
   },
 }
 
+const noResults: SxStyleProp = {
+  justifyContent: 'center',
+  alignContent: 'center',
+  padding: '12px',
+}
+
 export default {
   resultsContainer,
   resultsBox,
@@ -141,4 +147,5 @@ export default {
   searchIcon,
   searchContainer,
   alignCenter,
+  noResults,
 }
