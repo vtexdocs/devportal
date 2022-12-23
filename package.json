@@ -80,7 +80,7 @@
     "standard-version": "^9.3.2",
     "typescript": "^4.6.2"
   },
-	"overrides": {
+  "overrides": {
     "next-plugin-preval": {
       "next": "$next"
     }

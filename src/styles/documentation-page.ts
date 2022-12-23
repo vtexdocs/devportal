@@ -9,15 +9,41 @@ const container: SxStyleProp = {
 const mainContainer: SxStyleProp = {
   justifyContent: 'center',
   width: '100%',
-  pt: '64px',
+  pt: '32px',
 }
 
 const articleBox: SxStyleProp = {
   width: ['100%', 'initial'],
+  lineHeight: '22px',
+  a: {
+    color: '#E31C58',
+  },
+  header: {
+    borderBottom: '1px solid #E7E9EE',
+    marginBottom: '24px',
+  },
+  h1: {
+    fontSize: '32px',
+    fontWeight: '400',
+  },
+  h2: {
+    fontSize: '22px',
+    lineHeight: '32px',
+    paddingTop: '16px',
+    fontWeight: '400',
+  },
+  '.excerpt': {
+    color: '#A1A8B3',
+    fontSize: '18px',
+    paddingBottom: '20px',
+  },
+  strong: {
+    fontWeight: '600',
+  },
 }
 
 const contentContainer: SxStyleProp = {
-  width: ['auto', '544px', '544px', '544px', '544px', '720px'],
+  width: ['auto', '544px', '544px', '544px', '720px', '720px'],
   mx: ['18px', 'initial'],
 }
 
@@ -34,7 +60,7 @@ const bottomContributorsDivider: SxStyleProp = {
 }
 
 const rightContainer: SxStyleProp = {
-  ml: '64px',
+  ml: '82px',
   display: [
     'none !important',
     'none !important',

@@ -11,7 +11,7 @@ import hljsCurl from 'highlightjs-curl'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
@@ -86,7 +86,10 @@ const DocumentationPage: NextPage<Props> = ({
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
-                <h1>{serialized.frontmatter?.title}</h1>
+                <header>
+                  <h1>{serialized.frontmatter?.title}</h1>
+                  <Text class="excerpt">{serialized.frontmatter?.excerpt}</Text>
+                </header>
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>

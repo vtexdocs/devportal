@@ -12,21 +12,29 @@ import { whatsNextData, resources } from 'utils/constants'
 
 import image from '../../../../public/images/vtex-io.png'
 
-import styles from 'styles/vtex-io'
+import styles from 'styles/api-reference'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
 }
 
-const VTEXIOPage: NextPage<Props> = () => {
+const AppDevelopmentPage: NextPage<Props> = () => {
   const messages = getMessages()
 
   return (
     <Fragment>
       <Box sx={styles.welcomeOuterContainer}>
         <Flex sx={styles.welcomeInnerContainer}>
-          <Text sx={styles.welcomeText}>{messages['vtex_io_page.title']}</Text>
+          <Box sx={styles.welcomeHeader}>
+            <Text sx={styles.welcomeText}>
+              {messages['vtex_io_page.title']}
+            </Text>
+            <Text sx={styles.welcomeSubtitle}>
+              Learn how to develop apps and integrations in the cloud with VTEX
+              IO.
+            </Text>
+          </Box>
           <Box sx={styles.welcomeImageOuterContainer}>
             <Box sx={styles.welcomeImageInnerContainer}>
               <Box sx={styles.welcomeImageGradient}></Box>
@@ -44,8 +52,6 @@ const VTEXIOPage: NextPage<Props> = () => {
       </Box>
       <Box sx={styles.divider(false)}></Box>
       <Box sx={styles.contentContainer}>
-        <Text sx={styles.subtitle}>{messages['vtex_io_page.subtitle']}</Text>
-
         <Flex sx={styles.cardsContainer}>
           {whatsNextData.map((whatsNext) => (
             <WhatsNextCard {...whatsNext} />
@@ -80,7 +86,7 @@ const VTEXIOPage: NextPage<Props> = () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const sidebarfallback = await getNavigation()
-  const sectionSelected = 'VTEX IO'
+  const sectionSelected = 'App Development'
 
   return {
     props: {
@@ -90,4 +96,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default VTEXIOPage
+export default AppDevelopmentPage
