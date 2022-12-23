@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
+import jp from 'jsonpath'
 
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
@@ -25,6 +26,7 @@ import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
+import Breadcrumb from 'components/breadcrumb'
 
 import getHeadings from 'utils/getHeadings'
 import getNavigation from 'utils/getNavigation'
@@ -68,6 +70,7 @@ interface Props {
 
 const DocumentationPage: NextPage<Props> = ({
   serialized,
+  sidebarfallback,
   headingList,
   contributors,
 }) => {
@@ -75,6 +78,25 @@ const DocumentationPage: NextPage<Props> = ({
   useEffect(() => {
     setHeadings(headingList)
   }, [serialized.frontmatter])
+
+  const breadcumb = jp.paths(
+    sidebarfallback,
+    `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
+  )[0]
+  let currentBreadcumb = sidebarfallback
+  const breadcumbList: { slug: string; name: string; type: string }[] = []
+  breadcumb?.forEach((el: string | number) => {
+    if (typeof currentBreadcumb?.slug == 'string') {
+      breadcumbList.push({
+        slug: currentBreadcumb.slug,
+        name: currentBreadcumb.name,
+        type: currentBreadcumb.type,
+      })
+    }
+    if (el != '$') {
+      currentBreadcumb = currentBreadcumb[el]
+    }
+  })
 
   return (
     <>
@@ -86,6 +108,7 @@ const DocumentationPage: NextPage<Props> = ({
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
+                <Breadcrumb breadcumbList={breadcumbList} />
                 <h1>{serialized.frontmatter?.title}</h1>
                 <MarkdownRenderer serialized={serialized} />
               </article>
