@@ -57,9 +57,10 @@ const DocumentationPage: NextPage<Props> = ({
   const [headings, setHeadings] = useState<Item[]>([])
   const [seeAlsoUrls, setSeeAlsoUrls] = useState()
   useEffect(() => {
-    setSeeAlsoUrls(
-      JSON.parse(JSON.stringify(serialized.frontmatter?.seeAlso as string))
-    )
+    if (serialized.frontmatter?.seeAlso)
+      setSeeAlsoUrls(
+        JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
+      )
     setHeadings(headingList)
   }, [serialized.frontmatter])
 
