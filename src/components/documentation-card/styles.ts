@@ -1,7 +1,7 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const cardContainer: SxStyleProp = {
-  my: '16px',
+  my: ['16px', '16px', '16px', '16px', '16px', '16px', '24px'],
   padding: '8px',
 
   ':active, :hover': {
@@ -27,26 +27,26 @@ const titleContainer: SxStyleProp = {
 }
 
 const icon: SxStyleProp = {
-  width: '24px',
-  height: '24px',
+  width: ['24px', '24px', '24px', '24px', '24px', '24px', '36px'],
+  height: ['24px', '24px', '24px', '24px', '24px', '24px', '36px'],
 }
 
 const text: SxStyleProp = {
-  fontSize: '16px',
+  fontSize: ['16px', '16px', '16px', '16px', '16px', '16px', '24px'],
+  lineHeight: ['22px', '22px', '22px', '22px', '22px', '22px', '28px'],
   fontWeight: '400',
-  lineHeight: '22px',
   textTransform: 'none',
 }
 
 const title: SxStyleProp = {
   ...text,
-  ml: '8px',
+  ml: ['8px', '8px', '8px', '8px', '8px', '8px', '12px'],
   color: 'muted.0',
 }
 
 const description: SxStyleProp = {
   ...text,
-  ml: '32px',
+  ml: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
   color: 'muted.1',
 }
 

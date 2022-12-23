@@ -17,8 +17,13 @@ const articleBox: SxStyleProp = {
 }
 
 const contentContainer: SxStyleProp = {
-  width: ['auto', '544px', '544px', '544px', '544px', '720px'],
+  width: ['auto', '544px', '544px', '544px', '544px', '720px', '1080px'],
   mx: ['18px', 'initial'],
+}
+
+const documentationTitle: SxStyleProp = {
+  fontSize: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
+  fontWeight: 'bold',
 }
 
 const bottomContributorsContainer: SxStyleProp = {
@@ -34,7 +39,7 @@ const bottomContributorsDivider: SxStyleProp = {
 }
 
 const rightContainer: SxStyleProp = {
-  ml: '64px',
+  ml: ['64px', '64px', '64px', '64px', '64px', '64px', '200px'],
   display: [
     'none !important',
     'none !important',
@@ -42,7 +47,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
-  width: [0, 0, 0, 0, '189px', '284px'],
+  width: [0, 0, 0, 0, '189px', '284px', '402px'],
 }
 
 export default {
@@ -50,6 +55,7 @@ export default {
   mainContainer,
   articleBox,
   contentContainer,
+  documentationTitle,
   bottomContributorsContainer,
   bottomContributorsDivider,
   rightContainer,
