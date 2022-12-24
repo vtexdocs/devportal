@@ -6,6 +6,7 @@ export type DocumentationTitle =
   | 'VTEX IO'
   | 'Store Framework Apps'
   | 'FastStore'
+  | 'Legacy CMS Portal'
 
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
@@ -15,6 +16,7 @@ export type SlugPrefix =
   | 'vtex-io'
   | 'store-framework-apps'
   | 'faststore'
+  | 'legacy-cms'
 
 export type ResourceTitle =
   | 'Community'
