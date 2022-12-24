@@ -21,7 +21,7 @@ const nextConfig = {
   },
   env: {
     navigationJsonUrl:
-      'https://vtex-dev-portal-navigation.fra1.cdn.digitaloceanspaces.com/navigationNewPrefix.json',
+      'https://vtex-dev-portal-navigation.fra1.cdn.digitaloceanspaces.com/navigation.json',
   },
 }
 
