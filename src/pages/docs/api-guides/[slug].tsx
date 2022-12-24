@@ -14,9 +14,6 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
-
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from 'components/table-of-contents'
@@ -35,7 +32,6 @@ import getDocsPaths from 'utils/getDocsPaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
-// import getDocsListPreval from 'utils/getDocsList.preval'
 
 import styles from 'styles/documentation-page'
 import getFileContributors, {
@@ -43,22 +39,6 @@ import getFileContributors, {
 } from 'utils/getFileContributors'
 
 const docsPathsGLOBAL = await getDocsPaths()
-
-const documentationCards = [
-  {
-    title: 'Billing Options',
-    description: 'API Guides',
-    link: '/docs/api-guides/billing-options',
-    Icon: APIGuidesIcon,
-  },
-  {
-    title:
-      'Catalog API - A long documentation title aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-    description: 'API Reference',
-    link: '/docs/api-reference/catalog',
-    Icon: APIReferenceIcon,
-  },
-]
 
 interface Props {
   content: string
@@ -75,7 +55,12 @@ const DocumentationPage: NextPage<Props> = ({
   contributors,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
+  const [seeAlsoUrls, setSeeAlsoUrls] = useState()
   useEffect(() => {
+    if (serialized.frontmatter?.seeAlso)
+      setSeeAlsoUrls(
+        JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
+      )
     setHeadings(headingList)
   }, [serialized.frontmatter])
 
@@ -122,7 +107,9 @@ const DocumentationPage: NextPage<Props> = ({
             </Box>
 
             <FeedbackSection />
-            <SeeAlsoSection cards={documentationCards} />
+            {serialized.frontmatter?.seeAlso && (
+              <SeeAlsoSection urls={seeAlsoUrls!} />
+            )}
           </Box>
           <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />

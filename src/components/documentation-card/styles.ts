@@ -3,7 +3,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const cardContainer: SxStyleProp = {
   my: ['16px', '16px', '16px', '16px', '16px', '16px', '24px'],
   padding: '8px',
-
+  cursor: 'pointer',
   ':active, :hover': {
     borderRadius: '4px',
     backgroundColor: '#F8F7FC',
