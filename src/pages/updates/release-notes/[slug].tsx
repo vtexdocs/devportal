@@ -13,16 +13,12 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
-
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from 'components/table-of-contents'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
-import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
@@ -39,22 +35,6 @@ import { ActionType, getAction } from 'components/last-updates-card/functions'
 import styles from 'styles/documentation-page'
 
 const docsPathsGLOBAL = await getDocsPaths()
-
-const documentationCards = [
-  {
-    title: 'Billing Options',
-    description: 'API Guides',
-    link: '/docs/api-guides/billing-options',
-    Icon: APIGuidesIcon,
-  },
-  {
-    title:
-      'Catalog API - A long documentation title aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-    description: 'API Reference',
-    link: '/docs/api-reference/catalog',
-    Icon: APIReferenceIcon,
-  },
-]
 
 interface Props {
   content: string
@@ -117,7 +97,6 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
               </article>
             </Box>
             <FeedbackSection />
-            <SeeAlsoSection cards={documentationCards} />
           </Box>
           <Box sx={styles.rightContainer}>
             <TableOfContents />

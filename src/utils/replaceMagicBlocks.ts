@@ -32,7 +32,7 @@ function replacer(_match: string, blockType: string, blockContent: string) {
     case 'api-header':
       const header = JSON.parse(blockContent).title
       return `## ${header}\n`
-      
+
     case 'callout':
       const type = JSON.parse(blockContent).type
       const body = JSON.parse(blockContent).body
@@ -48,7 +48,7 @@ function replacer(_match: string, blockType: string, blockContent: string) {
         default:
           return `>ℹ️ ${body}`
       }
-      
+
     case 'parameters':
       const { data, rows, cols } = JSON.parse(blockContent)
 
