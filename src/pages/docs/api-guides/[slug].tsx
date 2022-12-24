@@ -2,19 +2,18 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
+import jp from 'jsonpath'
 
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
+import remarkBlockquote from './rehypeBlockquote'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
-import { Box, Flex } from '@vtex/brand-ui'
-
-import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
@@ -25,15 +24,15 @@ import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
+import Breadcrumb from 'components/breadcrumb'
 
-import { removeHTML } from 'utils/string-utils'
+import getHeadings from 'utils/getHeadings'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsPaths from 'utils/getDocsPaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
-// import getDocsListPreval from 'utils/getDocsList.preval'
 
 import styles from 'styles/documentation-page'
 import getFileContributors, {
@@ -42,57 +41,48 @@ import getFileContributors, {
 
 const docsPathsGLOBAL = await getDocsPaths()
 
-const documentationCards = [
-  {
-    title: 'Billing Options',
-    description: 'API Guides',
-    link: '/docs/api-guides/billing-options',
-    Icon: APIGuidesIcon,
-  },
-  {
-    title:
-      'Catalog API - A long documentation title aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-    description: 'API Reference',
-    link: '/docs/api-reference/catalog',
-    Icon: APIReferenceIcon,
-  },
-]
-
 interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
   contributors: ContributorsType[]
+  headingList: Item[]
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
+const DocumentationPage: NextPage<Props> = ({
+  serialized,
+  sidebarfallback,
+  headingList,
+  contributors,
+}) => {
   const [headings, setHeadings] = useState<Item[]>([])
+  const [seeAlsoUrls, setSeeAlsoUrls] = useState()
   useEffect(() => {
-    if (headings) setHeadings([])
-    document.querySelectorAll('h2, h3').forEach((heading) => {
-      const item = {
-        title: removeHTML(heading.innerHTML).replace(':', ''),
-        slug: heading.id,
-      }
+    if (serialized.frontmatter?.seeAlso)
+      setSeeAlsoUrls(
+        JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
+      )
+    setHeadings(headingList)
+  }, [serialized.frontmatter])
 
-      setHeadings((headings) => {
-        if (heading.tagName === 'H2') {
-          return [...headings, { ...item, children: [] }]
-        }
-
-        const { title, slug, children } = headings[headings.length - 1] || {
-          title: '',
-          slug: '',
-          children: [],
-        }
-
-        return [
-          ...headings.slice(0, -1),
-          { title, slug, children: [...children, item] },
-        ]
+  const breadcumb = jp.paths(
+    sidebarfallback,
+    `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
+  )[0]
+  let currentBreadcumb = sidebarfallback
+  const breadcumbList: { slug: string; name: string; type: string }[] = []
+  breadcumb?.forEach((el: string | number) => {
+    if (typeof currentBreadcumb?.slug == 'string') {
+      breadcumbList.push({
+        slug: currentBreadcumb.slug,
+        name: currentBreadcumb.name,
+        type: currentBreadcumb.type,
       })
-    })
-  }, [])
+    }
+    if (el != '$') {
+      currentBreadcumb = currentBreadcumb[el]
+    }
+  })
 
   return (
     <>
@@ -104,7 +94,10 @@ const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
-                <h1>{serialized.frontmatter?.title}</h1>
+                <Breadcrumb breadcumbList={breadcumbList} />
+                <Text sx={styles.documentationTitle}>
+                  {serialized.frontmatter?.title}
+                </Text>
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>
@@ -115,7 +108,9 @@ const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
             </Box>
 
             <FeedbackSection />
-            <SeeAlsoSection cards={documentationCards} />
+            {serialized.frontmatter?.seeAlso && (
+              <SeeAlsoSection urls={seeAlsoUrls!} />
+            )}
           </Box>
           <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />
@@ -174,17 +169,23 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       documentationContent = await replaceMagicBlocks(documentationContent)
     }
 
+    const headingList: Item[] = []
+
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGFM, remarkImages],
+        remarkPlugins: [
+          remarkGFM,
+          remarkImages,
+          [getHeadings, { headingList }],
+          remarkBlockquote,
+        ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
         format: 'mdx',
       },
     })
-
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
@@ -192,6 +193,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         serialized,
         sidebarfallback,
+        headingList,
         contributors,
       },
     }

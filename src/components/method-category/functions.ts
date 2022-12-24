@@ -31,7 +31,11 @@ export const categoryStyle = (
   active: boolean,
   sx?: SxStyleProp
 ): SxStyleProp => {
-  const categoryColors = methodsColors[method]
+  const categoryColors = methodsColors[method] || {
+    border: '1px solid #F49494',
+    color: '#CC3D3D',
+    background: '#F8E3E3',
+  }
 
   const categoryStyle: SxStyleProp = active
     ? {

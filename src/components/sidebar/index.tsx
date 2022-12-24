@@ -27,9 +27,14 @@ interface SideBarSectionState {
 const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   const [activeSectionName, setActiveSectionName] = useState('')
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
-  const { setActiveSidebarElement, openSidebarElement, closeSidebarElements } =
-    useContext(SidebarContext)
-  const sidebarDataMaster = useNavigation().data
+  const {
+    sidebarDataMaster,
+    setSidebarDataMaster,
+    setActiveSidebarElement,
+    openSidebarElement,
+    closeSidebarElements,
+  } = useContext(SidebarContext)
+  setSidebarDataMaster(useNavigation().data)
   const router = useRouter()
   let slug = ''
 
