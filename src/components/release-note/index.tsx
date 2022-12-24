@@ -78,7 +78,7 @@ const ReleaseNote = ({
         }
       >
         <Flex sx={styles.content}>
-          <Link href={slug} legacyBehavior>
+          <Link href={`release-notes/${slug}`} legacyBehavior>
             <Text
               onMouseOver={handleMouseOver}
               onMouseLeave={handleMouseOut}
