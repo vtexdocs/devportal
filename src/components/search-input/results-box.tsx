@@ -16,8 +16,16 @@ interface HitProps {
 
 const Hit = ({ hit, setSearchStateActive }: HitProps) => {
   const breadcrumbsList = getBreadcrumbs(hit)
-
+  const [title, setTitle] = useState<string>('')
   const DocIcon = getIcon(hit.doctype)
+
+  useEffect(() => {
+    if (hit.type === 'content') setTitle(hit.content)
+    else {
+      const hierarchy = JSON.parse(JSON.stringify(hit.hierarchy))
+      setTitle(hierarchy[hit.type])
+    }
+  }, [])
 
   return (
     <Link
@@ -29,7 +37,7 @@ const Hit = ({ hit, setSearchStateActive }: HitProps) => {
         <Flex>
           {DocIcon && <DocIcon className="hit-icon" sx={styles.hitIcon} />}
           <Text className="hit-content-title" sx={styles.hitContent}>
-            {hit.content}
+            {title}
           </Text>
         </Flex>
         <Flex sx={styles.alignCenter}>
@@ -72,7 +80,7 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
     <>
       {searchStateActive?.query && (
         <Box sx={styles.resultsContainer}>
-          <Box sx={styles.resultsBox}>
+          <Box sx={searchResults.hits.length && styles.resultsBox}>
             {searchResults.hits.map(
               (searchResult, index) =>
                 index < 7 && (
@@ -84,13 +92,18 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
                 )
             )}
           </Box>
-          {searchResults.hits.length > 7 && (
+          {false && searchResults.hits.length > 7 && (
             <Box
               sx={styles.seeAll}
               onClick={() => seeAllSubmit(searchStateActive.query!)}
             >
               <Text>See all results</Text>
             </Box>
+          )}
+          {!searchResults.hits.length && (
+            <Flex sx={styles.noResults}>
+              <Text>No results =(</Text>
+            </Flex>
           )}
         </Box>
       )}

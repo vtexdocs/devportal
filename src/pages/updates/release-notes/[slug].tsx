@@ -2,89 +2,96 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
-import jp from 'jsonpath'
 
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
-import remarkBlockquote from './rehypeBlockquote'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
+import APIGuidesIcon from 'components/icons/api-guides-icon'
+import APIReferenceIcon from 'components/icons/api-reference-icon'
+
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from 'components/table-of-contents'
-import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
-import Breadcrumb from 'components/breadcrumb'
 
-import getHeadings from 'utils/getHeadings'
+import { removeHTML } from 'utils/string-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsPaths from 'utils/getDocsPaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
+// import getDocsListPreval from 'utils/getDocsList.preval'
+import { getReleaseDate } from 'components/release-note/functions'
+import { ActionType, getAction } from 'components/last-updates-card/functions'
 
 import styles from 'styles/documentation-page'
-import getFileContributors, {
-  ContributorsType,
-} from 'utils/getFileContributors'
 
 const docsPathsGLOBAL = await getDocsPaths()
+
+const documentationCards = [
+  {
+    title: 'Billing Options',
+    description: 'API Guides',
+    link: '/docs/api-guides/billing-options',
+    Icon: APIGuidesIcon,
+  },
+  {
+    title:
+      'Catalog API - A long documentation title aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+    description: 'API Reference',
+    link: '/docs/api-reference/catalog',
+    Icon: APIReferenceIcon,
+  },
+]
 
 interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
-  contributors: ContributorsType[]
-  path: string
-  headingList: Item[]
 }
 
-const DocumentationPage: NextPage<Props> = ({
-  serialized,
-  path,
-  sidebarfallback,
-  headingList,
-  contributors,
-}) => {
+const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   const [headings, setHeadings] = useState<Item[]>([])
-  const [seeAlsoUrls, setSeeAlsoUrls] = useState()
   useEffect(() => {
-    if (serialized.frontmatter?.seeAlso)
-      setSeeAlsoUrls(
-        JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
-      )
-    setHeadings(headingList)
-  }, [serialized.frontmatter])
+    if (headings) setHeadings([])
+    document.querySelectorAll('h2, h3').forEach((heading) => {
+      const item = {
+        title: removeHTML(heading.innerHTML).replace(':', ''),
+        slug: heading.id,
+      }
 
-  const breadcumb = jp.paths(
-    sidebarfallback,
-    `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
-  )[0]
-  let currentBreadcumb = sidebarfallback
-  const breadcumbList: { slug: string; name: string; type: string }[] = []
-  breadcumb?.forEach((el: string | number) => {
-    if (typeof currentBreadcumb?.slug == 'string') {
-      breadcumbList.push({
-        slug: currentBreadcumb.slug,
-        name: currentBreadcumb.name,
-        type: currentBreadcumb.type,
+      setHeadings((headings) => {
+        if (heading.tagName === 'H2') {
+          return [...headings, { ...item, children: [] }]
+        }
+
+        const { title, slug, children } = headings[headings.length - 1] || {
+          title: '',
+          slug: '',
+          children: [],
+        }
+
+        return [
+          ...headings.slice(0, -1),
+          { title, slug, children: [...children, item] },
+        ]
       })
-    }
-    if (el != '$') {
-      currentBreadcumb = currentBreadcumb[el]
-    }
-  })
+    })
+  }, [])
+  const actionType: ActionType = serialized.frontmatter?.type as ActionType
+  const actionValue = actionType ? getAction(actionType) : null
 
   return (
     <>
@@ -96,27 +103,23 @@ const DocumentationPage: NextPage<Props> = ({
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
-                <Breadcrumb breadcumbList={breadcumbList} />
-                <Text sx={styles.documentationTitle}>
-                  {serialized.frontmatter?.title}
+                {actionValue ? (
+                  <Box sx={styles.releaseAction}>
+                    <actionValue.Icon />
+                    <Text>{actionValue?.title}</Text>
+                  </Box>
+                ) : null}
+                <h1>{serialized.frontmatter?.title}</h1>
+                <Text>
+                  {getReleaseDate(serialized.frontmatter?.createdAt || '')}
                 </Text>
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>
-
-            <Box sx={styles.bottomContributorsContainer}>
-              <Box sx={styles.bottomContributorsDivider} />
-              <Contributors contributors={contributors} />
-            </Box>
-
             <FeedbackSection />
-            {serialized.frontmatter?.seeAlso && (
-              <SeeAlsoSection urls={seeAlsoUrls!} />
-            )}
-
+            <SeeAlsoSection cards={documentationCards} />
           </Box>
           <Box sx={styles.rightContainer}>
-            <Contributors contributors={contributors} />
             <TableOfContents />
           </Box>
           <OnThisPage />
@@ -158,13 +161,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     path
   )
 
-  const contributors = await getFileContributors(
-    'vtexdocs',
-    'dev-portal-content',
-    'readme-docs',
-    path
-  )
-
   try {
     if (path.endsWith('.md')) {
       documentationContent = escapeCurlyBraces(documentationContent)
@@ -172,23 +168,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       documentationContent = await replaceMagicBlocks(documentationContent)
     }
 
-    const headingList: Item[] = []
-
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [
-          remarkGFM,
-          remarkImages,
-          [getHeadings, { headingList }],
-          remarkBlockquote,
-        ],
+        remarkPlugins: [remarkGFM, remarkImages],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
         format: 'mdx',
       },
     })
+
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
@@ -196,9 +186,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         serialized,
         sidebarfallback,
-        headingList,
-        contributors,
-        path,
       },
     }
   } catch (error) {

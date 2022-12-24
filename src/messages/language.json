@@ -17,6 +17,7 @@
   "documentation_webops.description": "Deployment platform optimized for storefront development",
   "documentation_sfapps.title": "Store Framework Apps",
   "documentation_sfapps.description": "Deployment platform optimized for storefront development",
+  "documentation_legacycms.description": "Legacy CMS portal",
   "updates_release_notes.title": "Release Notes",
   "updates_release_notes.description": "Technical updates on feature and bug fixes.",
   "updates_documentation_updates.title": "Documentation Updates",

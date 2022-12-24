@@ -50,6 +50,12 @@ const rightContainer: SxStyleProp = {
   width: [0, 0, 0, 0, '189px', '284px', '402px'],
 }
 
+const releaseAction: SxStyleProp = {
+  display: 'flex',
+  gap: '10px',
+  fontSize: '18px',
+}
+
 export default {
   container,
   mainContainer,
@@ -59,4 +65,5 @@ export default {
   bottomContributorsContainer,
   bottomContributorsDivider,
   rightContainer,
+  releaseAction,
 }
