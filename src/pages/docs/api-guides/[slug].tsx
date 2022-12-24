@@ -9,6 +9,7 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
+import remarkBlockquote from './rehypeBlockquote'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
@@ -177,6 +178,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           remarkGFM,
           remarkImages,
           [getHeadings, { headingList }],
+          remarkBlockquote,
         ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
