@@ -26,6 +26,8 @@ const documentationTitle: SxStyleProp = {
   fontWeight: 'bold',
 }
 
+const documentationExcerpt: SxStyleProp = {}
+
 const bottomContributorsContainer: SxStyleProp = {
   display: ['none', 'initial', 'initial', 'initial', 'none'],
 }
@@ -66,4 +68,5 @@ export default {
   bottomContributorsDivider,
   rightContainer,
   releaseAction,
+  documentationExcerpt,
 }

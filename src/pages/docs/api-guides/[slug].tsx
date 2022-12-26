@@ -94,10 +94,15 @@ const DocumentationPage: NextPage<Props> = ({
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
-                <Breadcrumb breadcumbList={breadcumbList} />
-                <Text sx={styles.documentationTitle}>
-                  {serialized.frontmatter?.title}
-                </Text>
+                <header>
+                  <Breadcrumb breadcumbList={breadcumbList} />
+                  <Text sx={styles.documentationTitle}>
+                    {serialized.frontmatter?.title}
+                  </Text>
+                  <Text sx={styles.documentationExcerpt}>
+                    {serialized.frontmatter?.excerpt}
+                  </Text>
+                </header>
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>

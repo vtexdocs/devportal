@@ -1,14 +1,28 @@
 .table {
   border-collapse: collapse;
+  border: 1px solid #e7e9ef;
+  margin: 25px 0;
+  width: 100%;
 }
 
-.td {
-  border: 1px solid black;
+.table thead {
+  border: 1px solid #e7e9ef;
+  font-weight: 500;
+}
+
+.table td,
+.table th {
+  border: 1px solid #e7e9ef;
+  padding: 14px;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f8f7fc;
 }
 
 .img {
   max-width: 100%;
-	padding-top: 2vh;
+  padding-top: 2vh;
 }
 
 .heading::before {
@@ -23,7 +37,7 @@
 .code {
   background-color: #f6f8fa;
   background-color: var(--md-code-background, #f6f8fa);
-  border-radius: 3px;
+  border-radius: 4px;
   color: var(--md-code-text);
   font-size: 85%;
   margin: 0;
@@ -38,6 +52,13 @@
     monospace
   );
   font-size: 1em;
+}
+
+.pre code {
+  background-color: #f8f7fc !important;
+  border: 1px solid #e7e9ee;
+  border-radius: 4px;
+  line-break: auto;
 }
 
 .blockquote {

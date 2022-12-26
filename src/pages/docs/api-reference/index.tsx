@@ -1,11 +1,11 @@
-import Image from 'next/image'
 import { Fragment } from 'react'
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import getNavigation from 'utils/getNavigation'
-
+import PageHeader from 'components/page-header'
 import WhatsNextCard from 'components/whats-next-card'
+import { getMessages } from 'utils/get-messages'
 
 const whatsNextData: WhatsNextDataElement[] = [
   {
@@ -188,33 +188,15 @@ interface Props {
 }
 
 const APIReferencePage: NextPage<Props> = () => {
+  const messages = getMessages()
   return (
     <Fragment>
-      <Box sx={styles.welcomeOuterContainer}>
-        <Flex sx={styles.welcomeInnerContainer}>
-          <Box sx={styles.welcomeHeader}>
-            <Text sx={styles.welcomeText}>API Reference</Text>
-            <Text sx={styles.welcomeSubtitle}>
-              Use our <strong>API reference documentation</strong> to build
-              custom solutions that fit your business.
-            </Text>
-          </Box>
-          <Box sx={styles.welcomeImageOuterContainer}>
-            <Box sx={styles.welcomeImageInnerContainer}>
-              <Box sx={styles.welcomeImageGradient}></Box>
-              <Image
-                alt=""
-                src={image}
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                }}
-              />
-            </Box>
-          </Box>
-        </Flex>
-      </Box>
-      <Box sx={styles.divider(false)}></Box>
+      <PageHeader
+        title={messages['api_reference_page.title']}
+        description={messages['api_reference_page.subtitle']}
+        imageUrl={image}
+        imageAlt={messages['api_reference_page.title']}
+      />
       <Box sx={styles.contentContainer}>
         <Flex sx={styles.cardsContainer}>
           {whatsNextData.map((whatsNext) => (

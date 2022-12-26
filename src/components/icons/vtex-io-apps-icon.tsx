@@ -1,7 +1,7 @@
 import type { IconProps } from '@vtex/brand-ui'
 import { Icon } from '@vtex/brand-ui'
 
-const SFAppsIcon = (props: IconProps) => (
+const VTEXIOAppsIcon = (props: IconProps) => (
   <Icon
     {...props}
     viewBox="0 0 32 32"
@@ -47,4 +47,4 @@ const SFAppsIcon = (props: IconProps) => (
   </Icon>
 )
 
-export default SFAppsIcon
+export default VTEXIOAppsIcon

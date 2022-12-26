@@ -19,14 +19,16 @@ interface Props {
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
 }
 
-const VTEXIOPage: NextPage<Props> = () => {
+const AppDevelopmentPage: NextPage<Props> = () => {
   const messages = getMessages()
 
   return (
     <Fragment>
       <Box sx={styles.welcomeOuterContainer}>
         <Flex sx={styles.welcomeInnerContainer}>
-          <Text sx={styles.welcomeText}>{messages['vtex_io_page.title']}</Text>
+          <Text sx={styles.welcomeText}>
+            {messages['app_development_page.title']}
+          </Text>
           <Box sx={styles.welcomeImageOuterContainer}>
             <Box sx={styles.welcomeImageInnerContainer}>
               <Box sx={styles.welcomeImageGradient}></Box>
@@ -44,7 +46,9 @@ const VTEXIOPage: NextPage<Props> = () => {
       </Box>
       <Box sx={styles.divider(false)}></Box>
       <Box sx={styles.contentContainer}>
-        <Text sx={styles.subtitle}>{messages['vtex_io_page.subtitle']}</Text>
+        <Text sx={styles.subtitle}>
+          {messages['app_development_page.subtitle']}
+        </Text>
 
         <Flex sx={styles.cardsContainer}>
           {whatsNextData.map((whatsNext) => (
@@ -54,7 +58,7 @@ const VTEXIOPage: NextPage<Props> = () => {
 
         <Box sx={styles.resourcesSectionContainer}>
           <Text sx={styles.resourcesSectionTitle}>
-            {messages['vtex_io_page_other_resources.title']}
+            {messages['app_development_page_other_resources.title']}
           </Text>
           <Box>
             {resources.map((resource) => (
@@ -80,7 +84,7 @@ const VTEXIOPage: NextPage<Props> = () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const sidebarfallback = await getNavigation()
-  const sectionSelected = 'VTEX IO'
+  const sectionSelected = 'App Development'
 
   return {
     props: {
@@ -90,4 +94,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default VTEXIOPage
+export default AppDevelopmentPage

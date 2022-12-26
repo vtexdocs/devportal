@@ -3,20 +3,18 @@ export type Locale = 'en' | 'pt' | 'es'
 export type DocumentationTitle =
   | 'API Guides'
   | 'API Reference'
-  | 'VTEX IO'
-  | 'Store Framework Apps'
-  | 'FastStore'
-  | 'Legacy CMS Portal'
+  | 'App Development'
+  | 'Storefront Development'
+  | 'VTEX IO Apps'
 
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
 export type SlugPrefix =
   | 'api-guides'
   | 'api-reference'
-  | 'vtex-io'
-  | 'store-framework-apps'
-  | 'faststore'
-  | 'legacy-cms'
+  | 'app-development'
+  | 'storefront-development'
+  | 'vtex-io-apps'
 
 export type ResourceTitle =
   | 'Community'
