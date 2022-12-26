@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from 'next/image'
 import { Box, Flex, Text } from '@vtex/brand-ui'
-import styles from 'styles/api-reference'
+import styles from './styles'
 import { Fragment } from 'react'
 
 interface IPageHeader {

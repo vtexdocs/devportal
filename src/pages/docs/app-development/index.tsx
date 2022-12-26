@@ -12,7 +12,7 @@ import { whatsNextData, resources } from 'utils/constants'
 
 import image from '../../../../public/images/vtex-io.png'
 
-import styles from 'styles/vtex-io'
+import styles from 'styles/documentation-landing-page'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line

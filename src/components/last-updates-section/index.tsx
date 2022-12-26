@@ -15,16 +15,6 @@ const lastReleaseNote: CardProps = {
   updateType: 'release-notes',
 }
 
-const lastDocumentationUpdate: CardProps = {
-  action: {
-    type: 'fixed',
-    description:
-      'Secure Proxy: An alternative option for card payment integrations',
-    date: new Date('03/11/2022'),
-  },
-  updateType: 'documentation-updates',
-}
-
 const LastUpdatesSection = () => {
   const messages = getMessages()
 
@@ -35,7 +25,6 @@ const LastUpdatesSection = () => {
       </Text>
       <Box sx={styles.cardsContainer}>
         <LastUpdatesCard {...lastReleaseNote} />
-        <LastUpdatesCard {...lastDocumentationUpdate} />
       </Box>
     </Box>
   )

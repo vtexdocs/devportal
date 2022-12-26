@@ -1,11 +1,13 @@
+import { Fragment } from 'react'
+import { Box } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
-import Layout from 'components/category-layout'
-import OverviewCard from 'components/overview-card'
-import { Composable } from 'components/overview-card/icons'
-import YouTubeFrame from 'components/youtube-frame'
-import styles from './styles.module.css'
+import imgStyles from './styles.module.css'
+import PageHeader from 'components/page-header'
+import { getMessages } from 'utils/get-messages'
+import image from '../../../../public/images/api-guides.png'
+import styles from 'styles/documentation-landing-page'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -13,98 +15,174 @@ interface Props {
 }
 
 const Image2 = () => (
-  <div className={styles.diagram}>
-    <div className={styles.diagramBox}>
-      <h2 className={styles.diagramTitle}>Merchant channels</h2>
-      <p className={styles.diagramCard + ' ' + styles.diagramPinkCard}>CDN</p>
-      <div className={styles.diagramFlex}>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
+  <div className={imgStyles.diagram}>
+    <div className={imgStyles.diagramBox}>
+      <h2 className={imgStyles.diagramTitle}>Merchant channels</h2>
+      <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard}>
+        CDN
+      </p>
+      <div className={imgStyles.diagramFlex}>
+        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
           Web Store
         </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>PWA</div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
+        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
+          PWA
+        </div>
+        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
           Live Shopping
         </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
+        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
           Conversational
         </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
+        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
           Marketplace Out
         </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
+        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
           Personal Shopper
         </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
           Mobile App
         </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramGray}>IOT</div>
+        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
+          IOT
+        </div>
       </div>
     </div>
-    <div className={styles.diagramSecondRow}>
-      <div className={styles.diagramBox + ' ' + styles.diagramBoxServices}>
-        <h2 className={styles.diagramTitle}>VTEX Core services</h2>
-        <div className={styles.diagramBoxServicesContent}>
-          <div className={styles.diagramGrid}>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+    <div className={imgStyles.diagramSecondRow}>
+      <div
+        className={imgStyles.diagramBox + ' ' + imgStyles.diagramBoxServices}
+      >
+        <h2 className={imgStyles.diagramTitle}>VTEX Core services</h2>
+        <div className={imgStyles.diagramBoxServicesContent}>
+          <div className={imgStyles.diagramGrid}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Catalog
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Checkout
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               DaaS - Master Data
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               OMS
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Subscriptions
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Ratings and reviews
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Promotions
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               CMS
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Search
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Messages
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Authentication
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Pricing
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Payment Hub
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Logistics/ Inventory
             </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
+            <div
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
               Customers
             </div>
           </div>
-          <div className={styles.diagramBox}>
-            <h2 className={styles.diagramTitle}>VTEX IO Apps (PaaS)</h2>
-            <div className={styles.diagramGridVertical}>
-              <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramBox}>
+            <h2 className={imgStyles.diagramTitle}>VTEX IO Apps (PaaS)</h2>
+            <div className={imgStyles.diagramGridVertical}>
+              <div
+                className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
+              >
                 Custom Admin
               </div>
-              <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+              <div
+                className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
+              >
                 Custom store component
               </div>
-              <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+              <div
+                className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
+              >
                 Custom backend service (API)
               </div>
               <div
-                className={styles.diagramCard + ' ' + styles.diagramPinkCard}
+                className={
+                  imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+                }
               >
                 VTEX App
               </div>
@@ -112,54 +190,64 @@ const Image2 = () => (
           </div>
         </div>
       </div>
-      <div className={styles.diagramBox}>
-        <h2 className={styles.diagramTitle}>3rd party optional</h2>
-        <div className={styles.diagramGridTwoColumns}>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+      <div className={imgStyles.diagramBox}>
+        <h2 className={imgStyles.diagramTitle}>3rd party optional</h2>
+        <div className={imgStyles.diagramGridTwoColumns}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Search
           </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Personalization
           </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Ratings and Reviews
           </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Loyalty
           </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Search
           </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Personalization
           </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Ratings and Reviews
           </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Loyalty
           </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Ratings and Reviews
           </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
+          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
             Loyalty
           </div>
         </div>
       </div>
     </div>
-    <div className={styles.diagramBox + ' ' + styles.diagramMuted}>
-      <h2 className={styles.diagramTitle}>Integration Layer</h2>
+    <div className={imgStyles.diagramBox + ' ' + imgStyles.diagramMuted}>
+      <h2 className={imgStyles.diagramTitle}>Integration Layer</h2>
     </div>
-    <div className={styles.diagramBox + ' ' + styles.diagramMuted}>
-      <h2 className={styles.diagramTitle}>Merchant back office</h2>
-      <div className={styles.diagramGridHorizontal}>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>ERP</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>OMS</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>WMS</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>PIM</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>CRM</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>
+    <div className={imgStyles.diagramBox + ' ' + imgStyles.diagramMuted}>
+      <h2 className={imgStyles.diagramTitle}>Merchant back office</h2>
+      <div className={imgStyles.diagramGridHorizontal}>
+        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
+          ERP
+        </p>
+        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
+          OMS
+        </p>
+        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
+          WMS
+        </p>
+        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
+          PIM
+        </p>
+        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
+          CRM
+        </p>
+        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
           Data Lake
         </p>
       </div>
@@ -167,90 +255,20 @@ const Image2 = () => (
   </div>
 )
 
-const categoryData = [
-  {
-    title: 'Platform overview',
-    href: 'api-guides/getting-started-platform-overview',
-    description:
-      "Understand our platform's architecture and data orchestration through our Platform Overview article.",
-    docs: [
-      {
-        title: 'Platform Overview',
-        href: 'api-guides/getting-started-platform-overview',
-      },
-    ],
-    icon: 'StorageUnit',
-  },
-  {
-    title: 'REST API',
-    href: 'api-guides/getting-started-platform-overview',
-    description:
-      'See how to use our APIs to integrate third-party solutions to a single platform for all experiences.',
-    docs: [
-      {
-        title: 'List of REST APIs',
-        href: 'api-guides/getting-started-list-of-rest-apis',
-      },
-      {
-        title: 'Authentication',
-        href: 'api-guides/getting-started-authentication',
-      },
-      {
-        title: 'Making your first request',
-        href: 'api-guides/getting-started-making-your-first-request',
-      },
-    ],
-    icon: 'Board',
-    seeMore: true,
-  },
-]
-
 const ApiGuidesPage: NextPage<Props> = () => {
+  const messages = getMessages()
   return (
-    <Layout>
-      <h1 className={styles.title}>Getting started</h1>
-      <p className={styles.details}>
-        Check out our introductory content to learn more about the capabilities
-        of our Rest APIs.
-      </p>
-      <p>
-        Welcome! VTEX is a headless commerce platform that is highly
-        customizable and constantly evolving. The video below illustrates how
-        our clients are currently using VTEX to address their business needs:
-      </p>
-      <YouTubeFrame embedId="JgkrlaF52WQ" />
-      <blockquote className={styles.blockquote}>
-        <Composable />
-        <p>
-          You're now in our Developer Portal. If you wish to see
-          business-focused content, and documentation about our web platform,
-          check out our <a href="https://help.vtex.com/"> Help Center </a>.
-        </p>
-      </blockquote>
-      <>
-        {categoryData.map((category) => (
-          <OverviewCard
-            title={category.title}
-            href={category.href}
-            description={category.description}
-            docs={category.docs}
-            icon={category.icon}
-            seeMore={category.seeMore}
-          />
-        ))}
-      </>
-
-      <h1 className={styles.title}>Getting to know our Core Services</h1>
-      <p className={styles.details}>
-        Leverage your ecommerce in our Headless architecture, by learning what
-        you can accomplish with each microsservice in VTEX.
-      </p>
-      <p>
-        Our API Guides and Reference cover VTEX Core Services, as illustrated in
-        the image below.
-      </p>
-      <Image2 />
-    </Layout>
+    <Fragment>
+      <PageHeader
+        title={messages['api_guides_page.title']}
+        description={messages['api_guides_page.subtitle']}
+        imageUrl={image}
+        imageAlt={messages['app_development_page.title']}
+      />
+      <Box sx={styles.contentContainer}>
+        <Image2 />
+      </Box>
+    </Fragment>
   )
 }
 

@@ -13,6 +13,7 @@ const channelBox: SxStyleProp = {
     transition: 'all 0.3s ease-out',
   },
   ':hover': {
+    cursor: 'pointer',
     '.channelArrow': {
       transition: 'all 0.3s ease-out',
       ml: '2px',

@@ -86,8 +86,8 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   const getHref = (slugPrefix: string, pathSuffix: string, slug: string) => {
     const href =
       slugPrefix === 'api-reference'
-        ? `/docs/${slugPrefix}/${slug}/${pathSuffix}`
-        : `/docs/${slugPrefix}/${slug}`
+        ? `/${slugPrefix}/${slug}/${pathSuffix}`
+        : `/${slugPrefix}/${slug}`
     return href.replaceAll('//', '/')
   }
 

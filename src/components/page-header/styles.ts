@@ -1,13 +1,20 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
-const container: SxStyleProp = {
-  pt: '5rem',
-  width: '100%',
-  backgroundColor: 'white',
+const welcomeHeader: SxStyleProp = {
+  pt: ['initial', '115px'],
+  position: ['initial', 'absolute'],
+  mb: ['32px', 'initial'],
+  zIndex: '1000',
+  maxWidth: ['380px', 'initial'],
+  width: ['380px', '380px', '380px', '380px', '380px', '380px'],
 }
 
-const mainContainer: SxStyleProp = {
-  width: '100%',
+const welcomeSubtitle: SxStyleProp = {
+  textAlign: ['left', 'initial'],
+  fontSize: ['16px', '18px'],
+  fontWeight: '400',
+  color: '#A1A8B3',
+  lineHeight: ['22px', '24px'],
 }
 
 const welcomeOuterContainer: SxStyleProp = {
@@ -31,17 +38,12 @@ const welcomeInnerContainer: SxStyleProp = {
 
 const welcomeText: SxStyleProp = {
   boxSizing: 'initial',
-  maxWidth: ['324px', 'initial'],
-  width: ['auto', '345px', '345px', '345px', '345px', '720px'],
-  textAlign: ['center', 'initial'],
+  textAlign: ['left', 'initial'],
   fontSize: ['20px', '28px'],
-  lineHeight: ['30px', '38px'],
   fontWeight: '400',
   color: '#4A4A4A',
-  position: ['initial', 'absolute'],
-  pt: ['initial', '115px'],
-  px: ['18px', 'initial'],
-  mt: ['32px', 'initial'],
+  lineHeight: ['30px', '38px'],
+  paddingBottom: '8px',
 }
 
 const welcomeImageOuterContainer: SxStyleProp = {
@@ -87,60 +89,9 @@ const divider: (sidebarSectionHidden: boolean) => SxStyleProp = (
   ],
 })
 
-const contentContainer: SxStyleProp = {
-  mx: 'auto',
-  mt: ['16px', '32px'],
-  mb: ['32px', '64px'],
-  px: ['18px', 'initial'],
-  maxWidth: ['324px', 'initial'],
-  width: ['auto', '544px', '544px', '544px', '720px'],
-  boxSizing: 'initial',
-}
-
-const subtitle: SxStyleProp = {
-  mb: ['16px', '8px'],
-  textAlign: ['center', 'initial'],
-  fontSize: ['16px', '18px'],
-  lineHeight: ['22px', '24px'],
-  fontWeight: '400',
-  color: '#4A4A4A',
-}
-
-const cardsContainer: SxStyleProp = {
-  flexWrap: 'wrap',
-  justifyContent: 'space-between',
-}
-
-const resourcesSectionContainer: SxStyleProp = {
-  mt: '24px',
-}
-
-const resourcesSectionTitle: SxStyleProp = {
-  fontSize: ['18px', '22px'],
-  lineHeight: ['30px', '32px'],
-  fontWeight: '400',
-  color: '#4A4A4A',
-}
-
-const resourceContainer: SxStyleProp = {
-  mt: '24px',
-  fontSize: '16px',
-  fontWeight: '400',
-  lineHeight: '22px',
-}
-
-const resourceTitle: SxStyleProp = {
-  color: '#E31C58',
-}
-
-const resourceDescription: SxStyleProp = {
-  mt: '8px',
-  color: '#4A4A4A',
-}
-
 export default {
-  container,
-  mainContainer,
+  welcomeHeader,
+  welcomeSubtitle,
   welcomeOuterContainer,
   welcomeInnerContainer,
   welcomeText,
@@ -148,12 +99,4 @@ export default {
   welcomeImageInnerContainer,
   welcomeImageGradient,
   divider,
-  contentContainer,
-  subtitle,
-  cardsContainer,
-  resourcesSectionContainer,
-  resourcesSectionTitle,
-  resourceContainer,
-  resourceTitle,
-  resourceDescription,
 }
