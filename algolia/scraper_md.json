@@ -1,8 +1,8 @@
 {
-  "index_name": "docsearch-scraper-md-files",
+  "index_name": "devportal-docs",
   "start_urls": ["http://elated-hoover-5c29bf.netlify.app/docs/api-guides"],
   "stop_urls": [],
-  "sitemap_urls": ["http://elated-hoover-5c29bf.netlify.app/sitemap.xml"],
+  "sitemap_urls": ["https://elated-hoover-5c29bf.netlify.app/sitemap-0.xml"],
   "selectors": {
     "text": "article p, article li",
     "lvl0": "article .title, article h1",
@@ -24,9 +24,9 @@
       "doctype"
     ]
   },
-  "only_content_level": true,
   "min_indexed_level": 0,
   "use_anchors": true,
+  "clear_index": true,
   "conversation_id": ["706181789"],
   "nb_hits": 4610
 }
