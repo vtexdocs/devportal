@@ -143,10 +143,11 @@ export const releaseData: UpdateElement[] = [
 
 export const whatsNextData: WhatsNextDataElement[] = [
   {
-    title: messages['app_development_page_new_to_vtex_io.title'],
-    description: messages['app_development_page_new_to_vtex_io.description'],
+    title: messages['app_development_page_new_to_app_development.title'],
+    description:
+      messages['app_development_page_new_to_app_development.description'],
     link: {
-      title: messages['app_development_page_new_to_vtex_io.link'],
+      title: messages['app_development_page_new_to_app_development.link'],
       to: '/',
     },
   },

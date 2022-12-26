@@ -56,7 +56,6 @@ const ObservableHeading = ({
 
 const Callout = ({ node, icon, ...props }: Component) => {
   const blockquoteType: string = icon ? icon : 'info'
-  console.log(props)
   return (
     <blockquote
       className={`${styles.blockquote} ${
