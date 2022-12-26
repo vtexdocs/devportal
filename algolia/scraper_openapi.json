@@ -1,5 +1,5 @@
 {
-  "index_name": "docsearch-scraper-openapi-test",
+  "index_name": "devportal-docs",
   "start_urls": ["https://elated-hoover-5c29bf.netlify.app/docs/api-reference"],
   "stop_urls": [],
   "selectors": {
@@ -23,10 +23,10 @@
       "doctype"
     ]
   },
-  "only_content_level": true,
   "js_render": true,
   "js_wait": 4,
   "use_anchors": true,
+  "clear_index": false,
   "conversation_id": ["706181789"],
   "nb_hits": 2
 }

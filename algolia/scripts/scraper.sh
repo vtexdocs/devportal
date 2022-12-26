@@ -51,6 +51,8 @@ cp ./utils/webclient.py ./.venv/lib/python3.6/site-packages/scrapy/core/download
 
 pipenv run ./docsearch run ./configs/scraper_md.json
 
+pipenv run ./docsearch run ./configs/scraper_openapi.json
+
 echo "🚀 Successfully indexed and uploaded the results to Algolia"
 
 cd ..
