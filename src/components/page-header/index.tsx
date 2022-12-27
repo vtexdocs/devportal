@@ -39,7 +39,7 @@ const PageHeader = ({
           </Box>
         </Flex>
       </Box>
-      <Box sx={styles.divider(false)}></Box>
+      <Box sx={styles.divider}></Box>
     </Fragment>
   )
 }
