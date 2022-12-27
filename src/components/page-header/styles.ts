@@ -41,9 +41,9 @@ const welcomeText: SxStyleProp = {
   textAlign: ['left', 'initial'],
   fontSize: ['22px', '32px'],
   fontWeight: '400',
-  color: '#4A4A4A',
   lineHeight: ['30px', '38px'],
   paddingBottom: '8px',
+  color: '#142032',
 }
 
 const welcomeImageOuterContainer: SxStyleProp = {

@@ -55,7 +55,8 @@ const getStartedData: WhatsNextDataElement[] = [
   },
   {
     title: "Set up your store's pages",
-    description: "Manage redirects and set up your store's routes and pages.",
+    description:
+      "Manage URL redirects and set up your store's routes and pages.",
     link: {
       title: 'See more',
       to: '/docs/api-guides/vtex-io-documentation-associating-a-custom-page-to-a-content-type',

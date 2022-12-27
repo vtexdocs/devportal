@@ -119,6 +119,11 @@ const link: SxStyleProp = {
   color: 'muted.1',
 }
 
+const divider: () => SxStyleProp = () => ({
+  marginTop: '40px',
+  borderBottom: '1px solid #E7E9EE',
+})
+
 export default {
   container,
   mainContainer,
@@ -135,4 +140,5 @@ export default {
   boxTitle,
   linkContainer,
   link,
+  divider,
 }
