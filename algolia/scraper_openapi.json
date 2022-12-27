@@ -1,6 +1,6 @@
 {
   "index_name": "devportal-docs",
-  "start_urls": ["https://elated-hoover-5c29bf.netlify.app/docs/api-reference"],
+  "start_urls": ["https://developersbeta.vtex.com.br/docs/api-reference"],
   "stop_urls": [],
   "selectors": {
     "lvl0": "h1",
