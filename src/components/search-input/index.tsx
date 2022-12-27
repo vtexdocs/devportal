@@ -19,10 +19,7 @@ export default function SearchInput() {
   const resultsBox = useRef<HTMLElement>()
   useClickOutside(resultsBox, setfocusOut)
   return (
-    <InstantSearch
-      searchClient={searchClient}
-      indexName="docsearch-scraper-md-files"
-    >
+    <InstantSearch searchClient={searchClient} indexName="devportal-docs">
       <Box onFocus={() => setfocusOut({ modaltoggle: true })} ref={resultsBox}>
         <SearchBox />
         {focusOut.modaltoggle && <Results />}
