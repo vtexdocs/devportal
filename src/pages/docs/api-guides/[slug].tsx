@@ -90,7 +90,7 @@ const DocumentationPage: NextPage<Props> = ({
         <meta name="docsearch:doctype" content="API Guides" />
       </Head>
       <APIGuideContextProvider headings={headings}>
-        <Flex sx={styles.mainContainer}>
+        <Flex sx={styles.innerContainer}>
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>

@@ -9,11 +9,36 @@ const container: SxStyleProp = {
 const mainContainer: SxStyleProp = {
   justifyContent: 'center',
   width: '100%',
+}
+
+const innerContainer: SxStyleProp = {
+  justifyContent: 'center',
+  width: '100%',
   pt: '64px',
 }
 
 const articleBox: SxStyleProp = {
   width: ['100%', 'initial'],
+  a: {
+    color: '#E31C58',
+  },
+  header: {
+    borderBottom: '1px solid #E7E9EE',
+    marginBottom: '24px',
+  },
+  h1: {
+    fontSize: '32px',
+    fontWeight: '400',
+  },
+  h2: {
+    fontSize: '22px',
+    lineHeight: '32px',
+    paddingTop: '16px',
+    fontWeight: '400',
+  },
+  strong: {
+    fontWeight: '600',
+  },
 }
 
 const contentContainer: SxStyleProp = {
@@ -26,7 +51,12 @@ const documentationTitle: SxStyleProp = {
   fontWeight: 'bold',
 }
 
-const documentationExcerpt: SxStyleProp = {}
+const documentationExcerpt: SxStyleProp = {
+  color: '#A1A8B3',
+  fontSize: '18px',
+  fontWeight: '400',
+  padding: '20px 0',
+}
 
 const bottomContributorsContainer: SxStyleProp = {
   display: ['none', 'initial', 'initial', 'initial', 'none'],
@@ -69,4 +99,5 @@ export default {
   rightContainer,
   releaseAction,
   documentationExcerpt,
+  innerContainer,
 }

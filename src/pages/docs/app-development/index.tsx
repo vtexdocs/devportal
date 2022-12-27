@@ -10,7 +10,7 @@ import WhatsNextCard from 'components/whats-next-card'
 import { getMessages } from 'utils/get-messages'
 import { whatsNextData, resources } from 'utils/constants'
 
-import image from '../../../../public/images/vtex-io.png'
+import image from '../../../../public/images/app-development.png'
 
 import styles from 'styles/documentation-landing-page'
 

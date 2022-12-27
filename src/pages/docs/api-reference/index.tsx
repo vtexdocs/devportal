@@ -7,6 +7,17 @@ import PageHeader from 'components/page-header'
 import WhatsNextCard from 'components/whats-next-card'
 import { getMessages } from 'utils/get-messages'
 
+import image from '../../../../public/images/api-reference.png'
+
+import styles from 'styles/documentation-landing-page'
+
+import { WhatsNextDataElement } from 'utils/typings/types'
+
+interface Props {
+  sidebarfallback: any //eslint-disable-line
+  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
+}
+
 const whatsNextData: WhatsNextDataElement[] = [
   {
     title: 'Antrifraud Provider API',
@@ -176,16 +187,6 @@ const whatsNextData: WhatsNextDataElement[] = [
     },
   },
 ]
-
-import image from '../../../../public/images/api-reference.png'
-
-import styles from 'styles/api-reference'
-import { WhatsNextDataElement } from 'utils/typings/types'
-
-interface Props {
-  sidebarfallback: any //eslint-disable-line
-  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
-}
 
 const APIReferencePage: NextPage<Props> = () => {
   const messages = getMessages()

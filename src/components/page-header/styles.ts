@@ -1,7 +1,7 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
 const welcomeHeader: SxStyleProp = {
-  pt: ['initial', '115px'],
+  pt: ['initial', '100px'],
   position: ['initial', 'absolute'],
   mb: ['32px', 'initial'],
   zIndex: '1000',
@@ -39,7 +39,7 @@ const welcomeInnerContainer: SxStyleProp = {
 const welcomeText: SxStyleProp = {
   boxSizing: 'initial',
   textAlign: ['left', 'initial'],
-  fontSize: ['20px', '28px'],
+  fontSize: ['22px', '32px'],
   fontWeight: '400',
   color: '#4A4A4A',
   lineHeight: ['30px', '38px'],
@@ -54,10 +54,18 @@ const welcomeImageOuterContainer: SxStyleProp = {
 const welcomeImageInnerContainer: SxStyleProp = {
   position: 'relative',
   mx: ['auto', 'initial'],
-  left: ['initial', '308px', '308px', '308px', '339px', '621px', '863px'],
+  right: [
+    'initial',
+    '-308px',
+    '-308px',
+    '-308px',
+    '-490px',
+    '-621px',
+    '-863px',
+  ],
   top: ['-92px', '-122px'],
-  width: ['360px', '592px'],
-  height: ['128px', '222px'],
+  width: ['500px', '592px'],
+  height: ['128px', '250px'],
 }
 
 const welcomeImageGradient: SxStyleProp = {
@@ -72,21 +80,13 @@ const welcomeImageGradient: SxStyleProp = {
   ],
 }
 
-const divider: (sidebarSectionHidden: boolean) => SxStyleProp = (
-  sidebarSectionHidden
-) => ({
+const divider: () => SxStyleProp = () => ({
   margin: 0,
   padding: 0,
-  float: 'right',
   borderWidth: 0,
   borderBottom: '1px solid #E7E9EE',
   transition: 'width 0.3s ease-in-out',
-  width: [
-    0,
-    '100%',
-    '100%',
-    `calc(100vw - 72px - ${sidebarSectionHidden ? 24 : 300}px)`,
-  ],
+  width: '100%',
 })
 
 export default {
