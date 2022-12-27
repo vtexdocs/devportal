@@ -11,7 +11,7 @@ const sidebar: SxStyleProp = {
   minWidth: 'auto',
   transition: 'all 0.3s ease-in-out',
   '.active': {
-    left: '-330px',
+    left: '-276px',
     marginRight: '-120px',
     transition: 'all 0.3s ease-in-out',
   },

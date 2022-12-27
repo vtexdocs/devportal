@@ -141,6 +141,7 @@ const StorefrontDevelopmentPage: NextPage<Props> = () => {
             <WhatsNextCard {...whatsNext} />
           ))}
         </Flex>
+        <Box sx={styles.divider}></Box>
         <Text sx={styles.contentTitle}>Go beyond with Store Framework</Text>
         <Flex sx={styles.cardsContainer}>
           {goBeyondData.map((whatsNext) => (

@@ -124,6 +124,13 @@ const divider: () => SxStyleProp = () => ({
   borderBottom: '1px solid #E7E9EE',
 })
 
+const seeMoreLink: SxStyleProp = {
+  display: 'flex',
+  justifyContent: 'flex-end',
+  marginY: '20px',
+  fontSize: '16px',
+}
+
 export default {
   container,
   mainContainer,
@@ -141,4 +148,5 @@ export default {
   linkContainer,
   link,
   divider,
+  seeMoreLink,
 }

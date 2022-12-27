@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Box, Text, Flex } from '@vtex/brand-ui'
+import { Box, Text, Flex, Link, IconCaret } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
@@ -54,6 +54,15 @@ const AppsListing = ({ category }: ICategoryListing) => {
           <WhatsNextCard {...whatsNext} />
         ))}
       </Flex>
+      <Link sx={styles.seeMoreLink} href={`/docs/api-guides/${category.slug}`}>
+        See more
+        <IconCaret
+          className="caret"
+          color="#A1A8B3"
+          direction="right"
+          size={24}
+        />
+      </Link>
       <Box sx={styles.divider}></Box>
     </>
   )
