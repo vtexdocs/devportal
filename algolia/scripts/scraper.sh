@@ -33,7 +33,9 @@ pip3 install pipenv==2018.11.26
 
 # download chromedriver
 
-wget -q https://chromedriver.storage.googleapis.com/106.0.5249.61/chromedriver_linux64.zip
+chromedriverStableVersion=$(curl -s 'https://chromedriver.storage.googleapis.com/LATEST_RELEASE')
+
+wget -q "https://chromedriver.storage.googleapis.com/${chromedriverStableVersion}/chromedriver_linux64.zip"
 
 unzip chromedriver_linux64.zip
 chmod +x chromedriver
