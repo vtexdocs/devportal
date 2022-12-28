@@ -30,6 +30,16 @@ const nextConfig = {
         destination: '/docs/api-guides/:slug',
         permanent: true,
       },
+      {
+        source: '/vtex-developer-docs/docs/:slug',
+        destination: '/docs/api-guides/:slug',
+        permanent: true,
+      },
+      {
+        source: '/vtex-developer-docs/changelog/:slug',
+        destination: '/docs/api-guides/:slug',
+        permanent: true,
+      },
     ]
   },
 }
