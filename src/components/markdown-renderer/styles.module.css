@@ -63,7 +63,7 @@
 
 .blockquote {
   display: grid;
-  padding: 15px 20px;
+  padding: 5px 20px;
   gap: 20px;
   width: 100%;
   margin: 20px 0;

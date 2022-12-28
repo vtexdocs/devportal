@@ -20,7 +20,7 @@ interface Props {
 
 const whatsNextData: WhatsNextDataElement[] = [
   {
-    title: 'Antrifraud Provider API',
+    title: 'Antifraud Provider API',
     description:
       'Use the Antifraud Provider Protocol to integrate your antifraud service API into the VTEX platform.',
     link: {
