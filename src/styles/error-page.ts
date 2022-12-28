@@ -18,6 +18,7 @@ const content: SxStyleProp = {
 
 const contentText: SxStyleProp = {
   ...content,
+  width: '100%',
   padding: ['80px 0', '0 80px'],
 }
 const title: SxStyleProp = {
@@ -27,7 +28,7 @@ const title: SxStyleProp = {
 }
 const description: SxStyleProp = {
   fontSize: '20px',
-  lineHeight: '24px',
+  lineHeight: '28px',
 }
 const button: SxStyleProp = {
   marginTop: '30px',

@@ -3,24 +3,21 @@ import Head from 'next/head'
 import type { Page } from 'utils/typings/types'
 import { Box, Flex, Text, Button, Link } from '@vtex/brand-ui'
 import styles from 'styles/error-page'
-import fourOhFourImage from '../../public/images/404-illustration.png'
+import fiveHundredImage from '../../public/images/500-illustration.png'
 
-const FourOhFour: Page = () => {
+const fiveHundredPage: Page = () => {
   return (
     <>
       <Head>
-        <title>404 - Page not found</title>
+        <title>500 - Internal Server Error</title>
       </Head>
       <Box sx={styles.mainContainer}>
         <Flex sx={styles.innerContainer}>
           <Box sx={styles.contentText}>
-            <Text sx={styles.title}>
-              The content you are looking for was not found or does not exist
-              anymore
-            </Text>
+            <Text sx={styles.title}>500 - Internal server error</Text>
             <Text sx={styles.description}>
-              Search above to find what you need or contact us to report an
-              error.
+              Sorry, there was an error on this page. Please try again later or
+              contact us if the problem persists.
             </Text>
             <Button sx={styles.button}>
               <Link
@@ -33,8 +30,8 @@ const FourOhFour: Page = () => {
           </Box>
           <Box sx={styles.content}>
             <Image
-              alt="404 error"
-              src={fourOhFourImage}
+              alt="500 error"
+              src={fiveHundredImage}
               style={{
                 maxWidth: '100%',
                 height: 'auto',
@@ -47,4 +44,4 @@ const FourOhFour: Page = () => {
   )
 }
 
-export default FourOhFour
+export default fiveHundredPage
