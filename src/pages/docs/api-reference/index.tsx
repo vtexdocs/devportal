@@ -25,7 +25,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Use the Antifraud Provider Protocol to integrate your antifraud service API into the VTEX platform.',
     link: {
       title: 'See more',
-      to: 'api-reference/antifraud-provider-protocol',
+      to: '/docs/api-reference/antifraud-provider-protocol',
     },
   },
   {
@@ -34,7 +34,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Manipulate your store’s sales channels, categories, brands, products, SKUs and specifications.',
     link: {
       title: 'See more',
-      to: 'api-reference/catalog-api-overview',
+      to: '/docs/api-reference/catalog-api',
     },
   },
   {
@@ -42,7 +42,7 @@ const whatsNextData: WhatsNextDataElement[] = [
     description: 'Access and manipulate items data of a checkout cart.',
     link: {
       title: 'See more',
-      to: 'api-reference/checkout-api-overview',
+      to: '/docs/api-reference/checkout-api',
     },
   },
   {
@@ -51,7 +51,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Enable credit payments on your store and control invoices and credit limits.',
     link: {
       title: 'See more',
-      to: 'api-reference/customer-credit-api-overview',
+      to: '/docs/api-reference/customer-credit-api',
     },
   },
   {
@@ -60,7 +60,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Retrieve and update gift cards from our native Gift Card System.',
     link: {
       title: 'See more',
-      to: 'api-reference/giftcard-api-overview',
+      to: '/docs/api-reference/giftcard-api',
     },
   },
   {
@@ -69,7 +69,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Interact with all Gift Card Providers registered to a store from a single point.',
     link: {
       title: 'See more',
-      to: 'api-reference/giftcard-api-overview',
+      to: '/docs/api-reference/giftcard-hub-api',
     },
   },
   {
@@ -78,7 +78,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.',
     link: {
       title: 'See more',
-      to: 'api-reference/license-manager-api-overview',
+      to: '/docs/api-reference/license-manager-api',
     },
   },
   {
@@ -87,7 +87,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Manage all store logistics data by accessing warehouses, docks, pick up points, carriers and shipping rates. Get or the inventory of each SKU.',
     link: {
       title: 'See more',
-      to: 'api-reference/logistics-api-overview',
+      to: '/docs/api-reference/logistics-api',
     },
   },
   {
@@ -96,7 +96,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Enables marketplaces and sellers hosted on VTEX to perform their collaborative operations.',
     link: {
       title: 'See more',
-      to: 'api-reference/marketplace-api-overview',
+      to: '/docs/api-reference/marketplace-apis',
     },
   },
   {
@@ -105,7 +105,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Manage and retrieve all data entities, applications and records from Master Data database.',
     link: {
       title: 'See more',
-      to: 'api-reference/master-data-api-v2-overview',
+      to: '/docs/api-reference/master-data-api-v2',
     },
   },
   {
@@ -113,7 +113,7 @@ const whatsNextData: WhatsNextDataElement[] = [
     description: 'Get payment data and process your transactions.',
     link: {
       title: 'See more',
-      to: 'api-reference/orders-api-overview',
+      to: '/docs/api-reference/orders-api',
     },
   },
   {
@@ -121,7 +121,7 @@ const whatsNextData: WhatsNextDataElement[] = [
     description: 'Receive, process, and manage every order through our APIs.',
     link: {
       title: 'See more',
-      to: 'api-reference/payments-gateway-api-overview',
+      to: '/docs/api-reference/payments-gateway-api',
     },
   },
   {
@@ -130,7 +130,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Create, read and edit prices for each SKU, sales channel or price table.',
     link: {
       title: 'See more',
-      to: 'api-reference/pricing-api-overview',
+      to: '/docs/api-reference/pricing-api',
     },
   },
   {
@@ -139,7 +139,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Manage and retrieve all promotions, coupons and tax rules from a VTEX store.',
     link: {
       title: 'See more',
-      to: 'api-reference/rates-and-benefits-api-overview',
+      to: '/docs/api-reference/promotions-and-taxes-api',
     },
   },
   {
@@ -148,7 +148,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Search and sort products in the catalog using fulltext, category and brand search terms. Retrieve product data to custom searches and product shelves.',
     link: {
       title: 'See more',
-      to: 'api-reference/search-api-overview',
+      to: '/docs/api-reference/search-api',
     },
   },
   {
@@ -157,7 +157,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       "Track relevant information about the client's current browsing session and integrate with several VTEX systems using a call.",
     link: {
       title: 'See more',
-      to: 'api-reference/session-manager-api-overview',
+      to: '/docs/api-reference/session-manager-api',
     },
   },
   {
@@ -166,7 +166,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       "Manage store's subscription rules to improve the revenue and reduce bounce rate and churn.",
     link: {
       title: 'See more',
-      to: 'api-reference/subscriptions-api-v3-overview',
+      to: '/docs/api-reference/subscriptions-api-v3',
     },
   },
   {
@@ -174,7 +174,7 @@ const whatsNextData: WhatsNextDataElement[] = [
     description: 'Manage and retrieve notes or tasks from VTEX Do.',
     link: {
       title: 'See more',
-      to: 'api-reference/vtex-do-api-overview',
+      to: '/docs/api-reference/vtex-do-api',
     },
   },
   {
@@ -183,7 +183,7 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Manage all delivery solutions powered by VTEX Tracking service.',
     link: {
       title: 'See more',
-      to: 'api-reference/vtex-tracking',
+      to: '/docs/api-reference/tracking',
     },
   },
 ]
