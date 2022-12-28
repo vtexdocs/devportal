@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# Local Scraping
+/docsearch-scraper
+
 # next.js
 /.next/
 /out/
