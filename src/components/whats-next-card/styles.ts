@@ -36,9 +36,9 @@ const title: SxStyleProp = {
 }
 
 const description: SxStyleProp = {
-  fontSize: '12px',
+  fontSize: '14px',
   fontWeight: '400',
-  lineHeight: '16px',
+  lineHeight: '18px',
   color: 'muted.0',
 }
 

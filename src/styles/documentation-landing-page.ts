@@ -41,13 +41,6 @@ const resourcesSectionContainer: SxStyleProp = {
   mt: '24px',
 }
 
-const resourcesSectionTitle: SxStyleProp = {
-  fontSize: ['18px', '22px'],
-  lineHeight: ['30px', '32px'],
-  fontWeight: '400',
-  color: '#4A4A4A',
-}
-
 const resourceContainer: SxStyleProp = {
   mt: '24px',
   fontSize: '16px',
@@ -56,9 +49,20 @@ const resourceContainer: SxStyleProp = {
 }
 
 const contentTitle: SxStyleProp = {
-  fontSize: '20px',
   paddingBottom: '6px',
   marginTop: '40px',
+  fontSize: ['18px', '22px'],
+  lineHeight: ['30px', '32px'],
+  fontWeight: '400',
+  color: '#4A4A4A',
+}
+
+const contentDescription: SxStyleProp = {
+  marginBottom: '30px',
+  fontSize: ['16px', '16px'],
+  lineHeight: ['22px', '22px'],
+  fontWeight: '400',
+  color: '#4A596B',
 }
 
 const resourceTitle: SxStyleProp = {
@@ -138,11 +142,11 @@ export default {
   subtitle,
   cardsContainer,
   resourcesSectionContainer,
-  resourcesSectionTitle,
   resourceContainer,
   resourceTitle,
   resourceDescription,
   contentTitle,
+  contentDescription,
   boxTip,
   boxTitle,
   linkContainer,

@@ -37,7 +37,7 @@ const AppDevelopmentPage: NextPage<Props> = () => {
           ))}
         </Flex>
         <Box sx={styles.resourcesSectionContainer}>
-          <Text sx={styles.resourcesSectionTitle}>
+          <Text sx={styles.contentTitle}>
             {messages['app_development_page_other_resources.title']}
           </Text>
           <Box>

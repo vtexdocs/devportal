@@ -1,5 +1,7 @@
+import Image from 'next/image'
 import { Fragment } from 'react'
-import { Box } from '@vtex/brand-ui'
+import { Box, Text, Grid, Flex } from '@vtex/brand-ui'
+import Tooltip from 'components/tooltip'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
@@ -7,6 +9,8 @@ import imgStyles from './styles.module.css'
 import PageHeader from 'components/page-header'
 import { getMessages } from 'utils/get-messages'
 import image from '../../../../public/images/api-guides.png'
+import imageData from '../../../../public/images/data-orchestration.png'
+import imagePlatform from '../../../../public/images/platform.png'
 import styles from 'styles/documentation-landing-page'
 
 interface Props {
@@ -18,36 +22,67 @@ const Image2 = () => (
   <div className={imgStyles.diagram}>
     <div className={imgStyles.diagramBox}>
       <h2 className={imgStyles.diagramTitle}>Merchant channels</h2>
-      <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard}>
-        CDN
-      </p>
-      <div className={imgStyles.diagramFlex}>
-        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
-          Web Store
-        </div>
-        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
-          PWA
-        </div>
-        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
-          Live Shopping
-        </div>
-        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
-          Conversational
-        </div>
-        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
-          Marketplace Out
-        </div>
-        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}>
-          Personal Shopper
-        </div>
-        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-          Mobile App
-        </div>
-        <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-          IOT
-        </div>
-      </div>
+      <Grid columns={[2, null]}>
+        <Box>
+          <Tooltip label="Label">
+            <p
+              className={
+                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+              }
+            >
+              CDN
+            </p>
+          </Tooltip>
+          <div className={imgStyles.diagramFlex}>
+            <div
+              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
+            >
+              Web Store
+            </div>
+            <div
+              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
+            >
+              PWA
+            </div>
+            <div
+              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
+            >
+              Live Shopping
+            </div>
+            <div
+              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
+            >
+              Conversational
+            </div>
+            <div
+              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
+            >
+              Marketplace Out
+            </div>
+            <div
+              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
+            >
+              Personal Shopper
+            </div>
+          </div>
+        </Box>
+        <Box>
+          <Flex>
+            <div
+              className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
+            >
+              Mobile App
+            </div>
+            <div
+              className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
+            >
+              IOT
+            </div>
+          </Flex>
+        </Box>
+      </Grid>
     </div>
+
     <div className={imgStyles.diagramSecondRow}>
       <div
         className={imgStyles.diagramBox + ' ' + imgStyles.diagramBoxServices}
@@ -55,20 +90,24 @@ const Image2 = () => (
         <h2 className={imgStyles.diagramTitle}>VTEX Core services</h2>
         <div className={imgStyles.diagramBoxServicesContent}>
           <div className={imgStyles.diagramGrid}>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Catalog
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Checkout
-            </div>
+            <Tooltip label="Manipulate your store’s sales channels, categories, brands, products, SKUs and specifications.">
+              <div
+                className={
+                  imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+                }
+              >
+                Catalog
+              </div>
+            </Tooltip>
+            <Tooltip label="Access and manipulate items data of a checkout cart.">
+              <div
+                className={
+                  imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
+                }
+              >
+                Checkout
+              </div>
+            </Tooltip>
             <div
               className={
                 imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
@@ -206,22 +245,22 @@ const Image2 = () => (
             Loyalty
           </div>
           <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Search
+            Analytics and Reporting
           </div>
           <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Personalization
+            DXP
           </div>
           <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Ratings and Reviews
+            Customer Payments
           </div>
           <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Loyalty
+            ADA
           </div>
           <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Ratings and Reviews
+            Conversational XP
           </div>
           <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Loyalty
+            User Rights
           </div>
         </div>
       </div>
@@ -266,6 +305,49 @@ const ApiGuidesPage: NextPage<Props> = () => {
         imageAlt={messages['app_development_page.title']}
       />
       <Box sx={styles.contentContainer}>
+        <Text sx={styles.contentTitle}>Get started</Text>
+        <Text sx={styles.contentDescription}>
+          Our core commerce capabilities, provided by over 70 shared
+          microservices, are available for flexible customization through our
+          REST APIs. This enables our clients to integrate third-party solutions
+          into a single platform for all experiences.{' '}
+        </Text>
+        <Image
+          alt="Platform overview"
+          src={imagePlatform}
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+        />
+        <Text sx={styles.contentDescription}>
+          Using our REST APIs with our serverless development platform (VTEX IO)
+          and scalable data service (Master Data), you can expand the VTEX
+          platform to address your unique business needs.
+        </Text>
+        <Box sx={styles.divider}></Box>
+        <Text sx={styles.contentTitle}>Data orchestration</Text>
+        <Text sx={styles.contentDescription}>
+          Our platform orchestrates data through multiple channels and sources
+          to remove barriers and enable more possibilities. E-commerce,
+          Brick-and-mortar, Marketplace, B2B... You name it, we enable it. That
+          is why we are a unified commerce platform for unified businesses.
+        </Text>
+        <Image
+          alt="Data orchestration"
+          src={imageData}
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+        />
+        <Box sx={styles.divider}></Box>
+        <Text sx={styles.contentTitle}>Core services</Text>
+        <Text sx={styles.contentDescription}>
+          Get to know our core microsservices and leverage your business with
+          our Headless architecture. Our API Guides and Reference cover VTEX
+          Core Services, as illustrated in the image below.
+        </Text>
         <Image2 />
       </Box>
     </Fragment>
