@@ -1,11 +1,11 @@
 import Image from 'next/image'
 import { Fragment } from 'react'
-import { Box, Text, Grid, Flex } from '@vtex/brand-ui'
+import { Box, Text, Grid, Flex, Link } from '@vtex/brand-ui'
 import Tooltip from 'components/tooltip'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
-import imgStyles from './styles.module.css'
+import imgStyles from './core-services-styles'
 import PageHeader from 'components/page-header'
 import { getMessages } from 'utils/get-messages'
 import image from '../../../../public/images/api-guides.png'
@@ -19,279 +19,143 @@ interface Props {
 }
 
 const Image2 = () => (
-  <div className={imgStyles.diagram}>
-    <div className={imgStyles.diagramBox}>
-      <h2 className={imgStyles.diagramTitle}>Merchant channels</h2>
-      <Grid columns={[2, null]}>
+  <Box>
+    <Box sx={imgStyles.diagramBox}>
+      <Text sx={imgStyles.diagramTitle}>Merchant channels</Text>
+      <Flex sx={imgStyles.diagramFlexEnd}>
         <Box>
-          <Tooltip label="Label">
-            <p
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              CDN
-            </p>
-          </Tooltip>
-          <div className={imgStyles.diagramFlex}>
-            <div
-              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
-            >
-              Web Store
-            </div>
-            <div
-              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
-            >
-              PWA
-            </div>
-            <div
-              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
-            >
-              Live Shopping
-            </div>
-            <div
-              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
-            >
-              Conversational
-            </div>
-            <div
-              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
-            >
-              Marketplace Out
-            </div>
-            <div
-              className={imgStyles.diagramCard + ' ' + imgStyles.diagramPink}
-            >
-              Personal Shopper
-            </div>
-          </div>
-        </Box>
-        <Box>
-          <Flex>
-            <div
-              className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
-            >
-              Mobile App
-            </div>
-            <div
-              className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
-            >
-              IOT
-            </div>
+          <Text sx={imgStyles.diagramPinkCard}>CDN</Text>
+          <Flex sx={imgStyles.diagramFlex}>
+            <Text sx={imgStyles.diagramPink}>Web Store</Text>
+            <Text sx={imgStyles.diagramPink}>PWA</Text>
+            <Text sx={imgStyles.diagramPink}>Live Shopping</Text>
+            <Text sx={imgStyles.diagramPink}>Conversational</Text>
+            <Text sx={imgStyles.diagramPink}>Marketplace Out</Text>
+            <Text sx={imgStyles.diagramPink}>Personal Shopper</Text>
           </Flex>
         </Box>
-      </Grid>
-    </div>
+        <Box>
+          <Flex sx={imgStyles.diagramFlex}>
+            <Box sx={imgStyles.diagramGray}>Mobile App</Box>
+            <Box sx={imgStyles.diagramGray}>IOT</Box>
+          </Flex>
+        </Box>
+      </Flex>
+    </Box>
 
-    <div className={imgStyles.diagramSecondRow}>
-      <div
-        className={imgStyles.diagramBox + ' ' + imgStyles.diagramBoxServices}
-      >
-        <h2 className={imgStyles.diagramTitle}>VTEX Core services</h2>
-        <div className={imgStyles.diagramBoxServicesContent}>
-          <div className={imgStyles.diagramGrid}>
+    <Box sx={imgStyles.diagramSecondRow}>
+      <Box sx={imgStyles.diagramBox}>
+        <Text sx={imgStyles.diagramTitleServices}>VTEX Core services</Text>
+        <Box sx={imgStyles.diagramBoxServicesContent}>
+          <Box sx={imgStyles.diagramGrid}>
             <Tooltip label="Manipulate your store’s sales channels, categories, brands, products, SKUs and specifications.">
-              <div
-                className={
-                  imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-                }
+              <Link
+                href="/docs/api-guides/catalog-overview"
+                sx={imgStyles.diagramPinkCardLink}
               >
                 Catalog
-              </div>
+              </Link>
             </Tooltip>
             <Tooltip label="Access and manipulate items data of a checkout cart.">
-              <div
-                className={
-                  imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-                }
+              <Link
+                href="/docs/api-guides/checkout-overview"
+                sx={imgStyles.diagramPinkCardLink}
               >
                 Checkout
-              </div>
+              </Link>
             </Tooltip>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              DaaS - Master Data
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              OMS
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Subscriptions
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Ratings and reviews
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Promotions
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              CMS
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Search
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Messages
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Authentication
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Pricing
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Payment Hub
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Logistics/ Inventory
-            </div>
-            <div
-              className={
-                imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-              }
-            >
-              Customers
-            </div>
-          </div>
-          <div className={imgStyles.diagramBox}>
-            <h2 className={imgStyles.diagramTitle}>VTEX IO Apps (PaaS)</h2>
-            <div className={imgStyles.diagramGridVertical}>
-              <div
-                className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
+            <Tooltip label="Create and manage promotions and coupons to scale your sales.">
+              <Link
+                href="/docs/api-guides/promotions-overview"
+                sx={imgStyles.diagramPinkCardLink}
               >
-                Custom Admin
-              </div>
-              <div
-                className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
+                Promotions
+              </Link>
+            </Tooltip>
+            <Tooltip label="Create, read and edit prices for each SKU, sales channel or price table.">
+              <Link
+                href="/docs/api-guides/pricing-overview"
+                sx={imgStyles.diagramPinkCardLink}
               >
-                Custom store component
-              </div>
-              <div
-                className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}
+                Pricing
+              </Link>
+            </Tooltip>
+            <Tooltip label="Get payment data and process your transactions.">
+              <Link
+                href="/docs/api-guides/payments-overview"
+                sx={imgStyles.diagramPinkCardLink}
               >
+                Payment Hub
+              </Link>
+            </Tooltip>
+            <Tooltip label="Search and sort products in the catalog using fulltext, category and brand search terms. Retrieve product data to create custom searches and product shelves.">
+              <Link
+                href="/docs/api-guides/search-overview"
+                sx={imgStyles.diagramPinkCardLink}
+              >
+                Intelligent Search
+              </Link>
+            </Tooltip>
+            <Tooltip label="Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.">
+              <Link
+                href="/docs/api-guides/account-management"
+                sx={imgStyles.diagramPinkCardLink}
+              >
+                Account management
+              </Link>
+            </Tooltip>
+            <Box sx={imgStyles.diagramPinkCard}>DaaS - Master Data</Box>
+            <Box sx={imgStyles.diagramPinkCard}>OMS</Box>
+            <Box sx={imgStyles.diagramPinkCard}>Subscriptions</Box>
+            <Box sx={imgStyles.diagramPinkCard}>Ratings and reviews</Box>
+            <Text sx={imgStyles.diagramPinkCard}>CMS</Text>
+            <Text sx={imgStyles.diagramPinkCard}>Search</Text>
+            <Text sx={imgStyles.diagramPinkCard}>Messages</Text>
+            <Box sx={imgStyles.diagramPinkCard}>Logistics/ Inventory</Box>
+            <Box sx={imgStyles.diagramPinkCard}>Customers</Box>
+          </Box>
+          <Box sx={imgStyles.diagramBox}>
+            <Text sx={imgStyles.diagramTitleServices}>VTEX IO Apps (PaaS)</Text>
+            <Box>
+              <Text sx={imgStyles.diagramGray}>Custom Admin</Text>
+              <Text sx={imgStyles.diagramGray}>Custom store component</Text>
+              <Text sx={imgStyles.diagramGray}>
                 Custom backend service (API)
-              </div>
-              <div
-                className={
-                  imgStyles.diagramCard + ' ' + imgStyles.diagramPinkCard
-                }
-              >
-                VTEX App
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={imgStyles.diagramBox}>
-        <h2 className={imgStyles.diagramTitle}>3rd party optional</h2>
-        <div className={imgStyles.diagramGridTwoColumns}>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Search
-          </div>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Personalization
-          </div>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Ratings and Reviews
-          </div>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Loyalty
-          </div>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Analytics and Reporting
-          </div>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            DXP
-          </div>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Customer Payments
-          </div>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            ADA
-          </div>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            Conversational XP
-          </div>
-          <div className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-            User Rights
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className={imgStyles.diagramBox + ' ' + imgStyles.diagramMuted}>
-      <h2 className={imgStyles.diagramTitle}>Integration Layer</h2>
-    </div>
-    <div className={imgStyles.diagramBox + ' ' + imgStyles.diagramMuted}>
-      <h2 className={imgStyles.diagramTitle}>Merchant back office</h2>
-      <div className={imgStyles.diagramGridHorizontal}>
-        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-          ERP
-        </p>
-        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-          OMS
-        </p>
-        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-          WMS
-        </p>
-        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-          PIM
-        </p>
-        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-          CRM
-        </p>
-        <p className={imgStyles.diagramCard + ' ' + imgStyles.diagramGray}>
-          Data Lake
-        </p>
-      </div>
-    </div>
-  </div>
+              </Text>
+              <Text sx={imgStyles.diagramPinkCard}>VTEX App</Text>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={imgStyles.diagramBox}>
+        <Text sx={imgStyles.diagramTitle}>3rd party optional</Text>
+        <Box>
+          <Text sx={imgStyles.diagramGray}>Search</Text>
+          <Text sx={imgStyles.diagramGray}>Personalization</Text>
+          <Text sx={imgStyles.diagramGray}>Ratings and Reviews</Text>
+          <Text sx={imgStyles.diagramGray}>Loyalty</Text>
+          <Text sx={imgStyles.diagramGray}>Analytics and Reporting</Text>
+          <Text sx={imgStyles.diagramGray}>DXP</Text>
+          <Text sx={imgStyles.diagramGray}>Customer Payments</Text>
+          <Text sx={imgStyles.diagramGray}>ADA</Text>
+        </Box>
+      </Box>
+    </Box>
+    <Box sx={imgStyles.diagramMuted}>
+      <Text sx={imgStyles.diagramTitleSingle}>Integration Layer</Text>
+    </Box>
+    <Box sx={imgStyles.diagramMuted}>
+      <Text sx={imgStyles.diagramTitle}>Merchant back office</Text>
+      <Grid sx={imgStyles.diagramGridHorizontal}>
+        <Text sx={imgStyles.diagramGray}>ERP</Text>
+        <Text sx={imgStyles.diagramGray}>OMS</Text>
+        <Text sx={imgStyles.diagramGray}>WMS</Text>
+        <Text sx={imgStyles.diagramGray}>PIM</Text>
+        <Text sx={imgStyles.diagramGray}>CRM</Text>
+        <Text sx={imgStyles.diagramGray}>Data Lake</Text>
+      </Grid>
+    </Box>
+  </Box>
 )
 
 const ApiGuidesPage: NextPage<Props> = () => {
