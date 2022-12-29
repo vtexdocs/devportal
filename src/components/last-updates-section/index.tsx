@@ -8,9 +8,8 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
-    description:
-      'Secure Proxy: An alternative option for card payment integrations',
-    date: new Date('03/14/2022'),
+    description: 'New go-live documentation available',
+    date: new Date('12/12/2022'),
   },
   updateType: 'release-notes',
 }

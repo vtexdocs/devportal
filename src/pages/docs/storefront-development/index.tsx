@@ -23,7 +23,7 @@ const getStartedData: WhatsNextDataElement[] = [
       'Set up your development environment and start creating unique storefronts.',
     link: {
       title: 'See more',
-      to: '/docs/api-guides/getting-started-3',
+      to: '/docs/guides/getting-started-3',
     },
   },
   {
@@ -41,7 +41,7 @@ const getStartedData: WhatsNextDataElement[] = [
       'Configure block templates to create PLPs, PDPs and landing pages.',
     link: {
       title: 'See more',
-      to: '/docs/api-guides/vtex-io-documentation-building-a-carousel-using-slider-layout',
+      to: '/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout',
     },
   },
   {
@@ -50,7 +50,7 @@ const getStartedData: WhatsNextDataElement[] = [
       'Style your storefront blocks and express your brand identity.',
     link: {
       title: 'See more',
-      to: '/docs/api-guides/vtex-io-documentation-customizing-your-stores-icons',
+      to: '/docs/guides/vtex-io-documentation-customizing-your-stores-icons',
     },
   },
   {
@@ -59,7 +59,7 @@ const getStartedData: WhatsNextDataElement[] = [
       "Manage URL redirects and set up your store's routes and pages.",
     link: {
       title: 'See more',
-      to: '/docs/api-guides/vtex-io-documentation-associating-a-custom-page-to-a-content-type',
+      to: '/docs/guides/vtex-io-documentation-associating-a-custom-page-to-a-content-type',
     },
   },
   {
@@ -68,7 +68,7 @@ const getStartedData: WhatsNextDataElement[] = [
       'Deploy your storefront and make it publicly available to shoppers.',
     link: {
       title: 'See more',
-      to: '/docs/api-guides/vtex-io-documentation-go-live',
+      to: '/docs/guides/vtex-io-documentation-go-live',
     },
   },
 ]
@@ -79,7 +79,7 @@ const goBeyondData: WhatsNextDataElement[] = [
     description: "Optimize your store's conversion rates by running A/B tests.",
     link: {
       title: 'See more',
-      to: '/docs/api-guides/vtex-io-documentation-running-native-ab-testing',
+      to: '/docs/guides/vtex-io-documentation-running-native-ab-testing',
     },
   },
   {
@@ -87,7 +87,7 @@ const goBeyondData: WhatsNextDataElement[] = [
     description: "Take action on enhancing your store's SEO.",
     link: {
       title: 'See more',
-      to: '/docs/api-guides/google-tag-manager',
+      to: '/docs/guides/google-tag-manager',
     },
   },
   {
@@ -95,7 +95,7 @@ const goBeyondData: WhatsNextDataElement[] = [
     description: "Solve real-world issues and boost your store's performance.",
     link: {
       title: 'See more',
-      to: '/docs/api-guides/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker',
+      to: '/docs/guides/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker',
     },
   },
   {
@@ -103,7 +103,7 @@ const goBeyondData: WhatsNextDataElement[] = [
     description: 'Achieve more customers by making your store multi-language.',
     link: {
       title: 'See more',
-      to: '/docs/api-guides/vtex-io-multi-language-stores',
+      to: '/docs/guides/vtex-io-multi-language-stores',
     },
   },
   {
@@ -112,7 +112,7 @@ const goBeyondData: WhatsNextDataElement[] = [
       'Go global with multi-currency, multi-language tools and reusable components.',
     link: {
       title: 'See more',
-      to: '/docs/api-guides/vtex-io-cross-border-stores',
+      to: '/docs/guides/vtex-io-cross-border-stores',
     },
   },
   {
@@ -120,7 +120,7 @@ const goBeyondData: WhatsNextDataElement[] = [
     description: 'Learn how to implement a B2B store with the Store Framework.',
     link: {
       title: 'See more',
-      to: '/docs/api-guides/b2b-setup',
+      to: '/docs/guides/b2b-setup',
     },
   },
 ]
@@ -149,7 +149,7 @@ const StorefrontDevelopmentPage: NextPage<Props> = () => {
           ))}
         </Flex>
         <Link
-          href="/docs/api-guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io"
+          href="/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io"
           legacyBehavior
         >
           <Box sx={styles.boxTip}>

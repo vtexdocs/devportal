@@ -68,7 +68,7 @@ const updates: Update[] = [
   {
     type: 'release-notes',
     title: 'Release Notes',
-    description: 'See new features and changes in documentation',
+    description: 'Stay up to date with our latest releases',
     Icon: ReleaseNotesIcon,
   },
 ]

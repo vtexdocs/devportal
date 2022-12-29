@@ -10,7 +10,7 @@ export type DocumentationTitle =
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
 export type SlugPrefix =
-  | 'api-guides'
+  | 'guides'
   | 'api-reference'
   | 'app-development'
   | 'storefront-development'

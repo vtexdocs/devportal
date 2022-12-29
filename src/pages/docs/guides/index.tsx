@@ -50,7 +50,7 @@ const Image2 = () => (
           <Box sx={imgStyles.diagramGrid}>
             <Tooltip label="Manipulate your store’s sales channels, categories, brands, products, SKUs and specifications.">
               <Link
-                href="/docs/api-guides/catalog-overview"
+                href="/docs/guides/catalog-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Catalog
@@ -58,7 +58,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Access and manipulate items data of a checkout cart.">
               <Link
-                href="/docs/api-guides/checkout-overview"
+                href="/docs/guides/checkout-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Checkout
@@ -66,7 +66,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Create and manage promotions and coupons to scale your sales.">
               <Link
-                href="/docs/api-guides/promotions-overview"
+                href="/docs/guides/promotions-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Promotions
@@ -74,7 +74,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Create, read and edit prices for each SKU, sales channel or price table.">
               <Link
-                href="/docs/api-guides/pricing-overview"
+                href="/docs/guides/pricing-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Pricing
@@ -82,7 +82,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Get payment data and process your transactions.">
               <Link
-                href="/docs/api-guides/payments-overview"
+                href="/docs/guides/payments-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Payment Hub
@@ -90,7 +90,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Search and sort products in the catalog using fulltext, category and brand search terms. Retrieve product data to create custom searches and product shelves.">
               <Link
-                href="/docs/api-guides/search-overview"
+                href="/docs/guides/search-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Intelligent Search
@@ -98,7 +98,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.">
               <Link
-                href="/docs/api-guides/account-management"
+                href="/docs/guides/account-management"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Account management

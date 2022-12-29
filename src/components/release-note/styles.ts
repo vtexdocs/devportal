@@ -37,6 +37,7 @@ const releaseTitle: SxStyleProp = {
   fontSize: ['16px', '18px'],
   lineHeight: ['22px', '24px'],
   pt: '8px',
+  cursor: 'pointer',
 }
 
 const releaseTitleActive: SxStyleProp = {
