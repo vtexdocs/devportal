@@ -14,9 +14,6 @@ interface IReleasesData {
 
 const ReleaseSection = ({ releasesData }: IReleasesData) => {
   const releases = releasesData.filter((release) => !release.hidden)
-  releases.sort(function (a, b) {
-    return Date.parse(b.createdAt) - Date.parse(a.createdAt)
-  })
 
   return (
     <Flex sx={styles.container}>
