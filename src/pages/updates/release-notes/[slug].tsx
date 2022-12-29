@@ -28,7 +28,6 @@ import getDocsPaths from 'utils/getReleasePaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
-// import getDocsListPreval from 'utils/getDocsList.preval'
 import { getReleaseDate } from 'components/release-note/functions'
 import { ActionType, getAction } from 'components/last-updates-card/functions'
 
@@ -79,7 +78,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
         <meta name="docsearch:doctype" content="API Guides" />
       </Head>
       <APIGuideContextProvider headings={headings}>
-        <Flex sx={styles.mainContainer}>
+        <Flex sx={styles.innerContainer}>
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
@@ -89,10 +88,13 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
                     <Text>{actionValue?.title}</Text>
                   </Box>
                 ) : null}
-                <h1>{serialized.frontmatter?.title}</h1>
-                <Text>
+                <Text sx={styles.documentationTitle}>
+                  {serialized.frontmatter?.title}
+                </Text>
+                <Text sx={{ marginTop: '10px' }}>
                   {getReleaseDate(serialized.frontmatter?.createdAt || '')}
                 </Text>
+                <Box sx={styles.divider}></Box>
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>
