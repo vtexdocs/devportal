@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { Flex, Timeline, Text, Box, Button, IconCaret } from '@vtex/brand-ui'
+import ReactMarkdown from 'react-markdown'
 
 import type { UpdateElement } from 'utils/typings/types'
 import { getAction } from './../last-updates-card/functions'
@@ -18,7 +19,11 @@ interface ReleaseNoteProps extends UpdateElement {
 
 const Description = ({ description, releaseStatus }: DescriptionProps) => {
   if (releaseStatus) {
-    return <Text sx={styles.releaseDescription}>{description}</Text>
+    return (
+      <Box sx={styles.releaseDescription}>
+        <ReactMarkdown>{description}</ReactMarkdown>
+      </Box>
+    )
   } else {
     return <></>
   }
