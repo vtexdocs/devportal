@@ -31,10 +31,10 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     activeSidebarElement,
     sidebarElementStatus,
     toggleSidebarElementStatus,
+    sidebarDataMaster,
   } = useContext(SidebarContext)
 
   const router = useRouter()
-  const { sidebarDataMaster } = useContext(SidebarContext)
 
   const handleClick = (
     e: { preventDefault: () => void },

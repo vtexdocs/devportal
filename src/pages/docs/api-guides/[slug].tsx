@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useContext } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import jp from 'jsonpath'
@@ -16,6 +16,7 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
+import { SidebarContext } from 'utils/contexts/sidebar'
 
 import type { Item } from 'components/table-of-contents'
 import Contributors from 'components/contributors'
@@ -50,6 +51,9 @@ interface Props {
 }
 
 const DocumentationPage: NextPage<Props> = ({
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //@ts-ignore
+  slug,
   serialized,
   sidebarfallback,
   headingList,
@@ -57,11 +61,13 @@ const DocumentationPage: NextPage<Props> = ({
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   const [seeAlsoUrls, setSeeAlsoUrls] = useState()
+  const { setActiveSidebarElement } = useContext(SidebarContext)
   useEffect(() => {
     if (serialized.frontmatter?.seeAlso)
       setSeeAlsoUrls(
         JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
       )
+    setActiveSidebarElement(slug)
     setHeadings(headingList)
   }, [serialized.frontmatter])
 
@@ -189,12 +195,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
+    const sectionSelected = 'API Guides'
     return {
       props: {
+        slug,
         serialized,
         sidebarfallback,
         headingList,
         contributors,
+        sectionSelected,
       },
     }
   } catch (error) {

@@ -78,10 +78,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = ({ params }) => {
   const slug = params?.slug
   const url = referencePaths[slug as string] || ''
+  const sectionSelected = 'API Reference'
   return {
     props: {
       slug,
       url,
+      sectionSelected,
     },
   }
 }
