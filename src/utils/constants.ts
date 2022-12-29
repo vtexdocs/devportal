@@ -1,12 +1,10 @@
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
-import VTEXIOIcon from 'components/icons/vtex-io-icon'
-import FastStoreIcon from 'components/icons/fast-store-icon'
-import SFAppsIcon from 'components/icons/sfapps-icon'
-import LegacyCMSIcon from 'components/icons/legacy-cms-icon'
+import AppDevelopmentIcon from 'components/icons/app-development-icon'
+import StorefrontDevelopmentIcon from 'components/icons/storefront-development-icon'
+import VTEXIOAppsIcon from 'components/icons/vtex-io-apps-icon'
 
 import ReleaseNotesIcon from 'components/icons/release-notes-icon'
-import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 
 import { getMessages } from 'utils/get-messages'
 import {
@@ -41,28 +39,22 @@ export const documentationData: DocDataElement[] = [
     link: '/docs/api-reference',
   },
   {
-    Icon: VTEXIOIcon,
-    title: 'VTEX IO',
-    description: messages['documentation_vtex_io.description'],
-    link: '/docs/vtex-io',
+    Icon: AppDevelopmentIcon,
+    title: 'App Development',
+    description: messages['documentation_app_development.description'],
+    link: '/docs/app-development',
   },
   {
-    Icon: FastStoreIcon,
-    title: 'FastStore',
-    description: messages['documentation_fast_store.description'],
-    link: '/docs/fast-store',
+    Icon: StorefrontDevelopmentIcon,
+    title: 'Storefront Development',
+    description: messages['documentation_storefront.description'],
+    link: '/docs/storefront-development',
   },
   {
-    Icon: SFAppsIcon,
-    title: 'Store Framework Apps',
-    description: messages['documentation_sfapps.description'],
-    link: '/docs/store-framework-apps',
-  },
-  {
-    Icon: LegacyCMSIcon,
-    title: 'Legacy CMS Portal',
-    description: messages['documentation_legacycms.description'],
-    link: '/docs/legacy-cms',
+    Icon: VTEXIOAppsIcon,
+    title: 'VTEX IO Apps',
+    description: messages['documentation_vtexio_apps.description'],
+    link: '/docs/vtex-io-apps',
   },
 ]
 
@@ -72,12 +64,6 @@ export const updatesData: UpdatesDataElement[] = [
     title: 'Release Notes',
     description: messages['updates_release_notes.description'],
     link: '/updates/release-notes',
-  },
-  {
-    Icon: DocumentationUpdatesIcon,
-    title: 'Documentation Updates',
-    description: messages['updates_documentation_updates.description'],
-    link: '/updates/documentation-updates',
   },
 ]
 
@@ -157,34 +143,36 @@ export const releaseData: UpdateElement[] = [
 
 export const whatsNextData: WhatsNextDataElement[] = [
   {
-    title: messages['vtex_io_page_new_to_vtex_io.title'],
-    description: messages['vtex_io_page_new_to_vtex_io.description'],
+    title: messages['app_development_page_new_to_app_development.title'],
+    description:
+      messages['app_development_page_new_to_app_development.description'],
     link: {
-      title: messages['vtex_io_page_new_to_vtex_io.link'],
+      title: messages['app_development_page_new_to_app_development.link'],
       to: '/',
     },
   },
   {
-    title: messages['vtex_io_page_solve_real_world_issues.title'],
-    description: messages['vtex_io_page_solve_real_world_issues.description'],
+    title: messages['app_development_page_solve_real_world_issues.title'],
+    description:
+      messages['app_development_page_solve_real_world_issues.description'],
     link: {
-      title: messages['vtex_io_page_solve_real_world_issues.link'],
+      title: messages['app_development_page_solve_real_world_issues.link'],
       to: '/',
     },
   },
   {
-    title: messages['vtex_io_page_build_foundations.title'],
-    description: messages['vtex_io_page_build_foundations.description'],
+    title: messages['app_development_page_build_foundations.title'],
+    description: messages['app_development_page_build_foundations.description'],
     link: {
-      title: messages['vtex_io_page_build_foundations.link'],
+      title: messages['app_development_page_build_foundations.link'],
       to: '/',
     },
   },
   {
-    title: messages['vtex_io_page_go_further.title'],
-    description: messages['vtex_io_page_go_further.description'],
+    title: messages['app_development_page_go_further.title'],
+    description: messages['app_development_page_go_further.description'],
     link: {
-      title: messages['vtex_io_page_go_further.link'],
+      title: messages['app_development_page_go_further.link'],
       to: '/',
     },
   },
@@ -193,29 +181,34 @@ export const whatsNextData: WhatsNextDataElement[] = [
 export const resources: ResourceDataElement[] = [
   {
     title: 'Community',
-    description: messages['vtex_io_page_other_resources_community.description'],
+    description:
+      messages['app_development_page_other_resources_community.description'],
     link: getCommunityURL(),
   },
   {
     title: 'Learning Center',
     description:
-      messages['vtex_io_page_other_resources_learning_center.description'],
+      messages[
+        'app_development_page_other_resources_learning_center.description'
+      ],
     link: getLearningCenterURL(),
   },
   {
     title: 'GitHub',
-    description: messages['vtex_io_page_other_resources_github.description'],
+    description:
+      messages['app_development_page_other_resources_github.description'],
     link: getGithubURL(),
   },
   {
     title: 'Help Center',
     description:
-      messages['vtex_io_page_other_resources_help_center.description'],
+      messages['app_development_page_other_resources_help_center.description'],
     link: getHelpCenterURL(),
   },
   {
     title: 'Support',
-    description: messages['vtex_io_page_other_resources_support.description'],
+    description:
+      messages['app_development_page_other_resources_support.description'],
     link: getSupportURL(),
   },
 ]

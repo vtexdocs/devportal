@@ -7,7 +7,9 @@ const container: SxStyleProp = {
   border: '1px solid #E7E9EE',
   width: ['324px', '264px', '264px', '264px', '352px'],
   transition: 'all 0.3s ease-out',
-
+  ':hover': {
+    cursor: 'pointer',
+  },
   ':active, :hover': {
     borderColor: 'muted.2',
     boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
@@ -34,9 +36,9 @@ const title: SxStyleProp = {
 }
 
 const description: SxStyleProp = {
-  fontSize: '12px',
+  fontSize: '14px',
   fontWeight: '400',
-  lineHeight: '16px',
+  lineHeight: '18px',
   color: 'muted.0',
 }
 

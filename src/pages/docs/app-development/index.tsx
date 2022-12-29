@@ -1,60 +1,44 @@
-import Image from 'next/image'
 import { Fragment } from 'react'
 import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import getNavigation from 'utils/getNavigation'
+import PageHeader from 'components/page-header'
 
 import WhatsNextCard from 'components/whats-next-card'
 
 import { getMessages } from 'utils/get-messages'
 import { whatsNextData, resources } from 'utils/constants'
 
-import image from '../../../../public/images/vtex-io.png'
+import image from '../../../../public/images/app-development.png'
 
-import styles from 'styles/vtex-io'
+import styles from 'styles/documentation-landing-page'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
 }
 
-const VTEXIOPage: NextPage<Props> = () => {
+const AppDevelopmentPage: NextPage<Props> = () => {
   const messages = getMessages()
 
   return (
     <Fragment>
-      <Box sx={styles.welcomeOuterContainer}>
-        <Flex sx={styles.welcomeInnerContainer}>
-          <Text sx={styles.welcomeText}>{messages['vtex_io_page.title']}</Text>
-          <Box sx={styles.welcomeImageOuterContainer}>
-            <Box sx={styles.welcomeImageInnerContainer}>
-              <Box sx={styles.welcomeImageGradient}></Box>
-              <Image
-                alt=""
-                src={image}
-                style={{
-                  maxWidth: '100%',
-                  height: 'auto',
-                }}
-              />
-            </Box>
-          </Box>
-        </Flex>
-      </Box>
-      <Box sx={styles.divider(false)}></Box>
+      <PageHeader
+        title={messages['app_development_page.title']}
+        description={messages['app_development_page.subtitle']}
+        imageUrl={image}
+        imageAlt={messages['app_development_page.title']}
+      />
       <Box sx={styles.contentContainer}>
-        <Text sx={styles.subtitle}>{messages['vtex_io_page.subtitle']}</Text>
-
         <Flex sx={styles.cardsContainer}>
           {whatsNextData.map((whatsNext) => (
             <WhatsNextCard {...whatsNext} />
           ))}
         </Flex>
-
         <Box sx={styles.resourcesSectionContainer}>
-          <Text sx={styles.resourcesSectionTitle}>
-            {messages['vtex_io_page_other_resources.title']}
+          <Text sx={styles.contentTitle}>
+            {messages['app_development_page_other_resources.title']}
           </Text>
           <Box>
             {resources.map((resource) => (
@@ -80,7 +64,7 @@ const VTEXIOPage: NextPage<Props> = () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const sidebarfallback = await getNavigation()
-  const sectionSelected = 'VTEX IO'
+  const sectionSelected = 'App Development'
 
   return {
     props: {
@@ -90,4 +74,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default VTEXIOPage
+export default AppDevelopmentPage

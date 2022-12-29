@@ -96,14 +96,19 @@ const DocumentationPage: NextPage<Props> = ({
         <meta name="docsearch:doctype" content="API Guides" />
       </Head>
       <APIGuideContextProvider headings={headings}>
-        <Flex sx={styles.mainContainer}>
+        <Flex sx={styles.innerContainer}>
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
-                <Breadcrumb breadcumbList={breadcumbList} />
-                <Text sx={styles.documentationTitle}>
-                  {serialized.frontmatter?.title}
-                </Text>
+                <header>
+                  <Breadcrumb breadcumbList={breadcumbList} />
+                  <Text sx={styles.documentationTitle}>
+                    {serialized.frontmatter?.title}
+                  </Text>
+                  <Text sx={styles.documentationExcerpt}>
+                    {serialized.frontmatter?.excerpt}
+                  </Text>
+                </header>
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>

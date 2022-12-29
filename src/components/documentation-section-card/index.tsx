@@ -56,10 +56,10 @@ const DocumentationSectionCard = ({
             className="quickStartedContainer"
             sx={styles.quickStartedContainer}
           >
-            <Text className="quickStartedText" sx={styles.quickStartedText}>
+            <Text className="learnMoreText" sx={styles.learnMoreText}>
               {
                 messages[
-                  'landing_page_documentation_documentation_card.quickStartedText'
+                  'landing_page_documentation_documentation_card.learnMoreText'
                 ]
               }
             </Text>

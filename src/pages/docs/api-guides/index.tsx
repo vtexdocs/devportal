@@ -1,11 +1,17 @@
+import Image from 'next/image'
+import { Fragment } from 'react'
+import { Box, Text, Grid, Flex, Link } from '@vtex/brand-ui'
+import Tooltip from 'components/tooltip'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
-import Layout from 'components/category-layout'
-import OverviewCard from 'components/overview-card'
-import { Composable } from 'components/overview-card/icons'
-import YouTubeFrame from 'components/youtube-frame'
-import styles from './styles.module.css'
+import imgStyles from '../../../styles/core-services-styles'
+import PageHeader from 'components/page-header'
+import { getMessages } from 'utils/get-messages'
+import image from '../../../../public/images/api-guides.png'
+import imageData from '../../../../public/images/data-orchestration.png'
+import imagePlatform from '../../../../public/images/platform.png'
+import styles from 'styles/documentation-landing-page'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -13,244 +19,202 @@ interface Props {
 }
 
 const Image2 = () => (
-  <div className={styles.diagram}>
-    <div className={styles.diagramBox}>
-      <h2 className={styles.diagramTitle}>Merchant channels</h2>
-      <p className={styles.diagramCard + ' ' + styles.diagramPinkCard}>CDN</p>
-      <div className={styles.diagramFlex}>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
-          Web Store
-        </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>PWA</div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
-          Live Shopping
-        </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
-          Conversational
-        </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
-          Marketplace Out
-        </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramPink}>
-          Personal Shopper
-        </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-          Mobile App
-        </div>
-        <div className={styles.diagramCard + ' ' + styles.diagramGray}>IOT</div>
-      </div>
-    </div>
-    <div className={styles.diagramSecondRow}>
-      <div className={styles.diagramBox + ' ' + styles.diagramBoxServices}>
-        <h2 className={styles.diagramTitle}>VTEX Core services</h2>
-        <div className={styles.diagramBoxServicesContent}>
-          <div className={styles.diagramGrid}>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Catalog
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Checkout
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              DaaS - Master Data
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              OMS
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Subscriptions
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Ratings and reviews
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Promotions
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              CMS
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Search
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Messages
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Authentication
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Pricing
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Payment Hub
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Logistics/ Inventory
-            </div>
-            <div className={styles.diagramCard + ' ' + styles.diagramPinkCard}>
-              Customers
-            </div>
-          </div>
-          <div className={styles.diagramBox}>
-            <h2 className={styles.diagramTitle}>VTEX IO Apps (PaaS)</h2>
-            <div className={styles.diagramGridVertical}>
-              <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-                Custom Admin
-              </div>
-              <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-                Custom store component
-              </div>
-              <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-                Custom backend service (API)
-              </div>
-              <div
-                className={styles.diagramCard + ' ' + styles.diagramPinkCard}
+  <Box>
+    <Box sx={imgStyles.diagramBox}>
+      <Text sx={imgStyles.diagramTitle}>Merchant channels</Text>
+      <Flex sx={imgStyles.diagramFlexEnd}>
+        <Box>
+          <Text sx={imgStyles.diagramPinkCard}>CDN</Text>
+          <Flex sx={imgStyles.diagramFlex}>
+            <Text sx={imgStyles.diagramPink}>Web Store</Text>
+            <Text sx={imgStyles.diagramPink}>PWA</Text>
+            <Text sx={imgStyles.diagramPink}>Live Shopping</Text>
+            <Text sx={imgStyles.diagramPink}>Conversational</Text>
+            <Text sx={imgStyles.diagramPink}>Marketplace Out</Text>
+            <Text sx={imgStyles.diagramPink}>Personal Shopper</Text>
+          </Flex>
+        </Box>
+        <Box>
+          <Flex sx={imgStyles.diagramFlex}>
+            <Box sx={imgStyles.diagramGray}>Mobile App</Box>
+            <Box sx={imgStyles.diagramGray}>IOT</Box>
+          </Flex>
+        </Box>
+      </Flex>
+    </Box>
+
+    <Box sx={imgStyles.diagramSecondRow}>
+      <Box sx={imgStyles.diagramBox}>
+        <Text sx={imgStyles.diagramTitleServices}>VTEX Core services</Text>
+        <Box sx={imgStyles.diagramBoxServicesContent}>
+          <Box sx={imgStyles.diagramGrid}>
+            <Tooltip label="Manipulate your store’s sales channels, categories, brands, products, SKUs and specifications.">
+              <Link
+                href="/docs/api-guides/catalog-overview"
+                sx={imgStyles.diagramPinkCardLink}
               >
-                VTEX App
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className={styles.diagramBox}>
-        <h2 className={styles.diagramTitle}>3rd party optional</h2>
-        <div className={styles.diagramGridTwoColumns}>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Search
-          </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Personalization
-          </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Ratings and Reviews
-          </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Loyalty
-          </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Search
-          </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Personalization
-          </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Ratings and Reviews
-          </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Loyalty
-          </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Ratings and Reviews
-          </div>
-          <div className={styles.diagramCard + ' ' + styles.diagramGray}>
-            Loyalty
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className={styles.diagramBox + ' ' + styles.diagramMuted}>
-      <h2 className={styles.diagramTitle}>Integration Layer</h2>
-    </div>
-    <div className={styles.diagramBox + ' ' + styles.diagramMuted}>
-      <h2 className={styles.diagramTitle}>Merchant back office</h2>
-      <div className={styles.diagramGridHorizontal}>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>ERP</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>OMS</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>WMS</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>PIM</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>CRM</p>
-        <p className={styles.diagramCard + ' ' + styles.diagramGray}>
-          Data Lake
-        </p>
-      </div>
-    </div>
-  </div>
+                Catalog
+              </Link>
+            </Tooltip>
+            <Tooltip label="Access and manipulate items data of a checkout cart.">
+              <Link
+                href="/docs/api-guides/checkout-overview"
+                sx={imgStyles.diagramPinkCardLink}
+              >
+                Checkout
+              </Link>
+            </Tooltip>
+            <Tooltip label="Create and manage promotions and coupons to scale your sales.">
+              <Link
+                href="/docs/api-guides/promotions-overview"
+                sx={imgStyles.diagramPinkCardLink}
+              >
+                Promotions
+              </Link>
+            </Tooltip>
+            <Tooltip label="Create, read and edit prices for each SKU, sales channel or price table.">
+              <Link
+                href="/docs/api-guides/pricing-overview"
+                sx={imgStyles.diagramPinkCardLink}
+              >
+                Pricing
+              </Link>
+            </Tooltip>
+            <Tooltip label="Get payment data and process your transactions.">
+              <Link
+                href="/docs/api-guides/payments-overview"
+                sx={imgStyles.diagramPinkCardLink}
+              >
+                Payment Hub
+              </Link>
+            </Tooltip>
+            <Tooltip label="Search and sort products in the catalog using fulltext, category and brand search terms. Retrieve product data to create custom searches and product shelves.">
+              <Link
+                href="/docs/api-guides/search-overview"
+                sx={imgStyles.diagramPinkCardLink}
+              >
+                Intelligent Search
+              </Link>
+            </Tooltip>
+            <Tooltip label="Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.">
+              <Link
+                href="/docs/api-guides/account-management"
+                sx={imgStyles.diagramPinkCardLink}
+              >
+                Account management
+              </Link>
+            </Tooltip>
+            <Box sx={imgStyles.diagramPinkCard}>DaaS - Master Data</Box>
+            <Box sx={imgStyles.diagramPinkCard}>OMS</Box>
+            <Box sx={imgStyles.diagramPinkCard}>Subscriptions</Box>
+            <Box sx={imgStyles.diagramPinkCard}>Ratings and reviews</Box>
+            <Text sx={imgStyles.diagramPinkCard}>CMS</Text>
+            <Text sx={imgStyles.diagramPinkCard}>Search</Text>
+            <Text sx={imgStyles.diagramPinkCard}>Messages</Text>
+            <Box sx={imgStyles.diagramPinkCard}>Logistics/ Inventory</Box>
+            <Box sx={imgStyles.diagramPinkCard}>Customers</Box>
+          </Box>
+          <Box sx={imgStyles.diagramBox}>
+            <Text sx={imgStyles.diagramTitleServices}>VTEX IO Apps (PaaS)</Text>
+            <Box>
+              <Text sx={imgStyles.diagramGray}>Custom Admin</Text>
+              <Text sx={imgStyles.diagramGray}>Custom store component</Text>
+              <Text sx={imgStyles.diagramGray}>
+                Custom backend service (API)
+              </Text>
+              <Text sx={imgStyles.diagramPinkCard}>VTEX App</Text>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+      <Box sx={imgStyles.diagramBox}>
+        <Text sx={imgStyles.diagramTitle}>3rd party optional</Text>
+        <Box>
+          <Text sx={imgStyles.diagramGray}>Search</Text>
+          <Text sx={imgStyles.diagramGray}>Personalization</Text>
+          <Text sx={imgStyles.diagramGray}>Ratings and Reviews</Text>
+          <Text sx={imgStyles.diagramGray}>Loyalty</Text>
+          <Text sx={imgStyles.diagramGray}>Analytics and Reporting</Text>
+          <Text sx={imgStyles.diagramGray}>DXP</Text>
+          <Text sx={imgStyles.diagramGray}>Customer Payments</Text>
+          <Text sx={imgStyles.diagramGray}>ADA</Text>
+        </Box>
+      </Box>
+    </Box>
+    <Box sx={imgStyles.diagramMuted}>
+      <Text sx={imgStyles.diagramTitleSingle}>Integration Layer</Text>
+    </Box>
+    <Box sx={imgStyles.diagramMuted}>
+      <Text sx={imgStyles.diagramTitle}>Merchant back office</Text>
+      <Grid sx={imgStyles.diagramGridHorizontal}>
+        <Text sx={imgStyles.diagramGray}>ERP</Text>
+        <Text sx={imgStyles.diagramGray}>OMS</Text>
+        <Text sx={imgStyles.diagramGray}>WMS</Text>
+        <Text sx={imgStyles.diagramGray}>PIM</Text>
+        <Text sx={imgStyles.diagramGray}>CRM</Text>
+        <Text sx={imgStyles.diagramGray}>Data Lake</Text>
+      </Grid>
+    </Box>
+  </Box>
 )
 
-const categoryData = [
-  {
-    title: 'Platform overview',
-    href: 'api-guides/getting-started-platform-overview',
-    description:
-      "Understand our platform's architecture and data orchestration through our Platform Overview article.",
-    docs: [
-      {
-        title: 'Platform Overview',
-        href: 'api-guides/getting-started-platform-overview',
-      },
-    ],
-    icon: 'StorageUnit',
-  },
-  {
-    title: 'REST API',
-    href: 'api-guides/getting-started-platform-overview',
-    description:
-      'See how to use our APIs to integrate third-party solutions to a single platform for all experiences.',
-    docs: [
-      {
-        title: 'List of REST APIs',
-        href: 'api-guides/getting-started-list-of-rest-apis',
-      },
-      {
-        title: 'Authentication',
-        href: 'api-guides/getting-started-authentication',
-      },
-      {
-        title: 'Making your first request',
-        href: 'api-guides/getting-started-making-your-first-request',
-      },
-    ],
-    icon: 'Board',
-    seeMore: true,
-  },
-]
-
 const ApiGuidesPage: NextPage<Props> = () => {
+  const messages = getMessages()
   return (
-    <Layout>
-      <h1 className={styles.title}>Getting started</h1>
-      <p className={styles.details}>
-        Check out our introductory content to learn more about the capabilities
-        of our Rest APIs.
-      </p>
-      <p>
-        Welcome! VTEX is a headless commerce platform that is highly
-        customizable and constantly evolving. The video below illustrates how
-        our clients are currently using VTEX to address their business needs:
-      </p>
-      <YouTubeFrame embedId="JgkrlaF52WQ" />
-      <blockquote className={styles.blockquote}>
-        <Composable />
-        <p>
-          You're now in our Developer Portal. If you wish to see
-          business-focused content, and documentation about our web platform,
-          check out our <a href="https://help.vtex.com/"> Help Center </a>.
-        </p>
-      </blockquote>
-      <>
-        {categoryData.map((category) => (
-          <OverviewCard
-            title={category.title}
-            href={category.href}
-            description={category.description}
-            docs={category.docs}
-            icon={category.icon}
-            seeMore={category.seeMore}
-          />
-        ))}
-      </>
-
-      <h1 className={styles.title}>Getting to know our Core Services</h1>
-      <p className={styles.details}>
-        Leverage your ecommerce in our Headless architecture, by learning what
-        you can accomplish with each microsservice in VTEX.
-      </p>
-      <p>
-        Our API Guides and Reference cover VTEX Core Services, as illustrated in
-        the image below.
-      </p>
-      <Image2 />
-    </Layout>
+    <Fragment>
+      <PageHeader
+        title={messages['api_guides_page.title']}
+        description={messages['api_guides_page.subtitle']}
+        imageUrl={image}
+        imageAlt={messages['app_development_page.title']}
+      />
+      <Box sx={styles.contentContainer}>
+        <Text sx={styles.contentTitle}>Get started</Text>
+        <Text sx={styles.contentDescription}>
+          Our core commerce capabilities, provided by over 70 shared
+          microservices, are available for flexible customization through our
+          REST APIs. This enables our clients to integrate third-party solutions
+          into a single platform for all experiences.{' '}
+        </Text>
+        <Image
+          alt="Platform overview"
+          src={imagePlatform}
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+        />
+        <Text sx={styles.contentDescription}>
+          Using our REST APIs with our serverless development platform (VTEX IO)
+          and scalable data service (Master Data), you can expand the VTEX
+          platform to address your unique business needs.
+        </Text>
+        <Box sx={styles.divider}></Box>
+        <Text sx={styles.contentTitle}>Data orchestration</Text>
+        <Text sx={styles.contentDescription}>
+          Our platform orchestrates data through multiple channels and sources
+          to remove barriers and enable more possibilities. E-commerce,
+          Brick-and-mortar, Marketplace, B2B... You name it, we enable it. That
+          is why we are a unified commerce platform for unified businesses.
+        </Text>
+        <Image
+          alt="Data orchestration"
+          src={imageData}
+          style={{
+            maxWidth: '100%',
+            height: 'auto',
+          }}
+        />
+        <Box sx={styles.divider}></Box>
+        <Text sx={styles.contentTitle}>Core services</Text>
+        <Text sx={styles.contentDescription}>
+          Get to know our core microsservices and leverage your business with
+          our Headless architecture. Our API Guides and Reference cover VTEX
+          Core Services, as illustrated in the image below.
+        </Text>
+        <Image2 />
+      </Box>
+    </Fragment>
   )
 }
 

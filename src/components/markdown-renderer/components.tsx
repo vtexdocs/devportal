@@ -56,7 +56,6 @@ const ObservableHeading = ({
 
 const Callout = ({ node, icon, ...props }: Component) => {
   const blockquoteType: string = icon ? icon : 'info'
-  console.log(props)
   return (
     <blockquote
       className={`${styles.blockquote} ${
@@ -118,6 +117,9 @@ export default {
   },
   code: ({ node, ...props }: Component) => {
     return <code className={styles.code} {...props}></code>
+  },
+  pre: ({ node, ...props }: Component) => {
+    return <pre className={styles.pre} {...props}></pre>
   },
   h2: ({ node, ...props }: Component) => {
     const { activeItem, setActiveItem, goToPreviousItem } =

@@ -1,7 +1,7 @@
 import type { IconProps } from '@vtex/brand-ui'
 import { Icon } from '@vtex/brand-ui'
 
-const FastStoreIcon = (props: IconProps) => (
+const StorefrontDevelopmentIcon = (props: IconProps) => (
   <Icon
     {...props}
     viewBox="0 0 32 32"
@@ -62,4 +62,4 @@ const FastStoreIcon = (props: IconProps) => (
   </Icon>
 )
 
-export default FastStoreIcon
+export default StorefrontDevelopmentIcon

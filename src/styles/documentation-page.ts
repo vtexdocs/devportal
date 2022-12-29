@@ -9,11 +9,37 @@ const container: SxStyleProp = {
 const mainContainer: SxStyleProp = {
   justifyContent: 'center',
   width: '100%',
+}
+
+const innerContainer: SxStyleProp = {
+  justifyContent: 'center',
+  width: '100%',
   pt: '64px',
 }
 
 const articleBox: SxStyleProp = {
   width: ['100%', 'initial'],
+  lineHeight: '22px',
+  a: {
+    color: '#E31C58',
+  },
+  header: {
+    borderBottom: '1px solid #E7E9EE',
+    marginBottom: '24px',
+  },
+  h1: {
+    fontSize: '32px',
+    fontWeight: '400',
+  },
+  h2: {
+    fontSize: '22px',
+    lineHeight: '32px',
+    paddingTop: '16px',
+    fontWeight: '400',
+  },
+  strong: {
+    fontWeight: '600',
+  },
 }
 
 const contentContainer: SxStyleProp = {
@@ -23,7 +49,14 @@ const contentContainer: SxStyleProp = {
 
 const documentationTitle: SxStyleProp = {
   fontSize: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
-  fontWeight: 'bold',
+  lineHeight: ['38px', '38px', '38px', '38px', '38px', '38px', '54px'],
+}
+
+const documentationExcerpt: SxStyleProp = {
+  color: '#A1A8B3',
+  fontSize: '18px',
+  fontWeight: '400',
+  padding: '8px 0 24px',
 }
 
 const bottomContributorsContainer: SxStyleProp = {
@@ -66,4 +99,6 @@ export default {
   bottomContributorsDivider,
   rightContainer,
   releaseAction,
+  documentationExcerpt,
+  innerContainer,
 }

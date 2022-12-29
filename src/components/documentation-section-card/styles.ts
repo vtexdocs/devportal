@@ -15,6 +15,7 @@ const cardContainer: SxStyleProp = {
   },
 
   ':active, :hover': {
+    cursor: 'pointer',
     backgroundColor: 'white',
     borderColor: 'muted.2',
     boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
@@ -85,7 +86,7 @@ const quickStartedContainer: SxStyleProp = {
   borderBottomRightRadius: '8px',
   transition: 'all 0.3s ease-out',
 
-  '.quickStartedText': {
+  '.learnMoreText': {
     transition: 'all 0.3s ease-out',
   },
 
@@ -93,14 +94,14 @@ const quickStartedContainer: SxStyleProp = {
     backgroundColor: '#F8F7FC',
     transition: 'all 0.3s ease-out',
 
-    '.quickStartedText': {
+    '.learnMoreText': {
       color: '#000711',
       transition: 'all 0.3s ease-out',
     },
   },
 }
 
-const quickStartedText: SxStyleProp = {
+const learnMoreText: SxStyleProp = {
   fontSize: ['12px', '16px'],
   lineHeight: ['16px', '22px'],
   fontWeight: '400',
@@ -113,6 +114,6 @@ export default {
   icon,
   infoContainer,
   quickStartedContainer,
-  quickStartedText,
+  learnMoreText,
   title,
 }
