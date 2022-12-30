@@ -21,9 +21,11 @@
     "index": "chmod +x ./algolia/scripts/scraper.sh && ./algolia/scripts/scraper.sh"
   },
   "dependencies": {
+    "@openreplay/tracker": "^4.1.9",
     "@plaiceholder/next": "^2.5.0",
     "@types/http-proxy": "^1.17.9",
     "@types/probe-image-size": "^7.2.0",
+    "@types/uuid": "^9.0.0",
     "@vtex/brand-ui": "^0.46.1",
     "algoliasearch": "^4.14.2",
     "highlight.js": "^11.6.0",
@@ -52,7 +54,8 @@
     "sharp": "^0.31.2",
     "swr": "^1.3.0",
     "unist-util-visit": "^4.1.1",
-    "use-yarn": "^2.4.0"
+    "use-yarn": "^2.4.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
