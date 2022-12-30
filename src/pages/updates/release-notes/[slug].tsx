@@ -1,39 +1,35 @@
 import Head from 'next/head'
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
-import jp from 'jsonpath'
 
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
-import remarkBlockquote from './rehypeBlockquote'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
-import { SidebarContext } from 'utils/contexts/sidebar'
 
 import type { Item } from 'components/table-of-contents'
 import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
-import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
-import Breadcrumb from 'components/breadcrumb'
 
-import getHeadings from 'utils/getHeadings'
+import { removeHTML } from 'utils/string-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsPaths from 'utils/getDocsPaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
+// import getDocsListPreval from 'utils/getDocsList.preval'
 
 import styles from 'styles/documentation-page'
 import getFileContributors, {
@@ -48,49 +44,40 @@ interface Props {
   sidebarfallback: any //eslint-disable-line
   contributors: ContributorsType[]
   path: string
-  headingList: Item[]
 }
 
 const DocumentationPage: NextPage<Props> = ({
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //@ts-ignore
-  slug,
   serialized,
-  path,
-  sidebarfallback,
-  headingList,
   contributors,
+  path,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
-  const [seeAlsoUrls, setSeeAlsoUrls] = useState()
-  const { setActiveSidebarElement } = useContext(SidebarContext)
   useEffect(() => {
-    if (serialized.frontmatter?.seeAlso)
-      setSeeAlsoUrls(
-        JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
-      )
-    setActiveSidebarElement(slug)
-    setHeadings(headingList)
-  }, [serialized.frontmatter])
+    if (headings) setHeadings([])
+    document.querySelectorAll('h2, h3').forEach((heading) => {
+      const item = {
+        title: removeHTML(heading.innerHTML).replace(':', ''),
+        slug: heading.id,
+      }
 
-  const breadcumb = jp.paths(
-    sidebarfallback,
-    `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
-  )[0]
-  let currentBreadcumb = sidebarfallback
-  const breadcumbList: { slug: string; name: string; type: string }[] = []
-  breadcumb?.forEach((el: string | number) => {
-    if (typeof currentBreadcumb?.slug == 'string') {
-      breadcumbList.push({
-        slug: currentBreadcumb.slug,
-        name: currentBreadcumb.name,
-        type: currentBreadcumb.type,
+      setHeadings((headings) => {
+        if (heading.tagName === 'H2') {
+          return [...headings, { ...item, children: [] }]
+        }
+
+        const { title, slug, children } = headings[headings.length - 1] || {
+          title: '',
+          slug: '',
+          children: [],
+        }
+
+        return [
+          ...headings.slice(0, -1),
+          { title, slug, children: [...children, item] },
+        ]
       })
-    }
-    if (el != '$') {
-      currentBreadcumb = currentBreadcumb[el]
-    }
-  })
+    })
+  }, [])
 
   return (
     <>
@@ -98,19 +85,11 @@ const DocumentationPage: NextPage<Props> = ({
         <meta name="docsearch:doctype" content="API Guides" />
       </Head>
       <APIGuideContextProvider headings={headings}>
-        <Flex sx={styles.innerContainer}>
+        <Flex sx={styles.mainContainer}>
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
-                <header>
-                  <Breadcrumb breadcumbList={breadcumbList} />
-                  <Text sx={styles.documentationTitle}>
-                    {serialized.frontmatter?.title}
-                  </Text>
-                  <Text sx={styles.documentationExcerpt}>
-                    {serialized.frontmatter?.excerpt}
-                  </Text>
-                </header>
+                <h1>{serialized.frontmatter?.title}</h1>
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>
@@ -121,9 +100,6 @@ const DocumentationPage: NextPage<Props> = ({
             </Box>
 
             <FeedbackSection docPath={path} />
-            {serialized.frontmatter?.seeAlso && (
-              <SeeAlsoSection urls={seeAlsoUrls!} />
-            )}
           </Box>
           <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />
@@ -182,36 +158,26 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       documentationContent = await replaceMagicBlocks(documentationContent)
     }
 
-    const headingList: Item[] = []
-
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [
-          remarkGFM,
-          remarkImages,
-          [getHeadings, { headingList }],
-          remarkBlockquote,
-        ],
+        remarkPlugins: [remarkGFM, remarkImages],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
         format: 'mdx',
       },
     })
+
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
-    const sectionSelected = 'API Guides'
     return {
       props: {
-        slug,
+        path,
         serialized,
         sidebarfallback,
-        headingList,
         contributors,
-        sectionSelected,
-        path,
       },
     }
   } catch (error) {
