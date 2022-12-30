@@ -1,14 +1,10 @@
 import styles from './styles'
-import type { PropsWithChildren, ReactNode } from 'react'
+import type { PropsWithChildren } from 'react'
 import { useDialogState, Dialog } from 'reakit/Dialog'
-import { Box, Button, Text, IconProps, SxProps, Link } from '@vtex/brand-ui'
+import { Box, Button, Text, SxProps, Link } from '@vtex/brand-ui'
 import { IconClose } from './IconClose'
 
-interface HelloBarProps extends PropsWithChildren<SxProps> {
-  variant?: 'primary' | 'secondary' | 'tertiary'
-  closeIcon?: boolean
-  onClose?: () => void
-  icon?: (props: IconProps) => ReactNode
+interface AnnouncementBarProps extends PropsWithChildren<SxProps> {
   action: {
     label: string
     href: string
@@ -16,19 +12,21 @@ interface HelloBarProps extends PropsWithChildren<SxProps> {
 }
 
 const AnnouncementBar = ({
-  onClose,
   action: { label, href },
   children,
-}: HelloBarProps) => {
-  const state = useDialogState({ modal: false, visible: true })
+}: AnnouncementBarProps) => {
+  const state = useDialogState({
+    modal: false,
+    visible: true,
+    baseId: 'announcement-bar',
+  })
   const handleClose = (e: React.MouseEvent) => {
     e.stopPropagation()
     state.hide()
-    if (onClose) onClose()
   }
 
   return (
-    <Dialog {...state} hideOnClickOutside={false}>
+    <Dialog {...state} aria-label="Welcome" hideOnClickOutside={false}>
       <Box sx={styles.container}>
         <Box sx={styles.box}>
           <Text sx={styles.label}>NEW</Text>

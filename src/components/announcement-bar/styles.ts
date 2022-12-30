@@ -8,6 +8,9 @@ const container: SxStyleProp = {
   cursor: 'default',
   width: '100%',
   padding: '15px 50px ',
+  ':focus': {
+    outline: 'none',
+  },
 }
 
 const box: SxStyleProp = {
@@ -39,8 +42,8 @@ const textBold: SxStyleProp = {
 
 const link: SxStyleProp = {
   display: 'inline',
-  focus: {
-    border: 'none',
+  ':focus': {
+    outline: 'none',
   },
 }
 
