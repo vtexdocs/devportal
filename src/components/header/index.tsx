@@ -19,8 +19,10 @@ import { getFeedbackURL } from 'utils/get-url'
 import { getMessages } from 'utils/get-messages'
 
 import SearchInput from 'components/search-input'
+import AnnouncementBar from 'components/announcement-bar'
 
 import styles from './styles'
+
 const Header = () => {
   const router = useRouter()
 
@@ -84,6 +86,14 @@ const Header = () => {
 
   return (
     <Box ref={headerElement} sx={styles.headerContainer}>
+      <AnnouncementBar
+        action={{
+          label: " If you have any feedback, don't hesitate to get in touch.",
+          href: 'https://docs.google.com/forms/d/e/1FAIpQLSfmnotPvPjw-SjiE7lt2Nt3RQgNUe10ixXZmuO2v9enOJReoQ/viewform?pli=1',
+        }}
+      >
+        We are excited to announce our new Developer Portal.
+      </AnnouncementBar>
       <HeaderBrand sx={styles.headerBrand}>
         <HeaderBrand.Brand>
           <Link href="/" legacyBehavior>
