@@ -41,8 +41,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/docs/api-guides/:slug',
-        destination: '/docs/guides/:slug',
+        source: '/docs/api-guides/:slug*',
+        destination: '/docs/guides/:slug*',
         permanent: true,
       },
     ]
