@@ -31,6 +31,7 @@ function newTracker(config: {
   const trackerConfig = {
     projectKey:
       config?.projectKey || process.env.NEXT_PUBLIC_OPENREPLAY_PROJECT_KEY,
+    ingestPoint: 'https://openreplay.vtex.com/ingest',
   }
   const tracker = new Tracker(trackerConfig)
   if (config?.userIdEnabled) {
