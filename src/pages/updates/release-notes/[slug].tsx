@@ -11,12 +11,11 @@ import hljsCurl from 'highlightjs-curl'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from 'components/table-of-contents'
-import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
@@ -25,16 +24,14 @@ import TableOfContents from 'components/table-of-contents'
 import { removeHTML } from 'utils/string-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
-import getDocsPaths from 'utils/getDocsPaths'
+import getDocsPaths from 'utils/getReleasePaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
-// import getDocsListPreval from 'utils/getDocsList.preval'
+import { getReleaseDate } from 'components/release-note/functions'
+import { ActionType, getAction } from 'components/last-updates-card/functions'
 
 import styles from 'styles/documentation-page'
-import getFileContributors, {
-  ContributorsType,
-} from 'utils/getFileContributors'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -42,15 +39,10 @@ interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
-  contributors: ContributorsType[]
   path: string
 }
 
-const DocumentationPage: NextPage<Props> = ({
-  serialized,
-  contributors,
-  path,
-}) => {
+const DocumentationPage: NextPage<Props> = ({ serialized, path }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
     if (headings) setHeadings([])
@@ -78,6 +70,8 @@ const DocumentationPage: NextPage<Props> = ({
       })
     })
   }, [])
+  const actionType: ActionType = serialized.frontmatter?.type as ActionType
+  const actionValue = actionType ? getAction(actionType) : null
 
   return (
     <>
@@ -85,24 +79,29 @@ const DocumentationPage: NextPage<Props> = ({
         <meta name="docsearch:doctype" content="API Guides" />
       </Head>
       <APIGuideContextProvider headings={headings}>
-        <Flex sx={styles.mainContainer}>
+        <Flex sx={styles.innerContainer}>
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
               <article>
-                <h1>{serialized.frontmatter?.title}</h1>
+                {actionValue ? (
+                  <Box sx={styles.releaseAction}>
+                    <actionValue.Icon />
+                    <Text>{actionValue?.title}</Text>
+                  </Box>
+                ) : null}
+                <Text sx={styles.documentationTitle}>
+                  {serialized.frontmatter?.title}
+                </Text>
+                <Text sx={{ marginTop: '10px' }}>
+                  {getReleaseDate(serialized.frontmatter?.createdAt || '')}
+                </Text>
+                <Box sx={styles.divider}></Box>
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>
-
-            <Box sx={styles.bottomContributorsContainer}>
-              <Box sx={styles.bottomContributorsDivider} />
-              <Contributors contributors={contributors} />
-            </Box>
-
             <FeedbackSection docPath={path} />
           </Box>
           <Box sx={styles.rightContainer}>
-            <Contributors contributors={contributors} />
             <TableOfContents />
           </Box>
           <OnThisPage />
@@ -144,13 +143,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     path
   )
 
-  const contributors = await getFileContributors(
-    'vtexdocs',
-    'dev-portal-content',
-    'main',
-    path
-  )
-
   try {
     if (path.endsWith('.md')) {
       documentationContent = escapeCurlyBraces(documentationContent)
@@ -174,10 +166,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     return {
       props: {
-        path,
         serialized,
         sidebarfallback,
-        contributors,
+        path,
       },
     }
   } catch (error) {

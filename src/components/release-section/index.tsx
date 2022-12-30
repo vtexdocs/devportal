@@ -1,15 +1,19 @@
 import ReleaseNote from '../release-note'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import { releaseData } from 'utils/constants'
 import styles from 'components/release-section/styles'
 import { getMessages } from 'utils/get-messages'
 import { compareDates, getDate } from './functions'
+import { UpdateElement } from 'utils/typings/types'
 
 const messages = getMessages()
 
-const ReleaseSection = () => {
-  const releases = releaseData.filter((release) => !release.hidden)
+interface IReleasesData {
+  releasesData: UpdateElement[]
+}
+
+const ReleaseSection = ({ releasesData }: IReleasesData) => {
+  const releases = releasesData.filter((release) => !release.hidden)
   return (
     <Flex sx={styles.container}>
       <Box>
