@@ -21,11 +21,7 @@ async function getGithubTree(org: string, repo: string, ref: string) {
 //https://api.github.com/repos/vtexdocs/devportal/commits?path=README.md
 
 export default async function getDocsPaths() {
-  const repoTree = await getGithubTree(
-    'vtexdocs',
-    'dev-portal-content',
-    'readme-docs'
-  )
+  const repoTree = await getGithubTree('vtexdocs', 'dev-portal-content', 'main')
   // @ts-ignore
   repoTree.tree.map((node: any) => {
     const path = node.path
