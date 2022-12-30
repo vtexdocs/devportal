@@ -1,6 +1,13 @@
 import { useRouter } from 'next/router'
 import React, { Fragment, useContext } from 'react'
-import { Box, Flex, Link, Button, IconCaret } from '@vtex/brand-ui'
+import {
+  Box,
+  Flex,
+  Link,
+  Button,
+  IconCaret,
+  IconExternalLink,
+} from '@vtex/brand-ui'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
 import { MethodType } from 'utils/typings/unionTypes'
@@ -150,6 +157,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
             </Link>
           ) : checkDocumentationType(sidebarDataMaster, slug, 'link') ? (
             <Link href={slug} target="_blank" sx={styles.elementText}>
+              <IconExternalLink size={16} sx={{ marginRight: '10px' }} />
               {name}
             </Link>
           ) : (
