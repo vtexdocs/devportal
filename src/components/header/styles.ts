@@ -1,7 +1,7 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
 const headerContainer: SxStyleProp = {
-  position: 'fixed',
+  position: 'sticky',
   zIndex: 9999,
   width: '100%',
   transition: 'top 0.3s',
