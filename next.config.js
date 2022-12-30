@@ -40,6 +40,11 @@ const nextConfig = {
         destination: '/docs/guides/:slug',
         permanent: true,
       },
+      {
+        source: '/docs/api-guides/:slug',
+        destination: '/docs/guides/:slug',
+        permanent: true,
+      },
     ]
   },
 }
