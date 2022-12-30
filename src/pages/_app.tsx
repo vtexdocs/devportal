@@ -10,15 +10,19 @@ type Props = AppProps & {
   Component: Page
 }
 
+import TrackerProvider from 'utils/contexts/trackerContext'
+
 function MyApp({ Component, pageProps }: Props) {
   return (
-    <Layout
-      sidebarfallback={pageProps.sidebarfallback}
-      hideSidebar={Component.hideSidebar}
-      sectionSelected={pageProps.sectionSelected}
-    >
-      <Component {...pageProps} />
-    </Layout>
+    <TrackerProvider>
+      <Layout
+        sidebarfallback={pageProps.sidebarfallback}
+        hideSidebar={Component.hideSidebar}
+        sectionSelected={pageProps.sectionSelected}
+      >
+        <Component {...pageProps} />
+      </Layout>
+    </TrackerProvider>
   )
 }
 
