@@ -128,7 +128,8 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
               onClick={() => toggleSidebarElementStatus(slug)}
             />
           )}
-          {!checkDocumentationType(sidebarDataMaster, slug, 'category') ? (
+          {!checkDocumentationType(sidebarDataMaster, slug, 'category') &&
+          !checkDocumentationType(sidebarDataMaster, slug, 'link') ? (
             <Link
               sx={textStyle(activeSidebarElement === slug, isExpandable)}
               onClick={(e: { preventDefault: () => void }) => {
@@ -145,6 +146,10 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
                   method={method}
                 />
               )}
+              {name}
+            </Link>
+          ) : checkDocumentationType(sidebarDataMaster, slug, 'link') ? (
+            <Link href={slug} target="_blank" sx={styles.elementText}>
               {name}
             </Link>
           ) : (
