@@ -13,9 +13,6 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import { Box, Flex } from '@vtex/brand-ui'
 
-import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
-
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from 'components/table-of-contents'
@@ -23,7 +20,6 @@ import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
-import SeeAlsoSection from 'components/see-also-section'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
@@ -42,30 +38,19 @@ import getFileContributors, {
 
 const docsPathsGLOBAL = await getDocsPaths()
 
-const documentationCards = [
-  {
-    title: 'Billing Options',
-    description: 'API Guides',
-    link: '/docs/api-guides/billing-options',
-    Icon: APIGuidesIcon,
-  },
-  {
-    title:
-      'Catalog API - A long documentation title aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
-    description: 'API Reference',
-    link: '/docs/api-reference/catalog',
-    Icon: APIReferenceIcon,
-  },
-]
-
 interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
   contributors: ContributorsType[]
+  path: string
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
+const DocumentationPage: NextPage<Props> = ({
+  serialized,
+  contributors,
+  path,
+}) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
     if (headings) setHeadings([])
@@ -114,8 +99,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized, contributors }) => {
               <Contributors contributors={contributors} />
             </Box>
 
-            <FeedbackSection />
-            <SeeAlsoSection cards={documentationCards} />
+            <FeedbackSection docPath={path} />
           </Box>
           <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />
@@ -190,6 +174,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     return {
       props: {
+        path,
         serialized,
         sidebarfallback,
         contributors,
