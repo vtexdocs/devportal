@@ -95,7 +95,8 @@ const DocumentationPage: NextPage<Props> = ({
   return (
     <>
       <Head>
-        <meta name="docsearch:doctype" content="API Guides" />
+        <title>{serialized.frontmatter?.title}</title>
+        <meta name="docsearch:doctype" content="Guides" />
       </Head>
       <APIGuideContextProvider headings={headings}>
         <Flex sx={styles.innerContainer}>

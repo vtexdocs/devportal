@@ -14,6 +14,7 @@ interface Props {
 }
 import { WhatsNextDataElement } from 'utils/typings/types'
 import WhatsNextCard from 'components/whats-next-card'
+import Head from 'next/head'
 
 interface ICategoryListing {
   category: IChildrenListing
@@ -51,7 +52,7 @@ const AppsListing = ({ category }: ICategoryListing) => {
       <Text sx={styles.contentTitle}>{category.name}</Text>
       <Flex sx={styles.cardsContainer}>
         {whatsNextData.map((whatsNext) => (
-          <WhatsNextCard {...whatsNext} />
+          <WhatsNextCard {...whatsNext} key={whatsNext.title} />
         ))}
       </Flex>
       <Link sx={styles.seeMoreLink} href={`/docs/guides/${category.slug}`}>
@@ -75,23 +76,33 @@ const VTEXIOAppsPage: NextPage<Props> = ({ sidebarfallback }) => {
   )
 
   return (
-    <Fragment>
-      <PageHeader
-        title={messages['vtex_io_apps_page.title']}
-        description={messages['vtex_io_apps_page.subtitle']}
-        imageUrl={image}
-        imageAlt={messages['vtex_io_apps_page.title']}
-      />
-      <Box sx={styles.contentContainer}>
-        {docs.categories.map((category: IChildrenListing) =>
-          category.children.length > 0 ? (
-            <AppsListing category={category} />
-          ) : (
-            ''
-          )
-        )}
-      </Box>
-    </Fragment>
+    <>
+      <Head>
+        <title>{messages['vtex_io_apps_page.title']}</title>
+        <meta
+          property="og:title"
+          content={messages['vtex_io_apps_page.subtitle']}
+          key="title"
+        />
+      </Head>
+      <Fragment>
+        <PageHeader
+          title={messages['vtex_io_apps_page.title']}
+          description={messages['vtex_io_apps_page.subtitle']}
+          imageUrl={image}
+          imageAlt={messages['vtex_io_apps_page.title']}
+        />
+        <Box sx={styles.contentContainer}>
+          {docs.categories.map((category: IChildrenListing) =>
+            category.children.length > 0 ? (
+              <AppsListing category={category} />
+            ) : (
+              ''
+            )
+          )}
+        </Box>
+      </Fragment>
+    </>
   )
 }
 

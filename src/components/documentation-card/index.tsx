@@ -9,7 +9,7 @@ export interface DocumentProps extends DataElement {
   title: string
 }
 export interface CardProps extends DocumentProps {
-  containerType: 'dropdown' | 'see-also'
+  containerType: 'dropdown' | 'see-also' | 'mobile'
 }
 const DocumentationCard = ({
   title,
