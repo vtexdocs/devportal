@@ -41,7 +41,7 @@ const AppsListing = ({ category }: ICategoryListing) => {
       description: '',
       link: {
         title: 'See more',
-        to: `/docs/api-guides/${item.slug}`,
+        to: `/docs/guides/${item.slug}`,
       },
     })
   )
@@ -54,7 +54,7 @@ const AppsListing = ({ category }: ICategoryListing) => {
           <WhatsNextCard {...whatsNext} />
         ))}
       </Flex>
-      <Link sx={styles.seeMoreLink} href={`/docs/api-guides/${category.slug}`}>
+      <Link sx={styles.seeMoreLink} href={`/docs/guides/${category.slug}`}>
         See more
         <IconCaret
           className="caret"

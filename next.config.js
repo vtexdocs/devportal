@@ -21,23 +21,28 @@ const nextConfig = {
   },
   env: {
     navigationJsonUrl:
-      'https://vtex-dev-portal-navigation.fra1.cdn.digitaloceanspaces.com/navigationNewPages.json',
+      'https://vtex-dev-portal-navigation.fra1.cdn.digitaloceanspaces.com/navigation.json',
   },
   async redirects() {
     return [
       {
         source: '/vtex-rest-api/docs/:slug',
-        destination: '/docs/api-guides/:slug',
+        destination: '/docs/guides/:slug',
         permanent: true,
       },
       {
         source: '/vtex-developer-docs/docs/:slug',
-        destination: '/docs/api-guides/:slug',
+        destination: '/docs/guides/:slug',
         permanent: true,
       },
       {
         source: '/vtex-developer-docs/changelog/:slug',
-        destination: '/docs/api-guides/:slug',
+        destination: '/docs/guides/:slug',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-guides/:slug*',
+        destination: '/docs/guides/:slug*',
         permanent: true,
       },
     ]

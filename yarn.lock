@@ -1803,6 +1803,13 @@
     "@octokit/webhooks-types" "6.5.0"
     aggregate-error "^3.1.0"
 
+"@openreplay/tracker@^4.1.9":
+  version "4.1.9"
+  resolved "https://registry.yarnpkg.com/@openreplay/tracker/-/tracker-4.1.9.tgz#03d7c45f5425c10e44edeb1f0351c48a18deae6f"
+  integrity sha512-wdsvJAN2fdVEtX0js5XOq4nQMyOu8hFtoaj5QxaZwgRcqG/EmAwwmalWQVDDEaX+6F8ETnEOiNRr3PyyymdAog==
+  dependencies:
+    error-stack-parser "^2.0.6"
+
 "@pkgr/utils@^2.3.1":
   version "2.3.1"
   resolved "https://registry.npmjs.org/@pkgr/utils/-/utils-2.3.1.tgz"
@@ -2308,6 +2315,11 @@
   version "2.0.6"
   resolved "https://registry.npmjs.org/@types/unist/-/unist-2.0.6.tgz"
   integrity sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==
+
+"@types/uuid@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-9.0.0.tgz#53ef263e5239728b56096b0a869595135b7952d2"
+  integrity sha512-kr90f+ERiQtKWMz5rP32ltJ/BtULDI5RVO0uavn1HQUOwjx0R1h0rnDYNL0CepF1zL5bSY6FISAfd9tOdDhU5Q==
 
 "@types/yauzl@^2.9.1":
   version "2.9.2"
@@ -4235,6 +4247,13 @@ error-ex@^1.3.1:
   integrity sha512-7dFHNmqeFSEt2ZBsCriorKnn3Z2pj+fd9kmI6QoWw4//DL+icEBfc0U7qJCisqrTsKTjw4fNFy2pW9OqStD84g==
   dependencies:
     is-arrayish "^0.2.1"
+
+error-stack-parser@^2.0.6:
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/error-stack-parser/-/error-stack-parser-2.1.4.tgz#229cb01cdbfa84440bfa91876285b94680188286"
+  integrity sha512-Sk5V6wVazPhq5MhpO+AUxJn5x7XSXGl1R93Vn7i+zS15KDVxQijejNCrz8340/2bgLBjR9GtEG8ZVKONDjcqGQ==
+  dependencies:
+    stackframe "^1.3.4"
 
 es-abstract@^1.19.0, es-abstract@^1.19.1:
   version "1.19.1"
@@ -8750,6 +8769,11 @@ sshpk@^1.14.1:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
+stackframe@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-1.3.4.tgz#b881a004c8c149a5e8efef37d51b16e412943310"
+  integrity sha512-oeVtt7eWQS+Na6F//S4kJ2K2VbRlS9D43mAlMyVpVWovy9o+jfgH8O9agzANzaiLjclA0oYzUXEM4PurhSUChw==
+
 standard-version@^9.3.2:
   version "9.3.2"
   resolved "https://registry.npmjs.org/standard-version/-/standard-version-9.3.2.tgz"
@@ -9620,6 +9644,11 @@ uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.npmjs.org/uuid/-/uuid-8.3.2.tgz"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
+
+uuid@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
+  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
 
 uvu@^0.5.0:
   version "0.5.3"

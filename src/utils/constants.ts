@@ -29,7 +29,7 @@ export const documentationData: DocDataElement[] = [
     Icon: APIGuidesIcon,
     title: 'API Guides',
     description: messages['documentation_api_guides.description'],
-    link: '/docs/api-guides',
+    link: '/docs/guides',
   },
   {
     Icon: APIReferenceIcon,
@@ -80,7 +80,7 @@ export const whatsNextData: WhatsNextDataElement[] = [
       messages['app_development_page_new_to_app_development.description'],
     link: {
       title: messages['app_development_page_new_to_app_development.link'],
-      to: '/',
+      to: '/docs/guides/getting-started',
     },
   },
   {
@@ -89,7 +89,7 @@ export const whatsNextData: WhatsNextDataElement[] = [
       messages['app_development_page_solve_real_world_issues.description'],
     link: {
       title: messages['app_development_page_solve_real_world_issues.link'],
-      to: '/',
+      to: '/docs/guides/overview-3',
     },
   },
   {
@@ -97,7 +97,7 @@ export const whatsNextData: WhatsNextDataElement[] = [
     description: messages['app_development_page_build_foundations.description'],
     link: {
       title: messages['app_development_page_build_foundations.link'],
-      to: '/',
+      to: '/docs/guides/reference',
     },
   },
   {
@@ -105,7 +105,7 @@ export const whatsNextData: WhatsNextDataElement[] = [
     description: messages['app_development_page_go_further.description'],
     link: {
       title: messages['app_development_page_go_further.link'],
-      to: '/',
+      to: '/docs/guides/perks',
     },
   },
 ]

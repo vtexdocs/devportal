@@ -11,11 +11,12 @@ import hljsCurl from 'highlightjs-curl'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from 'components/table-of-contents'
+import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
@@ -24,7 +25,7 @@ import TableOfContents from 'components/table-of-contents'
 import { removeHTML } from 'utils/string-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
-import getDocsPaths from 'utils/getReleasePaths'
+import getDocsPaths from 'utils/getDocsPaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
@@ -32,6 +33,9 @@ import { getReleaseDate } from 'components/release-note/functions'
 import { ActionType, getAction } from 'components/last-updates-card/functions'
 
 import styles from 'styles/documentation-page'
+import getFileContributors, {
+  ContributorsType,
+} from 'utils/getFileContributors'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -39,9 +43,15 @@ interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
+  contributors: ContributorsType[]
+  path: string
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized }) => {
+const DocumentationPage: NextPage<Props> = ({
+  serialized,
+  contributors,
+  path,
+}) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
     if (headings) setHeadings([])
@@ -69,8 +79,6 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
       })
     })
   }, [])
-  const actionType: ActionType = serialized.frontmatter?.type as ActionType
-  const actionValue = actionType ? getAction(actionType) : null
 
   return (
     <>
@@ -98,9 +106,16 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>
-            <FeedbackSection />
+
+            <Box sx={styles.bottomContributorsContainer}>
+              <Box sx={styles.bottomContributorsDivider} />
+              <Contributors contributors={contributors} />
+            </Box>
+
+            <FeedbackSection docPath={path} />
           </Box>
           <Box sx={styles.rightContainer}>
+            <Contributors contributors={contributors} />
             <TableOfContents />
           </Box>
           <OnThisPage />
@@ -138,7 +153,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   let documentationContent = await getGithubFile(
     'vtexdocs',
     'dev-portal-content',
-    'readme-docs',
+    'main',
+    path
+  )
+
+  const contributors = await getFileContributors(
+    'vtexdocs',
+    'dev-portal-content',
+    'main',
     path
   )
 
@@ -165,8 +187,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     return {
       props: {
+        path,
         serialized,
         sidebarfallback,
+        contributors,
       },
     }
   } catch (error) {
