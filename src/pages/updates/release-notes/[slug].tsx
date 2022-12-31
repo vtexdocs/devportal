@@ -39,10 +39,9 @@ interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
-  path: string
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized, path }) => {
+const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
     if (headings) setHeadings([])
@@ -76,7 +75,8 @@ const DocumentationPage: NextPage<Props> = ({ serialized, path }) => {
   return (
     <>
       <Head>
-        <meta name="docsearch:doctype" content="API Guides" />
+        <title>{serialized.frontmatter?.title}</title>
+        <meta name="docsearch:doctype" content="Release Notes" />
       </Head>
       <APIGuideContextProvider headings={headings}>
         <Flex sx={styles.innerContainer}>
@@ -99,7 +99,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized, path }) => {
                 <MarkdownRenderer serialized={serialized} />
               </article>
             </Box>
-            <FeedbackSection docPath={path} />
+            <FeedbackSection suggestEdits={false} />
           </Box>
           <Box sx={styles.rightContainer}>
             <TableOfContents />
@@ -168,7 +168,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         serialized,
         sidebarfallback,
-        path,
       },
     }
   } catch (error) {

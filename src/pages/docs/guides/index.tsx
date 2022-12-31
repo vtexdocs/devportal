@@ -12,6 +12,7 @@ import image from '../../../../public/images/api-guides.png'
 import imageData from '../../../../public/images/data-orchestration.png'
 import imagePlatform from '../../../../public/images/platform.png'
 import styles from 'styles/documentation-landing-page'
+import Head from 'next/head'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -161,60 +162,71 @@ const Image2 = () => (
 const ApiGuidesPage: NextPage<Props> = () => {
   const messages = getMessages()
   return (
-    <Fragment>
-      <PageHeader
-        title={messages['api_guides_page.title']}
-        description={messages['api_guides_page.subtitle']}
-        imageUrl={image}
-        imageAlt={messages['app_development_page.title']}
-      />
-      <Box sx={styles.contentContainer}>
-        <Text sx={styles.contentTitle}>Get started</Text>
-        <Text sx={styles.contentDescription}>
-          Our core commerce capabilities, provided by over 70 shared
-          microservices, are available for flexible customization through our
-          REST APIs. This enables our clients to integrate third-party solutions
-          into a single platform for all experiences.{' '}
-        </Text>
-        <Image
-          alt="Platform overview"
-          src={imagePlatform}
-          style={{
-            maxWidth: '100%',
-            height: 'auto',
-          }}
+    <>
+      <Head>
+        <title>{messages['api_guides_page.title']}</title>
+        <meta
+          property="og:title"
+          content={messages['api_guides_page.subtitle']}
+          key="title"
         />
-        <Text sx={styles.contentDescription}>
-          Using our REST APIs with our serverless development platform (VTEX IO)
-          and scalable data service (Master Data), you can expand the VTEX
-          platform to address your unique business needs.
-        </Text>
-        <Box sx={styles.divider}></Box>
-        <Text sx={styles.contentTitle}>Data orchestration</Text>
-        <Text sx={styles.contentDescription}>
-          Our platform orchestrates data through multiple channels and sources
-          to remove barriers and enable more possibilities. E-commerce,
-          Brick-and-mortar, Marketplace, B2B... You name it, we enable it. That
-          is why we are a unified commerce platform for unified businesses.
-        </Text>
-        <Image
-          alt="Data orchestration"
-          src={imageData}
-          style={{
-            maxWidth: '100%',
-            height: 'auto',
-          }}
+      </Head>
+      <Fragment>
+        <PageHeader
+          title={messages['api_guides_page.title']}
+          description={messages['api_guides_page.subtitle']}
+          imageUrl={image}
+          imageAlt={messages['app_development_page.title']}
         />
-        <Box sx={styles.divider}></Box>
-        <Text sx={styles.contentTitle}>Core services</Text>
-        <Text sx={styles.contentDescription}>
-          Get to know our core microsservices and leverage your business with
-          our Headless architecture. Our API Guides and Reference cover VTEX
-          Core Services, as illustrated in the image below.
-        </Text>
-        <Image2 />
-      </Box>
-    </Fragment>
+        <Box sx={styles.contentContainer}>
+          <Text sx={styles.contentTitle}>Get started</Text>
+          <Text sx={styles.contentDescription}>
+            Our core commerce capabilities, provided by over 70 shared
+            microservices, are available for flexible customization through our
+            REST APIs. This enables our clients to integrate third-party
+            solutions into a single platform for all experiences.{' '}
+          </Text>
+          <Image
+            alt="Platform overview"
+            src={imagePlatform}
+            style={{
+              maxWidth: '100%',
+              height: 'auto',
+            }}
+          />
+          <Text sx={styles.contentDescription}>
+            Using our REST APIs with our serverless development platform (VTEX
+            IO) and scalable data service (Master Data), you can expand the VTEX
+            platform to address your unique business needs.
+          </Text>
+          <Box sx={styles.divider}></Box>
+          <Text sx={styles.contentTitle}>Data orchestration</Text>
+          <Text sx={styles.contentDescription}>
+            Our platform orchestrates data through multiple channels and sources
+            to remove barriers and enable more possibilities. E-commerce,
+            Brick-and-mortar, Marketplace, B2B... You name it, we enable it.
+            That is why we are a unified commerce platform for unified
+            businesses.
+          </Text>
+          <Image
+            alt="Data orchestration"
+            src={imageData}
+            style={{
+              maxWidth: '100%',
+              height: 'auto',
+            }}
+          />
+          <Box sx={styles.divider}></Box>
+          <Text sx={styles.contentTitle}>Core services</Text>
+          <Text sx={styles.contentDescription}>
+            Get to know our core microsservices and leverage your business with
+            our Headless architecture. Our API Guides and Reference cover VTEX
+            Core Services, as illustrated in the image below.
+          </Text>
+          <Image2 />
+        </Box>
+      </Fragment>
+    </>
   )
 }
 

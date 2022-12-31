@@ -48,6 +48,7 @@ const contentContainer: SxStyleProp = {
 }
 
 const documentationTitle: SxStyleProp = {
+  marginTop: '16px',
   fontSize: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
   lineHeight: ['38px', '38px', '38px', '38px', '38px', '38px', '54px'],
 }

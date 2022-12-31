@@ -12,6 +12,7 @@ import image from '../../../../public/images/api-reference.png'
 import styles from 'styles/documentation-landing-page'
 
 import { WhatsNextDataElement } from 'utils/typings/types'
+import Head from 'next/head'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -191,21 +192,31 @@ const whatsNextData: WhatsNextDataElement[] = [
 const APIReferencePage: NextPage<Props> = () => {
   const messages = getMessages()
   return (
-    <Fragment>
-      <PageHeader
-        title={messages['api_reference_page.title']}
-        description={messages['api_reference_page.subtitle']}
-        imageUrl={image}
-        imageAlt={messages['api_reference_page.title']}
-      />
-      <Box sx={styles.contentContainer}>
-        <Flex sx={styles.cardsContainer}>
-          {whatsNextData.map((whatsNext) => (
-            <WhatsNextCard {...whatsNext} />
-          ))}
-        </Flex>
-      </Box>
-    </Fragment>
+    <>
+      <Head>
+        <title>{messages['api_reference_page.title']}</title>
+        <meta
+          property="og:title"
+          content={messages['api_reference_page.subtitle']}
+          key="title"
+        />
+      </Head>
+      <Fragment>
+        <PageHeader
+          title={messages['api_reference_page.title']}
+          description={messages['api_reference_page.subtitle']}
+          imageUrl={image}
+          imageAlt={messages['api_reference_page.title']}
+        />
+        <Box sx={styles.contentContainer}>
+          <Flex sx={styles.cardsContainer}>
+            {whatsNextData.map((whatsNext) => (
+              <WhatsNextCard {...whatsNext} key={whatsNext.title} />
+            ))}
+          </Flex>
+        </Box>
+      </Fragment>
+    </>
   )
 }
 
