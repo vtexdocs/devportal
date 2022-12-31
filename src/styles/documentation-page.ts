@@ -29,6 +29,7 @@ const articleBox: SxStyleProp = {
   h1: {
     fontSize: '32px',
     fontWeight: '400',
+    lineHeight: '40px',
   },
   h2: {
     fontSize: '22px',
@@ -47,6 +48,7 @@ const contentContainer: SxStyleProp = {
 }
 
 const documentationTitle: SxStyleProp = {
+  marginTop: '16px',
   fontSize: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
   lineHeight: ['38px', '38px', '38px', '38px', '38px', '38px', '54px'],
 }
@@ -88,6 +90,11 @@ const releaseAction: SxStyleProp = {
   fontSize: '18px',
 }
 
+const divider: SxStyleProp = {
+  marginTop: '20px',
+  borderBottom: '1px solid #E7E9EE',
+}
+
 export default {
   container,
   mainContainer,
@@ -100,4 +107,5 @@ export default {
   releaseAction,
   documentationExcerpt,
   innerContainer,
+  divider,
 }

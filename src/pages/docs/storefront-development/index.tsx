@@ -10,6 +10,7 @@ import image from '../../../../public/images/storefront-development.png'
 import styles from 'styles/documentation-landing-page'
 import WhatsNextCard from 'components/whats-next-card'
 import { WhatsNextDataElement } from 'utils/typings/types'
+import Head from 'next/head'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -127,52 +128,62 @@ const goBeyondData: WhatsNextDataElement[] = [
 const StorefrontDevelopmentPage: NextPage<Props> = () => {
   const messages = getMessages()
   return (
-    <Fragment>
-      <PageHeader
-        title={messages['storefront_development_page.title']}
-        description={messages['storefront_development_page.subtitle']}
-        imageUrl={image}
-        imageAlt={messages['storefront_development_page.title']}
-      />
-      <Box sx={styles.contentContainer}>
-        <Text sx={styles.contentTitle}>Get started with Store Framework</Text>
-        <Flex sx={styles.cardsContainer}>
-          {getStartedData.map((whatsNext) => (
-            <WhatsNextCard {...whatsNext} />
-          ))}
-        </Flex>
-        <Box sx={styles.divider}></Box>
-        <Text sx={styles.contentTitle}>Go beyond with Store Framework</Text>
-        <Flex sx={styles.cardsContainer}>
-          {goBeyondData.map((whatsNext) => (
-            <WhatsNextCard {...whatsNext} />
-          ))}
-        </Flex>
-        <Link
-          href="/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io"
-          legacyBehavior
-        >
-          <Box sx={styles.boxTip}>
-            <Text sx={styles.boxTitle}>Legacy CMS Portal</Text>
-            <Text>
-              If your store runs with the Legacy CMS Portal, we strongly
-              recommend migrating it to Store Framework.
-            </Text>
-            <Flex sx={styles.linkContainer}>
-              <Text sx={styles.link} className="link">
-                Learn more
+    <>
+      <Head>
+        <title>{messages['storefront_development_page.title']}</title>
+        <meta
+          property="og:title"
+          content={messages['storefront_development_page.subtitle']}
+          key="title"
+        />
+      </Head>
+      <Fragment>
+        <PageHeader
+          title={messages['storefront_development_page.title']}
+          description={messages['storefront_development_page.subtitle']}
+          imageUrl={image}
+          imageAlt={messages['storefront_development_page.title']}
+        />
+        <Box sx={styles.contentContainer}>
+          <Text sx={styles.contentTitle}>Get started with Store Framework</Text>
+          <Flex sx={styles.cardsContainer}>
+            {getStartedData.map((whatsNext) => (
+              <WhatsNextCard {...whatsNext} key={whatsNext.title} />
+            ))}
+          </Flex>
+          <Box sx={styles.divider}></Box>
+          <Text sx={styles.contentTitle}>Go beyond with Store Framework</Text>
+          <Flex sx={styles.cardsContainer}>
+            {goBeyondData.map((whatsNext) => (
+              <WhatsNextCard {...whatsNext} key={whatsNext.title} />
+            ))}
+          </Flex>
+          <Link
+            href="/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io"
+            legacyBehavior
+          >
+            <Box sx={styles.boxTip}>
+              <Text sx={styles.boxTitle}>Legacy CMS Portal</Text>
+              <Text>
+                If your store runs with the Legacy CMS Portal, we strongly
+                recommend migrating it to Store Framework.
               </Text>
-              <IconCaret
-                className="caret"
-                color="#A1A8B3"
-                direction="right"
-                size={16}
-              />
-            </Flex>
-          </Box>
-        </Link>
-      </Box>
-    </Fragment>
+              <Flex sx={styles.linkContainer}>
+                <Text sx={styles.link} className="link">
+                  Learn more
+                </Text>
+                <IconCaret
+                  className="caret"
+                  color="#A1A8B3"
+                  direction="right"
+                  size={16}
+                />
+              </Flex>
+            </Box>
+          </Link>
+        </Box>
+      </Fragment>
+    </>
   )
 }
 

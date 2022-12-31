@@ -7,6 +7,11 @@ const headerContainer: SxStyleProp = {
   transition: 'top 0.3s',
 }
 
+const hamburgerContainer: SxStyleProp = {
+  backgroundColor: '#ffff',
+  width: '100%',
+}
+
 const headerBrand: SxStyleProp = {
   gridTemplateColumns: '1fr 1fr 0fr 1fr',
   width: '100%',
@@ -90,6 +95,18 @@ const searchIcon: SxStyleProp = {
   maxWidth: 'fit-content',
 }
 
+const documentationContainer: SxStyleProp = {
+  px: '16px',
+  paddingBottom: '8px',
+}
+
+const updatesContainer: SxStyleProp = {
+  px: '16px',
+  paddingTop: '8px',
+  borderRadius: '0px 0px 8px 8px',
+  borderTop: '1px solid #E7E9EE',
+}
+
 export default {
   logoSize,
   headerContainer,
@@ -102,4 +119,7 @@ export default {
   rightButtonsText,
   dropdownButton,
   dropdownContainer,
+  documentationContainer,
+  updatesContainer,
+  hamburgerContainer,
 }

@@ -6,6 +6,7 @@ import type { UpdateElement } from 'utils/typings/types'
 import { getAction } from './../last-updates-card/functions'
 import { getReleaseDate } from './functions'
 import styles from './styles'
+import ReactMarkdown from 'react-markdown'
 
 interface DescriptionProps {
   description: string
@@ -18,7 +19,11 @@ interface ReleaseNoteProps extends UpdateElement {
 
 const Description = ({ description, releaseStatus }: DescriptionProps) => {
   if (releaseStatus) {
-    return <Text sx={styles.releaseDescription}>{description}</Text>
+    return (
+      <Box sx={styles.releaseDescription}>
+        <ReactMarkdown>{description}</ReactMarkdown>
+      </Box>
+    )
   } else {
     return <></>
   }

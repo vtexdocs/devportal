@@ -12,10 +12,11 @@ import styles from './styles'
 const messages = getMessages()
 
 interface DocPath {
-  docPath: string
+  docPath?: string
+  suggestEdits?: boolean
 }
 
-const FeedbackSection = ({ docPath }: DocPath) => {
+const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
   const [feedback, changeFeedback] = useState<boolean>()
   const [modalState, changeModalState] = useState<ModalProps>({
     modalOpen: false,
@@ -65,15 +66,17 @@ const FeedbackSection = ({ docPath }: DocPath) => {
           <Text>{messages['feedback_section.negative']}</Text>
         </Flex>
       </Flex>
-      <Link
-        target="_blank"
-        rel="noopener noreferrer"
-        href={urlToEdit}
-        sx={styles.editContainer}
-      >
-        <EditIcon sx={styles.editIcon} />
-        <Text>{messages['feedback_section.edit']}</Text>
-      </Link>
+      {suggestEdits && (
+        <Link
+          target="_blank"
+          rel="noopener noreferrer"
+          href={urlToEdit}
+          sx={styles.editContainer}
+        >
+          <EditIcon sx={styles.editIcon} />
+          <Text>{messages['feedback_section.edit']}</Text>
+        </Link>
+      )}
       {modalState.modalOpen ? (
         <FeedbackModal
           changeFeedBack={changeFeedback}
