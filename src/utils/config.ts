@@ -3,8 +3,10 @@
 //   return buff.toString('utf8')
 // }
 
-import fs from 'fs'
 import preval from 'next-plugin-preval'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import PEM from '../../github.pem'
 
 const getEnvironmentVariable = (environmentVariable: string): string => {
   const unvalidatedEnvironmentVariable = process.env[environmentVariable]
@@ -20,7 +22,7 @@ const getEnvironmentVariable = (environmentVariable: string): string => {
 export const config = preval({
   GITHUB_APPID: getEnvironmentVariable('GITHUB_APPID'),
   GITHUB_PRIVATEKEY: process.env.NETLIFY
-    ? fs.readFileSync('github.pem')
+    ? PEM
     : getEnvironmentVariable('GITHUB_PRIVATEKEY'),
   GITHUB_INSTALLATIONID: getEnvironmentVariable('GITHUB_INSTALLATIONID'),
 })
