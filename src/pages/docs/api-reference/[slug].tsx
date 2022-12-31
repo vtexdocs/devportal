@@ -15,8 +15,6 @@ interface ReadmeSlugObj {
   apiMethod: string
 }
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const readmeApisSlugList = require('utils/readmeAPIS.json')
 const referencePaths = await getReferencePaths()
 const slugs = Object.keys(await getReferencePaths())
 
@@ -98,6 +96,8 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
     }
   } else {
     const readmeSlugDict = new Map<string, ReadmeSlugObj>()
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const readmeApisSlugList = require('utils/readmeAPIS.json')
     for (const slugItem of readmeApisSlugList) {
       const readmeSlug = slugItem?.readmeDoc?.slug
       const slugToWrite = slugItem?.slug
