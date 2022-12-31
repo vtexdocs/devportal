@@ -7,7 +7,7 @@ import styles from './styles'
 
 const WhatsNextCard = ({ title, description, link }: WhatsNextDataElement) => {
   return (
-    <Link href={link.to} legacyBehavior>
+    <Link href={link.to}>
       <Box sx={styles.container}>
         <Text sx={styles.title} className="title">
           {title}
