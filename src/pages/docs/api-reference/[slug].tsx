@@ -9,7 +9,17 @@ interface Props {
   slug: string
 }
 
+interface ReadmeSlugObj {
+  slug: string
+  swaggerPath: string
+  apiMethod: string
+}
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const readmeApisSlugList = require('utils/readmeAPIS.json')
 const referencePaths = await getReferencePaths()
+const slugs = Object.keys(await getReferencePaths())
+
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 const APIPage: NextPage<Props> = ({ url }) => {
@@ -64,27 +74,61 @@ const APIPage: NextPage<Props> = ({ url }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = Object.keys(await getReferencePaths())
   const paths = slugs.map((slug) => ({
     params: { slug },
   }))
-
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   }
 }
 
 export const getStaticProps: GetStaticProps = ({ params }) => {
-  const slug = params?.slug
-  const url = referencePaths[slug as string] || ''
+  const slug = params?.slug || ''
+  const url = referencePaths[slug as string]
   const sectionSelected = 'API Reference'
-  return {
-    props: {
-      slug,
-      url,
-      sectionSelected,
-    },
+  if (slugs.includes(slug as string)) {
+    //Regular flow
+    return {
+      props: {
+        slug,
+        url,
+        sectionSelected,
+      },
+    }
+  } else {
+    const readmeSlugDict = new Map<string, ReadmeSlugObj>()
+    for (const slugItem of readmeApisSlugList) {
+      const readmeSlug = slugItem?.readmeDoc?.slug
+      const slugToWrite = slugItem?.slug
+      const swaggerPath = slugItem?.readmeDoc?.swagger?.path
+      const apiMethod = slugItem?.readmeDoc?.api?.method.toUpperCase()
+      if (swaggerPath)
+        readmeSlugDict.set(readmeSlug, {
+          slug: slugToWrite,
+          swaggerPath,
+          apiMethod,
+        })
+    }
+    if (readmeSlugDict.get(slug as string)) {
+      //Readme redirect
+      const readmeObj = readmeSlugDict.get(slug as string)
+      return {
+        redirect: {
+          destination: `${
+            readmeObj?.slug
+          }#${readmeObj?.apiMethod.toLowerCase()}-${readmeObj?.swaggerPath
+            .replaceAll('{', '-')
+            .replaceAll('}', '-')}`,
+          permanent: true,
+        },
+      }
+    } else {
+      // Not Found
+      return {
+        notFound: true,
+      }
+    }
   }
 }
 

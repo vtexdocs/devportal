@@ -45,6 +45,16 @@ const nextConfig = {
         destination: '/docs/guides/:slug*',
         permanent: true,
       },
+      {
+        source: '/vtex-rest-api/reference/:slug*',
+        destination: '/docs/api-reference/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/vtex-developer-docs/reference/:slug*',
+        destination: '/docs/api-reference/:slug*',
+        permanent: true,
+      },
     ]
   },
 }
