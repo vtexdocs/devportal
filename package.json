@@ -41,6 +41,7 @@
     "plaiceholder": "^2.5.0",
     "probe-image-size": "^7.2.3",
     "rapidoc": "^9.2.0",
+    "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-animate-height": "^3.0.4",
     "react-dom": "^18.2.0",

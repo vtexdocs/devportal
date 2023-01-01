@@ -12,11 +12,21 @@ const nextConfig = {
       },
     ],
   },
-  webpack: (config) => {
+  webpack: (config, options) => {
     // this will override the experiments
     config.experiments = { ...config.experiments, ...{ topLevelAwait: true } }
     // this will just update topLevelAwait property of config.experiments
     // config.experiments.topLevelAwait = true
+    config.module.rules.push({
+      test: /\.pem/,
+      use: [
+        options.defaultLoaders.babel,
+        {
+          loader: 'raw-loader',
+        },
+      ],
+    })
+
     return config
   },
   env: {
