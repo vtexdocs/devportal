@@ -41,13 +41,28 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/vtex-rest-api/docs',
+        destination: '/docs/guides',
+        permanent: true,
+      },
+      {
         source: '/vtex-developer-docs/docs/:slug',
         destination: '/docs/guides/:slug',
         permanent: true,
       },
       {
+        source: '/vtex-developer-docs/docs',
+        destination: '/docs/guides',
+        permanent: true,
+      },
+      {
         source: '/vtex-developer-docs/changelog/:slug',
-        destination: '/docs/guides/:slug',
+        destination: '/updates/release-notes/:slug',
+        permanent: true,
+      },
+      {
+        source: '/vtex-developer-docs/changelog',
+        destination: '/updates/release-notes',
         permanent: true,
       },
       {
@@ -63,6 +78,16 @@ const nextConfig = {
       {
         source: '/vtex-developer-docs/reference/:slug*',
         destination: '/docs/api-reference/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/vtex-rest-api/reference',
+        destination: '/docs/api-reference',
+        permanent: true,
+      },
+      {
+        source: '/vtex-developer-docs/reference',
+        destination: '/docs/api-reference',
         permanent: true,
       },
     ]
