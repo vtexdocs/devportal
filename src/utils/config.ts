@@ -21,8 +21,6 @@ const getEnvironmentVariable = (environmentVariable: string): string => {
 
 export const config = preval({
   GITHUB_APPID: getEnvironmentVariable('GITHUB_APPID'),
-  GITHUB_PRIVATEKEY: process.env.NETLIFY
-    ? PEM
-    : getEnvironmentVariable('GITHUB_PRIVATEKEY'),
+  GITHUB_PRIVATEKEY: PEM,
   GITHUB_INSTALLATIONID: getEnvironmentVariable('GITHUB_INSTALLATIONID'),
 })
