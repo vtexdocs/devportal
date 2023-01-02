@@ -27,7 +27,7 @@ export const messages = getMessages()
 export const documentationData: DocDataElement[] = [
   {
     Icon: APIGuidesIcon,
-    title: 'API Guides',
+    title: 'Guides',
     description: messages['documentation_api_guides.description'],
     link: '/docs/guides',
   },

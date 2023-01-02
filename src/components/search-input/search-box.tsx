@@ -27,7 +27,7 @@ const SearchBoxComponent = ({
         ref={inputRef}
         className="searchComponent"
         type="text"
-        placeholder={messages['landing_page_header_searchInput.message']}
+        placeholder={messages['search_input.placeholder']}
         value={currentRefinement}
         data-cy="search"
         onChange={(e) => refine(e.currentTarget.value)}
