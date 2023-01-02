@@ -11,19 +11,7 @@ interface Props {
 }
 
 const MarkdownRenderer = ({ serialized }: Props) => (
-  <Box
-    sx={{
-      fontSize: [
-        'initial',
-        'initial',
-        'initial',
-        'initial',
-        'initial',
-        'initial',
-        '28px',
-      ],
-    }}
-  >
+  <Box>
     <Head>
       <link
         rel="stylesheet"
