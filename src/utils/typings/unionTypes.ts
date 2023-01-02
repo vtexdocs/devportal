@@ -1,7 +1,7 @@
 export type Locale = 'en' | 'pt' | 'es'
 
 export type DocumentationTitle =
-  | 'API Guides'
+  | 'Guides'
   | 'API Reference'
   | 'App Development'
   | 'Storefront Development'
