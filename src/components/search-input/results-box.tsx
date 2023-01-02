@@ -5,7 +5,7 @@ import { connectStateResults } from 'react-instantsearch-dom'
 import { Hit, SearchState } from 'react-instantsearch-core'
 import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
 
-import { getIcon } from 'utils/constants'
+import { getIcon, messages } from 'utils/constants'
 import { getBreadcrumbs, getRelativeURL } from './functions'
 import styles from './styles'
 
@@ -28,33 +28,31 @@ const Hit = ({ hit, setSearchStateActive }: HitProps) => {
   }, [])
 
   return (
-    <Link
-      href={getRelativeURL(hit)}
-      onClick={() => setSearchStateActive({})}
-      legacyBehavior
-    >
-      <Box sx={styles.hitBox}>
-        <Flex>
-          {DocIcon && <DocIcon className="hit-icon" sx={styles.hitIcon} />}
-          <Text className="hit-content-title" sx={styles.hitContent}>
-            {title}
-          </Text>
-        </Flex>
-        <Flex sx={styles.alignCenter}>
-          <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.doctype}`}</Text>
-          {breadcrumbsList.length > 0 && (
-            <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
-          )}
-          {breadcrumbsList.map((filter: string, index: number) => (
-            <Flex sx={styles.alignCenter} key={`${filter}${index}`}>
-              <Text sx={styles.hitBreadCrumb}>{filter}</Text>
-              {index < breadcrumbsList.length - 1 ? (
-                <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
-              ) : null}
-            </Flex>
-          ))}
-        </Flex>
-      </Box>
+    <Link href={getRelativeURL(hit)} legacyBehavior>
+      <a onClick={() => setSearchStateActive({})}>
+        <Box sx={styles.hitBox}>
+          <Flex>
+            {DocIcon && <DocIcon className="hit-icon" sx={styles.hitIcon} />}
+            <Text className="hit-content-title" sx={styles.hitContent}>
+              {title}
+            </Text>
+          </Flex>
+          <Flex sx={styles.alignCenter}>
+            <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.doctype}`}</Text>
+            {breadcrumbsList.length > 0 && (
+              <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
+            )}
+            {breadcrumbsList.map((filter: string, index: number) => (
+              <Flex sx={styles.alignCenter} key={`${filter}${index}`}>
+                <Text sx={styles.hitBreadCrumb}>{filter}</Text>
+                {index < breadcrumbsList.length - 1 ? (
+                  <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
+                ) : null}
+              </Flex>
+            ))}
+          </Flex>
+        </Box>
+      </a>
     </Link>
   )
 }
@@ -102,7 +100,7 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
           )}
           {!searchResults.hits.length && (
             <Flex sx={styles.noResults}>
-              <Text>No results =(</Text>
+              <Text>{messages['search_input.empty']}</Text>
             </Flex>
           )}
         </Box>
