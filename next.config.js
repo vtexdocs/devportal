@@ -30,7 +30,8 @@ const nextConfig = {
     return config
   },
   env: {
-    navigationJsonUrl: 'https://developers.vtex.com/navigation.json',
+    navigationJsonUrl:
+      'https://vtex-dev-portal-navigation.fra1.cdn.digitaloceanspaces.com/navigation.json',
   },
   async redirects() {
     return [

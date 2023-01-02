@@ -10,7 +10,6 @@ async function transformer(ast: any) {
   visit(ast, 'image', visitor)
 
   function visitor(node: { url: string | Buffer; alt: string }) {
-    console.debug(`Checking img:${node.url}`)
     promises.push(
       probe(node.url as string).then((results) => {
         const img = results
@@ -21,7 +20,6 @@ async function transformer(ast: any) {
         if (img.width < maxIMGSizePx && img.height < maxIMGSizePx) {
           promises.push(
             getPlaiceholder(node.url).then((resultsPlaiceholder) => {
-              console.debug(`Plaiceholder done img:${node.url}`)
               node.alt = JSON.stringify({
                 base64: resultsPlaiceholder.base64,
                 img: resultsPlaiceholder.img,
