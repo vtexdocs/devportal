@@ -40,6 +40,8 @@ import getFileContributors, {
   ContributorsType,
 } from 'utils/getFileContributors'
 
+import { getLogger } from 'utils/logging/log-util'
+
 const docsPathsGLOBAL = await getDocsPaths()
 
 interface Props {
@@ -155,6 +157,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       ? docsPathsGLOBAL
       : await getDocsPaths()
 
+  const logger = getLogger('Guides')
+
   const path = docsPaths[slug]
   if (!path) {
     return {
@@ -162,21 +166,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 
-  let documentationContent = await getGithubFile(
-    'vtexdocs',
-    'dev-portal-content',
-    'main',
-    path
-  )
-
-  const contributors = await getFileContributors(
-    'vtexdocs',
-    'dev-portal-content',
-    'main',
-    path
-  )
-
   try {
+    let documentationContent = await getGithubFile(
+      'vtexdocs',
+      'dev-portal-content',
+      'main',
+      path
+    )
+
+    const contributors = await getFileContributors(
+      'vtexdocs',
+      'dev-portal-content',
+      'main',
+      path
+    )
     if (path.endsWith('.md')) {
       documentationContent = escapeCurlyBraces(documentationContent)
       documentationContent = replaceHTMLBlocks(documentationContent)
@@ -204,6 +207,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     serialized = JSON.parse(JSON.stringify(serialized))
 
     const sectionSelected = 'API Guides'
+    logger.info(`Processing ${slug}`)
     return {
       props: {
         slug,
@@ -216,9 +220,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     }
   } catch (error) {
-    console.error('`\x1b[33m Error while processing \x1b[0m', path)
-    console.error(`\x1b[33m${error}\x1b[0m`)
-
+    logger.error(`Error while processing ${path}\n${error}`)
     return {
       notFound: true,
     }
