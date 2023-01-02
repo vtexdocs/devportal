@@ -18,7 +18,8 @@ const innerContainer: SxStyleProp = {
 
 const articleBox: SxStyleProp = {
   width: ['100%', 'initial'],
-  lineHeight: '22px',
+  fontSize: ['16px', '16px', '16px', '16px', '16px', '16px', '24px'],
+  lineHeight: 1.375,
   a: {
     color: '#E31C58',
   },
@@ -27,14 +28,14 @@ const articleBox: SxStyleProp = {
     marginBottom: '24px',
   },
   h1: {
-    fontSize: '32px',
+    fontSize: '2em',
     fontWeight: '400',
-    lineHeight: '40px',
+    lineHeight: 1.25,
   },
   h2: {
-    fontSize: '22px',
-    lineHeight: '32px',
-    paddingTop: '16px',
+    fontSize: '1.375em',
+    lineHeight: 1.45,
+    paddingTop: '0.73em',
     fontWeight: '400',
   },
   strong: {

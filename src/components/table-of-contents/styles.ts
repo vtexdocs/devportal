@@ -22,8 +22,8 @@ const item: (level: number, active: boolean) => SxStyleProp = (
   ],
   py: ['6px', '6px', '6px', '6px', '4px', '4px', '6px'],
   borderLeft: `1px solid ${active && level === 1 ? '#E31C58' : '#E7E9EE'}`,
-  fontSize: ['16px', '16px', '16px', '16px', '12px', '16px', '24px'],
-  lineHeight: ['22px', '22px', '22px', '22px', '16px', '18px', '28px'],
+  fontSize: ['16px', '16px', '16px', '16px', '12px', '16px', '22px'],
+  lineHeight: ['22px', '22px', '22px', '22px', '16px', '18px', '24px'],
   fontWeight: `${active ? '600' : '400'}`,
   color: `${active ? '#0C1522' : 'muted.0'}`,
 
