@@ -41,9 +41,10 @@ const SidebarSection = ({
 
   useEffect(() => {
     setFilterStatus(
-      methodFilterList.some((methodFilter) => methodFilter.active)
+      methodFilterList.some((methodFilter) => methodFilter.active) ||
+        searchValue != ''
     )
-  }, [methodFilterList])
+  }, [methodFilterList, searchValue])
 
   const filteredResult = useMemo(() => {
     if (!filterStatus) return categories
@@ -56,21 +57,31 @@ const SidebarSection = ({
           .map((subcategory) => {
             subcategory.children = subcategory.children.filter(
               (endpoint) =>
-                endpoint.method &&
-                filterStatus &&
-                methodFilterList.find(
-                  (methodFilter) => methodFilter.name === endpoint.method
-                )?.active
+                (endpoint.method &&
+                  filterStatus &&
+                  methodFilterList.find(
+                    (methodFilter) => methodFilter.name === endpoint.method
+                  )?.active) ||
+                (searchValue != '' &&
+                  endpoint.name
+                    .toLowerCase()
+                    .includes(searchValue.toLowerCase()))
             )
             return subcategory
           })
-          .filter((subcategory) => subcategory.children.length > 0)
+          .filter(
+            (subcategory) =>
+              subcategory.children.length > 0 ||
+              (subcategory.type === 'markdown' &&
+                subcategory.name
+                  .toLowerCase()
+                  .includes(searchValue.toLowerCase()))
+          )
         return category
       })
       .filter((category: SidebarElement) => category.children.length > 0)
-
     return filteredCategories
-  }, [filterStatus, methodFilterList, categories])
+  }, [filterStatus, methodFilterList, categories, searchValue])
 
   return (
     <Box
