@@ -3,6 +3,9 @@
 const { withPlaiceholder } = require('@plaiceholder/next')
 
 const nextConfig = {
+  experimental: {
+    largePageDataBytes: 500 * 1000,
+  },
   reactStrictMode: true,
   staticPageGenerationTimeout: 3600,
   images: {
