@@ -218,6 +218,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         sectionSelected,
         path,
       },
+      revalidate: 300,
     }
   } catch (error) {
     logger.error(`Error while processing ${path}\n${error}`)
