@@ -171,8 +171,8 @@ const whatsNextData: WhatsNextDataElement[] = [
     },
   },
   {
-    title: 'VTEX Do API',
-    description: 'Manage and retrieve notes or tasks from VTEX Do.',
+    title: 'VTEX DO API',
+    description: 'Manage and retrieve notes or tasks related to orders from the VTEX DO task manager.',
     link: {
       title: 'See more',
       to: '/docs/api-reference/vtex-do-api',
