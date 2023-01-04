@@ -20,7 +20,7 @@ const slugs = Object.keys(await getReferencePaths())
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const APIPage: NextPage<Props> = ({ url }) => {
+const APIPage: NextPage<Props> = ({ slug }) => {
   const router = useRouter()
   const rapidoc = useRef<{ scrollTo: (endpoint: string) => void }>(null)
 
@@ -50,7 +50,7 @@ const APIPage: NextPage<Props> = ({ url }) => {
       />
       <rapi-doc
         ref={rapidoc}
-        spec-url={`${url}`}
+        spec-url={`/api/openapi/${slug}`}
         layout="column"
         render-style="focused"
         show-header="false"
