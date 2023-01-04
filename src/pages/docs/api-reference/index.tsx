@@ -85,7 +85,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   {
     title: 'Logistics API',
     description:
-      'Manage all store logistics data by accessing warehouses, docks, pick up points, inventory, carriers and shipping rates.',
+      'Manage all store logistics data by accessing warehouses, docks, pick up points, carriers and shipping rates. Get or the inventory of each SKU.',
     link: {
       title: 'See more',
       to: '/docs/api-reference/logistics-api',
