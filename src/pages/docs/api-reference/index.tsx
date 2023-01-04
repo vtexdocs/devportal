@@ -164,7 +164,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   {
     title: 'Subscriptions API',
     description:
-      "Manage store's subscription rules to improve the revenue and reduce bounce rate and churn.",
+      "Manage store's subscription rules to generate recurrent revenue and reduce bounce rate and churn.",
     link: {
       title: 'See more',
       to: '/docs/api-reference/subscriptions-api-v3',
