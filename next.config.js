@@ -92,6 +92,16 @@ const nextConfig = {
         destination: '/docs/api-reference',
         permanent: true,
       },
+      {
+        source: '/docs/:slug',
+        destination: '/docs/guides/:slug',
+        permanent: true,
+      },
+      {
+        source: '/docs',
+        destination: '/docs/guides',
+        permanent: true,
+      },
     ]
   },
 }
