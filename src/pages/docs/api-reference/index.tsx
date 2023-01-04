@@ -40,7 +40,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   },
   {
     title: 'Checkout API',
-    description: 'Access and manipulate items data of a checkout cart.',
+    description: 'Access and manipulate items and data from a checkout cart.',
     link: {
       title: 'See more',
       to: '/docs/api-reference/checkout-api',
