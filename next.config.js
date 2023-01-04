@@ -97,6 +97,11 @@ const nextConfig = {
         destination: '/docs/guides/erp-integration-set-up-order-processing',
         permanent: true,
       },
+      {
+        source: '/api-reference/payment-provider-protocol-api-overview',
+        destination: '/docs/guides/payment-provider-protocol-api-overview',
+        permanent: true,
+      },
     ]
   },
 }
