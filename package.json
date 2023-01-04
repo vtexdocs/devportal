@@ -103,7 +103,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "1.1.0-vtex-17-g4c233e6"
+      "version": "1.1.2-vtex-5-gf62c85b"
     }
   },
   "resolutions": {
