@@ -103,7 +103,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   {
     title: 'Master Data API',
     description:
-      'Manage and retrieve all data entities, applications and records from Master Data database.',
+      'Manage and retrieve all data entities, applications and records from the Master Data database.',
     link: {
       title: 'See more',
       to: '/docs/api-reference/master-data-api-v2',
