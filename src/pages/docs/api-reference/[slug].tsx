@@ -55,6 +55,7 @@ const APIPage: NextPage<Props> = ({ url }) => {
         render-style="focused"
         show-header="false"
         show-side-nav="false"
+        default-schema-tab="schema"
         fill-request-fields-with-example={true}
         theme="light"
         bg-color="#FFFFFF"
