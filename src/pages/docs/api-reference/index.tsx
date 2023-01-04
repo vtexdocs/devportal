@@ -128,7 +128,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   {
     title: 'Pricing API',
     description:
-      'Create, read and edit prices for each SKU, sales channel or price table.',
+      'Create, retrieve and edit prices for each SKU, sales channel or price table.',
     link: {
       title: 'See more',
       to: '/docs/api-reference/pricing-api',
