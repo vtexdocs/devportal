@@ -111,7 +111,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   },
   {
     title: 'Orders API',
-    description: 'Get payment data and process your transactions.',
+    description: 'Receive, process, and manage every order through our APIs.',
     link: {
       title: 'See more',
       to: '/docs/api-reference/orders-api',
@@ -119,7 +119,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   },
   {
     title: 'Payments Gateway API',
-    description: 'Receive, process, and manage every order through our APIs.',
+    description: 'Get payment data and process your transactions.',
     link: {
       title: 'See more',
       to: '/docs/api-reference/payments-gateway-api',
