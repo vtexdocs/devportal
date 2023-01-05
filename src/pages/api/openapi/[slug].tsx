@@ -65,13 +65,12 @@ export default async function handler(req: any, res: any) {
       `https://raw.githubusercontent.com/vtex/openapi-schemas/master/${path}.json`
     )
     const body = await response.text()
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    const headers = response.headers.entries()
-    for (const header of headers) {
-      res.setHeader(header[0], header[1])
-    }
-    res.send(body)
+    res
+      .setHeader(
+        'Cache-Control',
+        'public, s-maxage=300, stale-while-revalidate=250'
+      )
+      .send(body)
   } else {
     res.status(404)
   }
