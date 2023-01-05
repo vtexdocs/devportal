@@ -112,10 +112,11 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = Object.keys(await getDocsPaths())
-  const paths = slugs.map((slug) => ({
-    params: { slug },
-  }))
+  // const slugs = Object.keys(await getDocsPaths())
+  // const paths = slugs.map((slug) => ({
+  //   params: { slug },
+  // }))
+  const paths: never[] = []
   return {
     paths,
     fallback: 'blocking',
@@ -169,6 +170,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         serialized,
         sidebarfallback,
       },
+      revalidate: 600,
     }
   } catch (error) {
     console.error('`\x1b[33m Error while processing \x1b[0m', path)
