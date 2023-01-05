@@ -10,6 +10,7 @@ import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
+import { getLogger } from 'utils/logging/log-util'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
@@ -143,6 +144,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     'main',
     path
   )
+  const logger = getLogger('Release-Notes')
 
   try {
     if (path.endsWith('.md')) {
@@ -173,8 +175,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       revalidate: 600,
     }
   } catch (error) {
-    console.error('`\x1b[33m Error while processing \x1b[0m', path)
-    console.error(`\x1b[33m${error}\x1b[0m`)
+    logger.error(`Error while processing ${path}\n${error}`)
 
     return {
       notFound: true,
