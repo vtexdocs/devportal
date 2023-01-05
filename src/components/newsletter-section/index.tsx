@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Input, Link, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import Image from 'next/image'
 import landingProduct from '../../../public/images/landing-product.png'
@@ -19,7 +19,7 @@ const NewsletterSection = () => {
               <Text sx={styles.newsletterTitle}>
                 {messages['landing_page_newsletter.title']}
               </Text>
-              <Text sx={styles.newsletterDescription}>
+              {/* <Text sx={styles.newsletterDescription}>
                 {messages['landing_page_newsletter.description']}
               </Text>
               <Flex sx={styles.newsletterInputContainer}>
@@ -40,7 +40,7 @@ const NewsletterSection = () => {
                 <Button sx={styles.newsletterButton} variant="primary">
                   {messages['landing_page_newsletter.Button']}
                 </Button>
-              </Flex>
+              </Flex> */}
             </Flex>
           </Flex>
           <div className={imgStyle.wrapper}>
