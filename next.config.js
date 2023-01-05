@@ -98,7 +98,7 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/api-reference/payment-provider-protocol-api-overview',
+        source: '/vtex-rest-api/reference/payment-provider-protocol-api-overview',
         destination: '/docs/guides/payment-provider-protocol-api-overview',
         permanent: true,
       },
