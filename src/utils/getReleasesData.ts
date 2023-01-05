@@ -40,7 +40,7 @@ export default async function getReleasesData() {
             await getGithubFile(
               'vtexdocs',
               'dev-portal-content',
-              'readme-docs',
+              'main',
               release
             )
           )
