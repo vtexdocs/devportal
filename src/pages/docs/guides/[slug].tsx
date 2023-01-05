@@ -166,28 +166,34 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
   }
 
-  try {
-    let documentationContent = await getGithubFile(
-      'vtexdocs',
-      'dev-portal-content',
-      'main',
-      path
-    )
+  let documentationContent = await getGithubFile(
+    'vtexdocs',
+    'dev-portal-content',
+    'main',
+    path
+  )
 
-    const contributors = await getFileContributors(
-      'vtexdocs',
-      'dev-portal-content',
-      'main',
-      path
-    )
+  const contributors = await getFileContributors(
+    'vtexdocs',
+    'dev-portal-content',
+    'main',
+    path
+  )
+
+  let format = 'mdx'
+  try {
     if (path.endsWith('.md')) {
       documentationContent = escapeCurlyBraces(documentationContent)
       documentationContent = replaceHTMLBlocks(documentationContent)
       documentationContent = await replaceMagicBlocks(documentationContent)
     }
+  } catch (error) {
+    logger.error(`${error}`)
+    format = 'md'
+  }
 
+  try {
     const headingList: Item[] = []
-
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
@@ -200,13 +206,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
-        format: 'mdx',
+        format,
       },
     })
+
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
     logger.info(`Processing ${slug}`)
+
     return {
       props: {
         slug,
