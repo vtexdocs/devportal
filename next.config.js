@@ -73,6 +73,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/vtex-rest-api/reference/payment-provider-protocol-api-overview',
+        destination: '/docs/guides/payment-provider-protocol-api-overview',
+        permanent: true,
+      },
+      {
         source: '/vtex-rest-api/reference/:slug*',
         destination: '/docs/api-reference/:slug*',
         permanent: true,
@@ -95,11 +100,6 @@ const nextConfig = {
       {
         source: '/docs/erp-integration-set-up-order-processing',
         destination: '/docs/guides/erp-integration-set-up-order-processing',
-        permanent: true,
-      },
-      {
-        source: '/vtex-rest-api/reference/payment-provider-protocol-api-overview',
-        destination: '/docs/guides/payment-provider-protocol-api-overview',
         permanent: true,
       },
     ]
