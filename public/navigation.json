@@ -12939,7 +12939,7 @@
               "children": [
                 {
                   "name": "Official new orders module interface",
-                  "slug": "official-new-orders-module-interface",
+                  "slug": "oms-ui-deprecation",
                   "origin": "",
                   "type": "markdown",
                   "children": []
