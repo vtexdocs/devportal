@@ -7,9 +7,11 @@ const DOMAIN_URL = 'https://developers.vtex.com/docs/api-reference'
 function getEndpoint(element: any) {
   if (element.type === 'openapi') {
     const url: any = {}
-    url.loc = `${DOMAIN_URL}/${element.slug}/#${element.method.toLowerCase()}-${
-      element.endpoint
-    }`
+    url.loc = `${DOMAIN_URL}/${
+      element.slug
+    }/#${element.method.toLowerCase()}-${element.endpoint
+      .replaceAll('{', '-')
+      .replaceAll('}', '-')}`
     url.lastmod = new Date().toISOString()
     return url
   }
