@@ -2,7 +2,6 @@ export const config = {
   api: {
     bodyParser: false,
   },
-  runtime: 'experimental-edge',
 }
 
 const referencePaths = objectFlip({
@@ -56,22 +55,24 @@ function objectFlip(obj: { [x: string]: string }) {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function handler(req: any) {
-  const { searchParams } = new URL(req.url)
-  const slug = searchParams.get('slug')
+export default async function handler(req: any, res: any) {
+  const { slug } = req.query
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const path = referencePaths[slug] || ''
   if (path) {
-    return await fetch(
+    const response = await fetch(
       `https://raw.githubusercontent.com/vtex/openapi-schemas/master/${path}.json`
     )
+    const body = await response.text()
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    const headers = response.headers.entries()
+    for (const header of headers) {
+      res.setHeader(header[0], header[1])
+    }
+    res.send(body)
   } else {
-    return new Response('', {
-      status: 404,
-      headers: {
-        'content-type': 'application/json',
-      },
-    })
+    res.status(404)
   }
 }
