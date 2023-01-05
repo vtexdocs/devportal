@@ -93,13 +93,8 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/docs/:slug',
-        destination: '/docs/guides/:slug',
-        permanent: true,
-      },
-      {
-        source: '/docs',
-        destination: '/docs/guides',
+        source: '/docs/erp-integration-set-up-order-processing',
+        destination: '/docs/guides/erp-integration-set-up-order-processing',
         permanent: true,
       },
     ]
