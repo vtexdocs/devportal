@@ -180,7 +180,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     path
   )
 
-  let format = 'mdx'
+  let format: 'md' | 'mdx' = 'mdx'
   try {
     if (path.endsWith('.md')) {
       documentationContent = escapeCurlyBraces(documentationContent)
