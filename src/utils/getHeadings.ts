@@ -16,7 +16,7 @@ const getHeadings = ({ headingList }: Heading) => {
           children: [],
         })
       } else if (node['depth'] === 3) {
-        headingList[headingList.length - 1].children.push({
+        headingList[headingList.length - 1]?.children.push({
           title: toString(node),
           slug: slugify(toString(node)),
         })

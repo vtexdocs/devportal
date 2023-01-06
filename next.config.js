@@ -92,6 +92,11 @@ const nextConfig = {
         destination: '/docs/api-reference',
         permanent: true,
       },
+      {
+        source: '/docs/erp-integration-set-up-order-processing',
+        destination: '/docs/guides/erp-integration-set-up-order-processing',
+        permanent: true,
+      },
     ]
   },
 }
