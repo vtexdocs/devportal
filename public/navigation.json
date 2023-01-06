@@ -805,6 +805,13 @@
                   "children": []
                 },
                 {
+                  "name": "Create a brand",
+                  "slug": "create-a-brand",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Products",
                   "slug": "products",
                   "origin": "",
