@@ -1,7 +1,6 @@
 .table {
   border-collapse: collapse;
   border: 1px solid #e7e9ef;
-  margin: 25px 0;
   width: 100%;
 }
 
@@ -18,6 +17,12 @@
 
 .table tbody tr:nth-of-type(even) {
   background-color: #f8f7fc;
+}
+
+.div {
+  margin: 25px 0;
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .img {

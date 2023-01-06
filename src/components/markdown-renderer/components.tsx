@@ -76,7 +76,9 @@ const Callout = ({ node, icon, ...props }: Component) => {
 
 export default {
   table: ({ node, ...props }: Component) => (
-    <table className={styles.table} {...props} />
+    <div className={styles.div}>
+      <table className={styles.table} {...props} />
+    </div>
   ),
   td: ({ node, ...props }: Component) => (
     <td className={styles.td} {...props} />
