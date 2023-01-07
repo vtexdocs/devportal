@@ -1,7 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
-const docsPaths: { [slug: string]: string } = {
-  'billing-options': 'docs/guides/Getting Started/catalog-overview.md',
-}
+const docsPaths: { [slug: string]: string } = {}
 
 import octokit from 'utils/octokitConfig'
 
