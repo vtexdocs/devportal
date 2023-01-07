@@ -5,6 +5,7 @@ import replaceHTMLBlocks from './replaceHTMLBlocks'
 import replaceMagicBlocks from './replaceMagicBlocks'
 import { UpdateElement } from './typings/types'
 import { ActionType } from 'components/last-updates-card/functions'
+import { getLogger } from 'utils/logging/log-util'
 
 type IReleasesFrontmatter = {
   slug: string
@@ -34,18 +35,23 @@ export default async function getReleasesData() {
 
   await Promise.all(
     releases.map(async (release) => {
-      releasesContent.push(
-        await replaceMagicBlocks(
-          replaceHTMLBlocks(
-            await getGithubFile(
-              'vtexdocs',
-              'dev-portal-content',
-              'main',
-              release
+      try {
+        releasesContent.push(
+          await replaceMagicBlocks(
+            replaceHTMLBlocks(
+              await getGithubFile(
+                'vtexdocs',
+                'dev-portal-content',
+                'main',
+                release
+              )
             )
           )
         )
-      )
+      } catch (error) {
+        const logger = getLogger('getReleasesData')
+        logger.error(`Error getting data from release: ${release}\n${error}`)
+      }
     })
   )
 
