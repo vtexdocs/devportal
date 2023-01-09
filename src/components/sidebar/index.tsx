@@ -28,6 +28,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   const [activeSectionName, setActiveSectionName] = useState('')
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
   const {
+    activeSidebarElement,
     sidebarDataMaster,
     setSidebarDataMaster,
     setActiveSidebarElement,
@@ -81,7 +82,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
     return () => {
       clearTimeout(timer)
     }
-  }, [slug])
+  }, [activeSidebarElement])
 
   const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
     const [iconTooltip, setIconTooltip] = useState(false)
