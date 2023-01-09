@@ -12926,6 +12926,29 @@
           "children": []
         },
         {
+          "name": "2023",
+          "slug": "2023-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "January",
+              "slug": "january-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Official new orders module interface",
+                  "slug": "oms-ui-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "2022",
           "slug": "2022-category",
           "origin": "",
