@@ -5,23 +5,26 @@ import getNavigation from 'utils/getNavigation'
 const DOMAIN_URL = 'https://developers.vtex.com/docs/api-reference'
 
 function getEndpoint(element: any) {
-  if (element.type === 'openapi') {
-    const url: any = {}
-    url.loc = `${DOMAIN_URL}/${
-      element.slug
-    }/#${element.method.toLowerCase()}-${element.endpoint
-      .replaceAll('{', '-')
-      .replaceAll('}', '-')}`
-    url.lastmod = new Date().toISOString()
-    return url
-  }
+  let urls: any = []
   if (element.children) {
     const children = element.children.flatMap((e: any) => {
       return getEndpoint(e)
     })
-    return children
+    urls = children
   }
-  return []
+
+  if (element.type === 'openapi') {
+    const url: any = {}
+    const pathSuffix = element.method
+      ? `#${element.method.toLowerCase()}-${element.endpoint
+          .replaceAll('{', '-')
+          .replaceAll('}', '-')}`
+      : ''
+    url.loc = `${DOMAIN_URL}/${element.slug}/${pathSuffix}`
+    url.lastmod = new Date().toISOString()
+    urls.push(url)
+  }
+  return urls
 }
 
 export async function getServerSideProps(ctx: any) {
