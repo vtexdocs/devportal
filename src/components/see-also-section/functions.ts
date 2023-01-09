@@ -6,18 +6,16 @@ import { DocumentProps } from 'components/documentation-card'
 const getDoctype = (url: string) => {
   const pathDoctype = url.split('/')[2]
   switch (pathDoctype) {
-    case 'api-guides':
-      return 'API Guides'
+    case 'guides':
+      return 'Guides'
     case 'api-reference':
       return 'API Reference'
-    case 'vtex-io':
-      return 'VTEX IO'
-    case 'fast-store':
-      return 'FastStore'
-    case 'store-framework-apps':
-      return 'Store Framework Apps'
+    case 'app-development':
+      return 'App Development'
+    case 'vtex-io-apps':
+      return 'VTEX IO Apps'
     default:
-      return 'API Guides'
+      return 'Guides'
   }
 }
 

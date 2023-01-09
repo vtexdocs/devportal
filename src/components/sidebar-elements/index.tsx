@@ -106,9 +106,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     children,
   }: SidebarElement) => {
     const isExpandable = children.length > 0
-    const pathSuffix = method
-      ? `#${method.toLowerCase()}-${endpoint}`
-      : `/${slug}`
+    const pathSuffix = method ? `#${method.toLowerCase()}-${endpoint}` : ''
     return (
       <Box sx={styles.elementContainer}>
         <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
