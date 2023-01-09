@@ -805,6 +805,13 @@
                   "children": []
                 },
                 {
+                  "name": "Create a brand",
+                  "slug": "create-a-brand",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Products",
                   "slug": "products",
                   "origin": "",
@@ -1786,9 +1793,9 @@
       "categories": [
         {
           "name": "Antifraud Provider",
-          "slug": "antifraud-provider-protocol-root",
+          "slug": "antifraud-provider-protocol",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Antifraud  Flow",
@@ -1898,9 +1905,9 @@
         },
         {
           "name": "CMS API",
-          "slug": "cms-api-root",
+          "slug": "cms-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Change URI Schema",
@@ -1931,9 +1938,9 @@
         },
         {
           "name": "Catalog API - Seller Portal",
-          "slug": "catalog-api-seller-portal-root",
+          "slug": "catalog-api-seller-portal",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Product",
@@ -2111,9 +2118,9 @@
         },
         {
           "name": "Catalog API",
-          "slug": "catalog-api-root",
+          "slug": "catalog-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Product",
@@ -3779,9 +3786,9 @@
         },
         {
           "name": "Checkout API",
-          "slug": "checkout-api-root",
+          "slug": "checkout-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Shopping cart",
@@ -4124,9 +4131,9 @@
         },
         {
           "name": "Customer Credit API",
-          "slug": "customer-credit-api-root",
+          "slug": "customer-credit-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Invoices",
@@ -4387,9 +4394,9 @@
         },
         {
           "name": "GiftCard Hub API",
-          "slug": "giftcard-hub-api-root",
+          "slug": "giftcard-hub-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Provider",
@@ -4544,9 +4551,9 @@
         },
         {
           "name": "GiftCard API",
-          "slug": "giftcard-api-root",
+          "slug": "giftcard-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Gift Card",
@@ -4665,9 +4672,9 @@
         },
         {
           "name": "Giftcard Provider Protocol",
-          "slug": "giftcard-provider-protocol-root",
+          "slug": "giftcard-provider-protocol",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Gift Cards",
@@ -4786,9 +4793,9 @@
         },
         {
           "name": "VTEX Headless CMS",
-          "slug": "headless-cms-api-root",
+          "slug": "headless-cms-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Pages",
@@ -4828,9 +4835,9 @@
         },
         {
           "name": "Intelligent Search API",
-          "slug": "intelligent-search-api-root",
+          "slug": "intelligent-search-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Autocomplete",
@@ -4913,9 +4920,9 @@
         },
         {
           "name": "License Manager API",
-          "slug": "license-manager-api-root",
+          "slug": "license-manager-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "User",
@@ -5064,9 +5071,9 @@
         },
         {
           "name": "Logistics API",
-          "slug": "logistics-api-root",
+          "slug": "logistics-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Shipping Policies",
@@ -5626,9 +5633,9 @@
         },
         {
           "name": "Marketplace API",
-          "slug": "marketplace-apis-root",
+          "slug": "marketplace-apis",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Notification",
@@ -6186,9 +6193,9 @@
         },
         {
           "name": "Marketplace Protocol",
-          "slug": "marketplace-protocol-root",
+          "slug": "marketplace-protocol",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "External Seller",
@@ -6343,9 +6350,9 @@
         },
         {
           "name": "Master Data API - v2",
-          "slug": "master-data-api-v2-root",
+          "slug": "master-data-api-v2",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Documents",
@@ -6648,9 +6655,9 @@
         },
         {
           "name": "MasterData API - v1",
-          "slug": "masterdata-api-root",
+          "slug": "masterdata-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Attachments",
@@ -6892,9 +6899,9 @@
         },
         {
           "name": "Message Center API",
-          "slug": "message-center-api-root",
+          "slug": "message-center-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "DKIM Configuration",
@@ -6916,9 +6923,9 @@
         },
         {
           "name": "Orders API (PII compliant)",
-          "slug": "orders-api-pii-compliant-root",
+          "slug": "orders-api-pii-compliant",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Orders",
@@ -6999,9 +7006,9 @@
         },
         {
           "name": "Orders API",
-          "slug": "orders-api-root",
+          "slug": "orders-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Orders",
@@ -7336,9 +7343,9 @@
         },
         {
           "name": "Payment Provider Protocol",
-          "slug": "payment-provider-protocol-root",
+          "slug": "payment-provider-protocol",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Payment Flow",
@@ -7448,9 +7455,9 @@
         },
         {
           "name": "Payments Gateway API",
-          "slug": "payments-gateway-api-root",
+          "slug": "payments-gateway-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Installments",
@@ -7682,9 +7689,9 @@
         },
         {
           "name": "Policies System API",
-          "slug": "policies-system-ap-root",
+          "slug": "policies-system-ap",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Policy",
@@ -7751,9 +7758,9 @@
         },
         {
           "name": "Price Simulations API",
-          "slug": "price-simulations-root",
+          "slug": "price-simulations",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Custom Prices",
@@ -7843,9 +7850,9 @@
         },
         {
           "name": "Pricing API",
-          "slug": "pricing-api-root",
+          "slug": "pricing-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Prices and Fixed Prices",
@@ -7998,9 +8005,9 @@
         },
         {
           "name": "Pricing Hub",
-          "slug": "pricing-hub-root",
+          "slug": "pricing-hub",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Pricing Hub Prices",
@@ -8031,9 +8038,9 @@
         },
         {
           "name": "Profile System",
-          "slug": "profile-system-root",
+          "slug": "profile-system",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Profiles",
@@ -8317,9 +8324,9 @@
         },
         {
           "name": "Promotions & Taxes API",
-          "slug": "promotions-and-taxes-api-root",
+          "slug": "promotions-and-taxes-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Coupons",
@@ -8646,9 +8653,9 @@
         },
         {
           "name": "Reviews and Ratings API",
-          "slug": "reviews-and-ratings-api-root",
+          "slug": "reviews-and-ratings-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Rating",
@@ -8740,9 +8747,9 @@
         },
         {
           "name": "SKU Bindings API",
-          "slug": "sku-bindings-api-root",
+          "slug": "sku-bindings-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "SKU Bindings",
@@ -8863,9 +8870,9 @@
         },
         {
           "name": "Search API",
-          "slug": "search-api-root",
+          "slug": "search-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "CrossSelling",
@@ -9041,9 +9048,9 @@
         },
         {
           "name": "Session Manager API",
-          "slug": "session-manager-api-root",
+          "slug": "session-manager-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Sessions",
@@ -9099,9 +9106,9 @@
         },
         {
           "name": "Subscriptions API (v3)",
-          "slug": "subscriptions-api-v3-root",
+          "slug": "subscriptions-api-v3",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Cycles",
@@ -9322,9 +9329,9 @@
         },
         {
           "name": "VTEX Tracking APIs",
-          "slug": "tracking-root",
+          "slug": "tracking",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Authentication",
@@ -9416,9 +9423,9 @@
         },
         {
           "name": "VTEX Do API",
-          "slug": "vtex-do-api-root",
+          "slug": "vtex-do-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Note",
@@ -9510,9 +9517,9 @@
         },
         {
           "name": "VTEX ID",
-          "slug": "vtex-id-api-root",
+          "slug": "vtex-id-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Authentication",
@@ -12502,7 +12509,7 @@
           "origin": "",
           "type": "category",
           "children": [
-        {
+            {
               "name": "January",
               "slug": "january-2023",
               "origin": "",
@@ -12515,8 +12522,8 @@
                   "type": "markdown",
                   "children": []
                 }
-            ]
-        }
+              ]
+            }
           ]
         },
         {
