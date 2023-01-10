@@ -107,6 +107,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   }: SidebarElement) => {
     const isExpandable = children.length > 0
     const pathSuffix = method ? `#${method.toLowerCase()}-${endpoint}` : ''
+    const activeItem = method ? `${slug}${pathSuffix}` : slug
     return (
       <Box sx={styles.elementContainer}>
         <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
@@ -136,17 +137,17 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
           {!checkDocumentationType(sidebarDataMaster, slug, 'category') &&
           !checkDocumentationType(sidebarDataMaster, slug, 'link') ? (
             <Link
-              sx={textStyle(activeSidebarElement === slug, isExpandable)}
+              sx={textStyle(activeSidebarElement === activeItem, isExpandable)}
               onClick={(e: { preventDefault: () => void }) => {
                 handleClick(e, pathSuffix, slug)
-                toggleSidebarElementStatus(slug)
+                toggleSidebarElementStatus(activeItem)
               }}
               href={getHref(slugPrefix || '', pathSuffix, slug)}
             >
               {method && (
                 <MethodCategory
                   sx={styles.methodBox}
-                  active={activeSidebarElement === slug}
+                  active={activeSidebarElement === activeItem}
                   origin="sidebar"
                   method={method}
                 />

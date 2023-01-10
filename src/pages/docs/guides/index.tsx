@@ -232,7 +232,7 @@ const ApiGuidesPage: NextPage<Props> = () => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const sidebarfallback = await getNavigation()
-  const sectionSelected = 'API Guides'
+  const sectionSelected = 'Guides'
 
   return {
     props: {
