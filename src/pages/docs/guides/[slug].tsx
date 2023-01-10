@@ -206,7 +206,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
-    const sectionSelected = 'API Guides'
     logger.info(`Processing ${slug}`)
     return {
       props: {
@@ -215,7 +214,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         sidebarfallback,
         headingList,
         contributors,
-        sectionSelected,
         path,
       },
     }

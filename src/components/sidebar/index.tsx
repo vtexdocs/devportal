@@ -28,6 +28,7 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   const [activeSectionName, setActiveSectionName] = useState('')
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
   const {
+    activeSidebarElement,
     sidebarDataMaster,
     setSidebarDataMaster,
     setActiveSidebarElement,
@@ -36,22 +37,14 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
   } = useContext(SidebarContext)
   setSidebarDataMaster(useNavigation().data)
   const router = useRouter()
+  let activeSlug = ''
   let slug = ''
+  let parentSlugs: [arrayOfSlug: string[], sectionSelected: string] = [[], '']
 
-  const querySlug = router.query.slug
-  if (querySlug) {
-    slug = router.pathname.replace('[slug]', querySlug as string)
-  } else {
-    slug = router.pathname
-  }
-
-  slug = slug.substring(slug.lastIndexOf('/') + 1)
-
-  const getSlugPath = () => {
-    const findPath = jp.paths(
-      sidebarDataMaster,
-      `$..*[?(@.slug=='${slug}')]`
-    )[0]
+  const getSlugPath = (
+    queryToFind: string
+  ): [arrayOfSlug: string[], sectionSelected: string] => {
+    const findPath = jp.paths(sidebarDataMaster, queryToFind)[0]
     let currentSidebar = sidebarDataMaster
     const arrayOfSlugs: string[] = []
     if (findPath?.length > 0) {
@@ -68,20 +61,37 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
     return [[''], sectionSelected ? sectionSelected : '']
   }
 
+  const querySlug = router.query.slug
+  if (querySlug && router.pathname === '/docs/api-reference/[slug]') {
+    activeSlug = router.asPath.replace('/docs/api-reference/', '')
+    slug = querySlug as string
+    const docPath = activeSlug.split('/')
+    const endpoint = docPath.splice(1, docPath.length).join('/')
+    const query = `$..*[?(@.endpoint=='/${endpoint}')]`
+    parentSlugs = getSlugPath(query)
+  } else {
+    activeSlug =
+      (querySlug as string) ||
+      router.pathname.substring(activeSlug.lastIndexOf('/') + 1)
+    slug = activeSlug
+    const query = `$..*[?(@.slug=='${slug}')]`
+    parentSlugs = getSlugPath(query)
+  }
+
   useEffect(() => {
     const timer = setTimeout(() => setExpandDelayStatus(false), 5000)
-    const sectionName = getSlugPath()[1]
+    const sectionName = parentSlugs[1]
     closeSidebarElements()
     setActiveSectionName(sectionName)
-    getSlugPath()[0].forEach((slug: string) => {
+    parentSlugs[0].forEach((slug: string) => {
       openSidebarElement(slug)
     })
     openSidebarElement(slug)
-    setActiveSidebarElement(slug)
+    setActiveSidebarElement(activeSlug)
     return () => {
       clearTimeout(timer)
     }
-  }, [slug])
+  }, [activeSidebarElement, router])
 
   const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
     const [iconTooltip, setIconTooltip] = useState(false)
