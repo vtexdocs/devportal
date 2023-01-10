@@ -2,7 +2,7 @@ rapi-doc::part(section-navbar) {
   display: flex;
   flex-direction: column;
   flex-grow: 0;
-  background: #FFFFFF;
+  background: #ffffff;
   align-self: stretch;
   margin: 0 15px 0 0;
 }
@@ -16,20 +16,28 @@ rapi-doc::part(section-navbar-scroll) {
   flex-grow: 0;
   gap: 11px;
   overflow-y: scroll;
-  background: #FFFFFF;
+  background: #ffffff;
   align-self: stretch;
 }
 
 rapi-doc::part(section-main-content) {
-  background: #FFFFFF;
+  background: #ffffff;
   padding: 42px 64px;
 }
 
-rapi-doc::part(section-operations-in-tag) {
-  padding: 24px 0px;
+rapi-doc::part(anchor-param-example) {
+  color: #e31c58;
+  font-size: 14px;
 }
 
-rapi-doc::part(textbox), rapi-doc::part(textbox-param), rapi-doc::part(textarea), rapi-doc::part(textarea-param) {
+rapi-doc::part(anchor-param-example):hover {
+  color: #c81e51;
+}
+
+rapi-doc::part(textbox),
+rapi-doc::part(textbox-param),
+rapi-doc::part(textarea),
+rapi-doc::part(textarea-param) {
   /* Auto layout */
   display: flex;
   flex-direction: row;
@@ -38,7 +46,7 @@ rapi-doc::part(textbox), rapi-doc::part(textbox-param), rapi-doc::part(textarea)
   padding: 8px 8px 8px 12px;
   position: static;
   background: rgba(255, 255, 255, 0.0001);
-  border: 1px solid #B9B9B9;
+  border: 1px solid #b9b9b9;
   box-sizing: border-box;
   border-radius: 4px;
   flex: none;
@@ -53,5 +61,5 @@ rapi-doc::part(btn) {
   padding: 6px 16px;
   border-radius: 4px;
   background: #142032;
-  color: #FFFFFF;
+  color: #ffffff;
 }
