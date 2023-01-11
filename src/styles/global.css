@@ -28,3 +28,25 @@ footer > div {
 .searchComponent:focus {
   outline: none;
 }
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #e7e9ef;
+  width: 100%;
+  margin: 16px 0;
+}
+
+table thead {
+  border: 1px solid #e7e9ef;
+  font-weight: 500;
+}
+
+table td,
+table th {
+  border: 1px solid #e7e9ef;
+  padding: 14px;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f8f7fc;
+}
