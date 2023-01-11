@@ -15,10 +15,6 @@ interface ReadmeSlugObj {
   apiMethod: string
 }
 
-function capitalize(content: string) {
-  return content.replace(/^./, content[0].toUpperCase())
-}
-
 const referencePaths = await getReferencePaths()
 const slugs = Object.keys(await getReferencePaths())
 
@@ -45,9 +41,6 @@ const APIPage: NextPage<Props> = ({ slug }) => {
   return (
     <>
       <Head>
-        <title>
-          {capitalize(slug.replaceAll('-', ' ').replace('api', ''))} API
-        </title>
         <meta name="docsearch:doctype" content="API Reference" />
       </Head>
       <Script
