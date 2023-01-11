@@ -63,3 +63,10 @@ rapi-doc::part(btn) {
   background: #142032;
   color: #ffffff;
 }
+
+
+rapi-doc::part(anchor-endpoint) {
+  position: relative;
+  top: -220px;
+  visibility:hidden;
+}
