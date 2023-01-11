@@ -12497,13 +12497,6 @@
       "slugPrefix": "updates/release-notes",
       "categories": [
         {
-          "name": "All releases",
-          "slug": "",
-          "origin": "",
-          "type": "markdown",
-          "children": []
-        },
-        {
           "name": "2023",
           "slug": "2023-category",
           "origin": "",
