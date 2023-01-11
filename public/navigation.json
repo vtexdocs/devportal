@@ -11553,7 +11553,7 @@
           "children": [
             {
               "name": "Add To Cart Button",
-              "slug": "vtex-list-addtocartbutton",
+              "slug": "vtex-list-listaddtocartbutton",
               "origin": "",
               "type": "markdown",
               "children": []
