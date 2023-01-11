@@ -887,9 +887,9 @@
         },
         {
           "name": "Checkout",
-          "slug": "checkout-category",
+          "slug": "checkout-api-overview",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
               "name": "Custom Data",
@@ -10628,7 +10628,7 @@
           "children": [
             {
               "name": "Autocomplete Result List",
-              "slug": "vtex-store-components-autocomplete-result-list",
+              "slug": "vtex-store-components-autocompleteresults",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -10684,7 +10684,7 @@
             },
             {
               "name": "Product Description",
-              "slug": "vtex-store-components-product-description",
+              "slug": "vtex-store-components-productdescription",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11553,105 +11553,105 @@
           "children": [
             {
               "name": "Add To Cart Button",
-              "slug": "vtex-addtocartbutton",
+              "slug": "vtex-list-addtocartbutton",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Add New Item",
-              "slug": "vtex-addnewitem",
+              "slug": "vtex-list-addnewitem",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Go Back To List",
-              "slug": "vtex-gobacktolist",
+              "slug": "vtex-list-gobacktolist",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Auth Condition",
-              "slug": "vtex-authcondition",
+              "slug": "vtex-list-authcondition",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Add To List Button",
-              "slug": "vtex-addtolistbutton",
+              "slug": "vtex-list-addtolistbutton",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Search List",
-              "slug": "vtex-searchlist",
+              "slug": "vtex-list-searchlist",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Gallery List Items",
-              "slug": "vtex-gallerylistitems",
+              "slug": "vtex-list-gallerylistitems",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "List Modal",
-              "slug": "vtex-listmodal",
+              "slug": "vtex-list-listmodal",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "User Lists",
-              "slug": "vtex-userlists",
+              "slug": "vtex-list-userlists",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Share List",
-              "slug": "vtex-sharelist",
+              "slug": "vtex-list-sharelist",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Breadcrumb",
-              "slug": "vtex-breadcrumb",
+              "slug": "vtex-list-breadcrumbs",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Gifted Button",
-              "slug": "vtex-giftedbutton",
+              "slug": "vtex-list-giftedbutton",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "List Info",
-              "slug": "vtex-listinfo",
+              "slug": "vtex-list-listinfo",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Product Modal",
-              "slug": "vtex-productmodal",
+              "slug": "vtex-list-productmodal",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Store Wallet List",
-              "slug": "vtex-storewalletlist",
+              "slug": "vtex-list-storewalletlist",
               "origin": "",
               "type": "markdown",
               "children": []
