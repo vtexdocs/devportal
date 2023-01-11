@@ -7689,7 +7689,7 @@
         },
         {
           "name": "Policies System API",
-          "slug": "policies-system-ap",
+          "slug": "policies-system-api",
           "origin": "",
           "type": "openapi",
           "children": [
@@ -7700,7 +7700,7 @@
               "children": [
                 {
                   "name": "Get Policy List",
-                  "slug": "policies-system-ap",
+                  "slug": "policies-system-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -7709,7 +7709,7 @@
                 },
                 {
                   "name": "Evaluate Policies",
-                  "slug": "policies-system-ap",
+                  "slug": "policies-system-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -7718,7 +7718,7 @@
                 },
                 {
                   "name": "Get Policy by ID",
-                  "slug": "policies-system-ap",
+                  "slug": "policies-system-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -7727,7 +7727,7 @@
                 },
                 {
                   "name": "Create Policy",
-                  "slug": "policies-system-ap",
+                  "slug": "policies-system-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -7736,7 +7736,7 @@
                 },
                 {
                   "name": "Update Policy",
-                  "slug": "policies-system-ap",
+                  "slug": "policies-system-api",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
@@ -7745,7 +7745,7 @@
                 },
                 {
                   "name": "Delete Policy by ID",
-                  "slug": "policies-system-ap",
+                  "slug": "policies-system-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
