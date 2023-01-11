@@ -8,8 +8,8 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
-    description: 'New go-live documentation available',
-    date: new Date('12/12/2022'),
+    description: 'Official new orders module interface',
+    date: new Date('01/05/2023'),
   },
   updateType: 'release-notes',
 }
