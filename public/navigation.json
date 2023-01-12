@@ -103,6 +103,13 @@
               "children": []
             },
             {
+              "name": "Subscriptions",
+              "slug": "subscriptions",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Account management",
               "slug": "account-management",
               "origin": "",
