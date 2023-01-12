@@ -14,7 +14,7 @@ const Breadcrumb = ({ breadcumbList }: Props) => {
           <>
             <Text>{item.name}</Text>
             {idx < breadcumbList.length - 1 ? (
-              <IconCaret direction="right" sx={styles.caret} />
+              <IconCaret direction="right" size={16} />
             ) : (
               ''
             )}
@@ -25,7 +25,7 @@ const Breadcrumb = ({ breadcumbList }: Props) => {
               {item.name}
             </Link>
             {idx < breadcumbList.length - 1 ? (
-              <IconCaret direction="right" sx={styles.caret} />
+              <IconCaret direction="right" size={16} />
             ) : (
               ''
             )}
