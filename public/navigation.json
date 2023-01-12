@@ -75,6 +75,13 @@
               "children": []
             },
             {
+              "name": "Fulfillment",
+              "slug": "fulfillment",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Search",
               "slug": "search-overview",
               "origin": "",
@@ -91,6 +98,13 @@
             {
               "name": "Pricing",
               "slug": "pricing-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Subscriptions",
+              "slug": "subscriptions",
               "origin": "",
               "type": "markdown",
               "children": []
