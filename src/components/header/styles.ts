@@ -46,6 +46,7 @@ const rightLinksItem: SxStyleProp = {
 }
 
 const dropdownContainer: SxStyleProp = {
+  textTransform: 'none',
   justifyContent: 'flex-end',
   height: 'calc(100% + 1px)',
   cursor: 'pointer',
