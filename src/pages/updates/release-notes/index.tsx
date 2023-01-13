@@ -4,7 +4,7 @@ import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import getNavigation from 'utils/getNavigation'
 import ReleaseSection from '../../../components/release-section'
 
-import styles from 'styles/api-guides'
+import styles from 'styles/release-notes'
 import getReleasesData from 'utils/getReleasesData'
 import { UpdateElement } from 'utils/typings/types'
 import Head from 'next/head'
