@@ -5,7 +5,7 @@ const container: SxStyleProp = {
   padding: '16px',
   borderRadius: '4px',
   border: '1px solid #E7E9EE',
-  width: 'calc(50% - 8px)',
+  width: ['324px', '264px', '264px', '264px', '352px', '352px', '694px'],
   transition: 'all 0.3s ease-out',
   ':hover': {
     cursor: 'pointer',
@@ -36,9 +36,9 @@ const title: SxStyleProp = {
 }
 
 const description: SxStyleProp = {
-  fontSize: '14px',
+  fontSize: '12px',
   fontWeight: '400',
-  lineHeight: '18px',
+  lineHeight: '16px',
   color: 'muted.0',
 }
 
