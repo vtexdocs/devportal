@@ -18,7 +18,6 @@ const innerContainer: SxStyleProp = {
 
 const articleBox: SxStyleProp = {
   width: ['100%', 'initial'],
-  fontSize: ['16px', '16px', '16px', '16px', '16px', '16px', '24px'],
   lineHeight: 1.375,
   a: {
     color: '#E31C58',
@@ -26,20 +25,6 @@ const articleBox: SxStyleProp = {
   header: {
     borderBottom: '1px solid #E7E9EE',
     marginBottom: '24px',
-  },
-  h1: {
-    fontSize: '2em',
-    fontWeight: '400',
-    lineHeight: 1.25,
-  },
-  h2: {
-    fontSize: '1.375em',
-    lineHeight: 1.45,
-    paddingTop: '0.73em',
-    fontWeight: '400',
-  },
-  strong: {
-    fontWeight: '600',
   },
 }
 
@@ -50,7 +35,7 @@ const contentContainer: SxStyleProp = {
 
 const documentationTitle: SxStyleProp = {
   marginTop: '16px',
-  fontSize: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
+  fontSize: '32px',
   lineHeight: ['38px', '38px', '38px', '38px', '38px', '38px', '54px'],
 }
 
