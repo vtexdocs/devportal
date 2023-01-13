@@ -18,7 +18,8 @@ const innerContainer: SxStyleProp = {
 
 const articleBox: SxStyleProp = {
   width: ['100%', 'initial'],
-  lineHeight: 1.375,
+  fontSize: '18px',
+  lineHeight: '24px',
   a: {
     color: '#E31C58',
   },
@@ -26,23 +27,45 @@ const articleBox: SxStyleProp = {
     borderBottom: '1px solid #E7E9EE',
     marginBottom: '24px',
   },
+  h1: {
+    fontSize: '2em',
+    fontWeight: '400',
+    lineHeight: 1.25,
+  },
+  h2: {
+    fontSize: '22px',
+    lineHeight: '32px',
+    fontWeight: '400',
+    pt: '8px',
+    my: '16px',
+  },
+  h3: {
+    fontSize: '18px',
+    fontWeight: '600',
+    lineHeight: '24px',
+  },
+  strong: {
+    fontWeight: '600',
+  },
 }
 
 const contentContainer: SxStyleProp = {
-  width: ['auto', '544px', '544px', '544px', '544px', '720px', '1080px'],
+  width: ['auto', '544px', '544px', '544px', '544px', '720px', '1400px'],
   mx: ['18px', 'initial'],
 }
 
 const documentationTitle: SxStyleProp = {
+  fontSize: '28px',
+  fontWeight: '400',
+  lineHeight: '38px',
   marginTop: '16px',
-  fontSize: '32px',
-  lineHeight: ['38px', '38px', '38px', '38px', '38px', '38px', '54px'],
 }
 
 const documentationExcerpt: SxStyleProp = {
   color: '#A1A8B3',
-  fontSize: '18px',
+  fontSize: '16px',
   fontWeight: '400',
+  lineHeight: '18px',
   padding: '8px 0 24px',
 }
 
@@ -67,7 +90,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
-  width: [0, 0, 0, 0, '189px', '284px', '402px'],
+  width: [0, 0, 0, 0, '189px', '284px'],
 }
 
 const releaseAction: SxStyleProp = {
