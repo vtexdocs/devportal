@@ -1136,6 +1136,106 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Cart Attachments",
+              "slug": "cart-attachments-section-api-quick-start-guides",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Get client profile by email",
+                  "slug": "get-a-client-profile-by-email",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Add client profile",
+                  "slug": "add-client-profile",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Add shipping address and select delivery option",
+                  "slug": "add-shipping-address-and-delivery-option-to-the-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Add client preferences",
+                  "slug": "add-client-preferences-to-the-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Add marketing data",
+                  "slug": "add-marketing-data-to-the-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Add cart items",
+                  "slug": "add-cart-items",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Add payment data",
+                  "slug": "add-payment-data-to-the-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Add merchant context data",
+                  "slug": "add-merchant-context-data-to-the-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+	          {
+              "name": "Configuration",
+              "slug": "configuration-section-api-quick-start-guides",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Get an account's orderForm configuration",
+                  "slug": "get-an-account-orderform-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Update an account's orderForm configuration",
+                  "slug": "update-an-account-orderform-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Get and update the seller exchange window",
+                  "slug": "get-and-update-the-seller-exchange-window",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Clear orderForm message field from cart",
+                  "slug": "clear-orderform-message-field-from-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
