@@ -24,7 +24,7 @@ interface OverviewCardProps {
   title: string
   href: string
   description: string
-  docs: { title: string; href: string }[]
+  docs: string
   icon: string
   seeMore: boolean | undefined
 }
@@ -74,7 +74,11 @@ const OverviewCard = ({
           <Link href={href}>{title}</Link>
           <p>{description}</p>
         </div>
-        <ListOfDocs docs={docs} seeMore={seeMore} href={href} />
+        <ListOfDocs
+          docs={JSON.parse(docs.replace(/\\/g, ''))}
+          seeMore={seeMore}
+          href={href}
+        />
       </div>
     </div>
   )

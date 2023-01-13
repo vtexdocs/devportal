@@ -31,9 +31,11 @@ footer > div {
 
 table {
   border-collapse: collapse;
-  border: 1px solid #e7e9ef;
-  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  display: inline-block;
   margin: 16px 0;
+  border-radius: 4px
 }
 
 table thead {

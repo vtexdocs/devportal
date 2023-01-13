@@ -1,30 +1,3 @@
-.table {
-  border-collapse: collapse;
-  border: 1px solid #e7e9ef;
-  width: 100%;
-}
-
-.table thead {
-  border: 1px solid #e7e9ef;
-  font-weight: 500;
-}
-
-.table td,
-.table th {
-  border: 1px solid #e7e9ef;
-  padding: 14px;
-}
-
-.table tbody tr:nth-of-type(even) {
-  background-color: #f8f7fc;
-}
-
-.div {
-  margin: 25px 0;
-  max-width: 100%;
-  overflow-x: auto;
-}
-
 .img {
   max-width: 100%;
   padding-top: 2vh;

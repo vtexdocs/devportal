@@ -4,6 +4,7 @@ import { InView } from 'react-intersection-observer'
 import Image from 'next/image'
 import { APIGuideContext } from 'utils/contexts/api-guide'
 import { childrenToString, slugify } from 'utils/string-utils'
+import OverviewCard from 'components/overview-card'
 
 import styles from './styles.module.css'
 
@@ -75,10 +76,9 @@ const Callout = ({ node, icon, ...props }: Component) => {
 }
 
 export default {
+  OverviewCard,
   table: ({ node, ...props }: Component) => (
-    <div className={styles.div}>
-      <table className={styles.table} {...props} />
-    </div>
+    <table className={styles.table} {...props} />
   ),
   td: ({ node, ...props }: Component) => (
     <td className={styles.td} {...props} />
