@@ -1146,13 +1146,6 @@
           "type": "markdown",
           "children": [
             {
-              "name": "Introduction",
-              "slug": "master-data-introduction",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "How it works",
               "slug": "master-data-how-it-works",
               "origin": "",
