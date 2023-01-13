@@ -55,18 +55,18 @@ const contentContainer: SxStyleProp = {
 }
 
 const documentationTitle: SxStyleProp = {
-  fontSize: '28px',
-  fontWeight: '400',
-  lineHeight: '38px',
   marginTop: '16px',
+  fontSize: ['20px', '28px'],
+  lineHeight: ['30px', '38px'],
+  fontWeight: '400',
 }
 
 const documentationExcerpt: SxStyleProp = {
   color: '#A1A8B3',
-  fontSize: '16px',
-  fontWeight: '400',
-  lineHeight: '18px',
   padding: '8px 0 24px',
+  fontSize: ['12px', '16px'],
+  lineHeight: ['16px', '18px'],
+  fontWeight: '400',
 }
 
 const bottomContributorsContainer: SxStyleProp = {
@@ -97,6 +97,7 @@ const releaseAction: SxStyleProp = {
   display: 'flex',
   gap: '10px',
   fontSize: '18px',
+  mb: '8px',
 }
 
 const divider: SxStyleProp = {
