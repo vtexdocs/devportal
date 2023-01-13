@@ -5,9 +5,14 @@ import type { WhatsNextDataElement } from 'utils/typings/types'
 
 import styles from './styles'
 
-const WhatsNextCard = ({ title, description, link }: WhatsNextDataElement) => {
+const WhatsNextCard = ({
+  title,
+  description,
+  linkTitle,
+  linkTo,
+}: WhatsNextDataElement) => {
   return (
-    <Link href={link.to}>
+    <Link href={linkTo}>
       <Box sx={styles.container}>
         <Text sx={styles.title} className="title">
           {title}
@@ -17,7 +22,7 @@ const WhatsNextCard = ({ title, description, link }: WhatsNextDataElement) => {
         </Text>
         <Flex sx={styles.linkContainer}>
           <Text sx={styles.link} className="link">
-            {link.title}
+            {linkTitle}
           </Text>
           <IconCaret
             className="caret"

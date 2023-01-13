@@ -40,10 +40,8 @@ const AppsListing = ({ category }: ICategoryListing) => {
     whatsNextData.push({
       title: item.name,
       description: '',
-      link: {
-        title: 'See more',
-        to: `/docs/guides/${item.slug}`,
-      },
+      linkTitle: 'See more',
+      linkTo: `/docs/guides/${item.slug}`,
     })
   )
 
