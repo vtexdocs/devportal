@@ -35,10 +35,8 @@ export type UpdateElement = {
 export type WhatsNextDataElement = {
   title: string
   description: string
-  link: {
-    title: string
-    to: string
-  }
+  linkTitle: string
+  linkTo: string
 }
 
 export type ResourceDataElement = {

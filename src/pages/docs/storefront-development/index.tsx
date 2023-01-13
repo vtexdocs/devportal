@@ -22,55 +22,45 @@ const getStartedData: WhatsNextDataElement[] = [
     title: 'Get started',
     description:
       'Set up your development environment and start creating unique storefronts.',
-    link: {
-      title: 'See more',
-      to: '/docs/guides/getting-started-3',
-    },
+    linkTitle: 'See more',
+    linkTo: '/docs/guides/getting-started-3',
   },
   {
     title: 'Explore our pre-built components',
     description:
       'Use our pre-built and reusable components to quickly compose your storefront.',
-    link: {
-      title: 'See more',
-      to: '/docs/vtex-io-apps',
-    },
+    linkTitle: 'See more',
+    linkTo: '/docs/vtex-io-apps',
   },
   {
     title: 'Create store templates',
     description:
       'Configure block templates to create PLPs, PDPs and landing pages.',
-    link: {
-      title: 'See more',
-      to: '/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout',
-    },
+    linkTitle: 'See more',
+    linkTo:
+      '/docs/guides/vtex-io-documentation-building-a-carousel-using-slider-layout',
   },
   {
     title: 'Style your storefront',
     description:
       'Style your storefront blocks and express your brand identity.',
-    link: {
-      title: 'See more',
-      to: '/docs/guides/vtex-io-documentation-customizing-your-stores-icons',
-    },
+    linkTitle: 'See more',
+    linkTo: '/docs/guides/vtex-io-documentation-customizing-your-stores-icons',
   },
   {
     title: "Set up your store's pages",
     description:
       "Manage URL redirects and set up your store's routes and pages.",
-    link: {
-      title: 'See more',
-      to: '/docs/guides/vtex-io-documentation-associating-a-custom-page-to-a-content-type',
-    },
+    linkTitle: 'See more',
+    linkTo:
+      '/docs/guides/vtex-io-documentation-associating-a-custom-page-to-a-content-type',
   },
   {
     title: 'Go live with your store',
     description:
       'Deploy your storefront and make it publicly available to shoppers.',
-    link: {
-      title: 'See more',
-      to: '/docs/guides/vtex-io-documentation-go-live',
-    },
+    linkTitle: 'See more',
+    linkTo: '/docs/guides/vtex-io-documentation-go-live',
   },
 ]
 
@@ -78,51 +68,40 @@ const goBeyondData: WhatsNextDataElement[] = [
   {
     title: 'A/B testing',
     description: "Optimize your store's conversion rates by running A/B tests.",
-    link: {
-      title: 'See more',
-      to: '/docs/guides/vtex-io-documentation-running-native-ab-testing',
-    },
+    linkTitle: 'See more',
+    linkTo: '/docs/guides/vtex-io-documentation-running-native-ab-testing',
   },
   {
     title: 'SEO',
     description: "Take action on enhancing your store's SEO.",
-    link: {
-      title: 'See more',
-      to: '/docs/guides/google-tag-manager',
-    },
+    linkTitle: 'See more',
+    linkTo: '/docs/guides/google-tag-manager',
   },
   {
     title: 'Performance',
     description: "Solve real-world issues and boost your store's performance.",
-    link: {
-      title: 'See more',
-      to: '/docs/guides/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker',
-    },
+    linkTitle: 'See more',
+    linkTo:
+      '/docs/guides/vtex-io-documentation-deactivating-the-vtex-io-native-service-worker',
   },
   {
     title: 'Internationalization',
     description: 'Achieve more customers by making your store multi-language.',
-    link: {
-      title: 'See more',
-      to: '/docs/guides/vtex-io-multi-language-stores',
-    },
+    linkTitle: 'See more',
+    linkTo: '/docs/guides/vtex-io-multi-language-stores',
   },
   {
     title: 'Cross-border stores',
     description:
       'Go global with multi-currency, multi-language tools and reusable components.',
-    link: {
-      title: 'See more',
-      to: '/docs/guides/vtex-io-cross-border-stores',
-    },
+    linkTitle: 'See more',
+    linkTo: '/docs/guides/vtex-io-cross-border-stores',
   },
   {
     title: 'B2B stores',
     description: 'Learn how to implement a B2B store with the Store Framework.',
-    link: {
-      title: 'See more',
-      to: '/docs/guides/b2b-setup',
-    },
+    linkTitle: 'See more',
+    linkTo: '/docs/guides/b2b-setup',
   },
 ]
 const StorefrontDevelopmentPage: NextPage<Props> = () => {

@@ -3,8 +3,8 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 const breadcrumb: SxStyleProp = {
   alignItems: 'center',
   color: '#A1A8B3',
-  mb: ['32px', '32px', '32px', '32px', '32px', '32px', '64px'],
-  fontSize: ['16px', '16px', '16px', '16px', '16px', '16px', '24px'],
+  mb: '32px',
+  fontSize: '16px',
   lineHeight: '18px',
 }
 
@@ -16,8 +16,8 @@ const breadcrumbItem: SxStyleProp = {
 }
 
 const caret: SxStyleProp = {
-  width: ['16px', '16px', '16px', '16px', '16px', '16px', '32px'],
-  height: ['16px', '16px', '16px', '16px', '16px', '16px', '32px'],
+  width: '16px',
+  height: '16px',
 }
 
 export default { breadcrumb, breadcrumbItem, caret }

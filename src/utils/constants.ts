@@ -78,35 +78,27 @@ export const whatsNextData: WhatsNextDataElement[] = [
     title: messages['app_development_page_new_to_app_development.title'],
     description:
       messages['app_development_page_new_to_app_development.description'],
-    link: {
-      title: messages['app_development_page_new_to_app_development.link'],
-      to: '/docs/guides/getting-started',
-    },
+    linkTitle: messages['app_development_page_new_to_app_development.link'],
+    linkTo: '/docs/guides/getting-started',
   },
   {
     title: messages['app_development_page_solve_real_world_issues.title'],
     description:
       messages['app_development_page_solve_real_world_issues.description'],
-    link: {
-      title: messages['app_development_page_solve_real_world_issues.link'],
-      to: '/docs/guides/overview-3',
-    },
+    linkTitle: messages['app_development_page_solve_real_world_issues.link'],
+    linkTo: '/docs/guides/overview-3',
   },
   {
     title: messages['app_development_page_build_foundations.title'],
     description: messages['app_development_page_build_foundations.description'],
-    link: {
-      title: messages['app_development_page_build_foundations.link'],
-      to: '/docs/guides/reference',
-    },
+    linkTitle: messages['app_development_page_build_foundations.link'],
+    linkTo: '/docs/guides/reference',
   },
   {
     title: messages['app_development_page_go_further.title'],
     description: messages['app_development_page_go_further.description'],
-    link: {
-      title: messages['app_development_page_go_further.link'],
-      to: '/docs/guides/perks',
-    },
+    linkTitle: messages['app_development_page_go_further.link'],
+    linkTo: '/docs/guides/perks',
   },
 ]
 

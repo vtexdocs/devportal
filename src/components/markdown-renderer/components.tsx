@@ -4,8 +4,11 @@ import { InView } from 'react-intersection-observer'
 import Image from 'next/image'
 import { APIGuideContext } from 'utils/contexts/api-guide'
 import { childrenToString, slugify } from 'utils/string-utils'
+import OverviewCard from 'components/overview-card'
+import WhatsNextCard from 'components/whats-next-card'
 
 import styles from './styles.module.css'
+import { Flex } from '@vtex/brand-ui'
 
 type Component = {
   node: object
@@ -75,10 +78,13 @@ const Callout = ({ node, icon, ...props }: Component) => {
 }
 
 export default {
+  OverviewCard,
+  WhatsNextCard,
+  Flex: ({ node, ...props }: Component) => (
+    <Flex className={styles.flexWrap} {...props} />
+  ),
   table: ({ node, ...props }: Component) => (
-    <div className={styles.div}>
-      <table className={styles.table} {...props} />
-    </div>
+    <table className={styles.table} {...props} />
   ),
   td: ({ node, ...props }: Component) => (
     <td className={styles.td} {...props} />

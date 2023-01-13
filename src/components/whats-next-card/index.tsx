@@ -1,14 +1,18 @@
-import Link from 'next/link'
-import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
+import { Box, Flex, IconCaret, Text, Link } from '@vtex/brand-ui'
 
 import type { WhatsNextDataElement } from 'utils/typings/types'
 
 import styles from './styles'
 
-const WhatsNextCard = ({ title, description, link }: WhatsNextDataElement) => {
+const WhatsNextCard = ({
+  title,
+  description,
+  linkTitle,
+  linkTo,
+}: WhatsNextDataElement) => {
   return (
-    <Link href={link.to}>
-      <Box sx={styles.container}>
+    <Link href={linkTo} sx={styles.container}>
+      <Box>
         <Text sx={styles.title} className="title">
           {title}
         </Text>
@@ -17,7 +21,7 @@ const WhatsNextCard = ({ title, description, link }: WhatsNextDataElement) => {
         </Text>
         <Flex sx={styles.linkContainer}>
           <Text sx={styles.link} className="link">
-            {link.title}
+            {linkTitle}
           </Text>
           <IconCaret
             className="caret"
