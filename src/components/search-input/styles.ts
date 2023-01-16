@@ -51,7 +51,7 @@ const hitContent: SxStyleProp = {
   color: 'muted.0',
   fontSize: '16px',
   lineHeight: '22px',
-  whiteSpace: 'nowrap',
+  whiteSpace: 'pre',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
 }
@@ -133,6 +133,11 @@ const noResults: SxStyleProp = {
   padding: '12px',
 }
 
+const hitContentHighlighted: SxStyleProp = {
+  ...hitContent,
+  background: '#FFE0EF',
+}
+
 export default {
   resultsContainer,
   resultsBox,
@@ -148,4 +153,5 @@ export default {
   searchContainer,
   alignCenter,
   noResults,
+  hitContentHighlighted,
 }
