@@ -1,14 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { connectHighlight } from 'react-instantsearch-dom'
 import { Flex, Text } from '@vtex/brand-ui'
 import styles from './styles'
 
 const Highlight = ({ highlight, attribute, hit }: any) => {
   const [parsedHit, setParsedHit] = useState([])
+  const textContainer = useRef<HTMLElement>(null)
 
   useEffect(() => {
-    const titleSize = 40
+    const titleSize = textContainer.current
+      ? textContainer.current.offsetWidth / 7.75
+      : 40
     const highlightParts: any = []
     let highlightCount = 0,
       highlightLength = 0
@@ -66,13 +69,19 @@ const Highlight = ({ highlight, attribute, hit }: any) => {
         highlightCount -= 1
       }
       size = sizeRemaining / highlightCount
-      hitHighlights[match.index]
+      hitHighlights[match.index].value = hitHighlights[
+        match.index
+      ].value.replace(/\s+/g, '\u00A0')
     })
     setParsedHit(hitHighlights)
-  }, [hit])
+  }, [hit, textContainer.current])
 
   return (
-    <Flex className="hit-content-title">
+    <Flex
+      ref={textContainer}
+      className="hit-content-title"
+      sx={styles.hitContentContainer}
+    >
       {parsedHit.map((part: any, index: any) =>
         part.isHighlighted ? (
           <Text sx={styles.hitContentHighlighted} key={index}>

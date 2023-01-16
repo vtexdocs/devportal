@@ -47,6 +47,10 @@ const hitIcon: SxStyleProp = {
   marginRight: '8px',
 }
 
+const hitContentContainer: SxStyleProp = {
+  width: '100%',
+}
+
 const hitContent: SxStyleProp = {
   color: 'muted.0',
   fontSize: '16px',
@@ -144,6 +148,7 @@ export default {
   seeAll,
   hitBox,
   hitIcon,
+  hitContentContainer,
   hitContent,
   hitBreadCrumb,
   hitBreadCrumbIn,
