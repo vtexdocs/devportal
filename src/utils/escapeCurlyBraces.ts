@@ -1,44 +1,66 @@
-const correctlyFormattedCodeBlocks: (content: string) => boolean = (
-  content
-) => {
-  let idx = 0
+const assertCodeBlocksAreCorrectlyFormatted = (content: string) => {
+  let idx = 0,
+    row = 1,
+    col = 1
   let insideMultiLineCodeBlock = false
   let insideSingleLineCodeBlock = false
+  let lastRow = -1,
+    lastCol = -1
+
+  const error = (row: number, col: number) => {
+    throw new Error(
+      `There is an incorrectly formatted code block at line ${row} and column ${col} in this file`
+    )
+  }
 
   while (idx < content.length) {
     if (content.charAt(idx) !== '`') {
-      if (insideMultiLineCodeBlock || !insideSingleLineCodeBlock) idx++
-      else if (!/\s/.test(content.charAt(idx))) idx++
-      else {
+      if (
+        insideMultiLineCodeBlock ||
+        !insideSingleLineCodeBlock ||
+        !/\s/.test(content.charAt(idx))
+      ) {
+        col++
+        if (content.charAt(idx++) === '\n') {
+          row++
+          col = 1
+        }
+      } else {
         let newLineCount = 0
         while (idx < content.length && /\s/.test(content.charAt(idx))) {
-          if (content.charAt(idx++) === '\n') newLineCount++
+          if (content.charAt(idx++) !== '\n') col++
+          else newLineCount++, row++, (col = 1)
         }
 
-        if (idx >= content.length || newLineCount > 1) return false
+        if (idx >= content.length || newLineCount > 1) error(lastRow, lastCol)
       }
     } else {
       let backtickCount = 0
       while (idx < content.length && content.charAt(idx) === '`') {
         idx++
+        col++
         backtickCount++
       }
 
       if (backtickCount === 3) {
-        if (insideSingleLineCodeBlock) return false
+        if (insideSingleLineCodeBlock) error(lastRow, lastCol)
         insideMultiLineCodeBlock = !insideMultiLineCodeBlock
+        lastRow = row
+        lastCol = col
       } else if (backtickCount === 1 && !insideMultiLineCodeBlock) {
         insideSingleLineCodeBlock = !insideSingleLineCodeBlock
+        lastRow = row
+        lastCol = col
       }
     }
   }
 
-  return !insideMultiLineCodeBlock && !insideSingleLineCodeBlock
+  if (insideMultiLineCodeBlock || insideSingleLineCodeBlock)
+    error(lastRow, lastCol)
 }
 
 const escapeCurlyBraces: (content: string) => string = (content) => {
-  if (!correctlyFormattedCodeBlocks(content))
-    throw new Error('There are incorrectly formatted code blocks in this file')
+  assertCodeBlocksAreCorrectlyFormatted(content)
 
   let idx = 0
   let newContent = ''
