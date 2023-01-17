@@ -11707,6 +11707,13 @@
               "children": []
             },
             {
+              "name": "List Migration",
+              "slug": "vtex-list-listmigration",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "List Modal",
               "slug": "vtex-list-listmodal",
               "origin": "",
