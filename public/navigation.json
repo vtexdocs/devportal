@@ -12253,6 +12253,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Outdated Checkout endpoint deprecation",
+                  "slug": "outdated-checkout-endpoint-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Official new orders module interface",
                   "slug": "oms-ui-deprecation",
                   "origin": "",
