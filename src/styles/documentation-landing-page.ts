@@ -16,7 +16,7 @@ const contentContainer: SxStyleProp = {
   mb: ['32px', '64px'],
   px: ['18px', 'initial'],
   maxWidth: ['324px', 'initial'],
-  width: ['auto', '544px', '544px', '544px', '720px'],
+  width: ['auto', '544px', '544px', '544px', '720px', '720px', '1400px'],
   boxSizing: 'initial',
   color: '#4A4A4A',
   lineHeight: ['22px', '24px'],

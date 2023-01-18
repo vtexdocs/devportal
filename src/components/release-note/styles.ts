@@ -2,10 +2,12 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const releaseContainer: SxStyleProp = {
   mb: ['32px', '48px'],
+  width: '100%',
 }
 
 const actionType: SxStyleProp = {
   fontSize: '16px',
+  lineHeight: ['22px', '18px'],
   ml: '-16px',
 }
 
@@ -18,8 +20,6 @@ const actionIcon: SxStyleProp = {
 
 const content: SxStyleProp = {
   flexDirection: 'column',
-  maxWidth: ['272px', '495px', '495px', '495px', '671px'],
-  minWidth: ['272px', '495px', '495px', '495px', '671px'],
   pt: 0,
   ml: '-16px',
   mt: '-32px',
@@ -29,15 +29,15 @@ const content: SxStyleProp = {
 const releaseDate: SxStyleProp = {
   color: 'muted.1',
   fontSize: ['12px', '16px'],
-  lineHeight: '22px',
+  lineHeight: ['16px', '22px'],
 }
 
 const releaseTitle: SxStyleProp = {
   color: '#4A596B',
   fontSize: ['16px', '18px'],
   lineHeight: ['22px', '24px'],
-  pt: '8px',
   cursor: 'pointer',
+  mt: '16px',
 }
 
 const releaseTitleActive: SxStyleProp = {
@@ -47,9 +47,10 @@ const releaseTitleActive: SxStyleProp = {
 
 const releaseDescription: SxStyleProp = {
   color: '#4A4A4A',
-  fontSize: ['12px', '16px'],
+  fontSize: ['12px', '16px', '16px', '16px', '16px', '16px', '18px'],
   lineHeight: ['16px', '22px'],
   mt: '8px',
+  mb: '-16px',
 }
 
 const arrowIcon: SxStyleProp = {
