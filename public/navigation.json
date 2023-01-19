@@ -12265,6 +12265,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "SafeData can now block the anonymous creation of documents for all Master Data entities",
+                  "slug": "safedata-can-now-block-the-anonymous-creation-of-documents-for-all-master-data-entities",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             }
