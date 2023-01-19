@@ -66,32 +66,34 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
   return (
     <>
       {searchStateActive?.query && searchResults && (
-        <Box sx={styles.resultsContainer}>
-          <Box sx={searchResults.hits.length && styles.resultsBox}>
-            {searchResults.hits.map(
-              (searchResult, index) =>
-                index < 7 && (
-                  <Hit
-                    key={searchResult.objectID}
-                    hit={searchResult}
-                    setSearchStateActive={setSearchStateActive}
-                  />
-                )
+        <Box sx={styles.resultsOuterContainer}>
+          <Box sx={styles.resultsInnerContainer}>
+            <Box sx={searchResults.hits.length && styles.resultsBox}>
+              {searchResults.hits.map(
+                (searchResult, index) =>
+                  index < 7 && (
+                    <Hit
+                      key={searchResult.objectID}
+                      hit={searchResult}
+                      setSearchStateActive={setSearchStateActive}
+                    />
+                  )
+              )}
+            </Box>
+            {false && searchResults.hits.length > 7 && (
+              <Box
+                sx={styles.seeAll}
+                onClick={() => seeAllSubmit(searchStateActive.query!)}
+              >
+                <Text>See all results</Text>
+              </Box>
+            )}
+            {!searchResults.hits.length && (
+              <Flex sx={styles.noResults}>
+                <Text>{messages['search_input.empty']}</Text>
+              </Flex>
             )}
           </Box>
-          {false && searchResults.hits.length > 7 && (
-            <Box
-              sx={styles.seeAll}
-              onClick={() => seeAllSubmit(searchStateActive.query!)}
-            >
-              <Text>See all results</Text>
-            </Box>
-          )}
-          {!searchResults.hits.length && (
-            <Flex sx={styles.noResults}>
-              <Text>{messages['search_input.empty']}</Text>
-            </Flex>
-          )}
         </Box>
       )}
     </>
