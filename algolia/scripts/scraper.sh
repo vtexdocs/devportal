@@ -48,9 +48,6 @@ CHROMEDRIVER_PATH=./chromedriver
 
 PIPENV_VENV_IN_PROJECT=true pipenv install
 
-echo "Update webclient.py"
-cp ./utils/webclient.py ./.venv/lib/python3.6/site-packages/scrapy/core/downloader/
-
 pipenv run ./docsearch run ./configs/scraper_md.json
 
 pipenv run ./docsearch run ./configs/scraper_openapi.json
