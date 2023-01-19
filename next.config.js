@@ -114,11 +114,6 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/docs/(S*)',
-        destination: '/vtex-developer-docs/docs/$1',
-        permanent: true,
-      },
-      {
         source: '/docs',
         destination: '/vtex-developer-docs/docs',
         permanent: true,
