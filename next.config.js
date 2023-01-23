@@ -113,6 +113,142 @@ const nextConfig = {
         destination: '/docs/guides/orders-feed',
         permanent: true,
       },
+      {
+        source: '/docs/guides/feed-v3-1',
+        destination: '/docs/guides/orders-feed',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/guides/integrating-external-orders-via-api-to-be-used-with-vtex-tracking',
+        destination: '/docs/guides/integrate-external-orders-vtex-tracking',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/guides/creating-customizable-fields-in-the-cart-with-checkout-api-1',
+        destination: '/docs/guides/customizable-fields-with-checkout-api',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/guides/fetching-marketplace-payment-method-data-with-the-orders-api',
+        destination: '/docs/guides/get-marketplace-data-orders-api',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/guides/fetching-payment-data-from-a-mercado-libre-order-with-orders-api',
+        destination: '/docs/guides/get-payment-data-mercado-libre-orders-api',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/orders-feed-guide',
+        destination: '/docs/guides/orders-feed',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/vtex-google-tag-manager',
+        destination: '/docs/guides/google-tag-manager',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/vtex-kitlook',
+        destination: '/docs/guides/vtexbr-kitlook',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/carriers-1',
+        destination: '/docs/guides/vtex-shipping-network',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/managing-application-logs',
+        destination:
+          '/docs/guides/vtex-io-documentation-managing-application-logs',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/external-marketplace-integration-order-logs',
+        destination:
+          '/docs/guides/external-marketplace-integration-collect-orders',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/migrating-storefront-from-legacy-to-io',
+        destination:
+          '/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/guides/setting-up-an-ab-test-with-master-data-v2-trigger',
+        destination: '/docs/guides/trigger-ab-test',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/adaptations-and-limitations',
+        destination:
+          '/docs/guides/changes-and-limitations-pii-platform-version',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/data-privacy',
+        destination: '/docs/guides/pii-platform-version',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/changes-and-limitations-pii-compliant-account',
+        destination:
+          '/docs/guides/changes-and-limitations-pii-platform-version',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/pii-compliant-accounts',
+        destination: '/docs/guides/pii-platform-version',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#get-/api/orders/pvt/document/-orderId-',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/listorderspiicompliant',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/extendsearch/orders',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#get-/api/orders/extendsearch/orders',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/extendsearch/orders',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#post-/api/orders/pvt/document/-orderId-/cancel',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/cancel',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#post-/api/orders/pvt/document/-orderId-/invoices',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/invoices',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#post-/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment',
+        permanent: true,
+      },
     ]
   },
 }
