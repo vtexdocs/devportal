@@ -2811,6 +2811,15 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Get SKU Service",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/skuservice/-skuServiceId-",
+                  "children": []
+                },
+                {
                   "name": "Update SKU Service",
                   "slug": "catalog-api",
                   "type": "openapi",
@@ -2888,6 +2897,15 @@
                   "children": []
                 },
                 {
+                  "name": "Get SKU Service Type",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-",
+                  "children": []
+                },
+                {
                   "name": "Update SKU Service Type",
                   "slug": "catalog-api",
                   "type": "openapi",
@@ -2919,6 +2937,15 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/skuservicevalue",
+                  "children": []
+                },
+                {
+                  "name": "Get SKU Service Value",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-",
                   "children": []
                 },
                 {
