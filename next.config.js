@@ -208,6 +208,47 @@ const nextConfig = {
         destination: '/docs/guides/pii-platform-version',
         permanent: true,
       },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#get-/api/orders/pvt/document/-orderId-',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#get-/api/orders/pvt/document/-orderId-',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/listorderspiicompliant',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/extendsearch/orders',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#get-/api/orders/extendsearch/orders',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/extendsearch/orders',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#post-/api/orders/pvt/document/-orderId-/cancel',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/cancel',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#post-/api/orders/pvt/document/-orderId-/invoices',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/invoices',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/orders-api-pii-compliant#post-/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment',
+        destination:
+          '/docs/api-reference/orders-api-pii-version#post-/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment',
+        permanent: true,
+      },
     ]
   },
 }
