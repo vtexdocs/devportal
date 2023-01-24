@@ -2897,6 +2897,15 @@
                   "children": []
                 },
                 {
+                  "name": "Get SKU Service Type",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-",
+                  "children": []
+                },
+                {
                   "name": "Update SKU Service Type",
                   "slug": "catalog-api",
                   "type": "openapi",
