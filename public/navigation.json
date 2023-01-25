@@ -3915,6 +3915,22 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Gift List",
+              "slug": "catalog-api-gift-list",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Gift List",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/addon/pvt/giftlist/get/-listId-",
+                  "children": []
+                }
+              ]
             }
           ]
         },
