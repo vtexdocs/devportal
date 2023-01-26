@@ -94,7 +94,7 @@ jobs:
       if: ${{ env.RELEASE != 'no' }}
       uses: actions/create-release@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ADMIN_GITHUB_TOKEN }}
       with:
         release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
         tag_name: ${{ steps.publish_tag.outputs.tag_name }}
