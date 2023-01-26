@@ -29,6 +29,7 @@ jobs:
       with:
         ref: main
         fetch-depth: 0
+        token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
     - name: Setup
       # Git configs and environment preparation
       run: |
