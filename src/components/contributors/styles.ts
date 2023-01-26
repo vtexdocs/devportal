@@ -12,8 +12,8 @@ const titleContainer: SxStyleProp = {
 
 const title: SxStyleProp = {
   fontWeight: '400',
-  fontSize: ['12px', '16px', '16px', '16px', '12px', '16px', '22px'],
-  lineHeight: ['16px', '22px', '22px', '22px', '16px', '18px', '22px'],
+  fontSize: ['12px', '16px', '16px', '16px', '12px', '16px'],
+  lineHeight: ['16px', '18px', '18px', '18px', '16px', '18px'],
   color: '#4A4A4A',
 }
 
@@ -24,68 +24,44 @@ const count: SxStyleProp = {
   height: '16px',
   borderRadius: '24px',
   backgroundColor: 'muted.4',
-  fontSize: ['12px', '12px', '12px', '12px', '12px', '12px', '22px'],
+  fontSize: '12px',
   fontWeight: '400',
   lineHeight: '16px',
   textAlign: 'center',
   color: '#4A4A4A',
 }
 
-const photosContainer: (rows: number) => SxStyleProp = (rows) => {
-  const maxHeight = (photoSize: number, gap: number) =>
-    `${photoSize * rows + gap * (rows - 1)}px`
-  const defaultMaxHeight = maxHeight(32, 8)
-
-  return {
-    mt: ['16px', '16px', '16px', '16px', '16px', '16px', '24px'],
-    gap: ['8px', '8px', '8px', '8px', '8px', '8px', '12px'],
-    gridTemplateColumns: [
-      '1fr 1fr 1fr 1fr',
-      '1fr 1fr 1fr 1fr 1fr 1fr',
-      '1fr 1fr 1fr 1fr 1fr 1fr',
-      '1fr 1fr 1fr 1fr 1fr 1fr',
-      '1fr 1fr 1fr 1fr',
-      '1fr 1fr 1fr 1fr 1fr',
-    ],
-    overflow: 'hidden',
-    width: [
-      0,
-      'min-content',
-      'min-content',
-      'min-content',
-      '152px',
-      '192px',
-      '288px',
-    ],
-    maxHeight: [
-      defaultMaxHeight,
-      defaultMaxHeight,
-      defaultMaxHeight,
-      defaultMaxHeight,
-      defaultMaxHeight,
-      defaultMaxHeight,
-      maxHeight(48, 12),
-    ],
-    transition: 'max-height 0.3s ease-in-out',
-  }
-}
+const photosContainer: (rows: number) => SxStyleProp = (rows) => ({
+  mt: '16px',
+  gap: '8px',
+  gridTemplateColumns: [
+    '1fr 1fr 1fr 1fr',
+    '1fr 1fr 1fr 1fr 1fr 1fr',
+    '1fr 1fr 1fr 1fr 1fr 1fr',
+    '1fr 1fr 1fr 1fr 1fr 1fr',
+    '1fr 1fr 1fr 1fr',
+    '1fr 1fr 1fr 1fr 1fr',
+  ],
+  overflow: 'hidden',
+  width: [0, 'min-content', 'min-content', 'min-content', '152px', '192px'],
+  maxHeight: `${32 * rows + 8 * (rows - 1)}px`,
+  transition: 'max-height 0.3s ease-in-out',
+})
 
 const photo: SxStyleProp = {
-  width: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
-  height: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
+  width: '32px',
+  height: '32px',
   img: {
-    width: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
-    height: ['32px', '32px', '32px', '32px', '32px', '32px', '48px'],
+    width: '32px',
+    height: '32px',
     borderRadius: '100%',
   },
 }
 
 const collapseButton: SxStyleProp = {
-  mt: ['8px', '8px', '8px', '8px', '8px', '8px', '16px'],
+  ...title,
+  mt: '8px',
   height: '24px',
-  fontWeight: '400',
-  fontSize: ['12px', '12px', '12px', '12px', '12px', '12px', '22px'],
-  lineHeight: ['16px', '16px', '16px', '16px', '16px', '16px', '22px'],
   color: 'muted.0',
   cursor: 'pointer',
   alignItems: 'center',

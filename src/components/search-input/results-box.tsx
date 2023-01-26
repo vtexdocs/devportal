@@ -7,6 +7,7 @@ import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
 
 import { getIcon, messages } from 'utils/constants'
 import { getBreadcrumbs, getRelativeURL } from './functions'
+import CustomHighlight from './customHighlight'
 import styles from './styles'
 
 interface HitProps {
@@ -16,26 +17,14 @@ interface HitProps {
 
 const Hit = ({ hit, setSearchStateActive }: HitProps) => {
   const breadcrumbsList = getBreadcrumbs(hit)
-  const [title, setTitle] = useState<string>('')
   const DocIcon = getIcon(hit.doctype)
-
-  useEffect(() => {
-    if (hit.type === 'content') setTitle(hit.content)
-    else {
-      const hierarchy = JSON.parse(JSON.stringify(hit.hierarchy))
-      setTitle(hierarchy[hit.type])
-    }
-  }, [])
-
   return (
     <Link href={getRelativeURL(hit)} legacyBehavior>
       <a onClick={() => setSearchStateActive({})}>
         <Box sx={styles.hitBox}>
           <Flex>
             {DocIcon && <DocIcon className="hit-icon" sx={styles.hitIcon} />}
-            <Text className="hit-content-title" sx={styles.hitContent}>
-              {title}
-            </Text>
+            <CustomHighlight hit={hit} attribute="content" />
           </Flex>
           <Flex sx={styles.alignCenter}>
             <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.doctype}`}</Text>

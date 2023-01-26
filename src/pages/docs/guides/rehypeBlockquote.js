@@ -54,8 +54,8 @@ const formatValues = (value, regEx) => {
       .split('\n')
       .map((val) => {
         if (val.length === 2) return val.concat(' ').replace(regEx, '')
-        return val.replace(regEx, '').trim()
+        return val.replace(regEx, '').trimStart()
       })
       .join('\n')
-  } else return value.replace(regEx, '').trim()
+  } else return value.replace(regEx, '').trimStart()
 }

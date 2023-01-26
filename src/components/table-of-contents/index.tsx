@@ -41,7 +41,6 @@ const TableOfContents = () => {
             subItem: level === 1 ? '' : slug,
           }))
         }}
-        legacyBehavior
       >
         <Text sx={styles.item(level, active)}>{title}</Text>
       </Link>

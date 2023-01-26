@@ -2811,6 +2811,15 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Get SKU Service",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/skuservice/-skuServiceId-",
+                  "children": []
+                },
+                {
                   "name": "Update SKU Service",
                   "slug": "catalog-api",
                   "type": "openapi",
@@ -2888,6 +2897,15 @@
                   "children": []
                 },
                 {
+                  "name": "Get SKU Service Type",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-",
+                  "children": []
+                },
+                {
                   "name": "Update SKU Service Type",
                   "slug": "catalog-api",
                   "type": "openapi",
@@ -2919,6 +2937,15 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/skuservicevalue",
+                  "children": []
+                },
+                {
+                  "name": "Get SKU Service Value",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-",
                   "children": []
                 },
                 {
@@ -3885,6 +3912,22 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/catalog_system/pvt/commercialcondition/-commercialConditionId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Gift List",
+              "slug": "catalog-api-gift-list",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Gift List",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/addon/pvt/giftlist/get/-listId-",
                   "children": []
                 }
               ]
@@ -12253,8 +12296,22 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Outdated Checkout endpoint deprecation",
+                  "slug": "outdated-checkout-endpoint-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Official new orders module interface",
                   "slug": "oms-ui-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "SafeData can now block the anonymous creation of documents for all Master Data entities",
+                  "slug": "safedata-can-now-block-the-anonymous-creation-of-documents-for-all-master-data-entities",
                   "origin": "",
                   "type": "markdown",
                   "children": []

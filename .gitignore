@@ -8,6 +8,11 @@
 # testing
 /coverage
 
+# Sitemap file
+sitemap.xml
+sitemap-0.xml
+robots.txt
+
 # Local Scraping
 /docsearch-scraper
 

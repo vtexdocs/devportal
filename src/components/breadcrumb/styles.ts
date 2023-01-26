@@ -15,9 +15,4 @@ const breadcrumbItem: SxStyleProp = {
   },
 }
 
-const caret: SxStyleProp = {
-  width: '16px',
-  height: '16px',
-}
-
-export default { breadcrumb, breadcrumbItem, caret }
+export default { breadcrumb, breadcrumbItem }

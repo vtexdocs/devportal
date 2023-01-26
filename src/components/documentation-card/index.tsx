@@ -22,7 +22,7 @@ const DocumentationCard = ({
     <Link href={link} legacyBehavior>
       <Box sx={cardContainer(containerType)}>
         <Flex sx={titleContainer(containerType)}>
-          <Icon sx={styles.icon} />
+          <Icon size={24} />
           <Text className="title" sx={cardTitle(containerType)}>
             {title}
           </Text>

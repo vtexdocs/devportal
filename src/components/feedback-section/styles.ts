@@ -11,8 +11,8 @@ const container: SxStyleProp = {
 }
 
 const question: SxStyleProp = {
-  fontSize: ['16px', '16px', '16px', '16px', '16px', '16px', '22px'],
-  lineHeight: '22px',
+  fontSize: '16px',
+  lineHeight: '18px',
 }
 
 const likeContainer: SxStyleProp = {
@@ -24,18 +24,11 @@ const likeContainer: SxStyleProp = {
   justifyContent: ['center', 'initial'],
 }
 
-const icon: SxStyleProp = {
-  width: ['24px', '24px', '24px', '24px', '24px', '24px', '32px'],
-  height: ['24px', '24px', '24px', '24px', '24px', '24px', '32px'],
-}
-
 const likeIcon: SxStyleProp = {
-  ...icon,
   mr: '2px',
 }
 
 const dislikeIcon: SxStyleProp = {
-  ...icon,
   mr: '2px',
   transform: 'rotateX(180deg) rotateY(180deg)',
 }
@@ -65,7 +58,7 @@ const selectedButton: SxStyleProp = {
 const box: SxStyleProp = {
   alignItems: 'center',
   color: 'muted.0',
-  fontSize: ['16px', '16px', '16px', '16px', '16px', '16px', '22px'],
+  fontSize: '16px',
   lineHeight: '22px',
 }
 
@@ -76,7 +69,7 @@ const editContainer: SxStyleProp = {
   display: 'flex',
 }
 
-const editIcon: SxStyleProp = { ...icon, mr: '4px' }
+const editIcon: SxStyleProp = { mr: '4px' }
 
 export default {
   container,

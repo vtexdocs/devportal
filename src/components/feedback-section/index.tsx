@@ -47,9 +47,9 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
           onClick={feedback === undefined ? () => openModal(true) : null}
         >
           {feedback === undefined || !feedback ? (
-            <LikeIcon sx={styles.likeIcon} />
+            <LikeIcon size={24} sx={styles.likeIcon} />
           ) : (
-            <LikeSelectedIcon sx={styles.likeIcon} />
+            <LikeSelectedIcon size={24} sx={styles.likeIcon} />
           )}
           <Text>{messages['feedback_section.positive']}</Text>
         </Flex>
@@ -59,9 +59,9 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
           onClick={feedback === undefined ? () => openModal(false) : null}
         >
           {feedback === undefined || feedback ? (
-            <LikeIcon sx={styles.dislikeIcon} />
+            <LikeIcon size={24} sx={styles.dislikeIcon} />
           ) : (
-            <LikeSelectedIcon sx={styles.dislikeIcon} />
+            <LikeSelectedIcon size={24} sx={styles.dislikeIcon} />
           )}
           <Text>{messages['feedback_section.negative']}</Text>
         </Flex>
@@ -73,7 +73,7 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
           href={urlToEdit}
           sx={styles.editContainer}
         >
-          <EditIcon sx={styles.editIcon} />
+          <EditIcon size={24} sx={styles.editIcon} />
           <Text>{messages['feedback_section.edit']}</Text>
         </Link>
       )}

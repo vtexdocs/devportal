@@ -15,8 +15,8 @@ interface IReleasesData {
 const ReleaseSection = ({ releasesData }: IReleasesData) => {
   const releases = releasesData.filter((release) => !release.hidden)
   return (
-    <Flex sx={styles.container}>
-      <Box>
+    <Flex sx={styles.outerContainer}>
+      <Box sx={styles.innerContainer}>
         <Text sx={styles.sectionTitle}>
           {messages['release_notes_page.title']}
         </Text>

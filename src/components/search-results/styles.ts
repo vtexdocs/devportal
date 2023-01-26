@@ -1,7 +1,7 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const resultContainer: SxStyleProp = {
-  width: '720px',
+  width: ['324px', '544px', '544px', '544px', '720px', '720px', '1400px'],
   paddingTop: '64px',
   hr: {
     marginTop: '16px',

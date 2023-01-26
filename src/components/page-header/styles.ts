@@ -5,12 +5,11 @@ const welcomeHeader: SxStyleProp = {
   position: ['initial', 'absolute'],
   mb: ['32px', 'initial'],
   zIndex: '1000',
-  maxWidth: ['380px', 'initial'],
-  width: ['380px', '380px', '380px', '380px', '380px', '380px'],
+  width: ['320px', '345px', '345px', '345px', '345px', '720px'],
 }
 
 const welcomeSubtitle: SxStyleProp = {
-  textAlign: ['left', 'initial'],
+  textAlign: ['center', 'initial'],
   fontSize: ['16px', '18px'],
   fontWeight: '400',
   color: '#A1A8B3',
@@ -26,11 +25,12 @@ const welcomeInnerContainer: SxStyleProp = {
   position: ['initial', 'relative'],
   left: [
     'initial',
-    'calc(50% - 1194px / 2 + 325px)',
-    'calc(50% - 1194px / 2 + 325px)',
-    'calc(50% - 1194px / 2 + 325px)',
-    'calc(50% - 1280px / 2 + 280px)',
-    'calc(50% - 1213px / 2 + 247px)',
+    'calc(50% - 544px / 2)',
+    'calc(50% - 544px / 2)',
+    'calc(50% - 544px / 2)',
+    'calc(50% - 720px / 2)',
+    'calc(50% - 720px / 2)',
+    'calc(50% - 1400px / 2)',
   ],
   justifyContent: 'space-between',
   alignItems: ['center', 'initial'],
@@ -38,8 +38,8 @@ const welcomeInnerContainer: SxStyleProp = {
 
 const welcomeText: SxStyleProp = {
   boxSizing: 'initial',
-  textAlign: ['left', 'initial'],
-  fontSize: ['22px', '32px'],
+  textAlign: ['center', 'initial'],
+  fontSize: ['22px', '28px'],
   fontWeight: '400',
   lineHeight: ['30px', '38px'],
   paddingBottom: '8px',
