@@ -1,6 +1,6 @@
 {
   "name": "devportal",
-  "version": "0.30.2",
+  "version": "1.0.0",
   "private": true,
   "engines": {
     "npm": "please-use-yarn",
