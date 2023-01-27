@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/vtexdocs/devportal/compare/v1.0.0...v1.0.1) (2023-01-27)
+
+
+### Bug Fixes
+
+* **global.css:** create css classes for http methods ([4bfaf40](https://github.com/vtexdocs/devportal/commit/4bfaf406b08608fa3e902f88f2254a264a26d8f4))
+
 ## [1.0.0](https://github.com/vtexdocs/devportal/compare/v0.29.2...v1.0.0) (2023-01-26)
 
 
