@@ -5,6 +5,8 @@ const { withPlaiceholder } = require('@plaiceholder/next')
 const nextConfig = {
   experimental: {
     largePageDataBytes: 500 * 1000,
+    workerThreads: false,
+    cpus: 4,
   },
   reactStrictMode: true,
   staticPageGenerationTimeout: 3600,
@@ -34,6 +36,9 @@ const nextConfig = {
   },
   env: {
     navigationJsonUrl: 'https://developers.vtex.com/navigation.json',
+    contentOrg: '',
+    contentRepo: '',
+    contentBranch: '',
   },
   async redirects() {
     return [
