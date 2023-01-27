@@ -52,3 +52,38 @@ table th {
 table tbody tr:nth-of-type(even) {
   background-color: #f8f7fc;
 }
+
+.api {
+  box-sizing: border-box;
+  margin: 0px 4px;
+  border: 1px solid #dddddd;
+  background: #f4f4f4;
+  border-radius: 2px;
+  width: max-content;
+  height: 24px;
+  padding-left: 4px;
+  padding-right: 4px;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.api.type-post {
+  color: #2978b5;
+}
+
+.api.type-get {
+  color: #38853c;
+}
+
+.api.type-put {
+  color: #d56a00;
+}
+
+.api.type-delete {
+  color: #cc3d3d;
+}
+
+.api.type-patch {
+  color: #827717;
+}
