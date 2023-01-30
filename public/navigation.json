@@ -12305,6 +12305,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "SafeData can now block the anonymous creation of documents for all Master Data entities",
+                  "slug": "safedata-can-now-block-the-anonymous-creation-of-documents-for-all-master-data-entities",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Outdated Checkout endpoint deprecation",
                   "slug": "outdated-checkout-endpoint-deprecation",
                   "origin": "",
@@ -12314,13 +12321,6 @@
                 {
                   "name": "Official new orders module interface",
                   "slug": "oms-ui-deprecation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "SafeData can now block the anonymous creation of documents for all Master Data entities",
-                  "slug": "safedata-can-now-block-the-anonymous-creation-of-documents-for-all-master-data-entities",
                   "origin": "",
                   "type": "markdown",
                   "children": []
