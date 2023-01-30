@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/vtexdocs/devportal/compare/v1.0.1...v1.0.2) (2023-01-30)
+
+
+### Bug Fixes
+
+* **config:** stop worker threads ([650ade0](https://github.com/vtexdocs/devportal/commit/650ade0cedb19cc8f2cd1e597a46db3177dcca0d))
+
+
+### Chore
+
+* **navigation:** update master data v2 overview redirect ([2cd610d](https://github.com/vtexdocs/devportal/commit/2cd610d1923c1abc4785c3c8ac6a64ad37e7b90c))
+
+
+### Docs
+
+* **navigation:** edit marketplace api paths ([11103a8](https://github.com/vtexdocs/devportal/commit/11103a8cd5f4d8c3a1b8785ee0b2061d3b2a01a0))
+* **navigation:** fix marketplace api navigation ([f5badc4](https://github.com/vtexdocs/devportal/commit/f5badc492f7455a326597b0473f4c0d480d9f6a5))
+
 ### [1.0.1](https://github.com/vtexdocs/devportal/compare/v1.0.0...v1.0.1) (2023-01-27)
 
 
