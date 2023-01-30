@@ -20,7 +20,7 @@
   "selectors_exclude": [],
   "custom_settings": {
     "separatorsToIndex": "_",
-    "attributesForFaceting": ["doctype"],
+    "attributesForFaceting": ["docType"],
     "attributesToRetrieve": [
       "hierarchy",
       "content",
@@ -28,7 +28,9 @@
       "url",
       "url_without_anchor",
       "type",
-      "doctype"
+      "docType",
+      "docTitle",
+      "docCategory"
     ]
   },
   "js_render": true,
