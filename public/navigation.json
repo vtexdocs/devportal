@@ -1201,7 +1201,7 @@
                 }
               ]
             },
-	          {
+            {
               "name": "Configuration",
               "slug": "configuration-section-api-quick-start-guides",
               "origin": "",
@@ -5798,7 +5798,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/notificator/-sellerId-/changenotification/-skuId-/price",
+                  "endpoint": "/notificator/-sellerId-/changenotification/-skuId-/price",
                   "children": []
                 },
                 {
@@ -5807,178 +5807,185 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/notificator/-sellerId-/changenotification/-skuId-/inventory",
+                  "endpoint": "/notificator/-sellerId-/changenotification/-skuId-/inventory",
                   "children": []
                 }
               ]
             },
             {
-              "name": "SKU Approval Settings",
-              "slug": "marketplace-apis-sku-approval-settings",
+              "name": "Suggestions",
+              "slug": "marketplace-apis-suggestions",
               "type": "category",
               "children": [
                 {
-                  "name": "Get autoApprove Status in Account Settings",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/configuration/autoapproval/toggle",
-                  "children": []
+                  "name": "SKU Approval Settings",
+                  "slug": "marketplace-apis-sku-approval-settings",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get autoApprove Status in Account Settings",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/suggestions/configuration/autoapproval/toggle",
+                      "children": []
+                    },
+                    {
+                      "name": "Activate autoApprove in Marketplace's Account",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/suggestions/configuration/autoapproval/toggle",
+                      "children": []
+                    },
+                    {
+                      "name": "Get Account's Approval Settings",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/suggestions/configuration",
+                      "children": []
+                    },
+                    {
+                      "name": "Save Account's Approval Settings",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/suggestions/configuration",
+                      "children": []
+                    },
+                    {
+                      "name": "Get Seller's Approval Settings",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/suggestions/configuration/seller/-sellerId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Save Seller's Approval Settings",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/suggestions/configuration/seller/-sellerId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Activate autoApprove Setting for a Seller",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/suggestions/configuration/autoapproval/toggle/seller/-sellerId-",
+                      "children": []
+                    }
+                  ]
                 },
                 {
-                  "name": "Activate autoApprove in Marketplace's Account",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/configuration/autoapproval/toggle",
-                  "children": []
+                  "name": "Get Suggestions",
+                  "slug": "marketplace-apis-get-suggestions",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get all SKU suggestions",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/suggestions",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU Suggestion by ID",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/suggestions/-sellerId-/-sellerSkuId-",
+                      "children": []
+                    }
+                  ]
                 },
                 {
-                  "name": "Get Account's Approval Settings",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/configuration",
-                  "children": []
+                  "name": "Manage Suggestions",
+                  "slug": "marketplace-apis-manage-suggestions",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Send SKU Suggestion",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/suggestions/-sellerId-/-sellerSkuId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Delete SKU Suggestion",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/suggestions/-sellerId-/-sellerSkuId-",
+                      "children": []
+                    }
+                  ]
                 },
                 {
-                  "name": "Save Account's Approval Settings",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/configuration",
-                  "children": []
+                  "name": "Get Versions",
+                  "slug": "marketplace-apis-get-versions",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get all Versions",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/suggestions/-sellerId-/-sellerskuid-/versions",
+                      "children": []
+                    },
+                    {
+                      "name": "Get Version by ID",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/suggestions/-sellerId-/-sellerskuid-/versions/-version-",
+                      "children": []
+                    }
+                  ]
                 },
                 {
-                  "name": "Get Seller's Approval Settings",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/configuration/seller/-sellerId-",
-                  "children": []
-                },
-                {
-                  "name": "Save Seller's Approval Settings",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/configuration/seller/-sellerId-",
-                  "children": []
-                },
-                {
-                  "name": "Activate autoApprove Setting for a Seller",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/configuration/autoapproval/toggle/seller/-sellerId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Get Suggestions",
-              "slug": "marketplace-apis-get-suggestions",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get all SKU suggestions",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions",
-                  "children": []
-                },
-                {
-                  "name": "Get SKU Suggestion by ID",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/-sellerId-/-sellerSkuId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Manage Suggestions",
-              "slug": "marketplace-apis-manage-suggestions",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Send SKU Suggestion",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/-sellerId-/-sellerSkuId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete SKU Suggestion",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/-sellerId-/-sellerSkuId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Get Versions",
-              "slug": "marketplace-apis-get-versions",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get all Versions",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/-sellerId-/-sellerskuid-/versions",
-                  "children": []
-                },
-                {
-                  "name": "Get Version by ID",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/-sellerId-/-sellerskuid-/versions/-version-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Match Received SKUs",
-              "slug": "marketplace-apis-match-received-skus",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Match Received SKUs individually",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/-sellerId-/-sellerskuid-/versions/-version-/matches/-matchid-",
-                  "children": []
-                },
-                {
-                  "name": "Match Multiple Received SKUs",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api.vtex.com/-accountName-/suggestions/matches/action/-actionName-",
-                  "children": []
+                  "name": "Match Received SKUs",
+                  "slug": "marketplace-apis-match-received-skus",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Match Received SKUs individually",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/suggestions/-sellerId-/-sellerskuid-/versions/-version-/matches/-matchid-",
+                      "children": []
+                    },
+                    {
+                      "name": "Match Multiple Received SKUs",
+                      "slug": "marketplace-apis",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/suggestions/matches/action/-actionName-",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -5993,7 +6000,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/offer-manager/pvt/offers",
+                  "endpoint": "/offer-manager/pvt/offers",
                   "children": []
                 },
                 {
@@ -6002,7 +6009,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/offer-manager/pvt/product/-productId-/sku/-skuId-",
+                  "endpoint": "/offer-manager/pvt/product/-productId-/sku/-skuId-",
                   "children": []
                 },
                 {
@@ -6011,7 +6018,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/offer-manager/pvt/product/-productId-",
+                  "endpoint": "/offer-manager/pvt/product/-productId-",
                   "children": []
                 }
               ]
@@ -6027,7 +6034,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/seller-leads",
+                  "endpoint": "/seller-register/pvt/seller-leads",
                   "children": []
                 },
                 {
@@ -6036,7 +6043,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/seller-leads",
+                  "endpoint": "/seller-register/pvt/seller-leads",
                   "children": []
                 },
                 {
@@ -6045,7 +6052,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/seller-leads/-sellerLeadId-",
+                  "endpoint": "/seller-register/pvt/seller-leads/-sellerLeadId-",
                   "children": []
                 },
                 {
@@ -6054,7 +6061,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/seller-leads/-sellerLeadId-",
+                  "endpoint": "/seller-register/pvt/seller-leads/-sellerLeadId-",
                   "children": []
                 },
                 {
@@ -6063,7 +6070,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/seller-leads/-sellerLeadId-",
+                  "endpoint": "/seller-register/pvt/seller-leads/-sellerLeadId-",
                   "children": []
                 },
                 {
@@ -6072,7 +6079,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/seller-leads/-sellerLeadId-/seller",
+                  "endpoint": "/seller-register/pvt/seller-leads/-sellerLeadId-/seller",
                   "children": []
                 },
                 {
@@ -6081,7 +6088,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/seller-leads/-sellerLeadId-/status",
+                  "endpoint": "/seller-register/pvt/seller-leads/-sellerLeadId-/status",
                   "children": []
                 }
               ]
@@ -6097,7 +6104,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-/commissions/categories",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/commissions/categories",
                   "children": []
                 },
                 {
@@ -6106,7 +6113,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-/commissions",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/commissions",
                   "children": []
                 },
                 {
@@ -6115,7 +6122,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-",
                   "children": []
                 },
                 {
@@ -6124,7 +6131,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-",
                   "children": []
                 },
                 {
@@ -6133,7 +6140,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-",
                   "children": []
                 }
               ]
@@ -6149,7 +6156,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers",
+                  "endpoint": "/seller-register/pvt/sellers",
                   "children": []
                 },
                 {
@@ -6158,7 +6165,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers",
+                  "endpoint": "/seller-register/pvt/sellers",
                   "children": []
                 },
                 {
@@ -6167,7 +6174,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-",
                   "children": []
                 },
                 {
@@ -6176,7 +6183,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-",
                   "children": []
                 }
               ]
@@ -6192,7 +6199,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/channels",
+                  "endpoint": "/api/sent-offers/channels",
                   "children": []
                 },
                 {
@@ -6201,7 +6208,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds",
+                  "endpoint": "/api/sent-offers/feeds",
                   "children": []
                 },
                 {
@@ -6210,7 +6217,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds",
+                  "endpoint": "/api/sent-offers/feeds",
                   "children": []
                 },
                 {
@@ -6219,7 +6226,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds/-feedId-",
+                  "endpoint": "/api/sent-offers/feeds/-feedId-",
                   "children": []
                 },
                 {
@@ -6228,7 +6235,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds/-feedId-",
+                  "endpoint": "/api/sent-offers/feeds/-feedId-",
                   "children": []
                 },
                 {
@@ -6237,7 +6244,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds/-feedId-",
+                  "endpoint": "/api/sent-offers/feeds/-feedId-",
                   "children": []
                 },
                 {
@@ -6246,7 +6253,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions",
+                  "endpoint": "/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions",
                   "children": []
                 },
                 {
@@ -6255,7 +6262,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-",
+                  "endpoint": "/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-",
                   "children": []
                 },
                 {
@@ -6264,7 +6271,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close",
+                  "endpoint": "/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/close",
                   "children": []
                 },
                 {
@@ -6273,7 +6280,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs",
+                  "endpoint": "/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs",
                   "children": []
                 },
                 {
@@ -6282,7 +6289,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs/-logId-",
+                  "endpoint": "/api/sent-offers/feeds/-feedId-/skus/-skuId-/interactions/-interactionId-/logs/-logId-",
                   "children": []
                 },
                 {
@@ -6291,7 +6298,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/search/interactions",
+                  "endpoint": "/api/sent-offers/search/interactions",
                   "children": []
                 },
                 {
@@ -6300,7 +6307,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/search/errors",
+                  "endpoint": "/api/sent-offers/search/errors",
                   "children": []
                 },
                 {
@@ -6309,7 +6316,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/portal.-environment-.com.br/api/sent-offers/error-codes/-errorCodeId-",
+                  "endpoint": "/api/sent-offers/error-codes/-errorCodeId-",
                   "children": []
                 }
               ]
@@ -6325,7 +6332,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-/sales-channel/mapping",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/sales-channel/mapping",
                   "children": []
                 },
                 {
@@ -6334,7 +6341,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/seller-register/pvt/sellers/-sellerId-/sales-channel/mapping",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/sales-channel/mapping",
                   "children": []
                 }
               ]
