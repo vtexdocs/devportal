@@ -119,6 +119,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/docs/api-reference/master-data-api-v2-overview',
+        destination: '/docs/api-reference/master-data-api-v2#overview',
+        permanent: true,
+      },
+      {
         source: '/docs/guides/feed-v3-1',
         destination: '/docs/guides/orders-feed',
         permanent: true,
