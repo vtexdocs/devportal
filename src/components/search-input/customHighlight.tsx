@@ -1,28 +1,40 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useRef, useState } from 'react'
 import { connectHighlight } from 'react-instantsearch-dom'
+import { HighlightProps } from 'react-instantsearch-core'
 import { Flex, Text } from '@vtex/brand-ui'
 import styles from './styles'
 
-const Highlight = ({ highlight, attribute, hit }: any) => {
-  const [parsedHit, setParsedHit] = useState([])
+interface HighLightPartsProps {
+  index: number
+  isBetween: boolean
+  size: number
+}
+
+interface HitHighlightProps {
+  value: string
+  isHighlighted: boolean
+}
+
+const Highlight = ({ highlight, attribute, hit }: HighlightProps) => {
+  const [parsedHit, setParsedHit] = useState<HitHighlightProps[]>([])
   const textContainer = useRef<HTMLElement>(null)
 
   useEffect(() => {
     const titleSize = textContainer.current
       ? textContainer.current.offsetWidth / 7.75
       : 40
-    const highlightParts: any = []
+
+    const highlightParts: HighLightPartsProps[] = []
     let highlightCount = 0,
       highlightLength = 0
 
-    const hitHighlights = highlight({
+    const hitHighlights: HitHighlightProps[] = highlight({
       highlightProperty: '_highlightResult',
       attribute: hit.type != 'content' ? `hierarchy.${hit.type}` : attribute,
       hit,
     })
 
-    hitHighlights.forEach((match: any, index: number) => {
+    hitHighlights.forEach((match: HitHighlightProps, index: number) => {
       const isBetween =
         index > 0 && index < hitHighlights.length - 1 ? true : false
       if (match.isHighlighted) {
@@ -38,10 +50,13 @@ const Highlight = ({ highlight, attribute, hit }: any) => {
       }
     })
 
-    highlightParts.sort((a: any, b: any) => a.size - b.size)
+    highlightParts.sort(
+      (a: HighLightPartsProps, b: HighLightPartsProps) => a.size - b.size
+    )
     let sizeRemaining = titleSize - highlightLength
-    let size = sizeRemaining / highlightCount
-    highlightParts.forEach((match: any) => {
+    let size = sizeRemaining / (highlightCount || 1)
+
+    highlightParts.forEach((match: HighLightPartsProps) => {
       const value = hitHighlights[match.index].value
       if (match.isBetween) {
         if (match.size >= size * 2) {
@@ -82,15 +97,13 @@ const Highlight = ({ highlight, attribute, hit }: any) => {
       className="hit-content-title"
       sx={styles.hitContentContainer}
     >
-      {parsedHit.map((part: any, index: any) =>
+      {parsedHit.map((part: HitHighlightProps, index: number) =>
         part.isHighlighted ? (
           <Text sx={styles.hitContentHighlighted} key={index}>
             {part.value}
           </Text>
         ) : (
-          <Text sx={styles.hitContent} key={index}>
-            {part.value}
-          </Text>
+          <Text key={index}>{part.value}</Text>
         )
       )}
     </Flex>
