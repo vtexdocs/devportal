@@ -42,9 +42,13 @@ const description: SxStyleProp = {
   fontSize: '16px',
   lineHeight: '22px',
   paddingLeft: '32px',
-  color: 'muted.0',
+  color: 'muted.1',
   mt: '4px',
   mb: '8px',
+}
+
+const descriptionToggle: SxStyleProp = {
+  height: 'auto',
 }
 
 const filterContainer: SxStyleProp = {
@@ -88,6 +92,7 @@ export default {
   httpMethod,
   icon,
   description,
+  descriptionToggle,
   filterContainer,
   filter,
   filterIn,
