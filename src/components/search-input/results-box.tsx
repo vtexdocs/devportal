@@ -14,7 +14,7 @@ import aa from 'search-insights'
 import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
 
 import { getIcon, messages } from 'utils/constants'
-import { getBreadcrumbs, getRelativeURL } from './functions'
+import { getBreadcrumbs, getRelativeURL } from 'utils/search-utils'
 import CustomHighlight from './customHighlight'
 import styles from './styles'
 interface HitProps {
@@ -24,9 +24,9 @@ interface HitProps {
 
 const Hit = ({ hit, insights }: HitProps) => {
   const breadcrumbsList = getBreadcrumbs(hit)
-  const DocIcon = getIcon(hit.doctype)
+  const DocIcon = getIcon(hit.docType)
   return (
-    <Link href={getRelativeURL(hit)} legacyBehavior>
+    <Link href={getRelativeURL(hit.url)} legacyBehavior>
       <a
         onClick={() =>
           insights('clickedObjectIDsAfterSearch', {
@@ -38,10 +38,12 @@ const Hit = ({ hit, insights }: HitProps) => {
         <Box sx={styles.hitBox}>
           <Flex>
             {DocIcon && <DocIcon className="hit-icon" sx={styles.hitIcon} />}
-            <CustomHighlight hit={hit} attribute="content" />
+            <Text sx={styles.hitContent}>
+              <CustomHighlight hit={hit} attribute="content" />
+            </Text>
           </Flex>
           <Flex sx={styles.alignCenter}>
-            <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.doctype}`}</Text>
+            <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.docType}`}</Text>
             {breadcrumbsList.length > 0 && (
               <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
             )}
@@ -110,7 +112,7 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
                   )
               )}
             </Box>
-            {false && searchResults.hits.length > 7 && (
+            {searchResults.hits.length > 7 && (
               <Box
                 sx={styles.seeAll}
                 onClick={() => seeAllSubmit(searchStateActive.query!)}
