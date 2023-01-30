@@ -5815,7 +5815,8 @@
             {
               "name": "Suggestions",
               "slug": "marketplace-apis-suggestions",
-              "type": "category",
+              "origin": "",
+              "type": "openapi",
               "children": [
                 {
                   "name": "SKU Approval Settings",
@@ -6191,7 +6192,8 @@
             {
               "name": "Offer Management",
               "slug": "marketplace-apis-offer-management",
-              "type": "category",
+              "origin": "",
+              "type": "openapi",
               "children": [
                 {
                   "name": "Create Channel",
