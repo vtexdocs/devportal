@@ -65,7 +65,7 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
 
   return (
     <>
-      {searchStateActive?.query && (
+      {searchStateActive?.query && searchResults && (
         <Box sx={styles.resultsContainer}>
           <Box sx={searchResults.hits.length && styles.resultsBox}>
             {searchResults.hits.map(
