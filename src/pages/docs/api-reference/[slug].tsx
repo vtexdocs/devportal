@@ -47,7 +47,12 @@ const slugs = Object.keys(await getReferencePaths())
 
 const APIPage: NextPage<Props> = ({ slug, doc, endpoints }) => {
   const router = useRouter()
-  const rapidoc = useRef<{ scrollToPath: (endpoint: string) => void }>(null)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const rapidoc = useRef<{
+    shadowRoot: Node
+    scrollToPath: (endpoint: string) => void
+  }>(null)
+  const [endpointPath, setEndpointPath] = useState('')
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
 
@@ -63,8 +68,9 @@ const APIPage: NextPage<Props> = ({ slug, doc, endpoints }) => {
   useEffect(() => {
     const scrollDoc = () => {
       if (rapidoc.current) {
-        const endpoint = window.location.hash.slice(1) || 'overview'
-        rapidoc.current.scrollToPath(endpoint)
+        rapidoc.current.scrollToPath(
+          window.location.hash.slice(1) || 'overview'
+        )
       }
     }
 
