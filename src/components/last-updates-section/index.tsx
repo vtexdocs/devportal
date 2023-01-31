@@ -7,9 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'added',
-    description: 'Official new orders module interface',
-    date: new Date('01/05/2023'),
+    type: 'improved',
+    description:
+      'SafeData can now block the anonymous creation of documents for all Master Data entities',
+    date: new Date('01/18/2023'),
   },
   updateType: 'release-notes',
 }
