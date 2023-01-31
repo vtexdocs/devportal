@@ -6,6 +6,7 @@ import { APIGuideContext } from 'utils/contexts/api-guide'
 import { childrenToString, slugify } from 'utils/string-utils'
 import OverviewCard from 'components/overview-card'
 import WhatsNextCard from 'components/whats-next-card'
+import CodeBlock from 'components/code-block'
 
 import styles from './styles.module.css'
 import { Flex } from '@vtex/brand-ui'
@@ -126,8 +127,8 @@ export default {
   code: ({ node, ...props }: Component) => {
     return <code className={styles.code} {...props}></code>
   },
-  pre: ({ node, ...props }: Component) => {
-    return <pre className={styles.pre} {...props}></pre>
+  pre: ({ ...props }: Component) => {
+    return <CodeBlock {...props} />
   },
   h2: ({ node, ...props }: Component) => {
     const { activeItem, setActiveItem, goToPreviousItem } =
