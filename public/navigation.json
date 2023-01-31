@@ -9322,7 +9322,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/vtexid/apptoken/login",
+                  "endpoint": "/api/vtexid/apptoken/login",
                   "children": []
                 }
               ]
