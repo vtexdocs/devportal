@@ -11,7 +11,6 @@ type Component = {
 }
 
 const CodeBlock = ({ ...props }: Component) => {
-  console.log(childrenToString(props.children))
   return (
     <Box sx={styles.CodeBlock}>
       <pre>

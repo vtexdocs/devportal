@@ -27,6 +27,7 @@ export default function CopyButton({ code }: CopyButtonProps): JSX.Element {
       size="small"
       onClick={handleCopyCode}
       sx={styles.copyButton}
+      aria-label="Copy code snippet"
     >
       <Box sx={styles.copyButtonIcons} aria-hidden="true">
         <Icon
