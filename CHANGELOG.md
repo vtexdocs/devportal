@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.4](https://github.com/vtexdocs/devportal/compare/v1.0.3...v1.0.4) (2023-01-31)
+
+
+### Performance
+
+* **search-input:** remove search with empty query ([6ff1011](https://github.com/vtexdocs/devportal/commit/6ff10113dd6d4f8ec5e49af4f7910d25cac39a8e))
+
+
+### Chore
+
+* **last-updates-section:** update hard-coded lastReleaseNote ([1788ba1](https://github.com/vtexdocs/devportal/commit/1788ba182d6336c68276e7df98eb72083da55d57))
+
+
+### Docs
+
+* **navigation:** correct vtex id endpoint (generate authentication token) ([431a409](https://github.com/vtexdocs/devportal/commit/431a4092c341fda14c80028210c258669c31e405))
+
 ### [1.0.3](https://github.com/vtexdocs/devportal/compare/v1.0.2...v1.0.3) (2023-01-30)
 
 
