@@ -5825,7 +5825,7 @@
                   "children": [
                     {
                       "name": "Get autoApprove Status in Account Settings",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -5834,7 +5834,7 @@
                     },
                     {
                       "name": "Activate autoApprove in Marketplace's Account",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
@@ -5843,7 +5843,7 @@
                     },
                     {
                       "name": "Get Account's Approval Settings",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -5852,7 +5852,7 @@
                     },
                     {
                       "name": "Save Account's Approval Settings",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
@@ -5861,7 +5861,7 @@
                     },
                     {
                       "name": "Get Seller's Approval Settings",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -5870,7 +5870,7 @@
                     },
                     {
                       "name": "Save Seller's Approval Settings",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
@@ -5879,7 +5879,7 @@
                     },
                     {
                       "name": "Activate autoApprove Setting for a Seller",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
@@ -5895,7 +5895,7 @@
                   "children": [
                     {
                       "name": "Get all SKU suggestions",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -5904,7 +5904,7 @@
                     },
                     {
                       "name": "Get SKU Suggestion by ID",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -5920,7 +5920,7 @@
                   "children": [
                     {
                       "name": "Send SKU Suggestion",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
@@ -5929,7 +5929,7 @@
                     },
                     {
                       "name": "Delete SKU Suggestion",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "DELETE",
                       "origin": "",
@@ -5945,7 +5945,7 @@
                   "children": [
                     {
                       "name": "Get all Versions",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -5954,7 +5954,7 @@
                     },
                     {
                       "name": "Get Version by ID",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -5970,7 +5970,7 @@
                   "children": [
                     {
                       "name": "Match Received SKUs individually",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
@@ -5979,7 +5979,7 @@
                     },
                     {
                       "name": "Match Multiple Received SKUs",
-                      "slug": "marketplace-apis",
+                      "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
@@ -6197,7 +6197,7 @@
               "children": [
                 {
                   "name": "Create Channel",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -6206,7 +6206,7 @@
                 },
                 {
                   "name": "Activate Feed",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -6215,7 +6215,7 @@
                 },
                 {
                   "name": "List Feeds",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -6224,7 +6224,7 @@
                 },
                 {
                   "name": "Update Feed",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
@@ -6233,7 +6233,7 @@
                 },
                 {
                   "name": "Get Feed by feedId",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -6242,7 +6242,7 @@
                 },
                 {
                   "name": "Deactivate Feed",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
@@ -6251,7 +6251,7 @@
                 },
                 {
                   "name": "Open Interaction",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -6260,7 +6260,7 @@
                 },
                 {
                   "name": "Get Interaction Data by interactionId",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -6269,7 +6269,7 @@
                 },
                 {
                   "name": "Close Interaction",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -6278,7 +6278,7 @@
                 },
                 {
                   "name": "Create Log",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -6287,7 +6287,7 @@
                 },
                 {
                   "name": "Get Log Data by logId",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -6296,7 +6296,7 @@
                 },
                 {
                   "name": "Search Interactions and their Logs",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -6305,7 +6305,7 @@
                 },
                 {
                   "name": "Search Errors",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -6314,7 +6314,7 @@
                 },
                 {
                   "name": "Get Error Code data by errorCodeId",
-                  "slug": "marketplace-apis",
+                  "slug": "marketplace-apis-offer-management",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
