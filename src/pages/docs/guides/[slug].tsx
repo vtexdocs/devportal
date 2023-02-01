@@ -51,6 +51,11 @@ interface Props {
   contributors: ContributorsType[]
   path: string
   headingList: Item[]
+  seeAlsoData: {
+    url: string
+    title: string
+    category: string
+  }[]
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -62,15 +67,11 @@ const DocumentationPage: NextPage<Props> = ({
   sidebarfallback,
   headingList,
   contributors,
+  seeAlsoData,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
-  const [seeAlsoUrls, setSeeAlsoUrls] = useState()
   const { setActiveSidebarElement } = useContext(SidebarContext)
   useEffect(() => {
-    if (serialized.frontmatter?.seeAlso)
-      setSeeAlsoUrls(
-        JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
-      )
     setActiveSidebarElement(slug)
     setHeadings(headingList)
   }, [serialized.frontmatter])
@@ -128,7 +129,7 @@ const DocumentationPage: NextPage<Props> = ({
 
             <FeedbackSection docPath={path} />
             {serialized.frontmatter?.seeAlso && (
-              <SeeAlsoSection urls={seeAlsoUrls!} />
+              <SeeAlsoSection docs={seeAlsoData} />
             )}
           </Box>
           <Box sx={styles.rightContainer}>
@@ -217,6 +218,41 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     serialized = JSON.parse(JSON.stringify(serialized))
 
     logger.info(`Processing ${slug}`)
+    const seeAlsoData: {
+      url: string
+      title: string
+      category: string
+    }[] = []
+    const seeAlsoUrls = serialized.frontmatter?.seeAlso
+      ? JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
+      : []
+    await Promise.all(
+      seeAlsoUrls.map(async (seeAlsoUrl: string) => {
+        const seeAlsoPath = docsPaths[seeAlsoUrl.split('/')[3]]
+        if (seeAlsoPath) {
+          try {
+            const documentationContent = await getGithubFile(
+              'vtexdocs',
+              'dev-portal-content',
+              'main',
+              seeAlsoPath
+            )
+            const serialized = await serialize(documentationContent, {
+              parseFrontmatter: true,
+            })
+            seeAlsoData.push({
+              url: seeAlsoUrl,
+              title: serialized.frontmatter?.title
+                ? serialized.frontmatter.title
+                : '',
+              category: serialized.frontmatter?.category
+                ? serialized.frontmatter.category
+                : seeAlsoUrl.split('/')[2],
+            })
+          } catch (error) {}
+        }
+      })
+    )
 
     return {
       props: {
@@ -226,6 +262,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         headingList,
         contributors,
         path,
+        seeAlsoData,
       },
     }
   } catch (error) {

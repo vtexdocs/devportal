@@ -3,16 +3,17 @@ import { getIcon } from 'utils/constants'
 
 import { DocumentProps } from 'components/documentation-card'
 
-const getDoctype = (url: string) => {
-  const pathDoctype = url.split('/')[2]
-  switch (pathDoctype) {
-    case 'guides':
+const getDoctype = (category: string) => {
+  switch (category) {
+    case 'API Guides':
       return 'Guides'
     case 'api-reference':
       return 'API Reference'
-    case 'app-development':
+    case 'App Development':
       return 'App Development'
-    case 'vtex-io-apps':
+    case 'Storefront Development':
+      return 'Storefront Development'
+    case 'VTEX IO Apps':
       return 'VTEX IO Apps'
     default:
       return 'Guides'
@@ -20,19 +21,23 @@ const getDoctype = (url: string) => {
 }
 
 const getTitleFromUrl = (url: string) => {
-  const path = url.split('/')
-  const words = path[path.length - 1].split('-')
-  return `${words.map(capitalizeFirstLetter).join(' ')}`
+  const words = url.split('#')[0].split('-')
+  return `${words.map(capitalizeFirstLetter).join(' ').replace('Api', 'API')}`
 }
 
-export const createDocFromUrl = (url: string): DocumentProps => {
-  const Icon = getIcon(getDoctype(url))!
-  const title = getTitleFromUrl(url)
+export const createDocFromUrl = (doc: {
+  url: string
+  title: string
+  category: string
+}): DocumentProps => {
+  console.log(doc)
+  const Icon = getIcon(getDoctype(doc.category))!
+  const title = getTitleFromUrl(doc.title)
 
   return {
     title,
     Icon,
-    description: '',
-    link: url,
+    description: getTitleFromUrl(doc.category),
+    link: doc.url,
   }
 }
