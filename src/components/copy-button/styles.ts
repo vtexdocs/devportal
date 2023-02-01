@@ -1,20 +1,37 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
-const copyButton: SxStyleProp = {
+const basicButton: SxStyleProp = {
   float: 'right',
+  ':focus': {
+    outline: 'none !important',
+    boxShadow: 'none !important',
+  },
+  width: '28px',
+  height: '28px',
+  padding: '6px',
+  marginX: '18px',
+}
+
+const copyButton: SxStyleProp = {
+  ...basicButton,
+  backgroundColor: '#E7E9EE',
+}
+const copyButtonCopied: SxStyleProp = {
+  ...basicButton,
+  backgroundColor: '#E6F2E6',
 }
 
 const copyButtonIcons: SxStyleProp = {
   position: 'relative',
-  width: '1.125rem',
-  height: '1.125rem',
+  width: '16px',
+  height: '16px',
 }
 
 const copyButtonIcon: SxStyleProp = {
   position: 'absolute',
   top: '0',
   left: '0',
-  fill: 'currentColor',
+  fill: '#142032',
   opacity: 'inherit',
   width: 'inherit',
   height: 'inherit',
@@ -26,7 +43,7 @@ const copyButtonSuccessIcon: SxStyleProp = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  color: '#00d600',
+  fill: '#79A479',
 }
 
 const copyButtonIconCopied: SxStyleProp = {
@@ -42,6 +59,7 @@ const copyButtonSuccessIconCopied: SxStyleProp = {
 
 export default {
   copyButton,
+  copyButtonCopied,
   copyButtonIcons,
   copyButtonIcon,
   copyButtonSuccessIcon,

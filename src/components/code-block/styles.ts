@@ -5,6 +5,7 @@ const CodeBlock: SxStyleProp = {
   border: '1px solid #e7e9ee',
   borderRadius: '4px',
   lineBreak: 'auto',
+  fontSize: '0.9rem',
 }
 
 const CodeContent: SxStyleProp = {

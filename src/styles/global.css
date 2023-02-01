@@ -43,6 +43,10 @@ table thead {
   font-weight: 500;
 }
 
+pre, code, pre *, code * {
+  font-family: Consolas,monaco,monospace !important;
+}
+
 table td,
 table th {
   border: 1px solid #e7e9ef;

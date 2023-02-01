@@ -17,7 +17,6 @@
   background-color: var(--md-code-background, #f6f8fa);
   border-radius: 4px;
   color: var(--md-code-text);
-  font-size: 85%;
   margin: 0;
   padding: 0.2em 0.4em;
   font-family: var(
@@ -29,7 +28,7 @@
     Courier,
     monospace
   );
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .blockquote {
