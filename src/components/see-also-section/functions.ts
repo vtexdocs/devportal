@@ -30,7 +30,6 @@ export const createDocFromUrl = (doc: {
   title: string
   category: string
 }): DocumentProps => {
-  console.log(doc)
   const Icon = getIcon(getDoctype(doc.category))!
   const title = getTitleFromUrl(doc.title)
 

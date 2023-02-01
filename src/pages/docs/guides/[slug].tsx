@@ -244,12 +244,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               url: seeAlsoUrl,
               title: serialized.frontmatter?.title
                 ? serialized.frontmatter.title
-                : '',
+                : seeAlsoUrl.split('/')[3],
               category: serialized.frontmatter?.category
                 ? serialized.frontmatter.category
                 : seeAlsoUrl.split('/')[2],
             })
           } catch (error) {}
+        } else if (seeAlsoUrl.startsWith('/docs')) {
+          seeAlsoData.push({
+            url: seeAlsoUrl,
+            title: seeAlsoUrl.split('/')[3],
+            category: seeAlsoUrl.split('/')[2],
+          })
         }
       })
     )
