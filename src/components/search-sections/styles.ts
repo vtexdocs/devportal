@@ -1,6 +1,7 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const container: SxStyleProp = {
+  display: ['none', 'none', 'none', 'initial'],
   height: '100%',
   width: '242px',
   border: '1px solid #E7E9EE',
