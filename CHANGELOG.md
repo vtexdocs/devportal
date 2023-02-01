@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/vtexdocs/devportal/compare/v1.1.0...v1.2.0) (2023-02-01)
+
+
+### Features
+
+* **markdown-renderer:** add CodeBlock and CopyButton components ([433340a](https://github.com/vtexdocs/devportal/commit/433340a3ec4e28428c8df62e9dd07de8a2052822))
+
+
+### Bug Fixes
+
+* **code-block:** remove console.log and add aria label to copybutton ([03394d3](https://github.com/vtexdocs/devportal/commit/03394d3ac0be0bf793381e95ac2cacf961ba0250))
+
+
+### Style
+
+* **codeblock:** update code styles - font and copy button ([f8c7cc9](https://github.com/vtexdocs/devportal/commit/f8c7cc9bea9b45b2a151d20f9e2762f3c93fef29))
+
 ## [1.1.0](https://github.com/vtexdocs/devportal/compare/v1.0.4...v1.1.0) (2023-02-01)
 
 
