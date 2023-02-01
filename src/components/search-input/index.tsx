@@ -6,11 +6,20 @@ import Results from './results-box'
 import { Box } from '@vtex/brand-ui'
 import { useRef, useState } from 'react'
 import useClickOutside from 'utils/hooks/useClickOutside'
+import { MultipleQueriesQuery } from '@algolia/client-search'
 
-const searchClient = algoliasearch(
+const algoliaClient = algoliasearch(
   'A4TXCBOC74',
   'bcced196dc1d3b841471e5aa412b62ad'
 )
+
+const searchClient = {
+  ...algoliaClient,
+  search(requests: MultipleQueriesQuery[]) {
+    if (requests.every(({ params }) => !params?.query)) return
+    return algoliaClient.search(requests)
+  },
+}
 
 export default function SearchInput() {
   const [focusOut, setfocusOut] = useState<{ modaltoggle: boolean }>({

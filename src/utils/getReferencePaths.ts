@@ -31,6 +31,8 @@ const fileSlugMap = {
   'VTEX - License Manager API': 'license-manager-api',
   'VTEX - Logistics API': 'logistics-api',
   'VTEX - Marketplace APIs': 'marketplace-apis',
+  'VTEX - Marketplace APIs - Suggestions': 'marketplace-apis-suggestions',
+  'VTEX - Marketplace APIs - Sent Offers': 'marketplace-apis-offer-management',
   'VTEX - Marketplace Protocol': 'marketplace-protocol',
   'VTEX - Master Data API - v2': 'master-data-api-v2',
   'VTEX - MasterData API - v10.2': 'masterdata-api',

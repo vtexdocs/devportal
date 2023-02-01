@@ -2,6 +2,57 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/vtexdocs/devportal/compare/v1.0.4...v1.1.0) (2023-02-01)
+
+
+### Features
+
+* **search:** add search bar and filter tabs to the first three breakpoints of the search page ([013e354](https://github.com/vtexdocs/devportal/commit/013e3547840d40112b1f8aa81f341c27af6d9d0b))
+* **see-also-section:** improve the See Also Section component ([b28932a](https://github.com/vtexdocs/devportal/commit/b28932aae237f2b3214553fcbd38c456267678a9))
+* **see-also-section:** support api reference links ([e467e76](https://github.com/vtexdocs/devportal/commit/e467e7611b1da520c71ea7eeaacc2f9f9b6e16ab))
+
+
+### Bug Fixes
+
+* **search-bar:** fix search bar sizes and position ([5164dab](https://github.com/vtexdocs/devportal/commit/5164dab0920dbe9b41acc40e406ea8b704c26422))
+* **search:** hide some components in smaller breakpoints ([0167f81](https://github.com/vtexdocs/devportal/commit/0167f81c8491969a7adc933f0e8916ad5a5e7ff5))
+
+
+### Docs
+
+* **navigation:** fix marketplace api slugs ([61b4f16](https://github.com/vtexdocs/devportal/commit/61b4f1625b602f44d24448c856cddf58e347854c))
+* **navigation:** fix reference paths ([eceb0fd](https://github.com/vtexdocs/devportal/commit/eceb0fda6df4a12d6eb5ae02e344979d14492add))
+* **navigation:** fix slugs ([764ebe4](https://github.com/vtexdocs/devportal/commit/764ebe44bf76c359bd814c3eeb769b083e4d7ae9))
+
+
+### Build
+
+* **package:** update rapidoc version ([272641a](https://github.com/vtexdocs/devportal/commit/272641a7bd8f7eb26de3e742f48ac7bd6af37f78))
+* **package:** update rapidoc version ([7b3aab3](https://github.com/vtexdocs/devportal/commit/7b3aab3db55c5d2b1ff8df63027d2f39e3554651))
+* **package:** update rapidoc version ([b19bd49](https://github.com/vtexdocs/devportal/commit/b19bd497375c0892239cd06ec254b25db0c712e8))
+
+
+### Chore
+
+* **navigation:** update navigation file and copy of the app development page ([337f3cf](https://github.com/vtexdocs/devportal/commit/337f3cf77d614ab7bffd49e4f43583be0e648884))
+
+### [1.0.4](https://github.com/vtexdocs/devportal/compare/v1.0.3...v1.0.4) (2023-01-31)
+
+
+### Performance
+
+* **search-input:** remove search with empty query ([6ff1011](https://github.com/vtexdocs/devportal/commit/6ff10113dd6d4f8ec5e49af4f7910d25cac39a8e))
+
+
+### Chore
+
+* **last-updates-section:** update hard-coded lastReleaseNote ([1788ba1](https://github.com/vtexdocs/devportal/commit/1788ba182d6336c68276e7df98eb72083da55d57))
+
+
+### Docs
+
+* **navigation:** correct vtex id endpoint (generate authentication token) ([431a409](https://github.com/vtexdocs/devportal/commit/431a4092c341fda14c80028210c258669c31e405))
+
 ### [1.0.3](https://github.com/vtexdocs/devportal/compare/v1.0.2...v1.0.3) (2023-01-30)
 
 
