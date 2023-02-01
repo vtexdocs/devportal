@@ -79,26 +79,27 @@ export const whatsNextData: WhatsNextDataElement[] = [
     description:
       messages['app_development_page_new_to_app_development.description'],
     linkTitle: messages['app_development_page_new_to_app_development.link'],
-    linkTo: '/docs/guides/getting-started',
+    linkTo: '/docs/guides/vtex-io-getting-started',
   },
   {
     title: messages['app_development_page_solve_real_world_issues.title'],
     description:
       messages['app_development_page_solve_real_world_issues.description'],
     linkTitle: messages['app_development_page_solve_real_world_issues.link'],
-    linkTo: '/docs/guides/overview-3',
+    linkTo: '/docs/guides/app-development-guides',
   },
   {
     title: messages['app_development_page_build_foundations.title'],
     description: messages['app_development_page_build_foundations.description'],
     linkTitle: messages['app_development_page_build_foundations.link'],
-    linkTo: '/docs/guides/reference',
+    linkTo: '/docs/guides/concepts',
   },
   {
     title: messages['app_development_page_go_further.title'],
     description: messages['app_development_page_go_further.description'],
     linkTitle: messages['app_development_page_go_further.link'],
-    linkTo: '/docs/guides/perks',
+    linkTo:
+      '/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store',
   },
 ]
 
