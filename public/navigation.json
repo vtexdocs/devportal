@@ -9121,7 +9121,7 @@
           "name": "Subscriptions API (v2 - DEPRECATED)",
           "slug": "subscriptions-api-v2",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
               "name": "Subscriptions",
