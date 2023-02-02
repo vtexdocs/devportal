@@ -3,7 +3,7 @@ import { useEffect, useState, useContext } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import jp from 'jsonpath'
-
+import ArticlePagination from 'components/article-pagination'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
@@ -76,6 +76,11 @@ const DocumentationPage: NextPage<Props> = ({
     setHeadings(headingList)
   }, [serialized.frontmatter])
 
+  const isListed =
+    jp.query(sidebarfallback, `$..*[?(@.slug=='${slug}')]`).length > 0
+      ? true
+      : false
+
   const breadcumb = jp.paths(
     sidebarfallback,
     `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
@@ -128,6 +133,19 @@ const DocumentationPage: NextPage<Props> = ({
             </Box>
 
             <FeedbackSection docPath={path} />
+            {isListed && (
+              <ArticlePagination
+                hidePaginationNext={
+                  Boolean(serialized.frontmatter?.hidePaginationNext) || false
+                }
+                hidePaginationPrevious={
+                  Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
+                  false
+                }
+                slug={slug}
+                sidebar={sidebarfallback}
+              />
+            )}
             {serialized.frontmatter?.seeAlso && (
               <SeeAlsoSection docs={seeAlsoData} />
             )}
