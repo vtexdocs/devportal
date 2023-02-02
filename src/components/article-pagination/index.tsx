@@ -23,16 +23,15 @@ const ArticlePagination = ({
   const previousDocSlug = docsListSlug[indexOfSlug - 1]
   const previousDocName = docsListName[indexOfSlug - 1]
 
-  console.log(nextDocSlug)
   console.log(previousDocSlug)
   return (
     <Grid sx={styles.flexContainer}>
-      {!hidePaginationPrevious && (
+      {!hidePaginationPrevious && previousDocSlug && (
         <Link sx={styles.paginationLinkPrevious} href={previousDocSlug}>
           « {previousDocName}
         </Link>
       )}
-      {!hidePaginationNext && (
+      {!hidePaginationNext && nextDocSlug && (
         <Link sx={styles.paginationLinkNext} href={nextDocSlug}>
           {nextDocName} »
         </Link>
