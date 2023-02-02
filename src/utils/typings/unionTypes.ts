@@ -23,4 +23,4 @@ export type ResourceTitle =
   | 'Help Center'
   | 'Support'
 
-export type MethodType = 'POST' | 'GET' | 'PUT' | 'DELETE'
+export type MethodType = 'POST' | 'GET' | 'PUT' | 'DELETE' | 'PATCH'
