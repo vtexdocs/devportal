@@ -12614,6 +12614,21 @@
           "type": "category",
           "children": [
             {
+              "name": "February",
+              "slug": "february-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Filtered searches now available in Badges App",
+                  "slug": "filtered-searches-now-available-in-badges-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "January",
               "slug": "january-2023",
               "origin": "",

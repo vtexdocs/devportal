@@ -80,6 +80,11 @@
   grid-template-columns: 20px 1fr;
 }
 
+
+.blockquoteWarning code{
+  background-color: #ffe5b5
+}
+
 .blockquoteWarning:before {
   display: inline-block;
   height: 20px;
