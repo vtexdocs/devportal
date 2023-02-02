@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/vtexdocs/devportal/compare/v1.2.0...v1.3.0) (2023-02-02)
+
+
+### Features
+
+* **method-category:** enable patch filtering, improve callout style and update navigation ([45c9362](https://github.com/vtexdocs/devportal/commit/45c936211ea0174597ccb4c9d0410441caf8f6c9))
+
+
+### Docs
+
+* adding subscriptions v2 to navigation ([3d47f2a](https://github.com/vtexdocs/devportal/commit/3d47f2a3d2acb8c569cb8c44b045c1b1419212f3))
+* **fix navigation:** adding  subscriptions v2 to navigation ([c7349fd](https://github.com/vtexdocs/devportal/commit/c7349fda24b377d18fc0ef446defe455c1db689e))
+
 ## [1.2.0](https://github.com/vtexdocs/devportal/compare/v1.1.0...v1.2.0) (2023-02-01)
 
 
