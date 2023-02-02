@@ -9119,7 +9119,7 @@
         },
         {
           "name": "Subscriptions API (v2 - DEPRECATED)",
-          "slug": "subscriptions-api-v2-root",
+          "slug": "subscriptions-api-v2",
           "origin": "",
           "type": "category",
           "children": [
