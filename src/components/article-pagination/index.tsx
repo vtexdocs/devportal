@@ -23,7 +23,6 @@ const ArticlePagination = ({
   const previousDocSlug = docsListSlug[indexOfSlug - 1]
   const previousDocName = docsListName[indexOfSlug - 1]
 
-  console.log(previousDocSlug)
   return (
     <Grid sx={styles.flexContainer}>
       {!hidePaginationPrevious && previousDocSlug && (
