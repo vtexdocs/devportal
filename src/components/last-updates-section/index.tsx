@@ -8,9 +8,8 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'improved',
-    description:
-      'SafeData can now block the anonymous creation of documents for all Master Data entities',
-    date: new Date('01/18/2023'),
+    description: 'Filtered searches now available in Badges App',
+    date: new Date('02/02/2023'),
   },
   updateType: 'release-notes',
 }

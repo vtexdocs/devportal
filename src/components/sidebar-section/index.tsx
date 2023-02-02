@@ -37,6 +37,7 @@ const SidebarSection = ({
     { name: 'GET', active: false },
     { name: 'PUT', active: false },
     { name: 'DELETE', active: false },
+    { name: 'PATCH', active: false },
   ])
 
   useEffect(() => {

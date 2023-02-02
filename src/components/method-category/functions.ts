@@ -24,6 +24,11 @@ const methodsColors = {
     color: '#CC3D3D',
     background: '#F8E3E3',
   },
+  PATCH: {
+    border: '1px solid #afa871',
+    color: '#6C6314',
+    background: '#e9e7da',
+  },
 }
 
 export const categoryStyle = (
