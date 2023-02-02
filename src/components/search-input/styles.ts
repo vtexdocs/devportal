@@ -62,6 +62,7 @@ const hitContent: SxStyleProp = {
   whiteSpace: 'pre',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
+  width: '100%',
 }
 
 const alignCenter: SxStyleProp = {
@@ -143,6 +144,7 @@ const noResults: SxStyleProp = {
 
 const hitContentHighlighted: SxStyleProp = {
   ...hitContent,
+  width: 'auto',
   background: '#FFE0EF',
 }
 

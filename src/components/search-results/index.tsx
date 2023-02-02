@@ -22,7 +22,7 @@ const SearchResults = () => {
       </Text>
       <hr />
       <Box>
-        <InstantSearch searchClient={searchClient} indexName="devportal-docs">
+        <InstantSearch searchClient={searchClient} indexName="devportal-dev">
           <Configure query={router.query.keyword} hitsPerPage={16} />
           <InfiniteHits />
         </InstantSearch>
