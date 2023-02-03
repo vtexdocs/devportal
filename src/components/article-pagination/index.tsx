@@ -1,9 +1,9 @@
 import { Link, Grid } from '@vtex/brand-ui'
 interface Props {
-  nextDocSlug: string
-  nextDocName: string
-  previousDocSlug: string
-  previousDocName: string
+  pagination: {
+    previousDoc: { slug: string | null; name: string | null }
+    nextDoc: { slug: string | null; name: string | null }
+  }
   hidePaginationPrevious: boolean
   hidePaginationNext: boolean
 }
@@ -11,23 +11,23 @@ interface Props {
 import styles from './styles'
 
 const ArticlePagination = ({
-  nextDocSlug,
-  nextDocName,
-  previousDocSlug,
-  previousDocName,
+  pagination,
   hidePaginationNext,
   hidePaginationPrevious,
 }: Props) => {
   return (
     <Grid sx={styles.flexContainer}>
-      {!hidePaginationPrevious && previousDocSlug && (
-        <Link sx={styles.paginationLinkPrevious} href={previousDocSlug}>
-          « {previousDocName}
+      {!hidePaginationPrevious && pagination.previousDoc.slug && (
+        <Link
+          sx={styles.paginationLinkPrevious}
+          href={pagination.previousDoc.slug}
+        >
+          « {pagination.previousDoc.name}
         </Link>
       )}
-      {!hidePaginationNext && nextDocSlug && (
-        <Link sx={styles.paginationLinkNext} href={nextDocSlug}>
-          {nextDocName} »
+      {!hidePaginationNext && pagination.nextDoc.slug && (
+        <Link sx={styles.paginationLinkNext} href={pagination.nextDoc.slug}>
+          {pagination.nextDoc.name} »
         </Link>
       )}
     </Grid>

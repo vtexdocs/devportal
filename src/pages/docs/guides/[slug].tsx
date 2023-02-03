@@ -56,10 +56,10 @@ interface Props {
     title: string
     category: string
   }[]
-  nextDocSlug: string
-  nextDocName: string
-  previousDocSlug: string
-  previousDocName: string
+  pagination: {
+    previousDoc: { slug: string | null; name: string | null }
+    nextDoc: { slug: string | null; name: string | null }
+  }
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -72,10 +72,7 @@ const DocumentationPage: NextPage<Props> = ({
   headingList,
   contributors,
   seeAlsoData,
-  nextDocSlug,
-  nextDocName,
-  previousDocSlug,
-  previousDocName,
+  pagination,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   const { setActiveSidebarElement } = useContext(SidebarContext)
@@ -150,10 +147,7 @@ const DocumentationPage: NextPage<Props> = ({
                   Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
                   false
                 }
-                nextDocSlug={nextDocSlug}
-                nextDocName={nextDocName}
-                previousDocSlug={previousDocSlug}
-                previousDocName={previousDocName}
+                pagination={pagination}
               />
             )}
             {serialized.frontmatter?.seeAlso && (
@@ -297,10 +291,24 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       `$..[?(@.type=='markdown')]..name`
     )
     const indexOfSlug = docsListSlug.indexOf(slug)
-    const nextDocSlug = docsListSlug[indexOfSlug + 1]
-    const nextDocName = docsListName[indexOfSlug + 1]
-    const previousDocSlug = docsListSlug[indexOfSlug - 1]
-    const previousDocName = docsListName[indexOfSlug - 1]
+    const pagination = {
+      previousDoc: {
+        slug: docsListSlug[indexOfSlug - 1]
+          ? docsListSlug[indexOfSlug - 1]
+          : null,
+        name: docsListName[indexOfSlug - 1]
+          ? docsListName[indexOfSlug - 1]
+          : null,
+      },
+      nextDoc: {
+        slug: docsListSlug[indexOfSlug + 1]
+          ? docsListSlug[indexOfSlug + 1]
+          : null,
+        name: docsListName[indexOfSlug + 1]
+          ? docsListName[indexOfSlug + 1]
+          : null,
+      },
+    }
 
     return {
       props: {
@@ -311,10 +319,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         contributors,
         path,
         seeAlsoData,
-        nextDocSlug,
-        nextDocName,
-        previousDocSlug,
-        previousDocName,
+        pagination,
       },
     }
   } catch (error) {
