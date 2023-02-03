@@ -3,7 +3,7 @@ import { useEffect, useState, useContext } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import jp from 'jsonpath'
-
+import ArticlePagination from 'components/article-pagination'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
@@ -56,6 +56,10 @@ interface Props {
     title: string
     category: string
   }[]
+  pagination: {
+    previousDoc: { slug: string | null; name: string | null }
+    nextDoc: { slug: string | null; name: string | null }
+  }
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -68,6 +72,7 @@ const DocumentationPage: NextPage<Props> = ({
   headingList,
   contributors,
   seeAlsoData,
+  pagination,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   const { setActiveSidebarElement } = useContext(SidebarContext)
@@ -75,6 +80,11 @@ const DocumentationPage: NextPage<Props> = ({
     setActiveSidebarElement(slug)
     setHeadings(headingList)
   }, [serialized.frontmatter])
+
+  const isListed =
+    jp.query(sidebarfallback, `$..*[?(@.slug=='${slug}')]`).length > 0
+      ? true
+      : false
 
   const breadcumb = jp.paths(
     sidebarfallback,
@@ -128,6 +138,18 @@ const DocumentationPage: NextPage<Props> = ({
             </Box>
 
             <FeedbackSection docPath={path} />
+            {isListed && (
+              <ArticlePagination
+                hidePaginationNext={
+                  Boolean(serialized.frontmatter?.hidePaginationNext) || false
+                }
+                hidePaginationPrevious={
+                  Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
+                  false
+                }
+                pagination={pagination}
+              />
+            )}
             {serialized.frontmatter?.seeAlso && (
               <SeeAlsoSection docs={seeAlsoData} />
             )}
@@ -260,6 +282,34 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       })
     )
 
+    const docsListSlug = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..slug`
+    )
+    const docsListName = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..name`
+    )
+    const indexOfSlug = docsListSlug.indexOf(slug)
+    const pagination = {
+      previousDoc: {
+        slug: docsListSlug[indexOfSlug - 1]
+          ? docsListSlug[indexOfSlug - 1]
+          : null,
+        name: docsListName[indexOfSlug - 1]
+          ? docsListName[indexOfSlug - 1]
+          : null,
+      },
+      nextDoc: {
+        slug: docsListSlug[indexOfSlug + 1]
+          ? docsListSlug[indexOfSlug + 1]
+          : null,
+        name: docsListName[indexOfSlug + 1]
+          ? docsListName[indexOfSlug + 1]
+          : null,
+      },
+    }
+
     return {
       props: {
         slug,
@@ -269,6 +319,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         contributors,
         path,
         seeAlsoData,
+        pagination,
       },
     }
   } catch (error) {
