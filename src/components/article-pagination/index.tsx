@@ -1,4 +1,5 @@
 import { Link, Grid } from '@vtex/brand-ui'
+import { useRouter } from 'next/router'
 interface Props {
   pagination: {
     previousDoc: { slug: string | null; name: string | null }
@@ -15,18 +16,33 @@ const ArticlePagination = ({
   hidePaginationNext,
   hidePaginationPrevious,
 }: Props) => {
+  const router = useRouter()
+
+  const handleClick = (e: { preventDefault: () => void }, slug: string) => {
+    e.preventDefault()
+    router.push(`/docs/guides/${slug}`)
+  }
   return (
     <Grid sx={styles.flexContainer}>
       {!hidePaginationPrevious && pagination.previousDoc.slug && (
         <Link
           sx={styles.paginationLinkPrevious}
-          href={pagination.previousDoc.slug}
+          href={`/docs/guides/${pagination.previousDoc.slug}`}
+          onClick={(e: { preventDefault: () => void }) => {
+            handleClick(e, pagination.previousDoc.slug as string)
+          }}
         >
           « {pagination.previousDoc.name}
         </Link>
       )}
       {!hidePaginationNext && pagination.nextDoc.slug && (
-        <Link sx={styles.paginationLinkNext} href={pagination.nextDoc.slug}>
+        <Link
+          sx={styles.paginationLinkNext}
+          href={`/docs/guides/${pagination.nextDoc.slug}`}
+          onClick={(e: { preventDefault: () => void }) => {
+            handleClick(e, pagination.nextDoc.slug as string)
+          }}
+        >
           {pagination.nextDoc.name} »
         </Link>
       )}
