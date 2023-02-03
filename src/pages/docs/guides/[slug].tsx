@@ -56,6 +56,10 @@ interface Props {
     title: string
     category: string
   }[]
+  nextDocSlug: string
+  nextDocName: string
+  previousDocSlug: string
+  previousDocName: string
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -68,6 +72,10 @@ const DocumentationPage: NextPage<Props> = ({
   headingList,
   contributors,
   seeAlsoData,
+  nextDocSlug,
+  nextDocName,
+  previousDocSlug,
+  previousDocName,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   const { setActiveSidebarElement } = useContext(SidebarContext)
@@ -142,8 +150,10 @@ const DocumentationPage: NextPage<Props> = ({
                   Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
                   false
                 }
-                slug={slug}
-                sidebar={sidebarfallback}
+                nextDocSlug={nextDocSlug}
+                nextDocName={nextDocName}
+                previousDocSlug={previousDocSlug}
+                previousDocName={previousDocName}
               />
             )}
             {serialized.frontmatter?.seeAlso && (
@@ -278,6 +288,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       })
     )
 
+    const docsListSlug = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..slug`
+    )
+    const docsListName = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..name`
+    )
+    const indexOfSlug = docsListSlug.indexOf(slug)
+    const nextDocSlug = docsListSlug[indexOfSlug + 1]
+    const nextDocName = docsListName[indexOfSlug + 1]
+    const previousDocSlug = docsListSlug[indexOfSlug - 1]
+    const previousDocName = docsListName[indexOfSlug - 1]
+
     return {
       props: {
         slug,
@@ -287,6 +311,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         contributors,
         path,
         seeAlsoData,
+        nextDocSlug,
+        nextDocName,
+        previousDocSlug,
+        previousDocName,
       },
     }
   } catch (error) {
