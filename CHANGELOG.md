@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/vtexdocs/devportal/compare/v1.3.0...v1.4.0) (2023-02-03)
+
+
+### Features
+
+* **article-pagination:** add Next and Previous page links to guides ([2cdde02](https://github.com/vtexdocs/devportal/commit/2cdde0234b6a97bc4ce4499d701007faa7e19076))
+* **method-category:** enable patch filtering, improve callout style and update navigation ([56e6b33](https://github.com/vtexdocs/devportal/commit/56e6b337d9a4abe274ecf15d3a9ed9cb03ade99f))
+
+
+### Bug Fixes
+
+* **article-pagination:** fix extreme cases ([9243a1a](https://github.com/vtexdocs/devportal/commit/9243a1a1e0bdb9c2dd3fe6fe5c3c00ed642f7fde))
+* **article-pagination:** remove console log ([810f8f4](https://github.com/vtexdocs/devportal/commit/810f8f43ae4ee5c928b335f8efdd33f3130b782b))
+
+
+### Docs
+
+* **fix navigation:** adding  subscriptions v2 to navigation ([e584c57](https://github.com/vtexdocs/devportal/commit/e584c57c033f24db1cb9b9cf710e756ea43b07c9))
+
+
+### Chore
+
+* **release:** 1.3.0 ([e470f14](https://github.com/vtexdocs/devportal/commit/e470f1475a47b8a340269d1e41226cabf6d2e9bf))
+
+
+### Refactoring
+
+* **article-pagination:** handle click ([1ac9abb](https://github.com/vtexdocs/devportal/commit/1ac9abb2bc1f95658b09c57b67c65cf72abc61e9))
+* **article-pagination:** handle null cases ([cb9d801](https://github.com/vtexdocs/devportal/commit/cb9d8012b1b3bb3774d712f556a83a4b458922f2))
+* **article-pagination:** use getStaticProps ([30141b6](https://github.com/vtexdocs/devportal/commit/30141b6fdb938f1d42e944ad36b6bcc246c5a609))
+
 ## [1.3.0](https://github.com/vtexdocs/devportal/compare/v1.2.0...v1.3.0) (2023-02-02)
 
 
