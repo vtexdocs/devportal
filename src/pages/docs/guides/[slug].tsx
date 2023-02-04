@@ -60,6 +60,8 @@ interface Props {
     previousDoc: { slug: string | null; name: string | null }
     nextDoc: { slug: string | null; name: string | null }
   }
+  isListed: boolean
+  breadcumbList: { slug: string; name: string; type: string }[]
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -68,11 +70,12 @@ const DocumentationPage: NextPage<Props> = ({
   slug,
   serialized,
   path,
-  sidebarfallback,
   headingList,
   contributors,
   seeAlsoData,
   pagination,
+  isListed,
+  breadcumbList,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   const { setActiveSidebarElement } = useContext(SidebarContext)
@@ -80,31 +83,6 @@ const DocumentationPage: NextPage<Props> = ({
     setActiveSidebarElement(slug)
     setHeadings(headingList)
   }, [serialized.frontmatter])
-
-  const isListed =
-    jp.query(sidebarfallback, `$..*[?(@.slug=='${slug}')]`).length > 0
-      ? true
-      : false
-
-  const breadcumb = jp.paths(
-    sidebarfallback,
-    `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
-  )[0]
-  let currentBreadcumb = sidebarfallback
-  const breadcumbList: { slug: string; name: string; type: string }[] = []
-  breadcumb?.forEach((el: string | number) => {
-    if (typeof currentBreadcumb?.slug == 'string') {
-      breadcumbList.push({
-        slug: currentBreadcumb.slug,
-        name: currentBreadcumb.name,
-        type: currentBreadcumb.type,
-      })
-    }
-    if (el != '$') {
-      currentBreadcumb = currentBreadcumb[el]
-    }
-  })
-
   return (
     <>
       <Head>
@@ -310,6 +288,30 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     }
 
+    const isListed: boolean =
+      jp.query(sidebarfallback, `$..*[?(@.slug=='${slug}')]`).length > 0
+        ? true
+        : false
+
+    const breadcumb = jp.paths(
+      sidebarfallback,
+      `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
+    )[0]
+    let currentBreadcumb = sidebarfallback
+    const breadcumbList: { slug: string; name: string; type: string }[] = []
+    breadcumb?.forEach((el: string | number) => {
+      if (typeof currentBreadcumb?.slug == 'string') {
+        breadcumbList.push({
+          slug: currentBreadcumb.slug,
+          name: currentBreadcumb.name,
+          type: currentBreadcumb.type,
+        })
+      }
+      if (el != '$') {
+        currentBreadcumb = currentBreadcumb[el]
+      }
+    })
+
     return {
       props: {
         slug,
@@ -320,6 +322,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         path,
         seeAlsoData,
         pagination,
+        isListed,
+        breadcumbList,
       },
     }
   } catch (error) {

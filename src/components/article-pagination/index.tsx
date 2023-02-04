@@ -1,4 +1,4 @@
-import { Link, Grid } from '@vtex/brand-ui'
+import { Link, Grid, Text, Box } from '@vtex/brand-ui'
 import { useRouter } from 'next/router'
 interface Props {
   pagination: {
@@ -23,30 +23,34 @@ const ArticlePagination = ({
     router.push(`/docs/guides/${slug}`)
   }
   return (
-    <Grid sx={styles.flexContainer}>
-      {!hidePaginationPrevious && pagination.previousDoc.slug && (
-        <Link
-          sx={styles.paginationLinkPrevious}
-          href={`/docs/guides/${pagination.previousDoc.slug}`}
-          onClick={(e: { preventDefault: () => void }) => {
-            handleClick(e, pagination.previousDoc.slug as string)
-          }}
-        >
-          « {pagination.previousDoc.name}
-        </Link>
-      )}
-      {!hidePaginationNext && pagination.nextDoc.slug && (
-        <Link
-          sx={styles.paginationLinkNext}
-          href={`/docs/guides/${pagination.nextDoc.slug}`}
-          onClick={(e: { preventDefault: () => void }) => {
-            handleClick(e, pagination.nextDoc.slug as string)
-          }}
-        >
-          {pagination.nextDoc.name} »
-        </Link>
-      )}
-    </Grid>
+    <Box sx={styles.mainContainer}>
+      <Grid sx={styles.flexContainer}>
+        {!hidePaginationPrevious && pagination.previousDoc.slug && (
+          <Link
+            sx={styles.paginationLinkPrevious}
+            href={`/docs/guides/${pagination.previousDoc.slug}`}
+            onClick={(e: { preventDefault: () => void }) => {
+              handleClick(e, pagination.previousDoc.slug as string)
+            }}
+          >
+            <Text sx={styles.paginationText}>
+              {pagination.previousDoc.name}
+            </Text>
+          </Link>
+        )}
+        {!hidePaginationNext && pagination.nextDoc.slug && (
+          <Link
+            sx={styles.paginationLinkNext}
+            href={`/docs/guides/${pagination.nextDoc.slug}`}
+            onClick={(e: { preventDefault: () => void }) => {
+              handleClick(e, pagination.nextDoc.slug as string)
+            }}
+          >
+            <Text sx={styles.paginationText}>{pagination.nextDoc.name}</Text>
+          </Link>
+        )}
+      </Grid>
+    </Box>
   )
 }
 

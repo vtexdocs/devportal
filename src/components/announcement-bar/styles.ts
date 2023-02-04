@@ -19,7 +19,7 @@ const box: SxStyleProp = {
 }
 
 const label: SxStyleProp = {
-  color: '#f71963',
+  color: '#D4084C',
   backgroundColor: '#feeaef',
   borderRadius: '4px',
   padding: '5px 8px',
@@ -31,7 +31,7 @@ const label: SxStyleProp = {
 }
 
 const text: SxStyleProp = {
-  color: '#5E6E84',
+  color: '#142032',
   display: 'inline',
 }
 const textBold: SxStyleProp = {
@@ -41,6 +41,7 @@ const textBold: SxStyleProp = {
 }
 
 const link: SxStyleProp = {
+  color: '#D4084C',
   display: 'inline',
   ':focus': {
     outline: 'none',

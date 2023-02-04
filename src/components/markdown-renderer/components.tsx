@@ -6,6 +6,7 @@ import { APIGuideContext } from 'utils/contexts/api-guide'
 import { childrenToString, slugify } from 'utils/string-utils'
 import OverviewCard from 'components/overview-card'
 import WhatsNextCard from 'components/whats-next-card'
+import YoutubeFrame from 'components/youtube-frame'
 import CodeBlock from 'components/code-block'
 
 import styles from './styles.module.css'
@@ -81,6 +82,7 @@ const Callout = ({ node, icon, ...props }: Component) => {
 export default {
   OverviewCard,
   WhatsNextCard,
+  YoutubeFrame,
   Flex: ({ node, ...props }: Component) => (
     <Flex className={styles.flexWrap} {...props} />
   ),
