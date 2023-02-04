@@ -30,14 +30,14 @@ const AnnouncementBar = ({
       <Box sx={styles.container}>
         <Box sx={styles.box}>
           <Text sx={styles.label}>NEW</Text>
-          <Text sx={styles.textBold}>📢 Preview version - </Text>
-          <Text sx={styles.text}>{children}</Text>
+          <Text sx={styles.text}>📢 {children}</Text>
           <Link sx={styles.link} target="_blank" href={href}>
             {label}
           </Link>
         </Box>
         <Box>
           <Button
+            aria-label="Close Announcement Bar"
             sx={styles.closeIcon}
             variant="tertiary"
             size="small"
