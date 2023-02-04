@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.2](https://github.com/vtexdocs/devportal/compare/v1.4.1...v1.4.2) (2023-02-04)
+
+
+### Style
+
+* **sidebar-elements:** fix maxwidth ([661a384](https://github.com/vtexdocs/devportal/commit/661a384ffd4bbe9ad97cf93edcee32cc4cd38c25))
+
 ### [1.4.1](https://github.com/vtexdocs/devportal/compare/v1.4.0...v1.4.1) (2023-02-04)
 
 
