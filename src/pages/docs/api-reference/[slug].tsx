@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import Oas from 'oas'
+
 import getReferencePaths from 'utils/getReferencePaths'
 import getNavigation from 'utils/getNavigation'
 
@@ -25,9 +27,14 @@ const slugs = Object.keys(await getReferencePaths())
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const APIPage: NextPage<Props> = ({ slug }) => {
+const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
   const router = useRouter()
   const rapidoc = useRef<{ scrollToPath: (endpoint: string) => void }>(null)
+  const [endpointPath, setEndpointPath] = useState('')
+
+  useEffect(() => {
+    setEndpointPath(`#${router.asPath.split('#')[1]}`)
+  }, [router.asPath])
 
   useEffect(() => {
     const scrollDoc = () => {
@@ -50,6 +57,7 @@ const APIPage: NextPage<Props> = ({ slug }) => {
           {capitalize(slug.replaceAll('-', ' ').replace('api', ''))} API
         </title>
         <meta name="docsearch:doctype" content="API Reference" />
+        <meta name="description" content={descriptions[endpointPath]} />
       </Head>
       <Script
         type="text/javascript"
@@ -96,6 +104,29 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()
   if (slugs.includes(slug as string)) {
+    const response = await fetch(`http:/localhost:3000/api/openapi/${slug}`)
+    const doc = await response.json()
+    const test = new Oas(doc)
+    const allPaths = test.getDefinition().paths
+    const descriptions: { [key: string]: string } = {}
+
+    if (allPaths) {
+      Object.entries(allPaths).forEach(([key, value]) => {
+        if (value) {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          Object.entries(value).forEach(([endpointKey, endpointValue]: any) => {
+            descriptions[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] =
+              endpointValue.description
+                .split(/\r?\n/)
+                .map((line: string) => line.trim())
+                .find(
+                  (line: string) =>
+                    line && line[0].toLowerCase() !== line[0].toUpperCase()
+                ) || ''
+          })
+        }
+      })
+    }
     //Regular flow
     return {
       props: {
@@ -103,6 +134,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         url,
         sectionSelected,
         sidebarfallback,
+        descriptions,
       },
     }
   } else {
