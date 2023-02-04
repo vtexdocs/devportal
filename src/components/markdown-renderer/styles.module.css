@@ -80,9 +80,12 @@
   grid-template-columns: 20px 1fr;
 }
 
+.blockquoteWarning code {
+  background-color: #ffe5b5;
+}
 
-.blockquoteWarning code{
-  background-color: #ffe5b5
+.blockquoteInfo code {
+  background-color: #ecebf3;
 }
 
 .blockquoteWarning:before {

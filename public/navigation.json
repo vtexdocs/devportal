@@ -10192,9 +10192,9 @@
           "children": [
             {
               "name": "A/B tests",
-              "slug": "vtex-io-documentation-running-native-ab-testing",
+              "slug": "ab-tests-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Running A/B tests",
