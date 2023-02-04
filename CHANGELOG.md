@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/vtexdocs/devportal/compare/v1.4.0...v1.4.1) (2023-02-04)
+
+
+### Bug Fixes
+
+* **article-pagination:** fix styles and other accessibility issues ([9003ef6](https://github.com/vtexdocs/devportal/commit/9003ef6f13905f09d3b3ad7377fa54532e2a479d))
+
 ## [1.4.0](https://github.com/vtexdocs/devportal/compare/v1.3.0...v1.4.0) (2023-02-03)
 
 
