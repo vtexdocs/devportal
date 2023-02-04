@@ -40,6 +40,7 @@ interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
+  sectionSelected: string
 }
 
 const DocumentationPage: NextPage<Props> = ({ serialized }) => {
@@ -166,9 +167,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
+    const sectionSelected = 'Release Notes'
 
     return {
       props: {
+        sectionSelected,
         serialized,
         sidebarfallback,
       },
