@@ -17,7 +17,6 @@ import SidebarSection from 'components/sidebar-section'
 import Tooltip from 'components/tooltip'
 import { iconTooltipStyle } from './functions'
 
-import useNavigation from 'utils/hooks/useNavigation'
 import { SidebarContext } from 'utils/contexts/sidebar'
 
 interface SideBarSectionState {
@@ -34,13 +33,11 @@ const Sidebar = ({
   const {
     activeSidebarElement,
     sidebarDataMaster,
-    setSidebarDataMaster,
     setActiveSidebarElement,
     openSidebarElement,
     closeSidebarElements,
   } = useContext(SidebarContext)
   const router = useRouter()
-  setSidebarDataMaster(useNavigation().data)
   const flattenedSidebar = flattenJSON(sidebarDataMaster)
   let activeSlug = ''
   let keyPath = ''
@@ -65,7 +62,7 @@ const Sidebar = ({
 
   useEffect(() => {
     const timer = setTimeout(() => setExpandDelayStatus(false), 5000)
-    closeSidebarElements()
+    closeSidebarElements(parentsArray)
     setActiveSectionName(sectionSelected)
     parentsArray.forEach((slug: string) => {
       openSidebarElement(slug)
