@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useContext } from 'react'
 import { Flex, Text, Box } from '@vtex/brand-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
@@ -17,15 +18,18 @@ import Tooltip from 'components/tooltip'
 import { iconTooltipStyle } from './functions'
 
 import useNavigation from 'utils/hooks/useNavigation'
-import jp from 'jsonpath'
 import { SidebarContext } from 'utils/contexts/sidebar'
 
 interface SideBarSectionState {
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
+  parentsArray?: string[]
 }
 
-const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
-  const [activeSectionName, setActiveSectionName] = useState('')
+const Sidebar = ({
+  sectionSelected = 'API Reference',
+  parentsArray = [],
+}: SideBarSectionState) => {
+  const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
   const {
     activeSidebarElement,
@@ -35,63 +39,42 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
     openSidebarElement,
     closeSidebarElements,
   } = useContext(SidebarContext)
-  setSidebarDataMaster(useNavigation().data)
   const router = useRouter()
+  setSidebarDataMaster(useNavigation().data)
+  const flattenedSidebar = flattenJSON(sidebarDataMaster)
   let activeSlug = ''
-  let slug = ''
-  let parentSlugs: [arrayOfSlug: string[], sectionSelected: string] = [[], '']
-
-  const getSlugPath = (
-    queryToFind: string
-  ): [arrayOfSlug: string[], sectionSelected: string] => {
-    const findPath = jp.paths(sidebarDataMaster, queryToFind)[0]
-    let currentSidebar = sidebarDataMaster
-    const arrayOfSlugs: string[] = []
-    if (findPath?.length > 0) {
-      findPath.forEach((el: string | number) => {
-        if (typeof currentSidebar?.slug == 'string') {
-          arrayOfSlugs.push(currentSidebar.slug)
-        }
-        if (el != '$') {
-          currentSidebar = currentSidebar[el]
-        }
-      })
-      return [arrayOfSlugs, sidebarDataMaster[findPath[1]].documentation]
-    }
-    return [[''], sectionSelected ? sectionSelected : '']
-  }
-
+  let keyPath = ''
   const querySlug = router.query.slug
   if (querySlug && router.pathname === '/docs/api-reference/[slug]') {
     activeSlug = router.asPath.replace('/docs/api-reference/', '')
-    slug = querySlug as string
     const docPath = activeSlug.split('/')
-    const endpoint = docPath.splice(1, docPath.length).join('/')
-    const query = `$..*[?(@.endpoint=='/${endpoint}')]`
-    parentSlugs = getSlugPath(query)
+    const endpoint = '/' + docPath.splice(1, docPath.length).join('/')
+    keyPath = getKeyByValue(flattenedSidebar, endpoint)
+      ? getKeyByValue(flattenedSidebar, endpoint)!
+      : ''
+    if (endpoint == '/') {
+      activeSlug = docPath[0].split('#')[0]
+    }
+    parentsArray.push(activeSlug)
+    if (keyPath.length > 1) {
+      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
+    }
   } else {
-    activeSlug =
-      (querySlug as string) ||
-      router.pathname.substring(activeSlug.lastIndexOf('/') + 1)
-    slug = activeSlug
-    const query = `$..*[?(@.slug=='${slug}')]`
-    parentSlugs = getSlugPath(query)
+    activeSlug = parentsArray[parentsArray.length - 1]
   }
 
   useEffect(() => {
     const timer = setTimeout(() => setExpandDelayStatus(false), 5000)
-    const sectionName = parentSlugs[1]
     closeSidebarElements()
-    setActiveSectionName(sectionName)
-    parentSlugs[0].forEach((slug: string) => {
+    setActiveSectionName(sectionSelected)
+    parentsArray.forEach((slug: string) => {
       openSidebarElement(slug)
     })
-    openSidebarElement(slug)
     setActiveSidebarElement(activeSlug)
     return () => {
       clearTimeout(timer)
     }
-  }, [activeSidebarElement, router])
+  }, [activeSidebarElement, router, keyPath])
 
   const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
     const [iconTooltip, setIconTooltip] = useState(false)

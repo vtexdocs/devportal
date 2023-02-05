@@ -18,6 +18,7 @@ interface Props {
   children: ReactElement
   hideSidebar?: boolean
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
+  parentsArray?: string[]
 }
 
 // const tracker = new OpenReplay({
@@ -30,6 +31,7 @@ export default function Layout({
   sidebarfallback,
   hideSidebar,
   sectionSelected,
+  parentsArray,
 }: Props) {
   const { initTracker, startTracking } = useContext(TrackerContext)
   useEffect(() => {
@@ -41,7 +43,12 @@ export default function Layout({
       <Header />
       <Flex sx={styles.container}>
         <SidebarContextProvider fallback={sidebarfallback}>
-          {!hideSidebar && <Sidebar sectionSelected={sectionSelected} />}
+          {!hideSidebar && (
+            <Sidebar
+              parentsArray={parentsArray}
+              sectionSelected={sectionSelected}
+            />
+          )}
           <Box sx={styles.mainContainer}>{children}</Box>
         </SidebarContextProvider>
       </Flex>
