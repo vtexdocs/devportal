@@ -23,6 +23,7 @@ import OnThisPage from 'components/on-this-page'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
+import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsPaths from 'utils/getReleasePaths'
@@ -40,7 +41,6 @@ interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
-  sectionSelected: string
 }
 
 const DocumentationPage: NextPage<Props> = ({ serialized }) => {
@@ -167,13 +167,21 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
-    const sectionSelected = 'Release Notes'
 
+    const sectionSelected = 'Release Notes'
+    const flattenedSidebar = flattenJSON(sidebarfallback)
+    const keyPath = getKeyByValue(flattenedSidebar, slug)
+    const parentsArray: string[] = []
+    if (keyPath) {
+      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
+      parentsArray.push(slug)
+    }
     return {
       props: {
-        sectionSelected,
+        parentsArray,
         serialized,
         sidebarfallback,
+        sectionSelected,
       },
       revalidate: 600,
     }

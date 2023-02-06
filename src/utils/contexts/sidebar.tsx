@@ -14,7 +14,7 @@ type ContextType = {
   setActiveSidebarElement: Dispatch<SetStateAction<string>>
   toggleSidebarElementStatus: (title: string) => void
   openSidebarElement: (title: string) => void
-  closeSidebarElements: () => void
+  closeSidebarElements: (parentsArray: string[]) => void
 }
 
 export const SidebarContext = createContext<ContextType>({
@@ -39,7 +39,7 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
   const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
   const [activeSidebarElement, setActiveSidebarElement] = useState('')
   const [sidebarElementStatus, setSidebarElementStatus] = useState(new Map())
-  const [sidebarDataMaster, setSidebarDataMaster] = useState(new Map())
+  const [sidebarDataMaster, setSidebarDataMaster] = useState(props.fallback)
 
   const { fallback } = props
 
@@ -54,8 +54,14 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
     })
   }
 
-  const closeSidebarElements = () => {
-    sidebarElementStatus.clear()
+  const closeSidebarElements = (parentsArray: string[]) => {
+    sidebarElementStatus.forEach((_value, key) => {
+      if (!parentsArray.includes(key)) {
+        setSidebarElementStatus((sidebarElementStatus) => {
+          return new Map(sidebarElementStatus.set(key, false))
+        })
+      }
+    })
   }
 
   const openSidebarElement = (title: string) => {

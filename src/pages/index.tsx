@@ -8,6 +8,8 @@ import EducationSection from 'components/education-section'
 
 import Head from 'next/head'
 import styles from 'styles/landing-page'
+import getNavigation from 'utils/getNavigation'
+import { GetStaticProps } from 'next'
 
 const Home: Page = () => {
   return (
@@ -26,5 +28,15 @@ const Home: Page = () => {
 }
 
 Home.hideSidebar = true
+
+export const getStaticProps: GetStaticProps = async () => {
+  const sidebarfallback = await getNavigation()
+
+  return {
+    props: {
+      sidebarfallback,
+    },
+  }
+}
 
 export default Home

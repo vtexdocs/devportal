@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import getReferencePaths from 'utils/getReferencePaths'
+import getNavigation from 'utils/getNavigation'
 
 interface Props {
   slug: string
@@ -89,10 +90,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug || ''
   const url = referencePaths[slug as string]
   const sectionSelected = 'API Reference'
+  const sidebarfallback = await getNavigation()
   if (slugs.includes(slug as string)) {
     //Regular flow
     return {
@@ -100,6 +102,7 @@ export const getStaticProps: GetStaticProps = ({ params }) => {
         slug,
         url,
         sectionSelected,
+        sidebarfallback,
       },
     }
   } else {

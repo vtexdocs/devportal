@@ -4,6 +4,8 @@ import type { Page } from 'utils/typings/types'
 import { Box, Flex, Text, Button, Link } from '@vtex/brand-ui'
 import styles from 'styles/error-page'
 import fiveHundredImage from '../../public/images/500-illustration.png'
+import { GetStaticProps } from 'next'
+import getNavigation from 'utils/getNavigation'
 
 const fiveHundredPage: Page = () => {
   return (
@@ -42,6 +44,16 @@ const fiveHundredPage: Page = () => {
       </Box>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const sidebarfallback = await getNavigation()
+
+  return {
+    props: {
+      sidebarfallback,
+    },
+  }
 }
 
 export default fiveHundredPage
