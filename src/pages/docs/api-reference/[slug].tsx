@@ -26,13 +26,13 @@ const slugs = Object.keys(await getReferencePaths())
 // @ts-ignore
 const APIPage: NextPage<Props> = ({ slug }) => {
   const router = useRouter()
-  const rapidoc = useRef<{ scrollTo: (endpoint: string) => void }>(null)
+  const rapidoc = useRef<{ scrollToPath: (endpoint: string) => void }>(null)
 
   useEffect(() => {
     const scrollDoc = () => {
       if (rapidoc.current) {
         const endpoint = window.location.hash.slice(1) || 'overview'
-        rapidoc.current.scrollTo(endpoint)
+        rapidoc.current.scrollToPath(endpoint)
       }
     }
 
