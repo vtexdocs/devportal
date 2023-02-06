@@ -119,26 +119,29 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     if (allPaths) {
       Object.entries(allPaths).forEach(([key, value]) => {
         if (value) {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          Object.entries(value).forEach(([endpointKey, endpointValue]: any) => {
-            if (
-              isMethod(endpointKey) &&
-              endpointValue &&
-              endpointValue.description
-            ) {
-              descriptions[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] =
+          Object.entries(value).forEach(
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            ([endpointKey, endpointValue]: any) => {
+              if (
+                isMethod(endpointKey) &&
+                endpointValue &&
                 endpointValue.description
-                  .split(/\r?\n/)
-                  .map((line: string) => line.trim())
-                  .find(
-                    (line: string) =>
-                      line && line[0].toLowerCase() !== line[0].toUpperCase()
-                  ) || ''
+              ) {
+                descriptions[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] =
+                  endpointValue.description
+                    .split(/\r?\n/)
+                    .map((line: string) => line.trim())
+                    .find(
+                      (line: string) =>
+                        line && line[0].toLowerCase() !== line[0].toUpperCase()
+                    ) || ''
+              }
             }
-          })
+          )
         }
       })
     }
+
     //Regular flow
     return {
       props: {
