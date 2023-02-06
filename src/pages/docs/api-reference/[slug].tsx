@@ -57,7 +57,9 @@ const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
           {capitalize(slug.replaceAll('-', ' ').replace('api', ''))} API
         </title>
         <meta name="docsearch:doctype" content="API Reference" />
-        <meta name="description" content={descriptions[endpointPath]} />
+        {descriptions && (
+          <meta name="description" content={descriptions[endpointPath]} />
+        )}
       </Head>
       <Script
         type="text/javascript"
@@ -104,25 +106,35 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()
   if (slugs.includes(slug as string)) {
-    const response = await fetch(`http:/localhost:3000/api/openapi/${slug}`)
+    const response = await fetch(
+      `https://developers.vtex.com/api/openapi/${slug}`
+    )
     const doc = await response.json()
-    const test = new Oas(doc)
-    const allPaths = test.getDefinition().paths
+    const endpointFile = new Oas(doc)
+    const allPaths = endpointFile.getDefinition().paths
     const descriptions: { [key: string]: string } = {}
+    const isMethod = (key: string) =>
+      ['get', 'post', 'delete', 'put'].includes(key)
 
     if (allPaths) {
       Object.entries(allPaths).forEach(([key, value]) => {
         if (value) {
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           Object.entries(value).forEach(([endpointKey, endpointValue]: any) => {
-            descriptions[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] =
+            if (
+              isMethod(endpointKey) &&
+              endpointValue &&
               endpointValue.description
-                .split(/\r?\n/)
-                .map((line: string) => line.trim())
-                .find(
-                  (line: string) =>
-                    line && line[0].toLowerCase() !== line[0].toUpperCase()
-                ) || ''
+            ) {
+              descriptions[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] =
+                endpointValue.description
+                  .split(/\r?\n/)
+                  .map((line: string) => line.trim())
+                  .find(
+                    (line: string) =>
+                      line && line[0].toLowerCase() !== line[0].toUpperCase()
+                  ) || ''
+            }
           })
         }
       })
