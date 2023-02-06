@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.3](https://github.com/vtexdocs/devportal/compare/v1.4.2...v1.4.3) (2023-02-06)
+
+
+### Bug Fixes
+
+* **pagges:** use sidebarfallback and getNavigation - all pages ([677a2a4](https://github.com/vtexdocs/devportal/commit/677a2a4317f88af7608e489905e40ee23b9e0e2c))
+
+
+### Refactoring
+
+* **sidebar:** (wip) rewrite sidebar functions ([470c662](https://github.com/vtexdocs/devportal/commit/470c6622ad4938936964eec39cca0f3cfa8da9df))
+* **sidebarcontext:** use sidebarfallback ([ba2d39c](https://github.com/vtexdocs/devportal/commit/ba2d39c592b2f77ccaf8a41daa9f3fbf6d4f4a84))
+
 ### [1.4.2](https://github.com/vtexdocs/devportal/compare/v1.4.1...v1.4.2) (2023-02-04)
 
 
