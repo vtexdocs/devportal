@@ -12,12 +12,13 @@ const mainContainer: SxStyleProp = {
 
 const innerContainer: SxStyleProp = {
   justifyContent: 'center',
-  width: '100%',
   pt: '64px',
+  mx: 'auto',
+  px: ['18px', '10%', '10%', '10%', '18%', '5%', '5%'],
+  width: ['100%', '100%', '100%', '100%', '100%', '80%', '80%'],
 }
 
 const articleBox: SxStyleProp = {
-  width: ['100%', 'initial'],
   fontSize: '18px',
   lineHeight: '24px',
   a: {
@@ -36,13 +37,15 @@ const articleBox: SxStyleProp = {
     fontSize: '22px',
     lineHeight: '32px',
     fontWeight: '400',
-    pt: '8px',
-    my: '16px',
+    paddingTop: '90px',
+    marginTop: '-90px',
   },
   h3: {
     fontSize: '18px',
     fontWeight: '600',
     lineHeight: '24px',
+    paddingTop: '90px',
+    marginTop: '-90px',
   },
   strong: {
     fontWeight: '600',
@@ -50,8 +53,7 @@ const articleBox: SxStyleProp = {
 }
 
 const contentContainer: SxStyleProp = {
-  width: ['auto', '544px', '544px', '544px', '544px', '720px', '1400px'],
-  mx: ['18px', 'initial'],
+  width: '100%',
 }
 
 const documentationTitle: SxStyleProp = {
@@ -90,7 +92,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
-  width: [0, 0, 0, 0, '189px', '284px'],
+  minWidth: [0, 0, 0, 0, '189px', '284px', '284px'],
 }
 
 const releaseAction: SxStyleProp = {

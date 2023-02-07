@@ -91,6 +91,9 @@ const DocumentationPage: NextPage<Props> = ({
         {serialized.frontmatter?.hidden && (
           <meta name="robots" content="noindex" />
         )}
+        {serialized.frontmatter?.excerpt && (
+          <meta name="robots" content={serialized.frontmatter?.excerpt} />
+        )}
       </Head>
       <APIGuideContextProvider headings={headings}>
         <Flex sx={styles.innerContainer}>
@@ -99,7 +102,7 @@ const DocumentationPage: NextPage<Props> = ({
               <article>
                 <header>
                   <Breadcrumb breadcumbList={breadcumbList} />
-                  <Text sx={styles.documentationTitle}>
+                  <Text sx={styles.documentationTitle} className="title">
                     {serialized.frontmatter?.title}
                   </Text>
                   <Text sx={styles.documentationExcerpt}>
