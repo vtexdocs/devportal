@@ -17,7 +17,10 @@ function MyApp({ Component, pageProps }: Props) {
   return (
     <TrackerProvider>
       <Head>
-        <meta property="og:image" content="images/meta-image.png" />
+        <meta
+          property="og:image"
+          content="https://cdn.jsdelivr.net/gh/vtexdocs/devportal@main/public/images/meta-image.png"
+        />
       </Head>
       <Layout
         sidebarfallback={pageProps.sidebarfallback}
