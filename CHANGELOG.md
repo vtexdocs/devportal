@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/vtexdocs/devportal/compare/v1.4.3...v1.5.0) (2023-02-07)
+
+
+### Features
+
+* **header:** update aria-label and add meta description ([0082450](https://github.com/vtexdocs/devportal/commit/008245017ed5406d7776be8d7dba80fcbeb5b376))
+
+
+### Bug Fixes
+
+* **api-reference:** change function name to scrollToPath ([b086b42](https://github.com/vtexdocs/devportal/commit/b086b4267167b0cca082f2dbb551e1785829f7fa))
+* **components:** add aria-label to buttons; expand guide content width; add meta desc to guides ([444db81](https://github.com/vtexdocs/devportal/commit/444db818228f73a28d4aaad4f9f2441853b9eac1))
+
+
+### Build
+
+* **package:** update rapidoc version ([b763e1d](https://github.com/vtexdocs/devportal/commit/b763e1d8de2b10bfc7b87c64e393ed3298be8039))
+* update rapidoc version ([d3d51ac](https://github.com/vtexdocs/devportal/commit/d3d51ac4925411defe23b83966a834a0561082f5))
+
 ### [1.4.3](https://github.com/vtexdocs/devportal/compare/v1.4.2...v1.4.3) (2023-02-06)
 
 
