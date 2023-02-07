@@ -95,7 +95,10 @@ const DocumentationPage: NextPage<Props> = ({
           <meta name="robots" content="noindex" />
         )}
         {serialized.frontmatter?.excerpt && (
-          <meta name="robots" content={serialized.frontmatter?.excerpt} />
+          <meta
+            property="og:description"
+            content={serialized.frontmatter?.excerpt}
+          />
         )}
       </Head>
       <APIGuideContextProvider headings={headings}>

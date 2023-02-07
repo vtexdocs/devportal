@@ -22,7 +22,10 @@ const Home: Page = () => {
           content="Build and extend your world of commerce with VTEX development platform and Core Commerce APIs."
           key="desc"
         />
-        <meta property="og:image" content="images/meta-image.png" />
+        <meta
+          property="og:image"
+          content="https://cdn.jsdelivr.net/gh/vtexdocs/devportal@main/public/images/meta-image.png"
+        />
       </Head>
       <Grid sx={styles.grid}>
         <NewsletterSection />
