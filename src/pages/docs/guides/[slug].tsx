@@ -41,10 +41,14 @@ import getFileContributors, {
 } from 'utils/getFileContributors'
 
 import { getLogger } from 'utils/logging/log-util'
+import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
 interface Props {
+  sectionSelected: string
+  parentsArray: string[]
+  breadcumbList: { slug: string; name: string; type: string }[]
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
@@ -61,7 +65,6 @@ interface Props {
     nextDoc: { slug: string | null; name: string | null }
   }
   isListed: boolean
-  breadcumbList: { slug: string; name: string; type: string }[]
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -291,32 +294,36 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
     }
 
-    const isListed: boolean =
-      jp.query(sidebarfallback, `$..*[?(@.slug=='${slug}')]`).length > 0
-        ? true
-        : false
+    const flattenedSidebar = flattenJSON(sidebarfallback)
+    const isListed: boolean = getKeyByValue(flattenedSidebar, slug)
+      ? true
+      : false
+    const keyPath = getKeyByValue(flattenedSidebar, slug)
+    const parentsArray: string[] = []
+    const parentsArrayName: string[] = []
+    const parentsArrayType: string[] = []
+    let sectionSelected = ''
+    if (keyPath) {
+      sectionSelected = flattenedSidebar[`${keyPath[0]}.documentation`]
+      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
+      parentsArray.push(slug)
+      getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
+      getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
+    }
 
-    const breadcumb = jp.paths(
-      sidebarfallback,
-      `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
-    )[0]
-    let currentBreadcumb = sidebarfallback
     const breadcumbList: { slug: string; name: string; type: string }[] = []
-    breadcumb?.forEach((el: string | number) => {
-      if (typeof currentBreadcumb?.slug == 'string') {
-        breadcumbList.push({
-          slug: currentBreadcumb.slug,
-          name: currentBreadcumb.name,
-          type: currentBreadcumb.type,
-        })
-      }
-      if (el != '$') {
-        currentBreadcumb = currentBreadcumb[el]
-      }
+    parentsArrayName.forEach((_el: string, idx: number) => {
+      breadcumbList.push({
+        slug: `/docs/guides/${parentsArray[idx]}`,
+        name: parentsArrayName[idx],
+        type: parentsArrayType[idx],
+      })
     })
 
     return {
       props: {
+        sectionSelected,
+        parentsArray,
         slug,
         serialized,
         sidebarfallback,

@@ -1236,6 +1236,28 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Fulfillment",
+              "slug": "fulfillment",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "List pickup points by location",
+                  "slug": "list-pickup-points-by-location",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Get address by postal code",
+                  "slug": "get-address-by-postal-code",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
