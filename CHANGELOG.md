@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/vtexdocs/devportal/compare/v1.5.0...v1.5.1) (2023-02-07)
+
+
+### Bug Fixes
+
+* **guides:** update meta description ([fb8ff74](https://github.com/vtexdocs/devportal/commit/fb8ff748369dbe466fb6686cc1eae54747927559))
+
 ## [1.5.0](https://github.com/vtexdocs/devportal/compare/v1.4.3...v1.5.0) (2023-02-07)
 
 
