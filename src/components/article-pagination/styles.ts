@@ -3,7 +3,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const mainContainer: SxStyleProp = {
   width: '100%',
   mb: '32px',
-  maxWidth: ['initial', '544px', '544px', '544px', '544px', '720px', '1400px'],
+  maxWidth: '100%',
 }
 const flexContainer: SxStyleProp = {
   fontWeight: 'bold',

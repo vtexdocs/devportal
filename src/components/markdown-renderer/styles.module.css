@@ -1,6 +1,7 @@
 .img {
   max-width: 100%;
   padding-top: 2vh;
+  border-radius: 4px;
 }
 
 .heading::before {
@@ -40,6 +41,9 @@
   border-radius: 4px;
   align-items: center;
   border: 1px solid #ccced8;
+}
+.blockquote a{
+  color: #D4084C !important;
 }
 
 .blockquoteInfo {

@@ -17,6 +17,18 @@ const headerBrand: SxStyleProp = {
   width: '100%',
   position: 'relative',
 }
+
+const headerBrandLink: SxStyleProp = {
+  width: 'fit-content',
+  justifyContent: 'center',
+  gridArea: 'brand',
+  marginLeft: [4, 6, 6],
+  marginBottom: 1,
+  '> svg': {
+    width: 'auto',
+  },
+}
+
 const logoSize: SxStyleProp = {
   width: ['172px', '172px', '204px'],
   height: ['24px', '24px', '32px'],
@@ -112,6 +124,7 @@ export default {
   logoSize,
   headerContainer,
   headerBrand,
+  headerBrandLink,
   searchContainer,
   searchIcon,
   rightLinks,

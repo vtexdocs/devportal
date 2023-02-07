@@ -112,6 +112,7 @@ const Sidebar = ({
               setActiveSectionName(iconElement.title)
             }}
             passHref
+            aria-label={iconElement.title}
           >
             <Flex
               sx={

@@ -113,6 +113,11 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
         <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
           {isExpandable && (
             <Button
+              aria-label={
+                sidebarElementStatus.has(slug) && sidebarElementStatus.get(slug)
+                  ? 'Collapse category'
+                  : 'Expand category'
+              }
               size="regular"
               variant="tertiary"
               sx={

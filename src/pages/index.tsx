@@ -16,6 +16,13 @@ const Home: Page = () => {
     <>
       <Head>
         <title>VTEX Developers</title>
+        <meta property="og:title" content="VTEX Developers" key="title" />
+        <meta
+          property="og:description"
+          content="Build and extend your world of commerce with VTEX development platform and Core Commerce APIs."
+          key="desc"
+        />
+        <meta property="og:image" content="images/meta-image.png" />
       </Head>
       <Grid sx={styles.grid}>
         <NewsletterSection />
