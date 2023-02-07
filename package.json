@@ -104,7 +104,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "1.1.8-vtex-157-gdc573db"
+      "version": "1.1.9-vtex"
     }
   },
   "resolutions": {
