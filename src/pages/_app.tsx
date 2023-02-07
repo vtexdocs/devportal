@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app'
 import type { Page } from 'utils/typings/types'
+import Head from 'next/head'
 
 import 'styles/global.css'
 import 'styles/rapidoc.css'
@@ -15,6 +16,9 @@ import TrackerProvider from 'utils/contexts/trackerContext'
 function MyApp({ Component, pageProps }: Props) {
   return (
     <TrackerProvider>
+      <Head>
+        <meta property="og:image" content="images/meta-image.png" />
+      </Head>
       <Layout
         sidebarfallback={pageProps.sidebarfallback}
         hideSidebar={Component.hideSidebar}

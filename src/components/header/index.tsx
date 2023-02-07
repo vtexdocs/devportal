@@ -7,7 +7,6 @@ import {
 } from '@vtex/brand-ui'
 import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 import HamburgerMenu from './hamburger-menu'
 import DropdownMenu from 'components/dropdown-menu'
@@ -95,11 +94,13 @@ const Header = () => {
         We are excited to announce our new Developer Portal.
       </AnnouncementBar>
       <HeaderBrand sx={styles.headerBrand}>
-        <HeaderBrand.Brand>
-          <Link href="/" legacyBehavior>
-            <VTEXDevportalIcon sx={styles.logoSize} />
-          </Link>
-        </HeaderBrand.Brand>
+        <VtexLink
+          aria-label="Go back to Home"
+          href="/"
+          sx={styles.headerBrandLink}
+        >
+          <VTEXDevportalIcon sx={styles.logoSize} />
+        </VtexLink>
 
         <Box sx={styles.searchContainer}>
           <SearchInput />
