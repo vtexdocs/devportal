@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.2](https://github.com/vtexdocs/devportal/compare/v1.5.1...v1.5.2) (2023-02-08)
+
+
+### Build
+
+* **package:** upgrade rapidoc version ([8a38e62](https://github.com/vtexdocs/devportal/commit/8a38e62f77f6f7b25bb4cb6844a5ad2e527290e7))
+* update rapidoc version to add language selection ([25f09a3](https://github.com/vtexdocs/devportal/commit/25f09a3c25512a8b61a98f1f4b017e13f063b118))
+
 ### [1.5.1](https://github.com/vtexdocs/devportal/compare/v1.5.0...v1.5.1) (2023-02-07)
 
 
