@@ -4,7 +4,7 @@ import getNavigation from 'utils/getNavigation'
 import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
-import remarkBlockquote from '../guides/rehypeBlockquote'
+import remarkBlockquote from '../../guides/rehypeBlockquote'
 import getHeadings from 'utils/getHeadings'
 import { serialize } from 'next-mdx-remote/serialize'
 import type { Item } from 'components/table-of-contents'
@@ -38,15 +38,17 @@ interface Props {
   sidebarfallback: any
   serialized: MDXRemoteSerializeResult
   headingList: Item[]
+  childrenDocs: string[]
 }
 
-const TestPage: NextPage<Props> = ({
+const AppReadmePage: NextPage<Props> = ({
   serialized,
   headingList,
   vendor,
   latestMajor,
   currentVersion,
   title,
+  childrenDocs,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
@@ -60,6 +62,14 @@ const TestPage: NextPage<Props> = ({
       category: 'VTEX IO Apps',
     },
   ]
+
+  childrenDocs?.forEach((doc) =>
+    seeAlsoData.push({
+      url: `/${doc}`,
+      title: `${doc.split('/').slice(-1)}`,
+      category: 'VTEX IO Apps',
+    })
+  )
   return (
     <>
       <Head>
@@ -120,9 +130,8 @@ export const getStaticPaths: GetStaticPaths = () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug } = params as IParams
   const app = slug as string
-  const appReadme = `${app.replace('-', '.')}`
   const logger = getLogger('Apps')
-  const data = await getAppReadme(appReadme)
+  const data = await getAppReadme(app)
   if (!data.markdown) {
     return {
       notFound: true,
@@ -137,6 +146,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const markdown = data.markdown
     const latestMajor = data.latestMajor
     const currentVersion = data.currentVersion
+    const childrenDocs = data.childrenDocs ?? ['']
     const headingList: Item[] = []
     if (markdown) {
       let serialized = await serialize(markdown, {
@@ -165,6 +175,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           sidebarfallback,
           serialized,
           headingList,
+          childrenDocs,
         },
       }
     } else {
@@ -180,4 +191,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
 }
 
-export default TestPage
+export default AppReadmePage

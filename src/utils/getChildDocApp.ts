@@ -1,21 +1,19 @@
-export default async function getAppReadme(appName: string) {
-  const url = `https://vtexhelp.myvtex.com/_v/devportal/${appName}`
+export default async function getChildDocApp(appName: string, file: string) {
+  const url = `https://vtexhelp.myvtex.com/_v/devportal/${appName}/${file}`
   let data: {
     title: string
-    vendor: string
     markdown: string
+    vendor: string
     latestMajor: string
     currentVersion: string
-    isBeta: boolean
-    childrenDocs: string[]
+    appId: string
   } = {
     title: '',
-    vendor: '',
     markdown: '',
+    vendor: '',
     latestMajor: '',
     currentVersion: '',
-    isBeta: false,
-    childrenDocs: [''],
+    appId: '',
   }
   await fetch(url, {
     method: 'GET',
@@ -28,12 +26,11 @@ export default async function getAppReadme(appName: string) {
       (result) =>
         (data = {
           title: result.title,
+          markdown: result.markdown,
           vendor: result.vendor,
-          markdown: result.markdownWithoutHeadline,
           latestMajor: result.latestMajor,
           currentVersion: result.currentVersion,
-          isBeta: result.isBeta,
-          childrenDocs: result?.childrenDocs ? result?.childrenDocs : [],
+          appId: result.appId,
         })
     )
   return data
