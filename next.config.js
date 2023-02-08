@@ -223,6 +223,16 @@ const nextConfig = {
         destination: '/docs/guides/pii-platform-version',
         permanent: true,
       },
+      {
+        source: '/docs/app/:slug*',
+        destination: '/docs/apps/:slug*',
+        permanent: true,
+      },
+      {
+        source: '/docs/components/all/:slug*',
+        destination: '/docs/apps/:slug*',
+        permanent: true,
+      },
     ]
   },
   i18n: {
