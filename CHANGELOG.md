@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/vtexdocs/devportal/compare/v1.5.2...v1.6.0) (2023-02-08)
+
+
+### Features
+
+* **apps:** feat children docs from io apps ([813d71d](https://github.com/vtexdocs/devportal/commit/813d71dfeb1f8e2181eadad252a67b2b9f148a7d))
+* **apps:** fetches vtex io apps documentation ([8c5d65e](https://github.com/vtexdocs/devportal/commit/8c5d65eddbf2f72ad7b797e2cb3d05007d72d13c))
+
 ### [1.5.2](https://github.com/vtexdocs/devportal/compare/v1.5.1...v1.5.2) (2023-02-08)
 
 
