@@ -1,7 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const referencePaths: { [slug: string]: string } = {}
 
 import octokit from 'utils/octokitConfig'
+import { getLogger } from './logging/log-util'
 
 async function getGithubTree(org: string, repo: string, ref: string) {
   const response = octokit.request(
@@ -60,9 +61,8 @@ const fileSlugMap = {
 }
 
 export default async function getReferencePaths() {
+  const logger = getLogger('getReferencePaths')
   const repoTree = await getGithubTree('vtex', 'openapi-schemas', 'master')
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   repoTree.tree.map((node: any) => {
     const path = node.path
     const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
@@ -70,12 +70,18 @@ export default async function getReferencePaths() {
       const match = path.match(re)
       const filename = match?.groups?.filename ? match?.groups?.filename : ''
       const filetype = match?.groups?.filetype ? match?.groups?.filetype : ''
-      if (filetype === 'json') {
-        ;(referencePaths as any)[
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-ignore
-          fileSlugMap[filename as string]
-        ] = `https://cdn.jsdelivr.net/gh/vtex/openapi-schemas/${path}`
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
+      const fileslug = fileSlugMap[filename as string]
+      if (filetype === 'json' && filename !== 'VTEX_TEMPLATE') {
+        if (!fileslug)
+          logger.error(
+            `Couldn't find slug for this file: ${filename} in ${path}`
+          )
+        else
+          (referencePaths as any)[
+            fileslug
+          ] = `https://cdn.jsdelivr.net/gh/vtex/openapi-schemas/${path}`
       }
     }
   })
