@@ -30,6 +30,7 @@ footer > div {
 }
 
 table {
+  font-size: 15px;
   border-collapse: collapse;
   max-width: 100%;
   overflow-x: auto;
