@@ -20,16 +20,7 @@
   color: var(--md-code-text);
   margin: 0;
   padding: 0.2em 0.4em;
-  font-family: var(
-    --md-code-font,
-    SFMono-Regular,
-    Consolas,
-    Liberation Mono,
-    Menlo,
-    Courier,
-    monospace
-  );
-  font-size: 0.8em;
+  font-size: 0.875em;
 }
 
 .blockquote {
