@@ -12664,6 +12664,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New options for adding and removing modules from the Kit Look App",
+                  "slug": "new-options-for-adding-and-removing-modules-from-the-kit-look-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "SafeData can now block the anonymous creation of documents for all Master Data entities",
                   "slug": "safedata-can-now-block-the-anonymous-creation-of-documents-for-all-master-data-entities",
                   "origin": "",
