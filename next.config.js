@@ -218,6 +218,107 @@ const nextConfig = {
         destination: '/docs/guides/pii-platform-version',
         permanent: true,
       },
+      {
+        source:
+          '/docs/guides/vtex-io-documentation-vtex-io-cli-installment-and-command-reference#command-reference',
+        destination:
+          '/docs/guides/vtex-io-documentation-vtex-io-cli-command-reference',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/get-to-know-vtex-apis',
+        destination: '/docs/guides/get-to-know-vtex-apis',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/subscriptions-api-v3-overview',
+        destination: '/docs/api-reference/subscriptions-api-v3#overview',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/orderform-fields',
+        destination: '/docs/guides/orderform-fields',
+        permanent: true,
+      },
+      {
+        source: '/docs/vtex-cookie-script',
+        destination: '/docs/guides/vtex-cookie-script',
+        permanent: true,
+      },
+      {
+        source: '/docs/getting-started-authentication',
+        destination: '/docs/guides/getting-started-authentication',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/configuration#getorderformconfiguration',
+        destination:
+          '/docs/api-reference/checkout-api#get-/api/checkout/pvt/configuration/orderForm',
+        permanent: true,
+      },
+      {
+        source: '/reference/giftcard-api-overview',
+        destination: '/docs/guides/giftcard-api-overview',
+        permanent: true,
+      },
+      {
+        source: '/reference/miscellaneous-3#creategiftcard-1',
+        destination: '/docs/api-reference/giftcard-api#post-/giftcards',
+        permanent: true,
+      },
+      {
+        source: '/reference/miscellaneous-3#getgiftcardusingjson',
+        destination: '/docs/api-reference/giftcard-api#post-/giftcards/_search',
+        permanent: true,
+      },
+      {
+        source: '/reference/miscellaneous-3#creategiftcardtransaction-1',
+        destination:
+          '/docs/api-reference/giftcard-api#post-/giftcards/-giftCardID-/transactions',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/checkout-api-overview',
+        destination: '/docs/api-reference/checkout-api#overview',
+        permanent: true,
+      },
+      {
+        source: '/reference/orders#getorder',
+        destination:
+          '/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/orders-api',
+        destination: '/docs/api-reference/orders-api',
+        permanent: true,
+      },
+      {
+        source: '/docs/login-integration-guide-webstore-oauth2',
+        destination: '/docs/guides/login-integration-guide-webstore-oauth2',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/orderform-fields',
+        destination: '/docs/guides/orderform-fields',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/what-is-store-framework',
+        destination:
+          '/docs/guides/vtex-io-documentation-what-is-vtex-store-framework',
+        permanent: true,
+      },
+      {
+        source: '/reference/catalog-api-overview',
+        destination: '/docs/guides/catalog-api-overview',
+        permanent: true,
+      },
+      {
+        source: '/reference#master-data-api-v2-overview',
+        destination: '/docs/api-reference/master-data-api-v2#overview',
+        permanent: true,
+      },
     ]
   },
 }
