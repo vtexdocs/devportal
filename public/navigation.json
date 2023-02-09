@@ -12642,6 +12642,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Custom IO apps need to add the ListOrders resource",
+                  "slug": "custom-io-apps-need-to-add-the-listorders-resource",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Filtered searches now available in Badges App",
                   "slug": "filtered-searches-now-available-in-badges-app",
                   "origin": "",
