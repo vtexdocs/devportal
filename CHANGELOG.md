@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.6.1](https://github.com/vtexdocs/devportal/compare/v1.6.0...v1.6.1) (2023-02-09)
+
+
+### Style
+
+* **styles:** update table font-size ([90c4ee7](https://github.com/vtexdocs/devportal/commit/90c4ee72afcfd0d6a30de87f92e63ab8f1d483fd))
+
 ## [1.6.0](https://github.com/vtexdocs/devportal/compare/v1.5.2...v1.6.0) (2023-02-08)
 
 
