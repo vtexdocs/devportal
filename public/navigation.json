@@ -5258,7 +5258,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies/-id-",
+                  "endpoint": "/api/logistics/pvt/shipping-policies/-id-",
                   "children": []
                 },
                 {
