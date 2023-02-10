@@ -5267,7 +5267,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies/-id-",
+                  "endpoint": "/api/logistics/pvt/shipping-policies/-id-",
                   "children": []
                 },
                 {
@@ -5276,7 +5276,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies/-id-",
+                  "endpoint": "/api/logistics/pvt/shipping-policies/-id-",
                   "children": []
                 },
                 {
@@ -5285,7 +5285,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies",
+                  "endpoint": "/api/logistics/pvt/shipping-policies",
                   "children": []
                 },
                 {
@@ -5294,7 +5294,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies",
+                  "endpoint": "/api/logistics/pvt/shipping-policies",
                   "children": []
                 }
               ]
@@ -5310,7 +5310,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/freights/-carrierId-/values/update",
+                  "endpoint": "/api/logistics/pvt/configuration/freights/-carrierId-/values/update",
                   "children": []
                 },
                 {
@@ -5319,7 +5319,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/freights/-carrierId-/-cep-/values",
+                  "endpoint": "/api/logistics/pvt/configuration/freights/-carrierId-/-cep-/values",
                   "children": []
                 }
               ]
@@ -5335,7 +5335,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/carriers/-carrierId-/getdayofweekblocked",
+                  "endpoint": "/api/logistics/pvt/configuration/carriers/-carrierId-/getdayofweekblocked",
                   "children": []
                 },
                 {
@@ -5344,7 +5344,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/carriers/-carrierId-/adddayofweekblocked",
+                  "endpoint": "/api/logistics/pvt/configuration/carriers/-carrierId-/adddayofweekblocked",
                   "children": []
                 },
                 {
@@ -5353,7 +5353,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/carriers/-carrierId-/removedayofweekblocked",
+                  "endpoint": "/api/logistics/pvt/configuration/carriers/-carrierId-/removedayofweekblocked",
                   "children": []
                 },
                 {
@@ -5362,7 +5362,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames",
+                  "endpoint": "/api/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames",
                   "children": []
                 },
                 {
@@ -5371,7 +5371,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames/-windowDay-F-windowStartTime-T-windowEndTime-",
+                  "endpoint": "/api/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames/-windowDay-F-windowStartTime-T-windowEndTime-",
                   "children": []
                 }
               ]
