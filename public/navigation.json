@@ -10487,13 +10487,6 @@
       "slugPrefix": "docs/guides/",
       "categories": [
         {
-          "name": "Overview",
-          "slug": "store-framework-apps",
-          "origin": "",
-          "type": "markdown",
-          "children": []
-        },
-        {
           "name": "Basic components",
           "slug": "basic-components",
           "origin": "",

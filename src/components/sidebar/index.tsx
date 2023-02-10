@@ -18,6 +18,7 @@ import Tooltip from 'components/tooltip'
 import { iconTooltipStyle } from './functions'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
+import useNavigation from 'utils/hooks/useNavigation'
 
 interface SideBarSectionState {
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
@@ -33,10 +34,12 @@ const Sidebar = ({
   const {
     activeSidebarElement,
     sidebarDataMaster,
+    setSidebarDataMaster,
     setActiveSidebarElement,
     openSidebarElement,
     closeSidebarElements,
   } = useContext(SidebarContext)
+  setSidebarDataMaster(useNavigation().data)
   const router = useRouter()
   const flattenedSidebar = flattenJSON(sidebarDataMaster)
   let activeSlug = ''
