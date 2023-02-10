@@ -5387,16 +5387,16 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks",
+                  "endpoint": "/api/logistics/pvt/configuration/docks",
                   "children": []
                 },
                 {
-                  "name": "List all  docks",
+                  "name": "List all docks",
                   "slug": "logistics-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks",
+                  "endpoint": "/api/logistics/pvt/configuration/docks",
                   "children": []
                 },
                 {
@@ -5405,7 +5405,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks/-dockId-",
+                  "endpoint": "/api/logistics/pvt/configuration/docks/-dockId-",
                   "children": []
                 },
                 {
@@ -5414,7 +5414,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks/-dockId-",
+                  "endpoint": "/api/logistics/pvt/configuration/docks/-dockId-",
                   "children": []
                 },
                 {
@@ -5423,7 +5423,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks/-dockId-/activation",
+                  "endpoint": "/api/logistics/pvt/configuration/docks/-dockId-/activation",
                   "children": []
                 },
                 {
@@ -5432,7 +5432,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks/-dockId-/deactivation",
+                  "endpoint": "/api/logistics/pvt/configuration/docks/-dockId-/deactivation",
                   "children": []
                 }
               ]
@@ -5448,7 +5448,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses",
                   "children": []
                 },
                 {
@@ -5457,7 +5457,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses",
                   "children": []
                 },
                 {
@@ -5466,7 +5466,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5475,7 +5475,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5484,7 +5484,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses/-warehouseId-/activation",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses/-warehouseId-/activation",
                   "children": []
                 },
                 {
@@ -5493,7 +5493,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses/-warehouseId-/deactivation",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses/-warehouseId-/deactivation",
                   "children": []
                 }
               ]
@@ -5509,7 +5509,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/skus/-skuId-",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-",
                   "children": []
                 },
                 {
@@ -5518,7 +5518,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5527,7 +5527,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5536,7 +5536,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/docks/-dockId-",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/docks/-dockId-",
                   "children": []
                 },
                 {
@@ -5545,7 +5545,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/docks/-dockId-/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/docks/-dockId-/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5554,7 +5554,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-itemId-/warehouses/-warehouseId-/dispatched",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-itemId-/warehouses/-warehouseId-/dispatched",
                   "children": []
                 },
                 {
@@ -5563,7 +5563,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots",
                   "children": []
                 },
                 {
@@ -5572,7 +5572,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-",
                   "children": []
                 },
                 {
@@ -5581,7 +5581,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-/transfer",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-/transfer",
                   "children": []
                 }
               ]
@@ -5597,7 +5597,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/holidays/-holidayId-",
+                  "endpoint": "/api/logistics/pvt/configuration/holidays/-holidayId-",
                   "children": []
                 },
                 {
@@ -5606,7 +5606,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/holidays/-holidayId-",
+                  "endpoint": "/api/logistics/pvt/configuration/holidays/-holidayId-",
                   "children": []
                 },
                 {
@@ -5615,7 +5615,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/holidays/-holidayId-",
+                  "endpoint": "/api/logistics/pvt/configuration/holidays/-holidayId-",
                   "children": []
                 },
                 {
@@ -5624,7 +5624,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/holidays",
+                  "endpoint": "/api/logistics/pvt/configuration/holidays",
                   "children": []
                 }
               ]
