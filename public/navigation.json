@@ -5640,7 +5640,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations",
                   "children": []
                 },
                 {
@@ -5649,7 +5649,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-reservationId-",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-reservationId-",
                   "children": []
                 },
                 {
@@ -5658,7 +5658,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-reservationId-/confirm",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-reservationId-/confirm",
                   "children": []
                 },
                 {
@@ -5667,7 +5667,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-reservationId-/acknowledge",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-reservationId-/acknowledge",
                   "children": []
                 },
                 {
@@ -5676,7 +5676,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-reservationId-/cancel",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-reservationId-/cancel",
                   "children": []
                 },
                 {
@@ -5685,7 +5685,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-warehouseId-/-skuId-",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-warehouseId-/-skuId-",
                   "children": []
                 }
               ]
@@ -5701,7 +5701,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping/calculate",
+                  "endpoint": "/api/logistics/pvt/shipping/calculate",
                   "children": []
                 }
               ]
@@ -5717,7 +5717,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints",
                   "children": []
                 },
                 {
@@ -5726,7 +5726,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
                   "children": []
                 },
                 {
@@ -5735,7 +5735,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
                   "children": []
                 },
                 {
@@ -5744,7 +5744,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
                   "children": []
                 },
                 {
@@ -5753,7 +5753,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints/_search",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints/_search",
                   "children": []
                 }
               ]
@@ -5769,7 +5769,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/geoshape",
+                  "endpoint": "/api/logistics/pvt/configuration/geoshape",
                   "children": []
                 },
                 {
@@ -5778,7 +5778,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/geoshape",
+                  "endpoint": "/api/logistics/pvt/configuration/geoshape",
                   "children": []
                 },
                 {
@@ -5787,7 +5787,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/geoshape/-polygonName-",
+                  "endpoint": "/api/logistics/pvt/configuration/geoshape/-polygonName-",
                   "children": []
                 },
                 {
@@ -5796,7 +5796,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/geoshape/-polygonName-",
+                  "endpoint": "/api/logistics/pvt/configuration/geoshape/-polygonName-",
                   "children": []
                 }
               ]
