@@ -7,7 +7,7 @@ const container: SxStyleProp = {
   justifyContent: 'space-between',
   cursor: 'default',
   width: '100%',
-  padding: '15px 50px ',
+  padding: ['15px 15px', '15px 25px', '15px 50px'],
   ':focus': {
     outline: 'none',
   },
@@ -49,7 +49,7 @@ const link: SxStyleProp = {
 }
 
 const closeIcon: SxStyleProp = {
-  display: ['none', 'none', 'block'],
+  display: 'block',
   float: 'right',
 }
 
