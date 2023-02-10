@@ -10486,7 +10486,7 @@
       "documentation": "VTEX IO Apps",
       "slugPrefix": "docs/guides/",
       "categories": [
-				{
+        {
           "name": "Overview",
           "slug": "store-framework-apps",
           "origin": "",
