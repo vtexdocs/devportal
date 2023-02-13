@@ -12,6 +12,7 @@ import Footer from 'components/footer'
 import SidebarContextProvider from 'utils/contexts/sidebar'
 import Sidebar from 'components/sidebar'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
+import Script from 'next/script'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -41,6 +42,21 @@ export default function Layout({
   return (
     <ThemeProvider>
       <Header />
+      <div className="container">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=UA-56275648-4"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){window.dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-56275648-4');
+        `}
+        </Script>
+      </div>
       <Flex sx={styles.container}>
         <SidebarContextProvider fallback={sidebarfallback}>
           {!hideSidebar && (
