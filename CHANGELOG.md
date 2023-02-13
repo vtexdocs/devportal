@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/vtexdocs/devportal/compare/v1.6.1...v1.7.0) (2023-02-13)
+
+
+### Features
+
+* **header scripts:** add GA script ([5ba815c](https://github.com/vtexdocs/devportal/commit/5ba815cfb1adf6a9a76bc7970debf492e5187588))
+
+
+### Bug Fixes
+
+* check endpoint type to prevent errors ([a8fecb2](https://github.com/vtexdocs/devportal/commit/a8fecb237c1ba4e8e8c6f8581943df489368a301))
+* **format:** format ([66674a4](https://github.com/vtexdocs/devportal/commit/66674a498a965222faed40b263d001f154c94bd6))
+* **getreferencepaths:** remove undefined routes and add error log for them ([6ca4947](https://github.com/vtexdocs/devportal/commit/6ca4947c6d3b17f9c6b145178882a2d91f4e7d1c))
+* **navigation.json:** revert deletion ([4af8661](https://github.com/vtexdocs/devportal/commit/4af86612323db52d3e7c5cd1ee68863ed5c41b3e))
+* **sidebar:** fetch sidebardatamaster from usenavigation ([928aa36](https://github.com/vtexdocs/devportal/commit/928aa36a7d7a05c368f6db637d76fa557ee40e4d))
+* **usenavigation:** stop revalidating on focus ([309da0d](https://github.com/vtexdocs/devportal/commit/309da0d1afad15f3637f121c96ff2f75243b1d7a))
+
+
+### Performance
+
+* **api-reference:** add short description using the first endpoint paragraph ([0701dd9](https://github.com/vtexdocs/devportal/commit/0701dd9aff996a8ed939b4fc92cb7ea1e496a27a))
+
+
+### Refactoring
+
+* line break ([91bc5ae](https://github.com/vtexdocs/devportal/commit/91bc5ae07a6d6c98733e3c91dc50f4115e34b695))
+
+
+### Chore
+
+* **navigation:** add kit look app release note to navigation.json ([ae09cc3](https://github.com/vtexdocs/devportal/commit/ae09cc336d5c7b450f5b3a7628c61d854a8ae10f))
+
+
+### Style
+
+* **styles:** update styles considering the figma file ([f836443](https://github.com/vtexdocs/devportal/commit/f83644386935f184b871f5466226b98f20c83751))
+
+
+### Docs
+
+* adding new release note to navigation ([87ca215](https://github.com/vtexdocs/devportal/commit/87ca215a205780ba1e9a9c9533faea477f594c11))
+* change path ([5221964](https://github.com/vtexdocs/devportal/commit/52219646f397154d13e974778f9eff5c607ff75d))
+* change path ([8233e1d](https://github.com/vtexdocs/devportal/commit/8233e1d3a7a51b5867fac5a2f23970f8a1b3273e))
+* change path ([de8b7c3](https://github.com/vtexdocs/devportal/commit/de8b7c38cb637f47cb840e09f8812832e7253e1b))
+* path change ([5635cc1](https://github.com/vtexdocs/devportal/commit/5635cc19676b38f08d1d60d4daf29aac0cb8d454))
+
 ### [1.6.1](https://github.com/vtexdocs/devportal/compare/v1.6.0...v1.6.1) (2023-02-09)
 
 
