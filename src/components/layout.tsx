@@ -47,7 +47,6 @@ export default function Layout({
         width="0"
         style={{ display: 'none', visibility: 'hidden' }}
       ></iframe>
-      <Header />
       <div className="container">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=UA-56275648-4"
@@ -70,8 +69,9 @@ export default function Layout({
 					`}
         </Script>
       </div>
-      <Flex sx={styles.container}>
-        <SidebarContextProvider fallback={sidebarfallback}>
+      <SidebarContextProvider fallback={sidebarfallback}>
+        <Header sectionSelected={sectionSelected} />
+        <Flex sx={styles.container}>
           {!hideSidebar && (
             <Sidebar
               parentsArray={parentsArray}
@@ -79,8 +79,8 @@ export default function Layout({
             />
           )}
           <Box sx={styles.mainContainer}>{children}</Box>
-        </SidebarContextProvider>
-      </Flex>
+        </Flex>
+      </SidebarContextProvider>
       <Footer />
     </ThemeProvider>
   )

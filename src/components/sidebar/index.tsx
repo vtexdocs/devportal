@@ -35,7 +35,6 @@ const Sidebar = ({
     activeSidebarElement,
     sidebarDataMaster,
     setSidebarDataMaster,
-    setActiveSidebarElement,
     openSidebarElement,
     closeSidebarElements,
   } = useContext(SidebarContext)
@@ -70,7 +69,6 @@ const Sidebar = ({
     parentsArray.forEach((slug: string) => {
       openSidebarElement(slug)
     })
-    setActiveSidebarElement(activeSlug)
     return () => {
       clearTimeout(timer)
     }

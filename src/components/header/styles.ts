@@ -1,5 +1,23 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
+const menuContainer: SxStyleProp = {
+  display: 'flex',
+  width: 'max-content',
+}
+
+const cardContainer: SxStyleProp = {
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100vw',
+}
+
+const sideMenuContainer: SxStyleProp = {
+  height: 'calc(100vh - 5rem)',
+  width: '100vw',
+  overflowY: 'auto',
+  overflowX: 'hidden',
+}
+
 const headerContainer: SxStyleProp = {
   position: 'sticky',
   zIndex: 9999,
@@ -10,6 +28,11 @@ const headerContainer: SxStyleProp = {
 const hamburgerContainer: SxStyleProp = {
   backgroundColor: '#ffff',
   width: '100%',
+  postition: 'relative',
+  left: 0,
+  '.menuHidden': {
+    left: '-100vw',
+  },
 }
 
 const headerBrand: SxStyleProp = {
@@ -121,6 +144,9 @@ const updatesContainer: SxStyleProp = {
 }
 
 export default {
+  menuContainer,
+  cardContainer,
+  sideMenuContainer,
   logoSize,
   headerContainer,
   headerBrand,
