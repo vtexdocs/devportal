@@ -1034,6 +1034,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Create a regular order from an existing cart",
+                  "slug": "create-a-regular-order-from-an-existing-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
