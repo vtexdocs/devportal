@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.1](https://github.com/vtexdocs/devportal/compare/v1.7.0...v1.7.1) (2023-02-14)
+
+
+### Docs
+
+* **navigation:** correct navigation slug for guide: Making your first request ([29c8580](https://github.com/vtexdocs/devportal/commit/29c85804d91c2d315a61db51f6cd72619d21d680))
+* **redirect:** redirect guide due to slug change: Making your first request ([1c89e1e](https://github.com/vtexdocs/devportal/commit/1c89e1e4c38995b3ee998a772835ddb42f343bb3))
+
+
+### Build
+
+* update rapidoc version ([98bf11b](https://github.com/vtexdocs/devportal/commit/98bf11bfb4c076ef1d7b5e337c74982d7c8772a6))
+* update rapidoc version ([162db4b](https://github.com/vtexdocs/devportal/commit/162db4b46a472287ffd3c72166971d7f3a19a389))
+
 ## [1.7.0](https://github.com/vtexdocs/devportal/compare/v1.6.1...v1.7.0) (2023-02-13)
 
 
