@@ -18,16 +18,18 @@ export default function remarkBlockquote() {
       if (node.type !== 'blockquote') return
 
       const { children = [] } = node
-      const [{ value, type }, ...siblings] = children[0].children
+      const [{ value }] = children[0].children
 
       const result = Object.entries(extendedNames).find(([, regex]) =>
         regex.test(value)
       )
       if (!result) return
+      const newNode = node.children
+      newNode[0].children[0].value = newNode[0].children[0].value.substring(2)
 
       const newChild = {
-        type,
-        value: formatValues(value, result[1]),
+        type: 'paragraph',
+        children: newNode,
       }
 
       const props = {
@@ -41,21 +43,9 @@ export default function remarkBlockquote() {
       parent.children.splice(
         index,
         1,
-        u('blockquote', props, [u('paragraph', [newChild, ...siblings])])
+        u('blockquote', props, [u('paragraph', [newChild])])
       )
       return [SKIP, index]
     })
   }
-}
-
-const formatValues = (value, regEx) => {
-  if (value && value.includes('\n')) {
-    return value
-      .split('\n')
-      .map((val) => {
-        if (val.length === 2) return val.concat(' ').replace(regEx, '')
-        return val.replace(regEx, '').trimStart()
-      })
-      .join('\n')
-  } else return value.replace(regEx, '').trimStart()
 }
