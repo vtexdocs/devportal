@@ -223,6 +223,11 @@ const nextConfig = {
         destination: '/docs/guides/pii-platform-version',
         permanent: true,
       },
+      {
+        source: '/docs/guides/getting-started-making-your-first-request',
+        destination: '/docs/guides/making-your-first-request',
+        permanent: true,
+      },
     ]
   },
   i18n: {
