@@ -1580,6 +1580,14 @@
           ]
         },
         {
+          "name": "Fulfillment",
+          "slug": "fulfillment-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+          ]
+        },
+        {
           "name": "VTEX inStore",
           "slug": "instore-category",
           "origin": "",
