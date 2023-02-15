@@ -3,6 +3,9 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 const menuContainer: SxStyleProp = {
   display: 'flex',
   width: 'max-content',
+  position: 'relative',
+  transition: '1s',
+  left: 0,
 }
 
 const cardContainer: SxStyleProp = {
@@ -28,9 +31,8 @@ const headerContainer: SxStyleProp = {
 const hamburgerContainer: SxStyleProp = {
   backgroundColor: '#ffff',
   width: '100%',
-  postition: 'relative',
-  left: 0,
   '.menuHidden': {
+    transition: '1s',
     left: '-100vw',
   },
 }
@@ -143,6 +145,10 @@ const updatesContainer: SxStyleProp = {
   borderTop: '1px solid #E7E9EE',
 }
 
+const noPadding: SxStyleProp = {
+  padding: '0px',
+}
+
 export default {
   menuContainer,
   cardContainer,
@@ -162,4 +168,5 @@ export default {
   documentationContainer,
   updatesContainer,
   hamburgerContainer,
+  noPadding,
 }
