@@ -1490,21 +1490,6 @@
               ]
             },
             {
-              "name": "Multilevel Omnichannel Inventory",
-              "slug": "multilevel-omnichannel-inventory",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "API Integration",
-                  "slug": "api-integration",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Subscriptions",
               "slug": "subscriptions-category",
               "origin": "",
@@ -1579,6 +1564,21 @@
                 {
                   "name": "Integrating external orders via API to be used with VTEX Tracking",
                   "slug": "integrate-external-orders-vtex-tracking",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Multilevel Omnichannel Inventory",
+              "slug": "multilevel-omnichannel-inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "API Integration",
+                  "slug": "api-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
