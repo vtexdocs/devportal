@@ -25,7 +25,7 @@
 
 .blockquote {
   display: grid;
-  padding: 5px 20px;
+  padding: 20px;
   gap: 20px;
   width: 100%;
   margin: 20px 0;
@@ -33,6 +33,11 @@
   align-items: center;
   border: 1px solid #ccced8;
 }
+
+.blockquote p{
+  margin: 0px
+}
+
 .blockquote a{
   color: #D4084C !important;
 }
