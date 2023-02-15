@@ -403,21 +403,6 @@
               ]
             },
             {
-              "name": "Multilevel Omnichannel Inventory",
-              "slug": "multilevel-omnichannel-inventory",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "API Integration",
-                  "slug": "api-integration",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Gift Card",
               "slug": "gift-card-integration-guide",
               "origin": "",
@@ -1542,6 +1527,21 @@
                 {
                   "name": "Adding a second address for invoicing an order",
                   "slug": "adding-a-second-address-to-the-order",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Multilevel Omnichannel Inventory",
+              "slug": "multilevel-omnichannel-inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "API Integration",
+                  "slug": "api-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
