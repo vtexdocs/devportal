@@ -210,20 +210,6 @@
                   "children": []
                 },
                 {
-                  "name": "Change seller",
-                  "slug": "change-seller",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Change order",
-                  "slug": "change-order",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Updating / deleting information",
                   "slug": "erp-integration-updating-and-deleting-information",
                   "origin": "",
