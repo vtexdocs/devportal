@@ -74,8 +74,9 @@ const Callout = ({ node, icon, ...props }: Component) => {
           ? styles.blockquoteSuccess
           : ''
       }`}
-      {...props}
-    />
+    >
+      <p {...props} />
+    </blockquote>
   )
 }
 

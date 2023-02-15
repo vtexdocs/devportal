@@ -8,6 +8,7 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
+import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 import { getLogger } from 'utils/logging/log-util'
@@ -157,7 +158,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGFM, remarkImages],
+        remarkPlugins: [remarkGFM, remarkImages, remarkBlockquote],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
