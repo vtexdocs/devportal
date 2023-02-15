@@ -690,57 +690,6 @@
               "children": []
             },
             {
-              "name": "VTEX Shipping Network",
-              "slug": "vtex-shipping-network",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
-                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Integration flow",
-                  "slug": "integration-flow",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Notification",
-                  "slug": "notification-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Tracking",
-                  "slug": "tracking-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "VTEX Tracking",
-              "slug": "vtex-tracking",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integrating external orders via API to be used with VTEX Tracking",
-                  "slug": "integrate-external-orders-vtex-tracking",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "reCAPTCHA",
               "slug": "recaptcha",
               "origin": "",
@@ -1585,6 +1534,57 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "VTEX Shipping Network",
+              "slug": "vtex-shipping-network",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
+                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integration flow",
+                  "slug": "integration-flow",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Notification",
+                  "slug": "notification-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tracking",
+                  "slug": "tracking-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "VTEX Tracking",
+              "slug": "vtex-tracking",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integrating external orders via API to be used with VTEX Tracking",
+                  "slug": "integrate-external-orders-vtex-tracking",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
           ]
         },
         {
