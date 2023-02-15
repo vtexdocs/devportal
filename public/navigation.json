@@ -768,112 +768,112 @@
                   "children": []
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Catalog",
+          "slug": "catalog-integration",
+          "origin": "",
+          "type": "markdown",
+          "children": [
             {
-              "name": "Catalog",
-              "slug": "catalog-integration",
+              "name": "Categories",
+              "slug": "categories",
               "origin": "",
               "type": "markdown",
-              "children": [
-                {
-                  "name": "Categories",
-                  "slug": "categories",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Create a category",
-                  "slug": "create-a-category",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Brands",
-                  "slug": "brands",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Create a brand",
-                  "slug": "create-a-brand",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Products",
-                  "slug": "products",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Specifications",
-                  "slug": "specifications",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to create a specification",
-                  "slug": "how-to-create-a-specification",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Product specifications",
-                  "slug": "product-specifications",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "SKU specifications",
-                  "slug": "sku-specifications",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "SKUs",
-                  "slug": "skus",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to activate an SKU",
-                  "slug": "how-to-activate-an-sku",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Images",
-                  "slug": "images",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Alternative API requests",
-                  "slug": "alternative-api-requests",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to implement product color variation",
-                  "slug": "how-to-implement-product-color-variation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "children": []
+            },
+            {
+              "name": "Create a category",
+              "slug": "create-a-category",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Brands",
+              "slug": "brands",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Create a brand",
+              "slug": "create-a-brand",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Products",
+              "slug": "products",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Specifications",
+              "slug": "specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "How to create a specification",
+              "slug": "how-to-create-a-specification",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Product specifications",
+              "slug": "product-specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "SKU specifications",
+              "slug": "sku-specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "SKUs",
+              "slug": "skus",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "How to activate an SKU",
+              "slug": "how-to-activate-an-sku",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Images",
+              "slug": "images",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Alternative API requests",
+              "slug": "alternative-api-requests",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "How to implement product color variation",
+              "slug": "how-to-implement-product-color-variation",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
