@@ -133,28 +133,6 @@
           "type": "category",
           "children": [
             {
-              "name": "API Guides",
-              "slug": "api-guides-category",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Setting up DKIM for transactional emails",
-                  "slug": "setting-up-dkim-for-transactional-emails",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up the SPF",
-                  "slug": "setting-up-the-spf",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Back office integration guide (ERP/PIM/WMS)",
               "slug": "erp-integration-guide",
               "origin": "",
@@ -1772,6 +1750,20 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "Setting up DKIM for transactional emails",
+              "slug": "setting-up-dkim-for-transactional-emails",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Setting up the SPF",
+              "slug": "setting-up-the-spf",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "How to set up functions in the Message Center templates",
               "slug": "how-to-set-up-functions-in-the-message-center-templates",
