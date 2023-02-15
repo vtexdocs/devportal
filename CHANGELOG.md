@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.2](https://github.com/vtexdocs/devportal/compare/v1.7.1...v1.7.2) (2023-02-15)
+
+
+### Bug Fixes
+
+* **rehypeblockquote:** fixes long callouts ([0ea745c](https://github.com/vtexdocs/devportal/commit/0ea745c4ded725df50e6101cf1f0158b5301beff))
+* **release-notes:** use remarkBlockquote ([ca26cb9](https://github.com/vtexdocs/devportal/commit/ca26cb9ad8db1079b2578b2e1251428b19e948c6))
+
 ### [1.7.1](https://github.com/vtexdocs/devportal/compare/v1.7.0...v1.7.1) (2023-02-14)
 
 
