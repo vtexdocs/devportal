@@ -1477,6 +1477,13 @@
           "type": "category",
           "children": [
             {
+              "name": "Feed v3",
+              "slug": "orders-feed",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Change order",
               "slug": "change-order",
               "origin": "",
@@ -1549,11 +1556,26 @@
               ]
             },
             {
-              "name": "Feed v3",
-              "slug": "orders-feed",
+              "name": "Subscriptions",
+              "slug": "subscriptions-category",
               "origin": "",
-              "type": "markdown",
-              "children": []
+              "type": "category",
+              "children": [
+                {
+                  "name": "Enabling Manual Prices for Subscriptions v3",
+                  "slug": "enabling-manual-prices-for-subscriptions-v3",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Subscriptions v3 migration guide",
+                  "slug": "subscriptions-v3-migration-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -1834,28 +1856,6 @@
             {
               "name": "Create Zendesk integration",
               "slug": "create-zendesk-integration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Subscriptions",
-          "slug": "subscriptions-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Enabling Manual Prices for Subscriptions v3",
-              "slug": "enabling-manual-prices-for-subscriptions-v3",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Subscriptions v3 migration guide",
-              "slug": "subscriptions-v3-migration-guide",
               "origin": "",
               "type": "markdown",
               "children": []
