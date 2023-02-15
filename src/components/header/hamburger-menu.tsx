@@ -4,22 +4,32 @@ import styles from './styles'
 import DocumentationCard from 'components/documentation-card'
 import { documentationData, updatesData } from 'utils/constants'
 import SidebarSection, { SidebarSectionProps } from 'components/sidebar-section'
-import { useContext, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { SidebarContext } from 'utils/contexts/sidebar'
 
 const HamburgerMenu = ({ sectionSelected = 'API Reference' }) => {
-  const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
-  const { sidebarDataMaster, sidebarSectionHidden, setSidebarSectionHidden } =
-    useContext(SidebarContext)
+  const {
+    sidebarDataMaster,
+    sidebarSectionHidden,
+    activeSidebarElement,
+    setActiveSidebarElement,
+    setSidebarSectionHidden,
+  } = useContext(SidebarContext)
+
+  useEffect(() => {
+    if (!activeSidebarElement) {
+      setActiveSidebarElement(sectionSelected)
+    }
+  }, [activeSidebarElement])
 
   return (
     <Header.ActionButton>
-      <VtexHamburgerMenu
-        sx={styles.hamburgerContainer}
-        className={sidebarSectionHidden ? '' : 'menuHidden'}
-      >
-        <VtexHamburgerMenu.Menu>
-          <Box sx={styles.menuContainer}>
+      <VtexHamburgerMenu sx={styles.hamburgerContainer}>
+        <VtexHamburgerMenu.Menu sx={styles.noPadding}>
+          <Box
+            sx={styles.menuContainer}
+            className={sidebarSectionHidden ? '' : 'menuHidden'}
+          >
             <Box sx={styles.cardContainer}>
               <Box
                 sx={styles.documentationContainer}
@@ -31,7 +41,7 @@ const HamburgerMenu = ({ sectionSelected = 'API Reference' }) => {
                     key={card.title}
                     {...card}
                     onClick={() => {
-                      setActiveSectionName(card.title)
+                      setActiveSidebarElement(card.title)
                       setSidebarSectionHidden(false)
                     }}
                   />
@@ -51,12 +61,13 @@ const HamburgerMenu = ({ sectionSelected = 'API Reference' }) => {
               </Box>
             </Box>
             <Box sx={styles.sideMenuContainer}>
-              {activeSectionName ? (
+              {activeSidebarElement ? (
                 <SidebarSection
+                  isHamburgerMenu={true}
                   {...(Array.isArray(sidebarDataMaster)
                     ? sidebarDataMaster?.find(
                         (section: SidebarSectionProps) =>
-                          section.documentation === activeSectionName
+                          section.documentation === activeSidebarElement
                       )
                     : null)}
                 />
