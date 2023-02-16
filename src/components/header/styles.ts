@@ -145,8 +145,10 @@ const updatesContainer: SxStyleProp = {
   borderTop: '1px solid #E7E9EE',
 }
 
-const noPadding: SxStyleProp = {
+const innerHambugerContainer: SxStyleProp = {
   padding: '0px',
+  position: 'relative',
+  overflowX: 'hidden',
 }
 
 export default {
@@ -168,5 +170,5 @@ export default {
   documentationContainer,
   updatesContainer,
   hamburgerContainer,
-  noPadding,
+  innerHambugerContainer,
 }

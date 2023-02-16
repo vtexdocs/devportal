@@ -25,7 +25,7 @@ const HamburgerMenu = ({ sectionSelected = 'API Reference' }) => {
   return (
     <Header.ActionButton>
       <VtexHamburgerMenu sx={styles.hamburgerContainer}>
-        <VtexHamburgerMenu.Menu sx={styles.noPadding}>
+        <VtexHamburgerMenu.Menu sx={styles.innerHambugerContainer}>
           <Box
             sx={styles.menuContainer}
             className={sidebarSectionHidden ? '' : 'menuHidden'}
