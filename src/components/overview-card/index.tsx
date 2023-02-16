@@ -1,5 +1,5 @@
-import styles from './styles.module.css'
-import Link from 'next/link'
+import styles from './styles'
+import { Flex, Box } from '@vtex/brand-ui'
 import * as Icons from './icons'
 import type { IconComponent } from 'utils/typings/types'
 
@@ -17,70 +17,81 @@ const IconsMap: IconsI[] = [
     name: 'Board',
     Icon: Icons.Board,
   },
+  {
+    name: 'Integration',
+    Icon: Icons.Integration,
+  },
+  {
+    name: 'SearchList',
+    Icon: Icons.SearchList,
+  },
+  {
+    name: 'SearchDetails',
+    Icon: Icons.SearchDetails,
+  },
+  {
+    name: 'SwitchArrows',
+    Icon: Icons.SwitchArrows,
+  },
+  {
+    name: 'ChangeCart',
+    Icon: Icons.ChangeCart,
+  },
+  {
+    name: 'ToStore',
+    Icon: Icons.ToStore,
+  },
+  {
+    name: 'PaymentHand',
+    Icon: Icons.PaymentHand,
+  },
+  {
+    name: 'GlobeCart',
+    Icon: Icons.GlobeCart,
+  },
+  {
+    name: 'StoreCart',
+    Icon: Icons.StoreCart,
+  },
+  {
+    name: 'List',
+    Icon: Icons.List,
+  },
+  {
+    name: 'Blocks',
+    Icon: Icons.Blocks,
+  },
+  {
+    name: 'StoreData',
+    Icon: Icons.StoreData,
+  },
+  {
+    name: 'Cart',
+    Icon: Icons.Cart,
+  },
+  {
+    name: 'FileConfiguration',
+    Icon: Icons.FileConfiguration,
+  },
 ]
 
-//Interfaces
-interface OverviewCardProps {
-  title: string
-  href: string
-  description: string
-  docs: string
-  icon: string
-  seeMore: boolean | undefined
-}
-
-interface ListOfDocsProps {
-  docs: { title: string; href: string }[]
-  href: string
-  seeMore: boolean | undefined
-}
-
-//Functions
 const getIcon = (name: string) => {
   return IconsMap.find((icon) => icon.name === name)?.Icon
 }
 
-const ListOfDocs = ({ docs, seeMore, href }: ListOfDocsProps) => (
-  <ul className={styles.listOfDocs}>
-    {docs.map((doc) => (
-      <li key={doc.href}>
-        <Link href={doc.href}>{doc.title}</Link>
-      </li>
-    ))}
-    {seeMore && (
-      <li className={styles.seeMore}>
-        <Link href={href} legacyBehavior>
-          <a>See more</a>
-        </Link>
-      </li>
-    )}
-  </ul>
-)
+//Interfaces
+interface OverviewCardProps {
+  icon: string
+  children: string
+}
 
-const OverviewCard = ({
-  title,
-  href,
-  description,
-  docs,
-  icon,
-  seeMore,
-}: OverviewCardProps) => {
+const OverviewCard = ({ icon, children }: OverviewCardProps) => {
   const Icon = getIcon(icon)
   return (
-    <div className={styles.categoryInfo}>
-      {Icon && <Icon className={styles.icon} />}
-      <div>
-        <div className={styles.header}>
-          <Link href={href}>{title}</Link>
-          <p>{description}</p>
-        </div>
-        <ListOfDocs
-          docs={JSON.parse(docs.replace(/\\/g, ''))}
-          seeMore={seeMore}
-          href={href}
-        />
-      </div>
-    </div>
+    <Flex sx={styles.overviewCard}>
+      {Icon && <Icon sx={styles.overviewIcon} />}
+      <Box>{children}</Box>
+    </Flex>
   )
 }
 
