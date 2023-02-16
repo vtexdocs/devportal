@@ -11,16 +11,16 @@ const HamburgerMenu = ({ sectionSelected = 'API Reference' }) => {
   const {
     sidebarDataMaster,
     sidebarSectionHidden,
-    activeSidebarElement,
-    setActiveSidebarElement,
+    activeSidebarTab,
+    setActiveSidebarTab,
     setSidebarSectionHidden,
   } = useContext(SidebarContext)
 
   useEffect(() => {
-    if (!activeSidebarElement) {
-      setActiveSidebarElement(sectionSelected)
+    if (!activeSidebarTab) {
+      setActiveSidebarTab(sectionSelected)
     }
-  }, [activeSidebarElement])
+  }, [activeSidebarTab])
 
   return (
     <Header.ActionButton>
@@ -41,7 +41,7 @@ const HamburgerMenu = ({ sectionSelected = 'API Reference' }) => {
                     key={card.title}
                     {...card}
                     onClick={() => {
-                      setActiveSidebarElement(card.title)
+                      setActiveSidebarTab(card.title)
                       setSidebarSectionHidden(false)
                     }}
                   />
@@ -61,13 +61,13 @@ const HamburgerMenu = ({ sectionSelected = 'API Reference' }) => {
               </Box>
             </Box>
             <Box sx={styles.sideMenuContainer}>
-              {activeSidebarElement ? (
+              {activeSidebarTab ? (
                 <SidebarSection
                   isHamburgerMenu={true}
                   {...(Array.isArray(sidebarDataMaster)
                     ? sidebarDataMaster?.find(
                         (section: SidebarSectionProps) =>
-                          section.documentation === activeSidebarElement
+                          section.documentation === activeSidebarTab
                       )
                     : null)}
                 />
