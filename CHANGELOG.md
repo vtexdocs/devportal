@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.7.3](https://github.com/vtexdocs/devportal/compare/v1.7.2...v1.7.3) (2023-02-17)
+
+
+### Features
+
+* **layout:** add GTM ([70407ee](https://github.com/vtexdocs/devportal/commit/70407eee7c2c1ca7df24a21e16a27b8edb332d8e))
+* **layout:** correct GTM ([28d4652](https://github.com/vtexdocs/devportal/commit/28d4652bb09e43eaae790833764e5b5e8a0d5374))
+
+
+### Bug Fixes
+
+* **overview-card:** update overview card ([4e00ed3](https://github.com/vtexdocs/devportal/commit/4e00ed35e0e92e454f77413bf72bc33710c7228e))
+
+
+### Docs
+
+* move Catalog guides ([5e2b8fd](https://github.com/vtexdocs/devportal/commit/5e2b8fd8bf5e1126f02a6367f5dc245dd7898175))
+* move Message Center guides ([d0c7d80](https://github.com/vtexdocs/devportal/commit/d0c7d8093a828960907621503fe00b810fc58988))
+* **navigation:** edit pricing api paths ([97797d8](https://github.com/vtexdocs/devportal/commit/97797d8e5cc2549712d18d987874e2e0dc049fef))
+* **navigation:** improve authentication navigation in getting started section ([a26e2ae](https://github.com/vtexdocs/devportal/commit/a26e2ae3dbddca25c1d716278594ef3526b32680))
+* **redirect:** redirect authentication overview to new slug, according to architecture improvements ([0d4998b](https://github.com/vtexdocs/devportal/commit/0d4998b3476f7e85b2941d5b1cc681ecfd6be140))
+
 ### [1.7.2](https://github.com/vtexdocs/devportal/compare/v1.7.1...v1.7.2) (2023-02-15)
 
 
