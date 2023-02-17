@@ -785,22 +785,8 @@
               "children": []
             },
             {
-              "name": "Create a category",
-              "slug": "create-a-category",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Brands",
               "slug": "brands",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Create a brand",
-              "slug": "create-a-brand",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -815,13 +801,6 @@
             {
               "name": "Specifications",
               "slug": "specifications",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "How to create a specification",
-              "slug": "how-to-create-a-specification",
               "origin": "",
               "type": "markdown",
               "children": []
