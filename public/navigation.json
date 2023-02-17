@@ -31,13 +31,6 @@
                   "children": []
                 },
                 {
-                  "name": "Authentication",
-                  "slug": "getting-started-authentication",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Making your first request",
                   "slug": "making-your-first-request",
                   "origin": "",
@@ -110,11 +103,18 @@
               "children": []
             },
             {
-              "name": "Account management",
-              "slug": "account-management",
+              "name": "Authentication",
+              "slug": "authentication",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "Authentication overview",
+                  "slug": "authentication-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Checking which user is currently authenticated",
                   "slug": "checking-which-user-is-currently-authenticated",
