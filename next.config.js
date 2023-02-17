@@ -228,6 +228,11 @@ const nextConfig = {
         destination: '/docs/guides/making-your-first-request',
         permanent: true,
       },
+      {
+        source: '/docs/guides/getting-started-authentication',
+        destination: '/docs/guides/authentication-overview',
+        permanent: true,
+      },
     ]
   },
   i18n: {
