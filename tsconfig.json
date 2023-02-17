@@ -12,6 +12,11 @@
     "baseUrl": "src",
     "lib": ["ES2021.String"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/tests/cypress/support/commands.js"
+  ],
   "exclude": ["node_modules"]
 }
