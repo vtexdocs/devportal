@@ -233,6 +233,21 @@ const nextConfig = {
         destination: '/docs/guides/authentication-overview',
         permanent: true,
       },
+      {
+        source: '/docs/guides/create-a-category',
+        destination: '/docs/guides/categories',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/create-a-brand',
+        destination: '/docs/guides/brands',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/how-to-create-a-specification',
+        destination: '/docs/guides/specifications',
+        permanent: true,
+      },
     ]
   },
   i18n: {
