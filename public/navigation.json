@@ -8041,7 +8041,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/config",
+                  "endpoint": "/pricing/config",
                   "children": []
                 },
                 {
@@ -8050,7 +8050,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/migration",
+                  "endpoint": "/pricing/migration",
                   "children": []
                 }
               ]
@@ -8066,7 +8066,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/pipeline/catalog/-priceTableId-",
+                  "endpoint": "/pricing/pipeline/catalog/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8075,7 +8075,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/pipeline/catalog/-priceTableId-",
+                  "endpoint": "/pricing/pipeline/catalog/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8084,7 +8084,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/pipeline/catalog",
+                  "endpoint": "/pricing/pipeline/catalog",
                   "children": []
                 },
                 {
@@ -8093,7 +8093,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/tables",
+                  "endpoint": "/pricing/tables",
                   "children": []
                 }
               ]
