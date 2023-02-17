@@ -23,3 +23,39 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('any', { prevSubject: 'element' }, (subject, size = 1) => {
+  cy.wrap(subject).then((elementList) => {
+    elementList = elementList.jquery ? elementList.get() : elementList
+    elementList = Cypress._.sampleSize(elementList, size)
+    elementList = elementList.length > 1 ? elementList : elementList[0]
+    cy.wrap(elementList)
+  })
+})
+
+Cypress.Commands.add('randomize', { prevSubject: 'element' }, (subject) => {
+  // let index = 0
+  cy.wrap(subject).then((obj) => {
+    cy.wrap(obj)
+      // .should('have.length.gt', 2)
+      .its('length')
+      .then((size) => Cypress._.random(0, size - 1))
+      .then((randomIndex) => {
+        // cy.log('randomIndex', randomIndex)
+        // index = randomIndex
+        return cy.wrap([obj.eq(randomIndex), randomIndex])
+      })
+  })
+  // cy.wrap(subject)
+  //   .as('aloha')
+  //   .should('have.length.gt', 2)
+  //   .its('length')
+  //   .then((size) => Cypress._.random(0, size - 1))
+  //   .then((randomIndex) => {
+  //     // cy.log('randomIndex', randomIndex)
+  //     // index = randomIndex
+  //     return cy.wrap([cy.get('@aloha').eq(randomIndex), randomIndex])
+  //   })
+  // cy.log('ih', cy.get('@aloha'))
+  // return cy.wrap([cy.get('@aloha').eq(index), index])
+})
