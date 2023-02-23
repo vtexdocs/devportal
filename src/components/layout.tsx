@@ -70,7 +70,7 @@ export default function Layout({
         </Script>
       </div>
       <SidebarContextProvider fallback={sidebarfallback}>
-        <Header sectionSelected={sectionSelected} />
+        <Header />
         <Flex sx={styles.container}>
           {!hideSidebar && (
             <Sidebar

@@ -21,14 +21,9 @@ import SearchInput from 'components/search-input'
 import AnnouncementBar from 'components/announcement-bar'
 
 import styles from './styles'
-import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
-
-interface SideBarSectionState {
-  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
-}
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Header = ({ sectionSelected = 'API Reference' }: SideBarSectionState) => {
+const Header = () => {
   const router = useRouter()
 
   const lastScroll = useRef(0)
@@ -139,7 +134,7 @@ const Header = ({ sectionSelected = 'API Reference' }: SideBarSectionState) => {
             </Text>
           </VtexLink>
         </HeaderBrand.RightLinks>
-        <HamburgerMenu sectionSelected={sectionSelected} />
+        <HamburgerMenu />
       </HeaderBrand>
     </Box>
   )
