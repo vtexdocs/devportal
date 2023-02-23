@@ -29,6 +29,10 @@ footer > div {
   outline: none;
 }
 
+pre {
+  overflow-x: auto;
+}
+
 table {
   border-collapse: collapse;
   max-width: 100%;
