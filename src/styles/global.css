@@ -29,6 +29,16 @@ footer > div {
   outline: none;
 }
 
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
 pre {
   overflow-x: auto;
 }
