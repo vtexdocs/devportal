@@ -31,6 +31,7 @@ const articleBox: SxStyleProp = {
     fontSize: '1.75em',
     fontWeight: '400',
     lineHeight: '2.375em',
+    overflowWrap: 'anywhere',
   },
   h2: {
     fontSize: '1.375em',
@@ -39,6 +40,7 @@ const articleBox: SxStyleProp = {
     marginY: '1.125em',
     paddingTop: '90px',
     marginTop: '-90px',
+    overflowWrap: 'anywhere',
   },
   h3: {
     fontSize: '1.125em',
@@ -46,9 +48,11 @@ const articleBox: SxStyleProp = {
     lineHeight: '1.875em',
     paddingTop: '90px',
     marginTop: '-90px',
+    overflowWrap: 'anywhere',
   },
   strong: {
     fontWeight: '600',
+    overflowWrap: 'anywhere',
   },
 }
 
