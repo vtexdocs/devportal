@@ -4,10 +4,10 @@ import styles from './styles'
 import DocumentationCard from 'components/documentation-card'
 import { documentationData, updatesData } from 'utils/constants'
 import SidebarSection, { SidebarSectionProps } from 'components/sidebar-section'
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import { SidebarContext } from 'utils/contexts/sidebar'
 
-const HamburgerMenu = ({ sectionSelected = 'API Reference' }) => {
+const HamburgerMenu = () => {
   const {
     sidebarDataMaster,
     sidebarSectionHidden,
@@ -16,19 +16,15 @@ const HamburgerMenu = ({ sectionSelected = 'API Reference' }) => {
     setSidebarSectionHidden,
   } = useContext(SidebarContext)
 
-  useEffect(() => {
-    if (!activeSidebarTab) {
-      setActiveSidebarTab(sectionSelected)
-    }
-  }, [activeSidebarTab])
-
   return (
     <Header.ActionButton>
       <VtexHamburgerMenu sx={styles.hamburgerContainer}>
         <VtexHamburgerMenu.Menu sx={styles.innerHambugerContainer}>
           <Box
             sx={styles.menuContainer}
-            className={sidebarSectionHidden ? '' : 'menuHidden'}
+            className={
+              sidebarSectionHidden || !activeSidebarTab ? '' : 'menuHidden'
+            }
           >
             <Box sx={styles.cardContainer}>
               <Box
