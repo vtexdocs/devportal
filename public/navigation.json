@@ -6385,7 +6385,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-orderId-/fulfill",
+                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill",
                   "children": []
                 },
                 {
