@@ -7135,15 +7135,6 @@
                   "origin": "",
                   "endpoint": "/api/oms/pvt/orders/-orderId-/changes",
                   "children": []
-                },
-                {
-                  "name": "Add log in orders",
-                  "slug": "orders-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/oms/pvt/orders/-orderId-/interactions",
-                  "children": []
                 }
               ]
             },
