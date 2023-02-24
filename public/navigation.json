@@ -1222,6 +1222,21 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Region",
+              "slug": "region",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Get sellers by region or address",
+                  "slug": "get-sellers-by-region-or-address",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -4267,7 +4282,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get sellers by region",
+                  "name": "Get sellers by region or address",
                   "slug": "checkout-api",
                   "type": "openapi",
                   "method": "GET",
