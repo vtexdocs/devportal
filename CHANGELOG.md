@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/vtexdocs/devportal/compare/v1.7.3...v1.8.0) (2023-02-24)
+
+
+### Features
+
+* add working sidebar component to hamburger menu ([94ee834](https://github.com/vtexdocs/devportal/commit/94ee834d81be3419632a185b61d608f83dba2f84))
+* creating mobile menu ([25f66b7](https://github.com/vtexdocs/devportal/commit/25f66b72617919728d0bb84015407beea42fe32e))
+* **icons:** add arrow left icon ([b408d4d](https://github.com/vtexdocs/devportal/commit/b408d4d11276468ddd13af503ef5ceba444765cb))
+* **menu:** improve animation and add arrow to cards ([d32758c](https://github.com/vtexdocs/devportal/commit/d32758cbfa1b21bdba0ffc7b51a82a1bd114f8e7))
+* **sidebar:** create sidebar version to hamburger menu ([1ab74c8](https://github.com/vtexdocs/devportal/commit/1ab74c8b0b53acb4a466608dade4a64f8860c765))
+* **sidebar:** store current sidebar tab ([c6170eb](https://github.com/vtexdocs/devportal/commit/c6170eb6e804f5e6414251d838941f771fdea97f))
+
+
+### Bug Fixes
+
+* **hamburger-menu:** disable horizontal scroll ([f066928](https://github.com/vtexdocs/devportal/commit/f066928bd36d37430acd9924012fed82e034db57))
+* **hamburger-menu:** remove menu default  selection ([46261a2](https://github.com/vtexdocs/devportal/commit/46261a2339594d422e674b999c30db3ff834d5c6))
+* **header:** remove unused prop ([85d8b78](https://github.com/vtexdocs/devportal/commit/85d8b7829c8827f242ce5a384bf5099b7d4073d4))
+
+
+### Docs
+
+* create redirects ([1dc789a](https://github.com/vtexdocs/devportal/commit/1dc789a98d4d0b5648504ec8e4829f0206e8ff79))
+* **navigation:** remove deleted guides ([a1b8021](https://github.com/vtexdocs/devportal/commit/a1b80213f4bea360b36e784214c648552030ad4e))
+
+
+### Style
+
+* always show close icon on announcement bar ([a69c57b](https://github.com/vtexdocs/devportal/commit/a69c57b101c3c49eae42826c0e6f013b224aa5a4))
+* update sidebar and header styles ([82116d1](https://github.com/vtexdocs/devportal/commit/82116d12c3bf49df0b776a347bdd742374aa25f4))
+
 ### [1.7.3](https://github.com/vtexdocs/devportal/compare/v1.7.2...v1.7.3) (2023-02-17)
 
 
