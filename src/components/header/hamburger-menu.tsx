@@ -1,4 +1,10 @@
-import { Header, HamburgerMenu as VtexHamburgerMenu, Box } from '@vtex/brand-ui'
+import {
+  Header,
+  HamburgerMenu as VtexHamburgerMenu,
+  Box,
+  IconCaret,
+  Button,
+} from '@vtex/brand-ui'
 import styles from './styles'
 
 import DocumentationCard from 'components/documentation-card'
@@ -20,27 +26,35 @@ const HamburgerMenu = () => {
     <Header.ActionButton>
       <VtexHamburgerMenu sx={styles.hamburgerContainer}>
         <VtexHamburgerMenu.Menu sx={styles.innerHambugerContainer}>
-          <Box
-            sx={styles.menuContainer}
-            className={
-              sidebarSectionHidden || !activeSidebarTab ? '' : 'menuHidden'
-            }
-          >
+          <Box sx={styles.menuContainer}>
             <Box sx={styles.cardContainer}>
               <Box
                 sx={styles.documentationContainer}
                 data-cy="dropdown-menu-first-section"
               >
                 {documentationData.map((card) => (
-                  <DocumentationCard
-                    containerType="mobile"
-                    key={card.title}
-                    {...card}
-                    onClick={() => {
-                      setActiveSidebarTab(card.title)
-                      setSidebarSectionHidden(false)
-                    }}
-                  />
+                  <Box sx={styles.innerCardContainer}>
+                    <DocumentationCard
+                      containerType="mobile"
+                      key={card.title}
+                      {...card}
+                    />
+                    <Button
+                      aria-label={'Open sidebar'}
+                      size="regular"
+                      variant="tertiary"
+                      icon={() => <IconCaret direction="right" size={24} />}
+                      sx={
+                        activeSidebarTab === card.title && !sidebarSectionHidden
+                          ? styles.arrowIconActive
+                          : styles.arrowIcon
+                      }
+                      onClick={() => {
+                        setActiveSidebarTab(card.title)
+                        setSidebarSectionHidden(false)
+                      }}
+                    />
+                  </Box>
                 ))}
               </Box>
               <Box
@@ -48,15 +62,33 @@ const HamburgerMenu = () => {
                 data-cy="dropdown-menu-second-section"
               >
                 {updatesData.map((card) => (
-                  <DocumentationCard
-                    containerType="mobile"
-                    key={card.title}
-                    {...card}
-                  />
+                  <Box sx={styles.innerCardContainer}>
+                    <DocumentationCard
+                      containerType="mobile"
+                      key={card.title}
+                      {...card}
+                    />
+                    <Button
+                      aria-label={'Open sidebar'}
+                      size="regular"
+                      variant="tertiary"
+                      icon={() => <IconCaret direction="right" size={24} />}
+                      sx={styles.arrowIcon}
+                      onClick={() => {
+                        setActiveSidebarTab(card.title)
+                        setSidebarSectionHidden(false)
+                      }}
+                    />
+                  </Box>
                 ))}
               </Box>
             </Box>
-            <Box sx={styles.sideMenuContainer}>
+            <Box
+              className={
+                sidebarSectionHidden || !activeSidebarTab ? '' : 'menuHidden'
+              }
+              sx={styles.sideMenuContainer}
+            >
               {activeSidebarTab ? (
                 <SidebarSection
                   isHamburgerMenu={true}

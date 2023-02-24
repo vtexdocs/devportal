@@ -3,9 +3,6 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 const menuContainer: SxStyleProp = {
   display: 'flex',
   width: 'max-content',
-  position: 'relative',
-  transition: '1s',
-  left: 0,
 }
 
 const cardContainer: SxStyleProp = {
@@ -15,10 +12,13 @@ const cardContainer: SxStyleProp = {
 }
 
 const sideMenuContainer: SxStyleProp = {
+  backgroundColor: '#ffff',
   height: 'calc(100vh - 5rem)',
   width: '100vw',
   overflowY: 'auto',
   overflowX: 'hidden',
+  transform: 'translate(0)',
+  transition: 'transform .5s cubic-bezier(.4,0,.2,1)',
 }
 
 const headerContainer: SxStyleProp = {
@@ -32,8 +32,7 @@ const hamburgerContainer: SxStyleProp = {
   backgroundColor: '#ffff',
   width: '100%',
   '.menuHidden': {
-    transition: '1s',
-    left: '-100vw',
+    transform: 'translate(-100%)',
   },
 }
 
@@ -151,6 +150,22 @@ const innerHambugerContainer: SxStyleProp = {
   overflowX: 'hidden',
 }
 
+const innerCardContainer: SxStyleProp = {
+  display: 'flex',
+  alignItems: 'center',
+}
+
+const arrowIcon: SxStyleProp = {
+  padding: '0',
+  height: '34px',
+  color: 'muted.1',
+}
+
+const arrowIconActive: SxStyleProp = {
+  ...arrowIcon,
+  color: '#D71D55',
+}
+
 export default {
   menuContainer,
   cardContainer,
@@ -171,4 +186,7 @@ export default {
   updatesContainer,
   hamburgerContainer,
   innerHambugerContainer,
+  innerCardContainer,
+  arrowIcon,
+  arrowIconActive,
 }
