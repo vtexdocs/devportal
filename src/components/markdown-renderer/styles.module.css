@@ -21,6 +21,11 @@
   margin: 0;
   padding: 0.2em 0.4em;
   font-size: 0.875em;
+  word-break: break-all;
+}
+
+table .code {
+  word-break: normal;
 }
 
 .blockquote {
