@@ -47,7 +47,7 @@ const HamburgerMenu = () => {
                       aria-label={'Open sidebar'}
                       size="regular"
                       variant="tertiary"
-                      icon={() => <IconCaret direction="right" size={24} />}
+                      icon={() => <IconCaret direction="right" size={32} />}
                       sx={
                         activeSidebarTab === card.title && !sidebarSectionHidden
                           ? styles.arrowIconActive
