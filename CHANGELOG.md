@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.1](https://github.com/vtexdocs/devportal/compare/v1.8.0...v1.8.1) (2023-02-27)
+
+
+### Bug Fixes
+
+* **styles:** add break-word to inline code ([47858bc](https://github.com/vtexdocs/devportal/commit/47858bce0bafa8e249b4dab4cfede559581331d8))
+* **styles:** add overflow wrap to headings and strong tags ([eed6180](https://github.com/vtexdocs/devportal/commit/eed6180666dd757d81bd52f5366b3862df18ce36))
+* **styles:** limit img, svg and iframe width ([ccb3fea](https://github.com/vtexdocs/devportal/commit/ccb3feac2516934492379735c64b4b8e5b664459))
+* **styles:** show scrollbar in overflowing preformatted text ([d440e45](https://github.com/vtexdocs/devportal/commit/d440e457650ceca40a2161a06fd15ff7a09e988d))
+
+
+### Docs
+
+* chage path ([7daa0af](https://github.com/vtexdocs/devportal/commit/7daa0afc748589363b593ae6f62d4191745e8546))
+* redirect ([8a448fd](https://github.com/vtexdocs/devportal/commit/8a448fd10fa8b81d6f52d85476fe328c60f3b291))
+* remove from navigation ([114aaca](https://github.com/vtexdocs/devportal/commit/114aacaf8d20e9252ccd68a54f446e6a9642e99b))
+
 ## [1.8.0](https://github.com/vtexdocs/devportal/compare/v1.7.3...v1.8.0) (2023-02-24)
 
 
