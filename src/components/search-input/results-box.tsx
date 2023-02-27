@@ -1,26 +1,40 @@
-import { Dispatch, SetStateAction, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { connectStateResults } from 'react-instantsearch-dom'
-import { Hit, SearchState } from 'react-instantsearch-core'
+import {
+  connectStateResults,
+  connectHitInsights,
+} from 'react-instantsearch-dom'
+import {
+  Hit,
+  SearchState,
+  WrappedInsightsClient,
+} from 'react-instantsearch-core'
+import aa from 'search-insights'
 import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
 
 import { getIcon, messages } from 'utils/constants'
 import { getBreadcrumbs, getRelativeURL } from './functions'
 import CustomHighlight from './customHighlight'
 import styles from './styles'
-
 interface HitProps {
   hit: Hit
-  setSearchStateActive: Dispatch<SetStateAction<SearchState>>
+  insights: WrappedInsightsClient
 }
 
-const Hit = ({ hit, setSearchStateActive }: HitProps) => {
+const Hit = ({ hit, insights }: HitProps) => {
   const breadcrumbsList = getBreadcrumbs(hit)
   const DocIcon = getIcon(hit.doctype)
   return (
     <Link href={getRelativeURL(hit)} legacyBehavior>
-      <a onClick={() => setSearchStateActive({})}>
+      <a
+        onClick={() =>
+          insights('clickedObjectIDsAfterSearch', {
+            eventName: 'Search in top bar',
+            objectIDs: [hit.objectID],
+          })
+        }
+      >
         <Box sx={styles.hitBox}>
           <Flex>
             {DocIcon && <DocIcon className="hit-icon" sx={styles.hitIcon} />}
@@ -46,6 +60,8 @@ const Hit = ({ hit, setSearchStateActive }: HitProps) => {
   )
 }
 
+const HitWithInsights = connectHitInsights(aa)(Hit)
+
 const HitsBox = connectStateResults(({ searchState, searchResults }) => {
   const router = useRouter()
   const [searchStateActive, setSearchStateActive] =
@@ -57,6 +73,15 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
       pathname: '/search',
       query: { keyword },
     })
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const setQueryIDAndPosition = (hit: Hit, index: number): any => {
+    return {
+      ...hit,
+      __queryID: searchResults.queryID || '',
+      __position: searchResults.hitsPerPage * searchResults.page + index + 1,
+    }
   }
 
   useEffect(() => {
@@ -72,11 +97,14 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
               {searchResults.hits.map(
                 (searchResult, index) =>
                   index < 7 && (
-                    <Hit
-                      key={searchResult.objectID}
-                      hit={searchResult}
-                      setSearchStateActive={setSearchStateActive}
-                    />
+                    <Box
+                      key={`matched-result-${index}`}
+                      onClick={() => setSearchStateActive({})}
+                    >
+                      <HitWithInsights
+                        hit={setQueryIDAndPosition(searchResult, index)}
+                      />
+                    </Box>
                   )
               )}
             </Box>
