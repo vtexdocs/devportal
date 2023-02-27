@@ -12,6 +12,7 @@ import { documentationData, updatesData } from 'utils/constants'
 import SidebarSection, { SidebarSectionProps } from 'components/sidebar-section'
 import { useContext } from 'react'
 import { SidebarContext } from 'utils/contexts/sidebar'
+import SearchInput from 'components/search-input'
 
 const HamburgerMenu = () => {
   const {
@@ -26,6 +27,9 @@ const HamburgerMenu = () => {
     <Header.ActionButton>
       <VtexHamburgerMenu sx={styles.hamburgerContainer}>
         <VtexHamburgerMenu.Menu sx={styles.innerHambugerContainer}>
+          <Box sx={styles.hamburgerSearchContainer}>
+            <SearchInput />
+          </Box>
           <Box sx={styles.menuContainer}>
             <Box sx={styles.cardContainer}>
               <Box
