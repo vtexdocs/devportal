@@ -1203,7 +1203,7 @@
             },
             {
               "name": "Fulfillment",
-              "slug": "fulfillment",
+              "slug": "fulfillment-checkout-section-api-quick-start-guides",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -1225,7 +1225,7 @@
             },
             {
               "name": "Region",
-              "slug": "region",
+              "slug": "region-section-api-quick-start-guides",
               "origin": "",
               "type": "markdown",
               "children": [
