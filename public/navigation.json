@@ -1427,7 +1427,7 @@
           "children": [
             {
               "name": "Feed v3",
-              "slug": "orders-feed",
+              "slug": "feed-v3",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -1562,7 +1562,7 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Integrating external orders via API to be used with VTEX Tracking",
+                  "name": "Integrate external orders VTEX Tracking",
                   "slug": "integrate-external-orders-vtex-tracking",
                   "origin": "",
                   "type": "markdown",
@@ -1577,8 +1577,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "API Integration",
-                  "slug": "api-integration",
+                  "name": "Multilevel Omnichannel Inventory API Integration",
+                  "slug": "multilevel-omnichannel-inventory-api-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
