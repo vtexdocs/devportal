@@ -1,5 +1,26 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
+const menuContainer: SxStyleProp = {
+  display: 'flex',
+  width: 'max-content',
+}
+
+const cardContainer: SxStyleProp = {
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100vw',
+}
+
+const sideMenuContainer: SxStyleProp = {
+  backgroundColor: '#ffff',
+  height: 'calc(100vh - 5rem)',
+  width: '100vw',
+  overflowY: 'auto',
+  overflowX: 'hidden',
+  transform: 'translate(0)',
+  transition: 'transform .5s cubic-bezier(.4,0,.2,1)',
+}
+
 const headerContainer: SxStyleProp = {
   position: 'sticky',
   zIndex: 9999,
@@ -10,6 +31,9 @@ const headerContainer: SxStyleProp = {
 const hamburgerContainer: SxStyleProp = {
   backgroundColor: '#ffff',
   width: '100%',
+  '.menuHidden': {
+    transform: 'translate(-100%)',
+  },
 }
 
 const headerBrand: SxStyleProp = {
@@ -99,6 +123,13 @@ const searchContainer: SxStyleProp = {
   height: 'auto',
 }
 
+const hamburgerSearchContainer: SxStyleProp = {
+  display: 'flex',
+  justifyContent: 'center',
+  paddingBlock: '18px',
+  height: 'auto',
+}
+
 const searchIcon: SxStyleProp = {
   minWidth: '16px',
   minHeight: '16px',
@@ -120,11 +151,37 @@ const updatesContainer: SxStyleProp = {
   borderTop: '1px solid #E7E9EE',
 }
 
+const innerHambugerContainer: SxStyleProp = {
+  padding: '0px',
+  position: 'relative',
+  overflowX: 'hidden',
+}
+
+const innerCardContainer: SxStyleProp = {
+  display: 'flex',
+  alignItems: 'center',
+}
+
+const arrowIcon: SxStyleProp = {
+  padding: '0',
+  height: '34px',
+  color: 'muted.1',
+}
+
+const arrowIconActive: SxStyleProp = {
+  ...arrowIcon,
+  color: '#D71D55',
+}
+
 export default {
+  menuContainer,
+  cardContainer,
+  sideMenuContainer,
   logoSize,
   headerContainer,
   headerBrand,
   headerBrandLink,
+  hamburgerSearchContainer,
   searchContainer,
   searchIcon,
   rightLinks,
@@ -136,4 +193,8 @@ export default {
   documentationContainer,
   updatesContainer,
   hamburgerContainer,
+  innerHambugerContainer,
+  innerCardContainer,
+  arrowIcon,
+  arrowIconActive,
 }

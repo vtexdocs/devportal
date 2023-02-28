@@ -2,6 +2,96 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.2](https://github.com/vtexdocs/devportal/compare/v1.8.1...v1.8.2) (2023-02-28)
+
+
+### Features
+
+* **search box:** event to analyze user clicks ([282c611](https://github.com/vtexdocs/devportal/commit/282c611f6050685d3fa3466b9b0f7dc97af825d2))
+
+
+### Bug Fixes
+
+* **algolia script:** update name of algolia keys ([bd33b68](https://github.com/vtexdocs/devportal/commit/bd33b684efcbd5e4969ae9ed876dfec9b9e2e9f5))
+* **hamburger-menu:** add search input ([5392539](https://github.com/vtexdocs/devportal/commit/5392539cb734430598c4e17d088aeebe8d406446))
+* **hamburger-menu:** larger arrow in main menu ([379287f](https://github.com/vtexdocs/devportal/commit/379287fa36f052eb414a7767d274cb06696cb343))
+* **styles:** fix landing page cards ([88e4b90](https://github.com/vtexdocs/devportal/commit/88e4b9000530fc17fe89c353b0f5dba439e7ceb0))
+
+
+### Chore
+
+* **package.json:** add search-insights library ([3b10f3b](https://github.com/vtexdocs/devportal/commit/3b10f3b6bcb3e40e57c077b687d98144604b10c8))
+
+### [1.8.1](https://github.com/vtexdocs/devportal/compare/v1.8.0...v1.8.1) (2023-02-27)
+
+
+### Bug Fixes
+
+* **styles:** add break-word to inline code ([47858bc](https://github.com/vtexdocs/devportal/commit/47858bce0bafa8e249b4dab4cfede559581331d8))
+* **styles:** add overflow wrap to headings and strong tags ([eed6180](https://github.com/vtexdocs/devportal/commit/eed6180666dd757d81bd52f5366b3862df18ce36))
+* **styles:** limit img, svg and iframe width ([ccb3fea](https://github.com/vtexdocs/devportal/commit/ccb3feac2516934492379735c64b4b8e5b664459))
+* **styles:** show scrollbar in overflowing preformatted text ([d440e45](https://github.com/vtexdocs/devportal/commit/d440e457650ceca40a2161a06fd15ff7a09e988d))
+
+
+### Docs
+
+* chage path ([7daa0af](https://github.com/vtexdocs/devportal/commit/7daa0afc748589363b593ae6f62d4191745e8546))
+* redirect ([8a448fd](https://github.com/vtexdocs/devportal/commit/8a448fd10fa8b81d6f52d85476fe328c60f3b291))
+* remove from navigation ([114aaca](https://github.com/vtexdocs/devportal/commit/114aacaf8d20e9252ccd68a54f446e6a9642e99b))
+
+## [1.8.0](https://github.com/vtexdocs/devportal/compare/v1.7.3...v1.8.0) (2023-02-24)
+
+
+### Features
+
+* add working sidebar component to hamburger menu ([94ee834](https://github.com/vtexdocs/devportal/commit/94ee834d81be3419632a185b61d608f83dba2f84))
+* creating mobile menu ([25f66b7](https://github.com/vtexdocs/devportal/commit/25f66b72617919728d0bb84015407beea42fe32e))
+* **icons:** add arrow left icon ([b408d4d](https://github.com/vtexdocs/devportal/commit/b408d4d11276468ddd13af503ef5ceba444765cb))
+* **menu:** improve animation and add arrow to cards ([d32758c](https://github.com/vtexdocs/devportal/commit/d32758cbfa1b21bdba0ffc7b51a82a1bd114f8e7))
+* **sidebar:** create sidebar version to hamburger menu ([1ab74c8](https://github.com/vtexdocs/devportal/commit/1ab74c8b0b53acb4a466608dade4a64f8860c765))
+* **sidebar:** store current sidebar tab ([c6170eb](https://github.com/vtexdocs/devportal/commit/c6170eb6e804f5e6414251d838941f771fdea97f))
+
+
+### Bug Fixes
+
+* **hamburger-menu:** disable horizontal scroll ([f066928](https://github.com/vtexdocs/devportal/commit/f066928bd36d37430acd9924012fed82e034db57))
+* **hamburger-menu:** remove menu default  selection ([46261a2](https://github.com/vtexdocs/devportal/commit/46261a2339594d422e674b999c30db3ff834d5c6))
+* **header:** remove unused prop ([85d8b78](https://github.com/vtexdocs/devportal/commit/85d8b7829c8827f242ce5a384bf5099b7d4073d4))
+
+
+### Docs
+
+* create redirects ([1dc789a](https://github.com/vtexdocs/devportal/commit/1dc789a98d4d0b5648504ec8e4829f0206e8ff79))
+* **navigation:** remove deleted guides ([a1b8021](https://github.com/vtexdocs/devportal/commit/a1b80213f4bea360b36e784214c648552030ad4e))
+
+
+### Style
+
+* always show close icon on announcement bar ([a69c57b](https://github.com/vtexdocs/devportal/commit/a69c57b101c3c49eae42826c0e6f013b224aa5a4))
+* update sidebar and header styles ([82116d1](https://github.com/vtexdocs/devportal/commit/82116d12c3bf49df0b776a347bdd742374aa25f4))
+
+### [1.7.3](https://github.com/vtexdocs/devportal/compare/v1.7.2...v1.7.3) (2023-02-17)
+
+
+### Features
+
+* **layout:** add GTM ([70407ee](https://github.com/vtexdocs/devportal/commit/70407eee7c2c1ca7df24a21e16a27b8edb332d8e))
+* **layout:** correct GTM ([28d4652](https://github.com/vtexdocs/devportal/commit/28d4652bb09e43eaae790833764e5b5e8a0d5374))
+
+
+### Bug Fixes
+
+* **overview-card:** update overview card ([4e00ed3](https://github.com/vtexdocs/devportal/commit/4e00ed35e0e92e454f77413bf72bc33710c7228e))
+
+
+### Docs
+
+* move Catalog guides ([5e2b8fd](https://github.com/vtexdocs/devportal/commit/5e2b8fd8bf5e1126f02a6367f5dc245dd7898175))
+* move Message Center guides ([d0c7d80](https://github.com/vtexdocs/devportal/commit/d0c7d8093a828960907621503fe00b810fc58988))
+* **navigation:** edit pricing api paths ([97797d8](https://github.com/vtexdocs/devportal/commit/97797d8e5cc2549712d18d987874e2e0dc049fef))
+* **navigation:** improve authentication navigation in getting started section ([a26e2ae](https://github.com/vtexdocs/devportal/commit/a26e2ae3dbddca25c1d716278594ef3526b32680))
+* **redirect:** redirect authentication overview to new slug, according to architecture improvements ([0d4998b](https://github.com/vtexdocs/devportal/commit/0d4998b3476f7e85b2941d5b1cc681ecfd6be140))
+
 ### [1.7.2](https://github.com/vtexdocs/devportal/compare/v1.7.1...v1.7.2) (2023-02-15)
 
 

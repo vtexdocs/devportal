@@ -22,6 +22,7 @@ import AnnouncementBar from 'components/announcement-bar'
 
 import styles from './styles'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Header = () => {
   const router = useRouter()
 

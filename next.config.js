@@ -84,6 +84,13 @@ const nextConfig = {
       },
       {
         source:
+          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-orderId-/fulfill',
+        destination:
+          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill',
+        permanent: true,
+      },
+      {
+        source:
           '/vtex-rest-api/reference/payment-provider-protocol-api-overview',
         destination: '/docs/guides/payment-provider-protocol-api-overview',
         permanent: true,
@@ -226,6 +233,26 @@ const nextConfig = {
       {
         source: '/docs/guides/getting-started-making-your-first-request',
         destination: '/docs/guides/making-your-first-request',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/getting-started-authentication',
+        destination: '/docs/guides/authentication-overview',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/create-a-category',
+        destination: '/docs/guides/categories',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/create-a-brand',
+        destination: '/docs/guides/brands',
+        permanent: true,
+      },
+      {
+        source: '/docs/guides/how-to-create-a-specification',
+        destination: '/docs/guides/specifications',
         permanent: true,
       },
     ]

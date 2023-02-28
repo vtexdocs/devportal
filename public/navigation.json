@@ -31,13 +31,6 @@
                   "children": []
                 },
                 {
-                  "name": "Authentication",
-                  "slug": "getting-started-authentication",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Making your first request",
                   "slug": "making-your-first-request",
                   "origin": "",
@@ -110,11 +103,18 @@
               "children": []
             },
             {
-              "name": "Account management",
-              "slug": "account-management",
+              "name": "Authentication",
+              "slug": "authentication",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "Authentication overview",
+                  "slug": "authentication-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Checking which user is currently authenticated",
                   "slug": "checking-which-user-is-currently-authenticated",
@@ -132,28 +132,6 @@
           "origin": "",
           "type": "category",
           "children": [
-            {
-              "name": "API Guides",
-              "slug": "api-guides-category",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Setting up DKIM for transactional emails",
-                  "slug": "setting-up-dkim-for-transactional-emails",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up the SPF",
-                  "slug": "setting-up-the-spf",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
             {
               "name": "Back office integration guide (ERP/PIM/WMS)",
               "slug": "erp-integration-guide",
@@ -710,112 +688,91 @@
                   "children": []
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Catalog",
+          "slug": "catalog-integration",
+          "origin": "",
+          "type": "markdown",
+          "children": [
             {
-              "name": "Catalog",
-              "slug": "catalog-integration",
+              "name": "Categories",
+              "slug": "categories",
               "origin": "",
               "type": "markdown",
-              "children": [
-                {
-                  "name": "Categories",
-                  "slug": "categories",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Create a category",
-                  "slug": "create-a-category",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Brands",
-                  "slug": "brands",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Create a brand",
-                  "slug": "create-a-brand",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Products",
-                  "slug": "products",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Specifications",
-                  "slug": "specifications",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to create a specification",
-                  "slug": "how-to-create-a-specification",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Product specifications",
-                  "slug": "product-specifications",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "SKU specifications",
-                  "slug": "sku-specifications",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "SKUs",
-                  "slug": "skus",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to activate an SKU",
-                  "slug": "how-to-activate-an-sku",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Images",
-                  "slug": "images",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Alternative API requests",
-                  "slug": "alternative-api-requests",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to implement product color variation",
-                  "slug": "how-to-implement-product-color-variation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "children": []
+            },
+            {
+              "name": "Brands",
+              "slug": "brands",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Products",
+              "slug": "products",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Specifications",
+              "slug": "specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Product specifications",
+              "slug": "product-specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "SKU specifications",
+              "slug": "sku-specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "SKUs",
+              "slug": "skus",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "How to activate an SKU",
+              "slug": "how-to-activate-an-sku",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Images",
+              "slug": "images",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Alternative API requests",
+              "slug": "alternative-api-requests",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "How to implement product color variation",
+              "slug": "how-to-implement-product-color-variation",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -1166,7 +1123,7 @@
             },
             {
               "name": "Fulfillment",
-              "slug": "fulfillment",
+              "slug": "fulfillment-checkout-section-api-quick-start-guides",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -1180,6 +1137,21 @@
                 {
                   "name": "Get address by postal code",
                   "slug": "get-address-by-postal-code",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Region",
+              "slug": "region-section-api-quick-start-guides",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Get sellers by region or address",
+                  "slug": "get-sellers-by-region-or-address",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1802,6 +1774,20 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "Setting up DKIM for transactional emails",
+              "slug": "setting-up-dkim-for-transactional-emails",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Setting up the SPF",
+              "slug": "setting-up-the-spf",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "How to set up functions in the Message Center templates",
               "slug": "how-to-set-up-functions-in-the-message-center-templates",
@@ -4304,7 +4290,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get sellers by region",
+                  "name": "Get sellers by region or address",
                   "slug": "checkout-api",
                   "type": "openapi",
                   "method": "GET",
@@ -6422,7 +6408,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-orderId-/fulfill",
+                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill",
                   "children": []
                 },
                 {
@@ -7171,15 +7157,6 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/oms/pvt/orders/-orderId-/changes",
-                  "children": []
-                },
-                {
-                  "name": "Add log in orders",
-                  "slug": "orders-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/oms/pvt/orders/-orderId-/interactions",
                   "children": []
                 }
               ]
@@ -7978,7 +7955,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-",
+                  "endpoint": "/pricing/prices/-itemId-",
                   "children": []
                 },
                 {
@@ -7987,7 +7964,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-",
+                  "endpoint": "/pricing/prices/-itemId-",
                   "children": []
                 },
                 {
@@ -7996,7 +7973,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-",
+                  "endpoint": "/pricing/prices/-itemId-",
                   "children": []
                 },
                 {
@@ -8005,7 +7982,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/fixed",
+                  "endpoint": "/pricing/prices/-itemId-/fixed",
                   "children": []
                 },
                 {
@@ -8014,7 +7991,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/fixed/-priceTableId-",
+                  "endpoint": "/pricing/prices/-itemId-/fixed/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8023,7 +8000,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/fixed/-priceTableId-",
+                  "endpoint": "/pricing/prices/-itemId-/fixed/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8032,7 +8009,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/fixed/-priceTableId-",
+                  "endpoint": "/pricing/prices/-itemId-/fixed/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8041,7 +8018,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/computed/-priceTableId-",
+                  "endpoint": "/pricing/prices/-itemId-/computed/-priceTableId-",
                   "children": []
                 }
               ]
@@ -8057,7 +8034,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/config",
+                  "endpoint": "/pricing/config",
                   "children": []
                 },
                 {
@@ -8066,7 +8043,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/migration",
+                  "endpoint": "/pricing/migration",
                   "children": []
                 }
               ]
@@ -8082,7 +8059,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/pipeline/catalog/-priceTableId-",
+                  "endpoint": "/pricing/pipeline/catalog/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8091,7 +8068,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/pipeline/catalog/-priceTableId-",
+                  "endpoint": "/pricing/pipeline/catalog/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8100,7 +8077,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/pipeline/catalog",
+                  "endpoint": "/pricing/pipeline/catalog",
                   "children": []
                 },
                 {
@@ -8109,7 +8086,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/tables",
+                  "endpoint": "/pricing/tables",
                   "children": []
                 }
               ]
