@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.2](https://github.com/vtexdocs/devportal/compare/v1.8.1...v1.8.2) (2023-02-28)
+
+
+### Features
+
+* **search box:** event to analyze user clicks ([282c611](https://github.com/vtexdocs/devportal/commit/282c611f6050685d3fa3466b9b0f7dc97af825d2))
+
+
+### Bug Fixes
+
+* **algolia script:** update name of algolia keys ([bd33b68](https://github.com/vtexdocs/devportal/commit/bd33b684efcbd5e4969ae9ed876dfec9b9e2e9f5))
+* **hamburger-menu:** add search input ([5392539](https://github.com/vtexdocs/devportal/commit/5392539cb734430598c4e17d088aeebe8d406446))
+* **hamburger-menu:** larger arrow in main menu ([379287f](https://github.com/vtexdocs/devportal/commit/379287fa36f052eb414a7767d274cb06696cb343))
+* **styles:** fix landing page cards ([88e4b90](https://github.com/vtexdocs/devportal/commit/88e4b9000530fc17fe89c353b0f5dba439e7ceb0))
+
+
+### Chore
+
+* **package.json:** add search-insights library ([3b10f3b](https://github.com/vtexdocs/devportal/commit/3b10f3b6bcb3e40e57c077b687d98144604b10c8))
+
 ### [1.8.1](https://github.com/vtexdocs/devportal/compare/v1.8.0...v1.8.1) (2023-02-27)
 
 
