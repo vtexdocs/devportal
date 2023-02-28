@@ -40,14 +40,16 @@ const cardContainer: SxStyleProp = {
 }
 
 const infoContainer: SxStyleProp = {
-  py: ['16px', '24px'],
+  py: ['8px', '16px', '24px'],
   px: '16px',
   flexDirection: 'column',
   alignItems: 'center',
+  justifyContent: 'center',
   textAlign: 'center',
   backgroundColor: '#FEFEFE',
   borderTopLeftRadius: '8px',
   borderTopRightRadius: '8px',
+  height: '100%',
 }
 
 const icon: SxStyleProp = {
@@ -78,7 +80,7 @@ const description: SxStyleProp = {
 }
 
 const quickStartedContainer: SxStyleProp = {
-  height: '100%',
+  height: ['34px', '68px'],
   justifyContent: 'center',
   alignItems: 'center',
   borderTop: '1px solid #E7E9EE',

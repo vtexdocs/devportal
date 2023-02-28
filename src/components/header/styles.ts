@@ -123,6 +123,13 @@ const searchContainer: SxStyleProp = {
   height: 'auto',
 }
 
+const hamburgerSearchContainer: SxStyleProp = {
+  display: 'flex',
+  justifyContent: 'center',
+  paddingBlock: '18px',
+  height: 'auto',
+}
+
 const searchIcon: SxStyleProp = {
   minWidth: '16px',
   minHeight: '16px',
@@ -174,6 +181,7 @@ export default {
   headerContainer,
   headerBrand,
   headerBrandLink,
+  hamburgerSearchContainer,
   searchContainer,
   searchIcon,
   rightLinks,
