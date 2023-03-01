@@ -900,7 +900,7 @@
               ]
             },
             {
-              "name": "Orders",
+              "name": "Order Placement",
               "slug": "orders-2",
               "origin": "",
               "type": "markdown",
@@ -950,7 +950,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a new cart",
+                  "name": "Get current or create a new cart",
                   "slug": "create-a-new-cart",
                   "origin": "",
                   "type": "markdown",
