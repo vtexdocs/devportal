@@ -980,7 +980,7 @@
               ]
             },
             {
-              "name": "Orders",
+              "name": "Order Placement",
               "slug": "orders-2",
               "origin": "",
               "type": "markdown",
