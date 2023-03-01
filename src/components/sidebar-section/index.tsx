@@ -97,7 +97,7 @@ const SidebarSection = ({
     >
       <Box
         className={sidebarSectionHidden ? 'sidebarHide' : ''}
-        sx={styles.sidebarContainerBox}
+        sx={styles.sidebarContainerBoxHamburger}
       >
         <Flex sx={styles.sidebarContainerTitle}>
           <Button

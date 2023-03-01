@@ -7,12 +7,16 @@ const sidebar: SxStyleProp = {
     'none !important',
     'flex !important',
   ],
+  position: 'sticky',
+  left: '0',
+  top: '5rem',
+  flex: '1 0 auto',
+  height: 'calc(100vh - 5rem)',
   width: 'auto',
   minWidth: 'auto',
   transition: 'all 0.3s ease-in-out',
   '.active': {
-    left: '-276px',
-    marginRight: '-120px',
+    marginLeft: '-276px',
     transition: 'all 0.3s ease-in-out',
   },
   '.iconContainerExpanded': {

@@ -3,9 +3,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const sidebarContainer: SxStyleProp = {
   position: 'relative',
   width: 'auto',
-  minHeight: '692px',
-  paddingTop: '34px',
-  paddingBottom: '24px',
+  height: 'inherit',
   borderRight: '1px solid #E7E9EE',
   zIndex: '1',
   left: '0',
@@ -33,6 +31,18 @@ const sidebarContainerHamburger: SxStyleProp = {
 }
 
 const sidebarContainerBox: SxStyleProp = {
+  opacity: '100',
+  transition: 'all 1s ease-out',
+  paddingTop: '34px',
+  paddingBottom: '24px',
+  overflowY: 'auto',
+  height: 'inherit',
+  '::-webkit-scrollbar': {
+    display: 'none',
+  },
+}
+
+const sidebarContainerBoxHamburger: SxStyleProp = {
   opacity: '100',
   transition: 'all 1s ease-out',
 }
@@ -124,6 +134,7 @@ export default {
   sidebarContainer,
   sidebarContainerHamburger,
   sidebarContainerBox,
+  sidebarContainerBoxHamburger,
   sidebarContainerBody,
   sidebarContainerHeader,
   sidebarContainerTitle,
