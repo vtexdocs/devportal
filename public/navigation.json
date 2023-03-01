@@ -188,20 +188,6 @@
                   "children": []
                 },
                 {
-                  "name": "Change seller",
-                  "slug": "change-seller",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Change order",
-                  "slug": "change-order",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Updating / deleting information",
                   "slug": "erp-integration-updating-and-deleting-information",
                   "origin": "",
@@ -388,21 +374,6 @@
                 {
                   "name": "Catalog management for VTEX Marketplace",
                   "slug": "external-seller-integration-vtex-marketplace-operation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Multilevel Omnichannel Inventory",
-              "slug": "multilevel-omnichannel-inventory",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "API Integration",
-                  "slug": "api-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -695,57 +666,6 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            },
-            {
-              "name": "VTEX Shipping Network",
-              "slug": "vtex-shipping-network",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
-                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Integration flow",
-                  "slug": "integration-flow",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Notification",
-                  "slug": "notification-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Tracking",
-                  "slug": "tracking-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "VTEX Tracking",
-              "slug": "vtex-tracking",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integrating external orders via API to be used with VTEX Tracking",
-                  "slug": "integrate-external-orders-vtex-tracking",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
             },
             {
               "name": "reCAPTCHA",
@@ -1478,6 +1398,27 @@
           "type": "category",
           "children": [
             {
+              "name": "Feed v3",
+              "slug": "orders-feed",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Change order",
+              "slug": "change-order",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Change seller",
+              "slug": "change-seller",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Actions in orders",
               "slug": "actions-orders",
               "origin": "",
@@ -1521,11 +1462,100 @@
               ]
             },
             {
-              "name": "Feed v3",
-              "slug": "orders-feed",
+              "name": "Subscriptions",
+              "slug": "subscriptions-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Enabling Manual Prices for Subscriptions v3",
+                  "slug": "enabling-manual-prices-for-subscriptions-v3",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Subscriptions v3 migration guide",
+                  "slug": "subscriptions-v3-migration-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Fulfillment",
+          "slug": "fulfillment-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "VTEX Shipping Network",
+              "slug": "vtex-shipping-network",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
+                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integration flow",
+                  "slug": "integration-flow",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Notification",
+                  "slug": "notification-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tracking",
+                  "slug": "tracking-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "VTEX Tracking",
+              "slug": "vtex-tracking",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integrating external orders via API to be used with VTEX Tracking",
+                  "slug": "integrate-external-orders-vtex-tracking",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Multilevel Omnichannel Inventory",
+              "slug": "multilevel-omnichannel-inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "API Integration",
+                  "slug": "api-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -1820,28 +1850,6 @@
             {
               "name": "Create Zendesk integration",
               "slug": "create-zendesk-integration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Subscriptions",
-          "slug": "subscriptions-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Enabling Manual Prices for Subscriptions v3",
-              "slug": "enabling-manual-prices-for-subscriptions-v3",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Subscriptions v3 migration guide",
-              "slug": "subscriptions-v3-migration-guide",
               "origin": "",
               "type": "markdown",
               "children": []
