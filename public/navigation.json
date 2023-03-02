@@ -6386,38 +6386,38 @@
               "children": [
                 {
                   "name": "Fulfillment simulation - External Seller",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orderForms/simulation",
+                  "endpoint": "/pvt/orderForms/simulation",
                   "children": []
                 },
                 {
                   "name": "Order placement",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders",
+                  "endpoint": "/pvt/orders",
                   "children": []
                 },
                 {
                   "name": "Authorize fulfillment",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill",
+                  "endpoint": "/pvt/orders/-sellerOrderId-/fulfill",
                   "children": []
                 },
                 {
                   "name": "Marketplace order cancellation",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-orderId-/cancel",
+                  "endpoint": "pvt/orders/-orderId-/cancel",
                   "children": []
                 },
                 {
@@ -6426,7 +6426,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/invoice",
                   "children": []
                 },
                 {
@@ -6435,7 +6435,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-",
                   "children": []
                 },
                 {
@@ -6444,7 +6444,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking",
                   "children": []
                 },
                 {
@@ -6453,7 +6453,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/cancel",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/cancel",
                   "children": []
                 }
               ]
@@ -6465,61 +6465,61 @@
               "children": [
                 {
                   "name": "VTEX Mapper Registration",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.vtexcommercestable.com.br/api/mkp-category-mapper/connector/register",
+                  "endpoint": "/api/mkp-category-mapper/connector/register",
                   "children": []
                 },
                 {
                   "name": "Send Category Mapping to VTEX Mapper",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.vtexcommercestable.com.br/api/mkp-category-mapper/categories/marketplace/-id-",
+                  "endpoint": "/api/mkp-category-mapper/categories/marketplace/-id-",
                   "children": []
                 },
                 {
                   "name": "Place fulfillment order",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders",
+                  "endpoint": "/api/fulfillment/pvt/orders",
                   "children": []
                 },
                 {
                   "name": "Authorize dispatch for fulfillment order",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders/-orderId-/fulfill",
+                  "endpoint": "/api/fulfillment/pvt/orders/-orderId-/fulfill",
                   "children": []
                 },
                 {
                   "name": "New Order Integration",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.vtexcommercestable.com.br/api/order-integration/orders",
+                  "endpoint": "/api/order-integration/orders",
                   "children": []
                 },
                 {
                   "name": "Update Order Status",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/-accountName-.vtexcommercestable.com.br/api/order-integration/orders/status",
+                  "endpoint": "/api/order-integration/orders/status",
                   "children": []
                 },
                 {
                   "name": "Fulfillment simulation - External Marketplace",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
