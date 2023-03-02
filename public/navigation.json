@@ -3978,7 +3978,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a new cart",
+                  "name": "Get current or create a new cart",
                   "slug": "checkout-api",
                   "type": "openapi",
                   "method": "GET",
