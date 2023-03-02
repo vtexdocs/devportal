@@ -12628,6 +12628,21 @@
           "type": "category",
           "children": [
             {
+              "name": "March",
+              "slug": "march-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Deprecation of apps-graphql@2.x",
+                  "slug": "deprecation-of-apps-graphql@2.x",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "February",
               "slug": "february-2023",
               "origin": "",
