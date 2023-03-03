@@ -81,13 +81,13 @@
               "type": "markdown",
               "children": []
             },
-          {
-            "name": "Pricing",
-            "slug": "pricing-overview",
-            "origin": "",
-            "type": "markdown",
-            "children": []
-          },
+            {
+              "name": "Pricing",
+              "slug": "pricing-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "Promotions",
               "slug": "promotions-overview",
@@ -1795,7 +1795,7 @@
           "origin": "",
           "type": "category",
           "children": [
-                        {
+            {
               "name": "Creating and managing coupons with Promotions API",
               "slug": "creating-and-managing-coupons-with-promotions-api",
               "origin": "",
