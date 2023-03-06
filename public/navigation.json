@@ -82,15 +82,15 @@
               "children": []
             },
             {
-              "name": "Promotions",
-              "slug": "promotions-overview",
+              "name": "Pricing",
+              "slug": "pricing-overview",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Pricing",
-              "slug": "pricing-overview",
+              "name": "Promotions",
+              "slug": "promotions-overview",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -1798,21 +1798,36 @@
           ]
         },
         {
+          "name": "Pricing",
+          "slug": "pricing-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Scheduling prices for a range of hours",
+              "slug": "scheduling-prices-for-a-range-of-hours",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Promotions",
           "slug": "promotions-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "Using Policy Engine API on Promotion Alerts",
-              "slug": "using-policy-engine-api-on-promotion-alerts",
+              "name": "Creating and managing coupons with Promotions API",
+              "slug": "creating-and-managing-coupons-with-promotions-api",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Creating and managing coupons with Promotions API",
-              "slug": "creating-and-managing-coupons-with-promotions-api",
+              "name": "Using Policy Engine API on Promotion Alerts",
+              "slug": "using-policy-engine-api-on-promotion-alerts",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -1872,21 +1887,6 @@
             {
               "name": "Consult store search terms information",
               "slug": "consult-store-search-terms-information",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Pricing",
-          "slug": "pricing-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Scheduling prices for a range of hours",
-              "slug": "scheduling-prices-for-a-range-of-hours",
               "origin": "",
               "type": "markdown",
               "children": []
