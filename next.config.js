@@ -84,13 +84,6 @@ const nextConfig = {
       },
       {
         source:
-          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-orderId-/fulfill',
-        destination:
-          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill',
-        permanent: true,
-      },
-      {
-        source:
           '/vtex-rest-api/reference/payment-provider-protocol-api-overview',
         destination: '/docs/guides/payment-provider-protocol-api-overview',
         permanent: true,
