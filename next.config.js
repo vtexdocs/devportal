@@ -109,6 +109,24 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/docs/api-reference/orders#registerchange',
+        destination:
+          '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes',
+        permanent: true,
+      },
+      {
+        source: '/vtex-rest-api/reference/invoice',
+        destination:
+          '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/test-jsonata-expression',
+        destination:
+          '/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata',
+        permanent: true,
+      },
+      {
         source: '/docs/erp-integration-set-up-order-processing',
         destination: '/docs/guides/erp-integration-set-up-order-processing',
         permanent: true,
