@@ -255,6 +255,11 @@ const nextConfig = {
         destination: '/docs/guides/specifications',
         permanent: true,
       },
+      {
+        source: '/docs/guides/how-to-activate-an-sku',
+        destination: '/docs/guides/skus',
+        permanent: true,
+      },
     ]
   },
   i18n: {
