@@ -6417,7 +6417,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "pvt/orders/-orderId-/cancel",
+                  "endpoint": "/pvt/orders/-orderId-/cancel",
                   "children": []
                 },
                 {
