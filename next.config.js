@@ -84,13 +84,6 @@ const nextConfig = {
       },
       {
         source:
-          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-orderId-/fulfill',
-        destination:
-          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill',
-        permanent: true,
-      },
-      {
-        source:
           '/vtex-rest-api/reference/payment-provider-protocol-api-overview',
         destination: '/docs/guides/payment-provider-protocol-api-overview',
         permanent: true,
@@ -113,6 +106,24 @@ const nextConfig = {
       {
         source: '/vtex-developer-docs/reference',
         destination: '/docs/api-reference',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/orders#registerchange',
+        destination:
+          '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes',
+        permanent: true,
+      },
+      {
+        source: '/vtex-rest-api/reference/invoice',
+        destination:
+          '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/test-jsonata-expression',
+        destination:
+          '/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata',
         permanent: true,
       },
       {
