@@ -86,7 +86,7 @@ const nextConfig = {
         source:
           '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-orderId-/fulfill',
         destination:
-          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill',
+          '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-sellerOrderId-/fulfill',
         permanent: true,
       },
       {
