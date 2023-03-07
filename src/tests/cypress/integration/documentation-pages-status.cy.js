@@ -17,7 +17,7 @@ describe('Status of documentation pages', () => {
 
         while (!found && currChildren.length > 0) {
           childIndex = Math.floor(Math.random() * currChildren.length)
-          if (currChildren[childIndex].type === 'openapi') found = true
+          if (currChildren[childIndex].method) found = true
           else currChildren = currChildren[childIndex].children
         }
 
