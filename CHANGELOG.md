@@ -2,6 +2,53 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.3](https://github.com/vtexdocs/devportal/compare/v1.8.2...v1.8.3) (2023-03-07)
+
+
+### Bug Fixes
+
+* **cypress:** update cypress-io action version ([c9eb2b6](https://github.com/vtexdocs/devportal/commit/c9eb2b689e6485a91490b40c5666ae525cdd2448))
+* fix import preventing successful build ([117b5ef](https://github.com/vtexdocs/devportal/commit/117b5efb8851f8b586407816e1e4d9f0b3174773))
+
+
+### Chore
+
+* update dependencies ([8c97f21](https://github.com/vtexdocs/devportal/commit/8c97f21d058ef8eed780c2506204f447aca56faf))
+
+
+### Tests
+
+* add test for checking documentation pages status ([c644586](https://github.com/vtexdocs/devportal/commit/c64458671f6d3556a7e1c3dd30044d398ceec8bd))
+* update cypress action ([2bf9757](https://github.com/vtexdocs/devportal/commit/2bf97574c2311f06b09977c8a955f622c4909153))
+* update cypress version and delete deprecated tests ([5c16cc9](https://github.com/vtexdocs/devportal/commit/5c16cc9e4acdf8303036119fbf8e78c1c061b6d4))
+
+
+### Docs
+
+* add apps-graphql release note to navigation ([fcd5d3e](https://github.com/vtexdocs/devportal/commit/fcd5d3e486ded47adebe72e8a633379c892e0458))
+* change MOI navigation ([3b8c820](https://github.com/vtexdocs/devportal/commit/3b8c820321eb1cf7d741b2ad5fdc0eb78c0f0b24))
+* change navigation ([ba230dc](https://github.com/vtexdocs/devportal/commit/ba230dcfc8563038c5edab0f0cfa1a01bf7115c5))
+* change navigation ([c1db862](https://github.com/vtexdocs/devportal/commit/c1db862dbae46a9757d3d84e23b581850595b737))
+* change navigation ([26c47fb](https://github.com/vtexdocs/devportal/commit/26c47fb558b04b879f6d8ebea87c903945354ec0))
+* change navigation ([df37e78](https://github.com/vtexdocs/devportal/commit/df37e78891de95ab2c6fd57cea9b1c294335d52a))
+* change navigation ([c359443](https://github.com/vtexdocs/devportal/commit/c359443d464e0a6f905ffb329d3c9b7d6fb93878))
+* change navigation vtex shipping network ([262edbf](https://github.com/vtexdocs/devportal/commit/262edbfe5fbd8dcde307441af8690c5809bda60e))
+* correct marketplace protocol slug ([b4875d5](https://github.com/vtexdocs/devportal/commit/b4875d5348003ec32ea3c8f3c75905eea2df1f55))
+* correct marketplace protocol slugs ([7f2a4d8](https://github.com/vtexdocs/devportal/commit/7f2a4d8224180f74de3abf90f6dc77d3537a2d19))
+* create redirects marketplace protocol ([822c264](https://github.com/vtexdocs/devportal/commit/822c264a829842a9280f6abc00ab6505d93b653b))
+* delete guide and create redirect ([71f8ef7](https://github.com/vtexdocs/devportal/commit/71f8ef7aa95e62703019ffe322ef28cffff729fc))
+* edit navigation.json ([03213f4](https://github.com/vtexdocs/devportal/commit/03213f4cacd847773ba0c1663387c64944b950e5))
+* fix code formatting ([05f79dd](https://github.com/vtexdocs/devportal/commit/05f79dd09b43929823fc57d8c1a35a50e1ac9095))
+* fix redirect ([350a067](https://github.com/vtexdocs/devportal/commit/350a067f4e927fea44ade3b95e7331455e7bb90c))
+* **navigation:** correct marketplace protocol ([f3264c5](https://github.com/vtexdocs/devportal/commit/f3264c56a7c701fd7784c4ca73426db186693386))
+* **navigation:** fix formatting ([8a71e6f](https://github.com/vtexdocs/devportal/commit/8a71e6f5bdb8963fd5580b9174c6ef2a3df5f501))
+* **navigation:** fix path ([8d2d7c6](https://github.com/vtexdocs/devportal/commit/8d2d7c60ed3e68fe2c48d2f8dc17ff2d7757fcd0))
+* **navigation:** fix sessions endpoints that have had the paths fixed ([dfb3093](https://github.com/vtexdocs/devportal/commit/dfb3093c85020e070c3fe4491f0f8637cd6ce68d))
+* **navigation:** update yarn.lock ([02a62a4](https://github.com/vtexdocs/devportal/commit/02a62a4bab7c2c305b9546d1da8e5b8f93b60cb2))
+* redirects ([a2c8ac6](https://github.com/vtexdocs/devportal/commit/a2c8ac6e73c15c5e0fade61bcf6469ece2231e26))
+* remove redirect ([9a43c8c](https://github.com/vtexdocs/devportal/commit/9a43c8cf5ccec78e8c413a4abc68097574210993))
+* update yarn.lock ([498a6b6](https://github.com/vtexdocs/devportal/commit/498a6b6479977387aa1281ec67d1667296a10f5d))
+
 ### [1.8.2](https://github.com/vtexdocs/devportal/compare/v1.8.1...v1.8.2) (2023-02-28)
 
 
