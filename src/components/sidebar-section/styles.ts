@@ -32,13 +32,17 @@ const sidebarContainerHamburger: SxStyleProp = {
 
 const sidebarContainerBox: SxStyleProp = {
   opacity: '100',
-  transition: 'all 1s ease-out',
   paddingTop: '34px',
   paddingBottom: '24px',
   overflowY: 'auto',
   height: 'inherit',
-  '::-webkit-scrollbar': {
-    display: 'none',
+  maskImage:
+    'linear-gradient(to top, transparent, black), linear-gradient(to left, transparent 17px, black 17px)',
+  maskSize: '100% 20000px',
+  maskPosition: 'left bottom',
+  transition: 'mask-position 0.3s, -webkit-mask-position 0.3s',
+  ':hover': {
+    maskPosition: 'left top',
   },
 }
 
