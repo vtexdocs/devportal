@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.4](https://github.com/vtexdocs/devportal/compare/v1.8.3...v1.8.4) (2023-03-07)
+
+
+### Bug Fixes
+
+* **hamburger-menu:** show search input only in main menu, fix cards positions ([4f6d575](https://github.com/vtexdocs/devportal/commit/4f6d575a21b3107353f84d4da4a38fc7a38a83c6))
+* **sidebar:** show scroll on hover ([6672f93](https://github.com/vtexdocs/devportal/commit/6672f93380baa4b322da92182a36b8153cc3a64b))
+
+
+### Style
+
+* **sidebar:** fixed sidebar ([0d5d0cd](https://github.com/vtexdocs/devportal/commit/0d5d0cd35498b29313845ed474fcbaa26877539a))
+
 ### [1.8.3](https://github.com/vtexdocs/devportal/compare/v1.8.2...v1.8.3) (2023-03-07)
 
 
