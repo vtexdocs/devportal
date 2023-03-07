@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/vtexdocs/devportal/compare/v1.8.4...v1.9.0) (2023-03-07)
+
+
+### Features
+
+* **api-reference:** allow spec file download ([94c8b47](https://github.com/vtexdocs/devportal/commit/94c8b47bc557e942f3e331b57ae642eae5394b4b))
+
+
+### Build
+
+* **package:** update rapidoc version ([3db62b6](https://github.com/vtexdocs/devportal/commit/3db62b65a1f26ad111ab6b8ca83058bd6088b666))
+
 ### [1.8.4](https://github.com/vtexdocs/devportal/compare/v1.8.3...v1.8.4) (2023-03-07)
 
 
