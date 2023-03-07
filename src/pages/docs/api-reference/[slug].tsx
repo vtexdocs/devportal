@@ -85,6 +85,7 @@ const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
         schema-style="table"
         schema-description-expanded={true}
         id="the-doc"
+        allow-spec-file-download={true}
       />
     </>
   )
