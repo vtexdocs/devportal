@@ -27,11 +27,11 @@ const HamburgerMenu = () => {
     <Header.ActionButton>
       <VtexHamburgerMenu sx={styles.hamburgerContainer}>
         <VtexHamburgerMenu.Menu sx={styles.innerHambugerContainer}>
-          <Box sx={styles.hamburgerSearchContainer}>
-            <SearchInput />
-          </Box>
           <Box sx={styles.menuContainer}>
             <Box sx={styles.cardContainer}>
+              <Box sx={styles.hamburgerSearchContainer}>
+                <SearchInput />
+              </Box>
               <Box
                 sx={styles.documentationContainer}
                 data-cy="dropdown-menu-first-section"
@@ -76,7 +76,7 @@ const HamburgerMenu = () => {
                       aria-label={'Open sidebar'}
                       size="regular"
                       variant="tertiary"
-                      icon={() => <IconCaret direction="right" size={24} />}
+                      icon={() => <IconCaret direction="right" size={32} />}
                       sx={styles.arrowIcon}
                       onClick={() => {
                         setActiveSidebarTab(card.title)
