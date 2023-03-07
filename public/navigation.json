@@ -7881,7 +7881,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/sessions/",
+                  "endpoint": "/api/sessions/",
                   "children": []
                 }
               ]
@@ -8860,7 +8860,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/sessions",
+                  "endpoint": "/api/sessions",
                   "children": []
                 },
                 {
@@ -8869,7 +8869,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/sessions",
+                  "endpoint": "/api/sessions",
                   "children": []
                 },
                 {
@@ -8878,7 +8878,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/sessions",
+                  "endpoint": "/api/sessions",
                   "children": []
                 }
               ]
@@ -8894,7 +8894,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/segments",
+                  "endpoint": "/api/segments",
                   "children": []
                 }
               ]
