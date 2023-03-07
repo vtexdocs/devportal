@@ -378,7 +378,7 @@ const nextConfig = {
       },
       {
         source:
-          '/docs/guides/marketplace-api#manage-suggestions',
+          '/docs/guides/marketplace-api',
         destination:
           '/docs/api-reference/marketplace-apis',
         permanent: true,
