@@ -33,29 +33,13 @@ Cypress.Commands.add('any', { prevSubject: 'element' }, (subject, size = 1) => {
   })
 })
 
-Cypress.Commands.add('randomize', { prevSubject: 'element' }, (subject) => {
-  // let index = 0
+Cypress.Commands.add('anyWithIndex', { prevSubject: 'element' }, (subject) => {
   cy.wrap(subject).then((obj) => {
     cy.wrap(obj)
-      // .should('have.length.gt', 2)
       .its('length')
-      .then((size) => Cypress._.random(0, size - 1))
+      .then((length) => Cypress._.random(0, length - 1))
       .then((randomIndex) => {
-        // cy.log('randomIndex', randomIndex)
-        // index = randomIndex
         return cy.wrap([obj.eq(randomIndex), randomIndex])
       })
   })
-  // cy.wrap(subject)
-  //   .as('aloha')
-  //   .should('have.length.gt', 2)
-  //   .its('length')
-  //   .then((size) => Cypress._.random(0, size - 1))
-  //   .then((randomIndex) => {
-  //     // cy.log('randomIndex', randomIndex)
-  //     // index = randomIndex
-  //     return cy.wrap([cy.get('@aloha').eq(randomIndex), randomIndex])
-  //   })
-  // cy.log('ih', cy.get('@aloha'))
-  // return cy.wrap([cy.get('@aloha').eq(index), index])
 })
