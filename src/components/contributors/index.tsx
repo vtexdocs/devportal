@@ -58,6 +58,7 @@ const Contributors = ({ contributors }: Props) => {
             : Math.min(Math.ceil(contributors.length / photosPerRow), minRows)
         )}
         ref={photosContainer}
+        data-cy="contributors-container"
       >
         {contributors.map((contributor) => {
           return (

@@ -79,6 +79,7 @@ const FeedBackModal = ({
           sx={
             arrowDirectionStyle(chosenButtonRef.current, 'card') || styles.card
           }
+          data-cy="feedback-modal"
         >
           <Text sx={styles.title}>{messages['feedback_modal.title']}</Text>
           <Textarea

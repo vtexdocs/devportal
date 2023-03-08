@@ -48,7 +48,7 @@ const TableOfContents = () => {
   }
 
   return (
-    <Box sx={styles.itemsContainer}>
+    <Box sx={styles.itemsContainer} data-cy="table-of-contents">
       {headings.map((item) => (
         <Box key={item.slug}>
           <Item
