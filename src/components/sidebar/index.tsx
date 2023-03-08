@@ -40,11 +40,15 @@ const Sidebar = ({
     closeSidebarElements,
     isEditorPreview,
   } = useContext(SidebarContext)
-  if (!isEditorPreview) {
-    setSidebarDataMaster(useNavigation().data)
-  }
+
+  const sidebarNavigation = useNavigation().data
+
+  useEffect(() => {
+    if (!isEditorPreview) setSidebarDataMaster(sidebarNavigation)
+  }, [sidebarNavigation])
+
   const router = useRouter()
-  const flattenedSidebar = flattenJSON(sidebarDataMaster)
+  const flattenedSidebar = flattenJSON(sidebarNavigation)
   let activeSlug = ''
   let keyPath: string[] = []
   const querySlug = router.query.slug
