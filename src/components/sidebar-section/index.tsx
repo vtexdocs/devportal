@@ -1,4 +1,4 @@
-import { Flex, Box, Text } from '@vtex/brand-ui'
+import { Flex, Box, Text, Button } from '@vtex/brand-ui'
 import { useContext, useEffect, useMemo, useState } from 'react'
 
 import type { SidebarElement } from 'components/sidebar-elements'
@@ -12,8 +12,10 @@ import SearchIcon from 'components/icons/search-icon'
 import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
 import SideBarElements from 'components/sidebar-elements'
 import SectionFilter from 'components/sidebar-section-filter'
+import ArrowLeftIcon from 'components/icons/arrow-left-icon'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
+import { getIcon } from 'utils/constants'
 
 import styles from './styles'
 
@@ -21,12 +23,14 @@ export interface SidebarSectionProps {
   documentation: DocumentationTitle | UpdatesTitle
   categories: SidebarElement[]
   slugPrefix: SlugPrefix
+  isHamburgerMenu: boolean
 }
 
 const SidebarSection = ({
   documentation,
   categories,
   slugPrefix,
+  isHamburgerMenu = false,
 }: SidebarSectionProps) => {
   const [searchValue, setSearchValue] = useState('')
   const { sidebarSectionHidden, setSidebarSectionHidden } =
@@ -84,7 +88,60 @@ const SidebarSection = ({
     return filteredCategories
   }, [filterStatus, methodFilterList, categories, searchValue])
 
-  return (
+  const DocIcon = getIcon(documentation)
+
+  return isHamburgerMenu ? (
+    <Box
+      className={sidebarSectionHidden ? 'active' : ''}
+      sx={styles.sidebarContainerHamburger}
+    >
+      <Box
+        className={sidebarSectionHidden ? 'sidebarHide' : ''}
+        sx={styles.sidebarContainerBoxHamburger}
+      >
+        <Flex sx={styles.sidebarContainerTitle}>
+          <Button
+            sx={styles.arrowButton}
+            aria-label={'Go back'}
+            size="small"
+            variant="tertiary"
+            icon={() => <ArrowLeftIcon size={24} />}
+            onClick={() => {
+              setSidebarSectionHidden(true)
+            }}
+          />
+          {DocIcon && <DocIcon />}
+          <Text sx={styles.sidebarTitle}>{documentation}</Text>
+        </Flex>
+        <Box sx={styles.sidebarContainerBody}>
+          <Flex sx={styles.searchBox}>
+            <SearchIcon sx={styles.searchIcon} />
+            <input
+              style={styles.searchInput}
+              className="searchComponent"
+              type="text"
+              placeholder={`Search in ${documentation}...`}
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.currentTarget.value)}
+            />
+          </Flex>
+          {documentation == 'API Reference' && (
+            <SectionFilter
+              methodFilterList={methodFilterList}
+              setMethodFilter={setMethodFilterList}
+            />
+          )}
+        </Box>
+        <Box sx={styles.sidebarContainerBody}>
+          <SideBarElements
+            items={filteredResult}
+            subItemLevel={0}
+            slugPrefix={slugPrefix}
+          />
+        </Box>
+      </Box>
+    </Box>
+  ) : (
     <Box
       className={sidebarSectionHidden ? 'active' : ''}
       sx={styles.sidebarContainer}

@@ -5,6 +5,7 @@ import { SWRConfig } from 'swr'
 type ContextType = {
   sidebarSectionHidden: boolean
   activeSidebarElement: string
+  activeSidebarTab: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sidebarDataMaster: any
   sidebarElementStatus: Map<string, boolean>
@@ -12,6 +13,7 @@ type ContextType = {
   setSidebarDataMaster: Dispatch<SetStateAction<any>>
   setSidebarSectionHidden: Dispatch<SetStateAction<boolean>>
   setActiveSidebarElement: Dispatch<SetStateAction<string>>
+  setActiveSidebarTab: Dispatch<SetStateAction<string>>
   toggleSidebarElementStatus: (title: string) => void
   openSidebarElement: (title: string) => void
   closeSidebarElements: (parentsArray: string[]) => void
@@ -20,11 +22,13 @@ type ContextType = {
 export const SidebarContext = createContext<ContextType>({
   sidebarSectionHidden: false,
   activeSidebarElement: '',
+  activeSidebarTab: '',
   sidebarDataMaster: {},
   sidebarElementStatus: new Map(),
   setSidebarDataMaster: () => undefined,
   setSidebarSectionHidden: () => undefined,
   setActiveSidebarElement: () => undefined,
+  setActiveSidebarTab: () => undefined,
   toggleSidebarElementStatus: () => undefined,
   openSidebarElement: () => undefined,
   closeSidebarElements: () => undefined,
@@ -38,6 +42,7 @@ interface Props extends Partial<ContextType> {
 const SidebarContextProvider = ({ children, ...props }: Props) => {
   const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
   const [activeSidebarElement, setActiveSidebarElement] = useState('')
+  const [activeSidebarTab, setActiveSidebarTab] = useState('')
   const [sidebarElementStatus, setSidebarElementStatus] = useState(new Map())
   const [sidebarDataMaster, setSidebarDataMaster] = useState(props.fallback)
 
@@ -75,9 +80,11 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
       value={{
         sidebarSectionHidden,
         activeSidebarElement,
+        activeSidebarTab,
         sidebarElementStatus,
         setSidebarSectionHidden,
         setActiveSidebarElement,
+        setActiveSidebarTab,
         toggleSidebarElementStatus,
         openSidebarElement,
         closeSidebarElements,

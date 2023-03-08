@@ -1,6 +1,8 @@
 import { toString } from 'mdast-util-to-string'
 import { slugify } from 'utils/string-utils'
-import { visit, Node } from 'unist-util-visit'
+import { visit } from 'unist-util-visit'
+
+import type { Node } from 'unist'
 import type { Item } from 'components/table-of-contents'
 
 interface Heading {

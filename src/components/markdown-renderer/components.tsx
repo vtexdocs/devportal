@@ -74,8 +74,9 @@ const Callout = ({ node, icon, ...props }: Component) => {
           ? styles.blockquoteSuccess
           : ''
       }`}
-      {...props}
-    />
+    >
+      <p {...props} />
+    </blockquote>
   )
 }
 
@@ -86,12 +87,8 @@ export default {
   Flex: ({ node, ...props }: Component) => (
     <Flex className={styles.flexWrap} {...props} />
   ),
-  table: ({ node, ...props }: Component) => (
-    <table className={styles.table} {...props} />
-  ),
-  td: ({ node, ...props }: Component) => (
-    <td className={styles.td} {...props} />
-  ),
+  table: ({ node, ...props }: Component) => <table {...props} />,
+  td: ({ node, ...props }: Component) => <td {...props} />,
   img: ({ node, ...props }: Component) => {
     let data: { base64: string; img: object } = { base64: '', img: {} }
     try {

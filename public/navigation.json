@@ -31,15 +31,8 @@
                   "children": []
                 },
                 {
-                  "name": "Authentication",
-                  "slug": "getting-started-authentication",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Making your first request",
-                  "slug": "getting-started-making-your-first-request",
+                  "slug": "making-your-first-request",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -89,15 +82,15 @@
               "children": []
             },
             {
-              "name": "Promotions",
-              "slug": "promotions-overview",
+              "name": "Pricing",
+              "slug": "pricing-overview",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Pricing",
-              "slug": "pricing-overview",
+              "name": "Promotions",
+              "slug": "promotions-overview",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -110,11 +103,18 @@
               "children": []
             },
             {
-              "name": "Account management",
-              "slug": "account-management",
+              "name": "Authentication",
+              "slug": "authentication",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "Authentication overview",
+                  "slug": "authentication-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Checking which user is currently authenticated",
                   "slug": "checking-which-user-is-currently-authenticated",
@@ -132,28 +132,6 @@
           "origin": "",
           "type": "category",
           "children": [
-            {
-              "name": "API Guides",
-              "slug": "api-guides-category",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Setting up DKIM for transactional emails",
-                  "slug": "setting-up-dkim-for-transactional-emails",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up the SPF",
-                  "slug": "setting-up-the-spf",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
             {
               "name": "Back office integration guide (ERP/PIM/WMS)",
               "slug": "erp-integration-guide",
@@ -205,20 +183,6 @@
                 {
                   "name": "Set up order processing",
                   "slug": "erp-integration-set-up-order-processing",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Change seller",
-                  "slug": "change-seller",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Change order",
-                  "slug": "change-order",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -410,21 +374,6 @@
                 {
                   "name": "Catalog management for VTEX Marketplace",
                   "slug": "external-seller-integration-vtex-marketplace-operation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Multilevel Omnichannel Inventory",
-              "slug": "multilevel-omnichannel-inventory",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "API Integration",
-                  "slug": "api-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -719,57 +668,6 @@
               "children": []
             },
             {
-              "name": "VTEX Shipping Network",
-              "slug": "vtex-shipping-network",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
-                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Integration flow",
-                  "slug": "integration-flow",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Notification",
-                  "slug": "notification-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Tracking",
-                  "slug": "tracking-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "VTEX Tracking",
-              "slug": "vtex-tracking",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integrating external orders via API to be used with VTEX Tracking",
-                  "slug": "integrate-external-orders-vtex-tracking",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "reCAPTCHA",
               "slug": "recaptcha",
               "origin": "",
@@ -790,112 +688,84 @@
                   "children": []
                 }
               ]
-            },
+            }
+          ]
+        },
+        {
+          "name": "Catalog",
+          "slug": "catalog-integration",
+          "origin": "",
+          "type": "markdown",
+          "children": [
             {
-              "name": "Catalog",
-              "slug": "catalog-integration",
+              "name": "Categories",
+              "slug": "categories",
               "origin": "",
               "type": "markdown",
-              "children": [
-                {
-                  "name": "Categories",
-                  "slug": "categories",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Create a category",
-                  "slug": "create-a-category",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Brands",
-                  "slug": "brands",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Create a brand",
-                  "slug": "create-a-brand",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Products",
-                  "slug": "products",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Specifications",
-                  "slug": "specifications",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to create a specification",
-                  "slug": "how-to-create-a-specification",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Product specifications",
-                  "slug": "product-specifications",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "SKU specifications",
-                  "slug": "sku-specifications",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "SKUs",
-                  "slug": "skus",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to activate an SKU",
-                  "slug": "how-to-activate-an-sku",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Images",
-                  "slug": "images",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Alternative API requests",
-                  "slug": "alternative-api-requests",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to implement product color variation",
-                  "slug": "how-to-implement-product-color-variation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "children": []
+            },
+            {
+              "name": "Brands",
+              "slug": "brands",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Products",
+              "slug": "products",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Specifications",
+              "slug": "specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Product specifications",
+              "slug": "product-specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "SKU specifications",
+              "slug": "sku-specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "SKUs",
+              "slug": "skus",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Images",
+              "slug": "images",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Alternative API requests",
+              "slug": "alternative-api-requests",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "How to implement product color variation",
+              "slug": "how-to-implement-product-color-variation",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -1023,7 +893,7 @@
               ]
             },
             {
-              "name": "Orders",
+              "name": "Order Placement",
               "slug": "orders-2",
               "origin": "",
               "type": "markdown",
@@ -1031,6 +901,13 @@
                 {
                   "name": "Create a regular order using the Checkout API",
                   "slug": "create-a-regular-order-using-the-checkout-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Create a regular order from an existing cart",
+                  "slug": "create-a-regular-order-from-an-existing-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1066,7 +943,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a new cart",
+                  "name": "Get current or create a new cart",
                   "slug": "create-a-new-cart",
                   "origin": "",
                   "type": "markdown",
@@ -1239,7 +1116,7 @@
             },
             {
               "name": "Fulfillment",
-              "slug": "fulfillment",
+              "slug": "fulfillment-checkout-section-api-quick-start-guides",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -1253,6 +1130,21 @@
                 {
                   "name": "Get address by postal code",
                   "slug": "get-address-by-postal-code",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Region",
+              "slug": "region-section-api-quick-start-guides",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Get sellers by region or address",
+                  "slug": "get-sellers-by-region-or-address",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1499,6 +1391,27 @@
           "type": "category",
           "children": [
             {
+              "name": "Feed v3",
+              "slug": "orders-feed",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Change order",
+              "slug": "change-order",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Change seller",
+              "slug": "change-seller",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Actions in orders",
               "slug": "actions-orders",
               "origin": "",
@@ -1542,11 +1455,100 @@
               ]
             },
             {
-              "name": "Feed v3",
-              "slug": "orders-feed",
+              "name": "Subscriptions",
+              "slug": "subscriptions-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Enabling Manual Prices for Subscriptions v3",
+                  "slug": "enabling-manual-prices-for-subscriptions-v3",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Subscriptions v3 migration guide",
+                  "slug": "subscriptions-v3-migration-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Fulfillment",
+          "slug": "fulfillment-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "VTEX Shipping Network",
+              "slug": "vtex-shipping-network",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
+                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integration flow",
+                  "slug": "integration-flow",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Notification",
+                  "slug": "notification-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tracking",
+                  "slug": "tracking-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "VTEX Tracking",
+              "slug": "vtex-tracking",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integrating external orders via API to be used with VTEX Tracking",
+                  "slug": "integrate-external-orders-vtex-tracking",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Multilevel Omnichannel Inventory",
+              "slug": "multilevel-omnichannel-inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "API Integration",
+                  "slug": "api-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -1766,6 +1768,20 @@
           "type": "category",
           "children": [
             {
+              "name": "Setting up DKIM for transactional emails",
+              "slug": "setting-up-dkim-for-transactional-emails",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Setting up the SPF",
+              "slug": "setting-up-the-spf",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "How to set up functions in the Message Center templates",
               "slug": "how-to-set-up-functions-in-the-message-center-templates",
               "origin": "",
@@ -1782,21 +1798,36 @@
           ]
         },
         {
+          "name": "Pricing",
+          "slug": "pricing-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Scheduling prices for a range of hours",
+              "slug": "scheduling-prices-for-a-range-of-hours",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Promotions",
           "slug": "promotions-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "Using Policy Engine API on Promotion Alerts",
-              "slug": "using-policy-engine-api-on-promotion-alerts",
+              "name": "Creating and managing coupons with Promotions API",
+              "slug": "creating-and-managing-coupons-with-promotions-api",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Creating and managing coupons with Promotions API",
-              "slug": "creating-and-managing-coupons-with-promotions-api",
+              "name": "Using Policy Engine API on Promotion Alerts",
+              "slug": "using-policy-engine-api-on-promotion-alerts",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -1834,28 +1865,6 @@
           ]
         },
         {
-          "name": "Subscriptions",
-          "slug": "subscriptions-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Enabling Manual Prices for Subscriptions v3",
-              "slug": "enabling-manual-prices-for-subscriptions-v3",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Subscriptions v3 migration guide",
-              "slug": "subscriptions-v3-migration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
           "name": "Search",
           "slug": "search-category",
           "origin": "",
@@ -1878,21 +1887,6 @@
             {
               "name": "Consult store search terms information",
               "slug": "consult-store-search-terms-information",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Pricing",
-          "slug": "pricing-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Scheduling prices for a range of hours",
-              "slug": "scheduling-prices-for-a-range-of-hours",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -3977,7 +3971,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a new cart",
+                  "name": "Get current or create a new cart",
                   "slug": "checkout-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4289,7 +4283,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get sellers by region",
+                  "name": "Get sellers by region or address",
                   "slug": "checkout-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5258,7 +5252,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies/-id-",
+                  "endpoint": "/api/logistics/pvt/shipping-policies/-id-",
                   "children": []
                 },
                 {
@@ -5267,7 +5261,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies/-id-",
+                  "endpoint": "/api/logistics/pvt/shipping-policies/-id-",
                   "children": []
                 },
                 {
@@ -5276,7 +5270,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies/-id-",
+                  "endpoint": "/api/logistics/pvt/shipping-policies/-id-",
                   "children": []
                 },
                 {
@@ -5285,7 +5279,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies",
+                  "endpoint": "/api/logistics/pvt/shipping-policies",
                   "children": []
                 },
                 {
@@ -5294,7 +5288,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping-policies",
+                  "endpoint": "/api/logistics/pvt/shipping-policies",
                   "children": []
                 }
               ]
@@ -5310,7 +5304,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/freights/-carrierId-/values/update",
+                  "endpoint": "/api/logistics/pvt/configuration/freights/-carrierId-/values/update",
                   "children": []
                 },
                 {
@@ -5319,7 +5313,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/freights/-carrierId-/-cep-/values",
+                  "endpoint": "/api/logistics/pvt/configuration/freights/-carrierId-/-cep-/values",
                   "children": []
                 }
               ]
@@ -5335,7 +5329,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/carriers/-carrierId-/getdayofweekblocked",
+                  "endpoint": "/api/logistics/pvt/configuration/carriers/-carrierId-/getdayofweekblocked",
                   "children": []
                 },
                 {
@@ -5344,7 +5338,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/carriers/-carrierId-/adddayofweekblocked",
+                  "endpoint": "/api/logistics/pvt/configuration/carriers/-carrierId-/adddayofweekblocked",
                   "children": []
                 },
                 {
@@ -5353,7 +5347,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/carriers/-carrierId-/removedayofweekblocked",
+                  "endpoint": "/api/logistics/pvt/configuration/carriers/-carrierId-/removedayofweekblocked",
                   "children": []
                 },
                 {
@@ -5362,7 +5356,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames",
+                  "endpoint": "/api/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames",
                   "children": []
                 },
                 {
@@ -5371,7 +5365,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames/-windowDay-F-windowStartTime-T-windowEndTime-",
+                  "endpoint": "/api/logistics-capacity/resources/carrier@-capacityType-@-shippingPolicyId-/time-frames/-windowDay-F-windowStartTime-T-windowEndTime-",
                   "children": []
                 }
               ]
@@ -5387,16 +5381,16 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks",
+                  "endpoint": "/api/logistics/pvt/configuration/docks",
                   "children": []
                 },
                 {
-                  "name": "List all  docks",
+                  "name": "List all docks",
                   "slug": "logistics-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks",
+                  "endpoint": "/api/logistics/pvt/configuration/docks",
                   "children": []
                 },
                 {
@@ -5405,7 +5399,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks/-dockId-",
+                  "endpoint": "/api/logistics/pvt/configuration/docks/-dockId-",
                   "children": []
                 },
                 {
@@ -5414,7 +5408,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks/-dockId-",
+                  "endpoint": "/api/logistics/pvt/configuration/docks/-dockId-",
                   "children": []
                 },
                 {
@@ -5423,7 +5417,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks/-dockId-/activation",
+                  "endpoint": "/api/logistics/pvt/configuration/docks/-dockId-/activation",
                   "children": []
                 },
                 {
@@ -5432,7 +5426,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/docks/-dockId-/deactivation",
+                  "endpoint": "/api/logistics/pvt/configuration/docks/-dockId-/deactivation",
                   "children": []
                 }
               ]
@@ -5448,7 +5442,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses",
                   "children": []
                 },
                 {
@@ -5457,7 +5451,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses",
                   "children": []
                 },
                 {
@@ -5466,7 +5460,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5475,7 +5469,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5484,7 +5478,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses/-warehouseId-/activation",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses/-warehouseId-/activation",
                   "children": []
                 },
                 {
@@ -5493,7 +5487,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/warehouses/-warehouseId-/deactivation",
+                  "endpoint": "/api/logistics/pvt/configuration/warehouses/-warehouseId-/deactivation",
                   "children": []
                 }
               ]
@@ -5509,7 +5503,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/skus/-skuId-",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-",
                   "children": []
                 },
                 {
@@ -5518,7 +5512,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5527,7 +5521,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5536,7 +5530,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/docks/-dockId-",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/docks/-dockId-",
                   "children": []
                 },
                 {
@@ -5545,7 +5539,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/docks/-dockId-/warehouses/-warehouseId-",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/docks/-dockId-/warehouses/-warehouseId-",
                   "children": []
                 },
                 {
@@ -5554,7 +5548,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-itemId-/warehouses/-warehouseId-/dispatched",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-itemId-/warehouses/-warehouseId-/dispatched",
                   "children": []
                 },
                 {
@@ -5563,7 +5557,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots",
                   "children": []
                 },
                 {
@@ -5572,7 +5566,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-",
                   "children": []
                 },
                 {
@@ -5581,7 +5575,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-/transfer",
+                  "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-/transfer",
                   "children": []
                 }
               ]
@@ -5597,7 +5591,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/holidays/-holidayId-",
+                  "endpoint": "/api/logistics/pvt/configuration/holidays/-holidayId-",
                   "children": []
                 },
                 {
@@ -5606,7 +5600,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/holidays/-holidayId-",
+                  "endpoint": "/api/logistics/pvt/configuration/holidays/-holidayId-",
                   "children": []
                 },
                 {
@@ -5615,7 +5609,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/holidays/-holidayId-",
+                  "endpoint": "/api/logistics/pvt/configuration/holidays/-holidayId-",
                   "children": []
                 },
                 {
@@ -5624,7 +5618,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/holidays",
+                  "endpoint": "/api/logistics/pvt/configuration/holidays",
                   "children": []
                 }
               ]
@@ -5640,7 +5634,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations",
                   "children": []
                 },
                 {
@@ -5649,7 +5643,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-reservationId-",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-reservationId-",
                   "children": []
                 },
                 {
@@ -5658,7 +5652,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-reservationId-/confirm",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-reservationId-/confirm",
                   "children": []
                 },
                 {
@@ -5667,7 +5661,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-reservationId-/acknowledge",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-reservationId-/acknowledge",
                   "children": []
                 },
                 {
@@ -5676,7 +5670,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-reservationId-/cancel",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-reservationId-/cancel",
                   "children": []
                 },
                 {
@@ -5685,7 +5679,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/inventory/reservations/-warehouseId-/-skuId-",
+                  "endpoint": "/api/logistics/pvt/inventory/reservations/-warehouseId-/-skuId-",
                   "children": []
                 }
               ]
@@ -5701,7 +5695,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/shipping/calculate",
+                  "endpoint": "/api/logistics/pvt/shipping/calculate",
                   "children": []
                 }
               ]
@@ -5717,7 +5711,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints",
                   "children": []
                 },
                 {
@@ -5726,7 +5720,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
                   "children": []
                 },
                 {
@@ -5735,7 +5729,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
                   "children": []
                 },
                 {
@@ -5744,7 +5738,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints/-pickupPointId-",
                   "children": []
                 },
                 {
@@ -5753,7 +5747,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/pickuppoints/_search",
+                  "endpoint": "/api/logistics/pvt/configuration/pickuppoints/_search",
                   "children": []
                 }
               ]
@@ -5769,7 +5763,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/geoshape",
+                  "endpoint": "/api/logistics/pvt/configuration/geoshape",
                   "children": []
                 },
                 {
@@ -5778,7 +5772,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/geoshape",
+                  "endpoint": "/api/logistics/pvt/configuration/geoshape",
                   "children": []
                 },
                 {
@@ -5787,7 +5781,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/geoshape/-polygonName-",
+                  "endpoint": "/api/logistics/pvt/configuration/geoshape/-polygonName-",
                   "children": []
                 },
                 {
@@ -5796,7 +5790,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/logistics/pvt/configuration/geoshape/-polygonName-",
+                  "endpoint": "/api/logistics/pvt/configuration/geoshape/-polygonName-",
                   "children": []
                 }
               ]
@@ -6385,38 +6379,38 @@
               "children": [
                 {
                   "name": "Fulfillment simulation - External Seller",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orderForms/simulation",
+                  "endpoint": "/pvt/orderForms/simulation",
                   "children": []
                 },
                 {
                   "name": "Order placement",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders",
+                  "endpoint": "/pvt/orders",
                   "children": []
                 },
                 {
                   "name": "Authorize fulfillment",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-orderId-/fulfill",
+                  "endpoint": "/pvt/orders/-sellerOrderId-/fulfill",
                   "children": []
                 },
                 {
                   "name": "Marketplace order cancellation",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-orderId-/cancel",
+                  "endpoint": "/pvt/orders/-orderId-/cancel",
                   "children": []
                 },
                 {
@@ -6425,7 +6419,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/invoice",
                   "children": []
                 },
                 {
@@ -6434,7 +6428,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-",
                   "children": []
                 },
                 {
@@ -6443,7 +6437,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking",
                   "children": []
                 },
                 {
@@ -6452,7 +6446,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/cancel",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/cancel",
                   "children": []
                 }
               ]
@@ -6464,61 +6458,61 @@
               "children": [
                 {
                   "name": "VTEX Mapper Registration",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.vtexcommercestable.com.br/api/mkp-category-mapper/connector/register",
+                  "endpoint": "/api/mkp-category-mapper/connector/register",
                   "children": []
                 },
                 {
                   "name": "Send Category Mapping to VTEX Mapper",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.vtexcommercestable.com.br/api/mkp-category-mapper/categories/marketplace/-id-",
+                  "endpoint": "/api/mkp-category-mapper/categories/marketplace/-id-",
                   "children": []
                 },
                 {
                   "name": "Place fulfillment order",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders",
+                  "endpoint": "/api/fulfillment/pvt/orders",
                   "children": []
                 },
                 {
                   "name": "Authorize dispatch for fulfillment order",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders/-orderId-/fulfill",
+                  "endpoint": "/api/fulfillment/pvt/orders/-orderId-/fulfill",
                   "children": []
                 },
                 {
                   "name": "New Order Integration",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.vtexcommercestable.com.br/api/order-integration/orders",
+                  "endpoint": "/api/order-integration/orders",
                   "children": []
                 },
                 {
                   "name": "Update Order Status",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/-accountName-.vtexcommercestable.com.br/api/order-integration/orders/status",
+                  "endpoint": "/api/order-integration/orders/status",
                   "children": []
                 },
                 {
                   "name": "Fulfillment simulation - External Marketplace",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -7156,15 +7150,6 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/oms/pvt/orders/-orderId-/changes",
-                  "children": []
-                },
-                {
-                  "name": "Add log in orders",
-                  "slug": "orders-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/oms/pvt/orders/-orderId-/interactions",
                   "children": []
                 }
               ]
@@ -7896,7 +7881,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/sessions/",
+                  "endpoint": "/api/sessions/",
                   "children": []
                 }
               ]
@@ -7963,7 +7948,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-",
+                  "endpoint": "/pricing/prices/-itemId-",
                   "children": []
                 },
                 {
@@ -7972,7 +7957,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-",
+                  "endpoint": "/pricing/prices/-itemId-",
                   "children": []
                 },
                 {
@@ -7981,7 +7966,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-",
+                  "endpoint": "/pricing/prices/-itemId-",
                   "children": []
                 },
                 {
@@ -7990,7 +7975,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/fixed",
+                  "endpoint": "/pricing/prices/-itemId-/fixed",
                   "children": []
                 },
                 {
@@ -7999,7 +7984,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/fixed/-priceTableId-",
+                  "endpoint": "/pricing/prices/-itemId-/fixed/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8008,7 +7993,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/fixed/-priceTableId-",
+                  "endpoint": "/pricing/prices/-itemId-/fixed/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8017,7 +8002,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/fixed/-priceTableId-",
+                  "endpoint": "/pricing/prices/-itemId-/fixed/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8026,7 +8011,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/prices/-itemId-/computed/-priceTableId-",
+                  "endpoint": "/pricing/prices/-itemId-/computed/-priceTableId-",
                   "children": []
                 }
               ]
@@ -8042,7 +8027,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/config",
+                  "endpoint": "/pricing/config",
                   "children": []
                 },
                 {
@@ -8051,7 +8036,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/migration",
+                  "endpoint": "/pricing/migration",
                   "children": []
                 }
               ]
@@ -8067,7 +8052,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/pipeline/catalog/-priceTableId-",
+                  "endpoint": "/pricing/pipeline/catalog/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8076,7 +8061,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/pipeline/catalog/-priceTableId-",
+                  "endpoint": "/pricing/pipeline/catalog/-priceTableId-",
                   "children": []
                 },
                 {
@@ -8085,7 +8070,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/pipeline/catalog",
+                  "endpoint": "/pricing/pipeline/catalog",
                   "children": []
                 },
                 {
@@ -8094,7 +8079,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/tables",
+                  "endpoint": "/pricing/tables",
                   "children": []
                 }
               ]
@@ -8875,7 +8860,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/sessions",
+                  "endpoint": "/api/sessions",
                   "children": []
                 },
                 {
@@ -8884,7 +8869,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/sessions",
+                  "endpoint": "/api/sessions",
                   "children": []
                 },
                 {
@@ -8893,7 +8878,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/sessions",
+                  "endpoint": "/api/sessions",
                   "children": []
                 }
               ]
@@ -8909,7 +8894,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/segments",
+                  "endpoint": "/api/segments",
                   "children": []
                 }
               ]
@@ -12636,11 +12621,33 @@
           "type": "category",
           "children": [
             {
+              "name": "March",
+              "slug": "march-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Deprecation of apps-graphql@2.x",
+                  "slug": "deprecation-of-apps-graphql@2.x",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "February",
               "slug": "february-2023",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Custom IO apps need to add the ListOrders resource",
+                  "slug": "custom-io-apps-need-to-add-the-listorders-resource",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Filtered searches now available in Badges App",
                   "slug": "filtered-searches-now-available-in-badges-app",
@@ -12656,6 +12663,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "New options for adding and removing modules from the Kit Look App",
+                  "slug": "new-options-for-adding-and-removing-modules-from-the-kit-look-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "SafeData can now block the anonymous creation of documents for all Master Data entities",
                   "slug": "safedata-can-now-block-the-anonymous-creation-of-documents-for-all-master-data-entities",

@@ -14,13 +14,12 @@ const innerContainer: SxStyleProp = {
   justifyContent: 'center',
   pt: '64px',
   mx: 'auto',
-  px: ['18px', '10%', '10%', '10%', '18%', '5%', '5%'],
-  width: ['100%', '100%', '100%', '100%', '100%', '80%', '80%'],
+  px: ['auto', '5em', '7em', '7em', '7em', '10em', '20em'],
 }
 
 const articleBox: SxStyleProp = {
-  fontSize: '18px',
-  lineHeight: '24px',
+  fontSize: '1em',
+  lineHeight: '1.375em',
   a: {
     color: '#E31C58',
   },
@@ -29,31 +28,37 @@ const articleBox: SxStyleProp = {
     marginBottom: '24px',
   },
   h1: {
-    fontSize: '2em',
+    fontSize: '1.75em',
     fontWeight: '400',
-    lineHeight: 1.25,
+    lineHeight: '2.375em',
+    overflowWrap: 'anywhere',
   },
   h2: {
-    fontSize: '22px',
-    lineHeight: '32px',
+    fontSize: '1.375em',
+    lineHeight: '2em',
     fontWeight: '400',
+    marginY: '1.125em',
     paddingTop: '90px',
     marginTop: '-90px',
+    overflowWrap: 'anywhere',
   },
   h3: {
-    fontSize: '18px',
+    fontSize: '1.125em',
     fontWeight: '600',
-    lineHeight: '24px',
+    lineHeight: '1.875em',
     paddingTop: '90px',
     marginTop: '-90px',
+    overflowWrap: 'anywhere',
   },
   strong: {
     fontWeight: '600',
+    overflowWrap: 'anywhere',
   },
 }
 
 const contentContainer: SxStyleProp = {
   width: '100%',
+  px: ['1.125em', 'initial'],
 }
 
 const documentationTitle: SxStyleProp = {
@@ -66,8 +71,7 @@ const documentationTitle: SxStyleProp = {
 const documentationExcerpt: SxStyleProp = {
   color: '#A1A8B3',
   padding: '8px 0 24px',
-  fontSize: '18px',
-  lineHeight: '24px',
+  lineHeight: '18px',
   fontWeight: '400',
 }
 
@@ -84,7 +88,7 @@ const bottomContributorsDivider: SxStyleProp = {
 }
 
 const rightContainer: SxStyleProp = {
-  ml: ['64px', '64px', '64px', '64px', '64px', '64px', '200px'],
+  ml: ['68px', '68px', '68px', '68px', '68px', '68px', '200px'],
   display: [
     'none !important',
     'none !important',

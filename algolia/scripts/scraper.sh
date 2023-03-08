@@ -11,10 +11,10 @@ rm -rf ./docsearch-scraper
 
 if [ -e ./.env ]
 then
-  export $(grep "^ALGOLIA_APP_ID\|^ALGOLIA_WRITE_KEY" .env)
+  export $(grep "^NEXT_PUBLIC_ALGOLIA_APP_ID\|^NEXT_PUBLIC_ALGOLIA_WRITE_KEY" .env)
 fi
 
-if [ -z "${ALGOLIA_APP_ID}" ] || [ -z "${ALGOLIA_WRITE_KEY}" ]
+if [ -z "${NEXT_PUBLIC_ALGOLIA_APP_ID}" ] || [ -z "${NEXT_PUBLIC_ALGOLIA_WRITE_KEY}" ]
 then
   echo "❌ Required keys are missing in your .env file"
   exit 1
@@ -41,8 +41,8 @@ unzip chromedriver_linux64.zip
 chmod +x chromedriver
 
 # create the .env file for docsearch
-echo "APPLICATION_ID=${ALGOLIA_APP_ID}
-API_KEY=${ALGOLIA_WRITE_KEY}
+echo "APPLICATION_ID=${NEXT_PUBLIC_ALGOLIA_APP_ID}
+API_KEY=${NEXT_PUBLIC_ALGOLIA_WRITE_KEY}
 CHROMEDRIVER_PATH=./chromedriver
 " > .env
 

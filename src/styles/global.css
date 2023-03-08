@@ -29,13 +29,27 @@ footer > div {
   outline: none;
 }
 
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+pre {
+  overflow-x: auto;
+}
+
 table {
   border-collapse: collapse;
   max-width: 100%;
   overflow-x: auto;
   display: inline-block;
   margin: 16px 0;
-  border-radius: 4px
+  border-radius: 4px;
 }
 
 table thead {
@@ -43,14 +57,18 @@ table thead {
   font-weight: 500;
 }
 
-pre, code, pre *, code * {
+pre,
+code,
+pre *,
+code * {
   font-family: Consolas,monaco,monospace !important;
 }
 
 table td,
 table th {
+  font-size: 0.875em;
   border: 1px solid #e7e9ef;
-  padding: 14px;
+  padding: 0.5em;
 }
 
 table tbody tr:nth-of-type(even) {
