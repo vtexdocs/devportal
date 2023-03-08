@@ -17,7 +17,7 @@ describe('API guides documentation page', () => {
   it('Navigate by sidebar', () => {
     cy.get('.sidebar-component > div', { timeout: 10000 })
       .filter(filterSidebarItems)
-      .randomize()
+      .anyWithIndex()
       .then(([category, index]) => {
         cy.wrap(index).as('idx')
         return cy.wrap(category)
@@ -39,7 +39,7 @@ describe('API guides documentation page', () => {
         .eq(idx * 3 + 1)
         .find('.sidebar-component > div')
         .filter(filterSidebarItems)
-        .randomize()
+        .anyWithIndex()
         .then(([element, index]) => {
           cy.wrap(index).as('subItemsIdx')
           if (element.find('button').length)
@@ -54,7 +54,6 @@ describe('API guides documentation page', () => {
           .find('.sidebar-component > div')
           .eq(subItemIndex * 2 + 1)
           .then((element) => {
-            cy.log('ERROR', element.next())
             if (element.children().length > 0) {
               cy.wrap(element)
                 .find('.sidebar-component > div')
