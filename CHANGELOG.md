@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.1](https://github.com/vtexdocs/devportal/compare/v1.9.0...v1.9.1) (2023-03-09)
+
+
+### Bug Fixes
+
+* **sidebar:** hide sidebar by default in smaller breakpoints ([f2c2996](https://github.com/vtexdocs/devportal/commit/f2c2996cd5ab2c0f9f3d7c6474b2dedd5fd48c98))
+
+
+### Docs
+
+* redirect ([934aac6](https://github.com/vtexdocs/devportal/commit/934aac69514ec1732ec285a7d158d9a69a32c4a8))
+
+
+### Style
+
+* **documentation:** decrease contributors width and container padding ([9614cec](https://github.com/vtexdocs/devportal/commit/9614cec833dfbd9dbc6298c20e88451b26465615))
+
 ## [1.9.0](https://github.com/vtexdocs/devportal/compare/v1.8.4...v1.9.0) (2023-03-07)
 
 
