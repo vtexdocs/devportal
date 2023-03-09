@@ -1,6 +1,6 @@
 {
   "name": "devportal",
-  "version": "1.8.2",
+  "version": "1.9.0",
   "private": true,
   "engines": {
     "npm": "please-use-yarn",
@@ -108,7 +108,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "1.2.1-vtex"
+      "version": "1.2.1-vtex-2-g0d8c703"
     }
   },
   "resolutions": {
