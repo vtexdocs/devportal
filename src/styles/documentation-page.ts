@@ -14,7 +14,7 @@ const innerContainer: SxStyleProp = {
   justifyContent: 'center',
   pt: '64px',
   mx: 'auto',
-  px: ['auto', '5em', '7em', '7em', '7em', '10em', '20em'],
+  px: ['auto', '5em', '7em', '7em', '7em', '7em', '20em'],
 }
 
 const articleBox: SxStyleProp = {
@@ -88,7 +88,7 @@ const bottomContributorsDivider: SxStyleProp = {
 }
 
 const rightContainer: SxStyleProp = {
-  ml: ['68px', '68px', '68px', '68px', '68px', '68px', '200px'],
+  ml: ['38px', '38px', '48px', '48px', '58px', '68px', '200px'],
   display: [
     'none !important',
     'none !important',
@@ -96,7 +96,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
-  minWidth: [0, 0, 0, 0, '189px', '284px', '284px'],
+  minWidth: [0, 0, 0, 0, '139px', '184px', '284px'],
 }
 
 const releaseAction: SxStyleProp = {

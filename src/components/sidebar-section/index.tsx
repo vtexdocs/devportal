@@ -45,6 +45,10 @@ const SidebarSection = ({
   ])
 
   useEffect(() => {
+    if (window.innerWidth < 1920) setSidebarSectionHidden(true)
+  }, [])
+
+  useEffect(() => {
     setFilterStatus(
       methodFilterList.some((methodFilter) => methodFilter.active) ||
         searchValue != ''
