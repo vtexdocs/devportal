@@ -4,7 +4,7 @@ const container: SxStyleProp = {
   margin: '0',
   width: '100%',
   height: '100%',
-  backgroundColor: 'rgba(52,52,52,0.3)',
+  backgroundColor: 'rgba(52,52,52,0.5)',
   position: 'fixed',
   top: '0',
   left: '0',
@@ -23,6 +23,7 @@ const modal: SxStyleProp = {
   position: 'relative',
   zIndex: '100000',
   padding: ['5px', '5px', '10px', '10px', '20px'],
+  border: '1px solid #E7E9EE',
 
   '> img': {
     maxHeight: 'calc(100vh - 100px)',
@@ -41,9 +42,9 @@ const buttonContainer: SxStyleProp = {
 }
 
 const closeButton: SxStyleProp = {
-  width: '30px',
-  height: '30px',
-  color: '#E7E9EE',
+  width: '20px',
+  height: '20px',
+  color: '#142032',
 
   ':hover': {
     border: '1px solid #E7E9EE',

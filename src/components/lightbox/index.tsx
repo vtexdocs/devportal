@@ -30,7 +30,7 @@ export default function LightBox({ children }: Props) {
                 aria-label={'Close'}
                 size="small"
                 variant="tertiary"
-                icon={() => <CloseIcon size={24} />}
+                icon={() => <CloseIcon size={16} />}
                 onClick={() => setIsModalOpen(false)}
               />
             </Box>
