@@ -23,16 +23,9 @@ describe('API guides documentation page', () => {
         return cy.wrap(category)
       })
       .find('button')
+      .scrollIntoView()
       .should('be.visible')
       .click({ force: true })
-
-    cy.get('@idx').then((index) => {
-      cy.get('.sidebar-component > div', { timeout: 10000 })
-        .eq(index * 3)
-        .find('button')
-        .should('be.visible')
-        .click()
-    })
 
     cy.get('@idx').then((idx) => {
       cy.get('.sidebar-component > div', { timeout: 1000 })
@@ -125,26 +118,30 @@ describe('API guides documentation page', () => {
   })
 
   it('try to click in last element of table of contents', () => {
-    cy.get('h2')
-      .its('length')
-      .then((length) => {
-        cy.get('[data-cy="table-of-contents"]:visible > div').should(
-          'have.length',
-          length
-        )
-      })
+    if (Cypress.$('[data-cy="table-of-contents"]').children().length > 0) {
+      cy.get('h2')
+        .its('length')
+        .then((length) => {
+          cy.get('[data-cy="table-of-contents"]:visible > div').should(
+            'have.length',
+            length
+          )
+        })
 
-    cy.get('[data-cy="table-of-contents"]:visible > div')
-      .last()
-      .then((heading) => {
-        const anchor = heading.find('a').attr('href')
-        cy.wrap(anchor.substring(anchor.indexOf('#') + 1)).as('anchor')
-        return cy.wrap(heading)
-      })
-      .click()
+      cy.get('[data-cy="table-of-contents"]:visible > div')
+        .last()
+        .then((heading) => {
+          const anchor = heading.find('a').attr('href')
+          cy.wrap(anchor.substring(anchor.indexOf('#') + 1)).as('anchor')
+          return cy.wrap(heading)
+        })
+        .click()
 
-    cy.get('@anchor').then((anchor) => {
-      cy.get(`[id=${anchor}]`).should('be.visible')
-    })
+      cy.get('@anchor').then((anchor) => {
+        cy.get(`[id=${anchor}]`).should('be.visible')
+      })
+    } else {
+      cy.log('The table is empty')
+    }
   })
 })

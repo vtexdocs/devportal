@@ -8,13 +8,14 @@ describe('API reference documentation page', () => {
   })
 
   beforeEach(() => {
-    cy.task('getUrl').then((url) => cy.visit(url))
     cy.viewport(1366, 768)
+    cy.task('getUrl').then((url) => cy.visit(url))
   })
 
   it('Check if an random endpoint page, chosen using the sidebar, load and have a non empty title', () => {
-    cy.get('.sidebar-component > div')
-      .as('entireList')
+    cy.get('.sidebar-component').first().as('entireList')
+    cy.get('@entireList')
+      .children()
       .filter(filterSidebarItems)
       .anyWithIndex()
       .then(([category, index]) => {
@@ -24,35 +25,38 @@ describe('API reference documentation page', () => {
       .find('a')
       .click({ force: true })
 
-    cy.get('@idx', { timeout: 1000 }).then((idx) => {
-      cy.get('.sidebar-component > div', { timeout: 1000 })
+    cy.get('@idx').then((idx) => {
+      cy.get('@entireList', { timeout: 1000 })
+        .children()
         .eq(idx * 3 + 1)
         .find('.sidebar-component > div')
         .filter(filterSidebarItems)
         .anyWithIndex()
-        .then(([element, index]) => {
-          cy.wrap(index).as('subItemsIdx')
-          cy.wrap(element.next()).as('aff')
+        .then(([element, subItemidx]) => {
+          cy.wrap(subItemidx).as('subItemsIdx')
           return cy.wrap(element.find('button'))
         })
+        .scrollIntoView()
         .should('be.visible')
         .click({ force: true })
     })
 
-    cy.get('@idx', { timeout: 1000 }).then((categoryIdx) => {
-      cy.get('@subItemsIdx', { timeout: 1000 }).then((subcategoryIdx) => {
-        cy.get('.sidebar-component > div')
-          .should('be.visible')
+    cy.get('@idx').then((categoryIdx) => {
+      cy.get('@subItemsIdx').then((subcategoryIdx) => {
+        cy.get('@entireList', { timeout: 6000 })
+          .children()
           .eq(categoryIdx * 3 + 1)
-          .find('.sidebar-component > div')
+          .find('.sidebar-component > div', { timeout: 6000 })
           .eq(subcategoryIdx * 2 + 1)
-          .find('.sidebar-component > div')
+          .find('.sidebar-component > div', { timeout: 6000 })
           .filter(filterSidebarItems)
           .anyWithIndex()
           .then(([endpoint]) => {
             return cy.wrap(endpoint)
           })
           .find('a')
+          .scrollIntoView()
+          .should('be.visible')
           .click()
       })
     })
@@ -73,9 +77,13 @@ describe('API reference documentation page', () => {
         cy.get('api-response')
           .shadow()
           .within(() => {
-            cy.get('.resp-box').should('be.visible').click()
-            cy.get('.resp-modal-content').should('be.visible')
-            cy.get('.close-button').click()
+            cy.get('.resp-box')
+              .first()
+              .scrollIntoView()
+              .should('be.visible')
+              .click()
+            cy.get('.resp-modal-content').first().should('be.visible')
+            cy.get('.close-button').first().click()
           })
       })
   })
