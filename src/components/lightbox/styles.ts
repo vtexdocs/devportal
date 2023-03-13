@@ -10,6 +10,7 @@ const imageContainer: SxStyleProp = {
   },
 
   '> img': {
+    display: 'block',
     padding: '0',
     margin: '0',
   },
