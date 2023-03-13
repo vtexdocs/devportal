@@ -1,10 +1,25 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
+const imageContainer: SxStyleProp = {
+  cursor: 'pointer',
+  width: 'fit-content',
+  borderRadius: '5px',
+  transition: '0.3s',
+  ':hover': {
+    boxShadow: '2px 4px 8px 2px rgb(0 0 0 / 10%)',
+  },
+
+  '> img': {
+    padding: '0',
+    margin: '0',
+  },
+}
+
 const container: SxStyleProp = {
   margin: '0',
   width: '100%',
   height: '100%',
-  backgroundColor: 'rgba(52,52,52,0.5)',
+  backgroundColor: 'rgba(0,0,0,0.9)',
   position: 'fixed',
   top: '0',
   left: '0',
@@ -17,43 +32,36 @@ const container: SxStyleProp = {
 const modal: SxStyleProp = {
   display: 'inline-block',
   margin: 'auto',
-  backgroundColor: '#FEFEFE',
-  borderRadius: '5px',
   boxShadow: '2px 4px 16px rgb(0 0 0 / 30%)',
   position: 'relative',
-  zIndex: '100000',
-  padding: ['5px', '5px', '10px', '10px', '20px'],
-  border: '1px solid #E7E9EE',
+  zIndex: '10001',
+  padding: '0',
 
   '> img': {
-    maxHeight: 'calc(100vh - 100px)',
-    maxWidth: 'calc(100vw - 70px)',
+    display: 'block',
+    maxHeight: 'calc(100vh - 50px)',
+    maxWidth: 'calc(100vw - 50px)',
     width: 'auto',
+    margin: '0',
+    padding: '0',
   },
 }
 
-const buttonContainer: SxStyleProp = {
-  width: '100%',
-  display: 'flex',
-  borderBottom: '1px solid #E7E9EE',
-  justifyContent: 'flex-end',
-  alignItems: 'center',
-  paddingBottom: '5px',
-}
-
 const closeButton: SxStyleProp = {
-  width: '20px',
-  height: '20px',
-  color: '#142032',
+  position: 'absolute',
+  zIndex: '10002',
+  top: '10px',
+  right: '10px',
+  color: '#FEFEFE',
 
   ':hover': {
-    border: '1px solid #E7E9EE',
+    color: 'rgb(100, 100, 100)',
   },
 }
 
 export default {
+  imageContainer,
   container,
   modal,
-  buttonContainer,
   closeButton,
 }

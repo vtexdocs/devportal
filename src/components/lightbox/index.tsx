@@ -23,22 +23,22 @@ export default function LightBox({ children }: Props) {
     <div>
       {isModalOpen && (
         <Flex sx={styles.container}>
+          <Button
+            sx={styles.closeButton}
+            aria-label={'Close'}
+            size="small"
+            variant="tertiary"
+            icon={() => <CloseIcon size={24} />}
+            onClick={() => setIsModalOpen(false)}
+          />
           <Box sx={styles.modal} ref={modalRef}>
-            <Box sx={styles.buttonContainer}>
-              <Button
-                sx={styles.closeButton}
-                aria-label={'Close'}
-                size="small"
-                variant="tertiary"
-                icon={() => <CloseIcon size={16} />}
-                onClick={() => setIsModalOpen(false)}
-              />
-            </Box>
             {children}
           </Box>
         </Flex>
       )}
-      <div onClick={() => setIsModalOpen(true)}>{children}</div>
+      <Box sx={styles.imageContainer} onClick={() => setIsModalOpen(true)}>
+        {children}
+      </Box>
     </div>
   )
 }
