@@ -1890,6 +1890,27 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Consult product search information",
+              "slug": "consult-product-search-information",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Get banner list for a specific search",
+              "slug": "get-banner-list-for-a-specific-search",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Get a list of the possible facets for a specific search",
+              "slug": "get-a-list-of-the-possible-facets-for-a-specific-search",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
