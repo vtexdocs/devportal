@@ -88,8 +88,9 @@ const Header = () => {
     <Box ref={headerElement} sx={styles.headerContainer}>
       <AnnouncementBar
         action={{
-          label: " If you have any feedback, don't hesitate to get in touch.",
-          href: 'https://docs.google.com/forms/d/e/1FAIpQLSfmnotPvPjw-SjiE7lt2Nt3RQgNUe10ixXZmuO2v9enOJReoQ/viewform?pli=1',
+          label:
+            'We want to know more about you and how you use our docs. Fill in our survey! It takes less than 5 minutes.',
+          href: 'https://forms.gle/5EvnahjuwQqwumDd9',
         }}
       >
         We are excited to announce our new Developer Portal.
