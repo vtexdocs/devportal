@@ -556,6 +556,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "PSE Payment Method",
+                  "slug": "pse-payment-method",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
