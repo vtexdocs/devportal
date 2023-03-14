@@ -89,12 +89,10 @@ const Header = () => {
       <AnnouncementBar
         action={{
           label:
-            'We want to know more about you and how you use our docs. Fill in our survey! It takes less than 5 minutes.',
+            ' We want to know more about you and how you use our docs. Fill in our survey! It takes less than 5 minutes.',
           href: 'https://forms.gle/5EvnahjuwQqwumDd9',
         }}
-      >
-        We are excited to announce our new Developer Portal.
-      </AnnouncementBar>
+      ></AnnouncementBar>
       <HeaderBrand sx={styles.headerBrand}>
         <VtexLink
           aria-label="Go back to Home"
