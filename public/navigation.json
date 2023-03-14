@@ -12660,6 +12660,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "PSE: Payment method for Colombian customers",
+                  "slug": "pse-payment-method-for-colombian-customers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -12983,13 +12990,6 @@
                 {
                   "name": "Custom OAuth easy implementation",
                   "slug": "custom-oauth-easy-implementation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PSE: Payment method for Colombian customers",
-                  "slug": "pse-payment-method-for-colombian-customers",
                   "origin": "",
                   "type": "markdown",
                   "children": []
