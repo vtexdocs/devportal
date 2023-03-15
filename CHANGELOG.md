@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.3](https://github.com/vtexdocs/devportal/compare/v1.9.2...v1.9.3) (2023-03-15)
+
+
+### Bug Fixes
+
+* handle image loading errors ([4e81bbd](https://github.com/vtexdocs/devportal/commit/4e81bbd0be92488a5f72cb1d369ac23161649467))
+
+
+### Build
+
+* **package:** update rapidoc version ([9ac04b3](https://github.com/vtexdocs/devportal/commit/9ac04b3d3b82c98d36b7c9bf0f1c9c191247cbb3))
+
 ### [1.9.2](https://github.com/vtexdocs/devportal/compare/v1.9.1...v1.9.2) (2023-03-15)
 
 
