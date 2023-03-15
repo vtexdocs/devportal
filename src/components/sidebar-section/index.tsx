@@ -45,6 +45,10 @@ const SidebarSection = ({
   ])
 
   useEffect(() => {
+    if (window.innerWidth < 1920) setSidebarSectionHidden(true)
+  }, [])
+
+  useEffect(() => {
     setFilterStatus(
       methodFilterList.some((methodFilter) => methodFilter.active) ||
         searchValue != ''
@@ -97,7 +101,7 @@ const SidebarSection = ({
     >
       <Box
         className={sidebarSectionHidden ? 'sidebarHide' : ''}
-        sx={styles.sidebarContainerBox}
+        sx={styles.sidebarContainerBoxHamburger}
       >
         <Flex sx={styles.sidebarContainerTitle}>
           <Button

@@ -23,7 +23,7 @@ const DocumentationCard = ({
 }: CardProps) => {
   return (
     <Link href={link} legacyBehavior>
-      <a onClick={onClick}>
+      <a onClick={onClick} style={{ width: '100%' }}>
         <Box sx={cardContainer(containerType)}>
           <Flex sx={titleContainer(containerType)}>
             <Icon size={24} />

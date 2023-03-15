@@ -82,15 +82,15 @@
               "children": []
             },
             {
-              "name": "Promotions",
-              "slug": "promotions-overview",
+              "name": "Pricing",
+              "slug": "pricing-overview",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Pricing",
-              "slug": "pricing-overview",
+              "name": "Promotions",
+              "slug": "promotions-overview",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -183,20 +183,6 @@
                 {
                   "name": "Set up order processing",
                   "slug": "erp-integration-set-up-order-processing",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Change seller",
-                  "slug": "change-seller",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Change order",
-                  "slug": "change-order",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -395,21 +381,6 @@
               ]
             },
             {
-              "name": "Multilevel Omnichannel Inventory",
-              "slug": "multilevel-omnichannel-inventory",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "API Integration",
-                  "slug": "api-integration",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Gift Card",
               "slug": "gift-card-integration-guide",
               "origin": "",
@@ -585,6 +556,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "PSE Payment Method",
+                  "slug": "pse-payment-method",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -697,57 +675,6 @@
               "children": []
             },
             {
-              "name": "VTEX Shipping Network",
-              "slug": "vtex-shipping-network",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
-                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Integration flow",
-                  "slug": "integration-flow",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Notification",
-                  "slug": "notification-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Tracking",
-                  "slug": "tracking-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "VTEX Tracking",
-              "slug": "vtex-tracking",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integrating external orders via API to be used with VTEX Tracking",
-                  "slug": "integrate-external-orders-vtex-tracking",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "reCAPTCHA",
               "slug": "recaptcha",
               "origin": "",
@@ -822,13 +749,6 @@
             {
               "name": "SKUs",
               "slug": "skus",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "How to activate an SKU",
-              "slug": "how-to-activate-an-sku",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -980,7 +900,7 @@
               ]
             },
             {
-              "name": "Orders",
+              "name": "Order Placement",
               "slug": "orders-2",
               "origin": "",
               "type": "markdown",
@@ -1030,7 +950,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a new cart",
+                  "name": "Get current or create a new cart",
                   "slug": "create-a-new-cart",
                   "origin": "",
                   "type": "markdown",
@@ -1478,6 +1398,27 @@
           "type": "category",
           "children": [
             {
+              "name": "Feed v3",
+              "slug": "orders-feed",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Change order",
+              "slug": "change-order",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Change seller",
+              "slug": "change-seller",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Actions in orders",
               "slug": "actions-orders",
               "origin": "",
@@ -1521,11 +1462,100 @@
               ]
             },
             {
-              "name": "Feed v3",
-              "slug": "orders-feed",
+              "name": "Subscriptions",
+              "slug": "subscriptions-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Enabling Manual Prices for Subscriptions v3",
+                  "slug": "enabling-manual-prices-for-subscriptions-v3",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Subscriptions v3 migration guide",
+                  "slug": "subscriptions-v3-migration-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Fulfillment",
+          "slug": "fulfillment-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "VTEX Shipping Network",
+              "slug": "vtex-shipping-network",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
+                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integration flow",
+                  "slug": "integration-flow",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Notification",
+                  "slug": "notification-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tracking",
+                  "slug": "tracking-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "VTEX Tracking",
+              "slug": "vtex-tracking",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integrating external orders via API to be used with VTEX Tracking",
+                  "slug": "integrate-external-orders-vtex-tracking",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Multilevel Omnichannel Inventory",
+              "slug": "multilevel-omnichannel-inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "API Integration",
+                  "slug": "api-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -1775,21 +1805,36 @@
           ]
         },
         {
+          "name": "Pricing",
+          "slug": "pricing-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Scheduling prices for a range of hours",
+              "slug": "scheduling-prices-for-a-range-of-hours",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Promotions",
           "slug": "promotions-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "Using Policy Engine API on Promotion Alerts",
-              "slug": "using-policy-engine-api-on-promotion-alerts",
+              "name": "Creating and managing coupons with Promotions API",
+              "slug": "creating-and-managing-coupons-with-promotions-api",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Creating and managing coupons with Promotions API",
-              "slug": "creating-and-managing-coupons-with-promotions-api",
+              "name": "Using Policy Engine API on Promotion Alerts",
+              "slug": "using-policy-engine-api-on-promotion-alerts",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -1827,28 +1872,6 @@
           ]
         },
         {
-          "name": "Subscriptions",
-          "slug": "subscriptions-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Enabling Manual Prices for Subscriptions v3",
-              "slug": "enabling-manual-prices-for-subscriptions-v3",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Subscriptions v3 migration guide",
-              "slug": "subscriptions-v3-migration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
           "name": "Search",
           "slug": "search-category",
           "origin": "",
@@ -1874,18 +1897,24 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            }
-          ]
-        },
-        {
-          "name": "Pricing",
-          "slug": "pricing-category",
-          "origin": "",
-          "type": "category",
-          "children": [
+            },
             {
-              "name": "Scheduling prices for a range of hours",
-              "slug": "scheduling-prices-for-a-range-of-hours",
+              "name": "Consult product search information",
+              "slug": "consult-product-search-information",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Get banner list for a specific search",
+              "slug": "get-banner-list-for-a-specific-search",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Get a list of the possible facets for a specific search",
+              "slug": "get-a-list-of-the-possible-facets-for-a-specific-search",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -3970,7 +3999,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a new cart",
+                  "name": "Get current or create a new cart",
                   "slug": "checkout-api",
                   "type": "openapi",
                   "method": "GET",
@@ -6378,38 +6407,38 @@
               "children": [
                 {
                   "name": "Fulfillment simulation - External Seller",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orderForms/simulation",
+                  "endpoint": "/pvt/orderForms/simulation",
                   "children": []
                 },
                 {
                   "name": "Order placement",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders",
+                  "endpoint": "/pvt/orders",
                   "children": []
                 },
                 {
                   "name": "Authorize fulfillment",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill",
+                  "endpoint": "/pvt/orders/-sellerOrderId-/fulfill",
                   "children": []
                 },
                 {
                   "name": "Marketplace order cancellation",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-seller-fulfillment",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-fulfillmentEndpoint-/pvt/orders/-orderId-/cancel",
+                  "endpoint": "/pvt/orders/-orderId-/cancel",
                   "children": []
                 },
                 {
@@ -6418,7 +6447,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/invoice",
                   "children": []
                 },
                 {
@@ -6427,7 +6456,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-",
                   "children": []
                 },
                 {
@@ -6436,7 +6465,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking",
                   "children": []
                 },
                 {
@@ -6445,7 +6474,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/cancel",
+                  "endpoint": "/pvt/orders/-marketplaceOrderId-/cancel",
                   "children": []
                 }
               ]
@@ -6457,61 +6486,61 @@
               "children": [
                 {
                   "name": "VTEX Mapper Registration",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.vtexcommercestable.com.br/api/mkp-category-mapper/connector/register",
+                  "endpoint": "/api/mkp-category-mapper/connector/register",
                   "children": []
                 },
                 {
                   "name": "Send Category Mapping to VTEX Mapper",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/portal.vtexcommercestable.com.br/api/mkp-category-mapper/categories/marketplace/-id-",
+                  "endpoint": "/api/mkp-category-mapper/categories/marketplace/-id-",
                   "children": []
                 },
                 {
                   "name": "Place fulfillment order",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders",
+                  "endpoint": "/api/fulfillment/pvt/orders",
                   "children": []
                 },
                 {
                   "name": "Authorize dispatch for fulfillment order",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders/-orderId-/fulfill",
+                  "endpoint": "/api/fulfillment/pvt/orders/-orderId-/fulfill",
                   "children": []
                 },
                 {
                   "name": "New Order Integration",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-.vtexcommercestable.com.br/api/order-integration/orders",
+                  "endpoint": "/api/order-integration/orders",
                   "children": []
                 },
                 {
                   "name": "Update Order Status",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/-accountName-.vtexcommercestable.com.br/api/order-integration/orders/status",
+                  "endpoint": "/api/order-integration/orders/status",
                   "children": []
                 },
                 {
                   "name": "Fulfillment simulation - External Marketplace",
-                  "slug": "marketplace-protocol",
+                  "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -7880,7 +7909,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/sessions/",
+                  "endpoint": "/api/sessions/",
                   "children": []
                 }
               ]
@@ -8859,7 +8888,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/sessions",
+                  "endpoint": "/api/sessions",
                   "children": []
                 },
                 {
@@ -8868,7 +8897,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/sessions",
+                  "endpoint": "/api/sessions",
                   "children": []
                 },
                 {
@@ -8877,7 +8906,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/sessions",
+                  "endpoint": "/api/sessions",
                   "children": []
                 }
               ]
@@ -8893,7 +8922,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/segments",
+                  "endpoint": "/api/segments",
                   "children": []
                 }
               ]
@@ -12620,6 +12649,28 @@
           "type": "category",
           "children": [
             {
+              "name": "March",
+              "slug": "march-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Deprecation of apps-graphql@2.x",
+                  "slug": "deprecation-of-apps-graphql@2.x",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "PSE: Payment method for Colombian customers",
+                  "slug": "pse-payment-method-for-colombian-customers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "February",
               "slug": "february-2023",
               "origin": "",
@@ -12939,13 +12990,6 @@
                 {
                   "name": "Custom OAuth easy implementation",
                   "slug": "custom-oauth-easy-implementation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PSE: Payment method for Colombian customers",
-                  "slug": "pse-payment-method-for-colombian-customers",
                   "origin": "",
                   "type": "markdown",
                   "children": []

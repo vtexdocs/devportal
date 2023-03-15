@@ -84,15 +84,14 @@ const nextConfig = {
       },
       {
         source:
-          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-orderId-/fulfill',
-        destination:
-          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill',
+          '/vtex-rest-api/reference/payment-provider-protocol-api-overview',
+        destination: '/docs/guides/payment-provider-protocol-api-overview',
         permanent: true,
       },
       {
-        source:
-          '/vtex-rest-api/reference/payment-provider-protocol-api-overview',
-        destination: '/docs/guides/payment-provider-protocol-api-overview',
+        source: '/vtex-rest-api/reference/invoice',
+        destination:
+          '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice',
         permanent: true,
       },
       {
@@ -113,6 +112,18 @@ const nextConfig = {
       {
         source: '/vtex-developer-docs/reference',
         destination: '/docs/api-reference',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/test-jsonata-expression',
+        destination:
+          '/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata',
+        permanent: true,
+      },
+      {
+        source: '/docs/api-reference/orders#registerchange',
+        destination:
+          '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes',
         permanent: true,
       },
       {
@@ -255,6 +266,124 @@ const nextConfig = {
         destination: '/docs/guides/specifications',
         permanent: true,
       },
+      {
+        source: '/docs/guides/how-to-activate-an-sku',
+        destination: '/docs/guides/skus',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orderForms/simulation',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-sellerOrderId-/fulfill',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-orderId-/cancel',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-orderId-/cancel',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice',
+        destination:
+          '/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-',
+        destination:
+          '/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking',
+        destination:
+          '/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/cancel',
+        destination:
+          '/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/cancel',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/portal.vtexcommercestable.com.br/api/mkp-category-mapper/connector/register',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/portal.vtexcommercestable.com.br/api/mkp-category-mapper/categories/marketplace/-id-',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders/-orderId-/fulfill',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders/-orderId-/fulfill',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-accountName-.vtexcommercestable.com.br/api/order-integration/orders',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/-accountName-.vtexcommercestable.com.br/api/order-integration/orders/status',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders/status',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/api-reference/marketplace-protocol#post-/api/checkout/pub/orderForms/simulation',
+        destination:
+          '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/checkout/pub/orderForms/simulation',
+        permanent: true,
+      },
+      {
+        source:
+          '/docs/guides/marketplace-api',
+        destination:
+          '/docs/api-reference/marketplace-apis',
+        permanent: true,
+      },
+
     ]
   },
   i18n: {

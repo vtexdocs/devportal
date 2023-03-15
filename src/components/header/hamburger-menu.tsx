@@ -27,22 +27,18 @@ const HamburgerMenu = () => {
     <Header.ActionButton>
       <VtexHamburgerMenu sx={styles.hamburgerContainer}>
         <VtexHamburgerMenu.Menu sx={styles.innerHambugerContainer}>
-          <Box sx={styles.hamburgerSearchContainer}>
-            <SearchInput />
-          </Box>
           <Box sx={styles.menuContainer}>
             <Box sx={styles.cardContainer}>
+              <Box sx={styles.hamburgerSearchContainer}>
+                <SearchInput />
+              </Box>
               <Box
                 sx={styles.documentationContainer}
                 data-cy="dropdown-menu-first-section"
               >
                 {documentationData.map((card) => (
-                  <Box sx={styles.innerCardContainer}>
-                    <DocumentationCard
-                      containerType="mobile"
-                      key={card.title}
-                      {...card}
-                    />
+                  <Box sx={styles.innerCardContainer} key={card.title}>
+                    <DocumentationCard containerType="mobile" {...card} />
                     <Button
                       aria-label={'Open sidebar'}
                       size="regular"
@@ -66,17 +62,13 @@ const HamburgerMenu = () => {
                 data-cy="dropdown-menu-second-section"
               >
                 {updatesData.map((card) => (
-                  <Box sx={styles.innerCardContainer}>
-                    <DocumentationCard
-                      containerType="mobile"
-                      key={card.title}
-                      {...card}
-                    />
+                  <Box sx={styles.innerCardContainer} key={card.title}>
+                    <DocumentationCard containerType="mobile" {...card} />
                     <Button
                       aria-label={'Open sidebar'}
                       size="regular"
                       variant="tertiary"
-                      icon={() => <IconCaret direction="right" size={24} />}
+                      icon={() => <IconCaret direction="right" size={32} />}
                       sx={styles.arrowIcon}
                       onClick={() => {
                         setActiveSidebarTab(card.title)

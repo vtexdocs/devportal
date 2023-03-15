@@ -160,11 +160,13 @@ const innerHambugerContainer: SxStyleProp = {
 const innerCardContainer: SxStyleProp = {
   display: 'flex',
   alignItems: 'center',
+  justifyContent: 'space-between',
 }
 
 const arrowIcon: SxStyleProp = {
   padding: '0',
-  height: '34px',
+  height: '50px',
+  width: '50px',
   color: 'muted.1',
 }
 
