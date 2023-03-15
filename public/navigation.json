@@ -556,6 +556,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "PSE Payment Method",
+                  "slug": "pse-payment-method",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -1887,6 +1894,27 @@
             {
               "name": "Consult store search terms information",
               "slug": "consult-store-search-terms-information",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Consult product search information",
+              "slug": "consult-product-search-information",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Get banner list for a specific search",
+              "slug": "get-banner-list-for-a-specific-search",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Get a list of the possible facets for a specific search",
+              "slug": "get-a-list-of-the-possible-facets-for-a-specific-search",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12632,6 +12660,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "PSE: Payment method for Colombian customers",
+                  "slug": "pse-payment-method-for-colombian-customers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -12955,13 +12990,6 @@
                 {
                   "name": "Custom OAuth easy implementation",
                   "slug": "custom-oauth-easy-implementation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PSE: Payment method for Colombian customers",
-                  "slug": "pse-payment-method-for-colombian-customers",
                   "origin": "",
                   "type": "markdown",
                   "children": []
