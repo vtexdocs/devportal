@@ -376,6 +376,14 @@ const nextConfig = {
           '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/checkout/pub/orderForms/simulation',
         permanent: true,
       },
+      {
+        source:
+          '/docs/guides/marketplace-api',
+        destination:
+          '/docs/api-reference/marketplace-apis',
+        permanent: true,
+      },
+
     ]
   },
   i18n: {
