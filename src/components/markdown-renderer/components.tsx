@@ -12,6 +12,7 @@ import CodeBlock from 'components/code-block'
 import styles from './styles.module.css'
 import { Flex } from '@vtex/brand-ui'
 import LightBox from 'components/lightbox'
+import { messages } from 'utils/constants'
 
 type Component = {
   node: object
@@ -91,20 +92,32 @@ export default {
   table: ({ node, ...props }: Component) => <table {...props} />,
   td: ({ node, ...props }: Component) => <td {...props} />,
   img: ({ node, ...props }: Component) => {
+    const [imageHasError, setImageHasError] = useState(false)
+    const [srcHasError, setSrcHasError] = useState(false)
+    const regularImg = (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={props.src}
+        alt={props.alt}
+        onError={() => setSrcHasError(true)}
+      />
+    )
+    const errorMessage = (
+      <blockquote
+        className={`${styles.blockquote} ${styles.blockquoteWarning}`}
+      >
+        {messages['error_loading_image']} {props.src}
+      </blockquote>
+    )
+
     let data: { base64: string; img: object } = { base64: '', img: {} }
     try {
       data = JSON.parse(props.alt)
     } catch (error) {
       console.log(`Error parsing`, error)
-      return (
-        <>
-          <p>
-            <strong> Não pude carregar Imagem {props.src}</strong>
-          </p>
-        </>
-      )
+      return errorMessage
     }
-    return (
+    return !imageHasError ? (
       <LightBox>
         <Image
           className={styles.img}
@@ -117,9 +130,14 @@ export default {
             objectFit: 'contain',
             height: 'auto',
           }}
+          onError={() => setImageHasError(true)}
           {...data?.img}
         />
       </LightBox>
+    ) : !srcHasError ? (
+      <LightBox>{regularImg}</LightBox>
+    ) : (
+      errorMessage
     )
   },
   blockquote: ({ ...props }: Component) => {
