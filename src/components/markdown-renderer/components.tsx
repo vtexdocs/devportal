@@ -11,6 +11,7 @@ import CodeBlock from 'components/code-block'
 
 import styles from './styles.module.css'
 import { Flex } from '@vtex/brand-ui'
+import LightBox from 'components/lightbox'
 
 type Component = {
   node: object
@@ -104,20 +105,21 @@ export default {
       )
     }
     return (
-      <Image
-        className={styles.img}
-        loading="lazy"
-        src={props.src}
-        alt={props.alt}
-        sizes="100vw"
-        placeholder="blur"
-        blurDataURL={data.base64}
-        style={{
-          objectFit: 'contain',
-          height: 'auto',
-        }}
-        {...data?.img}
-      />
+      <LightBox>
+        <Image
+          className={styles.img}
+          loading="lazy"
+          src={props.src}
+          alt={props.alt}
+          placeholder="blur"
+          blurDataURL={data.base64}
+          style={{
+            objectFit: 'contain',
+            height: 'auto',
+          }}
+          {...data?.img}
+        />
+      </LightBox>
     )
   },
   blockquote: ({ ...props }: Component) => {

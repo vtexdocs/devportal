@@ -61,7 +61,7 @@ const Contributors = ({ contributors }: Props) => {
       >
         {contributors.map((contributor) => {
           return (
-            <Box sx={styles.photo}>
+            <Box sx={styles.photo} key={contributor.login}>
               <a key={contributor.login} href={contributor.userPage}>
                 <Tooltip label={contributor.name}>
                   <Image
