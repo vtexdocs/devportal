@@ -3,10 +3,13 @@ import { SidebarContext } from 'utils/contexts/sidebar'
 import navigation from '../../../public/navigation.json'
 import styles from './styles'
 import { Box, Button } from '@vtex/brand-ui'
-
+import { ToastContainer, toast } from 'react-toastify'
 const initialData = navigation.navbar
-
+import { injectStyle } from 'react-toastify/dist/inject-style'
 function JsonEditorComponent() {
+  useEffect(() => {
+    injectStyle()
+  })
   const { setSidebarDataMaster } = useContext(SidebarContext)
   const [isCopied, setIsCopied] = useState(false)
 
@@ -38,9 +41,12 @@ function JsonEditorComponent() {
 
   function handleSubmit(event: { preventDefault: () => void }) {
     event.preventDefault()
-    isJson(data)
-      ? setSidebarDataMaster(JSON.parse(data))
-      : alert('Try again. This is not a valid JSON')
+    if (isJson(data)) {
+      setSidebarDataMaster(JSON.parse(data))
+      toast.success('The sidebar was updated.')
+    } else {
+      toast.error('Try again. This is not a valid JSON.')
+    }
   }
 
   function handleRefresh(event: { preventDefault: () => void }) {
@@ -52,6 +58,7 @@ function JsonEditorComponent() {
       )
     )
     setSidebarDataMaster(initialData)
+    toast.warning('Content reloaded.')
     event.preventDefault()
   }
 
@@ -62,6 +69,7 @@ function JsonEditorComponent() {
         )
       : navigator.clipboard.writeText(data)
     setIsCopied(true)
+    toast.info('Content copied to the clipboard.')
     setTimeout(() => setIsCopied(false), 1000)
     event.preventDefault()
   }
@@ -69,6 +77,7 @@ function JsonEditorComponent() {
   function handleClear(event: { preventDefault: () => void }) {
     setData('')
     setSidebarDataMaster('')
+    toast.warning('Content cleared.')
     event.preventDefault()
   }
 
@@ -157,9 +166,18 @@ function JsonEditorComponent() {
           </Button>
         </Box>
         <textarea wrap="off" rows={25} value={data} onChange={handleChange} />
-        <Button sx={styles.submitButton} type="submit" value="">
+        <Button sx={styles.submitButton} type="submit">
           Submit
         </Button>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={true}
+          closeOnClick
+          pauseOnHover
+          theme="light"
+        />
       </form>
     </Box>
   )
