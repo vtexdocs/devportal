@@ -144,7 +144,9 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
             <Link
               sx={textStyle(activeSidebarElement === activeItem, isExpandable)}
               onClick={(e: { preventDefault: () => void }) => {
-                !isEditorPreview ?? handleClick(e, pathSuffix, slug)
+                if (!isEditorPreview) {
+                  handleClick(e, pathSuffix, slug)
+                }
                 toggleSidebarElementStatus(activeItem)
               }}
               href={getHref(slugPrefix || '', pathSuffix, slug)}

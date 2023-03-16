@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Head from 'next/head'
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 import JsonEditorComponent from 'components/JsonEditorComponent'
 import { Fragment } from 'react'
 import styles from 'styles/documentation-landing-page'
@@ -9,6 +9,7 @@ import { GetServerSideProps, NextPage } from 'next'
 
 import PageHeader from 'components/page-header'
 import image from '../../../public/images/editor.png'
+import Link from 'next/link'
 
 interface Props {
   file?: string
@@ -25,7 +26,7 @@ const AdminPage: NextPage<Props> = ({ file, fileContent, isPRPreview }) => {
   if (isPRPreview) {
     const { setSidebarDataMaster } = useContext(SidebarContext)
     setSidebarDataMaster(fileContent)
-    headerDescription = `You're now in preview mode of ${file}`
+    headerDescription = `You are now in preview mode. Change between sections or click a document to open it in a new tab.`
     headerTitle = `Sidebar Preview`
   }
 
@@ -33,6 +34,7 @@ const AdminPage: NextPage<Props> = ({ file, fileContent, isPRPreview }) => {
     <>
       <Head>
         <title>Sidebar Editor</title>
+        <meta name="robots" content="noindex" />
       </Head>
       <Flex>
         <Box sx={styles.mainContainer}>
@@ -43,11 +45,16 @@ const AdminPage: NextPage<Props> = ({ file, fileContent, isPRPreview }) => {
               imageUrl={image}
               imageAlt="Sidebar editor"
             />
-            {!isPRPreview && (
-              <Box sx={styles.contentContainer}>
+            <Box sx={styles.contentContainer}>
+              {!isPRPreview ? (
                 <JsonEditorComponent />
-              </Box>
-            )}
+              ) : (
+                <Text style={{ wordWrap: 'break-word' }}>
+                  This is the navigation file being used to display the sidebar:{' '}
+                  <Link href={`${file}`}>{file}</Link>
+                </Text>
+              )}
+            </Box>
           </Fragment>
         </Box>
       </Flex>
