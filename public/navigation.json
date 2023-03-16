@@ -1554,6 +1554,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Change chain orders in external marketplaces",
+                  "slug": "change-orders-multilevel-omnichannel-inventory-external-marketplaces",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             }
