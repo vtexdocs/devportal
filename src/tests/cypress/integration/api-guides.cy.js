@@ -1,12 +1,14 @@
 /// <reference types="cypress" />
-import { filterSidebarItems } from '../support/functions'
+import { filterSidebarItems, writeLog } from '../support/functions'
 import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
-
 describe('API guides documentation page', () => {
   before(() => {
     cy.task('setUrl', '/docs/guides')
+    cy.writeFile('cypress.log', `#API guides documentation page#\n`, {
+      flag: 'a+',
+    })
   })
 
   beforeEach(() => {
@@ -14,7 +16,15 @@ describe('API guides documentation page', () => {
     cy.viewport(1366, 768)
   })
 
-  it('Navigate by sidebar', () => {
+  afterEach(function () {
+    if (this.currentTest.state === 'failed') {
+      cy.task('getUrl').then((url) => {
+        writeLog(`${this.currentTest.title} (${url})`)
+      })
+    }
+  })
+
+  it('Check if a random guide page, chosen using the sidebar, loads', () => {
     cy.get('.sidebar-component > div', { timeout: 10000 })
       .filter(filterSidebarItems)
       .anyWithIndex()
@@ -64,11 +74,11 @@ describe('API guides documentation page', () => {
       .then((url) => cy.task('setUrl', url))
   })
 
-  it('Check title', () => {
+  it('check if it has a title', () => {
     cy.get('.title').invoke('text').should('not.be.empty')
   })
 
-  it('Trying to click contributor', () => {
+  it('try to click on any document contributor', () => {
     cy.get('[data-cy="contributors-container"]:visible > div')
       .any()
       .find('a')
@@ -80,7 +90,7 @@ describe('API guides documentation page', () => {
     })
   })
 
-  it('Try feedback section', () => {
+  it('try to send feedback', () => {
     cy.visit('/docs/guides/brands')
 
     cy.get('[data-cy="feedback-section"]').scrollIntoView()
@@ -117,7 +127,7 @@ describe('API guides documentation page', () => {
       .should('equal', messages['feedback_section.response'])
   })
 
-  it('try to click in last element of table of contents', () => {
+  it('try to click on the last element of table of contents', () => {
     if (Cypress.$('[data-cy="table-of-contents"]').children().length > 0) {
       cy.get('h2')
         .its('length')

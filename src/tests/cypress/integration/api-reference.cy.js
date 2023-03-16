@@ -1,10 +1,13 @@
 /// <reference types="cypress" />
 
-import { filterSidebarItems } from '../support/functions'
+import { filterSidebarItems, writeLog } from '../support/functions'
 
 describe('API reference documentation page', () => {
   before(() => {
     cy.task('setUrl', '/docs/api-reference')
+    cy.writeFile('cypress.log', `#API reference documentation page#\n`, {
+      flag: 'a+',
+    })
   })
 
   beforeEach(() => {
@@ -12,7 +15,15 @@ describe('API reference documentation page', () => {
     cy.task('getUrl').then((url) => cy.visit(url))
   })
 
-  it('Check if an random endpoint page, chosen using the sidebar, load and have a non empty title', () => {
+  afterEach(function () {
+    if (this.currentTest.state === 'failed') {
+      cy.task('getUrl').then((url) => {
+        writeLog(`${this.currentTest.title} (${url})`)
+      })
+    }
+  })
+
+  it('Check if a random endpoint page, chosen using the sidebar, load and have a non empty title', () => {
     cy.get('.sidebar-component').first().as('entireList')
     cy.get('@entireList')
       .children()
@@ -61,16 +72,20 @@ describe('API reference documentation page', () => {
       })
     })
 
+    cy.url({ timeout: 10000 })
+      .should('match', /(\/api-reference\/.)/)
+      .then((url) => cy.task('setUrl', url))
+  })
+
+  it('Check if it has a title', () => {
     cy.get('rapi-doc')
       .shadow()
       .within(() => {
         cy.get('h2').invoke('text').should('not.be.empty')
       })
-
-    cy.url().then((url) => cy.task('setUrl', url))
   })
 
-  it('Check, in the same endpoint page, if the response card is clickable and, after, if the response modal is visible', () => {
+  it('Check if the response card is clickable and, after it, if the response modal appeared', () => {
     cy.get('rapi-doc')
       .shadow()
       .within(() => {
@@ -88,7 +103,7 @@ describe('API reference documentation page', () => {
       })
   })
 
-  it('check if the copy component works fine', () => {
+  it('Check if the copy component works fine', () => {
     cy.get('rapi-doc')
       .shadow()
       .within(() => {
