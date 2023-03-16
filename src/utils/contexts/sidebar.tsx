@@ -41,7 +41,7 @@ export const SidebarContext = createContext<ContextType>({
 interface Props extends Partial<ContextType> {
   children: ReactNode
   fallback?: any //eslint-disable-line
-  isPreview?: boolean
+  isPreview: boolean
 }
 
 const SidebarContextProvider = ({ children, ...props }: Props) => {

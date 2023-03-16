@@ -18,7 +18,7 @@ interface Props {
   sidebarfallback: any //eslint-disable-line
   children: ReactElement
   hideSidebar?: boolean
-  isPreview?: boolean
+  isPreview: boolean
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
   parentsArray?: string[]
 }
@@ -32,7 +32,7 @@ export default function Layout({
   children,
   sidebarfallback,
   hideSidebar,
-  isPreview,
+  isPreview = false,
   sectionSelected,
   parentsArray,
 }: Props) {
