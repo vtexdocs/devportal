@@ -25,6 +25,7 @@ function MyApp({ Component, pageProps }: Props) {
       <Layout
         sidebarfallback={pageProps.sidebarfallback}
         hideSidebar={Component.hideSidebar}
+        isPreview={pageProps.isPreview}
         sectionSelected={pageProps.sectionSelected}
         parentsArray={pageProps.parentsArray}
       >

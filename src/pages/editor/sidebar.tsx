@@ -3,11 +3,9 @@ import Head from 'next/head'
 import { Box, Flex } from '@vtex/brand-ui'
 import JsonEditorComponent from 'components/JsonEditorComponent'
 import { Fragment } from 'react'
-import SidebarPreview from 'components/sidebar/sidebarPreview'
 import styles from 'styles/documentation-landing-page'
 import { SidebarContext } from 'utils/contexts/sidebar'
-import type { Page } from 'utils/typings/types'
-import { GetServerSideProps } from 'next'
+import { GetServerSideProps, NextPage } from 'next'
 
 import PageHeader from 'components/page-header'
 import image from '../../../public/images/editor.png'
@@ -16,9 +14,10 @@ interface Props {
   file?: string
   fileContent?: any //eslint-disable-line
   isPRPreview: boolean
+  isPreview: boolean
 }
 
-const AdminPage: Page<Props> = ({ file, fileContent, isPRPreview }) => {
+const AdminPage: NextPage<Props> = ({ file, fileContent, isPRPreview }) => {
   let headerDescription =
     'Enter the updated navigation JSON in the field below and click submit to preview your changes in the sidebar menu.'
   let headerTitle = 'Sidebar Editor'
@@ -36,7 +35,6 @@ const AdminPage: Page<Props> = ({ file, fileContent, isPRPreview }) => {
         <title>Sidebar Editor</title>
       </Head>
       <Flex>
-        <SidebarPreview sectionSelected="Guides" />
         <Box sx={styles.mainContainer}>
           <Fragment>
             <PageHeader
@@ -59,18 +57,20 @@ const AdminPage: Page<Props> = ({ file, fileContent, isPRPreview }) => {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { file } = context.query
+  const isPreview = true
+  const sectionSelected = 'Guides'
   if (file) {
     const fileContent = await fetch(file as string)
       .then((res) => res.json())
       .then((res) => res.navbar)
     const isPRPreview = true
-    return { props: { file, fileContent, isPRPreview } }
+    return {
+      props: { file, fileContent, isPreview, isPRPreview, sectionSelected },
+    }
   } else {
     const isPRPreview = false
-    return { props: { isPRPreview } }
+    return { props: { isPRPreview, isPreview, sectionSelected } }
   }
 }
-
-AdminPage.hideSidebar = true
 
 export default AdminPage

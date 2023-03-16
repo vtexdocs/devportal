@@ -18,6 +18,7 @@ interface Props {
   sidebarfallback: any //eslint-disable-line
   children: ReactElement
   hideSidebar?: boolean
+  isPreview?: boolean
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
   parentsArray?: string[]
 }
@@ -31,6 +32,7 @@ export default function Layout({
   children,
   sidebarfallback,
   hideSidebar,
+  isPreview,
   sectionSelected,
   parentsArray,
 }: Props) {
@@ -69,7 +71,7 @@ export default function Layout({
 					`}
         </Script>
       </div>
-      <SidebarContextProvider fallback={sidebarfallback}>
+      <SidebarContextProvider fallback={sidebarfallback} isPreview={isPreview}>
         <Header />
         <Flex sx={styles.container}>
           {!hideSidebar && (
