@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.3](https://github.com/vtexdocs/devportal/compare/v1.9.2...v1.9.3) (2023-03-15)
+
+
+### Bug Fixes
+
+* handle image loading errors ([4e81bbd](https://github.com/vtexdocs/devportal/commit/4e81bbd0be92488a5f72cb1d369ac23161649467))
+
+
+### Build
+
+* **package:** update rapidoc version ([9ac04b3](https://github.com/vtexdocs/devportal/commit/9ac04b3d3b82c98d36b7c9bf0f1c9c191247cbb3))
+
+### [1.9.2](https://github.com/vtexdocs/devportal/compare/v1.9.1...v1.9.2) (2023-03-15)
+
+
+### Features
+
+* add lightbox component to images ([731bff1](https://github.com/vtexdocs/devportal/commit/731bff1b95a40dfe1df920069ab085ead1609673))
+* create lightbox component ([a22dc7a](https://github.com/vtexdocs/devportal/commit/a22dc7a5e0c813d869bac46ccb5c29b5fb716717))
+
+
+### Bug Fixes
+
+* **components:** fix missing unique key error ([d79cf95](https://github.com/vtexdocs/devportal/commit/d79cf95d1cc4f2d71603d1547ebb2138a32dc1d4))
+* **hambuger:** fix missing unique key error ([0700857](https://github.com/vtexdocs/devportal/commit/070085780bf55774ba91425e62a78015af42bb11))
+* **lightbox:** use clickoutside hook ([5e12ee6](https://github.com/vtexdocs/devportal/commit/5e12ee65eb1c659845a1dbbc48e409290a0edeb2))
+
+
+### Style
+
+* **lightbox:** change close icon size and color ([b9a17e6](https://github.com/vtexdocs/devportal/commit/b9a17e61be1ecab3b185763de2081ca278f4198c))
+* **lightbox:** change image display to block ([0bf14b8](https://github.com/vtexdocs/devportal/commit/0bf14b86120922e21bf0683c547d5a8214d8e9ce))
+* **lightbox:** remove white modal to show only the image ([94acac0](https://github.com/vtexdocs/devportal/commit/94acac0fc2c37fb374e39034d6b37077a4c527d7))
+
+
+### Docs
+
+* create redirect mkp api overview ([0ce3e49](https://github.com/vtexdocs/devportal/commit/0ce3e49282a7fd66cb7b98c534f1612b598e5bef))
+* **navigation:** add new intelligent search guides ([2ef02bd](https://github.com/vtexdocs/devportal/commit/2ef02bdb93e1f7a1f0a95ea43731c96f6500bd2c))
+* **top bar:** change header content to persona research form ([b5b54f4](https://github.com/vtexdocs/devportal/commit/b5b54f4d3497a3a805d2efa47ff5127ca1072a92))
+* **top bar:** remove old sentence from top bar ([e8aab0d](https://github.com/vtexdocs/devportal/commit/e8aab0d3eadc835263a9852fc9176a404769902c))
+
 ### [1.9.1](https://github.com/vtexdocs/devportal/compare/v1.9.0...v1.9.1) (2023-03-09)
 
 

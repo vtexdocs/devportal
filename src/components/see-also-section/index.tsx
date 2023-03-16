@@ -17,7 +17,11 @@ const SeeAlsoSection = ({ docs }: SeeAlsoSectionProps) => {
     <Box sx={styles.seeAlsoContainer} data-cy="see-also-section">
       <Text sx={styles.sectionTitle}>See also</Text>
       {cards.map((card) => (
-        <DocumentationCard containerType="see-also" {...card} />
+        <DocumentationCard
+          key={card.title}
+          containerType="see-also"
+          {...card}
+        />
       ))}
     </Box>
   )
