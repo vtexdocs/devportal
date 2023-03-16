@@ -19,3 +19,7 @@ import './events'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
+
+before(() => {
+  cy.task('deleteLog')
+})

@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 import clipboardy from 'clipboardy'
+import { unlink } from 'fs'
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
 //
@@ -30,6 +31,14 @@ export default function plugins(on, config) {
     },
     getClipboard: () => {
       return clipboardy.readSync()
+    },
+    deleteLog: () => {
+      unlink('cypress.log', (err) => {
+        if (err?.code !== 'ENOENT') {
+          console.error('Error occurred while trying to delete file')
+        }
+      })
+      return null
     },
   })
 }
