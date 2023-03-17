@@ -27,7 +27,7 @@ async function getFrontmatter(releaseContent: string) {
 }
 
 export default async function getReleasesData(branch = 'main') {
-  const docs = await getReleasePaths()
+  const docs = await getReleasePaths(branch)
   const releases = Object.values(docs)
   const releasesContent: string[] = []
   const releasesFrontmatter: IReleasesFrontmatter[] = []
