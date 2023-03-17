@@ -25,6 +25,9 @@ describe('API guides documentation page', () => {
   })
 
   it('Check if a random guide page, chosen using the sidebar, loads', () => {
+    cy.get('.toggleIcon').should('be.visible').click()
+    cy.get('[data-cy="sidebar-section"]').should('be.visible')
+
     cy.get('.sidebar-component > div', { timeout: 10000 })
       .filter(filterSidebarItems)
       .anyWithIndex()

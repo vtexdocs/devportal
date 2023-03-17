@@ -24,6 +24,9 @@ describe('API reference documentation page', () => {
   })
 
   it('Check if a random endpoint page, chosen using the sidebar, load and have a non empty title', () => {
+    cy.get('.toggleIcon').should('be.visible').click()
+    cy.get('[data-cy="sidebar-section"]').should('be.visible')
+
     cy.get('.sidebar-component').first().as('entireList')
     cy.get('@entireList')
       .children()
