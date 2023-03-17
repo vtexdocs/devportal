@@ -3,6 +3,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const formBox: SxStyleProp = {
   textarea: {
     width: '100%',
+    resize: 'none',
     padding: '20px',
     fontFamily: 'Consolas,monaco,monospace !important',
   },
