@@ -3,6 +3,7 @@ import { createContext, useState } from 'react'
 import { SWRConfig } from 'swr'
 
 type ContextType = {
+  isEditorPreview: boolean
   sidebarSectionHidden: boolean
   activeSidebarElement: string
   activeSidebarTab: string
@@ -11,6 +12,7 @@ type ContextType = {
   sidebarElementStatus: Map<string, boolean>
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setSidebarDataMaster: Dispatch<SetStateAction<any>>
+  setIsEditorPreview: Dispatch<SetStateAction<boolean>>
   setSidebarSectionHidden: Dispatch<SetStateAction<boolean>>
   setActiveSidebarElement: Dispatch<SetStateAction<string>>
   setActiveSidebarTab: Dispatch<SetStateAction<string>>
@@ -20,10 +22,12 @@ type ContextType = {
 }
 
 export const SidebarContext = createContext<ContextType>({
+  isEditorPreview: false,
   sidebarSectionHidden: false,
   activeSidebarElement: '',
   activeSidebarTab: '',
   sidebarDataMaster: {},
+  setIsEditorPreview: () => undefined,
   sidebarElementStatus: new Map(),
   setSidebarDataMaster: () => undefined,
   setSidebarSectionHidden: () => undefined,
@@ -37,6 +41,7 @@ export const SidebarContext = createContext<ContextType>({
 interface Props extends Partial<ContextType> {
   children: ReactNode
   fallback?: any //eslint-disable-line
+  isPreview: boolean
 }
 
 const SidebarContextProvider = ({ children, ...props }: Props) => {
@@ -45,6 +50,7 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
   const [activeSidebarTab, setActiveSidebarTab] = useState('')
   const [sidebarElementStatus, setSidebarElementStatus] = useState(new Map())
   const [sidebarDataMaster, setSidebarDataMaster] = useState(props.fallback)
+  const [isEditorPreview, setIsEditorPreview] = useState(props.isPreview)
 
   const { fallback } = props
 
@@ -78,6 +84,8 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
   return (
     <SidebarContext.Provider
       value={{
+        isEditorPreview,
+        setIsEditorPreview,
         sidebarSectionHidden,
         activeSidebarElement,
         activeSidebarTab,

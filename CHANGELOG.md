@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.4](https://github.com/vtexdocs/devportal/compare/v1.9.3...v1.9.4) (2023-03-17)
+
+
+### Features
+
+* **editor:** add toast feedback to json editor ([83bdfbf](https://github.com/vtexdocs/devportal/commit/83bdfbf37fa7f49af2062541ba1f3a76f317d47a))
+* **editor:** allow file query string ([4c8ed87](https://github.com/vtexdocs/devportal/commit/4c8ed87783cf5635c5b9847f9a6cd6127c0fa511))
+* **editor:** v1 of sidebar editor ([248d715](https://github.com/vtexdocs/devportal/commit/248d7152dfebadcc90514e870f495b8ce224a74e))
+
+
+### Bug Fixes
+
+* **editor:** fix ispreview type ([bf1762d](https://github.com/vtexdocs/devportal/commit/bf1762d14fab123179e53ad5de2a872b1dc5d725))
+* **editor:** fix isPreview type ([462783d](https://github.com/vtexdocs/devportal/commit/462783d1a92137521cc1bc91eef0d669d553f538))
+
+
+### Docs
+
+* add change chain order navigation ([f6654f9](https://github.com/vtexdocs/devportal/commit/f6654f9d7da42502a26c8355625c1e4a684d597f))
+
+
+### Refactoring
+
+* **editor:** remove duplicated sidebar code ([6b571f4](https://github.com/vtexdocs/devportal/commit/6b571f444de50b04df0f2edd9d65c0e39f858d07))
+* **editor:** rewrite conditions ([2713bbb](https://github.com/vtexdocs/devportal/commit/2713bbbcd7bf9ff6f862bad81ee2abf5898de4e5))
+
 ### [1.9.3](https://github.com/vtexdocs/devportal/compare/v1.9.2...v1.9.3) (2023-03-15)
 
 

@@ -35,6 +35,7 @@ const SidebarSection = ({
   const [searchValue, setSearchValue] = useState('')
   const { sidebarSectionHidden, setSidebarSectionHidden } =
     useContext(SidebarContext)
+  const { isEditorPreview } = useContext(SidebarContext)
   const [filterStatus, setFilterStatus] = useState(false)
   const [methodFilterList, setMethodFilterList] = useState([
     { name: 'POST', active: false },
@@ -155,6 +156,28 @@ const SidebarSection = ({
         sx={styles.sidebarContainerBox}
       >
         <Box sx={styles.sidebarContainerHeader}>
+          {isEditorPreview && (
+            <Text sx={styles.previewMode}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="72"
+                height="72"
+                viewBox="0 0 72 72"
+                fill="none"
+              >
+                <circle cx="36" cy="36" r="36" fill="#FFB100" />
+                <path
+                  d="M40.4202 22.6818H31.8152V42.6377H40.4202V22.6818Z"
+                  fill="white"
+                />
+                <path
+                  d="M36.1177 54.6113C38.4939 54.6113 40.4202 52.8244 40.4202 50.6201C40.4202 48.4158 38.4939 46.6289 36.1177 46.6289C33.7415 46.6289 31.8152 48.4158 31.8152 50.6201C31.8152 52.8244 33.7415 54.6113 36.1177 54.6113Z"
+                  fill="white"
+                />
+              </svg>
+              PREVIEW MODE
+            </Text>
+          )}
           <Text sx={styles.sidebarTitle}>{documentation}</Text>
           <Flex sx={styles.searchBox}>
             <SearchIcon sx={styles.searchIcon} />

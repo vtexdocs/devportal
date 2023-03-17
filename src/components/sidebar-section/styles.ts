@@ -134,6 +134,23 @@ const arrowButton: SxStyleProp = {
   padding: '0px',
 }
 
+const previewMode: SxStyleProp = {
+  display: 'flex',
+  color: '#A87600',
+  backgroundColor: '#ffe5b5',
+  padding: '10px',
+  borderRadius: '10px',
+  fontWeight: '600',
+  fontSize: '14px',
+  lineHeight: '20px',
+  letterSpacing: '0.5px',
+  mb: '20px',
+  svg: {
+    width: '20px',
+    mr: '10px',
+  },
+}
+
 export default {
   sidebarContainer,
   sidebarContainerHamburger,
@@ -151,4 +168,5 @@ export default {
   toggleIconBoxActive,
   toggleIcon,
   arrowButton,
+  previewMode,
 }
