@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
 import { Box, Text, Flex, Link, IconCaret } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
@@ -11,10 +11,12 @@ import styles from 'styles/documentation-landing-page'
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
+  branch: string
 }
 import { WhatsNextDataElement } from 'utils/typings/types'
 import WhatsNextCard from 'components/whats-next-card'
 import Head from 'next/head'
+import { PreviewContext } from 'utils/contexts/preview'
 
 interface ICategoryListing {
   category: IChildrenListing
@@ -67,7 +69,9 @@ const AppsListing = ({ category }: ICategoryListing) => {
   )
 }
 
-const VTEXIOAppsPage: NextPage<Props> = ({ sidebarfallback }) => {
+const VTEXIOAppsPage: NextPage<Props> = ({ sidebarfallback, branch }) => {
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
   const messages = getMessages()
   const docs = sidebarfallback.find(
     (item: { documentation: string }) => item.documentation === 'VTEX IO Apps'
@@ -104,14 +108,23 @@ const VTEXIOAppsPage: NextPage<Props> = ({ sidebarfallback }) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({
+  preview,
+  previewData,
+}) => {
   const sidebarfallback = await getNavigation()
   const sectionSelected = 'VTEX IO Apps'
+  const previewBranch =
+    preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
+      ? JSON.parse(JSON.stringify(previewData)).branch
+      : 'main'
+  const branch = preview ? previewBranch : 'main'
 
   return {
     props: {
       sidebarfallback,
       sectionSelected,
+      branch,
     },
   }
 }

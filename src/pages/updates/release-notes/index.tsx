@@ -47,12 +47,12 @@ export const getStaticProps: GetStaticProps = async ({
 }) => {
   const sidebarfallback = await getNavigation()
   const sectionSelected = 'Release Notes'
-  const releasesData = await getReleasesData()
   const previewBranch =
     preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
       ? JSON.parse(JSON.stringify(previewData)).branch
       : 'main'
   const branch = preview ? previewBranch : 'main'
+  const releasesData = await getReleasesData(branch)
 
   return {
     props: {

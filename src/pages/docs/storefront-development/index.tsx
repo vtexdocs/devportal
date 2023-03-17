@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
 import { Box, Flex, Text, IconCaret } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
@@ -11,10 +11,12 @@ import styles from 'styles/documentation-landing-page'
 import WhatsNextCard from 'components/whats-next-card'
 import { WhatsNextDataElement } from 'utils/typings/types'
 import Head from 'next/head'
+import { PreviewContext } from 'utils/contexts/preview'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
+  branch: string
 }
 
 const getStartedData: WhatsNextDataElement[] = [
@@ -104,7 +106,9 @@ const goBeyondData: WhatsNextDataElement[] = [
     linkTo: '/docs/guides/b2b-setup',
   },
 ]
-const StorefrontDevelopmentPage: NextPage<Props> = () => {
+const StorefrontDevelopmentPage: NextPage<Props> = ({ branch }) => {
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
   const messages = getMessages()
   return (
     <>
@@ -166,14 +170,23 @@ const StorefrontDevelopmentPage: NextPage<Props> = () => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({
+  preview,
+  previewData,
+}) => {
   const sidebarfallback = await getNavigation()
   const sectionSelected = 'Storefront Development'
 
+  const previewBranch =
+    preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
+      ? JSON.parse(JSON.stringify(previewData)).branch
+      : 'main'
+  const branch = preview ? previewBranch : 'main'
   return {
     props: {
       sidebarfallback,
       sectionSelected,
+      branch,
     },
   }
 }
