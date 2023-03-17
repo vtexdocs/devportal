@@ -121,6 +121,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/docs/api-reference/catalog-api-product',
+        destination: '/docs/api-reference/catalog-api',
+        permanent: true,
+      },
+      {
         source: '/docs/api-reference/orders#registerchange',
         destination:
           '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes',
@@ -377,13 +382,10 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source:
-          '/docs/guides/marketplace-api',
-        destination:
-          '/docs/api-reference/marketplace-apis',
+        source: '/docs/guides/marketplace-api',
+        destination: '/docs/api-reference/marketplace-apis',
         permanent: true,
       },
-
     ]
   },
   i18n: {
