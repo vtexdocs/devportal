@@ -13,6 +13,7 @@ import SidebarContextProvider from 'utils/contexts/sidebar'
 import Sidebar from 'components/sidebar'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
+import { PreviewContext } from 'utils/contexts/preview'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -41,6 +42,13 @@ export default function Layout({
     initTracker()
     startTracking()
   }, [])
+
+  const { setBranchPreview } = useContext(PreviewContext)
+  useEffect(() => {
+    const branch = localStorage.getItem('branch') ?? 'main'
+    setBranchPreview(branch)
+  }, [])
+
   return (
     <ThemeProvider>
       <iframe
