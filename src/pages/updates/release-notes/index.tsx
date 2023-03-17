@@ -9,16 +9,21 @@ import getReleasesData from 'utils/getReleasesData'
 import { UpdateElement } from 'utils/typings/types'
 import Head from 'next/head'
 import { getMessages } from 'utils/get-messages'
+import { PreviewContext } from 'utils/contexts/preview'
+import { useContext } from 'react'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
   releasesData: UpdateElement[]
+  branch: string
 }
 
 const messages = getMessages()
 
-const ReleasePage: NextPage<Props> = ({ releasesData }) => {
+const ReleasePage: NextPage<Props> = ({ releasesData, branch }) => {
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
   return (
     <>
       <Head>
@@ -36,16 +41,25 @@ const ReleasePage: NextPage<Props> = ({ releasesData }) => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({
+  preview,
+  previewData,
+}) => {
   const sidebarfallback = await getNavigation()
   const sectionSelected = 'Release Notes'
   const releasesData = await getReleasesData()
+  const previewBranch =
+    preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
+      ? JSON.parse(JSON.stringify(previewData)).branch
+      : 'main'
+  const branch = preview ? previewBranch : 'main'
 
   return {
     props: {
       sidebarfallback,
       sectionSelected,
       releasesData,
+      branch,
     },
   }
 }

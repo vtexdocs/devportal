@@ -34,6 +34,7 @@ import getDocsPaths from 'utils/getDocsPaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
+import { PreviewContext } from 'utils/contexts/preview'
 
 import styles from 'styles/documentation-page'
 import getFileContributors, {
@@ -65,6 +66,7 @@ interface Props {
     nextDoc: { slug: string | null; name: string | null }
   }
   isListed: boolean
+  branch: string
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -79,8 +81,11 @@ const DocumentationPage: NextPage<Props> = ({
   pagination,
   isListed,
   breadcumbList,
+  branch,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
   const { setActiveSidebarElement } = useContext(SidebarContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
@@ -346,6 +351,7 @@ export const getStaticProps: GetStaticProps = async ({
         pagination,
         isListed,
         breadcumbList,
+        branch,
       },
     }
   } catch (error) {

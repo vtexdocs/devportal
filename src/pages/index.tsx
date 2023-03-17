@@ -10,14 +10,16 @@ import Head from 'next/head'
 import styles from 'styles/landing-page'
 import getNavigation from 'utils/getNavigation'
 import { GetStaticProps } from 'next'
-import { useLocalStorage } from 'utils/hooks/useLocalStorage'
+import { useContext } from 'react'
+import { PreviewContext } from 'utils/contexts/preview'
 
 interface Props {
   branch: string
 }
 
 const Home: Page<Props> = ({ branch }) => {
-  useLocalStorage('branch', branch)
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
 
   return (
     <>

@@ -33,7 +33,12 @@ const AnnouncementBar = ({
   }
 
   return (
-    <Dialog {...state} aria-label="Welcome" hideOnClickOutside={false}>
+    <Dialog
+      {...state}
+      aria-label="Welcome"
+      hideOnEsc={closable}
+      hideOnClickOutside={false}
+    >
       <Box sx={styles.container(type)}>
         <Box sx={styles.box}>
           {tag && <Text sx={styles.label(type)}>{tag}</Text>}
