@@ -161,7 +161,7 @@ const Image2 = () => (
   </Box>
 )
 
-const ApiGuidesPage: NextPage<Props> = () => {
+const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
   const messages = getMessages()
