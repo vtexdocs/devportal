@@ -509,13 +509,6 @@
                   "children": []
                 },
                 {
-                  "name": "Updating SKU Specifications with Catalog API",
-                  "slug": "updating-sku-specifications-with-catalog-api",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Split Payouts on Payment Provider Protocol",
                   "slug": "split-payouts-on-payment-provider-protocol",
                   "origin": "",
@@ -742,6 +735,13 @@
             {
               "name": "SKU specifications",
               "slug": "sku-specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Updating SKU Specifications with Catalog API",
+              "slug": "updating-sku-specifications-with-catalog-api",
               "origin": "",
               "type": "markdown",
               "children": []
