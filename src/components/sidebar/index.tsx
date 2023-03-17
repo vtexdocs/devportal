@@ -38,8 +38,11 @@ const Sidebar = ({
     setActiveSidebarElement,
     openSidebarElement,
     closeSidebarElements,
+    isEditorPreview,
   } = useContext(SidebarContext)
-  setSidebarDataMaster(useNavigation().data)
+  if (!isEditorPreview) {
+    setSidebarDataMaster(useNavigation().data)
+  }
   const router = useRouter()
   const flattenedSidebar = flattenJSON(sidebarDataMaster)
   let activeSlug = ''
@@ -110,8 +113,11 @@ const Sidebar = ({
           label={tooltipLabel}
         >
           <Link
-            href={iconElement.link}
-            onClick={() => {
+            href={!isEditorPreview ? iconElement.link : '/'}
+            onClick={(e) => {
+              if (isEditorPreview) {
+                e.preventDefault()
+              }
               setActiveSectionName(iconElement.title)
             }}
             passHref
