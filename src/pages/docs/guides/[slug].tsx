@@ -168,10 +168,7 @@ export const getStaticProps: GetStaticProps = async ({
   preview,
   previewData,
 }) => {
-  const previewBranch =
-    preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
-      ? JSON.parse(JSON.stringify(previewData)).branch
-      : 'main'
+  const previewBranch = JSON.parse(JSON.stringify(previewData)).branch
   const branch = preview ? previewBranch : 'main'
   const slug = params?.slug as string
   const docsPaths =
