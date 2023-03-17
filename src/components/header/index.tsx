@@ -92,6 +92,7 @@ const Header = () => {
     <Box ref={headerElement} sx={styles.headerContainer}>
       {!isBranchPreview ? (
         <AnnouncementBar
+          closable={true}
           type="new"
           label="📢 We want to know more about you and how you use our docs. "
           action={{
@@ -101,6 +102,7 @@ const Header = () => {
         ></AnnouncementBar>
       ) : (
         <AnnouncementBar
+          closable={false}
           type="warning"
           label={`🚧 You are currently using branch ${branchPreview} in preview mode. This content may differ from the published version.`}
           action={{
