@@ -1,4 +1,4 @@
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
 import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
@@ -14,13 +14,17 @@ import image from '../../../../public/images/app-development.png'
 
 import styles from 'styles/documentation-landing-page'
 import Head from 'next/head'
+import { PreviewContext } from 'utils/contexts/preview'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
+  branch: string
 }
 
-const AppDevelopmentPage: NextPage<Props> = () => {
+const AppDevelopmentPage: NextPage<Props> = ({ branch }) => {
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
   const messages = getMessages()
 
   return (
@@ -73,14 +77,24 @@ const AppDevelopmentPage: NextPage<Props> = () => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({
+  preview,
+  previewData,
+}) => {
   const sidebarfallback = await getNavigation()
   const sectionSelected = 'App Development'
+
+  const previewBranch =
+    preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
+      ? JSON.parse(JSON.stringify(previewData)).branch
+      : 'main'
+  const branch = preview ? previewBranch : 'main'
 
   return {
     props: {
       sidebarfallback,
       sectionSelected,
+      branch,
     },
   }
 }

@@ -41,6 +41,7 @@ export default function Layout({
     initTracker()
     startTracking()
   }, [])
+
   return (
     <ThemeProvider>
       <iframe

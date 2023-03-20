@@ -26,8 +26,8 @@ async function getFrontmatter(releaseContent: string) {
   return response.frontmatter
 }
 
-export default async function getReleasesData() {
-  const docs = await getReleasePaths()
+export default async function getReleasesData(branch = 'main') {
+  const docs = await getReleasePaths(branch)
   const releases = Object.values(docs)
   const releasesContent: string[] = []
   const releasesFrontmatter: IReleasesFrontmatter[] = []
@@ -42,7 +42,7 @@ export default async function getReleasesData() {
               await getGithubFile(
                 'vtexdocs',
                 'dev-portal-content',
-                'main',
+                branch,
                 release
               )
             )

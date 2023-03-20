@@ -7,6 +7,7 @@ import { IconClose } from './IconClose'
 interface AnnouncementBarProps extends PropsWithChildren<SxProps> {
   type: string
   label?: string
+  closable: boolean
   action: {
     href: string
     tag?: string
@@ -15,6 +16,7 @@ interface AnnouncementBarProps extends PropsWithChildren<SxProps> {
 }
 
 const AnnouncementBar = ({
+  closable,
   type,
   action: { tag, button, href },
   label,
@@ -31,7 +33,12 @@ const AnnouncementBar = ({
   }
 
   return (
-    <Dialog {...state} aria-label="Welcome" hideOnClickOutside={false}>
+    <Dialog
+      {...state}
+      aria-label="Welcome"
+      hideOnEsc={closable}
+      hideOnClickOutside={false}
+    >
       <Box sx={styles.container(type)}>
         <Box sx={styles.box}>
           {tag && <Text sx={styles.label(type)}>{tag}</Text>}
@@ -43,18 +50,20 @@ const AnnouncementBar = ({
             </Link>
           )}
         </Box>
-        <Box>
-          <Button
-            aria-label="Close Announcement Bar"
-            sx={styles.closeIcon}
-            variant="tertiary"
-            size="small"
-            onClick={(e) => {
-              handleClose(e)
-            }}
-            icon={() => <IconClose />}
-          />
-        </Box>
+        {closable && (
+          <Box>
+            <Button
+              aria-label="Close Announcement Bar"
+              sx={styles.closeIcon}
+              variant="tertiary"
+              size="small"
+              onClick={(e) => {
+                handleClose(e)
+              }}
+              icon={() => <IconClose />}
+            />
+          </Box>
+        )}
       </Box>
     </Dialog>
   )
