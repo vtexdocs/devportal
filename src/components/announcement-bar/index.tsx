@@ -5,14 +5,19 @@ import { Box, Button, Text, SxProps, Link } from '@vtex/brand-ui'
 import { IconClose } from './IconClose'
 
 interface AnnouncementBarProps extends PropsWithChildren<SxProps> {
+  type: string
+  label?: string
   action: {
-    label: string
     href: string
+    tag?: string
+    button?: string
   }
 }
 
 const AnnouncementBar = ({
-  action: { label, href },
+  type,
+  action: { tag, button, href },
+  label,
   children,
 }: AnnouncementBarProps) => {
   const state = useDialogState({
@@ -27,13 +32,16 @@ const AnnouncementBar = ({
 
   return (
     <Dialog {...state} aria-label="Welcome" hideOnClickOutside={false}>
-      <Box sx={styles.container}>
+      <Box sx={styles.container(type)}>
         <Box sx={styles.box}>
-          <Text sx={styles.label}>NEW</Text>
-          <Text sx={styles.text}>📢 {children}</Text>
-          <Link sx={styles.link} target="_blank" href={href}>
-            {label}
-          </Link>
+          {tag && <Text sx={styles.label(type)}>{tag}</Text>}
+          <Text sx={styles.text}>{children}</Text>
+          <Text sx={styles.text}>{label}</Text>
+          {button && (
+            <Link sx={styles.button(type)} target="_blank" href={href}>
+              {button}
+            </Link>
+          )}
         </Box>
         <Box>
           <Button
