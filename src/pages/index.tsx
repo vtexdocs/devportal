@@ -10,8 +10,17 @@ import Head from 'next/head'
 import styles from 'styles/landing-page'
 import getNavigation from 'utils/getNavigation'
 import { GetStaticProps } from 'next'
+import { useContext } from 'react'
+import { PreviewContext } from 'utils/contexts/preview'
 
-const Home: Page = () => {
+interface Props {
+  branch: string
+}
+
+const Home: Page<Props> = ({ branch }) => {
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
+
   return (
     <>
       <Head>
@@ -39,12 +48,20 @@ const Home: Page = () => {
 
 Home.hideSidebar = true
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({
+  preview,
+  previewData,
+}) => {
   const sidebarfallback = await getNavigation()
-
+  const previewBranch =
+    preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
+      ? JSON.parse(JSON.stringify(previewData)).branch
+      : 'main'
+  const branch = preview ? previewBranch : 'main'
   return {
     props: {
       sidebarfallback,
+      branch,
     },
   }
 }

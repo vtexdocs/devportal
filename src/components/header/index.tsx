@@ -5,7 +5,7 @@ import {
   Text,
   Box,
 } from '@vtex/brand-ui'
-import { useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 
 import HamburgerMenu from './hamburger-menu'
@@ -21,10 +21,14 @@ import SearchInput from 'components/search-input'
 import AnnouncementBar from 'components/announcement-bar'
 
 import styles from './styles'
+import { PreviewContext } from 'utils/contexts/preview'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Header = () => {
   const router = useRouter()
+  const isBranchPreview = router.isPreview
+
+  const { branchPreview } = useContext(PreviewContext)
 
   const lastScroll = useRef(0)
   const modalOpen = useRef(false)
@@ -86,13 +90,27 @@ const Header = () => {
 
   return (
     <Box ref={headerElement} sx={styles.headerContainer}>
-      <AnnouncementBar
-        action={{
-          label:
-            ' We want to know more about you and how you use our docs. Fill in our survey! It takes less than 5 minutes.',
-          href: 'https://forms.gle/5EvnahjuwQqwumDd9',
-        }}
-      ></AnnouncementBar>
+      {!isBranchPreview ? (
+        <AnnouncementBar
+          closable={true}
+          type="new"
+          label="📢 We want to know more about you and how you use our docs. "
+          action={{
+            button: 'Fill in our survey! It takes less than 5 minutes.',
+            href: 'https://forms.gle/5EvnahjuwQqwumDd9',
+          }}
+        ></AnnouncementBar>
+      ) : (
+        <AnnouncementBar
+          closable={false}
+          type="warning"
+          label={`🚧 You are currently using branch ${branchPreview} in preview mode. This content may differ from the published version.`}
+          action={{
+            button: 'EXIT PREVIEW MODE',
+            href: '/api/disable-preview',
+          }}
+        ></AnnouncementBar>
+      )}
       <HeaderBrand sx={styles.headerBrand}>
         <VtexLink
           aria-label="Go back to Home"

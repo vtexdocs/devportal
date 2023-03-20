@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 
@@ -35,6 +35,7 @@ import { getReleaseDate } from 'components/release-note/functions'
 import { ActionType, getAction } from 'components/last-updates-card/functions'
 
 import styles from 'styles/documentation-page'
+import { PreviewContext } from 'utils/contexts/preview'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -42,10 +43,13 @@ interface Props {
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
+  branch: string
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized }) => {
+const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
   const [headings, setHeadings] = useState<Item[]>([])
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
   useEffect(() => {
     if (headings) setHeadings([])
     document.querySelectorAll('h2, h3').forEach((heading) => {
@@ -78,7 +82,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
   return (
     <>
       <Head>
-        <title>{serialized.frontmatter?.title}</title>
+        <title>{serialized.frontmatter?.title as string}</title>
         <meta name="docsearch:doctype" content="Release Notes" />
       </Head>
       <APIGuideContextProvider headings={headings}>
@@ -96,7 +100,9 @@ const DocumentationPage: NextPage<Props> = ({ serialized }) => {
                   {serialized.frontmatter?.title}
                 </Text>
                 <Text sx={{ marginTop: '10px' }}>
-                  {getReleaseDate(serialized.frontmatter?.createdAt || '')}
+                  {getReleaseDate(
+                    (serialized.frontmatter?.createdAt as string) || ''
+                  )}
                 </Text>
                 <Box sx={styles.divider}></Box>
                 <MarkdownRenderer serialized={serialized} />
@@ -126,12 +132,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+  preview,
+  previewData,
+}) => {
+  const previewBranch =
+    preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
+      ? JSON.parse(JSON.stringify(previewData)).branch
+      : 'main'
+  const branch = preview ? previewBranch : 'main'
   const slug = params?.slug as string
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
-      : await getDocsPaths()
+      : await getDocsPaths(branch)
 
   const path = docsPaths[slug]
   if (!path) {
@@ -143,7 +158,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   let documentationContent = await getGithubFile(
     'vtexdocs',
     'dev-portal-content',
-    'main',
+    branch,
     path
   )
   const logger = getLogger('Release-Notes')
@@ -183,6 +198,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         serialized,
         sidebarfallback,
         sectionSelected,
+        branch,
       },
       revalidate: 600,
     }

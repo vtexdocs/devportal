@@ -1,6 +1,6 @@
 {
   "name": "devportal",
-  "version": "1.9.3",
+  "version": "1.9.6",
   "private": true,
   "engines": {
     "npm": "please-use-yarn",
@@ -39,7 +39,7 @@
     "next-mdx-remote": "^4.1.0",
     "next-plugin-preval": "^1.2.4",
     "next-sitemap": "^3.1.42",
-    "node-fetch": "^3.2.4",
+    "node-fetch": "^3.2.10",
     "oas": "^20.4.0",
     "octokit": "^2.0.7",
     "plaiceholder": "^2.5.0",
@@ -52,6 +52,7 @@
     "react-instantsearch-dom": "^6.37.0",
     "react-intersection-observer": "^9.2.2",
     "react-markdown": "^8.0.3",
+    "react-toastify": "^9.1.1",
     "rehype-highlight": "^5.0.2",
     "rehype-img-size": "^1.0.1",
     "remark-gfm": "^3.0.1",

@@ -34,6 +34,7 @@ import getDocsPaths from 'utils/getDocsPaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
+import { PreviewContext } from 'utils/contexts/preview'
 
 import styles from 'styles/documentation-page'
 import getFileContributors, {
@@ -65,6 +66,7 @@ interface Props {
     nextDoc: { slug: string | null; name: string | null }
   }
   isListed: boolean
+  branch: string
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -79,8 +81,11 @@ const DocumentationPage: NextPage<Props> = ({
   pagination,
   isListed,
   breadcumbList,
+  branch,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
   const { setActiveSidebarElement } = useContext(SidebarContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
@@ -89,7 +94,7 @@ const DocumentationPage: NextPage<Props> = ({
   return (
     <>
       <Head>
-        <title>{serialized.frontmatter?.title}</title>
+        <title>{serialized.frontmatter?.title as string}</title>
         <meta name="docsearch:doctype" content="Guides" />
         {serialized.frontmatter?.hidden && (
           <meta name="robots" content="noindex" />
@@ -97,7 +102,7 @@ const DocumentationPage: NextPage<Props> = ({
         {serialized.frontmatter?.excerpt && (
           <meta
             property="og:description"
-            content={serialized.frontmatter?.excerpt}
+            content={serialized.frontmatter?.excerpt as string}
           />
         )}
       </Head>
@@ -163,12 +168,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+  preview,
+  previewData,
+}) => {
+  const previewBranch =
+    preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
+      ? JSON.parse(JSON.stringify(previewData)).branch
+      : 'main'
+  const branch = preview ? previewBranch : 'main'
   const slug = params?.slug as string
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
-      : await getDocsPaths()
+      : await getDocsPaths(branch)
 
   const logger = getLogger('Guides')
 
@@ -182,14 +196,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   let documentationContent = await getGithubFile(
     'vtexdocs',
     'dev-portal-content',
-    'main',
+    branch,
     path
   )
 
   const contributors = await getFileContributors(
     'vtexdocs',
     'dev-portal-content',
-    'main',
+    branch,
     path
   )
 
@@ -252,10 +266,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             seeAlsoData.push({
               url: seeAlsoUrl,
               title: serialized.frontmatter?.title
-                ? serialized.frontmatter.title
+                ? (serialized.frontmatter.title as string)
                 : seeAlsoUrl.split('/')[3],
               category: serialized.frontmatter?.category
-                ? serialized.frontmatter.category
+                ? (serialized.frontmatter.category as string)
                 : seeAlsoUrl.split('/')[2],
             })
           } catch (error) {}
@@ -337,6 +351,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         pagination,
         isListed,
         breadcumbList,
+        branch,
       },
     }
   } catch (error) {

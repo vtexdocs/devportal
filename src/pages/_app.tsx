@@ -12,6 +12,7 @@ type Props = AppProps & {
 }
 
 import TrackerProvider from 'utils/contexts/trackerContext'
+import PreviewContextProvider from 'utils/contexts/preview'
 
 function MyApp({ Component, pageProps }: Props) {
   return (
@@ -22,14 +23,17 @@ function MyApp({ Component, pageProps }: Props) {
           content="https://cdn.jsdelivr.net/gh/vtexdocs/devportal@main/public/images/meta-image.png"
         />
       </Head>
-      <Layout
-        sidebarfallback={pageProps.sidebarfallback}
-        hideSidebar={Component.hideSidebar}
-        sectionSelected={pageProps.sectionSelected}
-        parentsArray={pageProps.parentsArray}
-      >
-        <Component {...pageProps} />
-      </Layout>
+      <PreviewContextProvider>
+        <Layout
+          sidebarfallback={pageProps.sidebarfallback}
+          hideSidebar={Component.hideSidebar}
+          isPreview={pageProps.isPreview ?? false}
+          sectionSelected={pageProps.sectionSelected}
+          parentsArray={pageProps.parentsArray}
+        >
+          <Component {...pageProps} />
+        </Layout>
+      </PreviewContextProvider>
     </TrackerProvider>
   )
 }

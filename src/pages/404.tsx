@@ -6,8 +6,17 @@ import styles from 'styles/error-page'
 import fourOhFourImage from '../../public/images/404-illustration.png'
 import getNavigation from 'utils/getNavigation'
 import { GetStaticProps } from 'next'
+import { useContext } from 'react'
+import { PreviewContext } from 'utils/contexts/preview'
 
-const FourOhFour: Page = () => {
+interface Props {
+  branch: string
+}
+
+const FourOhFour: Page<Props> = ({ branch }) => {
+  const { setBranchPreview } = useContext(PreviewContext)
+  setBranchPreview(branch)
+
   return (
     <>
       <Head>
@@ -49,13 +58,22 @@ const FourOhFour: Page = () => {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async ({
+  preview,
+  previewData,
+}) => {
   const sidebarfallback = await getNavigation()
-
+  const previewBranch =
+    preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
+      ? JSON.parse(JSON.stringify(previewData)).branch
+      : 'main'
+  const branch = preview ? previewBranch : 'main'
   return {
     props: {
       sidebarfallback,
+      branch,
     },
   }
 }
+
 export default FourOhFour

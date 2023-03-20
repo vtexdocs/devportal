@@ -9,13 +9,36 @@ describe('Status of documentation pages', () => {
       if (type === 'markdown' || type === 'openapi')
         it(`Checks page ${page}`, () => cy.visit(page))
 
-      children.forEach(visitPages)
+      if (type !== 'openapi') children.forEach(visitPages)
+      else {
+        let found = false
+        let childIndex = -1
+        let currChildren = children
+
+        while (!found && currChildren.length > 0) {
+          childIndex = Math.floor(Math.random() * currChildren.length)
+          if (currChildren[childIndex].method) found = true
+          else currChildren = currChildren[childIndex].children
+        }
+
+        if (found) {
+          const { method, endpoint } = currChildren[childIndex]
+          const endpointPage = `${page}#${method.toLowerCase()}-${endpoint}`
+          it(`Checks page ${endpointPage}`, () => cy.visit(endpointPage))
+        }
+      }
     }
 
     return visitPages
   }
 
   navigation.navbar.forEach(({ slugPrefix, categories }) => {
-    categories.forEach(visitDocumentationPages(slugPrefix))
+    categories.forEach(
+      visitDocumentationPages(
+        slugPrefix.endsWith('/')
+          ? slugPrefix.slice(0, slugPrefix.length - 1)
+          : slugPrefix
+      )
+    )
   })
 })

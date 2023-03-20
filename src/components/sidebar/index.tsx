@@ -2,7 +2,7 @@ import { useEffect, useRef, useState, useContext } from 'react'
 import { Flex, Text, Box } from '@vtex/brand-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import { flattenJSON, getKeysByValue, getParents } from 'utils/navigation-utils'
 
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
@@ -38,27 +38,35 @@ const Sidebar = ({
     setActiveSidebarElement,
     openSidebarElement,
     closeSidebarElements,
+    isEditorPreview,
   } = useContext(SidebarContext)
-  setSidebarDataMaster(useNavigation().data)
+  if (!isEditorPreview) {
+    setSidebarDataMaster(useNavigation().data)
+  }
   const router = useRouter()
   const flattenedSidebar = flattenJSON(sidebarDataMaster)
   let activeSlug = ''
-  let keyPath = ''
+  let keyPath: string[] = []
   const querySlug = router.query.slug
   if (querySlug && router.pathname === '/docs/api-reference/[slug]') {
     activeSlug = router.asPath.replace('/docs/api-reference/', '')
     const docPath = activeSlug.split('/')
     const endpoint = '/' + docPath.splice(1, docPath.length).join('/')
-    keyPath = getKeyByValue(flattenedSidebar, endpoint)
-      ? getKeyByValue(flattenedSidebar, endpoint)!
-      : ''
+    keyPath = getKeysByValue(flattenedSidebar, endpoint)
     if (endpoint == '/') {
       activeSlug = docPath[0].split('#')[0]
     }
     parentsArray.push(activeSlug)
-    if (keyPath.length > 1) {
-      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
-    }
+    keyPath.forEach((key: string) => {
+      if (key.length > 0)
+        getParents(
+          key,
+          'slug',
+          flattenedSidebar,
+          parentsArray,
+          activeSlug.split('#')[0]
+        )
+    })
   } else {
     activeSlug = parentsArray[parentsArray.length - 1]
   }
@@ -74,7 +82,7 @@ const Sidebar = ({
     return () => {
       clearTimeout(timer)
     }
-  }, [activeSidebarElement, router, keyPath])
+  }, [activeSidebarElement, router])
 
   const SideBarIcon = (iconElement: DocDataElement | UpdatesDataElement) => {
     const [iconTooltip, setIconTooltip] = useState(false)
@@ -110,8 +118,11 @@ const Sidebar = ({
           label={tooltipLabel}
         >
           <Link
-            href={iconElement.link}
-            onClick={() => {
+            href={!isEditorPreview ? iconElement.link : '/'}
+            onClick={(e) => {
+              if (isEditorPreview) {
+                e.preventDefault()
+              }
               setActiveSectionName(iconElement.title)
             }}
             passHref
