@@ -64,7 +64,8 @@ const FeedBackModal = ({
   }
 
   useEffect(() => {
-    body.style.top = `-${documentElement.scrollTop}px`
+    const scrollTop = body.getBoundingClientRect().top * -1
+    body.style.top = `-${scrollTop}px`
     body.classList.add('modal-open')
   }, [])
 
