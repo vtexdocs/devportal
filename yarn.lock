@@ -1575,6 +1575,11 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
+"@medv/finder@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@medv/finder/-/finder-3.0.0.tgz#141b81504f71c25ca860716451b8bcb2d8ef4783"
+  integrity sha512-GhTmdnzIm+EMCSAF6QL1JunVN/9r4GUbYBWbhX7zOCtNqhsA/Bo9ltr+Cl5p5U4F9PTEwnF7pWmSPWC3H3MUQQ==
+
 "@next/env@13.0.5":
   version "13.0.5"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.0.5.tgz#f2fafaa42c6693260e00f443853b549509715ad1"
@@ -1968,11 +1973,12 @@
     "@octokit/webhooks-types" "6.10.0"
     aggregate-error "^3.1.0"
 
-"@openreplay/tracker@^4.1.9":
-  version "4.1.11"
-  resolved "https://registry.yarnpkg.com/@openreplay/tracker/-/tracker-4.1.11.tgz#8ef230ff51e7a6038f6176fbb734fba167b2af92"
-  integrity sha512-9RJ7e5uK/S+zHhEEHbdNx94RgpYuFQdVLpdNYU7YgeYY1SBy7yPkEzbPrRQrctNz5rx+0myqcbDlxaAR32NC3Q==
+"@openreplay/tracker@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@openreplay/tracker/-/tracker-5.0.1.tgz#791d8bee7069fd1f01cc103bd3f4a08e97abaa93"
+  integrity sha512-70ggj9lAek2O0sm4RefeqMGtDsVuUgEZ2oLZ+Qas87nBMyzvV4C6ddTHQvpOy6y/vry/HtfLaeT9zUFn3gJ3eA==
   dependencies:
+    "@medv/finder" "^3.0.0"
     error-stack-parser "^2.0.6"
 
 "@pkgr/utils@^2.3.1":
