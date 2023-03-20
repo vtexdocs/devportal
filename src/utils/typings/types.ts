@@ -6,7 +6,9 @@ import { DocumentationTitle, UpdatesTitle, ResourceTitle } from './unionTypes'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type Page<P = {}, IP = P> = NextPage<P, IP> & {
+  sidebarfallback?: any //eslint-disable-line
   hideSidebar?: boolean
+  isPreview?: boolean
 }
 
 export type IconComponent = (props: IconProps) => JSX.Element

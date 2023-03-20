@@ -12,14 +12,14 @@ const mainContainer: SxStyleProp = {
 
 const innerContainer: SxStyleProp = {
   justifyContent: 'center',
-  width: '100%',
   pt: '64px',
+  mx: 'auto',
+  px: ['auto', '5em', '7em', '7em', '7em', '7em', '20em'],
 }
 
 const articleBox: SxStyleProp = {
-  width: ['100%', 'initial'],
-  fontSize: '18px',
-  lineHeight: '24px',
+  fontSize: '1em',
+  lineHeight: '1.375em',
   a: {
     color: '#E31C58',
   },
@@ -28,30 +28,37 @@ const articleBox: SxStyleProp = {
     marginBottom: '24px',
   },
   h1: {
-    fontSize: '2em',
+    fontSize: '1.75em',
     fontWeight: '400',
-    lineHeight: 1.25,
+    lineHeight: '2.375em',
+    overflowWrap: 'anywhere',
   },
   h2: {
-    fontSize: '22px',
-    lineHeight: '32px',
+    fontSize: '1.375em',
+    lineHeight: '2em',
     fontWeight: '400',
-    pt: '8px',
-    my: '16px',
+    marginY: '1.125em',
+    paddingTop: '90px',
+    marginTop: '-90px',
+    overflowWrap: 'anywhere',
   },
   h3: {
-    fontSize: '18px',
+    fontSize: '1.125em',
     fontWeight: '600',
-    lineHeight: '24px',
+    lineHeight: '1.875em',
+    paddingTop: '90px',
+    marginTop: '-90px',
+    overflowWrap: 'anywhere',
   },
   strong: {
     fontWeight: '600',
+    overflowWrap: 'anywhere',
   },
 }
 
 const contentContainer: SxStyleProp = {
-  width: ['auto', '544px', '544px', '544px', '544px', '720px', '1400px'],
-  mx: ['18px', 'initial'],
+  width: '100%',
+  px: ['1.125em', 'initial'],
 }
 
 const documentationTitle: SxStyleProp = {
@@ -64,8 +71,7 @@ const documentationTitle: SxStyleProp = {
 const documentationExcerpt: SxStyleProp = {
   color: '#A1A8B3',
   padding: '8px 0 24px',
-  fontSize: ['12px', '16px'],
-  lineHeight: ['16px', '18px'],
+  lineHeight: '18px',
   fontWeight: '400',
 }
 
@@ -82,7 +88,7 @@ const bottomContributorsDivider: SxStyleProp = {
 }
 
 const rightContainer: SxStyleProp = {
-  ml: ['64px', '64px', '64px', '64px', '64px', '64px', '200px'],
+  ml: ['38px', '38px', '48px', '48px', '58px', '68px', '200px'],
   display: [
     'none !important',
     'none !important',
@@ -90,7 +96,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
-  width: [0, 0, 0, 0, '189px', '284px'],
+  minWidth: [0, 0, 0, 0, '139px', '184px', '284px'],
 }
 
 const releaseAction: SxStyleProp = {

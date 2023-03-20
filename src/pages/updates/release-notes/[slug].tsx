@@ -8,6 +8,7 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
+import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 import { getLogger } from 'utils/logging/log-util'
@@ -23,6 +24,7 @@ import OnThisPage from 'components/on-this-page'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
+import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsPaths from 'utils/getReleasePaths'
@@ -156,7 +158,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGFM, remarkImages],
+        remarkPlugins: [remarkGFM, remarkImages, remarkBlockquote],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
@@ -167,10 +169,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
+    const sectionSelected = 'Release Notes'
+    const flattenedSidebar = flattenJSON(sidebarfallback)
+    const keyPath = getKeyByValue(flattenedSidebar, slug)
+    const parentsArray: string[] = []
+    if (keyPath) {
+      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
+      parentsArray.push(slug)
+    }
     return {
       props: {
+        parentsArray,
         serialized,
         sidebarfallback,
+        sectionSelected,
       },
       revalidate: 600,
     }

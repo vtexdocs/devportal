@@ -3,13 +3,13 @@ import { useEffect, useState, useContext } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import jp from 'jsonpath'
-
+import ArticlePagination from 'components/article-pagination'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
-import remarkBlockquote from './rehypeBlockquote'
+import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
@@ -41,16 +41,30 @@ import getFileContributors, {
 } from 'utils/getFileContributors'
 
 import { getLogger } from 'utils/logging/log-util'
+import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
 interface Props {
+  sectionSelected: string
+  parentsArray: string[]
+  breadcumbList: { slug: string; name: string; type: string }[]
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
   contributors: ContributorsType[]
   path: string
   headingList: Item[]
+  seeAlsoData: {
+    url: string
+    title: string
+    category: string
+  }[]
+  pagination: {
+    previousDoc: { slug: string | null; name: string | null }
+    nextDoc: { slug: string | null; name: string | null }
+  }
+  isListed: boolean
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -59,41 +73,19 @@ const DocumentationPage: NextPage<Props> = ({
   slug,
   serialized,
   path,
-  sidebarfallback,
   headingList,
   contributors,
+  seeAlsoData,
+  pagination,
+  isListed,
+  breadcumbList,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
-  const [seeAlsoUrls, setSeeAlsoUrls] = useState()
   const { setActiveSidebarElement } = useContext(SidebarContext)
   useEffect(() => {
-    if (serialized.frontmatter?.seeAlso)
-      setSeeAlsoUrls(
-        JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
-      )
     setActiveSidebarElement(slug)
     setHeadings(headingList)
   }, [serialized.frontmatter])
-
-  const breadcumb = jp.paths(
-    sidebarfallback,
-    `$..*[?(@.slug=='${serialized.frontmatter?.slug}')]`
-  )[0]
-  let currentBreadcumb = sidebarfallback
-  const breadcumbList: { slug: string; name: string; type: string }[] = []
-  breadcumb?.forEach((el: string | number) => {
-    if (typeof currentBreadcumb?.slug == 'string') {
-      breadcumbList.push({
-        slug: currentBreadcumb.slug,
-        name: currentBreadcumb.name,
-        type: currentBreadcumb.type,
-      })
-    }
-    if (el != '$') {
-      currentBreadcumb = currentBreadcumb[el]
-    }
-  })
-
   return (
     <>
       <Head>
@@ -101,6 +93,12 @@ const DocumentationPage: NextPage<Props> = ({
         <meta name="docsearch:doctype" content="Guides" />
         {serialized.frontmatter?.hidden && (
           <meta name="robots" content="noindex" />
+        )}
+        {serialized.frontmatter?.excerpt && (
+          <meta
+            property="og:description"
+            content={serialized.frontmatter?.excerpt}
+          />
         )}
       </Head>
       <APIGuideContextProvider headings={headings}>
@@ -110,7 +108,7 @@ const DocumentationPage: NextPage<Props> = ({
               <article>
                 <header>
                   <Breadcrumb breadcumbList={breadcumbList} />
-                  <Text sx={styles.documentationTitle}>
+                  <Text sx={styles.documentationTitle} className="title">
                     {serialized.frontmatter?.title}
                   </Text>
                   <Text sx={styles.documentationExcerpt}>
@@ -127,8 +125,20 @@ const DocumentationPage: NextPage<Props> = ({
             </Box>
 
             <FeedbackSection docPath={path} />
+            {isListed && (
+              <ArticlePagination
+                hidePaginationNext={
+                  Boolean(serialized.frontmatter?.hidePaginationNext) || false
+                }
+                hidePaginationPrevious={
+                  Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
+                  false
+                }
+                pagination={pagination}
+              />
+            )}
             {serialized.frontmatter?.seeAlso && (
-              <SeeAlsoSection urls={seeAlsoUrls!} />
+              <SeeAlsoSection docs={seeAlsoData} />
             )}
           </Box>
           <Box sx={styles.rightContainer}>
@@ -217,15 +227,116 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     serialized = JSON.parse(JSON.stringify(serialized))
 
     logger.info(`Processing ${slug}`)
+    const seeAlsoData: {
+      url: string
+      title: string
+      category: string
+    }[] = []
+    const seeAlsoUrls = serialized.frontmatter?.seeAlso
+      ? JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
+      : []
+    await Promise.all(
+      seeAlsoUrls.map(async (seeAlsoUrl: string) => {
+        const seeAlsoPath = docsPaths[seeAlsoUrl.split('/')[3]]
+        if (seeAlsoPath) {
+          try {
+            const documentationContent = await getGithubFile(
+              'vtexdocs',
+              'dev-portal-content',
+              'main',
+              seeAlsoPath
+            )
+            const serialized = await serialize(documentationContent, {
+              parseFrontmatter: true,
+            })
+            seeAlsoData.push({
+              url: seeAlsoUrl,
+              title: serialized.frontmatter?.title
+                ? serialized.frontmatter.title
+                : seeAlsoUrl.split('/')[3],
+              category: serialized.frontmatter?.category
+                ? serialized.frontmatter.category
+                : seeAlsoUrl.split('/')[2],
+            })
+          } catch (error) {}
+        } else if (seeAlsoUrl.startsWith('/docs')) {
+          seeAlsoData.push({
+            url: seeAlsoUrl,
+            title: seeAlsoUrl.split('/')[3],
+            category: seeAlsoUrl.split('/')[2],
+          })
+        }
+      })
+    )
+
+    const docsListSlug = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..slug`
+    )
+    const docsListName = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..name`
+    )
+    const indexOfSlug = docsListSlug.indexOf(slug)
+    const pagination = {
+      previousDoc: {
+        slug: docsListSlug[indexOfSlug - 1]
+          ? docsListSlug[indexOfSlug - 1]
+          : null,
+        name: docsListName[indexOfSlug - 1]
+          ? docsListName[indexOfSlug - 1]
+          : null,
+      },
+      nextDoc: {
+        slug: docsListSlug[indexOfSlug + 1]
+          ? docsListSlug[indexOfSlug + 1]
+          : null,
+        name: docsListName[indexOfSlug + 1]
+          ? docsListName[indexOfSlug + 1]
+          : null,
+      },
+    }
+
+    const flattenedSidebar = flattenJSON(sidebarfallback)
+    const isListed: boolean = getKeyByValue(flattenedSidebar, slug)
+      ? true
+      : false
+    const keyPath = getKeyByValue(flattenedSidebar, slug)
+    const parentsArray: string[] = []
+    const parentsArrayName: string[] = []
+    const parentsArrayType: string[] = []
+    let sectionSelected = ''
+    if (keyPath) {
+      sectionSelected = flattenedSidebar[`${keyPath[0]}.documentation`]
+      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
+      parentsArray.push(slug)
+      getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
+      getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
+    }
+
+    const breadcumbList: { slug: string; name: string; type: string }[] = []
+    parentsArrayName.forEach((_el: string, idx: number) => {
+      breadcumbList.push({
+        slug: `/docs/guides/${parentsArray[idx]}`,
+        name: parentsArrayName[idx],
+        type: parentsArrayType[idx],
+      })
+    })
 
     return {
       props: {
+        sectionSelected,
+        parentsArray,
         slug,
         serialized,
         sidebarfallback,
         headingList,
         contributors,
         path,
+        seeAlsoData,
+        pagination,
+        isListed,
+        breadcumbList,
       },
     }
   } catch (error) {

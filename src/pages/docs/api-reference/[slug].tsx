@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import Oas from 'oas'
+
 import getReferencePaths from 'utils/getReferencePaths'
+import getNavigation from 'utils/getNavigation'
 
 interface Props {
   slug: string
@@ -24,15 +27,20 @@ const slugs = Object.keys(await getReferencePaths())
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-const APIPage: NextPage<Props> = ({ slug }) => {
+const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
   const router = useRouter()
-  const rapidoc = useRef<{ scrollTo: (endpoint: string) => void }>(null)
+  const rapidoc = useRef<{ scrollToPath: (endpoint: string) => void }>(null)
+  const [endpointPath, setEndpointPath] = useState('')
+
+  useEffect(() => {
+    setEndpointPath(`#${router.asPath.split('#')[1]}`)
+  }, [router.asPath])
 
   useEffect(() => {
     const scrollDoc = () => {
       if (rapidoc.current) {
         const endpoint = window.location.hash.slice(1) || 'overview'
-        rapidoc.current.scrollTo(endpoint)
+        rapidoc.current.scrollToPath(endpoint)
       }
     }
 
@@ -49,6 +57,9 @@ const APIPage: NextPage<Props> = ({ slug }) => {
           {capitalize(slug.replaceAll('-', ' ').replace('api', ''))} API
         </title>
         <meta name="docsearch:doctype" content="API Reference" />
+        {descriptions && (
+          <meta name="description" content={descriptions[endpointPath]} />
+        )}
       </Head>
       <Script
         type="text/javascript"
@@ -74,6 +85,7 @@ const APIPage: NextPage<Props> = ({ slug }) => {
         schema-style="table"
         schema-description-expanded={true}
         id="the-doc"
+        allow-spec-file-download={true}
       />
     </>
   )
@@ -89,17 +101,56 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps = ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug || ''
   const url = referencePaths[slug as string]
   const sectionSelected = 'API Reference'
+  const sidebarfallback = await getNavigation()
   if (slugs.includes(slug as string)) {
+    const response = await fetch(
+      `https://developers.vtex.com/api/openapi/${slug}`
+    )
+    const doc = await response.json()
+    const endpointFile = new Oas(doc)
+    const allPaths = endpointFile.getDefinition().paths
+    const descriptions: { [key: string]: string } = {}
+    const isMethod = (key: string) =>
+      ['get', 'post', 'delete', 'put'].includes(key)
+
+    if (allPaths) {
+      Object.entries(allPaths).forEach(([key, value]) => {
+        if (value) {
+          Object.entries(value).forEach(
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            ([endpointKey, endpointValue]: any) => {
+              if (
+                isMethod(endpointKey) &&
+                endpointValue &&
+                endpointValue.description
+              ) {
+                descriptions[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] =
+                  endpointValue.description
+                    .split(/\r?\n/)
+                    .map((line: string) => line.trim())
+                    .find(
+                      (line: string) =>
+                        line && line[0].toLowerCase() !== line[0].toUpperCase()
+                    ) || ''
+              }
+            }
+          )
+        }
+      })
+    }
+
     //Regular flow
     return {
       props: {
         slug,
         url,
         sectionSelected,
+        sidebarfallback,
+        descriptions,
       },
     }
   } else {

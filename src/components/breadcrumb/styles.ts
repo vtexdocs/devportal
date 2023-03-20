@@ -2,16 +2,15 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 
 const breadcrumb: SxStyleProp = {
   alignItems: 'center',
-  color: '#A1A8B3',
-  mb: '32px',
-  fontSize: '16px',
+  color: '#6b7785',
+  mb: '24px',
   lineHeight: '18px',
 }
 
 const breadcrumbItem: SxStyleProp = {
-  color: '#A1A8B3 !important',
+  color: '#6b7785 !important',
   ':hover': {
-    color: '#F71963',
+    color: '#5E6E84 !important',
   },
 }
 

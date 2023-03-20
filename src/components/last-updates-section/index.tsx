@@ -7,10 +7,9 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'improved',
-    description:
-      'SafeData can now block the anonymous creation of documents for all Master Data entities',
-    date: new Date('01/18/2023'),
+    type: 'deprecated',
+    description: 'Deprecation of apps-graphql@2.x',
+    date: new Date('03/02/2023'),
   },
   updateType: 'release-notes',
 }

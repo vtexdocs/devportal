@@ -3,9 +3,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 const sidebarContainer: SxStyleProp = {
   position: 'relative',
   width: 'auto',
-  minHeight: '692px',
-  paddingTop: '34px',
-  paddingBottom: '24px',
+  height: 'inherit',
   borderRight: '1px solid #E7E9EE',
   zIndex: '1',
   left: '0',
@@ -26,7 +24,29 @@ const sidebarContainer: SxStyleProp = {
   },
 }
 
+const sidebarContainerHamburger: SxStyleProp = {
+  width: 'auto',
+  minHeight: '692px',
+  zIndex: '1',
+}
+
 const sidebarContainerBox: SxStyleProp = {
+  opacity: '100',
+  paddingTop: '34px',
+  paddingBottom: '24px',
+  overflowY: 'auto',
+  height: 'inherit',
+  maskImage:
+    'linear-gradient(to top, transparent, black), linear-gradient(to left, transparent 17px, black 17px)',
+  maskSize: '100% 20000px',
+  maskPosition: 'left bottom',
+  transition: 'mask-position 0.3s, -webkit-mask-position 0.3s',
+  ':hover': {
+    maskPosition: 'left top',
+  },
+}
+
+const sidebarContainerBoxHamburger: SxStyleProp = {
   opacity: '100',
   transition: 'all 1s ease-out',
 }
@@ -37,6 +57,14 @@ const sidebarContainerBody: SxStyleProp = {
 
 const sidebarContainerHeader: SxStyleProp = {
   ...sidebarContainerBody,
+}
+
+const sidebarContainerTitle: SxStyleProp = {
+  alignItems: 'center',
+  lineHeight: '22px',
+  gap: '5px',
+  padding: '17px 0px 17px 17px',
+  borderBottom: '1px solid #E7E9EE',
 }
 
 const sidebarTitle: SxStyleProp = {
@@ -102,11 +130,35 @@ const toggleIcon: SxStyleProp = {
   transform: 'scaleX(-1)',
 }
 
+const arrowButton: SxStyleProp = {
+  padding: '0px',
+}
+
+const previewMode: SxStyleProp = {
+  display: 'flex',
+  color: '#A87600',
+  backgroundColor: '#ffe5b5',
+  padding: '10px',
+  borderRadius: '10px',
+  fontWeight: '600',
+  fontSize: '14px',
+  lineHeight: '20px',
+  letterSpacing: '0.5px',
+  mb: '20px',
+  svg: {
+    width: '20px',
+    mr: '10px',
+  },
+}
+
 export default {
   sidebarContainer,
+  sidebarContainerHamburger,
   sidebarContainerBox,
+  sidebarContainerBoxHamburger,
   sidebarContainerBody,
   sidebarContainerHeader,
+  sidebarContainerTitle,
   sidebarTitle,
   sidebarHelpIcon,
   searchBox,
@@ -115,4 +167,6 @@ export default {
   toggleIconBox,
   toggleIconBoxActive,
   toggleIcon,
+  arrowButton,
+  previewMode,
 }

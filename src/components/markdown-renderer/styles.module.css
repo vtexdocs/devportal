@@ -1,6 +1,7 @@
 .img {
   max-width: 100%;
   padding-top: 2vh;
+  border-radius: 4px;
 }
 
 .heading::before {
@@ -17,37 +18,33 @@
   background-color: var(--md-code-background, #f6f8fa);
   border-radius: 4px;
   color: var(--md-code-text);
-  font-size: 85%;
   margin: 0;
   padding: 0.2em 0.4em;
-  font-family: var(
-    --md-code-font,
-    SFMono-Regular,
-    Consolas,
-    Liberation Mono,
-    Menlo,
-    Courier,
-    monospace
-  );
-  font-size: 1em;
+  font-size: 0.875em;
+  word-break: break-all;
 }
 
-.pre code {
-  background-color: #f8f7fc !important;
-  border: 1px solid #e7e9ee;
-  border-radius: 4px;
-  line-break: auto;
+table .code {
+  word-break: normal;
 }
 
 .blockquote {
   display: grid;
-  padding: 5px 20px;
+  padding: 20px;
   gap: 20px;
   width: 100%;
   margin: 20px 0;
   border-radius: 4px;
   align-items: center;
   border: 1px solid #ccced8;
+}
+
+.blockquote p{
+  margin: 0px
+}
+
+.blockquote a{
+  color: #D4084C !important;
 }
 
 .blockquoteInfo {
@@ -86,6 +83,14 @@
   background: #fff2d4;
   border: 1px solid #ffb100;
   grid-template-columns: 20px 1fr;
+}
+
+.blockquoteWarning code {
+  background-color: #ffe5b5;
+}
+
+.blockquoteInfo code {
+  background-color: #ecebf3;
 }
 
 .blockquoteWarning:before {

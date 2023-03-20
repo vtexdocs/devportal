@@ -1,5 +1,6 @@
 import algoliasearch from 'algoliasearch/lite'
-import { InstantSearch } from 'react-instantsearch-dom'
+import { Configure, InstantSearch } from 'react-instantsearch-dom'
+import aa from 'search-insights'
 
 import SearchBox from './search-box'
 import Results from './results-box'
@@ -9,8 +10,8 @@ import useClickOutside from 'utils/hooks/useClickOutside'
 import { MultipleQueriesQuery } from '@algolia/client-search'
 
 const algoliaClient = algoliasearch(
-  'A4TXCBOC74',
-  'bcced196dc1d3b841471e5aa412b62ad'
+  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ''
 )
 
 const searchClient = {
@@ -21,6 +22,19 @@ const searchClient = {
   },
 }
 
+aa('init', {
+  appId: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
+  apiKey: process.env.NEXT_PUBLIC_ALGOLIA_WRITE_KEY || '',
+  useCookie: true,
+})
+
+aa('getUserToken', null, (err) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+})
+
 export default function SearchInput() {
   const [focusOut, setfocusOut] = useState<{ modaltoggle: boolean }>({
     modaltoggle: true,
@@ -29,6 +43,7 @@ export default function SearchInput() {
   useClickOutside(resultsBox, setfocusOut)
   return (
     <InstantSearch searchClient={searchClient} indexName="devportal-docs">
+      <Configure clickAnalytics={true} />
       <Box onFocus={() => setfocusOut({ modaltoggle: true })} ref={resultsBox}>
         <SearchBox />
         {focusOut.modaltoggle && <Results />}

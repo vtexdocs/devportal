@@ -40,7 +40,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     toggleSidebarElementStatus,
     sidebarDataMaster,
   } = useContext(SidebarContext)
-
+  const { isEditorPreview } = useContext(SidebarContext)
   const router = useRouter()
 
   const handleClick = (
@@ -113,6 +113,11 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
         <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
           {isExpandable && (
             <Button
+              aria-label={
+                sidebarElementStatus.has(slug) && sidebarElementStatus.get(slug)
+                  ? 'Collapse category'
+                  : 'Expand category'
+              }
               size="regular"
               variant="tertiary"
               sx={
@@ -139,10 +144,13 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
             <Link
               sx={textStyle(activeSidebarElement === activeItem, isExpandable)}
               onClick={(e: { preventDefault: () => void }) => {
-                handleClick(e, pathSuffix, slug)
+                if (!isEditorPreview) {
+                  handleClick(e, pathSuffix, slug)
+                }
                 toggleSidebarElementStatus(activeItem)
               }}
               href={getHref(slugPrefix || '', pathSuffix, slug)}
+              target={isEditorPreview === true ? '_blank' : '_self'}
             >
               {method && (
                 <MethodCategory

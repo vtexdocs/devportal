@@ -6,9 +6,13 @@ import { APIGuideContext } from 'utils/contexts/api-guide'
 import { childrenToString, slugify } from 'utils/string-utils'
 import OverviewCard from 'components/overview-card'
 import WhatsNextCard from 'components/whats-next-card'
+import YoutubeFrame from 'components/youtube-frame'
+import CodeBlock from 'components/code-block'
 
 import styles from './styles.module.css'
 import { Flex } from '@vtex/brand-ui'
+import LightBox from 'components/lightbox'
+import { messages } from 'utils/constants'
 
 type Component = {
   node: object
@@ -72,52 +76,68 @@ const Callout = ({ node, icon, ...props }: Component) => {
           ? styles.blockquoteSuccess
           : ''
       }`}
-      {...props}
-    />
+    >
+      <p {...props} />
+    </blockquote>
   )
 }
 
 export default {
   OverviewCard,
   WhatsNextCard,
+  YoutubeFrame,
   Flex: ({ node, ...props }: Component) => (
     <Flex className={styles.flexWrap} {...props} />
   ),
-  table: ({ node, ...props }: Component) => (
-    <table className={styles.table} {...props} />
-  ),
-  td: ({ node, ...props }: Component) => (
-    <td className={styles.td} {...props} />
-  ),
+  table: ({ node, ...props }: Component) => <table {...props} />,
+  td: ({ node, ...props }: Component) => <td {...props} />,
   img: ({ node, ...props }: Component) => {
+    const [imageHasError, setImageHasError] = useState(false)
+    const [srcHasError, setSrcHasError] = useState(false)
+    const regularImg = (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src={props.src}
+        alt={props.alt}
+        onError={() => setSrcHasError(true)}
+      />
+    )
+    const errorMessage = (
+      <blockquote
+        className={`${styles.blockquote} ${styles.blockquoteWarning}`}
+      >
+        {messages['error_loading_image']} {props.src}
+      </blockquote>
+    )
+
     let data: { base64: string; img: object } = { base64: '', img: {} }
     try {
       data = JSON.parse(props.alt)
     } catch (error) {
       console.log(`Error parsing`, error)
-      return (
-        <>
-          <p>
-            <strong> Não pude carregar Imagem {props.src}</strong>
-          </p>
-        </>
-      )
+      return errorMessage
     }
-    return (
-      <Image
-        className={styles.img}
-        loading="lazy"
-        src={props.src}
-        alt={props.alt}
-        sizes="100vw"
-        placeholder="blur"
-        blurDataURL={data.base64}
-        style={{
-          objectFit: 'contain',
-          height: 'auto',
-        }}
-        {...data?.img}
-      />
+    return !imageHasError ? (
+      <LightBox>
+        <Image
+          className={styles.img}
+          loading="lazy"
+          src={props.src}
+          alt={props.alt}
+          placeholder="blur"
+          blurDataURL={data.base64}
+          style={{
+            objectFit: 'contain',
+            height: 'auto',
+          }}
+          onError={() => setImageHasError(true)}
+          {...data?.img}
+        />
+      </LightBox>
+    ) : !srcHasError ? (
+      <LightBox>{regularImg}</LightBox>
+    ) : (
+      errorMessage
     )
   },
   blockquote: ({ ...props }: Component) => {
@@ -126,8 +146,8 @@ export default {
   code: ({ node, ...props }: Component) => {
     return <code className={styles.code} {...props}></code>
   },
-  pre: ({ node, ...props }: Component) => {
-    return <pre className={styles.pre} {...props}></pre>
+  pre: ({ ...props }: Component) => {
+    return <CodeBlock {...props} />
   },
   h2: ({ node, ...props }: Component) => {
     const { activeItem, setActiveItem, goToPreviousItem } =

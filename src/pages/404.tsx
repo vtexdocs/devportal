@@ -4,6 +4,8 @@ import type { Page } from 'utils/typings/types'
 import { Box, Flex, Text, Button, Link } from '@vtex/brand-ui'
 import styles from 'styles/error-page'
 import fourOhFourImage from '../../public/images/404-illustration.png'
+import getNavigation from 'utils/getNavigation'
+import { GetStaticProps } from 'next'
 
 const FourOhFour: Page = () => {
   return (
@@ -47,4 +49,13 @@ const FourOhFour: Page = () => {
   )
 }
 
+export const getStaticProps: GetStaticProps = async () => {
+  const sidebarfallback = await getNavigation()
+
+  return {
+    props: {
+      sidebarfallback,
+    },
+  }
+}
 export default FourOhFour

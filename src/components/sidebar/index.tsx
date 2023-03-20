@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, useContext } from 'react'
 import { Flex, Text, Box } from '@vtex/brand-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { flattenJSON, getKeysByValue, getParents } from 'utils/navigation-utils'
 
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
@@ -16,16 +17,19 @@ import SidebarSection from 'components/sidebar-section'
 import Tooltip from 'components/tooltip'
 import { iconTooltipStyle } from './functions'
 
-import useNavigation from 'utils/hooks/useNavigation'
-import jp from 'jsonpath'
 import { SidebarContext } from 'utils/contexts/sidebar'
+import useNavigation from 'utils/hooks/useNavigation'
 
 interface SideBarSectionState {
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
+  parentsArray?: string[]
 }
 
-const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
-  const [activeSectionName, setActiveSectionName] = useState('')
+const Sidebar = ({
+  sectionSelected = 'API Reference',
+  parentsArray = [],
+}: SideBarSectionState) => {
+  const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
   const {
     activeSidebarElement,
@@ -34,59 +38,46 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
     setActiveSidebarElement,
     openSidebarElement,
     closeSidebarElements,
+    isEditorPreview,
   } = useContext(SidebarContext)
-  setSidebarDataMaster(useNavigation().data)
-  const router = useRouter()
-  let activeSlug = ''
-  let slug = ''
-  let parentSlugs: [arrayOfSlug: string[], sectionSelected: string] = [[], '']
-
-  const getSlugPath = (
-    queryToFind: string
-  ): [arrayOfSlug: string[], sectionSelected: string] => {
-    const findPath = jp.paths(sidebarDataMaster, queryToFind)[0]
-    let currentSidebar = sidebarDataMaster
-    const arrayOfSlugs: string[] = []
-    if (findPath?.length > 0) {
-      findPath.forEach((el: string | number) => {
-        if (typeof currentSidebar?.slug == 'string') {
-          arrayOfSlugs.push(currentSidebar.slug)
-        }
-        if (el != '$') {
-          currentSidebar = currentSidebar[el]
-        }
-      })
-      return [arrayOfSlugs, sidebarDataMaster[findPath[1]].documentation]
-    }
-    return [[''], sectionSelected ? sectionSelected : '']
+  if (!isEditorPreview) {
+    setSidebarDataMaster(useNavigation().data)
   }
-
+  const router = useRouter()
+  const flattenedSidebar = flattenJSON(sidebarDataMaster)
+  let activeSlug = ''
+  let keyPath: string[] = []
   const querySlug = router.query.slug
   if (querySlug && router.pathname === '/docs/api-reference/[slug]') {
     activeSlug = router.asPath.replace('/docs/api-reference/', '')
-    slug = querySlug as string
     const docPath = activeSlug.split('/')
-    const endpoint = docPath.splice(1, docPath.length).join('/')
-    const query = `$..*[?(@.endpoint=='/${endpoint}')]`
-    parentSlugs = getSlugPath(query)
+    const endpoint = '/' + docPath.splice(1, docPath.length).join('/')
+    keyPath = getKeysByValue(flattenedSidebar, endpoint)
+    if (endpoint == '/') {
+      activeSlug = docPath[0].split('#')[0]
+    }
+    parentsArray.push(activeSlug)
+    keyPath.forEach((key: string) => {
+      if (key.length > 0)
+        getParents(
+          key,
+          'slug',
+          flattenedSidebar,
+          parentsArray,
+          activeSlug.split('#')[0]
+        )
+    })
   } else {
-    activeSlug =
-      (querySlug as string) ||
-      router.pathname.substring(activeSlug.lastIndexOf('/') + 1)
-    slug = activeSlug
-    const query = `$..*[?(@.slug=='${slug}')]`
-    parentSlugs = getSlugPath(query)
+    activeSlug = parentsArray[parentsArray.length - 1]
   }
 
   useEffect(() => {
     const timer = setTimeout(() => setExpandDelayStatus(false), 5000)
-    const sectionName = parentSlugs[1]
-    closeSidebarElements()
-    setActiveSectionName(sectionName)
-    parentSlugs[0].forEach((slug: string) => {
+    closeSidebarElements(parentsArray)
+    setActiveSectionName(sectionSelected)
+    parentsArray.forEach((slug: string) => {
       openSidebarElement(slug)
     })
-    openSidebarElement(slug)
     setActiveSidebarElement(activeSlug)
     return () => {
       clearTimeout(timer)
@@ -127,11 +118,15 @@ const Sidebar = ({ sectionSelected }: SideBarSectionState) => {
           label={tooltipLabel}
         >
           <Link
-            href={iconElement.link}
-            onClick={() => {
+            href={!isEditorPreview ? iconElement.link : '/'}
+            onClick={(e) => {
+              if (isEditorPreview) {
+                e.preventDefault()
+              }
               setActiveSectionName(iconElement.title)
             }}
             passHref
+            aria-label={iconElement.title}
           >
             <Flex
               sx={

@@ -5,19 +5,23 @@ import { createDocFromUrl } from './functions'
 
 import styles from './styles'
 interface SeeAlsoSectionProps {
-  urls: string[]
+  docs: { url: string; title: string; category: string }[]
 }
 
-const SeeAlsoSection = ({ urls }: SeeAlsoSectionProps) => {
+const SeeAlsoSection = ({ docs }: SeeAlsoSectionProps) => {
   const cards: DocumentProps[] = []
-  urls?.forEach((url) => {
-    cards.push(createDocFromUrl(url))
+  docs?.forEach((doc) => {
+    cards.push(createDocFromUrl(doc))
   })
   return (
     <Box sx={styles.seeAlsoContainer} data-cy="see-also-section">
       <Text sx={styles.sectionTitle}>See also</Text>
       {cards.map((card) => (
-        <DocumentationCard containerType="see-also" {...card} />
+        <DocumentationCard
+          key={card.title}
+          containerType="see-also"
+          {...card}
+        />
       ))}
     </Box>
   )

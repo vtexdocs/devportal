@@ -2,6 +2,505 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.5](https://github.com/vtexdocs/devportal/compare/v1.9.4...v1.9.5) (2023-03-20)
+
+
+### Bug Fixes
+
+* **sidebar:** check the parent to expand the correct endpoint ([d58bbd6](https://github.com/vtexdocs/devportal/commit/d58bbd662771ff5016744d96397d04bc547979b6))
+
+
+### Docs
+
+* create redirect for catalog api ref ([62d863b](https://github.com/vtexdocs/devportal/commit/62d863b1244ab7a828b87970793c7508453c3ec5))
+* **navigation:** fix position of catalog guide ([843b4d2](https://github.com/vtexdocs/devportal/commit/843b4d2c8caa08e5d8f6823d6461ffc3952f4c7c))
+
+### [1.9.4](https://github.com/vtexdocs/devportal/compare/v1.9.3...v1.9.4) (2023-03-17)
+
+
+### Features
+
+* **editor:** add toast feedback to json editor ([83bdfbf](https://github.com/vtexdocs/devportal/commit/83bdfbf37fa7f49af2062541ba1f3a76f317d47a))
+* **editor:** allow file query string ([4c8ed87](https://github.com/vtexdocs/devportal/commit/4c8ed87783cf5635c5b9847f9a6cd6127c0fa511))
+* **editor:** v1 of sidebar editor ([248d715](https://github.com/vtexdocs/devportal/commit/248d7152dfebadcc90514e870f495b8ce224a74e))
+
+
+### Bug Fixes
+
+* **editor:** fix ispreview type ([bf1762d](https://github.com/vtexdocs/devportal/commit/bf1762d14fab123179e53ad5de2a872b1dc5d725))
+* **editor:** fix isPreview type ([462783d](https://github.com/vtexdocs/devportal/commit/462783d1a92137521cc1bc91eef0d669d553f538))
+
+
+### Docs
+
+* add change chain order navigation ([f6654f9](https://github.com/vtexdocs/devportal/commit/f6654f9d7da42502a26c8355625c1e4a684d597f))
+
+
+### Refactoring
+
+* **editor:** remove duplicated sidebar code ([6b571f4](https://github.com/vtexdocs/devportal/commit/6b571f444de50b04df0f2edd9d65c0e39f858d07))
+* **editor:** rewrite conditions ([2713bbb](https://github.com/vtexdocs/devportal/commit/2713bbbcd7bf9ff6f862bad81ee2abf5898de4e5))
+
+### [1.9.3](https://github.com/vtexdocs/devportal/compare/v1.9.2...v1.9.3) (2023-03-15)
+
+
+### Bug Fixes
+
+* handle image loading errors ([4e81bbd](https://github.com/vtexdocs/devportal/commit/4e81bbd0be92488a5f72cb1d369ac23161649467))
+
+
+### Build
+
+* **package:** update rapidoc version ([9ac04b3](https://github.com/vtexdocs/devportal/commit/9ac04b3d3b82c98d36b7c9bf0f1c9c191247cbb3))
+
+### [1.9.2](https://github.com/vtexdocs/devportal/compare/v1.9.1...v1.9.2) (2023-03-15)
+
+
+### Features
+
+* add lightbox component to images ([731bff1](https://github.com/vtexdocs/devportal/commit/731bff1b95a40dfe1df920069ab085ead1609673))
+* create lightbox component ([a22dc7a](https://github.com/vtexdocs/devportal/commit/a22dc7a5e0c813d869bac46ccb5c29b5fb716717))
+
+
+### Bug Fixes
+
+* **components:** fix missing unique key error ([d79cf95](https://github.com/vtexdocs/devportal/commit/d79cf95d1cc4f2d71603d1547ebb2138a32dc1d4))
+* **hambuger:** fix missing unique key error ([0700857](https://github.com/vtexdocs/devportal/commit/070085780bf55774ba91425e62a78015af42bb11))
+* **lightbox:** use clickoutside hook ([5e12ee6](https://github.com/vtexdocs/devportal/commit/5e12ee65eb1c659845a1dbbc48e409290a0edeb2))
+
+
+### Style
+
+* **lightbox:** change close icon size and color ([b9a17e6](https://github.com/vtexdocs/devportal/commit/b9a17e61be1ecab3b185763de2081ca278f4198c))
+* **lightbox:** change image display to block ([0bf14b8](https://github.com/vtexdocs/devportal/commit/0bf14b86120922e21bf0683c547d5a8214d8e9ce))
+* **lightbox:** remove white modal to show only the image ([94acac0](https://github.com/vtexdocs/devportal/commit/94acac0fc2c37fb374e39034d6b37077a4c527d7))
+
+
+### Docs
+
+* create redirect mkp api overview ([0ce3e49](https://github.com/vtexdocs/devportal/commit/0ce3e49282a7fd66cb7b98c534f1612b598e5bef))
+* **navigation:** add new intelligent search guides ([2ef02bd](https://github.com/vtexdocs/devportal/commit/2ef02bdb93e1f7a1f0a95ea43731c96f6500bd2c))
+* **top bar:** change header content to persona research form ([b5b54f4](https://github.com/vtexdocs/devportal/commit/b5b54f4d3497a3a805d2efa47ff5127ca1072a92))
+* **top bar:** remove old sentence from top bar ([e8aab0d](https://github.com/vtexdocs/devportal/commit/e8aab0d3eadc835263a9852fc9176a404769902c))
+
+### [1.9.1](https://github.com/vtexdocs/devportal/compare/v1.9.0...v1.9.1) (2023-03-09)
+
+
+### Bug Fixes
+
+* **sidebar:** hide sidebar by default in smaller breakpoints ([f2c2996](https://github.com/vtexdocs/devportal/commit/f2c2996cd5ab2c0f9f3d7c6474b2dedd5fd48c98))
+
+
+### Docs
+
+* redirect ([934aac6](https://github.com/vtexdocs/devportal/commit/934aac69514ec1732ec285a7d158d9a69a32c4a8))
+
+
+### Style
+
+* **documentation:** decrease contributors width and container padding ([9614cec](https://github.com/vtexdocs/devportal/commit/9614cec833dfbd9dbc6298c20e88451b26465615))
+
+## [1.9.0](https://github.com/vtexdocs/devportal/compare/v1.8.4...v1.9.0) (2023-03-07)
+
+
+### Features
+
+* **api-reference:** allow spec file download ([94c8b47](https://github.com/vtexdocs/devportal/commit/94c8b47bc557e942f3e331b57ae642eae5394b4b))
+
+
+### Build
+
+* **package:** update rapidoc version ([3db62b6](https://github.com/vtexdocs/devportal/commit/3db62b65a1f26ad111ab6b8ca83058bd6088b666))
+
+### [1.8.4](https://github.com/vtexdocs/devportal/compare/v1.8.3...v1.8.4) (2023-03-07)
+
+
+### Bug Fixes
+
+* **hamburger-menu:** show search input only in main menu, fix cards positions ([4f6d575](https://github.com/vtexdocs/devportal/commit/4f6d575a21b3107353f84d4da4a38fc7a38a83c6))
+* **sidebar:** show scroll on hover ([6672f93](https://github.com/vtexdocs/devportal/commit/6672f93380baa4b322da92182a36b8153cc3a64b))
+
+
+### Style
+
+* **sidebar:** fixed sidebar ([0d5d0cd](https://github.com/vtexdocs/devportal/commit/0d5d0cd35498b29313845ed474fcbaa26877539a))
+
+### [1.8.3](https://github.com/vtexdocs/devportal/compare/v1.8.2...v1.8.3) (2023-03-07)
+
+
+### Bug Fixes
+
+* **cypress:** update cypress-io action version ([c9eb2b6](https://github.com/vtexdocs/devportal/commit/c9eb2b689e6485a91490b40c5666ae525cdd2448))
+* fix import preventing successful build ([117b5ef](https://github.com/vtexdocs/devportal/commit/117b5efb8851f8b586407816e1e4d9f0b3174773))
+
+
+### Chore
+
+* update dependencies ([8c97f21](https://github.com/vtexdocs/devportal/commit/8c97f21d058ef8eed780c2506204f447aca56faf))
+
+
+### Tests
+
+* add test for checking documentation pages status ([c644586](https://github.com/vtexdocs/devportal/commit/c64458671f6d3556a7e1c3dd30044d398ceec8bd))
+* update cypress action ([2bf9757](https://github.com/vtexdocs/devportal/commit/2bf97574c2311f06b09977c8a955f622c4909153))
+* update cypress version and delete deprecated tests ([5c16cc9](https://github.com/vtexdocs/devportal/commit/5c16cc9e4acdf8303036119fbf8e78c1c061b6d4))
+
+
+### Docs
+
+* add apps-graphql release note to navigation ([fcd5d3e](https://github.com/vtexdocs/devportal/commit/fcd5d3e486ded47adebe72e8a633379c892e0458))
+* change MOI navigation ([3b8c820](https://github.com/vtexdocs/devportal/commit/3b8c820321eb1cf7d741b2ad5fdc0eb78c0f0b24))
+* change navigation ([ba230dc](https://github.com/vtexdocs/devportal/commit/ba230dcfc8563038c5edab0f0cfa1a01bf7115c5))
+* change navigation ([c1db862](https://github.com/vtexdocs/devportal/commit/c1db862dbae46a9757d3d84e23b581850595b737))
+* change navigation ([26c47fb](https://github.com/vtexdocs/devportal/commit/26c47fb558b04b879f6d8ebea87c903945354ec0))
+* change navigation ([df37e78](https://github.com/vtexdocs/devportal/commit/df37e78891de95ab2c6fd57cea9b1c294335d52a))
+* change navigation ([c359443](https://github.com/vtexdocs/devportal/commit/c359443d464e0a6f905ffb329d3c9b7d6fb93878))
+* change navigation vtex shipping network ([262edbf](https://github.com/vtexdocs/devportal/commit/262edbfe5fbd8dcde307441af8690c5809bda60e))
+* correct marketplace protocol slug ([b4875d5](https://github.com/vtexdocs/devportal/commit/b4875d5348003ec32ea3c8f3c75905eea2df1f55))
+* correct marketplace protocol slugs ([7f2a4d8](https://github.com/vtexdocs/devportal/commit/7f2a4d8224180f74de3abf90f6dc77d3537a2d19))
+* create redirects marketplace protocol ([822c264](https://github.com/vtexdocs/devportal/commit/822c264a829842a9280f6abc00ab6505d93b653b))
+* delete guide and create redirect ([71f8ef7](https://github.com/vtexdocs/devportal/commit/71f8ef7aa95e62703019ffe322ef28cffff729fc))
+* edit navigation.json ([03213f4](https://github.com/vtexdocs/devportal/commit/03213f4cacd847773ba0c1663387c64944b950e5))
+* fix code formatting ([05f79dd](https://github.com/vtexdocs/devportal/commit/05f79dd09b43929823fc57d8c1a35a50e1ac9095))
+* fix redirect ([350a067](https://github.com/vtexdocs/devportal/commit/350a067f4e927fea44ade3b95e7331455e7bb90c))
+* **navigation:** correct marketplace protocol ([f3264c5](https://github.com/vtexdocs/devportal/commit/f3264c56a7c701fd7784c4ca73426db186693386))
+* **navigation:** fix formatting ([8a71e6f](https://github.com/vtexdocs/devportal/commit/8a71e6f5bdb8963fd5580b9174c6ef2a3df5f501))
+* **navigation:** fix path ([8d2d7c6](https://github.com/vtexdocs/devportal/commit/8d2d7c60ed3e68fe2c48d2f8dc17ff2d7757fcd0))
+* **navigation:** fix sessions endpoints that have had the paths fixed ([dfb3093](https://github.com/vtexdocs/devportal/commit/dfb3093c85020e070c3fe4491f0f8637cd6ce68d))
+* **navigation:** update yarn.lock ([02a62a4](https://github.com/vtexdocs/devportal/commit/02a62a4bab7c2c305b9546d1da8e5b8f93b60cb2))
+* redirects ([a2c8ac6](https://github.com/vtexdocs/devportal/commit/a2c8ac6e73c15c5e0fade61bcf6469ece2231e26))
+* remove redirect ([9a43c8c](https://github.com/vtexdocs/devportal/commit/9a43c8cf5ccec78e8c413a4abc68097574210993))
+* update yarn.lock ([498a6b6](https://github.com/vtexdocs/devportal/commit/498a6b6479977387aa1281ec67d1667296a10f5d))
+
+### [1.8.2](https://github.com/vtexdocs/devportal/compare/v1.8.1...v1.8.2) (2023-02-28)
+
+
+### Features
+
+* **search box:** event to analyze user clicks ([282c611](https://github.com/vtexdocs/devportal/commit/282c611f6050685d3fa3466b9b0f7dc97af825d2))
+
+
+### Bug Fixes
+
+* **algolia script:** update name of algolia keys ([bd33b68](https://github.com/vtexdocs/devportal/commit/bd33b684efcbd5e4969ae9ed876dfec9b9e2e9f5))
+* **hamburger-menu:** add search input ([5392539](https://github.com/vtexdocs/devportal/commit/5392539cb734430598c4e17d088aeebe8d406446))
+* **hamburger-menu:** larger arrow in main menu ([379287f](https://github.com/vtexdocs/devportal/commit/379287fa36f052eb414a7767d274cb06696cb343))
+* **styles:** fix landing page cards ([88e4b90](https://github.com/vtexdocs/devportal/commit/88e4b9000530fc17fe89c353b0f5dba439e7ceb0))
+
+
+### Chore
+
+* **package.json:** add search-insights library ([3b10f3b](https://github.com/vtexdocs/devportal/commit/3b10f3b6bcb3e40e57c077b687d98144604b10c8))
+
+### [1.8.1](https://github.com/vtexdocs/devportal/compare/v1.8.0...v1.8.1) (2023-02-27)
+
+
+### Bug Fixes
+
+* **styles:** add break-word to inline code ([47858bc](https://github.com/vtexdocs/devportal/commit/47858bce0bafa8e249b4dab4cfede559581331d8))
+* **styles:** add overflow wrap to headings and strong tags ([eed6180](https://github.com/vtexdocs/devportal/commit/eed6180666dd757d81bd52f5366b3862df18ce36))
+* **styles:** limit img, svg and iframe width ([ccb3fea](https://github.com/vtexdocs/devportal/commit/ccb3feac2516934492379735c64b4b8e5b664459))
+* **styles:** show scrollbar in overflowing preformatted text ([d440e45](https://github.com/vtexdocs/devportal/commit/d440e457650ceca40a2161a06fd15ff7a09e988d))
+
+
+### Docs
+
+* chage path ([7daa0af](https://github.com/vtexdocs/devportal/commit/7daa0afc748589363b593ae6f62d4191745e8546))
+* redirect ([8a448fd](https://github.com/vtexdocs/devportal/commit/8a448fd10fa8b81d6f52d85476fe328c60f3b291))
+* remove from navigation ([114aaca](https://github.com/vtexdocs/devportal/commit/114aacaf8d20e9252ccd68a54f446e6a9642e99b))
+
+## [1.8.0](https://github.com/vtexdocs/devportal/compare/v1.7.3...v1.8.0) (2023-02-24)
+
+
+### Features
+
+* add working sidebar component to hamburger menu ([94ee834](https://github.com/vtexdocs/devportal/commit/94ee834d81be3419632a185b61d608f83dba2f84))
+* creating mobile menu ([25f66b7](https://github.com/vtexdocs/devportal/commit/25f66b72617919728d0bb84015407beea42fe32e))
+* **icons:** add arrow left icon ([b408d4d](https://github.com/vtexdocs/devportal/commit/b408d4d11276468ddd13af503ef5ceba444765cb))
+* **menu:** improve animation and add arrow to cards ([d32758c](https://github.com/vtexdocs/devportal/commit/d32758cbfa1b21bdba0ffc7b51a82a1bd114f8e7))
+* **sidebar:** create sidebar version to hamburger menu ([1ab74c8](https://github.com/vtexdocs/devportal/commit/1ab74c8b0b53acb4a466608dade4a64f8860c765))
+* **sidebar:** store current sidebar tab ([c6170eb](https://github.com/vtexdocs/devportal/commit/c6170eb6e804f5e6414251d838941f771fdea97f))
+
+
+### Bug Fixes
+
+* **hamburger-menu:** disable horizontal scroll ([f066928](https://github.com/vtexdocs/devportal/commit/f066928bd36d37430acd9924012fed82e034db57))
+* **hamburger-menu:** remove menu default  selection ([46261a2](https://github.com/vtexdocs/devportal/commit/46261a2339594d422e674b999c30db3ff834d5c6))
+* **header:** remove unused prop ([85d8b78](https://github.com/vtexdocs/devportal/commit/85d8b7829c8827f242ce5a384bf5099b7d4073d4))
+
+
+### Docs
+
+* create redirects ([1dc789a](https://github.com/vtexdocs/devportal/commit/1dc789a98d4d0b5648504ec8e4829f0206e8ff79))
+* **navigation:** remove deleted guides ([a1b8021](https://github.com/vtexdocs/devportal/commit/a1b80213f4bea360b36e784214c648552030ad4e))
+
+
+### Style
+
+* always show close icon on announcement bar ([a69c57b](https://github.com/vtexdocs/devportal/commit/a69c57b101c3c49eae42826c0e6f013b224aa5a4))
+* update sidebar and header styles ([82116d1](https://github.com/vtexdocs/devportal/commit/82116d12c3bf49df0b776a347bdd742374aa25f4))
+
+### [1.7.3](https://github.com/vtexdocs/devportal/compare/v1.7.2...v1.7.3) (2023-02-17)
+
+
+### Features
+
+* **layout:** add GTM ([70407ee](https://github.com/vtexdocs/devportal/commit/70407eee7c2c1ca7df24a21e16a27b8edb332d8e))
+* **layout:** correct GTM ([28d4652](https://github.com/vtexdocs/devportal/commit/28d4652bb09e43eaae790833764e5b5e8a0d5374))
+
+
+### Bug Fixes
+
+* **overview-card:** update overview card ([4e00ed3](https://github.com/vtexdocs/devportal/commit/4e00ed35e0e92e454f77413bf72bc33710c7228e))
+
+
+### Docs
+
+* move Catalog guides ([5e2b8fd](https://github.com/vtexdocs/devportal/commit/5e2b8fd8bf5e1126f02a6367f5dc245dd7898175))
+* move Message Center guides ([d0c7d80](https://github.com/vtexdocs/devportal/commit/d0c7d8093a828960907621503fe00b810fc58988))
+* **navigation:** edit pricing api paths ([97797d8](https://github.com/vtexdocs/devportal/commit/97797d8e5cc2549712d18d987874e2e0dc049fef))
+* **navigation:** improve authentication navigation in getting started section ([a26e2ae](https://github.com/vtexdocs/devportal/commit/a26e2ae3dbddca25c1d716278594ef3526b32680))
+* **redirect:** redirect authentication overview to new slug, according to architecture improvements ([0d4998b](https://github.com/vtexdocs/devportal/commit/0d4998b3476f7e85b2941d5b1cc681ecfd6be140))
+
+### [1.7.2](https://github.com/vtexdocs/devportal/compare/v1.7.1...v1.7.2) (2023-02-15)
+
+
+### Bug Fixes
+
+* **rehypeblockquote:** fixes long callouts ([0ea745c](https://github.com/vtexdocs/devportal/commit/0ea745c4ded725df50e6101cf1f0158b5301beff))
+* **release-notes:** use remarkBlockquote ([ca26cb9](https://github.com/vtexdocs/devportal/commit/ca26cb9ad8db1079b2578b2e1251428b19e948c6))
+
+### [1.7.1](https://github.com/vtexdocs/devportal/compare/v1.7.0...v1.7.1) (2023-02-14)
+
+
+### Docs
+
+* **navigation:** correct navigation slug for guide: Making your first request ([29c8580](https://github.com/vtexdocs/devportal/commit/29c85804d91c2d315a61db51f6cd72619d21d680))
+* **redirect:** redirect guide due to slug change: Making your first request ([1c89e1e](https://github.com/vtexdocs/devportal/commit/1c89e1e4c38995b3ee998a772835ddb42f343bb3))
+
+
+### Build
+
+* update rapidoc version ([98bf11b](https://github.com/vtexdocs/devportal/commit/98bf11bfb4c076ef1d7b5e337c74982d7c8772a6))
+* update rapidoc version ([162db4b](https://github.com/vtexdocs/devportal/commit/162db4b46a472287ffd3c72166971d7f3a19a389))
+
+## [1.7.0](https://github.com/vtexdocs/devportal/compare/v1.6.1...v1.7.0) (2023-02-13)
+
+
+### Features
+
+* **header scripts:** add GA script ([5ba815c](https://github.com/vtexdocs/devportal/commit/5ba815cfb1adf6a9a76bc7970debf492e5187588))
+
+
+### Bug Fixes
+
+* check endpoint type to prevent errors ([a8fecb2](https://github.com/vtexdocs/devportal/commit/a8fecb237c1ba4e8e8c6f8581943df489368a301))
+* **format:** format ([66674a4](https://github.com/vtexdocs/devportal/commit/66674a498a965222faed40b263d001f154c94bd6))
+* **getreferencepaths:** remove undefined routes and add error log for them ([6ca4947](https://github.com/vtexdocs/devportal/commit/6ca4947c6d3b17f9c6b145178882a2d91f4e7d1c))
+* **navigation.json:** revert deletion ([4af8661](https://github.com/vtexdocs/devportal/commit/4af86612323db52d3e7c5cd1ee68863ed5c41b3e))
+* **sidebar:** fetch sidebardatamaster from usenavigation ([928aa36](https://github.com/vtexdocs/devportal/commit/928aa36a7d7a05c368f6db637d76fa557ee40e4d))
+* **usenavigation:** stop revalidating on focus ([309da0d](https://github.com/vtexdocs/devportal/commit/309da0d1afad15f3637f121c96ff2f75243b1d7a))
+
+
+### Performance
+
+* **api-reference:** add short description using the first endpoint paragraph ([0701dd9](https://github.com/vtexdocs/devportal/commit/0701dd9aff996a8ed939b4fc92cb7ea1e496a27a))
+
+
+### Refactoring
+
+* line break ([91bc5ae](https://github.com/vtexdocs/devportal/commit/91bc5ae07a6d6c98733e3c91dc50f4115e34b695))
+
+
+### Chore
+
+* **navigation:** add kit look app release note to navigation.json ([ae09cc3](https://github.com/vtexdocs/devportal/commit/ae09cc336d5c7b450f5b3a7628c61d854a8ae10f))
+
+
+### Style
+
+* **styles:** update styles considering the figma file ([f836443](https://github.com/vtexdocs/devportal/commit/f83644386935f184b871f5466226b98f20c83751))
+
+
+### Docs
+
+* adding new release note to navigation ([87ca215](https://github.com/vtexdocs/devportal/commit/87ca215a205780ba1e9a9c9533faea477f594c11))
+* change path ([5221964](https://github.com/vtexdocs/devportal/commit/52219646f397154d13e974778f9eff5c607ff75d))
+* change path ([8233e1d](https://github.com/vtexdocs/devportal/commit/8233e1d3a7a51b5867fac5a2f23970f8a1b3273e))
+* change path ([de8b7c3](https://github.com/vtexdocs/devportal/commit/de8b7c38cb637f47cb840e09f8812832e7253e1b))
+* path change ([5635cc1](https://github.com/vtexdocs/devportal/commit/5635cc19676b38f08d1d60d4daf29aac0cb8d454))
+
+### [1.6.1](https://github.com/vtexdocs/devportal/compare/v1.6.0...v1.6.1) (2023-02-09)
+
+
+### Style
+
+* **styles:** update table font-size ([90c4ee7](https://github.com/vtexdocs/devportal/commit/90c4ee72afcfd0d6a30de87f92e63ab8f1d483fd))
+
+## [1.6.0](https://github.com/vtexdocs/devportal/compare/v1.5.2...v1.6.0) (2023-02-08)
+
+
+### Features
+
+* **apps:** feat children docs from io apps ([813d71d](https://github.com/vtexdocs/devportal/commit/813d71dfeb1f8e2181eadad252a67b2b9f148a7d))
+* **apps:** fetches vtex io apps documentation ([8c5d65e](https://github.com/vtexdocs/devportal/commit/8c5d65eddbf2f72ad7b797e2cb3d05007d72d13c))
+
+### [1.5.2](https://github.com/vtexdocs/devportal/compare/v1.5.1...v1.5.2) (2023-02-08)
+
+
+### Build
+
+* **package:** upgrade rapidoc version ([8a38e62](https://github.com/vtexdocs/devportal/commit/8a38e62f77f6f7b25bb4cb6844a5ad2e527290e7))
+* update rapidoc version to add language selection ([25f09a3](https://github.com/vtexdocs/devportal/commit/25f09a3c25512a8b61a98f1f4b017e13f063b118))
+
+### [1.5.1](https://github.com/vtexdocs/devportal/compare/v1.5.0...v1.5.1) (2023-02-07)
+
+
+### Bug Fixes
+
+* **guides:** update meta description ([fb8ff74](https://github.com/vtexdocs/devportal/commit/fb8ff748369dbe466fb6686cc1eae54747927559))
+
+## [1.5.0](https://github.com/vtexdocs/devportal/compare/v1.4.3...v1.5.0) (2023-02-07)
+
+
+### Features
+
+* **header:** update aria-label and add meta description ([0082450](https://github.com/vtexdocs/devportal/commit/008245017ed5406d7776be8d7dba80fcbeb5b376))
+
+
+### Bug Fixes
+
+* **api-reference:** change function name to scrollToPath ([b086b42](https://github.com/vtexdocs/devportal/commit/b086b4267167b0cca082f2dbb551e1785829f7fa))
+* **components:** add aria-label to buttons; expand guide content width; add meta desc to guides ([444db81](https://github.com/vtexdocs/devportal/commit/444db818228f73a28d4aaad4f9f2441853b9eac1))
+
+
+### Build
+
+* **package:** update rapidoc version ([b763e1d](https://github.com/vtexdocs/devportal/commit/b763e1d8de2b10bfc7b87c64e393ed3298be8039))
+* update rapidoc version ([d3d51ac](https://github.com/vtexdocs/devportal/commit/d3d51ac4925411defe23b83966a834a0561082f5))
+
+### [1.4.3](https://github.com/vtexdocs/devportal/compare/v1.4.2...v1.4.3) (2023-02-06)
+
+
+### Bug Fixes
+
+* **pagges:** use sidebarfallback and getNavigation - all pages ([677a2a4](https://github.com/vtexdocs/devportal/commit/677a2a4317f88af7608e489905e40ee23b9e0e2c))
+
+
+### Refactoring
+
+* **sidebar:** (wip) rewrite sidebar functions ([470c662](https://github.com/vtexdocs/devportal/commit/470c6622ad4938936964eec39cca0f3cfa8da9df))
+* **sidebarcontext:** use sidebarfallback ([ba2d39c](https://github.com/vtexdocs/devportal/commit/ba2d39c592b2f77ccaf8a41daa9f3fbf6d4f4a84))
+
+### [1.4.2](https://github.com/vtexdocs/devportal/compare/v1.4.1...v1.4.2) (2023-02-04)
+
+
+### Style
+
+* **sidebar-elements:** fix maxwidth ([661a384](https://github.com/vtexdocs/devportal/commit/661a384ffd4bbe9ad97cf93edcee32cc4cd38c25))
+
+### [1.4.1](https://github.com/vtexdocs/devportal/compare/v1.4.0...v1.4.1) (2023-02-04)
+
+
+### Bug Fixes
+
+* **article-pagination:** fix styles and other accessibility issues ([9003ef6](https://github.com/vtexdocs/devportal/commit/9003ef6f13905f09d3b3ad7377fa54532e2a479d))
+
+## [1.4.0](https://github.com/vtexdocs/devportal/compare/v1.3.0...v1.4.0) (2023-02-03)
+
+
+### Features
+
+* **article-pagination:** add Next and Previous page links to guides ([2cdde02](https://github.com/vtexdocs/devportal/commit/2cdde0234b6a97bc4ce4499d701007faa7e19076))
+* **method-category:** enable patch filtering, improve callout style and update navigation ([56e6b33](https://github.com/vtexdocs/devportal/commit/56e6b337d9a4abe274ecf15d3a9ed9cb03ade99f))
+
+
+### Bug Fixes
+
+* **article-pagination:** fix extreme cases ([9243a1a](https://github.com/vtexdocs/devportal/commit/9243a1a1e0bdb9c2dd3fe6fe5c3c00ed642f7fde))
+* **article-pagination:** remove console log ([810f8f4](https://github.com/vtexdocs/devportal/commit/810f8f43ae4ee5c928b335f8efdd33f3130b782b))
+
+
+### Docs
+
+* **fix navigation:** adding  subscriptions v2 to navigation ([e584c57](https://github.com/vtexdocs/devportal/commit/e584c57c033f24db1cb9b9cf710e756ea43b07c9))
+
+
+### Chore
+
+* **release:** 1.3.0 ([e470f14](https://github.com/vtexdocs/devportal/commit/e470f1475a47b8a340269d1e41226cabf6d2e9bf))
+
+
+### Refactoring
+
+* **article-pagination:** handle click ([1ac9abb](https://github.com/vtexdocs/devportal/commit/1ac9abb2bc1f95658b09c57b67c65cf72abc61e9))
+* **article-pagination:** handle null cases ([cb9d801](https://github.com/vtexdocs/devportal/commit/cb9d8012b1b3bb3774d712f556a83a4b458922f2))
+* **article-pagination:** use getStaticProps ([30141b6](https://github.com/vtexdocs/devportal/commit/30141b6fdb938f1d42e944ad36b6bcc246c5a609))
+
+## [1.3.0](https://github.com/vtexdocs/devportal/compare/v1.2.0...v1.3.0) (2023-02-02)
+
+
+### Features
+
+* **method-category:** enable patch filtering, improve callout style and update navigation ([45c9362](https://github.com/vtexdocs/devportal/commit/45c936211ea0174597ccb4c9d0410441caf8f6c9))
+
+
+### Docs
+
+* adding subscriptions v2 to navigation ([3d47f2a](https://github.com/vtexdocs/devportal/commit/3d47f2a3d2acb8c569cb8c44b045c1b1419212f3))
+* **fix navigation:** adding  subscriptions v2 to navigation ([c7349fd](https://github.com/vtexdocs/devportal/commit/c7349fda24b377d18fc0ef446defe455c1db689e))
+
+## [1.2.0](https://github.com/vtexdocs/devportal/compare/v1.1.0...v1.2.0) (2023-02-01)
+
+
+### Features
+
+* **markdown-renderer:** add CodeBlock and CopyButton components ([433340a](https://github.com/vtexdocs/devportal/commit/433340a3ec4e28428c8df62e9dd07de8a2052822))
+
+
+### Bug Fixes
+
+* **code-block:** remove console.log and add aria label to copybutton ([03394d3](https://github.com/vtexdocs/devportal/commit/03394d3ac0be0bf793381e95ac2cacf961ba0250))
+
+
+### Style
+
+* **codeblock:** update code styles - font and copy button ([f8c7cc9](https://github.com/vtexdocs/devportal/commit/f8c7cc9bea9b45b2a151d20f9e2762f3c93fef29))
+
+## [1.1.0](https://github.com/vtexdocs/devportal/compare/v1.0.4...v1.1.0) (2023-02-01)
+
+
+### Features
+
+* **search:** add search bar and filter tabs to the first three breakpoints of the search page ([013e354](https://github.com/vtexdocs/devportal/commit/013e3547840d40112b1f8aa81f341c27af6d9d0b))
+* **see-also-section:** improve the See Also Section component ([b28932a](https://github.com/vtexdocs/devportal/commit/b28932aae237f2b3214553fcbd38c456267678a9))
+* **see-also-section:** support api reference links ([e467e76](https://github.com/vtexdocs/devportal/commit/e467e7611b1da520c71ea7eeaacc2f9f9b6e16ab))
+
+
+### Bug Fixes
+
+* **search-bar:** fix search bar sizes and position ([5164dab](https://github.com/vtexdocs/devportal/commit/5164dab0920dbe9b41acc40e406ea8b704c26422))
+* **search:** hide some components in smaller breakpoints ([0167f81](https://github.com/vtexdocs/devportal/commit/0167f81c8491969a7adc933f0e8916ad5a5e7ff5))
+
+
+### Docs
+
+* **navigation:** fix marketplace api slugs ([61b4f16](https://github.com/vtexdocs/devportal/commit/61b4f1625b602f44d24448c856cddf58e347854c))
+* **navigation:** fix reference paths ([eceb0fd](https://github.com/vtexdocs/devportal/commit/eceb0fda6df4a12d6eb5ae02e344979d14492add))
+* **navigation:** fix slugs ([764ebe4](https://github.com/vtexdocs/devportal/commit/764ebe44bf76c359bd814c3eeb769b083e4d7ae9))
+
+
+### Build
+
+* **package:** update rapidoc version ([272641a](https://github.com/vtexdocs/devportal/commit/272641a7bd8f7eb26de3e742f48ac7bd6af37f78))
+* **package:** update rapidoc version ([7b3aab3](https://github.com/vtexdocs/devportal/commit/7b3aab3db55c5d2b1ff8df63027d2f39e3554651))
+* **package:** update rapidoc version ([b19bd49](https://github.com/vtexdocs/devportal/commit/b19bd497375c0892239cd06ec254b25db0c712e8))
+
+
+### Chore
+
+* **navigation:** update navigation file and copy of the app development page ([337f3cf](https://github.com/vtexdocs/devportal/commit/337f3cf77d614ab7bffd49e4f43583be0e648884))
+
 ### [1.0.4](https://github.com/vtexdocs/devportal/compare/v1.0.3...v1.0.4) (2023-01-31)
 
 
