@@ -22,11 +22,19 @@ export const getKeyByValue = (
   return Object.keys(object).find((key) => object[key] === value)
 }
 
+export const getKeysByValue = (
+  object: { [x: string]: string },
+  value: string
+) => {
+  return Object.keys(object).filter((key) => object[key] === value)
+}
+
 export const getParents = (
   path: string,
   data: string,
   flattenedSidebar: { [x: string]: string },
-  parentsArray: string[]
+  parentsArray: string[],
+  parent?: string
 ) => {
   const pathParts = path?.split('children')
   pathParts?.splice(-1)
@@ -34,7 +42,10 @@ export const getParents = (
   pathParts?.map((el) => {
     el = prev + el
     prev = el + 'children'
-    parentsArray.push(flattenedSidebar[`${el}${data}`])
+
+    if (!parent || flattenedSidebar[`${el}${data}`].includes(parent)) {
+      parentsArray.push(flattenedSidebar[`${el}${data}`])
+    }
   })
   return parentsArray
 }
