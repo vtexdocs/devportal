@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.5](https://github.com/vtexdocs/devportal/compare/v1.9.4...v1.9.5) (2023-03-20)
+
+
+### Bug Fixes
+
+* **sidebar:** check the parent to expand the correct endpoint ([d58bbd6](https://github.com/vtexdocs/devportal/commit/d58bbd662771ff5016744d96397d04bc547979b6))
+
+
+### Docs
+
+* create redirect for catalog api ref ([62d863b](https://github.com/vtexdocs/devportal/commit/62d863b1244ab7a828b87970793c7508453c3ec5))
+* **navigation:** fix position of catalog guide ([843b4d2](https://github.com/vtexdocs/devportal/commit/843b4d2c8caa08e5d8f6823d6461ffc3952f4c7c))
+
 ### [1.9.4](https://github.com/vtexdocs/devportal/compare/v1.9.3...v1.9.4) (2023-03-17)
 
 
