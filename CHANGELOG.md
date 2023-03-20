@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.6](https://github.com/vtexdocs/devportal/compare/v1.9.5...v1.9.6) (2023-03-20)
+
+
+### Chore
+
+* **deps:** bump ansi-regex from 3.0.0 to 3.0.1 ([d923de3](https://github.com/vtexdocs/devportal/commit/d923de3e80cfd5cab9ec26e692a399404240e811))
+
+
+### Build
+
+* **deps:** bump jsonwebtoken and universal-github-app-jwt ([b423c97](https://github.com/vtexdocs/devportal/commit/b423c97d7cb512beab1ce20628328b17075571e0))
+* **deps:** bump loader-utils from 2.0.2 to 2.0.4 ([998fcc8](https://github.com/vtexdocs/devportal/commit/998fcc8691135809d6514245a9eded80c2ec2258))
+* **deps:** bump luxon from 1.28.0 to 1.28.1 ([c5ccd33](https://github.com/vtexdocs/devportal/commit/c5ccd337f4a0753e3760fea1cd12eac73af6db87))
+* **deps:** bump node-fetch from 3.2.6 to 3.2.10 ([70f4a64](https://github.com/vtexdocs/devportal/commit/70f4a64ee554a09b3a529578eea0dd43b2f4d517))
+* **deps:** bump webpack from 5.74.0 to 5.76.2 ([a54c142](https://github.com/vtexdocs/devportal/commit/a54c142be6ffcdd386745bb598ddf5032b389947))
+
 ### [1.9.5](https://github.com/vtexdocs/devportal/compare/v1.9.4...v1.9.5) (2023-03-20)
 
 
