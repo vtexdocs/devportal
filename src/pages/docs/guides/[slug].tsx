@@ -94,7 +94,7 @@ const DocumentationPage: NextPage<Props> = ({
   return (
     <>
       <Head>
-        <title>{serialized.frontmatter?.title}</title>
+        <title>{serialized.frontmatter?.title as string}</title>
         <meta name="docsearch:doctype" content="Guides" />
         {serialized.frontmatter?.hidden && (
           <meta name="robots" content="noindex" />
@@ -102,7 +102,7 @@ const DocumentationPage: NextPage<Props> = ({
         {serialized.frontmatter?.excerpt && (
           <meta
             property="og:description"
-            content={serialized.frontmatter?.excerpt}
+            content={serialized.frontmatter?.excerpt as string}
           />
         )}
       </Head>
@@ -266,10 +266,10 @@ export const getStaticProps: GetStaticProps = async ({
             seeAlsoData.push({
               url: seeAlsoUrl,
               title: serialized.frontmatter?.title
-                ? serialized.frontmatter.title
+                ? (serialized.frontmatter.title as string)
                 : seeAlsoUrl.split('/')[3],
               category: serialized.frontmatter?.category
-                ? serialized.frontmatter.category
+                ? (serialized.frontmatter.category as string)
                 : seeAlsoUrl.split('/')[2],
             })
           } catch (error) {}

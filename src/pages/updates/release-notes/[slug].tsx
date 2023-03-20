@@ -82,7 +82,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
   return (
     <>
       <Head>
-        <title>{serialized.frontmatter?.title}</title>
+        <title>{serialized.frontmatter?.title as string}</title>
         <meta name="docsearch:doctype" content="Release Notes" />
       </Head>
       <APIGuideContextProvider headings={headings}>
@@ -100,7 +100,9 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
                   {serialized.frontmatter?.title}
                 </Text>
                 <Text sx={{ marginTop: '10px' }}>
-                  {getReleaseDate(serialized.frontmatter?.createdAt || '')}
+                  {getReleaseDate(
+                    (serialized.frontmatter?.createdAt as string) || ''
+                  )}
                 </Text>
                 <Box sx={styles.divider}></Box>
                 <MarkdownRenderer serialized={serialized} />
