@@ -6,12 +6,21 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Waiting for pages to change
+        uses: fountainhead/action-wait-for-check@v1.1.0
+        id: wait-for-pages-changed
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          checkName: 'Pages changed - elated-hoover-5c29bf'
+          timeoutSeconds: 3600
       - name: Waiting for 200 from the Netlify Preview
+        if: steps.wait-for-pages-changed.outputs.conclusion == 'neutral'
         uses: jakepartusch/wait-for-netlify-action@v1.4
         id: wait-for-netflify-preview
         with:
           site_name: 'elated-hoover-5c29bf'
-          max_timeout: 1800
+          max_timeout: 3600
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
       - name: Fetch navigation.json

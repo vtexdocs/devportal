@@ -23,7 +23,7 @@ async function getFrontmatter(releaseContent: string) {
       format: 'mdx',
     },
   })
-  return response.frontmatter
+  return response.frontmatter as Record<string, string>
 }
 
 export default async function getReleasesData(branch = 'main') {
