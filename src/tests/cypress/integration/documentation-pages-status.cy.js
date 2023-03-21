@@ -3,6 +3,18 @@
 import navigation from '../fixtures/navigation.json'
 
 describe('Status of documentation pages', () => {
+  before(() => {
+    cy.writeFile('cypress.log', `#Status of documentation pages#\n`, {
+      flag: 'a+',
+    })
+  })
+
+  afterEach(function () {
+    if (this.currentTest.state === 'failed') {
+      writeLog(this.currentTest.title)
+    }
+  })
+
   const visitDocumentationPages = (slugPrefix) => {
     const visitPages = ({ slug, type, children }) => {
       const page = `${slugPrefix}/${slug}`

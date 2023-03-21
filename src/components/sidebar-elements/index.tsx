@@ -209,7 +209,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   }
 
   return (
-    <Box>
+    <Box className="sidebar-component">
       {items?.map((item, index) => {
         const key = String(item.slug) + String(index)
         const slug = `${item.slug}`

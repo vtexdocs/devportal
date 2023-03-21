@@ -34,7 +34,7 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
   const urlToEdit = `https://github.com/vtexdocs/dev-portal-content/edit/main/${docPath}`
 
   return (
-    <Flex sx={styles.container}>
+    <Flex sx={styles.container} data-cy="feedback-section">
       <Text sx={styles.question}>
         {feedback !== undefined
           ? messages['feedback_section.response']
@@ -45,6 +45,7 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
           ref={likeButton}
           sx={setButtonStyle(feedback, modalState, true)}
           onClick={feedback === undefined ? () => openModal(true) : null}
+          data-cy="feedback-section-like"
         >
           {feedback === undefined || !feedback ? (
             <LikeIcon size={24} sx={styles.likeIcon} />

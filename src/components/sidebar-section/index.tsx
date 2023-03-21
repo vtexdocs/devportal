@@ -154,6 +154,7 @@ const SidebarSection = ({
       <Box
         className={sidebarSectionHidden ? 'sidebarHide' : ''}
         sx={styles.sidebarContainerBox}
+        data-cy="sidebar-section"
       >
         <Box sx={styles.sidebarContainerHeader}>
           {isEditorPreview && (

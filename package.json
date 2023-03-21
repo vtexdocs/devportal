@@ -76,6 +76,7 @@
     "@typescript-eslint/parser": "^5.14.0",
     "@vtex/prettier-config": "^1.0.0",
     "@vtex/tsconfig": "^0.6.0",
+    "clipboardy": "^3.0.0",
     "cypress": "12.5.1",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.32.0",
