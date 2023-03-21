@@ -32,9 +32,12 @@ jobs:
         env:
           CYPRESS_baseUrl: ${{ steps.wait-for-netflify-preview.outputs.url }}
       - name: Generate summary report
+        if: always()
         run: |
-          node src/tests/summary-report.js > src/tests/summary.md
-          rm cypress.log
+          if [[ -f "./cypress.log" ]]; then
+            node src/tests/summary-report.js > src/tests/summary.md
+            rm cypress.log
+          fi
       - name: Comment PR with summary report
         uses: thollander/actions-comment-pull-request@v2
         with:
