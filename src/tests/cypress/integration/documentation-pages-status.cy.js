@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 import navigation from '../fixtures/navigation.json'
+import { writeLog } from '../support/functions'
 
 describe('Status of documentation pages', () => {
   before(() => {
