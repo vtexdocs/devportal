@@ -5,6 +5,7 @@ import {
   SetStateAction,
   useEffect,
   useRef,
+  useState,
 } from 'react'
 import { getMessages } from 'utils/get-messages'
 import useClickOutside from 'utils/hooks/useClickOutside'
@@ -42,14 +43,17 @@ const FeedBackModal = ({
   changeModalState,
   changeFeedBack,
   chosenButtonRef,
+  onSubmit,
 }: {
   modalState: ModalProps
   changeModalState: Dispatch<SetStateAction<ModalProps>>
   changeFeedBack: Dispatch<SetStateAction<boolean | undefined>>
   chosenButtonRef: MutableRefObject<HTMLElement | undefined>
+  onSubmit: (comment: string) => Promise<void>
 }) => {
   const cardRef = useRef<HTMLDivElement>()
   const { body, documentElement } = document
+  const [comment, setComment] = useState('')
 
   const closeModal = () => {
     const feedback = modalState?.liked
@@ -61,6 +65,11 @@ const FeedBackModal = ({
 
     changeModalState({ modalOpen: false })
     changeFeedBack(feedback)
+  }
+
+  const handleClick = async () => {
+    await onSubmit(comment)
+    closeModal()
   }
 
   useEffect(() => {
@@ -88,9 +97,11 @@ const FeedBackModal = ({
             sx={styles.textarea}
             label=""
             rows={7}
+            value={comment}
+            onChange={(e) => setComment(e.currentTarget.value)}
           />
           <Button
-            onClick={() => closeModal()}
+            onClick={async () => await handleClick()}
             sx={styles.button}
             variant="secondary"
           >

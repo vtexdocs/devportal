@@ -31,6 +31,22 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
     })
   }
 
+  const sendFeedback = async (comment: string) => {
+    const feedback = {
+      data: [
+        new Date().toISOString(),
+        `https://developers.vtex.com/${docPath}`,
+        modalState.liked ? 'positive' : 'negative',
+        comment,
+      ],
+    }
+
+    await fetch('/api/feedback/', {
+      method: 'POST',
+      body: JSON.stringify(feedback),
+    })
+  }
+
   const urlToEdit = `https://github.com/vtexdocs/dev-portal-content/edit/main/${docPath}`
 
   return (
@@ -84,6 +100,7 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
           changeModalState={changeModalState}
           modalState={modalState}
           chosenButtonRef={modalState.liked ? likeButton : dislikeButton}
+          onSubmit={(comment) => sendFeedback(comment)}
         />
       ) : null}
     </Flex>
