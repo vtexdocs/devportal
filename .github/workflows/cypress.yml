@@ -31,3 +31,13 @@ jobs:
         uses: cypress-io/github-action@v5
         env:
           CYPRESS_baseUrl: ${{ steps.wait-for-netflify-preview.outputs.url }}
+      - name: Generate summary report
+        run: |
+          node src/tests/summary-report.js > src/tests/summary.md
+          rm cypress.log
+      - name: Comment PR with summary report
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          comment_tag: tests-summary
+          filePath: src/tests/summary.md
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
