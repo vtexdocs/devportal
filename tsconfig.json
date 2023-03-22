@@ -10,7 +10,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": "src",
-    "lib": ["ES2021.String"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true
