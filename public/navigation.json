@@ -9498,7 +9498,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/app_name-/v-app_version-/-account-/-workspace-/notify",
+                  "endpoint": "/-app_name-/v-app_version-/-account-/-workspace-/notify",
                   "children": []
                 }
               ]
