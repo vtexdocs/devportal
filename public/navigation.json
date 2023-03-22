@@ -9482,6 +9482,46 @@
           ]
         },
         {
+          "name": "VTEX Shipping Network API",
+          "slug": "shipping-network",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Notification",
+              "slug": "shipping-network-notification",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Notify Carrier with App",
+                  "slug": "notify-carrier-with-app",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-app_name-/v-app_version-/-account-/-workspace-/notify",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Tracking",
+              "slug": "shipping-network-tracking",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Tracking Events with App",
+                  "slug": "tracking",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-app_name-/v-app_version-/-account-/-workspace-/tracking",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "VTEX Tracking APIs",
           "slug": "tracking",
           "origin": "",
