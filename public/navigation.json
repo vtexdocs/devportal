@@ -9489,12 +9489,12 @@
           "children": [
             {
               "name": "Notification",
-              "slug": "shipping-network-notification",
+              "slug": "vtex-shipping-network-api-notification",
               "type": "category",
               "children": [
                 {
                   "name": "Notify Carrier with App",
-                  "slug": "notify-carrier-with-app",
+                  "slug": "vtex-shipping-network-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -9505,12 +9505,12 @@
             },
             {
               "name": "Tracking",
-              "slug": "shipping-network-tracking",
+              "slug": "vtex-shipping-network-api-tracking",
               "type": "category",
               "children": [
                 {
                   "name": "Tracking Events with App",
-                  "slug": "tracking",
+                  "slug": "vtex-shipping-network-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
