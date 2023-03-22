@@ -9483,7 +9483,7 @@
         },
         {
           "name": "VTEX Shipping Network API",
-          "slug": "shipping-network-api",
+          "slug": "vtex-shipping-network-api",
           "origin": "",
           "type": "openapi",
           "children": [
