@@ -9498,7 +9498,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-app-name-/v-app-version-/-account-/-workspace-/notify",
+                  "endpoint": "/app_name-/v-app_version-/-account-/-workspace-/notify",
                   "children": []
                 }
               ]
@@ -9514,7 +9514,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-app-name-/v-app-version-/-account-/-workspace-/tracking",
+                  "endpoint": "/-app_name-/v-app_version-/-account-/-workspace-/tracking",
                   "children": []
                 }
               ]
