@@ -11248,7 +11248,7 @@
             },
             {
               "name": "Checkout UI Custom",
-              "slug": "apps/vtex.checkout-ui-custom-v0",
+              "slug": "apps/vtex.checkout-ui-custom",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -13866,20 +13866,6 @@
                 {
                   "name": "Preparing for enhanced monitoring of app installations and updates",
                   "slug": "preparing-for-enhanced-monitoring-of-app-installations-and-updates",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Facebook Domain Verification app",
-                  "slug": "facebook-domain-verification-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Facebook Domain Verification app",
-                  "slug": "facebook-domain-verification-app",
                   "origin": "",
                   "type": "markdown",
                   "children": []
