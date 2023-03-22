@@ -52,6 +52,7 @@ const referencePaths = objectFlip({
   'VTEX - Tracking': 'tracking',
   'VTEX - VTEX Do API': 'vtex-do-api',
   'VTEX - VTEX ID API': 'vtex-id-api',
+  'VTEX - VTEX Shipping Network API': 'vtex-shipping-network-api',
 })
 
 function objectFlip(obj: { [x: string]: string }) {
