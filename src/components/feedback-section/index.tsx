@@ -2,7 +2,7 @@ import { Flex, Text, Link } from '@vtex/brand-ui'
 import EditIcon from 'components/icons/edit-icon'
 import LikeIcon from 'components/icons/like-icon'
 import LikeSelectedIcon from 'components/icons/like-selected-icon'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { getMessages } from 'utils/get-messages'
 import { setButtonStyle } from './functions'
 import FeedbackModal, { ModalProps } from 'components/feedback-modal'
@@ -23,6 +23,11 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
   })
   const likeButton = useRef<HTMLElement>()
   const dislikeButton = useRef<HTMLElement>()
+
+  useEffect(() => {
+    changeModalState({ modalOpen: false })
+    changeFeedback(undefined)
+  }, [docPath])
 
   const openModal = (choice: boolean) => {
     changeModalState({
