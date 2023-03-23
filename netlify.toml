@@ -5,365 +5,365 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 [[redirects]]
 force = true
 from = "/vtex-rest-api/docs/:slug"
-status = 304
+status = 308
 to = "/docs/guides/:slug"
 
 [[redirects]]
 force = true
 from = "/vtex-rest-api/docs"
-status = 304
+status = 308
 to = "/docs/guides"
 
 [[redirects]]
 force = true
 from = "/vtex-developer-docs/docs/:slug"
-status = 304
+status = 308
 to = "/docs/guides/:slug"
 
 [[redirects]]
 force = true
 from = "/vtex-developer-docs/docs"
-status = 304
+status = 308
 to = "/docs/guides"
 
 [[redirects]]
 force = true
 from = "/vtex-developer-docs/docs/:slug"
-status = 304
+status = 308
 to = "/docs/guides/:slug"
 
 [[redirects]]
 force = true
 from = "/vtex-developer-docs/v2.3/docs/:slug"
-status = 304
+status = 308
 to = "/docs/guides/:slug"
 
 [[redirects]]
 force = true
 from = "/vtex-developer-docs/changelog/:slug"
-status = 304
+status = 308
 to = "/updates/release-notes/:slug"
 
 [[redirects]]
 force = true
 from = "/vtex-developer-docs/changelog"
-status = 304
+status = 308
 to = "/updates/release-notes"
 
 [[redirects]]
 force = true
 from = "/docs/api-guides/:slug*"
-status = 304
+status = 308
 to = "/docs/guides/:slug*"
 
 [[redirects]]
 force = true
 from = '/vtex-rest-api/reference/payment-provider-protocol-api-overview'
-status = 304
+status = 308
 to = '/docs/guides/payment-provider-protocol-api-overview'
 
 [[redirects]]
 force = true
 from = '/vtex-rest-api/reference/invoice'
-status = 304
+status = 308
 to = '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice'
 
 [[redirects]]
 force = true
 from = '/vtex-rest-api/reference/:slug*'
-status = 304
+status = 308
 to = '/docs/api-reference/:slug*'
 
 [[redirects]]
 force = true
 from = '/vtex-developer-docs/reference/:slug*'
-status = 304
+status = 308
 to = '/docs/api-reference/:slug*'
 
 [[redirects]]
 force = true
 from = '/vtex-rest-api/reference'
-status = 304
+status = 308
 to = '/docs/api-reference'
 
 [[redirects]]
 force = true
 from = '/vtex-developer-docs/reference'
-status = 304
+status = 308
 to = '/docs/api-reference'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/test-jsonata-expression'
-status = 304
+status = 308
 to = '/docs/api-reference/orders-api#post-/api/orders/expressions/jsonata'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/catalog-api-product'
-status = 304
+status = 308
 to = '/docs/api-reference/catalog-api'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/orders#registerchange'
-status = 304
+status = 308
 to = '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes'
 
 [[redirects]]
 force = true
 from = '/docs/erp-integration-set-up-order-processing'
-status = 304
+status = 308
 to = '/docs/guides/erp-integration-set-up-order-processing'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/feed-v3'
-status = 304
+status = 308
 to = '/docs/guides/orders-feed'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/checkout-api-overview'
-status = 304
+status = 308
 to = '/docs/guides/checkout-overview'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/master-data-api-v2-overview'
-status = 304
+status = 308
 to = '/docs/api-reference/master-data-api-v2#overview'
 
 [[redirects]]
 force = true
 from = '/docs/guides/feed-v3-1'
-status = 304
+status = 308
 to = '/docs/guides/orders-feed'
 
 [[redirects]]
 force = true
 from = '/docs/guides/integrating-external-orders-via-api-to-be-used-with-vtex-tracking'
-status = 304
+status = 308
 to = '/docs/guides/integrate-external-orders-vtex-tracking'
 
 [[redirects]]
 force = true
 from = '/docs/guides/creating-customizable-fields-in-the-cart-with-checkout-api-1'
-status = 304
+status = 308
 to = '/docs/guides/customizable-fields-with-checkout-api'
 
 [[redirects]]
 force = true
 from = '/docs/guides/fetching-marketplace-payment-method-data-with-the-orders-api'
-status = 304
+status = 308
 to = '/docs/guides/get-marketplace-data-orders-api'
 
 [[redirects]]
 force = true
 from = '/docs/guides/fetching-payment-data-from-a-mercado-libre-order-with-orders-api'
-status = 304
+status = 308
 to = '/docs/guides/get-payment-data-mercado-libre-orders-api'
 
 [[redirects]]
 force = true
 from = '/docs/guides/orders-feed-guide'
-status = 304
+status = 308
 to = '/docs/guides/orders-feed'
 
 [[redirects]]
 force = true
 from = '/docs/guides/vtex-google-tag-manager'
-status = 304
+status = 308
 to = '/docs/guides/google-tag-manager'
 
 [[redirects]]
 force = true
 from = '/docs/guides/vtex-kitlook'
-status = 304
+status = 308
 to = '/docs/guides/vtexbr-kitlook'
 
 [[redirects]]
 force = true
 from = '/docs/guides/carriers-1'
-status = 304
+status = 308
 to = '/docs/guides/vtex-shipping-network'
 
 [[redirects]]
 force = true
 from = '/docs/guides/managing-application-logs'
-status = 304
+status = 308
 to = '/docs/guides/vtex-io-documentation-managing-application-logs'
 
 [[redirects]]
 force = true
 from = '/docs/guides/external-marketplace-integration-order-logs'
-status = 304
+status = 308
 to = '/docs/guides/external-marketplace-integration-collect-orders'
 
 [[redirects]]
 force = true
 from = '/docs/guides/migrating-storefront-from-legacy-to-io'
-status = 304
+status = 308
 to = '/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io'
 
 [[redirects]]
 force = true
 from = '/docs/guides/setting-up-an-ab-test-with-master-data-v2-trigger'
-status = 304
+status = 308
 to = '/docs/guides/trigger-ab-test'
 
 [[redirects]]
 force = true
 from = '/docs/guides/adaptations-and-limitations'
-status = 304
+status = 308
 to = '/docs/guides/changes-and-limitations-pii-platform-version'
 
 [[redirects]]
 force = true
 from = '/docs/guides/data-privacy'
-status = 304
+status = 308
 to = '/docs/guides/pii-platform-version'
 
 [[redirects]]
 force = true
 from = '/docs/guides/changes-and-limitations-pii-compliant-account'
-status = 304
+status = 308
 to = '/docs/guides/changes-and-limitations-pii-platform-version'
 
 [[redirects]]
 force = true
 from = '/docs/guides/pii-compliant-accounts'
-status = 304
+status = 308
 to = '/docs/guides/pii-platform-version'
 
 [[redirects]]
 force = true
 from = '/docs/guides/getting-started-making-your-first-request'
-status = 304
+status = 308
 to = '/docs/guides/making-your-first-request'
 
 [[redirects]]
 force = true
 from = '/docs/guides/getting-started-authentication'
-status = 304
+status = 308
 to = '/docs/guides/authentication-overview'
 
 [[redirects]]
 force = true
 from = '/docs/guides/create-a-category'
-status = 304
+status = 308
 to = '/docs/guides/categories'
 
 [[redirects]]
 force = true
 from = '/docs/guides/create-a-brand'
-status = 304
+status = 308
 to = '/docs/guides/brands'
 
 [[redirects]]
 force = true
 from = '/docs/guides/how-to-create-a-specification'
-status = 304
+status = 308
 to = '/docs/guides/specifications'
 
 [[redirects]]
 force = true
 from = '/docs/guides/how-to-activate-an-sku'
-status = 304
+status = 308
 to = '/docs/guides/skus'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orderForms/simulation'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-sellerOrderId-/fulfill'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-sellerOrderId-/fulfill'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orders/-orderId-/cancel'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orders/-orderId-/cancel'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/invoice/-invoiceNumber-/tracking'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-marketplaceServicesEndpoint-/pvt/orders/-marketplaceOrderId-/cancel'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol#post-/pvt/orders/-marketplaceOrderId-/cancel'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/portal.vtexcommercestable.com.br/api/mkp-category-mapper/connector/register'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/connector/register'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/portal.vtexcommercestable.com.br/api/mkp-category-mapper/categories/marketplace/-id-'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-marketplace-mapper#post-/api/mkp-category-mapper/categories/marketplace/-id-'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-accountName-.-environment-.com.br/api/fulfillment/pvt/orders/-orderId-/fulfill'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/fulfillment/pvt/orders/-orderId-/fulfill'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-accountName-.vtexcommercestable.com.br/api/order-integration/orders'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-accountName-.vtexcommercestable.com.br/api/order-integration/orders/status'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/order-integration/orders/status'
 
 [[redirects]]
 force = true
 from = '/docs/api-reference/marketplace-protocol#post-/api/checkout/pub/orderForms/simulation'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/checkout/pub/orderForms/simulation'
 
 [[redirects]]
 force = true
 from = '/docs/guides/marketplace-api'
-status = 304
+status = 308
 to = '/docs/api-reference/marketplace-apis'
