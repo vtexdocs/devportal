@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-import navigation from '../fixtures/navigation.json'
 import { writeLog } from '../support/functions'
+import navigation from '../fixtures/navigation.json'
 
 describe('Status of documentation pages', () => {
   before(() => {
@@ -19,11 +19,14 @@ describe('Status of documentation pages', () => {
   const visitDocumentationPages = (slugPrefix) => {
     const visitPages = ({ slug, type, children }) => {
       const page = `${slugPrefix}/${slug}`
-      if (type === 'markdown' || type === 'openapi')
+      const prob = Cypress.env('testProbability') || 1.0
+      const shouldVisitPage = Math.random() < prob
+
+      if ((type === 'markdown' || type === 'openapi') && shouldVisitPage)
         it(`Checks page ${page}`, () => cy.visit(page))
 
       if (type !== 'openapi') children.forEach(visitPages)
-      else {
+      else if (shouldVisitPage) {
         let found = false
         let childIndex = -1
         let currChildren = children

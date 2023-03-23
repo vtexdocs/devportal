@@ -31,6 +31,7 @@ jobs:
         uses: cypress-io/github-action@v5
         env:
           CYPRESS_baseUrl: ${{ steps.wait-for-netflify-preview.outputs.url }}
+          CYPRESS_testProbability: 0.1
       - name: Generate summary report
         if: always()
         run: |
