@@ -1,5 +1,6 @@
 import { Compute, JWT, UserRefreshClient } from 'google-auth-library'
 import { google } from 'googleapis'
+import { getVariable } from 'utils/get-variables'
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
@@ -10,7 +11,7 @@ function writeData(auth: Compute | JWT | UserRefreshClient, data: string[]) {
 
   sheets.spreadsheets.values.append(
     {
-      spreadsheetId: process.env.SPREADSHEET_ID,
+      spreadsheetId: getVariable('SPREADSHEET_ID'),
       range: 'Sheet1!A1:A5',
       valueInputOption: 'RAW',
       requestBody: { values },
@@ -30,9 +31,9 @@ function writeData(auth: Compute | JWT | UserRefreshClient, data: string[]) {
 
 async function getAuth() {
   const jwt = new google.auth.JWT(
-    process.env.GOOGLE_SHEETS_CLIENT_EMAIL,
+    getVariable('GOOGLE_SHEETS_CLIENT_EMAIL'),
     undefined,
-    (process.env.GOOGLE_SHEETS_PRIVATE_KEY || '').replace(/\\n/g, '\n'),
+    (getVariable('GOOGLE_SHEETS_PRIVATE_KEY') || '').replace(/\\n/g, '\n'),
     SCOPES
   )
 
