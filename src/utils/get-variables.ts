@@ -6,7 +6,6 @@ let secrets: { [key: string]: string } | undefined = undefined
 
 const getSecrets = () => {
   if (!secrets) {
-    console.log('leu arquivo')
     let data = fs.readFileSync(SECRETS_PATH, 'utf-8')
     data = decrypt(data)
     try {
