@@ -78,8 +78,8 @@ const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
         theme="light"
         bg-color="#FFFFFF"
         primary-color="#142032"
-        regular-font="VTEX Trust Variable"
-        mono-font="VTEX Trust Variable"
+        regular-font="VTEX Trust Regular"
+        mono-font="Consolas,monaco,monospace"
         medium-font="VTEX Trust Medium"
         load-fonts={false}
         schema-style="table"
