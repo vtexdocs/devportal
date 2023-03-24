@@ -1,12 +1,16 @@
 import crypto from 'crypto'
 import fs from 'fs'
+import path from 'path'
 
-const SECRETS_PATH = 'sheets-secrets'
+const SECRETS_PATH = './sheets-secrets'
 let secrets: { [key: string]: string } | undefined = undefined
 
 const getSecrets = () => {
   if (!secrets) {
-    let data = fs.readFileSync(SECRETS_PATH, 'utf-8')
+    let data = fs.readFileSync(
+      path.resolve(process.cwd(), SECRETS_PATH),
+      'utf-8'
+    )
     data = decrypt(data)
     try {
       secrets = JSON.parse(data)
