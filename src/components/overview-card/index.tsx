@@ -73,6 +73,54 @@ const IconsMap: IconsI[] = [
     name: 'FileConfiguration',
     Icon: Icons.FileConfiguration,
   },
+  {
+    name: 'Platform',
+    Icon: Icons.Platform,
+  },
+  {
+    name: 'RestApis',
+    Icon: Icons.RestApis,
+  },
+  {
+    name: 'Catalog',
+    Icon: Icons.Catalog,
+  },
+  {
+    name: 'Orders',
+    Icon: Icons.Orders,
+  },
+  {
+    name: 'Checkout',
+    Icon: Icons.Checkout,
+  },
+  {
+    name: 'Payments',
+    Icon: Icons.Payments,
+  },
+  {
+    name: 'Promotions',
+    Icon: Icons.Promotions,
+  },
+  {
+    name: 'Pricing',
+    Icon: Icons.Pricing,
+  },
+  {
+    name: 'AccountManagement',
+    Icon: Icons.AccountManagement,
+  },
+  {
+    name: 'StoreSearch',
+    Icon: Icons.StoreSearch,
+  },
+  {
+    name: 'Subscriptions',
+    Icon: Icons.Subscriptions,
+  },
+  {
+    name: 'Fulfillment',
+    Icon: Icons.Fulfillment,
+  },
 ]
 
 const getIcon = (name: string) => {
