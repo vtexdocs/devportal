@@ -117,6 +117,10 @@ const IconsMap: IconsI[] = [
     name: 'Subscriptions',
     Icon: Icons.Subscriptions,
   },
+  {
+    name: 'Fulfillment',
+    Icon: Icons.Fulfillment,
+  },
 ]
 
 const getIcon = (name: string) => {
