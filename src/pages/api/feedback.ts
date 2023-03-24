@@ -45,13 +45,12 @@ export default async function handler(req: any, res: any) {
   let data: string[] = []
   try {
     data = JSON.parse(req.body).data
+    const auth = await getAuth()
+    const { error, response } = writeData(auth, data)
+
+    if (error) res.status(400).json(error)
+    else res.status(200).json(response)
   } catch (err) {
     res.status(400).json(err)
   }
-
-  const auth = await getAuth()
-  const { error, response } = writeData(auth, data)
-
-  if (error) res.status(400).json(error)
-  else res.status(200).json(response)
 }
