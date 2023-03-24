@@ -110,8 +110,12 @@ const IconsMap: IconsI[] = [
     Icon: Icons.AccountManagement,
   },
   {
-    name: 'SearchStore',
-    Icon: Icons.SearchStore,
+    name: 'StoreSearch',
+    Icon: Icons.StoreSearch,
+  },
+  {
+    name: 'Subscriptions',
+    Icon: Icons.Subscriptions,
   },
 ]
 
