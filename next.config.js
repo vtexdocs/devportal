@@ -1,6 +1,11 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('next').NextConfig} */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { withPlaiceholder } = require('@plaiceholder/next')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  //disable-eslint-line
+  enabled: process.env.ANALYZE === 'true',
+})
+const TerserPlugin = require('terser-webpack-plugin')
 
 const nextConfig = {
   experimental: {
@@ -22,6 +27,12 @@ const nextConfig = {
     config.experiments = { ...config.experiments, ...{ topLevelAwait: true } }
     // this will just update topLevelAwait property of config.experiments
     // config.experiments.topLevelAwait = true
+    config.mode = 'production'
+    config.optimization = {
+      usedExports: true,
+      minimize: true,
+      minimizer: [new TerserPlugin()],
+    }
     config.module.rules.push({
       test: /\.pem/,
       use: [
@@ -49,4 +60,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withPlaiceholder(nextConfig)
+module.exports = withBundleAnalyzer(withPlaiceholder(nextConfig))
