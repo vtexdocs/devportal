@@ -9994,6 +9994,13 @@
                   "children": []
                 },
                 {
+                  "name": "Service path patterns",
+                  "slug": "service-path-patterns",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Managing Clients",
                   "slug": "vtex-io-documentation-how-to-create-and-use-clients",
                   "origin": "",
