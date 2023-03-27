@@ -274,6 +274,12 @@ to = '/docs/guides/skus'
 
 [[redirects]]
 force = true
+from = '/docs/guides/how-to-add-and-handle-custom-information-in-the-order'
+status = 308
+to = '/docs/guides/add-and-handle-custom-information-in-the-order'
+
+[[redirects]]
+force = true
 from = '/docs/api-reference/marketplace-protocol#post-/-fulfillmentEndpoint-/pvt/orderForms/simulation'
 status = 308
 to = '/docs/api-reference/marketplace-protocol-external-seller-fulfillment#post-/pvt/orderForms/simulation'
