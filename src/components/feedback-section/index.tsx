@@ -12,11 +12,12 @@ import styles from './styles'
 const messages = getMessages()
 
 interface DocPath {
+  slug?: string
   docPath?: string
   suggestEdits?: boolean
 }
 
-const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
+const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
   const [feedback, changeFeedback] = useState<boolean>()
   const [modalState, changeModalState] = useState<ModalProps>({
     modalOpen: false,
@@ -27,7 +28,7 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
   useEffect(() => {
     changeModalState({ modalOpen: false })
     changeFeedback(undefined)
-  }, [docPath])
+  }, [slug])
 
   const openModal = (choice: boolean) => {
     changeModalState({
@@ -40,7 +41,7 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
     const feedback = {
       data: [
         new Date().toISOString(),
-        `https://developers.vtex.com/${docPath}`,
+        `https://developers.vtex.com/docs/guides/${slug}`,
         modalState.liked ? 'positive' : 'negative',
         comment,
       ],
