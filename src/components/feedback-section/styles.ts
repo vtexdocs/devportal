@@ -66,7 +66,11 @@ const box: SxStyleProp = {
 const editContainer: SxStyleProp = {
   ...box,
   ...button,
+  ':hover': {
+    color: '#000711 !important',
+  },
   ml: ['0', 'auto'],
+  color: '#4A596B !important',
   display: 'flex',
 }
 
