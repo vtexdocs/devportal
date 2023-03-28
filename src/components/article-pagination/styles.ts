@@ -9,8 +9,8 @@ const mainContainer: SxStyleProp = {
 const flexContainer: SxStyleProp = {
   fontWeight: 'bold',
   gridAutoFlow: 'column',
-  mx: ['18px', 'initial'],
-  gap: '20%',
+  px: ['18px', 'initial'],
+  gap: ['16px', '20%'],
   gridAutoColumns: '1fr',
 }
 
