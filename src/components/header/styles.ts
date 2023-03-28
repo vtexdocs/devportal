@@ -1,4 +1,5 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
+import { VtexTrustMedium } from 'utils/fonts'
 
 const menuContainer: SxStyleProp = {
   display: 'flex',
@@ -110,7 +111,7 @@ const rightButtonsText: SxStyleProp = {
   fontWeight: 'normal',
   fontSize: '16px',
   lineHeight: '22px',
-  fontFamily: 'VTEX Trust Medium !important',
+  fontFamily: `${VtexTrustMedium.style.fontFamily} !important`,
   textTransform: 'none',
 }
 

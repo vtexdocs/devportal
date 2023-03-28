@@ -28,7 +28,7 @@
     "@types/http-proxy": "^1.17.9",
     "@types/probe-image-size": "^7.2.0",
     "@types/uuid": "^9.0.0",
-    "@vtex/brand-ui": "^0.46.1",
+    "@vtex/brand-ui": "https://gitpkg.now.sh/vtexdocs/brand-ui/packages/brand-ui/dist?main",
     "algoliasearch": "^4.14.2",
     "chalk": "^5.2.0",
     "copy-text-to-clipboard": "^3.0.1",
@@ -65,7 +65,16 @@
     "unist-builder": "^3.0.1",
     "unist-util-visit": "^4.1.1",
     "use-yarn": "^2.4.0",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "@emotion/core": "^10.0.35",
+    "@react-aria/focus": "3.2.0",
+    "@theme-ui/css": "0.4.0-rc.3",
+    "deepmerge": "^4.2.2",
+    "luxon": "^1.25.0",
+    "react-swipeable": "^6.0.0",
+    "reakit": "1.2.3",
+    "theme-ui": "^0.3.1",
+    "tiny-invariant": "^1.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
