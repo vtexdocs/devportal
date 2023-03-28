@@ -110,7 +110,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "1.2.2-vtex-3-gebe511c"
+      "version": "1.2.3-vtex"
     }
   },
   "resolutions": {
