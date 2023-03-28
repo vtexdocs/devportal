@@ -4,7 +4,12 @@ import { getVariable } from 'utils/get-variables'
 
 const SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
-function writeData(auth: Compute | JWT | UserRefreshClient, data: string[]) {
+function writeData(
+  auth: Compute | JWT | UserRefreshClient,
+  data: string[],
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  res: any
+) {
   const sheets = google.sheets({ version: 'v4', auth })
   const values = [data]
   let error, response
@@ -17,12 +22,8 @@ function writeData(auth: Compute | JWT | UserRefreshClient, data: string[]) {
       requestBody: { values },
     },
     (err, result) => {
-      error = err
-      response = result
-
-      if (err) {
-        console.log(err)
-      }
+      if (err) res.status(400).json(err)
+      else res.status(200).json(result)
     }
   )
 
@@ -46,10 +47,7 @@ export default async function handler(req: any, res: any) {
   try {
     data = JSON.parse(req.body).data
     const auth = await getAuth()
-    const { error, response } = writeData(auth, data)
-
-    if (error) res.status(400).json(error)
-    else res.status(200).json(response)
+    writeData(auth, data, res)
   } catch (err) {
     res.status(400).json(err)
   }
