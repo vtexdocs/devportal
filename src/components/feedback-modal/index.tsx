@@ -68,7 +68,7 @@ const FeedBackModal = ({
   }
 
   const handleClick = async () => {
-    await onSubmit(comment)
+    onSubmit(comment)
     closeModal()
   }
 
