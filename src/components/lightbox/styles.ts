@@ -4,6 +4,8 @@ const imageContainer: SxStyleProp = {
   cursor: 'pointer',
   width: 'fit-content',
   borderRadius: '5px',
+  mt: '16px',
+  mb: '24px',
   transition: '0.3s',
   ':hover': {
     boxShadow: '2px 4px 8px 2px rgb(0 0 0 / 10%)',

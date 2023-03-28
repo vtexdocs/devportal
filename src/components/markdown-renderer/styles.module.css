@@ -33,14 +33,18 @@ table .code {
   padding: 20px;
   gap: 20px;
   width: 100%;
-  margin: 20px 0;
+  margin: 16px 0px 24px;
   border-radius: 4px;
   align-items: center;
   border: 1px solid #ccced8;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: 1fr;
 }
 
 .blockquote p{
-  margin: 0px
+  margin: 0px;
+  grid-column: 2 / -1;
+  grid-row: 1 / 1;
 }
 
 .blockquote a{
@@ -50,7 +54,6 @@ table .code {
 .blockquoteInfo {
   background: #f8f7fc;
   border: 1px solid #ccced8;
-  grid-template-columns: 20px 1fr;
 }
 
 .blockquoteInfo:before {
@@ -66,7 +69,6 @@ table .code {
 .blockquoteDanger {
   background: #fdefef;
   border: 1px solid #dc5a41;
-  grid-template-columns: 20px 1fr;
 }
 
 .blockquoteDanger:before {
@@ -82,7 +84,6 @@ table .code {
 .blockquoteWarning {
   background: #fff2d4;
   border: 1px solid #ffb100;
-  grid-template-columns: 20px 1fr;
 }
 
 .blockquoteWarning code {
@@ -106,7 +107,6 @@ table .code {
 .blockquoteSuccess {
   background: #f3f8f3;
   border: 1px solid #80be80;
-  grid-template-columns: 20px 1fr;
 }
 
 .blockquoteSuccess:before {
