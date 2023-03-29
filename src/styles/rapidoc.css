@@ -60,16 +60,6 @@ rapi-doc::part(textarea-param) {
   flex-grow: 0;
 }
 
-rapi-doc::part(btn) {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6px 16px;
-  border-radius: 4px;
-  background: #142032;
-  color: #ffffff;
-}
-
 rapi-doc::part(anchor-endpoint) {
   position: relative;
   top: -220px;
@@ -81,7 +71,7 @@ rapi-doc::part(section-operation-summary){
 }
 
 rapi-doc::part(section-overview-title){
-  padding-top: 48px;
+  padding-top: 32px;
   line-height: 38px;
 }
 

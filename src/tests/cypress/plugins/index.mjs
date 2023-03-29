@@ -32,13 +32,5 @@ export default function plugins(on, config) {
     getClipboard: () => {
       return clipboardy.readSync()
     },
-    deleteLog: () => {
-      unlink('cypress.log', (err) => {
-        if (err?.code !== 'ENOENT') {
-          console.error('Error occurred while trying to delete file')
-        }
-      })
-      return null
-    },
   })
 }
