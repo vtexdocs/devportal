@@ -2,6 +2,107 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.7](https://github.com/vtexdocs/devportal/compare/v1.9.6...v1.9.7) (2023-03-29)
+
+
+### Features
+
+* **overviewcard:** add fulfillment icon ([95de3dc](https://github.com/vtexdocs/devportal/commit/95de3dc3c3e0abc320f83f2c497e212271ab9f1b))
+* **overviewcard:** add icons to overview card - getting started doc ([a144def](https://github.com/vtexdocs/devportal/commit/a144defb71655753d2804de32bda00752ec03b95))
+* **overviewcard:** update icons ([1f5c2e8](https://github.com/vtexdocs/devportal/commit/1f5c2e8433dab24ea201659cd11c2e5e86f8c40e))
+* **previewcontext:** display name of the branch in use ([3f5bfae](https://github.com/vtexdocs/devportal/commit/3f5bfae232c9c0d4d071c4edd9f4da1df7c7df32))
+* **previewcontext:** update pages to use previewcontext ([b11740a](https://github.com/vtexdocs/devportal/commit/b11740a44232380daa310905e8fc896bedeab771))
+* **preview:** enable preview mode ([9fe11f1](https://github.com/vtexdocs/devportal/commit/9fe11f1f8d219d60351ff1b0e7762439284ecebc))
+* **preview:** only add preview cookies if branch exists ([3ccd6f4](https://github.com/vtexdocs/devportal/commit/3ccd6f4d06f23e00515d08820d01f2ac032a16d5))
+* **tests:** comment tests results summary in PR ([796767e](https://github.com/vtexdocs/devportal/commit/796767ee970b53e816db752f4c58073df1e1f41b))
+
+
+### Bug Fixes
+
+* **cypress-action:** add action for waiting for pages to update ([d86d936](https://github.com/vtexdocs/devportal/commit/d86d936617c6f9f8741befa60a021b43c181f3f6))
+* **disable-preview:** fix value declared but never used ([b7bd30e](https://github.com/vtexdocs/devportal/commit/b7bd30e68e08894bd38e0e4eb59760122cac24d4))
+* **getreleasesdata:** add missing branch param ([9dae1d9](https://github.com/vtexdocs/devportal/commit/9dae1d943332383c3eaaaf2d348bdb069fe3d88c))
+* **guides:** add missing prop ([af13536](https://github.com/vtexdocs/devportal/commit/af13536730d086e88e52a41b2f5da5178a090117))
+* prevent type errors ([7932cf2](https://github.com/vtexdocs/devportal/commit/7932cf28e888affe1c11c7edf9cedaae88e06ad3))
+* **redirects:** force redirects ([cb39199](https://github.com/vtexdocs/devportal/commit/cb39199f8283e72a60cf9fd31943a61266c6fa9a))
+* **redirects:** use correct http code ([310dc64](https://github.com/vtexdocs/devportal/commit/310dc64611ea0be8b95e302efe7bee73fb5abcfd))
+* **sidebar:** rerenders in sidebar ([2b5d574](https://github.com/vtexdocs/devportal/commit/2b5d5742bdc2ae89684bdf6a654debc031e8a011))
+* **slug:** update previewbranch ([164e620](https://github.com/vtexdocs/devportal/commit/164e6203dfb2f78bb5264b816831172670e3a0a2))
+* **tests:** add missing import statement and remove deleteLog plugin ([60c2c83](https://github.com/vtexdocs/devportal/commit/60c2c832900ae51fbd6efcfbb779cd84e937e559))
+* **tests:** do not record screenshots and video ([d7b67e6](https://github.com/vtexdocs/devportal/commit/d7b67e607e0e4465723ef80c2b9fbfe87c90a176))
+* **tests:** fix typo in test title ([c27e12b](https://github.com/vtexdocs/devportal/commit/c27e12b9493187e9ba0c948e485819efc511b541))
+* **tests:** generate summary report even if cypress run failed ([29db8da](https://github.com/vtexdocs/devportal/commit/29db8daf4db216e072ca5e5d315a64ae22355372))
+* **tests:** increase timeout when waiting for netlify ([ba97b1e](https://github.com/vtexdocs/devportal/commit/ba97b1eda4523ab9b9fd12643104ead0a1c346ff))
+* **tests:** run comment PR action regardless of cypress run exit code ([94b2d9e](https://github.com/vtexdocs/devportal/commit/94b2d9e25ebfbfae477b11f5796e53f1802982ed))
+* **tsconfig:** add nextjs config ([c86dc5a](https://github.com/vtexdocs/devportal/commit/c86dc5aae7a593995864d7c85b8022627ea3b8c9))
+* **tsconfig:** who would've guessed tsconfig can get this hard ([e949566](https://github.com/vtexdocs/devportal/commit/e94956692262ce73838ffa25238d3158899d4251))
+
+
+### Build
+
+* **package.json:** add clipboardy dependency ([644ee97](https://github.com/vtexdocs/devportal/commit/644ee971e2dcbd17ccbe6764d9c580ec8275362f))
+* update yarn.lock ([1586fa8](https://github.com/vtexdocs/devportal/commit/1586fa89d02d878f93f7eb67442b0957135af170))
+* update yarn.lock ([504779e](https://github.com/vtexdocs/devportal/commit/504779ed2b75d3c78cf311225f3a84849561e1e8))
+
+
+### Refactoring
+
+* **previewcontext:** update pages to pass branch value ([1d4989c](https://github.com/vtexdocs/devportal/commit/1d4989cd2fbe8fe9c3e5c78605a6a03cf63b64b4))
+* **redirects:** use netlify redirects ([3ba9cc2](https://github.com/vtexdocs/devportal/commit/3ba9cc2cecb1eadbb40475cd3283dc867878b889))
+* **sidebar:** add sidebar-component class ([96b9ba3](https://github.com/vtexdocs/devportal/commit/96b9ba3f57bcb4a09a868790ea945dd774309c74))
+* **tsconfig:** remove unecessary dependencies and change module resolution ([730a3ad](https://github.com/vtexdocs/devportal/commit/730a3ad7edef8cad0bfca15970190d831bc74c7c))
+
+
+### Docs
+
+* changed navigation.json ([96a35f7](https://github.com/vtexdocs/devportal/commit/96a35f70e5f69752d8d822760a06ab200acdfe24))
+* changed navigation.json ([f172fd4](https://github.com/vtexdocs/devportal/commit/f172fd424943a89472e20d301322a30d2557821d))
+* changed navigation.json ([e8229cc](https://github.com/vtexdocs/devportal/commit/e8229cc87c84ebf0812187bd646431577ec88b22))
+* changed navigation.json ([3815191](https://github.com/vtexdocs/devportal/commit/381519117a741559a34c99f5bc486f1e499379cf))
+* changed navigation.json ([59ad125](https://github.com/vtexdocs/devportal/commit/59ad1259d1437acc58159a4fc2d88e984b045067))
+* changed navigation.json ([3b8bb44](https://github.com/vtexdocs/devportal/commit/3b8bb445db7fb29f2c5cefd80aa4466788cb971f))
+* changed url in navigation.json ([c535aa3](https://github.com/vtexdocs/devportal/commit/c535aa33f632718e509db2687f70bf0d6b8eb38b))
+* **navigation:** add new guide: service path patterns ([dca69e2](https://github.com/vtexdocs/devportal/commit/dca69e2ef6377f75fa3dc0222705fbc02b1db738))
+* **navigation:** change order of authentication category in the getting started section ([a51f1cf](https://github.com/vtexdocs/devportal/commit/a51f1cfd2012041fb0cbe3bfedee0ada73030550))
+
+
+### Tests
+
+* add cypress id to containers ([7c2c779](https://github.com/vtexdocs/devportal/commit/7c2c7796dc330334119c36ec4ca5ef33a8cefe19))
+* **api-reference:** test sidebar navigation and check shadowDOM elements ([d9de723](https://github.com/vtexdocs/devportal/commit/d9de723e5b8c1bf70e8b6b89cd74a2b2af08ad6c))
+* **commands:** add commands to get a random element inside of a list ([9d53baf](https://github.com/vtexdocs/devportal/commit/9d53bafc3291a44a6d9b500d4a9494516683697b))
+* **cypress:** add error log to tests ([f661a87](https://github.com/vtexdocs/devportal/commit/f661a87e169191360edc5f4edef418ea95c9a9ea))
+* **cypress:** add log messages to documenation-pages-status test ([2f072de](https://github.com/vtexdocs/devportal/commit/2f072de5f8a87e1f0ab70215d025c2fef304bf6e))
+* **cypress:** add write and remove functios to manage log file ([bce244c](https://github.com/vtexdocs/devportal/commit/bce244c6a53df4db8b8e501c564f052f4cf49499))
+* **cypress:** api guides tests ([64fb15f](https://github.com/vtexdocs/devportal/commit/64fb15f864b7aebd9a087c1af3d5568ce9a4499d))
+* **cypress:** conditional test if doc have TOC ([23c9b32](https://github.com/vtexdocs/devportal/commit/23c9b3288ecb133d7b206debdad7b06f01f58bd5))
+* **cypress:** open sidebar after page load in large screen ([d340f2c](https://github.com/vtexdocs/devportal/commit/d340f2c80b650bb5727e3e0e8aab0c4035d1f123))
+* **cypress:** prevent security erros from chrome ([52c1072](https://github.com/vtexdocs/devportal/commit/52c107261921b90df809a710361ce2569afa5bad))
+* **cypress:** set false to chromeWebSecurity ([fe18549](https://github.com/vtexdocs/devportal/commit/fe185499aac11637c8a8b9a9f81b05fc89cf2a55))
+* **documentation page status:** fix double slash in url and multiple tests for same reference page ([da6157b](https://github.com/vtexdocs/devportal/commit/da6157bea56f0591c4ea3be5e7e1657e80218c39))
+* fix bug in documentation pages status test ([068b60b](https://github.com/vtexdocs/devportal/commit/068b60b329abcda351f19d18920c8fabade30259))
+* **plugins:** add task plugin ([97026d6](https://github.com/vtexdocs/devportal/commit/97026d68da9a479c95e7d15417a1d01dea08c6db))
+* remove wrong index file and add reference tests ([45a15e2](https://github.com/vtexdocs/devportal/commit/45a15e263787e5ad3e48743833f9c8121201e598))
+* run documentation pages status test on a small number of pages ([190b6cf](https://github.com/vtexdocs/devportal/commit/190b6cf8d810aa9dacc0d598571c933bdf92b605))
+
+
+### Chore
+
+* **package.json:** update rapidoc version ([9dbe46b](https://github.com/vtexdocs/devportal/commit/9dbe46b4e3a6a59f1b285ca1cc4dc0bd0b84523f))
+* **package:** add clipboardy ([2b522c4](https://github.com/vtexdocs/devportal/commit/2b522c4d2015fcd681f3a9bd862647e29fad7d2f))
+* remove tests screenshots and videos from git track ([a2a90b4](https://github.com/vtexdocs/devportal/commit/a2a90b4aaf02e3cbf60c112870689e0528d0e68d))
+* **tracker:** update tracker ([2f73087](https://github.com/vtexdocs/devportal/commit/2f730875b02853c8656126ef4e903153da86c1dd))
+* update cypress version ([1ad1fa0](https://github.com/vtexdocs/devportal/commit/1ad1fa0a29fed0417ff92ff025f23b27ea926b2f))
+
+
+### Style
+
+* **announcementbar:** announcement bar not closable when in preview mode ([96b003a](https://github.com/vtexdocs/devportal/commit/96b003a00d332254b5ba01bbd2834169e033a116))
+* **api-reference:** update rapi-doc fonts ([d51967f](https://github.com/vtexdocs/devportal/commit/d51967f12aed8a20f764631a31b2dab111f2507b))
+* **article-pagination:** update padding ([b59152b](https://github.com/vtexdocs/devportal/commit/b59152b764eafe05579d6b3f21a0404ceb637f4a))
+* **article-pagination:** use figma file as a reference for pagination component ([2b0c811](https://github.com/vtexdocs/devportal/commit/2b0c81112a0efd048a63c7dd8b33234f1491e953))
+* **rapidoc:** update rapidoc version and styles ([66a38bc](https://github.com/vtexdocs/devportal/commit/66a38bc94ed7d2dc77cb8bc3cdce9993c9e3a6cb))
+
 ### [1.9.6](https://github.com/vtexdocs/devportal/compare/v1.9.5...v1.9.6) (2023-03-20)
 
 
