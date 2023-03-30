@@ -2,7 +2,7 @@ import { Flex, Text, Link } from '@vtex/brand-ui'
 import EditIcon from 'components/icons/edit-icon'
 import LikeIcon from 'components/icons/like-icon'
 import LikeSelectedIcon from 'components/icons/like-selected-icon'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { getMessages } from 'utils/get-messages'
 import { setButtonStyle } from './functions'
 import FeedbackModal, { ModalProps } from 'components/feedback-modal'
@@ -12,11 +12,12 @@ import styles from './styles'
 const messages = getMessages()
 
 interface DocPath {
+  slug?: string
   docPath?: string
   suggestEdits?: boolean
 }
 
-const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
+const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
   const [feedback, changeFeedback] = useState<boolean>()
   const [modalState, changeModalState] = useState<ModalProps>({
     modalOpen: false,
@@ -24,10 +25,31 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
   const likeButton = useRef<HTMLElement>()
   const dislikeButton = useRef<HTMLElement>()
 
+  useEffect(() => {
+    changeModalState({ modalOpen: false })
+    changeFeedback(undefined)
+  }, [slug])
+
   const openModal = (choice: boolean) => {
     changeModalState({
       modalOpen: true,
       liked: choice,
+    })
+  }
+
+  const sendFeedback = async (comment: string) => {
+    const feedback = {
+      data: [
+        new Date().toISOString(),
+        `https://developers.vtex.com/docs/guides/${slug}`,
+        modalState.liked ? 'positive' : 'negative',
+        comment,
+      ],
+    }
+
+    await fetch('/api/feedback/', {
+      method: 'POST',
+      body: JSON.stringify(feedback),
     })
   }
 
@@ -84,6 +106,7 @@ const FeedbackSection = ({ docPath, suggestEdits = true }: DocPath) => {
           changeModalState={changeModalState}
           modalState={modalState}
           chosenButtonRef={modalState.liked ? likeButton : dislikeButton}
+          onSubmit={(comment) => sendFeedback(comment)}
         />
       ) : null}
     </Flex>

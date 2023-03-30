@@ -13,8 +13,14 @@ export default function LightBox({ children }: Props) {
   const modalRef = useRef<HTMLDivElement>()
 
   useEffect(() => {
-    if (isModalOpen) document.body.style.overflow = 'hidden'
-    else document.body.style.overflow = 'visible'
+    if (isModalOpen) {
+      const scrollTop = document.body.getBoundingClientRect().top
+      document.body.style.top = `${scrollTop}px`
+      document.body.classList.add('modal-open')
+    } else {
+      document.body.classList.remove('modal-open')
+      document.body.style.removeProperty('top')
+    }
   }, [isModalOpen])
 
   useClickOutside(modalRef, () => setIsModalOpen(false))

@@ -129,7 +129,7 @@ const DocumentationPage: NextPage<Props> = ({
               <Contributors contributors={contributors} />
             </Box>
 
-            <FeedbackSection docPath={path} />
+            <FeedbackSection docPath={path} slug={slug} />
             {isListed && (
               <ArticlePagination
                 hidePaginationNext={
