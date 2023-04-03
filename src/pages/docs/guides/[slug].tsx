@@ -43,6 +43,7 @@ import getFileContributors, {
 
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import remarkMermaid from 'remark-mermaidjs'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -233,6 +234,14 @@ export const getStaticProps: GetStaticProps = async ({
           remarkImages,
           [getHeadings, { headingList }],
           remarkBlockquote,
+          [
+            remarkMermaid,
+            {
+              launchOptions: {
+                executablePath: process.env.CHROME_EXECUTABLE_PATH ?? '',
+              },
+            },
+          ],
         ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
