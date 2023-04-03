@@ -1,37 +1,40 @@
 name: Lighthouse Desktop
-
 on: [pull_request]
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Waiting for pages to change
+        uses: fountainhead/action-wait-for-check@v1.1.0
+        id: wait-for-pages-changed
         with:
-          node-version: 14.x
-      - name: Install
-        run: |
-          yarn install --frozen-lockfile
-      - name: Build
-        run: |
-          yarn run build
-        env:
-          GITHUB_PRIVATEKEY: ${{ secrets.PRIVATEKEY }}
-          GITHUB_APPID: ${{ secrets.APPID }}
-          GITHUB_INSTALLATIONID: ${{ secrets.INSTALLATIONID }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: $${{ github.event.pull_request.head.sha || github.sha }}
+          checkName: 'Pages changed - elated-hoover-5c29bf'
+          timeoutSeconds: 3600
       - name: Waiting for 200 from the Netlify Preview
-        uses: kamranayub/wait-for-netlify-action@2.0.0
+        if: steps.wait-for-pages-changed.outputs.conclusion == 'neutral'
+        uses: jakepartusch/wait-for-netlify-action@v1.4
         id: wait-for-netflify-preview
         with:
           site_name: 'elated-hoover-5c29bf'
+          max_timeout: 3600
         env:
           NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
-      - name: Lighthouse CI
-        run: |
-          yarn global add @lhci/cli@0.8.x
-          lhci autorun --upload.target=temporary-public-storage --collect.url=${{ steps.wait-for-netflify-preview.outputs.url }} --collect.settings.preset="desktop" || echo "LHCI failed!"
+      - name: Select random pages
+        id: select-random-pages
+        uses: actions/github-script@v6
         env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          URL: ${{ steps.wait-for-netlify-preview.output.url }}
+        with:
+          script: |
+            const { selectRandomPages } = require('./src/tests/utils/select-pages.js')
+            const pages = selectRandomPages(0.05).map(page => `${URL}/${page}`).join('\n')
+            core.setOutput('pages', pages)
+      - name: Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v8
+        with:
+          urls: |
+            ${{ steps.select-random-pages.outputs.pages }}
