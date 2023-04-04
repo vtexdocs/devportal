@@ -7,7 +7,7 @@ import Oas from 'oas'
 
 import getReferencePaths from 'utils/getReferencePaths'
 import getNavigation from 'utils/getNavigation'
-import { VtexTrustMedium, VtexTrustVariable } from 'utils/fonts'
+import { VtexTrustMedium, VtexTrustRegular } from 'utils/fonts'
 
 interface Props {
   slug: string
@@ -79,7 +79,7 @@ const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
         theme="light"
         bg-color="#FFFFFF"
         primary-color="#142032"
-        regular-font={VtexTrustVariable.style.fontFamily}
+        regular-font={VtexTrustRegular.style.fontFamily}
         mono-font="Consolas,monaco,monospace"
         medium-font={VtexTrustMedium.style.fontFamily}
         load-fonts={false}

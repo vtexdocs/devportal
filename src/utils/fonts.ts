@@ -7,7 +7,3 @@ export const VtexTrustRegular = localFont({
 export const VtexTrustMedium = localFont({
   src: '../../public/fonts/VtexTrustMedium.woff2',
 })
-
-export const VtexTrustVariable = localFont({
-  src: '../../public/fonts/VtexTrustVariable.woff2',
-})
