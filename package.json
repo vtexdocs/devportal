@@ -30,6 +30,7 @@
     "@vtex/brand-ui": "^0.46.1",
     "algoliasearch": "^4.14.2",
     "chalk": "^5.2.0",
+    "chrome-aws-lambda": "^10.1.0",
     "copy-text-to-clipboard": "^3.0.1",
     "googleapis": "^39.2.0",
     "highlight.js": "^11.6.0",
