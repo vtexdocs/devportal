@@ -22,6 +22,7 @@ import AnnouncementBar from 'components/announcement-bar'
 
 import styles from './styles'
 import { PreviewContext } from 'utils/contexts/preview'
+import useWindowSize from 'utils/hooks/useWindowSize'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Header = () => {
@@ -36,6 +37,8 @@ const Header = () => {
   const headerElement = useRef<HTMLElement>()
 
   const messages = getMessages()
+
+  const windowSize = useWindowSize()
 
   useEffect(() => {
     const body = document.body
@@ -151,7 +154,7 @@ const Header = () => {
             </Text>
           </VtexLink>
         </HeaderBrand.RightLinks>
-        <HamburgerMenu />
+        {windowSize.width < 1024 && <HamburgerMenu />}
       </HeaderBrand>
     </Box>
   )

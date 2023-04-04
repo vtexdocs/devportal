@@ -43,6 +43,7 @@ import getFileContributors, {
 
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import useWindowSize from 'utils/hooks/useWindowSize'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -87,6 +88,7 @@ const DocumentationPage: NextPage<Props> = ({
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
   const { setActiveSidebarElement } = useContext(SidebarContext)
+  const windowSize = useWindowSize()
   useEffect(() => {
     setActiveSidebarElement(slug)
     setHeadings(headingList)
@@ -150,7 +152,7 @@ const DocumentationPage: NextPage<Props> = ({
             <Contributors contributors={contributors} />
             <TableOfContents />
           </Box>
-          <OnThisPage />
+          {windowSize.width < 1024 && <OnThisPage />}
         </Flex>
       </APIGuideContextProvider>
     </>
