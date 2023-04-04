@@ -44,6 +44,7 @@ import getFileContributors, {
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import remarkMermaid from 'remark-mermaidjs'
+import Chromium from 'chrome-aws-lambda'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -238,7 +239,8 @@ export const getStaticProps: GetStaticProps = async ({
             remarkMermaid,
             {
               launchOptions: {
-                executablePath: process.env.CHROME_EXECUTABLE_PATH ?? '',
+                executablePath:
+                  process.env.CHROME_EXECUTABLE_PATH || Chromium.executablePath,
               },
             },
           ],
