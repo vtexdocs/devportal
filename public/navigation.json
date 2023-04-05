@@ -40,6 +40,28 @@
               ]
             },
             {
+              "name": "Authentication",
+              "slug": "authentication",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Authentication overview",
+                  "slug": "authentication-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Checking which user is currently authenticated",
+                  "slug": "checking-which-user-is-currently-authenticated",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Catalog",
               "slug": "catalog-overview",
               "origin": "",
@@ -101,28 +123,6 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            },
-            {
-              "name": "Authentication",
-              "slug": "authentication",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Authentication overview",
-                  "slug": "authentication-overview",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Checking which user is currently authenticated",
-                  "slug": "checking-which-user-is-currently-authenticated",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
             }
           ]
         },
@@ -10004,6 +10004,13 @@
                 {
                   "name": "Developing service configuration apps",
                   "slug": "vtex-io-documentation-developing-service-configuration-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Service path patterns",
+                  "slug": "service-path-patterns",
                   "origin": "",
                   "type": "markdown",
                   "children": []

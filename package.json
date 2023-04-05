@@ -1,6 +1,6 @@
 {
   "name": "devportal",
-  "version": "1.9.6",
+  "version": "1.9.7",
   "private": true,
   "engines": {
     "npm": "please-use-yarn",
@@ -31,6 +31,7 @@
     "algoliasearch": "^4.14.2",
     "chalk": "^5.2.0",
     "copy-text-to-clipboard": "^3.0.1",
+    "googleapis": "^39.2.0",
     "highlight.js": "^11.6.0",
     "highlightjs-curl": "^1.3.0",
     "http-proxy": "^1.18.1",
@@ -110,7 +111,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     },
     "rapidoc": {
-      "version": "1.2.2-vtex-3-gebe511c"
+      "version": "1.2.3-vtex"
     }
   },
   "resolutions": {
