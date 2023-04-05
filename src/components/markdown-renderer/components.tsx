@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import Image from 'next/image'
 import { APIGuideContext } from 'utils/contexts/api-guide'
@@ -10,9 +10,13 @@ import YoutubeFrame from 'components/youtube-frame'
 import CodeBlock from 'components/code-block'
 
 import styles from './styles.module.css'
-import { Flex } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtex/brand-ui'
 import LightBox from 'components/lightbox'
 import { messages } from 'utils/constants'
+import {
+  ReactSVGPanZoom,
+  UncontrolledReactSVGPanZoom,
+} from 'react-svg-pan-zoom'
 
 type Component = {
   node: object
@@ -190,6 +194,42 @@ export default {
         }}
         {...props}
       />
+    )
+  },
+  svg: ({ node, ...props }: Component) => {
+    const viewerRef = useRef<ReactSVGPanZoom>(null)
+    const ref = useRef<HTMLElement>()
+
+    const [width, setWidth] = useState(0)
+    const [height, setHeight] = useState(0)
+
+    useEffect(() => {
+      const resizeObserver = new ResizeObserver(() => {
+        if (!ref.current) return
+        setWidth(ref.current?.clientWidth ?? 0)
+        setHeight(ref.current?.clientWidth / 2 ?? 0)
+      })
+
+      if (ref.current) resizeObserver.observe(ref.current)
+    }, [])
+
+    return (
+      <Box ref={ref} className={styles.svgContainer}>
+        <UncontrolledReactSVGPanZoom
+          ref={viewerRef}
+          width={width}
+          height={height}
+          miniatureProps={{
+            position: 'none',
+            width: 100,
+            height: 80,
+            background: '#616264',
+          }}
+          background={'rgba(0, 0, 0, 0)'}
+        >
+          <svg {...props}></svg>
+        </UncontrolledReactSVGPanZoom>
+      </Box>
     )
   },
 }

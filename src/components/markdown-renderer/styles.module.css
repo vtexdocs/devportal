@@ -123,3 +123,7 @@ table .code {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.svgContainer {
+  width: 100%;
+}
