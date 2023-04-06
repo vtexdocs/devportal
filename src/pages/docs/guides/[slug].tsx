@@ -44,7 +44,7 @@ import getFileContributors, {
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import remarkMermaid from 'remark-mermaidjs'
-import Chromium from 'chrome-aws-lambda'
+import chromium from 'chrome-aws-lambda'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -191,10 +191,15 @@ export const getStaticProps: GetStaticProps = async ({
       : await getDocsPaths(branch)
 
   const logger = getLogger('Guides')
-  const executablePath =
-    process.env.CHROME_EXECUTABLE_PATH || (await Chromium.executablePath)
 
-  console.log('executablePath', executablePath)
+  const launchOptions = {
+    args: chromium.args,
+    executablePath:
+      process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath),
+    headless: true,
+  }
+
+  console.log(launchOptions)
   const path = docsPaths[slug]
   if (!path) {
     return {
@@ -238,10 +243,7 @@ export const getStaticProps: GetStaticProps = async ({
           remarkImages,
           [getHeadings, { headingList }],
           remarkBlockquote,
-          [
-            remarkMermaid,
-            { launchOptions: { executablePath: executablePath } },
-          ],
+          [remarkMermaid, { launchOptions }],
         ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
