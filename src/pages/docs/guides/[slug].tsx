@@ -191,7 +191,10 @@ export const getStaticProps: GetStaticProps = async ({
       : await getDocsPaths(branch)
 
   const logger = getLogger('Guides')
+  const executablePath =
+    process.env.CHROME_EXECUTABLE_PATH || (await Chromium.executablePath)
 
+  console.log('executablePath', executablePath)
   const path = docsPaths[slug]
   if (!path) {
     return {
@@ -237,12 +240,7 @@ export const getStaticProps: GetStaticProps = async ({
           remarkBlockquote,
           [
             remarkMermaid,
-            {
-              launchOptions: {
-                executablePath:
-                  process.env.CHROME_EXECUTABLE_PATH || Chromium.executablePath,
-              },
-            },
+            { launchOptions: { executablePath: executablePath } },
           ],
         ],
         rehypePlugins: [
