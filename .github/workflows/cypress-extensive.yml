@@ -1,0 +1,24 @@
+name: Extensive tests
+on: workflow_dispatch
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Fetch navigation.json
+        uses: wei/curl@v1
+        with:
+          args: -o src/tests/cypress/fixtures/navigation.json https://developers.vtex.com/navigation.json
+      - name: Cypress run
+        uses: cypress-io/github-action@v5
+        env:
+          CYPRESS_baseUrl: https://developers.vtex.com
+          CYPRESS_testProbability: 1.0
+      - name: Summary report
+        if: always()
+        run: |
+          if [[ -f "cypress.log" ]]; then
+            node src/tests/summary-report.js > $GITHUB_STEP_SUMMARY
+            rm cypress.log
+          fi

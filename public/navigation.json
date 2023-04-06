@@ -2310,6 +2310,375 @@
           "type": "openapi",
           "children": [
             {
+              "name": "Category",
+              "slug": "catalog-api-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Category Tree",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pub/category/tree/-categoryLevels-",
+                  "children": []
+                },
+                {
+                  "name": "Get Category by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/category/-categoryId-",
+                  "children": []
+                },
+                {
+                  "name": "Update Category",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/category/-categoryId-",
+                  "children": []
+                },
+                {
+                  "name": "Create Category",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/category",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Category Specification",
+              "slug": "catalog-api-category-specification",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Specifications By Category ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pub/specification/field/listByCategoryId/-categoryId-",
+                  "children": []
+                },
+                {
+                  "name": "Get Specifications Tree By Category ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pub/specification/field/listTreeByCategoryId/-categoryId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Brand",
+              "slug": "catalog-api-brand",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Brand List",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pvt/brand/list",
+                  "children": []
+                },
+                {
+                  "name": "Get Brand List Per Page",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pvt/brand/pagedlist",
+                  "children": []
+                },
+                {
+                  "name": "Get Brand",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pvt/brand/-brandId-",
+                  "children": []
+                },
+                {
+                  "name": "Create Brand",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/brand",
+                  "children": []
+                },
+                {
+                  "name": "Get Brand and context",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/brand/-brandId-",
+                  "children": []
+                },
+                {
+                  "name": "Update Brand",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/brand/-brandId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete Brand",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/brand/-brandId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Specification Group",
+              "slug": "catalog-api-specification-group",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List Specification Group by Category",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pvt/specification/groupbycategory/-categoryId-",
+                  "children": []
+                },
+                {
+                  "name": "Get Specification Group",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pub/specification/groupGet/-groupId-",
+                  "children": []
+                },
+                {
+                  "name": "Create Specification Group",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/specificationgroup",
+                  "children": []
+                },
+                {
+                  "name": "Update Specification Group",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/specificationgroup/-groupId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Specification",
+              "slug": "catalog-api-specification",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Specification",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/specification/-specificationId-",
+                  "children": []
+                },
+                {
+                  "name": "Update Specification",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/specification/-specificationId-",
+                  "children": []
+                },
+                {
+                  "name": "Create Specification",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/specification",
+                  "children": []
+                },
+                {
+                  "name": "Specification Field",
+                  "slug": "catalog-api-specification-field",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get Specification Field",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog_system/pub/specification/fieldGet/-fieldId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Create Specification Field",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/catalog_system/pvt/specification/field",
+                      "children": []
+                    },
+                    {
+                      "name": "Update Specification Field",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog_system/pvt/specification/field",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Non Structured Specification",
+                  "slug": "catalog-api-non-structured-specification",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get Non Structured Specification by ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/nonstructured/-Id-",
+                      "children": []
+                    },
+                    {
+                      "name": "Delete Non Structured Specification",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/nonstructured/-Id-",
+                      "children": []
+                    },
+                    {
+                      "name": "Get Non Structured Specification by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/nonstructured",
+                      "children": []
+                    },
+                    {
+                      "name": "Delete Non Structured Specification by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/nonstructured",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Specification Value",
+              "slug": "catalog-api-specification-value",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Specification Value",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/specificationvalue/-specificationValueId-",
+                  "children": []
+                },
+                {
+                  "name": "Update Specification Value",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/specificationvalue/-specificationValueId-",
+                  "children": []
+                },
+                {
+                  "name": "Create Specification Value",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/specificationvalue",
+                  "children": []
+                },
+                {
+                  "name": "Specification Field Value",
+                  "slug": "catalog-api-specification-field-value",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get Specification Field Value",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog_system/pvt/specification/fieldValue/-fieldValueId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Get Specification Values By Field ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog_system/pub/specification/fieldvalue/-fieldId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Create Specification Field Value",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/catalog_system/pvt/specification/fieldValue",
+                      "children": []
+                    },
+                    {
+                      "name": "Update Specification Field Value",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog_system/pvt/specification/fieldValue",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "name": "Product",
               "slug": "catalog-api-product",
               "type": "category",
@@ -2556,6 +2925,137 @@
               ]
             },
             {
+              "name": "SKU Specification",
+              "slug": "catalog-api-sku-specification",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get SKU Specifications",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification",
+                  "children": []
+                },
+                {
+                  "name": "Associate SKU Specification",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification",
+                  "children": []
+                },
+                {
+                  "name": "Update SKU Specification",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification",
+                  "children": []
+                },
+                {
+                  "name": "Delete all SKU Specifications",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification",
+                  "children": []
+                },
+                {
+                  "name": "Delete SKU Specification",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification/-specificationId-",
+                  "children": []
+                },
+                {
+                  "name": "Associate SKU specification using specification name and group name",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specificationvalue",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "SKU File",
+              "slug": "catalog-api-sku-file",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get SKU Files",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file",
+                  "children": []
+                },
+                {
+                  "name": "Create SKU File",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file",
+                  "children": []
+                },
+                {
+                  "name": "Delete All SKU Files",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file",
+                  "children": []
+                },
+                {
+                  "name": "Update SKU File",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete SKU Image File",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-",
+                  "children": []
+                },
+                {
+                  "name": "Copy Files from an SKU to another SKU",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/copy/-skuIdfrom-/-skuIdto-/file/",
+                  "children": []
+                },
+                {
+                  "name": "Disassociate SKU File",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/disassociate/-skuId-/file/-skuFileId-",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "SKU Complement",
               "slug": "catalog-api-sku-complement",
               "type": "category",
@@ -2669,6 +3169,58 @@
               ]
             },
             {
+              "name": "Attachment",
+              "slug": "catalog-api-attachment",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get attachment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/attachment/-attachmentid-",
+                  "children": []
+                },
+                {
+                  "name": "Update attachment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/attachment/-attachmentid-",
+                  "children": []
+                },
+                {
+                  "name": "Delete attachment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/attachment/-attachmentid-",
+                  "children": []
+                },
+                {
+                  "name": "Create attachment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/attachment",
+                  "children": []
+                },
+                {
+                  "name": "Get all attachments",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/attachments",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "SKU Attachment",
               "slug": "catalog-api-sku-attachment",
               "type": "category",
@@ -2721,72 +3273,165 @@
               ]
             },
             {
-              "name": "SKU File",
-              "slug": "catalog-api-sku-file",
+              "name": "SKU Service",
+              "slug": "catalog-api-sku-service",
               "type": "category",
               "children": [
                 {
-                  "name": "Get SKU Files",
+                  "name": "Get SKU Service",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file",
+                  "endpoint": "/api/catalog/pvt/skuservice/-skuServiceId-",
                   "children": []
                 },
                 {
-                  "name": "Create SKU File",
+                  "name": "Update SKU Service",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/skuservice/-skuServiceId-",
+                  "children": []
+                },
+                {
+                  "name": "Dissociate SKU Service",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/skuservice/-skuServiceId-",
+                  "children": []
+                },
+                {
+                  "name": "Associate SKU Service",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file",
+                  "endpoint": "/api/catalog/pvt/skuservice",
                   "children": []
                 },
                 {
-                  "name": "Delete All SKU Files",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file",
-                  "children": []
+                  "name": "SKU Service Attachment",
+                  "slug": "catalog-api-sku-service-attachment",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Associate SKU Service Attachment",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetypeattachment",
+                      "children": []
+                    },
+                    {
+                      "name": "Dissociate Attachment by Attachment ID or SKU Service Type ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetypeattachment",
+                      "children": []
+                    },
+                    {
+                      "name": "Dissociate Attachment from SKU Service Type",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetypeattachment/-skuServiceTypeAttachmentId-",
+                      "children": []
+                    }
+                  ]
                 },
                 {
-                  "name": "Update SKU File",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-",
-                  "children": []
+                  "name": "SKU Service Type",
+                  "slug": "catalog-api-sku-service-type",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Create SKU Service Type",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetype",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU Service Type",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Update SKU Service Type",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Delete SKU Service Type",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-",
+                      "children": []
+                    }
+                  ]
                 },
                 {
-                  "name": "Delete SKU Image File",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-",
-                  "children": []
-                },
-                {
-                  "name": "Copy Files from an SKU to another SKU",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/copy/-skuIdfrom-/-skuIdto-/file/",
-                  "children": []
-                },
-                {
-                  "name": "Disassociate SKU File",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/disassociate/-skuId-/file/-skuFileId-",
-                  "children": []
+                  "name": "SKU Service Value",
+                  "slug": "catalog-api-sku-service-value",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Create SKU Service Value",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU Service Value",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Update SKU Service Value",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Delete SKU Service Value",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -2886,388 +3531,6 @@
               ]
             },
             {
-              "name": "SKU Service",
-              "slug": "catalog-api-sku-service",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get SKU Service",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservice/-skuServiceId-",
-                  "children": []
-                },
-                {
-                  "name": "Update SKU Service",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservice/-skuServiceId-",
-                  "children": []
-                },
-                {
-                  "name": "Dissociate SKU Service",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservice/-skuServiceId-",
-                  "children": []
-                },
-                {
-                  "name": "Associate SKU Service",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservice",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "SKU Service Attachment",
-              "slug": "catalog-api-sku-service-attachment",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Associate SKU Service Attachment",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicetypeattachment",
-                  "children": []
-                },
-                {
-                  "name": "Dissociate Attachment by Attachment ID or SKU Service Type ID",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicetypeattachment",
-                  "children": []
-                },
-                {
-                  "name": "Dissociate Attachment from SKU Service Type",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicetypeattachment/-skuServiceTypeAttachmentId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "SKU Service Type",
-              "slug": "catalog-api-sku-service-type",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create SKU Service Type",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicetype",
-                  "children": []
-                },
-                {
-                  "name": "Get SKU Service Type",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-",
-                  "children": []
-                },
-                {
-                  "name": "Update SKU Service Type",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete SKU Service Type",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "SKU Service Value",
-              "slug": "catalog-api-sku-service-value",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create SKU Service Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicevalue",
-                  "children": []
-                },
-                {
-                  "name": "Get SKU Service Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-",
-                  "children": []
-                },
-                {
-                  "name": "Update SKU Service Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete SKU Service Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "SKU Specification",
-              "slug": "catalog-api-sku-specification",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get SKU Specifications",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification",
-                  "children": []
-                },
-                {
-                  "name": "Associate SKU Specification",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification",
-                  "children": []
-                },
-                {
-                  "name": "Update SKU Specification",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification",
-                  "children": []
-                },
-                {
-                  "name": "Delete all SKU Specifications",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification",
-                  "children": []
-                },
-                {
-                  "name": "Delete SKU Specification",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specification/-specificationId-",
-                  "children": []
-                },
-                {
-                  "name": "Associate SKU specification using specification name and group name",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/specificationvalue",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Legacy Subcollection",
-              "slug": "catalog-api-legacy-subcollection",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Add SKU to Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/stockkeepingunit",
-                  "children": []
-                },
-                {
-                  "name": "Delete SKU from Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/stockkeepingunit/-skuId-",
-                  "children": []
-                },
-                {
-                  "name": "Associate Category to Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/category",
-                  "children": []
-                },
-                {
-                  "name": "Delete Category from Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/brand/-categoryId-",
-                  "children": []
-                },
-                {
-                  "name": "Associate Brand to Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/brand",
-                  "children": []
-                },
-                {
-                  "name": "Delete Brand from Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/brand/-brandId-",
-                  "children": []
-                },
-                {
-                  "name": "Get Subcollection by Collection ID",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/collection/-collectionId-/subcollection",
-                  "children": []
-                },
-                {
-                  "name": "Get Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-",
-                  "children": []
-                },
-                {
-                  "name": "Update Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-",
-                  "children": []
-                },
-                {
-                  "name": "Create Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection",
-                  "children": []
-                },
-                {
-                  "name": "Reposition SKU on the Subcollection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/collection/-collectionId-/position",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Category",
-              "slug": "catalog-api-category",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Category Tree",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pub/category/tree/-categoryLevels-",
-                  "children": []
-                },
-                {
-                  "name": "Get Category by ID",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/category/-categoryId-",
-                  "children": []
-                },
-                {
-                  "name": "Update Category",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/category/-categoryId-",
-                  "children": []
-                },
-                {
-                  "name": "Create Category",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/category",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Similar Category",
               "slug": "catalog-api-similar-category",
               "type": "category",
@@ -3297,153 +3560,6 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/product/-productId-/similarcategory/-categoryId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Category Specification",
-              "slug": "catalog-api-category-specification",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Specifications By Category ID",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pub/specification/field/listByCategoryId/-categoryId-",
-                  "children": []
-                },
-                {
-                  "name": "Get Specifications Tree By Category ID",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pub/specification/field/listTreeByCategoryId/-categoryId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Brand",
-              "slug": "catalog-api-brand",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Brand List",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/brand/list",
-                  "children": []
-                },
-                {
-                  "name": "Get Brand List Per Page",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/brand/pagedlist",
-                  "children": []
-                },
-                {
-                  "name": "Get Brand",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/brand/-brandId-",
-                  "children": []
-                },
-                {
-                  "name": "Create Brand",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/brand",
-                  "children": []
-                },
-                {
-                  "name": "Get Brand and context",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/brand/-brandId-",
-                  "children": []
-                },
-                {
-                  "name": "Update Brand",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/brand/-brandId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete Brand",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/brand/-brandId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Attachment",
-              "slug": "catalog-api-attachment",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get attachment",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/attachment/-attachmentid-",
-                  "children": []
-                },
-                {
-                  "name": "Update attachment",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/attachment/-attachmentid-",
-                  "children": []
-                },
-                {
-                  "name": "Delete attachment",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/attachment/-attachmentid-",
-                  "children": []
-                },
-                {
-                  "name": "Create attachment",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/attachment",
-                  "children": []
-                },
-                {
-                  "name": "Get all attachments",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/attachments",
                   "children": []
                 }
               ]
@@ -3571,257 +3687,116 @@
               ]
             },
             {
-              "name": "Specification",
-              "slug": "catalog-api-specification",
+              "name": "Legacy Subcollection",
+              "slug": "catalog-api-legacy-subcollection",
               "type": "category",
               "children": [
                 {
-                  "name": "Get Specification",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/specification/-specificationId-",
-                  "children": []
-                },
-                {
-                  "name": "Update Specification",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/specification/-specificationId-",
-                  "children": []
-                },
-                {
-                  "name": "Create Specification",
+                  "name": "Add SKU to Subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/specification",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Specification Field",
-              "slug": "catalog-api-specification-field",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Specification Field",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pub/specification/fieldGet/-fieldId-",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/stockkeepingunit",
                   "children": []
                 },
                 {
-                  "name": "Create Specification Field",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/specification/field",
-                  "children": []
-                },
-                {
-                  "name": "Update Specification Field",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/specification/field",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Specification Field Value",
-              "slug": "catalog-api-specification-field-value",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Specification Field Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/specification/fieldValue/-fieldValueId-",
-                  "children": []
-                },
-                {
-                  "name": "Get Specification Values By Field ID",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pub/specification/fieldvalue/-fieldId-",
-                  "children": []
-                },
-                {
-                  "name": "Create Specification Field Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/specification/fieldValue",
-                  "children": []
-                },
-                {
-                  "name": "Update Specification Field Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/specification/fieldValue",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Specification Value",
-              "slug": "catalog-api-specification-value",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Specification Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/specificationvalue/-specificationValueId-",
-                  "children": []
-                },
-                {
-                  "name": "Update Specification Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/specificationvalue/-specificationValueId-",
-                  "children": []
-                },
-                {
-                  "name": "Create Specification Value",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/specificationvalue",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Specification Group",
-              "slug": "catalog-api-specification-group",
-              "type": "category",
-              "children": [
-                {
-                  "name": "List Specification Group by Category",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/specification/groupbycategory/-categoryId-",
-                  "children": []
-                },
-                {
-                  "name": "Get Specification Group",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pub/specification/groupGet/-groupId-",
-                  "children": []
-                },
-                {
-                  "name": "Create Specification Group",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/specificationgroup",
-                  "children": []
-                },
-                {
-                  "name": "Update Specification Group",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/specificationgroup/-groupId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Non Structured Specification",
-              "slug": "catalog-api-non-structured-specification",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Non Structured Specification by ID",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/specification/nonstructured/-Id-",
-                  "children": []
-                },
-                {
-                  "name": "Delete Non Structured Specification",
+                  "name": "Delete SKU from Subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/specification/nonstructured/-Id-",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/stockkeepingunit/-skuId-",
                   "children": []
                 },
                 {
-                  "name": "Get Non Structured Specification by SKU ID",
+                  "name": "Associate Category to Subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
-                  "method": "GET",
+                  "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/specification/nonstructured",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/category",
                   "children": []
                 },
                 {
-                  "name": "Delete Non Structured Specification by SKU ID",
+                  "name": "Delete Category from Subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/specification/nonstructured",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Sales Channel",
-              "slug": "catalog-api-sales-channel",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Sales Channel List",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/saleschannel/list",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/brand/-categoryId-",
                   "children": []
                 },
                 {
-                  "name": "Get Sales Channel by ID",
+                  "name": "Associate Brand to Subcollection",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/brand",
+                  "children": []
+                },
+                {
+                  "name": "Delete Brand from Subcollection",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/brand/-brandId-",
+                  "children": []
+                },
+                {
+                  "name": "Get Subcollection by Collection ID",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/catalog_system/pub/saleschannel/-salesChannelId-",
+                  "endpoint": "/api/catalog/pvt/collection/-collectionId-/subcollection",
+                  "children": []
+                },
+                {
+                  "name": "Get Subcollection",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-",
+                  "children": []
+                },
+                {
+                  "name": "Update Subcollection",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete Subcollection",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-",
+                  "children": []
+                },
+                {
+                  "name": "Create Subcollection",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection",
+                  "children": []
+                },
+                {
+                  "name": "Reposition SKU on the Subcollection",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/collection/-collectionId-/position",
                   "children": []
                 }
               ]
@@ -3952,6 +3927,31 @@
                   "origin": "",
                   "endpoint": "/api/catalog_system/pvt/sku/stockkeepingunitidsbysaleschannel",
                   "children": []
+                },
+                {
+                  "name": "Sales Channel",
+                  "slug": "catalog-api-sales-channel",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get Sales Channel List",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog_system/pvt/saleschannel/list",
+                      "children": []
+                    },
+                    {
+                      "name": "Get Sales Channel by ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog_system/pub/saleschannel/-salesChannelId-",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
