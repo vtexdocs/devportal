@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { Box, Flex, TooltipProps, SxStyleProp } from '@vtex/brand-ui'
+import { Box, Flex, SxStyleProp } from '@vtex/brand-ui'
+import { TooltipProps } from '@vtex/brand-ui/components/Tooltip'
 
 import CaretIcon from 'components/icons/caret'
 
