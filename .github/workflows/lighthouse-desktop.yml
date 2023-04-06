@@ -27,7 +27,7 @@ jobs:
         id: select-random-pages
         uses: actions/github-script@v6
         env:
-          URL: ${{ steps.wait-for-netlify-preview.output.url }}
+          URL: ${{ steps.wait-for-netlify-preview.outputs.url }}
         with:
           script: |
             const { selectRandomPages } = require('./src/tests/utils/select-pages.js')
@@ -37,4 +37,5 @@ jobs:
         uses: treosh/lighthouse-ci-action@v8
         with:
           urls: |
+            ${{ steps.wait-for-netlify-preview.outputs.url }}
             ${{ steps.select-random-pages.outputs.pages }}
