@@ -1,5 +1,5 @@
 import { Flex, Box, Text, Button } from '@vtex/brand-ui'
-import { useContext, useEffect, useMemo, useState } from 'react'
+import { useContext, useMemo, useState } from 'react'
 
 import type { SidebarElement } from 'components/sidebar-elements'
 import type {
@@ -43,10 +43,6 @@ const SidebarSection = ({
     { name: 'DELETE', active: false },
     { name: 'PATCH', active: false },
   ])
-
-  useEffect(() => {
-    if (window.innerWidth < 1920) setSidebarSectionHidden(true)
-  }, [])
 
   const filterStatus =
     methodFilterList.some((methodFilter) => methodFilter.active) ||
