@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
 
@@ -31,11 +31,7 @@ const slugs = Object.keys(await getReferencePaths())
 const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
   const router = useRouter()
   const rapidoc = useRef<{ scrollToPath: (endpoint: string) => void }>(null)
-  const [endpointPath, setEndpointPath] = useState('')
-
-  useEffect(() => {
-    setEndpointPath(`#${router.asPath.split('#')[1]}`)
-  }, [router.asPath])
+  const endpointPath = `#${router.asPath.split('#')[1]}`
 
   useEffect(() => {
     const scrollDoc = () => {
@@ -49,7 +45,7 @@ const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
     return () => {
       router.events.off('hashChangeComplete', scrollDoc)
     }
-  }, [rapidoc.current, router.events])
+  }, [])
 
   return (
     <>
