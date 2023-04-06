@@ -2,6 +2,7 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 
 const container: SxStyleProp = {
   width: '100%',
+  minHeight: 'calc(100vh - 225px)',
   backgroundColor: 'white',
 }
 
