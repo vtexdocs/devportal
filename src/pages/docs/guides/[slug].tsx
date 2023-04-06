@@ -45,6 +45,7 @@ import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import remarkMermaid from 'remark-mermaidjs'
 import chromium from 'chrome-aws-lambda'
+import puppeteer from 'puppeteer-core'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -192,14 +193,27 @@ export const getStaticProps: GetStaticProps = async ({
 
   const logger = getLogger('Guides')
 
-  const launchOptions = {
-    args: chromium.args,
-    executablePath:
-      process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath),
-    headless: true,
+  let browser = null
+  let executablePath = null
+
+  try {
+    executablePath =
+      process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath)
+
+    browser = await puppeteer.launch({
+      args: chromium.args,
+      executablePath: executablePath,
+      headless: chromium.headless,
+    })
+  } catch (error) {
+    console.log('error', error)
+  } finally {
+    if (browser !== null) {
+      await browser.close()
+    }
   }
 
-  console.log(launchOptions)
+  console.log('executablePath', executablePath)
   const path = docsPaths[slug]
   if (!path) {
     return {
@@ -243,7 +257,7 @@ export const getStaticProps: GetStaticProps = async ({
           remarkImages,
           [getHeadings, { headingList }],
           remarkBlockquote,
-          [remarkMermaid, { launchOptions }],
+          [remarkMermaid, { launchOptions: { executablePath } }],
         ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
