@@ -7,6 +7,8 @@ export default defineConfig({
   fixturesFolder: 'src/tests/cypress/fixtures',
   downloadsFolder: 'src/tests/cypress/downloads',
   chromeWebSecurity: false,
+  numTestsKeptInMemory: 10,
+  experimentalMemoryManagement: true,
   e2e: {
     setupNodeEvents(on, config) {
       return nodeEvents(on, config)
