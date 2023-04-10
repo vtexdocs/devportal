@@ -12732,6 +12732,21 @@
           "type": "category",
           "children": [
             {
+              "name": "April",
+              "slug": "april-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Master Data v2 orders entity deprecation",
+                  "slug": "master-data-v2-orders-entity-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "March",
               "slug": "march-2023",
               "origin": "",
