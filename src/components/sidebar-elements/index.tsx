@@ -109,103 +109,103 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     const pathSuffix = method ? `#${method.toLowerCase()}-${endpoint}` : ''
     const activeItem = method ? `${slug}${pathSuffix}` : slug
     return (
-      <Box sx={styles.elementContainer}>
-        <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
-          {isExpandable && (
-            <Button
-              aria-label={
-                sidebarElementStatus.has(slug) && sidebarElementStatus.get(slug)
-                  ? 'Collapse category'
-                  : 'Expand category'
-              }
-              size="regular"
-              variant="tertiary"
-              sx={
-                sidebarElementStatus.has(slug) && sidebarElementStatus.get(slug)
-                  ? styles.arrowIconActive
-                  : styles.arrowIcon
-              }
-              icon={() => (
-                <IconCaret
-                  direction={
-                    sidebarElementStatus.has(slug) &&
-                    sidebarElementStatus.get(slug)
-                      ? 'down'
-                      : 'right'
-                  }
-                  size={24}
-                />
-              )}
-              onClick={() => toggleSidebarElementStatus(slug)}
-            />
-          )}
-          {!checkDocumentationType(sidebarDataMaster, slug, 'category') &&
-          !checkDocumentationType(sidebarDataMaster, slug, 'link') ? (
-            <Link
-              sx={textStyle(activeSidebarElement === activeItem, isExpandable)}
-              onClick={(e: { preventDefault: () => void }) => {
-                if (!isEditorPreview) {
-                  handleClick(e, pathSuffix, slug)
+      <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
+        {isExpandable && (
+          <Button
+            aria-label={
+              sidebarElementStatus.has(slug) && sidebarElementStatus.get(slug)
+                ? 'Collapse category'
+                : 'Expand category'
+            }
+            size="regular"
+            variant="tertiary"
+            sx={
+              sidebarElementStatus.has(slug) && sidebarElementStatus.get(slug)
+                ? styles.arrowIconActive
+                : styles.arrowIcon
+            }
+            icon={() => (
+              <IconCaret
+                direction={
+                  sidebarElementStatus.has(slug) &&
+                  sidebarElementStatus.get(slug)
+                    ? 'down'
+                    : 'right'
                 }
-                toggleSidebarElementStatus(activeItem)
-              }}
-              href={getHref(slugPrefix || '', pathSuffix, slug)}
-              target={isEditorPreview === true ? '_blank' : '_self'}
-            >
-              {method && (
-                <MethodCategory
-                  sx={styles.methodBox}
-                  active={activeSidebarElement === activeItem}
-                  origin="sidebar"
-                  method={method}
-                />
-              )}
-              {name}
-            </Link>
-          ) : checkDocumentationType(sidebarDataMaster, slug, 'link') ? (
-            <Link href={slug} target="_blank" sx={styles.elementText}>
-              <IconExternalLink size={16} sx={{ marginRight: '10px' }} />
-              {name}
-            </Link>
-          ) : (
-            <Box
-              sx={textStyle(activeSidebarElement === slug, isExpandable)}
-              onClick={() => {
-                toggleSidebarElementStatus(slug)
-              }}
-            >
-              {method && (
-                <MethodCategory
-                  sx={styles.methodBox}
-                  active={activeSidebarElement === slug}
-                  origin="sidebar"
-                  method={method}
-                />
-              )}
-              {name}
-            </Box>
-          )}
-        </Flex>
-      </Box>
+                size={24}
+              />
+            )}
+            onClick={() => toggleSidebarElementStatus(slug)}
+          />
+        )}
+        {!checkDocumentationType(sidebarDataMaster, slug, 'category') &&
+        !checkDocumentationType(sidebarDataMaster, slug, 'link') ? (
+          <Link
+            sx={textStyle(activeSidebarElement === activeItem, isExpandable)}
+            onClick={(e: { preventDefault: () => void }) => {
+              if (!isEditorPreview) {
+                handleClick(e, pathSuffix, slug)
+              }
+              toggleSidebarElementStatus(activeItem)
+            }}
+            href={getHref(slugPrefix || '', pathSuffix, slug)}
+            target={isEditorPreview === true ? '_blank' : '_self'}
+          >
+            {method && (
+              <MethodCategory
+                sx={styles.methodBox}
+                active={activeSidebarElement === activeItem}
+                origin="sidebar"
+                method={method}
+              />
+            )}
+            {name}
+          </Link>
+        ) : checkDocumentationType(sidebarDataMaster, slug, 'link') ? (
+          <Link href={slug} target="_blank" sx={styles.elementText}>
+            <IconExternalLink size={16} sx={{ marginRight: '10px' }} />
+            {name}
+          </Link>
+        ) : (
+          <Box
+            sx={textStyle(activeSidebarElement === slug, isExpandable)}
+            onClick={() => {
+              toggleSidebarElementStatus(slug)
+            }}
+          >
+            {method && (
+              <MethodCategory
+                sx={styles.methodBox}
+                active={activeSidebarElement === slug}
+                origin="sidebar"
+                method={method}
+              />
+            )}
+            {name}
+          </Box>
+        )}
+      </Flex>
+    )
+  }
+
+  const isExpandable = ({ slug, children }: SidebarElement) => {
+    const hasChildren = children.length > 0
+    return (
+      hasChildren &&
+      sidebarElementStatus.has(slug) &&
+      sidebarElementStatus.get(slug)
     )
   }
 
   const ElementChildren = ({ slug, children }: SidebarElement) => {
-    const isExpandable = children.length > 0
-    // const newPathPrefix =
-    //   slugPrefix === 'api-reference' ? `/api-reference/${slug}` : slugPrefix
-    return isExpandable &&
-      sidebarElementStatus.has(slug) &&
-      sidebarElementStatus.get(slug) ? (
-      <Box>
-        <SidebarElements
-          slugPrefix={slugPrefix}
-          items={children}
-          subItemLevel={subItemLevel + 1}
-          key={`${slug}sd`}
-        />
-      </Box>
-    ) : null
+    return (
+      <SidebarElements
+        slugPrefix={slugPrefix}
+        items={children}
+        subItemLevel={subItemLevel + 1}
+        key={`${slug}sd`}
+      />
+    )
   }
 
   return (
@@ -217,9 +217,9 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
         return (
           <Fragment key={String(key)}>
             <ElementRoot {...item} slug={slug} />
-            <Box>
+            {isExpandable({ ...item }) && (
               <ElementChildren {...item} slug={slug} />
-            </Box>
+            )}
             {subItemLevel == 0 ? (
               <Box sx={styles.sectionDivider}>
                 <hr />
