@@ -30,9 +30,11 @@ jobs:
           URL: ${{ steps.wait-for-netlify-preview.outputs.url }}
         with:
           script: |
+            const { URL } = process.env
             const { selectRandomPages } = require('./src/tests/utils/select-pages.js')
             const pages = selectRandomPages(0.05).map(page => `${URL}/${page}`).join('\n')
             core.setOutput('pages', pages)
+            console.log(pages)
       - name: Lighthouse CI
         uses: treosh/lighthouse-ci-action@v8
         with:
