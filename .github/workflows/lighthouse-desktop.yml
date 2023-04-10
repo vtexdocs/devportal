@@ -17,7 +17,7 @@ jobs:
       - name: Waiting for 200 from the Netlify Preview
         if: steps.wait-for-pages-changed.outputs.conclusion == 'neutral'
         uses: jakepartusch/wait-for-netlify-action@v1.4
-        id: wait-for-netflify-preview
+        id: wait-for-netlify-preview
         with:
           site_name: 'elated-hoover-5c29bf'
           max_timeout: 3600
