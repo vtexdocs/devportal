@@ -11,7 +11,7 @@ jobs:
         id: wait-for-pages-changed
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          ref: $${{ github.event.pull_request.head.sha || github.sha }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           checkName: 'Pages changed - elated-hoover-5c29bf'
           timeoutSeconds: 3600
       - name: Waiting for 200 from the Netlify Preview
@@ -22,7 +22,7 @@ jobs:
           site_name: 'elated-hoover-5c29bf'
           max_timeout: 3600
         env:
-          NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
       - name: Select random pages
         id: select-random-pages
         uses: actions/github-script@v6
