@@ -118,6 +118,12 @@ to = '/docs/guides/erp-integration-set-up-order-processing'
 
 [[redirects]]
 force = true
+from = '/docs/erp-integration-guide'
+status = 308
+to = '/docs/guides/erp-integration-guide'
+
+[[redirects]]
+force = true
 from = '/docs/api-reference/feed-v3'
 status = 308
 to = '/docs/guides/orders-feed'
