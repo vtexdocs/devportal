@@ -47,10 +47,11 @@ const slugs = Object.keys(await getReferencePaths())
 
 const APIPage: NextPage<Props> = ({ slug, doc, endpoints }) => {
   const router = useRouter()
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const rapidoc = useRef<{
     shadowRoot: Node
     scrollToPath: (endpoint: string) => void
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    resolvedSpec: any
   }>(null)
   const [endpointPath, setEndpointPath] = useState('')
   const pageTitle =
