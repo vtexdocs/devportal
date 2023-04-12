@@ -62,7 +62,7 @@ const APIPage: NextPage<Props> = ({ slug, doc, endpoints }) => {
     const method = regexMethodMatches ? regexMethodMatches[1].toUpperCase() : ''
     return method && isMethodType(method) ? method : ''
   }
-  const httpMethod = getMethod() as MethodType | ''
+  const httpMethod: MethodType | '' = getMethod()
   const hash = router.asPath.split('#')[1]
   const endpointPath = hash ? `#${hash}` : slug
 
