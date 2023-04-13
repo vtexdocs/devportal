@@ -29,8 +29,8 @@ const SearchContextProvider: React.FC = ({ children }) => {
     const ocurrenceCountMap = new Map<FilterType, number>()
     resultsData.forEach((result) => {
       ocurrenceCountMap.set(
-        result.docType as FilterType,
-        (ocurrenceCountMap.get(result.docType as FilterType) || 0) + 1
+        result.doctype as FilterType,
+        (ocurrenceCountMap.get(result.doctype as FilterType) || 0) + 1
       )
     })
     ocurrenceCountMap.set('', resultsData.length)

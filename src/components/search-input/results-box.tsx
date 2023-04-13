@@ -24,7 +24,7 @@ interface HitProps {
 
 const Hit = ({ hit, insights }: HitProps) => {
   const breadcrumbsList = getBreadcrumbs(hit)
-  const DocIcon = getIcon(hit.docType)
+  const DocIcon = getIcon(hit.doctype)
   return (
     <Link href={getRelativeURL(hit.url)} legacyBehavior>
       <a
@@ -43,7 +43,7 @@ const Hit = ({ hit, insights }: HitProps) => {
             </Text>
           </Flex>
           <Flex sx={styles.alignCenter}>
-            <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.docType}`}</Text>
+            <Text sx={styles.hitBreadCrumbIn}>{`In ${hit.doctype}`}</Text>
             {breadcrumbsList.length > 0 && (
               <IconCaret direction="right" sx={styles.hitBreadCrumbArrow} />
             )}
