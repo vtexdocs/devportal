@@ -15,7 +15,6 @@ import Head from 'next/head'
 import { PreviewContext } from 'utils/contexts/preview'
 import { useIntl } from 'react-intl'
 
-const intl = useIntl()
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
@@ -164,6 +163,7 @@ const Image2 = () => (
 
 const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
   const { setBranchPreview } = useContext(PreviewContext)
+  const intl = useIntl()
   setBranchPreview(branch)
   return (
     <>

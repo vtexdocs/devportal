@@ -12,8 +12,6 @@ import { PreviewContext } from 'utils/contexts/preview'
 import { useContext } from 'react'
 import { useIntl } from 'react-intl'
 
-const intl = useIntl()
-
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
@@ -22,6 +20,7 @@ interface Props {
 }
 
 const ReleasePage: NextPage<Props> = ({ releasesData, branch }) => {
+  const intl = useIntl()
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
   return (
