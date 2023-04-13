@@ -59,9 +59,6 @@ const hitContent: SxStyleProp = {
   color: 'muted.0',
   fontSize: '16px',
   lineHeight: '22px',
-  whiteSpace: 'pre',
-  overflow: 'hidden',
-  textOverflow: 'ellipsis',
   width: '100%',
 }
 
@@ -144,6 +141,7 @@ const noResults: SxStyleProp = {
 
 const hitContentHighlighted: SxStyleProp = {
   ...hitContent,
+  color: '#4A596B',
   width: 'auto',
   background: '#FFE0EF',
 }

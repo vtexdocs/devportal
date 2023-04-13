@@ -8,7 +8,6 @@ import { searchClient } from 'utils/constants'
 import { Configure, InstantSearch } from 'react-instantsearch-dom'
 import CustomHits from './customHits'
 import Pagination from './pagination'
-// import { Pagination } from 'react-instantsearch-dom'
 
 import styles from './styles'
 
