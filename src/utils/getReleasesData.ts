@@ -41,7 +41,7 @@ export default async function getReleasesData(branch = 'main') {
             replaceHTMLBlocks(
               await getGithubFile(
                 'vtexdocs',
-                'dev-portal-content',
+                'help-center-content',
                 branch,
                 release
               )

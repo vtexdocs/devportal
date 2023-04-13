@@ -23,7 +23,11 @@ async function getGithubTree(org: string, repo: string, ref: string) {
 
 async function getDocsList() {
   console.log('getDocsList')
-  const repoTree = await getGithubTree('vtexdocs', 'dev-portal-content', 'main')
+  const repoTree = await getGithubTree(
+    'vtexdocs',
+    'help-center-content',
+    'main'
+  )
   // @ts-ignore
   repoTree.tree.map((node: any) => {
     const path = node.path

@@ -195,14 +195,14 @@ export const getStaticProps: GetStaticProps = async ({
 
   let documentationContent = await getGithubFile(
     'vtexdocs',
-    'dev-portal-content',
+    'help-center-content',
     branch,
     path
   )
 
   const contributors = await getFileContributors(
     'vtexdocs',
-    'dev-portal-content',
+    'help-center-content',
     branch,
     path
   )
@@ -256,7 +256,7 @@ export const getStaticProps: GetStaticProps = async ({
           try {
             const documentationContent = await getGithubFile(
               'vtexdocs',
-              'dev-portal-content',
+              'help-center-content',
               'main',
               seeAlsoPath
             )

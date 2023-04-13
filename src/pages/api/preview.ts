@@ -26,7 +26,7 @@ export default async function handler(
     try {
       branchExists = await getGithubBranch(
         'vtexdocs',
-        'dev-portal-content',
+        'help-center-content',
         branch
       )
     } catch {
