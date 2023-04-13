@@ -84,6 +84,11 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
       <Head>
         <title>{serialized.frontmatter?.title as string}</title>
         <meta name="docsearch:doctype" content="Release Notes" />
+        <meta
+          name="docsearch:doctitle"
+          content={serialized.frontmatter?.title as string}
+        />
+        <meta name="docsearch:actiontype" content={actionType} />
       </Head>
       <APIGuideContextProvider headings={headings}>
         <Flex sx={styles.innerContainer}>

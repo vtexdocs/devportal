@@ -96,6 +96,10 @@ const DocumentationPage: NextPage<Props> = ({
       <Head>
         <title>{serialized.frontmatter?.title as string}</title>
         <meta name="docsearch:doctype" content="Guides" />
+        <meta
+          name="docsearch:doctitle"
+          content={serialized.frontmatter?.title as string}
+        />
         {serialized.frontmatter?.hidden && (
           <meta name="robots" content="noindex" />
         )}
