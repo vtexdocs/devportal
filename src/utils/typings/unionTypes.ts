@@ -24,3 +24,7 @@ export type ResourceTitle =
   | 'Support'
 
 export type MethodType = 'POST' | 'GET' | 'PUT' | 'DELETE' | 'PATCH'
+
+export function isMethodType(value: string): value is MethodType {
+  return ['POST', 'GET', 'PUT', 'DELETE', 'PATCH'].includes(value as MethodType)
+}
