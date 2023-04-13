@@ -9781,7 +9781,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/rnb/v2/pvt/coupon",
+                  "endpoint": "/coupon",
                   "children": []
                 },
                 {
@@ -9790,7 +9790,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/rnb/v2/pvt/coupon/group/archived",
+                  "endpoint": "/coupon/group/archived",
                   "children": []
                 },
                 {
@@ -9799,7 +9799,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/rnb/v2/pvt/coupon/group/{groupingKey}",
+                  "endpoint": "/coupon/group/-groupingKey-",
                   "children": []
                 },
                 {
@@ -9808,7 +9808,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "",
+                  "endpoint": "/coupon/group/-groupingKey-",
                   "children": []
                 },
                 {
@@ -9817,7 +9817,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon/group/{groupingKey}/codes",
+                  "endpoint": "/coupon/group/-groupingKey-/codes",
                   "children": []
                 },
                 {
@@ -9826,7 +9826,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/coupon/group/{groupingKey}/archive",
+                  "endpoint": "/coupon/group/-groupingKey-/archive",
                   "children": []
                 },
                 {
@@ -9844,7 +9844,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/coupon/group/{groupingKey}/unarchive",
+                  "endpoint": "/coupon/group/-groupingKey-/unarchive",
                   "children": []
                 },
                 {
@@ -9853,7 +9853,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon/usage-count/{couponCode}",
+                  "endpoint": "/coupon/usage-count/-couponCode-",
                   "children": []
                 },
                 {
@@ -9862,7 +9862,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon/usage-count/group/{groupingKey}",
+                  "endpoint": "/coupon/usage-count/group/-groupingKey-",
                   "children": []
                 },
                 {
@@ -9871,7 +9871,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon/usage-count/group/{groupingKey}",
+                  "endpoint": "/coupon/usage-count/group/-groupingKey-",
                   "children": []
                 }
               ]
