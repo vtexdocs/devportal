@@ -1,4 +1,4 @@
-name: End-to-end tests
+name: Integration tests
 on: [pull_request]
 jobs:
   cypress-run:
