@@ -5,11 +5,9 @@ import landingProduct from '../../../public/images/landing-product.png'
 import styles from 'components/newsletter-section/styles'
 import imgStyle from './styles.module.css'
 
-import { getMessages } from 'utils/get-messages'
+import { FormattedMessage } from 'react-intl'
 
 const NewsletterSection = () => {
-  const messages = getMessages()
-
   return (
     <Box sx={styles.section}>
       <Box sx={styles.newsletter}>
@@ -17,30 +15,8 @@ const NewsletterSection = () => {
           <Flex sx={styles.newsletterBackground}>
             <Flex sx={styles.newsletterBox}>
               <Text sx={styles.newsletterTitle}>
-                {messages['landing_page_newsletter.title']}
+                <FormattedMessage id="landing_page_newsletter.title" />
               </Text>
-              {/* <Text sx={styles.newsletterDescription}>
-                {messages['landing_page_newsletter.description']}
-              </Text>
-              <Flex sx={styles.newsletterInputContainer}>
-                <Box sx={styles.newsletterInputBox}>
-                  <Input
-                    sx={styles.newsletterInput}
-                    id="newsletter-mail"
-                    label="E-mail"
-                    type={'email'}
-                  ></Input>
-                  <Text sx={styles.policyText}>
-                    {messages['landing_page_newsletter.policyText']}
-                    <Link sx={styles.policyLink}>
-                      {messages['landing_page_newsletter.policyLink']}
-                    </Link>
-                  </Text>
-                </Box>
-                <Button sx={styles.newsletterButton} variant="primary">
-                  {messages['landing_page_newsletter.Button']}
-                </Button>
-              </Flex> */}
             </Flex>
           </Flex>
           <div className={imgStyle.wrapper}>

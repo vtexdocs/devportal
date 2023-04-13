@@ -13,6 +13,7 @@ import SidebarSection, { SidebarSectionProps } from 'components/sidebar-section'
 import { useContext } from 'react'
 import { SidebarContext } from 'utils/contexts/sidebar'
 import SearchInput from 'components/search-input'
+import { useIntl } from 'react-intl'
 
 const HamburgerMenu = () => {
   const {
@@ -22,6 +23,7 @@ const HamburgerMenu = () => {
     setActiveSidebarTab,
     setSidebarSectionHidden,
   } = useContext(SidebarContext)
+  const intl = useIntl()
 
   return (
     <Header.ActionButton>
@@ -36,7 +38,7 @@ const HamburgerMenu = () => {
                 sx={styles.documentationContainer}
                 data-cy="dropdown-menu-first-section"
               >
-                {documentationData.map((card) => (
+                {documentationData(intl).map((card) => (
                   <Box sx={styles.innerCardContainer} key={card.title}>
                     <DocumentationCard containerType="mobile" {...card} />
                     <Button
@@ -61,7 +63,7 @@ const HamburgerMenu = () => {
                 sx={styles.updatesContainer}
                 data-cy="dropdown-menu-second-section"
               >
-                {updatesData.map((card) => (
+                {updatesData(intl).map((card) => (
                   <Box sx={styles.innerCardContainer} key={card.title}>
                     <DocumentationCard containerType="mobile" {...card} />
                     <Button

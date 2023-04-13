@@ -7,13 +7,13 @@ import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import imgStyles from '../../../styles/core-services-styles'
 import PageHeader from 'components/page-header'
-import { getMessages } from 'utils/get-messages'
 import image from '../../../../public/images/api-guides.png'
 import imageData from '../../../../public/images/data-orchestration.png'
 import imagePlatform from '../../../../public/images/platform.png'
 import styles from 'styles/documentation-landing-page'
 import Head from 'next/head'
 import { PreviewContext } from 'utils/contexts/preview'
+import { useIntl } from 'react-intl'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -163,24 +163,36 @@ const Image2 = () => (
 
 const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
   const { setBranchPreview } = useContext(PreviewContext)
+  const intl = useIntl()
   setBranchPreview(branch)
-  const messages = getMessages()
   return (
     <>
       <Head>
-        <title>{messages['api_guides_page.title']}</title>
+        <title>
+          {intl.formatMessage({
+            id: 'api_guides_page.title',
+          })}
+        </title>
         <meta
           property="og:title"
-          content={messages['api_guides_page.subtitle']}
+          content={intl.formatMessage({
+            id: 'api_guides_page.subtitle',
+          })}
           key="title"
         />
       </Head>
       <Fragment>
         <PageHeader
-          title={messages['api_guides_page.title']}
-          description={messages['api_guides_page.subtitle']}
+          title={intl.formatMessage({
+            id: 'api_guides_page.title',
+          })}
+          description={intl.formatMessage({
+            id: 'api_guides_page.subtitle',
+          })}
           imageUrl={image}
-          imageAlt={messages['app_development_page.title']}
+          imageAlt={intl.formatMessage({
+            id: 'app_development_page.title',
+          })}
         />
         <Box sx={styles.contentContainer}>
           <Text sx={styles.contentTitle}>Get started</Text>

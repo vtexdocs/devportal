@@ -2,6 +2,7 @@ import { capitalizeFirstLetter } from 'utils/string-utils'
 import { getIcon } from 'utils/constants'
 
 import { DocumentProps } from 'components/documentation-card'
+import { useIntl } from 'react-intl'
 
 const getDoctype = (category: string) => {
   switch (category) {
@@ -30,7 +31,8 @@ export const createDocFromUrl = (doc: {
   title: string
   category: string
 }): DocumentProps => {
-  const Icon = getIcon(getDoctype(doc.category))!
+  const intl = useIntl()
+  const Icon = getIcon(getDoctype(doc.category), intl)!
   const title = getTitleFromUrl(doc.title)
 
   return {

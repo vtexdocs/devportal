@@ -35,7 +35,8 @@ const nextConfig = {
     return config
   },
   env: {
-    navigationJsonUrl: 'https://developers.vtex.com/navigation.json',
+    navigationJsonUrl:
+      'https://leafy-mooncake-7c2e5e.netlify.app/navigation.json',
     contentOrg: '',
     contentRepo: '',
     contentBranch: '',
@@ -44,7 +45,7 @@ const nextConfig = {
     return []
   },
   i18n: {
-    locales: ['en'],
+    locales: ['en', 'pt', 'es'],
     defaultLocale: 'en',
   },
 }

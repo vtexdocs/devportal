@@ -2,11 +2,9 @@ import ReleaseNote from '../release-note'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import styles from 'components/release-section/styles'
-import { getMessages } from 'utils/get-messages'
 import { compareDates, getDate } from './functions'
 import { UpdateElement } from 'utils/typings/types'
-
-const messages = getMessages()
+import { FormattedMessage } from 'react-intl'
 
 interface IReleasesData {
   releasesData: UpdateElement[]
@@ -18,10 +16,10 @@ const ReleaseSection = ({ releasesData }: IReleasesData) => {
     <Flex sx={styles.outerContainer}>
       <Box sx={styles.innerContainer}>
         <Text sx={styles.sectionTitle}>
-          {messages['release_notes_page.title']}
+          <FormattedMessage id="release_notes_page.title" />
         </Text>
         <Text sx={styles.sectionSubtitle}>
-          {messages['release_notes_page.subtitle']}
+          <FormattedMessage id="release_notes_page.subtitle" />
         </Text>
         <Box sx={styles.sectionDivider}>
           <hr />

@@ -19,6 +19,7 @@ import { iconTooltipStyle } from './functions'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
 import useNavigation from 'utils/hooks/useNavigation'
+import { useIntl } from 'react-intl'
 
 interface SideBarSectionState {
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
@@ -46,6 +47,7 @@ const Sidebar = ({
   useEffect(() => {
     if (!isEditorPreview) setSidebarDataMaster(sidebarNavigation)
   }, [sidebarNavigation])
+  const intl = useIntl()
 
   const router = useRouter()
   const flattenedSidebar = flattenJSON(sidebarNavigation)
@@ -167,7 +169,7 @@ const Sidebar = ({
         sx={styles.sidebarIcons}
       >
         <Flex sx={styles.sidebarIconsContainer}>
-          {docsIcons.map((docsIconElement) => (
+          {docsIcons(intl).map((docsIconElement) => (
             <SideBarIcon
               {...docsIconElement}
               key={`sidebar-icon-${docsIconElement.title}`}
@@ -178,7 +180,7 @@ const Sidebar = ({
           <hr />
         </Box>
         <Flex sx={styles.sidebarIconsContainer}>
-          {notesIcons.map((notesIconElement) => (
+          {notesIcons(intl).map((notesIconElement) => (
             <SideBarIcon
               {...notesIconElement}
               key={`sidebar-icon-${notesIconElement.title}`}

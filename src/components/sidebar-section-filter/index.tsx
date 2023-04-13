@@ -1,7 +1,7 @@
 import { Box, Flex, Text } from '@vtex/brand-ui'
 import MethodCategory from 'components/method-category'
 import { Dispatch, SetStateAction, useState } from 'react'
-import { getMessages } from 'utils/get-messages'
+import { FormattedMessage } from 'react-intl'
 import { MethodType } from 'utils/typings/unionTypes'
 
 import styles from './styles'
@@ -24,7 +24,6 @@ const SectionFilter = ({
   methodFilterList,
   setMethodFilter,
 }: SectionFilterProps) => {
-  const messages = getMessages()
   const [activeFilters, setActiveFilters] = useState<MethodType[]>([])
 
   const setFilter = (methodFilterChanged: MethodType | null) => {
@@ -71,7 +70,9 @@ const SectionFilter = ({
 
   return (
     <Box sx={styles.container}>
-      <Text sx={styles.text}>{messages['api_reference_sidebar_filter']}</Text>
+      <Text sx={styles.text}>
+        <FormattedMessage id="api_reference_sidebar_filter" />
+      </Text>
       <Flex>
         {methodFilterList.map((methodFilter) => (
           <MethodButton
@@ -81,7 +82,7 @@ const SectionFilter = ({
         ))}
         {activeFilters.length > 1 && (
           <Text onClick={() => setFilter(null)} sx={styles.clear}>
-            {messages['api_reference_sidebar_filter_clear']}
+            <FormattedMessage id="api_reference_sidebar_filter_clear" />
           </Text>
         )}
       </Flex>

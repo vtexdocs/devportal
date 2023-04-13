@@ -3,13 +3,11 @@ import EditIcon from 'components/icons/edit-icon'
 import LikeIcon from 'components/icons/like-icon'
 import LikeSelectedIcon from 'components/icons/like-selected-icon'
 import { useEffect, useRef, useState } from 'react'
-import { getMessages } from 'utils/get-messages'
 import { setButtonStyle } from './functions'
 import FeedbackModal, { ModalProps } from 'components/feedback-modal'
+import { useIntl, FormattedMessage } from 'react-intl'
 
 import styles from './styles'
-
-const messages = getMessages()
 
 interface DocPath {
   slug?: string
@@ -24,6 +22,7 @@ const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
   })
   const likeButton = useRef<HTMLElement>()
   const dislikeButton = useRef<HTMLElement>()
+  const intl = useIntl()
 
   useEffect(() => {
     changeModalState({ modalOpen: false })
@@ -53,14 +52,14 @@ const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
     })
   }
 
-  const urlToEdit = `https://github.com/vtexdocs/dev-portal-content/edit/main/${docPath}`
+  const urlToEdit = `https://github.com/vtexdocs/help-center-content/edit/main/${docPath}`
 
   return (
     <Flex sx={styles.container} data-cy="feedback-section">
       <Text sx={styles.question}>
         {feedback !== undefined
-          ? messages['feedback_section.response']
-          : messages['feedback_section.question']}
+          ? intl.formatMessage({ id: 'feedback_section.response' })
+          : intl.formatMessage({ id: 'feedback_section.question' })}
       </Text>
       <Flex sx={styles.likeContainer}>
         <Flex
@@ -74,7 +73,9 @@ const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
           ) : (
             <LikeSelectedIcon size={24} sx={styles.likeIcon} />
           )}
-          <Text>{messages['feedback_section.positive']}</Text>
+          <Text>
+            <FormattedMessage id="feedback_section.positive" />
+          </Text>
         </Flex>
         <Flex
           ref={dislikeButton}
@@ -86,7 +87,9 @@ const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
           ) : (
             <LikeSelectedIcon size={24} sx={styles.dislikeIcon} />
           )}
-          <Text>{messages['feedback_section.negative']}</Text>
+          <Text>
+            <FormattedMessage id="feedback_section.negative" />
+          </Text>
         </Flex>
       </Flex>
       {suggestEdits && (
@@ -97,7 +100,9 @@ const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
           sx={styles.editContainer}
         >
           <EditIcon size={24} sx={styles.editIcon} />
-          <Text>{messages['feedback_section.edit']}</Text>
+          <Text>
+            <FormattedMessage id="feedback_section.edit" />
+          </Text>
         </Link>
       )}
       {modalState.modalOpen ? (

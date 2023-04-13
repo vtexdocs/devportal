@@ -11,6 +11,7 @@ import type { ActionType } from 'components/last-updates-card/functions'
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 
 import styles from './styles'
+import { useIntl } from 'react-intl'
 
 export interface SearchDataItemProps {
   doc: DocumentationTitle | UpdatesTitle
@@ -48,6 +49,7 @@ const searchData: SearchDataItemProps[] = [
 
 const SearchResults = () => {
   const router = useRouter()
+  const intl = useIntl()
   const { filterSelectedSection, updateOcurrenceCount } =
     useContext(SearchContext)
 
@@ -72,7 +74,7 @@ const SearchResults = () => {
         {filteredResult.map((result, index) => (
           <SearchCard
             key={`${result.doc}${result.title}${index}`}
-            Icon={getIcon(result.doc)!}
+            Icon={getIcon(result.doc, intl)!}
             {...result}
           />
         ))}

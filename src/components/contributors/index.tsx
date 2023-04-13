@@ -2,8 +2,7 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { Box, Flex, Grid, IconCaret, Text } from '@vtex/brand-ui'
 
 import Tooltip from 'components/tooltip'
-
-import { getMessages } from 'utils/get-messages'
+import { useIntl } from 'react-intl'
 
 import styles from './styles'
 import { ContributorsType } from 'utils/getFileContributors'
@@ -14,7 +13,7 @@ interface Props {
 }
 
 const Contributors = ({ contributors }: Props) => {
-  const messages = getMessages()
+  const intl = useIntl()
 
   const [showAll, setShowAll] = useState(false)
   const [pageWidth, setPageWidth] = useState(0)
@@ -46,7 +45,9 @@ const Contributors = ({ contributors }: Props) => {
     <Flex sx={styles.container}>
       <Flex sx={styles.titleContainer}>
         <Text sx={styles.title}>
-          {messages['api_guide_documentation_page_contributors.title']}
+          {intl.formatMessage({
+            id: 'api_guide_documentation_page_contributors.title',
+          })}
         </Text>
         <Text sx={styles.count}>{contributors.length}</Text>
       </Flex>
@@ -87,7 +88,9 @@ const Contributors = ({ contributors }: Props) => {
         >
           <Text>
             {showAll
-              ? messages['api_guide_documentation_page_contributors.toggleText']
+              ? intl.formatMessage({
+                  id: 'api_guide_documentation_page_contributors.toggleText',
+                })
               : `+ ${
                   contributors.length - minRows * photosPerRow
                 } contributors`}

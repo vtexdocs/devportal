@@ -4,16 +4,15 @@ import { connectSearchBox } from 'react-instantsearch-dom'
 import { SearchBoxProvided } from 'react-instantsearch-core'
 
 import SearchIcon from 'components/icons/search-icon'
-import { getMessages } from 'utils/get-messages'
 import styles from './styles'
-
-const messages = getMessages()
+import { useIntl } from 'react-intl'
 
 const SearchBoxComponent = ({
   currentRefinement,
   refine,
 }: SearchBoxProvided) => {
   const inputRef = useRef<HTMLInputElement>(null)
+  const intl = useIntl()
 
   const handleClick = () => {
     if (inputRef.current != null) inputRef.current.focus()
@@ -27,7 +26,9 @@ const SearchBoxComponent = ({
         ref={inputRef}
         className="searchComponent"
         type="text"
-        placeholder={messages['search_input.placeholder']}
+        placeholder={intl.formatMessage({
+          id: 'search_input.placeholder',
+        })}
         value={currentRefinement}
         data-cy="search"
         onChange={(e) => refine(e.currentTarget.value)}
