@@ -6,7 +6,9 @@ import { Box, Text } from '@vtex/brand-ui'
 import { searchClient } from 'utils/constants'
 
 import { Configure, InstantSearch } from 'react-instantsearch-dom'
-import InfiniteHits from './infiniteHits'
+import CustomHits from './customHits'
+import Pagination from './pagination'
+// import { Pagination } from 'react-instantsearch-dom'
 
 import styles from './styles'
 
@@ -22,9 +24,14 @@ const SearchResults = () => {
       </Text>
       <hr />
       <Box>
-        <InstantSearch searchClient={searchClient} indexName="devportal-dev">
-          <Configure query={router.query.keyword} hitsPerPage={16} />
-          <InfiniteHits />
+        <InstantSearch searchClient={searchClient} indexName="devportal-docs">
+          <Configure
+            query={router.query.keyword}
+            clickAnalytics={true}
+            hitsPerPage={6}
+          />
+          <CustomHits />
+          <Pagination />
         </InstantSearch>
       </Box>
     </Box>
