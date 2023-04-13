@@ -7,8 +7,8 @@ import {
   useRef,
   useState,
 } from 'react'
-import { getMessages } from 'utils/get-messages'
 import useClickOutside from 'utils/hooks/useClickOutside'
+import { useIntl } from 'react-intl'
 
 import { arrowDirectionStyle, modalPositionStyle } from './functions'
 import styles from './styles'
@@ -16,8 +16,6 @@ export interface ModalProps {
   modalOpen: boolean
   liked?: boolean
 }
-
-const messages = getMessages()
 
 const FeedBackModalArrow = (props: IconProps) => {
   return (
@@ -54,6 +52,7 @@ const FeedBackModal = ({
   const cardRef = useRef<HTMLDivElement>()
   const { body, documentElement } = document
   const [comment, setComment] = useState('')
+  const intl = useIntl()
 
   const closeModal = () => {
     const feedback = modalState?.liked
@@ -91,7 +90,11 @@ const FeedBackModal = ({
           }
           data-cy="feedback-modal"
         >
-          <Text sx={styles.title}>{messages['feedback_modal.title']}</Text>
+          <Text sx={styles.title}>
+            {intl.formatMessage({
+              id: 'feedback_modal.title',
+            })}
+          </Text>
           <Textarea
             id="feedback-modal-input"
             sx={styles.textarea}
@@ -105,7 +108,9 @@ const FeedBackModal = ({
             sx={styles.button}
             variant="secondary"
           >
-            {messages['feedback_modal.button']}
+            {intl.formatMessage({
+              id: 'feedback_modal.button',
+            })}
           </Button>
         </Box>
         <FeedBackModalArrow

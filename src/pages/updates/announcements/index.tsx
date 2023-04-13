@@ -8,9 +8,11 @@ import styles from 'styles/release-notes'
 import getReleasesData from 'utils/getReleasesData'
 import { UpdateElement } from 'utils/typings/types'
 import Head from 'next/head'
-import { getMessages } from 'utils/get-messages'
 import { PreviewContext } from 'utils/contexts/preview'
 import { useContext } from 'react'
+import { useIntl } from 'react-intl'
+
+const intl = useIntl()
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -19,18 +21,22 @@ interface Props {
   branch: string
 }
 
-const messages = getMessages()
-
 const ReleasePage: NextPage<Props> = ({ releasesData, branch }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
   return (
     <>
       <Head>
-        <title>{messages['release_notes_page.title']}</title>
+        <title>
+          {intl.formatMessage({
+            id: 'release_notes_page.title',
+          })}
+        </title>
         <meta
           property="og:title"
-          content={messages['release_notes_page.subtitle']}
+          content={intl.formatMessage({
+            id: 'release_notes_page.subtitle',
+          })}
           key="title"
         />
       </Head>

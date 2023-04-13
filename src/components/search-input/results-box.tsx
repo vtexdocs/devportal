@@ -13,10 +13,11 @@ import {
 import aa from 'search-insights'
 import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
 
-import { getIcon, messages } from 'utils/constants'
+import { getIcon } from 'utils/constants'
 import { getBreadcrumbs, getRelativeURL } from './functions'
 import CustomHighlight from './customHighlight'
 import styles from './styles'
+import { FormattedMessage, useIntl } from 'react-intl'
 interface HitProps {
   hit: Hit
   insights: WrappedInsightsClient
@@ -24,7 +25,8 @@ interface HitProps {
 
 const Hit = ({ hit, insights }: HitProps) => {
   const breadcrumbsList = getBreadcrumbs(hit)
-  const DocIcon = getIcon(hit.doctype)
+  const intl = useIntl()
+  const DocIcon = getIcon(hit.doctype, intl)
   return (
     <Link href={getRelativeURL(hit)} legacyBehavior>
       <a
@@ -118,7 +120,9 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
             )}
             {!searchResults.hits.length && (
               <Flex sx={styles.noResults}>
-                <Text>{messages['search_input.empty']}</Text>
+                <Text>
+                  <FormattedMessage id="search_input.empty" />
+                </Text>
               </Flex>
             )}
           </Box>

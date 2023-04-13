@@ -12,7 +12,7 @@ import CodeBlock from 'components/code-block'
 import styles from './styles.module.css'
 import { Flex } from '@vtex/brand-ui'
 import LightBox from 'components/lightbox'
-import { messages } from 'utils/constants'
+import { FormattedMessage } from 'react-intl'
 
 type Component = {
   node: object
@@ -106,7 +106,8 @@ export default {
       <blockquote
         className={`${styles.blockquote} ${styles.blockquoteWarning}`}
       >
-        {messages['error_loading_image']} {props.src}
+        <FormattedMessage id="error_loading_image" />
+        {props.src}
       </blockquote>
     )
 

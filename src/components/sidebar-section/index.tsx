@@ -18,6 +18,7 @@ import { SidebarContext } from 'utils/contexts/sidebar'
 import { getIcon } from 'utils/constants'
 
 import styles from './styles'
+import { useIntl } from 'react-intl'
 
 export interface SidebarSectionProps {
   documentation: DocumentationTitle | UpdatesTitle
@@ -92,8 +93,9 @@ const SidebarSection = ({
       .filter((category: SidebarElement) => category.children.length > 0)
     return filteredCategories
   }, [filterStatus, methodFilterList, categories, searchValue])
+  const intl = useIntl()
 
-  const DocIcon = getIcon(documentation)
+  const DocIcon = getIcon(documentation, intl)
 
   return isHamburgerMenu ? (
     <Box

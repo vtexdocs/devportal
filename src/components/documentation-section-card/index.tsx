@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import { Flex, Text } from '@vtex/brand-ui'
 
-import { getMessages } from 'utils/get-messages'
 import type { DocDataElement } from 'utils/typings/types'
 import Tooltip from 'components/tooltip'
 import styles from './styles'
 import { useEffect, useRef, useState } from 'react'
+import { useIntl } from 'react-intl'
 
 const DocumentationSectionCard = ({
   Icon,
@@ -13,7 +13,7 @@ const DocumentationSectionCard = ({
   description,
   link,
 }: DocDataElement) => {
-  const messages = getMessages()
+  const intl = useIntl()
   const [tooltipState, setTooltipState] = useState(false)
   const [tooltipDescription, setTooltipDescription] = useState(description)
   const descriptionRef = useRef<HTMLElement>()
@@ -57,11 +57,9 @@ const DocumentationSectionCard = ({
             sx={styles.quickStartedContainer}
           >
             <Text className="learnMoreText" sx={styles.learnMoreText}>
-              {
-                messages[
-                  'landing_page_documentation_documentation_card.learnMoreText'
-                ]
-              }
+              {intl.formatMessage({
+                id: 'landing_page_documentation_documentation_card.learnMoreText',
+              })}
             </Text>
           </Flex>
         </Flex>

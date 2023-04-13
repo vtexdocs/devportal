@@ -5,6 +5,7 @@ import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 
 import { SearchContext } from 'utils/contexts/search'
 import { documentationData, updatesData } from 'utils/constants'
+import { useIntl } from 'react-intl'
 
 import styles from './styles'
 
@@ -30,13 +31,14 @@ const SearchFilterTab = ({
 }
 
 const SearchFilterTabBar = () => {
+  const intl = useIntl()
   return (
     <Flex sx={styles.container}>
       <SearchFilterTab filter="" />
-      {documentationData.map(({ title }) => (
+      {documentationData(intl).map(({ title }) => (
         <SearchFilterTab key={title} filter={title} />
       ))}
-      {updatesData.map(({ title }) => (
+      {updatesData(intl).map(({ title }) => (
         <SearchFilterTab key={title} filter={title} />
       ))}
     </Flex>

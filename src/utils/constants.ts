@@ -21,119 +21,169 @@ import {
   WhatsNextDataElement,
   ResourceDataElement,
 } from './typings/types'
+import { IntlShape } from 'react-intl'
 
 export const messages = getMessages()
 
-export const documentationData: DocDataElement[] = [
-  {
-    Icon: APIGuidesIcon,
-    title: 'Guides',
-    description: messages['documentation_api_guides.description'],
-    link: '/docs/guides',
-  },
-  {
-    Icon: APIReferenceIcon,
-    title: 'API Reference',
-    description: messages['documentation_api_reference.description'],
-    link: '/docs/api-reference',
-  },
-  {
-    Icon: AppDevelopmentIcon,
-    title: 'App Development',
-    description: messages['documentation_app_development.description'],
-    link: '/docs/app-development',
-  },
-  {
-    Icon: StorefrontDevelopmentIcon,
-    title: 'Storefront Development',
-    description: messages['documentation_storefront.description'],
-    link: '/docs/storefront-development',
-  },
-  {
-    Icon: VTEXIOAppsIcon,
-    title: 'VTEX IO Apps',
-    description: messages['documentation_vtexio_apps.description'],
-    link: '/docs/vtex-io-apps',
-  },
-]
+export const documentationData = (intl: IntlShape) => {
+  const data: DocDataElement[] = [
+    {
+      Icon: APIGuidesIcon,
+      title: 'Guides',
+      description: intl.formatMessage({
+        id: 'documentation_api_guides.description',
+      }),
+      link: '/docs/guides',
+    },
+    {
+      Icon: APIReferenceIcon,
+      title: 'API Reference',
+      description: intl.formatMessage({
+        id: 'documentation_api_reference.description',
+      }),
+      link: '/docs/api-reference',
+    },
+    {
+      Icon: AppDevelopmentIcon,
+      title: 'App Development',
+      description: intl.formatMessage({
+        id: 'documentation_app_development.description',
+      }),
+      link: '/docs/app-development',
+    },
+    {
+      Icon: StorefrontDevelopmentIcon,
+      title: 'Storefront Development',
+      description: intl.formatMessage({
+        id: 'documentation_storefront.description',
+      }),
+      link: '/docs/storefront-development',
+    },
+    {
+      Icon: VTEXIOAppsIcon,
+      title: 'VTEX IO Apps',
+      description: intl.formatMessage({
+        id: 'documentation_vtexio_apps.description',
+      }),
+      link: '/docs/vtex-io-apps',
+    },
+  ]
+  return data
+}
 
-export const updatesData: UpdatesDataElement[] = [
-  {
-    Icon: ReleaseNotesIcon,
-    title: 'Release Notes',
-    description: messages['updates_release_notes.description'],
-    link: '/updates/release-notes',
-  },
-]
-
-export const getIcon = (doc: string) => {
+export const updatesData = (intl: IntlShape) => {
+  const data: UpdatesDataElement[] = [
+    {
+      Icon: ReleaseNotesIcon,
+      title: 'Release Notes',
+      description: intl.formatMessage({
+        id: 'updates_release_notes.description',
+      }),
+      link: '/updates/release-notes',
+    },
+  ]
+  return data
+}
+export const getIcon = (doc: string, intl: IntlShape) => {
   return (
-    documentationData.find((icon) => icon.title === doc)?.Icon ||
-    updatesData.find((icon) => icon.title === doc)?.Icon
+    documentationData(intl).find((icon) => icon.title === doc)?.Icon ||
+    updatesData(intl).find((icon) => icon.title === doc)?.Icon
   )
 }
 
-export const whatsNextData: WhatsNextDataElement[] = [
-  {
-    title: messages['app_development_page_new_to_app_development.title'],
-    description:
-      messages['app_development_page_new_to_app_development.description'],
-    linkTitle: messages['app_development_page_new_to_app_development.link'],
-    linkTo: '/docs/guides/vtex-io-getting-started',
-  },
-  {
-    title: messages['app_development_page_solve_real_world_issues.title'],
-    description:
-      messages['app_development_page_solve_real_world_issues.description'],
-    linkTitle: messages['app_development_page_solve_real_world_issues.link'],
-    linkTo: '/docs/guides/app-development-guides',
-  },
-  {
-    title: messages['app_development_page_build_foundations.title'],
-    description: messages['app_development_page_build_foundations.description'],
-    linkTitle: messages['app_development_page_build_foundations.link'],
-    linkTo: '/docs/guides/concepts',
-  },
-  {
-    title: messages['app_development_page_go_further.title'],
-    description: messages['app_development_page_go_further.description'],
-    linkTitle: messages['app_development_page_go_further.link'],
-    linkTo:
-      '/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store',
-  },
-]
+export const whatsNextData = (intl: IntlShape) => {
+  const data: WhatsNextDataElement[] = [
+    {
+      title: intl.formatMessage({
+        id: 'app_development_page_new_to_app_development.title',
+      }),
+      description: intl.formatMessage({
+        id: 'app_development_page_new_to_app_development.description',
+      }),
+      linkTitle: intl.formatMessage({
+        id: 'app_development_page_new_to_app_development.link',
+      }),
+      linkTo: '/docs/guides/vtex-io-getting-started',
+    },
+    {
+      title: intl.formatMessage({
+        id: 'app_development_page_solve_real_world_issues.title',
+      }),
+      description: intl.formatMessage({
+        id: 'app_development_page_solve_real_world_issues.description',
+      }),
+      linkTitle: intl.formatMessage({
+        id: 'app_development_page_solve_real_world_issues.link',
+      }),
+      linkTo: '/docs/guides/app-development-guides',
+    },
+    {
+      title: intl.formatMessage({
+        id: 'app_development_page_build_foundations.title',
+      }),
+      description: intl.formatMessage({
+        id: 'app_development_page_build_foundations.description',
+      }),
+      linkTitle: intl.formatMessage({
+        id: 'app_development_page_build_foundations.link',
+      }),
+      linkTo: '/docs/guides/concepts',
+    },
+    {
+      title: intl.formatMessage({
+        id: 'app_development_page_go_further.title',
+      }),
+      description: intl.formatMessage({
+        id: 'app_development_page_go_further.description',
+      }),
+      linkTitle: intl.formatMessage({
+        id: 'app_development_page_go_further.link',
+      }),
+      linkTo:
+        '/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store',
+    },
+  ]
+  return data
+}
 
-export const resources: ResourceDataElement[] = [
-  {
-    title: 'Community',
-    description:
-      messages['app_development_page_other_resources_community.description'],
-    link: getCommunityURL(),
-  },
-  {
-    title: 'Learning Center',
-    description:
-      messages[
-        'app_development_page_other_resources_learning_center.description'
-      ],
-    link: getLearningCenterURL(),
-  },
-  {
-    title: 'GitHub',
-    description:
-      messages['app_development_page_other_resources_github.description'],
-    link: getGithubURL(),
-  },
-  {
-    title: 'Help Center',
-    description:
-      messages['app_development_page_other_resources_help_center.description'],
-    link: getHelpCenterURL(),
-  },
-  {
-    title: 'Support',
-    description:
-      messages['app_development_page_other_resources_support.description'],
-    link: getSupportURL(),
-  },
-]
+export const resources = (intl: IntlShape) => {
+  const data: ResourceDataElement[] = [
+    {
+      title: 'Community',
+      description: intl.formatMessage({
+        id: 'app_development_page_other_resources_community.description',
+      }),
+      link: getCommunityURL(),
+    },
+    {
+      title: 'Learning Center',
+      description: intl.formatMessage({
+        id: 'app_development_page_other_resources_learning_center.description',
+      }),
+      link: getLearningCenterURL(),
+    },
+    {
+      title: 'GitHub',
+      description: intl.formatMessage({
+        id: 'app_development_page_other_resources_github.description',
+      }),
+      link: getGithubURL(),
+    },
+    {
+      title: 'Help Center',
+      description: intl.formatMessage({
+        id: 'app_development_page_other_resources_help_center.description',
+      }),
+      link: getHelpCenterURL(),
+    },
+    {
+      title: 'Support',
+      description: intl.formatMessage({
+        id: 'app_development_page_other_resources_support.description',
+      }),
+      link: getSupportURL(),
+    },
+  ]
+
+  return data
+}

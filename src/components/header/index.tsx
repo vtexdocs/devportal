@@ -10,18 +10,18 @@ import { useRouter } from 'next/router'
 
 import HamburgerMenu from './hamburger-menu'
 import DropdownMenu from 'components/dropdown-menu'
-import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
+import VTEXHelpCenterIcon from 'components/icons/vtex-helpcenter-icon'
 import GridIcon from 'components/icons/grid-icon'
 import LongArrowIcon from 'components/icons/long-arrow-icon'
 
 import { getFeedbackURL } from 'utils/get-url'
-import { getMessages } from 'utils/get-messages'
 
 import SearchInput from 'components/search-input'
 import AnnouncementBar from 'components/announcement-bar'
 
 import styles from './styles'
 import { PreviewContext } from 'utils/contexts/preview'
+import { FormattedMessage } from 'react-intl'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Header = () => {
@@ -34,8 +34,6 @@ const Header = () => {
   const modalOpen = useRef(false)
   const [showDropdown, setShowDropdown] = useState(false)
   const headerElement = useRef<HTMLElement>()
-
-  const messages = getMessages()
 
   useEffect(() => {
     const body = document.body
@@ -117,7 +115,7 @@ const Header = () => {
           href="/"
           sx={styles.headerBrandLink}
         >
-          <VTEXDevportalIcon sx={styles.logoSize} />
+          <VTEXHelpCenterIcon sx={styles.logoSize} />
         </VtexLink>
 
         <Box sx={styles.searchContainer}>
@@ -133,7 +131,7 @@ const Header = () => {
             <Flex sx={styles.dropdownButton(showDropdown)}>
               <GridIcon />
               <Text sx={styles.rightButtonsText} data-cy="docs-dropdown">
-                {messages['landing_page_header_docs.message']}
+                <FormattedMessage id="landing_page_header_docs.message" />
               </Text>
             </Flex>
 
@@ -147,7 +145,7 @@ const Header = () => {
           >
             <LongArrowIcon />
             <Text sx={styles.rightButtonsText}>
-              {messages['landing_page_header_feedback.message']}
+              <FormattedMessage id="landing_page_header_feedback.message" />
             </Text>
           </VtexLink>
         </HeaderBrand.RightLinks>
