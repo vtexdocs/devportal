@@ -1,12 +1,17 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const container: SxStyleProp = {
+  justifyContent: 'space-between',
+  borderRadius: '9px',
+  border: '1px solid #DDDDDD',
   width: '100%',
-  padding: '16px',
-  mt: '8px',
+  mb: '18px',
+  paddingTop: '26px',
+  paddingBottom: '10px',
+  paddingLeft: '44px',
+  paddingRight: '13px',
   background: '#FFFFFF',
   cursor: 'pointer',
-  borderRadius: '4px',
   ':hover': {
     background: '#F8F7FC',
     '.searchCardTitle, .searchCardDescription': {
@@ -42,13 +47,18 @@ const description: SxStyleProp = {
   fontSize: '16px',
   lineHeight: '22px',
   paddingLeft: '32px',
-  color: 'muted.1',
+  color: 'muted.0',
   mt: '4px',
   mb: '8px',
 }
 
 const descriptionToggle: SxStyleProp = {
   height: 'auto',
+  minWidth: 'auto',
+}
+
+const descriptionExpandedItem: SxStyleProp = {
+  mt: '24px',
 }
 
 const filterContainer: SxStyleProp = {
@@ -93,6 +103,7 @@ export default {
   icon,
   description,
   descriptionToggle,
+  descriptionExpandedItem,
   filterContainer,
   filter,
   filterIn,
