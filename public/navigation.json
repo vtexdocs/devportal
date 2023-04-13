@@ -1035,8 +1035,8 @@
                   "children": []
                 },
                 {
-                  "name": "Add client profile",
-                  "slug": "add-client-profile",
+                  "name": "Adding customer profile information to the cart",
+                  "slug": "add-customer-profile-information-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1049,15 +1049,15 @@
                   "children": []
                 },
                 {
-                  "name": "Add client preferences",
-                  "slug": "add-client-preferences-to-the-cart",
+                  "name": "Adding customer preferences to the cart",
+                  "slug": "add-customer-preferences-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Add marketing data",
-                  "slug": "add-marketing-data-to-the-cart",
+                  "name": "Adding marketing information to the cart",
+                  "slug": "add-marketing-information-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1070,15 +1070,15 @@
                   "children": []
                 },
                 {
-                  "name": "Add payment data",
-                  "slug": "add-payment-data-to-the-cart",
+                  "name": "Adding payment information to the cart",
+                  "slug": "adding-payment-information-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Add merchant context data",
-                  "slug": "add-merchant-context-data-to-the-cart",
+                  "name": "Adding merchant context information to the cart",
+                  "slug": "add-merchant-context-information-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
