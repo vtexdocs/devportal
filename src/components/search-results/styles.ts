@@ -1,7 +1,7 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const resultContainer: SxStyleProp = {
-  width: ['324px', '544px', '544px', '544px', '720px', '720px', '1400px'],
+  width: ['80%', '544px', '544px', '544px', '720px', '720px', '1400px'],
   paddingTop: ['32px', '32px', '32px', '64px'],
   hr: {
     marginTop: '16px',
@@ -33,6 +33,7 @@ const paginationLink: SxStyleProp = {
 }
 
 const paginationLinkDisabled: SxStyleProp = {
+  ...paginationLink,
   color: 'muted.1',
 }
 
