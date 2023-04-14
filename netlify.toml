@@ -373,3 +373,39 @@ force = true
 from = '/docs/guides/marketplace-api'
 status = 308
 to = '/docs/api-reference/marketplace-apis'
+
+[[redirects]]
+force = true
+from = '/docs/guides/add-client-preferences-to-the-cart'
+status = 308
+to = '/docs/guides/add-customer-preferences-to-the-cart'
+
+[[redirects]]
+force = true
+from = '/docs/guides/add-client-profile'
+status = 308
+to = '/docs/guides/add-customer-profile-information-to-the-cart'
+
+[[redirects]]
+force = true
+from = '/docs/guides/add-marketing-data-to-the-cart'
+status = 308
+to = '/docs/guides/add-marketing-information-to-the-cart'
+
+[[redirects]]
+force = true
+from = '/docs/guides/add-merchant-context-data-to-the-cart'
+status = 308
+to = '/docs/guides/add-merchant-context-information-to-the-cart'
+
+[[redirects]]
+force = true
+from = '/docs/guides/add-payment-data-to-the-cart'
+status = 308
+to = '/docs/guides/adding-payment-information-to-the-cart'
+
+[[redirects]]
+force = true
+from = '/docs/guides/get-a-client-profile-by-email'
+status = 308
+to = '/docs/guides/getting-a-customer-profile-by-email'
