@@ -181,7 +181,6 @@ export const getStaticProps: GetStaticProps = async ({
   const branch = preview ? previewBranch : 'main'
   const slug = params?.slug as string
   const currentLocale = locale ? locale : 'en'
-  console.log(currentLocale)
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
