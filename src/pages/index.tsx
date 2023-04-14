@@ -12,6 +12,7 @@ import getNavigation from 'utils/getNavigation'
 import { GetStaticProps } from 'next'
 import { useContext } from 'react'
 import { PreviewContext } from 'utils/contexts/preview'
+import SupportSection from 'components/support-section'
 
 interface Props {
   branch: string
@@ -40,6 +41,7 @@ const Home: Page<Props> = ({ branch }) => {
         <NewsletterSection />
         <DocumentationSection />
         <LastUpdatesSection />
+        <SupportSection />
         <EducationSection />
       </Grid>
     </>

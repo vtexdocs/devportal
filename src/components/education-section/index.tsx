@@ -14,12 +14,12 @@ const EducationSection = () => {
 
   const educationChannels = [
     {
-      title: intl.formatMessage({ id: 'landing_page_education_github.title' }),
+      title: intl.formatMessage({ id: 'landing_page_education_support.title' }),
       description: intl.formatMessage({
-        id: 'landing_page_education_github.description',
+        id: 'landing_page_education_support.description',
       }),
       textLink: intl.formatMessage({
-        id: 'landing_page_education_github.textLink',
+        id: 'landing_page_education_support.textLink',
       }),
       link: getGithubURL(),
       icon: GithubIcon,

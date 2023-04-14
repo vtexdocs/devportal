@@ -53,6 +53,9 @@ const articleBox: SxStyleProp = {
     fontWeight: '600',
     overflowWrap: 'anywhere',
   },
+  hr: {
+    border: '0.5px solid #E7E9EE',
+  },
 }
 
 const contentContainer: SxStyleProp = {
