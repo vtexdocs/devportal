@@ -170,6 +170,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({
   params,
+  locale,
   preview,
   previewData,
 }) => {
@@ -182,7 +183,7 @@ export const getStaticProps: GetStaticProps = async ({
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
-      : await getDocsPaths(branch)
+      : await getDocsPaths(branch, locale)
 
   const logger = getLogger('Guides')
 

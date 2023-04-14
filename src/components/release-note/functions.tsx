@@ -8,9 +8,10 @@ import { FormattedMessage } from 'react-intl'
 export const getReleaseDate = (createdAt: string) => {
   const daysElapsed = getDaysElapsed(new Date(createdAt))
   return daysElapsed < 8 ? (
-    <Text sx={styles.releaseDate}>{`${getDaysElapsed(new Date(createdAt))} ${(
+    <Text sx={styles.releaseDate}>
+      {`${getDaysElapsed(new Date(createdAt))} `}
       <FormattedMessage id="relese-note-days-elapsed" />
-    )}`}</Text>
+    </Text>
   ) : (
     getDate(createdAt, false)
   )

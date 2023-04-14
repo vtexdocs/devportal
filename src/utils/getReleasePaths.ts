@@ -18,7 +18,7 @@ async function getGithubTree(org: string, repo: string, ref: string) {
 
 //https://api.github.com/repos/vtexdocs/devportal/commits?path=README.md
 
-export default async function getReleasePaths(branch = 'main') {
+export default async function getReleasePaths(branch = 'main', locale = '') {
   const repoTree = await getGithubTree(
     'vtexdocs',
     'help-center-content',
@@ -28,7 +28,7 @@ export default async function getReleasePaths(branch = 'main') {
   repoTree.tree.map((node: any) => {
     const path = node.path
     const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
-    if (path.startsWith('docs/release-notes')) {
+    if (path.startsWith(`announcements/${locale}`)) {
       const match = path.match(re)
       const filename = match?.groups?.filename ? match?.groups?.filename : ''
       const filetype = match?.groups?.filetype ? match?.groups?.filetype : ''
