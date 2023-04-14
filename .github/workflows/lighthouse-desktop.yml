@@ -1,7 +1,7 @@
 name: Lighthouse Desktop
 on: [pull_request]
 jobs:
-  build:
+  lighthouse:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,12 +32,43 @@ jobs:
           script: |
             const { URL } = process.env
             const { selectRandomPages } = require('./src/tests/utils/select-pages.js')
-            const pages = selectRandomPages(0.05).map(page => `${URL}/${page}`).join('\n')
+            const pages = selectRandomPages(0.01).map(page => `${URL}${page}`).join('\n')
             core.setOutput('pages', pages)
-            console.log(pages)
       - name: Lighthouse CI
-        uses: treosh/lighthouse-ci-action@v8
+        id: lighthouse-ci
+        uses: treosh/lighthouse-ci-action@v9
         with:
           urls: |
             ${{ steps.wait-for-netlify-preview.outputs.url }}
             ${{ steps.select-random-pages.outputs.pages }}
+          configPath: ./lighthouserc.json
+          temporaryPublicStorage: true
+      - name: Generate summary report
+        id: generate-summary-report
+        uses: actions/github-script@v6
+        env:
+          LINKS: ${{ steps.lighthouse-ci.outputs.links }}
+          MANIFEST: ${{ steps.lighthouse-ci.outputs.manifest }}
+        with:
+          script: |
+            const links = JSON.parse(process.env.LINKS)
+            const manifest = JSON.parse(process.env.MANIFEST)
+
+            let output = '# Performance Results\n\n'
+            manifest.forEach(({ url, summary }) => {
+              output += `* Page: ${url}\n\n`
+              output += `    Complete results [here](${links[url]})\n\n`
+
+              output += `    ![Performance](https://progress-bar.dev/${Math.floor(summary['performance'] * 100)}?title=Performance)\n`
+              output += `    ![Accessibility](https://progress-bar.dev/${Math.floor(summary['accessibility'] * 100)}?title=Accessibility)\n`
+              output += `    ![Best Practices](https://progress-bar.dev/${Math.floor(summary['best-practices'] * 100)}?title=Best%20Practices)\n`
+              output += `    ![SEO](https://progress-bar.dev/${Math.floor(summary['seo'] * 100)}?title=SEO)\n\n`
+            })
+
+            core.setOutput('summary', output)
+        - name: Comment PR
+          uses: thollander/actions-comment-pull-request@v2
+          with:
+            comment_tag: lighthouse-summary
+            message: ${{ steps.generate-summary-report.outputs.summary }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
