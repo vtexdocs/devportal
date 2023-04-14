@@ -403,3 +403,9 @@ force = true
 from = '/docs/guides/add-payment-data-to-the-cart'
 status = 308
 to = '/docs/guides/adding-payment-information-to-the-cart'
+
+[[redirects]]
+force = true
+from = '/docs/guides/get-a-client-profile-by-email'
+status = 308
+to = '/docs/guides/getting-a-customer-profile-by-email'

@@ -1028,8 +1028,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Get client profile by email",
-                  "slug": "get-a-client-profile-by-email",
+                  "name": "Getting a customer profile by email",
+                  "slug": "getting-a-customer-profile-by-email",
                   "origin": "",
                   "type": "markdown",
                   "children": []
