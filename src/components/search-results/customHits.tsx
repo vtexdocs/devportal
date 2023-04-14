@@ -33,9 +33,9 @@ const Hit = ({ hit }: HitProps) => {
     <SearchCard
       doc={hit.doctype as DocumentationTitle | UpdatesTitle}
       Icon={DocIcon!}
-      title="Product Summary SKU Name"
+      title={hit.doctitle}
       http={(hit.http as MethodType) || undefined}
-      filters={(breadcrumbs as string[]) || []}
+      breadcrumbs={(breadcrumbs as string[]) || []}
       actionType={(hit.actiontype as ActionType) || undefined}
       url={getRelativeURL(hit.url)}
       hit={hit}
