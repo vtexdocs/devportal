@@ -8,7 +8,7 @@ const container: SxStyleProp = {
   mb: '18px',
   paddingTop: '26px',
   paddingBottom: '10px',
-  paddingLeft: '44px',
+  paddingLeft: ['13px', '44px'],
   paddingRight: '13px',
   background: '#FFFFFF',
   cursor: 'pointer',
@@ -22,9 +22,9 @@ const container: SxStyleProp = {
 
 const title: SxStyleProp = {
   display: 'flex',
-  alignItems: 'center',
-  fontSize: '18px',
-  lineHeight: '24px',
+  alignItems: 'flex-start',
+  fontSize: ['16px', '18px'],
+  lineHeight: ['22px', '24px'],
   color: 'muted.0',
 }
 
@@ -61,26 +61,49 @@ const descriptionExpandedItem: SxStyleProp = {
   mt: '24px',
 }
 
-const filterContainer: SxStyleProp = {
+const breadcrumbsContainer: SxStyleProp = {
+  display: ['none', 'flex'],
   paddingLeft: '32px',
+  alignItems: 'center',
 }
 
-const filter: SxStyleProp = {
-  display: 'flex',
+const alignCenter: SxStyleProp = {
   alignItems: 'center',
+}
+
+const documentation: SxStyleProp = {
+  ...alignCenter,
+  minWidth: 'max-content',
+}
+
+const breadcrumb: SxStyleProp = {
+  color: 'muted.1',
   fontSize: '16px',
   lineHeight: '18px',
-  color: 'muted.1',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
 }
 
-const filterIn: SxStyleProp = {
-  ...filter,
+const lastBreadcrumb: SxStyleProp = {
+  ...breadcrumb,
+  margin: 'auto 0',
+  display: 'block',
+  overflow: 'hidden',
+  maxWidth: 'max-content',
+  whiteSpace: 'nowrap',
+}
+
+const breadcrumbsIn: SxStyleProp = {
+  ...breadcrumb,
   mr: '4px',
+  minWidth: 'fit-content',
 }
 
-const filterArrow: SxStyleProp = {
+const breadcrumbsArrow: SxStyleProp = {
   width: '16px',
   height: '16px',
+  color: 'muted.2',
 }
 
 const actionContainer: SxStyleProp = {
@@ -104,10 +127,13 @@ export default {
   description,
   descriptionToggle,
   descriptionExpandedItem,
-  filterContainer,
-  filter,
-  filterIn,
-  filterArrow,
+  breadcrumbsContainer,
+  alignCenter,
+  documentation,
+  breadcrumb,
+  lastBreadcrumb,
+  breadcrumbsIn,
+  breadcrumbsArrow,
   actionContainer,
   actionIcon,
 }

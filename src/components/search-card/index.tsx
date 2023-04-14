@@ -1,4 +1,4 @@
-import { Box, Flex, Text, IconCaret } from '@vtex/brand-ui'
+import { Box, Flex, Text, IconCaret, Tooltip } from '@vtex/brand-ui'
 import { IconComponent } from 'utils/typings/types'
 
 import { methodStyle } from './functions'
@@ -19,7 +19,7 @@ export type FilteredHit = Hit & { filteredMatches?: Hit[] }
 interface SearchCardProps {
   doc: DocumentationTitle | UpdatesTitle
   title: string
-  filters?: string[]
+  breadcrumbs?: string[]
   http?: MethodType
   actionType?: ActionType
   Icon: IconComponent
@@ -31,7 +31,7 @@ const SearchCard = ({
   Icon,
   title,
   http,
-  filters,
+  breadcrumbs,
   actionType,
   url,
   hit,
@@ -70,18 +70,23 @@ const SearchCard = ({
                 </Box>
               ))}
           </Text>
-          {filters ? (
-            <Flex sx={styles.filterContainer}>
-              <Text sx={styles.filterIn}>In</Text>
-              {filters.map((filter, index) => (
-                <Text sx={styles.filter} key={`${filter}${index}`}>
-                  {filter}
-                  {index < filters.length - 1 ? (
-                    <IconCaret direction="right" sx={styles.filterArrow} />
+          {breadcrumbs ? (
+            <Box sx={styles.breadcrumbsContainer}>
+              <Text sx={styles.breadcrumbsIn}>In</Text>
+              {breadcrumbs.map((breadcrumb, index) => (
+                <Flex
+                  sx={index === 0 ? styles.documentation : styles.alignCenter}
+                  key={`${breadcrumb}${index}`}
+                >
+                  <Tooltip label={breadcrumb} placement="top">
+                    <Text sx={styles.breadcrumb}>{breadcrumb}</Text>
+                  </Tooltip>
+                  {index < breadcrumbs.length - 1 ? (
+                    <IconCaret direction="right" sx={styles.breadcrumbsArrow} />
                   ) : null}
-                </Text>
+                </Flex>
               ))}
-            </Flex>
+            </Box>
           ) : null}
           {actionValue ? (
             <Flex sx={styles.actionContainer}>
