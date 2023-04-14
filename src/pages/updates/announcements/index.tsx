@@ -48,6 +48,7 @@ const ReleasePage: NextPage<Props> = ({ releasesData, branch }) => {
 
 export const getStaticProps: GetStaticProps = async ({
   preview,
+  locale,
   previewData,
 }) => {
   const sidebarfallback = await getNavigation()
@@ -57,7 +58,8 @@ export const getStaticProps: GetStaticProps = async ({
       ? JSON.parse(JSON.stringify(previewData)).branch
       : 'main'
   const branch = preview ? previewBranch : 'main'
-  const releasesData = await getReleasesData(branch)
+  const currentLocale = locale || 'en'
+  const releasesData = await getReleasesData(branch, currentLocale)
 
   return {
     props: {

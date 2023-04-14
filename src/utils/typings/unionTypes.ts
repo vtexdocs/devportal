@@ -2,18 +2,24 @@ export type Locale = 'en' | 'pt' | 'es'
 
 export type DocumentationTitle =
   | 'Guides'
-  | 'API Reference'
-  | 'App Development'
-  | 'Storefront Development'
-  | 'VTEX IO Apps'
+  | 'Dashboards'
+  | 'Orders'
+  | 'Catalog'
+  | 'Promotions'
+  | 'Storefront'
+  | 'Shipping'
+  | 'Marketplace'
 
-export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
+export type UpdatesTitle = 'Announcements' | 'Documentation Updates'
 
 export type SlugPrefix =
+  | 'guides'
   | 'guides'
   | 'api-reference'
   | 'app-development'
   | 'storefront-development'
+  | 'vtex-io-apps'
+  | 'vtex-io-apps'
   | 'vtex-io-apps'
 
 export type ResourceTitle =
