@@ -62,7 +62,6 @@ const rightLinks: SxStyleProp = {
   display: ['none', 'none', 'none', 'flex !important'],
   width: 'auto',
   height: '100%',
-  pr: '48px',
 }
 
 const rightLinksItem: SxStyleProp = {
