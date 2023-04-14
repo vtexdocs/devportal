@@ -24,6 +24,7 @@
   "dependencies": {
     "@openreplay/tracker": "^5.0.1",
     "@plaiceholder/next": "^2.5.0",
+    "@sparticuz/chromium": "^112.0.2",
     "@types/http-proxy": "^1.17.9",
     "@types/probe-image-size": "^7.2.0",
     "@types/react-svg-pan-zoom": "^3.3.5",
@@ -31,7 +32,6 @@
     "@vtex/brand-ui": "^0.46.1",
     "algoliasearch": "^4.14.2",
     "chalk": "^5.2.0",
-    "chrome-aws-lambda": "^10.1.0",
     "copy-text-to-clipboard": "^3.0.1",
     "googleapis": "^39.2.0",
     "highlight.js": "^11.6.0",
