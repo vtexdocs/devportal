@@ -7,9 +7,15 @@ import Oas from 'oas'
 
 import getReferencePaths from 'utils/getReferencePaths'
 import getNavigation from 'utils/getNavigation'
+import { MethodType, isMethodType } from 'utils/typings/unionTypes'
 
+interface Endpoint {
+  title: string
+  description: string
+}
 interface Props {
   slug: string
+  endpoints: { [key: string]: Endpoint }
 }
 
 interface ReadmeSlugObj {
@@ -25,12 +31,19 @@ function capitalize(content: string) {
 const referencePaths = await getReferencePaths()
 const slugs = Object.keys(await getReferencePaths())
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
+const APIPage: NextPage<Props> = ({ slug, endpoints }) => {
   const router = useRouter()
   const rapidoc = useRef<{ scrollToPath: (endpoint: string) => void }>(null)
   const [endpointPath, setEndpointPath] = useState('')
+  const pageTitle =
+    capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
+
+  const getMethod = () => {
+    const regexMethodMatches = router.asPath.match(/#(.*?)-/) || ''
+    const method = regexMethodMatches ? regexMethodMatches[1].toUpperCase() : ''
+    return method && isMethodType(method) ? method : ''
+  }
+  const httpMethod = getMethod() as MethodType | ''
 
   useEffect(() => {
     setEndpointPath(`#${router.asPath.split('#')[1]}`)
@@ -56,10 +69,21 @@ const APIPage: NextPage<Props> = ({ slug, descriptions }) => {
         <title>
           {capitalize(slug.replaceAll('-', ' ').replace('api', ''))} API
         </title>
-        <meta name="docsearch:doctype" content="API Reference" />
-        {descriptions && (
-          <meta name="description" content={descriptions[endpointPath]} />
+        {endpoints && (
+          <>
+            <meta
+              name="description"
+              content={endpoints[endpointPath]?.description}
+            />
+            <meta
+              name="docsearch:doctitle"
+              content={endpoints[endpointPath]?.title}
+            />
+          </>
         )}
+        <meta name="docsearch:doctype" content="API Reference" />
+        <meta name="docsearch:doccategory" content={pageTitle} />
+        {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Script
         type="text/javascript"
@@ -113,7 +137,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const doc = await response.json()
     const endpointFile = new Oas(doc)
     const allPaths = endpointFile.getDefinition().paths
-    const descriptions: { [key: string]: string } = {}
+    const endpoints: {
+      [key: string]: Endpoint
+    } = {}
     const isMethod = (key: string) =>
       ['get', 'post', 'delete', 'put'].includes(key)
 
@@ -128,14 +154,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                 endpointValue &&
                 endpointValue.description
               ) {
-                descriptions[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] =
-                  endpointValue.description
-                    .split(/\r?\n/)
-                    .map((line: string) => line.trim())
-                    .find(
-                      (line: string) =>
-                        line && line[0].toLowerCase() !== line[0].toUpperCase()
-                    ) || ''
+                endpoints[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] = {
+                  title: endpointValue.summary || '',
+                  description:
+                    endpointValue.description
+                      .split(/\r?\n/)
+                      .map((line: string) => line.trim())
+                      .find(
+                        (line: string) =>
+                          line &&
+                          line[0].toLowerCase() !== line[0].toUpperCase()
+                      ) || '',
+                }
               }
             }
           )
@@ -150,7 +180,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         url,
         sectionSelected,
         sidebarfallback,
-        descriptions,
+        endpoints,
       },
     }
   } else {

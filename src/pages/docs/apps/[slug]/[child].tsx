@@ -75,6 +75,7 @@ const AppChildPage: NextPage<Props> = ({
           {title} by {vendor}
         </title>
         <meta name="docsearch:doctype" content="VTEX IO Apps" />
+        <meta name="docsearch:doctitle" content={title} />
         {vendor != 'vtex' && <meta name="robots" content="noindex" />}
       </Head>
       <Fragment>
