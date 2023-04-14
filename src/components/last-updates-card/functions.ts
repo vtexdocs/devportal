@@ -5,7 +5,7 @@ import DeprecatedIcon from 'components/icons/deprecated-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 import FixedIcon from 'components/icons/fixed-icon'
 import ImprovedIcon from 'components/icons/improved-icon'
-import ReleaseNotesIcon from 'components/icons/release-notes-icon'
+import AnnouncementIcon from 'components/icons/announcement-icon'
 import RemovedIcon from 'components/icons/removed-icon'
 
 export type ActionType =
@@ -15,7 +15,7 @@ export type ActionType =
   | 'improved'
   | 'removed'
 
-export type UpdateType = 'documentation-updates' | 'release-notes'
+export type UpdateType = 'documentation-updates' | 'announcements'
 
 export interface Action {
   type: ActionType
@@ -66,10 +66,10 @@ const updates: Update[] = [
     Icon: DocumentationUpdatesIcon,
   },
   {
-    type: 'release-notes',
-    title: 'Release Notes',
+    type: 'announcements',
+    title: 'Announcements',
     description: 'Stay up to date with our latest releases',
-    Icon: ReleaseNotesIcon,
+    Icon: AnnouncementIcon,
   },
 ]
 

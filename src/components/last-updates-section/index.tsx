@@ -11,7 +11,7 @@ const lastReleaseNote: CardProps = {
     description: 'Deprecation of apps-graphql@2.x',
     date: new Date('03/02/2023'),
   },
-  updateType: 'release-notes',
+  updateType: 'announcements',
 }
 
 const LastUpdatesSection = () => {

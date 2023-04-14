@@ -11,7 +11,6 @@ import type {
 import SearchIcon from 'components/icons/search-icon'
 import SideBarToggleIcon from 'components/icons/sidebar-toggle-icon'
 import SideBarElements from 'components/sidebar-elements'
-import SectionFilter from 'components/sidebar-section-filter'
 import ArrowLeftIcon from 'components/icons/arrow-left-icon'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
@@ -38,46 +37,23 @@ const SidebarSection = ({
     useContext(SidebarContext)
   const { isEditorPreview } = useContext(SidebarContext)
   const [filterStatus, setFilterStatus] = useState(false)
-  const [methodFilterList, setMethodFilterList] = useState([
-    { name: 'POST', active: false },
-    { name: 'GET', active: false },
-    { name: 'PUT', active: false },
-    { name: 'DELETE', active: false },
-    { name: 'PATCH', active: false },
-  ])
 
   useEffect(() => {
     if (window.innerWidth < 1920) setSidebarSectionHidden(true)
   }, [])
 
   useEffect(() => {
-    setFilterStatus(
-      methodFilterList.some((methodFilter) => methodFilter.active) ||
-        searchValue != ''
-    )
-  }, [methodFilterList, searchValue])
+    setFilterStatus(searchValue != '')
+  }, [searchValue])
 
   const filteredResult = useMemo(() => {
     if (!filterStatus) return categories
-
     const dataCopy = JSON.parse(JSON.stringify(categories))
 
     const filteredCategories = dataCopy
       .map((category: SidebarElement) => {
         category.children = category.children
           .map((subcategory) => {
-            subcategory.children = subcategory.children.filter(
-              (endpoint) =>
-                (endpoint.method &&
-                  filterStatus &&
-                  methodFilterList.find(
-                    (methodFilter) => methodFilter.name === endpoint.method
-                  )?.active) ||
-                (searchValue != '' &&
-                  endpoint.name
-                    .toLowerCase()
-                    .includes(searchValue.toLowerCase()))
-            )
             return subcategory
           })
           .filter(
@@ -92,7 +68,7 @@ const SidebarSection = ({
       })
       .filter((category: SidebarElement) => category.children.length > 0)
     return filteredCategories
-  }, [filterStatus, methodFilterList, categories, searchValue])
+  }, [filterStatus, categories, searchValue])
   const intl = useIntl()
 
   const DocIcon = getIcon(documentation, intl)
@@ -132,12 +108,6 @@ const SidebarSection = ({
               onChange={(e) => setSearchValue(e.currentTarget.value)}
             />
           </Flex>
-          {documentation == 'API Reference' && (
-            <SectionFilter
-              methodFilterList={methodFilterList}
-              setMethodFilter={setMethodFilterList}
-            />
-          )}
         </Box>
         <Box sx={styles.sidebarContainerBody}>
           <SideBarElements
@@ -194,12 +164,6 @@ const SidebarSection = ({
             />
           </Flex>
         </Box>
-        {documentation == 'API Reference' && (
-          <SectionFilter
-            methodFilterList={methodFilterList}
-            setMethodFilter={setMethodFilterList}
-          />
-        )}
         <Box sx={styles.sidebarContainerBody}>
           <SideBarElements
             items={filteredResult}

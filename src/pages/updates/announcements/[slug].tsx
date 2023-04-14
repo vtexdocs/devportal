@@ -83,7 +83,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
     <>
       <Head>
         <title>{serialized.frontmatter?.title as string}</title>
-        <meta name="docsearch:doctype" content="Release Notes" />
+        <meta name="docsearch:doctype" content="Announcements" />
       </Head>
       <APIGuideContextProvider headings={headings}>
         <Flex sx={styles.innerContainer}>
@@ -144,10 +144,11 @@ export const getStaticProps: GetStaticProps = async ({
       : 'main'
   const branch = preview ? previewBranch : 'main'
   const slug = params?.slug as string
+  const currentLocale = locale || 'en'
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
-      : await getDocsPaths(branch, locale)
+      : await getDocsPaths(branch, currentLocale)
 
   const path = docsPaths[slug]
   if (!path) {

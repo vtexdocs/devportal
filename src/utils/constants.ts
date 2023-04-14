@@ -1,10 +1,12 @@
 import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
-import AppDevelopmentIcon from 'components/icons/app-development-icon'
-import StorefrontDevelopmentIcon from 'components/icons/storefront-development-icon'
-import VTEXIOAppsIcon from 'components/icons/vtex-io-apps-icon'
-
-import ReleaseNotesIcon from 'components/icons/release-notes-icon'
+import OrdersIcon from 'components/icons/orders-icon'
+import CatalogIcon from 'components/icons/catalog-icon'
+import PromotionsIcon from 'components/icons/promotions-icon'
+import StorefrontIcon from 'components/icons/storefront-icon'
+import AnnouncementIcon from 'components/icons/announcement-icon'
+import ShippingIcon from 'components/icons/shipping-icon'
+import MarketplaceIcon from 'components/icons/marketplace-icon'
+import DashboardsIcon from 'components/icons/dashboards-icon'
 
 import { getMessages } from 'utils/get-messages'
 import {
@@ -36,32 +38,56 @@ export const documentationData = (intl: IntlShape) => {
       link: '/docs/guides',
     },
     {
-      Icon: APIReferenceIcon,
-      title: 'API Reference',
+      Icon: DashboardsIcon,
+      title: 'Dashboards',
       description: intl.formatMessage({
         id: 'documentation_api_reference.description',
       }),
       link: '/docs/api-reference',
     },
     {
-      Icon: AppDevelopmentIcon,
-      title: 'App Development',
+      Icon: OrdersIcon,
+      title: 'Orders',
       description: intl.formatMessage({
         id: 'documentation_app_development.description',
       }),
       link: '/docs/app-development',
     },
     {
-      Icon: StorefrontDevelopmentIcon,
-      title: 'Storefront Development',
+      Icon: CatalogIcon,
+      title: 'Catalog',
       description: intl.formatMessage({
         id: 'documentation_storefront.description',
       }),
       link: '/docs/storefront-development',
     },
     {
-      Icon: VTEXIOAppsIcon,
-      title: 'VTEX IO Apps',
+      Icon: PromotionsIcon,
+      title: 'Promotions',
+      description: intl.formatMessage({
+        id: 'documentation_vtexio_apps.description',
+      }),
+      link: '/docs/vtex-io-apps',
+    },
+    {
+      Icon: StorefrontIcon,
+      title: 'Storefront',
+      description: intl.formatMessage({
+        id: 'documentation_vtexio_apps.description',
+      }),
+      link: '/docs/vtex-io-apps',
+    },
+    {
+      Icon: ShippingIcon,
+      title: 'Shipping',
+      description: intl.formatMessage({
+        id: 'documentation_vtexio_apps.description',
+      }),
+      link: '/docs/vtex-io-apps',
+    },
+    {
+      Icon: MarketplaceIcon,
+      title: 'Marketplace',
       description: intl.formatMessage({
         id: 'documentation_vtexio_apps.description',
       }),
@@ -74,12 +100,12 @@ export const documentationData = (intl: IntlShape) => {
 export const updatesData = (intl: IntlShape) => {
   const data: UpdatesDataElement[] = [
     {
-      Icon: ReleaseNotesIcon,
-      title: 'Release Notes',
+      Icon: AnnouncementIcon,
+      title: 'Announcements',
       description: intl.formatMessage({
         id: 'updates_release_notes.description',
       }),
-      link: '/updates/release-notes',
+      link: '/updates/announcements',
     },
   ]
   return data
