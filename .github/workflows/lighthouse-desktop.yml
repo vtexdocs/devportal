@@ -66,9 +66,9 @@ jobs:
             })
 
             core.setOutput('summary', output)
-        - name: Comment PR
-          uses: thollander/actions-comment-pull-request@v2
-          with:
-            comment_tag: lighthouse-summary
-            message: ${{ steps.generate-summary-report.outputs.summary }}
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          comment_tag: lighthouse-summary
+          message: ${{ steps.generate-summary-report.outputs.summary }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
