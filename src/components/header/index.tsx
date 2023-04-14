@@ -18,6 +18,7 @@ import { getFeedbackURL } from 'utils/get-url'
 
 import SearchInput from 'components/search-input'
 import AnnouncementBar from 'components/announcement-bar'
+import LocaleSwitcher from 'components/locale-switcher'
 
 import styles from './styles'
 import { PreviewContext } from 'utils/contexts/preview'
@@ -148,6 +149,7 @@ const Header = () => {
               <FormattedMessage id="landing_page_header_feedback.message" />
             </Text>
           </VtexLink>
+          <LocaleSwitcher />
         </HeaderBrand.RightLinks>
         <HamburgerMenu />
       </HeaderBrand>
