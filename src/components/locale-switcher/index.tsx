@@ -31,6 +31,7 @@ export default function LocaleSwitcher() {
   const handleOptionClick = (option: string) => {
     const locale = option
     router.push(router.pathname, router.asPath, { locale })
+    disclosure.hide()
   }
   const disclosure = useDisclosureState({ visible: false })
   const Option = ({ screen, option, onClick, active }: OptionProps) => {

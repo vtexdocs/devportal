@@ -24,8 +24,8 @@ const Home: Page<Props> = ({ branch }) => {
   return (
     <>
       <Head>
-        <title>VTEX Developers</title>
-        <meta property="og:title" content="VTEX Developers" key="title" />
+        <title>VTEX Help Center</title>
+        <meta property="og:title" content="VTEX Help Center" key="title" />
         <meta
           property="og:description"
           content="Build and extend your world of commerce with VTEX development platform and Core Commerce APIs."

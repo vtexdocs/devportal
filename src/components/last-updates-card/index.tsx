@@ -4,6 +4,7 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 import type { ActionType, UpdateType } from './functions'
 import { getAction, getUpdate } from './functions'
 import { getDaysElapsed } from './../../utils/get-days-elapsed'
+import { useIntl } from 'react-intl'
 
 import styles from './styles'
 
@@ -18,6 +19,7 @@ export interface CardProps {
 
 const LastUpdatesCard = ({ action, updateType }: CardProps) => {
   const { title: actionTitle, Icon: ActionIcon } = getAction(action.type)
+  const intl = useIntl()
   const {
     title: updateTitle,
     description: updateDescription,
@@ -50,7 +52,9 @@ const LastUpdatesCard = ({ action, updateType }: CardProps) => {
           <Box sx={styles.actionDescriptionContainer}>
             <Text sx={styles.actionDescription}>{action.description}</Text>
             <Text sx={styles.actionTime}>
-              {`${getDaysElapsed(action.date)} days ago`}
+              {`${getDaysElapsed(action.date)} ${intl.formatMessage({
+                id: 'relese-note-days-elapsed',
+              })}`}
             </Text>
           </Box>
         </Box>
