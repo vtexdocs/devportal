@@ -9871,6 +9871,8 @@
             }
           ]
         },
+      ]
+    },
     {
       "documentation": "App Development",
       "slugPrefix": "docs/guides/",
