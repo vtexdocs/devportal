@@ -12,7 +12,6 @@ const newsletter: SxStyleProp = {
 
 const newsletterContainer: SxStyleProp = {
   position: 'relative',
-  mt: '5rem',
   pl: ['0px', '0px', '0px', '223px', '223px', '313px', '530px'],
   borderBottom: '1px solid #E7E9EE',
   display: ['flex', 'flex', 'flex', 'block', 'flex'],
@@ -25,7 +24,7 @@ const newsletterContainer: SxStyleProp = {
 const newsletterBackground: SxStyleProp = {
   position: 'relative',
   height: 'auto',
-  paddingBlock: ['0px', '64px 46px', '86px', '86px', '84px 72px'],
+  paddingBlock: ['0px', '64px 46px', '86px', '300px', '300px 72px'],
   background: ['#FFFFFF', 'transparent'],
   mt: ['-80px', '0'],
   zIndex: '3',
@@ -43,9 +42,11 @@ const newsletterBox: SxStyleProp = {
 const newsletterTitle: SxStyleProp = {
   width: ['auto', '434px', '100%'],
   mx: ['0px', 'auto'],
+  pb: ['20px', '20px'],
   textAlign: ['center', 'center', 'center', 'initial'],
   fontSize: ['24px', '40px', '40px', '52px'],
   lineHeight: ['34px', '50px', '50px', '62px'],
+  mt: ['0px', '-80px'],
 }
 
 const newsletterDescription: SxStyleProp = {
@@ -103,6 +104,16 @@ const policyLink: SxStyleProp = {
   color: '#E31C58',
 }
 
+const searchContainer: SxStyleProp = {
+  alignItems: 'center',
+  justifyContent: 'center',
+  background: '#F4F4F4',
+  width: '388px',
+  height: '40px',
+  borderRadius: '4px',
+  cursor: 'pointer',
+}
+
 export default {
   section,
   newsletter,
@@ -118,4 +129,5 @@ export default {
   image,
   policyText,
   policyLink,
+  searchContainer,
 }

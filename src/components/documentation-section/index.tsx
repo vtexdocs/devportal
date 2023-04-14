@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtex/brand-ui'
 
 import DocumentationSectionCard from '../documentation-section-card'
 
@@ -11,11 +11,6 @@ const DocumentationSection = () => {
   const intl = useIntl()
   return (
     <Box sx={styles.sectionContainer}>
-      <Text sx={styles.title}>
-        {intl.formatMessage({
-          id: 'landing_page_documentation.title',
-        })}
-      </Text>
       <Flex
         sx={styles.cardsContainer}
         data-cy="documentation-section-card-list"
