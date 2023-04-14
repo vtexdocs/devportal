@@ -8625,9 +8625,7 @@
               "children": []
             }
           ]
-        }
-      ]
-    },
+        },
         {
           "name": "Reviews and Ratings API",
           "slug": "reviews-and-ratings-api",
@@ -9871,6 +9869,8 @@
             }
           ]
         },
+      ]
+    },
     {
       "documentation": "App Development",
       "slugPrefix": "docs/guides/",
