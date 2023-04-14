@@ -18,7 +18,7 @@ async function getGithubTree(org: string, repo: string, ref: string) {
 
 //https://api.github.com/repos/vtexdocs/devportal/commits?path=README.md
 
-export default async function getReleasePaths(branch = 'main', locale = '') {
+export default async function getReleasePaths(branch = 'main', locale = 'en') {
   const repoTree = await getGithubTree(
     'vtexdocs',
     'help-center-content',

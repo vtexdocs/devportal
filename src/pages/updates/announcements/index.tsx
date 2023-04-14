@@ -58,7 +58,7 @@ export const getStaticProps: GetStaticProps = async ({
       ? JSON.parse(JSON.stringify(previewData)).branch
       : 'main'
   const branch = preview ? previewBranch : 'main'
-  const currentLocale = locale || 'en'
+  const currentLocale = locale ? locale : 'en'
   const releasesData = await getReleasesData(branch, currentLocale)
 
   return {
