@@ -2,7 +2,6 @@ import { useEffect, useRef, useState, useContext } from 'react'
 import { Flex, Text, Box } from '@vtex/brand-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { flattenJSON, getKeysByValue, getParents } from 'utils/navigation-utils'
 
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
@@ -50,32 +49,8 @@ const Sidebar = ({
   const intl = useIntl()
 
   const router = useRouter()
-  const flattenedSidebar = flattenJSON(sidebarNavigation)
   let activeSlug = ''
-  let keyPath: string[] = []
-  const querySlug = router.query.slug
-  if (querySlug && router.pathname === '/docs/api-reference/[slug]') {
-    activeSlug = router.asPath.replace('/docs/api-reference/', '')
-    const docPath = activeSlug.split('/')
-    const endpoint = '/' + docPath.splice(1, docPath.length).join('/')
-    keyPath = getKeysByValue(flattenedSidebar, endpoint)
-    if (endpoint == '/') {
-      activeSlug = docPath[0].split('#')[0]
-    }
-    parentsArray.push(activeSlug)
-    keyPath.forEach((key: string) => {
-      if (key.length > 0)
-        getParents(
-          key,
-          'slug',
-          flattenedSidebar,
-          parentsArray,
-          activeSlug.split('#')[0]
-        )
-    })
-  } else {
-    activeSlug = parentsArray[parentsArray.length - 1]
-  }
+  activeSlug = parentsArray[parentsArray.length - 1]
 
   useEffect(() => {
     const timer = setTimeout(() => setExpandDelayStatus(false), 5000)
