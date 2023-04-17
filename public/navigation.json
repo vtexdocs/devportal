@@ -1028,15 +1028,15 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Get client profile by email",
-                  "slug": "get-a-client-profile-by-email",
+                  "name": "Getting a customer profile by email",
+                  "slug": "getting-a-customer-profile-by-email",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Add client profile",
-                  "slug": "add-client-profile",
+                  "name": "Adding customer profile information to the cart",
+                  "slug": "add-customer-profile-information-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1049,15 +1049,15 @@
                   "children": []
                 },
                 {
-                  "name": "Add client preferences",
-                  "slug": "add-client-preferences-to-the-cart",
+                  "name": "Adding customer preferences to the cart",
+                  "slug": "add-customer-preferences-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Add marketing data",
-                  "slug": "add-marketing-data-to-the-cart",
+                  "name": "Adding marketing information to the cart",
+                  "slug": "add-marketing-information-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1070,15 +1070,15 @@
                   "children": []
                 },
                 {
-                  "name": "Add payment data",
-                  "slug": "add-payment-data-to-the-cart",
+                  "name": "Adding payment information to the cart",
+                  "slug": "adding-payment-information-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Add merchant context data",
-                  "slug": "add-merchant-context-data-to-the-cart",
+                  "name": "Adding merchant context information to the cart",
+                  "slug": "add-merchant-context-information-to-the-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -4105,7 +4105,7 @@
                   "origin": "",
                   "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/installments",
                   "children": []
-                }                
+                }
               ]
             },
             {
@@ -8515,6 +8515,111 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/rnb/pub/notifications",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Promotions & Taxes API v2",
+          "slug": "promotions-and-taxes-api-v2",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Coupons v2",
+              "slug": "promotions-and-taxes-api-coupons-v2",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Coupons",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/coupon",
+                  "children": []
+                },
+                {
+                  "name": "Get Archived Coupons",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/coupon/group/archived",
+                  "children": []
+                },
+                {
+                  "name": "Get coupon batch information",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/coupon/group/-groupingKey-",
+                  "children": []
+                },
+                {
+                  "name": "Edit coupon batch configuration",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/coupon/group/-groupingKey-",
+                  "children": []
+                },
+                {
+                  "name": "Get coupon batch codes",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/coupon/group/-groupingKey-/codes",
+                  "children": []
+                },
+                {
+                  "name": "Archive a coupon batch",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/coupon/group/-groupingKey-/archive",
+                  "children": []
+                },
+                {
+                  "name": "Create coupon batches",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/coupon/group",
+                  "children": []
+                },
+                {
+                  "name": "Unarchive a coupon batch",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/coupon/group/-groupingKey-/unarchive",
+                  "children": []
+                },
+                {
+                  "name": "Get usage count for a single coupon",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/coupon/usage-count/-couponCode-",
+                  "children": []
+                },
+                {
+                  "name": "Get usage count for a coupon batch",
+                  "slug": "promotions-and-taxes-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/coupon/usage-count/group/-groupingKey-",
                   "children": []
                 }
               ]
