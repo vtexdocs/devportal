@@ -66,6 +66,7 @@ const fileSlugMap = {
   'VTEX - VTEX Do API': 'vtex-do-api',
   'VTEX - VTEX ID API': 'vtex-id-api',
   'VTEX - VTEX Shipping Network API': 'vtex-shipping-network-api',
+  'VTEX - Promotions & Taxes API - v2': 'promotions-and-taxes-api-v2',
 }
 
 export default async function getReferencePaths() {

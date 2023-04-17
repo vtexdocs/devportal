@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.8](https://github.com/vtexdocs/devportal/compare/v1.9.7...v1.9.8) (2023-04-11)
+
+
+### Features
+
+* add action for extensive testing ([dc8f184](https://github.com/vtexdocs/devportal/commit/dc8f184f59eefbdd98110520ff9ac3c3da77c606))
+* **api:** create feedback endpoint ([5b10d4c](https://github.com/vtexdocs/devportal/commit/5b10d4c8f73b4364b0af308a2aceea410d3aaddb))
+* create encrypted file to store environment variables ([0357902](https://github.com/vtexdocs/devportal/commit/03579028c5c40bce2f1f11465a1db82f96b0e158))
+* **feedback:** send feedback to the respective endpoint ([e18a7b0](https://github.com/vtexdocs/devportal/commit/e18a7b07053f4ac5a3de04651f7282054f8c9359))
+
+
+### Bug Fixes
+
+* **components:** fix modal and lightbox position ([767f730](https://github.com/vtexdocs/devportal/commit/767f7304625207076714aab2a5d7deb359541927))
+* **feedback:** fix url sent with feedback ([1e06747](https://github.com/vtexdocs/devportal/commit/1e06747e61af10bf255e982c0b27caa91fbdcda5))
+* **feedback:** modal should not wait for the request response ([623f15f](https://github.com/vtexdocs/devportal/commit/623f15fd71545aa4583a6d8d3cb98d03cb8b436e))
+* **feedback:** send only one response ([0467f0c](https://github.com/vtexdocs/devportal/commit/0467f0cd739b1e42c79ab84b93ce81d640b95434))
+* **feedback:** send sheets api response ([e241bd7](https://github.com/vtexdocs/devportal/commit/e241bd7f2c7103e2241e6a3d1eddc0814e6f0f6d))
+* **get-variable:** get working directory ([a5739ec](https://github.com/vtexdocs/devportal/commit/a5739ecf69b3f369d2c366be5c73d68894b4d1c5))
+* reduce memory consumption on test runs ([457fdd3](https://github.com/vtexdocs/devportal/commit/457fdd3e48acf669097b282e7921fb17dc3ce08c))
+* reset feedback when documentation changes ([3a41499](https://github.com/vtexdocs/devportal/commit/3a414994fecb4f4f71faeb59200add1ad9cb8e4a))
+* use getVariable to get environment variables ([33a734f](https://github.com/vtexdocs/devportal/commit/33a734f16482a7d80d9969d4c758135fda7a3af3))
+
+
+### Build
+
+* add googleapis dependency ([4496437](https://github.com/vtexdocs/devportal/commit/44964376368107a2fe90243c9429cffddf3eb6a5))
+
+
+### Chore
+
+* remove console log ([37ea5a5](https://github.com/vtexdocs/devportal/commit/37ea5a5386d90ec36d938ff718661d9184d8f859))
+
+
+### Docs
+
+* **navigation:** adding navigation for new pick and pack docs ([32c4a0f](https://github.com/vtexdocs/devportal/commit/32c4a0f1dbe06ae9bda8255e8dd4fadb260be322))
+* **navigation:** adding navigation for new pick and pack protocol guide ([f95859e](https://github.com/vtexdocs/devportal/commit/f95859e9052e3f75428d6babf4c0a2918b395be8))
+* **navigation:** update catalog api menu ([91184b5](https://github.com/vtexdocs/devportal/commit/91184b58294745737d1532faa766ac3d9363880b))
+
 ### [1.9.7](https://github.com/vtexdocs/devportal/compare/v1.9.6...v1.9.7) (2023-03-29)
 
 
