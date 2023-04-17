@@ -1,7 +1,7 @@
 import { createContext, Dispatch, SetStateAction, useState } from 'react'
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 
-type FilterType = DocumentationTitle | UpdatesTitle | ''
+export type FilterType = DocumentationTitle | UpdatesTitle | ''
 
 type OcurrenceType = {
   [key: string]: number
