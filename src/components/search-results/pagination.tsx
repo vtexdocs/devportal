@@ -2,6 +2,7 @@ import { useContext, useEffect } from 'react'
 import { Flex, Text } from '@vtex/brand-ui'
 import { connectPagination } from 'react-instantsearch-dom'
 import { SearchContext } from 'utils/contexts/search'
+import { messages } from 'utils/constants'
 import styles from './styles'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -10,7 +11,7 @@ const Pagination = ({ currentRefinement, nbPages, refine }: any) => {
   useEffect(() => {
     if (currentRefinement !== 1) refine(1)
   }, [filterSelectedSection])
-  return (
+  return nbPages > 0 ? (
     <Flex sx={styles.paginationContainer}>
       <Text
         sx={
@@ -41,6 +42,10 @@ const Pagination = ({ currentRefinement, nbPages, refine }: any) => {
       >
         more
       </Text>
+    </Flex>
+  ) : (
+    <Flex sx={styles.noResults}>
+      <Text>{messages['search_input.empty']}</Text>
     </Flex>
   )
 }

@@ -50,6 +50,12 @@ const paginationActualNumber: SxStyleProp = {
   mx: '4px',
 }
 
+const noResults: SxStyleProp = {
+  justifyContent: 'center',
+  alignContent: 'center',
+  padding: '12px',
+}
+
 export default {
   resultContainer,
   resultText,
@@ -58,4 +64,5 @@ export default {
   paginationLinkDisabled,
   paginationNumber,
   paginationActualNumber,
+  noResults,
 }
