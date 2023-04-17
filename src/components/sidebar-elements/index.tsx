@@ -10,9 +10,6 @@ import {
 } from '@vtex/brand-ui'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
-import { MethodType } from 'utils/typings/unionTypes'
-
-import MethodCategory from 'components/method-category'
 
 import { styleByLevelNormal, textStyle } from './functions'
 import styles from './styles'
@@ -22,8 +19,6 @@ export interface SidebarElement {
   slug: string
   origin: string
   type: string
-  method?: MethodType
-  endpoint?: string
   children: SidebarElement[]
 }
 
@@ -43,13 +38,9 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
   const { isEditorPreview } = useContext(SidebarContext)
   const router = useRouter()
 
-  const handleClick = (
-    e: { preventDefault: () => void },
-    pathSuffix: string,
-    slug: string
-  ) => {
+  const handleClick = (e: { preventDefault: () => void }, slug: string) => {
     e.preventDefault()
-    router.push(getHref(slugPrefix || '', pathSuffix, slug))
+    router.push(getHref(slugPrefix || '', slug))
   }
 
   // eslint-disable-next-line
@@ -90,27 +81,17 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     return false
   }
 
-  const getHref = (slugPrefix: string, pathSuffix: string, slug: string) => {
-    const href =
-      slugPrefix === 'docs/api-reference'
-        ? `/${slugPrefix}/${slug}/${pathSuffix}`
-        : `/${slugPrefix}/${slug}`
+  const getHref = (slugPrefix: string, slug: string) => {
+    const href = `/${slugPrefix}/${slug}`
     return href.replaceAll('//', '/')
   }
 
-  const ElementRoot = ({
-    slug,
-    name,
-    method,
-    endpoint,
-    children,
-  }: SidebarElement) => {
-    const locale: string = useRouter().locale || 'en'
+  const ElementRoot = ({ slug, name, children }: SidebarElement) => {
+    const locale = useRouter().locale ? useRouter().locale : 'en'
     const localizedName: string =
       typeof name === 'string' ? name : name[`${locale}`]
     const isExpandable = children.length > 0
-    const pathSuffix = method ? `#${method.toLowerCase()}-${endpoint}` : ''
-    const activeItem = method ? `${slug}${pathSuffix}` : slug
+    const activeItem = slug
     return (
       <Box sx={styles.elementContainer}>
         <Flex sx={styleByLevelNormal(subItemLevel, isExpandable || false)}>
@@ -148,21 +129,13 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
               sx={textStyle(activeSidebarElement === activeItem, isExpandable)}
               onClick={(e: { preventDefault: () => void }) => {
                 if (!isEditorPreview) {
-                  handleClick(e, pathSuffix, slug)
+                  handleClick(e, slug)
                 }
                 toggleSidebarElementStatus(activeItem)
               }}
-              href={getHref(slugPrefix || '', pathSuffix, slug)}
+              href={getHref(slugPrefix || '', slug)}
               target={isEditorPreview === true ? '_blank' : '_self'}
             >
-              {method && (
-                <MethodCategory
-                  sx={styles.methodBox}
-                  active={activeSidebarElement === activeItem}
-                  origin="sidebar"
-                  method={method}
-                />
-              )}
               {localizedName}
             </Link>
           ) : checkDocumentationType(sidebarDataMaster, slug, 'link') ? (
@@ -177,14 +150,6 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
                 toggleSidebarElementStatus(slug)
               }}
             >
-              {method && (
-                <MethodCategory
-                  sx={styles.methodBox}
-                  active={activeSidebarElement === slug}
-                  origin="sidebar"
-                  method={method}
-                />
-              )}
               {localizedName}
             </Box>
           )}
