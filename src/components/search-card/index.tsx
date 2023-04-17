@@ -2,7 +2,6 @@ import { Box, Flex, Text, IconCaret } from '@vtex/brand-ui'
 import { IconComponent } from 'utils/typings/types'
 import type { SearchDataItemProps } from 'components/search-results'
 
-import { methodStyle } from './functions'
 import styles from './styles'
 import { getAction } from 'components/last-updates-card/functions'
 
@@ -14,7 +13,6 @@ const SearchCard = ({
   Icon,
   title,
   description,
-  http,
   filters,
   actionType,
 }: SearchCardProps) => {
@@ -23,7 +21,6 @@ const SearchCard = ({
     <Box sx={styles.container}>
       <Text className="searchCardTitle" sx={styles.title}>
         <Icon sx={styles.icon} />
-        {http ? <Text sx={methodStyle(http)}>{http}</Text> : null}
         {title}
       </Text>
       <Text className="searchCardDescription" sx={styles.description}>

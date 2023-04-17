@@ -6,7 +6,6 @@ import { SearchContext } from 'utils/contexts/search'
 import SearchCard from 'components/search-card'
 import { getIcon } from 'utils/constants'
 
-import type { MethodType } from 'utils/typings/unionTypes'
 import type { ActionType } from 'components/last-updates-card/functions'
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 
@@ -18,7 +17,6 @@ export interface SearchDataItemProps {
   title: string
   description: string
   filters?: string[]
-  http?: MethodType
   actionType?: ActionType
 }
 
