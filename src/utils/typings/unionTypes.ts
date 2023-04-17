@@ -12,21 +12,12 @@ export type DocumentationTitle =
 
 export type UpdatesTitle = 'Announcements' | 'Documentation Updates'
 
-export type SlugPrefix =
-  | 'guides'
-  | 'guides'
-  | 'api-reference'
-  | 'app-development'
-  | 'storefront-development'
-  | 'vtex-io-apps'
-  | 'vtex-io-apps'
-  | 'vtex-io-apps'
+export type SlugPrefix = 'guides'
 
 export type ResourceTitle =
   | 'Community'
   | 'Learning Center'
   | 'GitHub'
+  | 'Developer Portal'
   | 'Help Center'
   | 'Support'
-
-export type MethodType = 'POST' | 'GET' | 'PUT' | 'DELETE' | 'PATCH'

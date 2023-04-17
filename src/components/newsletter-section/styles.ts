@@ -111,6 +111,7 @@ const searchContainer: SxStyleProp = {
   width: '388px',
   height: '40px',
   borderRadius: '4px',
+  mb: '50px',
   cursor: 'pointer',
 }
 

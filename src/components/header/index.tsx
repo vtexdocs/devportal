@@ -22,12 +22,13 @@ import LocaleSwitcher from 'components/locale-switcher'
 
 import styles from './styles'
 import { PreviewContext } from 'utils/contexts/preview'
-import { FormattedMessage } from 'react-intl'
+import { FormattedMessage, useIntl } from 'react-intl'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Header = () => {
   const router = useRouter()
   const isBranchPreview = router.isPreview
+  const intl = useIntl()
 
   const { branchPreview } = useContext(PreviewContext)
 
@@ -93,9 +94,9 @@ const Header = () => {
         <AnnouncementBar
           closable={true}
           type="new"
-          label="📢 We want to know more about you and how you use our docs. "
+          label={intl.formatMessage({ id: 'announcement_bar.headline' })}
           action={{
-            button: 'Fill in our survey! It takes less than 5 minutes.',
+            button: intl.formatMessage({ id: 'announcement_bar.button' }),
             href: 'https://forms.gle/5EvnahjuwQqwumDd9',
           }}
         ></AnnouncementBar>

@@ -12,7 +12,7 @@ import { getMessages } from 'utils/get-messages'
 import {
   getCommunityURL,
   getLearningCenterURL,
-  getGithubURL,
+  getDeveloperPortalURL,
   getHelpCenterURL,
   getSupportURL,
 } from 'utils/get-url'
@@ -43,7 +43,7 @@ export const documentationData = (intl: IntlShape) => {
       description: intl.formatMessage({
         id: 'documentation_api_reference.description',
       }),
-      link: '/docs/api-reference',
+      link: '/docs/guides',
     },
     {
       Icon: OrdersIcon,
@@ -51,7 +51,7 @@ export const documentationData = (intl: IntlShape) => {
       description: intl.formatMessage({
         id: 'documentation_app_development.description',
       }),
-      link: '/docs/app-development',
+      link: '/docs/guides',
     },
     {
       Icon: CatalogIcon,
@@ -59,7 +59,7 @@ export const documentationData = (intl: IntlShape) => {
       description: intl.formatMessage({
         id: 'documentation_storefront.description',
       }),
-      link: '/docs/storefront-development',
+      link: '/docs/guides/catalog-overview',
     },
     {
       Icon: PromotionsIcon,
@@ -67,7 +67,7 @@ export const documentationData = (intl: IntlShape) => {
       description: intl.formatMessage({
         id: 'documentation_vtexio_apps.description',
       }),
-      link: '/docs/vtex-io-apps',
+      link: '/docs/guides',
     },
     {
       Icon: StorefrontIcon,
@@ -75,7 +75,7 @@ export const documentationData = (intl: IntlShape) => {
       description: intl.formatMessage({
         id: 'documentation_vtexio_apps.description',
       }),
-      link: '/docs/vtex-io-apps',
+      link: '/docs/guides',
     },
     {
       Icon: ShippingIcon,
@@ -83,7 +83,7 @@ export const documentationData = (intl: IntlShape) => {
       description: intl.formatMessage({
         id: 'documentation_vtexio_apps.description',
       }),
-      link: '/docs/vtex-io-apps',
+      link: '/docs/guides',
     },
     {
       Icon: MarketplaceIcon,
@@ -91,7 +91,7 @@ export const documentationData = (intl: IntlShape) => {
       description: intl.formatMessage({
         id: 'documentation_vtexio_apps.description',
       }),
-      link: '/docs/vtex-io-apps',
+      link: '/docs/guides',
     },
   ]
   return data
@@ -189,11 +189,11 @@ export const resources = (intl: IntlShape) => {
       link: getLearningCenterURL(),
     },
     {
-      title: 'GitHub',
+      title: 'Developer Portal',
       description: intl.formatMessage({
         id: 'app_development_page_other_resources_github.description',
       }),
-      link: getGithubURL(),
+      link: getDeveloperPortalURL(),
     },
     {
       title: 'Help Center',

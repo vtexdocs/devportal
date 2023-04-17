@@ -1,7 +1,7 @@
 import { Box, FooterLanding } from '@vtex/brand-ui'
 import styles from './styles'
 import {
-  getGithubURL,
+  getDeveloperPortalURL,
   getHelpCenterURL,
   getCommunityURL,
   getFeedbackURL,
@@ -14,9 +14,9 @@ const Footer = () => {
   const links = [
     {
       message: intl.formatMessage({
-        id: 'landing_page_footer_github.message',
+        id: 'landing_page_footer_developer_portal.message',
       }),
-      to: () => getGithubURL(),
+      to: () => getDeveloperPortalURL(),
     },
     {
       message: intl.formatMessage({
