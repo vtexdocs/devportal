@@ -42,7 +42,12 @@ import getFileContributors, {
 } from 'utils/getFileContributors'
 
 import { getLogger } from 'utils/logging/log-util'
-import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import {
+  flattenJSON,
+  getKeyByValue,
+  getParents,
+  localeType,
+} from 'utils/navigation-utils'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -180,7 +185,9 @@ export const getStaticProps: GetStaticProps = async ({
       : 'main'
   const branch = preview ? previewBranch : 'main'
   const slug = params?.slug as string
-  const currentLocale = locale ? locale : 'en'
+  const currentLocale: localeType = locale
+    ? (locale as localeType)
+    : ('en' as localeType)
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
@@ -324,10 +331,22 @@ export const getStaticProps: GetStaticProps = async ({
     let sectionSelected = ''
     if (keyPath) {
       sectionSelected = flattenedSidebar[`${keyPath[0]}.documentation`]
-      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
+      getParents(keyPath, 'slug', flattenedSidebar, currentLocale, parentsArray)
       parentsArray.push(slug)
-      getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
-      getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
+      getParents(
+        keyPath,
+        'name',
+        flattenedSidebar,
+        currentLocale,
+        parentsArrayName
+      )
+      getParents(
+        keyPath,
+        'type',
+        flattenedSidebar,
+        currentLocale,
+        parentsArrayType
+      )
     }
 
     const breadcumbList: { slug: string; name: string; type: string }[] = []

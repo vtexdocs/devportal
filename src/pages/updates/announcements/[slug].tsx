@@ -24,7 +24,12 @@ import OnThisPage from 'components/on-this-page'
 import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
-import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import {
+  flattenJSON,
+  getKeyByValue,
+  getParents,
+  localeType,
+} from 'utils/navigation-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getDocsPaths from 'utils/getReleasePaths'
@@ -144,7 +149,9 @@ export const getStaticProps: GetStaticProps = async ({
       : 'main'
   const branch = preview ? previewBranch : 'main'
   const slug = params?.slug as string
-  const currentLocale = locale || 'en'
+  const currentLocale: localeType = locale
+    ? (locale as localeType)
+    : ('en' as localeType)
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
@@ -191,7 +198,7 @@ export const getStaticProps: GetStaticProps = async ({
     const keyPath = getKeyByValue(flattenedSidebar, slug)
     const parentsArray: string[] = []
     if (keyPath) {
-      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
+      getParents(keyPath, 'slug', flattenedSidebar, currentLocale, parentsArray)
       parentsArray.push(slug)
     }
     return {

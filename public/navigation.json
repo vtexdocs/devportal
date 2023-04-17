@@ -5,39 +5,25 @@
       "slugPrefix": "docs/guides",
       "categories": [
         {
-          "name": "Getting Started",
           "slug": "getting-started-category",
+          "name": {
+            "en": "Getting Started",
+            "pt": "Primeiros Passos",
+            "es": "Primeros pasos"
+          },
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "Introduction",
-              "slug": "getting-started",
+              "name": {
+                "en": "Catalog Overview",
+                "pt": "Catálogo - Visão Geral",
+                "es": "Catalogo - Vision General"
+              },
+              "slug": "catalog-overview",
               "origin": "",
               "type": "markdown",
-              "children": [
-                {
-                  "name": "Platform overview",
-                  "slug": "getting-started-platform-overview",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "List of REST APIs",
-                  "slug": "getting-started-list-of-rest-apis",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Making your first request",
-                  "slug": "making-your-first-request",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "children": []
             }
           ]
         }
@@ -89,19 +75,31 @@
       "slugPrefix": "updates/announcements",
       "categories": [
         {
-          "name": "2023",
+          "name": {
+            "en": "2023",
+            "pt": "2023",
+            "es": "2023"
+          },
           "slug": "2023-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "April",
+              "name": {
+                "en": "April",
+                "pt": "Abril",
+                "es": "Abril"
+              },
               "slug": "april-2023",
               "origin": "",
               "type": "category",
               "children": [
                 {
-                  "name": "Master Data v2 order entity will be deprecated",
+                  "name": {
+                    "en": "Master Data v2 order entity will be deprecated",
+                    "pt": "A entidade de pedidos do Master Data v2 será deprecada",
+                    "es": "Se descontinuará la entidad de pedidos de Master Data v2"
+                  },
                   "slug": "2023-11-04-master-data-v2-orders-entity-will-be-depreacted",
                   "origin": "",
                   "type": "markdown",
@@ -110,21 +108,33 @@
               ]
             },
             {
-              "name": "March",
+              "name": {
+                "en": "March",
+                "pt": "Março",
+                "es": "Marzo"
+              },
               "slug": "march-2023",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "February",
+              "name": {
+                "en": "February",
+                "pt": "Fevereiro",
+                "es": "Febrero"
+              },
               "slug": "february-2023",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "January",
+              "name": {
+                "en": "January",
+                "pt": "Janeiro",
+                "es": "Enero"
+              },
               "slug": "january-2023",
               "origin": "",
               "type": "category",
@@ -133,83 +143,131 @@
           ]
         },
         {
-          "name": "2022",
+          "name": {
+            "en": "2022",
+            "pt": "2022",
+            "es": "2022"
+          },
           "slug": "2022-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "November",
+              "name": {
+                "en": "November",
+                "pt": "Novembro",
+                "es": "Noviembre"
+              },
               "slug": "november-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "October",
+              "name": {
+                "en": "October",
+                "pt": "Outubro",
+                "es": "Octubre"
+              },
               "slug": "october-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "September",
+              "name": {
+                "en": "September",
+                "pt": "Setembro",
+                "es": "Septiembre"
+              },
               "slug": "september-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "August",
+              "name": {
+                "en": "August",
+                "pt": "Agosto",
+                "es": "Agosto"
+              },
               "slug": "august-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "July",
+              "name": {
+                "en": "July",
+                "pt": "Julho",
+                "es": "Julio"
+              },
               "slug": "july-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "June",
+              "name": {
+                "en": "June",
+                "pt": "Junho",
+                "es": "Junio"
+              },
               "slug": "june-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "May",
+              "name": {
+                "en": "May",
+                "pt": "Maio",
+                "es": "Marzo"
+              },
               "slug": "may-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "April",
+              "name": {
+                "en": "April",
+                "pt": "Abril",
+                "es": "Abril"
+              },
               "slug": "april-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "March",
+              "name": {
+                "en": "March",
+                "pt": "Março",
+                "es": "Marzo"
+              },
               "slug": "march-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "February",
+              "name": {
+                "en": "February",
+                "pt": "Fevereiro",
+                "es": "Febrero"
+              },
               "slug": "february-2022",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "January",
+              "name": {
+                "en": "January",
+                "pt": "Janeiro",
+                "es": "Enero"
+              },
               "slug": "january-2022",
               "origin": "",
               "type": "category",
@@ -218,90 +276,142 @@
           ]
         },
         {
-          "name": "2021",
+          "name": {
+            "en": "2021",
+            "pt": "2021",
+            "es": "2021"
+          },
           "slug": "2021-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "December",
+              "name": {
+                "en": "December",
+                "pt": "Dezembro",
+                "es": "Diciembre"
+              },
               "slug": "december-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "November",
+              "name": {
+                "en": "November",
+                "pt": "Novembro",
+                "es": "Noviembre"
+              },
               "slug": "november-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "October",
+              "name": {
+                "en": "October",
+                "pt": "Outubro",
+                "es": "Octubre"
+              },
               "slug": "october-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "September",
+              "name": {
+                "en": "September",
+                "pt": "Setembro",
+                "es": "Septiembre"
+              },
               "slug": "september-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "August",
+              "name": {
+                "en": "August",
+                "pt": "Agosto",
+                "es": "Agosto"
+              },
               "slug": "august-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "July",
+              "name": {
+                "en": "July",
+                "pt": "Julho",
+                "es": "Julio"
+              },
               "slug": "july-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "June",
+              "name": {
+                "en": "June",
+                "pt": "Junho",
+                "es": "Junio"
+              },
               "slug": "june-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "May",
+              "name": {
+                "en": "May",
+                "pt": "Maio",
+                "es": "Marzo"
+              },
               "slug": "may-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "April",
+              "name": {
+                "en": "April",
+                "pt": "Abril",
+                "es": "Abril"
+              },
               "slug": "april-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "March",
+              "name": {
+                "en": "March",
+                "pt": "Março",
+                "es": "Marzo"
+              },
               "slug": "march-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "February",
+              "name": {
+                "en": "February",
+                "pt": "Fevereiro",
+                "es": "Febrero"
+              },
               "slug": "february-2021",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "January",
+              "name": {
+                "en": "January",
+                "pt": "Janeiro",
+                "es": "Enero"
+              },
               "slug": "january-2021",
               "origin": "",
               "type": "category",
@@ -310,83 +420,131 @@
           ]
         },
         {
-          "name": "2020",
+          "name": {
+            "en": "2020",
+            "pt": "2020",
+            "es": "2020"
+          },
           "slug": "2020-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "December",
+              "name": {
+                "en": "December",
+                "pt": "Dezembro",
+                "es": "Diciembre"
+              },
               "slug": "december-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "November",
+              "name": {
+                "en": "November",
+                "pt": "Novembro",
+                "es": "Noviembre"
+              },
               "slug": "november-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "October",
+              "name": {
+                "en": "October",
+                "pt": "Outubro",
+                "es": "Octubre"
+              },
               "slug": "october-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "September",
+              "name": {
+                "en": "September",
+                "pt": "Setembro",
+                "es": "Septiembre"
+              },
               "slug": "september-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "August",
+              "name": {
+                "en": "August",
+                "pt": "Agosto",
+                "es": "Agosto"
+              },
               "slug": "august-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "July",
+              "name": {
+                "en": "July",
+                "pt": "Julho",
+                "es": "Julio"
+              },
               "slug": "july-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "June",
+              "name": {
+                "en": "June",
+                "pt": "Junho",
+                "es": "Junio"
+              },
               "slug": "june-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "May",
+              "name": {
+                "en": "May",
+                "pt": "Maio",
+                "es": "Marzo"
+              },
               "slug": "may-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "April",
+              "name": {
+                "en": "April",
+                "pt": "Abril",
+                "es": "Abril"
+              },
               "slug": "april-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "March",
+              "name": {
+                "en": "March",
+                "pt": "Março",
+                "es": "Marzo"
+              },
               "slug": "march-2020",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "February",
+              "name": {
+                "en": "February",
+                "pt": "Fevereiro",
+                "es": "Febrero"
+              },
               "slug": "february-2020",
               "origin": "",
               "type": "category",
@@ -395,41 +553,65 @@
           ]
         },
         {
-          "name": "2019",
+          "name": {
+            "en": "2019",
+            "pt": "2019",
+            "es": "2019"
+          },
           "slug": "2019-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "December",
+              "name": {
+                "en": "December",
+                "pt": "Dezembro",
+                "es": "Diciembre"
+              },
               "slug": "december-2019",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "November",
+              "name": {
+                "en": "November",
+                "pt": "Novembro",
+                "es": "Noviembre"
+              },
               "slug": "november-2019",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "October",
+              "name": {
+                "en": "October",
+                "pt": "Outubro",
+                "es": "Octubre"
+              },
               "slug": "october-2019",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "September",
+              "name": {
+                "en": "September",
+                "pt": "Setembro",
+                "es": "Septiembre"
+              },
               "slug": "september-2019",
               "origin": "",
               "type": "category",
               "children": []
             },
             {
-              "name": "August",
+              "name": {
+                "en": "August",
+                "pt": "Agosto",
+                "es": "Agosto"
+              },
               "slug": "august-2019",
               "origin": "",
               "type": "category",

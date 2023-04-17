@@ -29,23 +29,28 @@ export const getKeysByValue = (
   return Object.keys(object).filter((key) => object[key] === value)
 }
 
+export type localeType = 'en' | 'pt' | 'es'
+
 export const getParents = (
   path: string,
   data: string,
   flattenedSidebar: { [x: string]: string },
+  locale: localeType = 'en',
   parentsArray: string[],
   parent?: string
 ) => {
   const pathParts = path?.split('children')
+  const desiredData = data === 'name' ? `${data}.${locale}` : data
   pathParts?.splice(-1)
   let prev = ''
   pathParts?.map((el) => {
     el = prev + el
     prev = el + 'children'
 
-    if (!parent || flattenedSidebar[`${el}${data}`].includes(parent)) {
-      parentsArray.push(flattenedSidebar[`${el}${data}`])
+    if (!parent || flattenedSidebar[`${el}${desiredData}`].includes(parent)) {
+      parentsArray.push(flattenedSidebar[`${el}${desiredData}`])
     }
   })
+  console.log(parentsArray)
   return parentsArray
 }
