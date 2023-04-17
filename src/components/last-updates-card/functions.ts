@@ -7,6 +7,7 @@ import FixedIcon from 'components/icons/fixed-icon'
 import ImprovedIcon from 'components/icons/improved-icon'
 import AnnouncementIcon from 'components/icons/announcement-icon'
 import RemovedIcon from 'components/icons/removed-icon'
+import { IntlShape } from 'react-intl'
 
 export type ActionType =
   | 'added'
@@ -58,25 +59,32 @@ const actions: Action[] = [
   },
 ]
 
-const updates: Update[] = [
-  {
-    type: 'documentation-updates',
-    title: 'Documentation Updates',
-    description: 'See what is new and latest documentation version',
-    Icon: DocumentationUpdatesIcon,
-  },
-  {
-    type: 'announcements',
-    title: 'Announcements',
-    description: 'Stay up to date with our latest releases',
-    Icon: AnnouncementIcon,
-  },
-]
+const updates = (intl: IntlShape) => {
+  const data: Update[] = [
+    {
+      type: 'documentation-updates',
+      title: 'Documentation Updates',
+      description: 'See what is new and latest documentation version',
+      Icon: DocumentationUpdatesIcon,
+    },
+    {
+      type: 'announcements',
+      title: intl.formatMessage({
+        id: 'announcements_page.title',
+      }),
+      description: intl.formatMessage({
+        id: 'announcements_page.subtitle',
+      }),
+      Icon: AnnouncementIcon,
+    },
+  ]
+  return data
+}
 
 export const getAction = (actionType: ActionType): Action => {
   return actions.find((action) => action.type === actionType) as Action
 }
 
-export const getUpdate = (updateType: UpdateType): Update => {
-  return updates.find((update) => update.type === updateType) as Update
+export const getUpdate = (updateType: UpdateType, intl: IntlShape): Update => {
+  return updates(intl).find((update) => update.type === updateType) as Update
 }

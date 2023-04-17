@@ -16,10 +16,10 @@ const ReleaseSection = ({ releasesData }: IReleasesData) => {
     <Flex sx={styles.outerContainer}>
       <Box sx={styles.innerContainer}>
         <Text sx={styles.sectionTitle}>
-          <FormattedMessage id="release_notes_page.title" />
+          <FormattedMessage id="announcements_page.title" />
         </Text>
         <Text sx={styles.sectionSubtitle}>
-          <FormattedMessage id="release_notes_page.subtitle" />
+          <FormattedMessage id="announcements_page.subtitle" />
         </Text>
         <Box sx={styles.sectionDivider}>
           <hr />

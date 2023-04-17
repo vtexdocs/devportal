@@ -28,13 +28,13 @@ const ReleasePage: NextPage<Props> = ({ releasesData, branch }) => {
       <Head>
         <title>
           {intl.formatMessage({
-            id: 'release_notes_page.title',
+            id: 'announcements_page.title',
           })}
         </title>
         <meta
           property="og:title"
           content={intl.formatMessage({
-            id: 'release_notes_page.subtitle',
+            id: 'announcements_page.subtitle',
           })}
           key="title"
         />

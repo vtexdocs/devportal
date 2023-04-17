@@ -2,8 +2,8 @@ export const getFeedbackURL = () => {
   return `https://docs.google.com/forms/d/e/1FAIpQLSfmnotPvPjw-SjiE7lt2Nt3RQgNUe10ixXZmuO2v9enOJReoQ/viewform?entry.1972292648=developers.vtex.com&entry.1799503232=`
 }
 
-export const getGithubURL = () => {
-  return `https://github.com/vtex-apps`
+export const getDeveloperPortalURL = () => {
+  return `https://developers.vtex.com/`
 }
 
 export const getHelpCenterURL = () => {

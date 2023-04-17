@@ -24,7 +24,7 @@ const LastUpdatesCard = ({ action, updateType }: CardProps) => {
     title: updateTitle,
     description: updateDescription,
     Icon: UpdateIcon,
-  } = getUpdate(updateType)
+  } = getUpdate(updateType, intl)
 
   return (
     <Link

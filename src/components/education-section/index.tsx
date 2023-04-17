@@ -1,10 +1,15 @@
 import { Box, Text, Flex } from '@vtex/brand-ui'
 
 import EducationChannel from 'components/education-channel'
-import GithubIcon from 'components/icons/github-icon'
 import HelpCenterIcon from 'components/icons/helpcenter-icon'
 import CommunityIcon from 'components/icons/community-icon'
-import { getGithubURL, getHelpCenterURL, getCommunityURL } from 'utils/get-url'
+import DeveloperPortalIcon from 'components/icons/developer-portal-icon'
+
+import {
+  getDeveloperPortalURL,
+  getCommunityURL,
+  getSupportURL,
+} from 'utils/get-url'
 
 import styles from './styles'
 import { useIntl } from 'react-intl'
@@ -21,20 +26,7 @@ const EducationSection = () => {
       textLink: intl.formatMessage({
         id: 'landing_page_education_support.textLink',
       }),
-      link: getGithubURL(),
-      icon: GithubIcon,
-    },
-    {
-      title: intl.formatMessage({
-        id: 'landing_page_education_developer_portal.title',
-      }),
-      description: intl.formatMessage({
-        id: 'landing_page_education_developer_portal.description',
-      }),
-      textLink: intl.formatMessage({
-        id: 'landing_page_education_developer_portal.textLink',
-      }),
-      link: getHelpCenterURL(),
+      link: getSupportURL(),
       icon: HelpCenterIcon,
     },
     {
@@ -49,6 +41,19 @@ const EducationSection = () => {
       }),
       link: getCommunityURL(),
       icon: CommunityIcon,
+    },
+    {
+      title: intl.formatMessage({
+        id: 'landing_page_education_developer_portal.title',
+      }),
+      description: intl.formatMessage({
+        id: 'landing_page_education_developer_portal.description',
+      }),
+      textLink: intl.formatMessage({
+        id: 'landing_page_education_developer_portal.textLink',
+      }),
+      link: getDeveloperPortalURL(),
+      icon: DeveloperPortalIcon,
     },
   ]
   return (
