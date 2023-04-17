@@ -140,8 +140,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const endpoints: {
       [key: string]: Endpoint
     } = {}
-    const isMethod = (key: string) =>
-      ['get', 'post', 'delete', 'put'].includes(key)
 
     if (allPaths) {
       Object.entries(allPaths).forEach(([key, value]) => {
@@ -150,7 +148,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             ([endpointKey, endpointValue]: any) => {
               if (
-                isMethod(endpointKey) &&
+                isMethodType(endpointKey.toUpperCase()) &&
                 endpointValue &&
                 endpointValue.description
               ) {
