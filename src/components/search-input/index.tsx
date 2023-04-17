@@ -27,12 +27,17 @@ export default function SearchInput() {
   })
   const resultsBox = useRef<HTMLElement>()
   useClickOutside(resultsBox, setfocusOut)
+
+  const changeFocus = (value: boolean) => {
+    setfocusOut({ modaltoggle: value })
+  }
+
   return (
     <InstantSearch searchClient={searchClient} indexName="devportal-docs">
       <Configure clickAnalytics={true} />
       <Box onFocus={() => setfocusOut({ modaltoggle: true })} ref={resultsBox}>
-        <SearchBox />
-        {focusOut.modaltoggle && <Results />}
+        <SearchBox changeFocus={changeFocus} />
+        {focusOut.modaltoggle && <Results changeFocus={changeFocus} />}
       </Box>
     </InstantSearch>
   )

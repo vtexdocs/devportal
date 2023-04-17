@@ -7,7 +7,7 @@ import {
 } from 'react-instantsearch-dom'
 import {
   Hit,
-  SearchState,
+  StateResultsProvided,
   WrappedInsightsClient,
 } from 'react-instantsearch-core'
 import aa from 'search-insights'
@@ -20,6 +20,10 @@ import styles from './styles'
 interface HitProps {
   hit: Hit
   insights: WrappedInsightsClient
+}
+
+interface HitsBoxProps extends StateResultsProvided {
+  changeFocus: (value: boolean) => void
 }
 
 const Hit = ({ hit, insights }: HitProps) => {
@@ -64,74 +68,75 @@ const Hit = ({ hit, insights }: HitProps) => {
 
 const HitWithInsights = connectHitInsights(aa)(Hit)
 
-const HitsBox = connectStateResults(({ searchState, searchResults }) => {
-  const router = useRouter()
-  const [searchStateActive, setSearchStateActive] =
-    useState<SearchState>(searchState)
-  const [prevSearchState, setPrevSearchState] = useState(searchState)
+const HitsBox = connectStateResults<HitsBoxProps>(
+  ({ searchState, searchResults, changeFocus }) => {
+    const router = useRouter()
+    const [searchStateActive, setSearchStateActive] =
+      useState<SearchState>(searchState)
+    const [prevSearchState, setPrevSearchState] = useState(searchState)
 
-  if (searchState !== prevSearchState) {
-    setSearchStateActive(searchState)
-    setPrevSearchState(searchState)
-  }
-
-  const seeAllSubmit = (keyword: string) => {
-    setSearchStateActive({})
-    router.push({
-      pathname: '/search',
-      query: { keyword },
-    })
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const setQueryIDAndPosition = (hit: Hit, index: number): any => {
-    return {
-      ...hit,
-      __queryID: searchResults.queryID || '',
-      __position: searchResults.hitsPerPage * searchResults.page + index + 1,
+    if (searchState !== prevSearchState) {
+      setSearchStateActive(searchState)
+      setPrevSearchState(searchState)
     }
-  }
 
-  return (
-    <>
-      {searchStateActive?.query && searchResults && (
-        <Box sx={styles.resultsOuterContainer}>
-          <Box sx={styles.resultsInnerContainer}>
-            <Box sx={searchResults.hits.length && styles.resultsBox}>
-              {searchResults.hits.map(
-                (searchResult, index) =>
-                  index < 7 && (
-                    <Box
-                      key={`matched-result-${index}`}
-                      onClick={() => setSearchStateActive({})}
-                    >
-                      <HitWithInsights
-                        hit={setQueryIDAndPosition(searchResult, index)}
-                      />
-                    </Box>
-                  )
+    const seeAllSubmit = (keyword: string) => {
+      router.push({
+        pathname: '/search',
+        query: { keyword },
+      })
+      changeFocus(false)
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const setQueryIDAndPosition = (hit: Hit, index: number): any => {
+      return {
+        ...hit,
+        __queryID: searchResults.queryID || '',
+        __position: searchResults.hitsPerPage * searchResults.page + index + 1,
+      }
+    }
+
+    return (
+      <>
+        {searchStateActive?.query && searchResults && (
+          <Box sx={styles.resultsOuterContainer}>
+            <Box sx={styles.resultsInnerContainer}>
+              <Box sx={searchResults.hits.length && styles.resultsBox}>
+                {searchResults.hits.map(
+                  (searchResult, index) =>
+                    index < 7 && (
+                      <Box
+                        key={`matched-result-${index}`}
+                        onClick={() => changeFocus(false)}
+                        // onClick={() => setSearchStateActive({})}
+                      >
+                        <HitWithInsights
+                          hit={setQueryIDAndPosition(searchResult, index)}
+                        />
+                      </Box>
+                    )
+                )}
+              </Box>
+              {searchResults.hits.length > 7 && (
+                <Box
+                  sx={styles.seeAll}
+                  onClick={() => seeAllSubmit(searchState.query || '')}
+                >
+                  <Text>See all results</Text>
+                </Box>
+              )}
+              {!searchResults.hits.length && (
+                <Flex sx={styles.noResults}>
+                  <Text>{messages['search_input.empty']}</Text>
+                </Flex>
               )}
             </Box>
-            {searchResults.hits.length > 7 && (
-              <Box
-                sx={styles.seeAll}
-                onClick={() => seeAllSubmit(searchStateActive.query!)}
-              >
-                <Text>See all results</Text>
-              </Box>
-            )}
-            {!searchResults.hits.length && (
-              <Flex sx={styles.noResults}>
-                <Text>{messages['search_input.empty']}</Text>
-              </Flex>
-            )}
           </Box>
-        </Box>
-      )}
-    </>
-  )
-})
+        )}
+      </>
+    )
+  }
+)
 
-export default function Results() {
-  return <HitsBox />
-}
+export default HitsBox
