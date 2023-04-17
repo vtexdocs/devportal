@@ -1,4 +1,6 @@
 import { SxStyleProp } from '@vtex/brand-ui'
+import { methodsColors } from 'components/method-category/functions'
+import { MethodType } from 'utils/typings/unionTypes'
 
 const container: SxStyleProp = {
   justifyContent: 'space-between',
@@ -12,12 +14,22 @@ const container: SxStyleProp = {
   paddingRight: '13px',
   background: '#FFFFFF',
   cursor: 'pointer',
-  ':hover': {
-    background: '#F8F7FC',
-    '.searchCardTitle, .searchCardDescription': {
-      color: '#142032',
+}
+
+const containerActive = (method: MethodType | undefined): SxStyleProp => {
+  const methodCategory = method ? methodsColors[method] : ''
+  return {
+    ...container,
+    ':hover': {
+      background: '#F8F7FC',
+      '.searchCardTitle, .searchCardDescription': {
+        color: '#142032',
+      },
+      '.method-category': {
+        ...methodCategory,
+      },
     },
-  },
+  }
 }
 
 const title: SxStyleProp = {
@@ -30,8 +42,6 @@ const title: SxStyleProp = {
 
 const httpMethod: SxStyleProp = {
   mr: '4px',
-  fontSize: '12px',
-  lineHeight: '16px',
 }
 
 const icon: SxStyleProp = {
@@ -120,7 +130,7 @@ const actionIcon: SxStyleProp = {
 }
 
 export default {
-  container,
+  containerActive,
   title,
   httpMethod,
   icon,

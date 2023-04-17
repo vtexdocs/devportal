@@ -34,7 +34,7 @@ const Hit = ({ hit }: HitProps) => {
       doc={hit.doctype as DocumentationTitle | UpdatesTitle}
       Icon={DocIcon!}
       title={hit.doctitle}
-      http={(hit.http as MethodType) || undefined}
+      method={(hit.method as MethodType) || undefined}
       breadcrumbs={(breadcrumbs as string[]) || []}
       actionType={(hit.actiontype as ActionType) || undefined}
       url={getRelativeURL(hit.url)}

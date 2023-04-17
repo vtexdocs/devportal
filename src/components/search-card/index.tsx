@@ -1,7 +1,6 @@
 import { Box, Flex, Text, IconCaret, Tooltip } from '@vtex/brand-ui'
 import { IconComponent } from 'utils/typings/types'
 
-import { methodStyle } from './functions'
 import styles from './styles'
 import { ActionType, getAction } from 'components/last-updates-card/functions'
 import Link from 'next/link'
@@ -14,13 +13,14 @@ import {
 import { useState } from 'react'
 import ExpandedResultsIcon from 'components/icons/expanded-results-icon'
 import { Hit } from 'react-instantsearch-core'
+import MethodCategory from 'components/method-category'
 
 export type FilteredHit = Hit & { filteredMatches?: Hit[] }
 interface SearchCardProps {
   doc: DocumentationTitle | UpdatesTitle
   title: string
   breadcrumbs?: string[]
-  http?: MethodType
+  method?: MethodType
   actionType?: ActionType
   Icon: IconComponent
   url: string
@@ -30,7 +30,7 @@ interface SearchCardProps {
 const SearchCard = ({
   Icon,
   title,
-  http,
+  method,
   breadcrumbs,
   actionType,
   url,
@@ -40,11 +40,18 @@ const SearchCard = ({
   const [toggleChildResults, setToggleChildResults] = useState<boolean>(false)
   return (
     <Link href={url} legacyBehavior>
-      <Flex sx={styles.container}>
+      <Flex sx={styles.containerActive(method)}>
         <Box>
           <Text className="searchCardTitle" sx={styles.title}>
             {Icon && <Icon sx={styles.icon} />}
-            {http ? <Text sx={methodStyle(http)}>{http}</Text> : null}
+            {method ? (
+              <MethodCategory
+                sx={styles.httpMethod}
+                origin="search"
+                method={method}
+                active={false}
+              />
+            ) : null}
             {title === 'overview' && `${hit.doccategory} `}
             {title}
           </Text>
