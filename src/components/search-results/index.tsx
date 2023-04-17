@@ -14,20 +14,26 @@ import styles from './styles'
 const SearchResults = () => {
   const router = useRouter()
   const { filterSelectedSection, ocurrenceCount } = useContext(SearchContext)
+  const filters = filterSelectedSection
+    ? `doctype: "${filterSelectedSection}"`
+    : ''
 
   return (
     <Box sx={styles.resultContainer}>
       <Text sx={styles.resultText}>
-        Showing {ocurrenceCount.get(filterSelectedSection)} results for "
+        Showing {ocurrenceCount[filterSelectedSection]} results for "
         {router.query.keyword}" in all results
       </Text>
       <hr />
       <Box>
         <InstantSearch searchClient={searchClient} indexName="devportal-docs">
           <Configure
+            filters={filters}
             query={router.query.keyword}
             clickAnalytics={true}
             hitsPerPage={6}
+            facets={['doctype']}
+            facetingAfterDistinct={true}
           />
           <CustomHits />
           <Pagination />

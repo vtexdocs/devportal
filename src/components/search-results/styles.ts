@@ -20,7 +20,7 @@ const resultText: SxStyleProp = {
 }
 
 const paginationContainer: SxStyleProp = {
-  mt: '115px',
+  mt: ['48px', '115px'],
   mb: '34px',
   justifyContent: 'center',
 }

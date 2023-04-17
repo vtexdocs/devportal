@@ -1,6 +1,6 @@
 import { useContext, useEffect, useMemo } from 'react'
-import { connectHits } from 'react-instantsearch-dom'
-import { Hit, HitsProvided, BasicDoc } from 'react-instantsearch-core'
+import { connectStateResults } from 'react-instantsearch-dom'
+import { Hit, StateResultsProvided, BasicDoc } from 'react-instantsearch-core'
 import { getRelativeURL } from 'utils/search-utils'
 import { getIcon } from 'utils/constants'
 import { ActionType } from 'components/last-updates-card/functions'
@@ -43,13 +43,13 @@ const Hit = ({ hit }: HitProps) => {
   )
 }
 
-const CustomHits = ({ hits }: HitsProvided<BasicDoc>) => {
+const CustomHits = ({ searchResults }: StateResultsProvided<BasicDoc>) => {
   const { filterSelectedSection, updateOcurrenceCount } =
     useContext(SearchContext)
 
   const filteredResult = useMemo(() => {
     const mergeHits: FilteredHit[] = []
-    hits.forEach((hit) => {
+    searchResults?.hits.forEach((hit) => {
       const alreadyExists = mergeHits.findIndex(
         (e) => e.url_without_anchor === hit.url_without_anchor
       )
@@ -61,11 +61,16 @@ const CustomHits = ({ hits }: HitsProvided<BasicDoc>) => {
     })
 
     return mergeHits
-  }, [hits])
+  }, [searchResults])
 
   useEffect(() => {
-    updateOcurrenceCount(filteredResult)
-  }, [filteredResult])
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const results = searchResults as any
+    if (results && results._state.filters === '') {
+      const facets = searchResults?.facets[0]
+      updateOcurrenceCount({ ...facets?.data, '': searchResults?.nbHits })
+    }
+  }, [searchResults?.queryID])
 
   return (
     <Box>
@@ -84,4 +89,4 @@ const CustomHits = ({ hits }: HitsProvided<BasicDoc>) => {
   )
 }
 
-export default connectHits(CustomHits)
+export default connectStateResults(CustomHits)

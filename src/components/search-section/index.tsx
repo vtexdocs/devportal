@@ -29,7 +29,7 @@ const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
         All results
       </Text>
       <Box className="search-section-count" sx={styles.sectionCount}>
-        {ocurrenceCount.get('')}
+        {ocurrenceCount['']}
       </Box>
     </Flex>
   ) : (
@@ -52,7 +52,7 @@ const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
         </Text>
       </Flex>
       <Box className="search-section-count" sx={styles.sectionCount}>
-        {ocurrenceCount.get(dataElement.title) || 0}
+        {ocurrenceCount[dataElement.title] || 0}
       </Box>
     </Flex>
   )

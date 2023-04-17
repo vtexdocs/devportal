@@ -1,40 +1,33 @@
 import { createContext, Dispatch, SetStateAction, useState } from 'react'
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
-import { Hit } from 'react-instantsearch-core'
 
 type FilterType = DocumentationTitle | UpdatesTitle | ''
+
+type OcurrenceType = {
+  [key: string]: number
+}
 
 type SearchContextType = {
   filterSelectedSection: FilterType
   changeFilterSelectedSection: Dispatch<SetStateAction<FilterType>>
-  ocurrenceCount: Map<FilterType, number>
-  updateOcurrenceCount: (resultsData: Hit[]) => void
+  ocurrenceCount: OcurrenceType
+  updateOcurrenceCount: (resultsData: OcurrenceType) => void
 }
 
 export const SearchContext = createContext<SearchContextType>({
   filterSelectedSection: '',
   changeFilterSelectedSection: () => undefined,
-  ocurrenceCount: new Map(),
+  ocurrenceCount: {},
   updateOcurrenceCount: () => undefined,
 })
 
 const SearchContextProvider: React.FC = ({ children }) => {
   const [filterSelectedSection, changeFilterSelectedSection] =
     useState<FilterType>('')
-  const [ocurrenceCount, changeOcurrenceCount] = useState<
-    Map<FilterType, number>
-  >(new Map())
+  const [ocurrenceCount, changeOcurrenceCount] = useState({})
 
-  const updateOcurrenceCount = (resultsData: Hit[]) => {
-    const ocurrenceCountMap = new Map<FilterType, number>()
-    resultsData.forEach((result) => {
-      ocurrenceCountMap.set(
-        result.doctype as FilterType,
-        (ocurrenceCountMap.get(result.doctype as FilterType) || 0) + 1
-      )
-    })
-    ocurrenceCountMap.set('', resultsData.length)
-    changeOcurrenceCount(ocurrenceCountMap)
+  const updateOcurrenceCount = (resultsData: OcurrenceType) => {
+    changeOcurrenceCount(resultsData)
   }
 
   return (

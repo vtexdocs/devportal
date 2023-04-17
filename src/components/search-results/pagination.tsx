@@ -1,9 +1,15 @@
+import { useContext, useEffect } from 'react'
 import { Flex, Text } from '@vtex/brand-ui'
 import { connectPagination } from 'react-instantsearch-dom'
+import { SearchContext } from 'utils/contexts/search'
 import styles from './styles'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Pagination = ({ currentRefinement, nbPages, refine }: any) => {
+  const { filterSelectedSection } = useContext(SearchContext)
+  useEffect(() => {
+    if (currentRefinement !== 1) refine(1)
+  }, [filterSelectedSection])
   return (
     <Flex sx={styles.paginationContainer}>
       <Text
