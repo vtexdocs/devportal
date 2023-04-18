@@ -16,6 +16,9 @@ describe('Status of documentation pages', () => {
     }
   })
 
-  const pages = selectRandomPages(Cypress.env('testProbability') || 1.0)
+  const pages = selectRandomPages({
+    prob: Cypress.env('testProbability') || 1.0,
+  })
+
   pages.forEach((page) => it(`Checks page ${page}`, () => cy.visit(page)))
 })
