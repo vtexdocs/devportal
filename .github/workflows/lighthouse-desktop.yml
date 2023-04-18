@@ -32,7 +32,7 @@ jobs:
           script: |
             const { URL } = process.env
             const { selectRandomPages } = require('./src/tests/utils/select-pages.js')
-            const pages = selectRandomPages(0.01).map(page => `${URL}${page}`).join('\n')
+            const pages = selectRandomPages({ sampleSize: 3 }).map(page => `${URL}${page}`).join('\n')
             core.setOutput('pages', pages)
       - name: Lighthouse CI
         id: lighthouse-ci
