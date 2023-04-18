@@ -1,50 +1,76 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const navigation = require('../../../public/navigation.json')
 
-const selectRandomPages = (prob) => {
-  const pages = []
-  const selectDocumentationPages = (slugPrefix) => {
-    const selectPages = ({ slug, type, children }) => {
+const sample = (elements, size) => {
+  const chosenIndices = new Set()
+  while (chosenIndices.size < size) {
+    let chosenIndex = Math.floor(Math.random() * elements.length)
+    while (chosenIndices.has(chosenIndex)) {
+      chosenIndex = Math.floor(Math.random() * elements.length)
+    }
+
+    chosenIndices.add(chosenIndex)
+  }
+
+  const chosenElements = []
+  chosenIndices.forEach((index) => chosenElements.push(elements[index]))
+  return chosenElements
+}
+
+const selectRandomPages = (options) => {
+  const getDocumentationPages = (slugPrefix, pages) => {
+    const getPages = ({ slug, type, children }) => {
       const page = `${slugPrefix}/${slug}`
-      const shouldSelectPage = Math.random() < prob
+      if (type === 'markdown') pages.push(page)
+      else if (type === 'openapi') pages.push({ overview: page })
 
-      if ((type === 'markdown' || type === 'openapi') && shouldSelectPage)
-        pages.push(page)
-
-      if (type !== 'openapi') children.forEach(selectPages)
-      else if (shouldSelectPage) {
-        let found = false
+      if (type !== 'openapi') children.forEach(getPages)
+      else {
         let childIndex = -1
+        let foundEndpoint = false
         let currChildren = children
 
-        while (!found && currChildren.length > 0) {
+        while (!foundEndpoint && currChildren.length > 0) {
           childIndex = Math.floor(Math.random() * currChildren.length)
-          if (currChildren[childIndex].method) found = true
+          if (currChildren[childIndex].method) foundEndpoint = true
           else currChildren = currChildren[childIndex].children
         }
 
-        if (found) {
+        if (foundEndpoint) {
           const { method, endpoint } = currChildren[childIndex]
           const endpointPage = `${page}#${method.toLowerCase()}-${endpoint}`
-          pages.push(endpointPage)
+          pages[pages.length - 1].endpoint = endpointPage
         }
       }
     }
 
-    return selectPages
+    return getPages
   }
 
+  const allSelectedPages = []
   navigation.navbar.forEach(({ slugPrefix, categories }) => {
-    categories.forEach(
-      selectDocumentationPages(
-        slugPrefix.endsWith('/')
-          ? slugPrefix.slice(0, slugPrefix.length - 1)
-          : slugPrefix
-      )
-    )
+    const fixedSlugPrefix = slugPrefix.endsWith('/')
+      ? slugPrefix.slice(0, slugPrefix.length - 1)
+      : slugPrefix
+
+    const allPages = []
+    categories.forEach(getDocumentationPages(fixedSlugPrefix, allPages))
+
+    const sampleSize =
+      options.sampleSize || Math.floor(allPages.length * options.prob)
+
+    const selectedPages = sample(allPages, sampleSize)
+    selectedPages.forEach((page) => {
+      if (slugPrefix !== 'docs/api-reference') {
+        allSelectedPages.push(page)
+      } else {
+        allSelectedPages.push(page.overview)
+        if (page.endpoint) allSelectedPages.push(page.endpoint)
+      }
+    })
   })
 
-  return pages
+  return allSelectedPages
 }
 
 module.exports = { selectRandomPages }
