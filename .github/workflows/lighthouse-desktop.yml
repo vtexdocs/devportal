@@ -56,13 +56,19 @@ jobs:
 
             let output = '# Performance Results\n\n'
             manifest.forEach(({ url, summary }) => {
-              output += `* Page: ${url}\n\n`
-              output += `    Complete results [here](${links[url]})\n\n`
+              output += '<details>\n'
+              output += '  <summary>\n'
+              output += '    Page\n'
+              output += `    <a href=${url}>${url}</a>\n`;
+              output += '  </summary>\n\n';
 
-              output += `    ![Performance](https://progress-bar.dev/${Math.floor(summary['performance'] * 100)}?title=Performance)\n`
-              output += `    ![Accessibility](https://progress-bar.dev/${Math.floor(summary['accessibility'] * 100)}?title=Accessibility)\n`
-              output += `    ![Best Practices](https://progress-bar.dev/${Math.floor(summary['best-practices'] * 100)}?title=Best%20Practices)\n`
-              output += `    ![SEO](https://progress-bar.dev/${Math.floor(summary['seo'] * 100)}?title=SEO)\n\n`
+              output += `  ![Performance](https://progress-bar.dev/${Math.floor(summary['performance'] * 100)}?title=Performance)\n`
+              output += `  ![Accessibility](https://progress-bar.dev/${Math.floor(summary['accessibility'] * 100)}?title=Accessibility)\n`
+              output += `  ![Best Practices](https://progress-bar.dev/${Math.floor(summary['best-practices'] * 100)}?title=Best%20Practices)\n`
+              output += `  ![SEO](https://progress-bar.dev/${Math.floor(summary['seo'] * 100)}?title=SEO)\n\n`
+
+              output += `  Complete results [here](${links[url]})\n`
+              output += '</details>\n\n'
             })
 
             core.setOutput('summary', output)
