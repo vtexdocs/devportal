@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import remarkGFM from 'remark-gfm'
@@ -52,10 +52,7 @@ const AppChildPage: NextPage<Props> = ({
   title,
   appId,
 }) => {
-  const [headings, setHeadings] = useState<Item[]>([])
-  useEffect(() => {
-    setHeadings(headingList)
-  }, [serialized.frontmatter])
+  const headings: Item[] = headingList
 
   const seeAlsoData = [
     {
