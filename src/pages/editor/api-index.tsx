@@ -11,7 +11,7 @@ import image from '../../../public/images/editor.png'
 
 const APIRefAdminPage: NextPage = () => {
   const headerDescription =
-    'Enter the `children` array of an API reference navigation JSON below and click Submit to convert it to a markdown index.'
+    'Enter the object or the `children` array of an API reference navigation JSON below and click Submit to convert it to a markdown index.'
   const headerTitle = 'API Index Generator'
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
