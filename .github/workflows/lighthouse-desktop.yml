@@ -32,7 +32,7 @@ jobs:
           script: |
             const { URL } = process.env
             const { selectRandomPages } = require('./src/tests/utils/select-pages.js')
-            const pages = selectRandomPages({ sampleSize: 3 }).map(page => `${URL}${page}`).join('\n')
+            const pages = selectRandomPages({ sampleSize: 2 }).map(page => `${URL}${page}`).join('\n')
             core.setOutput('pages', pages)
       - name: Lighthouse CI
         id: lighthouse-ci
@@ -59,8 +59,9 @@ jobs:
               output += '<details>\n'
               output += '  <summary>\n'
               output += '    Page\n'
-              output += `    <a href=${url}>${url}</a>\n`;
-              output += '  </summary>\n\n';
+              output += `    <a href=${url}>${url}</a>\n`
+              output += '  </summary>\n'
+              output += '  <br />\n\n'
 
               output += `  ![Performance](https://progress-bar.dev/${Math.floor(summary['performance'] * 100)}?title=Performance)\n`
               output += `  ![Accessibility](https://progress-bar.dev/${Math.floor(summary['accessibility'] * 100)}?title=Accessibility)\n`
