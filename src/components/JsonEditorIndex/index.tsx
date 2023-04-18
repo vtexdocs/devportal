@@ -1,5 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
-import { SidebarContext } from 'utils/contexts/sidebar'
+import React, { useState, useEffect } from 'react'
 import navigation from '../../../public/navigation.json'
 import styles from './styles'
 import { Box, Button } from '@vtex/brand-ui'
@@ -17,12 +16,8 @@ function JsonEditorIndex({ handleJsonDataChange }: JsonEditorIndexProps) {
   useEffect(() => {
     injectStyle()
   }, [])
-  const { setSidebarDataMaster } = useContext(SidebarContext)
   const [isCopied, setIsCopied] = useState(false)
 
-  useEffect(() => {
-    setSidebarDataMaster(initialData)
-  }, [])
   const [data, setData] = useState(
     JSON.stringify(
       JSON.parse(JSON.stringify(initialData).toString()),
@@ -127,10 +122,9 @@ function JsonEditorIndex({ handleJsonDataChange }: JsonEditorIndexProps) {
     if (isJson(data)) {
       const parsedData = JSON.parse(data)
       handleJsonDataChange(parsedData)
-      toast.success('The code was updated.')
+      toast.success('The index was generated.')
       const markdownData = createMarkdownCode(parsedData)
       setData(JSON.stringify(parsedData, undefined, 2))
-      setSidebarDataMaster(parsedData)
       setData(markdownData)
     } else {
       toast.error('Try again. This is not a valid JSON.')
@@ -145,7 +139,6 @@ function JsonEditorIndex({ handleJsonDataChange }: JsonEditorIndexProps) {
         2
       )
     )
-    setSidebarDataMaster(initialData)
     toast.warning('Content reloaded.')
     event.preventDefault()
   }
@@ -164,7 +157,6 @@ function JsonEditorIndex({ handleJsonDataChange }: JsonEditorIndexProps) {
 
   function handleClear(event: { preventDefault: () => void }) {
     setData('')
-    setSidebarDataMaster('')
     toast.warning('Content cleared.')
     event.preventDefault()
   }

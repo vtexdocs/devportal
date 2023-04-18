@@ -4,12 +4,12 @@ import { Box, Flex } from '@vtex/brand-ui'
 import JsonEditorIndex from 'components/JsonEditorIndex'
 import { Fragment } from 'react'
 import styles from 'styles/documentation-landing-page'
-import { NextPage } from 'next'
+import type { Page } from 'utils/typings/types'
 
 import PageHeader from 'components/page-header'
 import image from '../../../public/images/editor.png'
 
-const APIRefAdminPage: NextPage = () => {
+const APIRefAdminPage: Page = () => {
   const headerDescription =
     'Enter the object or the `children` array of an API reference navigation JSON below and click Submit to convert it to a markdown index.'
   const headerTitle = 'API Index Generator'
@@ -43,5 +43,7 @@ const APIRefAdminPage: NextPage = () => {
     </>
   )
 }
+
+APIRefAdminPage.hideSidebar = true
 
 export default APIRefAdminPage
