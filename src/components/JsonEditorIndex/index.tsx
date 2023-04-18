@@ -82,7 +82,7 @@ function JsonEditorIndex({ handleJsonDataChange }: JsonEditorIndexProps) {
         }
         markdown += '\n'
       }
-    } else if (data instanceof Object) {
+    } else if (typeof data === 'object') {
       markdown += `## ${data.name} Index\n\n`
       if (data.children && Array.isArray(data.children)) {
         for (let i = 0; i < data.children.length; i++) {
