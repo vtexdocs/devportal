@@ -1157,6 +1157,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Checkout error codes",
+              "slug": "checkout-error-codes",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
