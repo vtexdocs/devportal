@@ -88,7 +88,7 @@ describe('API reference documentation page', () => {
       })
   })
 
-  it('Check if the response card is clickable and, after it, if the response modal appeared', () => {
+  it('Check if the response tab is clickable and, after it, if the response appeared', () => {
     cy.get('rapi-doc')
       .shadow()
       .within(() => {
@@ -100,8 +100,7 @@ describe('API reference documentation page', () => {
               .scrollIntoView()
               .should('be.visible')
               .click()
-            cy.get('.resp-modal-content').first().should('be.visible')
-            cy.get('.close-button').first().click()
+            cy.get('.resp-content').first().should('be.visible')
           })
       })
   })
