@@ -10,6 +10,7 @@ import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
+import remarkMermaid from 'utils/remark_plugins/mermaid'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
@@ -43,8 +44,6 @@ import getFileContributors, {
 
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
-import remarkMermaid from 'remark-mermaidjs'
-import chromium from '@sparticuz/chromium'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -192,13 +191,6 @@ export const getStaticProps: GetStaticProps = async ({
 
   const logger = getLogger('Guides')
 
-  const launchOptions = {
-    args: chromium.args,
-    executablePath:
-      process.env.CHROME_EXECUTABLE_PATH || (await chromium.executablePath()),
-    headless: chromium.headless,
-  }
-
   const path = docsPaths[slug]
   if (!path) {
     return {
@@ -242,7 +234,7 @@ export const getStaticProps: GetStaticProps = async ({
           remarkImages,
           [getHeadings, { headingList }],
           remarkBlockquote,
-          [remarkMermaid, { launchOptions }],
+          remarkMermaid,
         ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
