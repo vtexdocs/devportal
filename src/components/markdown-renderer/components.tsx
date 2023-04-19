@@ -18,6 +18,7 @@ import {
   UncontrolledReactSVGPanZoom,
 } from 'react-svg-pan-zoom'
 import mermaid from 'mermaid'
+import parse from 'html-react-parser'
 
 type Component = {
   node: object
@@ -88,20 +89,46 @@ const Callout = ({ node, icon, ...props }: Component) => {
 }
 
 const MermaidDiagram = ({ node, ...props }: Component) => {
+  const viewerRef = useRef<ReactSVGPanZoom>(null)
+  const ref = useRef<HTMLElement>()
+
   const [diagram, setDiagram] = useState('')
+  const [width, setWidth] = useState(0)
+  const [height, setHeight] = useState(0)
 
   useEffect(() => {
-    ;(async function () {
+    const resizeObserver = new ResizeObserver(() => {
+      if (!ref.current) return
+      setWidth(ref.current?.clientWidth ?? 0)
+      setHeight(ref.current?.clientWidth / 2 ?? 0)
+    })
+
+    const mermaidRenderer = async function () {
       const { svg } = await mermaid.render('mermaid-id', props.children)
       setDiagram(svg)
-    })()
+    }
+
+    mermaidRenderer()
+    if (ref.current) resizeObserver.observe(ref.current)
   }, [])
 
   return (
-    <Box
-      className={styles.svgContainer}
-      dangerouslySetInnerHTML={{ __html: diagram }}
-    />
+    <Box ref={ref} className={styles.svgContainer}>
+      <UncontrolledReactSVGPanZoom
+        ref={viewerRef}
+        width={width}
+        height={height}
+        miniatureProps={{
+          position: 'none',
+          width: 100,
+          height: 80,
+          background: '#616264',
+        }}
+        background={'rgba(0, 0, 0, 0)'}
+      >
+        <>{parse(diagram)}</>
+      </UncontrolledReactSVGPanZoom>
+    </Box>
   )
 }
 
@@ -216,42 +243,6 @@ export default {
         }}
         {...props}
       />
-    )
-  },
-  svg: ({ node, ...props }: Component) => {
-    const viewerRef = useRef<ReactSVGPanZoom>(null)
-    const ref = useRef<HTMLElement>()
-
-    const [width, setWidth] = useState(0)
-    const [height, setHeight] = useState(0)
-
-    useEffect(() => {
-      const resizeObserver = new ResizeObserver(() => {
-        if (!ref.current) return
-        setWidth(ref.current?.clientWidth ?? 0)
-        setHeight(ref.current?.clientWidth / 2 ?? 0)
-      })
-
-      if (ref.current) resizeObserver.observe(ref.current)
-    }, [])
-
-    return (
-      <Box ref={ref} className={styles.svgContainer}>
-        <UncontrolledReactSVGPanZoom
-          ref={viewerRef}
-          width={width}
-          height={height}
-          miniatureProps={{
-            position: 'none',
-            width: 100,
-            height: 80,
-            background: '#616264',
-          }}
-          background={'rgba(0, 0, 0, 0)'}
-        >
-          <svg {...props}></svg>
-        </UncontrolledReactSVGPanZoom>
-      </Box>
     )
   },
 }
