@@ -13,14 +13,14 @@
   },
   "custom_settings": {
     "separatorsToIndex": "_",
-    "attributesForFaceting": ["docType"],
+    "attributesForFaceting": ["doctype"],
     "attributesToRetrieve": [
       "hierarchy",
       "content",
       "anchor",
       "url",
       "type",
-      "docType",
+      "doctype",
       "docTitle"
     ]
   },

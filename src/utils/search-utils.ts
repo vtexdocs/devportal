@@ -3,7 +3,7 @@ import { Hit } from 'react-instantsearch-core'
 export const getBreadcrumbs = (hit: Hit) => {
   const breadcrumbs: string[] = []
   breadcrumbs.push(hit.doctype)
-  if (hit.docType === 'API Reference' && hit.doccategory)
+  if (hit.doctype === 'API Reference' && hit.doccategory)
     breadcrumbs.push(hit.doccategory)
   breadcrumbs.push(hit.doctitle)
   return breadcrumbs
