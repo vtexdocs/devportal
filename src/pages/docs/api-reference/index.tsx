@@ -28,6 +28,12 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/antifraud-provider-protocol',
   },
   {
+    title: 'CMS API',
+    description: 'Update your websites’ internet communication protocol',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/cms-api',
+  },
+  {
     title: 'Catalog API',
     description:
       'Manipulate your store’s sales channels, categories, brands, products, SKUs and specifications.',
@@ -35,8 +41,15 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/catalog-api',
   },
   {
+    title: 'Catalog API - Seller Portal',
+    description:
+      'create, edit and consult products and their variations, brands, and categories for a Seller Portal account',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/catalog-api-seller-portal',
+  },
+  {
     title: 'Checkout API',
-    description: 'Access and manipulate items data of a checkout cart.',
+    description: 'Access and manipulate items and data from a checkout cart.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/checkout-api',
   },
@@ -62,6 +75,25 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/giftcard-hub-api',
   },
   {
+    title: 'Gift Card Provider Protocol API',
+    description: 'Integrate your Gift Card API into VTEX platform.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/giftcard-provider-protocol',
+  },
+  {
+    title: 'VTEX Headless CMS API',
+    description: 'No-code management system for storefront content.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/headless-cms-api',
+  },
+  {
+    title: 'Intelligent Search API',
+    description:
+      'Assist your customers in their purchase journey, presenting results from search bar interactions.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/intelligent-search-api',
+  },
+  {
     title: 'License Manager API',
     description:
       'Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.',
@@ -71,7 +103,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   {
     title: 'Logistics API',
     description:
-      'Manage all store logistics data by accessing warehouses, docks, pick up points, carriers and shipping rates. Get or the inventory of each SKU.',
+      'Manage all store logistics data by accessing warehouses, docks, pick up points, inventory, carriers and shipping rates.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/logistics-api',
   },
@@ -85,35 +117,68 @@ const whatsNextData: WhatsNextDataElement[] = [
   {
     title: 'Master Data API',
     description:
-      'Manage and retrieve all data entities, applications and records from Master Data database.',
+      'Manage and retrieve all data entities, applications and records from the Master Data database.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/master-data-api-v2',
   },
   {
     title: 'Orders API',
-    description: 'Get payment data and process your transactions.',
+    description: 'Receive, process, and manage every order through our APIs.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/orders-api',
   },
   {
+    title: 'Payments Provider Protocol API',
+    description:
+      'Integrate your payment processing API into the VTEX platform,',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/payment-provider-protocol',
+  },
+  {
     title: 'Payments Gateway API',
-    description: 'Receive, process, and manage every order through our APIs.',
+    description: 'Get payment data and process your transactions.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/payments-gateway-api',
   },
   {
+    title: 'Policies System API',
+    description:
+      'Create promotion alarms when selling products with undesired prices and promotions.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/policies-system-api',
+  },
+  {
     title: 'Pricing API',
     description:
-      'Create, read and edit prices for each SKU, sales channel or price table.',
+      'Create, retrieve and edit prices for each SKU, sales channel or price table.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/pricing-api',
   },
   {
-    title: 'Promotions API',
+    title: 'Price Simulations API',
+    description: 'Configure custom price selectors for B2B stores.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/price-simulations',
+  },
+  {
+    title: 'Pricing Hub API',
+    description:
+      'Intermediary between VTEX and external pricing systems for B2B context.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/pricing-hub',
+  },
+  {
+    title: 'Promotions & Taxes API',
     description:
       'Manage and retrieve all promotions, coupons and tax rules from a VTEX store.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/promotions-and-taxes-api',
+  },
+  {
+    title: 'Reviews and Ratings API',
+    description: 'Allow shoppers to submit reviews and ratings for products.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/reviews-and-ratings-api',
   },
   {
     title: 'Search API',
@@ -130,17 +195,30 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/session-manager-api',
   },
   {
+    title: 'SKU Bindings API',
+    description: 'Manage SKU Bindings in your catalog.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/sku-bindings-api',
+  },
+  {
     title: 'Subscriptions API',
     description:
-      "Manage store's subscription rules to improve the revenue and reduce bounce rate and churn.",
+      "Manage store's subscription rules to generate recurrent revenue and reduce bounce rate and churn.",
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/subscriptions-api-v3',
   },
   {
     title: 'VTEX Do API',
-    description: 'Manage and retrieve notes or tasks from VTEX Do.',
+    description:
+      'Manage and retrieve notes or tasks related to orders from the VTEX DO task manager.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/vtex-do-api',
+  },
+  {
+    title: 'VTEX Shipping Network API',
+    description: 'Integrate your carrier with VTEX Shipping Network’s Hub.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/vtex-shipping-network-api',
   },
   {
     title: 'VTEX Tracking',
