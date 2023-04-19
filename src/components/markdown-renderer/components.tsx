@@ -17,6 +17,7 @@ import {
   ReactSVGPanZoom,
   UncontrolledReactSVGPanZoom,
 } from 'react-svg-pan-zoom'
+import mermaid from 'mermaid'
 
 type Component = {
   node: object
@@ -86,6 +87,24 @@ const Callout = ({ node, icon, ...props }: Component) => {
   )
 }
 
+const MermaidDiagram = ({ node, ...props }: Component) => {
+  const [diagram, setDiagram] = useState('')
+
+  useEffect(() => {
+    ;(async function () {
+      const { svg } = await mermaid.render('mermaid-id', props.children)
+      setDiagram(svg)
+    })()
+  }, [])
+
+  return (
+    <Box
+      className={styles.svgContainer}
+      dangerouslySetInnerHTML={{ __html: diagram }}
+    />
+  )
+}
+
 export default {
   OverviewCard,
   WhatsNextCard,
@@ -151,6 +170,9 @@ export default {
     return <code className={styles.code} {...props}></code>
   },
   pre: ({ ...props }: Component) => {
+    if (props.className && props.className === 'mermaid')
+      return <MermaidDiagram {...props} />
+
     return <CodeBlock {...props} />
   },
   h2: ({ node, ...props }: Component) => {
