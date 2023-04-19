@@ -409,3 +409,201 @@ force = true
 from = '/docs/guides/get-a-client-profile-by-email'
 status = 308
 to = '/docs/guides/getting-a-customer-profile-by-email'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-search-result'
+status = 308
+to = '/docs/apps/vtex.search-result'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-flex-layout'
+status = 308
+to = '/docs/apps/vtex.flex-layout'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-slider-layout'
+status = 308
+to = '/docs/apps/vtex.slider-layout'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-rich-text'
+status = 308
+to = '/docs/apps/vtex.rich-text'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-store-components-skuselector'
+status = 308
+to = '/docs/apps/vtex.store-components/SKUSelector'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-store-components-searchbar'
+status = 308
+to = '/docs/apps/vtex.store-components/SearchBar'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-store-components-image'
+status = 308
+to = '/docs/apps/vtex.store-components/Image'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-store-components-infocard'
+status = 308
+to = '/docs/apps/vtex.store-components/InfoCard'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-store-components-productimages'
+status = 308
+to = '/docs/apps/vtex.store-components/ProductImages'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-product-summary-productsummaryimage'
+status = 308
+to = '/docs/apps/vtex.product-summary/ProductSummaryImage'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-product-summary-productsummarylist'
+status = 308
+to = '/docs/apps/vtex.product-summary/ProductSummaryList'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-product-summary-productsummaryshelf'
+status = 308
+to = '/docs/apps/vtex.product-summary/ProductSummaryShelf'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-menu'
+status = 308
+to = '/docs/apps/vtex.menu'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-product-summary'
+status = 308
+to = '/docs/apps/vtex.product-summary'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-minicart'
+status = 308
+to = '/docs/apps/vtex.minicart'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-search'
+status = 308
+to = '/docs/apps/vtex.search'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-add-to-cart-button'
+status = 308
+to = '/docs/apps/vtex.add-to-cart-button'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-condition-layout'
+status = 308
+to = '/docs/apps/vtex.condition-layout'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-modal-layout'
+status = 308
+to = '/docs/apps/vtex.modal-layout'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-product-list'
+status = 308
+to = '/docs/apps/vtex.product-list'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-b2b-suite'
+status = 308
+to = '/docs/apps/vtex.b2b-suite'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-shelf'
+status = 308
+to = '/docs/apps/vtex.shelf'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-product-highlights'
+status = 308
+to = '/docs/apps/vtex.product-highlights'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-responsive-layout'
+status = 308
+to = '/docs/apps/vtex.responsive-layout'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-store-form'
+status = 308
+to = '/docs/apps/vtex.store-form'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-flex-layout'
+status = 308
+to = '/docs/apps/vtex.flex-layout'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-wish-list'
+status = 308
+to = '/docs/apps/vtex.wish-list'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-store-image'
+status = 308
+to = '/docs/apps/vtex.store-image'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-disclosure-layout'
+status = 308
+to = '/docs/apps/vtex.disclosure-layout'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-reviews-and-ratings'
+status = 308
+to = '/docs/apps/vtex.reviews-and-ratings'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-product-specifications'
+status = 308
+to = '/docs/apps/vtex.product-specifications'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-store-drawer'
+status = 308
+to = '/docs/apps/vtex.store-drawer'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-product-customizer'
+status = 308
+to = '/docs/apps/vtex.product-customizer'
