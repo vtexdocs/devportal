@@ -47,10 +47,12 @@ jobs:
         id: generate-summary-report
         uses: actions/github-script@v6
         env:
+          URL: ${{ steps.wait-for-netlify-preview.outputs.url }}
           LINKS: ${{ steps.lighthouse-ci.outputs.links }}
           MANIFEST: ${{ steps.lighthouse-ci.outputs.manifest }}
         with:
           script: |
+            const { URL } = process.env
             const links = JSON.parse(process.env.LINKS)
             const manifest = JSON.parse(process.env.MANIFEST)
 
@@ -59,7 +61,7 @@ jobs:
               output += '<details>\n'
               output += '  <summary>\n'
               output += '    Page\n'
-              output += `    <a href=${url}>${url}</a>\n`
+              output += `    <a href=${url}>/${url.replace(URL, '')}</a>\n`
               output += '  </summary>\n'
               output += '  <br />\n\n'
 
