@@ -320,6 +320,8 @@ export const getStaticProps: GetStaticProps = async ({
       ? true
       : false
     const keyPath = getKeyByValue(flattenedSidebar, slug)
+      ? getKeyByValue(flattenedSidebar, slug)
+      : getKeyByValue(flattenedSidebar, `guides/${slug}`)
     const parentsArray: string[] = []
     const parentsArrayName: string[] = []
     const parentsArrayType: string[] = []
@@ -328,6 +330,7 @@ export const getStaticProps: GetStaticProps = async ({
       sectionSelected = flattenedSidebar[`${keyPath[0]}.documentation`]
       getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
       parentsArray.push(slug)
+      parentsArray.push(`guides/${slug}`)
       getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
       getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
     }

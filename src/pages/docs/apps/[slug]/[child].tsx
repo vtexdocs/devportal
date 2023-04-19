@@ -23,6 +23,7 @@ import TableOfContents from 'components/table-of-contents'
 import Head from 'next/head'
 import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
+import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -167,6 +168,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         },
       })
       serialized = JSON.parse(JSON.stringify(serialized))
+      const parentsArray: string[] = []
+      const parentsArrayName: string[] = []
+      const parentsArrayType: string[] = []
+      const flattenedSidebar = flattenJSON(sidebarfallback)
+      const keyPath = getKeyByValue(flattenedSidebar, `apps/${slug}/${child}`)
+      if (keyPath) {
+        getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
+        parentsArray.push(slug)
+        getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
+        getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
+      }
+      parentsArray.push(`apps/${slug}/${child}`)
       return {
         props: {
           title,
@@ -174,6 +187,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           latestMajor,
           currentVersion,
           sectionSelected,
+          parentsArray,
           sidebarfallback,
           serialized,
           headingList,
