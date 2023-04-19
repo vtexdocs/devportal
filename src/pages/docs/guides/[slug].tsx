@@ -319,7 +319,8 @@ export const getStaticProps: GetStaticProps = async ({
     const isListed: boolean = getKeyByValue(flattenedSidebar, slug)
       ? true
       : false
-    const keyPath = getKeyByValue(flattenedSidebar, slug)
+    const cleanSlug = getKeyByValue(flattenedSidebar, slug)
+    const keyPath = cleanSlug
       ? getKeyByValue(flattenedSidebar, slug)
       : getKeyByValue(flattenedSidebar, `guides/${slug}`)
     const parentsArray: string[] = []
@@ -329,8 +330,7 @@ export const getStaticProps: GetStaticProps = async ({
     if (keyPath) {
       sectionSelected = flattenedSidebar[`${keyPath[0]}.documentation`]
       getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
-      parentsArray.push(slug)
-      parentsArray.push(`guides/${slug}`)
+      cleanSlug ? parentsArray.push(slug) : parentsArray.push(`guides/${slug}`)
       getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
       getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
     }
