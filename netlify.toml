@@ -376,6 +376,12 @@ to = '/docs/api-reference/marketplace-apis'
 
 [[redirects]]
 force = true
+from = '/docs/api-reference/pricing-hub-overview'
+status = 308
+to = '/docs/api-reference/pricing-hub'
+
+[[redirects]]
+force = true
 from = '/docs/guides/add-client-preferences-to-the-cart'
 status = 308
 to = '/docs/guides/add-customer-preferences-to-the-cart'
@@ -607,3 +613,4 @@ force = true
 from = '/docs/guides/vtex-product-customizer'
 status = 308
 to = '/docs/apps/vtex.product-customizer'
+
