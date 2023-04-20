@@ -105,7 +105,7 @@ const MermaidDiagram = ({ node, ...props }: Component) => {
 
     const mermaidRenderer = async function () {
       const { svg } = await mermaid.render('mermaid-id', props.children)
-      setDiagram(svg)
+      setDiagram(svg.replace('id="mermaid-id"', ''))
     }
 
     mermaidRenderer()
@@ -126,7 +126,9 @@ const MermaidDiagram = ({ node, ...props }: Component) => {
         }}
         background={'rgba(0, 0, 0, 0)'}
       >
-        <>{parse(diagram)}</>
+        <svg width={width} height={height}>
+          {parse(diagram)}
+        </svg>
       </UncontrolledReactSVGPanZoom>
     </Box>
   )
