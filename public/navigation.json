@@ -10943,7 +10943,7 @@
             },
             {
               "name": "Search Result",
-              "slug": "apps/vtex.search/result",
+              "slug": "apps/vtex.search-result",
               "origin": "",
               "type": "markdown",
               "children": []
