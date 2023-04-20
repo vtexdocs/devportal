@@ -8,8 +8,8 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'deprecated',
-    description: 'Deprecation of apps-graphql@2.x',
-    date: new Date('03/02/2023'),
+    description: 'Master Data v2 orders entity deprecation',
+    date: new Date('04/11/2023'),
   },
   updateType: 'release-notes',
 }
