@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('next').NextConfig} */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const { withPlaiceholder } = require('@plaiceholder/next')
+const withLitSSR = require('@lit-labs/nextjs')()
 
 const nextConfig = {
   experimental: {
@@ -9,6 +10,7 @@ const nextConfig = {
     cpus: 4,
   },
   reactStrictMode: true,
+  swcMinify: true,
   staticPageGenerationTimeout: 3600,
   images: {
     remotePatterns: [
@@ -49,4 +51,9 @@ const nextConfig = {
   },
 }
 
-module.exports = withPlaiceholder(nextConfig)
+module.exports = () => {
+  const plugins = [withPlaiceholder, withLitSSR]
+  return plugins.reduce((acc, plugin) => plugin(acc), {
+    ...nextConfig,
+  })
+}

@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@highlightjs/cdn-assets": "^11.7.0",
+    "@lit-labs/nextjs": "^0.1.1",
     "@openreplay/tracker": "^5.0.1",
     "@plaiceholder/next": "^2.5.0",
     "@types/http-proxy": "^1.17.9",
