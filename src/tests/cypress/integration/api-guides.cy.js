@@ -114,6 +114,8 @@ describe('API guides documentation page', () => {
       .invoke('text')
       .should('equal', messages['feedback_modal.title'])
 
+    cy.get('[data-cy="feedback-modal"]').find('textarea').type('cypress-test')
+
     cy.get('[data-cy="feedback-modal"]')
       .find('button')
       .then((sendFeedbackButton) => {
