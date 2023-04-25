@@ -60,7 +60,7 @@ to = "/docs/guides/:slug*"
 force = true
 from = '/docs/guides/subscriptions-2'
 status = 308
-to = "/docs/guides/subscriptions"
+to = '/docs/guides/subscriptions'
 
 [[redirects]]
 force = true
