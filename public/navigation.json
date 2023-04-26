@@ -1099,7 +1099,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update an account's orderForm configuration",
+                  "name": "Updating an account orderForm configuration",
                   "slug": "update-an-account-orderform-configuration",
                   "origin": "",
                   "type": "markdown",
