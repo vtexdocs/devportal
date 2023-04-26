@@ -10598,6 +10598,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Using the Docs builder to publish app documentation",
+                  "slug": "using-the-docs-builder-to-publish-app-documentation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -10617,13 +10624,6 @@
                 {
                   "name": "Publishing an app",
                   "slug": "vtex-io-documentation-publishing-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using the Docs builder to publish app documentation",
-                  "slug": "using-the-docs-builder-to-publish-app-documentation",
                   "origin": "",
                   "type": "markdown",
                   "children": []
