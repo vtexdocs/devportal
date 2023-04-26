@@ -1113,7 +1113,7 @@
                   "children": []
                 },
                 {
-                  "name": "Clear orderForm message field from cart",
+                  "name": "Clearing the orderForm message field from the cart",
                   "slug": "clear-orderform-message-field-from-cart",
                   "origin": "",
                   "type": "markdown",
@@ -12828,7 +12828,7 @@
           ]
         },
         {
-          "name": "(Beta) FastStore",
+          "name": "FastStore",
           "slug": "https://www.faststore.dev/",
           "origin": "",
           "type": "link",
