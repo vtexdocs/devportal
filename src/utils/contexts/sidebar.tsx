@@ -1,10 +1,14 @@
-import type { Dispatch, ReactNode, SetStateAction } from 'react'
+import { Dispatch, ReactNode, SetStateAction, useEffect } from 'react'
 import { createContext, useState } from 'react'
 import { SWRConfig } from 'swr'
+import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
+
+type SectionName = DocumentationTitle | UpdatesTitle | ''
 
 type ContextType = {
   isEditorPreview: boolean
   sidebarSectionHidden: boolean
+  activeSectionName: SectionName
   activeSidebarElement: string
   activeSidebarTab: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -14,6 +18,7 @@ type ContextType = {
   setSidebarDataMaster: Dispatch<SetStateAction<any>>
   setIsEditorPreview: Dispatch<SetStateAction<boolean>>
   setSidebarSectionHidden: Dispatch<SetStateAction<boolean>>
+  setActiveSectionName: Dispatch<SetStateAction<SectionName>>
   setActiveSidebarElement: Dispatch<SetStateAction<string>>
   setActiveSidebarTab: Dispatch<SetStateAction<string>>
   toggleSidebarElementStatus: (title: string) => void
@@ -24,6 +29,7 @@ type ContextType = {
 export const SidebarContext = createContext<ContextType>({
   isEditorPreview: false,
   sidebarSectionHidden: false,
+  activeSectionName: '',
   activeSidebarElement: '',
   activeSidebarTab: '',
   sidebarDataMaster: {},
@@ -31,6 +37,7 @@ export const SidebarContext = createContext<ContextType>({
   sidebarElementStatus: new Map(),
   setSidebarDataMaster: () => undefined,
   setSidebarSectionHidden: () => undefined,
+  setActiveSectionName: () => undefined,
   setActiveSidebarElement: () => undefined,
   setActiveSidebarTab: () => undefined,
   toggleSidebarElementStatus: () => undefined,
@@ -42,15 +49,25 @@ interface Props extends Partial<ContextType> {
   children: ReactNode
   fallback?: any //eslint-disable-line
   isPreview: boolean
+  sectionSelected: SectionName
 }
 
 const SidebarContextProvider = ({ children, ...props }: Props) => {
+  const [activeSectionName, setActiveSectionName] = useState(
+    props.sectionSelected
+  )
   const [sidebarSectionHidden, setSidebarSectionHidden] = useState(false)
   const [activeSidebarElement, setActiveSidebarElement] = useState('')
   const [activeSidebarTab, setActiveSidebarTab] = useState('')
   const [sidebarElementStatus, setSidebarElementStatus] = useState(new Map())
   const [sidebarDataMaster, setSidebarDataMaster] = useState(props.fallback)
   const [isEditorPreview, setIsEditorPreview] = useState(props.isPreview)
+
+  useEffect(() => {
+    if (props.sectionSelected === '') setSidebarSectionHidden(true)
+    else if (props.sectionSelected !== activeSectionName)
+      setActiveSectionName(props.sectionSelected)
+  }, [props.sectionSelected])
 
   const { fallback } = props
 
@@ -87,9 +104,11 @@ const SidebarContextProvider = ({ children, ...props }: Props) => {
         isEditorPreview,
         setIsEditorPreview,
         sidebarSectionHidden,
+        activeSectionName,
         activeSidebarElement,
         activeSidebarTab,
         sidebarElementStatus,
+        setActiveSectionName,
         setSidebarSectionHidden,
         setActiveSidebarElement,
         setActiveSidebarTab,

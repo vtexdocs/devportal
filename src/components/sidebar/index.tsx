@@ -25,17 +25,15 @@ import { SidebarContext } from 'utils/contexts/sidebar'
 import useNavigation from 'utils/hooks/useNavigation'
 
 interface SideBarSectionState {
-  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
   parentsArray?: string[]
 }
 
-const Sidebar = ({
-  sectionSelected = 'API Reference',
-  parentsArray = [],
-}: SideBarSectionState) => {
-  const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
+const Sidebar = ({ parentsArray = [] }: SideBarSectionState) => {
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
+
   const {
+    activeSectionName,
+    setActiveSectionName,
     activeSidebarElement,
     sidebarDataMaster,
     setSidebarDataMaster,
@@ -79,7 +77,6 @@ const Sidebar = ({
   useEffect(() => {
     const timer = setTimeout(() => setExpandDelayStatus(false), 5000)
     closeSidebarElements(parentsArray)
-    setActiveSectionName(sectionSelected)
     parentsArray.forEach((slug: string) => {
       openSidebarElement(slug)
     })

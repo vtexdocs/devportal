@@ -72,15 +72,14 @@ export default function Layout({
 					`}
         </Script>
       </div>
-      <SidebarContextProvider fallback={sidebarfallback} isPreview={isPreview}>
+      <SidebarContextProvider
+        sectionSelected={sectionSelected || ''}
+        fallback={sidebarfallback}
+        isPreview={isPreview}
+      >
         <Header />
         <Flex sx={styles.container}>
-          {!hideSidebar && (
-            <Sidebar
-              parentsArray={parentsArray}
-              sectionSelected={sectionSelected}
-            />
-          )}
+          {!hideSidebar && <Sidebar parentsArray={parentsArray} />}
           <Box sx={styles.mainContainer}>{children}</Box>
         </Flex>
       </SidebarContextProvider>
