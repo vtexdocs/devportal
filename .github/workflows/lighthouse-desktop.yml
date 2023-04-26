@@ -60,7 +60,7 @@ jobs:
             manifest.forEach(({ url, summary }) => {
               output += '<details>\n'
               output += '  <summary>\n'
-              output += '    Page <a href=${url}>/${url.replace(URL, '')}</a>\n`
+              output += `    Page <a href=${url}>/${url.replace(URL, '')}</a>\n`
               output += '  </summary>\n'
               output += '  <br />\n\n'
 
