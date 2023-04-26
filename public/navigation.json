@@ -10622,6 +10622,13 @@
                   "children": []
                 },
                 {
+                  "name": "Using the Docs builder to publish app documentation",
+                  "slug": "using-the-docs-builder-to-publish-app-documentation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Deploying the app's stable version",
                   "slug": "vtex-io-documentation-deploying-the-app-stable-version",
                   "origin": "",
