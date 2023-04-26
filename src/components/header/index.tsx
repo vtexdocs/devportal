@@ -91,16 +91,18 @@ const Header = () => {
   return (
     <Box ref={headerElement} sx={styles.headerContainer}>
       {!isBranchPreview ? (
-        <AnnouncementBar
-          closable={true}
-          type="new"
-          label="📢 We want to know more about you and how you use our docs. "
-          action={{
-            button: 'Fill in our survey! It takes less than 5 minutes.',
-            href: 'https://forms.gle/5EvnahjuwQqwumDd9',
-          }}
-        ></AnnouncementBar>
+        <div></div>
       ) : (
+        // To create an announcement at the topbar, un-comment this code, and change the copy and links.
+        // <AnnouncementBar
+        //   closable={true}
+        //   type="new"
+        //   label="📢 We want to know more about you and how you use our docs. "
+        //   action={{
+        //     button: 'Fill in our survey! It takes less than 5 minutes.',
+        //     href: 'https://forms.gle/5EvnahjuwQqwumDd9',
+        //   }}
+        // ></AnnouncementBar>
         <AnnouncementBar
           closable={false}
           type="warning"
