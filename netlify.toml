@@ -58,6 +58,12 @@ to = "/docs/guides/:slug*"
 
 [[redirects]]
 force = true
+from = '/docs/guides/subscriptions-2'
+status = 308
+to = '/docs/guides/subscriptions'
+
+[[redirects]]
+force = true
 from = '/vtex-rest-api/reference/payment-provider-protocol-api-overview'
 status = 308
 to = '/docs/guides/payment-provider-protocol-api-overview'
