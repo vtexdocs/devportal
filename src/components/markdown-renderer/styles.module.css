@@ -14,10 +14,10 @@
 }
 
 .code {
-  background-color: #f6f8fa;
-  background-color: var(--md-code-background, #f6f8fa);
+  background-color: #feeaef;
+  background-color: var(--md-code-background, #feeaef);
   border-radius: 4px;
-  color: var(--md-code-text);
+  color: var(--md-code-text, #d4084c);
   margin: 0;
   padding: 0.2em 0.4em;
   font-size: 0.875em;
