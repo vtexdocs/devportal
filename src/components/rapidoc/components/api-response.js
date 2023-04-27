@@ -676,4 +676,5 @@ ${mimeRespDetails.examples[0].exampleValue}</pre
 }
 
 // Register the element with the browser
-customElements.define('api-response', ApiResponse)
+customElements.get('api-response') ||
+  customElements.define('api-response', ApiResponse)

@@ -405,4 +405,5 @@ export default class JsonSchemaViewer extends LitElement {
     }
   }
 }
-customElements.define('json-schema-viewer', JsonSchemaViewer)
+customElements.get('json-schema-viewer') ||
+  customElements.define('json-schema-viewer', JsonSchemaViewer)

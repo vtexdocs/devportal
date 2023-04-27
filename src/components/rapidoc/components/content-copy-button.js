@@ -175,4 +175,5 @@ export class ContentCopyButton extends LitElement {
   }
 }
 
-customElements.define('content-copy-button', ContentCopyButton)
+customElements.get('content-copy-button') ||
+  customElements.define('content-copy-button', ContentCopyButton)

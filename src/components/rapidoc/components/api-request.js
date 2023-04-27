@@ -2063,4 +2063,5 @@ ${responseContent}</pre
 }
 
 // Register the element with the browser
-customElements.define('api-request', ApiRequest)
+customElements.get('api-request') ||
+  customElements.define('api-request', ApiRequest)
