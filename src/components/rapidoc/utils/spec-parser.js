@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
-import OpenApiParser from '@apitools/openapi-parser'
+import OpenApiParser from '@readme/openapi-parser'
 import { marked } from 'marked'
-import { invalidCharsRegEx, rapidocApiKey, sleep } from './common-utils'
+import { invalidCharsRegEx, rapidocApiKey } from './common-utils'
 
 export default async function ProcessSpec(
   specUrl,
@@ -14,27 +14,12 @@ export default async function ProcessSpec(
   serverUrl = ''
 ) {
   let jsonParsedSpec
+  let specMeta
   try {
     this.requestUpdate() // important to show the initial loader
-    let specMeta
-    if (typeof specUrl === 'string') {
-      specMeta = await OpenApiParser.resolve({
-        url: specUrl,
-        allowMetaPatches: false,
-      }) // Swagger(specUrl);
-    } else {
-      specMeta = await OpenApiParser.resolve({
-        spec: specUrl,
-        allowMetaPatches: false,
-      }) // Swagger({ spec: specUrl });
-    }
-    await sleep(0) // important to show the initial loader (allows for rendering updates)
+    specMeta = await OpenApiParser.parse(specUrl)
 
-    // If  JSON Schema Viewer
-    if (
-      specMeta.resolvedSpec?.jsonSchemaViewer &&
-      specMeta.resolvedSpec?.schemaAndExamples
-    ) {
+    if (specMeta?.jsonSchemaViewer && specMeta?.schemaAndExamples) {
       this.dispatchEvent(
         new CustomEvent('before-render', {
           detail: { spec: specMeta.resolvedSpec },
@@ -59,14 +44,14 @@ export default async function ProcessSpec(
       return parsedSpec
     }
     if (
-      specMeta.spec &&
-      (specMeta.spec.components ||
-        specMeta.spec.info ||
-        specMeta.spec.servers ||
-        specMeta.spec.tags ||
-        specMeta.spec.paths)
+      specMeta &&
+      (specMeta.components ||
+        specMeta.info ||
+        specMeta.servers ||
+        specMeta.tags ||
+        specMeta.paths)
     ) {
-      jsonParsedSpec = specMeta.spec
+      jsonParsedSpec = specMeta
       this.dispatchEvent(
         new CustomEvent('before-render', { detail: { spec: jsonParsedSpec } })
       )
@@ -81,9 +66,7 @@ export default async function ProcessSpec(
         isSpecLoading: false,
         info: {
           title: 'Error loading the spec',
-          description: specMeta.response?.url
-            ? `${specMeta.response?.url} ┃ ${specMeta.response?.status}  ${specMeta.response?.statusText}`
-            : 'Unable to load the Spec',
+          description: 'Unable to load the Spec',
           version: ' ',
         },
         tags: [],
