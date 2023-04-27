@@ -28,6 +28,18 @@ function capitalize(content: string) {
   return content.replace(/^./, content[0].toUpperCase())
 }
 
+function getDescription(description: string) {
+  return (
+    description
+      .split(/\r?\n/)
+      .map((line: string) => line.trim())
+      .find(
+        (line: string) =>
+          line && line[0].toLowerCase() !== line[0].toUpperCase()
+      ) || ''
+  )
+}
+
 const referencePaths = await getReferencePaths()
 const slugs = Object.keys(await getReferencePaths())
 
@@ -46,7 +58,8 @@ const APIPage: NextPage<Props> = ({ slug, endpoints }) => {
   const httpMethod = getMethod() as MethodType | ''
 
   useEffect(() => {
-    setEndpointPath(`#${router.asPath.split('#')[1]}`)
+    const path = router.asPath.split('#')[1]
+    setEndpointPath(path ? `#${router.asPath.split('#')[1]}` : slug)
   }, [router.asPath])
 
   useEffect(() => {
@@ -136,35 +149,30 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     )
     const doc = await response.json()
     const endpointFile = new Oas(doc)
-    const allPaths = endpointFile.getDefinition().paths
+    const { info, paths } = endpointFile.getDefinition()
     const endpoints: {
       [key: string]: Endpoint
     } = {}
-    const isMethod = (key: string) =>
-      ['get', 'post', 'delete', 'put'].includes(key)
 
-    if (allPaths) {
-      Object.entries(allPaths).forEach(([key, value]) => {
+    endpoints[slug as string] = {
+      title: info.title,
+      description: getDescription(info.description || ''),
+    }
+
+    if (paths) {
+      Object.entries(paths).forEach(([key, value]) => {
         if (value) {
           Object.entries(value).forEach(
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             ([endpointKey, endpointValue]: any) => {
               if (
-                isMethod(endpointKey) &&
+                isMethodType(endpointKey.toUpperCase()) &&
                 endpointValue &&
                 endpointValue.description
               ) {
                 endpoints[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] = {
                   title: endpointValue.summary || '',
-                  description:
-                    endpointValue.description
-                      .split(/\r?\n/)
-                      .map((line: string) => line.trim())
-                      .find(
-                        (line: string) =>
-                          line &&
-                          line[0].toLowerCase() !== line[0].toUpperCase()
-                      ) || '',
+                  description: getDescription(endpointValue.description),
                 }
               }
             }
