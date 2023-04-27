@@ -1459,6 +1459,11 @@
   resolved "https://registry.yarnpkg.com/@exodus/schemasafe/-/schemasafe-1.0.0.tgz#f44e252665b1a6bdef0d686e22af3599a6f0a095"
   integrity sha512-2cyupPIZI69HQxEAPllLXBjQp4njDKkOjYRCYxvMZe3/LY9pp9fBM3Tb1wiFAdP6Emo4v3OEbCLGj6u73Q5KLw==
 
+"@highlightjs/cdn-assets@^11.7.0":
+  version "11.7.0"
+  resolved "https://registry.yarnpkg.com/@highlightjs/cdn-assets/-/cdn-assets-11.7.0.tgz#8e759d20f97b1ae6e73f92ebbf1dd64b4396035a"
+  integrity sha512-FNBhxhkI18qDA+SbUc6560d8N20WWBdUjalTKeZExV4eQaPAreEXQILj8QpAuBWJMUC4pD0/MzdEyI3+urJlSQ==
+
 "@humanwhocodes/config-array@^0.5.0":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.5.0.tgz#1407967d4c6eecd7388f83acf1eaf4d0c6e58ef9"
