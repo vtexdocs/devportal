@@ -1,37 +1,82 @@
 name: Lighthouse Desktop
-
 on: [pull_request]
-
 jobs:
-  build:
+  lighthouse:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v1
-      - name: Use Node.js 14.x
-        uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Waiting for pages to change
+        uses: fountainhead/action-wait-for-check@v1.1.0
+        id: wait-for-pages-changed
         with:
-          node-version: 14.x
-      - name: Install
-        run: |
-          yarn install --frozen-lockfile
-      - name: Build
-        run: |
-          yarn run build
-        env:
-          GITHUB_PRIVATEKEY: ${{ secrets.PRIVATEKEY }}
-          GITHUB_APPID: ${{ secrets.APPID }}
-          GITHUB_INSTALLATIONID: ${{ secrets.INSTALLATIONID }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          checkName: 'Pages changed - elated-hoover-5c29bf'
+          timeoutSeconds: 3600
       - name: Waiting for 200 from the Netlify Preview
-        uses: kamranayub/wait-for-netlify-action@2.0.0
-        id: wait-for-netflify-preview
+        if: steps.wait-for-pages-changed.outputs.conclusion == 'neutral'
+        uses: jakepartusch/wait-for-netlify-action@v1.4
+        id: wait-for-netlify-preview
         with:
           site_name: 'elated-hoover-5c29bf'
+          max_timeout: 3600
         env:
-          NETLIFY_TOKEN: ${{secrets.NETLIFY_TOKEN}}
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+      - name: Select random pages
+        id: select-random-pages
+        uses: actions/github-script@v6
+        env:
+          URL: ${{ steps.wait-for-netlify-preview.outputs.url }}
+        with:
+          script: |
+            const { URL } = process.env
+            const { selectRandomPages } = require('./src/tests/utils/select-pages.js')
+            const pages = selectRandomPages({ sampleSize: 2 }).map(page => `${URL}${page}`).join('\n')
+            core.setOutput('pages', pages)
       - name: Lighthouse CI
-        run: |
-          yarn global add @lhci/cli@0.8.x
-          lhci autorun --upload.target=temporary-public-storage --collect.url=${{ steps.wait-for-netflify-preview.outputs.url }} --collect.settings.preset="desktop" || echo "LHCI failed!"
+        id: lighthouse-ci
+        uses: treosh/lighthouse-ci-action@v9
+        with:
+          urls: |
+            ${{ steps.wait-for-netlify-preview.outputs.url }}
+            ${{ steps.select-random-pages.outputs.pages }}
+          configPath: ./lighthouserc.json
+          temporaryPublicStorage: true
+      - name: Generate summary report
+        id: generate-summary-report
+        uses: actions/github-script@v6
         env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          URL: ${{ steps.wait-for-netlify-preview.outputs.url }}
+          LINKS: ${{ steps.lighthouse-ci.outputs.links }}
+          MANIFEST: ${{ steps.lighthouse-ci.outputs.manifest }}
+        with:
+          script: |
+            const { URL } = process.env
+            const links = JSON.parse(process.env.LINKS)
+            const manifest = JSON.parse(process.env.MANIFEST)
+
+            let output = '# Performance Results\n\n'
+            manifest.forEach(({ url, summary }) => {
+              output += '<details>\n'
+              output += '  <summary>\n'
+              output += `    Page <a href=${url}>/${url.replace(URL, '')}</a>\n`
+              output += '  </summary>\n'
+              output += '  <br />\n\n'
+
+              output += `  ![Performance](https://progress-bar.dev/${Math.floor(summary['performance'] * 100)}?title=Performance)\n`
+              output += `  ![Accessibility](https://progress-bar.dev/${Math.floor(summary['accessibility'] * 100)}?title=Accessibility)\n`
+              output += `  ![Best Practices](https://progress-bar.dev/${Math.floor(summary['best-practices'] * 100)}?title=Best%20Practices)\n`
+              output += `  ![SEO](https://progress-bar.dev/${Math.floor(summary['seo'] * 100)}?title=SEO)\n\n`
+
+              output += `  Complete results [here](${links[url]})\n`
+              output += '</details>\n\n'
+            })
+
+            core.setOutput('summary', output)
+      - name: Comment PR
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          comment_tag: lighthouse-summary
+          message: ${{ steps.generate-summary-report.outputs.summary }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
