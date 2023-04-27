@@ -37,7 +37,7 @@ jobs:
         run: |
           touch src/tests/summary.md
           if [[ -f "./cypress.log" ]]; then
-            node src/tests/summary-report.js > src/tests/summary.md
+            node src/tests/utils/summary-report.js > src/tests/summary.md
             rm cypress.log
           fi
       - name: Comment PR with summary report
