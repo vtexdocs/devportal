@@ -1389,4 +1389,5 @@ export default class RapiDoc extends LitElement {
     }, delay)
   }
 }
-customElements.define('rapi-doc', RapiDoc)
+
+customElements.get('rapi-doc') || customElements.define('rapi-doc', RapiDoc)

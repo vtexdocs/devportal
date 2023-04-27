@@ -233,4 +233,4 @@ export class BaseUrl extends LitElement {
   }
 }
 
-customElements.define('base-url', BaseUrl)
+customElements.get('base-url') || customElements.define('base-url', BaseUrl)

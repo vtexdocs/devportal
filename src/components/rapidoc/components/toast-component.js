@@ -211,4 +211,5 @@ export class Toast extends LitElement {
   }
 }
 
-customElements.define('toast-component', Toast)
+customElements.get('toast-component') ||
+  customElements.define('toast-component', Toast)
