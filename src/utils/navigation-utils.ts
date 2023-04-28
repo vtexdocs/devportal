@@ -22,11 +22,38 @@ export const getKeyByValue = (
   return Object.keys(object).find((key) => object[key] === value)
 }
 
-export const getKeysByValue = (
+export const getKeyByEndpoint = (
   object: { [x: string]: string },
-  value: string
+  endpoint: string,
+  slug: string,
+  method?: string
 ) => {
-  return Object.keys(object).filter((key) => object[key] === value)
+  const slugPaths = Object.keys(object).filter((key) => object[key] === slug)
+  let path = ''
+  slugPaths?.map((el) => {
+    if (
+      method &&
+      object[`${el.replace('.slug', '.method')}`] == method?.toUpperCase() &&
+      object[`${el.replace('.slug', '.endpoint')}`] == endpoint
+    ) {
+      path = el
+    } else if (hasChildren(object, el.replace('.slug', '.children'))) {
+      path = el
+    }
+  })
+  return path
+}
+
+function hasChildren(
+  flattenedJson: { [x: string]: string },
+  elementKey: string
+): boolean {
+  for (const key in flattenedJson) {
+    if (key.startsWith(`${elementKey}.`)) {
+      return true
+    }
+  }
+  return false
 }
 
 export const getParents = (
