@@ -1113,7 +1113,7 @@
                   "children": []
                 },
                 {
-                  "name": "Clearing the orderForm message field from the cart",
+                  "name": "Clear orderForm message field from cart",
                   "slug": "clear-orderform-message-field-from-cart",
                   "origin": "",
                   "type": "markdown",
@@ -12845,6 +12845,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "New Coupons v2 API",
+                  "slug": "new-coupons-v2-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Master Data v2 orders entity deprecation",
                   "slug": "master-data-v2-orders-entity-deprecation",
