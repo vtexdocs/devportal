@@ -24,19 +24,20 @@ export const getKeyByValue = (
 
 export const getKeyByEndpoint = (
   object: { [x: string]: string },
-  value: string,
+  endpoint: string,
+  slug: string,
   method?: string
 ) => {
-  const paths = Object.keys(object).filter((key) => object[key] === value)
+  const slugPaths = Object.keys(object).filter((key) => object[key] === slug)
   let path = ''
-  paths?.map((el) => {
-    if (hasChildren(object, el.replace('.slug', '.children'))) {
-      path = el
-    }
+  slugPaths?.map((el) => {
     if (
       method &&
-      object[`${el.replace('.endpoint', '.method')}`] == method?.toUpperCase()
+      object[`${el.replace('.slug', '.method')}`] == method?.toUpperCase() &&
+      object[`${el.replace('.slug', '.endpoint')}`] == endpoint
     ) {
+      path = el
+    } else if (hasChildren(object, el.replace('.slug', '.children'))) {
       path = el
     }
   })
