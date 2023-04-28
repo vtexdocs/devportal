@@ -41,7 +41,7 @@ import { setApiServer } from './templates/server-template'
 export default class RapiDoc extends LitElement {
   constructor() {
     super()
-    const intersectionObserverOptions = {
+    /* const intersectionObserverOptions = {
       root: this.getRootNode().host,
       rootMargin: '-50px 0px -50px 0px', // when the element is visible 100px from bottom
       threshold: 0,
@@ -52,7 +52,7 @@ export default class RapiDoc extends LitElement {
     this.isIntersectionObserverActive = false
     this.intersectionObserver = new IntersectionObserver((entries) => {
       this.onIntersect(entries)
-    }, intersectionObserverOptions)
+    }, intersectionObserverOptions) */
   }
 
   static get properties() {
@@ -789,9 +789,9 @@ export default class RapiDoc extends LitElement {
 
   // Cleanup
   disconnectedCallback() {
-    if (this.intersectionObserver) {
+    /* if (this.intersectionObserver) {
       this.intersectionObserver.disconnect()
-    }
+    } */
     super.disconnectedCallback()
   }
 
@@ -806,20 +806,20 @@ export default class RapiDoc extends LitElement {
 
   render() {
     // return render(mainBodyTemplate(this), this.shadowRoot, { eventContext: this });
-    const cssLinkEl = document.querySelector(`link[href*="${this.cssFile}"]`)
+    //const cssLinkEl = document.querySelector(`link[href*="${this.cssFile}"]`)
     // adding custom style for RapiDoc
-    if (cssLinkEl) {
+    /* if (cssLinkEl) {
       this.shadowRoot.appendChild(cssLinkEl.cloneNode())
-    }
+    } */
     return mainBodyTemplate.call(this)
   }
 
   observeExpandedContent() {
     // Main Container
-    const observeOverviewEls = this.shadowRoot.querySelectorAll('.observe-me')
+    /* const observeOverviewEls = this.shadowRoot.querySelectorAll('.observe-me')
     observeOverviewEls.forEach((targetEl) => {
       this.intersectionObserver.observe(targetEl)
-    })
+    }) */
   }
 
   attributeChangedCallback(name, oldVal, newVal) {
@@ -841,7 +841,7 @@ export default class RapiDoc extends LitElement {
           this.observeExpandedContent()
         }, 100)
       } else {
-        this.intersectionObserver.disconnect()
+        //this.intersectionObserver.disconnect()
       }
     }
     if (
@@ -1055,13 +1055,13 @@ export default class RapiDoc extends LitElement {
     this.dispatchEvent(specLoadedEvent)
 
     // Initiate IntersectionObserver and put it at the end of event loop, to allow loading all the child elements (must for larger specs)
-    this.intersectionObserver.disconnect()
+    //this.intersectionObserver.disconnect()
     if (this.renderStyle === 'read') {
       await sleep(100)
       this.observeExpandedContent() // This will auto-highlight the selected nav-item in read-mode
     }
 
-    this.isIntersectionObserverActive = true
+    //this.isIntersectionObserverActive = true
 
     // On first time Spec load, try to navigate to location hash if provided
     const elementId = this.getElementIDFromURL()
@@ -1197,9 +1197,9 @@ export default class RapiDoc extends LitElement {
   }
 
   onIntersect(entries) {
-    if (this.isIntersectionObserverActive === false) {
+    /* if (this.isIntersectionObserverActive === false) {
       return
-    }
+    } */
 
     entries.forEach((entry) => {
       if (entry.isIntersecting && entry.intersectionRatio > 0) {
@@ -1268,7 +1268,7 @@ export default class RapiDoc extends LitElement {
     if (!navEl.dataset.contentId) {
       return
     }
-    this.isIntersectionObserverActive = false
+    //this.isIntersectionObserverActive = false
     if (this.renderStyle === 'focused') {
       const requestEl = this.shadowRoot.querySelector('api-request')
       if (requestEl) {
@@ -1276,9 +1276,9 @@ export default class RapiDoc extends LitElement {
       }
     }
     this.scrollToPath(navEl.dataset.contentId, true, scrollNavItemToView)
-    setTimeout(() => {
+    /* setTimeout(() => {
       this.isIntersectionObserverActive = true
-    }, 300)
+    }, 300) */
   }
 
   // Public Method (scrolls to a given path and highlights the left-nav selection)
