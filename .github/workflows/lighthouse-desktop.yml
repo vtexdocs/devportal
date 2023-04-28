@@ -36,7 +36,7 @@ jobs:
             core.setOutput('pages', pages)
       - name: Lighthouse CI
         id: lighthouse-ci
-        uses: treosh/lighthouse-ci-action@v9
+        uses: treosh/lighthouse-ci-action@v10
         with:
           urls: |
             ${{ steps.wait-for-netlify-preview.outputs.url }}
