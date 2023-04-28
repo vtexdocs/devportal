@@ -183,6 +183,7 @@ export default {
             height: 'auto',
           }}
           onError={() => setImageHasError(true)}
+          unoptimized={props.src.includes('.gif')}
           {...data?.img}
         />
       </LightBox>
