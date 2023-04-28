@@ -2,6 +2,121 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.9](https://github.com/vtexdocs/devportal/compare/v1.9.8...v1.9.9) (2023-04-27)
+
+
+### Features
+
+* add api ref index generator index.tsx ([da09561](https://github.com/vtexdocs/devportal/commit/da09561d911b92feaacf43d7d031c4697e04ce1f))
+* add buttons to zoom and pan svgs ([3d41e39](https://github.com/vtexdocs/devportal/commit/3d41e398341e9cc0ce5c7795374be51f4831c24b))
+* **api-index:** add api-index page ([8dc8694](https://github.com/vtexdocs/devportal/commit/8dc8694db48b9c22abad6b5c1cf55fb902db86c2))
+* **guides:** add remark-mermaidjs plugin ([23b4464](https://github.com/vtexdocs/devportal/commit/23b44647a7aed180fb4ad5f8e92a33ea843491df))
+* **guides:** use chromium executable path ([e52fbbf](https://github.com/vtexdocs/devportal/commit/e52fbbf31d685b658474be904209868239eb4049))
+* **lighthouse:** add toggle items to lighthouse summary report ([62cb015](https://github.com/vtexdocs/devportal/commit/62cb015fe579430f426a9c4d5fabc61bcc93878c))
+* **pages:** update searchable attributes ([80a7877](https://github.com/vtexdocs/devportal/commit/80a7877c42b48e3ff22aa0966655c0a1159c4f68))
+* **select-random-pages:** improve algorithm to allow getting the same number of pages of each type ([d8084d6](https://github.com/vtexdocs/devportal/commit/d8084d6445d8a7847d8e52ea2e9b10b77546ffb7))
+* update lighthouse action version and comment PR with lighthouse results summary ([c2fad50](https://github.com/vtexdocs/devportal/commit/c2fad504ce7c6588f2ffed14ec4662dbfef862c0))
+
+
+### Bug Fixes
+
+* add args and headless to launch options ([a1560db](https://github.com/vtexdocs/devportal/commit/a1560dbdc43b4009aa06e6b2d9735f8ef5bf6bdb))
+* add lighthouse config file for setting screen resolution during performance tests ([ebcb61b](https://github.com/vtexdocs/devportal/commit/ebcb61b65968bc5108aed0fa10d41468ede830a4))
+* add missing variable and debug command to lighthouse action ([e19d642](https://github.com/vtexdocs/devportal/commit/e19d64238a80b6a916c77338b360554b3bbf2be9))
+* adjust navigation.json ([f7beab9](https://github.com/vtexdocs/devportal/commit/f7beab9f4ad2a59f7d6fdced931b268c168bb954))
+* **api-reference:** get title and description from openapi overviews ([df2670f](https://github.com/vtexdocs/devportal/commit/df2670fc523cfafe8629e56f4ae2da1cdd4d04ff))
+* **api-reference:** retrieve title and description of patch-type endpoints ([aae8543](https://github.com/vtexdocs/devportal/commit/aae85431ad792919efd50137de6623466a38d220))
+* create plugin to replace remark-mermaidjs ([be55b79](https://github.com/vtexdocs/devportal/commit/be55b795099086563d2c0c1ac45ef77c884b3b0d))
+* don't send feedback if it's a test ([c32cc7f](https://github.com/vtexdocs/devportal/commit/c32cc7f0226ae8defc3d4f2d730ca99a2fb42d5b))
+* fix typo in lighthouse action ([5ac2316](https://github.com/vtexdocs/devportal/commit/5ac23169c385dc8197bba12b1655b6c0e9a5199e))
+* fix typo in lighthouse action ([65f2390](https://github.com/vtexdocs/devportal/commit/65f23904ec6426e4eca36531da2da3170a7dc9d2))
+* fix typos in lighthouse action ([438783d](https://github.com/vtexdocs/devportal/commit/438783dd6d0bd8ef9987e83a941d2b0c2cefb09c))
+* **guides:** fix activeslug ([8b5af4c](https://github.com/vtexdocs/devportal/commit/8b5af4ccd4fef5a6bc7c1f032d567b92f4dd30a7))
+* **jsoneditorindex:** remove setsidebar code ([9f42841](https://github.com/vtexdocs/devportal/commit/9f42841352203aaf607cc02cec739ca3090ff085))
+* **jsoneditorindex:** use typeof instead of instanceof ([285d485](https://github.com/vtexdocs/devportal/commit/285d485f168266cfad73ef8112a27fc62cb470d4))
+* launch browser ([1318e62](https://github.com/vtexdocs/devportal/commit/1318e62d1dfe8badcd671d13f4dae53a8a1646e8))
+* **lighthouse:** fix indentation ([ae29684](https://github.com/vtexdocs/devportal/commit/ae296846054b465baa8f63c1875c5f59374aa02e))
+* **lighthouse:** fix typo ([842f3d6](https://github.com/vtexdocs/devportal/commit/842f3d69b874b1c8f2db94a02dcdc839b578a669))
+* **lighthouse:** remove deploy url from comment ([6d56408](https://github.com/vtexdocs/devportal/commit/6d564083db689b216996931e9b3b6e7693d4e564))
+* **lighthouse:** run lighthouse in less pages ([25f06d2](https://github.com/vtexdocs/devportal/commit/25f06d27f75f1f49535bfcc7461b5376417946f6))
+* **lighthouse:** update action ([3835a36](https://github.com/vtexdocs/devportal/commit/3835a36dcc3dd5394a31eae79dfb05309fd7991a))
+* **pages:** apps navigation ([93b6359](https://github.com/vtexdocs/devportal/commit/93b6359706b241e1b5556ff2df446bc3ecf659e0))
+* remove id and add width and height props to svg ([ce705ca](https://github.com/vtexdocs/devportal/commit/ce705caffe838cf6303e1b597aa5989244bc928d))
+* replace chrome-aws-lambda ([d9bc5d8](https://github.com/vtexdocs/devportal/commit/d9bc5d85f1cbf6123299ff7b02421030ff29d99c))
+* **tests:** update documentation-page-status test ([ab289b3](https://github.com/vtexdocs/devportal/commit/ab289b3dd93b322805626865bbe4d935696b3c54))
+* **tsconfig:** add module declaration for @octokit/plugin-throttling ([857d0ea](https://github.com/vtexdocs/devportal/commit/857d0ea16a3ea95e3e3a3c421d04cb201b4ebb05))
+* update from main ([0c39c90](https://github.com/vtexdocs/devportal/commit/0c39c90884b8c61e3cd4e753765e60890adfbf60))
+* update lighthouse action to run on multiple pages ([d74af74](https://github.com/vtexdocs/devportal/commit/d74af74dd34eeb8b34ad39e8f670333e314a2a14))
+* use chromium.headless ([499b554](https://github.com/vtexdocs/devportal/commit/499b554571f52ca2b7d56d5654f42ef26c3b16a6))
+* use render method to generate diagram ([c7c468d](https://github.com/vtexdocs/devportal/commit/c7c468dfb42b3a508964dabdd99696f2f0f3165c))
+* using react-svg-pan-zoom ([e7796aa](https://github.com/vtexdocs/devportal/commit/e7796aa267b076773337cf29f9f3ef6d9890ea3f))
+* **vtex-io-apps:** update links vtex-io-apps page ([1b100e1](https://github.com/vtexdocs/devportal/commit/1b100e1dfde369d0a6256413ad160a66af211a18))
+* wait for chromium executable path ([68efe7c](https://github.com/vtexdocs/devportal/commit/68efe7cca3e0b4f02f5f4cccd05fcf67b01b61e4))
+
+
+### Tests
+
+* update response component test ([d4f9a02](https://github.com/vtexdocs/devportal/commit/d4f9a02e8607933c802d1bd83a0763dab5a57d1b))
+
+
+### Performance
+
+* **markdown-renderer:** remove highlightjs import using head link ([508e2c1](https://github.com/vtexdocs/devportal/commit/508e2c1fd8c8b49d91d33be6d3433d0ad6cb3330))
+
+
+### Docs
+
+* **adding missing api ref:** adds new cards with missing api ref and corrects previous copies ([b029e5a](https://github.com/vtexdocs/devportal/commit/b029e5ad5708833dc6be8cbb62089025a08f5522))
+* fix navigation.json ([985c9f4](https://github.com/vtexdocs/devportal/commit/985c9f4c52365edc0845f2b91ba7f4ec4970917a))
+* fix navigation.json ([786d655](https://github.com/vtexdocs/devportal/commit/786d6550834b369ce6e5afe5a41274058f9a5ea1))
+* **navigation:** fix promotions and taxes api ([9002543](https://github.com/vtexdocs/devportal/commit/9002543c3895163b090303d720df93eeab95e9f1))
+* **redirect for pricing hub:** redirected 404 link for pricing hub API overview ([3072688](https://github.com/vtexdocs/devportal/commit/30726885ad49c71787ed97eaa611dc6de698d302))
+* redirect subscriptions ([8c2aeb1](https://github.com/vtexdocs/devportal/commit/8c2aeb10b0e40a4e57511d93601837212f81a740))
+* update navigation.json ([4632a9f](https://github.com/vtexdocs/devportal/commit/4632a9f9d9fc0f713576576a51108386ba962197))
+* update slug ([e14f3fe](https://github.com/vtexdocs/devportal/commit/e14f3fedeaae708de59c4be5f3d2cd212b50142b))
+
+
+### Build
+
+* add puppeteer-core to dependencies ([f77a6ac](https://github.com/vtexdocs/devportal/commit/f77a6ac2140e68b4dbf5444c59d760cece01adf9))
+* add react-svg-pan-zoom to dependencies ([16a9b57](https://github.com/vtexdocs/devportal/commit/16a9b57a2d42348f23a1130775d2c8d822f5ab45))
+* **package:** update rapidoc version ([cc48e50](https://github.com/vtexdocs/devportal/commit/cc48e501dac6db1be1865882e51f2bfcc41920cd))
+* update rapidoc version ([0004785](https://github.com/vtexdocs/devportal/commit/00047851edd58f21997f6fdfa48b028730069110))
+
+
+### Refactoring
+
+* **announcementbar:** changes the code of announcement bar to hide it ([6862af4](https://github.com/vtexdocs/devportal/commit/6862af4af3635d154437aade74a75bc1b4cf31fa))
+* **api-index:** edit headerDescription ([fe0f4a8](https://github.com/vtexdocs/devportal/commit/fe0f4a8f2e745e4a02a7de06a564f936ae3bdf53))
+* **tests:** create function for randomly selecting documentation pages ([2a28aa9](https://github.com/vtexdocs/devportal/commit/2a28aa92b77e584db13d653ac728fc12eabf1a1a))
+
+
+### Style
+
+* create mermaidjs diagram CSS file ([5475f45](https://github.com/vtexdocs/devportal/commit/5475f45d1004bba8556a3894759263acf050efa0))
+* **jsoneditorindex:** add api ref index generator styles.ts ([1e67fc6](https://github.com/vtexdocs/devportal/commit/1e67fc6fe7a306ac2447510d8edf9ee30a833ad2))
+* **lighthouse:** remove unecessary line break ([60faf3b](https://github.com/vtexdocs/devportal/commit/60faf3b0c58719c6fd095c2ad2afe2453be198f9))
+* **tests:** remove unused import ([40faf97](https://github.com/vtexdocs/devportal/commit/40faf970e422d0bf997ddf72577c36219e7b680f))
+* update mermaid diagram css ([49787d7](https://github.com/vtexdocs/devportal/commit/49787d7fbf9f352da2f88a4b6c5a6f0467acfbd2))
+
+
+### Chore
+
+* **last-updates-section:** update lasReleaseNote ([989fb3f](https://github.com/vtexdocs/devportal/commit/989fb3f029e86a1699b2b4a7097b55499209d22a))
+* **navigatin.json:** update search result slug ([0ea9f6e](https://github.com/vtexdocs/devportal/commit/0ea9f6e6d6f325b947db999930fbbaab0f592c3a))
+* **navigation.json:** remove beta label from faststore link ([c5c4dcb](https://github.com/vtexdocs/devportal/commit/c5c4dcb8862b278d033ecc29c71d467572d8fbad))
+* **navigation.json:** update vtex io apps sidebar ([906813c](https://github.com/vtexdocs/devportal/commit/906813c08ec9f455d1cfce8a444c660a12924b57))
+* **netlify.toml:** add redirects most visited apps ([18bf50e](https://github.com/vtexdocs/devportal/commit/18bf50e502e924a680a1e1514a3fa19261af14e4))
+* **package.json:** update next version ([8b21537](https://github.com/vtexdocs/devportal/commit/8b21537d42935b12eb79de17a56a77c2321a56ea))
+* **package:** add chrome-aws-lambda ([098e835](https://github.com/vtexdocs/devportal/commit/098e83597b85eeb1402f500404f019d3e0c4cec4))
+* **package:** add remark-mermaidjs ([aef31aa](https://github.com/vtexdocs/devportal/commit/aef31aa82e8760d331585d8a98923770e6e02da8))
+* update dependencies ([07ebf8a](https://github.com/vtexdocs/devportal/commit/07ebf8a93064bcdd8cd2e247d6a3ac334902edd4))
+* update yarn.lock ([6dd68f9](https://github.com/vtexdocs/devportal/commit/6dd68f9960f2084277845c638f46066ee137f0fd))
+* update yarn.lock ([a3a82db](https://github.com/vtexdocs/devportal/commit/a3a82dbb0b50e754f929bb629a22f34eadda88b7))
+* update yarn.lock ([726a50b](https://github.com/vtexdocs/devportal/commit/726a50bbe61bdad4ad1e12ee46102c0cfc7b6add))
+* update yarn.lock ([d109937](https://github.com/vtexdocs/devportal/commit/d109937b931ab283ab476958f1ac4976679092ba))
+* update yarn.lock and package-lock.json ([73cdcec](https://github.com/vtexdocs/devportal/commit/73cdcec0f0f58b954e56566630504b9d1f08a90a))
+
 ### [1.9.8](https://github.com/vtexdocs/devportal/compare/v1.9.7...v1.9.8) (2023-04-11)
 
 

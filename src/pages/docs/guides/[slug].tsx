@@ -10,6 +10,7 @@ import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
+import remarkMermaid from 'utils/remark_plugins/mermaid'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
@@ -233,6 +234,7 @@ export const getStaticProps: GetStaticProps = async ({
           remarkImages,
           [getHeadings, { headingList }],
           remarkBlockquote,
+          remarkMermaid,
         ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],

@@ -1092,14 +1092,14 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Get an account's orderForm configuration",
+                  "name": "Getting an account orderForm configuration",
                   "slug": "get-an-account-orderform-configuration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Update an account's orderForm configuration",
+                  "name": "Updating an account orderForm configuration",
                   "slug": "update-an-account-orderform-configuration",
                   "origin": "",
                   "type": "markdown",
@@ -11431,7 +11431,7 @@
               "children": []
             },
             {
-              "name": "Catalog Images app",
+              "name": "Catalog Images",
               "slug": "apps/vtex.catalog-images",
               "origin": "",
               "type": "markdown",
@@ -11494,22 +11494,22 @@
               "children": []
             },
             {
-              "name": "Assembly Options app",
-              "slug": "assembly-options-app",
+              "name": "Assembly Options",
+              "slug": "guides/assembly-options-app",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Delivery Window Blocker",
-              "slug": "delivery-window-blocker-app",
+              "slug": "guides/delivery-window-blocker-app",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Affiliates Program app",
-              "slug": "affiliates-program-app",
+              "name": "Affiliates Program",
+              "slug": "guides/affiliates-program-app",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11756,7 +11756,7 @@
             },
             {
               "name": "Kelkoo app",
-              "slug": "apps/vtex.kelkoo-app",
+              "slug": "apps/vtex.kelkoo",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11804,13 +11804,6 @@
               "children": []
             },
             {
-              "name": "Sidecar pixel app",
-              "slug": "apps/vtex.io-release-notes-sidecar-pixel-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "smarthint",
               "slug": "apps/vtex.smarthint",
               "origin": "",
@@ -11819,14 +11812,14 @@
             },
             {
               "name": "Speech to Text Search",
-              "slug": "apps/vtexarg.speech-to-text-search",
+              "slug": "apps/vtexarg.speech-to-text",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Suiteshare",
-              "slug": "apps/vtex.suiteshare",
+              "slug": "apps/vtex.suite-share",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12002,21 +11995,21 @@
             },
             {
               "name": "Quantity Selector",
-              "slug": "apps/vtex.list/quantity-selector-2",
+              "slug": "apps/vtex.list/quantity%20selector",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Wrappers",
-              "slug": "apps/vtex.gift-list-wrappers",
+              "slug": "apps/vtex.list/wrappers",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "List Items Order By",
-              "slug": "apps/vtex.gift-list-listitemsorderby",
+              "slug": "apps/vtex.list/listitemsorderby",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -13592,7 +13585,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Admin's `Enable B2B behavior` button",
+                  "name": "Admin's Enable B2B behavior button",
                   "slug": "admins-enable-b2b-behavior-button",
                   "origin": "",
                   "type": "markdown",
@@ -13664,13 +13657,6 @@
                   "children": []
                 },
                 {
-                  "name": "Styleguide's unit multiplier",
-                  "slug": "styleguides-unit-multiplier",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Tax values on product prices",
                   "slug": "tax-values-on-product-prices",
                   "origin": "",
@@ -13701,13 +13687,6 @@
                 {
                   "name": "New way to activate an SKU",
                   "slug": "new-way-to-activate-an-sku",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Updated Payments Integration Guide",
-                  "slug": "updated-payments-integration-guide",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13816,7 +13795,7 @@
                   "children": []
                 },
                 {
-                  "name": "`Add to cart` button performance",
+                  "name": "Add-to-cart button performance",
                   "slug": "add-to-cart-button-performance",
                   "origin": "",
                   "type": "markdown",
@@ -14042,13 +14021,6 @@
                   "children": []
                 },
                 {
-                  "name": "Markdown interpretation by Assets Builder",
-                  "slug": "markdown-interpretation-by-assets-builder",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "EAN in Google Analytics events",
                   "slug": "ean-in-google-analytics-events",
                   "origin": "",
@@ -14063,8 +14035,8 @@
                   "children": []
                 },
                 {
-                  "name": "Sales channel parameter in the `productsByIdentifier` query",
-                  "slug": "sales-channel-parameter-in-the-`productsbyidentifier-query",
+                  "name": "Sales channel parameter in the productsByIdentifier query",
+                  "slug": "sales-channel-parameter-in-the-productsbyidentifier-query",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14126,8 +14098,8 @@
                   "children": []
                 },
                 {
-                  "name": "Auto-complete on `product-context` properties",
-                  "slug": "auto-complete-on-`product-context-properties",
+                  "name": "Auto-complete on product-context properties",
+                  "slug": "auto-complete-on-product-context-properties",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14147,8 +14119,8 @@
                   "children": []
                 },
                 {
-                  "name": "New endpoints available on Marketplace APIs",
-                  "slug": "new-endpoints-available-on-marketplace-apis",
+                  "name": "New endpoints available and grouped under Marketplace APIs",
+                  "slug": "new-endpoints-available-and-grouped-under-marketplace-apis",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14309,13 +14281,6 @@
                   "children": []
                 },
                 {
-                  "name": "Show more button on the Search Results page",
-                  "slug": "show-more-button-on-the-search-results-page",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Search Result's filters title HTML tag",
                   "slug": "search-results-filters-title-html-tag",
                   "origin": "",
@@ -14345,7 +14310,7 @@
                   "children": []
                 },
                 {
-                  "name": "New `font-faces.css` file in Store Theme",
+                  "name": "New font-faces.css file in Store Theme",
                   "slug": "new-font-facescss-file",
                   "origin": "",
                   "type": "markdown",
