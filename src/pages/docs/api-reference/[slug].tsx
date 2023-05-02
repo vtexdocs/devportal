@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Script from 'next/script'
 import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
@@ -8,6 +7,7 @@ import Oas from 'oas'
 import getReferencePaths from 'utils/getReferencePaths'
 import getNavigation from 'utils/getNavigation'
 import { MethodType, isMethodType } from 'utils/typings/unionTypes'
+import 'components/rapidoc/rapidoc.js'
 
 interface Endpoint {
   title: string
@@ -94,11 +94,6 @@ const APIPage: NextPage<Props> = ({ slug, endpoints }) => {
         <meta name="docsearch:doccategory" content={pageTitle} />
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
-      <Script
-        type="text/javascript"
-        src="/rapidoc/rapidoc-min.js"
-        strategy="beforeInteractive"
-      />
       <rapi-doc
         ref={rapidoc}
         spec-url={`/api/openapi/${slug}`}
