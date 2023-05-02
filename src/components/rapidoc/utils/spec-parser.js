@@ -1,5 +1,5 @@
 /* eslint-disable no-use-before-define */
-import OpenApiParser from '@readme/openapi-parser'
+import SwaggerParser from 'swagger-parser'
 import { marked } from 'marked'
 import { invalidCharsRegEx, rapidocApiKey } from './common-utils'
 
@@ -14,10 +14,10 @@ export default async function ProcessSpec(
   serverUrl = ''
 ) {
   let jsonParsedSpec
-  let specMeta
   try {
     this.requestUpdate() // important to show the initial loader
-    specMeta = await OpenApiParser.parse(specUrl)
+    const api = await SwaggerParser.dereference(specUrl)
+    const specMeta = await SwaggerParser.parse(api)
 
     if (specMeta?.jsonSchemaViewer && specMeta?.schemaAndExamples) {
       this.dispatchEvent(
