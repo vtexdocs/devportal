@@ -12472,20 +12472,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Migrating Google Tag Manager app from major 2.x to major 3.x",
-                  "slug": "vtex-io-documentation-migrating-google-tag-manager-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Sending custom events to Google Tag Manager",
-                  "slug": "vtex-io-documentation-sending-custom-events-to-google-tag-manager",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
