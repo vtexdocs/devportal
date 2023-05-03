@@ -60,6 +60,9 @@ const hitContent: SxStyleProp = {
   fontSize: ['14px', '16px'],
   lineHeight: ['20px', '22px'],
   width: '100%',
+  whiteSpace: 'pre',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
 }
 
 const alignCenter: SxStyleProp = {
