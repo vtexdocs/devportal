@@ -12826,6 +12826,21 @@
           "type": "category",
           "children": [
             {
+              "name": "May",
+              "slug": "may-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get ready for Google Analytics 4 with VTEX's new Google Tag Manager version app",
+                  "slug": "google-tag-manager-new-version.md",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "April",
               "slug": "april-2023",
               "origin": "",
