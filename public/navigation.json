@@ -7516,15 +7516,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "List Payment Methods",
-                  "slug": "payment-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/payment-methods",
-                  "children": []
-                },
-                {
                   "name": "List Payment Provider Manifest",
                   "slug": "payment-provider-protocol",
                   "type": "openapi",
@@ -12825,6 +12816,21 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "May",
+              "slug": "may-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Deprecation of List Payment Methods endpoint",
+                  "slug": "deprecation-of-list-payment-methods-endpoint",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "April",
               "slug": "april-2023",
