@@ -7516,15 +7516,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "List Payment Methods",
-                  "slug": "payment-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/payment-methods",
-                  "children": []
-                },
-                {
                   "name": "List Payment Provider Manifest",
                   "slug": "payment-provider-protocol",
                   "type": "openapi",
@@ -12832,8 +12823,8 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get ready for Google Analytics 4 with VTEX's new Google Tag Manager version app",
-                  "slug": "google-tag-manager-new-version.md",
+                  "name": "Deprecation of List Payment Methods endpoint",
+                  "slug": "deprecation-of-list-payment-methods-endpoint",
                   "origin": "",
                   "type": "markdown",
                   "children": []
