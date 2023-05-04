@@ -7,9 +7,9 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'deprecated',
-    description: 'Master Data v2 orders entity deprecation',
-    date: new Date('04/11/2023'),
+    type: 'improved',
+    description: 'New VTEX Google Tag Manager app version',
+    date: new Date('05/04/2023'),
   },
   updateType: 'release-notes',
 }
