@@ -301,7 +301,7 @@ export const getStaticProps: GetStaticProps = async ({
     const pagination = {
       previousDoc: {
         slug: docsListSlug[indexOfSlug - 1]
-          ? docsListSlug[indexOfSlug - 1]
+          ? `/docs/guides/${docsListSlug[indexOfSlug - 1]}`
           : null,
         name: docsListName[indexOfSlug - 1]
           ? docsListName[indexOfSlug - 1]
@@ -309,7 +309,7 @@ export const getStaticProps: GetStaticProps = async ({
       },
       nextDoc: {
         slug: docsListSlug[indexOfSlug + 1]
-          ? docsListSlug[indexOfSlug + 1]
+          ? `/docs/guides/${docsListSlug[indexOfSlug + 1]}`
           : null,
         name: docsListName[indexOfSlug + 1]
           ? docsListName[indexOfSlug + 1]
