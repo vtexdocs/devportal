@@ -172,6 +172,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug, child } = params as IParams
   const data = await getChildDocApp(slug, child)
   const logger = getLogger('Apps Children Docs')
+  const appName = slug.split('@')[0]
   if (!data.markdown) {
     return {
       notFound: true,
@@ -216,7 +217,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         sidebarfallback,
         `$..[?(@.type=='markdown')]..name`
       )
-      const indexOfSlug = docsListSlug.indexOf(`apps/${slug}/${child}`)
+      const indexOfSlug = docsListSlug.indexOf(`apps/${appName}/${child}`)
       const pagination = {
         previousDoc: {
           slug: docsListSlug[indexOfSlug - 1]
@@ -236,14 +237,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         },
       }
       const flattenedSidebar = flattenJSON(sidebarfallback)
-      const keyPath = getKeyByValue(flattenedSidebar, `apps/${slug}/${child}`)
+      const keyPath = getKeyByValue(
+        flattenedSidebar,
+        `apps/${appName}/${child}`
+      )
       if (keyPath) {
         getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
         parentsArray.push(slug)
         getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
         getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
       }
-      parentsArray.push(`apps/${slug}/${child}`)
+      parentsArray.push(`apps/${appName}/${child}`)
       const isListed: boolean = keyPath ? true : false
       const breadcumbList: { slug: string; name: string; type: string }[] = []
       parentsArrayName.forEach((_el: string, idx: number) => {

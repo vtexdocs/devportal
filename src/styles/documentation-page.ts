@@ -96,7 +96,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
-  minWidth: [0, 0, 0, 0, '184px', '184px', '284px'],
+  width: [0, 0, 0, 0, '184px', '184px', '284px'],
 }
 
 const releaseAction: SxStyleProp = {

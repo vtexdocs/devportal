@@ -183,6 +183,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const parentsArray: string[] = []
     const parentsArrayName: string[] = []
     const parentsArrayType: string[] = []
+    const appName = slug.split('@')[0]
     const docsListSlug = jp.query(
       sidebarfallback,
       `$..[?(@.type=='markdown')]..slug`
@@ -191,7 +192,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       sidebarfallback,
       `$..[?(@.type=='markdown')]..name`
     )
-    const indexOfSlug = docsListSlug.indexOf(`apps/${slug}`)
+    const indexOfSlug = docsListSlug.indexOf(`apps/${appName}`)
     const pagination = {
       previousDoc: {
         slug: docsListSlug[indexOfSlug - 1]
@@ -213,14 +214,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     const flattenedSidebar = flattenJSON(sidebarfallback)
 
-    const keyPath = getKeyByValue(flattenedSidebar, `apps/${slug}`)
+    const keyPath = getKeyByValue(flattenedSidebar, `apps/${appName}`)
     if (keyPath) {
       getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
       parentsArray.push(slug)
       getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
       getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
     }
-    parentsArray.push(`apps/${slug}`)
+    parentsArray.push(`apps/${appName}`)
     const isListed: boolean = keyPath ? true : false
     const breadcumbList: { slug: string; name: string; type: string }[] = []
     parentsArrayName.forEach((_el: string, idx: number) => {
