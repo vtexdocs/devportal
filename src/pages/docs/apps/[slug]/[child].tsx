@@ -125,7 +125,7 @@ const AppChildPage: NextPage<Props> = ({
                         <Text>Community extension</Text>
                       </Flex>
                     )}
-                    <Text>Version: {currentVersion}.x</Text>
+                    <Text>Version: {currentVersion}</Text>
                     <Text>Latest version: {latestMajor}.x</Text>
                   </Flex>
                 </header>
