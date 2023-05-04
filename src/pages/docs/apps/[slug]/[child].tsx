@@ -9,6 +9,9 @@ import getHeadings from 'utils/getHeadings'
 import { serialize } from 'next-mdx-remote/serialize'
 import type { Item } from 'components/table-of-contents'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
+import Breadcrumb from 'components/breadcrumb'
+import ArticlePagination from 'components/article-pagination'
+import jp from 'jsonpath'
 
 import getChildDocApp from 'utils/getChildDocApp'
 import { getLogger } from 'utils/logging/log-util'
@@ -16,7 +19,14 @@ import { getLogger } from 'utils/logging/log-util'
 import MarkdownRenderer from 'components/markdown-renderer'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
-import { Box, Flex, Text, IconVTEXSymbol, IconGlobe } from '@vtex/brand-ui'
+import {
+  Box,
+  Flex,
+  Text,
+  IconVTEXSymbol,
+  IconGlobe,
+  Link,
+} from '@vtex/brand-ui'
 import styles from 'styles/documentation-page'
 import stylesApps from 'styles/apps-page'
 import TableOfContents from 'components/table-of-contents'
@@ -36,11 +46,17 @@ interface Props {
   latestMajor: string
   currentVersion: string
   sectionSelected: string
+  breadcumbList: { slug: string; name: string; type: string }[]
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   sidebarfallback: any
   serialized: MDXRemoteSerializeResult
   headingList: Item[]
   appId: string
+  pagination: {
+    previousDoc: { slug: string | null; name: string | null }
+    nextDoc: { slug: string | null; name: string | null }
+  }
+  isListed: boolean
 }
 
 const AppChildPage: NextPage<Props> = ({
@@ -49,8 +65,11 @@ const AppChildPage: NextPage<Props> = ({
   vendor,
   latestMajor,
   currentVersion,
+  breadcumbList,
   title,
   appId,
+  pagination,
+  isListed,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   useEffect(() => {
@@ -69,6 +88,7 @@ const AppChildPage: NextPage<Props> = ({
       category: 'VTEX IO Apps',
     },
   ]
+  const officialVendors = ['vtex', 'vtexarg', 'vtexventures']
   return (
     <>
       <Head>
@@ -85,14 +105,19 @@ const AppChildPage: NextPage<Props> = ({
             <Box sx={styles.articleBox}>
               <Box sx={styles.contentContainer}>
                 <header>
+                  <Breadcrumb breadcumbList={breadcumbList} />
                   <Text sx={styles.documentationTitle} className="title">
                     {title}
                   </Text>
                   <Flex sx={stylesApps.details}>
-                    {vendor == 'vtex' ? (
+                    {officialVendors.includes(vendor) ? (
                       <Flex>
                         <IconVTEXSymbol size={24} sx={stylesApps.iconDetails} />
-                        <Text>{appId}</Text>
+                        <Link
+                          href={`https://developers.vtex.com/docs/apps/${appId}`}
+                        >
+                          {appId}
+                        </Link>
                       </Flex>
                     ) : (
                       <Flex>
@@ -108,6 +133,18 @@ const AppChildPage: NextPage<Props> = ({
                   <MarkdownRenderer serialized={serialized} />
                 </article>
               </Box>
+              {isListed && (
+                <ArticlePagination
+                  hidePaginationNext={
+                    Boolean(serialized.frontmatter?.hidePaginationNext) || false
+                  }
+                  hidePaginationPrevious={
+                    Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
+                    false
+                  }
+                  pagination={pagination}
+                />
+              )}
               <SeeAlsoSection docs={seeAlsoData} />
             </Box>
             <Box sx={styles.rightContainer}>
@@ -152,7 +189,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const currentVersion = data.currentVersion
     const headingList: Item[] = []
     if (markdown) {
-      let serialized = await serialize(markdown, {
+      let serialized = await serialize(markdown.split('## Contributors')[0], {
         parseFrontmatter: true,
         mdxOptions: {
           remarkPlugins: [
@@ -171,6 +208,33 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       const parentsArray: string[] = []
       const parentsArrayName: string[] = []
       const parentsArrayType: string[] = []
+      const docsListSlug = jp.query(
+        sidebarfallback,
+        `$..[?(@.type=='markdown')]..slug`
+      )
+      const docsListName = jp.query(
+        sidebarfallback,
+        `$..[?(@.type=='markdown')]..name`
+      )
+      const indexOfSlug = docsListSlug.indexOf(`apps/${slug}/${child}`)
+      const pagination = {
+        previousDoc: {
+          slug: docsListSlug[indexOfSlug - 1]
+            ? `/docs/${docsListSlug[indexOfSlug - 1]}`
+            : null,
+          name: docsListName[indexOfSlug - 1]
+            ? docsListName[indexOfSlug - 1]
+            : null,
+        },
+        nextDoc: {
+          slug: docsListSlug[indexOfSlug + 1]
+            ? `/docs/${docsListSlug[indexOfSlug + 1]}`
+            : null,
+          name: docsListName[indexOfSlug + 1]
+            ? docsListName[indexOfSlug + 1]
+            : null,
+        },
+      }
       const flattenedSidebar = flattenJSON(sidebarfallback)
       const keyPath = getKeyByValue(flattenedSidebar, `apps/${slug}/${child}`)
       if (keyPath) {
@@ -180,6 +244,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
       }
       parentsArray.push(`apps/${slug}/${child}`)
+      const isListed: boolean = keyPath ? true : false
+      const breadcumbList: { slug: string; name: string; type: string }[] = []
+      parentsArrayName.forEach((_el: string, idx: number) => {
+        breadcumbList.push({
+          slug: `/docs/${parentsArray[idx]}`,
+          name: parentsArrayName[idx],
+          type: parentsArrayType[idx],
+        })
+      })
       return {
         props: {
           title,
@@ -187,11 +260,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           latestMajor,
           currentVersion,
           sectionSelected,
+          breadcumbList,
           parentsArray,
           sidebarfallback,
           serialized,
           headingList,
           appId,
+          pagination,
+          isListed,
         },
       }
     } else {
