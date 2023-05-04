@@ -109,3 +109,8 @@ table tbody tr:nth-of-type(even) {
 .api.type-patch {
   color: #827717;
 }
+
+hr {
+  border: 1px solid #E7E9EE;
+  border-bottom: none;
+}

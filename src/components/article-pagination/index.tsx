@@ -20,7 +20,7 @@ const ArticlePagination = ({
 
   const handleClick = (e: { preventDefault: () => void }, slug: string) => {
     e.preventDefault()
-    router.push(`/docs/guides/${slug}`)
+    router.push(slug)
   }
   return (
     <Box sx={styles.mainContainer}>
@@ -28,7 +28,7 @@ const ArticlePagination = ({
         {!hidePaginationPrevious && pagination.previousDoc.slug && (
           <Link
             sx={styles.paginationLinkPrevious}
-            href={`/docs/guides/${pagination.previousDoc.slug}`}
+            href={pagination.previousDoc.slug}
             onClick={(e: { preventDefault: () => void }) => {
               handleClick(e, pagination.previousDoc.slug as string)
             }}
@@ -44,7 +44,7 @@ const ArticlePagination = ({
         {!hidePaginationNext && pagination.nextDoc.slug && (
           <Link
             sx={styles.paginationLinkNext}
-            href={`/docs/guides/${pagination.nextDoc.slug}`}
+            href={pagination.nextDoc.slug}
             onClick={(e: { preventDefault: () => void }) => {
               handleClick(e, pagination.nextDoc.slug as string)
             }}
