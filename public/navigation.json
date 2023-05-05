@@ -6555,6 +6555,87 @@
                   "children": []
                 },
                 {
+                  "name": "List all channels",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/channel/all",
+                  "children": []
+                },
+                {
+                  "name": "Retrieve channel",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/channel/-channelId",
+                  "children": []
+                },
+                {
+                  "name": "Register connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector",
+                  "children": []
+                },
+                {
+                  "name": "List all connectors",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/all",
+                  "children": []
+                },
+                {
+                  "name": "Retrieve connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Upsert merchant connection",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Remove connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Full update connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Partial update connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
                   "name": "Place fulfillment order",
                   "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
@@ -6597,87 +6678,6 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/checkout/pub/orderForms/simulation",
-                  "children": []
-                },
-                {
-                  "name": "List all channels",
-                  "slug": "marketplace-protocol-external-marketplace-mapper",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/channel-manager/channel/all",
-                  "children": []
-                },
-                {
-                  "name": "Retrieve channel",
-                  "slug": "marketplace-protocol-external-marketplace-mapper",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/channel-manager/channel/:channelId",
-                  "children": []
-                },
-                {
-                  "name": "Register connector",
-                  "slug": "marketplace-protocol-external-marketplace-mapper",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/channel-manager/connector",
-                  "children": []
-                },
-                {
-                  "name": "List all connectors",
-                  "slug": "marketplace-protocol-external-marketplace-mapper",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/channel-manager/connector/all",
-                  "children": []
-                },
-                {
-                  "name": "Retrieve connector",
-                  "slug": "marketplace-protocol-external-marketplace-mapper",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/channel-manager/connector/:connectorId",
-                  "children": []
-                },
-                {
-                  "name": "Upsert merchant connection",
-                  "slug": "marketplace-protocol-external-marketplace-mapper",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/channel-manager/connector/:connectorId",
-                  "children": []
-                },
-                {
-                  "name": "Remove connector",
-                  "slug": "marketplace-protocol-external-marketplace-mapper",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/channel-manager/connector/:connectorId",
-                  "children": []
-                },
-                {
-                  "name": "Full update connector",
-                  "slug": "marketplace-protocol-external-marketplace-mapper",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/channel-manager/connector/:connectorId",
-                  "children": []
-                },
-                {
-                  "name": "Partial update connector",
-                  "slug": "marketplace-protocol-external-marketplace-mapper",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/channel-manager/connector/:connectorId",
                   "children": []
                 }
               ]
