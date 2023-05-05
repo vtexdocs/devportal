@@ -12823,15 +12823,15 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Deprecation of List Payment Methods endpoint",
-                  "slug": "deprecation-of-list-payment-methods-endpoint",
+                  "name": "Get ready for Google Analytics 4 with VTEX's new Google Tag Manager version app",
+                  "slug": "2023-05-04-google-tag-manager-new-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Get ready for Google Analytics 4 with VTEX's new Google Tag Manager version app",
-                  "slug": "google-tag-manager-new-version-app",
+                  "name": "Deprecation of List Payment Methods endpoint",
+                  "slug": "deprecation-of-list-payment-methods-endpoint",
                   "origin": "",
                   "type": "markdown",
                   "children": []
