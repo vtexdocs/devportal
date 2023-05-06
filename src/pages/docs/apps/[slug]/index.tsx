@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from 'react'
+import { Fragment } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import remarkGFM from 'remark-gfm'
@@ -9,6 +9,9 @@ import getHeadings from 'utils/getHeadings'
 import { serialize } from 'next-mdx-remote/serialize'
 import type { Item } from 'components/table-of-contents'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
+import Breadcrumb from 'components/breadcrumb'
+import ArticlePagination from 'components/article-pagination'
+import jp from 'jsonpath'
 
 import getAppReadme from 'utils/getAppReadme'
 import { getLogger } from 'utils/logging/log-util'
@@ -40,6 +43,12 @@ interface Props {
   serialized: MDXRemoteSerializeResult
   headingList: Item[]
   childrenDocs: string[]
+  breadcumbList: { slug: string; name: string; type: string }[]
+  pagination: {
+    previousDoc: { slug: string | null; name: string | null }
+    nextDoc: { slug: string | null; name: string | null }
+  }
+  isListed: boolean
 }
 
 const AppReadmePage: NextPage<Props> = ({
@@ -50,11 +59,11 @@ const AppReadmePage: NextPage<Props> = ({
   currentVersion,
   title,
   childrenDocs,
+  breadcumbList,
+  pagination,
+  isListed,
 }) => {
-  const [headings, setHeadings] = useState<Item[]>([])
-  useEffect(() => {
-    setHeadings(headingList)
-  }, [serialized.frontmatter])
+  const headings: Item[] = headingList
 
   const seeAlsoData = [
     {
@@ -63,6 +72,7 @@ const AppReadmePage: NextPage<Props> = ({
       category: 'VTEX IO Apps',
     },
   ]
+  const officialVendors = ['vtex', 'vtexarg', 'vtexventures']
 
   childrenDocs?.forEach((doc) =>
     seeAlsoData.push({
@@ -86,11 +96,12 @@ const AppReadmePage: NextPage<Props> = ({
             <Box sx={styles.articleBox}>
               <Box sx={styles.contentContainer}>
                 <header>
+                  <Breadcrumb breadcumbList={breadcumbList} />
                   <Text sx={styles.documentationTitle} className="title">
                     {title}
                   </Text>
                   <Flex sx={stylesApps.details}>
-                    {vendor == 'vtex' ? (
+                    {officialVendors.includes(vendor) ? (
                       <Flex>
                         <IconVTEXSymbol size={24} sx={stylesApps.iconDetails} />
                         <Text>Official extension</Text>
@@ -101,7 +112,7 @@ const AppReadmePage: NextPage<Props> = ({
                         <Text>Community extension</Text>
                       </Flex>
                     )}
-                    <Text>Version: {currentVersion}.x</Text>
+                    <Text>Version: {currentVersion}</Text>
                     <Text>Latest version: {latestMajor}.x</Text>
                   </Flex>
                 </header>
@@ -109,6 +120,19 @@ const AppReadmePage: NextPage<Props> = ({
                   <MarkdownRenderer serialized={serialized} />
                 </article>
               </Box>
+
+              {isListed && (
+                <ArticlePagination
+                  hidePaginationNext={
+                    Boolean(serialized.frontmatter?.hidePaginationNext) || false
+                  }
+                  hidePaginationPrevious={
+                    Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
+                    false
+                  }
+                  pagination={pagination}
+                />
+              )}
               <SeeAlsoSection docs={seeAlsoData} />
             </Box>
             <Box sx={styles.rightContainer}>
@@ -122,7 +146,11 @@ const AppReadmePage: NextPage<Props> = ({
 }
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const paths = [{ params: { slug: 'vtex-google-customer-reviews' } }]
+  const paths = [
+    { params: { slug: 'vtex.add-to-cart-button' } },
+    { params: { slug: 'vtex.search' } },
+    { params: { slug: 'vtex.rich-text' } },
+  ]
   return {
     paths,
     fallback: 'blocking',
@@ -152,18 +180,56 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const parentsArray: string[] = []
     const parentsArrayName: string[] = []
     const parentsArrayType: string[] = []
+    const appName = slug.split('@')[0]
+    const docsListSlug = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..slug`
+    )
+    const docsListName = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..name`
+    )
+    const indexOfSlug = docsListSlug.indexOf(`apps/${appName}`)
+    const pagination = {
+      previousDoc: {
+        slug: docsListSlug[indexOfSlug - 1]
+          ? `/docs/${docsListSlug[indexOfSlug - 1]}`
+          : null,
+        name: docsListName[indexOfSlug - 1]
+          ? docsListName[indexOfSlug - 1]
+          : null,
+      },
+      nextDoc: {
+        slug: docsListSlug[indexOfSlug + 1]
+          ? `/docs/${docsListSlug[indexOfSlug + 1]}`
+          : null,
+        name: docsListName[indexOfSlug + 1]
+          ? docsListName[indexOfSlug + 1]
+          : null,
+      },
+    }
+
     const flattenedSidebar = flattenJSON(sidebarfallback)
-    const keyPath = getKeyByValue(flattenedSidebar, `apps/${slug}`)
+
+    const keyPath = getKeyByValue(flattenedSidebar, `apps/${appName}`)
     if (keyPath) {
       getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
       parentsArray.push(slug)
       getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
       getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
     }
-    parentsArray.push(`apps/${slug}`)
-
+    parentsArray.push(`apps/${appName}`)
+    const isListed: boolean = keyPath ? true : false
+    const breadcumbList: { slug: string; name: string; type: string }[] = []
+    parentsArrayName.forEach((_el: string, idx: number) => {
+      breadcumbList.push({
+        slug: `/docs/${parentsArray[idx]}`,
+        name: parentsArrayName[idx],
+        type: parentsArrayType[idx],
+      })
+    })
     if (markdown) {
-      let serialized = await serialize(markdown, {
+      let serialized = await serialize(markdown.split('## Contributors')[0], {
         parseFrontmatter: true,
         mdxOptions: {
           remarkPlugins: [
@@ -190,7 +256,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           sidebarfallback,
           serialized,
           headingList,
+          breadcumbList,
           childrenDocs,
+          pagination,
+          isListed,
         },
       }
     } else {

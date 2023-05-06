@@ -36,7 +36,7 @@ jobs:
             core.setOutput('pages', pages)
       - name: Lighthouse CI
         id: lighthouse-ci
-        uses: treosh/lighthouse-ci-action@v9
+        uses: treosh/lighthouse-ci-action@v10
         with:
           urls: |
             ${{ steps.wait-for-netlify-preview.outputs.url }}
@@ -56,6 +56,14 @@ jobs:
             const links = JSON.parse(process.env.LINKS)
             const manifest = JSON.parse(process.env.MANIFEST)
 
+            let count = 0
+            let mean = {
+              'performance': 0.0,
+              'accessibility': 0.0,
+              'best-practices': 0.0,
+              'seo': 0.0,
+            }
+
             let output = '# Performance Results\n\n'
             manifest.forEach(({ url, summary }) => {
               output += '<details>\n'
@@ -71,7 +79,16 @@ jobs:
 
               output += `  Complete results [here](${links[url]})\n`
               output += '</details>\n\n'
+
+              count++
+              Object.keys(summary).forEach(key => mean[key] += summary[key])
             })
+
+            output += '## Overall Performance\n\n'
+            output += `![Performance](https://progress-bar.dev/${Math.floor(mean['performance'] / count * 100)}?title=Performance)\n`
+            output += `![Accessibility](https://progress-bar.dev/${Math.floor(mean['accessibility'] / count * 100)}?title=Accessibility)\n`
+            output += `![Best Practices](https://progress-bar.dev/${Math.floor(mean['best-practices'] / count * 100)}?title=Best%20Practices)\n`
+            output += `![SEO](https://progress-bar.dev/${Math.floor(mean['seo'] / count * 100)}?title=SEO)\n\n`
 
             core.setOutput('summary', output)
       - name: Comment PR

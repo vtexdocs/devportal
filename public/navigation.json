@@ -1113,7 +1113,7 @@
                   "children": []
                 },
                 {
-                  "name": "Clearing the orderForm message field from the cart",
+                  "name": "Clear orderForm message field from cart",
                   "slug": "clear-orderform-message-field-from-cart",
                   "origin": "",
                   "type": "markdown",
@@ -6555,6 +6555,87 @@
                   "children": []
                 },
                 {
+                  "name": "List all channels",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/channel/all",
+                  "children": []
+                },
+                {
+                  "name": "Retrieve channel",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/channel/-channelId",
+                  "children": []
+                },
+                {
+                  "name": "Register connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector",
+                  "children": []
+                },
+                {
+                  "name": "List all connectors",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/all",
+                  "children": []
+                },
+                {
+                  "name": "Retrieve connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Upsert merchant connection",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Remove connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Full update connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Partial update connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
                   "name": "Place fulfillment order",
                   "slug": "marketplace-protocol-external-marketplace-orders",
                   "type": "openapi",
@@ -7515,15 +7596,6 @@
               "slug": "payment-provider-protocol-payment-flow",
               "type": "category",
               "children": [
-                {
-                  "name": "List Payment Methods",
-                  "slug": "payment-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/payment-methods",
-                  "children": []
-                },
                 {
                   "name": "List Payment Provider Manifest",
                   "slug": "payment-provider-protocol",
@@ -9952,7 +10024,7 @@
                   "children": []
                 },
                 {
-                  "name": "3. Setting your store's theme",
+                  "name": "3. Creating a Store Theme project",
                   "slug": "vtex-io-documentation-3-settingyourstoretheme",
                   "origin": "",
                   "type": "markdown",
@@ -12472,20 +12544,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Migrating Google Tag Manager app from major 2.x to major 3.x",
-                  "slug": "vtex-io-documentation-migrating-google-tag-manager-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Sending custom events to Google Tag Manager",
-                  "slug": "vtex-io-documentation-sending-custom-events-to-google-tag-manager",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
@@ -12840,11 +12898,40 @@
           "type": "category",
           "children": [
             {
+              "name": "May",
+              "slug": "may-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get ready for Google Analytics 4 with VTEX's new Google Tag Manager version app",
+                  "slug": "2023-05-04-google-tag-manager-new-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Deprecation of List Payment Methods endpoint",
+                  "slug": "deprecation-of-list-payment-methods-endpoint",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "April",
               "slug": "april-2023",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "New Coupons v2 API",
+                  "slug": "new-coupons-v2-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Master Data v2 orders entity deprecation",
                   "slug": "master-data-v2-orders-entity-deprecation",

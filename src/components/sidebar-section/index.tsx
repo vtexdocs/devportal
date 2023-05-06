@@ -36,7 +36,6 @@ const SidebarSection = ({
   const { sidebarSectionHidden, setSidebarSectionHidden } =
     useContext(SidebarContext)
   const { isEditorPreview } = useContext(SidebarContext)
-  const [filterStatus, setFilterStatus] = useState(false)
   const [methodFilterList, setMethodFilterList] = useState([
     { name: 'POST', active: false },
     { name: 'GET', active: false },
@@ -49,12 +48,9 @@ const SidebarSection = ({
     if (window.innerWidth < 1920) setSidebarSectionHidden(true)
   }, [])
 
-  useEffect(() => {
-    setFilterStatus(
-      methodFilterList.some((methodFilter) => methodFilter.active) ||
-        searchValue != ''
-    )
-  }, [methodFilterList, searchValue])
+  const filterStatus =
+    methodFilterList.some((methodFilter) => methodFilter.active) ||
+    searchValue != ''
 
   const filteredResult = useMemo(() => {
     if (!filterStatus) return categories
