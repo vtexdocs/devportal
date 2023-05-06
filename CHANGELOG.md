@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.10](https://github.com/vtexdocs/devportal/compare/v1.9.9...v1.9.10) (2023-05-06)
+
+
+### Features
+
+* **apps:** add Breadcrumbs and Pagination to app pages, among other minor improvements ([0d701fd](https://github.com/vtexdocs/devportal/commit/0d701fd9f3c03364e47eb6cea5679f39189ff06b))
+* **lighthouse:** add mean of performance results to the summary report ([1c36a94](https://github.com/vtexdocs/devportal/commit/1c36a94b109b9b60abcf3dead84c5b73deaec600))
+* **sidebar:** support different openapi specs in the same category ([f815289](https://github.com/vtexdocs/devportal/commit/f815289e688be4b58f08694c57db9b099883667b))
+
+
+### Bug Fixes
+
+* **apps:** find in navbar despite version ([d982dc4](https://github.com/vtexdocs/devportal/commit/d982dc4f1fd7be35f7df72ac30df8f6d4a24318e))
+* **cypress:** fix file path in action ([ec09e00](https://github.com/vtexdocs/devportal/commit/ec09e003386ae4b6f41c21d9c7673b0c87ea8a97))
+* **lighthouse:** update action version ([2b715da](https://github.com/vtexdocs/devportal/commit/2b715daa652ad9d468aa6edf28704e79061839f0))
+* nextjs shouldn't optimize image if it is a gif ([1aa1ab9](https://github.com/vtexdocs/devportal/commit/1aa1ab93b075e36b6be926bfd116d5d776d777a8))
+* **sidebar:** general api reference cases ([447c3a0](https://github.com/vtexdocs/devportal/commit/447c3a09c640f8a4d08b79e76a30066ed843fd20))
+
+
+### Docs
+
+* **navigation.json:** added new release note to navigation ([44fa6a9](https://github.com/vtexdocs/devportal/commit/44fa6a9a2a37fcb173a7604dd233f51c533a79dc))
+
+
+### Performance
+
+* prevent rerenders and remove useEffects ([e7345bd](https://github.com/vtexdocs/devportal/commit/e7345bd917b26c351197c0b060727ea3c9467166))
+* remove unnecessary effects ([6933a65](https://github.com/vtexdocs/devportal/commit/6933a65793ce60695d26f8de1828f6d0004e13ab))
+
+
+### Revert Changes
+
+* **sidebar-section:** sidebar shift ([8901806](https://github.com/vtexdocs/devportal/commit/8901806b06d41aed1de848d265a75034252ae6b3))
+
+
+### Chore
+
+* **apps:** remove .x from version text ([fec51c7](https://github.com/vtexdocs/devportal/commit/fec51c7a0de0ee8fe2464091b5bdb58a4a871b16))
+* **navigation.json:** fixes navigation slugs ([299e9b7](https://github.com/vtexdocs/devportal/commit/299e9b7f8efad64c73901a3e11db110823183f77))
+
 ### [1.9.9](https://github.com/vtexdocs/devportal/compare/v1.9.8...v1.9.9) (2023-04-27)
 
 
