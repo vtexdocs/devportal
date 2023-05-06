@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Script from 'next/script'
 import { useRouter } from 'next/router'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
 
@@ -46,7 +46,6 @@ const slugs = Object.keys(await getReferencePaths())
 const APIPage: NextPage<Props> = ({ slug, endpoints }) => {
   const router = useRouter()
   const rapidoc = useRef<{ scrollToPath: (endpoint: string) => void }>(null)
-  const [endpointPath, setEndpointPath] = useState('')
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
 
@@ -56,11 +55,8 @@ const APIPage: NextPage<Props> = ({ slug, endpoints }) => {
     return method && isMethodType(method) ? method : ''
   }
   const httpMethod = getMethod() as MethodType | ''
-
-  useEffect(() => {
-    const path = router.asPath.split('#')[1]
-    setEndpointPath(path ? `#${router.asPath.split('#')[1]}` : slug)
-  }, [router.asPath])
+  const hash = router.asPath.split('#')[1]
+  const endpointPath = hash ? `#${hash}` : slug
 
   useEffect(() => {
     const scrollDoc = () => {
@@ -74,7 +70,7 @@ const APIPage: NextPage<Props> = ({ slug, endpoints }) => {
     return () => {
       router.events.off('hashChangeComplete', scrollDoc)
     }
-  }, [rapidoc.current, router.events])
+  }, [])
 
   return (
     <>

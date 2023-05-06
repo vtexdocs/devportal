@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import {
@@ -66,6 +66,12 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
   const router = useRouter()
   const [searchStateActive, setSearchStateActive] =
     useState<SearchState>(searchState)
+  const [prevSearchState, setPrevSearchState] = useState(searchState)
+
+  if (searchState !== prevSearchState) {
+    setSearchStateActive(searchState)
+    setPrevSearchState(searchState)
+  }
 
   const seeAllSubmit = (keyword: string) => {
     setSearchStateActive({})
@@ -83,10 +89,6 @@ const HitsBox = connectStateResults(({ searchState, searchResults }) => {
       __position: searchResults.hitsPerPage * searchResults.page + index + 1,
     }
   }
-
-  useEffect(() => {
-    setSearchStateActive(searchState)
-  }, [searchState])
 
   return (
     <>

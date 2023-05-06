@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useContext } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import jp from 'jsonpath'
@@ -84,13 +84,12 @@ const DocumentationPage: NextPage<Props> = ({
   breadcumbList,
   branch,
 }) => {
-  const [headings, setHeadings] = useState<Item[]>([])
+  const headings: Item[] = headingList
   const { setBranchPreview } = useContext(PreviewContext)
-  setBranchPreview(branch)
   const { setActiveSidebarElement } = useContext(SidebarContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
-    setHeadings(headingList)
+    setBranchPreview(branch)
   }, [serialized.frontmatter])
   return (
     <>
