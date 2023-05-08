@@ -1,0 +1,3 @@
+[submodule "RapiDoc"]
+	path = RapiDoc
+	url = https://github.com/vtexdocs/RapiDoc/
