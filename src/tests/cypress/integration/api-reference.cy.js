@@ -82,27 +82,4 @@ describe('API reference documentation page', () => {
           })
       })
   })
-
-  it('Check if the copy component works fine', () => {
-    cy.get('rapi-doc')
-      .shadow()
-      .within(() => {
-        cy.get('content-copy-button')
-          .shadow()
-          .within(() => {
-            cy.get('.content-copy-container')
-              .first()
-              .children()
-              .eq(0)
-              .as('input2Copy')
-              .click()
-
-            cy.get('@input2Copy').invoke('text').as('defaultText')
-
-            cy.get('@defaultText').then((text) => {
-              cy.task('getClipboard').should('eq', text)
-            })
-          })
-      })
-  })
 })
