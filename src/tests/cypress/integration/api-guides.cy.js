@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { filterSidebarItems, writeLog } from '../support/functions'
+import { writeLog } from '../support/functions'
 import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
@@ -24,51 +24,42 @@ describe('API guides documentation page', () => {
     }
   })
 
-  it('Check if a random guide page, chosen using the sidebar, loads', () => {
+  it('Check if the sidebar collapse button works', () => {
+    cy.get('.toggleIcon').should('not.be.visible').click()
+    cy.get('[data-cy="sidebar-section"]').should('not.be.visible')
     cy.get('.toggleIcon').should('be.visible').click()
     cy.get('[data-cy="sidebar-section"]').should('be.visible')
+  })
 
-    cy.get('.sidebar-component > div', { timeout: 10000 })
-      .filter(filterSidebarItems)
+  it('Check if a random guide page, chosen using the sidebar, loads', () => {
+    cy.get('.css-1450tp')
       .anyWithIndex()
       .then(([category, index]) => {
         cy.wrap(index).as('idx')
         return cy.wrap(category)
       })
-      .find('button')
       .scrollIntoView()
-      .should('be.visible')
+      .find('button')
       .click({ force: true })
 
     cy.get('@idx').then((idx) => {
-      cy.get('.sidebar-component > div', { timeout: 1000 })
-        .eq(idx * 3 + 1)
-        .find('.sidebar-component > div')
-        .filter(filterSidebarItems)
-        .anyWithIndex()
-        .then(([element, index]) => {
-          cy.wrap(index).as('subItemsIdx')
-          if (element.find('button').length)
-            return cy.wrap(element).find('button')
+      cy.get('.css-1450tp')
+        .eq(idx + 1)
+        .then((element) => {
+          const hasButton = element.find('button').length
+          cy.wrap(element.find('button').length).as('hasButton')
+          if (hasButton) return cy.wrap(element).find('button')
           return cy.wrap(element).find('a')
         })
-        .click()
+        .click({ force: true })
 
-      cy.get('@subItemsIdx').then((subItemIndex) => {
-        cy.get('.sidebar-component > div', { timeout: 1000 })
-          .eq(idx * 3 + 1)
-          .find('.sidebar-component > div')
-          .eq(subItemIndex * 2 + 1)
-          .then((element) => {
-            if (element.children().length > 0) {
-              cy.wrap(element)
-                .find('.sidebar-component > div')
-                .filter(filterSidebarItems)
-                .any()
-                .find('a')
-                .click({ force: true })
-            }
-          })
+      cy.get('@hasButton').then((hasButton) => {
+        if (hasButton) {
+          cy.get('.css-1450tp')
+            .eq(idx + 2)
+            .find('a')
+            .click({ force: true })
+        }
       })
     })
 
