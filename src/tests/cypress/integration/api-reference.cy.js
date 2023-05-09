@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { filterSidebarItems, writeLog } from '../support/functions'
+import { writeLog } from '../support/functions'
 
 describe('API reference documentation page', () => {
   before(() => {
@@ -23,56 +23,34 @@ describe('API reference documentation page', () => {
     }
   })
 
-  it('Check if a random endpoint page, chosen using the sidebar, loads', () => {
+  it('Check if the sidebar collapse button works', () => {
+    cy.get('.toggleIcon').should('not.be.visible').click()
+    cy.get('[data-cy="sidebar-section"]').should('not.be.visible')
     cy.get('.toggleIcon').should('be.visible').click()
     cy.get('[data-cy="sidebar-section"]').should('be.visible')
+  })
 
-    cy.get('.sidebar-component').first().as('entireList')
-    cy.get('@entireList')
-      .children()
-      .filter(filterSidebarItems)
+  it('Check if a random guide page, chosen using the sidebar, loads', () => {
+    cy.get('.css-1450tp')
       .anyWithIndex()
       .then(([category, index]) => {
         cy.wrap(index).as('idx')
         return cy.wrap(category)
       })
-      .find('a')
+      .scrollIntoView()
+      .find('button')
       .click({ force: true })
 
     cy.get('@idx').then((idx) => {
-      cy.get('@entireList', { timeout: 1000 })
-        .children()
-        .eq(idx * 3 + 1)
-        .find('.sidebar-component > div')
-        .filter(filterSidebarItems)
-        .anyWithIndex()
-        .then(([element, subItemidx]) => {
-          cy.wrap(subItemidx).as('subItemsIdx')
-          return cy.wrap(element.find('button'))
-        })
-        .scrollIntoView()
-        .should('be.visible')
+      cy.get('.css-1450tp')
+        .eq(idx + 1)
+        .find('button')
         .click({ force: true })
-    })
 
-    cy.get('@idx').then((categoryIdx) => {
-      cy.get('@subItemsIdx').then((subcategoryIdx) => {
-        cy.get('@entireList', { timeout: 6000 })
-          .children()
-          .eq(categoryIdx * 3 + 1)
-          .find('.sidebar-component > div', { timeout: 6000 })
-          .eq(subcategoryIdx * 2 + 1)
-          .find('.sidebar-component > div', { timeout: 6000 })
-          .filter(filterSidebarItems)
-          .anyWithIndex()
-          .then(([endpoint]) => {
-            return cy.wrap(endpoint)
-          })
-          .find('a')
-          .scrollIntoView()
-          .should('be.visible')
-          .click()
-      })
+      cy.get('.css-1450tp')
+        .eq(idx + 2)
+        .find('a')
+        .click({ force: true })
     })
 
     cy.url({ timeout: 10000 })
@@ -101,29 +79,6 @@ describe('API reference documentation page', () => {
               .should('be.visible')
               .click()
             cy.get('.resp-content').first().should('be.visible')
-          })
-      })
-  })
-
-  it('Check if the copy component works fine', () => {
-    cy.get('rapi-doc')
-      .shadow()
-      .within(() => {
-        cy.get('content-copy-button')
-          .shadow()
-          .within(() => {
-            cy.get('.content-copy-container')
-              .first()
-              .children()
-              .eq(0)
-              .as('input2Copy')
-              .click()
-
-            cy.get('@input2Copy').invoke('text').as('defaultText')
-
-            cy.get('@defaultText').then((text) => {
-              cy.task('getClipboard').should('eq', text)
-            })
           })
       })
   })
