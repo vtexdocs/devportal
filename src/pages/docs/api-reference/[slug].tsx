@@ -1,13 +1,14 @@
 import Head from 'next/head'
-import Script from 'next/script'
 import { useRouter } from 'next/router'
 import { useEffect, useRef } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
+import SwaggerParser from '@apidevtools/swagger-parser'
 
 import getReferencePaths from 'utils/getReferencePaths'
 import getNavigation from 'utils/getNavigation'
 import { MethodType, isMethodType } from 'utils/typings/unionTypes'
+import '../../../../RapiDoc/src/rapidoc.js'
 
 interface Endpoint {
   title: string
@@ -15,6 +16,7 @@ interface Endpoint {
 }
 interface Props {
   slug: string
+  doc: string
   endpoints: { [key: string]: Endpoint }
 }
 
@@ -43,7 +45,7 @@ function getDescription(description: string) {
 const referencePaths = await getReferencePaths()
 const slugs = Object.keys(await getReferencePaths())
 
-const APIPage: NextPage<Props> = ({ slug, endpoints }) => {
+const APIPage: NextPage<Props> = ({ slug, doc, endpoints }) => {
   const router = useRouter()
   const rapidoc = useRef<{ scrollToPath: (endpoint: string) => void }>(null)
   const pageTitle =
@@ -94,14 +96,10 @@ const APIPage: NextPage<Props> = ({ slug, endpoints }) => {
         <meta name="docsearch:doccategory" content={pageTitle} />
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
-      <Script
-        type="text/javascript"
-        src="/rapidoc/rapidoc-min.js"
-        strategy="beforeInteractive"
-      />
       <rapi-doc
         ref={rapidoc}
         spec-url={`/api/openapi/${slug}`}
+        spec={doc}
         layout="column"
         render-style="focused"
         show-header="false"
@@ -140,10 +138,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()
   if (slugs.includes(slug as string)) {
-    const response = await fetch(
+    const api = await SwaggerParser.dereference(
       `https://developers.vtex.com/api/openapi/${slug}`
     )
-    const doc = await response.json()
+    const doc = JSON.stringify(await SwaggerParser.parse(api))
     const endpointFile = new Oas(doc)
     const { info, paths } = endpointFile.getDefinition()
     const endpoints: {
@@ -181,6 +179,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         slug,
+        doc,
         url,
         sectionSelected,
         sidebarfallback,
