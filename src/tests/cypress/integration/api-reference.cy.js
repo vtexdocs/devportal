@@ -24,9 +24,15 @@ describe('API reference documentation page', () => {
   })
 
   it('Check if the sidebar collapse button works', () => {
-    cy.get('.toggleIcon').should('not.be.visible').click()
+    cy.get('.toggleIcon')
+      .scrollIntoView({ offset: { top: -100 } })
+      .should('not.be.visible')
+      .click()
     cy.get('[data-cy="sidebar-section"]').should('not.be.visible')
-    cy.get('.toggleIcon').should('be.visible').click()
+    cy.get('.toggleIcon')
+      .scrollIntoView({ offset: { top: -100 } })
+      .should('be.visible')
+      .click()
     cy.get('[data-cy="sidebar-section"]').should('be.visible')
   })
 
@@ -39,21 +45,21 @@ describe('API reference documentation page', () => {
       })
       .scrollIntoView()
       .find('button')
-      .click({ force: true })
+      .click()
 
     cy.get('@idx').then((idx) => {
       cy.get('.css-1450tp')
         .eq(idx + 1)
         .find('button')
-        .click({ force: true })
+        .click()
 
       cy.get('.css-1450tp')
         .eq(idx + 2)
         .find('a')
-        .click({ force: true })
+        .click()
     })
 
-    cy.url({ timeout: 10000 })
+    cy.url()
       .should('match', /(\/api-reference\/.)/)
       .then((url) => cy.task('setUrl', url))
   })
