@@ -53,7 +53,6 @@ const APIPage: NextPage<Props> = ({ slug, doc, endpoints }) => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     resolvedSpec: any
   }>(null)
-  const [endpointPath, setEndpointPath] = useState('')
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
 

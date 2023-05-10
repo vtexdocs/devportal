@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import {
@@ -71,14 +70,6 @@ const HitWithInsights = connectHitInsights(aa)(Hit)
 const HitsBox = connectStateResults<HitsBoxProps>(
   ({ searchState, searchResults, changeFocus }) => {
     const router = useRouter()
-    const [searchStateActive, setSearchStateActive] =
-      useState<SearchState>(searchState)
-    const [prevSearchState, setPrevSearchState] = useState(searchState)
-
-    if (searchState !== prevSearchState) {
-      setSearchStateActive(searchState)
-      setPrevSearchState(searchState)
-    }
 
     const seeAllSubmit = (keyword: string) => {
       router.push({
@@ -99,7 +90,7 @@ const HitsBox = connectStateResults<HitsBoxProps>(
 
     return (
       <>
-        {searchStateActive?.query && searchResults && (
+        {searchResults && (
           <Box sx={styles.resultsOuterContainer}>
             <Box sx={styles.resultsInnerContainer}>
               <Box sx={searchResults.hits.length && styles.resultsBox}>
@@ -109,7 +100,6 @@ const HitsBox = connectStateResults<HitsBoxProps>(
                       <Box
                         key={`matched-result-${index}`}
                         onClick={() => changeFocus(false)}
-                        // onClick={() => setSearchStateActive({})}
                       >
                         <HitWithInsights
                           hit={setQueryIDAndPosition(searchResult, index)}
