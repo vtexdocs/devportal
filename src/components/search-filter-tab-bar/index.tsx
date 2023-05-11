@@ -24,7 +24,7 @@ const SearchFilterTab = ({
       <Text sx={styles.tabTitle(filterSelectedSection === filter)}>
         {filter || 'All Results'}
       </Text>
-      <Text sx={styles.tabCount}>{ocurrenceCount.get(filter) || 0}</Text>
+      <Text sx={styles.tabCount}>{ocurrenceCount[filter] || 0}</Text>
     </Flex>
   )
 }

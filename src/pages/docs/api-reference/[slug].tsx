@@ -47,7 +47,12 @@ const slugs = Object.keys(await getReferencePaths())
 
 const APIPage: NextPage<Props> = ({ slug, doc, endpoints }) => {
   const router = useRouter()
-  const rapidoc = useRef<{ scrollToPath: (endpoint: string) => void }>(null)
+  const rapidoc = useRef<{
+    shadowRoot: Node
+    scrollToPath: (endpoint: string) => void
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    resolvedSpec: any
+  }>(null)
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
 
@@ -56,15 +61,16 @@ const APIPage: NextPage<Props> = ({ slug, doc, endpoints }) => {
     const method = regexMethodMatches ? regexMethodMatches[1].toUpperCase() : ''
     return method && isMethodType(method) ? method : ''
   }
-  const httpMethod = getMethod() as MethodType | ''
+  const httpMethod: MethodType | '' = getMethod()
   const hash = router.asPath.split('#')[1]
   const endpointPath = hash ? `#${hash}` : slug
 
   useEffect(() => {
     const scrollDoc = () => {
       if (rapidoc.current) {
-        const endpoint = window.location.hash.slice(1) || 'overview'
-        rapidoc.current.scrollToPath(endpoint)
+        rapidoc.current.scrollToPath(
+          window.location.hash.slice(1) || 'overview'
+        )
       }
     }
 

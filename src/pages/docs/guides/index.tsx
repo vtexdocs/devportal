@@ -174,6 +174,11 @@ const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
           content={messages['api_guides_page.subtitle']}
           key="title"
         />
+        <meta name="docsearch:doctype" content="Guides" />
+        <meta
+          name="docsearch:doctitle"
+          content={messages['api_guides_page.title']}
+        />
       </Head>
       <Fragment>
         <PageHeader

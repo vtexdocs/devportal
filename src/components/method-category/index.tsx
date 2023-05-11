@@ -18,7 +18,7 @@ const MethodCategory = ({
   sx,
 }: MethodCategoryProps) => {
   return (
-    <Flex sx={categoryStyle(method, active, sx)}>
+    <Flex className="method-category" sx={categoryStyle(method, active, sx)}>
       <Text sx={styles.text}>{categoryText(method, origin)}</Text>
       {origin === 'filter' && active && (
         <CloseFilterIcon

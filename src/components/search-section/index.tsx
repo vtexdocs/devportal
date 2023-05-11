@@ -1,9 +1,10 @@
 import { Box, Flex, Text } from '@vtex/brand-ui'
 import type { DocDataElement, UpdatesDataElement } from 'utils/typings/types'
-import { useContext } from 'react'
-import { SearchContext } from 'utils/contexts/search'
+import { useContext, useEffect } from 'react'
+import { FilterType, SearchContext } from 'utils/contexts/search'
 
 import styles from './styles'
+import { useRouter } from 'next/router'
 
 interface SearchSectionProps {
   dataElement: DocDataElement | UpdatesDataElement | null
@@ -11,13 +12,21 @@ interface SearchSectionProps {
 }
 
 const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
+  const router = useRouter()
   const { filterSelectedSection, ocurrenceCount, changeFilterSelectedSection } =
     useContext(SearchContext)
+
+  const updateFilter = (value: FilterType) => {
+    router.query.filter = value
+    changeFilterSelectedSection(value)
+  }
+
+  useEffect(() => {
+    updateFilter('')
+  }, [router.query])
+
   return !dataElement ? (
-    <Flex
-      sx={styles.sectionContainer}
-      onClick={() => changeFilterSelectedSection('')}
-    >
+    <Flex sx={styles.sectionContainer} onClick={() => updateFilter('')}>
       <Text
         className="search-section-title"
         sx={
@@ -29,14 +38,14 @@ const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
         All results
       </Text>
       <Box className="search-section-count" sx={styles.sectionCount}>
-        {ocurrenceCount.get('')}
+        {ocurrenceCount['']}
       </Box>
     </Flex>
   ) : (
     <Flex
       sx={styles.sectionContainer}
       key={`search-section-${dataElement.title}${index}`}
-      onClick={() => changeFilterSelectedSection(dataElement.title)}
+      onClick={() => updateFilter(dataElement.title)}
     >
       <Flex sx={styles.sectionIconTitleBox}>
         <dataElement.Icon sx={styles.sectionIcon} />
@@ -52,7 +61,7 @@ const SearchSection = ({ dataElement, index }: SearchSectionProps) => {
         </Text>
       </Flex>
       <Box className="search-section-count" sx={styles.sectionCount}>
-        {ocurrenceCount.get(dataElement.title) || 0}
+        {ocurrenceCount[dataElement.title] || 0}
       </Box>
     </Flex>
   )

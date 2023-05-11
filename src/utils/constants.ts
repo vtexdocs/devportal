@@ -1,9 +1,11 @@
+import algoliasearch from 'algoliasearch/lite'
+import { MultipleQueriesQuery } from '@algolia/client-search'
+
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
 import AppDevelopmentIcon from 'components/icons/app-development-icon'
 import StorefrontDevelopmentIcon from 'components/icons/storefront-development-icon'
 import VTEXIOAppsIcon from 'components/icons/vtex-io-apps-icon'
-
 import ReleaseNotesIcon from 'components/icons/release-notes-icon'
 
 import { getMessages } from 'utils/get-messages'
@@ -21,6 +23,19 @@ import {
   WhatsNextDataElement,
   ResourceDataElement,
 } from './typings/types'
+
+const algoliaClient = algoliasearch(
+  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ''
+)
+
+export const searchClient = {
+  ...algoliaClient,
+  search(requests: MultipleQueriesQuery[]) {
+    if (requests.every(({ params }) => !params?.query)) return
+    return algoliaClient.search(requests)
+  },
+}
 
 export const messages = getMessages()
 

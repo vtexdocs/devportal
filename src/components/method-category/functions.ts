@@ -3,7 +3,7 @@ import { MethodType } from 'utils/typings/unionTypes'
 
 import styles from './styles'
 
-const methodsColors = {
+export const methodsColors = {
   POST: {
     border: '1px solid #7CBBEA',
     color: '#2978B5',

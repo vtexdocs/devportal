@@ -1,32 +1,47 @@
 import { SxStyleProp } from '@vtex/brand-ui'
+import { methodsColors } from 'components/method-category/functions'
+import { MethodType } from 'utils/typings/unionTypes'
 
 const container: SxStyleProp = {
+  justifyContent: 'space-between',
+  borderRadius: '9px',
+  border: '1px solid #DDDDDD',
   width: '100%',
-  padding: '16px',
-  mt: '8px',
+  mb: '18px',
+  paddingTop: '26px',
+  paddingBottom: '10px',
+  paddingLeft: ['13px', '44px'],
+  paddingRight: '13px',
   background: '#FFFFFF',
   cursor: 'pointer',
-  borderRadius: '4px',
-  ':hover': {
-    background: '#F8F7FC',
-    '.searchCardTitle, .searchCardDescription': {
-      color: '#142032',
+}
+
+const containerActive = (method: MethodType | undefined): SxStyleProp => {
+  const methodCategory = method ? methodsColors[method] : ''
+  return {
+    ...container,
+    ':hover': {
+      background: '#F8F7FC',
+      '.searchCardTitle, .searchCardDescription': {
+        color: '#142032',
+      },
+      '.method-category': {
+        ...methodCategory,
+      },
     },
-  },
+  }
 }
 
 const title: SxStyleProp = {
   display: 'flex',
-  alignItems: 'center',
-  fontSize: '18px',
-  lineHeight: '24px',
+  alignItems: 'flex-start',
+  fontSize: ['16px', '18px'],
+  lineHeight: ['22px', '24px'],
   color: 'muted.0',
 }
 
 const httpMethod: SxStyleProp = {
   mr: '4px',
-  fontSize: '12px',
-  lineHeight: '16px',
 }
 
 const icon: SxStyleProp = {
@@ -47,26 +62,58 @@ const description: SxStyleProp = {
   mb: '8px',
 }
 
-const filterContainer: SxStyleProp = {
-  paddingLeft: '32px',
+const descriptionToggle: SxStyleProp = {
+  height: 'auto',
+  minWidth: 'auto',
 }
 
-const filter: SxStyleProp = {
-  display: 'flex',
+const descriptionExpandedItem: SxStyleProp = {
+  mt: '24px',
+}
+
+const breadcrumbsContainer: SxStyleProp = {
+  display: ['none', 'flex'],
+  paddingLeft: '32px',
   alignItems: 'center',
+}
+
+const alignCenter: SxStyleProp = {
+  alignItems: 'center',
+}
+
+const documentation: SxStyleProp = {
+  ...alignCenter,
+  minWidth: 'max-content',
+}
+
+const breadcrumb: SxStyleProp = {
+  color: 'muted.1',
   fontSize: '16px',
   lineHeight: '18px',
-  color: 'muted.1',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
 }
 
-const filterIn: SxStyleProp = {
-  ...filter,
+const lastBreadcrumb: SxStyleProp = {
+  ...breadcrumb,
+  margin: 'auto 0',
+  display: 'block',
+  overflow: 'hidden',
+  maxWidth: 'max-content',
+  whiteSpace: 'nowrap',
+}
+
+const breadcrumbsIn: SxStyleProp = {
+  ...breadcrumb,
   mr: '4px',
+  minWidth: 'fit-content',
 }
 
-const filterArrow: SxStyleProp = {
+const breadcrumbsArrow: SxStyleProp = {
   width: '16px',
   height: '16px',
+  color: 'muted.2',
 }
 
 const actionContainer: SxStyleProp = {
@@ -83,15 +130,20 @@ const actionIcon: SxStyleProp = {
 }
 
 export default {
-  container,
+  containerActive,
   title,
   httpMethod,
   icon,
   description,
-  filterContainer,
-  filter,
-  filterIn,
-  filterArrow,
+  descriptionToggle,
+  descriptionExpandedItem,
+  breadcrumbsContainer,
+  alignCenter,
+  documentation,
+  breadcrumb,
+  lastBreadcrumb,
+  breadcrumbsIn,
+  breadcrumbsArrow,
   actionContainer,
   actionIcon,
 }

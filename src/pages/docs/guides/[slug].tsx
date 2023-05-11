@@ -83,6 +83,7 @@ const DocumentationPage: NextPage<Props> = ({
   isListed,
   breadcumbList,
   branch,
+  sectionSelected,
 }) => {
   const headings: Item[] = headingList
   const { setBranchPreview } = useContext(PreviewContext)
@@ -95,7 +96,7 @@ const DocumentationPage: NextPage<Props> = ({
     <>
       <Head>
         <title>{serialized.frontmatter?.title as string}</title>
-        <meta name="docsearch:doctype" content="Guides" />
+        <meta name="docsearch:doctype" content={sectionSelected} />
         <meta
           name="docsearch:doctitle"
           content={serialized.frontmatter?.title as string}
