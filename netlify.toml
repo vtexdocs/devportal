@@ -76,9 +76,9 @@ to = '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice'
 
 [[redirects]]
 force = true
-from = '/docs/api-reference/payment-provider-protocol#get-/payment-methods'
+from = '/vtex-rest-api/reference/payment-flow#createpayment'
 status = 308
-to = '/docs/api-reference/payment-provider-protocol#get-/manifest'
+to = '/docs/api-reference/payment-provider-protocol#post-/payments'
 
 [[redirects]]
 force = true
@@ -379,6 +379,12 @@ force = true
 from = '/docs/api-reference/marketplace-protocol#post-/api/checkout/pub/orderForms/simulation'
 status = 308
 to = '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/checkout/pub/orderForms/simulation'
+
+[[redirects]]
+force = true
+from = '/docs/api-reference/payment-provider-protocol#get-/payment-methods'
+status = 308
+to = '/docs/api-reference/payment-provider-protocol#get-/manifest'
 
 [[redirects]]
 force = true
