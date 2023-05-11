@@ -63,7 +63,9 @@ const Sidebar = ({ parentsArray = [] }: SideBarSectionState) => {
       activeSlug = apiSlug
       keyPath = getKeyByEndpoint(flattenedSidebar, '', apiSlug)
     } else {
-      const method = docPath[0].split('#')[1].split('-')[0]
+      const method = docPath[0].includes('#')
+        ? docPath[0].split('#')[1].split('-')[0]
+        : docPath[1]
       keyPath = getKeyByEndpoint(flattenedSidebar, endpoint, apiSlug, method)
     }
     parentsArray.push(activeSlug)
