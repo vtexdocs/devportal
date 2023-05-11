@@ -11,7 +11,7 @@
           "accountId": "6003163501",
           "containerId": "116800787",
           "name": "GA4 Demo",
-          "publicId": "GTM-PGC54GQ",
+          "publicId": "GTM-USEYOUROWN",
           "usageContext": [
               "WEB"
           ],
@@ -33,7 +33,7 @@
               "supportZones": true
           },
           "tagIds": [
-              "GTM-PGC54GQ"
+              "GTM-USEYOUROWN"
           ]
       },
       "tag": [
