@@ -14,6 +14,7 @@ import { MethodType, isMethodType } from 'utils/typings/unionTypes'
 import '../../../../RapiDoc/src/rapidoc.js'
 import { flattenWithChildren } from 'utils/navigation-utils'
 import { getLogger } from 'utils/logging/log-util'
+import getReferenceEndpoints from 'utils/getReferenceEndpoints'
 
 interface Endpoint {
   title: string
@@ -65,6 +66,9 @@ function getDescription(description: string) {
 
 const referencePaths = await getReferencePaths()
 const slugs = Object.keys(await getReferencePaths())
+const referenceEndpoints = (await getReferenceEndpoints({
+  sitemap: false,
+})) as string[]
 
 const APIPage: NextPage<Props> = ({
   slug,
@@ -181,8 +185,8 @@ const APIPage: NextPage<Props> = ({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = slugs.map((slug) => ({
-    params: { slug },
+  const paths = referenceEndpoints.map((slug) => ({
+    params: { slug: [slug] },
   }))
   return {
     paths,
@@ -191,7 +195,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slug || ''
+  const slug = params?.slug ? params?.slug[0] : ''
   const url = referencePaths[slug as string]
   const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()

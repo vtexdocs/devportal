@@ -53,7 +53,7 @@ const Sidebar = ({ parentsArray = [] }: SideBarSectionState) => {
   const flattenedSidebar = flattenJSON(sidebarNavigation)
   let activeSlug = ''
   const querySlug = router.query.slug
-  if (querySlug && router.pathname === '/docs/api-reference/[slug]') {
+  if (querySlug && router.pathname === '/docs/api-reference/[...slug]') {
     activeSlug = router.asPath.replace('/docs/api-reference/', '')
     const docPath = activeSlug.split('/')
     const apiSlug = docPath[0].split('#')[0]
