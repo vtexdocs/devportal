@@ -1978,6 +1978,21 @@
               "children": []
             }
           ]
+        },
+        {
+          "name": "Troubleshooting",
+          "slug": "troubleshooting",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "My store is slow or unavailable",
+              "slug": "my-store-is-slow-or-unavailable",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
         }
       ]
     },
