@@ -15,6 +15,7 @@ import '../../../../RapiDoc/src/rapidoc.js'
 import { flattenWithChildren } from 'utils/navigation-utils'
 import { getLogger } from 'utils/logging/log-util'
 import getReferenceEndpoints from 'utils/getReferenceEndpoints'
+import filterOpenAPI from 'utils/filterOpenAPI'
 
 interface Endpoint {
   title: string
@@ -36,6 +37,7 @@ interface Pagination {
 
 interface Props {
   slug: string
+  slugAPI: string
   doc: string
   endpoints: { [key: string]: Endpoint }
   pagination: { [key: string]: Pagination }
@@ -72,6 +74,7 @@ const referenceEndpoints = (await getReferenceEndpoints({
 
 const APIPage: NextPage<Props> = ({
   slug,
+  slugAPI,
   doc,
   endpoints,
   pagination,
@@ -85,7 +88,7 @@ const APIPage: NextPage<Props> = ({
     resolvedSpec: any
   }>(null)
   const pageTitle =
-    capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
+    capitalize(slugAPI.replaceAll('-', ' ').replace('api', '')) + ' API'
 
   const getMethod = () => {
     const regexMethodMatches = router.asPath.match(/#(.*?)-/) || ''
@@ -94,7 +97,6 @@ const APIPage: NextPage<Props> = ({
   }
   const httpMethod: MethodType | '' = getMethod()
   const hash = router.asPath.split('#')[1]
-  const endpointPath = hash ? `#${hash}` : slug
   const pag: Pagination = {
     previousDoc: {
       name: null,
@@ -106,13 +108,20 @@ const APIPage: NextPage<Props> = ({
     },
   }
   const [endpointPagination, setEndpointPagination] = useState(pag)
+  const endpointPath = hash ? `#${hash}` : slugAPI
+
+  useEffect(() => {
+    if (slugAPI !== slug && rapidoc.current)
+      rapidoc.current.scrollToPath(slug.slice(slug.indexOf('/') + 1))
+  }, [slug])
 
   useEffect(() => {
     const scrollDoc = () => {
       if (rapidoc.current) {
-        rapidoc.current.scrollToPath(
-          window.location.hash.slice(1) || 'overview'
-        )
+        if (slugAPI === slug)
+          rapidoc.current.scrollToPath(
+            window.location.hash.slice(1) || 'overview'
+          )
       }
     }
 
@@ -151,8 +160,8 @@ const APIPage: NextPage<Props> = ({
       <Box sx={{ px: ['1em', '2em'], pt: '1em' }}>
         <rapi-doc
           ref={rapidoc}
-          spec-url={`/api/openapi/${slug}`}
           postman-url={`/api/postman/${slug}`}
+          spec-url={`/api/openapi/${slugAPI}`}
           spec={doc}
           layout="column"
           render-style="focused"
@@ -195,17 +204,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.slug ? params?.slug[0] : ''
-  const url = referencePaths[slug as string]
+  const slug =
+    typeof params?.slug === 'object'
+      ? params.slug.join('/')
+      : params?.slug ?? ''
+  const slugAPI = params?.slug ? params?.slug[0] : ''
+  const url = referencePaths[slugAPI as string]
   const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()
   const logger = getLogger('API Reference')
   let api
-  if (slugs.includes(slug as string)) {
+
+  if (slugs.includes(slugAPI as string)) {
+    const openAPI = await filterOpenAPI(slug)
     try {
-      api = await SwaggerParser.dereference(
-        `https://developers.vtex.com/api/openapi/${slug}`
-      )
+      api = await SwaggerParser.dereference(openAPI)
     } catch (error) {
       logger.error(`Parse Error on file ${slug}`)
       return {
@@ -219,7 +232,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       [key: string]: Endpoint
     } = {}
 
-    endpoints[slug as string] = {
+    endpoints[slugAPI as string] = {
       title: info.title,
       description: getDescription(info.description || ''),
     }
@@ -319,6 +332,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         slug,
+        slugAPI,
         doc,
         url,
         sectionSelected,
