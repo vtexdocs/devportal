@@ -96,7 +96,6 @@ const APIPage: NextPage<Props> = ({
     return method && isMethodType(method) ? method : ''
   }
   const httpMethod: MethodType | '' = getMethod()
-  const hash = router.asPath.split('#')[1]
   const pag: Pagination = {
     previousDoc: {
       name: null,
@@ -108,7 +107,7 @@ const APIPage: NextPage<Props> = ({
     },
   }
   const [endpointPagination, setEndpointPagination] = useState(pag)
-  const endpointPath = hash ? `#${hash}` : slugAPI
+  const endpointPath = router.asPath.split(slugAPI)[1].substring(1) || slugAPI
 
   useEffect(() => {
     if (slugAPI !== slug && rapidoc.current)
@@ -249,7 +248,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                 endpointValue &&
                 endpointValue.description
               ) {
-                endpoints[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] = {
+                endpoints[`${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] = {
                   title: endpointValue.summary || '',
                   description: getDescription(endpointValue.description),
                 }
