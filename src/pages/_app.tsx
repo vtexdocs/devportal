@@ -34,6 +34,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: Props) {
             isEditor={Component.isEditor}
             sectionSelected={pageProps.sectionSelected}
             parentsArray={pageProps.parentsArray}
+            slugAPI={pageProps.slugAPI}
           >
             <Component {...pageProps} />
           </Layout>

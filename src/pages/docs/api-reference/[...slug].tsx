@@ -163,6 +163,7 @@ const APIPage: NextPage<Props> = ({
           postman-url={`/api/postman/${slug}`}
           spec-url={`/api/openapi/${slugAPI}`}
           spec={doc}
+          route-prefix={slug === slugAPI ? '#' : `${slugAPI}/`}
           layout="column"
           render-style="focused"
           show-header="false"

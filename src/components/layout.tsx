@@ -22,6 +22,7 @@ interface Props {
   isEditor?: boolean
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
   parentsArray?: string[]
+  slugAPI?: string
 }
 
 // const tracker = new OpenReplay({
@@ -37,6 +38,7 @@ export default function Layout({
   isEditor,
   sectionSelected,
   parentsArray,
+  slugAPI,
 }: Props) {
   const { initTracker, startTracking } = useContext(TrackerContext)
   useEffect(() => {
@@ -81,7 +83,9 @@ export default function Layout({
       >
         <Header isEditor={isEditor ? true : false} />
         <Flex sx={styles.container}>
-          {!hideSidebar && <Sidebar parentsArray={parentsArray} />}
+          {!hideSidebar && (
+            <Sidebar slugAPI={slugAPI} parentsArray={parentsArray} />
+          )}
           <Box sx={styles.mainContainer}>{children}</Box>
         </Flex>
       </SidebarContextProvider>

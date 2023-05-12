@@ -106,7 +106,7 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     children,
   }: SidebarElement) => {
     const isExpandable = children.length > 0
-    const pathSuffix = method ? `#${method.toLowerCase()}-${endpoint}` : ''
+    const pathSuffix = method ? `/${method.toLowerCase()}-${endpoint}` : ''
     const activeItem = method ? `${slug}${pathSuffix}` : slug
     return (
       <Box sx={styles.elementContainer}>

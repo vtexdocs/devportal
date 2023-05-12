@@ -26,9 +26,10 @@ import useNavigation from 'utils/hooks/useNavigation'
 
 interface SideBarSectionState {
   parentsArray?: string[]
+  slugAPI?: string
 }
 
-const Sidebar = ({ parentsArray = [] }: SideBarSectionState) => {
+const Sidebar = ({ parentsArray = [], slugAPI = '' }: SideBarSectionState) => {
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
 
   const {
@@ -48,25 +49,23 @@ const Sidebar = ({ parentsArray = [] }: SideBarSectionState) => {
   useEffect(() => {
     if (!isEditorPreview) setSidebarDataMaster(sidebarNavigation)
   }, [sidebarNavigation])
-
   const router = useRouter()
   const flattenedSidebar = flattenJSON(sidebarNavigation)
   let activeSlug = ''
   const querySlug = router.query.slug
   if (querySlug && router.pathname === '/docs/api-reference/[...slug]') {
-    activeSlug = router.asPath.replace('/docs/api-reference/', '')
+    activeSlug = router.asPath
+      .replace('/docs/api-reference/', '')
+      .replace('#', '/')
     const docPath = activeSlug.split('/')
-    const apiSlug = docPath[0].split('#')[0]
-    const endpoint = '/' + docPath.splice(1, docPath.length).join('/')
+    const endpoint = '/' + docPath.slice(2, docPath.length).join('/')
     let keyPath
     if (endpoint == '/') {
-      activeSlug = apiSlug
-      keyPath = getKeyByEndpoint(flattenedSidebar, '', apiSlug)
+      activeSlug = slugAPI
+      keyPath = getKeyByEndpoint(flattenedSidebar, '', slugAPI)
     } else {
-      const method = docPath[0].includes('#')
-        ? docPath[0].split('#')[1].split('-')[0]
-        : docPath[1]
-      keyPath = getKeyByEndpoint(flattenedSidebar, endpoint, apiSlug, method)
+      const method = docPath[1]?.split('-')[0]
+      keyPath = getKeyByEndpoint(flattenedSidebar, endpoint, slugAPI, method)
     }
     parentsArray.push(activeSlug)
     if (keyPath) {
