@@ -110,11 +110,6 @@ const APIPage: NextPage<Props> = ({
   const endpointPath = router.asPath.split(slugAPI)[1].substring(1) || slugAPI
 
   useEffect(() => {
-    if (slugAPI !== slug && rapidoc.current)
-      rapidoc.current.scrollToPath(slug.slice(slug.indexOf('/') + 1))
-  }, [slug])
-
-  useEffect(() => {
     const scrollDoc = () => {
       if (rapidoc.current) {
         if (slugAPI === slug)
