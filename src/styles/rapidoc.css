@@ -22,22 +22,6 @@ rapi-doc::part(section-navbar-scroll) {
 
 rapi-doc::part(section-main-content) {
   background: #ffffff;
-  padding: 24px 0;
-}
-
-rapi-doc::part(section-overview),
-rapi-doc::part(section-operations-in-tag) {
-  width: 85%;
-  margin: auto;
-}
-
-rapi-doc::part(anchor-param-example) {
-  color: #e31c58;
-  font-size: 14px;
-}
-
-rapi-doc::part(anchor-param-example):hover {
-  color: #c81e51;
 }
 
 rapi-doc::part(textbox),
@@ -77,8 +61,9 @@ rapi-doc::part(section-overview-title){
 
 rapi-doc::part(section-operation-summary),
 rapi-doc::part(section-overview-title) {
-  font-size: 32px;
+  font-size: 28px;
   padding-bottom: 24px;
   border-bottom: 1px solid #E7E9EE;
-  margin-bottom: 24px;
+  margin-top: 16px;
+  line-height: 38px;
 }

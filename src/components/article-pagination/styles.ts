@@ -25,6 +25,10 @@ const paginationBox: SxStyleProp = {
   borderRadius: '4px',
   border: '1px solid #E7E9EE',
   color: '#4A596B',
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
 }
 
 const paginationText: SxStyleProp = {
@@ -48,6 +52,7 @@ const paginationLinkNext: SxStyleProp = {
   ...paginationLink,
   justifySelf: 'flex-end',
   textAlign: 'right',
+  gridColumnStart: '2',
 }
 
 const paginationLinkPrevious: SxStyleProp = {
