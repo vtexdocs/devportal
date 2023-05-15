@@ -9,7 +9,7 @@ export const config = {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function handler(req: any, res: any) {
   const { slug } = req.query
-  const filteredOpenAPI = filterOpenAPI(slug)
+  const filteredOpenAPI = await filterOpenAPI(slug)
 
   if (filteredOpenAPI) {
     res
