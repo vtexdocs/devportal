@@ -244,21 +244,15 @@ to = '/docs/guides/changes-and-limitations-pii-platform-version'
 
 [[redirects]]
 force = true
-from = '/docs/guides/data-privacy'
-status = 308
-to = '/docs/guides/pii-platform-version'
-
-[[redirects]]
-force = true
 from = '/docs/guides/changes-and-limitations-pii-compliant-account'
 status = 308
-to = '/docs/guides/changes-and-limitations-pii-platform-version'
+to = '/docs/guides/changes-and-limitations-pii-data-architecture'
 
 [[redirects]]
 force = true
 from = '/docs/guides/pii-compliant-accounts'
 status = 308
-to = '/docs/guides/pii-platform-version'
+to = '/docs/guides/data-privacy'
 
 [[redirects]]
 force = true
