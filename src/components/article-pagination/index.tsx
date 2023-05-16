@@ -29,8 +29,6 @@ const ArticlePagination = ({
 }: Props) => {
   const router = useRouter()
 
-  console.log(pagination.previousDoc)
-
   const handleClick = (e: { preventDefault: () => void }, slug: string) => {
     e.preventDefault()
     router.push(slug)

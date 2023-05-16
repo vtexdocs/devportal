@@ -23,12 +23,12 @@ interface Pagination {
   previousDoc: {
     slug: string | null
     name: string | null
-    method: string | null | undefined
+    method?: string
   }
   nextDoc: {
     slug: string | null
     name: string | null
-    method: string | null | undefined
+    method?: string
   }
 }
 
@@ -94,12 +94,10 @@ const APIPage: NextPage<Props> = ({
     previousDoc: {
       name: null,
       slug: null,
-      method: null,
     },
     nextDoc: {
       name: null,
       slug: null,
-      method: null,
     },
   }
   const [endpointPagination, setEndpointPagination] = useState(pag)
@@ -168,7 +166,7 @@ const APIPage: NextPage<Props> = ({
           id="the-doc"
           allow-spec-file-download={true}
         />
-        <Box sx={{ px: ['0', '80px'] }}>
+        <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
           <ArticlePagination
             hidePaginationNext={false}
             hidePaginationPrevious={false}
@@ -283,7 +281,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           method:
             indexOfEndpoint > 0
               ? `${docsList[indexOfEndpoint - 1].method}`
-              : null,
+              : 'undefined',
         },
         nextDoc: {
           name:
@@ -297,7 +295,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           method:
             indexOfEndpoint < docsList.length - 1
               ? `${docsList[indexOfEndpoint + 1].method}`
-              : null,
+              : 'undefined',
         },
       }
     })
