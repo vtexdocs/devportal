@@ -52,11 +52,13 @@ describe('API reference documentation page', () => {
       cy.get('.css-1450tp')
         .eq(idx + 1)
         .find('button')
+        .scrollIntoView()
         .click({ force: true })
 
       cy.get('.css-1450tp')
         .eq(idx + 2)
         .find('a')
+        .scrollIntoView()
         .click({ force: true })
     })
 
