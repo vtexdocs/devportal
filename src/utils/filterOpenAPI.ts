@@ -59,11 +59,18 @@ const referencePaths = objectFlip({
   'VTEX - Promotions & Taxes API - v2': 'promotions-and-taxes-api-v2',
 })
 
+function replaceHyphens(value: string) {
+  if (value.length > 1 && value[0] === '-' && value[value.length - 1] === '-')
+    return '{' + value.slice(1, -1) + '}'
+
+  return value
+}
+
 export default async function filterOpenAPI(slug: string) {
   const slugArray = slug.split('/')
   const slugAPI = slugArray[0]
   const slugMethod = slugArray[1] ? slugArray[1].slice(0, -1) : ''
-  const slugEndpoint = slugArray[2] ? '/' + slugArray.slice(2).join('/') : ''
+  const slugsEndpoint = slugArray.slice(2)
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const path = referencePaths[slugAPI] || ''
@@ -76,14 +83,12 @@ export default async function filterOpenAPI(slug: string) {
     const openAPI = JSON.parse(body)
     const filteredOpenAPI = openAPI
 
-    if (slugMethod && slugEndpoint) {
-      const regex = /\/-([^{}-]+)-/g
-      const fixedEndpoint = slugEndpoint.replace(regex, (_match, param) => {
-        return '/{' + param + '}'
-      })
+    if (slugMethod && slugsEndpoint) {
+      const slugs = slugsEndpoint.map((value) => replaceHyphens(value))
+      const fixedEndpoint = '/' + slugs.join('/')
 
       filteredOpenAPI.paths = {
-        [slugEndpoint]: {
+        [fixedEndpoint]: {
           [slugMethod]: openAPI.paths[fixedEndpoint][slugMethod],
         },
       }
