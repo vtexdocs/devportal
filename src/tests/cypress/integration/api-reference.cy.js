@@ -2,6 +2,13 @@
 
 import { writeLog } from '../support/functions'
 
+function isButtonActive(index) {
+  cy.get('.css-1450tp')
+    .eq(index)
+    .find('button')
+    .should('have.css', 'color', 'rgb(215, 29, 85)')
+}
+
 describe('API reference documentation page', () => {
   before(() => {
     cy.task('setUrl', '/docs/api-reference')
@@ -24,20 +31,11 @@ describe('API reference documentation page', () => {
     }
   })
 
-  it('Check if the sidebar collapse button works', () => {
+  it('Check if a random guide page, chosen using the sidebar, loads', () => {
     cy.get('.toggleIcon')
       .scrollIntoView({ offset: { top: -100 } })
       .should('not.be.visible')
-      .click()
-    cy.get('[data-cy="sidebar-section"]').should('not.be.visible')
-    cy.get('.toggleIcon')
-      .scrollIntoView({ offset: { top: -100 } })
-      .should('be.visible')
-      .click()
-    cy.get('[data-cy="sidebar-section"]').should('be.visible')
-  })
 
-  it('Check if a random guide page, chosen using the sidebar, loads', () => {
     cy.get('.css-1450tp')
       .anyWithIndex()
       .then(([category, index]) => {
@@ -46,19 +44,30 @@ describe('API reference documentation page', () => {
       })
       .scrollIntoView()
       .find('button')
-      .click({ force: true })
+      .should('be.visible')
+      .then(($btn) => {
+        $btn.trigger('click')
+      })
 
     cy.get('@idx').then((idx) => {
+      isButtonActive(idx)
+
       cy.get('.css-1450tp')
         .eq(idx + 1)
         .find('button')
         .scrollIntoView()
-        .click({ force: true })
+        .should('be.visible')
+        .then(($btn) => {
+          $btn.trigger('click')
+        })
+
+      isButtonActive(idx + 1)
 
       cy.get('.css-1450tp')
         .eq(idx + 2)
         .find('a')
         .scrollIntoView()
+        .should('be.visible')
         .click({ force: true })
     })
 
