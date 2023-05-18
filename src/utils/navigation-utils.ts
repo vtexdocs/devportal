@@ -76,3 +76,33 @@ export const getParents = (
   })
   return parentsArray
 }
+interface DocElement {
+  name: string
+  slug: string
+  type: string
+  method?: string
+  origin?: string
+  endpoint?: string
+  children?: []
+  route: string
+}
+
+export const flattenWithChildren = (data: DocElement[]) => {
+  const flattened: DocElement[] = []
+
+  function traverse(obj: DocElement) {
+    const { children, ...rest } = obj
+    flattened.push(rest)
+    if (children && children.length > 0) {
+      children.forEach((child) => {
+        traverse(child)
+      })
+    }
+  }
+
+  data.forEach((obj) => {
+    traverse(obj)
+  })
+
+  return flattened
+}

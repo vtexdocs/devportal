@@ -1,15 +1,26 @@
 import { Link, Grid, Text, Box } from '@vtex/brand-ui'
 import { useRouter } from 'next/router'
+
 interface Props {
   pagination: {
-    previousDoc: { slug: string | null; name: string | null }
-    nextDoc: { slug: string | null; name: string | null }
+    previousDoc: {
+      slug: string | null
+      name: string | null
+      method?: string
+    }
+    nextDoc: {
+      slug: string | null
+      name: string | null
+      method?: string
+    }
   }
   hidePaginationPrevious: boolean
   hidePaginationNext: boolean
 }
 
 import styles from './styles'
+import { MethodType } from 'utils/typings/unionTypes'
+import MethodCategory from 'components/method-category'
 
 const ArticlePagination = ({
   pagination,
@@ -34,6 +45,16 @@ const ArticlePagination = ({
             }}
           >
             <Box sx={styles.paginationBox}>
+              {typeof pagination.previousDoc.method == 'string' &&
+                pagination.previousDoc.method !== 'undefined' && (
+                  <Box sx={{ mb: '10px' }}>
+                    <MethodCategory
+                      method={pagination.previousDoc.method as MethodType}
+                      active={true}
+                      origin={'pagination'}
+                    />
+                  </Box>
+                )}
               <Text sx={styles.paginationText}>
                 {pagination.previousDoc.name}
               </Text>
@@ -50,6 +71,22 @@ const ArticlePagination = ({
             }}
           >
             <Box sx={styles.paginationBox}>
+              {typeof pagination.nextDoc.method == 'string' &&
+                pagination.nextDoc.method !== 'undefined' && (
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      flexDirection: 'row-reverse',
+                      mb: '10px',
+                    }}
+                  >
+                    <MethodCategory
+                      method={pagination.nextDoc.method as MethodType}
+                      active={true}
+                      origin={'pagination'}
+                    />
+                  </Box>
+                )}
               <Text sx={styles.paginationText}>{pagination.nextDoc.name}</Text>
               <Text sx={styles.subTitle}>Next »</Text>
             </Box>

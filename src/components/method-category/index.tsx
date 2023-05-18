@@ -7,7 +7,7 @@ import CloseFilterIcon from 'components/icons/close-filter-icon'
 export interface MethodCategoryProps {
   method: MethodType
   active: boolean
-  origin: 'sidebar' | 'search' | 'filter'
+  origin: 'sidebar' | 'search' | 'filter' | 'pagination'
   sx?: SxStyleProp
 }
 
