@@ -143,7 +143,7 @@ const APIPage: NextPage<Props> = ({
         <meta name="docsearch:doccategory" content={pageTitle} />
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
-      <Box sx={{ px: '2em', pt: '1em' }}>
+      <Box sx={{ px: ['1em', '2em'], pt: '1em' }}>
         <rapi-doc
           ref={rapidoc}
           spec-url={`/api/openapi/${slug}`}
