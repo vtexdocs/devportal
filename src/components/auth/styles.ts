@@ -22,7 +22,7 @@ const signInInnerContainer: SxStyleProp = {
 }
 
 const signInText: SxStyleProp = {
-  fontSize: '20px',
+  fontSize: ['16px', '20px'],
   mb: '12px',
 }
 
