@@ -1,4 +1,4 @@
-import { Box } from '@vtex/brand-ui'
+import { Box } from '@vtexdocs/brand-ui'
 
 import DocumentationCard from 'components/documentation-card'
 import { documentationData, updatesData } from 'utils/constants'

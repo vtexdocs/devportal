@@ -1,4 +1,11 @@
-import { Box, Button, Textarea, Text, Icon, IconProps } from '@vtex/brand-ui'
+import {
+  Box,
+  Button,
+  Textarea,
+  Text,
+  Icon,
+  IconProps,
+} from '@vtexdocs/brand-ui'
 import {
   Dispatch,
   MutableRefObject,

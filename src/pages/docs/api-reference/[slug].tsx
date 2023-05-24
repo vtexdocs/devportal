@@ -5,7 +5,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
 import SwaggerParser from '@apidevtools/swagger-parser'
 import ArticlePagination from 'components/article-pagination'
-import { Box } from '@vtex/brand-ui'
+import { Box } from '@vtexdocs/brand-ui'
 import jp from 'jsonpath'
 
 import getReferencePaths from 'utils/getReferencePaths'

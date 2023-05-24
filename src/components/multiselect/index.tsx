@@ -1,5 +1,5 @@
 import styles from './styles'
-import { Flex, Box, Button, IconCaret } from '@vtex/brand-ui'
+import { Flex, Box, Button, IconCaret } from '@vtexdocs/brand-ui'
 import CheckboxIcon from 'components/icons/checkbox'
 import { useState } from 'react'
 import { messages } from 'utils/constants'

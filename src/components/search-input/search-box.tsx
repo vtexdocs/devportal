@@ -1,6 +1,6 @@
 import { useRef, KeyboardEvent } from 'react'
 import { useRouter } from 'next/router'
-import { Flex } from '@vtex/brand-ui'
+import { Flex } from '@vtexdocs/brand-ui'
 import { connectSearchBox } from 'react-instantsearch-dom'
 import { SearchBoxProvided } from 'react-instantsearch-core'
 

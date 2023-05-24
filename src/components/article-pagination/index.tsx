@@ -1,4 +1,4 @@
-import { Link, Grid, Text, Box } from '@vtex/brand-ui'
+import { Link, Grid, Text, Box } from '@vtexdocs/brand-ui'
 import { useRouter } from 'next/router'
 
 interface Props {

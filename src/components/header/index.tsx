@@ -4,7 +4,7 @@ import {
   Flex,
   Text,
   Box,
-} from '@vtex/brand-ui'
+} from '@vtexdocs/brand-ui'
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 

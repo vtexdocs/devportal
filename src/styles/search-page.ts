@@ -1,4 +1,4 @@
-import { SxStyleProp } from '@vtex/brand-ui'
+import { SxStyleProp } from '@vtexdocs/brand-ui'
 
 const searchBarContainer: SxStyleProp = {
   display: ['flex', 'flex', 'flex', 'none'],

@@ -4,7 +4,7 @@ import {
   Box,
   IconCaret,
   Button,
-} from '@vtex/brand-ui'
+} from '@vtexdocs/brand-ui'
 import styles from './styles'
 
 import DocumentationCard from 'components/documentation-card'

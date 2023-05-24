@@ -1,4 +1,4 @@
-import type { SxStyleProp } from '@vtex/brand-ui'
+import type { SxStyleProp } from '@vtexdocs/brand-ui'
 import { VtexTrustMedium } from 'utils/fonts'
 
 const menuContainer: SxStyleProp = {

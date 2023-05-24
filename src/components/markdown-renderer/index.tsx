@@ -1,4 +1,4 @@
-import { Box } from '@vtex/brand-ui'
+import { Box } from '@vtexdocs/brand-ui'
 import { MDXRemote } from 'next-mdx-remote'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const MDXRemote2: any = MDXRemote

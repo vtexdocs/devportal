@@ -1,4 +1,4 @@
-import { SxStyleProp } from '@vtex/brand-ui'
+import { SxStyleProp } from '@vtexdocs/brand-ui'
 
 export const iconTooltipStyle: SxStyleProp = (tooltipState: boolean) => {
   const iconTooltip: SxStyleProp = {

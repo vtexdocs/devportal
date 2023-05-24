@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 import AnimateHeight from 'react-animate-height'
 
 import { APIGuideContext } from 'utils/contexts/api-guide'

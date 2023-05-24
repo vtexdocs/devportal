@@ -1,5 +1,5 @@
 import ReleaseNote from '../release-note'
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 
 import styles from 'components/release-section/styles'
 import { getMessages } from 'utils/get-messages'

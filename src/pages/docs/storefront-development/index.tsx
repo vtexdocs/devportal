@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Fragment, useContext } from 'react'
-import { Box, Flex, Text, IconCaret } from '@vtex/brand-ui'
+import { Box, Flex, Text, IconCaret } from '@vtexdocs/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'

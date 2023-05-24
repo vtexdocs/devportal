@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import Head from 'next/head'
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 import JsonEditorComponent from 'components/JsonEditorComponent'
 import { Fragment } from 'react'
 import styles from 'styles/documentation-landing-page'

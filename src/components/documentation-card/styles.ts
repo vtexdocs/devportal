@@ -1,4 +1,4 @@
-import { SxStyleProp } from '@vtex/brand-ui'
+import { SxStyleProp } from '@vtexdocs/brand-ui'
 
 const cardContainer: SxStyleProp = {
   my: ['16px', '16px', '16px', '16px', '16px', '16px', '24px'],

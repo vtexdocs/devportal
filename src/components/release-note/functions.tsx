@@ -1,4 +1,4 @@
-import { Text } from '@vtex/brand-ui'
+import { Text } from '@vtexdocs/brand-ui'
 import { getDaysElapsed } from 'utils/get-days-elapsed'
 import { getDate } from 'components/release-section/functions'
 

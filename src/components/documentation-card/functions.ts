@@ -1,4 +1,4 @@
-import { SxStyleProp } from '@vtex/brand-ui'
+import { SxStyleProp } from '@vtexdocs/brand-ui'
 import styles from './styles'
 
 const cardContainer = (containerType: string) => {

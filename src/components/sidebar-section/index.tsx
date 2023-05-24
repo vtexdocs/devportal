@@ -1,4 +1,4 @@
-import { Flex, Box, Text, Button } from '@vtex/brand-ui'
+import { Flex, Box, Text, Button } from '@vtexdocs/brand-ui'
 import { useContext, useMemo, useState } from 'react'
 
 import type { SidebarElement } from 'components/sidebar-elements'

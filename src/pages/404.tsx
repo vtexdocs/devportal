@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Head from 'next/head'
 import type { Page } from 'utils/typings/types'
-import { Box, Flex, Text, Button, Link } from '@vtex/brand-ui'
+import { Box, Flex, Text, Button, Link } from '@vtexdocs/brand-ui'
 import styles from 'styles/error-page'
 import fourOhFourImage from '../../public/images/404-illustration.png'
 import getNavigation from 'utils/getNavigation'

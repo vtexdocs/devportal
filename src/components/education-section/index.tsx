@@ -1,4 +1,4 @@
-import { Box, Text, Flex } from '@vtex/brand-ui'
+import { Box, Text, Flex } from '@vtexdocs/brand-ui'
 
 import EducationChannel from 'components/education-channel'
 import GithubIcon from 'components/icons/github-icon'

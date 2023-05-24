@@ -1,4 +1,4 @@
-import { SxStyleProp } from '@vtex/brand-ui'
+import { SxStyleProp } from '@vtexdocs/brand-ui'
 
 const elementContainer: SxStyleProp = {
   maxWidth: '265px',

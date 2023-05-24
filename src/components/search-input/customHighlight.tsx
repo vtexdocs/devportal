@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { connectHighlight } from 'react-instantsearch-dom'
 import { HighlightProps } from 'react-instantsearch-core'
-import { Flex, Text } from '@vtex/brand-ui'
+import { Flex, Text } from '@vtexdocs/brand-ui'
 import styles from './styles'
 
 interface HighLightPartsProps {

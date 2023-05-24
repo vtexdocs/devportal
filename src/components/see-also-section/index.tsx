@@ -1,4 +1,4 @@
-import { Box, Text } from '@vtex/brand-ui'
+import { Box, Text } from '@vtexdocs/brand-ui'
 
 import DocumentationCard, { DocumentProps } from 'components/documentation-card'
 import { createDocFromUrl } from './functions'

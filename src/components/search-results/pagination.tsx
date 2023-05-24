@@ -1,5 +1,5 @@
 import { useContext, useEffect } from 'react'
-import { Flex, Text } from '@vtex/brand-ui'
+import { Flex, Text } from '@vtexdocs/brand-ui'
 import { connectPagination } from 'react-instantsearch-dom'
 import { SearchContext } from 'utils/contexts/search'
 import { messages } from 'utils/constants'

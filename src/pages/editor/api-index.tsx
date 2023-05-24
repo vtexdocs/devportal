@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtexdocs/brand-ui'
 import JsonEditorIndex from 'components/JsonEditorIndex'
 import { Fragment } from 'react'
 import styles from 'styles/documentation-landing-page'

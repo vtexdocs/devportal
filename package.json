@@ -30,7 +30,7 @@
     "@types/probe-image-size": "^7.2.0",
     "@types/react-svg-pan-zoom": "^3.3.5",
     "@types/uuid": "^9.0.0",
-    "@vtex/brand-ui": "https://gitpkg.now.sh/vtexdocs/brand-ui/packages/brand-ui/dist?main",
+    "@vtexdocs/brand-ui": "https://gitpkg.now.sh/vtexdocs/brand-ui/packages/brand-ui/dist?b3777abc881fd4d3874a7799d107dd831d6e847f",
     "algoliasearch": "^4.14.2",
     "chalk": "^5.2.0",
     "copy-text-to-clipboard": "^3.0.1",

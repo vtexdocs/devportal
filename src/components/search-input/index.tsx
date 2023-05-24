@@ -3,7 +3,7 @@ import aa from 'search-insights'
 
 import SearchBox from './search-box'
 import Results from './results-box'
-import { Box } from '@vtex/brand-ui'
+import { Box } from '@vtexdocs/brand-ui'
 import { useRef, useState } from 'react'
 import useClickOutside from 'utils/hooks/useClickOutside'
 import { searchClient } from 'utils/constants'

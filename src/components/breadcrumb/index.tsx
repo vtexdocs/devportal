@@ -1,4 +1,4 @@
-import { Link, Flex, IconCaret, Text } from '@vtex/brand-ui'
+import { Link, Flex, IconCaret, Text } from '@vtexdocs/brand-ui'
 
 import styles from './styles'
 

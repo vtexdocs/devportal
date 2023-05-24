@@ -7,7 +7,7 @@ import {
   Button,
   IconCaret,
   IconExternalLink,
-} from '@vtex/brand-ui'
+} from '@vtexdocs/brand-ui'
 
 import { SidebarContext } from 'utils/contexts/sidebar'
 import { MethodType } from 'utils/typings/unionTypes'

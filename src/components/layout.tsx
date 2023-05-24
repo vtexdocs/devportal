@@ -1,9 +1,9 @@
-import { Flex, Box } from '@vtex/brand-ui'
+import { Flex, Box } from '@vtexdocs/brand-ui'
 import type { ReactElement } from 'react'
 import { useContext, useEffect } from 'react'
 import { TrackerContext } from 'utils/contexts/trackerContext'
 
-import { ThemeProvider } from '@vtex/brand-ui'
+import { ThemeProvider } from '@vtexdocs/brand-ui'
 
 import styles from 'styles/documentation-page'
 import Header from 'components/header'

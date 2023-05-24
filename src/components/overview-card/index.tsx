@@ -1,5 +1,5 @@
 import styles from './styles'
-import { Flex, Box } from '@vtex/brand-ui'
+import { Flex, Box } from '@vtexdocs/brand-ui'
 import * as Icons from './icons'
 import type { IconComponent } from 'utils/typings/types'
 

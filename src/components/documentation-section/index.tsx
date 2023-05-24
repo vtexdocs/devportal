@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 
 import DocumentationSectionCard from '../documentation-section-card'
 

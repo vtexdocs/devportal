@@ -1,5 +1,5 @@
 import { ReactElement } from 'react'
-import { Box, Flex, Button, Text } from '@vtex/brand-ui'
+import { Box, Flex, Button, Text } from '@vtexdocs/brand-ui'
 import { useSession, signIn, signOut } from 'next-auth/react'
 
 import styles from './styles'

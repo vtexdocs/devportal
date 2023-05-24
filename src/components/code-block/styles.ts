@@ -1,4 +1,4 @@
-import type { SxStyleProp } from '@vtex/brand-ui'
+import type { SxStyleProp } from '@vtexdocs/brand-ui'
 
 const CodeBlock: SxStyleProp = {
   backgroundColor: '#f8f7fc !important',

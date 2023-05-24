@@ -1,5 +1,5 @@
 import { NextPage, GetStaticProps } from 'next'
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtexdocs/brand-ui'
 import styles from 'styles/search-page'
 import SearchSections from 'components/search-sections'
 import SearchContextProvider from 'utils/contexts/search'

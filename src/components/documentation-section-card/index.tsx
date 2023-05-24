@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Flex, Text } from '@vtex/brand-ui'
+import { Flex, Text } from '@vtexdocs/brand-ui'
 
 import { getMessages } from 'utils/get-messages'
 import type { DocDataElement } from 'utils/typings/types'

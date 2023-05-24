@@ -1,4 +1,4 @@
-import { SxStyleProp } from '@vtex/brand-ui'
+import { SxStyleProp } from '@vtexdocs/brand-ui'
 
 const footerLeftLinks: SxStyleProp = {
   ml: ['0px', '32px'],

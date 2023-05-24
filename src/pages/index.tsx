@@ -1,4 +1,4 @@
-import { Grid } from '@vtex/brand-ui'
+import { Grid } from '@vtexdocs/brand-ui'
 import type { Page } from 'utils/typings/types'
 
 import NewsletterSection from 'components/newsletter-section'

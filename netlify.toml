@@ -2,6 +2,9 @@
 external_node_modules = ["sharp"]
 included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
+[build]
+YARN_FLAGS = "--skip-integrity-check"
+
 [[redirects]]
 force = true
 from = "/404/docs/recipes/store-management/enabling-order-form-optimization"

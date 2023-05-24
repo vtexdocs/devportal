@@ -1,6 +1,6 @@
 import styles from './styles'
 import type { ReactElement } from 'react'
-import { Box } from '@vtex/brand-ui'
+import { Box } from '@vtexdocs/brand-ui'
 interface Props {
   children: ReactElement[]
 }

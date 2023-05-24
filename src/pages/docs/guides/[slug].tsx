@@ -14,7 +14,7 @@ import remarkMermaid from 'utils/remark_plugins/mermaid'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 import { SidebarContext } from 'utils/contexts/sidebar'
