@@ -12,8 +12,9 @@ describe('API guides documentation page', () => {
   })
 
   beforeEach(() => {
-    cy.task('getUrl').then((url) => cy.visit(url))
     cy.viewport(1366, 768)
+    cy.task('getUrl').then((url) => cy.visit(url))
+    cy.wait(6000)
   })
 
   afterEach(function () {
@@ -130,25 +131,23 @@ describe('API guides documentation page', () => {
   })
 
   it('try to click on the last element of table of contents', () => {
-    if (Cypress.$('[data-cy="table-of-contents"]').children().length > 0) {
+    if (Cypress.$('h2').length > 0) {
       cy.get('h2')
         .its('length')
         .then((length) => {
-          cy.get('[data-cy="table-of-contents"]:visible > div').should(
-            'have.length',
-            length
-          )
+          cy.get('[data-cy="table-of-contents"]')
+            .should('not.be.empty')
+            .first()
+            .children()
+            .should('have.length', length)
+            .last()
+            .then((heading) => {
+              const anchor = heading.find('a').attr('href')
+              cy.wrap(anchor.substring(anchor.indexOf('#') + 1)).as('anchor')
+              return cy.wrap(heading)
+            })
+            .click()
         })
-
-      cy.get('[data-cy="table-of-contents"]:visible > div')
-        .last()
-        .then((heading) => {
-          const anchor = heading.find('a').attr('href')
-          cy.wrap(anchor.substring(anchor.indexOf('#') + 1)).as('anchor')
-          return cy.wrap(heading)
-        })
-        .click()
-
       cy.get('@anchor').then((anchor) => {
         cy.get(`[id=${anchor}]`).should('be.visible')
       })
