@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.12](https://github.com/vtexdocs/devportal/compare/v1.9.11...v1.9.12) (2023-05-25)
+
+
+### Docs
+
+* **navigation:** making small change just to force build to test if my guide changes will show ([bb94273](https://github.com/vtexdocs/devportal/commit/bb9427370abb50bd455829015e041ecb8bc5c35b))
+
 ### [1.9.11](https://github.com/vtexdocs/devportal/compare/v1.9.10...v1.9.11) (2023-05-24)
 
 
