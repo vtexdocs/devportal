@@ -22,7 +22,8 @@ const SearchResults = () => {
     <Box sx={styles.resultContainer}>
       <Text sx={styles.resultText}>
         Showing {ocurrenceCount[filterSelectedSection]} results for "
-        {router.query.keyword}" in all results
+        {router.query.keyword}" in{' '}
+        {!filterSelectedSection ? `all results` : filterSelectedSection}
       </Text>
       <hr />
       <Box>

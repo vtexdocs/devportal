@@ -120,7 +120,7 @@ const Highlight = ({
       className="hit-content-title"
       sx={styles.hitContentContainer}
     >
-      <Text sx={styles.hitContent}>
+      <Text sx={searchPage ? styles.hitContent : styles.hitContentSmall}>
         {(searchPage ? ellipsedContent : parsedHit).map(
           (part: HitHighlightProps, index: number) =>
             part.isHighlighted ? (

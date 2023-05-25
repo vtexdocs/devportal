@@ -46,3 +46,8 @@ export type ResourceDataElement = {
   description: string
   link: string
 }
+
+export type SelectOption = {
+  id: string
+  label: string
+}

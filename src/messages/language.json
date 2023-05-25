@@ -55,6 +55,7 @@
   "api_reference_sidebar_filter_clear": "Clear all",
   "release_notes_page.title": "Release Notes",
   "release_notes_page.subtitle": "Stay up to date with our latest releases",
+  "release_notes_multiselect_text": "All types",
   "api_reference_page.title": "API Reference",
   "api_reference_page.subtitle": "Use our API reference documentation to build custom solutions that fit your business.",
   "api_guides_page.title": "API Guides",
@@ -84,5 +85,7 @@
   "app_development_page_other_resources_help_center.description": "The Help Center contains beginner tutorials, reference guides and troubleshooting articles about the VTEX Admin panel.",
   "app_development_page_other_resources_support.description": "All clients have access to the services provided by our Technical Support team. These specialists are extensively prepared to give you the best experience possible when solving your tickets. To contact them, you need to open a ticket to VTEX support.",
   "relese-note-days-elapsed": "days ago",
-  "error_loading_image": "An error occurred while trying to load the image."
+  "error_loading_image": "An error occurred while trying to load the image.",
+  "multiselect_apply_button": "Apply",
+  "multiselect_clear_button": "Clear"
 }

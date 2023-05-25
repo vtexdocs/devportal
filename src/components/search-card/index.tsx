@@ -37,7 +37,7 @@ const SearchCard = ({
   hit,
 }: SearchCardProps) => {
   const actionValue = actionType ? getAction(actionType) : null
-  const [toggleChildResults, setToggleChildResults] = useState<boolean>(false)
+  const [toggleChildResults, setToggleChildResults] = useState<boolean>(true)
   return (
     <Link href={url} legacyBehavior>
       <Flex sx={styles.containerActive(method)}>

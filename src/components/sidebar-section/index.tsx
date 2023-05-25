@@ -178,7 +178,9 @@ const SidebarSection = ({
               style={styles.searchInput}
               className="searchComponent"
               type="text"
-              placeholder={`Search in ${documentation}...`}
+              placeholder={`Search in ${
+                !isEditorPreview ? `in ${documentation}` : ''
+              }...`}
               value={searchValue}
               onChange={(e) => setSearchValue(e.currentTarget.value)}
             />
