@@ -12,8 +12,9 @@ describe('API guides documentation page', () => {
   })
 
   beforeEach(() => {
-    cy.task('getUrl').then((url) => cy.visit(url))
     cy.viewport(1366, 768)
+    cy.task('getUrl').then((url) => cy.visit(url))
+    cy.wait(6000)
   })
 
   afterEach(function () {
