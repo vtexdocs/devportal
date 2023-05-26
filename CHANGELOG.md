@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.13](https://github.com/vtexdocs/devportal/compare/v1.9.12...v1.9.13) (2023-05-26)
+
+
+### Tests
+
+* **cypress:** simplify the test on TOC in guides pages ([1f004e9](https://github.com/vtexdocs/devportal/commit/1f004e9271173a9edb53eaaa3040b7b5159ac4ae))
+* **cypress:** wait before run test ([9ba58c0](https://github.com/vtexdocs/devportal/commit/9ba58c0b12767c2735bd7b63e0caada1cc98f81f))
+
+
+### Chore
+
+* **rapidoc:** update rapidoc submodule - adds danger callout style ([378b2ca](https://github.com/vtexdocs/devportal/commit/378b2ca77d1cd2b132407cedf61246f905f1918c))
+* **rapidoc:** update rapidoc submodule to enable warning callout ([55bcc71](https://github.com/vtexdocs/devportal/commit/55bcc71907c60b27d8ce44f01e166d1af4072deb))
+* **rapidoc:** update rapidoc submodule to fix param table ([cf67044](https://github.com/vtexdocs/devportal/commit/cf67044cb8dc715fbf88055f6ccf5d90ab9db335))
+
 ### [1.9.12](https://github.com/vtexdocs/devportal/compare/v1.9.11...v1.9.12) (2023-05-25)
 
 
