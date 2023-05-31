@@ -5958,7 +5958,7 @@
                     {
                       "name": "Get Account's Matcher Settings",
                       "slug": "marketplace-apis-suggestions",
-                      "type": "markdown",
+                      "type": "openapi",
                       "method": "GET",
                       "origin": "",
                       "endpoint": "/suggestions/configuration/account/config",
