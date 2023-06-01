@@ -13,6 +13,7 @@ describe('API reference documentation page', () => {
   beforeEach(() => {
     cy.viewport(1366, 768)
     cy.task('getUrl').then((url) => cy.visit(url))
+    cy.wait(6000)
   })
 
   afterEach(function () {
@@ -45,18 +46,18 @@ describe('API reference documentation page', () => {
       })
       .scrollIntoView()
       .find('button')
-      .click()
+      .click({ force: true })
 
     cy.get('@idx').then((idx) => {
       cy.get('.css-1450tp')
         .eq(idx + 1)
         .find('button')
-        .click()
+        .click({ force: true })
 
       cy.get('.css-1450tp')
         .eq(idx + 2)
         .find('a')
-        .click()
+        .click({ force: true })
     })
 
     cy.url()

@@ -11,7 +11,7 @@ const container: SxStyleProp = {
   paddingTop: '26px',
   paddingBottom: '10px',
   paddingLeft: ['13px', '44px'],
-  paddingRight: '13px',
+  paddingRight: ['13px', '34px'],
   background: '#FFFFFF',
   cursor: 'pointer',
 }

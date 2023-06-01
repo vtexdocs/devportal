@@ -53,7 +53,7 @@
                   "children": []
                 },
                 {
-                  "name": "Checking which user is currently authenticated",
+                  "name": "Checking which user is currently authenticated ",
                   "slug": "checking-which-user-is-currently-authenticated",
                   "origin": "",
                   "type": "markdown",

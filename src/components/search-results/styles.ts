@@ -39,10 +39,10 @@ const paginationLinkDisabled: SxStyleProp = {
 
 const paginationNumber: SxStyleProp = {
   display: 'flex',
-  fontSize: '16px',
+  fontSize: ['14px', '16px'],
   lineHeight: '20px',
   color: '#4A596B',
-  mx: '27px',
+  mx: ['18px', '27px'],
 }
 
 const paginationActualNumber: SxStyleProp = {

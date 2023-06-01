@@ -2,6 +2,132 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.13](https://github.com/vtexdocs/devportal/compare/v1.9.12...v1.9.13) (2023-05-26)
+
+
+### Tests
+
+* **cypress:** simplify the test on TOC in guides pages ([1f004e9](https://github.com/vtexdocs/devportal/commit/1f004e9271173a9edb53eaaa3040b7b5159ac4ae))
+* **cypress:** wait before run test ([9ba58c0](https://github.com/vtexdocs/devportal/commit/9ba58c0b12767c2735bd7b63e0caada1cc98f81f))
+
+
+### Chore
+
+* **rapidoc:** update rapidoc submodule - adds danger callout style ([378b2ca](https://github.com/vtexdocs/devportal/commit/378b2ca77d1cd2b132407cedf61246f905f1918c))
+* **rapidoc:** update rapidoc submodule to enable warning callout ([55bcc71](https://github.com/vtexdocs/devportal/commit/55bcc71907c60b27d8ce44f01e166d1af4072deb))
+* **rapidoc:** update rapidoc submodule to fix param table ([cf67044](https://github.com/vtexdocs/devportal/commit/cf67044cb8dc715fbf88055f6ccf5d90ab9db335))
+
+### [1.9.12](https://github.com/vtexdocs/devportal/compare/v1.9.11...v1.9.12) (2023-05-25)
+
+
+### Docs
+
+* **navigation:** making small change just to force build to test if my guide changes will show ([bb94273](https://github.com/vtexdocs/devportal/commit/bb9427370abb50bd455829015e041ecb8bc5c35b))
+
+### [1.9.11](https://github.com/vtexdocs/devportal/compare/v1.9.10...v1.9.11) (2023-05-24)
+
+
+### Features
+
+* add authentication higher order component ([e8dbfc1](https://github.com/vtexdocs/devportal/commit/e8dbfc10a12e8edc14b6f35db4d427b200431e50))
+* add authentication to editor pages ([435e1d2](https://github.com/vtexdocs/devportal/commit/435e1d22c995bff16c50413ec2b3d1b6883ef8ce))
+* add checkbox icon ([010870b](https://github.com/vtexdocs/devportal/commit/010870bdd366601307f02b8e6a4f6d12212e1886))
+* add filter to release notes page ([e51ce1e](https://github.com/vtexdocs/devportal/commit/e51ce1e47133a7a6e7b083e2e5ea42d66dafa6eb))
+* add rapidoc to components ([5ec43bb](https://github.com/vtexdocs/devportal/commit/5ec43bb7f5bbef2591f788c49d5efd1c4bcc7f83))
+* add support for authentication ([5d04e08](https://github.com/vtexdocs/devportal/commit/5d04e08504a0f6efb0b8f0260983e78e847a304f))
+* **algolia-scraper:** update attributes to retrieve ([908c51d](https://github.com/vtexdocs/devportal/commit/908c51dd369a66b9e15825786e356dab27252d0f))
+* **api-references:** add api pagination and other minor improv ([4e10f6c](https://github.com/vtexdocs/devportal/commit/4e10f6c714073dad192ef001f31016ecab5365e5))
+* **auth:** add authentication to preview API route ([634c31e](https://github.com/vtexdocs/devportal/commit/634c31e606365b6acf6d2be6f0119cb8c4630aec))
+* create multiselect component ([dbf5293](https://github.com/vtexdocs/devportal/commit/dbf5293340135aee2675b12dc21207da4c7fe0e2))
+* **customhighlights:** add search-page behavior to customHighlight component ([837e8f4](https://github.com/vtexdocs/devportal/commit/837e8f4a876d49d0b2e6a1c5057b65df56be8beb))
+* get list of action types ([c3ca8b8](https://github.com/vtexdocs/devportal/commit/c3ca8b8c8cb5cf7d7f3bb877cfeda5ca627a4490))
+* **pages:** add searchable attributes to doc pages head ([9944a2e](https://github.com/vtexdocs/devportal/commit/9944a2e1d90ed657480f12a54708f0bee84327a0))
+* **search-card:** add methodCategory ([d4a94f7](https://github.com/vtexdocs/devportal/commit/d4a94f71f5844493ac35258ca344858a0c1af1b5))
+* **search-card:** update card style ([d32cc25](https://github.com/vtexdocs/devportal/commit/d32cc255029da493d2a5cbc308c427ad97fb6ce1))
+* **search-page:** add custom search results using instantsearch infinitehits hook ([d80bf4a](https://github.com/vtexdocs/devportal/commit/d80bf4a3ec1c03a190f7ebd57d8ac0517c7142bb))
+* **search-page:** open merged cards by default ([ef36358](https://github.com/vtexdocs/devportal/commit/ef3635804af5f73c394c59336e2017ee46ffe802))
+* **search-page:** switch infinite scroll for pagination ([91e012f](https://github.com/vtexdocs/devportal/commit/91e012fcfb0aa4d754213a60475bf4a0700aca6a))
+* **search-results:** connect instantsearch with infinite hits hook ([f66cce5](https://github.com/vtexdocs/devportal/commit/f66cce5dc321c9eaf8fd8bea21a6af89f8161e6d))
+* use submodule and add spec property to rapidoc ([c9c2d12](https://github.com/vtexdocs/devportal/commit/c9c2d1238cadadd9b3676acea1f54bf472f6bb2d))
+* using rapidoc lit component ([4b7e95e](https://github.com/vtexdocs/devportal/commit/4b7e95e3d4589b5862299523fec00647bc81594a))
+
+
+### Bug Fixes
+
+* add @octokit/auth-app module to typings ([528ec97](https://github.com/vtexdocs/devportal/commit/528ec9722dd97ad8e70a406b3e9e1c1c438b1dda))
+* **api-references:** fix method type ([3a03395](https://github.com/vtexdocs/devportal/commit/3a03395565511b6f7bd2d79a5b025ca931c26292))
+* **auth:** fix auth component width in the first breakpoint ([c02754b](https://github.com/vtexdocs/devportal/commit/c02754b2751e2ff9c9832692f86541f0a5bd2b5f))
+* check for custom element before defining ([88750ae](https://github.com/vtexdocs/devportal/commit/88750ae96e74484cf641704e3f5c675cd4773965))
+* comment lines that caused errors ([2f21675](https://github.com/vtexdocs/devportal/commit/2f21675980f67ff8db25ff9375b29105da1b3ecd))
+* **customhighlight:** remove types any and text style ([9366151](https://github.com/vtexdocs/devportal/commit/936615114bb7271e4a7846907bad64a580436015))
+* doctype name ([c031a78](https://github.com/vtexdocs/devportal/commit/c031a7811da1e86a63388c11eaabe7818287c14d))
+* get endpoint value even if haven't description and remove mock from search card ([c528e35](https://github.com/vtexdocs/devportal/commit/c528e35c6f11631fa20e71b06306a85277a0e4a6))
+* **guides:** correct type of pages from another documentation ([c07c1bd](https://github.com/vtexdocs/devportal/commit/c07c1bdb9f2bf1d52cad9518a26f1a3f8b7067af))
+* **pages:** add missing doc titles ([4ac2a5e](https://github.com/vtexdocs/devportal/commit/4ac2a5e2270619185cf60dfa70d7d2f3dfc0ea16))
+* replace package to perform open api parsing ([0353bae](https://github.com/vtexdocs/devportal/commit/0353bae322ccc4604513db7ade6955749530eeac))
+* **results-box:** remove search state after rebase ([ea88ac7](https://github.com/vtexdocs/devportal/commit/ea88ac72e48223a50c7aeb8f6b155b4509d26915))
+* **search-card:** breadcrumbs behavior ([db802ea](https://github.com/vtexdocs/devportal/commit/db802ea85a8e179b4195036d312699ca25734fdf))
+* **search-components:** revert names of docsearch's searchable attributes ([6e81f38](https://github.com/vtexdocs/devportal/commit/6e81f3814b570baafc29d900f82b67efb8b7e6be))
+* **search-input:** enable see all results button and connect the search bar with the search page ([040c871](https://github.com/vtexdocs/devportal/commit/040c8714508b5fa19b93566bfb7fb1ed76be1f51))
+* **search-page:** add no-result feedback ([5c58219](https://github.com/vtexdocs/devportal/commit/5c582194d14d5c30ec659c2b79cd7fd57c7ba438))
+* **search-page:** clear filter when new search was fired ([8406ceb](https://github.com/vtexdocs/devportal/commit/8406cebd03f38013e6ed9e31de080dddd12b6b0b))
+* **search-page:** filter by facets ([bfdde9c](https://github.com/vtexdocs/devportal/commit/bfdde9c165f6e3e8e6ade069604f4dab381017bc))
+* **search-page:** update results text to match the selected filter ([0f41e79](https://github.com/vtexdocs/devportal/commit/0f41e79f101c99d545dd1092cb30ea637b2b7fb8))
+* **search:** fix results width and update search index ([f03a9fe](https://github.com/vtexdocs/devportal/commit/f03a9fef49c57a6a0519b2c7b24ea3ca0f7c296b))
+* **sidebar:** fix sidebar searchbar placeholder text in editor pages ([cbef791](https://github.com/vtexdocs/devportal/commit/cbef791d8f335bc44a1bfb0f0d51054374157304))
+* **sidebar:** move section state to context and add correct behavior of sidebar to search page ([2d2456c](https://github.com/vtexdocs/devportal/commit/2d2456c16d80e19c0d2e8128f95680154893fc48))
+* use swagger-parse and dereference refs ([e03f9b5](https://github.com/vtexdocs/devportal/commit/e03f9b589f1c898360e13d0120452816323adb94))
+
+
+### Build
+
+* add lit-labs/nextjs and update config ([b0ddc77](https://github.com/vtexdocs/devportal/commit/b0ddc77f542f8a2fa3801aa6bd46b9abdc3b681b))
+* add some rapidoc dependencies ([8fad4d9](https://github.com/vtexdocs/devportal/commit/8fad4d9b097a10908119a8194824a73712927610))
+
+
+### Performance
+
+* **reference-page:** get endpoint title in getStaticProps ([0b2aa72](https://github.com/vtexdocs/devportal/commit/0b2aa724642b3301489663e3adef4900b3cf25dc))
+
+
+### Refactoring
+
+* **reference-page:** add endpoint interface and remove method state ([602b85f](https://github.com/vtexdocs/devportal/commit/602b85fb049c7f720394f29a8fd20e16c2d0eafd))
+* **search-input:** close search box ([f644e3b](https://github.com/vtexdocs/devportal/commit/f644e3ba40d6a74804a0e0485f505dd47fdf0b59))
+* update types and move search client to constants ([f27b862](https://github.com/vtexdocs/devportal/commit/f27b86208a9f33a060f63b13f512bd04ed2bc4ff))
+* **utils:** move search functions to utils ([ff2474f](https://github.com/vtexdocs/devportal/commit/ff2474f01cd224d54fecb6a33b4bdf256e7e35ee))
+
+
+### Revert Changes
+
+* **search-input:** result text overflow ([90569a9](https://github.com/vtexdocs/devportal/commit/90569a9fba97e341e03d937b198d97fb56d59612))
+
+
+### Tests
+
+* **api-reference:** remove copy test ([35803b5](https://github.com/vtexdocs/devportal/commit/35803b533f0158d718c674404478785279d33642))
+* **cypress:** fix reference page load ([f9e531c](https://github.com/vtexdocs/devportal/commit/f9e531c07d61d836b5c4d7dbfdadd47405242247))
+* **cypress:** run on headed chrome and increase defaultCommandTimeout ([30ee862](https://github.com/vtexdocs/devportal/commit/30ee862436e80ea82fd41ad3d67b63066f82b6e8))
+* **cypress:** update the tests to consider the opened sidebar ([f93d23c](https://github.com/vtexdocs/devportal/commit/f93d23c3b8d661f18775892205646d54baca8f18))
+
+
+### Chore
+
+* add NextAuth package ([9a34bfe](https://github.com/vtexdocs/devportal/commit/9a34bfe831957a56288c4d5d65baccc01e1e652c))
+* **netlify.toml:** add redirect for livestreaming app ([13aba09](https://github.com/vtexdocs/devportal/commit/13aba094341835f9288df6fea1c1b8c94b2e38b1))
+* **rapidoc:** update submodule ([4fd28e0](https://github.com/vtexdocs/devportal/commit/4fd28e068364497504cffa37db5a0901c5b9772e))
+* **rapidoc:** update submodule ([9a35a2e](https://github.com/vtexdocs/devportal/commit/9a35a2e736967097b1e4a9410834167f83d3ea71))
+* remove rapidoc files ([b042fb6](https://github.com/vtexdocs/devportal/commit/b042fb6cd74a05ac582b8f992f366db17fe318b4))
+* update yarn.lock ([b096cf8](https://github.com/vtexdocs/devportal/commit/b096cf8a74005d47877ef434da6704e58a39cd79))
+* update yarn.lock ([5f638d5](https://github.com/vtexdocs/devportal/commit/5f638d5ea622e6d231d5ab61d760c3dd3f15ac59))
+
+
+### Style
+
+* **auth:** update auth environment variables ([32ea68f](https://github.com/vtexdocs/devportal/commit/32ea68faa7017185d645074c09355c54740dc8ab))
+* **search-page:** first version of mobile design ([e2df0b3](https://github.com/vtexdocs/devportal/commit/e2df0b3074255bab85b6f208d520e5c445e452ac))
+* **search-page:** fix pagination in mobile, results ellipsis and right spacing ([689b5ba](https://github.com/vtexdocs/devportal/commit/689b5babf5c2d4f3fc729fb66cc72cf762277340))
+
 ### [1.9.10](https://github.com/vtexdocs/devportal/compare/v1.9.9...v1.9.10) (2023-05-06)
 
 
