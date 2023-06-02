@@ -12898,6 +12898,21 @@
           "type": "category",
           "children": [
             {
+              "name": "June",
+              "slug": "june-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Extensions Hub: Our new place to promote apps and partners inside VTEX Admin",
+                  "slug": "extensions-hub-our-new-place-to-promote-apps-and-partners-inside-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "May",
               "slug": "may-2023",
               "origin": "",
