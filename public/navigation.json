@@ -12904,6 +12904,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New field now available in Promotion object",
+                  "slug": "new-field-now-available-in-promotion-object",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Get ready for Google Analytics 4 with VTEX's new Google Tag Manager version app",
                   "slug": "2023-05-04-google-tag-manager-new-version",
                   "origin": "",
