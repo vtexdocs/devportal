@@ -23,14 +23,15 @@ export default async function getFileContributors(
   })
 
   response.data.forEach((commitData: any) => {
-    if (!contributors.find((e) => e.login === commitData.author.login)) {
-      contributors.push({
-        name: commitData.commit.author.name,
-        login: commitData.author.login,
-        avatar: commitData.author.avatar_url,
-        userPage: commitData.author.html_url,
-      })
-    }
+    if (commitData?.author)
+      if (!contributors.find((e) => e.login === commitData?.author?.login)) {
+        contributors.push({
+          name: commitData.commit.author?.name,
+          login: commitData.author?.login,
+          avatar: commitData.author?.avatar_url,
+          userPage: commitData.author?.html_url,
+        })
+      }
   })
 
   return contributors
