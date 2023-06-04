@@ -7,9 +7,9 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'improved',
-    description: 'New VTEX Google Tag Manager app version',
-    date: new Date('05/04/2023'),
+    type: 'added',
+    description: 'Extensions Hub: Our new place to promote apps and partners inside VTEX Admin',
+    date: new Date('06/02/2023'),
   },
   updateType: 'release-notes',
 }
