@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.14](https://github.com/vtexdocs/devportal/compare/v1.9.13...v1.9.14) (2023-06-05)
+
+
+### Bug Fixes
+
+* format ([44c2eb5](https://github.com/vtexdocs/devportal/commit/44c2eb596c715c6c6916c887cd730095941a1250))
+* **getfilecontributors:** check for author ([3e2dd54](https://github.com/vtexdocs/devportal/commit/3e2dd54728847d401a9acb4db0a35dc2f7c99fbc))
+* **getfilecontributors:** check for author ([47104e7](https://github.com/vtexdocs/devportal/commit/47104e7f30f8719d6bb2c1d00a7832ec4dd3da16))
+
+
+### Docs
+
+* **netlify.toml:** update pii redirects ([94ed2aa](https://github.com/vtexdocs/devportal/commit/94ed2aa62961b7c86dad6cc416ef2ff4aca9c172))
+
 ### [1.9.13](https://github.com/vtexdocs/devportal/compare/v1.9.12...v1.9.13) (2023-05-26)
 
 
