@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.15](https://github.com/vtexdocs/devportal/compare/v1.9.14...v1.9.15) (2023-06-05)
+
+
+### Docs
+
+* **redirects:** redirecting data privacy article to new correct slug ([8653514](https://github.com/vtexdocs/devportal/commit/86535141d77ad552c13335194ee670090fc92ed6))
+
 ### [1.9.14](https://github.com/vtexdocs/devportal/compare/v1.9.13...v1.9.14) (2023-06-05)
 
 
