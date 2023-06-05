@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.17](https://github.com/vtexdocs/devportal/compare/v1.9.16...v1.9.17) (2023-06-05)
+
+
+### Docs
+
+* **navigation:** add troubleshooting category and first guide ([75a18dc](https://github.com/vtexdocs/devportal/commit/75a18dcd5ddd7f5cb5ead4e61390cf37a714607e))
+
 ### [1.9.16](https://github.com/vtexdocs/devportal/compare/v1.9.15...v1.9.16) (2023-06-05)
 
 
