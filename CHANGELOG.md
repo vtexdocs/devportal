@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.16](https://github.com/vtexdocs/devportal/compare/v1.9.15...v1.9.16) (2023-06-05)
+
+
+### Docs
+
+* **netlify.toml:** fixing pii article redirect ([5448971](https://github.com/vtexdocs/devportal/commit/5448971be4e0bfa3f5fd70ca504d5e54e6a7aa19))
+
 ### [1.9.15](https://github.com/vtexdocs/devportal/compare/v1.9.14...v1.9.15) (2023-06-05)
 
 
