@@ -252,7 +252,7 @@ to = '/docs/guides/changes-and-limitations-pii-data-architecture'
 force = true
 from = '/docs/guides/pii-compliant-accounts'
 status = 308
-to = '/docs/guides/data-privacy'
+to = '/docs/guides/pii-data-architecture'
 
 [[redirects]]
 force = true
@@ -643,3 +643,9 @@ force = true
 from = '/docs/guides/vtexventures-livestreaming'
 status = 308
 to = '/docs/apps/vtexventures.livestreaming'
+
+[[redirects]]
+force = true
+from = '/docs/guides/data-privacy'
+status = 308
+to = '/docs/guides/pii-data-architecture'
