@@ -12955,6 +12955,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New integration guide: headless commerce",
+                  "slug": "2023-06-06-new-integration-guide-headless-commerce",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Extensions Hub: Our new place to promote apps and partners inside VTEX Admin",
                   "slug": "extensions-hub-our-new-place-to-promote-apps-and-partners-inside-vtex-admin",
                   "origin": "",
