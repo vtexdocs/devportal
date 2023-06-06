@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.18](https://github.com/vtexdocs/devportal/compare/v1.9.17...v1.9.18) (2023-06-06)
+
+
+### Docs
+
+* **navigation:** publish headless commerce guides ([36fc086](https://github.com/vtexdocs/devportal/commit/36fc0869e3dcd30695c636432b352414e1d354f3))
+* **navigation:** publish password expiring guide ([baffd9c](https://github.com/vtexdocs/devportal/commit/baffd9cf96b6353317b151151e8094c1c8860b49))
+
 ### [1.9.17](https://github.com/vtexdocs/devportal/compare/v1.9.16...v1.9.17) (2023-06-05)
 
 
