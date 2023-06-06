@@ -125,6 +125,7 @@ const MermaidDiagram = ({ node, ...props }: Component) => {
           background: '#616264',
         }}
         background={'rgba(0, 0, 0, 0)'}
+        detectAutoPan={false}
       >
         <svg width={width} height={height}>
           {parse(diagram)}
