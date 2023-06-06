@@ -53,8 +53,15 @@
                   "children": []
                 },
                 {
-                  "name": "Checking which user is currently authenticated ",
+                  "name": "Checking which user is currently authenticated",
                   "slug": "checking-which-user-is-currently-authenticated",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Expiring a shopper's password",
+                  "slug": "expiring-a-shoppers-password",
                   "origin": "",
                   "type": "markdown",
                   "children": []
