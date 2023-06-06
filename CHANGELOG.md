@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.19](https://github.com/vtexdocs/devportal/compare/v1.9.18...v1.9.19) (2023-06-06)
+
+
+### Docs
+
+* **navigation:** publish headless release note ([5da0bb9](https://github.com/vtexdocs/devportal/commit/5da0bb9b6ab5d7e5cb6a6af2e9383717125e06b3))
+
 ### [1.9.18](https://github.com/vtexdocs/devportal/compare/v1.9.17...v1.9.18) (2023-06-06)
 
 
