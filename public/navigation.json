@@ -53,8 +53,15 @@
                   "children": []
                 },
                 {
-                  "name": "Checking which user is currently authenticated ",
+                  "name": "Checking which user is currently authenticated",
                   "slug": "checking-which-user-is-currently-authenticated",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Expiring a shopper's password",
+                  "slug": "expiring-a-shoppers-password",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -389,6 +396,35 @@
                 {
                   "name": "Gift Card system architecture",
                   "slug": "gift-card-integration-guide-system-architecture",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Headless commerce",
+              "slug": "headless-commerce",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Headless catalog",
+                  "slug": "headless-catalog",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Headless cart and checkout",
+                  "slug": "headless-cart-and-checkout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Headless profile management and order history",
+                  "slug": "headless-profile-management-and-order-history",
                   "origin": "",
                   "type": "markdown",
                   "children": []
