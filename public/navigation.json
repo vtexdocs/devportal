@@ -396,6 +396,35 @@
               ]
             },
             {
+              "name": "Headless commerce",
+              "slug": "headless-commerce",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Headless catalog",
+                  "slug": "headless-catalog",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Headless cart and checkout",
+                  "slug": "headless-cart-and-checkout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Headless profile management and order history",
+                  "slug": "headless-profile-management-and-order-history",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Login (SSO)",
               "slug": "login-integration-guide",
               "origin": "",
