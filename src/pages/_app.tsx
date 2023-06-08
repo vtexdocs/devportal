@@ -6,7 +6,6 @@ import { SessionProvider } from 'next-auth/react'
 
 import 'styles/global.css'
 import 'styles/rapidoc.css'
-import 'styles/mermaid.css'
 
 import Layout from 'components/layout'
 

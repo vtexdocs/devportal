@@ -19,6 +19,9 @@ import {
 } from 'react-svg-pan-zoom'
 import mermaid from 'mermaid'
 import parse from 'html-react-parser'
+import mermaidInit from 'utils/mermaidInit'
+
+mermaidInit()
 
 type Component = {
   node: object
@@ -105,7 +108,9 @@ const MermaidDiagram = ({ node, ...props }: Component) => {
 
     const mermaidRenderer = async function () {
       const { svg } = await mermaid.render('mermaid-id', props.children)
-      setDiagram(svg.replace('id="mermaid-id"', ''))
+      setDiagram(
+        svg.replace('id="mermaid-id"', '').replaceAll('#mermaid-id', '')
+      )
     }
 
     mermaidRenderer()
