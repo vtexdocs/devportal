@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.20](https://github.com/vtexdocs/devportal/compare/v1.9.19...v1.9.20) (2023-06-09)
+
+
+### Bug Fixes
+
+* **mermaid:** remove zoom on scroll ([989804d](https://github.com/vtexdocs/devportal/commit/989804de7fbb6bcf4a878b91b23bb2de50639990))
+* **mermaid:** set detect auto pan to false ([2f4b853](https://github.com/vtexdocs/devportal/commit/2f4b85304d0661442490006d17b319368ed4a01c))
+* **mermaid:** using themes to set diagram colors ([1e83a2e](https://github.com/vtexdocs/devportal/commit/1e83a2e54e305c03006720c8aacd8ca0aba2f96a))
+
 ### [1.9.19](https://github.com/vtexdocs/devportal/compare/v1.9.18...v1.9.19) (2023-06-06)
 
 
