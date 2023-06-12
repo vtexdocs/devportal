@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.21](https://github.com/vtexdocs/devportal/compare/v1.9.20...v1.9.21) (2023-06-12)
+
+
+### Chore
+
+* update rapidoc submodule ([f2d1612](https://github.com/vtexdocs/devportal/commit/f2d1612ef0b371c0c23fd2b691ff9271a228874d))
+
 ### [1.9.20](https://github.com/vtexdocs/devportal/compare/v1.9.19...v1.9.20) (2023-06-09)
 
 
