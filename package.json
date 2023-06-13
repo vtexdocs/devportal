@@ -22,6 +22,8 @@
     "cypress": "cypress open"
   },
   "dependencies": {
+    "@faststore/components": "^2.1.9",
+    "@faststore/ui": "^2.1.9",
     "@highlightjs/cdn-assets": "^11.7.0",
     "@lit-labs/nextjs": "^0.1.1",
     "@openreplay/tracker": "^5.0.1",
@@ -58,6 +60,8 @@
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
     "react-animate-height": "^3.0.4",
+    "react-docgen": "^5.4.3",
+    "react-docgen-typescript": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-instantsearch-dom": "^6.37.0",
     "react-intersection-observer": "^9.2.2",

@@ -11,7 +11,6 @@ import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import remarkMermaid from 'utils/remark_plugins/mermaid'
-
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
@@ -19,6 +18,7 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 import { SidebarContext } from 'utils/contexts/sidebar'
 
+import PropsSection from 'components/faststore-docs/PropsSection'
 import type { Item } from 'components/table-of-contents'
 import Contributors from 'components/contributors'
 import MarkdownRenderer from 'components/markdown-renderer'
@@ -44,6 +44,7 @@ import getFileContributors, {
 
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import { getComponentPropsFrom } from 'utils/propsSectionUtil'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -68,6 +69,13 @@ interface Props {
   }
   isListed: boolean
   branch: string
+  faststoreComponentPropsData: {
+    name: string
+    type: string
+    required: boolean
+    default: string
+    description: string
+  }[]
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -84,6 +92,7 @@ const DocumentationPage: NextPage<Props> = ({
   breadcumbList,
   branch,
   sectionSelected,
+  faststoreComponentPropsData,
 }) => {
   const headings: Item[] = headingList
   const { setBranchPreview } = useContext(PreviewContext)
@@ -126,6 +135,12 @@ const DocumentationPage: NextPage<Props> = ({
                   </Text>
                 </header>
                 <MarkdownRenderer serialized={serialized} />
+                {faststoreComponentPropsData.length !== 0 && (
+                  <>
+                    <Text>Props</Text>
+                    <PropsSection propsList={faststoreComponentPropsData} />
+                  </>
+                )}
               </article>
             </Box>
 
@@ -181,8 +196,8 @@ export const getStaticProps: GetStaticProps = async ({
   const previewBranch =
     preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
       ? JSON.parse(JSON.stringify(previewData)).branch
-      : 'main'
-  const branch = preview ? previewBranch : 'main'
+      : 'feat/migrate-faststore-docs-test'
+  const branch = preview ? previewBranch : 'feat/migrate-faststore-docs-test'
   const slug = params?.slug as string
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
@@ -192,6 +207,9 @@ export const getStaticProps: GetStaticProps = async ({
   const logger = getLogger('Guides')
 
   const path = docsPaths[slug]
+
+  const isFastStoreComponent = path.includes('/faststore/components')
+
   if (!path) {
     return {
       notFound: true,
@@ -246,6 +264,21 @@ export const getStaticProps: GetStaticProps = async ({
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
+    let faststoreComponentPropsData: {
+      name: string
+      type: string
+      required: boolean
+      default: string
+      description: string
+    }[] = []
+    if (isFastStoreComponent) {
+      const atomicDesign = serialized.frontmatter?.atomicDesign as string
+      faststoreComponentPropsData = await getComponentPropsFrom(
+        atomicDesign,
+        slug
+      )
+    }
+
     logger.info(`Processing ${slug}`)
     const seeAlsoData: {
       url: string
@@ -263,7 +296,7 @@ export const getStaticProps: GetStaticProps = async ({
             const documentationContent = await getGithubFile(
               'vtexdocs',
               'dev-portal-content',
-              'main',
+              'feat/migrate-faststore-docs-test',
               seeAlsoPath
             )
             const serialized = await serialize(documentationContent, {
@@ -361,6 +394,7 @@ export const getStaticProps: GetStaticProps = async ({
         isListed,
         breadcumbList,
         branch,
+        faststoreComponentPropsData,
       },
     }
   } catch (error) {
