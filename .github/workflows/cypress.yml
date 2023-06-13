@@ -24,9 +24,7 @@ jobs:
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
       - name: Fetch navigation.json
-        uses: wei/curl@v1
-        with:
-          args: -o src/tests/cypress/fixtures/navigation.json https://developers.vtex.com/navigation.json
+        run: curl -o src/tests/cypress/fixtures/navigation.json https://developers.vtex.com/navigation.json
       - name: Cypress run
         uses: cypress-io/github-action@v5
         with:
