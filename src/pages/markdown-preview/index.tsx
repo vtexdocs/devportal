@@ -17,7 +17,6 @@ import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import remarkImages from 'utils/remark_plugins/client-image'
 
 import styles from 'styles/document-editor'
-import Auth from 'components/auth'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 interface Props {
@@ -161,7 +160,7 @@ const WriteDocPage: Page<Props> = () => {
   }, [documentContent])
 
   return (
-    <Auth>
+    <>
       <Head>
         <title>Markdown Editor</title>
         <meta name="robots" content="noindex" />
@@ -173,7 +172,6 @@ const WriteDocPage: Page<Props> = () => {
               placeholder="Type here..."
               value={documentContent}
               onValueChange={(code) => setDocumentContent(code)}
-              about="aldwad"
               highlight={(code) =>
                 Prism.highlight(code, Prism.languages.markdown, 'md')
               }
@@ -214,7 +212,7 @@ const WriteDocPage: Page<Props> = () => {
           </Box>
         </Flex>
       </Box>
-    </Auth>
+    </>
   )
 }
 
