@@ -32,7 +32,7 @@ import {
 } from 'utils/navigation-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
-import getDocsPaths from 'utils/getReleasePaths'
+import getReleasePaths from 'utils/getReleasePaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
@@ -42,7 +42,7 @@ import { ActionType, getAction } from 'components/last-updates-card/functions'
 import styles from 'styles/documentation-page'
 import { PreviewContext } from 'utils/contexts/preview'
 
-const docsPathsGLOBAL = await getDocsPaths()
+const docsPathsGLOBAL = await getReleasePaths()
 
 interface Props {
   content: string
@@ -126,11 +126,11 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // const slugs = Object.keys(await getDocsPaths())
-  // const paths = slugs.map((slug) => ({
-  //   params: { slug },
-  // }))
-  const paths: never[] = []
+  const paths = [
+    {
+      params: { slug: 'access-googles-pagespeed-insights-in-your-vtex-admin' },
+    },
+  ]
   return {
     paths,
     fallback: 'blocking',
@@ -155,7 +155,7 @@ export const getStaticProps: GetStaticProps = async ({
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
-      : await getDocsPaths(branch, currentLocale)
+      : await getReleasePaths(branch, currentLocale)
 
   const path = docsPaths[slug]
   if (!path) {

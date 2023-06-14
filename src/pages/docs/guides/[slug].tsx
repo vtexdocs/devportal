@@ -163,10 +163,15 @@ const DocumentationPage: NextPage<Props> = ({
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const slugs = Object.keys(await getDocsPaths())
-  const paths = slugs.map((slug) => ({
-    params: { slug },
-  }))
+  //const slugs = Object.keys(await getDocsPaths())
+  //const paths = slugs.map((slug) => ({
+  //    params: { slug },
+  //}))
+  const paths = [
+    {
+      params: { slug: 'about-the-community-support-plan' },
+    },
+  ]
   return {
     paths,
     fallback: 'blocking',
