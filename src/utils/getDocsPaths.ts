@@ -28,7 +28,12 @@ export default async function getDocsPaths(branch = 'main', locale = 'en') {
   repoTree.tree.map((node: any) => {
     const path = node.path
     const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
-    if (path.startsWith(`docs/${locale}`)) {
+    if (
+      path.startsWith(`docs/tracks/${locale}`) ||
+      path.startsWith(`docs/faq/${locale}`) ||
+      path.startsWith(`docs/known-issues/${locale}`) ||
+      path.startsWith(`docs/tutorials/${locale}`)
+    ) {
       const match = path.match(re)
       const filename = match?.groups?.filename ? match?.groups?.filename : ''
       const filetype = match?.groups?.filetype ? match?.groups?.filetype : ''
