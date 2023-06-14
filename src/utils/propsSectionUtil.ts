@@ -7,8 +7,9 @@ export function mapComponentFromMdxPath(
   atomicDesignType: string,
   component: string
 ): string {
-  const faststoreComponentsSrcFromNodeModules = `${process.cwd()}/node_modules/@faststore/components/src/${atomicDesignType}`
-  // e.g. <user-path>/faststore/node_modules/@faststore/components/src/molecules/Accordion/Accordion.tsx
+  const sourceDir = __dirname.split('/devportal/')[0]
+  const faststoreComponentsSrcFromNodeModules = `${sourceDir}/devportal/node_modules/@faststore/components/src/${atomicDesignType}`
+  // e.g. <user-path>/devportal/node_modules/@faststore/components/src/molecules/Accordion/Accordion.tsx
 
   return [
     faststoreComponentsSrcFromNodeModules,
