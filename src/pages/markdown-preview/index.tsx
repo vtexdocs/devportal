@@ -50,9 +50,10 @@ Text Template: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ri
 ## Bullet points template
 
 - First: any text.
-- **Bold Second**: any text.
-- *Italic Third*: any text.
-- \`Code Fourth\`: any text.
+  - subtopic
+- **Second(Bold)**: any text.
+- *Third(Italic)*: any text.
+- \`Fourth(Code)\`: any text.
 
 **Code Block Template**
 
@@ -67,13 +68,13 @@ Text Template: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ri
 \`\`\`
 
 
->❗ This is a danger callout block.
+>❗ This is a danger callout.
 
->\u26A0 This is a warning callout block.
+>\u26A0 This is a warning callout.
 
->\u2705 This is a Success callout block.
+>\u2705 This is a Success callout.
 
->ℹ️ This is a Info callout block.
+>ℹ️ This is a Info callout.
 `
 
 async function serializing(
