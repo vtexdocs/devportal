@@ -12,6 +12,7 @@ import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import remarkMermaid from 'utils/remark_plugins/mermaid'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
+import path from 'path'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
@@ -56,7 +57,7 @@ interface Props {
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
   contributors: ContributorsType[]
-  path: string
+  contentPath: string
   headingList: Item[]
   seeAlsoData: {
     url: string
@@ -83,7 +84,7 @@ const DocumentationPage: NextPage<Props> = ({
   //@ts-ignore
   slug,
   serialized,
-  path,
+  contentPath,
   headingList,
   contributors,
   seeAlsoData,
@@ -149,7 +150,7 @@ const DocumentationPage: NextPage<Props> = ({
               <Contributors contributors={contributors} />
             </Box>
 
-            <FeedbackSection docPath={path} slug={slug} />
+            <FeedbackSection docPath={contentPath} slug={slug} />
             {isListed && (
               <ArticlePagination
                 hidePaginationNext={
@@ -206,11 +207,9 @@ export const getStaticProps: GetStaticProps = async ({
 
   const logger = getLogger('Guides')
 
-  const path = docsPaths[slug]
+  const contentPath = docsPaths[slug]
 
-  const isFastStoreComponent = path.includes('/faststore/components')
-
-  if (!path) {
+  if (!contentPath) {
     return {
       notFound: true,
     }
@@ -220,19 +219,19 @@ export const getStaticProps: GetStaticProps = async ({
     'vtexdocs',
     'dev-portal-content',
     branch,
-    path
+    contentPath
   )
 
   const contributors = await getFileContributors(
     'vtexdocs',
     'dev-portal-content',
     branch,
-    path
+    contentPath
   )
 
   let format: 'md' | 'mdx' = 'mdx'
   try {
-    if (path.endsWith('.md')) {
+    if (contentPath.endsWith('.md')) {
       documentationContent = escapeCurlyBraces(documentationContent)
       documentationContent = replaceHTMLBlocks(documentationContent)
       documentationContent = await replaceMagicBlocks(documentationContent)
@@ -264,6 +263,8 @@ export const getStaticProps: GetStaticProps = async ({
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
+    const isFastStoreComponent = contentPath.includes('/faststore/components')
+
     let faststoreComponentPropsData: {
       name: string
       type: string
@@ -271,11 +272,15 @@ export const getStaticProps: GetStaticProps = async ({
       default: string
       description: string
     }[] = []
+
     if (isFastStoreComponent) {
       const atomicDesign = serialized.frontmatter?.atomicDesign as string
-      faststoreComponentPropsData = await getComponentPropsFrom(
+      const componentName = serialized.frontmatter?.title as string
+      const currentPath = path.resolve(__filename)
+      faststoreComponentPropsData = getComponentPropsFrom(
+        currentPath,
         atomicDesign,
-        slug
+        componentName
       )
     }
 
@@ -388,7 +393,7 @@ export const getStaticProps: GetStaticProps = async ({
         sidebarfallback,
         headingList,
         contributors,
-        path,
+        contentPath,
         seeAlsoData,
         pagination,
         isListed,
@@ -398,7 +403,7 @@ export const getStaticProps: GetStaticProps = async ({
       },
     }
   } catch (error) {
-    logger.error(`Error while processing ${path}\n${error}`)
+    logger.error(`Error while processing ${contentPath}\n${error}`)
     return {
       notFound: true,
     }

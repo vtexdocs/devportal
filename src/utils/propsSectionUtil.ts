@@ -4,10 +4,12 @@ export const faststoreComponentsFromNodeModules =
   'node_modules/@faststore/components'
 
 export function mapComponentFromMdxPath(
+  currentPath: string,
   atomicDesignType: string,
   component: string
 ): string {
-  const sourceDir = __dirname.split('/devportal/')[0]
+  const sourceDir = currentPath.split('/devportal/')[0]
+  console.log(sourceDir)
   const faststoreComponentsSrcFromNodeModules = `${sourceDir}/devportal/node_modules/@faststore/components/src/${atomicDesignType}`
   // e.g. <user-path>/devportal/node_modules/@faststore/components/src/molecules/Accordion/Accordion.tsx
 
@@ -19,10 +21,12 @@ export function mapComponentFromMdxPath(
 }
 
 export function getComponentPropsFrom(
+  currentPath: string,
   atomicDesignType: string,
   componentsName: string
 ) {
   const componentPath: string = mapComponentFromMdxPath(
+    currentPath,
     atomicDesignType,
     componentsName
   )
