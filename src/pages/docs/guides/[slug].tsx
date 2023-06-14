@@ -167,7 +167,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   //const paths = slugs.map((slug) => ({
   //    params: { slug },
   //}))
-  const paths: never[] = []
+  const paths = [
+    {
+      params: { slug: 'about-the-community-support-plan' },
+    },
+  ]
   return {
     paths,
     fallback: 'blocking',
