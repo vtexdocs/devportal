@@ -9,14 +9,15 @@ const previewContainer: SxStyleProp = {
 
 const writeBox: SxStyleProp = {
   height: '100%',
+  flexDirection: ['column', 'column', 'row'],
 }
 
 const textArea: SxStyleProp = {
   top: '100px',
-  position: 'sticky',
-  height: ['400px', '400px', '500px', '700px'],
+  position: ['initial', 'initial', 'sticky'],
+  height: ['400px', '400px', '75vh'],
   marginLeft: '8px',
-  width: '37vw',
+  width: ['100%', '100%', '37vw'],
   overflow: 'auto',
   background: '#f8f7fc',
   borderRadius: '8px',
@@ -63,11 +64,13 @@ const editor: SxStyleProp = {
 }
 
 const renderedPageBox: SxStyleProp = {
-  borderLeft: '2px solid #E7E9EE',
-  paddingLeft: '8px',
+  borderLeft: ['none', 'none', '2px solid #E7E9EE'],
+  borderTop: ['2px solid #E7E9EE', '2px solid #E7E9EE', 'none'],
+  marginTop: ['24px', '24px', '0'],
+  paddingLeft: ['0', '0', '8px'],
   marginLeft: '8px',
   height: 'fit-content',
-  width: '61vw',
+  width: ['100%', '100%', '61vw'],
 }
 
 const warning: SxStyleProp = {
@@ -79,7 +82,7 @@ const warning: SxStyleProp = {
 }
 
 const errorBox: SxStyleProp = {
-  margin: 'auto',
+  justifyContent: 'center',
 }
 
 const errorMessage: SxStyleProp = {

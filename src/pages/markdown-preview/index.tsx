@@ -50,9 +50,9 @@ Text Template: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ri
 
 - First: any text.
   - subtopic
-- **Second(Bold)**: any text.
-- *Third(Italic)*: any text.
-- \`Fourth(Code)\`: any text.
+- **Second (Bold)**: any text.
+- *Third (Italic)*: any text.
+- \`Fourth (Code)\`: any text.
 
 **Code Block Template**
 
@@ -67,9 +67,9 @@ Text Template: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ri
 \`\`\`
 
 
->❗ This is a danger callout.
+>❗ This is a Danger callout.
 
->\u26A0 This is a warning callout.
+>\u26A0 This is a Warning callout.
 
 >\u2705 This is a Success callout.
 
@@ -202,9 +202,9 @@ const WriteDocPage: Page<Props> = () => {
               </Box>
             )}
             {error && (
-              <Box sx={styles.errorBox}>
+              <Flex sx={styles.errorBox}>
                 <Text sx={styles.errorMessage}>{error}</Text>
-              </Box>
+              </Flex>
             )}
             {!documentContent && (
               <Text sx={styles.emptyMessage}>Empty Document</Text>

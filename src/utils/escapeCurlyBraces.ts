@@ -12,7 +12,7 @@ const assertCodeBlocksAreCorrectlyFormatted = (
 
   const error = (row: number, col: number) => {
     if (from === 'client') {
-      return `There is an incorrectly formatted code block at line ${row} and column ${col} in this file`
+      return `There is an incorrectly formatted code block at line ${row} and column ${col} in this preview`
     }
 
     throw new Error(
@@ -77,6 +77,8 @@ const escapeCurlyBraces: (
 } = (content, from?: string) => {
   const error = assertCodeBlocksAreCorrectlyFormatted(content, from)
 
+  if (error) return { result: '', error }
+
   let idx = 0
   let newContent = ''
   let insideCodeBlock = false
@@ -84,7 +86,19 @@ const escapeCurlyBraces: (
 
   if (content.startsWith('---')) {
     idx += 3
-    while (content.substring(idx, idx + 3) !== '---') idx++
+    let frontMatterEnd = ''
+    while (
+      idx < content.length &&
+      (frontMatterEnd = content.substring(idx, idx + 3)) !== '---'
+    )
+      idx++
+    if (frontMatterEnd !== '---') {
+      return {
+        result: '',
+        error:
+          'Parsing error in Frontmatter. Did you close the frontmatter block with "---"?',
+      }
+    }
     idx += 3
   }
   newContent = content.substring(0, idx)
