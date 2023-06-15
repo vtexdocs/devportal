@@ -147,7 +147,7 @@ const APIPage: NextPage<Props> = ({
         <rapi-doc
           ref={rapidoc}
           spec-url={`/api/openapi/${slug}`}
-          postman-url={`/api/portman/${slug}`}
+          postman-url={`/api/postman/${slug}`}
           spec={doc}
           layout="column"
           render-style="focused"

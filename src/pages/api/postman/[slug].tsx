@@ -73,7 +73,7 @@ export default async function handler(req: any, res: any) {
   const path = referencePaths[slug] || ''
   if (path) {
     const response = await fetch(
-      `https://raw.githubusercontent.com/vtex/openapi-schemas/master/portman/${path}.json`
+      `https://raw.githubusercontent.com/vtex/openapi-schemas/master/PostmanCollections/${path}.json`
     )
     const body = await response.text()
     res
