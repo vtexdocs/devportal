@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import type { Page } from 'utils/typings/types'
 import Head from 'next/head'
 import { Box, Text, Flex } from '@vtex/brand-ui'
+import CopyButton from 'components/copy-button'
+import type { Page } from 'utils/typings/types'
 
 import MarkdownRenderer from 'components/markdown-renderer'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -166,18 +167,26 @@ const WriteDocPage: Page<Props> = () => {
         <meta name="robots" content="noindex" />
       </Head>
       <Box sx={styles.previewContainer}>
+        <Text sx={styles.title}> Markdown Editor </Text>
+        <Text sx={styles.subtitle}>
+          Use the markdown editor below and preview the rendered page to the
+          side.
+        </Text>
         <Flex sx={styles.writeBox}>
-          <Box sx={styles.textArea}>
-            <Editor
-              placeholder="Type here..."
-              value={documentContent}
-              onValueChange={(code) => setDocumentContent(code)}
-              highlight={(code) =>
-                Prism.highlight(code, Prism.languages.markdown, 'md')
-              }
-              padding={10}
-              style={styles.editor}
-            />
+          <Box sx={styles.writeContainer}>
+            <CopyButton sx={styles.copyButton} code={documentContent} />
+            <Box sx={styles.textArea}>
+              <Editor
+                placeholder="Type here..."
+                value={documentContent}
+                onValueChange={(code) => setDocumentContent(code)}
+                highlight={(code) =>
+                  Prism.highlight(code, Prism.languages.markdown, 'md')
+                }
+                padding={10}
+                style={styles.editor}
+              />
+            </Box>
           </Box>
           <Box sx={styles.renderedPageBox}>
             {serializedDoc && (

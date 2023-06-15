@@ -7,6 +7,22 @@ const previewContainer: SxStyleProp = {
   mt: '64px',
 }
 
+const title: SxStyleProp = {
+  fontSize: '32px',
+  paddingLeft: '24px',
+}
+
+const subtitle: SxStyleProp = {
+  color: '#A1A8B3',
+  fontSize: '18px',
+  marginBlock: '8px 24px',
+  paddingLeft: '24px',
+}
+
+const writeContainer: SxStyleProp = {
+  position: 'relative',
+}
+
 const writeBox: SxStyleProp = {
   height: '100%',
   flexDirection: ['column', 'column', 'row'],
@@ -55,6 +71,13 @@ const textArea: SxStyleProp = {
   },
 }
 
+const copyButton: SxStyleProp = {
+  position: 'absolute',
+  top: '8px',
+  right: '8px',
+  zIndex: '1',
+}
+
 const editor: SxStyleProp = {
   fontFamily: '"Fira code", "Fira Mono", monospace',
   fontSize: '14px',
@@ -101,8 +124,12 @@ const emptyMessage: SxStyleProp = {
 
 export default {
   previewContainer,
+  title,
+  subtitle,
+  writeContainer,
   writeBox,
   textArea,
+  copyButton,
   editor,
   renderedPageBox,
   warning,
