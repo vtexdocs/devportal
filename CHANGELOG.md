@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.22](https://github.com/vtexdocs/devportal/compare/v1.9.21...v1.9.22) (2023-06-15)
+
+
+### Features
+
+* create api route to get postman collection ([565201f](https://github.com/vtexdocs/devportal/commit/565201f0c1eb8e8ce148804081c4ecbfbce8a912))
+
+
+### Bug Fixes
+
+* change endpoint to postman and update folder name ([0c33529](https://github.com/vtexdocs/devportal/commit/0c33529cdc940a29e8dae4ed0178f9528f8c5591))
+
+
+### Chore
+
+* update rapidoc submodule ([ae3db8c](https://github.com/vtexdocs/devportal/commit/ae3db8cc0eb59e0eacfee7641468b89c7d0186b2))
+* update rapidoc submodule to add icons ([62f8611](https://github.com/vtexdocs/devportal/commit/62f8611cecdd819a93fcb793e3d36816c2bc3074))
+* update rapidoc submodule to fix curl url ([e831e55](https://github.com/vtexdocs/devportal/commit/e831e55e192a0123f677a8e9988e9d57875c1dd2))
+
 ### [1.9.21](https://github.com/vtexdocs/devportal/compare/v1.9.20...v1.9.21) (2023-06-12)
 
 
