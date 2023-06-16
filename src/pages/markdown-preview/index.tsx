@@ -30,8 +30,8 @@ import 'prismjs/components/prism-markdown'
 import Editor from 'react-simple-code-editor'
 
 const templateDoc = `---
-title: "Title"
-slug: "document-slug"
+title: "Preview"
+slug: "preview-document-slug"
 hidden: false
 createdAt: "2023-06-21T10:45:55.338Z"
 updatedAt: "2023-06-21T11:40:35.480Z"
@@ -49,11 +49,11 @@ Text Template: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ri
 
 ## Bullet points template
 
-- First: any text.
+- First : any text.
   - subtopic
-- **Second (Bold)**: any text.
-- *Third (Italic)*: any text.
-- \`Fourth (Code)\`: any text.
+- **Second (Bold)** : any text.
+- *Third (Italic)* : any text.
+- \`Fourth (Code)\` : any text.
 
 **Code Block Template**
 
@@ -67,6 +67,12 @@ Text Template: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ri
 }
 \`\`\`
 
+## Table template
+
+| Name | Description |
+| :---: | --- |
+|\`VTEX\` | Lorem ipsum dolor sit amet, consectetur adipiscing elit. |
+| [Developers Portal](https://developers.vtex.com) | Lorem ipsum dolor sit amet, consectetur adipiscing elit. |
 
 >❗ This is a Danger callout.
 
@@ -74,7 +80,7 @@ Text Template: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ri
 
 >\u2705 This is a Success callout.
 
->ℹ️ This is a Info callout.
+>ℹ️ This is an Info callout.
 `
 
 async function serializing(
@@ -112,7 +118,7 @@ async function serializing(
   return { serialized, error: serializedError || '' }
 }
 
-const WriteDocPage: Page<Props> = () => {
+const MarkdownPreviewPage: Page<Props> = () => {
   const [documentContent, setDocumentContent] = useState(templateDoc)
   const [serializedDoc, setSerializedDoc] =
     useState<MDXRemoteSerializeResult | null>()
@@ -163,11 +169,11 @@ const WriteDocPage: Page<Props> = () => {
   return (
     <>
       <Head>
-        <title>Markdown Editor</title>
+        <title>Markdown Preview</title>
         <meta name="robots" content="noindex" />
       </Head>
       <Box sx={styles.previewContainer}>
-        <Text sx={styles.title}> Markdown Editor </Text>
+        <Text sx={styles.title}> Markdown Preview </Text>
         <Text sx={styles.subtitle}>
           Use the markdown editor below and preview the rendered page to the
           side.
@@ -225,6 +231,6 @@ const WriteDocPage: Page<Props> = () => {
   )
 }
 
-WriteDocPage.hideSidebar = true
+MarkdownPreviewPage.hideSidebar = true
 
-export default WriteDocPage
+export default MarkdownPreviewPage
