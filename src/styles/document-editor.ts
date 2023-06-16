@@ -21,6 +21,25 @@ const subtitle: SxStyleProp = {
 
 const writeContainer: SxStyleProp = {
   position: 'relative',
+  width: ['100%', '100%', '37vw'],
+}
+
+const resizeButton: SxStyleProp = {
+  display: ['none !important', 'none !important', 'flex !important'],
+  position: 'sticky',
+  float: 'right',
+  top: '50%',
+  background: '#CCCED7',
+  paddingBlock: '8px',
+  borderRadius: '4px',
+  marginLeft: '8px',
+  marginRight: '12px',
+  cursor: 'pointer',
+  svg: {
+    path: {
+      fill: '#F8F7FC',
+    },
+  },
 }
 
 const writeBox: SxStyleProp = {
@@ -33,12 +52,16 @@ const textArea: SxStyleProp = {
   position: ['initial', 'initial', 'sticky'],
   height: ['400px', '400px', '75vh'],
   marginLeft: '8px',
-  width: ['100%', '100%', '37vw'],
+  // width: ['100%', '100%', '37vw'],
   overflow: 'auto',
   background: '#f8f7fc',
   borderRadius: '8px',
   padding: '4px',
   border: '1px solid #e7e9ee',
+  counterReset: 'line',
+  'pre, textarea': {
+    paddingLeft: '24px !important',
+  },
   'pre, code, pre *, code *': {
     fontFamily: 'VTEX Trust Regular !important',
   },
@@ -69,6 +92,20 @@ const textArea: SxStyleProp = {
   '.punctuation': {
     color: '#162035',
   },
+  '.container__editor': {
+    counterReset: 'line',
+  },
+  '.editor-line-number': {
+    ':before': {
+      position: 'absolute',
+      left: '0',
+      textAlign: 'right',
+      opacity: '.3',
+      userSelect: 'none',
+      counterIncrement: 'line',
+      content: 'counter(line)',
+    },
+  },
 }
 
 const copyButton: SxStyleProp = {
@@ -87,13 +124,11 @@ const editor: SxStyleProp = {
 }
 
 const renderedPageBox: SxStyleProp = {
-  borderLeft: ['none', 'none', '2px solid #E7E9EE'],
   borderTop: ['2px solid #E7E9EE', '2px solid #E7E9EE', 'none'],
   marginTop: ['24px', '24px', '0'],
-  paddingLeft: ['0', '0', '8px'],
-  marginLeft: '8px',
   height: 'fit-content',
   width: ['100%', '100%', '61vw'],
+  paddingInline: ['12px', '12px', '0'],
 }
 
 const warning: SxStyleProp = {
@@ -128,6 +163,7 @@ export default {
   subtitle,
   writeContainer,
   writeBox,
+  resizeButton,
   textArea,
   copyButton,
   editor,

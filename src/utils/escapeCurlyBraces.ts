@@ -89,17 +89,17 @@ const escapeCurlyBraces: (
     let frontMatterEnd = ''
     while (
       idx < content.length &&
-      (frontMatterEnd = content.substring(idx, idx + 3)) !== '---'
+      (frontMatterEnd = content.substring(idx, idx + 5)) !== '\n---\n'
     )
       idx++
-    if (frontMatterEnd !== '---') {
+    if (frontMatterEnd !== '\n---\n') {
       return {
         result: '',
         error:
-          'Parsing error in Frontmatter. Did you close the frontmatter block with "---"?',
+          'Parsing error in Frontmatter. Did you close the frontmatter block with "---" ?',
       }
     }
-    idx += 3
+    idx += 5
   }
   newContent = content.substring(0, idx)
 

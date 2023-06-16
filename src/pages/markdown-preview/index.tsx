@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { Box, Text, Flex } from '@vtex/brand-ui'
 import CopyButton from 'components/copy-button'
+import ResizeIcon from 'components/icons/resize-icon'
 import type { Page } from 'utils/typings/types'
 
 import MarkdownRenderer from 'components/markdown-renderer'
@@ -111,7 +112,6 @@ async function serializing(
       },
     })
     serialized = JSON.parse(JSON.stringify(serialized))
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e) {
     serializedError = (e as Error).message
   }
@@ -123,6 +123,7 @@ const MarkdownPreviewPage: Page<Props> = () => {
   const [serializedDoc, setSerializedDoc] =
     useState<MDXRemoteSerializeResult | null>()
   const [error, setError] = useState('')
+  const [resizeValue, setResizeValue] = useState(0)
 
   const missingProperties = () => {
     const frontmatterKeys = [
@@ -140,6 +141,24 @@ const MarkdownPreviewPage: Page<Props> = () => {
       result += missing[i] + `${i < n - 1 ? ', ' : ''}`
     }
     return result
+  }
+
+  const resizeHandler = (mouseDownEvent: MouseEvent) => {
+    const startPosition = mouseDownEvent.pageX
+    mouseDownEvent.preventDefault()
+
+    function onMouseMove(mouseMoveEvent: MouseEvent) {
+      setResizeValue(
+        (resizeValue > 0 ? resizeValue : startPosition + 24) +
+          (mouseMoveEvent.pageX - startPosition)
+      )
+    }
+    function onMouseUp() {
+      document.body.removeEventListener('mousemove', onMouseMove)
+    }
+
+    document.body.addEventListener('mousemove', onMouseMove)
+    document.body.addEventListener('mouseup', onMouseUp, { once: true })
   }
 
   useEffect(() => {
@@ -179,7 +198,16 @@ const MarkdownPreviewPage: Page<Props> = () => {
           side.
         </Text>
         <Flex sx={styles.writeBox}>
-          <Box sx={styles.writeContainer}>
+          <Box
+            style={resizeValue > 0 ? { width: resizeValue } : null}
+            sx={styles.writeContainer}
+          >
+            <Flex
+              sx={styles.resizeButton}
+              onMouseDown={(e: MouseEvent) => resizeHandler(e)}
+            >
+              <ResizeIcon />
+            </Flex>
             <Box sx={styles.textArea}>
               <CopyButton sx={styles.copyButton} code={documentContent} />
               <Editor
@@ -188,13 +216,26 @@ const MarkdownPreviewPage: Page<Props> = () => {
                 onValueChange={(code) => setDocumentContent(code)}
                 highlight={(code) =>
                   Prism.highlight(code, Prism.languages.markdown, 'md')
+                    .split('\n')
+                    .map(
+                      (line) =>
+                        `<span class="editor-line-number">${line}</span>`
+                    )
+                    .join('\n')
                 }
                 padding={10}
                 style={styles.editor}
               />
             </Box>
           </Box>
-          <Box sx={styles.renderedPageBox}>
+          <Box
+            style={
+              resizeValue > 0
+                ? { width: `calc(100% - ${resizeValue}px)` }
+                : null
+            }
+            sx={styles.renderedPageBox}
+          >
             {serializedDoc && (
               <Box sx={styles.articleBox}>
                 <article>
