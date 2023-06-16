@@ -72,7 +72,7 @@ const textArea: SxStyleProp = {
 }
 
 const copyButton: SxStyleProp = {
-  position: 'absolute',
+  position: 'sticky',
   top: '8px',
   right: '8px',
   zIndex: '1',

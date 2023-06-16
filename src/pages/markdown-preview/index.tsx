@@ -180,8 +180,8 @@ const MarkdownPreviewPage: Page<Props> = () => {
         </Text>
         <Flex sx={styles.writeBox}>
           <Box sx={styles.writeContainer}>
-            <CopyButton sx={styles.copyButton} code={documentContent} />
             <Box sx={styles.textArea}>
+              <CopyButton sx={styles.copyButton} code={documentContent} />
               <Editor
                 placeholder="Type here..."
                 value={documentContent}
