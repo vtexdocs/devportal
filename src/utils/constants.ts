@@ -23,6 +23,7 @@ import {
   WhatsNextDataElement,
   ResourceDataElement,
 } from './typings/types'
+import TroubleshootingIcon from 'components/icons/troubleshooting-icon'
 
 const algoliaClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
@@ -70,6 +71,12 @@ export const documentationData: DocDataElement[] = [
     description: messages['documentation_vtexio_apps.description'],
     link: '/docs/vtex-io-apps',
   },
+  {
+    Icon: TroubleshootingIcon,
+    title: 'Troubleshooting',
+    description: messages['documentation_troubleshooting.description'],
+    link: '/docs/troubleshooting',
+  },
 ]
 
 export const updatesData: UpdatesDataElement[] = [
@@ -113,6 +120,34 @@ export const whatsNextData: WhatsNextDataElement[] = [
     title: messages['app_development_page_go_further.title'],
     description: messages['app_development_page_go_further.description'],
     linkTitle: messages['app_development_page_go_further.link'],
+    linkTo:
+      '/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store',
+  },
+]
+
+export const troubleshootingData: WhatsNextDataElement[] = [
+  {
+    title: 'Rate limits',
+    description: 'Lorem ipsum',
+    linkTitle: 'Lorem ipsum',
+    linkTo: '/docs/guides/vtex-io-getting-started',
+  },
+  {
+    title: 'General development issues',
+    description: 'Lorem ipsum',
+    linkTitle: 'Lorem ipsum',
+    linkTo: '/docs/guides/concepts',
+  },
+  {
+    title: 'Store performance',
+    description: 'Lorem ipsum',
+    linkTitle: 'Lorem ipsum',
+    linkTo: '/docs/guides/my-store-is-slow-or-unavailable',
+  },
+  {
+    title: 'Store Framework issues',
+    description: 'Lorem ipsum',
+    linkTitle: 'Lorem ipsum',
     linkTo:
       '/docs/guides/vtex-io-documentation-homologation-requirements-for-vtex-app-store',
   },
