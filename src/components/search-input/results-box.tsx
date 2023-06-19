@@ -10,7 +10,7 @@ import {
   WrappedInsightsClient,
 } from 'react-instantsearch-core'
 import aa from 'search-insights'
-import { Box, Flex, IconCaret, Text } from '@vtex/brand-ui'
+import { Box, Flex, IconCaret, Text } from '@vtexdocs/brand-ui'
 
 import { getIcon, messages } from 'utils/constants'
 import { getBreadcrumbs, getRelativeURL } from 'utils/search-utils'

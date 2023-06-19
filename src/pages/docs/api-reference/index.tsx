@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtexdocs/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import getNavigation from 'utils/getNavigation'

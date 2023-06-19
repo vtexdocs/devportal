@@ -1,4 +1,4 @@
-import { Box, Button, Flex } from '@vtex/brand-ui'
+import { Box, Button, Flex } from '@vtexdocs/brand-ui'
 import CloseIcon from 'components/icons/close-icon'
 import { ReactElement, useEffect, useRef, useState } from 'react'
 import useClickOutside from 'utils/hooks/useClickOutside'

@@ -12,7 +12,7 @@ import {
   MethodType,
   UpdatesTitle,
 } from 'utils/typings/unionTypes'
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtexdocs/brand-ui'
 
 export type FilteredHit = Hit & { filteredMatches?: Hit[] }
 

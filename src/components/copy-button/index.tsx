@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useRef, useEffect } from 'react'
 import copy from 'copy-text-to-clipboard'
-import { Box, Button, Icon } from '@vtex/brand-ui'
+import { Box, Button, Icon } from '@vtexdocs/brand-ui'
 
 import styles from './styles'
 

@@ -1,7 +1,7 @@
 import styles from './styles'
 import type { PropsWithChildren } from 'react'
 import { useDialogState, Dialog } from 'reakit/Dialog'
-import { Box, Button, Text, SxProps, Link } from '@vtex/brand-ui'
+import { Box, Button, Text, SxProps, Link } from '@vtexdocs/brand-ui'
 import { IconClose } from './IconClose'
 
 interface AnnouncementBarProps extends PropsWithChildren<SxProps> {

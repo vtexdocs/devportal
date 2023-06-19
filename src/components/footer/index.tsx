@@ -1,4 +1,4 @@
-import { Box, FooterLanding } from '@vtex/brand-ui'
+import { Box, FooterLanding } from '@vtexdocs/brand-ui'
 import { getMessages } from 'utils/get-messages'
 import styles from './styles'
 import {

@@ -1,4 +1,4 @@
-import { Flex, Text, Link } from '@vtex/brand-ui'
+import { Flex, Text, Link } from '@vtexdocs/brand-ui'
 import EditIcon from 'components/icons/edit-icon'
 import LikeIcon from 'components/icons/like-icon'
 import LikeSelectedIcon from 'components/icons/like-selected-icon'

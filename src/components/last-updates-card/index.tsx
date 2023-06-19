@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 
 import type { ActionType, UpdateType } from './functions'
 import { getAction, getUpdate } from './functions'

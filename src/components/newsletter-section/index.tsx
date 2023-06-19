@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 
 import Image from 'next/image'
 import landingProduct from '../../../public/images/landing-product.png'

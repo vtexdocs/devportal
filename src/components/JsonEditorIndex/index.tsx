@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import navigation from '../../../public/navigation.json'
 import styles from './styles'
-import { Box, Button } from '@vtex/brand-ui'
+import { Box, Button } from '@vtexdocs/brand-ui'
 import { ToastContainer, toast } from 'react-toastify'
 import { injectStyle } from 'react-toastify/dist/inject-style'
 

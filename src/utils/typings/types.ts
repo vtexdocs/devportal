@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { IconProps } from '@vtex/brand-ui'
+import { IconProps } from '@vtexdocs/brand-ui'
 
 import { ActionType } from 'components/last-updates-card/functions'
 import { DocumentationTitle, UpdatesTitle, ResourceTitle } from './unionTypes'

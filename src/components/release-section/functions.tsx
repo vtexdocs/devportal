@@ -1,4 +1,4 @@
-import { Text } from '@vtex/brand-ui'
+import { Text } from '@vtexdocs/brand-ui'
 import styles from './styles'
 
 const month = [

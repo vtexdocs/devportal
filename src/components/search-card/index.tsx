@@ -1,4 +1,4 @@
-import { Box, Flex, Text, IconCaret, Tooltip } from '@vtex/brand-ui'
+import { Box, Flex, Text, IconCaret, Tooltip } from '@vtexdocs/brand-ui'
 import { IconComponent } from 'utils/typings/types'
 
 import styles from './styles'

@@ -1,4 +1,4 @@
-import { SxStyleProp } from '@vtex/brand-ui'
+import { SxStyleProp } from '@vtexdocs/brand-ui'
 
 const sectionContainer: SxStyleProp = {
   px: ['8px', '12px', '96px', '38px'],

@@ -1,10 +1,3 @@
-html,
-body,
-* {
-  font-family: 'VTEX Trust Regular', -apple-system, system-ui,
-    BlinkMacSystemFont, sans-serif !important;
-}
-
 body.modal-open {
   position: fixed;
   overflow-y: scroll;

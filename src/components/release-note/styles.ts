@@ -1,4 +1,4 @@
-import { SxStyleProp } from '@vtex/brand-ui'
+import { SxStyleProp } from '@vtexdocs/brand-ui'
 
 const releaseContainer: SxStyleProp = {
   mb: ['32px', '48px'],

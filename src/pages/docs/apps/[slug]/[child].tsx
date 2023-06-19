@@ -26,7 +26,7 @@ import {
   IconVTEXSymbol,
   IconGlobe,
   Link,
-} from '@vtex/brand-ui'
+} from '@vtexdocs/brand-ui'
 import styles from 'styles/documentation-page'
 import stylesApps from 'styles/apps-page'
 import TableOfContents from 'components/table-of-contents'

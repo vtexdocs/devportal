@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 import MethodCategory from 'components/method-category'
 import { Dispatch, SetStateAction, useState } from 'react'
 import { getMessages } from 'utils/get-messages'

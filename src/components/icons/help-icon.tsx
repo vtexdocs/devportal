@@ -1,5 +1,5 @@
-import type { IconProps } from '@vtex/brand-ui'
-import { Icon } from '@vtex/brand-ui'
+import type { IconProps } from '@vtexdocs/brand-ui'
+import { Icon } from '@vtexdocs/brand-ui'
 
 const HelpIcon = (props: IconProps) => (
   <Icon

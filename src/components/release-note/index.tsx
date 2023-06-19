@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Flex, Timeline, Text, Box, Button, IconCaret } from '@vtex/brand-ui'
+import {
+  Flex,
+  Timeline,
+  Text,
+  Box,
+  Button,
+  IconCaret,
+} from '@vtexdocs/brand-ui'
 
 import type { UpdateElement } from 'utils/typings/types'
 import { getAction } from './../last-updates-card/functions'

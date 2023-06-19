@@ -1,4 +1,4 @@
-import { Flex, Text } from '@vtex/brand-ui'
+import { Flex, Text } from '@vtexdocs/brand-ui'
 
 import styles from 'styles/documentation-updates'
 

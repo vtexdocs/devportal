@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import { Box, Flex, Grid, IconCaret, Text } from '@vtex/brand-ui'
+import { Box, Flex, Grid, IconCaret, Text } from '@vtexdocs/brand-ui'
 
 import Tooltip from 'components/tooltip'
 

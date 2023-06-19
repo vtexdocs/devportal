@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { useContext } from 'react'
 import { SearchContext } from 'utils/contexts/search'
 
-import { Box, Text } from '@vtex/brand-ui'
+import { Box, Text } from '@vtexdocs/brand-ui'
 import { searchClient } from 'utils/constants'
 
 import { Configure, InstantSearch } from 'react-instantsearch-dom'

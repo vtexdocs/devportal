@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, IconProps } from '@vtex/brand-ui'
+import { Icon, IconProps } from '@vtexdocs/brand-ui'
 
 export function IconClose(props: IconProps) {
   return (

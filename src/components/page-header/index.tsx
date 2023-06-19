@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image'
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 import styles from './styles'
 import { Fragment } from 'react'
 

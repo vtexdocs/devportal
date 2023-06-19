@@ -13,7 +13,7 @@ import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 import { getLogger } from 'utils/logging/log-util'
 
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 

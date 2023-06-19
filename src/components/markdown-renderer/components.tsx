@@ -10,7 +10,7 @@ import YoutubeFrame from 'components/youtube-frame'
 import CodeBlock from 'components/code-block'
 
 import styles from './styles.module.css'
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box, Flex } from '@vtexdocs/brand-ui'
 import LightBox from 'components/lightbox'
 import { messages } from 'utils/constants'
 import {

@@ -1,4 +1,4 @@
-import { Flex, Text, SxStyleProp } from '@vtex/brand-ui'
+import { Flex, Text, SxStyleProp } from '@vtexdocs/brand-ui'
 import { categoryStyle, categoryText, closeCategoryStyle } from './functions'
 import { MethodType } from 'utils/typings/unionTypes'
 import styles from './styles'

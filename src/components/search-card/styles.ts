@@ -1,4 +1,4 @@
-import { SxStyleProp } from '@vtex/brand-ui'
+import { SxStyleProp } from '@vtexdocs/brand-ui'
 import { methodsColors } from 'components/method-category/functions'
 import { MethodType } from 'utils/typings/unionTypes'
 

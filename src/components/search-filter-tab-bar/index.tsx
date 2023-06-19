@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import { Flex, Text } from '@vtex/brand-ui'
+import { Flex, Text } from '@vtexdocs/brand-ui'
 
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 

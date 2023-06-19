@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtexdocs/brand-ui'
 import type { DocDataElement, UpdatesDataElement } from 'utils/typings/types'
 import { useContext, useEffect } from 'react'
 import { FilterType, SearchContext } from 'utils/contexts/search'

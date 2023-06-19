@@ -1,6 +1,6 @@
 import React from 'react'
 import CopyButton from 'components/copy-button'
-import { Box, Text } from '@vtex/brand-ui'
+import { Box, Text } from '@vtexdocs/brand-ui'
 import styles from './styles'
 import { childrenToString } from 'utils/string-utils'
 

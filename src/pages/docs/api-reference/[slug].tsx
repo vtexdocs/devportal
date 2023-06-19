@@ -5,7 +5,7 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
 import SwaggerParser from '@apidevtools/swagger-parser'
 import ArticlePagination from 'components/article-pagination'
-import { Box } from '@vtex/brand-ui'
+import { Box } from '@vtexdocs/brand-ui'
 import jp from 'jsonpath'
 
 import getReferencePaths from 'utils/getReferencePaths'
@@ -13,6 +13,7 @@ import getNavigation from 'utils/getNavigation'
 import { MethodType, isMethodType } from 'utils/typings/unionTypes'
 import '../../../../RapiDoc/src/rapidoc.js'
 import { flattenWithChildren } from 'utils/navigation-utils'
+import { VtexTrustMedium, VtexTrustVariable } from 'utils/fonts'
 
 interface Endpoint {
   title: string
@@ -158,9 +159,9 @@ const APIPage: NextPage<Props> = ({
           theme="light"
           bg-color="#FFFFFF"
           primary-color="#142032"
-          regular-font="VTEX Trust Regular"
+          regular-font={VtexTrustVariable.style.fontFamily}
           mono-font="Consolas,monaco,monospace"
-          medium-font="VTEX Trust Medium"
+          medium-font={VtexTrustMedium.style.fontFamily}
           load-fonts={false}
           schema-style="table"
           schema-description-expanded={true}

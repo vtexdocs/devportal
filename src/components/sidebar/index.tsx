@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, useContext } from 'react'
-import { Flex, Text, Box } from '@vtex/brand-ui'
+import { Flex, Text, Box } from '@vtexdocs/brand-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import {

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useContext } from 'react'
-import { Box, Text } from '@vtex/brand-ui'
+import { Box, Text } from '@vtexdocs/brand-ui'
 import AnimateHeight from 'react-animate-height'
 
 import { APIGuideContext } from 'utils/contexts/api-guide'
