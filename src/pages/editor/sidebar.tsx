@@ -7,7 +7,6 @@ import styles from 'styles/documentation-landing-page'
 import { SidebarContext } from 'utils/contexts/sidebar'
 import { GetServerSideProps, NextPage } from 'next'
 
-import Auth from 'components/auth'
 import PageHeader from 'components/page-header'
 import image from '../../../public/images/editor.png'
 import Link from 'next/link'
@@ -32,7 +31,7 @@ const AdminPage: NextPage<Props> = ({ file, fileContent, isPRPreview }) => {
   }
 
   return (
-    <Auth>
+    <>
       <Head>
         <title>Sidebar Editor</title>
         <meta name="robots" content="noindex" />
@@ -59,7 +58,7 @@ const AdminPage: NextPage<Props> = ({ file, fileContent, isPRPreview }) => {
           </Fragment>
         </Box>
       </Flex>
-    </Auth>
+    </>
   )
 }
 

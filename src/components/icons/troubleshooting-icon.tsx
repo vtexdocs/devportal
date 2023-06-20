@@ -4,7 +4,7 @@ import { Icon } from '@vtex/brand-ui'
 const TroubleshootingIcon = (props: IconProps) => (
   <Icon
     {...props}
-    viewBox="0 0 32 32"
+    viewBox="0 0 36 36"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
