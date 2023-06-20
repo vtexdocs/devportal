@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Box, Text, Flex } from '@vtex/brand-ui'
 import CopyButton from 'components/copy-button'
 import ResizeIcon from 'components/icons/resize-icon'
+import Auth from 'components/auth'
 import type { Page } from 'utils/typings/types'
 
 import MarkdownRenderer from 'components/markdown-renderer'
@@ -36,9 +37,9 @@ slug: "preview-document-slug"
 hidden: false
 createdAt: "2023-06-21T10:45:55.338Z"
 updatedAt: "2023-06-21T11:40:35.480Z"
+excerpt: "Lorem ipsum"
 ---
 
-# Template
 ## Template Title
 ### Template subtitle
 
@@ -64,7 +65,9 @@ Text Template: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ri
     "Nullable": null,
     "Boolean": true,
     "Numerical": 772,
-    "attribute": "value", 
+    "attribute": {
+      "value": 2,
+    }, 
 }
 \`\`\`
 
@@ -132,6 +135,7 @@ const MarkdownPreviewPage: Page<Props> = () => {
       'hidden',
       'createdAt',
       'updatedAt',
+      'excerpt',
     ]
     const missing = frontmatterKeys.filter(
       (key) => !serializedDoc?.frontmatter?.hasOwnProperty(key)
@@ -186,7 +190,7 @@ const MarkdownPreviewPage: Page<Props> = () => {
   }, [documentContent])
 
   return (
-    <>
+    <Auth>
       <Head>
         <title>Markdown Preview</title>
         <meta name="robots" content="noindex" />
@@ -268,7 +272,7 @@ const MarkdownPreviewPage: Page<Props> = () => {
           </Box>
         </Flex>
       </Box>
-    </>
+    </Auth>
   )
 }
 
