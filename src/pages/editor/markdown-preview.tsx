@@ -277,5 +277,6 @@ const MarkdownPreviewPage: Page<Props> = () => {
 }
 
 MarkdownPreviewPage.hideSidebar = true
+MarkdownPreviewPage.isEditor = true
 
 export default MarkdownPreviewPage
