@@ -22,7 +22,11 @@ import {
   UpdatesDataElement,
   WhatsNextDataElement,
   ResourceDataElement,
+  AdminDataElement,
 } from './typings/types'
+import EditIcon from 'components/icons/edit-icon'
+import MenuIcon from 'components/icons/menu-icon'
+import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 
 const algoliaClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
@@ -69,6 +73,27 @@ export const documentationData: DocDataElement[] = [
     title: 'VTEX IO Apps',
     description: messages['documentation_vtexio_apps.description'],
     link: '/docs/vtex-io-apps',
+  },
+]
+
+export const adminData: AdminDataElement[] = [
+  {
+    Icon: MenuIcon,
+    title: 'Sidebar Editor',
+    description: 'Test and validate your changes to the sidebar.',
+    link: '/editor/sidebar',
+  },
+  {
+    Icon: DocumentationUpdatesIcon,
+    title: 'API Index Generator',
+    description: 'Automatically generate API Reference overview pages.',
+    link: '/editor/api-index',
+  },
+  {
+    Icon: EditIcon,
+    title: 'Markdown Preview',
+    description: 'Preview the rendering of your markdown file in the portal.',
+    link: '/editor/markdown-preview',
   },
 ]
 

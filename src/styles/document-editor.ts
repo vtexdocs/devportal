@@ -4,7 +4,6 @@ import guidesStyle from 'styles/documentation-page'
 const previewContainer: SxStyleProp = {
   background: 'transparent',
   height: 'auto',
-  mt: '64px',
 }
 
 const title: SxStyleProp = {

@@ -4,7 +4,9 @@ import { Box, Text, Flex } from '@vtex/brand-ui'
 import CopyButton from 'components/copy-button'
 import ResizeIcon from 'components/icons/resize-icon'
 import Auth from 'components/auth'
+import PageHeader from 'components/page-header'
 import type { Page } from 'utils/typings/types'
+import image from '../../../public/images/editor.png'
 
 import MarkdownRenderer from 'components/markdown-renderer'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -196,11 +198,12 @@ const MarkdownPreviewPage: Page<Props> = () => {
         <meta name="robots" content="noindex" />
       </Head>
       <Box sx={styles.previewContainer}>
-        <Text sx={styles.title}> Markdown Preview </Text>
-        <Text sx={styles.subtitle}>
-          Use the markdown editor below and preview the rendered page to the
-          side.
-        </Text>
+        <PageHeader
+          title="Markdown Preview"
+          description="Use the markdown editor below and preview the rendered page to the side."
+          imageUrl={image}
+          imageAlt="Markdown Preview"
+        />
         <Flex sx={styles.writeBox}>
           <Box
             style={resizeValue > 0 ? { width: resizeValue } : null}
@@ -277,5 +280,6 @@ const MarkdownPreviewPage: Page<Props> = () => {
 }
 
 MarkdownPreviewPage.hideSidebar = true
+MarkdownPreviewPage.isEditor = true
 
 export default MarkdownPreviewPage
