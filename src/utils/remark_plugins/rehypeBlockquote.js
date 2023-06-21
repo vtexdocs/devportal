@@ -16,16 +16,17 @@ export default function remarkBlockquote() {
   return (tree) => {
     visit(tree, (node, index, parent) => {
       if (node.type !== 'blockquote') return
-
       const { children = [] } = node
-      const [{ value }] = children[0].children
+      const [{ value }] =
+        children.length > 0 ? children[0].children : [{ value: '' }]
 
       const result = Object.entries(extendedNames).find(([, regex]) =>
         regex.test(value)
       )
       if (!result) return
       const newNode = node.children
-      newNode[0].children[0].value = newNode[0].children[0].value.substring(2)
+      if (node.children.length > 0)
+        newNode[0].children[0].value = newNode[0].children[0].value.substring(2)
 
       const newChild = {
         type: 'paragraph',
