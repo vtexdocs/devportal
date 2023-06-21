@@ -46,7 +46,7 @@ export default async function handler(
     }
     res.redirect('/')
   } else {
-    const protocol = process.env.NETLIFY ? 'https' : 'http'
+    const protocol = process.env.BUILD_ENV === 'dev' ? 'http' : 'https'
     const callbackUrl = `${protocol}://${req.headers.host}${req.url}`
     res.redirect(`/api/auth/signin?callbackUrl=${callbackUrl}`)
   }
