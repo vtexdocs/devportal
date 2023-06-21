@@ -12,21 +12,21 @@ const MenuIcon = (props: IconProps) => (
   >
     <path
       d="M10.002 12H17.501"
-      stroke="#323232"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M10.002 15.484H17.501"
-      stroke="#323232"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M10.002 8.48401H17.501"
-      stroke="#323232"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"

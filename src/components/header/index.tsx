@@ -23,8 +23,12 @@ import AnnouncementBar from 'components/announcement-bar'
 import styles from './styles'
 import { PreviewContext } from 'utils/contexts/preview'
 
+interface Props {
+  isEditor: boolean
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Header = () => {
+const Header = ({ isEditor }: Props) => {
   const router = useRouter()
   const isBranchPreview = router.isPreview
 
@@ -134,12 +138,18 @@ const Header = () => {
           >
             <Flex sx={styles.dropdownButton(showDropdown)}>
               <GridIcon />
-              <Text sx={styles.rightButtonsText} data-cy="docs-dropdown">
-                {messages['landing_page_header_docs.message']}
-              </Text>
+              {!isEditor ? (
+                <Text sx={styles.rightButtonsText} data-cy="docs-dropdown">
+                  {messages['landing_page_header_docs.message']}
+                </Text>
+              ) : (
+                <Text sx={styles.rightButtonsText} data-cy="docs-dropdown">
+                  Admin tools
+                </Text>
+              )}
             </Flex>
 
-            {showDropdown && <DropdownMenu />}
+            {showDropdown && <DropdownMenu isEditor={isEditor} />}
           </Flex>
 
           <VtexLink

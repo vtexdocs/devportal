@@ -45,6 +45,7 @@ const APIRefAdminPage: Page = () => {
   )
 }
 
+APIRefAdminPage.isEditor = true
 APIRefAdminPage.hideSidebar = true
 
 export default APIRefAdminPage

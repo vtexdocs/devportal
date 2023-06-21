@@ -9,6 +9,11 @@ export type DocumentationTitle =
 
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
+export type AdminTitle =
+  | 'Sidebar Editor'
+  | 'API Index Generator'
+  | 'Markdown Preview'
+
 export type SlugPrefix =
   | 'guides'
   | 'api-reference'

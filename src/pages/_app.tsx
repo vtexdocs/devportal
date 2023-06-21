@@ -31,6 +31,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: Props) {
             sidebarfallback={pageProps.sidebarfallback}
             hideSidebar={Component.hideSidebar}
             isPreview={pageProps.isPreview ?? false}
+            isEditor={Component.isEditor}
             sectionSelected={pageProps.sectionSelected}
             parentsArray={pageProps.parentsArray}
           >
