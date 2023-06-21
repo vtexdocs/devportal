@@ -1,14 +1,16 @@
 import React, { useCallback, useState, useRef, useEffect } from 'react'
 import copy from 'copy-text-to-clipboard'
 import { Box, Button, Icon } from '@vtex/brand-ui'
+import type { SxStyleProp } from '@vtex/brand-ui'
 
 import styles from './styles'
 
 interface CopyButtonProps {
   code: string
+  sx?: SxStyleProp
 }
 
-export default function CopyButton({ code }: CopyButtonProps): JSX.Element {
+export default function CopyButton({ code, sx }: CopyButtonProps): JSX.Element {
   const [isCopied, setIsCopied] = useState(false)
   const copyTimeout = useRef<number | undefined>(undefined)
   const handleCopyCode = useCallback(() => {
@@ -26,7 +28,10 @@ export default function CopyButton({ code }: CopyButtonProps): JSX.Element {
       variant="tertiary"
       size="small"
       onClick={handleCopyCode}
-      sx={isCopied ? styles.copyButtonCopied : styles.copyButton}
+      sx={{
+        ...(isCopied ? styles.copyButtonCopied : styles.copyButton),
+        ...sx,
+      }}
       aria-label="Copy code snippet"
     >
       <Box sx={styles.copyButtonIcons} aria-hidden="true">

@@ -176,7 +176,7 @@ export default {
       console.log(`Error parsing`, error)
       return errorMessage
     }
-    return !imageHasError ? (
+    return data.base64 && !imageHasError ? (
       <LightBox>
         <Image
           className={styles.img}

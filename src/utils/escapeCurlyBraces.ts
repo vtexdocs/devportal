@@ -1,4 +1,7 @@
-const assertCodeBlocksAreCorrectlyFormatted = (content: string) => {
+const assertCodeBlocksAreCorrectlyFormatted = (
+  content: string,
+  from?: string
+) => {
   let idx = 0,
     row = 1,
     col = 1
@@ -8,6 +11,10 @@ const assertCodeBlocksAreCorrectlyFormatted = (content: string) => {
     lastCol = -1
 
   const error = (row: number, col: number) => {
+    if (from === 'client') {
+      return `There is an incorrectly formatted code block at line ${row} and column ${col} in this preview`
+    }
+
     throw new Error(
       `There is an incorrectly formatted code block at line ${row} and column ${col} in this file`
     )
@@ -43,7 +50,7 @@ const assertCodeBlocksAreCorrectlyFormatted = (content: string) => {
       }
 
       if (backtickCount === 3) {
-        if (insideSingleLineCodeBlock) error(lastRow, lastCol)
+        if (insideSingleLineCodeBlock) return error(lastRow, lastCol)
         insideMultiLineCodeBlock = !insideMultiLineCodeBlock
         lastRow = row
         lastCol = col
@@ -56,11 +63,21 @@ const assertCodeBlocksAreCorrectlyFormatted = (content: string) => {
   }
 
   if (insideMultiLineCodeBlock || insideSingleLineCodeBlock)
-    error(lastRow, lastCol)
+    return error(lastRow, lastCol)
+
+  return ''
 }
 
-const escapeCurlyBraces: (content: string) => string = (content) => {
-  assertCodeBlocksAreCorrectlyFormatted(content)
+const escapeCurlyBraces: (
+  content: string,
+  from?: string
+) => {
+  result: string
+  error: string
+} = (content, from?: string) => {
+  const error = assertCodeBlocksAreCorrectlyFormatted(content, from)
+
+  if (error) return { result: '', error }
 
   let idx = 0
   let newContent = ''
@@ -69,8 +86,20 @@ const escapeCurlyBraces: (content: string) => string = (content) => {
 
   if (content.startsWith('---')) {
     idx += 3
-    while (content.substring(idx, idx + 3) !== '---') idx++
-    idx += 3
+    let frontMatterEnd = ''
+    while (
+      idx < content.length &&
+      (frontMatterEnd = content.substring(idx, idx + 5)) !== '\n---\n'
+    )
+      idx++
+    if (frontMatterEnd !== '\n---\n') {
+      return {
+        result: '',
+        error:
+          'Parsing error in Frontmatter. Did you close the frontmatter block with "---" ?',
+      }
+    }
+    idx += 5
   }
   newContent = content.substring(0, idx)
 
@@ -97,7 +126,10 @@ const escapeCurlyBraces: (content: string) => string = (content) => {
     idx++
   }
 
-  return newContent
+  return {
+    result: newContent,
+    error,
+  }
 }
 
 export default escapeCurlyBraces
