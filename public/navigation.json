@@ -12939,6 +12939,19 @@
       ]
     },
     {
+      "documentation": "Troubleshooting",
+      "slugPrefix": "docs/guides",
+      "categories": [
+        {
+          "name": "My store is slow or unavailable",
+          "slug": "my-store-is-slow-or-unavailable",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        }
+      ]
+    },
+    {
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",
       "categories": [

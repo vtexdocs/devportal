@@ -15,6 +15,8 @@ const getDoctype = (category: string) => {
       return 'Storefront Development'
     case 'VTEX IO Apps':
       return 'VTEX IO Apps'
+    case 'Troubleshooting':
+      return 'Troubleshooting'
     default:
       return 'Guides'
   }
