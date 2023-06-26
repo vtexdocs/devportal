@@ -6007,6 +6007,15 @@
                       "children": []
                     },
                     {
+                      "name": "Get Account's Matcher Settings",
+                      "slug": "marketplace-apis-suggestions",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/suggestions/configuration/account/config",
+                      "children": []
+                    },
+                    {
                       "name": "Get Seller's Approval Settings",
                       "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
@@ -10822,7 +10831,6 @@
         }
       ]
     },
-
     {
       "documentation": "VTEX IO Apps",
       "slugPrefix": "docs/",
