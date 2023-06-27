@@ -13,6 +13,7 @@ import getNavigation from 'utils/getNavigation'
 import { MethodType, isMethodType } from 'utils/typings/unionTypes'
 import '../../../../RapiDoc/src/rapidoc.js'
 import { flattenWithChildren } from 'utils/navigation-utils'
+import { getLogger } from 'utils/logging/log-util'
 
 interface Endpoint {
   title: string
@@ -194,10 +195,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const url = referencePaths[slug as string]
   const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()
+  const logger = getLogger('API Reference')
+  let api
   if (slugs.includes(slug as string)) {
-    const api = await SwaggerParser.dereference(
-      `https://developers.vtex.com/api/openapi/${slug}`
-    )
+    try {
+      api = await SwaggerParser.dereference(
+        `https://developers.vtex.com/api/openapi/${slug}`
+      )
+    } catch (error) {
+      logger.error(`Parse Error on file ${slug}`)
+      return {
+        notFound: true,
+      }
+    }
     const doc = JSON.stringify(await SwaggerParser.parse(api))
     const endpointFile = new Oas(doc)
     const { info, paths } = endpointFile.getDefinition()
