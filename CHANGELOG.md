@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.23](https://github.com/vtexdocs/devportal/compare/v1.9.22...v1.9.23) (2023-06-27)
+
+
+### Features
+
+* **dropwdown-menu:** different menu for admin pages ([b46bd8d](https://github.com/vtexdocs/devportal/commit/b46bd8d57f13dda1326bf8bf1fb036060e722521))
+* **markdown-editor:** title, subtitle and copy button ([01440ae](https://github.com/vtexdocs/devportal/commit/01440ae1810142404013711a5eddcca311649700))
+* **markdown-preview:** add resize button, numered lines in code editor and fix frontmatter parse ([cb6d94f](https://github.com/vtexdocs/devportal/commit/cb6d94fb78def5a5e955dc9ce104282f03c61e54))
+* **markdown-preview:** first version of markdown preview ([017ab63](https://github.com/vtexdocs/devportal/commit/017ab632e1992a91bedf1744f25d7242518e8c28))
+* **package.json:** add react-simple-code-editor ([320f10d](https://github.com/vtexdocs/devportal/commit/320f10d3917d557b54586aa30699830d80db6ee0))
+* **remark plugins:** image plugin to client side render in preview ([b908390](https://github.com/vtexdocs/devportal/commit/b908390d494383803e1e4044700080d11306c279))
+* update serialize plugins and funcions ([a7ac0ad](https://github.com/vtexdocs/devportal/commit/a7ac0ada9b82a97cbd9eb59d20fcdd19d6c14000))
+
+
+### Bug Fixes
+
+* **apireferences:** fail gracefully for parse errors on openapi ([f8419bb](https://github.com/vtexdocs/devportal/commit/f8419bbcd9303ce8126f13747a7472c804408110))
+* **getreferencepaths:** check if path is on root ([eece0db](https://github.com/vtexdocs/devportal/commit/eece0db1a2478d4c4a594afd562db46cfb84dd27))
+* **markdown-preview:** add mobile version, update template ([75c42b6](https://github.com/vtexdocs/devportal/commit/75c42b652a0ca6beaade990c5b1a7817f61a0e41))
+* **markdown-preview:** page name and template structure ([4cd22a5](https://github.com/vtexdocs/devportal/commit/4cd22a55e4aabb4679a8b8edb9d8c3602a2baadd))
+* **mdxrenderer:** render next image only if base64 is loaded ([3f1ae25](https://github.com/vtexdocs/devportal/commit/3f1ae254f33d70960134c3525bb7afd027bc9814))
+
+
+### Revert Changes
+
+* **markdown-preview:** remove auth ([04ac694](https://github.com/vtexdocs/devportal/commit/04ac694739e48805486bd3d6870910d349884a9c))
+
+
+### Style
+
+* **markdown-preview:** fix copy button position ([cdb6136](https://github.com/vtexdocs/devportal/commit/cdb613661dcd7a637a30719256c7758ad86fdcb7))
+
+
+### Refactoring
+
+* **markdown-preview:** edit template ([7e95bf3](https://github.com/vtexdocs/devportal/commit/7e95bf38e9926cf53c720d72d7d4ffb11a59fe62))
+* **markdown-preview:** update route and add auth ([08c2c3b](https://github.com/vtexdocs/devportal/commit/08c2c3b5ef5e8439ea3cc1f8a7dfbbcef6551841))
+
+
+### Chore
+
+* **markdown-preview:** add isEditor true ([c71d574](https://github.com/vtexdocs/devportal/commit/c71d574814a549e18beccbe13cd69d418659d41b))
+* **markdown-preview:** use PageHeader ([fa61eb2](https://github.com/vtexdocs/devportal/commit/fa61eb2aa493d96e17b1fc91478831e7cacc5a33))
+
 ### [1.9.22](https://github.com/vtexdocs/devportal/compare/v1.9.21...v1.9.22) (2023-06-15)
 
 
