@@ -75,7 +75,7 @@ export default async function getReferencePaths() {
   repoTree.tree.map((node: any) => {
     const path = node.path
     const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
-    if (path.startsWith('')) {
+    if (!path.includes('/')) {
       const match = path.match(re)
       const filename = match?.groups?.filename ? match?.groups?.filename : ''
       const filetype = match?.groups?.filetype ? match?.groups?.filetype : ''
