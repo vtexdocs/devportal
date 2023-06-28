@@ -640,6 +640,12 @@ to = '/docs/apps/vtex.product-customizer'
 
 [[redirects]]
 force = true
+from = '/docs/guides/vtex-product-price'
+status = 308
+to = '/docs/apps/vtex.product-price'
+
+[[redirects]]
+force = true
 from = '/docs/guides/vtexventures-livestreaming'
 status = 308
 to = '/docs/apps/vtexventures.livestreaming'
