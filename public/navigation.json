@@ -8458,6 +8458,15 @@
                   "children": []
                 },
                 {
+                  "name": "Search promotion by name",
+                  "slug": "promotions-and-taxes-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/rnb/pvt/benefits/calculatorconfiguration/search",
+                  "children": []
+                },
+                {
                   "name": "Get Promotion or Tax by ID",
                   "slug": "promotions-and-taxes-api",
                   "type": "openapi",
