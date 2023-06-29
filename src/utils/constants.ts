@@ -58,8 +58,14 @@ export const documentationData: DocDataElement[] = [
   {
     Icon: VTEXIOAppsIcon,
     title: 'VTEX IO Apps',
-    description: messages['documentation_vtexio_apps.description'],
+    description: messages['documentation_faststore.description'],
     link: '/docs/vtex-io-apps',
+  },
+  {
+    Icon: VTEXIOAppsIcon,
+    title: 'FastStore',
+    description: messages['documentation_vtexio_apps.description'],
+    link: '/docs/faststore',
   },
 ]
 
