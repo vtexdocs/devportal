@@ -12278,6 +12278,80 @@
       ]
     },
     {
+      "documentation": "FastStore",
+      "slugPrefix": "docs/faststore/",
+      "categories": [
+        {
+          "name": "Components",
+          "slug": "components",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Atoms",
+              "slug": "atoms",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Button",
+                  "slug": "button",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Molecules",
+              "slug": "molecules",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Accordion",
+                  "slug": "accordion",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Documentation",
+          "slug": "index",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Themes",
+              "slug": "themes",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Midnight",
+                  "slug": "midnight",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Soft Blue",
+                  "slug": "soft-blue",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "documentation": "Storefront Development",
       "slugPrefix": "docs/guides/",
       "categories": [
