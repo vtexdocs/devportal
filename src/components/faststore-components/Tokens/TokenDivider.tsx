@@ -1,8 +1,6 @@
-import styles from './token-table.module.css'
-
 const TokenDivider = () => {
   return (
-    <tr className={styles.tokenDivider}>
+    <tr className="faststore-tokenDivider">
       <td></td>
       <td></td>
     </tr>

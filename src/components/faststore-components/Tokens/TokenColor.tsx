@@ -1,5 +1,3 @@
-import styles from './token-colors.module.css'
-
 export type TokenColorProps = {
   token: string
   value: string
@@ -7,7 +5,7 @@ export type TokenColorProps = {
 
 const TokenColor = ({ token, value }: TokenColorProps) => {
   return (
-    <li className={styles.tokenColor}>
+    <li className="faststore-tokenColor">
       <div style={{ backgroundColor: value }}></div>
       <p>{token}</p>
       <code>{value}</code>

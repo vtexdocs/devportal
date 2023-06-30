@@ -1,4 +1,4 @@
-.typeset {
+.faststore-typeset {
   display: flex;
   flex-direction: column;
   row-gap: var(--fs-spacing-1);
@@ -11,17 +11,17 @@
   overflow: auto;
 }
 
-.typeset li {
+.faststore-typeset li {
   display: flex;
   align-items: baseline;
   column-gap: var(--fs-spacing-3);
 }
 
-.typeset span {
+.faststore-typeset span {
   font-size: var(--fs-text-size-0);
 }
 
-.typeset p {
+.faststore-typeset p {
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;

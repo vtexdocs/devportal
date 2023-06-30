@@ -1,7 +1,3 @@
-import React from 'react'
-
-import styles from './props-section.module.css'
-
 export interface RowItem {
   name: string
   type: string | []
@@ -15,9 +11,9 @@ export interface PropsSectionProps {
   propsList?: RowItem[]
 }
 
-const PropsSection = ({ propsList }) => {
+const PropsSection = ({ propsList }: PropsSectionProps) => {
   return (
-    <section className={styles.propsSection}>
+    <section className="faststore-propsSection">
       <table>
         <colgroup>
           <col data-nx-props-section-name />

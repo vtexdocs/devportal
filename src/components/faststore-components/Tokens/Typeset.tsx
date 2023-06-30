@@ -1,5 +1,3 @@
-import styles from './typeset.module.css'
-
 type scaleItem = {
   size: number
   token: string
@@ -21,7 +19,7 @@ const Typeset = ({ sample, scaleItems, scale = 'mobile' }: TypesetProps) => {
   //     : 'var(--fs-text-scale-desktop)'
 
   return (
-    <ul className={styles.typeset} data-doc-typeset-variation={scale}>
+    <ul className="faststore-typeset" data-doc-typeset-variation={scale}>
       {scaleItems.map((item, index) => (
         <li key={`fs-typeset-${index}-${item.size}`}>
           <span>{item.size}</span>
