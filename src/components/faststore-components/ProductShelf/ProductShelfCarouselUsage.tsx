@@ -8,7 +8,7 @@ import {
   ProductShelf,
 } from '@faststore/ui'
 
-import { products } from 'site/mocks/products'
+import { products } from 'components/faststore-components/mocks/products'
 import { useFormattedPrice } from '../utilities/usePriceFormatter'
 
 const ProductShelfCarouselUsage = () => {

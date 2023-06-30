@@ -1,7 +1,7 @@
 import React from 'react'
 import { SkuSelector } from '@faststore/ui'
 
-import { product } from '../../mocks/product'
+import { product } from 'components/faststore-components/mocks/product'
 
 const SkuSelectorImage = () => {
   return (
