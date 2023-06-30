@@ -1,4 +1,4 @@
-.tokenColors {
+.faststore-tokenColors {
   display: flex;
   flex-wrap: wrap;
   column-gap: var(--fs-spacing-0);
@@ -6,18 +6,18 @@
   margin-top: var(--fs-spacing-4);
 }
 
-.tokenColor {
+.faststore-tokenColor {
   display: flex;
   flex-direction: column;
   row-gap: var(--fs-spacing-0);
 }
 
-.tokenColor > p {
+.faststore-tokenColor > p {
   font-size: var(--fs-text-size-1);
   font-weight: var(--fs-text-weight-bold);
 }
 
-.tokenColor > div {
+.faststore-tokenColor > div {
   width: auto;
   height: 3.5rem;
   min-width: 10rem;

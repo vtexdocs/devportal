@@ -1,5 +1,4 @@
 import React, { CSSProperties } from 'react'
-import styles from './overview-section.module.css'
 
 type Direction = 'column' | 'row'
 
@@ -20,7 +19,7 @@ const OverviewSection = ({
 }) => {
   return (
     <div
-      className={styles.overviewSection}
+      className="faststore-overviewSection"
       data-doc-overview-section
       data-doc-overview-dark={dark}
       data-doc-overview-direction={direction}

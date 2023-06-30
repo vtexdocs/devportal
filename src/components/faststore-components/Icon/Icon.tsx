@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import styles from './icon.module.css'
 
 export type IconProps = {
   icon: ReactNode
@@ -8,8 +7,8 @@ export type IconProps = {
 
 const Icon = ({ icon, name }: IconProps) => {
   return (
-    <li className={styles.icon}>
-      <div className={styles.iconItem}>{icon}</div>
+    <li className="faststore-icon">
+      <div className="faststore-iconItem">{icon}</div>
       <p>{name}</p>
     </li>
   )

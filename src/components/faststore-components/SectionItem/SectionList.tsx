@@ -1,5 +1,4 @@
 import type { PropsWithChildren } from 'react'
-import styles from './section-item.module.css'
 
 export type SectionListProps = {
   grid?: 'row' | 'column'
@@ -14,8 +13,7 @@ const SectionList = ({
   classes,
   ...otherProps
 }: PropsWithChildren<SectionListProps>) => {
-  const scopedClasses =
-    classes?.split(' ').map((klass) => styles[klass] ?? '') ?? []
+  const scopedClasses = classes?.split(' ').map((klass) => klass ?? '') ?? []
   const stylizedClasses = scopedClasses.reduce(
     (acc, klass) => `${acc} ${klass}`,
     ''
@@ -23,7 +21,7 @@ const SectionList = ({
 
   return (
     <section
-      className={`${styles.sectionList} ${stylizedClasses}`}
+      className={`faststore-sectionList' ${stylizedClasses}`}
       {...otherProps}
     >
       <ul data-doc-section-grid={grid} data-doc-section-grid-columns={columns}>

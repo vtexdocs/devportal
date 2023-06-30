@@ -1,5 +1,4 @@
 import { CSSProperties, PropsWithChildren, ReactNode } from 'react'
-import styles from './section-item.module.css'
 
 import { Icon, LinkButton } from '@faststore/ui'
 
@@ -19,7 +18,7 @@ const SectionItem = ({
   ...otherProps
 }: PropsWithChildren<SectionItemProps>) => {
   return (
-    <li className={styles.sectionItem} {...otherProps}>
+    <li className="faststore-sectionItem" {...otherProps}>
       <div style={containerStyle}>{children}</div>
       <article>
         <h3 className="nx-font-semibold nx-tracking-tight nx-mt-8 nx-text-2xl">

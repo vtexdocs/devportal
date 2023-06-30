@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import styles from './token-table.module.css'
 
 export type TokenTableProps = {
   title?: string
@@ -17,7 +16,7 @@ const TokenTable = ({
       style={{
         width: '100%',
       }}
-      className={styles.tokenTable}
+      className="faststore-tokenTable"
     >
       <thead>
         <tr>
