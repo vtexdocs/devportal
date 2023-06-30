@@ -12294,8 +12294,142 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Badge",
+                  "slug": "badge",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Button",
                   "slug": "button",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Checkbox",
+                  "slug": "checkbox",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Icon",
+                  "slug": "icon",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Input",
+                  "slug": "input",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Label",
+                  "slug": "label",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Link",
+                  "slug": "link",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "List",
+                  "slug": "list",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Loader",
+                  "slug": "loader",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Overlay",
+                  "slug": "overlay",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Price",
+                  "slug": "price",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Radio",
+                  "slug": "radio",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Select",
+                  "slug": "select",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Skeleton",
+                  "slug": "skeleton",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Slider",
+                  "slug": "slider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "SROnly",
+                  "slug": "sr-only",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Features",
+              "slug": "features",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Navigation",
+                  "slug": "navigation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Regionalization",
+                  "slug": "regionalization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search",
+                  "slug": "search",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12314,6 +12448,385 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Alert",
+                  "slug": "alert",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Breadcrumb",
+                  "slug": "breadcrumb",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Buy Button",
+                  "slug": "buy-button",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Carousel",
+                  "slug": "carousel",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Cart Item",
+                  "slug": "cart-item",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Checkbox Field",
+                  "slug": "checkbox-field",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Discount Badge",
+                  "slug": "discount-badge",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Dropdown",
+                  "slug": "dropdown",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Gift",
+                  "slug": "gift",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Icon Button",
+                  "slug": "icon-button",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Input Field",
+                  "slug": "input-field",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Link Button",
+                  "slug": "link-button",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Modal",
+                  "slug": "modal",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Navbar Link",
+                  "slug": "navbar-links",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Order Summary",
+                  "slug": "order-summary",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Card",
+                  "slug": "product-card",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Title",
+                  "slug": "product-title",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Quantity Selector",
+                  "slug": "quantity-selector",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Radio Field",
+                  "slug": "radio-field",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Radio Group",
+                  "slug": "radio-group",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Rating",
+                  "slug": "rating",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Region Bar",
+                  "slug": "region-bar",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search Auto Complete",
+                  "slug": "search-auto-complete",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search Dropdown",
+                  "slug": "search-dropdown",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search History",
+                  "slug": "search-history",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search Input Field",
+                  "slug": "search-input-field",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search Products",
+                  "slug": "search-products",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search Top",
+                  "slug": "search-top",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Select Field",
+                  "slug": "select-field",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "SKU Selector",
+                  "slug": "sku-selector",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Table",
+                  "slug": "table",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tag",
+                  "slug": "tag",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Toast",
+                  "slug": "toast",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Toggle Field",
+                  "slug": "toggle-field",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Toggle",
+                  "slug": "toggle",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Organisms",
+              "slug": "organisms",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Banner Text",
+                  "slug": "banner-text",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Cart Sidebar",
+                  "slug": "cart-sidebar",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Empty State",
+                  "slug": "empty-state",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Filter Slider",
+                  "slug": "filter-slider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Filter",
+                  "slug": "filter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Hero",
+                  "slug": "hero",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Image Gallery",
+                  "slug": "image-gallery",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Navbar Slider",
+                  "slug": "navbar-slider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Navbar",
+                  "slug": "navbar",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Out of Stock",
+                  "slug": "out-of-stock",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment Methods",
+                  "slug": "payment-methods",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Price Range",
+                  "slug": "price-range",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Grid",
+                  "slug": "product-grid",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Shelf",
+                  "slug": "product-shelf",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Region Modal",
+                  "slug": "region-modal",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search Input",
+                  "slug": "search-input",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Shipping Simulation",
+                  "slug": "shipping-simulation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Slide Over",
+                  "slug": "Slide Over",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             }
@@ -12325,6 +12838,250 @@
           "origin": "",
           "type": "markdown",
           "children": [
+            {
+              "name": "Brandless",
+              "slug": "brandless",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Requirements",
+              "slug": "getting-started-requirements",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Icons",
+              "slug": "icons",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Building Sections",
+              "slug": "",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Component Customization",
+                  "slug": "component-customatization-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Creating a new section",
+                  "slug": "creating-a-new-section",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Overriding a native component",
+                  "slug": "overriding-a-native-component",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Overriding components props",
+                  "slug": "overriding-components-props",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Customizing",
+              "slug": "",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Components",
+                  "slug": "components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Pages",
+                  "slug": "pages",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Getting Started",
+              "slug": "getting-started-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Dashboard",
+                  "slug": "dashboard",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Starting a new project",
+                  "slug": "onboarding",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up the project",
+                  "slug": "2-setting-up-the-project",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Project Structure",
+                  "slug": "3-project-structure",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore CLI",
+                  "slug": "4-faststore-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Next Steps",
+                  "slug": "5-next-steps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Global Tokens",
+              "slug": "",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Colors",
+                  "slug": "colors",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Grid and Layout",
+                  "slug": "grid-and-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Interactive Controls",
+                  "slug": "interactive-controls",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Refinements",
+                  "slug": "refinements",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Spacing",
+                  "slug": "spacing",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Typography",
+                  "slug": "typography",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Go Live",
+              "slug": "",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Before you start",
+                  "slug": "before-you-start",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up VTEX account",
+                  "slug": "1-setting-up-vtex-account-for-faststore",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Configuring external DNS",
+                  "slug": "2-configuring-external-dns",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integrating the VTEX Login",
+                  "slug": "3-integrating-the-the-vtex-login",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integrating the VTEX Checkout",
+                  "slug": "4-integrating-the-vtex-checkout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integrating the Order Placed and My Account",
+                  "slug": "5-integrating-the-vtex-order-placed-and-my-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Reference Guides",
+              "slug": "",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "List of Native Sections",
+                  "slug": "list-of-native-sections",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "Themes",
               "slug": "themes",
@@ -12341,6 +13098,42 @@
                 {
                   "name": "Soft Blue",
                   "slug": "soft-blue",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Troubleshooting",
+              "slug": "",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Overview",
+                  "slug": "overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Analytics and Partytown",
+                  "slug": "analytics-and-partytown",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Identifying development errors and Starter bugs",
+                  "slug": "identifying-development-errors-and-starter-bugs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tracing the Error Source",
+                  "slug": "tracing-the-error-source",
                   "origin": "",
                   "type": "markdown",
                   "children": []
