@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { SearchInputField, SearchInput, SearchProvider } from '@faststore/ui'
 import SearchDropdownUsage from 'components/faststore-components/Search/SearchDropdownUsage'
-import { product } from 'site/mocks/product'
+import { product } from 'components/faststore-components/mocks/product'
 
 type SearchInputUsageProps = {
   actions?: boolean

@@ -1,5 +1,5 @@
 import { Button, useUI } from '@faststore/ui'
-import { facetsMock } from '../../mocks/facets'
+import { facetsMock } from 'components/faststore-components/mocks/facets'
 import FilterDesktopUsage from './FilterDesktopUsage'
 import FilterSliderUsage from './FilterSliderUsage'
 import { useFilter } from './useFilter'

@@ -15,7 +15,7 @@ import {
 } from '@faststore/ui'
 
 import { useFormattedPrice } from 'components/faststore-components/utilities/usePriceFormatter'
-import { product } from 'site/mocks/product'
+import { product } from 'components/faststore-components/mocks/product'
 
 export interface SearchDropdownUsageProps {
   term: string

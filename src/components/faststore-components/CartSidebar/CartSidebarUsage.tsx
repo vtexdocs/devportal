@@ -16,7 +16,7 @@ import {
   useUI,
 } from '@faststore/ui'
 
-import { product } from 'site/mocks/product'
+import { product } from 'components/faststore-components/mocks/product'
 import { useFormattedPrice } from '../utilities/usePriceFormatter'
 
 export const skuActiveVariants =

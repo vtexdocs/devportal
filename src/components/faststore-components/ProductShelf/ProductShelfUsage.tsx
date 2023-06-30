@@ -9,7 +9,7 @@ import {
   ProductShelfItem,
 } from '@faststore/ui'
 
-import { products } from 'site/mocks/products'
+import { products } from 'components/faststore-components/mocks/products'
 import { useFormattedPrice } from '../utilities/usePriceFormatter'
 
 export interface ProductShelfUsageProps {
@@ -47,7 +47,7 @@ const ProductShelfUsage = ({
                   listPrice: product.offers.offers[0].listPrice,
                   formatter: useFormattedPrice,
                 }}
-                onButtonClick={withButton ? () => undefined : null}
+                onButtonClick={withButton ? () => undefined : undefined}
               />
             </ProductCard>
           </ProductShelfItem>
