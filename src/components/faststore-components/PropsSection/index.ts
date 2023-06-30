@@ -1,1 +1,1 @@
-export { default as PropsSection } from './PropsSection'
+export { default } from './PropsSection'
