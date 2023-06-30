@@ -6,6 +6,7 @@ import { SessionProvider } from 'next-auth/react'
 
 import 'styles/global.css'
 import 'styles/rapidoc.css'
+import 'styles/faststore.scss'
 
 import Layout from 'components/layout'
 
