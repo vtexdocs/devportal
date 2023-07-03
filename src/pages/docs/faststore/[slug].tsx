@@ -1,8 +1,8 @@
 import { useContext, useEffect } from 'react'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
-import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import Head from 'next/head'
+import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import { bundleMDX } from 'mdx-bundler'
 import remarkGFM from 'remark-gfm'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
@@ -11,6 +11,7 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
 import path from 'path'
+import jp from 'jsonpath'
 
 import type { Item } from 'components/table-of-contents'
 import Breadcrumb from 'components/breadcrumb'
@@ -36,8 +37,21 @@ import getNavigation from 'utils/getNavigation'
 
 import styles from 'styles/documentation-page'
 import { RowItem } from 'components/faststore-components/PropsSection/PropsSection'
+import ArticlePagination from 'components/article-pagination'
 
 interface Props {
+  frontmatter: {
+    title: string
+    slug: string
+    description: string
+    excerpt: string
+    keywords: string[]
+    sidebar_custom_props?: {
+      image: string
+    }
+    hidePaginationNext: boolean
+    hidePaginationPrevious: boolean
+  }
   sectionSelected: string
   parentsArray: string[]
   breadcumbList: { slug: string; name: string; type: string }[]
@@ -51,11 +65,17 @@ interface Props {
     componentAttributes: RowItem[]
   }[]
   branch: string
+  pagination: {
+    previousDoc: { slug: string | null; name: string | null }
+    nextDoc: { slug: string | null; name: string | null }
+  }
+  isListed: boolean
 }
 
 const docsPathsGLOBAL = await getDocsPaths()
 
 const FastStorePage: NextPage<Props> = ({
+  frontmatter,
   sectionSelected,
   breadcumbList,
   slug,
@@ -65,6 +85,8 @@ const FastStorePage: NextPage<Props> = ({
   code,
   mdxProps,
   branch,
+  pagination,
+  isListed,
 }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   const { setActiveSidebarElement } = useContext(SidebarContext)
@@ -87,9 +109,13 @@ const FastStorePage: NextPage<Props> = ({
                 <header>
                   <Breadcrumb breadcumbList={breadcumbList} />
                   <Text sx={styles.documentationTitle} className="title">
-                    Teste
+                    {frontmatter.title}
                   </Text>
-                  <Text sx={styles.documentationExcerpt}>Teste</Text>
+                  <Text sx={styles.documentationExcerpt}>
+                    {frontmatter.excerpt
+                      ? frontmatter.excerpt
+                      : frontmatter.description}
+                  </Text>
                 </header>
                 <MarkdownRenderer
                   serialized={null}
@@ -105,6 +131,17 @@ const FastStorePage: NextPage<Props> = ({
             </Box>
 
             <FeedbackSection docPath={filePath} slug={slug} />
+            {isListed && (
+              <ArticlePagination
+                hidePaginationNext={
+                  Boolean(frontmatter?.hidePaginationNext) || false
+                }
+                hidePaginationPrevious={
+                  Boolean(frontmatter?.hidePaginationPrevious) || false
+                }
+                pagination={pagination}
+              />
+            )}
           </Box>
           <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />
@@ -194,6 +231,7 @@ export const getStaticProps: GetStaticProps = async ({
 
   const sidebarfallback = await getNavigation()
   const flattenedSidebar = flattenJSON(sidebarfallback)
+  const isListed: boolean = getKeyByValue(flattenedSidebar, slug) ? true : false
   const cleanSlug = getKeyByValue(flattenedSidebar, slug)
   const keyPath = cleanSlug
     ? getKeyByValue(flattenedSidebar, slug)
@@ -223,11 +261,12 @@ export const getStaticProps: GetStaticProps = async ({
 
   try {
     const headingList: Item[] = []
-    const { frontmatter, code } = await bundleMDX({
+    const { code, frontmatter } = await bundleMDX({
       source: documentationContent,
       cwd: path.join(process.cwd(), 'src'),
       mdxOptions(options) {
         options.remarkPlugins = [
+          ...(options.remarkPlugins ?? []),
           remarkGFM,
           remarkImages,
           [getHeadings, { headingList }],
@@ -235,17 +274,47 @@ export const getStaticProps: GetStaticProps = async ({
           remarkMermaid,
         ]
         options.rehypePlugins = [
+          ...(options.rehypePlugins ?? []),
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ]
         return options
       },
       esbuildOptions(options) {
-        options.write = true
         options.outdir = path.join(process.cwd(), '.next')
-
+        options.write = true
         return options
       },
     })
+
+    const docsListSlug = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..slug`
+    )
+    const docsListName = jp.query(
+      sidebarfallback,
+      `$..[?(@.type=='markdown')]..name`
+    )
+    const indexOfSlug = docsListSlug.indexOf(slug)
+
+    const pagination = {
+      previousDoc: {
+        slug: docsListSlug[indexOfSlug - 1]
+          ? `/docs/faststore/${docsListSlug[indexOfSlug - 1]}`
+          : null,
+        name: docsListName[indexOfSlug - 1]
+          ? docsListName[indexOfSlug - 1]
+          : null,
+      },
+      nextDoc: {
+        slug: docsListSlug[indexOfSlug + 1]
+          ? `/docs/faststore/${docsListSlug[indexOfSlug + 1]}`
+          : null,
+        name: docsListName[indexOfSlug + 1]
+          ? docsListName[indexOfSlug + 1]
+          : null,
+      },
+    }
+
     return {
       props: {
         sectionSelected,
@@ -259,6 +328,8 @@ export const getStaticProps: GetStaticProps = async ({
         breadcumbList,
         headingList,
         branch,
+        isListed,
+        pagination,
       },
     }
   } catch (error) {
