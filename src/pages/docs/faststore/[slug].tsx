@@ -4,6 +4,12 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import Head from 'next/head'
 import { bundleMDX } from 'mdx-bundler'
+import remarkGFM from 'remark-gfm'
+import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
+import remarkMermaid from 'utils/remark_plugins/mermaid'
+import remarkImages from 'utils/remark_plugins/plaiceholder'
+import rehypeHighlight from 'rehype-highlight'
+import hljsCurl from 'highlightjs-curl'
 import path from 'path'
 
 import type { Item } from 'components/table-of-contents'
@@ -221,7 +227,16 @@ export const getStaticProps: GetStaticProps = async ({
       source: documentationContent,
       cwd: path.join(process.cwd(), 'src'),
       mdxOptions(options) {
-        options.remarkPlugins = [[getHeadings, { headingList }]]
+        options.remarkPlugins = [
+          remarkGFM,
+          remarkImages,
+          [getHeadings, { headingList }],
+          remarkBlockquote,
+          remarkMermaid,
+        ]
+        options.rehypePlugins = [
+          [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
+        ]
         return options
       },
       esbuildOptions(options) {
