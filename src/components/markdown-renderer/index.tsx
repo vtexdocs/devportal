@@ -1,14 +1,14 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Box } from '@vtex/brand-ui'
-import { MDXRemote } from 'next-mdx-remote'
-const MDXRemote2: any = MDXRemote
-import { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import components from './components'
-import { getMDXComponent } from 'mdx-bundler/client'
-import '@highlightjs/cdn-assets/styles/github.min.css'
 import { useMemo } from 'react'
+import { Box } from '@vtex/brand-ui'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
+const MDXRemote2: any = MDXRemote
+import components from './components'
+import fastStoreComponents from './fastStoreComponents'
+import { getMDXComponent } from 'mdx-bundler/client'
 import { PropsSection } from 'components/faststore-components'
 import { RowItem } from 'components/faststore-components/PropsSection/PropsSection'
+import '@highlightjs/cdn-assets/styles/github.min.css'
 
 interface Props {
   serialized: MDXRemoteSerializeResult | null
@@ -19,11 +19,8 @@ interface Props {
   }[]
 }
 
-const Tab = ({ children }: any) => <div>{children}</div>
-const Tabs = ({ children }: any) => <div>{children}</div>
-
 const MarkdownRenderer = ({ serialized, code, mdxProps }: Props) => {
-  if (mdxProps) {
+  if (code && mdxProps) {
     const ComponentPropsSection = ({ component }: { component: string }) => {
       const mdxComponents: { [componentName: string]: JSX.Element } = {}
       for (const props of mdxProps) {
@@ -35,9 +32,8 @@ const MarkdownRenderer = ({ serialized, code, mdxProps }: Props) => {
     }
     const updatedComponents: any = {
       ...components,
+      ...fastStoreComponents,
       ComponentPropsSection,
-      Tab,
-      Tabs,
     }
     const MdxBundlerComponent = useMemo(() => getMDXComponent(code), [code])
 
