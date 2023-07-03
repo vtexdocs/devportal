@@ -21,7 +21,7 @@ const SectionList = ({
 
   return (
     <section
-      className={`faststore-sectionList' ${stylizedClasses}`}
+      className={`faststore-sectionList ${stylizedClasses}`}
       {...otherProps}
     >
       <ul data-doc-section-grid={grid} data-doc-section-grid-columns={columns}>
