@@ -12282,8 +12282,8 @@
       "slugPrefix": "docs/faststore/",
       "categories": [
         {
-          "name": "Components",
-          "slug": "components",
+          "name": "UI Components",
+          "slug": "components-index",
           "origin": "",
           "type": "markdown",
           "children": [
@@ -12291,116 +12291,116 @@
               "name": "Atoms",
               "slug": "atoms",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Badge",
-                  "slug": "badge",
+                  "slug": "atoms-badge",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Button",
-                  "slug": "button",
+                  "slug": "atoms-button",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Checkbox",
-                  "slug": "checkbox",
+                  "slug": "atoms-checkbox",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Icon",
-                  "slug": "icon",
+                  "slug": "atoms-icon",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Input",
-                  "slug": "input",
+                  "slug": "atoms-input",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Label",
-                  "slug": "label",
+                  "slug": "atoms-label",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Link",
-                  "slug": "link",
+                  "slug": "atoms-link",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "List",
-                  "slug": "list",
+                  "slug": "atoms-list",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Loader",
-                  "slug": "loader",
+                  "slug": "atoms-loader",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Overlay",
-                  "slug": "overlay",
+                  "slug": "atoms-overlay",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Price",
-                  "slug": "price",
+                  "slug": "atoms-price",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Radio",
-                  "slug": "radio",
+                  "slug": "atoms-radio",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Select",
-                  "slug": "select",
+                  "slug": "atoms-select",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Skeleton",
-                  "slug": "skeleton",
+                  "slug": "atoms-skeleton",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Slider",
-                  "slug": "slider",
+                  "slug": "atoms-slider",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "SROnly",
-                  "slug": "sr-only",
+                  "slug": "atoms-sr-only",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12411,25 +12411,25 @@
               "name": "Features",
               "slug": "features",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Navigation",
-                  "slug": "navigation",
+                  "slug": "features-navigation",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Regionalization",
-                  "slug": "regionalization",
+                  "slug": "features-regionalization",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Search",
-                  "slug": "search",
+                  "slug": "features-search",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12440,256 +12440,256 @@
               "name": "Molecules",
               "slug": "molecules",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Accordion",
-                  "slug": "accordion",
+                  "slug": "molecules-accordion",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Alert",
-                  "slug": "alert",
+                  "slug": "molecules-alert",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Breadcrumb",
-                  "slug": "breadcrumb",
+                  "slug": "molecules-breadcrumb",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Buy Button",
-                  "slug": "buy-button",
+                  "slug": "molecules-buy-button",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Carousel",
-                  "slug": "carousel",
+                  "slug": "molecules-carousel",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Cart Item",
-                  "slug": "cart-item",
+                  "slug": "molecules-cart-item",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Checkbox Field",
-                  "slug": "checkbox-field",
+                  "slug": "molecules-checkbox-field",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Discount Badge",
-                  "slug": "discount-badge",
+                  "slug": "molecules-discount-badge",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Dropdown",
-                  "slug": "dropdown",
+                  "slug": "molecules-dropdown",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Gift",
-                  "slug": "gift",
+                  "slug": "molecules-gift",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Icon Button",
-                  "slug": "icon-button",
+                  "slug": "molecules-icon-button",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Input Field",
-                  "slug": "input-field",
+                  "slug": "molecules-input-field",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Link Button",
-                  "slug": "link-button",
+                  "slug": "molecules-link-button",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Modal",
-                  "slug": "modal",
+                  "slug": "molecules-modal",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Navbar Link",
-                  "slug": "navbar-links",
+                  "slug": "molecules-navbar-links",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Order Summary",
-                  "slug": "order-summary",
+                  "slug": "molecules-order-summary",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Product Card",
-                  "slug": "product-card",
+                  "slug": "molecules-product-card",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Product Title",
-                  "slug": "product-title",
+                  "slug": "molecules-product-title",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Quantity Selector",
-                  "slug": "quantity-selector",
+                  "slug": "molecules-quantity-selector",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Radio Field",
-                  "slug": "radio-field",
+                  "slug": "molecules-radio-field",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Radio Group",
-                  "slug": "radio-group",
+                  "slug": "molecules-radio-group",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Rating",
-                  "slug": "rating",
+                  "slug": "molecules-rating",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Region Bar",
-                  "slug": "region-bar",
+                  "slug": "molecules-region-bar",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Search Auto Complete",
-                  "slug": "search-auto-complete",
+                  "slug": "molecules-search-auto-complete",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Search Dropdown",
-                  "slug": "search-dropdown",
+                  "slug": "molecules-search-dropdown",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Search History",
-                  "slug": "search-history",
+                  "slug": "molecules-search-history",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Search Input Field",
-                  "slug": "search-input-field",
+                  "slug": "molecules-search-input-field",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Search Products",
-                  "slug": "search-products",
+                  "slug": "molecules-search-products",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Search Top",
-                  "slug": "search-top",
+                  "slug": "molecules-search-top",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Select Field",
-                  "slug": "select-field",
+                  "slug": "molecules-select-field",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "SKU Selector",
-                  "slug": "sku-selector",
+                  "slug": "molecules-sku-selector",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Table",
-                  "slug": "table",
+                  "slug": "molecules-table",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Tag",
-                  "slug": "tag",
+                  "slug": "molecules-tag",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Toast",
-                  "slug": "toast",
+                  "slug": "molecules-toast",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Toggle Field",
-                  "slug": "toggle-field",
+                  "slug": "molecules-toggle-field",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Toggle",
-                  "slug": "toggle",
+                  "slug": "molecules-toggle",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12700,130 +12700,130 @@
               "name": "Organisms",
               "slug": "organisms",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Banner Text",
-                  "slug": "banner-text",
+                  "slug": "organisms-banner-text",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Cart Sidebar",
-                  "slug": "cart-sidebar",
+                  "slug": "organisms-cart-sidebar",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Empty State",
-                  "slug": "empty-state",
+                  "slug": "organisms-empty-state",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Filter Slider",
-                  "slug": "filter-slider",
+                  "slug": "organisms-filter-slider",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Filter",
-                  "slug": "filter",
+                  "slug": "organisms-filter",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Hero",
-                  "slug": "hero",
+                  "slug": "organisms-hero",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Image Gallery",
-                  "slug": "image-gallery",
+                  "slug": "organisms-image-gallery",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Navbar Slider",
-                  "slug": "navbar-slider",
+                  "slug": "organisms-navbar-slider",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Navbar",
-                  "slug": "navbar",
+                  "slug": "organisms-navbar",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Out of Stock",
-                  "slug": "out-of-stock",
+                  "slug": "organisms-out-of-stock",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Payment Methods",
-                  "slug": "payment-methods",
+                  "slug": "organisms-payment-methods",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Price Range",
-                  "slug": "price-range",
+                  "slug": "organisms-price-range",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Product Grid",
-                  "slug": "product-grid",
+                  "slug": "organisms-product-grid",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Product Shelf",
-                  "slug": "product-shelf",
+                  "slug": "organisms-product-shelf",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Region Modal",
-                  "slug": "region-modal",
+                  "slug": "organisms-region-modal",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Search Input",
-                  "slug": "search-input",
+                  "slug": "organisms-search-input",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Shipping Simulation",
-                  "slug": "shipping-simulation",
+                  "slug": "organisms-shipping-simulation",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Slide Over",
-                  "slug": "Slide Over",
+                  "slug": "organisms-slide-over",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12834,61 +12834,61 @@
         },
         {
           "name": "Documentation",
-          "slug": "index",
+          "slug": "docs-index",
           "origin": "",
           "type": "markdown",
           "children": [
             {
               "name": "Brandless",
-              "slug": "brandless",
+              "slug": "docs-brandless",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Requirements",
-              "slug": "getting-started-requirements",
+              "slug": "docs-getting-started-requirements",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Icons",
-              "slug": "icons",
+              "slug": "docs-icons",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Building Sections",
-              "slug": "",
+              "slug": "docs-building-sections",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Component Customization",
-                  "slug": "component-customatization-overview",
+                  "slug": "building-sections-component-customatization-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Creating a new section",
-                  "slug": "creating-a-new-section",
+                  "slug": "building-sections-creating-a-new-section",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Overriding a native component",
-                  "slug": "overriding-a-native-component",
+                  "slug": "building-sections-overriding-a-native-component",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Overriding components props",
-                  "slug": "overriding-components-props",
+                  "slug": "building-sections-overriding-components-props",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12897,20 +12897,20 @@
             },
             {
               "name": "Customizing",
-              "slug": "",
+              "slug": "docs-customizing",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Components",
-                  "slug": "components",
+                  "slug": "customizing-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Pages",
-                  "slug": "pages",
+                  "slug": "customizing-pages",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12919,48 +12919,55 @@
             },
             {
               "name": "Getting Started",
-              "slug": "getting-started-overview",
+              "slug": "docs-getting-started-overview",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Dashboard",
-                  "slug": "dashboard",
+                  "slug": "1-faststore-onboarding-dashboard",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Starting a new project",
-                  "slug": "onboarding",
+                  "slug": "1-faststore-onboarding-onboarding",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Onboarding app",
+                  "slug": "1-faststore-onboarding-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Setting up the project",
-                  "slug": "2-setting-up-the-project",
+                  "slug": "getting-started-2-setting-up-the-project",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Project Structure",
-                  "slug": "3-project-structure",
+                  "slug": "getting-started-3-project-structure",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "FastStore CLI",
-                  "slug": "4-faststore-cli",
+                  "slug": "getting-started-4-faststore-cli",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Next Steps",
-                  "slug": "5-next-steps",
+                  "slug": "getting-started-5-next-steps",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12969,48 +12976,48 @@
             },
             {
               "name": "Global Tokens",
-              "slug": "",
+              "slug": "docs-global-tokens",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Colors",
-                  "slug": "colors",
+                  "slug": "global-tokens-colors",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Grid and Layout",
-                  "slug": "grid-and-layout",
+                  "slug": "global-tokens-grid-and-layout",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Interactive Controls",
-                  "slug": "interactive-controls",
+                  "slug": "global-tokens-interactive-controls",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Refinements",
-                  "slug": "refinements",
+                  "slug": "global-tokens-refinements",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Spacing",
-                  "slug": "spacing",
+                  "slug": "global-tokens-spacing",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Typography",
-                  "slug": "typography",
+                  "slug": "global-tokens-typography",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13019,48 +13026,55 @@
             },
             {
               "name": "Go Live",
-              "slug": "",
+              "slug": "docs-go-live",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Before you start",
-                  "slug": "before-you-start",
+                  "slug": "go-live-before-you-start",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Go-live overview",
+                  "slug": "go-live-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Setting up VTEX account",
-                  "slug": "1-setting-up-vtex-account-for-faststore",
+                  "slug": "go-live-1-setting-up-vtex-account-for-faststore",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Configuring external DNS",
-                  "slug": "2-configuring-external-dns",
+                  "slug": "go-live-2-configuring-external-dns",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Integrating the VTEX Login",
-                  "slug": "3-integrating-the-the-vtex-login",
+                  "slug": "go-live-3-integrating-the-the-vtex-login",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Integrating the VTEX Checkout",
-                  "slug": "4-integrating-the-vtex-checkout",
+                  "slug": "go-live-4-integrating-the-vtex-checkout",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Integrating the Order Placed and My Account",
-                  "slug": "5-integrating-the-vtex-order-placed-and-my-account",
+                  "slug": "go-live-5-integrating-the-vtex-order-placed-and-my-account",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13069,13 +13083,13 @@
             },
             {
               "name": "Reference Guides",
-              "slug": "",
+              "slug": "docs-reference-guides",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "List of Native Sections",
-                  "slug": "list-of-native-sections",
+                  "slug": "reference-guides-list-of-native-sections",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13084,20 +13098,27 @@
             },
             {
               "name": "Themes",
-              "slug": "themes",
+              "slug": "docs-themes",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
+                  "name": "Overview",
+                  "slug": "themes-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Midnight",
-                  "slug": "midnight",
+                  "slug": "themes-midnight",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Soft Blue",
-                  "slug": "soft-blue",
+                  "slug": "themes-soft-blue",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13106,34 +13127,34 @@
             },
             {
               "name": "Troubleshooting",
-              "slug": "",
+              "slug": "docs-troubleshooting",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Overview",
-                  "slug": "overview",
+                  "slug": "troubleshooting-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Analytics and Partytown",
-                  "slug": "analytics-and-partytown",
+                  "slug": "troubleshooting-analytics-and-partytown",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Identifying development errors and Starter bugs",
-                  "slug": "identifying-development-errors-and-starter-bugs",
+                  "slug": "troubleshooting-identifying-development-errors-and-starter-bugs",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Tracing the Error Source",
-                  "slug": "tracing-the-error-source",
+                  "slug": "troubleshooting-tracing-the-error-source",
                   "origin": "",
                   "type": "markdown",
                   "children": []

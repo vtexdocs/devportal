@@ -27,7 +27,6 @@ import { SidebarContext } from 'utils/contexts/sidebar'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 import getFastStorePaths from 'utils/getFastStorePaths'
 import getGithubFile from 'utils/getGithubFile'
-import getDocsPaths from 'utils/getDocsPaths'
 import getHeadings from 'utils/getHeadings'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import getFileContributors, {
@@ -72,7 +71,7 @@ interface Props {
   isListed: boolean
 }
 
-const docsPathsGLOBAL = await getDocsPaths()
+const docsPathsGLOBAL = await getFastStorePaths('main')
 
 const FastStorePage: NextPage<Props> = ({
   frontmatter,
@@ -180,7 +179,7 @@ export const getStaticProps: GetStaticProps = async ({
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
-      : await getDocsPaths(branch)
+      : await getFastStorePaths(branch)
 
   const filePath = docsPaths[slug]
   if (!filePath) {
@@ -240,10 +239,9 @@ export const getStaticProps: GetStaticProps = async ({
   const parentsArray: string[] = []
   const parentsArrayName: string[] = []
   const parentsArrayType: string[] = []
-  let sectionSelected = ''
+  const sectionSelected = 'FastStore'
 
   if (keyPath) {
-    sectionSelected = flattenedSidebar[`${keyPath[0]}.documentation`]
     getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
     cleanSlug ? parentsArray.push(slug) : parentsArray.push(`guides/${slug}`)
     getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)

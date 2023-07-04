@@ -25,13 +25,14 @@ export default async function getFastStorePaths(
   // @ts-ignore
   repoTree.tree.map((node: any) => {
     const path = node.path
-    const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
+    const re = /^(?<path>.+\/)*(?<folder>.+)\/(?<filename>.+)\.(?<filetype>.+)$/
     if (path.startsWith('docs/faststore')) {
       const match = path.match(re)
       const filename = match?.groups?.filename ? match?.groups?.filename : ''
+      const folder = match?.groups?.folder ? match?.groups?.folder : ''
       const filetype = match?.groups?.filetype ? match?.groups?.filetype : ''
       if (filetype === 'md' || filetype === 'mdx') {
-        ;(docsPaths as any)[filename] = path
+        ;(docsPaths as any)[`${folder}-${filename}`] = path
       }
     }
   })
