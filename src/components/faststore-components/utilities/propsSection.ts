@@ -13,7 +13,7 @@ export function mapComponentFromMdxPath(
   absoluteMdxPath: string,
   components: string[]
 ): string[] {
-  const faststoreMonorepoDir = absoluteMdxPath.split('/apps/site/')[0]
+  const faststoreMonorepoDir = process.cwd()
   const faststoreComponentsSrcFromNodeModules = `${faststoreMonorepoDir}/node_modules/@faststore/components/src`
 
   const dirs = absoluteMdxPath.split('/')

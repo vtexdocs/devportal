@@ -210,24 +210,6 @@ export const getStaticProps: GetStaticProps = async ({
     ''
   )
 
-  const componentsFiles =
-    documentationContent
-      .match(/\'(.*).tsx\'/g)
-      ?.map((match) => match.replaceAll("'", '')) || []
-
-  const mdxPath = filePath.split('/')
-  const componentPath = mdxPath
-    .slice(mdxPath.length - 2, mdxPath.length)
-    .join('/')
-
-  const mdxProps = getComponentPropsFrom(componentPath, componentsFiles).map(
-    (component: object, index) =>
-      (component = {
-        componentName: componentsFiles[index],
-        componentAttributes: component,
-      })
-  )
-
   const sidebarfallback = await getNavigation()
   const flattenedSidebar = flattenJSON(sidebarfallback)
   const isListed: boolean = getKeyByValue(flattenedSidebar, slug) ? true : false
@@ -283,6 +265,22 @@ export const getStaticProps: GetStaticProps = async ({
         return options
       },
     })
+
+    const componentsFiles = frontmatter.components ?? []
+
+    const mdxPath = filePath.split('/')
+
+    const componentPath = mdxPath
+      .slice(mdxPath.length - 2, mdxPath.length)
+      .join('/')
+
+    const mdxProps = getComponentPropsFrom(componentPath, componentsFiles).map(
+      (component: object, index) =>
+        (component = {
+          componentName: componentsFiles[index].replace('.tsx', ''),
+          componentAttributes: component,
+        })
+    )
 
     const docsListSlug = jp.query(
       sidebarfallback,
