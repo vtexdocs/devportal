@@ -206,6 +206,10 @@ export const getStaticProps: GetStaticProps = async ({
     'components/faststore-components'
   )
   documentationContent = documentationContent.replace(
+    /site\/mocks/g,
+    'components/faststore-components/mocks'
+  )
+  documentationContent = documentationContent.replace(
     /.*getComponentPropsFrom.*/g,
     ''
   )
