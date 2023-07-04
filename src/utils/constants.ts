@@ -27,6 +27,7 @@ import {
 import EditIcon from 'components/icons/edit-icon'
 import MenuIcon from 'components/icons/menu-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
+import FastStoreIcon from 'components/icons/faststore-icon'
 
 const algoliaClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
@@ -75,7 +76,7 @@ export const documentationData: DocDataElement[] = [
     link: '/docs/vtex-io-apps',
   },
   {
-    Icon: VTEXIOAppsIcon,
+    Icon: FastStoreIcon,
     title: 'FastStore',
     description: messages['documentation_vtexio_apps.description'],
     link: '/docs/faststore',
