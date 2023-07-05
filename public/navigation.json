@@ -1639,27 +1639,20 @@
           ]
         },
         {
-          "name": "VTEX inStore",
-          "slug": "instore-category",
+          "name": "VTEX Sales App",
+          "slug": "vtex-sale-app-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "How to customize inStore",
-              "slug": "how-to-customize-instore",
+              "name": "How to customize VTEX Sales App",
+              "slug": "how-to-customize-vtex-sales-app",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Customize inStore login options",
-                  "slug": "customize-instore-login-options",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Change inStore language",
-                  "slug": "change-instore-language",
+                  "name": "Change VTEX Sales App language",
+                  "slug": "change-vtex-sales-app-language",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1672,8 +1665,8 @@
                   "children": []
                 },
                 {
-                  "name": "Define payment methods displayed on inStore",
-                  "slug": "define-payment-methods-displayed-on-instore",
+                  "name": "Define payment methods displayed on VTEX Sales App",
+                  "slug": "define-payment-methods-displayed-on-vtex-sales-app",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1714,13 +1707,6 @@
                   "children": []
                 },
                 {
-                  "name": "Set up the order summary printing",
-                  "slug": "set-up-the-order-summary-printing",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Add extra text to the order summary print",
                   "slug": "add-extra-text-to-the-order-print",
                   "origin": "",
@@ -1749,59 +1735,15 @@
                   "children": []
                 },
                 {
-                  "name": "Allow manual prices on inStore",
-                  "slug": "allow-manual-prices-on-instore",
+                  "name": "Allow manual prices on VTEX Sales App",
+                  "slug": "allow-manual-prices-on-vtex-sales-app",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "How to configure extra fields in inStore cart",
-                  "slug": "how-to-configure-extra-fields-in-instore-cart",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "How to manage inStore data",
-              "slug": "how-to-manage-instore-data",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Create and manage physical stores and sales associates in Master Data",
-                  "slug": "how-to-create-and-manage-instore-physical-stores-and-sales-associates-in-master-data",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Invoiced orders",
-              "slug": "instore-invoiced-orders",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Get invoiced orders placed in inStore",
-                  "slug": "get-invoiced-orders-placed-in-instore",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up fields for issuing invoices with inStore",
-                  "slug": "setting-up-fields-for-issuing-invoices-with-instore",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to identify the store and sales associate in an inStore order",
-                  "slug": "how-to-identify-the-store-and-sales-associate-in-an-instore-order",
+                  "name": "Integration VTEX Sales App Local stock sale",
+                  "slug": "integration-vtex-sales-app-local-stock-sale",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -8455,6 +8397,15 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/rnb/pvt/taxes/calculatorconfiguration",
+                  "children": []
+                },
+                {
+                  "name": "Search promotion by name",
+                  "slug": "promotions-and-taxes-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/rnb/pvt/benefits/calculatorconfiguration/search",
                   "children": []
                 },
                 {

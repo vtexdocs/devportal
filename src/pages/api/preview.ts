@@ -46,8 +46,8 @@ export default async function handler(
     }
     res.redirect('/')
   } else {
-    res
-      .status(401)
-      .json({ err: 'You need to be authenticated to use this route' })
+    const protocol = process.env.BUILD_ENV === 'dev' ? 'http' : 'https'
+    const callbackUrl = `${protocol}://${req.headers.host}${req.url}`
+    res.redirect(`/api/auth/signin?callbackUrl=${callbackUrl}`)
   }
 }

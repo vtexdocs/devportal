@@ -8,6 +8,25 @@ All notable changes to this project will be documented in this file. See [standa
 
 * Redirect to the app product-price from DevPortalContent to its own repository.
 
+### [1.9.25](https://github.com/vtexdocs/devportal/compare/v1.9.24...v1.9.25) (2023-06-30)
+
+### [1.9.24](https://github.com/vtexdocs/devportal/compare/v1.9.23...v1.9.24) (2023-06-28)
+
+
+### Features
+
+* redirect user to sign in page when trying to reach preview API endpoint ([1a4038f](https://github.com/vtexdocs/devportal/commit/1a4038fa3426b6773118834b179bb70cc7b00826))
+
+
+### Bug Fixes
+
+* fix bug in preview API endpoint ([431f38c](https://github.com/vtexdocs/devportal/commit/431f38cc82121d2d880d4c35eef597f54de4ef1c))
+
+
+### Docs
+
+* **navigation:** add promotions api endpoint ([ee09cca](https://github.com/vtexdocs/devportal/commit/ee09ccad3bbe57ae438fd0807e10e37e14491771))
+
 ### [1.9.23](https://github.com/vtexdocs/devportal/compare/v1.9.22...v1.9.23) (2023-06-27)
 
 
