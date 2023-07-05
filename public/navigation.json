@@ -12908,11 +12908,40 @@
           "type": "category",
           "children": [
             {
+              "name": "July",
+              "slug": "july-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "reCAPTCHA validation will now follow orderForm configuration for all requests",
+                  "slug": "2023-07-05-recaptcha-validation-will-now-follow-orderform-configuration-for-all-requests",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Anti-fraud flow for debit card transactions",
+                  "slug": "anti-fraud-flow-for-debit-card-transactions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "June",
               "slug": "june-2023",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "reCAPTCHA v3 support available for integrations",
+                  "slug": "2023-06-28-recaptcha-v3-support-available-for-integrations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "New integration guide: headless commerce",
                   "slug": "2023-06-06-new-integration-guide-headless-commerce",
