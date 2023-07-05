@@ -30,11 +30,13 @@ const MarkdownRenderer = ({ serialized, code, mdxProps }: Props) => {
       }
       return mdxComponents[component]
     }
+
     const updatedComponents: any = {
       ...components,
       ...fastStoreComponents,
       ComponentPropsSection,
     }
+
     const MdxBundlerComponent = useMemo(() => getMDXComponent(code), [code])
 
     return (

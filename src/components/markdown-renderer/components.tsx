@@ -86,7 +86,7 @@ const Callout = ({ node, icon, ...props }: Component) => {
           : ''
       }`}
     >
-      <p {...props} />
+      <div {...props} />
     </blockquote>
   )
 }
@@ -199,6 +199,9 @@ export default {
     ) : (
       errorMessage
     )
+  },
+  text: ({ node, ...props }: Component) => {
+    return <Box sx={{ marginBlock: '1em' }} {...props} />
   },
   blockquote: ({ ...props }: Component) => {
     return <Callout {...props} />
