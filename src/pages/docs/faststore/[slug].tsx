@@ -37,6 +37,8 @@ import getNavigation from 'utils/getNavigation'
 import styles from 'styles/documentation-page'
 import { RowItem } from 'components/faststore-components/PropsSection/PropsSection'
 import ArticlePagination from 'components/article-pagination'
+import { visit } from 'unist-util-visit'
+import { Node } from 'unist-util-visit/lib'
 
 interface Props {
   frontmatter: {
@@ -243,6 +245,18 @@ export const getStaticProps: GetStaticProps = async ({
     })
   })
 
+  function transformer(ast: Node) {
+    visit(ast, 'element', visitor)
+
+    function visitor(node: { tagName: string }) {
+      if (node.tagName === 'p') {
+        node.tagName = 'text'
+      }
+    }
+  }
+
+  const changeParagraphTag = () => transformer
+
   try {
     const headingList: Item[] = []
     const { code, frontmatter } = await bundleMDX({
@@ -260,6 +274,7 @@ export const getStaticProps: GetStaticProps = async ({
         options.rehypePlugins = [
           ...(options.rehypePlugins ?? []),
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
+          changeParagraphTag,
         ]
         return options
       },
