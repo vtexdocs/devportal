@@ -592,6 +592,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Google Pay: processing information for payment providers and anti-fraud",
+                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -1433,6 +1440,13 @@
                 {
                   "name": "Cardholder document configuration",
                   "slug": "cardholder-document-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing a pre-analysis anti-fraud flow for debit card transactions",
+                  "slug": "implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12907,6 +12921,28 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "July",
+              "slug": "july-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "reCAPTCHA validation will now follow orderForm configuration for all requests",
+                  "slug": "2023-07-05-recaptcha-validation-will-now-follow-orderform-configuration-for-all-requests",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Anti-fraud flow for debit card transactions",
+                  "slug": "anti-fraud-flow-for-debit-card-transactions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "June",
               "slug": "june-2023",
