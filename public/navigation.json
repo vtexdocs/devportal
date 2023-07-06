@@ -12928,6 +12928,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Application form to access VTEX IO builders is no longer required",
+                  "slug": "application-form-to-access-vtex-io-builders-is-no-longer-required",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Search API: Teasers field deprecation",
                   "slug": "2023-07-06-search-api-teasers-field-deprecation",
                   "origin": "",
