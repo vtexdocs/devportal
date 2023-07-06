@@ -12928,6 +12928,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Search API: Teasers field deprecation",
+                  "slug": "2023-07-06-search-api-teasers-field-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "reCAPTCHA validation will now follow orderForm configuration for all requests",
                   "slug": "2023-07-05-recaptcha-validation-will-now-follow-orderform-configuration-for-all-requests",
                   "origin": "",
