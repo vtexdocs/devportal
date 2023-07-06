@@ -592,6 +592,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Google Pay: processing information for payment providers and anti-fraud",
+                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -1433,6 +1440,13 @@
                 {
                   "name": "Cardholder document configuration",
                   "slug": "cardholder-document-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing a pre-analysis anti-fraud flow for debit card transactions",
+                  "slug": "implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions",
                   "origin": "",
                   "type": "markdown",
                   "children": []
