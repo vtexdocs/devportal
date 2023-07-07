@@ -12935,6 +12935,13 @@
                   "children": []
                 },
                 {
+                  "name": "Change in the SKU notification behavior",
+                  "slug": "2023-07-07-change-in-the-sku-notification-behavior",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Search API: Teasers field deprecation",
                   "slug": "2023-07-06-search-api-teasers-field-deprecation",
                   "origin": "",
