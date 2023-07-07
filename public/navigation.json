@@ -12928,6 +12928,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Application form to access VTEX IO builders is no longer required",
+                  "slug": "application-form-to-access-vtex-io-builders-is-no-longer-required",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Change in the SKU notification behavior",
                   "slug": "2023-07-07-change-in-the-sku-notification-behavior",
                   "origin": "",
