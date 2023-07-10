@@ -12,15 +12,9 @@ import { products } from 'components/faststore-components/mocks/products'
 import { useFormattedPrice } from '../utilities/usePriceFormatter'
 
 const ProductShelfCarouselUsage = () => {
-  const isMobile = window.innerWidth <= 768
-
   return (
     <ProductShelf>
-      <Carousel
-        itemsPerPage={isMobile ? 1 : 3}
-        variant="scroll"
-        infiniteMode={false}
-      >
+      <Carousel itemsPerPage={3} variant="scroll" infiniteMode={false}>
         {products.map(({ product }) => (
           <ProductCard bordered>
             <ProductCardImage>
