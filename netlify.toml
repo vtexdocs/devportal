@@ -82,6 +82,12 @@ to = '/docs/guides/payment-provider-protocol-api-overview'
 
 [[redirects]]
 force = true
+from = '/reference/payment-provider-protocol-api-overview'
+status = 308
+to = '/docs/guides/payment-provider-protocol-api-overview'
+
+[[redirects]]
+force = true
 from = '/vtex-rest-api/reference/invoice'
 status = 308
 to = '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice'
