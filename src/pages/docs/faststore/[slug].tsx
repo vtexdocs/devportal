@@ -281,6 +281,10 @@ export const getStaticProps: GetStaticProps = async ({
       esbuildOptions(options) {
         options.outdir = path.join(process.cwd(), '.next')
         options.write = true
+        options.bundle = true
+        options.minify = true
+        options.treeShaking = true
+        options.splitting = true
         return options
       },
     })
