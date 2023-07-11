@@ -30,7 +30,13 @@ const SectionItem = ({
             size="small"
             variant="tertiary"
             href={actionPath}
-            icon={<Icon name="ArrowRight" />}
+            icon={
+              <Icon
+                name="ArrowRight"
+                onResize={undefined}
+                onResizeCapture={undefined}
+              />
+            }
             iconPosition="right"
           >
             See more

@@ -9,7 +9,13 @@ const RatingActionable = (props: RatingActionableProps) => {
   const [rating, setRating] = useState(props.value)
 
   return (
-    <Rating value={rating} icon={<Icon name="Star" />} onChange={setRating} />
+    <Rating
+      value={rating}
+      icon={
+        <Icon name="Star" onResize={undefined} onResizeCapture={undefined} />
+      }
+      onChange={setRating}
+    />
   )
 }
 

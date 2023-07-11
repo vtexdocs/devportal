@@ -5,7 +5,8 @@ const ButtonLoading = () => {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    let timer = null
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let timer: any = null
 
     if (loading) {
       timer = window.setTimeout(() => setLoading(false), 2000)

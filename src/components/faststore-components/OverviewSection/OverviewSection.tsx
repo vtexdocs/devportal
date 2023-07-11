@@ -1,8 +1,9 @@
-import React, { CSSProperties } from 'react'
+import React, { CSSProperties, ReactElement } from 'react'
 
 type Direction = 'column' | 'row'
 
 export type OverviewSectionProps = {
+  children: ReactElement[]
   dark?: boolean
   direction?: Direction
   bigGap?: boolean
@@ -16,7 +17,7 @@ const OverviewSection = ({
   containerStyle,
   bigGap,
   ...otherProps
-}) => {
+}: OverviewSectionProps) => {
   return (
     <div
       className="faststore-overviewSection"

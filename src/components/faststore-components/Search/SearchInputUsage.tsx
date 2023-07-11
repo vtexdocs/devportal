@@ -10,8 +10,9 @@ type SearchInputUsageProps = {
 const SearchInputUsage = ({ actions = true }: SearchInputUsageProps) => {
   const [searchDropdownVisible, setSearchDropdownVisible] = useState(false)
   const [term, setTerm] = useState('')
-  const [products, setProducts] = useState(null)
-  function onChangeValue(e) {
+  const [products, setProducts] = useState<(typeof product)[] | null>(null)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  function onChangeValue(e: any) {
     if (!actions) return
 
     setSearchDropdownVisible(true)
@@ -20,7 +21,7 @@ const SearchInputUsage = ({ actions = true }: SearchInputUsageProps) => {
       setProducts(null)
     } else {
       setTerm('App')
-      setProducts(product)
+      setProducts([product])
     }
   }
   function onClickButton() {
@@ -77,7 +78,10 @@ const SearchInputUsage = ({ actions = true }: SearchInputUsageProps) => {
           }}
         />
         {searchDropdownVisible && (
-          <SearchDropdownUsage term={term} products={products} />
+          <SearchDropdownUsage
+            term={term}
+            products={products as [] | null | undefined}
+          />
         )}
       </SearchInput>
     </SearchProvider>

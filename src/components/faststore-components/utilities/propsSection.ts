@@ -1,12 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { parse } from 'react-docgen-typescript'
 
 export const faststoreComponentsFromNodeModules = `node_modules/@faststore/components`
 
 function toPascalCase(string: string) {
   // matches one or more non-alphanumeric characters ([^a-zA-Z0-9]+) followed by any character ((.)) and replaces the following character with its uppercase version using a callback function.
-  return (' ' + string).toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => {
-    return chr.toUpperCase()
-  })
+  return (' ' + string)
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+(.)/g, (_m, chr) => {
+      return chr.toUpperCase()
+    })
 }
 
 export function mapComponentFromMdxPath(
@@ -51,7 +54,7 @@ export function getComponentPropsFrom(
     savePropValueAsString: true,
     shouldExtractLiteralValuesFromEnum: true,
     shouldExtractValuesFromUnion: true,
-    propFilter: (prop) =>
+    propFilter: (prop: any) =>
       prop?.parent?.fileName?.includes(faststoreComponentsFromNodeModules),
   }
 
@@ -64,7 +67,9 @@ export function getComponentPropsFrom(
       return {
         name: key,
         type:
-          prop.type?.value?.map(({ value }) => value).join(' | ') ??
+          prop.type?.value
+            ?.map(({ value }: { value: any }) => value)
+            .join(' | ') ??
           prop.type?.raw ??
           prop.type?.name ??
           '',

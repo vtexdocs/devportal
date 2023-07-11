@@ -21,7 +21,11 @@ function NavbarLinksUsage({ classes }: { classes?: string }) {
         <Button variant="tertiary" size="small">
           Set location
         </Button>
-        <NavbarLinksList>
+        <NavbarLinksList
+          nonce={undefined}
+          onResize={undefined}
+          onResizeCapture={undefined}
+        >
           {links.map((link) => (
             <NavbarLinksListItem key={link}>
               <Link variant="display" href="#">
