@@ -5,9 +5,11 @@ export const faststoreComponentsFromNodeModules = `node_modules/@faststore/compo
 
 function toPascalCase(string: string) {
   // matches one or more non-alphanumeric characters ([^a-zA-Z0-9]+) followed by any character ((.)) and replaces the following character with its uppercase version using a callback function.
-  return (' ' + string).toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => {
-    return chr.toUpperCase()
-  })
+  return (' ' + string)
+    .toLowerCase()
+    .replace(/[^a-zA-Z0-9]+(.)/g, (_m, chr) => {
+      return chr.toUpperCase()
+    })
 }
 
 export function mapComponentFromMdxPath(
