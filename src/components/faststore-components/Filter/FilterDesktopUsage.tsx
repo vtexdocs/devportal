@@ -20,7 +20,7 @@ interface Props {
    * ID to find this component in testing tools (e.g.: cypress,
    * testing-library, and jest).
    */
-  testId?: string
+  testId: string
   /**
    * Title for the `FilterDesktop` component.
    */

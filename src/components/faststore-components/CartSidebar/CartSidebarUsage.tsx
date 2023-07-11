@@ -23,7 +23,7 @@ export const skuActiveVariants =
   product.isVariantOf.skuVariants.activeVariations
 export const activeVariations = Object.keys(skuActiveVariants).map((key) => ({
   label: key,
-  option: skuActiveVariants[key],
+  option: skuActiveVariants[key as keyof typeof skuActiveVariants],
 }))
 
 export const CartSidebarUsage = () => {
@@ -41,7 +41,13 @@ export const CartSidebarUsage = () => {
       {displayCart && (
         <CartSidebar
           totalItems={0}
-          alertIcon={<Icon name="Truck" />}
+          alertIcon={
+            <Icon
+              name="Truck"
+              onResize={undefined}
+              onResizeCapture={undefined}
+            />
+          }
           alertText="Free shipping starts at $300"
           onClose={closeCart}
         >
@@ -66,7 +72,15 @@ export const CartSidebarUsage = () => {
                 activeVariations={activeVariations}
               />
             </CartItem>
-            <Gift icon={<Icon name="Tag" />}>
+            <Gift
+              icon={
+                <Icon
+                  name="Tag"
+                  onResize={undefined}
+                  onResizeCapture={undefined}
+                />
+              }
+            >
               <GiftImage>
                 <img
                   src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
@@ -95,7 +109,15 @@ export const CartSidebarUsage = () => {
             <Button
               data-fs-cart-sidebar-checkout-button
               variant="primary"
-              icon={<Icon name="ArrowRight" width={18} height={18} />}
+              icon={
+                <Icon
+                  name="ArrowRight"
+                  width={18}
+                  height={18}
+                  onResize={undefined}
+                  onResizeCapture={undefined}
+                />
+              }
               iconPosition="right"
             >
               Checkout

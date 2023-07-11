@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { parse } from 'react-docgen-typescript'
 
 export const faststoreComponentsFromNodeModules = `node_modules/@faststore/components`
@@ -51,7 +52,7 @@ export function getComponentPropsFrom(
     savePropValueAsString: true,
     shouldExtractLiteralValuesFromEnum: true,
     shouldExtractValuesFromUnion: true,
-    propFilter: (prop) =>
+    propFilter: (prop: any) =>
       prop?.parent?.fileName?.includes(faststoreComponentsFromNodeModules),
   }
 
@@ -64,7 +65,9 @@ export function getComponentPropsFrom(
       return {
         name: key,
         type:
-          prop.type?.value?.map(({ value }) => value).join(' | ') ??
+          prop.type?.value
+            ?.map(({ value }: { value: any }) => value)
+            .join(' | ') ??
           prop.type?.raw ??
           prop.type?.name ??
           '',

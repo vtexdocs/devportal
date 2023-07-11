@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from 'react'
 
-const IconList = ({ children }: PropsWithChildren) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const IconList = ({ children }: PropsWithChildren<any>) => {
   return <ul className="faststore-iconList">{children}</ul>
 }
 

@@ -26,7 +26,15 @@ export const NavbarSlider = () => {
         <IconButton
           onClick={fadeOut}
           aria-label="Logo"
-          icon={<Icon name="Storefront" width={32} height={32} />}
+          icon={
+            <Icon
+              name="Storefront"
+              width={32}
+              height={32}
+              onResize={undefined}
+              onResizeCapture={undefined}
+            />
+          }
         />
       </UINavbarSliderHeader>
       <UINavbarSliderContent>
@@ -46,7 +54,15 @@ const NavbarSliderUsage = () => {
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <IconButton
         aria-label="Open Menu"
-        icon={<Icon name="List" width={32} height={32} />}
+        icon={
+          <Icon
+            name="List"
+            width={32}
+            height={32}
+            onResize={undefined}
+            onResizeCapture={undefined}
+          />
+        }
         onClick={openNavbar}
       />
       <p style={{ marginLeft: '12px' }}>Open Menu</p>
