@@ -1,40 +1,33 @@
 import { createContext, Dispatch, SetStateAction, useState } from 'react'
 import type { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
-import type { SearchDataItemProps } from 'components/search-results'
 
-type FilterType = DocumentationTitle | UpdatesTitle | ''
+export type FilterType = DocumentationTitle | UpdatesTitle | ''
+
+type OcurrenceType = {
+  [key: string]: number
+}
 
 type SearchContextType = {
   filterSelectedSection: FilterType
   changeFilterSelectedSection: Dispatch<SetStateAction<FilterType>>
-  ocurrenceCount: Map<FilterType, number>
-  updateOcurrenceCount: (resultsData: SearchDataItemProps[]) => void
+  ocurrenceCount: OcurrenceType
+  updateOcurrenceCount: (resultsData: OcurrenceType) => void
 }
 
 export const SearchContext = createContext<SearchContextType>({
   filterSelectedSection: '',
   changeFilterSelectedSection: () => undefined,
-  ocurrenceCount: new Map(),
+  ocurrenceCount: {},
   updateOcurrenceCount: () => undefined,
 })
 
 const SearchContextProvider: React.FC = ({ children }) => {
   const [filterSelectedSection, changeFilterSelectedSection] =
     useState<FilterType>('')
-  const [ocurrenceCount, changeOcurrenceCount] = useState<
-    Map<FilterType, number>
-  >(new Map())
+  const [ocurrenceCount, changeOcurrenceCount] = useState({})
 
-  const updateOcurrenceCount = (resultsData: SearchDataItemProps[]) => {
-    const ocurrenceCountMap = new Map<FilterType, number>()
-    resultsData.forEach((result) => {
-      ocurrenceCountMap.set(
-        result.doc,
-        ocurrenceCountMap.get(result.doc)! + 1 || 1
-      )
-    })
-    ocurrenceCountMap.set('', resultsData.length)
-    changeOcurrenceCount(ocurrenceCountMap)
+  const updateOcurrenceCount = (resultsData: OcurrenceType) => {
+    changeOcurrenceCount(resultsData)
   }
 
   return (

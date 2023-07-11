@@ -7,9 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'deprecated',
-    description: 'Master Data v2 orders entity deprecation',
-    date: new Date('04/11/2023'),
+    type: 'added',
+    description:
+      'Extensions Hub: Our new place to promote apps and partners inside VTEX Admin',
+    date: new Date('06/02/2023'),
   },
   updateType: 'release-notes',
 }

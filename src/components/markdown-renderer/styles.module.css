@@ -7,8 +7,6 @@
 .heading::before {
   content: '';
   display: block;
-  height: 20vh;
-  margin-top: -20vh;
   visibility: hidden;
   pointer-events: none;
 }
@@ -122,4 +120,8 @@ table .code {
 .flexWrap {
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.svgContainer {
+  width: 100%;
 }

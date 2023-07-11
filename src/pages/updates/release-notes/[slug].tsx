@@ -170,7 +170,8 @@ export const getStaticProps: GetStaticProps = async ({
 
   try {
     if (path.endsWith('.md')) {
-      documentationContent = escapeCurlyBraces(documentationContent)
+      const { result } = escapeCurlyBraces(documentationContent)
+      documentationContent = result
       documentationContent = replaceHTMLBlocks(documentationContent)
       documentationContent = await replaceMagicBlocks(documentationContent)
     }

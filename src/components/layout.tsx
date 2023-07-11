@@ -19,6 +19,7 @@ interface Props {
   children: ReactElement
   hideSidebar?: boolean
   isPreview: boolean
+  isEditor?: boolean
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
   parentsArray?: string[]
 }
@@ -33,6 +34,7 @@ export default function Layout({
   sidebarfallback,
   hideSidebar,
   isPreview = false,
+  isEditor,
   sectionSelected,
   parentsArray,
 }: Props) {
@@ -72,15 +74,14 @@ export default function Layout({
 					`}
         </Script>
       </div>
-      <SidebarContextProvider fallback={sidebarfallback} isPreview={isPreview}>
-        <Header />
+      <SidebarContextProvider
+        sectionSelected={sectionSelected || ''}
+        fallback={sidebarfallback}
+        isPreview={isPreview}
+      >
+        <Header isEditor={isEditor ? true : false} />
         <Flex sx={styles.container}>
-          {!hideSidebar && (
-            <Sidebar
-              parentsArray={parentsArray}
-              sectionSelected={sectionSelected}
-            />
-          )}
+          {!hideSidebar && <Sidebar parentsArray={parentsArray} />}
           <Box sx={styles.mainContainer}>{children}</Box>
         </Flex>
       </SidebarContextProvider>

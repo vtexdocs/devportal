@@ -119,6 +119,11 @@ const StorefrontDevelopmentPage: NextPage<Props> = ({ branch }) => {
           content={messages['storefront_development_page.subtitle']}
           key="title"
         />
+        <meta
+          name="docsearch:doctitle"
+          content={messages['storefront_development_page.title']}
+        />
+        <meta name="docsearch:doctype" content="Storefront Development" />
       </Head>
       <Fragment>
         <PageHeader

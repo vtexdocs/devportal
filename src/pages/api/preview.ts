@@ -1,5 +1,8 @@
 import { NextApiRequest, NextApiResponse } from 'next'
+import { getServerSession } from 'next-auth'
 import octokit from 'utils/octokitConfig'
+
+import { authOptions } from './auth/[...nextauth]'
 
 async function getGithubBranch(org: string, repo: string, branch: string) {
   const response = octokit.request(
@@ -19,25 +22,32 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const branch = req.query.branch ? (req.query.branch as string) : 'main'
+  const session = await getServerSession(req, res, authOptions)
+  if (session) {
+    const branch = req.query.branch ? (req.query.branch as string) : 'main'
 
-  if (req.query.branch) {
-    let branchExists
-    try {
-      branchExists = await getGithubBranch(
-        'vtexdocs',
-        'dev-portal-content',
-        branch
-      )
-    } catch {
-      branchExists = false
-    }
-    if (branchExists) {
-      const customPreviewData = {
-        branch: `${branch}`,
+    if (req.query.branch) {
+      let branchExists
+      try {
+        branchExists = await getGithubBranch(
+          'vtexdocs',
+          'dev-portal-content',
+          branch
+        )
+      } catch {
+        branchExists = false
       }
-      res.setPreviewData(customPreviewData)
+      if (branchExists) {
+        const customPreviewData = {
+          branch: `${branch}`,
+        }
+        res.setPreviewData(customPreviewData)
+      }
     }
+    res.redirect('/')
+  } else {
+    const protocol = process.env.BUILD_ENV === 'dev' ? 'http' : 'https'
+    const callbackUrl = `${protocol}://${req.headers.host}${req.url}`
+    res.redirect(`/api/auth/signin?callbackUrl=${callbackUrl}`)
   }
-  res.redirect('/')
 }

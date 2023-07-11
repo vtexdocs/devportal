@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-import { filterSidebarItems, writeLog } from '../support/functions'
+import { writeLog } from '../support/functions'
 import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
@@ -12,8 +12,9 @@ describe('API guides documentation page', () => {
   })
 
   beforeEach(() => {
-    cy.task('getUrl').then((url) => cy.visit(url))
     cy.viewport(1366, 768)
+    cy.task('getUrl').then((url) => cy.visit(url))
+    cy.wait(6000)
   })
 
   afterEach(function () {
@@ -24,51 +25,48 @@ describe('API guides documentation page', () => {
     }
   })
 
-  it('Check if a random guide page, chosen using the sidebar, loads', () => {
-    cy.get('.toggleIcon').should('be.visible').click()
+  it('Check if the sidebar collapse button works', () => {
+    cy.get('.toggleIcon')
+      .scrollIntoView({ offset: { top: -100 } })
+      .should('not.be.visible')
+      .click()
+    cy.get('[data-cy="sidebar-section"]').should('not.be.visible')
+    cy.get('.toggleIcon')
+      .scrollIntoView({ offset: { top: -100 } })
+      .should('be.visible')
+      .click()
     cy.get('[data-cy="sidebar-section"]').should('be.visible')
+  })
 
-    cy.get('.sidebar-component > div', { timeout: 10000 })
-      .filter(filterSidebarItems)
+  it('Check if a random guide page, chosen using the sidebar, loads', () => {
+    cy.get('.css-1450tp')
       .anyWithIndex()
       .then(([category, index]) => {
         cy.wrap(index).as('idx')
         return cy.wrap(category)
       })
-      .find('button')
       .scrollIntoView()
-      .should('be.visible')
+      .find('button')
       .click({ force: true })
 
     cy.get('@idx').then((idx) => {
-      cy.get('.sidebar-component > div', { timeout: 1000 })
-        .eq(idx * 3 + 1)
-        .find('.sidebar-component > div')
-        .filter(filterSidebarItems)
-        .anyWithIndex()
-        .then(([element, index]) => {
-          cy.wrap(index).as('subItemsIdx')
-          if (element.find('button').length)
-            return cy.wrap(element).find('button')
+      cy.get('.css-1450tp')
+        .eq(idx + 1)
+        .then((element) => {
+          const hasButton = element.find('button').length
+          cy.wrap(element.find('button').length).as('hasButton')
+          if (hasButton) return cy.wrap(element).find('button')
           return cy.wrap(element).find('a')
         })
-        .click()
+        .click({ force: true })
 
-      cy.get('@subItemsIdx').then((subItemIndex) => {
-        cy.get('.sidebar-component > div', { timeout: 1000 })
-          .eq(idx * 3 + 1)
-          .find('.sidebar-component > div')
-          .eq(subItemIndex * 2 + 1)
-          .then((element) => {
-            if (element.children().length > 0) {
-              cy.wrap(element)
-                .find('.sidebar-component > div')
-                .filter(filterSidebarItems)
-                .any()
-                .find('a')
-                .click({ force: true })
-            }
-          })
+      cy.get('@hasButton').then((hasButton) => {
+        if (hasButton) {
+          cy.get('.css-1450tp')
+            .eq(idx + 2)
+            .find('a')
+            .click({ force: true })
+        }
       })
     })
 
@@ -114,6 +112,8 @@ describe('API guides documentation page', () => {
       .invoke('text')
       .should('equal', messages['feedback_modal.title'])
 
+    cy.get('[data-cy="feedback-modal"]').find('textarea').type('cypress-test')
+
     cy.get('[data-cy="feedback-modal"]')
       .find('button')
       .then((sendFeedbackButton) => {
@@ -131,25 +131,23 @@ describe('API guides documentation page', () => {
   })
 
   it('try to click on the last element of table of contents', () => {
-    if (Cypress.$('[data-cy="table-of-contents"]').children().length > 0) {
+    if (Cypress.$('h2').length > 0) {
       cy.get('h2')
         .its('length')
         .then((length) => {
-          cy.get('[data-cy="table-of-contents"]:visible > div').should(
-            'have.length',
-            length
-          )
+          cy.get('[data-cy="table-of-contents"]')
+            .should('not.be.empty')
+            .first()
+            .children()
+            .should('have.length', length)
+            .last()
+            .then((heading) => {
+              const anchor = heading.find('a').attr('href')
+              cy.wrap(anchor.substring(anchor.indexOf('#') + 1)).as('anchor')
+              return cy.wrap(heading)
+            })
+            .click()
         })
-
-      cy.get('[data-cy="table-of-contents"]:visible > div')
-        .last()
-        .then((heading) => {
-          const anchor = heading.find('a').attr('href')
-          cy.wrap(anchor.substring(anchor.indexOf('#') + 1)).as('anchor')
-          return cy.wrap(heading)
-        })
-        .click()
-
       cy.get('@anchor').then((anchor) => {
         cy.get(`[id=${anchor}]`).should('be.visible')
       })

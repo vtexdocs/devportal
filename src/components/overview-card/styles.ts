@@ -14,7 +14,7 @@ const overviewCard: SxStyleProp = {
   h3: {
     fontSize: '1.125em',
     fontWeight: '600',
-    marginBottom: '0',
+    my: '0',
   },
   h4: {
     fontSize: '1.05em',

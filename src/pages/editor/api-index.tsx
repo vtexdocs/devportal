@@ -6,6 +6,7 @@ import { Fragment } from 'react'
 import styles from 'styles/documentation-landing-page'
 import type { Page } from 'utils/typings/types'
 
+import Auth from 'components/auth'
 import PageHeader from 'components/page-header'
 import image from '../../../public/images/editor.png'
 
@@ -20,7 +21,7 @@ const APIRefAdminPage: Page = () => {
   }
 
   return (
-    <>
+    <Auth>
       <Head>
         <title>API Reference Index Generator</title>
         <meta name="robots" content="noindex" />
@@ -40,10 +41,11 @@ const APIRefAdminPage: Page = () => {
           </Fragment>
         </Box>
       </Flex>
-    </>
+    </Auth>
   )
 }
 
+APIRefAdminPage.isEditor = true
 APIRefAdminPage.hideSidebar = true
 
 export default APIRefAdminPage

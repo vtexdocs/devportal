@@ -20,7 +20,8 @@
       "anchor",
       "url",
       "type",
-      "doctype"
+      "doctype",
+      "docTitle"
     ]
   },
   "use_anchors": true,

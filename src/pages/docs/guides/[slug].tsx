@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useContext } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import jp from 'jsonpath'
@@ -10,6 +10,7 @@ import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
+import remarkMermaid from 'utils/remark_plugins/mermaid'
 
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
@@ -82,20 +83,20 @@ const DocumentationPage: NextPage<Props> = ({
   isListed,
   breadcumbList,
   branch,
+  sectionSelected,
 }) => {
-  const [headings, setHeadings] = useState<Item[]>([])
+  const headings: Item[] = headingList
   const { setBranchPreview } = useContext(PreviewContext)
-  setBranchPreview(branch)
   const { setActiveSidebarElement } = useContext(SidebarContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
-    setHeadings(headingList)
+    setBranchPreview(branch)
   }, [serialized.frontmatter])
   return (
     <>
       <Head>
         <title>{serialized.frontmatter?.title as string}</title>
-        <meta name="docsearch:doctype" content="Guides" />
+        <meta name="docsearch:doctype" content={sectionSelected} />
         <meta
           name="docsearch:doctitle"
           content={serialized.frontmatter?.title as string}
@@ -214,7 +215,8 @@ export const getStaticProps: GetStaticProps = async ({
   let format: 'md' | 'mdx' = 'mdx'
   try {
     if (path.endsWith('.md')) {
-      documentationContent = escapeCurlyBraces(documentationContent)
+      const { result } = escapeCurlyBraces(documentationContent)
+      documentationContent = result
       documentationContent = replaceHTMLBlocks(documentationContent)
       documentationContent = await replaceMagicBlocks(documentationContent)
     }
@@ -233,6 +235,7 @@ export const getStaticProps: GetStaticProps = async ({
           remarkImages,
           [getHeadings, { headingList }],
           remarkBlockquote,
+          remarkMermaid,
         ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
@@ -299,7 +302,7 @@ export const getStaticProps: GetStaticProps = async ({
     const pagination = {
       previousDoc: {
         slug: docsListSlug[indexOfSlug - 1]
-          ? docsListSlug[indexOfSlug - 1]
+          ? `/docs/guides/${docsListSlug[indexOfSlug - 1]}`
           : null,
         name: docsListName[indexOfSlug - 1]
           ? docsListName[indexOfSlug - 1]
@@ -307,7 +310,7 @@ export const getStaticProps: GetStaticProps = async ({
       },
       nextDoc: {
         slug: docsListSlug[indexOfSlug + 1]
-          ? docsListSlug[indexOfSlug + 1]
+          ? `/docs/guides/${docsListSlug[indexOfSlug + 1]}`
           : null,
         name: docsListName[indexOfSlug + 1]
           ? docsListName[indexOfSlug + 1]

@@ -57,8 +57,16 @@ const hitContentContainer: SxStyleProp = {
 
 const hitContent: SxStyleProp = {
   color: 'muted.0',
-  fontSize: '16px',
-  lineHeight: '22px',
+  fontSize: ['14px', '16px'],
+  lineHeight: ['20px', '22px'],
+  width: '100%',
+}
+
+const hitContentSmall: SxStyleProp = {
+  color: 'muted.0',
+  fontSize: ['14px', '16px'],
+  lineHeight: ['20px', '22px'],
+  width: '100%',
   whiteSpace: 'pre',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
@@ -143,6 +151,8 @@ const noResults: SxStyleProp = {
 
 const hitContentHighlighted: SxStyleProp = {
   ...hitContent,
+  color: '#4A596B',
+  width: 'auto',
   background: '#FFE0EF',
 }
 
@@ -155,6 +165,7 @@ export default {
   hitIcon,
   hitContentContainer,
   hitContent,
+  hitContentSmall,
   hitBreadCrumb,
   hitBreadCrumbIn,
   hitBreadCrumbArrow,

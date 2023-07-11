@@ -28,7 +28,9 @@
       "url",
       "url_without_anchor",
       "type",
-      "doctype"
+      "doctype",
+      "docTitle",
+      "docCategory"
     ]
   },
   "js_render": true,

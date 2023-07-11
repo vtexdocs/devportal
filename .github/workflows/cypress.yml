@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: Waiting for pages to change
         uses: fountainhead/action-wait-for-check@v1.1.0
         id: wait-for-pages-changed
@@ -29,6 +29,9 @@ jobs:
           args: -o src/tests/cypress/fixtures/navigation.json https://developers.vtex.com/navigation.json
       - name: Cypress run
         uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+          headed: true
         env:
           CYPRESS_baseUrl: ${{ steps.wait-for-netflify-preview.outputs.url }}
           CYPRESS_testProbability: 0.1
@@ -37,7 +40,7 @@ jobs:
         run: |
           touch src/tests/summary.md
           if [[ -f "./cypress.log" ]]; then
-            node src/tests/summary-report.js > src/tests/summary.md
+            node src/tests/utils/summary-report.js > src/tests/summary.md
             rm cypress.log
           fi
       - name: Comment PR with summary report

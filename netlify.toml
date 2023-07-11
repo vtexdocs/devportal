@@ -4,6 +4,18 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/404/docs/recipes/store-management/enabling-order-form-optimization"
+status = 308
+to = "/docs/guides/vtex-io-documentation-enabling-order-form-optimization"
+
+[[redirects]]
+force = true
+from = "/docs/recipes/store-management/enabling-order-form-optimization"
+status = 308
+to = "/docs/guides/vtex-io-documentation-enabling-order-form-optimization"
+
+[[redirects]]
+force = true
 from = "/vtex-rest-api/docs/:slug"
 status = 308
 to = "/docs/guides/:slug"
@@ -70,9 +82,21 @@ to = '/docs/guides/payment-provider-protocol-api-overview'
 
 [[redirects]]
 force = true
+from = '/reference/payment-provider-protocol-api-overview'
+status = 308
+to = '/docs/guides/payment-provider-protocol-api-overview'
+
+[[redirects]]
+force = true
 from = '/vtex-rest-api/reference/invoice'
 status = 308
 to = '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice'
+
+[[redirects]]
+force = true
+from = '/vtex-rest-api/reference/payment-flow#createpayment'
+status = 308
+to = '/docs/api-reference/payment-provider-protocol#post-/payments'
 
 [[redirects]]
 force = true
@@ -226,21 +250,15 @@ to = '/docs/guides/changes-and-limitations-pii-platform-version'
 
 [[redirects]]
 force = true
-from = '/docs/guides/data-privacy'
-status = 308
-to = '/docs/guides/pii-platform-version'
-
-[[redirects]]
-force = true
 from = '/docs/guides/changes-and-limitations-pii-compliant-account'
 status = 308
-to = '/docs/guides/changes-and-limitations-pii-platform-version'
+to = '/docs/guides/changes-and-limitations-pii-data-architecture'
 
 [[redirects]]
 force = true
 from = '/docs/guides/pii-compliant-accounts'
 status = 308
-to = '/docs/guides/pii-platform-version'
+to = '/docs/guides/pii-data-architecture'
 
 [[redirects]]
 force = true
@@ -373,6 +391,12 @@ force = true
 from = '/docs/api-reference/marketplace-protocol#post-/api/checkout/pub/orderForms/simulation'
 status = 308
 to = '/docs/api-reference/marketplace-protocol-external-marketplace-orders#post-/api/checkout/pub/orderForms/simulation'
+
+[[redirects]]
+force = true
+from = '/docs/api-reference/payment-provider-protocol#get-/payment-methods'
+status = 308
+to = '/docs/api-reference/payment-provider-protocol#get-/manifest'
 
 [[redirects]]
 force = true
@@ -620,3 +644,26 @@ from = '/docs/guides/vtex-product-customizer'
 status = 308
 to = '/docs/apps/vtex.product-customizer'
 
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-product-price'
+status = 308
+to = '/docs/apps/vtex.product-price'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtexventures-livestreaming'
+status = 308
+to = '/docs/apps/vtexventures.livestreaming'
+
+[[redirects]]
+force = true
+from = '/docs/guides/data-privacy'
+status = 308
+to = '/docs/guides/pii-data-architecture'
+
+[[redirects]]
+force = true
+from = '/docs/guides/pii-platform-version'
+status = 308
+to = '/docs/guides/pii-data-architecture'

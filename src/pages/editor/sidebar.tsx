@@ -5,8 +5,10 @@ import JsonEditorComponent from 'components/JsonEditorComponent'
 import { Fragment } from 'react'
 import styles from 'styles/documentation-landing-page'
 import { SidebarContext } from 'utils/contexts/sidebar'
-import { GetServerSideProps, NextPage } from 'next'
+import { GetServerSideProps } from 'next'
+import type { Page } from 'utils/typings/types'
 
+import Auth from 'components/auth'
 import PageHeader from 'components/page-header'
 import image from '../../../public/images/editor.png'
 import Link from 'next/link'
@@ -18,7 +20,7 @@ interface Props {
   isPreview: boolean
 }
 
-const AdminPage: NextPage<Props> = ({ file, fileContent, isPRPreview }) => {
+const AdminPage: Page<Props> = ({ file, fileContent, isPRPreview }) => {
   let headerDescription =
     'Enter the updated navigation JSON in the field below and click submit to preview your changes in the sidebar menu.'
   let headerTitle = 'Sidebar Editor'
@@ -31,7 +33,7 @@ const AdminPage: NextPage<Props> = ({ file, fileContent, isPRPreview }) => {
   }
 
   return (
-    <>
+    <Auth>
       <Head>
         <title>Sidebar Editor</title>
         <meta name="robots" content="noindex" />
@@ -58,9 +60,11 @@ const AdminPage: NextPage<Props> = ({ file, fileContent, isPRPreview }) => {
           </Fragment>
         </Box>
       </Flex>
-    </>
+    </Auth>
   )
 }
+
+AdminPage.isEditor = true
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const { file } = context.query

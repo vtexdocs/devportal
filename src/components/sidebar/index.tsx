@@ -2,7 +2,11 @@ import { useEffect, useRef, useState, useContext } from 'react'
 import { Flex, Text, Box } from '@vtex/brand-ui'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { flattenJSON, getKeysByValue, getParents } from 'utils/navigation-utils'
+import {
+  flattenJSON,
+  getKeyByEndpoint,
+  getParents,
+} from 'utils/navigation-utils'
 
 import styles from './styles'
 import type { SidebarSectionProps } from 'components/sidebar-section'
@@ -21,17 +25,15 @@ import { SidebarContext } from 'utils/contexts/sidebar'
 import useNavigation from 'utils/hooks/useNavigation'
 
 interface SideBarSectionState {
-  sectionSelected?: DocumentationTitle | UpdatesTitle | ''
   parentsArray?: string[]
 }
 
-const Sidebar = ({
-  sectionSelected = 'API Reference',
-  parentsArray = [],
-}: SideBarSectionState) => {
-  const [activeSectionName, setActiveSectionName] = useState(sectionSelected)
+const Sidebar = ({ parentsArray = [] }: SideBarSectionState) => {
   const [expandDelayStatus, setExpandDelayStatus] = useState(true)
+
   const {
+    activeSectionName,
+    setActiveSectionName,
     activeSidebarElement,
     sidebarDataMaster,
     setSidebarDataMaster,
@@ -50,27 +52,24 @@ const Sidebar = ({
   const router = useRouter()
   const flattenedSidebar = flattenJSON(sidebarNavigation)
   let activeSlug = ''
-  let keyPath: string[] = []
   const querySlug = router.query.slug
   if (querySlug && router.pathname === '/docs/api-reference/[slug]') {
     activeSlug = router.asPath.replace('/docs/api-reference/', '')
     const docPath = activeSlug.split('/')
+    const apiSlug = docPath[0].split('#')[0]
     const endpoint = '/' + docPath.splice(1, docPath.length).join('/')
-    keyPath = getKeysByValue(flattenedSidebar, endpoint)
+    let keyPath
     if (endpoint == '/') {
-      activeSlug = docPath[0].split('#')[0]
+      activeSlug = apiSlug
+      keyPath = getKeyByEndpoint(flattenedSidebar, '', apiSlug)
+    } else {
+      const method = docPath[0].split('#')[1].split('-')[0]
+      keyPath = getKeyByEndpoint(flattenedSidebar, endpoint, apiSlug, method)
     }
     parentsArray.push(activeSlug)
-    keyPath.forEach((key: string) => {
-      if (key.length > 0)
-        getParents(
-          key,
-          'slug',
-          flattenedSidebar,
-          parentsArray,
-          activeSlug.split('#')[0]
-        )
-    })
+    if (keyPath) {
+      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
+    }
   } else {
     activeSlug = parentsArray[parentsArray.length - 1]
   }
@@ -78,7 +77,6 @@ const Sidebar = ({
   useEffect(() => {
     const timer = setTimeout(() => setExpandDelayStatus(false), 5000)
     closeSidebarElements(parentsArray)
-    setActiveSectionName(sectionSelected)
     parentsArray.forEach((slug: string) => {
       openSidebarElement(slug)
     })

@@ -7,7 +7,7 @@ import CloseFilterIcon from 'components/icons/close-filter-icon'
 export interface MethodCategoryProps {
   method: MethodType
   active: boolean
-  origin: 'sidebar' | 'search' | 'filter'
+  origin: 'sidebar' | 'search' | 'filter' | 'pagination'
   sx?: SxStyleProp
 }
 
@@ -18,7 +18,7 @@ const MethodCategory = ({
   sx,
 }: MethodCategoryProps) => {
   return (
-    <Flex sx={categoryStyle(method, active, sx)}>
+    <Flex className="method-category" sx={categoryStyle(method, active, sx)}>
       <Text sx={styles.text}>{categoryText(method, origin)}</Text>
       {origin === 'filter' && active && (
         <CloseFilterIcon

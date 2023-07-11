@@ -19,6 +19,6 @@ jobs:
         if: always()
         run: |
           if [[ -f "cypress.log" ]]; then
-            node src/tests/summary-report.js > $GITHUB_STEP_SUMMARY
+            node src/tests/utils/summary-report.js > $GITHUB_STEP_SUMMARY
             rm cypress.log
           fi

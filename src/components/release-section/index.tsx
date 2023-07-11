@@ -4,16 +4,25 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 import styles from 'components/release-section/styles'
 import { getMessages } from 'utils/get-messages'
 import { compareDates, getDate } from './functions'
-import { UpdateElement } from 'utils/typings/types'
+import { SelectOption, UpdateElement } from 'utils/typings/types'
+import Multiselect from 'components/multiselect'
+import { useState } from 'react'
 
 const messages = getMessages()
 
 interface IReleasesData {
   releasesData: UpdateElement[]
+  actionTypes: SelectOption[]
 }
 
-const ReleaseSection = ({ releasesData }: IReleasesData) => {
-  const releases = releasesData.filter((release) => !release.hidden)
+const ReleaseSection = ({ releasesData, actionTypes }: IReleasesData) => {
+  const [filter, setFilter] = useState<SelectOption[]>([])
+  const releases = releasesData.filter(
+    (release) =>
+      !release.hidden &&
+      (filter.length === 0 ||
+        filter.some((option) => option.label === release.actionType))
+  )
   return (
     <Flex sx={styles.outerContainer}>
       <Box sx={styles.innerContainer}>
@@ -26,6 +35,13 @@ const ReleaseSection = ({ releasesData }: IReleasesData) => {
         <Box sx={styles.sectionDivider}>
           <hr />
         </Box>
+        <Multiselect
+          title={messages['release_notes_multiselect_text']}
+          options={actionTypes}
+          onSelect={(selection) => {
+            setFilter(selection)
+          }}
+        />
         {releases.map((release, index) => (
           <>
             {index > 0
