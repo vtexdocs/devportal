@@ -58,6 +58,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Expiring a shopper's password",
+                  "slug": "expiring-a-shoppers-password",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -389,6 +396,35 @@
                 {
                   "name": "Gift Card system architecture",
                   "slug": "gift-card-integration-guide-system-architecture",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Headless commerce",
+              "slug": "headless-commerce",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Headless catalog",
+                  "slug": "headless-catalog",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Headless cart and checkout",
+                  "slug": "headless-cart-and-checkout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Headless profile management and order history",
+                  "slug": "headless-profile-management-and-order-history",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1092,14 +1128,14 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Get an account's orderForm configuration",
+                  "name": "Getting an account orderForm configuration",
                   "slug": "get-an-account-orderform-configuration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Update an account's orderForm configuration",
+                  "name": "Updating an account orderForm configuration",
                   "slug": "update-an-account-orderform-configuration",
                   "origin": "",
                   "type": "markdown",
@@ -1113,7 +1149,7 @@
                   "children": []
                 },
                 {
-                  "name": "Clearing the orderForm message field from the cart",
+                  "name": "Clear orderForm message field from cart",
                   "slug": "clear-orderform-message-field-from-cart",
                   "origin": "",
                   "type": "markdown",
@@ -1603,27 +1639,20 @@
           ]
         },
         {
-          "name": "VTEX inStore",
-          "slug": "instore-category",
+          "name": "VTEX Sales App",
+          "slug": "vtex-sale-app-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "How to customize inStore",
-              "slug": "how-to-customize-instore",
+              "name": "How to customize VTEX Sales App",
+              "slug": "how-to-customize-vtex-sales-app",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Customize inStore login options",
-                  "slug": "customize-instore-login-options",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Change inStore language",
-                  "slug": "change-instore-language",
+                  "name": "Change VTEX Sales App language",
+                  "slug": "change-vtex-sales-app-language",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1636,8 +1665,8 @@
                   "children": []
                 },
                 {
-                  "name": "Define payment methods displayed on inStore",
-                  "slug": "define-payment-methods-displayed-on-instore",
+                  "name": "Define payment methods displayed on VTEX Sales App",
+                  "slug": "define-payment-methods-displayed-on-vtex-sales-app",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1678,13 +1707,6 @@
                   "children": []
                 },
                 {
-                  "name": "Set up the order summary printing",
-                  "slug": "set-up-the-order-summary-printing",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Add extra text to the order summary print",
                   "slug": "add-extra-text-to-the-order-print",
                   "origin": "",
@@ -1713,59 +1735,15 @@
                   "children": []
                 },
                 {
-                  "name": "Allow manual prices on inStore",
-                  "slug": "allow-manual-prices-on-instore",
+                  "name": "Allow manual prices on VTEX Sales App",
+                  "slug": "allow-manual-prices-on-vtex-sales-app",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "How to configure extra fields in inStore cart",
-                  "slug": "how-to-configure-extra-fields-in-instore-cart",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "How to manage inStore data",
-              "slug": "how-to-manage-instore-data",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Create and manage physical stores and sales associates in Master Data",
-                  "slug": "how-to-create-and-manage-instore-physical-stores-and-sales-associates-in-master-data",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Invoiced orders",
-              "slug": "instore-invoiced-orders",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Get invoiced orders placed in inStore",
-                  "slug": "get-invoiced-orders-placed-in-instore",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up fields for issuing invoices with inStore",
-                  "slug": "setting-up-fields-for-issuing-invoices-with-instore",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "How to identify the store and sales associate in an inStore order",
-                  "slug": "how-to-identify-the-store-and-sales-associate-in-an-instore-order",
+                  "name": "Integration VTEX Sales App Local stock sale",
+                  "slug": "integration-vtex-sales-app-local-stock-sale",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1973,6 +1951,21 @@
             {
               "name": "Sessions System Overview",
               "slug": "sessions-system-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Troubleshooting",
+          "slug": "troubleshooting",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "My store is slow or unavailable",
+              "slug": "my-store-is-slow-or-unavailable",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -5956,6 +5949,15 @@
                       "children": []
                     },
                     {
+                      "name": "Get Account's Matcher Settings",
+                      "slug": "marketplace-apis-suggestions",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/suggestions/configuration/account/config",
+                      "children": []
+                    },
+                    {
                       "name": "Get Seller's Approval Settings",
                       "slug": "marketplace-apis-suggestions",
                       "type": "openapi",
@@ -6552,6 +6554,87 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/mkp-category-mapper/categories/marketplace/-id-",
+                  "children": []
+                },
+                {
+                  "name": "List all channels",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/channel/all",
+                  "children": []
+                },
+                {
+                  "name": "Retrieve channel",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/channel/-channelId",
+                  "children": []
+                },
+                {
+                  "name": "Register connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector",
+                  "children": []
+                },
+                {
+                  "name": "List all connectors",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/all",
+                  "children": []
+                },
+                {
+                  "name": "Retrieve connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Upsert merchant connection",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Remove connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Full update connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
+                  "children": []
+                },
+                {
+                  "name": "Partial update connector",
+                  "slug": "marketplace-protocol-external-marketplace-mapper",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/channel-manager/connector/-connectorId",
                   "children": []
                 },
                 {
@@ -7516,15 +7599,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "List Payment Methods",
-                  "slug": "payment-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/payment-methods",
-                  "children": []
-                },
-                {
                   "name": "List Payment Provider Manifest",
                   "slug": "payment-provider-protocol",
                   "type": "openapi",
@@ -8323,6 +8397,15 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/rnb/pvt/taxes/calculatorconfiguration",
+                  "children": []
+                },
+                {
+                  "name": "Search promotion by name",
+                  "slug": "promotions-and-taxes-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/rnb/pvt/benefits/calculatorconfiguration/search",
                   "children": []
                 },
                 {
@@ -9952,7 +10035,7 @@
                   "children": []
                 },
                 {
-                  "name": "3. Setting your store's theme",
+                  "name": "3. Creating a Store Theme project",
                   "slug": "vtex-io-documentation-3-settingyourstoretheme",
                   "origin": "",
                   "type": "markdown",
@@ -10706,7 +10789,6 @@
         }
       ]
     },
-
     {
       "documentation": "VTEX IO Apps",
       "slugPrefix": "docs/",
@@ -11438,7 +11520,7 @@
               "children": []
             },
             {
-              "name": "Catalog Images app",
+              "name": "Catalog Images",
               "slug": "apps/vtex.catalog-images",
               "origin": "",
               "type": "markdown",
@@ -11501,22 +11583,22 @@
               "children": []
             },
             {
-              "name": "Assembly Options app",
-              "slug": "assembly-options-app",
+              "name": "Assembly Options",
+              "slug": "guides/assembly-options-app",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Delivery Window Blocker",
-              "slug": "delivery-window-blocker-app",
+              "slug": "guides/delivery-window-blocker-app",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Affiliates Program app",
-              "slug": "affiliates-program-app",
+              "name": "Affiliates Program",
+              "slug": "guides/affiliates-program-app",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11763,7 +11845,7 @@
             },
             {
               "name": "Kelkoo app",
-              "slug": "apps/vtex.kelkoo-app",
+              "slug": "apps/vtex.kelkoo",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11811,13 +11893,6 @@
               "children": []
             },
             {
-              "name": "Sidecar pixel app",
-              "slug": "apps/vtex.io-release-notes-sidecar-pixel-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "smarthint",
               "slug": "apps/vtex.smarthint",
               "origin": "",
@@ -11826,14 +11901,14 @@
             },
             {
               "name": "Speech to Text Search",
-              "slug": "apps/vtexarg.speech-to-text-search",
+              "slug": "apps/vtexarg.speech-to-text",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Suiteshare",
-              "slug": "apps/vtex.suiteshare",
+              "slug": "apps/vtex.suite-share",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12009,21 +12084,21 @@
             },
             {
               "name": "Quantity Selector",
-              "slug": "apps/vtex.list/quantity-selector-2",
+              "slug": "apps/vtex.list/quantity%20selector",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "Wrappers",
-              "slug": "apps/vtex.gift-list-wrappers",
+              "slug": "apps/vtex.list/wrappers",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
               "name": "List Items Order By",
-              "slug": "apps/vtex.gift-list-listitemsorderby",
+              "slug": "apps/vtex.list/listitemsorderby",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12486,20 +12561,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Migrating Google Tag Manager app from major 2.x to major 3.x",
-                  "slug": "vtex-io-documentation-migrating-google-tag-manager-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Sending custom events to Google Tag Manager",
-                  "slug": "vtex-io-documentation-sending-custom-events-to-google-tag-manager",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
@@ -12854,11 +12915,69 @@
           "type": "category",
           "children": [
             {
+              "name": "June",
+              "slug": "june-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New integration guide: headless commerce",
+                  "slug": "2023-06-06-new-integration-guide-headless-commerce",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Extensions Hub: Our new place to promote apps and partners inside VTEX Admin",
+                  "slug": "extensions-hub-our-new-place-to-promote-apps-and-partners-inside-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "May",
+              "slug": "may-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get ready for Google Analytics 4 with VTEX's new Google Tag Manager version app",
+                  "slug": "2023-05-04-google-tag-manager-new-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Deprecation of List Payment Methods endpoint",
+                  "slug": "deprecation-of-list-payment-methods-endpoint",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "April",
               "slug": "april-2023",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "New Coupons v2 API",
+                  "slug": "new-coupons-v2-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New field now available in Promotion object",
+                  "slug": "2023-04-23-new-field-now-available-in-promotion-object",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Master Data v2 orders entity deprecation",
                   "slug": "master-data-v2-orders-entity-deprecation",
@@ -13592,7 +13711,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Admin's `Enable B2B behavior` button",
+                  "name": "Admin's Enable B2B behavior button",
                   "slug": "admins-enable-b2b-behavior-button",
                   "origin": "",
                   "type": "markdown",
@@ -13664,13 +13783,6 @@
                   "children": []
                 },
                 {
-                  "name": "Styleguide's unit multiplier",
-                  "slug": "styleguides-unit-multiplier",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Tax values on product prices",
                   "slug": "tax-values-on-product-prices",
                   "origin": "",
@@ -13701,13 +13813,6 @@
                 {
                   "name": "New way to activate an SKU",
                   "slug": "new-way-to-activate-an-sku",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Updated Payments Integration Guide",
-                  "slug": "updated-payments-integration-guide",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13816,7 +13921,7 @@
                   "children": []
                 },
                 {
-                  "name": "`Add to cart` button performance",
+                  "name": "Add-to-cart button performance",
                   "slug": "add-to-cart-button-performance",
                   "origin": "",
                   "type": "markdown",
@@ -14042,13 +14147,6 @@
                   "children": []
                 },
                 {
-                  "name": "Markdown interpretation by Assets Builder",
-                  "slug": "markdown-interpretation-by-assets-builder",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "EAN in Google Analytics events",
                   "slug": "ean-in-google-analytics-events",
                   "origin": "",
@@ -14063,8 +14161,8 @@
                   "children": []
                 },
                 {
-                  "name": "Sales channel parameter in the `productsByIdentifier` query",
-                  "slug": "sales-channel-parameter-in-the-`productsbyidentifier-query",
+                  "name": "Sales channel parameter in the productsByIdentifier query",
+                  "slug": "sales-channel-parameter-in-the-productsbyidentifier-query",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14126,8 +14224,8 @@
                   "children": []
                 },
                 {
-                  "name": "Auto-complete on `product-context` properties",
-                  "slug": "auto-complete-on-`product-context-properties",
+                  "name": "Auto-complete on product-context properties",
+                  "slug": "auto-complete-on-product-context-properties",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14147,8 +14245,8 @@
                   "children": []
                 },
                 {
-                  "name": "New endpoints available on Marketplace APIs",
-                  "slug": "new-endpoints-available-on-marketplace-apis",
+                  "name": "New endpoints available and grouped under Marketplace APIs",
+                  "slug": "new-endpoints-available-and-grouped-under-marketplace-apis",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14309,13 +14407,6 @@
                   "children": []
                 },
                 {
-                  "name": "Show more button on the Search Results page",
-                  "slug": "show-more-button-on-the-search-results-page",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Search Result's filters title HTML tag",
                   "slug": "search-results-filters-title-html-tag",
                   "origin": "",
@@ -14345,7 +14436,7 @@
                   "children": []
                 },
                 {
-                  "name": "New `font-faces.css` file in Store Theme",
+                  "name": "New font-faces.css file in Store Theme",
                   "slug": "new-font-facescss-file",
                   "origin": "",
                   "type": "markdown",
