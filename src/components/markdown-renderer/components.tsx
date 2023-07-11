@@ -8,6 +8,7 @@ import OverviewCard from 'components/overview-card'
 import WhatsNextCard from 'components/whats-next-card'
 import YoutubeFrame from 'components/youtube-frame'
 import CodeBlock from 'components/code-block'
+import { CH } from '@code-hike/mdx/components'
 
 import styles from './styles.module.css'
 import { Box, Flex } from '@vtex/brand-ui'
@@ -142,6 +143,7 @@ const MermaidDiagram = ({ node, ...props }: Component) => {
 }
 
 export default {
+  CH,
   OverviewCard,
   WhatsNextCard,
   YoutubeFrame,

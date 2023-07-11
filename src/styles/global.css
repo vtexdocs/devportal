@@ -114,3 +114,9 @@ hr {
   border: 1px solid #E7E9EE;
   border-bottom: none;
 }
+
+.ch-codeblock, .ch-codegroup, .ch-preview {
+  box-shadow: none !important;
+  border-radius: 4px !important;
+  border: 1px solid #e7e9ee;
+}
