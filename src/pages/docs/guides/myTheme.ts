@@ -1,4 +1,4 @@
-export const myTheme = {
+export default {
   $schema: 'vscode://schemas/color-theme',
   name: 'light-plus',
   tokenColors: [
