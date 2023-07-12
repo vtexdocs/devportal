@@ -1,4 +1,4 @@
-export default {
+const myTheme = {
   $schema: 'vscode://schemas/color-theme',
   name: 'light-plus',
   tokenColors: [
@@ -605,3 +605,5 @@ export default {
     'tab.inactiveBackground': '#e7e9eeff',
   },
 }
+
+export default myTheme

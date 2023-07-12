@@ -13,7 +13,7 @@ import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import remarkMermaid from 'utils/remark_plugins/mermaid'
 
 import { remarkCodeHike } from '@code-hike/mdx'
-import myTheme from './myTheme'
+import myTheme from 'styles/codeHikeTheme'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
