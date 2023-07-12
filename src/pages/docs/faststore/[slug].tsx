@@ -284,7 +284,6 @@ export const getStaticProps: GetStaticProps = async ({
         options.bundle = true
         options.minify = true
         options.treeShaking = true
-        options.splitting = true
         return options
       },
     })
