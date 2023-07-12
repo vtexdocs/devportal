@@ -592,6 +592,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Google Pay: processing information for payment providers and anti-fraud",
+                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -1436,6 +1443,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Implementing a pre-analysis anti-fraud flow for debit card transactions",
+                  "slug": "implementing-a-pre-analysis-antifraud-flow-for-debit-card-transactions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             }
@@ -1737,6 +1751,13 @@
                 {
                   "name": "Allow manual prices on VTEX Sales App",
                   "slug": "allow-manual-prices-on-vtex-sales-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integration VTEX Sales App Local stock sale",
+                  "slug": "integration-vtex-sales-app-local-stock-sale",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -5007,7 +5028,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
                   "children": []
                 },
                 {
@@ -10674,6 +10695,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Using the Docs builder to publish app documentation",
+                  "slug": "using-the-docs-builder-to-publish-app-documentation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -12901,11 +12929,61 @@
           "type": "category",
           "children": [
             {
+              "name": "July",
+              "slug": "july-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Application form to access VTEX IO builders is no longer required",
+                  "slug": "application-form-to-access-vtex-io-builders-is-no-longer-required",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Change in the SKU notification behavior",
+                  "slug": "2023-07-07-change-in-the-sku-notification-behavior",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search API: Teasers field deprecation",
+                  "slug": "2023-07-06-search-api-teasers-field-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "reCAPTCHA validation will now follow orderForm configuration for all requests",
+                  "slug": "2023-07-05-recaptcha-validation-will-now-follow-orderform-configuration-for-all-requests",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Anti-fraud flow for debit card transactions",
+                  "slug": "anti-fraud-flow-for-debit-card-transactions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "June",
               "slug": "june-2023",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "reCAPTCHA v3 support available for integrations",
+                  "slug": "2023-06-28-recaptcha-v3-support-available-for-integrations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "New integration guide: headless commerce",
                   "slug": "2023-06-06-new-integration-guide-headless-commerce",

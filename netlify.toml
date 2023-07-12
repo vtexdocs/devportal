@@ -82,6 +82,12 @@ to = '/docs/guides/payment-provider-protocol-api-overview'
 
 [[redirects]]
 force = true
+from = '/reference/payment-provider-protocol-api-overview'
+status = 308
+to = '/docs/guides/payment-provider-protocol-api-overview'
+
+[[redirects]]
+force = true
 from = '/vtex-rest-api/reference/invoice'
 status = 308
 to = '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice'
@@ -640,6 +646,12 @@ to = '/docs/apps/vtex.product-customizer'
 
 [[redirects]]
 force = true
+from = '/docs/guides/vtex-product-price'
+status = 308
+to = '/docs/apps/vtex.product-price'
+
+[[redirects]]
+force = true
 from = '/docs/guides/vtexventures-livestreaming'
 status = 308
 to = '/docs/apps/vtexventures.livestreaming'
@@ -655,3 +667,9 @@ force = true
 from = '/docs/guides/pii-platform-version'
 status = 308
 to = '/docs/guides/pii-data-architecture'
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/catalog-api-seller-portal-overview"
+status = 308
+to = "/docs/api-reference/catalog-api-seller-portal"

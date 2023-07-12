@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## Unreleased
+
+### Fixed
+
+* Redirect to the app product-price from DevPortalContent to its own repository.
+
+### [1.9.25](https://github.com/vtexdocs/devportal/compare/v1.9.24...v1.9.25) (2023-06-30)
+
 ### [1.9.24](https://github.com/vtexdocs/devportal/compare/v1.9.23...v1.9.24) (2023-06-28)
 
 
