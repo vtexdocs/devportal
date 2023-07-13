@@ -4832,7 +4832,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get GiftCard using JSON",
+                  "name": "Search GiftCards from cart data",
                   "slug": "giftcard-api",
                   "type": "openapi",
                   "method": "POST",
