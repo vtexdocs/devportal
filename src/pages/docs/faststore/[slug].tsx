@@ -3,7 +3,6 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
-import { bundleMDX } from 'mdx-bundler'
 import remarkGFM from 'remark-gfm'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import remarkMermaid from 'utils/remark_plugins/mermaid'
@@ -39,8 +38,11 @@ import { RowItem } from 'components/faststore-components/PropsSection/PropsSecti
 import ArticlePagination from 'components/article-pagination'
 import { visit } from 'unist-util-visit'
 import { Node } from 'unist-util-visit/lib'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 interface Props {
+  serialized: MDXRemoteSerializeResult
   frontmatter: {
     title: string
     slug: string
@@ -76,6 +78,7 @@ interface Props {
 const docsPathsGLOBAL = await getFastStorePaths('main')
 
 const FastStorePage: NextPage<Props> = ({
+  serialized,
   frontmatter,
   sectionSelected,
   breadcumbList,
@@ -83,7 +86,6 @@ const FastStorePage: NextPage<Props> = ({
   filePath,
   headingList,
   contributors,
-  code,
   mdxProps,
   branch,
   pagination,
@@ -118,11 +120,7 @@ const FastStorePage: NextPage<Props> = ({
                       : frontmatter.description}
                   </Text>
                 </header>
-                <MarkdownRenderer
-                  serialized={null}
-                  code={code}
-                  mdxProps={mdxProps}
-                />
+                <MarkdownRenderer serialized={serialized} mdxProps={mdxProps} />
               </article>
             </Box>
 
@@ -259,33 +257,27 @@ export const getStaticProps: GetStaticProps = async ({
 
   try {
     const headingList: Item[] = []
-    const { code, frontmatter } = await bundleMDX({
-      source: documentationContent,
-      cwd: path.join(process.cwd(), 'src'),
-      mdxOptions(options) {
-        options.remarkPlugins = [
-          ...(options.remarkPlugins ?? []),
+    let serialized = await serialize(documentationContent, {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [
           remarkGFM,
           remarkImages,
           [getHeadings, { headingList }],
           remarkBlockquote,
           remarkMermaid,
-        ]
-        options.rehypePlugins = [
-          ...(options.rehypePlugins ?? []),
+        ],
+        rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
           changeParagraphTag,
-        ]
-        return options
-      },
-      esbuildOptions(options) {
-        options.outdir = path.join(process.cwd(), '.next')
-        options.write = true
-        return options
+        ],
+        format: 'mdx',
       },
     })
-
-    const componentsFiles = frontmatter.components ?? []
+    serialized = JSON.parse(JSON.stringify(serialized))
+    const componentsFiles = serialized.frontmatter?.components
+      ? JSON.parse(JSON.stringify(serialized.frontmatter.components as string))
+      : []
 
     const mdxPath = filePath.split('/')
 
@@ -332,13 +324,13 @@ export const getStaticProps: GetStaticProps = async ({
 
     return {
       props: {
+        serialized,
         sectionSelected,
         parentsArray,
         slug,
         filePath,
         contributors,
-        frontmatter,
-        code,
+        frontmatter: serialized.frontmatter,
         mdxProps,
         breadcumbList,
         headingList,
