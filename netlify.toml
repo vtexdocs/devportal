@@ -684,4 +684,4 @@ to = "https://assets.ctfassets.net/alneenqid6w5/4OdeCFbcVQtEgkuWsuuidl/80b79448c
 force = true
 from = "/docs/api-reference/catalog-api-overview"
 status = 308
-to = "/docs/api-reference/catalog-api-overview"
+to = "/docs/api-reference/catalog-api#overview"
