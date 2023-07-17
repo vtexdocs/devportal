@@ -816,6 +816,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Webservice (Legacy)",
+              "slug": "webservice-deprecated",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },

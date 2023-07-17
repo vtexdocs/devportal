@@ -673,3 +673,9 @@ force = true
 from = "/docs/api-reference/catalog-api-seller-portal-overview"
 status = 308
 to = "/docs/api-reference/catalog-api-seller-portal"
+
+[[redirects]]
+force = true
+from = "/docs/guides/webservice-deprecated"
+status = 308
+to = "https://assets.ctfassets.net/alneenqid6w5/4OdeCFbcVQtEgkuWsuuidl/80b79448cf2b327e07b567a8411afaa0/vtex_WebServiceGuide.pdf"
