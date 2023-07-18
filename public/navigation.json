@@ -76,6 +76,13 @@
               "children": []
             },
             {
+              "name": "Marketplace",
+              "slug": "marketplace-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Orders",
               "slug": "orders-overview",
               "origin": "",
