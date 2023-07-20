@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.27](https://github.com/vtexdocs/devportal/compare/v1.9.26...v1.9.27) (2023-07-20)
+
+
+### Bug Fixes
+
+* **api proxy:** set Headers correctly ([d5955a6](https://github.com/vtexdocs/devportal/commit/d5955a6239bd7c343385c44730b3822898ba422e))
+
+
+### Docs
+
+* add missing comma ([c8c487d](https://github.com/vtexdocs/devportal/commit/c8c487dd660799c9e7de472dd1a4cd38da49ac9d))
+* add redirect ([b683402](https://github.com/vtexdocs/devportal/commit/b68340270c678cd32a9e31d013ebf92cdac2edeb))
+* add webservice guide to navigation ([5fd3131](https://github.com/vtexdocs/devportal/commit/5fd3131917891dee69f14d9a1c5ce537b0b88aaf))
+* create redirect to webservice guide pdf ([dba5190](https://github.com/vtexdocs/devportal/commit/dba519011daf5a2ea9a7e648df337eeed0ab7fa6))
+* fix redirect url ([ccd9fe4](https://github.com/vtexdocs/devportal/commit/ccd9fe4ba6a4ef7b2da3c7842efc38b251d114a3))
+* **navigation:** edit promotions api ([7b98089](https://github.com/vtexdocs/devportal/commit/7b980899c996c3c83d73e577b6399048a344fa2a))
+
 ### [1.9.26](https://github.com/vtexdocs/devportal/compare/v1.9.25...v1.9.26) (2023-07-12)
 
 

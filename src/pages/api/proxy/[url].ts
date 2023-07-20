@@ -34,10 +34,8 @@ export default (req: any, res: any) =>
   new Promise((resolve, reject) => {
     const { url } = req.query
     const proxy: httpProxy = httpProxy.createProxy()
-    proxy.on('proxyRes', function (proxyRes, req, res) {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      res = res
-      enableCors(req, proxyRes)
+    proxy.on('proxyRes', function (_proxyRes, a, b) {
+      enableCors(a, b)
     })
     proxy.once('proxyRes', resolve).once('error', reject).web(req, res, {
       target: url,

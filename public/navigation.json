@@ -8322,12 +8322,12 @@
                   "children": []
                 },
                 {
-                  "name": "Create coupon",
+                  "name": "Create or update coupon",
                   "slug": "promotions-and-taxes-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/rnb/pvt/coupon/",
+                  "endpoint": "/api/rnb/pvt/coupon",
                   "children": []
                 },
                 {
@@ -8355,15 +8355,6 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/rnb/pvt/archive/coupon/-couponCode-",
-                  "children": []
-                },
-                {
-                  "name": "Update coupon",
-                  "slug": "promotions-and-taxes-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/rnb/pvt/coupon",
                   "children": []
                 },
                 {
