@@ -11,7 +11,6 @@ import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import remarkMermaid from 'utils/remark_plugins/mermaid'
-
 import { remarkCodeHike } from '@code-hike/mdx'
 import myTheme from 'styles/codeHikeTheme'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
@@ -70,6 +69,7 @@ interface Props {
   }
   isListed: boolean
   branch: string
+  hideTOC: boolean
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -86,6 +86,7 @@ const DocumentationPage: NextPage<Props> = ({
   breadcumbList,
   branch,
   sectionSelected,
+  hideTOC,
 }) => {
   const headings: Item[] = headingList
   const { setBranchPreview } = useContext(PreviewContext)
@@ -153,10 +154,12 @@ const DocumentationPage: NextPage<Props> = ({
               <SeeAlsoSection docs={seeAlsoData} />
             )}
           </Box>
-          <Box sx={styles.rightContainer}>
-            <Contributors contributors={contributors} />
-            <TableOfContents />
-          </Box>
+          {!hideTOC && (
+            <Box sx={styles.rightContainer}>
+              <Contributors contributors={contributors} />
+              <TableOfContents />
+            </Box>
+          )}
           <OnThisPage />
         </Flex>
       </APIGuideContextProvider>
@@ -301,6 +304,8 @@ export const getStaticProps: GetStaticProps = async ({
       })
     )
 
+    const hideTOC = serialized.frontmatter?.hideTOC === true
+
     const docsListSlug = jp.query(
       sidebarfallback,
       `$..[?(@.type=='markdown')]..slug`
@@ -373,6 +378,7 @@ export const getStaticProps: GetStaticProps = async ({
         isListed,
         breadcumbList,
         branch,
+        hideTOC,
       },
     }
   } catch (error) {

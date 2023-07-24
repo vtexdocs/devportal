@@ -120,3 +120,42 @@ hr {
   border-radius: 4px !important;
   border: 1px solid #e7e9ee;
 }
+
+.ch-spotlight-tab:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e3e3e3
+}
+
+.ch-spotlight-tab[data-selected]{
+  border-color: #e31c58;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+}
+
+.ch-spotlight-tab h2, .ch-spotlight-tab h3{
+  margin: 10px 0 !important;
+}
+
+.ch-spotlight-tab{
+  padding: 0 0.8em !important;
+}
+
+.ch-spotlight-sticker, .ch-scrollycoding-sticker{
+  width: 45% !important;
+  height: 100vh;
+}
+
+.ch-codegroup{
+  width: 100% !important
+}
+
+.ch-codegroup { 
+  margin: 8px; 
+  --the-api-key: "{accountName}"
+}
+
+.placeholder::after {
+  content: var(--the-api-key);
+  outline: 2px solid royalblue;
+
+}
