@@ -1987,9 +1987,9 @@
         },
         {
           "name": "Troubleshooting",
-          "slug": "troubleshooting",
+          "slug": "troubleshooting-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "My store is slow or unavailable",
@@ -5059,7 +5059,7 @@
           ]
         },
         {
-          "name": "VTEX Headless CMS",
+          "name": "Headless CMS",
           "slug": "headless-cms-api",
           "origin": "",
           "type": "openapi",
@@ -10987,7 +10987,7 @@
               "children": []
             },
             {
-              "name": "ProductSummaryList",
+              "name": "Product Summary List",
               "slug": "apps/vtex.product-summary/productsummarylist",
               "origin": "",
               "type": "markdown",
@@ -11241,6 +11241,13 @@
               "children": []
             },
             {
+              "name": "Personal Shoper",
+              "slug": "apps/vtexventures.personal-shopper-free",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Product Availability",
               "slug": "apps/vtex.product-availability",
               "origin": "",
@@ -11264,6 +11271,13 @@
             {
               "name": "Product Highlight by VTEX Segment",
               "slug": "apps/vtexarg.product-highlight-by-vtex-segment",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Product Specification Badges",
+              "slug": "apps/vtex.product-specification-badges",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11355,13 +11369,6 @@
             {
               "name": "VTEX IO Sandbox Component",
               "slug": "apps/vtex.sandbox",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "VTEX Product Specification Badges",
-              "slug": "apps/vtex.product-specification-badges",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11687,7 +11694,7 @@
               "children": []
             },
             {
-              "name": "VTEX Sticky Layout",
+              "name": "Sticky Layout",
               "slug": "apps/vtex.sticky-layout",
               "origin": "",
               "type": "markdown",
@@ -12754,7 +12761,7 @@
                   "children": []
                 },
                 {
-                  "name": "How to Interactively Inspect Blocks on a Store Framework Store",
+                  "name": "Interactively inspecting storefront blocks",
                   "slug": "how-to-interactively-inspect-blocks-on-a-store-framework-store",
                   "origin": "",
                   "type": "markdown",
@@ -12940,15 +12947,15 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Application form to access VTEX IO builders is no longer required",
-                  "slug": "application-form-to-access-vtex-io-builders-is-no-longer-required",
+                  "name": "Change in the SKU notification behavior",
+                  "slug": "2023-07-07-change-in-the-sku-notification-behavior",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Change in the SKU notification behavior",
-                  "slug": "2023-07-07-change-in-the-sku-notification-behavior",
+                  "name": "Application form to access VTEX IO builders is no longer required",
+                  "slug": "application-form-to-access-vtex-io-builders-is-no-longer-required",
                   "origin": "",
                   "type": "markdown",
                   "children": []
