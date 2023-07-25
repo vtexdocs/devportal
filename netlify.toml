@@ -4,9 +4,15 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
-from = "docs/guides/vtex-do-api-overview"
+from = "/docs/guides/getting-started-with-vtex-io-for-carriers"
 status = 308
-to = "docs/api-reference/vtex-do-api"
+to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-networkyarn cz-commit"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-do-api-overview"
+status = 308
+to = "/docs/api-reference/vtex-do-api"
 
 [[redirects]]
 force = true
