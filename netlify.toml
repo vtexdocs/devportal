@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "docs/guides/vtex-do-api-overview"
+status = 308
+to = "docs/api-reference/vtex-do-api"
+
+[[redirects]]
+force = true
 from = "/404/docs/recipes/store-management/enabling-order-form-optimization"
 status = 308
 to = "/docs/guides/vtex-io-documentation-enabling-order-form-optimization"
