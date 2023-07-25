@@ -7,10 +7,9 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'added',
-    description:
-      'Extensions Hub: Our new place to promote apps and partners inside VTEX Admin',
-    date: new Date('06/02/2023'),
+    type: 'deprecated',
+    description: 'Change in the SKU notification behavior',
+    date: new Date('07/07/2023'),
   },
   updateType: 'release-notes',
 }
