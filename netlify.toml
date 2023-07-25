@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/api-reference/vtex-tracking-overview"
+status = 308
+to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
+
+[[redirects]]
+force = true
 from = "/docs/guides/getting-started-with-vtex-io-for-carriers"
 status = 308
 to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
