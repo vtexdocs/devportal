@@ -2119,19 +2119,19 @@
           ]
         },
         {
-          "name": "CMS API",
-          "slug": "cms-api",
+          "name": "Legacy CMS Portal API",
+          "slug": "legacy-cms-portal-api",
           "origin": "",
           "type": "openapi",
           "children": [
             {
               "name": "Change URI Schema",
-              "slug": "cms-api-change-uri-schema",
+              "slug": "change-uri-schema",
               "type": "category",
               "children": [
                 {
                   "name": "Update all account's websites internet communication protocol",
-                  "slug": "cms-api",
+                  "slug": "legacy-cms-portal-api",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
@@ -2140,7 +2140,7 @@
                 },
                 {
                   "name": "Update specific website comunication protocol",
-                  "slug": "cms-api",
+                  "slug": "legacy-cms-portal-api",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
