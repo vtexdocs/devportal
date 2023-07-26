@@ -721,3 +721,9 @@ force = true
 from = "/docs/api-reference/catalog-api-overview"
 status = 308
 to = "/docs/api-reference/catalog-api#overview"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/cms-api"
+status = 308
+to = "/docs/api-reference/legacy-cms-portal-api"

@@ -31,7 +31,7 @@ const whatsNextData: WhatsNextDataElement[] = [
     title: 'Legacy CMS Portal API',
     description: 'Update your websites’ internet communication protocol',
     linkTitle: 'See more',
-    linkTo: '/docs/api-reference/cms-api',
+    linkTo: '/docs/api-reference/legacy-cms-portal-api',
   },
   {
     title: 'Catalog API',
