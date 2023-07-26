@@ -19,7 +19,7 @@ async function getGithubTree(org: string, repo: string, ref: string) {
 
 const fileSlugMap = {
   'VTEX - Antifraud Provider API': 'antifraud-provider-protocol',
-  'VTEX - CMS API': 'cms-api',
+  'VTEX - Legacy CMS Portal API': 'legacy-cms-portal-api',
   'VTEX - Catalog API Seller Portal': 'catalog-api-seller-portal',
   'VTEX - Catalog API': 'catalog-api',
   'VTEX - Checkout API': 'checkout-api',
