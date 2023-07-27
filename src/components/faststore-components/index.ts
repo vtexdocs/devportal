@@ -11,7 +11,7 @@ export type {
   FilterFacetBoolean,
   FilterFacetRange,
 } from './Filter/FilterUsage'
-export * from './Icon'
+export { Icon as IconComponent, IconList } from './Icon'
 export { default as ImageGalleryUsage } from './ImageGallery/ImageGalleryUsage'
 export type { ImageGalleryUsageProps } from './ImageGallery/ImageGalleryUsage'
 export * from './Logos'
