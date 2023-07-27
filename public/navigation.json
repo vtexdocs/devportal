@@ -12947,6 +12947,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Gift card support multi-currencies",
+                  "slug": "gift-card-support-multi-currencies",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Change in the SKU notification behavior",
                   "slug": "2023-07-07-change-in-the-sku-notification-behavior",
                   "origin": "",
