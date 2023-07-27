@@ -19,10 +19,22 @@ const innerContainer: SxStyleProp = {
 
 const articleBox: SxStyleProp = {
   fontSize: '1em',
-  lineHeight: '1.375em',
+  lineHeight: '1.5em',
   width: '100%',
   a: {
     color: '#E31C58',
+  },
+  ul: {
+    li: {
+      mt: '0.5em',
+      mb: '0.5em',
+    },
+  },
+  ol: {
+    li: {
+      mt: '0.5em',
+      mb: '0.5em',
+    },
   },
   header: {
     borderBottom: '1px solid #E7E9EE',
@@ -69,8 +81,8 @@ const documentationTitle: SxStyleProp = {
 
 const documentationExcerpt: SxStyleProp = {
   color: '#A1A8B3',
-  padding: '8px 0 24px',
-  lineHeight: '18px',
+  padding: '0.5em 0 1.2em',
+  lineHeight: '1.5em',
   fontWeight: '400',
 }
 

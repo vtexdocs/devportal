@@ -43,7 +43,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   {
     title: 'Catalog API - Seller Portal',
     description:
-      'create, edit and consult products and their variations, brands, and categories for a Seller Portal account',
+      'Create, edit and consult products and their variations, brands, and categories for a Seller Portal account',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/catalog-api-seller-portal',
   },
