@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import path from 'path'
 import { parse } from 'react-docgen-typescript'
 
 export const faststoreComponentsFromNodeModules = `node_modules/@faststore/components`
@@ -13,13 +14,20 @@ function toPascalCase(string: string) {
 }
 
 export function mapComponentFromMdxPath(
-  absoluteMdxPath: string,
+  mdxPath: string,
   components: string[]
 ): string[] {
-  const faststoreMonorepoDir = process.cwd()
-  const faststoreComponentsSrcFromNodeModules = `${faststoreMonorepoDir}/node_modules/@faststore/components/src`
+  console.log('mapComponentFromMdxPath')
 
-  const dirs = absoluteMdxPath.split('/')
+  const componentsAbsolutePath = path.resolve(
+    'node_modules',
+    '@faststore/components',
+    'src'
+  )
+
+  console.log(componentsAbsolutePath)
+
+  const dirs = mdxPath.split('/')
 
   // 2 levels before e.g. molecules/accordion.mdx
   while (dirs.length > 2) {
@@ -33,7 +41,7 @@ export function mapComponentFromMdxPath(
   // e.g. <user-path>/faststore/node_modules/@faststore/components/src/molecules/Accordion/Accordion.tsx
   return components?.map((component: string) => {
     return [
-      faststoreComponentsSrcFromNodeModules,
+      componentsAbsolutePath,
       atomicDesignType,
       componentFolder,
       component,
