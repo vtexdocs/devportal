@@ -17,15 +17,11 @@ export function mapComponentFromMdxPath(
   mdxPath: string,
   components: string[]
 ): string[] {
-  console.log('mapComponentFromMdxPath')
-
   const componentsAbsolutePath = path.resolve(
     'node_modules',
     '@faststore/components',
     'src'
   )
-
-  console.log(componentsAbsolutePath)
 
   const dirs = mdxPath.split('/')
 
@@ -53,38 +49,43 @@ export function getComponentPropsFrom(
   absoluteMdxPath: string,
   componentsName: string[]
 ) {
-  const components: string[] = mapComponentFromMdxPath(
-    absoluteMdxPath,
-    componentsName
-  )
+  try {
+    const components: string[] = mapComponentFromMdxPath(
+      absoluteMdxPath,
+      componentsName
+    )
 
-  const options = {
-    savePropValueAsString: true,
-    shouldExtractLiteralValuesFromEnum: true,
-    shouldExtractValuesFromUnion: true,
-    propFilter: (prop: any) =>
-      prop?.parent?.fileName?.includes(faststoreComponentsFromNodeModules),
-  }
+    const options = {
+      savePropValueAsString: true,
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldExtractValuesFromUnion: true,
+      propFilter: (prop: any) =>
+        prop?.parent?.fileName?.includes(faststoreComponentsFromNodeModules),
+    }
 
-  return components.map((componentPath) => {
-    const componentInfo = parse(componentPath, options)
-    const componentProps = componentInfo?.[0]?.props ?? {}
+    return components.map((componentPath) => {
+      const componentInfo = parse(componentPath, options)
+      const componentProps = componentInfo?.[0]?.props ?? {}
 
-    return Object.keys(componentProps).map((key) => {
-      const prop = componentProps[key]
-      return {
-        name: key,
-        type:
-          prop.type?.value
-            ?.map(({ value }: { value: any }) => value)
-            .join(' | ') ??
-          prop.type?.raw ??
-          prop.type?.name ??
-          '',
-        required: prop.required,
-        default: prop.defaultValue?.value ?? '',
-        description: prop.description ?? '',
-      }
+      return Object.keys(componentProps).map((key) => {
+        const prop = componentProps[key]
+        return {
+          name: key,
+          type:
+            prop.type?.value
+              ?.map(({ value }: { value: any }) => value)
+              .join(' | ') ??
+            prop.type?.raw ??
+            prop.type?.name ??
+            '',
+          required: prop.required,
+          default: prop.defaultValue?.value ?? '',
+          description: prop.description ?? '',
+        }
+      })
     })
-  })
+  } catch (error) {
+    console.error(`Error getting props for ${absoluteMdxPath}`)
+    return []
+  }
 }

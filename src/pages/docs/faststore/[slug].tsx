@@ -40,6 +40,7 @@ import { visit } from 'unist-util-visit'
 import { Node } from 'unist-util-visit/lib'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
+import { getLogger } from 'utils/logging/log-util'
 
 interface Props {
   serialized: MDXRemoteSerializeResult
@@ -181,6 +182,8 @@ export const getStaticProps: GetStaticProps = async ({
       ? docsPathsGLOBAL
       : await getFastStorePaths(branch)
 
+  const logger = getLogger('FastStore')
+
   const filePath = docsPaths[slug]
   if (!filePath) {
     return {
@@ -256,6 +259,8 @@ export const getStaticProps: GetStaticProps = async ({
   const changeParagraphTag = () => transformer
 
   try {
+    logger.info(`Processing ${slug}`)
+
     const headingList: Item[] = []
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
@@ -340,7 +345,7 @@ export const getStaticProps: GetStaticProps = async ({
       },
     }
   } catch (error) {
-    console.error(`Error while processing ${path}\n${error}`)
+    logger.error(`Error while processing ${path}\n${error}`)
     return {
       notFound: true,
     }
