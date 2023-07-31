@@ -76,7 +76,7 @@ interface Props {
   isListed: boolean
 }
 
-const docsPathsGLOBAL = await getFastStorePaths('main')
+const docsPathsGLOBAL = await getFastStorePaths()
 
 const FastStorePage: NextPage<Props> = ({
   serialized,
