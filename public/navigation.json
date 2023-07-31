@@ -12947,6 +12947,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Headless CMS Plugin v1.0.8: Improved sync command",
+                  "slug": "2023-07-31-improved-headless-cms-plugin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Gift card support multi-currencies",
                   "slug": "gift-card-support-multi-currencies",
                   "origin": "",
