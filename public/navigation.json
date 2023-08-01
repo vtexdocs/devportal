@@ -6753,7 +6753,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update entire document",
+                  "name": "Create document with custom ID or Update entire document",
                   "slug": "master-data-api-v2",
                   "type": "openapi",
                   "method": "PUT",
