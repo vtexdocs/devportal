@@ -16,7 +16,7 @@ function getEndpoint(element: any) {
   if (element.type === 'openapi') {
     const url: any = {}
     const pathSuffix = element.method
-      ? `#${element.method.toLowerCase()}-${element.endpoint
+      ? `?endpoint=${element.method.toLowerCase()}-${element.endpoint
           .replaceAll('{', '-')
           .replaceAll('}', '-')}`
       : ''

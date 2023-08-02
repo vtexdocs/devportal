@@ -49,7 +49,10 @@ const SidebarElements = ({ slugPrefix, items, subItemLevel }: SidebarProps) => {
     slug: string
   ) => {
     e.preventDefault()
-    router.push(getHref(slugPrefix || '', pathSuffix, slug))
+    const hasEndpointQuery = router.query.endpoint
+    router.push(getHref(slugPrefix || '', pathSuffix, slug)).then(() => {
+      if (hasEndpointQuery) router.reload()
+    })
   }
 
   // eslint-disable-next-line
