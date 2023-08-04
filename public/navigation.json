@@ -4568,7 +4568,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a Pre Authorization",
+                  "name": "Create a Pre-Authorization",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4577,7 +4577,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a Pre Authorization (using id)",
+                  "name": "Update a Pre-Authorization",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4586,7 +4586,7 @@
                   "children": []
                 },
                 {
-                  "name": "Cancel a Pre Authorization",
+                  "name": "Cancel a Pre-Authorization",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "DELETE",
