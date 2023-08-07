@@ -118,6 +118,12 @@ to = '/docs/guides/payment-provider-protocol-api-overview'
 
 [[redirects]]
 force = true
+from = '/reference/configuration#updateorderformconfiguration'
+status = 308
+to = 'docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm'
+
+[[redirects]]
+force = true
 from = '/vtex-rest-api/reference/invoice'
 status = 308
 to = '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/invoice'
