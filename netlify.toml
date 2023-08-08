@@ -52,6 +52,54 @@ to = "/docs/guides"
 
 [[redirects]]
 force = true
+from = "/vtex-developer-docs/docs/what-is-vtex-io"
+status = 308
+to = "/docs/guides/vtex-io-documentation-what-is-vtex-io"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/overview-2"
+status = 308
+to = "/docs/guides/vtex-io-documentation-what-is-vtex-store-framework"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/vtex-io-documentation-consulting-b2b-order-statuses"
+status = 308
+to = "/docs/guides/querying-b2b-order-statuses"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/vtex_io-documentation_what-is-vtex-io"
+status = 308
+to = "/docs/guides/vtex-io-documentation-what-is-vtex-io"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/vtex-io-documentation-interfaces"
+status = 308
+to = "/docs/guides/vtex-io-documentation-interface"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/getting-started-authentication"
+status = 308
+to = "/docs/guides/authentication"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/overview-3"
+status = 308
+to = "/docs/guides/app-development-guides"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/understanding-vtex-io"
+status = 308
+to = "/docs/guides/vtex-io-documentation-what-is-vtex-io"
+
+[[redirects]]
+force = true
 from = "/vtex-developer-docs/docs/:slug"
 status = 308
 to = "/docs/guides/:slug"

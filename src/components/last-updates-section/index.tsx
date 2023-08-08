@@ -7,9 +7,9 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'deprecated',
-    description: 'Change in the SKU notification behavior',
-    date: new Date('07/07/2023'),
+    type: 'improved',
+    description: 'Headless CMS Plugin v1.0.8: Improved sync command',
+    date: new Date('07/31/2023'),
   },
   updateType: 'release-notes',
 }
