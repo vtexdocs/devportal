@@ -4689,7 +4689,7 @@
                   "children": []
                 },
                 {
-                  "name": "Search GiftCards from cart data",
+                  "name": "List All GiftCards",
                   "slug": "giftcard-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4714,7 +4714,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get GiftCard Transactions",
+                  "name": "List All GiftCards Transactions",
                   "slug": "giftcard-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4732,7 +4732,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Transaction Authorizations",
+                  "name": "Get GiftCard Transaction Authorizations",
                   "slug": "giftcard-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4750,7 +4750,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Transaction Cancellations",
+                  "name": "List All GiftCard Transaction Cancellations",
                   "slug": "giftcard-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4768,7 +4768,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Transaction Settlements",
+                  "name": "List All GiftCard Transactions Settlements",
                   "slug": "giftcard-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4862,7 +4862,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create GiftCard Transaction Cancellation",
+                  "name": "Cancel GiftCard Transaction",
                   "slug": "giftcard-provider-protocol",
                   "type": "openapi",
                   "method": "POST",
@@ -4880,7 +4880,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create GiftCard Transaction Settlement",
+                  "name": "Settle GiftCard Transaction",
                   "slug": "giftcard-provider-protocol",
                   "type": "openapi",
                   "method": "POST",
