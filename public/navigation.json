@@ -5075,7 +5075,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-builderId-/",
+                  "endpoint": "/_v/cms/api/-projectId-/",
                   "children": []
                 },
                 {
@@ -5084,7 +5084,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-builderId-/-content-type-",
+                  "endpoint": "/_v/cms/api/-projectId-/-content-type-",
                   "children": []
                 },
                 {
@@ -5093,7 +5093,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-builderId-/-content-type-/-document-id-/",
+                  "endpoint": "/_v/cms/api/-projectId-/-content-type-/-document-id-/",
                   "children": []
                 }
               ]
