@@ -4660,6 +4660,248 @@
           ]
         },
         {
+          "name": "GiftCard API",
+          "slug": "giftcard-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Gift Card",
+              "slug": "giftcard-api-gift-card",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create GiftCard",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard by ID",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCards",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/_search",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Transaction",
+              "slug": "giftcard-api-transaction",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create GiftCard Transaction",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCards Transactions",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard Transaction by ID",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard Transaction Authorizations",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
+                  "children": []
+                },
+                {
+                  "name": "Cancel GiftCard Transaction",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transaction Cancellations",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "children": []
+                },
+                {
+                  "name": "Settle GiftCard Transaction",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions Settlements",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Giftcard Provider Protocol",
+          "slug": "giftcard-provider-protocol",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Gift Cards",
+              "slug": "giftcard-provider-protocol-gift-cards",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create GiftCard",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard by ID",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCards",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/_search",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Transactions",
+              "slug": "giftcard-provider-protocol-transactions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create GiftCard Transaction",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard Transaction by ID",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard Transaction Authorization",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
+                  "children": []
+                },
+                {
+                  "name": "Cancel GiftCard Transaction",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions Cancellations",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "children": []
+                },
+                {
+                  "name": "Settle GiftCard Transaction",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions Settlements",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "GiftCard Hub API",
           "slug": "giftcard-hub-api",
           "origin": "",
@@ -4810,248 +5052,6 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/cancellations",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "GiftCard API",
-          "slug": "giftcard-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Gift Card",
-              "slug": "giftcard-api-gift-card",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create GiftCard",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard by ID",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-",
-                  "children": []
-                },
-                {
-                  "name": "Search GiftCards from cart data",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/_search",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Transaction",
-              "slug": "giftcard-api-transaction",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get GiftCard Transactions",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
-                  "name": "Create GiftCard Transaction",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard Transaction by ID",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
-                  "children": []
-                },
-                {
-                  "name": "Get Transaction Authorizations",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
-                  "children": []
-                },
-                {
-                  "name": "Get Transaction Cancellations",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
-                  "children": []
-                },
-                {
-                  "name": "Cancel GiftCard Transaction",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
-                  "children": []
-                },
-                {
-                  "name": "Get Transaction Settlements",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
-                  "children": []
-                },
-                {
-                  "name": "Settle GiftCard Transaction",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Giftcard Provider Protocol",
-          "slug": "giftcard-provider-protocol",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Gift Cards",
-              "slug": "giftcard-provider-protocol-gift-cards",
-              "type": "category",
-              "children": [
-                {
-                  "name": "List All GiftCards",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/_search",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard by ID",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-",
-                  "children": []
-                },
-                {
-                  "name": "Create GiftCard",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Transactions",
-              "slug": "giftcard-provider-protocol-transactions",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create GiftCard Transaction",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
-                  "name": "List All GiftCard Transactions",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard Transaction by ID",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard Transaction Authorization",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
-                  "children": []
-                },
-                {
-                  "name": "Create GiftCard Transaction Cancellation",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
-                  "children": []
-                },
-                {
-                  "name": "List All GiftCard Transactions Cancellations",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
-                  "children": []
-                },
-                {
-                  "name": "Create GiftCard Transaction Settlement",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
-                  "children": []
-                },
-                {
-                  "name": "List All GiftCard Transactions Settlements",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
                   "children": []
                 }
               ]
