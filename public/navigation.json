@@ -4714,21 +4714,21 @@
                   "children": []
                 },
                 {
-                  "name": "List All GiftCards Transactions",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
                   "name": "Get GiftCard Transaction by ID",
                   "slug": "giftcard-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCards Transactions",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
                   "children": []
                 },
                 {
@@ -4835,21 +4835,21 @@
                   "children": []
                 },
                 {
-                  "name": "List All GiftCard Transactions",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
                   "name": "Get GiftCard Transaction by ID",
                   "slug": "giftcard-provider-protocol",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
                   "children": []
                 },
                 {
@@ -4913,12 +4913,12 @@
               "type": "category",
               "children": [
                 {
-                  "name": "List All GiftCard Providers",
+                  "name": "Create/Update GiftCard Provider by ID",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
-                  "method": "GET",
+                  "method": "PUT",
                   "origin": "",
-                  "endpoint": "/giftcardproviders",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-",
                   "children": []
                 },
                 {
@@ -4931,12 +4931,12 @@
                   "children": []
                 },
                 {
-                  "name": "Create/Update GiftCard Provider by ID",
+                  "name": "List All GiftCard Providers",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
-                  "method": "PUT",
+                  "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-",
+                  "endpoint": "/giftcardproviders",
                   "children": []
                 },
                 {
@@ -4983,15 +4983,6 @@
                   "children": []
                 },
                 {
-                  "name": "List All GiftCard Transactions",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
                   "name": "Create GiftCard Transaction",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
@@ -5010,7 +5001,16 @@
                   "children": []
                 },
                 {
-                  "name": "Get GiftCard Authorization Transaction",
+                  "name": "List All GiftCard Transactions",
+                  "slug": "giftcard-hub-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard Transaction Authorization",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5019,25 +5019,16 @@
                   "children": []
                 },
                 {
-                  "name": "List All GiftCard Settlement Transactions",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
-                  "children": []
-                },
-                {
-                  "name": "Create GiftCard Settlement Transaction",
+                  "name": "Cancel GiftCard Transaction",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/cancellations",
                   "children": []
                 },
                 {
-                  "name": "List All GiftCard Cancellation Transactions",
+                  "name": "List All GiftCard Transactions Cancellations",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5046,12 +5037,21 @@
                   "children": []
                 },
                 {
-                  "name": "Create GiftCard Cancellation Transaction",
+                  "name": "Settle GiftCard Transaction",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/cancellations",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions Settlements",
+                  "slug": "giftcard-hub-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
                   "children": []
                 }
               ]
