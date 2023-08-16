@@ -3,7 +3,6 @@ import Head from 'next/head'
 import { Box, Text, Flex } from '@vtex/brand-ui'
 import CopyButton from 'components/copy-button'
 import ResizeIcon from 'components/icons/resize-icon'
-import Auth from 'components/auth'
 import PageHeader from 'components/page-header'
 import type { Page } from 'utils/typings/types'
 import image from '../../../public/images/editor.png'
@@ -192,7 +191,7 @@ const MarkdownPreviewPage: Page<Props> = () => {
   }, [documentContent])
 
   return (
-    <Auth>
+    <>
       <Head>
         <title>Markdown Preview</title>
         <meta name="robots" content="noindex" />
@@ -275,7 +274,7 @@ const MarkdownPreviewPage: Page<Props> = () => {
           </Box>
         </Flex>
       </Box>
-    </Auth>
+    </>
   )
 }
 
