@@ -121,22 +121,22 @@ hr {
   border: 1px solid #e7e9ee;
 }
 
-.ch-spotlight-tab:hover{
+.ch-spotlight-tab:hover, .ch-scrollycoding-step-content:hover{
   cursor: pointer;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
   border: 1px solid #e3e3e3
 }
 
-.ch-spotlight-tab[data-selected]{
+.ch-spotlight-tab[data-selected], .ch-scrollycoding-step-content[data-selected]{
   border-color: #e31c58;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
 }
 
-.ch-spotlight-tab h2, .ch-spotlight-tab h3{
+.ch-spotlight-tab *, .ch-scrollycoding-step-content *{
   margin: 10px 0 !important;
 }
 
-.ch-spotlight-tab{
+.ch-spotlight-tab, .ch-scrollycoding-step-content{
   padding: 0 0.8em !important;
 }
 
