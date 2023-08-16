@@ -50,6 +50,15 @@ export type WhatsNextDataElement = {
   linkTo: string
 }
 
+export type CodeSamplesElement = {
+  title: string
+  description: string
+  builders: string[]
+  linkTitle: string
+  linkTo: string
+  repoLink: string
+}
+
 export type ResourceDataElement = {
   title: ResourceTitle
   description: string
