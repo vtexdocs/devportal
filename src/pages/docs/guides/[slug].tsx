@@ -89,6 +89,8 @@ const DocumentationPage: NextPage<Props> = ({
   hideTOC,
 }) => {
   const headings: Item[] = headingList
+  const hidden =
+    sectionSelected === '' || serialized.frontmatter.hidden === true
   const { setBranchPreview } = useContext(PreviewContext)
   const { setActiveSidebarElement } = useContext(SidebarContext)
   useEffect(() => {
@@ -104,9 +106,7 @@ const DocumentationPage: NextPage<Props> = ({
           name="docsearch:doctitle"
           content={serialized.frontmatter?.title as string}
         />
-        {serialized.frontmatter?.hidden && (
-          <meta name="robots" content="noindex" />
-        )}
+        {hidden && <meta name="robots" content="noindex" />}
         {serialized.frontmatter?.excerpt && (
           <meta
             property="og:description"

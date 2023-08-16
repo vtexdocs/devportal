@@ -6,7 +6,7 @@ const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL
 module.exports = {
   transform: async (config, path) => {
     const noIndexRegex = /(<meta.*(content="noindex").*\/>)/gm
-    const filepath = `./.next/server/pages/${path}.html`
+    const filepath = `./.next/server/pages/en${path}.html`
 
     if (fs.existsSync(filepath)) {
       try {

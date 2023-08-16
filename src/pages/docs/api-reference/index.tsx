@@ -28,10 +28,10 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/antifraud-provider-protocol',
   },
   {
-    title: 'CMS API',
+    title: 'Legacy CMS Portal API',
     description: 'Update your websites’ internet communication protocol',
     linkTitle: 'See more',
-    linkTo: '/docs/api-reference/cms-api',
+    linkTo: '/docs/api-reference/legacy-cms-portal-api',
   },
   {
     title: 'Catalog API',
@@ -43,7 +43,7 @@ const whatsNextData: WhatsNextDataElement[] = [
   {
     title: 'Catalog API - Seller Portal',
     description:
-      'create, edit and consult products and their variations, brands, and categories for a Seller Portal account',
+      'Create, edit and consult products and their variations, brands, and categories for a Seller Portal account',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/catalog-api-seller-portal',
   },

@@ -1,13 +1,13 @@
 import { useRouter } from 'next/router'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { SearchContext } from 'utils/contexts/search'
 
 import { Box, Text } from '@vtex/brand-ui'
 import { searchClient } from 'utils/constants'
 
 import { Configure, InstantSearch } from 'react-instantsearch-dom'
-import CustomHits from './customHits'
-import Pagination from './pagination'
+import { SearchState } from 'react-instantsearch-core'
+import InfiniteHits from './infiniteHits'
 
 import styles from './styles'
 
@@ -17,6 +17,17 @@ const SearchResults = () => {
   const filters = filterSelectedSection
     ? `doctype: "${filterSelectedSection}"`
     : ''
+  const [prevFilter, setPrevFilter] = useState('')
+  const [searchState, setSearchState] = useState({})
+
+  const updateSearchState = (currentState: SearchState) => {
+    const page = filters !== prevFilter ? 1 : currentState.page || 1
+    setPrevFilter(filters)
+    setSearchState({
+      ...currentState,
+      page,
+    })
+  }
 
   return (
     <Box sx={styles.resultContainer}>
@@ -27,7 +38,14 @@ const SearchResults = () => {
       </Text>
       <hr />
       <Box>
-        <InstantSearch searchClient={searchClient} indexName="devportal-docs">
+        <InstantSearch
+          searchClient={searchClient}
+          indexName="devportal-docs"
+          searchState={searchState}
+          onSearchStateChange={(currentState) =>
+            updateSearchState(currentState)
+          }
+        >
           <Configure
             filters={filters}
             query={router.query.keyword}
@@ -36,8 +54,7 @@ const SearchResults = () => {
             facets={['doctype']}
             facetingAfterDistinct={true}
           />
-          <CustomHits />
-          <Pagination />
+          <InfiniteHits />
         </InstantSearch>
       </Box>
     </Box>

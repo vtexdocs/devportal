@@ -76,6 +76,13 @@
               "children": []
             },
             {
+              "name": "Marketplace",
+              "slug": "marketplace-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Orders",
               "slug": "orders-overview",
               "origin": "",
@@ -195,7 +202,7 @@
                   "children": []
                 },
                 {
-                  "name": "Updating / deleting information",
+                  "name": "Update or delete information",
                   "slug": "erp-integration-updating-and-deleting-information",
                   "origin": "",
                   "type": "markdown",
@@ -813,6 +820,13 @@
             {
               "name": "How to implement product color variation",
               "slug": "how-to-implement-product-color-variation",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Webservice (Legacy)",
+              "slug": "webservice-deprecated",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -1973,9 +1987,9 @@
         },
         {
           "name": "Troubleshooting",
-          "slug": "troubleshooting",
+          "slug": "troubleshooting-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "My store is slow or unavailable",
@@ -2105,19 +2119,19 @@
           ]
         },
         {
-          "name": "CMS API",
-          "slug": "cms-api",
+          "name": "Legacy CMS Portal API",
+          "slug": "legacy-cms-portal-api",
           "origin": "",
           "type": "openapi",
           "children": [
             {
               "name": "Change URI Schema",
-              "slug": "cms-api-change-uri-schema",
+              "slug": "change-uri-schema",
               "type": "category",
               "children": [
                 {
                   "name": "Update all account's websites internet communication protocol",
-                  "slug": "cms-api",
+                  "slug": "legacy-cms-portal-api",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
@@ -2126,7 +2140,7 @@
                 },
                 {
                   "name": "Update specific website comunication protocol",
-                  "slug": "cms-api",
+                  "slug": "legacy-cms-portal-api",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
@@ -4554,7 +4568,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a Pre Authorization",
+                  "name": "Create a Pre-Authorization",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4563,7 +4577,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create a Pre Authorization (using id)",
+                  "name": "Update a Pre-Authorization",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4572,7 +4586,7 @@
                   "children": []
                 },
                 {
-                  "name": "Cancel a Pre Authorization",
+                  "name": "Cancel a Pre-Authorization",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4646,6 +4660,248 @@
           ]
         },
         {
+          "name": "GiftCard API",
+          "slug": "giftcard-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Gift Card",
+              "slug": "giftcard-api-gift-card",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create GiftCard",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard by ID",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCards",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/_search",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Transaction",
+              "slug": "giftcard-api-transaction",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create GiftCard Transaction",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard Transaction by ID",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCards Transactions",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard Transaction Authorizations",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
+                  "children": []
+                },
+                {
+                  "name": "Cancel GiftCard Transaction",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transaction Cancellations",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "children": []
+                },
+                {
+                  "name": "Settle GiftCard Transaction",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions Settlements",
+                  "slug": "giftcard-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Giftcard Provider Protocol",
+          "slug": "giftcard-provider-protocol",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Gift Cards",
+              "slug": "giftcard-provider-protocol-gift-cards",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create GiftCard",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard by ID",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCards",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/_search",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Transactions",
+              "slug": "giftcard-provider-protocol-transactions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create GiftCard Transaction",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard Transaction by ID",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard Transaction Authorization",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
+                  "children": []
+                },
+                {
+                  "name": "Cancel GiftCard Transaction",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions Cancellations",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "children": []
+                },
+                {
+                  "name": "Settle GiftCard Transaction",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
+                  "children": []
+                },
+                {
+                  "name": "List All GiftCard Transactions Settlements",
+                  "slug": "giftcard-provider-protocol",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "GiftCard Hub API",
           "slug": "giftcard-hub-api",
           "origin": "",
@@ -4657,12 +4913,12 @@
               "type": "category",
               "children": [
                 {
-                  "name": "List All GiftCard Providers",
+                  "name": "Create/Update GiftCard Provider by ID",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
-                  "method": "GET",
+                  "method": "PUT",
                   "origin": "",
-                  "endpoint": "/giftcardproviders",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-",
                   "children": []
                 },
                 {
@@ -4675,12 +4931,12 @@
                   "children": []
                 },
                 {
-                  "name": "Create/Update GiftCard Provider by ID",
+                  "name": "List All GiftCard Providers",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
-                  "method": "PUT",
+                  "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-",
+                  "endpoint": "/giftcardproviders",
                   "children": []
                 },
                 {
@@ -4727,15 +4983,6 @@
                   "children": []
                 },
                 {
-                  "name": "List All GiftCard Transactions",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
                   "name": "Create GiftCard Transaction",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
@@ -4754,290 +5001,57 @@
                   "children": []
                 },
                 {
-                  "name": "Get GiftCard Authorization Transaction",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
-                  "children": []
-                },
-                {
-                  "name": "List All GiftCard Settlement Transactions",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
-                  "children": []
-                },
-                {
-                  "name": "Create GiftCard Settlement Transaction",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
-                  "children": []
-                },
-                {
-                  "name": "List All GiftCard Cancellation Transactions",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/cancellations",
-                  "children": []
-                },
-                {
-                  "name": "Create GiftCard Cancellation Transaction",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/cancellations",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "GiftCard API",
-          "slug": "giftcard-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Gift Card",
-              "slug": "giftcard-api-gift-card",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create GiftCard",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard by ID",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard using JSON",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/_search",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Transaction",
-              "slug": "giftcard-api-transaction",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get GiftCard Transactions",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
-                  "name": "Create GiftCard Transaction",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard Transaction by ID",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
-                  "children": []
-                },
-                {
-                  "name": "Get Transaction Authorizations",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
-                  "children": []
-                },
-                {
-                  "name": "Get Transaction Cancellations",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
-                  "children": []
-                },
-                {
-                  "name": "Cancel GiftCard Transaction",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
-                  "children": []
-                },
-                {
-                  "name": "Get Transaction Settlements",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
-                  "children": []
-                },
-                {
-                  "name": "Settle GiftCard Transaction",
-                  "slug": "giftcard-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Giftcard Provider Protocol",
-          "slug": "giftcard-provider-protocol",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Gift Cards",
-              "slug": "giftcard-provider-protocol-gift-cards",
-              "type": "category",
-              "children": [
-                {
-                  "name": "List All GiftCards",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/_search",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard by ID",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-",
-                  "children": []
-                },
-                {
-                  "name": "Create GiftCard",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Transactions",
-              "slug": "giftcard-provider-protocol-transactions",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create GiftCard Transaction",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
                   "name": "List All GiftCard Transactions",
-                  "slug": "giftcard-provider-protocol",
+                  "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard Transaction by ID",
-                  "slug": "giftcard-provider-protocol",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions",
                   "children": []
                 },
                 {
                   "name": "Get GiftCard Transaction Authorization",
-                  "slug": "giftcard-provider-protocol",
+                  "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/authorization",
                   "children": []
                 },
                 {
-                  "name": "Create GiftCard Transaction Cancellation",
-                  "slug": "giftcard-provider-protocol",
+                  "name": "Cancel GiftCard Transaction",
+                  "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/cancellations",
                   "children": []
                 },
                 {
                   "name": "List All GiftCard Transactions Cancellations",
-                  "slug": "giftcard-provider-protocol",
+                  "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/cancellations",
                   "children": []
                 },
                 {
-                  "name": "Create GiftCard Transaction Settlement",
-                  "slug": "giftcard-provider-protocol",
+                  "name": "Settle GiftCard Transaction",
+                  "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
                   "children": []
                 },
                 {
                   "name": "List All GiftCard Transactions Settlements",
-                  "slug": "giftcard-provider-protocol",
+                  "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
+                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
                   "children": []
                 }
               ]
@@ -5045,7 +5059,7 @@
           ]
         },
         {
-          "name": "VTEX Headless CMS",
+          "name": "Headless CMS",
           "slug": "headless-cms-api",
           "origin": "",
           "type": "openapi",
@@ -5061,7 +5075,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-builderId-/",
+                  "endpoint": "/_v/cms/api/-projectId-/",
                   "children": []
                 },
                 {
@@ -5070,7 +5084,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-builderId-/-content-type-",
+                  "endpoint": "/_v/cms/api/-projectId-/-content-type-",
                   "children": []
                 },
                 {
@@ -5079,7 +5093,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-builderId-/-content-type-/-document-id-/",
+                  "endpoint": "/_v/cms/api/-projectId-/-content-type-/-document-id-/",
                   "children": []
                 }
               ]
@@ -6739,7 +6753,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update entire document",
+                  "name": "Create document with custom ID or Update entire document",
                   "slug": "master-data-api-v2",
                   "type": "openapi",
                   "method": "PUT",
@@ -8308,12 +8322,12 @@
                   "children": []
                 },
                 {
-                  "name": "Create coupon",
+                  "name": "Create or update coupon",
                   "slug": "promotions-and-taxes-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/rnb/pvt/coupon/",
+                  "endpoint": "/api/rnb/pvt/coupon",
                   "children": []
                 },
                 {
@@ -8341,15 +8355,6 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/rnb/pvt/archive/coupon/-couponCode-",
-                  "children": []
-                },
-                {
-                  "name": "Update coupon",
-                  "slug": "promotions-and-taxes-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/rnb/pvt/coupon",
                   "children": []
                 },
                 {
@@ -10695,6 +10700,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Using the Docs builder to publish app documentation",
+                  "slug": "using-the-docs-builder-to-publish-app-documentation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -10975,7 +10987,7 @@
               "children": []
             },
             {
-              "name": "ProductSummaryList",
+              "name": "Product Summary List",
               "slug": "apps/vtex.product-summary/productsummarylist",
               "origin": "",
               "type": "markdown",
@@ -11229,6 +11241,13 @@
               "children": []
             },
             {
+              "name": "Personal Shoper",
+              "slug": "apps/vtexventures.personal-shopper-free",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Product Availability",
               "slug": "apps/vtex.product-availability",
               "origin": "",
@@ -11252,6 +11271,13 @@
             {
               "name": "Product Highlight by VTEX Segment",
               "slug": "apps/vtexarg.product-highlight-by-vtex-segment",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Product Specification Badges",
+              "slug": "apps/vtex.product-specification-badges",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11343,13 +11369,6 @@
             {
               "name": "VTEX IO Sandbox Component",
               "slug": "apps/vtex.sandbox",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "VTEX Product Specification Badges",
-              "slug": "apps/vtex.product-specification-badges",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11675,7 +11694,7 @@
               "children": []
             },
             {
-              "name": "VTEX Sticky Layout",
+              "name": "Sticky Layout",
               "slug": "apps/vtex.sticky-layout",
               "origin": "",
               "type": "markdown",
@@ -12742,7 +12761,7 @@
                   "children": []
                 },
                 {
-                  "name": "How to Interactively Inspect Blocks on a Store Framework Store",
+                  "name": "Interactively inspecting storefront blocks",
                   "slug": "how-to-interactively-inspect-blocks-on-a-store-framework-store",
                   "origin": "",
                   "type": "markdown",
@@ -12928,8 +12947,15 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Application form to access VTEX IO builders is no longer required",
-                  "slug": "application-form-to-access-vtex-io-builders-is-no-longer-required",
+                  "name": "Headless CMS Plugin v1.0.8: Improved sync command",
+                  "slug": "2023-07-31-improved-headless-cms-plugin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Gift card support multi-currencies",
+                  "slug": "gift-card-support-multi-currencies",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12937,6 +12963,13 @@
                 {
                   "name": "Change in the SKU notification behavior",
                   "slug": "2023-07-07-change-in-the-sku-notification-behavior",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Application form to access VTEX IO builders is no longer required",
+                  "slug": "application-form-to-access-vtex-io-builders-is-no-longer-required",
                   "origin": "",
                   "type": "markdown",
                   "children": []
