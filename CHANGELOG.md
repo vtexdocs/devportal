@@ -2,11 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## Unreleased
+### [1.9.27](https://github.com/vtexdocs/devportal/compare/v1.9.26...v1.9.27) (2023-07-20)
 
-### Fixed
 
-* Redirect to the app product-price from DevPortalContent to its own repository.
+### Bug Fixes
+
+* **api proxy:** set Headers correctly ([d5955a6](https://github.com/vtexdocs/devportal/commit/d5955a6239bd7c343385c44730b3822898ba422e))
+
+
+### Docs
+
+* add missing comma ([c8c487d](https://github.com/vtexdocs/devportal/commit/c8c487dd660799c9e7de472dd1a4cd38da49ac9d))
+* add redirect ([b683402](https://github.com/vtexdocs/devportal/commit/b68340270c678cd32a9e31d013ebf92cdac2edeb))
+* add webservice guide to navigation ([5fd3131](https://github.com/vtexdocs/devportal/commit/5fd3131917891dee69f14d9a1c5ce537b0b88aaf))
+* create redirect to webservice guide pdf ([dba5190](https://github.com/vtexdocs/devportal/commit/dba519011daf5a2ea9a7e648df337eeed0ab7fa6))
+* fix redirect url ([ccd9fe4](https://github.com/vtexdocs/devportal/commit/ccd9fe4ba6a4ef7b2da3c7842efc38b251d114a3))
+* **navigation:** edit promotions api ([7b98089](https://github.com/vtexdocs/devportal/commit/7b980899c996c3c83d73e577b6399048a344fa2a))
+
+### [1.9.26](https://github.com/vtexdocs/devportal/compare/v1.9.25...v1.9.26) (2023-07-12)
+
+
+### Bug Fixes
+
+* **search-card:** hide full description by default ([fa17e5e](https://github.com/vtexdocs/devportal/commit/fa17e5e80edb79a05508fae07f847684894c8ca3))
+
+
+### Chore
+
+* update rapidoc to show postman button in overview ([8efe47a](https://github.com/vtexdocs/devportal/commit/8efe47a3a40d58128879e8e599268d5f460514c5))
+
+
+### Docs
+
+* add intelligent search events api to [slug].tsx ([22f17b5](https://github.com/vtexdocs/devportal/commit/22f17b550cf82fe8084506eb2b1c46634488ea83))
+* add intelligent search events api to getReferencePaths.ts ([73d1470](https://github.com/vtexdocs/devportal/commit/73d14706fb29f98268032c24176226e3b52f0470))
+* added docs builder docs to navigation.json ([f401f83](https://github.com/vtexdocs/devportal/commit/f401f83b8b65cf38860becd49132bea701523265))
+* create redirect catalog api seller portal ([2cedbcc](https://github.com/vtexdocs/devportal/commit/2cedbcc3ad0dd7e32b9d516872fc9a9f95d4993b))
+* **navigation:** add change in sku notification release notes ([6ddbdd3](https://github.com/vtexdocs/devportal/commit/6ddbdd344c2446b1412bbc60d370442fc67d37e6))
+* **navigation:** add teasers field release notes to navigation ([685fc4d](https://github.com/vtexdocs/devportal/commit/685fc4d467126468841d7ca6763ab5c6daad51cd))
+* **navigation:** added jun/jul 2023 releases ([b7df11d](https://github.com/vtexdocs/devportal/commit/b7df11d6f2bb3415e5e131823b3d49ed51d41107))
 
 ### [1.9.25](https://github.com/vtexdocs/devportal/compare/v1.9.24...v1.9.25) (2023-06-30)
 

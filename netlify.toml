@@ -4,6 +4,30 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/api-reference/freight-values"
+status = 308
+to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/freights/-carrierId-/values/update"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/vtex-tracking-overview"
+status = 308
+to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
+
+[[redirects]]
+force = true
+from = "/docs/guides/getting-started-with-vtex-io-for-carriers"
+status = 308
+to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-do-api-overview"
+status = 308
+to = "/docs/api-reference/vtex-do-api"
+
+[[redirects]]
+force = true
 from = "/404/docs/recipes/store-management/enabling-order-form-optimization"
 status = 308
 to = "/docs/guides/vtex-io-documentation-enabling-order-form-optimization"
@@ -25,6 +49,54 @@ force = true
 from = "/vtex-rest-api/docs"
 status = 308
 to = "/docs/guides"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/what-is-vtex-io"
+status = 308
+to = "/docs/guides/vtex-io-documentation-what-is-vtex-io"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/overview-2"
+status = 308
+to = "/docs/guides/vtex-io-documentation-what-is-vtex-store-framework"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/vtex-io-documentation-consulting-b2b-order-statuses"
+status = 308
+to = "/docs/guides/querying-b2b-order-statuses"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/vtex_io-documentation_what-is-vtex-io"
+status = 308
+to = "/docs/guides/vtex-io-documentation-what-is-vtex-io"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/vtex-io-documentation-interfaces"
+status = 308
+to = "/docs/guides/vtex-io-documentation-interface"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/getting-started-authentication"
+status = 308
+to = "/docs/guides/authentication"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/overview-3"
+status = 308
+to = "/docs/guides/app-development-guides"
+
+[[redirects]]
+force = true
+from = "/vtex-developer-docs/docs/understanding-vtex-io"
+status = 308
+to = "/docs/guides/vtex-io-documentation-what-is-vtex-io"
 
 [[redirects]]
 force = true
@@ -76,9 +148,27 @@ to = '/docs/guides/subscriptions'
 
 [[redirects]]
 force = true
+from = '/vtex-rest-api/reference/order-placement-1'
+status = 308
+to = '/docs/api-reference/checkout-api#put-/api/checkout/pub/orders'
+
+[[redirects]]
+force = true
 from = '/vtex-rest-api/reference/payment-provider-protocol-api-overview'
 status = 308
 to = '/docs/guides/payment-provider-protocol-api-overview'
+
+[[redirects]]
+force = true
+from = '/reference/payment-provider-protocol-api-overview'
+status = 308
+to = '/docs/guides/payment-provider-protocol-api-overview'
+
+[[redirects]]
+force = true
+from = '/reference/configuration#updateorderformconfiguration'
+status = 308
+to = 'docs/api-reference/checkout-api#post-/api/checkout/pvt/configuration/orderForm'
 
 [[redirects]]
 force = true
@@ -133,6 +223,12 @@ force = true
 from = '/docs/api-reference/orders#registerchange'
 status = 308
 to = '/docs/api-reference/orders-api#post-/api/oms/pvt/orders/-orderId-/changes'
+
+[[redirects]]
+force = true
+from = '/docs/erp-integration-guide'
+status = 308
+to = '/docs/guides/erp-integration-guide'
 
 [[redirects]]
 force = true
@@ -661,6 +757,30 @@ force = true
 from = '/docs/guides/pii-platform-version'
 status = 308
 to = '/docs/guides/pii-data-architecture'
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/catalog-api-seller-portal-overview"
+status = 308
+to = "/docs/api-reference/catalog-api-seller-portal"
+
+[[redirects]]
+force = true
+from = "/docs/guides/webservice-deprecated"
+status = 308
+to = "https://assets.ctfassets.net/alneenqid6w5/4OdeCFbcVQtEgkuWsuuidl/80b79448cf2b327e07b567a8411afaa0/vtex_WebServiceGuide.pdf"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/catalog-api-overview"
+status = 308
+to = "/docs/api-reference/catalog-api#overview"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/cms-api"
+status = 308
+to = "/docs/api-reference/legacy-cms-portal-api"
 
 [[redirects]]
 force = true

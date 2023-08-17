@@ -44,12 +44,12 @@ const SidebarSection = ({
     { name: 'PATCH', active: false },
   ])
 
-  const filterStatus =
-    methodFilterList.some((methodFilter) => methodFilter.active) ||
-    searchValue != ''
+  const filterStatus = methodFilterList.some(
+    (methodFilter) => methodFilter.active
+  )
 
   const filteredResult = useMemo(() => {
-    if (!filterStatus) return categories
+    if (!filterStatus && searchValue === '') return categories
 
     const dataCopy = JSON.parse(JSON.stringify(categories))
 
@@ -57,18 +57,17 @@ const SidebarSection = ({
       .map((category: SidebarElement) => {
         category.children = category.children
           .map((subcategory) => {
-            subcategory.children = subcategory.children.filter(
-              (endpoint) =>
-                (endpoint.method &&
-                  filterStatus &&
-                  methodFilterList.find(
-                    (methodFilter) => methodFilter.name === endpoint.method
-                  )?.active) ||
-                (searchValue != '' &&
-                  endpoint.name
-                    .toLowerCase()
-                    .includes(searchValue.toLowerCase()))
-            )
+            subcategory.children = subcategory.children.filter((endpoint) => {
+              const hasMethodFilter =
+                !filterStatus ||
+                methodFilterList.find(
+                  (methodFilter) => methodFilter.name === endpoint.method
+                )?.active
+              const hasInputFilter =
+                searchValue === '' ||
+                endpoint.name.toLowerCase().includes(searchValue.toLowerCase())
+              return hasMethodFilter && hasInputFilter
+            })
             return subcategory
           })
           .filter(

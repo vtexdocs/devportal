@@ -8,6 +8,7 @@ import OverviewCard from 'components/overview-card'
 import WhatsNextCard from 'components/whats-next-card'
 import YoutubeFrame from 'components/youtube-frame'
 import CodeBlock from 'components/code-block'
+import Steps from 'components/steps'
 
 import styles from './styles.module.css'
 import { Box, Flex } from '@vtex/brand-ui'
@@ -53,6 +54,7 @@ const ObservableHeading = ({
   return (
     <InView
       threshold={0.5}
+      className="heading"
       rootMargin="0px 0px -80% 0px"
       onChange={(inView, entry) => {
         if (inView) onEnterView(slug)
@@ -145,6 +147,7 @@ export default {
   OverviewCard,
   WhatsNextCard,
   YoutubeFrame,
+  Steps,
   Flex: ({ node, ...props }: Component) => (
     <Flex className={styles.flexWrap} {...props} />
   ),
