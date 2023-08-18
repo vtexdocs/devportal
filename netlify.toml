@@ -781,3 +781,9 @@ force = true
 from = "/docs/api-reference/cms-api"
 status = 308
 to = "/docs/api-reference/legacy-cms-portal-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-availability-notify"
+status = 308
+to = "/docs/apps/vtex.availability-notify"
