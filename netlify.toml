@@ -786,4 +786,4 @@ to = "/docs/api-reference/legacy-cms-portal-api"
 force = true
 from = "/docs/guides/vtex-availability-notify"
 status = 308
-to = "/docs/apps/vtex-availability-notify"
+to = "/docs/apps/vtex.availability-notify"
