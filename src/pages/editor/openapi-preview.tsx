@@ -69,16 +69,14 @@ const OpenAPIPreviewPage: Page<Props> = () => {
       </Head>
       <Box sx={styles.previewContainer}>
         <PageHeader
-          title="Markdown Preview"
-          description="Use the markdown editor below and preview the rendered page to the side."
+          title="OpenAPI Preview"
+          description="Preview the rendered OpenAPI below. This is an overview and you can expand the endpoints by clicking on them"
           imageUrl={image}
-          imageAlt="Markdown Preview"
+          imageAlt="OpenAPI Preview image"
         />
         <Box sx={styles.previewContent}>
           <rapi-doc
             ref={rapidoc}
-            spec-url={''}
-            // postman-url={`/api/postman/${slug}`}
             spec={spec}
             layout="column"
             render-style="view"
