@@ -4,7 +4,6 @@ import Head from 'next/head'
 import { Box } from '@vtex/brand-ui'
 import SwaggerParser from '@apidevtools/swagger-parser'
 
-import Auth from 'components/auth'
 import PageHeader from 'components/page-header'
 import type { Page } from 'utils/typings/types'
 import image from '../../../public/images/editor.png'
@@ -63,7 +62,7 @@ const OpenAPIPreviewPage: Page<Props> = () => {
   }, [])
 
   return (
-    <Auth>
+    <>
       <Head>
         <title>OpenAPI Preview</title>
         <meta name="robots" content="noindex" />
@@ -101,7 +100,7 @@ const OpenAPIPreviewPage: Page<Props> = () => {
           />
         </Box>
       </Box>
-    </Auth>
+    </>
   )
 }
 
