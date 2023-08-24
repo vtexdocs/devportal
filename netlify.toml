@@ -16,6 +16,18 @@ to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
 
 [[redirects]]
 force = true
+from = "/reference/orders-api-overview"
+status = 308
+to = "/docs/api-reference/orders-api"
+
+[[redirects]]
+force = true
+from = "/reference/orders#listorders"
+status = 308
+to = "/docs/api-reference/orders-api#get-/api/oms/pvt/orders"
+
+[[redirects]]
+force = true
 from = "/docs/guides/getting-started-with-vtex-io-for-carriers"
 status = 308
 to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
