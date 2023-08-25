@@ -70,7 +70,7 @@ const OpenAPIPreviewPage: Page<Props> = () => {
       <Box sx={styles.previewContainer}>
         <PageHeader
           title="OpenAPI Preview"
-          description="Preview the rendered OpenAPI below. This is an overview and you can expand the endpoints by clicking on them"
+          description="Preview the rendered OpenAPI below. This is an overview and you can expand the endpoints by clicking on them."
           imageUrl={image}
           imageAlt="OpenAPI Preview image"
         />
@@ -79,6 +79,7 @@ const OpenAPIPreviewPage: Page<Props> = () => {
             ref={rapidoc}
             spec={spec}
             layout="column"
+            route-prefix="#"
             render-style="view"
             show-header="false"
             show-side-nav="false"
