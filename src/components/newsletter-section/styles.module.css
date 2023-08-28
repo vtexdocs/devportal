@@ -1,94 +1,68 @@
-.imageGradient {
+.container {
   width: 100%;
-  height: 100%;
-  z-index: 2;
+  height: 230px;
+}
+
+.container > img {
   position: absolute;
-  box-shadow: 0px 0px 80px #ffffff inset;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 15%, #FFFFFF 55%);
+  left: 38%;
+  transform: translate(-50%, -50%);
+  max-width: 200px;
+  height: auto;
+  transition: 0.3s ease-out;
 }
 
-.wrapper {
-  position: relative;
-  box-sizing: content-box;
-  height: 209px;
-  width: 320px;
-  overflow-y: hidden;
-  background: -webkit-linear-gradient(
-    left,
-    #ffffff 40%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  left: 50%;
-  transform: translateX(-50%);
+.container img:nth-child(2) {
+  transform: translate(calc(-50% + 130px), calc(-50% + 20px));
 }
 
-@media (min-width: 40em) {
-  .imageGradient {
-    background: linear-gradient(to left, rgba(255, 255, 255, 0) 25%, #FFFFFF 62%);
-  }
-
-  .wrapper {
-    position: absolute;
-    display: block;
-    right: -220px;
-    top: -115px;
-    width: 640px;
-    height: 418px;
-    left: initial;
-    transform: none;
-  }
+.container img:nth-child(3) {
+  bottom: 0;
+  transform: translate(calc(-50% + 70px), calc(-50% + 82px));
 }
 
-@media (min-width: 52em) {
-  .wrapper {
-    right: -128px;
+
+@media screen and (min-width: 40em) {
+  .container {
+    height: 400px;
   }
+
+  .container > img {
+    left: 35%;
+    max-width: 350px;
+  }
+
+  .container img:nth-child(2) {
+    transform: translate(calc(-50% + 225px), calc(-50% + 15px));
+  }
+  
+  .container img:nth-child(3) {
+    transform: translate(calc(-50% + 100px), calc(-50% + 135px));
+  }
+  
 }
 
-@media (min-width: 64em) {
-  .wrapper {
-    width: 768px;
-    height: 500px;
-    top: -160px;
-    right: -200px
-  }
-}
-
-@media (min-width: 80em) {
-  .imageGradient {
-    background: 
-      linear-gradient(to left, rgba(255, 255, 255, 0) 25%, #FFFFFF 95%),
-      linear-gradient(to right, rgba(255, 255, 255, 0) 85%, #FFFFFF 89%);
-  } 
-
-  .wrapper {
-    position: absolute;
-    top: initial;
-    right: initial;
-    left: 600px;
-    height: 100%;
+@media screen and (min-width: 52em) {
+  .container {
+    height: 580px;
   }
 
-  .wrapper > span {
-    height: 100% !important;
+  .container > img {
+    left: 35%;
+    max-width: 500px;
+  }
+  
+  .container img:nth-child(2) {
+    transform: translate(calc(-50% + 340px), calc(-50% + 25px));
+  }
+  
+  .container img:nth-child(3) {
+    transform: translate(calc(-50% + 150px), calc(-50% + 195px));
   }
 }
 
-@media (min-width: 120em) {
-  .wrapper {
-    right: 200px;
-    left: initial;
-  }
-}
-
-@media (min-width: 160em) {
-  .imageGradient {
-    background: 
-      linear-gradient(to left, rgba(255, 255, 255, 0) 25%, #FFFFFF 95%),
-      linear-gradient(to right, rgba(255, 255, 255, 0) 88%, #FFFFFF 107%);
-  } 
-
-  .wrapper {
-    right: 460px;
+@media screen and (min-width: 64em) {
+  .container > img {
+    left: 40%;
   }
 }
