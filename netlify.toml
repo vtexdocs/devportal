@@ -799,3 +799,9 @@ force = true
 from = "/docs/guides/vtex-availability-notify"
 status = 308
 to = "/docs/apps/vtex.availability-notify"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-zendesk-chat"
+status = 308
+to = "/docs/apps/vtex.zendesk-chat"
