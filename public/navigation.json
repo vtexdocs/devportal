@@ -46,8 +46,22 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Authentication overview",
-                  "slug": "authentication-overview",
+                  "name": "API authentication using application keys",
+                  "slug": "api-authentication-using-application-keys",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "App authentication using auth tokens",
+                  "slug": "app-authentication-using-auth-tokens",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "User authentication and login",
+                  "slug": "user-authentication-and-login",
                   "origin": "",
                   "type": "markdown",
                   "children": []
