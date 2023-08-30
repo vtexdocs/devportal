@@ -810,4 +810,4 @@ to = "/docs/apps/vtex.zendesk-chat"
 force = true
 from = "/docs/guides/authentication-overview"
 status = 308
-to = "/docs/apps/authentication"
+to = "/docs/guides/authentication"
