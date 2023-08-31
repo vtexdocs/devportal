@@ -9969,6 +9969,33 @@
                   "origin": "",
                   "endpoint": "/api/vtexid/apptoken/login",
                   "children": []
+                },
+                {
+                  "name": "Check authenticated user",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/authenticated/user",
+                  "children": []
+                },
+                {
+                  "name": "Enable or disable repeated passwords",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/providers/setup/password/webstore/password",
+                  "children": []
+                },
+                {
+                  "name": "Expire user password",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/providers/setup/password/expire",
+                  "children": []
                 }
               ]
             }
