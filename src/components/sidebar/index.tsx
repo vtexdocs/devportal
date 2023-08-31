@@ -56,14 +56,17 @@ const Sidebar = ({ parentsArray = [] }: SideBarSectionState) => {
   if (querySlug && router.pathname === '/docs/api-reference/[slug]') {
     activeSlug = router.asPath.replace('/docs/api-reference/', '')
     const docPath = activeSlug.split('/')
-    const apiSlug = docPath[0].split('#')[0]
+    const hasHashTag = router.asPath.indexOf('#') > -1
+    const apiSlug = docPath[0].split(hasHashTag ? '#' : '?endpoint=')[0]
     const endpoint = '/' + docPath.splice(1, docPath.length).join('/')
     let keyPath
     if (endpoint == '/') {
       activeSlug = apiSlug
       keyPath = getKeyByEndpoint(flattenedSidebar, '', apiSlug)
     } else {
-      const method = docPath[0].split('#')[1].split('-')[0]
+      const method = docPath[0]
+        .split(hasHashTag ? '#' : '?endpoint=')[1]
+        .split('-')[0]
       keyPath = getKeyByEndpoint(flattenedSidebar, endpoint, apiSlug, method)
     }
     parentsArray.push(activeSlug)
@@ -80,7 +83,7 @@ const Sidebar = ({ parentsArray = [] }: SideBarSectionState) => {
     parentsArray.forEach((slug: string) => {
       openSidebarElement(slug)
     })
-    setActiveSidebarElement(activeSlug)
+    setActiveSidebarElement(activeSlug?.replace('?endpoint=', '#'))
     return () => {
       clearTimeout(timer)
     }

@@ -82,15 +82,18 @@ const APIPage: NextPage<Props> = ({
   }>(null)
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
+  const hasHashTag = router.asPath.indexOf('#') > -1
+  const cleanPath = hasHashTag
+    ? router.asPath.split('#')[1]
+    : router.asPath.split('?endpoint=')[1] || ''
 
   const getMethod = () => {
-    const regexMethodMatches = router.asPath.match(/#(.*?)-/) || ''
-    const method = regexMethodMatches ? regexMethodMatches[1].toUpperCase() : ''
-    return method && isMethodType(method) ? method : ''
+    const method = cleanPath.split('/')[0].replace('-', '').toUpperCase()
+    return isMethodType(method) ? method : ''
   }
+
   const httpMethod: MethodType | '' = getMethod()
-  const hash = router.asPath.split('#')[1]
-  const endpointPath = hash ? `#${hash}` : slug
+  const endpointPath = cleanPath ? `#${cleanPath}` : slug
   const pag: Pagination = {
     previousDoc: {
       name: null,
