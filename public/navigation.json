@@ -9994,7 +9994,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/vtexid/pub/providers/setup/password/expire",
+                  "endpoint": "/api/vtexid/password/expire",
                   "children": []
                 }
               ]
