@@ -508,7 +508,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },                
+                },
                 {
                   "name": "Payment Provider Protocol",
                   "slug": "payments-integration-payment-provider-protocol",
@@ -550,7 +550,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },  
+                },
                 {
                   "name": "Payment Methods",
                   "slug": "payments-integration-payment-methods",
@@ -564,7 +564,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },                
+                },
                 {
                   "name": "PCI - DSS Compliance",
                   "slug": "payments-integration-pci-dss-compliance",
@@ -585,7 +585,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },                
+                },
                 {
                   "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
                   "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
@@ -613,7 +613,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },                               
+                },
                 {
                   "name": "PSE Payment Method",
                   "slug": "pse-payment-method",
@@ -627,7 +627,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }    
+                }
               ]
             },
             {
@@ -10008,47 +10008,18 @@
       "slugPrefix": "docs/guides/",
       "categories": [
         {
-          "name": "Introduction",
-          "slug": "welcome",
+          "name": "What is VTEX IO",
+          "slug": "vtex-io-documentation-what-is-vtex-io",
           "origin": "",
           "type": "markdown",
-          "children": [
-            {
-              "name": "What is VTEX IO",
-              "slug": "vtex-io-documentation-what-is-vtex-io",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "What is a VTEX App",
-              "slug": "vtex-io-documentation-what-is-a-vtex-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Frequently asked questions",
-              "slug": "vtex-io-documentation-frequently-asked-questions",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Other resources",
-              "slug": "other-resources",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Contributing",
-              "slug": "contributing",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
+          "children": []
+        },
+        {
+          "name": "What is a VTEX App",
+          "slug": "vtex-io-documentation-what-is-a-vtex-app",
+          "origin": "",
+          "type": "markdown",
+          "children": []
         },
         {
           "name": "Getting Started",
@@ -10105,7 +10076,7 @@
                   "children": []
                 },
                 {
-                  "name": "Making your theme content public",
+                  "name": "7. Making your store theme public",
                   "slug": "vtex-io-documentation-making-your-theme-content-public",
                   "origin": "",
                   "type": "markdown",
@@ -10470,35 +10441,6 @@
           ]
         },
         {
-          "name": "GraphQL APIs",
-          "slug": "graphql-apis",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Overview",
-              "slug": "graphql-ide",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Rewriter",
-              "slug": "rewriter",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Search",
-              "slug": "search-graphql",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
           "name": "VTEX IO CLI",
           "slug": "vtex-io-documentation-vtex-io-cli-installation-and-command-reference",
           "origin": "",
@@ -10549,220 +10491,212 @@
           ]
         },
         {
-          "name": "Guides",
-          "slug": "app-development-guides",
+          "name": "Local development",
+          "slug": "local-development-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Creating a Development workspace",
+              "slug": "vtex-io-documentation-creating-a-development-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Creating a Production workspace",
+              "slug": "vtex-io-documentation-creating-a-production-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Deprecating an app",
+              "slug": "vtex-io-documentation-deprecating-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Installing an app",
+              "slug": "vtex-io-documentation-installing-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Listing an account’s apps",
+              "slug": "vtex-io-documentation-listing-an-accounts-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Linking an app",
+              "slug": "vtex-io-documentation-linking-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Managing application logs",
+              "slug": "vtex-io-documentation-managing-application-logs",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Running IO scripts in non-IO VTEX stores",
+              "slug": "vtex-io-documentation-running-io-scripts-in-non-io-vtex-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Creating a Development workspace for a Legacy CMS store",
+              "slug": "vtex-io-documentation-creating-development-workspace-for-cms-legacy",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "A/B tests",
+          "slug": "ab-tests",
           "origin": "",
           "type": "markdown",
           "children": [
             {
-              "name": "A/B tests",
-              "slug": "ab-tests",
+              "name": "Running A/B tests",
+              "slug": "vtex-io-documentation-running-native-ab-testing",
               "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Running A/B tests",
-                  "slug": "vtex-io-documentation-running-native-ab-testing",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "A/B testing Legacy and IO store versions",
-                  "slug": "vtex-io-documentation-performing-ab-testing-between-legacy-and-io",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "type": "markdown",
+              "children": []
             },
             {
-              "name": "Edition Apps",
-              "slug": "managing-edition-apps",
+              "name": "A/B testing Legacy and IO store versions",
+              "slug": "vtex-io-documentation-performing-ab-testing-between-legacy-and-io",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Deployment",
+          "slug": "vtex-io-documentation-making-your-new-app-version-publicly-available",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Releasing a new app version",
+              "slug": "vtex-io-documentation-releasing-a-new-app-version",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Publishing an app",
+              "slug": "vtex-io-documentation-publishing-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Deploying the app's stable version",
+              "slug": "vtex-io-documentation-deploying-the-app-stable-version",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Promoting a workspace to Master",
+              "slug": "vtex-io-documentation-promoting-a-workspace-to-master",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "VTEX App Store",
+          "slug": "vtex-app-store",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Becoming a registered VTEX App Store developer",
+              "slug": "vtex-io-documentation-becoming-a-registered-vtex-app-store-developer",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Developing an app",
+              "slug": "vtex-io-documentation-developing-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Setting your app's billing model",
+              "slug": "vtex-io-documentation-setting-your-apps-billing-model",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Preparing your app for distribution",
+              "slug": "vtex-io-documentation-preparing-your-app-distribution",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Submitting your app to the VTEX App Store",
+              "slug": "vtex-io-documentation-submitting-your-app-in-the-vtex-app-store",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Using the Docs builder to publish app documentation",
+              "slug": "using-the-docs-builder-to-publish-app-documentation",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "App Store Guidelines",
+              "slug": "vtex-io-documentation-homologation-requirements-for-vtex-app-store",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Becoming a Sponsor Account",
-                  "slug": "vtex-io-documentation-becoming-a-sponsor-account",
+                  "name": "App monetization",
+                  "slug": "vtex-io-documentation-business-guidelines-app-monetization",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Configuring an Edition App",
-                  "slug": "vtex-io-documentation-configuring-an-edition-app",
+                  "name": "Marketing guidelines",
+                  "slug": "vtex-io-documentation-business-guidelines-marketing-assets",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Updating Edition apps",
-                  "slug": "vtex-io-documentation-updating-edition-apps",
+                  "name": "User Experience guidelines",
+                  "slug": "vtex-io-documentation-design-guidelines",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Seller Portal Edition App",
-                  "slug": "seller-portal-edition-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Local development",
-              "slug": "local-development-category",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Creating a Development workspace",
-                  "slug": "vtex-io-documentation-creating-a-development-workspace",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Creating a Production workspace",
-                  "slug": "vtex-io-documentation-creating-a-production-workspace",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Deprecating an app",
-                  "slug": "vtex-io-documentation-deprecating-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Installing an app",
-                  "slug": "vtex-io-documentation-installing-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Listing an account’s apps",
-                  "slug": "vtex-io-documentation-listing-an-accounts-apps",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Linking an app",
-                  "slug": "vtex-io-documentation-linking-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing application logs",
-                  "slug": "vtex-io-documentation-managing-application-logs",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Running IO scripts in non-IO VTEX stores",
-                  "slug": "vtex-io-documentation-running-io-scripts-in-non-io-vtex-stores",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Creating a Development workspace for a Legacy CMS store",
-                  "slug": "vtex-io-documentation-creating-development-workspace-for-cms-legacy",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "VTEX App Store",
-              "slug": "vtex-app-store",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Becoming a registered VTEX App Store developer",
-                  "slug": "vtex-io-documentation-becoming-a-registered-vtex-app-store-developer",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Developing an app",
-                  "slug": "vtex-io-documentation-developing-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting your app's billing model",
-                  "slug": "vtex-io-documentation-setting-your-apps-billing-model",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Preparing your app for distribution",
-                  "slug": "vtex-io-documentation-preparing-your-app-distribution",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Submitting your app to the VTEX App Store",
-                  "slug": "vtex-io-documentation-submitting-your-app-in-the-vtex-app-store",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using the Docs builder to publish app documentation",
-                  "slug": "using-the-docs-builder-to-publish-app-documentation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Making your new app version publicly available",
-              "slug": "vtex-io-documentation-making-your-new-app-version-publicly-available",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Releasing a new app version",
-                  "slug": "vtex-io-documentation-releasing-a-new-app-version",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Publishing an app",
-                  "slug": "vtex-io-documentation-publishing-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Deploying the app's stable version",
-                  "slug": "vtex-io-documentation-deploying-the-app-stable-version",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Promoting a workspace to Master",
-                  "slug": "vtex-io-documentation-promoting-a-workspace-to-master",
+                  "name": "Engineering best practices",
+                  "slug": "vtex-io-documentation-engineering-guidelines",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -10771,36 +10705,37 @@
             }
           ]
         },
+
         {
-          "name": "App Store Guidelines",
-          "slug": "vtex-io-documentation-homologation-requirements-for-vtex-app-store",
+          "name": "Edition Apps",
+          "slug": "managing-edition-apps",
           "origin": "",
           "type": "markdown",
           "children": [
             {
-              "name": "App monetization",
-              "slug": "vtex-io-documentation-business-guidelines-app-monetization",
+              "name": "Becoming a Sponsor Account",
+              "slug": "vtex-io-documentation-becoming-a-sponsor-account",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Marketing guidelines",
-              "slug": "vtex-io-documentation-business-guidelines-marketing-assets",
+              "name": "Configuring an Edition App",
+              "slug": "vtex-io-documentation-configuring-an-edition-app",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "User Experience guidelines",
-              "slug": "vtex-io-documentation-design-guidelines",
+              "name": "Updating Edition apps",
+              "slug": "vtex-io-documentation-updating-edition-apps",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Engineering best practices",
-              "slug": "vtex-io-documentation-engineering-guidelines",
+              "name": "Seller Portal Edition App",
+              "slug": "seller-portal-edition-app",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -10828,6 +10763,20 @@
               "children": []
             }
           ]
+        },
+        {
+          "name": "Frequently asked questions",
+          "slug": "vtex-io-documentation-frequently-asked-questions",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        },
+        {
+          "name": "Other resources",
+          "slug": "other-resources",
+          "origin": "",
+          "type": "markdown",
+          "children": []
         }
       ]
     },
