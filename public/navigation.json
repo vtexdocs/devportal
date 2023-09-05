@@ -10556,7 +10556,7 @@
           "children": [
             {
               "name": "A/B tests",
-              "slug": "ab-tests-category",
+              "slug": "ab-tests",
               "origin": "",
               "type": "category",
               "children": [
