@@ -12913,6 +12913,21 @@
           "type": "category",
           "children": [
             {
+              "name": "September",
+              "slug": "september-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Headless CMS Plugin v1.0.10: Bug fix for sync error",
+                  "slug": "2023-09-06-fixed-headless-cms-plugin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "July",
               "slug": "july-2023",
               "origin": "",
