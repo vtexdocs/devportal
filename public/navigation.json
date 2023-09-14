@@ -6,38 +6,30 @@
       "categories": [
         {
           "name": "Getting Started",
-          "slug": "getting-started-category",
+          "slug": "getting-started",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
-              "name": "Introduction",
-              "slug": "getting-started",
+              "name": "Platform overview",
+              "slug": "getting-started-platform-overview",
               "origin": "",
               "type": "markdown",
-              "children": [
-                {
-                  "name": "Platform overview",
-                  "slug": "getting-started-platform-overview",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "List of REST APIs",
-                  "slug": "getting-started-list-of-rest-apis",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Making your first request",
-                  "slug": "making-your-first-request",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "children": []
+            },
+            {
+              "name": "List of REST APIs",
+              "slug": "getting-started-list-of-rest-apis",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Making your first request",
+              "slug": "making-your-first-request",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             },
             {
               "name": "Authentication",
@@ -10705,7 +10697,6 @@
             }
           ]
         },
-
         {
           "name": "Edition Apps",
           "slug": "managing-edition-apps",
