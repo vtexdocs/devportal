@@ -136,7 +136,6 @@ summary {
   outline-offset: 2px;
   outline: 2px solid transparent;
   border-radius: .25rem;
-  display: flex;
   cursor: pointer;
   list-style-type: none;
   align-items: center;
@@ -158,6 +157,8 @@ details > summary::before {
   height: 1.2em;
   width: 1.2em;
   transition: transform 0.3s ease; 
+  float: left;
+  line-height: 32px;
 }
 
 details[open] > summary::before {
