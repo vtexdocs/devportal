@@ -61,7 +61,7 @@ pre,
 code,
 pre *,
 code * {
-  font-family: Consolas,monaco,monospace !important;
+  font-family: Consolas, monaco, monospace !important;
 }
 
 table td,
@@ -113,4 +113,60 @@ table tbody tr:nth-of-type(even) {
 hr {
   border: 1px solid #E7E9EE;
   border-bottom: none;
+}
+
+details{
+  tab-size: 4;
+  font-feature-settings: "rlig" 1,"calt" 1,"ss01" 1;
+  letter-spacing: .01em;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  border: 0 solid #e7e9ee;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .25rem;
+  border-width: 1px;
+  padding: .5rem;
+}
+
+summary {
+  tab-size: 4;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  outline-offset: 2px;
+  outline: 2px solid transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+  list-style-type: none;
+  align-items: center;
+  padding: .25rem;
+}
+
+details:hover{
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' %3E%3Cpath fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  padding-right: .25rem;
+  vertical-align: -4px;
+  height: 1.2em;
+  width: 1.2em;
+  transition: transform 0.3s ease; 
+  float: left;
+  line-height: 32px;
+}
+
+details[open] > summary::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' %3E%3Cpath fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  transform: rotate(90deg);
+  margin-top: .25rem;
+  padding-right: .25rem;
+  vertical-align: -4px;
+  height: 1.2em;
+  width: 1.2em;
 }
