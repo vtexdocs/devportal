@@ -811,3 +811,9 @@ force = true
 from = "/docs/guides/authentication-overview"
 status = 308
 to = "/docs/guides/authentication"
+
+[[redirects]]
+force = true
+from = "/docs/guides/changes-and-limitations-pii-data-architecture"
+status = 308
+to = "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"

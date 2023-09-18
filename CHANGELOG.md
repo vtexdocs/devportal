@@ -2,6 +2,74 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.28](https://github.com/vtexdocs/devportal/compare/v1.9.27...v1.9.28) (2023-09-18)
+
+
+### Features
+
+* **api reference:** get query param from endpoint url ([fc9465c](https://github.com/vtexdocs/devportal/commit/fc9465c4231f00e7d2fdfd6384be048987cd1465))
+* **newsletter-section:** change image to parallax ([4def726](https://github.com/vtexdocs/devportal/commit/4def7264de174f2be2b264acf646ca99fd407625))
+* **public:** add parallax layers ([6894129](https://github.com/vtexdocs/devportal/commit/689412981308d301383df70a00fb6edc3e95ca10))
+* **search-page:** add infinite scroll ([270bc64](https://github.com/vtexdocs/devportal/commit/270bc64dd3fb805a7b7d4a40268f9023c2e0a856))
+* **steps:** adds the steps components and improves some styles ([64d80d2](https://github.com/vtexdocs/devportal/commit/64d80d255fa2fceda843025c1567405291740a66))
+
+
+### Bug Fixes
+
+* **hamburger:** fix and scroll and hide menu correctly ([4bfa52d](https://github.com/vtexdocs/devportal/commit/4bfa52d295b36c5ef94eb3e37b9cd051b14fd7e8))
+* **sidebar:** fix endpoint filter in api reference ([2c8978b](https://github.com/vtexdocs/devportal/commit/2c8978b9f754f782411541bfae976dc3c678540d))
+* **sitemap:** remove guides page with noindex from sitemap ([3894da7](https://github.com/vtexdocs/devportal/commit/3894da7156350577a65eb9d5d3807f842162edb0))
+
+
+### Docs
+
+* add user data rights api to [slug].tsx ([af5c752](https://github.com/vtexdocs/devportal/commit/af5c75245aa73eb4211e86b19189ea7f28d55296))
+* add user data rights api to getReferencePaths.ts ([3a58783](https://github.com/vtexdocs/devportal/commit/3a587837ef1385df6e795a0df645a043a61275ae))
+* add zendesk app redirect ([29107e3](https://github.com/vtexdocs/devportal/commit/29107e36ddbbe38389808f69cbe98ebb4767395e))
+* **changes doc title:** adds more context to this doc's title ([a5ce31d](https://github.com/vtexdocs/devportal/commit/a5ce31d8f8cbb96e38ef8349da8b7a34b30131a4))
+* create pii doc redirect ([3cf0108](https://github.com/vtexdocs/devportal/commit/3cf0108217119201b865ba44c1a70f698dfa90ff))
+* create redirect ([927fc77](https://github.com/vtexdocs/devportal/commit/927fc777a00a9d377b62882378f28a2891440501))
+* create redirect ([1e012f5](https://github.com/vtexdocs/devportal/commit/1e012f5724a2cbb8c1a25c2114975ae6d68def9a))
+* create redirect ([884224a](https://github.com/vtexdocs/devportal/commit/884224a8452f8d20657de1a8abffc6dac2741472))
+* create redirect authentication guide ([6d1ef2e](https://github.com/vtexdocs/devportal/commit/6d1ef2e35fc93c44756c9f341e472cdb8cb5c403))
+* edit legacy cms portal api reference paths ([926a9c1](https://github.com/vtexdocs/devportal/commit/926a9c1f9beee23ecbfb50a4613e746337602f8f))
+* fix broken link ([a404f32](https://github.com/vtexdocs/devportal/commit/a404f32b782c3203b2a88489a522ca703353b11a))
+* fix broken page ([4f52b47](https://github.com/vtexdocs/devportal/commit/4f52b474bc117e3fcafef897804b6372326c1c98))
+* **fix typo in slug:** removes extra space in slug ([16506a4](https://github.com/vtexdocs/devportal/commit/16506a4fc1882749372b6e487d6960b8e4cad47d))
+* **navigation:** add vtex id endpoints ([345f458](https://github.com/vtexdocs/devportal/commit/345f458b4694e2e244b13970f04801acd4f99e94))
+* **navigation:** edit legacy cms portal api ([b49aacf](https://github.com/vtexdocs/devportal/commit/b49aacf7c25fa32993c55587276da608167daf63))
+* **navigation:** edit master data api v2 ([8bd1321](https://github.com/vtexdocs/devportal/commit/8bd132172f88556bfeab9541e9268c6f7105ca21))
+* **navigation:** fix vtex id endpoint path ([a20d4a7](https://github.com/vtexdocs/devportal/commit/a20d4a741c060df237681bb5956f07f399975729))
+* **navigation:** update authentication guides ([d4cb4b8](https://github.com/vtexdocs/devportal/commit/d4cb4b8e1255e88e33cab8cba76f2cadd81cb086))
+* **navigation:** update erp guide name in nav ([0f5551a](https://github.com/vtexdocs/devportal/commit/0f5551a3178917d0e0b8a25a736572ef15cc08a4))
+* **redirect about vtex do:** change rediret empty page ([adce0c3](https://github.com/vtexdocs/devportal/commit/adce0c3e6d9eec63316c0d4d5a4417fcffd88a0d))
+* redirect broken link ([4c1ecbf](https://github.com/vtexdocs/devportal/commit/4c1ecbf71f7a8f036a6f0f4ea5a4dcbb5a68666f))
+* **redirect erp guide:** creates a redirect for a 404 erp guide link ([f25bf59](https://github.com/vtexdocs/devportal/commit/f25bf5969f51cd00546a8f51fd6ea31c1c019ab5))
+* **redirect:** redirect ([fd50b41](https://github.com/vtexdocs/devportal/commit/fd50b41e24579643fd34bdb2b0349da835b2c921))
+* **remove file from navigation:** remove export order report from navigation ([aa4abca](https://github.com/vtexdocs/devportal/commit/aa4abca3c973e8b930cc24050228c3c6c217eac0))
+* update index.tsx ([488d92c](https://github.com/vtexdocs/devportal/commit/488d92cef6d19bdb4aa813e22ece52bade40320f))
+* update netlify.toml ([0358bdf](https://github.com/vtexdocs/devportal/commit/0358bdf8a14aa422ed74ed99aa2fc73746563b90))
+
+
+### Chore
+
+* **navigation:** update sidebar ([86234a7](https://github.com/vtexdocs/devportal/commit/86234a787afbe973d1056eb1549764aafa738c6b))
+* **navigation:** updates navigation.json ([2f30c8e](https://github.com/vtexdocs/devportal/commit/2f30c8e2bb3619326d7ba76fdced0a5bab30686b))
+* **netlify.toml:** fix redirects ordering ([a5f85f2](https://github.com/vtexdocs/devportal/commit/a5f85f291db9cc02bc9dc35947a90a956a478b8e))
+* **netlify.toml:** update redirects and lastrelease ([1981b4f](https://github.com/vtexdocs/devportal/commit/1981b4fae6e9bca7b3b8d38f4722c4856e3da547))
+* **rapidoc:** update version ([18d86c7](https://github.com/vtexdocs/devportal/commit/18d86c7f2e966e55eab05f3289c6ec4d4964cc30))
+* update rapidoc submodule ([922950d](https://github.com/vtexdocs/devportal/commit/922950da7cd2210df78a12d2ab52227648389040))
+
+
+### Style
+
+* **documentation-page:** update content width ([616fd83](https://github.com/vtexdocs/devportal/commit/616fd83c2bc480ca9af37a116bdfc15417d03fc9))
+* **global.css:** fix details styles ([17979a6](https://github.com/vtexdocs/devportal/commit/17979a65dfba01743b0e775429ef141a2ca0bfdb))
+* **global.css:** update details and summary styles ([9d1b2d8](https://github.com/vtexdocs/devportal/commit/9d1b2d840abc2c4e819d001c4dbd49a97210c829))
+* **mermaidinit.ts:** update mermaid theme ([85fef8e](https://github.com/vtexdocs/devportal/commit/85fef8e8c835f7b5e3de4c07e97ccf4eddecdae0))
+* **rapidoc:** update api padding ([04ba318](https://github.com/vtexdocs/devportal/commit/04ba3181d41ee7b7f54316658e182833fa5f9395))
+* **whatsnextcard:** increase whatnextcard font size ([11e3017](https://github.com/vtexdocs/devportal/commit/11e30173c14e4180876982d9e1ff9a451e6cee1d))
+
 ### [1.9.27](https://github.com/vtexdocs/devportal/compare/v1.9.26...v1.9.27) (2023-07-20)
 
 
