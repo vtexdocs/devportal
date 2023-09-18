@@ -9,6 +9,8 @@ const cardContainer: SxStyleProp = {
   display: 'flex',
   flexDirection: 'column',
   width: '100vw',
+  overflowY: 'scroll',
+  height: 'calc(100vh - 5rem)',
 }
 
 const sideMenuContainer: SxStyleProp = {
@@ -29,6 +31,7 @@ const headerContainer: SxStyleProp = {
 }
 
 const hamburgerContainer: SxStyleProp = {
+  display: ['block', 'block', 'block', 'none'],
   backgroundColor: '#ffff',
   width: '100%',
   '.menuHidden': {
