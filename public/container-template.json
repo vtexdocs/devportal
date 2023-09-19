@@ -13,7 +13,7 @@
             "accountId": "6003163501",
             "containerId": "164701425",
             "name": "Google Analytics 4",
-            "publicId": "GTM-KMGXQP86",
+            "publicId": "GTM-USEYOUROWN",
             "usageContext": [
                 "WEB"
             ],
@@ -36,7 +36,7 @@
                 "supportTransformations": false
             },
             "tagIds": [
-                "GTM-KMGXQP86"
+                "GTM-USEYOUROWN"
             ]
         },
         "tag": [
