@@ -10271,8 +10271,8 @@
           ]
         },
         {
-          "name": "Concepts",
-          "slug": "concepts",
+          "name": "Manifest",
+          "slug": "vtex-io-documentation-manifest",
           "origin": "",
           "type": "markdown",
           "children": [
@@ -10291,50 +10291,8 @@
               "children": []
             },
             {
-              "name": "Clients",
-              "slug": "vtex-io-documentation-clients",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "CMS",
-              "slug": "vtex-io-documentation-cms",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Composition",
-              "slug": "vtex-io-documentation-composition",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Dependencies",
               "slug": "vtex-io-documentation-dependencies",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Edition App",
-              "slug": "vtex-io-documentation-edition-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Interfaces",
-              "slug": "vtex-io-documentation-interface",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Manifest",
-              "slug": "vtex-io-documentation-manifest",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -10347,22 +10305,37 @@
               "children": []
             },
             {
-              "name": "Pixel app",
-              "slug": "vtex-io-documentation-pixel-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Policies",
               "slug": "vtex-io-documentation-policies",
               "origin": "",
               "type": "markdown",
               "children": []
+            }
+          ]
+        },
+        {
+          "name": "Concepts",
+          "slug": "concepts",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Clients",
+              "slug": "vtex-io-documentation-clients",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             },
             {
-              "name": "Properties",
-              "slug": "vtex-io-documentation-properties",
+              "name": "Edition App",
+              "slug": "vtex-io-documentation-edition-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Pixel app",
+              "slug": "vtex-io-documentation-pixel-app",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -10375,13 +10348,6 @@
               "children": []
             },
             {
-              "name": "Routes",
-              "slug": "vtex-io-documentation-routes",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Service",
               "slug": "vtex-io-documentation-service",
               "origin": "",
@@ -10389,29 +10355,8 @@
               "children": []
             },
             {
-              "name": "Site Editor",
-              "slug": "vtex-io-documentation-site-editor",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Slots",
-              "slug": "vtex-io-documentation-slots",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Sponsor Account",
               "slug": "vtex-io-documentation-sponsor-account",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "VTEX IO CLI",
-              "slug": "vtex-io-documentation-toolbelt",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12268,6 +12213,63 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Concepts",
+              "slug": "concepts-storefront",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "CMS",
+                  "slug": "vtex-io-documentation-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Composition",
+                  "slug": "vtex-io-documentation-composition",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Interfaces",
+                  "slug": "vtex-io-documentation-interface",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Properties",
+                  "slug": "vtex-io-documentation-properties",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Routes",
+                  "slug": "vtex-io-documentation-routes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Site Editor",
+                  "slug": "vtex-io-documentation-site-editor",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Slots",
+                  "slug": "vtex-io-documentation-slots",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Guides",
