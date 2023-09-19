@@ -7,9 +7,9 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'fixed',
-    description: 'Headless CMS Plugin v1.0.10: Bug fix for sync error',
-    date: new Date('09/06/2023'),
+    type: 'added',
+    description: 'New Checkout Settings for Bot Attack Protection',
+    date: new Date('09/12/2023'),
   },
   updateType: 'release-notes',
 }
