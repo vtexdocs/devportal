@@ -30,13 +30,13 @@ to = "/docs/api-reference/orders-api#get-/api/oms/pvt/orders"
 force = true
 from = "/docs/guides/using-apis-to-place-a-regular-order"
 status = 308
-to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
+to = "/docs/guides/create-a-regular-order-using-the-checkout-api"
 
 [[redirects]]
 force = true
 from = "/docs/guides/getting-started-with-vtex-io-for-carriers"
 status = 308
-to = "/docs/guides/create-a-regular-order-using-the-checkout-api"
+to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
 
 [[redirects]]
 force = true
