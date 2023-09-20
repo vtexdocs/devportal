@@ -12898,6 +12898,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Apps and payment connector homologation freeze in preparation for Black Friday 2023",
+                  "slug": "apps-and-payment-connector-homologation-freeze-in-preparation-for-black-friday-2023",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "New Checkout settings for bot attack protection",
                   "slug": "2023-09-12-new-checkout-settings-for-bot-attack-protection",
                   "origin": "",
