@@ -10669,22 +10669,7 @@
           "slug": "troubleshooting",
           "origin": "",
           "type": "markdown",
-          "children": [
-            {
-              "name": "Development",
-              "slug": "development",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Production",
-              "slug": "production",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
+          "children": []
         },
         {
           "name": "Frequently asked questions",
