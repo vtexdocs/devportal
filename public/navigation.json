@@ -11108,7 +11108,7 @@
             },
             {
               "name": "Icon Pack list",
-              "slug": "vtex-store-icons-iconpack",
+              "slug": "guides/advanced-components/vtex-store-icons-iconpack",
               "origin": "",
               "type": "markdown",
               "children": []
