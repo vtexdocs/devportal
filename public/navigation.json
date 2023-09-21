@@ -10604,7 +10604,7 @@
                   "children": []
                 },
                 {
-                  "name": "Engineering best practices",
+                  "name": "Engineering guidelines",
                   "slug": "vtex-io-documentation-engineering-guidelines",
                   "origin": "",
                   "type": "markdown",
@@ -10642,7 +10642,7 @@
               "children": []
             },
             {
-              "name": "Configuring an Edition App",
+              "name": "Developing an Edition App",
               "slug": "vtex-io-documentation-configuring-an-edition-app",
               "origin": "",
               "type": "markdown",
@@ -10669,22 +10669,7 @@
           "slug": "troubleshooting",
           "origin": "",
           "type": "markdown",
-          "children": [
-            {
-              "name": "Development",
-              "slug": "development",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Production",
-              "slug": "production",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
+          "children": []
         },
         {
           "name": "Frequently asked questions",
@@ -12586,9 +12571,9 @@
             },
             {
               "name": "Routing",
-              "slug": "vtex-io-documentation-associating-a-custom-page-to-a-content-type",
+              "slug": "store-framework-routing-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Associating a custom page to a content type",
@@ -12681,6 +12666,20 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Optimizing performance",
+                  "slug": "vtex-io-documentation-best-practices-for-optimizing-performance",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Rendering images",
+                  "slug": "vtex-io-documentation-best-practices-for-rendering-images",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -12757,35 +12756,21 @@
               ]
             },
             {
-              "name": "Migrating CMS settings after a theme major update",
-              "slug": "vtex-io-documentation-migrating-cms-settings-after-major-update",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Best practices",
               "slug": "best-practices-category",
               "origin": "",
               "type": "category",
               "children": [
                 {
+                  "name": "Migrating CMS settings after a Store Theme major update",
+                  "slug": "vtex-io-documentation-migrating-cms-settings-after-major-update",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Installing apps on live stores",
                   "slug": "vtex-io-documentation-installing-apps-in-live-stores-best-practices",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Optimizing performance",
-                  "slug": "vtex-io-documentation-best-practices-for-optimizing-performance",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Rendering images",
-                  "slug": "vtex-io-documentation-best-practices-for-rendering-images",
                   "origin": "",
                   "type": "markdown",
                   "children": []
