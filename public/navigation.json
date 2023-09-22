@@ -10398,6 +10398,28 @@
           "type": "markdown",
           "children": [
             {
+              "name": "Clients",
+              "slug": "vtex-io-documentation-clients",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Developing Node Clients",
+                  "slug": "vtex-io-documentation-how-to-create-and-use-clients",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using Node Clients",
+                  "slug": "using-node-clients",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Routes",
               "slug": "service-path-patterns",
               "origin": "",
@@ -10405,22 +10427,8 @@
               "children": []
             },
             {
-              "name": "Clients",
-              "slug": "vtex-io-documentation-clients",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Developing service configuration apps",
               "slug": "vtex-io-documentation-developing-service-configuration-apps",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Managing Clients",
-              "slug": "vtex-io-documentation-how-to-create-and-use-clients",
               "origin": "",
               "type": "markdown",
               "children": []
