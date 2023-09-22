@@ -10404,14 +10404,14 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Developing Node Clients",
+                  "name": "Developing custom Clients",
                   "slug": "vtex-io-documentation-how-to-create-and-use-clients",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Using Node Clients",
+                  "name": "Using Clients in Node apps",
                   "slug": "using-node-clients",
                   "origin": "",
                   "type": "markdown",
