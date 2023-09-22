@@ -8,7 +8,6 @@ import {
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import HamburgerMenu from './hamburger-menu'
 import DropdownMenu from 'components/dropdown-menu'
 import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
 import GridIcon from 'components/icons/grid-icon'
@@ -22,6 +21,7 @@ import AnnouncementBar from 'components/announcement-bar'
 
 import styles from './styles'
 import { PreviewContext } from 'utils/contexts/preview'
+import { HamburgerMenu } from '../../../dist/index.mjs'
 
 interface Props {
   isEditor: boolean

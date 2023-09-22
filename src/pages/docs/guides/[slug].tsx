@@ -17,7 +17,6 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
-import { SidebarContext } from 'utils/contexts/sidebar'
 
 import type { Item } from 'components/table-of-contents'
 import Contributors from 'components/contributors'
@@ -44,6 +43,7 @@ import getFileContributors, {
 
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import { LibraryContext } from '../../../../dist/index.mjs'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -91,7 +91,7 @@ const DocumentationPage: NextPage<Props> = ({
   const hidden =
     sectionSelected === '' || serialized.frontmatter.hidden === true
   const { setBranchPreview } = useContext(PreviewContext)
-  const { setActiveSidebarElement } = useContext(SidebarContext)
+  const { setActiveSidebarElement } = useContext(LibraryContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
     setBranchPreview(branch)
