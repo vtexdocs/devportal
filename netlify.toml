@@ -12,7 +12,19 @@ to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/fr
 force = true
 from = "/docs/api-reference/vtex-tracking-overview"
 status = 308
-to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
+to = "/docs/api-reference/tracking"
+
+[[redirects]]
+force = true
+from = "/reference/createupdatewarehouse"
+status = 308
+to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses"
+
+[[redirects]]
+force = true
+from = "/docs/guides/lead-time-beta"
+status = 308
+to = "https://help.vtex.com/en/tutorial/lead_time-shipping-time-at-sku-level--16yv5Mkj6bTyWR1hCN2f4B"
 
 [[redirects]]
 force = true
