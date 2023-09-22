@@ -6,13 +6,13 @@ import { TrackerContext } from 'utils/contexts/trackerContext'
 import { ThemeProvider } from '@vtex/brand-ui'
 
 import styles from 'styles/documentation-page'
-import Header from 'components/header'
 import Footer from 'components/footer'
 
-import { Sidebar, LibraryContextProvider } from './../../dist/index.mjs'
+import { Sidebar, LibraryContextProvider, Header } from './../../dist/index.mjs'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
-import { documentationData, updatesData } from 'utils/constants'
+import { documentationData, updatesData, adminData } from 'utils/constants'
+import VTEXDevportalIcon from './icons/vtex-devportal-icon'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -80,7 +80,11 @@ export default function Layout({
 					`}
           </Script>
         </div>
-        <Header isEditor={isEditor ? true : false} />
+        <Header
+          isEditor={isEditor ? true : false}
+          editorSections={[adminData]}
+          Icon={VTEXDevportalIcon}
+        />
         <Flex sx={styles.container}>
           {!hideSidebar && <Sidebar parentsArray={parentsArray} />}
           <Box sx={styles.mainContainer}>{children}</Box>
