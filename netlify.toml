@@ -12,7 +12,7 @@ to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/fr
 force = true
 from = "/docs/api-reference/vtex-tracking-overview"
 status = 308
-to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
+to = "/docs/api-reference/tracking"
 
 [[redirects]]
 force = true
