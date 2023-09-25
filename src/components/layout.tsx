@@ -13,6 +13,7 @@ import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
 import { documentationData, updatesData, adminData } from 'utils/constants'
 import VTEXDevportalIcon from './icons/vtex-devportal-icon'
+import { PreviewContext } from 'utils/contexts/preview'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -39,10 +40,34 @@ export default function Layout({
   parentsArray,
 }: Props) {
   const { initTracker, startTracking } = useContext(TrackerContext)
+  const { branchPreview } = useContext(PreviewContext)
   useEffect(() => {
     initTracker()
     startTracking()
   }, [])
+
+  const announcements = []
+  // To create an announcement at the topbar, un-comment this code, and change the copy and links.
+  // announcements.push({
+  //   closable: true,
+  //   type: 'new',
+  //   label: '📢 We want to know more about you and how you use our docs.',
+  //   action: {
+  //     button: 'Fill in our survey! It takes less than 5 minutes.',
+  //     href: 'https://forms.gle/5EvnahjuwQqwumDd9',
+  //   },
+  // })
+
+  if (isPreview)
+    announcements.push({
+      closable: false,
+      type: 'warning',
+      label: `🚧 You are currently using branch ${branchPreview} in preview mode. This content may differ from the published version.`,
+      action: {
+        button: 'EXIT PREVIEW MODE',
+        href: '/api/disable-preview',
+      },
+    })
 
   return (
     <ThemeProvider>
@@ -84,6 +109,7 @@ export default function Layout({
           isEditor={isEditor ? true : false}
           editorSections={[adminData]}
           Icon={VTEXDevportalIcon}
+          announcements={announcements}
         />
         <Flex sx={styles.container}>
           {!hideSidebar && <Sidebar parentsArray={parentsArray} />}
