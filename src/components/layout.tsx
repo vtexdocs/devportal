@@ -14,6 +14,7 @@ import Script from 'next/script'
 import { documentationData, updatesData, adminData } from 'utils/constants'
 import VTEXDevportalIcon from './icons/vtex-devportal-icon'
 import { PreviewContext } from 'utils/contexts/preview'
+import { useRouter } from 'next/router'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -39,6 +40,7 @@ export default function Layout({
   sectionSelected,
   parentsArray,
 }: Props) {
+  const router = useRouter()
   const { initTracker, startTracking } = useContext(TrackerContext)
   const { branchPreview } = useContext(PreviewContext)
   useEffect(() => {
@@ -58,7 +60,7 @@ export default function Layout({
   //   },
   // })
 
-  if (isPreview)
+  if (router.isPreview)
     announcements.push({
       closable: false,
       type: 'warning',
