@@ -11,7 +11,12 @@ import Footer from 'components/footer'
 import { Sidebar, LibraryContextProvider, Header } from './../../dist/index.mjs'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
-import { documentationData, updatesData, adminData } from 'utils/constants'
+import {
+  documentationData,
+  updatesData,
+  adminData,
+  searchClient,
+} from 'utils/constants'
 import VTEXDevportalIcon from './icons/vtex-devportal-icon'
 import { PreviewContext } from 'utils/contexts/preview'
 import { useRouter } from 'next/router'
@@ -78,6 +83,7 @@ export default function Layout({
         isPreview={isPreview}
         fallback={sidebarfallback}
         sectionSelected={sectionSelected ?? ''}
+        searchClient={searchClient}
       >
         <iframe
           src="https://www.googletagmanager.com/ns.html?id=GTM-WGQQ964"

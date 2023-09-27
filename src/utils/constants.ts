@@ -28,6 +28,20 @@ import {
 import EditIcon from 'components/icons/edit-icon'
 import MenuIcon from 'components/icons/menu-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
+import aa from 'search-insights'
+
+aa('init', {
+  appId: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
+  apiKey: process.env.NEXT_PUBLIC_ALGOLIA_WRITE_KEY || '',
+  useCookie: true,
+})
+
+aa('getUserToken', null, (err) => {
+  if (err) {
+    console.error(err)
+    return
+  }
+})
 
 const algoliaClient = algoliasearch(
   process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
