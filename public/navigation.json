@@ -2020,7 +2020,7 @@
       "slugPrefix": "docs/api-reference",
       "categories": [
         {
-          "name": "Antifraud Provider",
+          "name": "Antifraud Provider API",
           "slug": "antifraud-provider-protocol",
           "origin": "",
           "type": "openapi",
