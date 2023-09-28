@@ -558,6 +558,13 @@
                   "children": []
                 },
                 {
+                  "name": "Antifraud Provider Protocol",
+                  "slug": "how-the-integration-protocol-between-vtex-and-antifraud-companies-works",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+                {
                   "name": "PCI - DSS Compliance",
                   "slug": "payments-integration-pci-dss-compliance",
                   "origin": "",
