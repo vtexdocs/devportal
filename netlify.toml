@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/apps/vtex.store-icons/iconpack"
+status = 308
+to = "/docs/guides/vtex-store-icons-iconpack"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/freight-values"
 status = 308
 to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/freights/-carrierId-/values/update"
