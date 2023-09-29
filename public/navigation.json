@@ -11114,6 +11114,13 @@
               "children": []
             },
             {
+              "name": "Icon Pack",
+              "slug": "guides/vtex-store-icons-iconpack",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Iframe",
               "slug": "apps/vtex.iframe",
               "origin": "",
