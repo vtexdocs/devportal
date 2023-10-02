@@ -7,9 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'added',
-    description: 'New Checkout Settings for Bot Attack Protection',
-    date: new Date('09/12/2023'),
+    type: 'improved',
+    description:
+      'Apps and payment connector homologation freeze in preparation for Black Friday 2023',
+    date: new Date('09/20/2023'),
   },
   updateType: 'release-notes',
 }
