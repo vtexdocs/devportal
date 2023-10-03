@@ -5226,6 +5226,15 @@
                   "children": []
                 },
                 {
+                  "name": "Delete User",
+                  "slug": "license-manager-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/users/-userId-",
+                  "children": []
+                },
+                {
                   "name": "Create User",
                   "slug": "license-manager-api",
                   "type": "openapi",
