@@ -396,7 +396,7 @@ to = '/docs/guides/making-your-first-request'
 force = true
 from = '/docs/guides/getting-started-authentication'
 status = 308
-to = '/docs/guides/authentication-overview'
+to = '/docs/guides/authentication'
 
 [[redirects]]
 force = true
@@ -841,3 +841,9 @@ force = true
 from = "/docs/guides/changes-and-limitations-pii-data-architecture"
 status = 308
 to = "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
+
+[[redirects]]
+force = true
+from = "/docs/guides/user-authentication-and-login"
+status = 308
+to = "/docs/guides/api-authentication-using-user-tokens"
