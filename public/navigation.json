@@ -52,8 +52,8 @@
                   "children": []
                 },
                 {
-                  "name": "User authentication and login",
-                  "slug": "user-authentication-and-login",
+                  "name": "API authentication using user tokens",
+                  "slug": "api-authentication-using-user-tokens",
                   "origin": "",
                   "type": "markdown",
                   "children": []
