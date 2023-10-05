@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
-import { LibraryConfig } from '../../dist/index.mjs'
+import { SearchConfig } from '../../dist/index.mjs'
 
 const libraryConfig = {
   appId: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
@@ -7,4 +7,4 @@ const libraryConfig = {
   index: 'devportal-docs',
 }
 
-export default LibraryConfig(libraryConfig)
+export default SearchConfig(libraryConfig)
