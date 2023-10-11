@@ -12901,6 +12901,21 @@
           "type": "category",
           "children": [
             {
+              "name": "October",
+              "slug": "october-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore v1: Fixed abandoned cart tracking",
+                  "slug": "2023-10-11-faststore-v1-abandoned-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "September",
               "slug": "september-2023",
               "origin": "",
