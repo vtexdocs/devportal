@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.29](https://github.com/vtexdocs/devportal/compare/v1.9.28...v1.9.29) (2023-10-02)
+
+
+### Chore
+
+* **last-updates-section:** update lastReleaseNote ([b17d712](https://github.com/vtexdocs/devportal/commit/b17d71252886bc33ed7291dfcb1aca77dbd9bd54))
+* **navigation.json:** update navigation ([ecb24e6](https://github.com/vtexdocs/devportal/commit/ecb24e60bd17dd078632fefa2e58dd0730aa7a9f))
+* **navigation.json:** update sidebar ([8a3e43e](https://github.com/vtexdocs/devportal/commit/8a3e43e02cf61733273abb4817a2b371f1ec1422))
+* **navigation.json:** update troubleshooting section ([76fa1df](https://github.com/vtexdocs/devportal/commit/76fa1df6468bdaed61d4435c434ea8db325f9c93))
+* **navigation:** improving clients docs ([a240941](https://github.com/vtexdocs/devportal/commit/a24094152e0b581f97305bdb49c2cfbd40196aad))
+* **navigation:** update docs name ([410003f](https://github.com/vtexdocs/devportal/commit/410003f4949cfeab2ac1c4fdb81d635abc8802e0))
+* **navigation:** update sidebar ([0690664](https://github.com/vtexdocs/devportal/commit/06906641a0d3b2437fd40791250c01c300029ced))
+
+
+### Docs
+
+* correcting redirect ([c237563](https://github.com/vtexdocs/devportal/commit/c23756318f62b83ebcc50743f78e369f56a905bf))
+* create redirect ([238e98e](https://github.com/vtexdocs/devportal/commit/238e98e320829a3658e0b1049652ed3d584a0afd))
+* creating redirect ([342daba](https://github.com/vtexdocs/devportal/commit/342daba4279d17155bbf92ca8b62c2c3c29d0dad))
+* fix GTM container ([7a6b8a3](https://github.com/vtexdocs/devportal/commit/7a6b8a3763a83136b29fa286f419f26f60a66b05))
+* fix publicid value ([c740255](https://github.com/vtexdocs/devportal/commit/c740255da24f1133143ddf15d94633c9a8a29769))
+* **last updates section:** add homologation freeze for 23 BF release note ([027e61d](https://github.com/vtexdocs/devportal/commit/027e61d4230b110c9706665fcd321e132361f94d))
+
 ### [1.9.28](https://github.com/vtexdocs/devportal/compare/v1.9.27...v1.9.28) (2023-09-18)
 
 

@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/apps/vtex.store-icons/iconpack"
+status = 308
+to = "/docs/guides/vtex-store-icons-iconpack"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/freight-values"
 status = 308
 to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/freights/-carrierId-/values/update"
@@ -12,7 +18,19 @@ to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/fr
 force = true
 from = "/docs/api-reference/vtex-tracking-overview"
 status = 308
-to = "/docs/guides/getting-started-with-vtex-io-for-vtex-shipping-network"
+to = "/docs/api-reference/tracking"
+
+[[redirects]]
+force = true
+from = "/reference/createupdatewarehouse"
+status = 308
+to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses"
+
+[[redirects]]
+force = true
+from = "/docs/guides/lead-time-beta"
+status = 308
+to = "https://help.vtex.com/en/tutorial/lead_time-shipping-time-at-sku-level--16yv5Mkj6bTyWR1hCN2f4B"
 
 [[redirects]]
 force = true
@@ -25,6 +43,12 @@ force = true
 from = "/reference/orders#listorders"
 status = 308
 to = "/docs/api-reference/orders-api#get-/api/oms/pvt/orders"
+
+[[redirects]]
+force = true
+from = "/docs/guides/using-apis-to-place-a-regular-order"
+status = 308
+to = "/docs/guides/create-a-regular-order-using-the-checkout-api"
 
 [[redirects]]
 force = true
@@ -372,7 +396,7 @@ to = '/docs/guides/making-your-first-request'
 force = true
 from = '/docs/guides/getting-started-authentication'
 status = 308
-to = '/docs/guides/authentication-overview'
+to = '/docs/guides/authentication'
 
 [[redirects]]
 force = true
@@ -817,3 +841,9 @@ force = true
 from = "/docs/guides/changes-and-limitations-pii-data-architecture"
 status = 308
 to = "/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data"
+
+[[redirects]]
+force = true
+from = "/docs/guides/user-authentication-and-login"
+status = 308
+to = "/docs/guides/api-authentication-using-user-tokens"

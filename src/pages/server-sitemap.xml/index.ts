@@ -20,7 +20,7 @@ function getEndpoint(element: any) {
           .replaceAll('{', '-')
           .replaceAll('}', '-')}`
       : ''
-    url.loc = `${DOMAIN_URL}/${element.slug}/${pathSuffix}`
+    url.loc = `${DOMAIN_URL}/${element.slug}${pathSuffix}`
     url.lastmod = new Date().toISOString()
     urls.push(url)
   }
