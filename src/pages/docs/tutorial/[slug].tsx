@@ -100,7 +100,7 @@ const DocumentationPage: NextPage<Props> = ({
     <>
       <Head>
         <title>{serialized.frontmatter?.title as string}</title>
-        <meta name="docsearch:doctype" content="Guides" />
+        <meta name="docsearch:doctype" content="Tutorial" />
         {serialized.frontmatter?.hidden && (
           <meta name="robots" content="noindex" />
         )}
@@ -198,7 +198,7 @@ export const getStaticProps: GetStaticProps = async ({
       ? docsPathsGLOBAL
       : await getDocsPaths(branch, currentLocale)
 
-  const logger = getLogger('Guides')
+  const logger = getLogger('Tutorial')
 
   const path = docsPaths[slug]
   if (!path) {
@@ -357,7 +357,7 @@ export const getStaticProps: GetStaticProps = async ({
     const breadcumbList: { slug: string; name: string; type: string }[] = []
     parentsArrayName.forEach((_el: string, idx: number) => {
       breadcumbList.push({
-        slug: `/docs/guides/${parentsArray[idx]}`,
+        slug: `/docs/tutorial/${parentsArray[idx]}`,
         name: parentsArrayName[idx],
         type: parentsArrayType[idx],
       })

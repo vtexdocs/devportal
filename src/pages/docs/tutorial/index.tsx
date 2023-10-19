@@ -53,7 +53,7 @@ const Image2 = () => (
           <Box sx={imgStyles.diagramGrid}>
             <Tooltip label="Manipulate your store’s sales channels, categories, brands, products, SKUs and specifications.">
               <Link
-                href="/docs/guides/catalog-overview"
+                href="/docs/tutorial/catalog-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Catalog
@@ -61,7 +61,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Access and manipulate items data of a checkout cart.">
               <Link
-                href="/docs/guides/checkout-overview"
+                href="/docs/tutorial/checkout-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Checkout
@@ -69,7 +69,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Create and manage promotions and coupons to scale your sales.">
               <Link
-                href="/docs/guides/promotions-overview"
+                href="/docs/tutorial/promotions-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Promotions
@@ -77,7 +77,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Create, read and edit prices for each SKU, sales channel or price table.">
               <Link
-                href="/docs/guides/pricing-overview"
+                href="/docs/tutorial/pricing-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Pricing
@@ -85,7 +85,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Get payment data and process your transactions.">
               <Link
-                href="/docs/guides/payments-overview"
+                href="/docs/tutorial/payments-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Payment Hub
@@ -93,7 +93,7 @@ const Image2 = () => (
             </Tooltip>
             <Tooltip label="Search and sort products in the catalog using fulltext, category and brand search terms. Retrieve product data to create custom searches and product shelves.">
               <Link
-                href="/docs/guides/search-overview"
+                href="/docs/tutorial/search-overview"
                 sx={imgStyles.diagramPinkCardLink}
               >
                 Intelligent Search
@@ -161,7 +161,7 @@ const Image2 = () => (
   </Box>
 )
 
-const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
+const TutorialPage: NextPage<Props> = ({ branch }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   const intl = useIntl()
   setBranchPreview(branch)
@@ -251,7 +251,7 @@ export const getStaticProps: GetStaticProps = async ({
   previewData,
 }) => {
   const sidebarfallback = await getNavigation()
-  const sectionSelected = 'Guides'
+  const sectionSelected = 'Tutorials & Solutions'
 
   const previewBranch =
     preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
@@ -268,4 +268,4 @@ export const getStaticProps: GetStaticProps = async ({
   }
 }
 
-export default ApiGuidesPage
+export default TutorialPage

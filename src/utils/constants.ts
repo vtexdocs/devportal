@@ -1,11 +1,5 @@
 import APIGuidesIcon from 'components/icons/api-guides-icon'
-import OrdersIcon from 'components/icons/orders-icon'
-import CatalogIcon from 'components/icons/catalog-icon'
-import PromotionsIcon from 'components/icons/promotions-icon'
-import StorefrontIcon from 'components/icons/storefront-icon'
 import AnnouncementIcon from 'components/icons/announcement-icon'
-import ShippingIcon from 'components/icons/shipping-icon'
-import MarketplaceIcon from 'components/icons/marketplace-icon'
 import DashboardsIcon from 'components/icons/dashboards-icon'
 
 import { getMessages } from 'utils/get-messages'
@@ -31,67 +25,19 @@ export const documentationData = (intl: IntlShape) => {
   const data: DocDataElement[] = [
     {
       Icon: APIGuidesIcon,
-      title: 'Guides',
+      title: 'Start here',
       description: intl.formatMessage({
         id: 'documentation_api_guides.description',
       }),
-      link: '/docs/guides',
+      link: '/docs/tracks',
     },
     {
       Icon: DashboardsIcon,
-      title: 'Dashboards',
+      title: 'Tutorials & Solutions',
       description: intl.formatMessage({
         id: 'documentation_api_reference.description',
       }),
-      link: '/docs/guides',
-    },
-    {
-      Icon: OrdersIcon,
-      title: 'Orders',
-      description: intl.formatMessage({
-        id: 'documentation_app_development.description',
-      }),
-      link: '/docs/guides',
-    },
-    {
-      Icon: CatalogIcon,
-      title: 'Catalog',
-      description: intl.formatMessage({
-        id: 'documentation_storefront.description',
-      }),
-      link: '/docs/guides/catalog-overview',
-    },
-    {
-      Icon: PromotionsIcon,
-      title: 'Promotions',
-      description: intl.formatMessage({
-        id: 'documentation_vtexio_apps.description',
-      }),
-      link: '/docs/guides',
-    },
-    {
-      Icon: StorefrontIcon,
-      title: 'Storefront',
-      description: intl.formatMessage({
-        id: 'documentation_vtexio_apps.description',
-      }),
-      link: '/docs/guides',
-    },
-    {
-      Icon: ShippingIcon,
-      title: 'Shipping',
-      description: intl.formatMessage({
-        id: 'documentation_vtexio_apps.description',
-      }),
-      link: '/docs/guides',
-    },
-    {
-      Icon: MarketplaceIcon,
-      title: 'Marketplace',
-      description: intl.formatMessage({
-        id: 'documentation_vtexio_apps.description',
-      }),
-      link: '/docs/guides',
+      link: '/docs/tutorial',
     },
   ]
   return data
@@ -101,7 +47,7 @@ export const updatesData = (intl: IntlShape) => {
   const data: UpdatesDataElement[] = [
     {
       Icon: AnnouncementIcon,
-      title: 'Announcements',
+      title: 'News',
       description: intl.formatMessage({
         id: 'updates_release_notes.description',
       }),
