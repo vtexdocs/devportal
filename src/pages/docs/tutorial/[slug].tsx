@@ -15,7 +15,7 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import APIGuideContextProvider from 'utils/contexts/api-guide'
+import DocumentContextProvider from 'utils/contexts/documentContext'
 import { SidebarContext } from 'utils/contexts/sidebar'
 
 import type { Item } from 'components/table-of-contents'
@@ -74,7 +74,7 @@ interface Props {
   branch: string
 }
 
-const DocumentationPage: NextPage<Props> = ({
+const TutorialPage: NextPage<Props> = ({
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   //@ts-ignore
   slug,
@@ -100,7 +100,7 @@ const DocumentationPage: NextPage<Props> = ({
     <>
       <Head>
         <title>{serialized.frontmatter?.title as string}</title>
-        <meta name="docsearch:doctype" content="Tutorial" />
+        <meta name="docsearch:doctype" content="Tutorials & Solutions" />
         {serialized.frontmatter?.hidden && (
           <meta name="robots" content="noindex" />
         )}
@@ -111,7 +111,7 @@ const DocumentationPage: NextPage<Props> = ({
           />
         )}
       </Head>
-      <APIGuideContextProvider headings={headings}>
+      <DocumentContextProvider headings={headings}>
         <Flex sx={styles.innerContainer}>
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
@@ -157,7 +157,7 @@ const DocumentationPage: NextPage<Props> = ({
           </Box>
           <OnThisPage />
         </Flex>
-      </APIGuideContextProvider>
+      </DocumentContextProvider>
     </>
   )
 }
@@ -198,7 +198,7 @@ export const getStaticProps: GetStaticProps = async ({
       ? docsPathsGLOBAL
       : await getDocsPaths(branch, currentLocale)
 
-  const logger = getLogger('Tutorial')
+  const logger = getLogger('Tutorials & Solutions')
 
   const path = docsPaths[slug]
   if (!path) {
@@ -388,4 +388,4 @@ export const getStaticProps: GetStaticProps = async ({
   }
 }
 
-export default DocumentationPage
+export default TutorialPage

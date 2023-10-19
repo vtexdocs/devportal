@@ -161,7 +161,7 @@ const Image2 = () => (
   </Box>
 )
 
-const TutorialPage: NextPage<Props> = ({ branch }) => {
+const TutorialsPage: NextPage<Props> = ({ branch }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   const intl = useIntl()
   setBranchPreview(branch)
@@ -268,4 +268,4 @@ export const getStaticProps: GetStaticProps = async ({
   }
 }
 
-export default TutorialPage
+export default TutorialsPage
