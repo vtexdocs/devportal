@@ -131,6 +131,7 @@ const APIPage: NextPage<Props> = ({
     <>
       <Head>
         <title>{endpointNames[endpointPath]}</title>
+        {endpointPath === slug && <meta name="robots" content="noindex" />}
         {endpoints && (
           <>
             <meta
