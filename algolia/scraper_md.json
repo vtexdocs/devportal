@@ -1,8 +1,8 @@
 {
-  "index_name": "devportal-docs",
-  "start_urls": ["https://developers.vtex.com/docs/guides"],
+  "index_name": "helpcenter-docs",
+  "start_urls": ["https://helpcenter.vtex.com/docs"],
   "stop_urls": [],
-  "sitemap_urls": ["https://developers.vtex.com/sitemap-0.xml"],
+  "sitemap_urls": ["https://helpcenter.vtex.com/sitemap-0.xml"],
   "selectors": {
     "lvl0": "article .title, article h1",
     "lvl1": "article h2",
