@@ -7,10 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'improved',
+    type: 'added',
     description:
-      'Apps and payment connector homologation freeze in preparation for Black Friday 2023',
-    date: new Date('09/20/2023'),
+      'Stores using FastStore can now take advantage of Node.js 18 capabilities',
+    date: new Date('10/20/2023'),
   },
   updateType: 'release-notes',
 }
