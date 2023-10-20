@@ -6,18 +6,14 @@ import { useIntl } from 'react-intl'
 
 const getDoctype = (category: string) => {
   switch (category) {
-    case 'API Guides':
-      return 'Guides'
-    case 'api-reference':
-      return 'API Reference'
-    case 'App Development':
-      return 'App Development'
-    case 'Storefront Development':
-      return 'Storefront Development'
-    case 'VTEX IO Apps':
-      return 'VTEX IO Apps'
+    case 'Tutorials & Solutions':
+      return 'Tutorials & Solutions'
+    case 'Start here':
+      return 'Start here'
+    case 'News':
+      return 'News'
     default:
-      return 'Guides'
+      return 'Tutorials & Solutions'
   }
 }
 

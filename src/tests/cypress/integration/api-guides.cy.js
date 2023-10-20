@@ -3,10 +3,10 @@ import { filterSidebarItems, writeLog } from '../support/functions'
 import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
-describe('API guides documentation page', () => {
+describe('Tutorials documentation page', () => {
   before(() => {
-    cy.task('setUrl', '/docs/guides')
-    cy.writeFile('cypress.log', `#API guides documentation page#\n`, {
+    cy.task('setUrl', '/docs/tutorial')
+    cy.writeFile('cypress.log', `#Tutorials documentation page#\n`, {
       flag: 'a+',
     })
   })
@@ -73,7 +73,7 @@ describe('API guides documentation page', () => {
     })
 
     cy.url({ timeout: 10000 })
-      .should('match', /(\/guides\/.)/)
+      .should('match', /(\/tutorial\/.)/)
       .then((url) => cy.task('setUrl', url))
   })
 
@@ -94,7 +94,7 @@ describe('API guides documentation page', () => {
   })
 
   it('try to send feedback', () => {
-    cy.visit('/docs/guides/brands')
+    cy.visit('/docs/tutorial/brands')
 
     cy.get('[data-cy="feedback-section"]').scrollIntoView()
 

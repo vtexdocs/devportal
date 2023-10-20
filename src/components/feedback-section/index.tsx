@@ -40,7 +40,7 @@ const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
     const feedback = {
       data: [
         new Date().toISOString(),
-        `https://developers.vtex.com/docs/guides/${slug}`,
+        `https://developers.vtex.com/docs/tutorial/${slug}`,
         modalState.liked ? 'positive' : 'negative',
         comment,
       ],

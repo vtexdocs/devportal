@@ -22,7 +22,7 @@ export interface SearchDataItemProps {
 
 const searchData: SearchDataItemProps[] = [
   {
-    doc: 'Guides',
+    doc: 'Tutorials & Solutions',
     title: 'SKU Selector',
     description:
       'The SKU Selector is a product details page block responsible for displaying every SKU available for a given product.',

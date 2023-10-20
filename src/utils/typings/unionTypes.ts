@@ -4,7 +4,7 @@ export type DocumentationTitle = 'Start here' | 'Tutorials & Solutions'
 
 export type UpdatesTitle = 'News' | 'Documentation Updates'
 
-export type SlugPrefix = 'guides'
+export type SlugPrefix = 'tutorial'
 
 export type ResourceTitle =
   | 'Community'
