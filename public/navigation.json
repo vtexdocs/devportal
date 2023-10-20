@@ -12907,6 +12907,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore now supports Node.js 18",
+                  "slug": "2023-10-20-faststore-now-supports-node-18",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore v1: Fixed abandoned cart tracking",
                   "slug": "2023-10-11-faststore-v1-abandoned-cart",
                   "origin": "",
