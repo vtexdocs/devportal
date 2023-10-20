@@ -15,7 +15,7 @@ import { getLogger } from 'utils/logging/log-util'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
-import APIGuideContextProvider from 'utils/contexts/api-guide'
+import DocumentContextContextProvider from 'utils/contexts/documentContext'
 
 import type { Item } from 'components/table-of-contents'
 import MarkdownRenderer from 'components/markdown-renderer'
@@ -90,7 +90,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
         <title>{serialized.frontmatter?.title as string}</title>
         <meta name="docsearch:doctype" content="Announcements" />
       </Head>
-      <APIGuideContextProvider headings={headings}>
+      <DocumentContextContextProvider headings={headings}>
         <Flex sx={styles.innerContainer}>
           <Box sx={styles.articleBox}>
             <Box sx={styles.contentContainer}>
@@ -120,7 +120,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
           </Box>
           <OnThisPage />
         </Flex>
-      </APIGuideContextProvider>
+      </DocumentContextContextProvider>
     </>
   )
 }

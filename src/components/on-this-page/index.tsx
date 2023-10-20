@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 import AnimateHeight from 'react-animate-height'
 
-import { APIGuideContext } from 'utils/contexts/api-guide'
+import { DocumentContext } from 'utils/contexts/documentContext'
 
 import MenuIcon from 'components/icons/menu-icon'
 import CloseIcon from 'components/icons/close-icon'
@@ -14,7 +14,7 @@ import { FormattedMessage } from 'react-intl'
 
 const OnThisPage = () => {
   const { onThisPageOpenStatus, setOnThisPageOpenStatus } =
-    useContext(APIGuideContext)
+    useContext(DocumentContext)
 
   return (
     <Flex sx={styles.container}>
