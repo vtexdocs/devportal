@@ -64,6 +64,7 @@
     "react": "^18.2.0",
     "react-animate-height": "^3.0.4",
     "react-docgen-typescript": "^2.2.2",
+    "react-cookie-consent": "^9.0.0",
     "react-dom": "^18.2.0",
     "react-instantsearch-dom": "^6.37.0",
     "react-intersection-observer": "^9.2.2",
