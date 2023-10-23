@@ -91,5 +91,9 @@
   "relese-note-days-elapsed": "days ago",
   "error_loading_image": "An error occurred while trying to load the image.",
   "multiselect_apply_button": "Apply",
-  "multiselect_clear_button": "Clear"
+  "multiselect_clear_button": "Clear",
+  "cookie_bar.title": "We use cookies",
+  "cookie_bar.description": "This website uses cookies to improve site navigation, analyze website usage, and assist in our marketing efforts.",
+  "cookie_bar.accept": "I understand",
+  "cookie_bar.decline": "I decline"
 }
