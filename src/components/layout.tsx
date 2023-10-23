@@ -13,6 +13,8 @@ import { Sidebar, LibraryContextProvider } from '@vtexdocs/components'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
 import { documentationData, updatesData } from 'utils/constants'
+import CookieBar from './cookie-bar'
+import aa from 'search-insights'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -67,6 +69,10 @@ export default function Layout({
             {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied'
+          });
           gtag('js', new Date());
           gtag('config', 'UA-56275648-4');
         `}
@@ -80,6 +86,21 @@ export default function Layout({
 					`}
           </Script>
         </div>
+        <CookieBar
+          onAccept={() => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const window2 = window as any
+            window2.gtag('consent', 'update', {
+              ad_storage: 'granted',
+              analytics_storage: 'granted',
+            })
+
+            aa('init', {
+              partial: true,
+              useCookie: true,
+            })
+          }}
+        />
         <Header isEditor={isEditor ? true : false} />
         <Flex sx={styles.container}>
           {!hideSidebar && <Sidebar parentsArray={parentsArray} />}
