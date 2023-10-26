@@ -1,6 +1,6 @@
 import { NextPage, GetStaticProps } from 'next'
 import getNavigation from 'utils/getNavigation'
-import { Search } from '../../../dist/index.mjs'
+import { Search } from '@components-library/index.mjs'
 
 const SearchPage: NextPage = () => {
   return <Search />

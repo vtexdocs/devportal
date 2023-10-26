@@ -1,4 +1,4 @@
-import { FeedbackSection as FeedbackSectionComponent } from '../../../dist/index.mjs'
+import { FeedbackSection as FeedbackSectionComponent } from '@components-library/index.mjs'
 
 interface DocPath {
   slug?: string
@@ -30,6 +30,7 @@ const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
       sendFeedback={sendFeedback}
       urlToEdit={urlToEdit}
       suggestEdits={suggestEdits}
+      slug={slug}
     />
   )
 }

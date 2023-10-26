@@ -43,7 +43,7 @@ import getFileContributors, {
 
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
-import { LibraryContext } from '../../../../dist/index.mjs'
+import { LibraryContext } from '@components-library/index.mjs'
 
 const docsPathsGLOBAL = await getDocsPaths()
 

@@ -11,7 +11,7 @@ import Auth from 'components/auth'
 import PageHeader from 'components/page-header'
 import image from '../../../public/images/editor.png'
 import Link from 'next/link'
-import { LibraryContext } from '../../../dist/index.mjs'
+import { LibraryContext } from '@components-library/index.mjs'
 
 interface Props {
   file?: string
