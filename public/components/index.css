@@ -1,0 +1,107 @@
+/* src/lib/markdown-renderer/styles.module.css */
+.img {
+  max-width: 100%;
+  padding-top: 2vh;
+  border-radius: 4px;
+}
+.heading::before {
+  content: "";
+  display: block;
+  visibility: hidden;
+  pointer-events: none;
+}
+.code {
+  background-color: #f6f8fa;
+  background-color: var(--md-code-background, #f6f8fa);
+  border-radius: 4px;
+  color: var(--md-code-text);
+  margin: 0;
+  padding: 0.2em 0.4em;
+  font-size: 0.875em;
+  word-break: break-all;
+}
+table .code {
+  word-break: normal;
+}
+.blockquote {
+  display: grid;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+  margin: 16px 0px 24px;
+  border-radius: 4px;
+  align-items: center;
+  border: 1px solid #ccced8;
+  grid-template-columns: 20px 1fr;
+  grid-template-rows: 1fr;
+}
+.blockquote p {
+  margin: 0px;
+  grid-column: 2 / -1;
+  grid-row: 1 / 1;
+}
+.blockquote a {
+  color: #D4084C !important;
+}
+.blockquoteInfo {
+  background: #f8f7fc;
+  border: 1px solid #ccced8;
+}
+.blockquoteInfo:before {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background: url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg) no-repeat 0 0;
+  background-size: 20px 20px;
+}
+.blockquoteDanger {
+  background: #fdefef;
+  border: 1px solid #dc5a41;
+}
+.blockquoteDanger:before {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background: url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/danger.svg) no-repeat 0 0;
+  background-size: 20px 20px;
+}
+.blockquoteWarning {
+  background: #fff2d4;
+  border: 1px solid #ffb100;
+}
+.blockquoteWarning code {
+  background-color: #ffe5b5;
+}
+.blockquoteInfo code {
+  background-color: #ecebf3;
+}
+.blockquoteWarning:before {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background: url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/warning.svg) no-repeat 0 0;
+  background-size: 20px 20px;
+}
+.blockquoteSuccess {
+  background: #f3f8f3;
+  border: 1px solid #80be80;
+}
+.blockquoteSuccess:before {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  content: "";
+  background: url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/success.svg) no-repeat 0 0;
+  background-size: 20px 20px;
+}
+.flexWrap {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.svgContainer {
+  width: 100%;
+}
+/*# sourceMappingURL=index.css.map */
