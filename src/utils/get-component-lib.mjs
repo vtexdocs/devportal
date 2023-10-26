@@ -5,9 +5,9 @@ import { createRequire } from 'module'
 const require = createRequire(import.meta.url)
 const pkgJson = require('../../package.json')
 
-const rapidoc_version = `${pkgJson.config.rapidoc.version}`
-const rapidoc_dir = path.join('public', 'rapidoc')
-const rapidoc_file = 'rapidoc-min.js'
+const components_version = `${pkgJson.config.components.version}`
+const components_dir = path.join('public', 'components')
+const components_file = 'index.mjs'
 
 const assertDirExists = (dir_path) => {
   if (!fs.existsSync(dir_path)) {
@@ -15,19 +15,19 @@ const assertDirExists = (dir_path) => {
   }
 }
 
-const getRapidocFile = async (version) => {
+const getComponentLib = async (version) => {
   try {
     const response = await fetch(
-      `https://raw.githubusercontent.com/vtexdocs/RapiDoc/v${version}/dist/rapidoc-min.js`
+      `https://raw.githubusercontent.com/vtexdocs/components/v${version}/dist/index.mjs`
     )
     if (!response.ok) {
       const err = new Error(`response status ${response.status}`)
       err.response = response
       throw err
     } else {
-      assertDirExists(rapidoc_dir)
-      const rapidoc_file_path = path.join(rapidoc_dir, rapidoc_file)
-      const file_stream = fs.createWriteStream(rapidoc_file_path)
+      assertDirExists(components_dir)
+      const components_file_path = path.join(components_dir, components_file)
+      const file_stream = fs.createWriteStream(components_file_path)
       await new Promise((resolve, reject) => {
         response.body.pipe(file_stream)
         response.body.on('error', reject)
@@ -35,8 +35,10 @@ const getRapidocFile = async (version) => {
       })
     }
   } catch (err) {
-    console.log(`[Error] ${err.message}, ${rapidoc_file} could not be fetched.`)
+    console.log(
+      `[Error] ${err.message}, ${components_file} could not be fetched.`
+    )
   }
 }
 
-getRapidocFile(rapidoc_version)
+getComponentLib(components_version)
