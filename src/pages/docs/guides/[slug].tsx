@@ -18,13 +18,13 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
-import type { Item } from 'components/table-of-contents'
+import type { Item } from '@components-library/index.mjs'
 import Contributors from 'components/contributors'
-import MarkdownRenderer from 'components/markdown-renderer'
+import { MarkdownRenderer } from '@components-library/index.mjs'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
-import TableOfContents from 'components/table-of-contents'
+import { TableOfContents } from '@components-library/index.mjs'
 import Breadcrumb from 'components/breadcrumb'
 
 import getHeadings from 'utils/getHeadings'

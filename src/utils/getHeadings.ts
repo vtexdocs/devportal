@@ -3,7 +3,7 @@ import { slugify } from 'utils/string-utils'
 import { visit } from 'unist-util-visit'
 
 import type { Node } from 'unist'
-import type { Item } from 'components/table-of-contents'
+import type { Item } from '@components-library/index.mjs'
 
 interface Heading {
   headingList: Item[]

@@ -17,10 +17,11 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
-import type { Item } from 'components/table-of-contents'
-import MarkdownRenderer from 'components/markdown-renderer'
+import type { Item } from '@components-library/index.mjs'
+import { MarkdownRenderer } from '@components-library/index.mjs'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
+import { TableOfContents } from '@components-library/index.mjs'
 
 import { removeHTML } from 'utils/string-utils'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
