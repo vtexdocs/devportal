@@ -61,7 +61,7 @@ pre,
 code,
 pre *,
 code * {
-  font-family: Consolas,monaco,monospace !important;
+  font-family: Consolas, monaco, monospace !important;
 }
 
 table td,
@@ -115,47 +115,130 @@ hr {
   border-bottom: none;
 }
 
-.ch-codeblock, .ch-codegroup, .ch-preview {
-  box-shadow: none !important;
-  border-radius: 4px !important;
-  border: 1px solid #e7e9ee;
+.ch-codeblock {
+  box-shadow: none;
 }
 
-.ch-spotlight-tab:hover, .ch-scrollycoding-step-content:hover{
+.ch-scrollycoding, .ch-spotlight-tabs {
+  gap: 0;
+}
+
+.ch-spotlight-tab:hover,
+.ch-scrollycoding-step-content:hover {
   cursor: pointer;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e3e3e3
+  border-top: 1px solid #e7e9ee;
+  border-bottom: none;
+  border-left: 4px solid transparent;
 }
 
-.ch-spotlight-tab[data-selected], .ch-scrollycoding-step-content[data-selected]{
-  border-color: #e31c58;
-  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+.ch-spotlight-tabs > div,
+.ch-spotlight-tab,
+.ch-scrollycoding-step-content {
+  border-right: none;
+  border-radius: 0;
+  border-top: 1px solid #e7e9ee;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+  padding: 18px 18px 10px;
 }
 
-.ch-spotlight-tab h2, .ch-spotlight-tab h3{
-  margin: 10px 0 !important;
+.ch-scrollycoding-step-content {
+  margin-right: 14px;
 }
 
-.ch-spotlight-tab, .ch-scrollycoding-step-content{
-  padding: 0 0.8em !important;
+.ch-spotlight-tab[data-selected],
+.ch-scrollycoding-step-content[data-selected] {
+  border-top: 1px solid #e7e9ee;
+  border-left: 4px solid #e7e9ee;
+  background-color: #fcfcfe;
+}
+
+.ch-spotlight h2,
+.ch-spotlight h3,
+.ch-spotlight h4,
+.ch-scrollycoding-step-content h2,
+.ch-scrollycoding-step-content h3,
+.ch-scrollycoding-step-content h4 {
+  margin: 0 !important;
+  color: #142032;
+}
+
+.ch-spotlight h2,
+.ch-scrollycoding-step-content h2 {
+  font-family: 'VTEX Trust Medium'  !important;
+  line-height: 1.3em !important;
+  font-size: 1.3em !important;
+}
+
+.ch-codegroup north{
+  border: 1px solid red
 }
 
 .ch-spotlight-sticker, .ch-scrollycoding-sticker{
-  width: 45% !important;
-  height: 100vh;
+  width: 40% !important;
 }
 
-.ch-codegroup{
-  width: 100% !important
+.ch-editor-frame > div{
+  height: 20px;
 }
 
-.ch-codegroup { 
-  margin: 8px; 
-  --the-api-key: "{accountName}"
+body {
+  --ch-scrollycoding-sticker-width: 40%;
+  --ch-scrollycoding-code-min-height: 80vh;
 }
 
-.placeholder::after {
-  content: var(--the-api-key);
-  outline: 2px solid royalblue;
+details{
+  tab-size: 4;
+  font-feature-settings: "rlig" 1,"calt" 1,"ss01" 1;
+  letter-spacing: .01em;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  border: 0 solid #e7e9ee;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .25rem;
+  border-width: 1px;
+  padding: .5rem;
+}
 
+summary {
+  tab-size: 4;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+  outline-offset: 2px;
+  outline: 2px solid transparent;
+  border-radius: .25rem;
+  cursor: pointer;
+  list-style-type: none;
+  align-items: center;
+  padding: .25rem;
+}
+
+details:hover{
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1)
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' %3E%3Cpath fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  padding-right: .25rem;
+  vertical-align: -4px;
+  height: 1.2em;
+  width: 1.2em;
+  transition: transform 0.3s ease; 
+  float: left;
+  line-height: 32px;
+}
+
+details[open] > summary::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor' %3E%3Cpath fill-rule='evenodd' d='M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z' clip-rule='evenodd' /%3E%3C/svg%3E");
+  transform: rotate(90deg);
+  margin-top: .25rem;
+  padding-right: .25rem;
+  vertical-align: -4px;
+  height: 1.2em;
+  width: 1.2em;
 }

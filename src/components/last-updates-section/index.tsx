@@ -7,9 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'improved',
-    description: 'Headless CMS Plugin v1.0.8: Improved sync command',
-    date: new Date('07/31/2023'),
+    type: 'added',
+    description:
+      'Stores using FastStore can now take advantage of Node.js 18 capabilities',
+    date: new Date('10/20/2023'),
   },
   updateType: 'release-notes',
 }
