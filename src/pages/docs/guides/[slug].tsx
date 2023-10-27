@@ -12,7 +12,6 @@ import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import remarkMermaid from 'utils/remark_plugins/mermaid'
 import { remarkCodeHike } from '@code-hike/mdx'
-import myTheme from 'styles/codeHikeTheme'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
@@ -186,8 +185,8 @@ export const getStaticProps: GetStaticProps = async ({
   const previewBranch =
     preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
       ? JSON.parse(JSON.stringify(previewData)).branch
-      : 'test/codehike'
-  const branch = preview ? previewBranch : 'test/codehike'
+      : 'test/codehike-doc'
+  const branch = preview ? previewBranch : 'test/codehike-doc'
   const slug = params?.slug as string
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
@@ -241,7 +240,10 @@ export const getStaticProps: GetStaticProps = async ({
             {
               autoImport: false,
               showCopyButton: true,
-              theme: myTheme,
+              lineNumbers: true,
+              skipLanguages: ['mermaid'],
+              staticMediaQuery: 'not screen, (max-width: 850px)',
+              theme: 'poimandres',
             },
           ],
           remarkGFM,

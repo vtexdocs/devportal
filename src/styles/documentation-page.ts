@@ -62,9 +62,6 @@ const articleBox: SxStyleProp = {
   strong: {
     fontWeight: '600',
   },
-  '*': {
-    maxWidth: '100%',
-  },
 }
 
 const contentContainer: SxStyleProp = {
