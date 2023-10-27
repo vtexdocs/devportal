@@ -5213,6 +5213,30 @@
           ]
         },
         {
+          "name": "Intelligent Search Events API - Headless",
+          "slug": "intelligent-search-events-api-headless",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Events",
+              "slug": "intelligent-search-events-api-headless-events",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Save Events",
+                  "slug": "intelligent-search-events-api-headless",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/event",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "License Manager API",
           "slug": "license-manager-api",
           "origin": "",
