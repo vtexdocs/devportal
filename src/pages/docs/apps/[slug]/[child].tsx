@@ -146,7 +146,7 @@ const AppChildPage: NextPage<Props> = ({
               <SeeAlsoSection docs={seeAlsoData} />
             </Box>
             <Box sx={styles.rightContainer}>
-              <TableOfContents />
+              <TableOfContents headingList={headingList} />
             </Box>
           </Flex>
         </APIGuideContextProvider>

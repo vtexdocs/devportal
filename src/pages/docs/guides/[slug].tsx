@@ -156,7 +156,7 @@ const DocumentationPage: NextPage<Props> = ({
           {!hideTOC && (
             <Box sx={styles.rightContainer}>
               <Contributors contributors={contributors} />
-              <TableOfContents />
+              <TableOfContents headingList={headingList} />
             </Box>
           )}
           <OnThisPage />

@@ -21,7 +21,6 @@ import type { Item } from '@components-library/index.mjs'
 import { MarkdownRenderer } from '@components-library/index.mjs'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
-import { TableOfContents } from '@components-library/index.mjs'
 
 import { removeHTML } from 'utils/string-utils'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
