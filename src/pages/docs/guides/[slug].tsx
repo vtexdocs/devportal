@@ -185,8 +185,8 @@ export const getStaticProps: GetStaticProps = async ({
   const previewBranch =
     preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
       ? JSON.parse(JSON.stringify(previewData)).branch
-      : 'test/codehike-doc'
-  const branch = preview ? previewBranch : 'test/codehike-doc'
+      : 'main'
+  const branch = preview ? previewBranch : 'main'
   const slug = params?.slug as string
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
