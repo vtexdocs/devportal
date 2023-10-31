@@ -847,3 +847,9 @@ force = true
 from = "/docs/guides/user-authentication-and-login"
 status = 308
 to = "/docs/guides/api-authentication-using-user-tokens"
+
+[[redirects]]
+force = true
+from = "vtex-rest-api/reference/updateseller"
+status = 308
+to = "/docs/api-reference/marketplace-apis#patch-/seller-register/pvt/sellers/-sellerId-"
