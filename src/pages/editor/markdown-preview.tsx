@@ -3,11 +3,24 @@ import Head from 'next/head'
 import { Box, Text, Flex } from '@vtex/brand-ui'
 import CopyButton from 'components/copy-button'
 import ResizeIcon from 'components/icons/resize-icon'
+import Auth from 'components/auth'
 import PageHeader from 'components/page-header'
 import type { Page } from 'utils/typings/types'
 import image from '../../../public/images/editor.png'
 
 import MarkdownRenderer from 'components/markdown-renderer'
+import { serialize } from 'next-mdx-remote/serialize'
+
+import remarkGFM from 'remark-gfm'
+import rehypeHighlight from 'rehype-highlight'
+import hljsCurl from 'highlightjs-curl'
+import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
+import remarkMermaid from 'utils/remark_plugins/mermaid'
+import escapeCurlyBraces from 'utils/escapeCurlyBraces'
+import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
+import replaceMagicBlocks from 'utils/replaceMagicBlocks'
+import remarkImages from 'utils/remark_plugins/client-image'
+
 import styles from 'styles/document-editor'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
@@ -76,28 +89,38 @@ Text Template: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ri
 >ℹ️ This is an Info callout.
 `
 
-async function renderMDXContent(
+async function serializing(
   document: string
 ): Promise<{ serialized: MDXRemoteSerializeResult | null; error: string }> {
+  let docbefore = document
+  const { result, error } = escapeCurlyBraces(docbefore, 'client')
+  if (error) return { serialized: null, error }
+  docbefore = result
+  docbefore = replaceHTMLBlocks(docbefore)
+  docbefore = await replaceMagicBlocks(docbefore)
+  let serialized, serializedError
   try {
-    const response = await fetch('/api/serialize', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+    serialized = await serialize(docbefore, {
+      parseFrontmatter: true,
+      mdxOptions: {
+        remarkPlugins: [
+          remarkGFM,
+          remarkImages,
+          remarkBlockquote,
+          remarkMermaid,
+        ],
+        rehypePlugins: [
+          [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
+        ],
+        format: 'mdx',
+        development: process.env.NODE_ENV === 'development',
       },
-      body: JSON.stringify({ document }),
     })
-
-    if (response.ok) {
-      const { serialized, error } = await response.json()
-      return { serialized, error }
-    } else {
-      return { serialized: null, error: '' }
-    }
+    serialized = JSON.parse(JSON.stringify(serialized))
   } catch (e) {
-    const serializedError = (e as Error).message
-    return { serialized: null, error: serializedError || '' }
+    serializedError = (e as Error).message
   }
+  return { serialized, error: serializedError || '' }
 }
 
 const MarkdownPreviewPage: Page<Props> = () => {
@@ -162,15 +185,14 @@ const MarkdownPreviewPage: Page<Props> = () => {
       if (!active) {
         return
       }
-      const { serialized, error } = await renderMDXContent(documentContent)
-
+      const { serialized, error } = await serializing(documentContent)
       setError(error)
       setSerializedDoc(serialized)
     }
   }, [documentContent])
 
   return (
-    <>
+    <Auth>
       <Head>
         <title>Markdown Preview</title>
         <meta name="robots" content="noindex" />
@@ -253,7 +275,7 @@ const MarkdownPreviewPage: Page<Props> = () => {
           </Box>
         </Flex>
       </Box>
-    </>
+    </Auth>
   )
 }
 
