@@ -11,7 +11,7 @@ import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import remarkMermaid from 'utils/remark_plugins/mermaid'
-
+import { remarkCodeHike } from '@code-hike/mdx'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
@@ -68,6 +68,7 @@ interface Props {
   }
   isListed: boolean
   branch: string
+  hideTOC: boolean
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -84,6 +85,7 @@ const DocumentationPage: NextPage<Props> = ({
   breadcumbList,
   branch,
   sectionSelected,
+  hideTOC,
 }) => {
   const headings: Item[] = headingList
   const hidden =
@@ -151,10 +153,12 @@ const DocumentationPage: NextPage<Props> = ({
               <SeeAlsoSection docs={seeAlsoData} />
             )}
           </Box>
-          <Box sx={styles.rightContainer}>
-            <Contributors contributors={contributors} />
-            <TableOfContents />
-          </Box>
+          {!hideTOC && (
+            <Box sx={styles.rightContainer}>
+              <Contributors contributors={contributors} />
+              <TableOfContents />
+            </Box>
+          )}
           <OnThisPage />
         </Flex>
       </APIGuideContextProvider>
@@ -231,6 +235,17 @@ export const getStaticProps: GetStaticProps = async ({
       parseFrontmatter: true,
       mdxOptions: {
         remarkPlugins: [
+          [
+            remarkCodeHike,
+            {
+              autoImport: false,
+              showCopyButton: true,
+              lineNumbers: true,
+              skipLanguages: ['mermaid'],
+              staticMediaQuery: 'not screen, (max-width: 850px)',
+              theme: 'poimandres',
+            },
+          ],
           remarkGFM,
           remarkImages,
           [getHeadings, { headingList }],
@@ -240,6 +255,7 @@ export const getStaticProps: GetStaticProps = async ({
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
+        useDynamicImport: true,
         format,
       },
     })
@@ -289,6 +305,8 @@ export const getStaticProps: GetStaticProps = async ({
         }
       })
     )
+
+    const hideTOC = serialized.frontmatter?.hideTOC === true
 
     const docsListSlug = jp.query(
       sidebarfallback,
@@ -362,6 +380,7 @@ export const getStaticProps: GetStaticProps = async ({
         isListed,
         breadcumbList,
         branch,
+        hideTOC,
       },
     }
   } catch (error) {

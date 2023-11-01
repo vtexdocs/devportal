@@ -115,6 +115,78 @@ hr {
   border-bottom: none;
 }
 
+.ch-codeblock {
+  box-shadow: none;
+}
+
+.ch-scrollycoding, .ch-spotlight-tabs {
+  gap: 0;
+}
+
+.ch-spotlight-tab:hover,
+.ch-scrollycoding-step-content:hover {
+  cursor: pointer;
+  border-top: 1px solid #e7e9ee;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+}
+
+.ch-spotlight-tabs > div,
+.ch-spotlight-tab,
+.ch-scrollycoding-step-content {
+  border-right: none;
+  border-radius: 0;
+  border-top: 1px solid #e7e9ee;
+  border-bottom: none;
+  border-left: 4px solid transparent;
+  padding: 18px 18px 10px;
+}
+
+.ch-scrollycoding-step-content {
+  margin-right: 14px;
+}
+
+.ch-spotlight-tab[data-selected],
+.ch-scrollycoding-step-content[data-selected] {
+  border-top: 1px solid #e7e9ee;
+  border-left: 4px solid #e7e9ee;
+  background-color: #fcfcfe;
+}
+
+.ch-spotlight h2,
+.ch-spotlight h3,
+.ch-spotlight h4,
+.ch-scrollycoding-step-content h2,
+.ch-scrollycoding-step-content h3,
+.ch-scrollycoding-step-content h4 {
+  margin: 0 !important;
+  color: #142032;
+}
+
+.ch-spotlight h2,
+.ch-scrollycoding-step-content h2 {
+  font-family: 'VTEX Trust Medium'  !important;
+  line-height: 1.3em !important;
+  font-size: 1.3em !important;
+}
+
+.ch-codegroup north{
+  border: 1px solid red
+}
+
+.ch-spotlight-sticker, .ch-scrollycoding-sticker{
+  width: 40% !important;
+}
+
+.ch-editor-frame > div{
+  height: 20px;
+}
+
+body {
+  --ch-scrollycoding-sticker-width: 40%;
+  --ch-scrollycoding-code-min-height: 80vh;
+}
+
 details{
   tab-size: 4;
   font-feature-settings: "rlig" 1,"calt" 1,"ss01" 1;

@@ -22,6 +22,7 @@
     "cypress": "cypress open"
   },
   "dependencies": {
+    "@code-hike/mdx": "^0.9.0",
     "@highlightjs/cdn-assets": "^11.7.0",
     "@lit-labs/nextjs": "^0.1.1",
     "@openreplay/tracker": "^5.0.1",

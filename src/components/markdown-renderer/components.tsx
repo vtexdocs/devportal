@@ -7,7 +7,7 @@ import { childrenToString, slugify } from 'utils/string-utils'
 import OverviewCard from 'components/overview-card'
 import WhatsNextCard from 'components/whats-next-card'
 import YoutubeFrame from 'components/youtube-frame'
-import CodeBlock from 'components/code-block'
+import { CH } from '@code-hike/mdx/components'
 import Steps from 'components/steps'
 
 import styles from './styles.module.css'
@@ -144,6 +144,7 @@ const MermaidDiagram = ({ node, ...props }: Component) => {
 }
 
 export default {
+  CH,
   OverviewCard,
   WhatsNextCard,
   YoutubeFrame,
@@ -213,7 +214,7 @@ export default {
     if (props.className && props.className === 'mermaid')
       return <MermaidDiagram {...props} />
 
-    return <CodeBlock {...props} />
+    return <pre className={styles.pre} {...props} />
   },
   h2: ({ node, ...props }: Component) => {
     const { activeItem, setActiveItem, goToPreviousItem } =

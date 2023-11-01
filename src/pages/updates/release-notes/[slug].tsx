@@ -36,6 +36,7 @@ import { ActionType, getAction } from 'components/last-updates-card/functions'
 
 import styles from 'styles/documentation-page'
 import { PreviewContext } from 'utils/contexts/preview'
+import { remarkCodeHike } from '@code-hike/mdx'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -179,10 +180,26 @@ export const getStaticProps: GetStaticProps = async ({
     let serialized = await serialize(documentationContent, {
       parseFrontmatter: true,
       mdxOptions: {
-        remarkPlugins: [remarkGFM, remarkImages, remarkBlockquote],
+        remarkPlugins: [
+          [
+            remarkCodeHike,
+            {
+              autoImport: false,
+              showCopyButton: true,
+              lineNumbers: true,
+              skipLanguages: ['mermaid'],
+              staticMediaQuery: 'not screen, (max-width: 850px)',
+              theme: 'poimandres',
+            },
+          ],
+          remarkGFM,
+          remarkImages,
+          remarkBlockquote,
+        ],
         rehypePlugins: [
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
         ],
+        useDynamicImport: true,
         format: 'mdx',
       },
     })

@@ -4,6 +4,8 @@ import { Box, Text } from '@vtex/brand-ui'
 import styles from './styles'
 import { childrenToString } from 'utils/string-utils'
 
+//CODE HIKE IS BEING USED INSTEAD OF THIS COMPONENT
+
 type Component = {
   node: object
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
