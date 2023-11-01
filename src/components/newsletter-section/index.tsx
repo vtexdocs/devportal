@@ -1,60 +1,100 @@
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import Image from 'next/image'
-import landingProduct from '../../../public/images/landing-product.png'
+import parallaxOne from '../../../public/images/parallax/parallax-one.png'
+import parallaxTwo from '../../../public/images/parallax/parallax-two.png'
+import parallaxThree from '../../../public/images/parallax/parallax-three.png'
 import styles from 'components/newsletter-section/styles'
 import imgStyle from './styles.module.css'
 
 import { getMessages } from 'utils/get-messages'
+import { useEffect, useRef, useState } from 'react'
 
 const NewsletterSection = () => {
   const messages = getMessages()
+  const imageContainer = useRef<HTMLDivElement>(null)
+  const [imageIntersect, setImageIntersect] = useState(false)
+  const [scrollAnimY, setScrollAnimY] = useState(0)
+  const [overImage, setOverImage] = useState(-1)
+
+  function onImageIntersection(entries: IntersectionObserverEntry[]) {
+    entries.forEach((entry) => {
+      setImageIntersect(entry.isIntersecting)
+    })
+  }
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(onImageIntersection, {
+      threshold: 0.5,
+    })
+
+    if (imageContainer.current) observer.observe(imageContainer.current)
+    return () => {
+      observer.disconnect()
+    }
+  }, [imageContainer])
+
+  useEffect(() => {
+    if (!imageIntersect || !imageContainer.current) {
+      return
+    }
+
+    const onScroll = () => {
+      setScrollAnimY(window.scrollY)
+    }
+
+    window.removeEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
+
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [imageIntersect])
 
   return (
     <Box sx={styles.section}>
       <Box sx={styles.newsletter}>
-        <Box sx={styles.newsletterContainer}>
-          <Flex sx={styles.newsletterBackground}>
-            <Flex sx={styles.newsletterBox}>
-              <Text sx={styles.newsletterTitle}>
-                {messages['landing_page_newsletter.title']}
-              </Text>
-              {/* <Text sx={styles.newsletterDescription}>
-                {messages['landing_page_newsletter.description']}
-              </Text>
-              <Flex sx={styles.newsletterInputContainer}>
-                <Box sx={styles.newsletterInputBox}>
-                  <Input
-                    sx={styles.newsletterInput}
-                    id="newsletter-mail"
-                    label="E-mail"
-                    type={'email'}
-                  ></Input>
-                  <Text sx={styles.policyText}>
-                    {messages['landing_page_newsletter.policyText']}
-                    <Link sx={styles.policyLink}>
-                      {messages['landing_page_newsletter.policyLink']}
-                    </Link>
-                  </Text>
-                </Box>
-                <Button sx={styles.newsletterButton} variant="primary">
-                  {messages['landing_page_newsletter.Button']}
-                </Button>
-              </Flex> */}
-            </Flex>
-          </Flex>
-          <div className={imgStyle.wrapper}>
-            <div className={imgStyle.imageGradient}></div>
+        <Flex sx={styles.newsletterContainer}>
+          <Box
+            ref={imageContainer}
+            sx={styles.imageContainer}
+            className={imgStyle.container}
+          >
             <Image
-              src={landingProduct}
-              alt=""
+              src={parallaxOne}
               style={{
-                maxWidth: '100%',
-                height: 'auto',
+                top: `calc(40% + ${scrollAnimY * 0.7}px)`,
+                scale: overImage === 1 ? '1.2' : 'none',
               }}
+              alt=""
+              onMouseOver={() => setOverImage(1)}
+              onMouseLeave={() => setOverImage(-1)}
             />
-          </div>
-        </Box>
+            <Image
+              src={parallaxTwo}
+              style={{
+                top: `calc(40% + ${scrollAnimY * 0.85}px)`,
+                scale: overImage === 2 ? '1.2' : 'none',
+              }}
+              alt=""
+              onMouseOver={() => setOverImage(2)}
+              onMouseLeave={() => setOverImage(-1)}
+            />
+            <Image
+              src={parallaxThree}
+              style={{
+                top: `calc(40% + ${scrollAnimY}px)`,
+                scale: overImage === 3 ? '1.2' : 'none',
+              }}
+              onMouseOver={() => setOverImage(3)}
+              onMouseLeave={() => setOverImage(-1)}
+              alt=""
+            />
+          </Box>
+          <Box sx={styles.titleGradient}>
+            <Text sx={styles.newsletterTitle}>
+              {messages['landing_page_newsletter.title']}
+            </Text>
+          </Box>
+        </Flex>
       </Box>
     </Box>
   )

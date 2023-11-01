@@ -6,38 +6,30 @@
       "categories": [
         {
           "name": "Getting Started",
-          "slug": "getting-started-category",
+          "slug": "getting-started",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
-              "name": "Introduction",
-              "slug": "getting-started",
+              "name": "Platform overview",
+              "slug": "getting-started-platform-overview",
               "origin": "",
               "type": "markdown",
-              "children": [
-                {
-                  "name": "Platform overview",
-                  "slug": "getting-started-platform-overview",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "List of REST APIs",
-                  "slug": "getting-started-list-of-rest-apis",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Making your first request",
-                  "slug": "making-your-first-request",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "children": []
+            },
+            {
+              "name": "List of REST APIs",
+              "slug": "getting-started-list-of-rest-apis",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Making your first request",
+              "slug": "making-your-first-request",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             },
             {
               "name": "Authentication",
@@ -46,8 +38,22 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Authentication overview",
-                  "slug": "authentication-overview",
+                  "name": "API authentication using application keys",
+                  "slug": "api-authentication-using-application-keys",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "App authentication using auth tokens",
+                  "slug": "app-authentication-using-auth-tokens",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "API authentication using user tokens",
+                  "slug": "api-authentication-using-user-tokens",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -406,6 +412,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Managing VTEX gift cards",
+                  "slug": "managing-vtex-gift-cards",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -489,6 +502,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Integrating a new payment provider on VTEX",
+                  "slug": "integrating-a-new-payment-provider-on-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Payment Provider Protocol",
                   "slug": "payments-integration-payment-provider-protocol",
                   "origin": "",
@@ -496,22 +516,8 @@
                   "children": []
                 },
                 {
-                  "name": "PCI - DSS Compliance",
-                  "slug": "payments-integration-pci-dss-compliance",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Methods",
-                  "slug": "payments-integration-payment-methods",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Purchase Flows",
-                  "slug": "payments-integration-purchase-flows",
+                  "name": "Payment Provider Protocol applied to payments with POS",
+                  "slug": "payments-integration-ppp-applied-to-pos",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -524,8 +530,78 @@
                   "children": []
                 },
                 {
+                  "name": "Payment Provider Framework",
+                  "slug": "payments-integration-payment-provider-framework",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Purchase Flows",
+                  "slug": "payments-integration-purchase-flows",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment App",
+                  "slug": "payments-integration-payment-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment Methods",
+                  "slug": "payments-integration-payment-methods",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Payment Provider Homologation",
                   "slug": "payments-integration-payment-provider-homologation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Antifraud Provider Protocol",
+                  "slug": "how-the-integration-protocol-between-vtex-and-antifraud-companies-works",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "PCI - DSS Compliance",
+                  "slug": "payments-integration-pci-dss-compliance",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Secure Proxy",
+                  "slug": "payments-integration-secure-proxy",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Split Payouts on Payment Provider Protocol",
+                  "slug": "split-payouts-on-payment-provider-protocol",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
+                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Custom Auto Capture Feature",
+                  "slug": "custom-auto-capture-feature",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -540,55 +616,6 @@
                 {
                   "name": "Installing Affirm Payment App",
                   "slug": "installing-affirm-payment-app-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment App",
-                  "slug": "payments-integration-payment-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Split Payouts on Payment Provider Protocol",
-                  "slug": "split-payouts-on-payment-provider-protocol",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Custom Auto Capture Feature",
-                  "slug": "custom-auto-capture-feature",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
-                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Secure Proxy",
-                  "slug": "payments-integration-secure-proxy",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Framework",
-                  "slug": "payments-integration-payment-provider-framework",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Protocol applied to payments with POS",
-                  "slug": "payments-integration-ppp-applied-to-pos",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1649,8 +1676,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "API Integration",
-                  "slug": "api-integration",
+                  "name": "Multilevel omnichannel inventory API integration",
+                  "slug": "multilevel-omnichannel-inventory-api-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2007,7 +2034,7 @@
       "slugPrefix": "docs/api-reference",
       "categories": [
         {
-          "name": "Antifraud Provider",
+          "name": "Antifraud Provider API",
           "slug": "antifraud-provider-protocol",
           "origin": "",
           "type": "openapi",
@@ -4685,7 +4712,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-",
+                  "endpoint": "/giftcards/-giftCardId-",
                   "children": []
                 },
                 {
@@ -4710,7 +4737,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "endpoint": "/giftcards/-giftCardId-/transactions",
                   "children": []
                 },
                 {
@@ -4719,7 +4746,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-",
                   "children": []
                 },
                 {
@@ -4728,7 +4755,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "endpoint": "/giftcards/-giftCardId-/transactions",
                   "children": []
                 },
                 {
@@ -4737,7 +4764,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-/authorization",
                   "children": []
                 },
                 {
@@ -4746,7 +4773,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-/cancellations",
                   "children": []
                 },
                 {
@@ -4755,7 +4782,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-/cancellations",
                   "children": []
                 },
                 {
@@ -4764,7 +4791,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-/settlements",
                   "children": []
                 },
                 {
@@ -4773,7 +4800,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/settlements",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-/settlements",
                   "children": []
                 }
               ]
@@ -4806,7 +4833,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-",
+                  "endpoint": "/giftcards/-giftCardId-",
                   "children": []
                 },
                 {
@@ -4831,7 +4858,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "endpoint": "/giftcards/-giftCardId-/transactions",
                   "children": []
                 },
                 {
@@ -4840,7 +4867,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-",
                   "children": []
                 },
                 {
@@ -4849,7 +4876,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions",
+                  "endpoint": "/giftcards/-giftCardId-/transactions",
                   "children": []
                 },
                 {
@@ -4858,7 +4885,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/authorization",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-/authorization",
                   "children": []
                 },
                 {
@@ -4867,7 +4894,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-/cancellations",
                   "children": []
                 },
                 {
@@ -4876,7 +4903,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-transactionID-/cancellations",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-transactionId-/cancellations",
                   "children": []
                 },
                 {
@@ -4885,7 +4912,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-tId-/settlements",
                   "children": []
                 },
                 {
@@ -4894,7 +4921,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcards/-giftCardID-/transactions/-tID-/settlements",
+                  "endpoint": "/giftcards/-giftCardId-/transactions/-tId-/settlements",
                   "children": []
                 }
               ]
@@ -4913,12 +4940,12 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Create/Update GiftCard Provider by ID",
+                  "name": "Create/Update GiftCard Provider by Id",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-",
                   "children": []
                 },
                 {
@@ -4945,7 +4972,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-",
                   "children": []
                 }
               ]
@@ -4961,7 +4988,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards",
                   "children": []
                 },
                 {
@@ -4970,7 +4997,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/_search",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/_search",
                   "children": []
                 },
                 {
@@ -4979,7 +5006,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-",
                   "children": []
                 },
                 {
@@ -4988,7 +5015,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions",
                   "children": []
                 },
                 {
@@ -4997,7 +5024,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-transactionID-",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-transactionId-",
                   "children": []
                 },
                 {
@@ -5006,7 +5033,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions",
                   "children": []
                 },
                 {
@@ -5015,7 +5042,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/authorization",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/authorization",
                   "children": []
                 },
                 {
@@ -5024,7 +5051,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/cancellations",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/cancellations",
                   "children": []
                 },
                 {
@@ -5033,7 +5060,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/cancellations",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/cancellations",
                   "children": []
                 },
                 {
@@ -5042,7 +5069,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/settlements",
                   "children": []
                 },
                 {
@@ -5051,7 +5078,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderID-/giftcards/-giftCardID-/transactions/-tId-/settlements",
+                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/settlements",
                   "children": []
                 }
               ]
@@ -5186,6 +5213,30 @@
           ]
         },
         {
+          "name": "Intelligent Search Events API - Headless",
+          "slug": "intelligent-search-events-api-headless",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Events",
+              "slug": "intelligent-search-events-api-headless-events",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Save Events",
+                  "slug": "intelligent-search-events-api-headless",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/event",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "License Manager API",
           "slug": "license-manager-api",
           "origin": "",
@@ -5201,6 +5252,15 @@
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/users/-userId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete User",
+                  "slug": "license-manager-api",
+                  "type": "openapi",
+                  "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/license-manager/users/-userId-",
                   "children": []
@@ -7020,7 +7080,7 @@
           ]
         },
         {
-          "name": "MasterData API - v1",
+          "name": "Master Data API - v1",
           "slug": "masterdata-api",
           "origin": "",
           "type": "openapi",
@@ -7534,31 +7594,6 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/orders/hook/config",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Export order report",
-              "slug": "orders-api-export-order-report",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Export order report with status 'Completed'",
-                  "slug": "orders-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/oms/pvt/admin/reports/completed",
-                  "children": []
-                },
-                {
-                  "name": "Export order report with status 'In Progress'",
-                  "slug": "orders-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/oms/pvt/admin/reports/inprogress",
                   "children": []
                 }
               ]
@@ -9973,6 +10008,33 @@
                   "origin": "",
                   "endpoint": "/api/vtexid/apptoken/login",
                   "children": []
+                },
+                {
+                  "name": "Check authenticated user",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/authenticated/user",
+                  "children": []
+                },
+                {
+                  "name": "Enable or disable repeated passwords",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/providers/setup/password/webstore/password",
+                  "children": []
+                },
+                {
+                  "name": "Expire user password",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/password/expire",
+                  "children": []
                 }
               ]
             }
@@ -9985,47 +10047,18 @@
       "slugPrefix": "docs/guides/",
       "categories": [
         {
-          "name": "Introduction",
-          "slug": "welcome",
+          "name": "What is VTEX IO",
+          "slug": "vtex-io-documentation-what-is-vtex-io",
           "origin": "",
           "type": "markdown",
-          "children": [
-            {
-              "name": "What is VTEX IO",
-              "slug": "vtex-io-documentation-what-is-vtex-io",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "What is a VTEX App",
-              "slug": "vtex-io-documentation-what-is-a-vtex-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Frequently asked questions",
-              "slug": "vtex-io-documentation-frequently-asked-questions",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Other resources",
-              "slug": "other-resources",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Contributing",
-              "slug": "contributing",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
+          "children": []
+        },
+        {
+          "name": "What is a VTEX App",
+          "slug": "vtex-io-documentation-what-is-a-vtex-app",
+          "origin": "",
+          "type": "markdown",
+          "children": []
         },
         {
           "name": "Getting Started",
@@ -10082,7 +10115,7 @@
                   "children": []
                 },
                 {
-                  "name": "Making your theme content public",
+                  "name": "7. Making your store theme public",
                   "slug": "vtex-io-documentation-making-your-theme-content-public",
                   "origin": "",
                   "type": "markdown",
@@ -10175,6 +10208,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "What is a Pixel app",
+                  "slug": "vtex-io-documentation-pixel-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "1. Setting up your development environment",
                   "slug": "vtex-io-documentation-2-basicsetuptodevelopinvtexio",
                   "origin": "",
@@ -10226,56 +10266,6 @@
               ]
             },
             {
-              "name": "Services",
-              "slug": "vtex-io-documentation-developing-service-configuration-apps",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Developing service configuration apps",
-                  "slug": "vtex-io-documentation-developing-service-configuration-apps",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Service path patterns",
-                  "slug": "service-path-patterns",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing Clients",
-                  "slug": "vtex-io-documentation-how-to-create-and-use-clients",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Connecting to VTEX Core Commerce APIs",
-                  "slug": "how-to-connect-with-vtex-core-commerce-apis-using-vtex-io",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Receiving Catalog Changes on VTEX IO",
-                  "slug": "how-to-receive-catalog-changes-on-vtex-io",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Receiving Order Notifications",
-                  "slug": "how-to-receive-order-notifications-on-vtex-io",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Master Data CRUD",
               "slug": "create-master-data-crud-app",
               "origin": "",
@@ -10285,8 +10275,8 @@
           ]
         },
         {
-          "name": "Concepts",
-          "slug": "concepts",
+          "name": "Manifest",
+          "slug": "vtex-io-documentation-manifest",
           "origin": "",
           "type": "markdown",
           "children": [
@@ -10305,27 +10295,6 @@
               "children": []
             },
             {
-              "name": "Clients",
-              "slug": "vtex-io-documentation-clients",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "CMS",
-              "slug": "vtex-io-documentation-cms",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Composition",
-              "slug": "vtex-io-documentation-composition",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Dependencies",
               "slug": "vtex-io-documentation-dependencies",
               "origin": "",
@@ -10333,142 +10302,8 @@
               "children": []
             },
             {
-              "name": "Edition App",
-              "slug": "vtex-io-documentation-edition-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Interfaces",
-              "slug": "vtex-io-documentation-interface",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Manifest",
-              "slug": "vtex-io-documentation-manifest",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Peer Dependencies",
               "slug": "vtex-io-documentation-peerdependencies",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Pixel app",
-              "slug": "vtex-io-documentation-pixel-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Policies",
-              "slug": "vtex-io-documentation-policies",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Properties",
-              "slug": "vtex-io-documentation-properties",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Roles",
-              "slug": "vtex-io-documentation-roles",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Routes",
-              "slug": "vtex-io-documentation-routes",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Service",
-              "slug": "vtex-io-documentation-service",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Site Editor",
-              "slug": "vtex-io-documentation-site-editor",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Slots",
-              "slug": "vtex-io-documentation-slots",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Sponsor Account",
-              "slug": "vtex-io-documentation-sponsor-account",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "VTEX IO CLI",
-              "slug": "vtex-io-documentation-toolbelt",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "VTEX Resource Name (VRN)",
-              "slug": "vtex-io-documentation-vrn",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Workspace",
-              "slug": "vtex-io-documentation-workspace",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "GraphQL APIs",
-          "slug": "graphql-apis",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Overview",
-              "slug": "graphql-ide",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Rewriter",
-              "slug": "rewriter",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Search",
-              "slug": "search-graphql",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -10526,63 +10361,105 @@
           ]
         },
         {
-          "name": "Guides",
-          "slug": "app-development-guides",
+          "name": "Local development",
+          "slug": "local-development-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Workspace",
+              "slug": "vtex-io-documentation-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Creating a Development workspace",
+              "slug": "vtex-io-documentation-creating-a-development-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Creating a Production workspace",
+              "slug": "vtex-io-documentation-creating-a-production-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Deprecating an app",
+              "slug": "vtex-io-documentation-deprecating-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Installing an app",
+              "slug": "vtex-io-documentation-installing-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Listing an account’s apps",
+              "slug": "vtex-io-documentation-listing-an-accounts-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Linking an app",
+              "slug": "vtex-io-documentation-linking-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Managing application logs",
+              "slug": "vtex-io-documentation-managing-application-logs",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Running IO scripts in non-IO VTEX stores",
+              "slug": "vtex-io-documentation-running-io-scripts-in-non-io-vtex-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Creating a Development workspace for a Legacy CMS store",
+              "slug": "vtex-io-documentation-creating-development-workspace-for-cms-legacy",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Services",
+          "slug": "vtex-io-documentation-service",
           "origin": "",
           "type": "markdown",
           "children": [
             {
-              "name": "A/B tests",
-              "slug": "ab-tests-category",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Running A/B tests",
-                  "slug": "vtex-io-documentation-running-native-ab-testing",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "A/B testing Legacy and IO store versions",
-                  "slug": "vtex-io-documentation-performing-ab-testing-between-legacy-and-io",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Edition Apps",
-              "slug": "managing-edition-apps",
+              "name": "Clients",
+              "slug": "vtex-io-documentation-clients",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Becoming a Sponsor Account",
-                  "slug": "vtex-io-documentation-becoming-a-sponsor-account",
+                  "name": "Developing custom Clients",
+                  "slug": "vtex-io-documentation-how-to-create-and-use-clients",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Configuring an Edition App",
-                  "slug": "vtex-io-documentation-configuring-an-edition-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Updating Edition apps",
-                  "slug": "vtex-io-documentation-updating-edition-apps",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Seller Portal Edition App",
-                  "slug": "seller-portal-edition-app",
+                  "name": "Using Clients in Node apps",
+                  "slug": "using-node-clients",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -10590,156 +10467,200 @@
               ]
             },
             {
-              "name": "Local development",
-              "slug": "local-development-category",
+              "name": "Routes",
+              "slug": "service-path-patterns",
               "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Creating a Development workspace",
-                  "slug": "vtex-io-documentation-creating-a-development-workspace",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Creating a Production workspace",
-                  "slug": "vtex-io-documentation-creating-a-production-workspace",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Deprecating an app",
-                  "slug": "vtex-io-documentation-deprecating-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Installing an app",
-                  "slug": "vtex-io-documentation-installing-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Listing an account’s apps",
-                  "slug": "vtex-io-documentation-listing-an-accounts-apps",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Linking an app",
-                  "slug": "vtex-io-documentation-linking-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing application logs",
-                  "slug": "vtex-io-documentation-managing-application-logs",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Running IO scripts in non-IO VTEX stores",
-                  "slug": "vtex-io-documentation-running-io-scripts-in-non-io-vtex-stores",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Creating a Development workspace for a Legacy CMS store",
-                  "slug": "vtex-io-documentation-creating-development-workspace-for-cms-legacy",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "type": "markdown",
+              "children": []
             },
             {
-              "name": "VTEX App Store",
-              "slug": "vtex-app-store",
+              "name": "Developing service configuration apps",
+              "slug": "vtex-io-documentation-developing-service-configuration-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Connecting to VTEX Core Commerce APIs",
+              "slug": "how-to-connect-with-vtex-core-commerce-apis-using-vtex-io",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Receiving Catalog Changes on VTEX IO",
+              "slug": "how-to-receive-catalog-changes-on-vtex-io",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Receiving Order Notifications",
+              "slug": "how-to-receive-order-notifications-on-vtex-io",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Policies and permissions",
+          "slug": "vtex-io-documentation-policies",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Roles",
+              "slug": "vtex-io-documentation-roles",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX Resource Name (VRN)",
+              "slug": "vtex-io-documentation-vrn",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "A/B tests",
+          "slug": "ab-tests",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Running A/B tests",
+              "slug": "vtex-io-documentation-running-native-ab-testing",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "A/B testing Legacy and IO store versions",
+              "slug": "vtex-io-documentation-performing-ab-testing-between-legacy-and-io",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Deployment",
+          "slug": "vtex-io-documentation-making-your-new-app-version-publicly-available",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Releasing a new app version",
+              "slug": "vtex-io-documentation-releasing-a-new-app-version",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Publishing an app",
+              "slug": "vtex-io-documentation-publishing-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Deploying the app's stable version",
+              "slug": "vtex-io-documentation-deploying-the-app-stable-version",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Promoting a workspace to Master",
+              "slug": "vtex-io-documentation-promoting-a-workspace-to-master",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "VTEX App Store",
+          "slug": "vtex-app-store",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Becoming a registered VTEX App Store developer",
+              "slug": "vtex-io-documentation-becoming-a-registered-vtex-app-store-developer",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Developing an app",
+              "slug": "vtex-io-documentation-developing-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Setting your app's billing model",
+              "slug": "vtex-io-documentation-setting-your-apps-billing-model",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Preparing your app for distribution",
+              "slug": "vtex-io-documentation-preparing-your-app-distribution",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Submitting your app to the VTEX App Store",
+              "slug": "vtex-io-documentation-submitting-your-app-in-the-vtex-app-store",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Using the Docs builder to publish app documentation",
+              "slug": "using-the-docs-builder-to-publish-app-documentation",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "App Store Guidelines",
+              "slug": "vtex-io-documentation-homologation-requirements-for-vtex-app-store",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Becoming a registered VTEX App Store developer",
-                  "slug": "vtex-io-documentation-becoming-a-registered-vtex-app-store-developer",
+                  "name": "App monetization",
+                  "slug": "vtex-io-documentation-business-guidelines-app-monetization",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Developing an app",
-                  "slug": "vtex-io-documentation-developing-an-app",
+                  "name": "Marketing guidelines",
+                  "slug": "vtex-io-documentation-business-guidelines-marketing-assets",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Setting your app's billing model",
-                  "slug": "vtex-io-documentation-setting-your-apps-billing-model",
+                  "name": "User Experience guidelines",
+                  "slug": "vtex-io-documentation-design-guidelines",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Preparing your app for distribution",
-                  "slug": "vtex-io-documentation-preparing-your-app-distribution",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Submitting your app to the VTEX App Store",
-                  "slug": "vtex-io-documentation-submitting-your-app-in-the-vtex-app-store",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using the Docs builder to publish app documentation",
-                  "slug": "using-the-docs-builder-to-publish-app-documentation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Making your new app version publicly available",
-              "slug": "vtex-io-documentation-making-your-new-app-version-publicly-available",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Releasing a new app version",
-                  "slug": "vtex-io-documentation-releasing-a-new-app-version",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Publishing an app",
-                  "slug": "vtex-io-documentation-publishing-an-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Deploying the app's stable version",
-                  "slug": "vtex-io-documentation-deploying-the-app-stable-version",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Promoting a workspace to Master",
-                  "slug": "vtex-io-documentation-promoting-a-workspace-to-master",
+                  "name": "Engineering guidelines",
+                  "slug": "vtex-io-documentation-engineering-guidelines",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -10749,35 +10670,49 @@
           ]
         },
         {
-          "name": "App Store Guidelines",
-          "slug": "vtex-io-documentation-homologation-requirements-for-vtex-app-store",
+          "name": "Edition Apps",
+          "slug": "managing-edition-apps",
           "origin": "",
           "type": "markdown",
           "children": [
             {
-              "name": "App monetization",
-              "slug": "vtex-io-documentation-business-guidelines-app-monetization",
+              "name": "Edition App",
+              "slug": "vtex-io-documentation-edition-app",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Marketing guidelines",
-              "slug": "vtex-io-documentation-business-guidelines-marketing-assets",
+              "name": "Sponsor Account",
+              "slug": "vtex-io-documentation-sponsor-account",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "User Experience guidelines",
-              "slug": "vtex-io-documentation-design-guidelines",
+              "name": "Becoming a Sponsor Account",
+              "slug": "vtex-io-documentation-becoming-a-sponsor-account",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Engineering best practices",
-              "slug": "vtex-io-documentation-engineering-guidelines",
+              "name": "Developing an Edition App",
+              "slug": "vtex-io-documentation-configuring-an-edition-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Updating Edition apps",
+              "slug": "vtex-io-documentation-updating-edition-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Seller Portal Edition App",
+              "slug": "seller-portal-edition-app",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -10789,22 +10724,21 @@
           "slug": "troubleshooting",
           "origin": "",
           "type": "markdown",
-          "children": [
-            {
-              "name": "Development",
-              "slug": "development",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Production",
-              "slug": "production",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
+          "children": []
+        },
+        {
+          "name": "Frequently asked questions",
+          "slug": "vtex-io-documentation-frequently-asked-questions",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        },
+        {
+          "name": "Other resources",
+          "slug": "other-resources",
+          "origin": "",
+          "type": "markdown",
+          "children": []
         }
       ]
     },
@@ -12307,6 +12241,63 @@
               "children": []
             },
             {
+              "name": "Concepts",
+              "slug": "concepts-storefront",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "CMS",
+                  "slug": "vtex-io-documentation-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Composition",
+                  "slug": "vtex-io-documentation-composition",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Interfaces",
+                  "slug": "vtex-io-documentation-interface",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Properties",
+                  "slug": "vtex-io-documentation-properties",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Routes",
+                  "slug": "vtex-io-documentation-routes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Site Editor",
+                  "slug": "vtex-io-documentation-site-editor",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Slots",
+                  "slug": "vtex-io-documentation-slots",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Guides",
               "slug": "storefront-development-category",
               "origin": "",
@@ -12635,9 +12626,9 @@
             },
             {
               "name": "Routing",
-              "slug": "vtex-io-documentation-associating-a-custom-page-to-a-content-type",
+              "slug": "store-framework-routing-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Associating a custom page to a content type",
@@ -12730,6 +12721,20 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Optimizing performance",
+                  "slug": "vtex-io-documentation-best-practices-for-optimizing-performance",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Rendering images",
+                  "slug": "vtex-io-documentation-best-practices-for-rendering-images",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -12806,35 +12811,21 @@
               ]
             },
             {
-              "name": "Migrating CMS settings after a theme major update",
-              "slug": "vtex-io-documentation-migrating-cms-settings-after-major-update",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Best practices",
               "slug": "best-practices-category",
               "origin": "",
               "type": "category",
               "children": [
                 {
+                  "name": "Migrating CMS settings after a Store Theme major update",
+                  "slug": "vtex-io-documentation-migrating-cms-settings-after-major-update",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Installing apps on live stores",
                   "slug": "vtex-io-documentation-installing-apps-in-live-stores-best-practices",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Optimizing performance",
-                  "slug": "vtex-io-documentation-best-practices-for-optimizing-performance",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Rendering images",
-                  "slug": "vtex-io-documentation-best-practices-for-rendering-images",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12940,6 +12931,64 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "October",
+              "slug": "october-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New referenceValue parameter in the Create Payment endpoint request body",
+                  "slug": "new-referencevalue-parameter-create-payment-endpoint",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore now supports Node.js 18",
+                  "slug": "2023-10-20-faststore-now-supports-node-18",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore v1: Fixed abandoned cart tracking",
+                  "slug": "2023-10-11-faststore-v1-abandoned-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "September",
+              "slug": "september-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Apps and payment connector homologation freeze in preparation for Black Friday 2023",
+                  "slug": "apps-and-payment-connector-homologation-freeze-in-preparation-for-black-friday-2023",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New Checkout settings for bot attack protection",
+                  "slug": "2023-09-12-new-checkout-settings-for-bot-attack-protection",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Headless CMS Plugin v1.0.10: Bug fix for sync error",
+                  "slug": "2023-09-06-fixed-headless-cms-plugin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "July",
               "slug": "july-2023",
@@ -13251,7 +13300,7 @@
                   "children": []
                 },
                 {
-                  "name": "Payment connector homologation freeze in preparation for Black Friday",
+                  "name": "Payment connector homologation freeze in preparation for Black Friday 2022",
                   "slug": "payment-connector-homologation-freeze-in-preparation-for-black-friday",
                   "origin": "",
                   "type": "markdown",

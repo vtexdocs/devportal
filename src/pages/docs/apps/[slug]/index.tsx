@@ -27,6 +27,7 @@ import Head from 'next/head'
 import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import { remarkCodeHike } from '@code-hike/mdx'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -234,6 +235,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         parseFrontmatter: true,
         mdxOptions: {
           remarkPlugins: [
+            [
+              remarkCodeHike,
+              {
+                autoImport: false,
+                showCopyButton: true,
+                lineNumbers: true,
+                skipLanguages: ['mermaid'],
+                staticMediaQuery: 'not screen, (max-width: 850px)',
+                theme: 'poimandres',
+              },
+            ],
             remarkGFM,
             remarkImages,
             [getHeadings, { headingList }],
@@ -242,6 +254,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           rehypePlugins: [
             [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
           ],
+          useDynamicImport: true,
           format,
         },
       })
