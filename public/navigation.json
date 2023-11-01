@@ -7080,7 +7080,7 @@
           ]
         },
         {
-          "name": "MasterData API - v1",
+          "name": "Master Data API - v1",
           "slug": "masterdata-api",
           "origin": "",
           "type": "openapi",
