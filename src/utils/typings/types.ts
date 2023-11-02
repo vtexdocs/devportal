@@ -54,8 +54,8 @@ export type CodeSamplesElement = {
   title: string
   description: string
   builders: string[]
-  linkTitle: string
-  linkTo: string
+  category: string
+  linkTo?: string
   repoLink: string
 }
 

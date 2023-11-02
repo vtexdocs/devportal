@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Box, Flex } from '@vtex/brand-ui'
 
-import { getMessages } from 'utils/get-messages'
 import { codeSamples } from 'utils/constants'
 
 import styles from 'styles/documentation-landing-page'
@@ -14,7 +13,6 @@ interface ICodeSamplesSection {
 }
 
 const CodeSamplesSection = ({ builders }: ICodeSamplesSection) => {
-  const messages = getMessages()
   const [filter, setFilter] = useState<SelectOption[]>([])
   const filteredCodeSamples = codeSamples.filter(
     (codeSampleItem) =>
@@ -24,7 +22,7 @@ const CodeSamplesSection = ({ builders }: ICodeSamplesSection) => {
   return (
     <Box sx={styles.contentContainer}>
       <Multiselect
-        title={messages['release_notes_multiselect_text']}
+        title={'All builders'}
         options={builders}
         onSelect={(selection) => {
           setFilter(selection)

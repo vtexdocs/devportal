@@ -182,6 +182,12 @@ hr {
   height: 20px;
 }
 
+@media screen and (max-width: 40em) {
+  .ch-editor-frame > div{
+    height: auto;
+  }
+}
+
 body {
   --ch-scrollycoding-sticker-width: 40%;
   --ch-scrollycoding-code-min-height: 80vh;

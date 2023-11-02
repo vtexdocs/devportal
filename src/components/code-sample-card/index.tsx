@@ -1,5 +1,4 @@
 import { Box, Flex, Text, IconCaret, Link } from '@vtex/brand-ui'
-import GithubIcon from 'components/icons/github-icon'
 
 import type { CodeSamplesElement } from 'utils/typings/types'
 
@@ -9,43 +8,52 @@ const CodeSampleCard = ({
   title,
   description,
   builders,
-  linkTitle,
   linkTo,
   repoLink,
+  category,
 }: CodeSamplesElement) => {
   return (
-    <Box sx={styles.container}>
-      <Flex sx={styles.flexLinks}>
+    <Flex sx={styles.container}>
+      <Box sx={styles.innerContent}>
+        {category && <Text sx={styles.category}>{category}</Text>}
         <Text sx={styles.title} className="title">
           {title}
         </Text>
-        <Link href={repoLink}>
-          <GithubIcon size={30} sx={styles.link} />
+        <Text sx={styles.description} className="description">
+          {description}
+        </Text>
+        <Box sx={styles.builderList}>
+          {builders.map((builder) => (
+            <Text sx={styles.builderListItem}>{builder}</Text>
+          ))}
+        </Box>
+        {linkTo && (
+          <Link href={linkTo}>
+            <Flex sx={styles.linkContainer}>
+              <Text sx={styles.link} className="link">
+                Learn more
+              </Text>
+            </Flex>
+          </Link>
+        )}
+      </Box>
+
+      <Flex sx={styles.ctaLink}>
+        <Link href={repoLink} target="_blank">
+          <Flex sx={styles.linkContainer}>
+            <Text sx={styles.ctaLinkText} className="ctaLinkText">
+              View GitHub repository
+            </Text>
+            <IconCaret
+              className="caret"
+              color="#A1A8B3"
+              direction="right"
+              size={20}
+            />
+          </Flex>
         </Link>
       </Flex>
-      <Text sx={styles.description} className="description">
-        {description}
-      </Text>
-
-      <Box sx={styles.builderList}>
-        {builders.map((builder) => (
-          <Text sx={styles.builderListItem}>{builder}</Text>
-        ))}
-      </Box>
-      <Link href={linkTo}>
-        <Flex sx={styles.linkContainer}>
-          <Text sx={styles.link} className="link">
-            {linkTitle}
-          </Text>
-          <IconCaret
-            className="caret"
-            color="#A1A8B3"
-            direction="right"
-            size={16}
-          />
-        </Flex>
-      </Link>
-    </Box>
+    </Flex>
   )
 }
 

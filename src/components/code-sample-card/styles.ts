@@ -1,8 +1,10 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
 const container: SxStyleProp = {
+  flexDirection: 'column',
+  justifyContent: 'space-between',
+  fontSize: '14px',
   mt: '16px',
-  padding: '16px',
   borderRadius: '4px',
   border: '1px solid #E7E9EE',
   width: ['100%', '49%'],
@@ -24,8 +26,21 @@ const container: SxStyleProp = {
   },
 }
 
+const innerContent: SxStyleProp = {
+  padding: '16px',
+}
+
+const category: SxStyleProp = {
+  textTransform: 'uppercase',
+  fontWeight: '600',
+  fontSize: '12px',
+  letterSpacing: '0.8px',
+  color: '#a1a8b3',
+  mb: '10px',
+}
+
 const title: SxStyleProp = {
-  mb: '8px',
+  mb: '6px',
   fontSize: '16px',
   fontWeight: '400',
   lineHeight: ['22px', '18px'],
@@ -33,9 +48,38 @@ const title: SxStyleProp = {
 }
 
 const description: SxStyleProp = {
-  fontSize: '14px',
+  fontSize: '1.05em',
   fontWeight: '400',
-  lineHeight: '20px',
+  color: 'muted.0',
+  minHeight: '42px',
+  maxHeight: '82px',
+}
+
+const ctaLink: SxStyleProp = {
+  padding: '8px 0 15px',
+  maxHeight: '56px',
+  justifyContent: 'center',
+  alignItems: 'center',
+  borderTop: '1px solid #E7E9EE',
+  borderBottomLeftRadius: '8px',
+  borderBottomRightRadius: '8px',
+  transition: 'all 0.3s ease-out',
+  '.ctaLinkText': {
+    transition: 'all 0.3s ease-out',
+  },
+  ':active, :hover': {
+    backgroundColor: '#F8F7FC',
+    transition: 'all 0.3s ease-out',
+    '.ctaLinkText': {
+      color: '#000711',
+      transition: 'all 0.3s ease-out',
+    },
+  },
+}
+
+const ctaLinkText: SxStyleProp = {
+  fontSize: '1.1em',
+  fontWeight: '400',
   color: 'muted.0',
 }
 
@@ -45,8 +89,8 @@ const linkContainer: SxStyleProp = {
 }
 
 const link: SxStyleProp = {
-  ...description,
   color: 'muted.1',
+  textDecoration: 'underline',
   ':hover': {
     color: '#e31d58 !important',
   },
@@ -60,25 +104,22 @@ const builderList: SxStyleProp = {
 }
 
 const builderListItem: SxStyleProp = {
-  ...description,
-  bg: '#e7e9ed',
+  bg: 'muted.3',
   px: '6px',
   borderRadius: '4px',
   display: 'inline',
 }
 
-const flexLinks: SxStyleProp = {
-  ...builderList,
-  justifyContent: 'space-between',
-}
-
 export default {
   container,
+  innerContent,
   title,
   description,
   linkContainer,
   link,
   builderList,
   builderListItem,
-  flexLinks,
+  ctaLink,
+  ctaLinkText,
+  category,
 }

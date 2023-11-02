@@ -14,11 +14,12 @@ const multiselect: SxStyleProp = {
 }
 
 const input: SxStyleProp = {
-  padding: '8px 12px 7px',
+  fontSize: '15px',
+  padding: '8px 12px 4px',
   background: '#F4F4F4',
   borderRadius: '4px',
   justifyContent: 'space-between',
-  width: '230px',
+  width: '150px',
   cursor: 'pointer',
 }
 
@@ -38,6 +39,9 @@ const dropdown: SxStyleProp = {
 
 const optionsContainer: SxStyleProp = {
   flexDirection: 'column',
+  overflowY: 'auto',
+  maxHeight: '35vh',
+  width: '256px',
 }
 
 const checkbox: SxStyleProp = {
@@ -48,12 +52,14 @@ const checkbox: SxStyleProp = {
 }
 
 const option: SxStyleProp = {
+  fontSize: '15px',
   columnGap: '8px',
   padding: '8px 0px',
 }
 
 const buttonsContainer: SxStyleProp = {
-  marginTop: '10px',
+  marginTop: '14px',
+  justifyContent: 'flex-end',
 }
 
 export default {
