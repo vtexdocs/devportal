@@ -5,7 +5,7 @@ import { Box, Button } from '@vtex/brand-ui'
 import { ToastContainer, toast } from 'react-toastify'
 const initialData = navigation.navbar
 import { injectStyle } from 'react-toastify/dist/inject-style'
-import { LibraryContext } from '@components-library/index.mjs'
+import { LibraryContext } from '@vtexdocs/components'
 function JsonEditorComponent() {
   useEffect(() => {
     injectStyle()

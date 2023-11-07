@@ -1,4 +1,4 @@
-import { FeedbackSection as FeedbackSectionComponent } from '@components-library/index.mjs'
+import { FeedbackSection as FeedbackSectionComponent } from '@vtexdocs/components'
 
 interface DocPath {
   slug?: string

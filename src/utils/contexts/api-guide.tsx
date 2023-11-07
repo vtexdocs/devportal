@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react'
 import { createContext, useState } from 'react'
 
-import type { Item } from '@components-library/index.mjs'
+import type { Item } from '@vtexdocs/components'
 
 type ActiveItem = {
   item: string

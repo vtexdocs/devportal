@@ -9,7 +9,7 @@ import styles from 'styles/documentation-page'
 import Header from 'components/header'
 import Footer from 'components/footer'
 
-import { Sidebar, LibraryContextProvider } from '@components-library/index.mjs'
+import { Sidebar, LibraryContextProvider } from '@vtexdocs/components'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
 import { documentationData, updatesData } from 'utils/constants'

@@ -20,7 +20,7 @@ import AnnouncementBar from 'components/announcement-bar'
 
 import styles from './styles'
 import { PreviewContext } from 'utils/contexts/preview'
-import { HamburgerMenu, SearchInput } from '@components-library/index.mjs'
+import { HamburgerMenu, SearchInput } from '@vtexdocs/components'
 
 interface Props {
   isEditor: boolean

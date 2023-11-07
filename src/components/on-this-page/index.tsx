@@ -7,7 +7,7 @@ import { APIGuideContext } from 'utils/contexts/api-guide'
 import MenuIcon from 'components/icons/menu-icon'
 import CloseIcon from 'components/icons/close-icon'
 
-import { TableOfContents } from '@components-library/index.mjs'
+import { TableOfContents } from '@vtexdocs/components'
 
 import { getMessages } from 'utils/get-messages'
 

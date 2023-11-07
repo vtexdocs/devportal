@@ -18,13 +18,13 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
-import type { Item } from '@components-library/index.mjs'
+import type { Item } from '@vtexdocs/components'
 import Contributors from 'components/contributors'
-import { MarkdownRenderer } from '@components-library/index.mjs'
+import { MarkdownRenderer } from '@vtexdocs/components'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
-import { TableOfContents } from '@components-library/index.mjs'
+import { TableOfContents } from '@vtexdocs/components'
 import Breadcrumb from 'components/breadcrumb'
 
 import getHeadings from 'utils/getHeadings'
@@ -43,7 +43,7 @@ import getFileContributors, {
 
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
-import { LibraryContext } from '@components-library/index.mjs'
+import { LibraryContext } from '@vtexdocs/components'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
