@@ -222,7 +222,7 @@ export const codeSamples: CodeSamplesElement[] = [
   {
     title: 'Store Theme',
     description:
-      'Jumpstart the development of Store Themes with this pre-defined template.',
+      'Jumpstart the development of Store Themes with this predefined template.',
     builders: ['styles', 'store', 'sitemap'],
     linkTo: 'https://developers.vtex.com/docs/guides/getting-started-3',
     category: 'Store Framework',
