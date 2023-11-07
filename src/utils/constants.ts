@@ -312,7 +312,7 @@ export const codeSamples: CodeSamplesElement[] = [
   {
     title: 'Search Segment resolver',
     description:
-      'Segment the search result page of your store to present custom search results for each of your shoppers.',
+      'Segment the search result page of your store to present custom search results for each shopper.',
     builders: ['node'],
     linkTo:
       'https://developers.vtex.com/docs/guides/vtex-io-documentation-segmenting-the-search-result',
