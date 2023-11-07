@@ -231,7 +231,7 @@ export const codeSamples: CodeSamplesElement[] = [
   {
     title: 'Minimum Store Theme',
     description:
-      'Jumpstart the development of Store Themes with this minimum Store Theme.',
+      'Jumpstart the development of Store Themes with this minimum template.',
     builders: ['styles', 'store'],
     linkTo: 'https://learn.vtex.com/docs/course-basic-blocks-lang-en',
     category: 'Store Framework',
