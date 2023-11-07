@@ -374,7 +374,7 @@ export const codeSamples: CodeSamplesElement[] = [
   {
     title: 'Buyer Organization Supplier app',
     description:
-      'Create an app to save custom data from a Buyer Organization to the Profile System.',
+      'Create an app to save custom data from a Buyer Organization to Master Data.',
     builders: ['node'],
     repoLink: 'https://github.com/vtex-apps/buyer-org-supplier',
     category: 'B2B',
