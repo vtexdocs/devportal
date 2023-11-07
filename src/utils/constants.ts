@@ -340,7 +340,7 @@ export const codeSamples: CodeSamplesElement[] = [
   },
   {
     title: 'Orders Feed',
-    description: 'Develop an app to handle status updates from OMS Feed.',
+    description: 'Develop an app to handle status updates from Orders Feed.',
     builders: ['node'],
     linkTo:
       'https://developers.vtex.com/docs/guides/how-to-receive-order-notifications-on-vtex-io',
