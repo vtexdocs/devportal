@@ -28,6 +28,12 @@ to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/wa
 
 [[redirects]]
 force = true
+from = "/reference/logistics-api-overview"
+status = 308
+to = "/docs/api-reference/logistics-api"
+
+[[redirects]]
+force = true
 from = "/docs/guides/order-canceling-improvements-beta"
 status = 308
 to = "/docs/guides/order-canceling-improvements"
