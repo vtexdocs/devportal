@@ -9,7 +9,7 @@
   "scripts": {
     "predev": "./getPEM.sh",
     "dev": "next dev",
-    "prebuild": "./getPEM.sh && node src/utils/get-component-lib.mjs",
+    "prebuild": "./getPEM.sh",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
