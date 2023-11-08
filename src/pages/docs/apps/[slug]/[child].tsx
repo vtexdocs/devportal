@@ -44,7 +44,7 @@ interface IParams extends ParsedUrlQuery {
 interface Props {
   title: string
   vendor: string
-  latestMajor: string
+  latestVersion: string
   currentVersion: string
   sectionSelected: string
   breadcumbList: { slug: string; name: string; type: string }[]
@@ -64,7 +64,7 @@ const AppChildPage: NextPage<Props> = ({
   serialized,
   headingList,
   vendor,
-  latestMajor,
+  latestVersion,
   currentVersion,
   breadcumbList,
   title,
@@ -124,7 +124,7 @@ const AppChildPage: NextPage<Props> = ({
                       </Flex>
                     )}
                     <Text>Version: {currentVersion}</Text>
-                    <Text>Latest version: {latestMajor}.x</Text>
+                    <Text>Latest version: {latestVersion}</Text>
                   </Flex>
                 </header>
                 <article>
@@ -170,6 +170,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { slug, child } = params as IParams
   const data = await getChildDocApp(slug, child)
   const logger = getLogger('Apps Children Docs')
+  const app = slug as string
   const appName = slug.split('@')[0]
   if (!data.markdown) {
     return {
@@ -181,13 +182,28 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const format: 'md' | 'mdx' = 'md'
     const sectionSelected = 'VTEX IO Apps'
     const title = data.title
-    const markdown = data.markdown
+    let markdown = data.markdown
     const vendor = data.vendor
     const appId = data.appId
-    const latestMajor = data.latestMajor
+    const latestVersion = data.latestVersion
     const currentVersion = data.currentVersion
+    const specifiedVersion = app.split('@')[1]
+      ? app.split('@')[1]
+      : currentVersion
     const headingList: Item[] = []
     if (markdown) {
+      {
+        specifiedVersion !== currentVersion
+          ? (markdown =
+              `>⚠️ The specified version of the app (**${specifiedVersion}**) does not exist. This page is about the latest stable version, which is **${currentVersion}**. \n` +
+              markdown)
+          : !specifiedVersion.includes('-') &&
+            specifiedVersion !== latestVersion
+          ? (markdown =
+              `>⚠️ This page is about version **${currentVersion}** of the app, which is not the most recent version. The latest stable version is **${latestVersion}**. \n` +
+              markdown)
+          : ''
+      }
       let serialized = await serialize(markdown.split('## Contributors')[0], {
         parseFrontmatter: true,
         mdxOptions: {
@@ -271,7 +287,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         props: {
           title,
           vendor,
-          latestMajor,
+          latestVersion,
           currentVersion,
           sectionSelected,
           breadcumbList,
