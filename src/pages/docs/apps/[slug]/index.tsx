@@ -237,12 +237,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       {
         specifiedVersion !== currentVersion
           ? (markdown =
-              `>⚠️ The specified version does not exist. You are seeing ${currentVersion} \n` +
+              `>⚠️ The specified version of the app (**${specifiedVersion}**) does not exist. This page is about the latest stable version, which is **${currentVersion}**. \n` +
               markdown)
           : !specifiedVersion.includes('-') &&
             specifiedVersion !== latestVersion
           ? (markdown =
-              `>⚠️ You are seeing ${currentVersion}. The latest version is ${latestVersion} \n` +
+              `>⚠️ This page is about version **${currentVersion}** of the app, which is not the most recent version. The latest stable version is **${latestVersion}**. \n` +
               markdown)
           : ''
       }
