@@ -4,7 +4,7 @@ export default async function getAppReadme(appName: string) {
     title: string
     vendor: string
     markdown: string
-    latestMajor: string
+    latestVersion: string
     currentVersion: string
     isBeta: boolean
     childrenDocs: string[]
@@ -12,7 +12,7 @@ export default async function getAppReadme(appName: string) {
     title: '',
     vendor: '',
     markdown: '',
-    latestMajor: '',
+    latestVersion: '',
     currentVersion: '',
     isBeta: false,
     childrenDocs: [''],
@@ -30,7 +30,7 @@ export default async function getAppReadme(appName: string) {
           title: result.title,
           vendor: result.vendor,
           markdown: result.markdownWithoutHeadline,
-          latestMajor: result.latestMajor,
+          latestVersion: result.latestVersion,
           currentVersion: result.currentVersion,
           isBeta: result.isBeta,
           childrenDocs: result?.childrenDocs ? result?.childrenDocs : [],
