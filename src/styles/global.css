@@ -178,8 +178,14 @@ hr {
   width: 40% !important;
 }
 
-.ch-editor-frame > div{
+.ch-scrollycoding .ch-editor-frame > div{
   height: 20px;
+}
+
+@media screen and (max-width: 40em) {
+  .ch-scrollycoding .ch-editor-frame > div{
+    height: auto;
+  }
 }
 
 body {

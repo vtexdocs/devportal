@@ -10061,6 +10061,13 @@
           "children": []
         },
         {
+          "name": "Code samples and templates",
+          "slug": "code-samples",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        },
+        {
           "name": "Getting Started",
           "slug": "vtex-io-getting-started",
           "origin": "",
