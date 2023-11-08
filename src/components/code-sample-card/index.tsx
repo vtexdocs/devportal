@@ -27,32 +27,30 @@ const CodeSampleCard = ({
             <Text sx={styles.builderListItem}>{builder}</Text>
           ))}
         </Box>
-        {linkTo && (
-          <Link href={linkTo}>
-            <Flex sx={styles.linkContainer}>
-              <Text sx={styles.link} className="link">
-                Learn more
-              </Text>
-            </Flex>
-          </Link>
-        )}
+        <Link href={repoLink} target="_blank">
+          <Text sx={styles.link} className="link">
+            View GitHub repository
+          </Text>
+        </Link>
       </Box>
 
-      <Flex sx={styles.ctaLink}>
-        <Link href={repoLink} target="_blank">
-          <Flex sx={styles.linkContainer}>
-            <Text sx={styles.ctaLinkText} className="ctaLinkText">
-              View GitHub repository
-            </Text>
-            <IconCaret
-              className="caret"
-              color="#A1A8B3"
-              direction="right"
-              size={20}
-            />
-          </Flex>
-        </Link>
-      </Flex>
+      {linkTo && (
+        <Flex sx={styles.ctaLink}>
+          <Link href={linkTo}>
+            <Flex sx={styles.linkContainer}>
+              <Text sx={styles.ctaLinkText} className="ctaLinkText">
+                View documentation
+              </Text>
+              <IconCaret
+                className="caret"
+                color="#A1A8B3"
+                direction="right"
+                size={20}
+              />
+            </Flex>
+          </Link>
+        </Flex>
+      )}
     </Flex>
   )
 }

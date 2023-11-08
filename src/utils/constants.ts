@@ -277,7 +277,7 @@ export const codeSamples: CodeSamplesElement[] = [
   {
     title: 'Payment app',
     description:
-      "Develop your own Payment app to provide an additional verification step in your store's checkout process.",
+      "Provide an additional verification step in your store's checkout process.",
     builders: ['react', 'pages', 'messages'],
     linkTo:
       'https://developers.vtex.com/docs/guides/payments-integration-payment-app',
@@ -312,7 +312,7 @@ export const codeSamples: CodeSamplesElement[] = [
   {
     title: 'Search Segment resolver',
     description:
-      'Segment the search result page of your store to present custom search results for each shopper.',
+      'Segment the search result page to present custom results for each shopper.',
     builders: ['node'],
     linkTo:
       'https://developers.vtex.com/docs/guides/vtex-io-documentation-segmenting-the-search-result',
@@ -340,7 +340,7 @@ export const codeSamples: CodeSamplesElement[] = [
   },
   {
     title: 'Orders Feed',
-    description: 'Develop an app to handle status updates from Orders Feed.',
+    description: 'Handle status updates from the Orders Feed.',
     builders: ['node'],
     linkTo:
       'https://developers.vtex.com/docs/guides/how-to-receive-order-notifications-on-vtex-io',
@@ -372,19 +372,18 @@ export const codeSamples: CodeSamplesElement[] = [
     category: 'Admin',
   },
   {
-    title: 'Buyer Organization Supplier app',
-    description:
-      'Create an app to save custom data from a Buyer Organization to Master Data.',
-    builders: ['node'],
-    repoLink: 'https://github.com/vtex-apps/buyer-org-supplier',
-    category: 'B2B',
-  },
-  {
     title: 'Checkout UI Settings',
     description: "Customize the user interface of your store's Checkout.",
     builders: ['checkout-ui-custom'],
     repoLink: 'https://github.com/vtex-apps/checkout-ui-settings',
     category: 'Checkout',
+  },
+  {
+    title: 'Buyer Organization Supplier app',
+    description: 'Save custom data from a Buyer Organization to Master Data.',
+    builders: ['node'],
+    repoLink: 'https://github.com/vtex-apps/buyer-org-supplier',
+    category: 'B2B',
   },
   // {
   //   title: 'Delivery Theme',

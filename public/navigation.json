@@ -4945,7 +4945,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-",
                   "children": []
                 },
                 {
@@ -4954,7 +4954,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-",
                   "children": []
                 },
                 {
@@ -4963,7 +4963,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders",
+                  "endpoint": "/api/giftcardproviders",
                   "children": []
                 },
                 {
@@ -4972,7 +4972,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-",
                   "children": []
                 }
               ]
@@ -4988,7 +4988,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards",
                   "children": []
                 },
                 {
@@ -4997,7 +4997,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/_search",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/_search",
                   "children": []
                 },
                 {
@@ -5006,7 +5006,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-",
                   "children": []
                 },
                 {
@@ -5015,7 +5015,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions",
                   "children": []
                 },
                 {
@@ -5024,7 +5024,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-transactionId-",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-transactionId-",
                   "children": []
                 },
                 {
@@ -5033,7 +5033,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions",
                   "children": []
                 },
                 {
@@ -5042,7 +5042,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/authorization",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/authorization",
                   "children": []
                 },
                 {
@@ -5051,7 +5051,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/cancellations",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/cancellations",
                   "children": []
                 },
                 {
@@ -5060,7 +5060,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/cancellations",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/cancellations",
                   "children": []
                 },
                 {
@@ -5069,7 +5069,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/settlements",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/settlements",
                   "children": []
                 },
                 {
@@ -5078,7 +5078,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/settlements",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-/transactions/-tId-/settlements",
                   "children": []
                 }
               ]
@@ -10056,6 +10056,13 @@
         {
           "name": "What is a VTEX App",
           "slug": "vtex-io-documentation-what-is-a-vtex-app",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        },
+        {
+          "name": "Code samples and templates",
+          "slug": "code-samples",
           "origin": "",
           "type": "markdown",
           "children": []

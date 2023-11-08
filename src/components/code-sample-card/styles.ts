@@ -42,8 +42,8 @@ const category: SxStyleProp = {
 const title: SxStyleProp = {
   mb: '6px',
   fontSize: '16px',
-  fontWeight: '400',
-  lineHeight: ['22px', '18px'],
+  fontWeight: 'bold',
+  lineHeight: '22px',
   color: 'muted.0',
 }
 
@@ -51,12 +51,11 @@ const description: SxStyleProp = {
   fontSize: '1.05em',
   fontWeight: '400',
   color: 'muted.0',
-  minHeight: '42px',
   maxHeight: '82px',
 }
 
 const ctaLink: SxStyleProp = {
-  padding: '8px 0 15px',
+  padding: '12px 0',
   maxHeight: '56px',
   justifyContent: 'center',
   alignItems: 'center',
@@ -84,11 +83,11 @@ const ctaLinkText: SxStyleProp = {
 }
 
 const linkContainer: SxStyleProp = {
-  mt: '8px',
   alignItems: 'center',
 }
 
 const link: SxStyleProp = {
+  mt: '10px',
   color: 'muted.1',
   textDecoration: 'underline',
   ':hover': {
@@ -115,8 +114,8 @@ export default {
   innerContent,
   title,
   description,
-  linkContainer,
   link,
+  linkContainer,
   builderList,
   builderListItem,
   ctaLink,
