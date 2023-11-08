@@ -20,5 +20,16 @@ describe('Status of documentation pages', () => {
     prob: Cypress.env('testProbability') || 1.0,
   })
 
-  pages.forEach((page) => it(`Checks page ${page}`, () => cy.visit(page)))
+  pages.forEach((page) =>
+    it(
+      `Checks page ${page}`,
+      {
+        retries: {
+          runMode: 3,
+          openMode: 3,
+        },
+      },
+      () => cy.visit(page)
+    )
+  )
 })

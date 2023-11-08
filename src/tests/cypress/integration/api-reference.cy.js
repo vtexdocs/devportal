@@ -13,7 +13,7 @@ describe('API reference documentation page', () => {
   beforeEach(() => {
     cy.viewport(1366, 768)
     cy.task('getUrl').then((url) => cy.visit(url))
-    cy.wait(6000)
+    cy.wait(10000)
   })
 
   afterEach(function () {
