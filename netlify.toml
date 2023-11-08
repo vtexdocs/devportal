@@ -28,6 +28,18 @@ to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/wa
 
 [[redirects]]
 force = true
+from = "/reference/logistics-api-overview"
+status = 308
+to = "/docs/api-reference/logistics-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/order-canceling-improvements-beta"
+status = 308
+to = "/docs/guides/order-canceling-improvements"
+
+[[redirects]]
+force = true
 from = "/docs/guides/lead-time-beta"
 status = 308
 to = "https://help.vtex.com/en/tutorial/lead_time-shipping-time-at-sku-level--16yv5Mkj6bTyWR1hCN2f4B"
