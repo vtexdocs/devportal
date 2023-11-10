@@ -51,6 +51,6 @@ export const getParents = (
       parentsArray.push(flattenedSidebar[`${el}${desiredData}`])
     }
   })
-  console.log(parentsArray)
+
   return parentsArray
 }

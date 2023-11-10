@@ -51,7 +51,7 @@ interface Props {
   branch: string
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
+const NewsPage: NextPage<Props> = ({ serialized, branch }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
@@ -193,7 +193,7 @@ export const getStaticProps: GetStaticProps = async ({
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
-    const sectionSelected = 'Announcements'
+    const sectionSelected = 'News'
     const flattenedSidebar = flattenJSON(sidebarfallback)
     const keyPath = getKeyByValue(flattenedSidebar, slug)
     const parentsArray: string[] = []
@@ -220,4 +220,4 @@ export const getStaticProps: GetStaticProps = async ({
   }
 }
 
-export default DocumentationPage
+export default NewsPage
