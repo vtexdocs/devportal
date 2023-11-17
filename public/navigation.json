@@ -12939,6 +12939,21 @@
           "type": "category",
           "children": [
             {
+              "name": "November",
+              "slug": "november-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Temporary freeze on automatic app distribution in preparation for Black Friday 2023",
+                  "slug": "2023-11-17-temporary-freeze-on-automatic-app-distribution-in-preparation-for-black-friday-2023",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "October",
               "slug": "october-2023",
               "origin": "",
