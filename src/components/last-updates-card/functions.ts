@@ -7,6 +7,7 @@ import FixedIcon from 'components/icons/fixed-icon'
 import ImprovedIcon from 'components/icons/improved-icon'
 import ReleaseNotesIcon from 'components/icons/release-notes-icon'
 import RemovedIcon from 'components/icons/removed-icon'
+import InfoIcon from 'components/icons/info-icon'
 
 export type ActionType =
   | 'added'
@@ -14,6 +15,7 @@ export type ActionType =
   | 'fixed'
   | 'improved'
   | 'removed'
+  | 'info'
 
 export type UpdateType = 'documentation-updates' | 'release-notes'
 
@@ -55,6 +57,11 @@ const actions: Action[] = [
     type: 'removed',
     title: 'Removed',
     Icon: RemovedIcon,
+  },
+  {
+    type: 'info',
+    title: 'Information',
+    Icon: InfoIcon,
   },
 ]
 
