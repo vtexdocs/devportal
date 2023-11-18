@@ -36,7 +36,7 @@ export const getDate = (currentUpdate: string, dataGroup: boolean) => {
   const day = current.getDate()
 
   return (
-    <Text sx={dataGroup ? styles.releaseDate : styles.releaseCreationDay}>
+    <Text sx={dataGroup ? styles.releaseMonth : styles.releaseDate}>
       {month[monthIndex] + ', ' + (dataGroup ? year : day)}
     </Text>
   )
