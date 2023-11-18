@@ -10,7 +10,7 @@ const lastReleaseNote: CardProps = {
     type: 'info',
     description:
       'Temporary freeze on automatic app distribution in preparation for Black Friday 2023',
-    date: new Date('10/20/2023'),
+    date: new Date('11/17/2023'),
   },
   updateType: 'release-notes',
 }

@@ -19,7 +19,7 @@ const input: SxStyleProp = {
   background: '#F4F4F4',
   borderRadius: '4px',
   justifyContent: 'space-between',
-  width: '210px',
+  width: '240px',
   cursor: 'pointer',
 }
 
