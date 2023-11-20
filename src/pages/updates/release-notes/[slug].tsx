@@ -17,8 +17,8 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
-import type { Item } from 'components/table-of-contents'
-import MarkdownRenderer from 'components/markdown-renderer'
+import type { Item } from '@vtexdocs/components'
+import { MarkdownRenderer } from '@vtexdocs/components'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 

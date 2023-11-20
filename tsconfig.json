@@ -31,7 +31,10 @@
       "es2018.promise",
       "esnext.asynciterable"
     ],
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@components-library/*": ["../public/components/*"]
+    }
   },
   "typeRoots": ["./typings", "./node_modules/@types"],
   "include": [

@@ -17,15 +17,14 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
-import { SidebarContext } from 'utils/contexts/sidebar'
 
-import type { Item } from 'components/table-of-contents'
+import type { Item } from '@vtexdocs/components'
 import Contributors from 'components/contributors'
-import MarkdownRenderer from 'components/markdown-renderer'
+import { MarkdownRenderer } from '@vtexdocs/components'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
-import TableOfContents from 'components/table-of-contents'
+import { TableOfContents } from '@vtexdocs/components'
 import Breadcrumb from 'components/breadcrumb'
 
 import getHeadings from 'utils/getHeadings'
@@ -44,6 +43,7 @@ import getFileContributors, {
 
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import { LibraryContext } from '@vtexdocs/components'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -91,7 +91,7 @@ const DocumentationPage: NextPage<Props> = ({
   const hidden =
     sectionSelected === '' || serialized.frontmatter.hidden === true
   const { setBranchPreview } = useContext(PreviewContext)
-  const { setActiveSidebarElement } = useContext(SidebarContext)
+  const { setActiveSidebarElement } = useContext(LibraryContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
     setBranchPreview(branch)
@@ -156,7 +156,7 @@ const DocumentationPage: NextPage<Props> = ({
           {!hideTOC && (
             <Box sx={styles.rightContainer}>
               <Contributors contributors={contributors} />
-              <TableOfContents />
+              <TableOfContents headingList={headingList} />
             </Box>
           )}
           <OnThisPage />
