@@ -8,7 +8,7 @@ import PageHeader from 'components/page-header'
 import type { Page } from 'utils/typings/types'
 import image from '../../../public/images/editor.png'
 
-import MarkdownRenderer from 'components/markdown-renderer'
+import { MarkdownRenderer } from '@vtexdocs/components'
 import { serialize } from 'next-mdx-remote/serialize'
 
 import remarkGFM from 'remark-gfm'

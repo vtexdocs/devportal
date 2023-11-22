@@ -2,55 +2,50 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const outerContainer: SxStyleProp = {
   mx: 'auto',
-  mb: '64px',
+  my: '64px',
   width: ['324px', '544px', '544px', '544px', '720px', '720px', '1400px'],
 }
 
-const innerContainer: SxStyleProp = {
-  width: '100%',
-}
-
 const sectionTitle: SxStyleProp = {
-  fontSize: ['20px', '28px'],
-  lineHeight: ['30px', '38px'],
+  fontSize: '1.75rem',
+  lineHeight: '2.375rem',
   color: '#4A4A4A',
-  pt: '64px',
-  mb: '8px',
+  mb: '0.5rem',
 }
 
 const sectionSubtitle: SxStyleProp = {
   color: '#A1A8B3',
-  fontSize: ['12px', '16px'],
-  lineHeight: ['16px', '18px'],
-  mb: '24px',
+  fontSize: '1.125rem',
+  lineHeight: '1.125rem',
+  pb: '1.5rem',
 }
 
 const sectionDivider: SxStyleProp = {
   hr: {
     border: '1px solid #E7E9EE',
     borderTop: 'none',
-    mb: '32px',
+    mb: '1.5remm',
   },
 }
 
-const releaseDate: SxStyleProp = {
-  fontSize: ['14px', '18px'],
-  lineHeight: ['20px', '24px'],
-  mb: ['16px', '24px'],
+const releaseMonth: SxStyleProp = {
+  fontSize: '1.125rem',
+  lineHeight: '1.5rem',
+  mb: '1.5rem',
 }
 
-const releaseCreationDay: SxStyleProp = {
+const releaseDate: SxStyleProp = {
   color: 'muted.1',
-  fontSize: ['12px', '16px'],
-  lineHeight: ['16px', '22px'],
+  fontSize: '1rem',
+  lineHeight: '1.5rem',
+  mt: '0.25rem',
 }
 
 export default {
   outerContainer,
-  innerContainer,
   sectionTitle,
   sectionSubtitle,
   sectionDivider,
+  releaseMonth,
   releaseDate,
-  releaseCreationDay,
 }

@@ -4,7 +4,6 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 import JsonEditorComponent from 'components/JsonEditorComponent'
 import { Fragment } from 'react'
 import styles from 'styles/documentation-landing-page'
-import { SidebarContext } from 'utils/contexts/sidebar'
 import { GetServerSideProps } from 'next'
 import type { Page } from 'utils/typings/types'
 
@@ -12,6 +11,7 @@ import Auth from 'components/auth'
 import PageHeader from 'components/page-header'
 import image from '../../../public/images/editor.png'
 import Link from 'next/link'
+import { LibraryContext } from '@vtexdocs/components'
 
 interface Props {
   file?: string
@@ -26,7 +26,7 @@ const AdminPage: Page<Props> = ({ file, fileContent, isPRPreview }) => {
   let headerTitle = 'Sidebar Editor'
 
   if (isPRPreview) {
-    const { setSidebarDataMaster } = useContext(SidebarContext)
+    const { setSidebarDataMaster } = useContext(LibraryContext)
     setSidebarDataMaster(fileContent)
     headerDescription = `You are now in preview mode. Change between sections or click a document to open it in a new tab.`
     headerTitle = `Sidebar Preview`
