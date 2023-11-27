@@ -7,7 +7,7 @@ import { APIGuideContext } from 'utils/contexts/api-guide'
 import MenuIcon from 'components/icons/menu-icon'
 import CloseIcon from 'components/icons/close-icon'
 
-import TableOfContents from 'components/table-of-contents'
+import { TableOfContents } from '@vtexdocs/components'
 
 import { getMessages } from 'utils/get-messages'
 
@@ -15,7 +15,7 @@ import styles from './styles'
 
 const OnThisPage = () => {
   const messages = getMessages()
-  const { onThisPageOpenStatus, setOnThisPageOpenStatus } =
+  const { onThisPageOpenStatus, setOnThisPageOpenStatus, headings } =
     useContext(APIGuideContext)
 
   return (
@@ -30,7 +30,7 @@ const OnThisPage = () => {
             {messages['api_guide_documentation_page_on_this_page.title']}
           </Text>
           <Box>
-            <TableOfContents />
+            <TableOfContents headingList={headings} />
           </Box>
         </Box>
       </AnimateHeight>

@@ -6291,7 +6291,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/commissions/categories",
+                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/commissions",
                   "children": []
                 },
                 {
@@ -6301,15 +6301,6 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/seller-register/pvt/sellers/-sellerId-/commissions",
-                  "children": []
-                },
-                {
-                  "name": "Upsert Seller Commissions by Category ID",
-                  "slug": "marketplace-apis",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/seller-register/pvt/sellers/-sellerId-/commissions/-categoryId-",
                   "children": []
                 },
                 {
@@ -12938,6 +12929,21 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "November",
+              "slug": "november-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Temporary freeze on automatic app distribution in preparation for Black Friday 2023",
+                  "slug": "2023-11-17-temporary-freeze-on-automatic-app-distribution-in-preparation-for-black-friday-2023",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "October",
               "slug": "october-2023",

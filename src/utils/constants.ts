@@ -1,6 +1,3 @@
-import algoliasearch from 'algoliasearch/lite'
-import { MultipleQueriesQuery } from '@algolia/client-search'
-
 import APIGuidesIcon from 'components/icons/api-guides-icon'
 import APIReferenceIcon from 'components/icons/api-reference-icon'
 import AppDevelopmentIcon from 'components/icons/app-development-icon'
@@ -28,20 +25,9 @@ import {
 import EditIcon from 'components/icons/edit-icon'
 import MenuIcon from 'components/icons/menu-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
+import libraryConfig from './libraryConfig'
 
-const algoliaClient = algoliasearch(
-  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || '',
-  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ''
-)
-
-export const searchClient = {
-  ...algoliaClient,
-  search(requests: MultipleQueriesQuery[]) {
-    if (requests.every(({ params }) => !params?.query)) return
-    return algoliaClient.search(requests)
-  },
-}
-
+libraryConfig
 export const messages = getMessages()
 
 export const documentationData: DocDataElement[] = [

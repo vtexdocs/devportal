@@ -1,43 +1,41 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const releaseContainer: SxStyleProp = {
-  mb: ['32px', '48px'],
+  mb: '2rem',
   width: '100%',
 }
 
 const actionType: SxStyleProp = {
-  fontSize: '16px',
-  lineHeight: ['22px', '18px'],
-  ml: '-16px',
+  fontSize: '1rem',
+  ml: '-0.5rem',
+  mb: '-0.75rem',
 }
 
 const actionIcon: SxStyleProp = {
-  minWidth: '16px',
-  minHeight: '16px',
-  width: '16px',
-  height: '16px',
+  maxWidth: '1rem',
+  maxHeight: '1rem',
+  width: '1rem',
+  height: '1rem',
 }
 
 const content: SxStyleProp = {
   flexDirection: 'column',
-  pt: 0,
-  ml: '-16px',
-  mt: '-32px',
-  mb: '-32px',
+  ml: '-0.5rem',
+  mb: '-2rem',
 }
 
 const releaseDate: SxStyleProp = {
   color: 'muted.1',
-  fontSize: ['12px', '16px'],
-  lineHeight: ['16px', '22px'],
+  fontSize: '1rem',
+  lineHeight: '1.5rem',
+  mt: '0.25rem',
 }
 
 const releaseTitle: SxStyleProp = {
   color: '#4A596B',
-  fontSize: ['16px', '18px'],
-  lineHeight: ['22px', '24px'],
+  fontSize: '1.125rem',
+  lineHeight: '1.5rem',
   cursor: 'pointer',
-  mt: '16px',
 }
 
 const releaseTitleActive: SxStyleProp = {
@@ -47,15 +45,17 @@ const releaseTitleActive: SxStyleProp = {
 
 const releaseDescription: SxStyleProp = {
   color: '#4A4A4A',
-  fontSize: ['12px', '16px', '16px', '16px', '16px', '16px', '18px'],
-  lineHeight: ['16px', '22px'],
-  mt: '8px',
-  mb: '-16px',
+  fontSize: '1rem',
+  lineHeight: '1.375rem',
+  mt: '0.5rem',
+  p: {
+    m: '0',
+  },
 }
 
 const arrowIcon: SxStyleProp = {
-  pb: '30px',
-  pr: '0px',
+  pb: '1.5rem',
+  pr: '0.25rem',
   pl: 0,
   color: 'muted.0',
   ':hover': {
@@ -72,7 +72,7 @@ const timeLineBar: SxStyleProp = {
   '& > :first-of-type': {
     '& > :nth-of-type(2)': {
       width: '1px',
-      borderRadius: '8px',
+      borderRadius: '0.5rem',
     },
   },
 }

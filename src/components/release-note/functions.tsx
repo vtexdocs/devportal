@@ -9,7 +9,9 @@ const messages = getMessages()
 
 export const getReleaseDate = (createdAt: string) => {
   const daysElapsed = getDaysElapsed(new Date(createdAt))
-  return daysElapsed < 8 ? (
+  return daysElapsed < 1 ? (
+    <Text sx={styles.releaseDate}>Today</Text>
+  ) : daysElapsed < 8 ? (
     <Text sx={styles.releaseDate}>{`${getDaysElapsed(new Date(createdAt))} ${
       messages['relese-note-days-elapsed']
     }`}</Text>

@@ -7,7 +7,7 @@ import hljsCurl from 'highlightjs-curl'
 import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import getHeadings from 'utils/getHeadings'
 import { serialize } from 'next-mdx-remote/serialize'
-import type { Item } from 'components/table-of-contents'
+import type { Item } from '@vtexdocs/components'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 import Breadcrumb from 'components/breadcrumb'
 import ArticlePagination from 'components/article-pagination'
@@ -16,13 +16,13 @@ import jp from 'jsonpath'
 import getAppReadme from 'utils/getAppReadme'
 import { getLogger } from 'utils/logging/log-util'
 
-import MarkdownRenderer from 'components/markdown-renderer'
+import { MarkdownRenderer } from '@vtexdocs/components'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 import { Box, Flex, Text, IconVTEXSymbol, IconGlobe } from '@vtex/brand-ui'
 import styles from 'styles/documentation-page'
 import stylesApps from 'styles/apps-page'
-import TableOfContents from 'components/table-of-contents'
+import { TableOfContents } from '@vtexdocs/components'
 import Head from 'next/head'
 import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
@@ -138,7 +138,7 @@ const AppReadmePage: NextPage<Props> = ({
               <SeeAlsoSection docs={seeAlsoData} />
             </Box>
             <Box sx={styles.rightContainer}>
-              <TableOfContents />
+              <TableOfContents headingList={headingList} />
             </Box>
           </Flex>
         </APIGuideContextProvider>

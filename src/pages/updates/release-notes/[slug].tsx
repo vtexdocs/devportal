@@ -17,11 +17,10 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
-import type { Item } from 'components/table-of-contents'
-import MarkdownRenderer from 'components/markdown-renderer'
+import type { Item } from '@vtexdocs/components'
+import { MarkdownRenderer } from '@vtexdocs/components'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
-import TableOfContents from 'components/table-of-contents'
 
 import { removeHTML } from 'utils/string-utils'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
@@ -115,9 +114,6 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
               </article>
             </Box>
             <FeedbackSection suggestEdits={false} />
-          </Box>
-          <Box sx={styles.rightContainer}>
-            <TableOfContents />
           </Box>
           <OnThisPage />
         </Flex>
