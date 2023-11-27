@@ -36,7 +36,7 @@ interface IParams extends ParsedUrlQuery {
 interface Props {
   title: string
   vendor: string
-  latestMajor: string
+  latestVersion: string
   currentVersion: string
   sectionSelected: string
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -56,7 +56,7 @@ const AppReadmePage: NextPage<Props> = ({
   serialized,
   headingList,
   vendor,
-  latestMajor,
+  latestVersion,
   currentVersion,
   title,
   childrenDocs,
@@ -115,7 +115,7 @@ const AppReadmePage: NextPage<Props> = ({
                       </Flex>
                     )}
                     <Text>Version: {currentVersion}</Text>
-                    <Text>Latest version: {latestMajor}.x</Text>
+                    <Text>Latest version: {latestVersion}</Text>
                   </Flex>
                 </header>
                 <article>
@@ -174,9 +174,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const sectionSelected = 'VTEX IO Apps'
     const vendor = data.vendor
     const title = data.title
-    const markdown = data.markdown
-    const latestMajor = data.latestMajor
+    let markdown = data.markdown
+    const latestVersion = data.latestVersion
     const currentVersion = data.currentVersion
+    const specifiedVersion = app.split('@')[1]
+      ? app.split('@')[1]
+      : currentVersion
     const childrenDocs = data.childrenDocs ?? ['']
     const headingList: Item[] = []
     const parentsArray: string[] = []
@@ -231,6 +234,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       })
     })
     if (markdown) {
+      {
+        specifiedVersion !== currentVersion
+          ? (markdown =
+              `>❗ The specified version of the app (**${specifiedVersion}**) does not exist. This page is about the latest stable version, which is **${currentVersion}**. \n\n` +
+              markdown)
+          : !specifiedVersion.includes('-') &&
+            specifiedVersion !== latestVersion
+          ? (markdown =
+              `>❗ This page is about version **${currentVersion}** of the app, which is not the most recent version. The latest stable version is **${latestVersion}**. \n\n` +
+              markdown)
+          : ''
+      }
       let serialized = await serialize(markdown.split('## Contributors')[0], {
         parseFrontmatter: true,
         mdxOptions: {
@@ -263,7 +278,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         props: {
           title,
           vendor,
-          latestMajor,
+          latestVersion,
           currentVersion,
           sectionSelected,
           parentsArray,
