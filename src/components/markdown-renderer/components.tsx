@@ -2,7 +2,7 @@
 import { useContext, useState } from 'react'
 import { InView } from 'react-intersection-observer'
 import Image from 'next/image'
-import { APIGuideContext } from 'utils/contexts/api-guide'
+import { DocumentContext } from 'utils/contexts/documentContext'
 import { childrenToString, slugify } from 'utils/string-utils'
 import OverviewCard from 'components/overview-card'
 import WhatsNextCard from 'components/whats-next-card'
@@ -152,7 +152,7 @@ export default {
   },
   h2: ({ node, ...props }: Component) => {
     const { activeItem, setActiveItem, goToPreviousItem } =
-      useContext(APIGuideContext)
+      useContext(DocumentContext)
     return (
       <ObservableHeading
         level={2}
@@ -173,7 +173,7 @@ export default {
   },
   h3: ({ node, ...props }: Component) => {
     const { activeItem, setActiveItem, goToPreviousSubItem } =
-      useContext(APIGuideContext)
+      useContext(DocumentContext)
 
     return (
       <ObservableHeading

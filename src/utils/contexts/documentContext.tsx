@@ -18,7 +18,7 @@ type ContextType = {
   goToPreviousSubItem: () => void
 }
 
-export const APIGuideContext = createContext<ContextType>({
+export const DocumentContext = createContext<ContextType>({
   headings: [],
   activeItem: {
     item: '',
@@ -35,7 +35,7 @@ interface Props {
   headings: Item[]
 }
 
-const APIGuideContextProvider: React.FC<Props> = ({ children, headings }) => {
+const DocumentContextProvider: React.FC<Props> = ({ children, headings }) => {
   const [onThisPageOpenStatus, setOnThisPageOpenStatus] = useState(false)
   const [activeItem, setActiveItem] = useState<ActiveItem>({
     item: '',
@@ -77,7 +77,7 @@ const APIGuideContextProvider: React.FC<Props> = ({ children, headings }) => {
   }
 
   return (
-    <APIGuideContext.Provider
+    <DocumentContext.Provider
       value={{
         headings,
         activeItem,
@@ -89,8 +89,8 @@ const APIGuideContextProvider: React.FC<Props> = ({ children, headings }) => {
       }}
     >
       {children}
-    </APIGuideContext.Provider>
+    </DocumentContext.Provider>
   )
 }
 
-export default APIGuideContextProvider
+export default DocumentContextProvider

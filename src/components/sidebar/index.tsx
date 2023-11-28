@@ -26,7 +26,7 @@ interface SideBarSectionState {
 }
 
 const Sidebar = ({
-  sectionSelected = 'Guides',
+  sectionSelected = 'Start here',
   parentsArray = [],
 }: SideBarSectionState) => {
   const [activeSectionName, setActiveSectionName] = useState(sectionSelected)

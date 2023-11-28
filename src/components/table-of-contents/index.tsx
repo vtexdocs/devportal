@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { Box, Text } from '@vtex/brand-ui'
 import AnimateHeight from 'react-animate-height'
 
-import { APIGuideContext } from 'utils/contexts/api-guide'
+import { DocumentContext } from 'utils/contexts/documentContext'
 
 import styles from './styles'
 
@@ -18,7 +18,7 @@ export interface Item extends SubItem {
 
 const TableOfContents = () => {
   const { headings, activeItem, setActiveItem, setOnThisPageOpenStatus } =
-    useContext(APIGuideContext)
+    useContext(DocumentContext)
 
   const Item = ({
     title,
