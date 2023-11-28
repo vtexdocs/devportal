@@ -17,11 +17,10 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import DocumentContextProvider from 'utils/contexts/documentContext'
 
-import type { Item } from 'components/table-of-contents'
-import MarkdownRenderer from 'components/markdown-renderer'
+import { Item, MarkdownRenderer } from '@vtexdocs/components'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
-import TableOfContents from 'components/table-of-contents'
+import { TableOfContents } from '@vtexdocs/components'
 
 import { removeHTML } from 'utils/string-utils'
 import {

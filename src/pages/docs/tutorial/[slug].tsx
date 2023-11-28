@@ -16,15 +16,13 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import DocumentContextProvider from 'utils/contexts/documentContext'
-import { SidebarContext } from 'utils/contexts/sidebar'
 
-import type { Item } from 'components/table-of-contents'
 import Contributors from 'components/contributors'
-import MarkdownRenderer from 'components/markdown-renderer'
+import { Item, LibraryContext, MarkdownRenderer } from '@vtexdocs/components'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
-import TableOfContents from 'components/table-of-contents'
+import { TableOfContents } from '@vtexdocs/components'
 import Breadcrumb from 'components/breadcrumb'
 
 import getHeadings from 'utils/getHeadings'
@@ -91,7 +89,7 @@ const TutorialPage: NextPage<Props> = ({
   const [headings, setHeadings] = useState<Item[]>([])
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
-  const { setActiveSidebarElement } = useContext(SidebarContext)
+  const { setActiveSidebarElement } = useContext(LibraryContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
     setHeadings(headingList)

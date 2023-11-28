@@ -7,10 +7,9 @@ import { DocumentContext } from 'utils/contexts/documentContext'
 import MenuIcon from 'components/icons/menu-icon'
 import CloseIcon from 'components/icons/close-icon'
 
-import TableOfContents from 'components/table-of-contents'
-
 import styles from './styles'
 import { FormattedMessage } from 'react-intl'
+import { TableOfContents } from '@vtexdocs/components'
 
 const OnThisPage = () => {
   const { onThisPageOpenStatus, setOnThisPageOpenStatus } =

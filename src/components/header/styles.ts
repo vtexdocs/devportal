@@ -28,14 +28,6 @@ const headerContainer: SxStyleProp = {
   transition: 'top 0.3s',
 }
 
-const hamburgerContainer: SxStyleProp = {
-  backgroundColor: '#ffff',
-  width: '100%',
-  '.menuHidden': {
-    transform: 'translate(-100%)',
-  },
-}
-
 const headerBrand: SxStyleProp = {
   gridTemplateColumns: '1fr 1fr 0fr 1fr',
   width: '100%',
@@ -122,13 +114,6 @@ const searchContainer: SxStyleProp = {
   height: 'auto',
 }
 
-const hamburgerSearchContainer: SxStyleProp = {
-  display: 'flex',
-  justifyContent: 'center',
-  paddingBlock: '18px',
-  height: 'auto',
-}
-
 const searchIcon: SxStyleProp = {
   minWidth: '16px',
   minHeight: '16px',
@@ -182,7 +167,6 @@ export default {
   headerContainer,
   headerBrand,
   headerBrandLink,
-  hamburgerSearchContainer,
   searchContainer,
   searchIcon,
   rightLinks,
@@ -193,7 +177,6 @@ export default {
   dropdownContainer,
   documentationContainer,
   updatesContainer,
-  hamburgerContainer,
   innerHambugerContainer,
   innerCardContainer,
   arrowIcon,
