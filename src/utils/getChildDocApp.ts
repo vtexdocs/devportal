@@ -4,14 +4,14 @@ export default async function getChildDocApp(appName: string, file: string) {
     title: string
     markdown: string
     vendor: string
-    latestMajor: string
+    latestVersion: string
     currentVersion: string
     appId: string
   } = {
     title: '',
     markdown: '',
     vendor: '',
-    latestMajor: '',
+    latestVersion: '',
     currentVersion: '',
     appId: '',
   }
@@ -28,7 +28,7 @@ export default async function getChildDocApp(appName: string, file: string) {
           title: result.title,
           markdown: result.markdown,
           vendor: result.vendor,
-          latestMajor: result.latestMajor,
+          latestVersion: result.latestVersion,
           currentVersion: result.currentVersion,
           appId: result.appId,
         })

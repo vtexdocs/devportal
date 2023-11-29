@@ -4460,76 +4460,6 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Invoices",
-              "slug": "customer-credit-api-invoices",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Search all invoices",
-                  "slug": "customer-credit-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/creditcontrol/invoices",
-                  "children": []
-                },
-                {
-                  "name": "Retrieve Invoice by Id",
-                  "slug": "customer-credit-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-",
-                  "children": []
-                },
-                {
-                  "name": "Change Invoice",
-                  "slug": "customer-credit-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-",
-                  "children": []
-                },
-                {
-                  "name": "Cancel Invoice",
-                  "slug": "customer-credit-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-",
-                  "children": []
-                },
-                {
-                  "name": "Retrieve invoice by creditAccountId",
-                  "slug": "customer-credit-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices",
-                  "children": []
-                },
-                {
-                  "name": "Mark an invoice as Paid",
-                  "slug": "customer-credit-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-/payments",
-                  "children": []
-                },
-                {
-                  "name": "Postpone an invoice",
-                  "slug": "customer-credit-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-/postponement",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Account",
               "slug": "customer-credit-api-account",
               "type": "category",
@@ -4544,7 +4474,7 @@
                   "children": []
                 },
                 {
-                  "name": "Open an Account",
+                  "name": "Open an account",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4553,7 +4483,7 @@
                   "children": []
                 },
                 {
-                  "name": "Retrieve an Account by Id",
+                  "name": "Retrieve an account by id",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4562,7 +4492,7 @@
                   "children": []
                 },
                 {
-                  "name": "Close an Account",
+                  "name": "Close an account",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4571,7 +4501,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update email and description of a account",
+                  "name": "Update account information",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4580,7 +4510,7 @@
                   "children": []
                 },
                 {
-                  "name": "Account statements",
+                  "name": "Get account statements",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4589,16 +4519,7 @@
                   "children": []
                 },
                 {
-                  "name": "Open or Change Account",
-                  "slug": "customer-credit-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/creditcontrol/accounts/-accountId-",
-                  "children": []
-                },
-                {
-                  "name": "Change credit limit of an Account",
+                  "name": "Change credit limit of an account",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4616,7 +4537,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create or Update Settlement",
+                  "name": "Create or update settlement",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4625,16 +4546,16 @@
                   "children": []
                 },
                 {
-                  "name": "Create a Pre-Authorization",
+                  "name": "Create a pre-authorization",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/transaction",
+                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/transactions",
                   "children": []
                 },
                 {
-                  "name": "Update a Pre-Authorization",
+                  "name": "Update a pre-Authorization",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4643,7 +4564,7 @@
                   "children": []
                 },
                 {
-                  "name": "Cancel a Pre-Authorization",
+                  "name": "Cancel a pre-authorization",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4652,7 +4573,7 @@
                   "children": []
                 },
                 {
-                  "name": "Add an account Holder",
+                  "name": "Add an account holder",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4679,7 +4600,7 @@
                   "children": []
                 },
                 {
-                  "name": "Partial or Total Refund a Settlement",
+                  "name": "Partially or fully refund a settlement",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4688,9 +4609,79 @@
                   "children": []
                 }
               ]
+            },            
+            {
+              "name": "Invoices",
+              "slug": "customer-credit-api-invoices",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Search all invoices",
+                  "slug": "customer-credit-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/creditcontrol/invoices",
+                  "children": []
+                },
+                {
+                  "name": "Retrieve invoice by id",
+                  "slug": "customer-credit-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-",
+                  "children": []
+                },
+                {
+                  "name": "Change invoice",
+                  "slug": "customer-credit-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-",
+                  "children": []
+                },
+                {
+                  "name": "Cancel invoice",
+                  "slug": "customer-credit-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-",
+                  "children": []
+                },
+                {
+                  "name": "Retrieve invoice by creditAccountId",
+                  "slug": "customer-credit-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices",
+                  "children": []
+                },
+                {
+                  "name": "Mark an invoice as paid",
+                  "slug": "customer-credit-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-/payments",
+                  "children": []
+                },
+                {
+                  "name": "Postpone an invoice",
+                  "slug": "customer-credit-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/creditcontrol/accounts/-creditAccountId-/invoices/-invoiceId-/postponement",
+                  "children": []
+                }
+              ]
             },
             {
-              "name": "Store Configuration",
+              "name": "Store configuration",
               "slug": "customer-credit-api-store-configuration",
               "type": "category",
               "children": [
