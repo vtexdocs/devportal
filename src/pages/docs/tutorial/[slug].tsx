@@ -65,8 +65,14 @@ interface Props {
     category: string
   }[]
   pagination: {
-    previousDoc: { slug: string | null; name: string | null }
-    nextDoc: { slug: string | null; name: string | null }
+    previousDoc: {
+      slug: string | null
+      name: { en: string; pt: string; es: string } | null | null
+    }
+    nextDoc: {
+      slug: string | null
+      name: { en: string; pt: string; es: string } | null | null
+    }
   }
   isListed: boolean
   branch: string
