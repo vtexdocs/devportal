@@ -52,7 +52,7 @@ const docsPathsGLOBAL = await getDocsPaths()
 interface Props {
   sectionSelected: string
   parentsArray: string[]
-  breadcumbList: { slug: string; name: string; type: string }[]
+  breadcrumbList: { slug: string; name: string; type: string }[]
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
@@ -83,7 +83,7 @@ const TutorialPage: NextPage<Props> = ({
   seeAlsoData,
   pagination,
   isListed,
-  breadcumbList,
+  breadcrumbList,
   branch,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
@@ -115,7 +115,7 @@ const TutorialPage: NextPage<Props> = ({
             <Box sx={styles.contentContainer}>
               <article>
                 <header>
-                  <Breadcrumb breadcumbList={breadcumbList} />
+                  <Breadcrumb breadcrumbList={breadcrumbList} />
                   <Text sx={styles.documentationTitle} className="title">
                     {serialized.frontmatter?.title}
                   </Text>
@@ -352,9 +352,9 @@ export const getStaticProps: GetStaticProps = async ({
       )
     }
 
-    const breadcumbList: { slug: string; name: string; type: string }[] = []
+    const breadcrumbList: { slug: string; name: string; type: string }[] = []
     parentsArrayName.forEach((_el: string, idx: number) => {
-      breadcumbList.push({
+      breadcrumbList.push({
         slug: `/docs/tutorial/${parentsArray[idx]}`,
         name: parentsArrayName[idx],
         type: parentsArrayType[idx],
@@ -374,7 +374,7 @@ export const getStaticProps: GetStaticProps = async ({
         seeAlsoData,
         pagination,
         isListed,
-        breadcumbList,
+        breadcrumbList,
         branch,
       },
     }
