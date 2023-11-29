@@ -384,13 +384,19 @@ to = '/docs/guides/trigger-ab-test'
 force = true
 from = '/docs/guides/adaptations-and-limitations'
 status = 308
-to = '/docs/guides/changes-and-limitations-pii-platform-version'
+to = '/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data'
 
 [[redirects]]
 force = true
 from = '/docs/guides/changes-and-limitations-pii-compliant-account'
 status = 308
-to = '/docs/guides/changes-and-limitations-pii-data-architecture'
+to = '/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data'
+
+[[redirects]]
+force = true
+from = '/docs/guides/changes-and-limitations-pii-platform-version'
+status = 308
+to = '/docs/guides/changes-in-vtex-features-behavior-to-handle-pii-data'
 
 [[redirects]]
 force = true
