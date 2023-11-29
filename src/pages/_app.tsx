@@ -7,6 +7,7 @@ import { getMessages } from 'utils/get-messages'
 
 import 'styles/global.css'
 import 'styles/rapidoc.css'
+import '@vtexdocs/components/dist/index.css'
 
 import Layout from 'components/layout'
 
