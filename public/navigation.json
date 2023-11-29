@@ -5,18 +5,11 @@
       "slugPrefix": "docs/guides",
       "categories": [
         {
-          "name": "Getting Started",
-          "slug": "getting-started",
+          "name": "API usage",
+          "slug": "api-usage-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
-            {
-              "name": "Platform overview",
-              "slug": "getting-started-platform-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
             {
               "name": "List of REST APIs",
               "slug": "getting-started-list-of-rest-apis",
@@ -74,6 +67,43 @@
                 }
               ]
             },
+            {
+              "name": "Response status codes",
+              "slug": "api-response-codes",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Error handling and best practices",
+              "slug": "error-handling-and-best-practices-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Handling errors and exceptions",
+                  "slug": "handling-errors-and-exceptions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Best practices for avoiding rate limit errors",
+                  "slug": "best-practices-for-avoiding-rate-limit-errors",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Getting started",
+          "slug": "getting-started",
+          "origin": "",
+          "type": "markdown",
+          "children": [
             {
               "name": "Catalog",
               "slug": "catalog-overview",
