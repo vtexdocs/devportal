@@ -34,7 +34,7 @@ const MarkdownRenderer = ({ serialized, mdxProps }: Props) => {
 
     return (
       <MarkdownRenderer2
-        components={updatedComponents}
+        customComponents={updatedComponents}
         serialized={serialized}
         scope={constants}
       />
