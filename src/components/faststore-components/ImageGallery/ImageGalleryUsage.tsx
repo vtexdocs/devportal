@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react'
-import { ImageGallery, ImageZoom } from '@faststore/ui'
+import { ImageGallery, ImageGalleryViewer } from '@faststore/ui'
 import type { ImageElementData } from '@faststore/components'
 
 interface ImageComponentProps {
@@ -32,14 +32,14 @@ const ImageGalleryUsage = ({ images }: ImageGalleryUsageProps) => {
       selectedImageIdx={selectedImageIdx}
       setSelectedImageIdx={setSelectedImageIdx}
     >
-      <ImageZoom>
+      <ImageGalleryViewer>
         <img
           data-fs-image
           src={currentImage?.url}
           alt={currentImage?.alternateName}
           style={{ aspectRatio: 15 / 14 }}
         />
-      </ImageZoom>
+      </ImageGalleryViewer>
     </ImageGallery>
   )
 }
