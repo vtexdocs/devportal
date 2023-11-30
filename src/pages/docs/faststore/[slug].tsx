@@ -12,17 +12,13 @@ import hljsCurl from 'highlightjs-curl'
 import path from 'path'
 import jp from 'jsonpath'
 
-import type { Item } from 'components/table-of-contents'
 import Breadcrumb from 'components/breadcrumb'
-import MarkdownRenderer from 'components/markdown-renderer'
 import Contributors from 'components/contributors'
 import FeedbackSection from 'components/feedback-section'
-import TableOfContents from 'components/table-of-contents'
 import OnThisPage from 'components/on-this-page'
 import { getComponentPropsFrom } from 'components/faststore-components/utilities/propsSection'
 
 import { PreviewContext } from 'utils/contexts/preview'
-import { SidebarContext } from 'utils/contexts/sidebar'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 import getFastStorePaths from 'utils/getFastStorePaths'
 import getGithubFile from 'utils/getGithubFile'
@@ -41,6 +37,8 @@ import { Node } from 'unist-util-visit/lib'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { getLogger } from 'utils/logging/log-util'
+import { Item, LibraryContext, TableOfContents } from '@vtexdocs/components'
+import MarkdownRenderer from 'components/faststore-components/markdown-renderer'
 
 interface Props {
   serialized: MDXRemoteSerializeResult
@@ -93,7 +91,7 @@ const FastStorePage: NextPage<Props> = ({
   isListed,
 }) => {
   const { setBranchPreview } = useContext(PreviewContext)
-  const { setActiveSidebarElement } = useContext(SidebarContext)
+  const { setActiveSidebarElement } = useContext(LibraryContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
     setBranchPreview(branch)
