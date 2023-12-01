@@ -26,7 +26,6 @@ import EditIcon from 'components/icons/edit-icon'
 import MenuIcon from 'components/icons/menu-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 import libraryConfig from './libraryConfig'
-import FastStoreIcon from 'components/icons/faststore-icon'
 
 libraryConfig
 export const messages = getMessages()
@@ -59,15 +58,15 @@ export const documentationData: DocDataElement[] = [
   {
     Icon: VTEXIOAppsIcon,
     title: 'VTEX IO Apps',
-    description: messages['documentation_faststore.description'],
+    description: messages['documentation_vtexio_apps.description'],
     link: '/docs/vtex-io-apps',
   },
-  {
+  /*   {
     Icon: FastStoreIcon,
     title: 'FastStore',
     description: messages['documentation_vtexio_apps.description'],
     link: '/docs/faststore',
-  },
+  }, */
 ]
 
 export const adminData: AdminDataElement[] = [
