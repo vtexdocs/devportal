@@ -1132,6 +1132,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Add a service (offering) to a shopping cart",
+                  "slug": "add-service-to-the-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
