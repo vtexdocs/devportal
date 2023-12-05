@@ -69,7 +69,7 @@ const fileSlugMap = {
   'VTEX - Promotions & Taxes API - v2': 'promotions-and-taxes-api-v2',
   'VTEX - Intelligent Search Events API - Headless':
     'intelligent-search-events-api-headless',
-  'VTEX - User Data Rights API': 'user-data-rights-api',
+  'VTEX - Data Subject Rights API': 'data-subject-rights-api',
 }
 
 export default async function getReferencePaths() {
