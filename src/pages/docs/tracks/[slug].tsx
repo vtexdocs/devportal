@@ -157,7 +157,7 @@ const TrackPage: NextPage<Props> = ({
           </Box>
           <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />
-            <TableOfContents />
+            <TableOfContents headingList={headings} />
           </Box>
           <OnThisPage />
         </Flex>
