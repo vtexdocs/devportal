@@ -3493,9 +3493,9 @@
   resolved "https://registry.yarnpkg.com/@vtex/tsconfig/-/tsconfig-0.6.0.tgz#c9dfffc95d2ef55195237411f9c15269ca30b2a5"
   integrity sha512-SVQBxaSdEVdpJFja1aVTIiZBgpQKePyYOUWGzcYq6LYkSWqSbz2LoC7TuLUsmfweYmVkv8+4eVuxcDpQVEpq1A==
 
-"@vtexdocs/components@https://github.com/vtexdocs/components.git#v1.1.15":
-  version "1.1.15"
-  resolved "https://github.com/vtexdocs/components.git#ed6391ab063187bc8cc8226fd7d2efc7d886dfb4"
+"@vtexdocs/components@https://github.com/vtexdocs/components.git#v1.2.0":
+  version "1.2.0"
+  resolved "https://github.com/vtexdocs/components.git#6d0937897665f590eb696a13f9d2c64029f73773"
   dependencies:
     "@code-hike/mdx" "^0.9.0"
     "@vtex/brand-ui" "^0.46.1"
@@ -3504,6 +3504,7 @@
     mermaid "^10.1.0"
     next-mdx-remote "^4.1.0"
     react-animate-height "^3.0.4"
+    react-cookie-consent "^9.0.0"
     react-dom "18.2.0"
     react-instantsearch-dom "^6.37.0"
     react-intersection-observer "^9.5.2"
