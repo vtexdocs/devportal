@@ -11,7 +11,11 @@ import Footer from 'components/footer'
 
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
-import { LibraryContextProvider, Sidebar } from '@vtexdocs/components'
+import {
+  CookieBar,
+  LibraryContextProvider,
+  Sidebar,
+} from '@vtexdocs/components'
 import { documentationData, updatesData } from 'utils/constants'
 import { useIntl } from 'react-intl'
 
@@ -68,6 +72,10 @@ export default function Layout({
             {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){window.dataLayer.push(arguments);}
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied'
+          });
           gtag('js', new Date());
           gtag('config', 'UA-56275648-4');
         `}
@@ -81,6 +89,16 @@ export default function Layout({
 					`}
           </Script>
         </div>
+        <CookieBar
+          onAccept={() => {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            const window2 = window as any
+            window2.gtag('consent', 'update', {
+              ad_storage: 'granted',
+              analytics_storage: 'granted',
+            })
+          }}
+        />
         <Header />
         <Flex sx={styles.container}>
           {!hideSidebar && <Sidebar parentsArray={parentsArray} />}
