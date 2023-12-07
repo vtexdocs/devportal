@@ -8117,7 +8117,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/sessions/",
+                  "endpoint": "/sessions/",
                   "children": []
                 }
               ]
@@ -8334,7 +8334,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get Prices",
+                  "name": "Retrieve Prices",
                   "slug": "pricing-hub",
                   "type": "openapi",
                   "method": "POST",
@@ -8701,7 +8701,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon",
+                  "endpoint": "/api/rnb/v2/pvt/coupon",
                   "children": []
                 },
                 {
@@ -8710,7 +8710,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon/group/archived",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/group/archived",
                   "children": []
                 },
                 {
@@ -8719,7 +8719,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon/group/-groupingKey-",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/group/{groupingKey}",
                   "children": []
                 },
                 {
@@ -8728,7 +8728,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/coupon/group/-groupingKey-",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/group/{groupingKey}",
                   "children": []
                 },
                 {
@@ -8737,7 +8737,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon/group/-groupingKey-/codes",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/group/{groupingKey}/codes",
                   "children": []
                 },
                 {
@@ -8746,7 +8746,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/coupon/group/-groupingKey-/archive",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/group/{groupingKey}/archive",
                   "children": []
                 },
                 {
@@ -8755,7 +8755,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/coupon/group",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/group",
                   "children": []
                 },
                 {
@@ -8764,7 +8764,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/coupon/group/-groupingKey-/unarchive",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/group/{groupingKey}/unarchive",
                   "children": []
                 },
                 {
@@ -8773,7 +8773,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon/usage-count/-couponCode-",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/usage-count/{couponCode}",
                   "children": []
                 },
                 {
@@ -8782,7 +8782,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/coupon/usage-count/group/-groupingKey-",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/usage-count/group/{groupingKey}",
                   "children": []
                 }
               ]
