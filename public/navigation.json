@@ -8782,7 +8782,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/rnb/v2/pvt/coupon/usage-count/group/{groupingKey}",
+                  "endpoint": "/api/rnb/v2/pvt/coupon/usage-count/group/-groupingKey-",
                   "children": []
                 }
               ]
