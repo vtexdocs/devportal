@@ -12958,6 +12958,21 @@
           "type": "category",
           "children": [
             {
+              "name": "December",
+              "slug": "december-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New TLS security protocol cryptographic cipher suite required for PCI-DSS compliance guidelines",
+                  "slug": "new-tls-security-protocol-cryptographic-cipher-suite-required-for-pci-dss-compliance-guidelines",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "November",
               "slug": "november-2023",
               "origin": "",
