@@ -88,7 +88,7 @@ const NewsPage: NextPage<Props> = ({ serialized, branch }) => {
     <>
       <Head>
         <title>{serialized.frontmatter?.title as string}</title>
-        <meta name="docsearch:doctype" content="Announcements" />
+        <meta name="docsearch:doctype" content="News" />
       </Head>
       <DocumentContextProvider headings={headings}>
         <Flex sx={styles.innerContainer}>
