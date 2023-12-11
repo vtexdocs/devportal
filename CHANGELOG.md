@@ -2,6 +2,159 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/vtexdocs/devportal/compare/v1.9.29...v1.10.0) (2023-12-11)
+
+
+### Features
+
+* add @vtexdocs/library dependency and update imports ([e3114cf](https://github.com/vtexdocs/devportal/commit/e3114cf85e2f00f2d68406ed92300252931318c4))
+* add component lib build file ([d0cc0a3](https://github.com/vtexdocs/devportal/commit/d0cc0a376d7b4757047550fc76b24201e7825af9))
+* **code-samples:** add code samples page to showcase boilerplate repositories ([331576c](https://github.com/vtexdocs/devportal/commit/331576cce2047f0827a0542a14f8cbe477900c6d))
+* **codehike:** install codehike ([5b49d5e](https://github.com/vtexdocs/devportal/commit/5b49d5e428f0369a5be2e90eaf2103f46bcb5a44))
+* **components:** add faststore components ([6e0acb9](https://github.com/vtexdocs/devportal/commit/6e0acb906d1d725ad4bcadeb64176f7de70d3480))
+* create alias for component lib filepath ([b483d7b](https://github.com/vtexdocs/devportal/commit/b483d7bd6844aee4905f1d7deeaa325d7a69e313))
+* create faststore page ([d269385](https://github.com/vtexdocs/devportal/commit/d2693853ad0d8f0ae58d760df4defc4cb1964824))
+* **editor:** openapi preview ([4836e77](https://github.com/vtexdocs/devportal/commit/4836e770131bc395ed3e8dedcbd3b457fbf74844))
+* **faststore-components:** add and update mocks examples ([3c3d62c](https://github.com/vtexdocs/devportal/commit/3c3d62cf54f2506b26e637a69280853245ddfa02))
+* **faststore:** add components ([d70e57e](https://github.com/vtexdocs/devportal/commit/d70e57ef0c6cdc49681202e5b1972883f2c714df))
+* **faststore:** add faststore icon ([2bc8fc8](https://github.com/vtexdocs/devportal/commit/2bc8fc89258829a408b28636e41789155201e682))
+* **faststore:** add faststore icons and add global style ([2873adf](https://github.com/vtexdocs/devportal/commit/2873adf276147f053de3a821a2665080fee0c56b))
+* **faststore:** add first version of faststore docs page ([f07a808](https://github.com/vtexdocs/devportal/commit/f07a808bce41080fc020050ae2f124bae9565b41))
+* **faststore:** add new images ([34082e9](https://github.com/vtexdocs/devportal/commit/34082e9d08074a831d3f195b464b4349367adc6b))
+* **faststore:** add remark and rehype plugins ([2c66188](https://github.com/vtexdocs/devportal/commit/2c6618856f9da934b7d21df9bf5e0030bc069304))
+* **faststore:** create steps component ([feb515a](https://github.com/vtexdocs/devportal/commit/feb515aa63f75054e1dc9be46e7da8bb4a721de5))
+* **faststore:** update main page ([0347e25](https://github.com/vtexdocs/devportal/commit/0347e259f25f2115adc72486412df1f6762dadce))
+* **faststore:** update sidebar structure ([28ed257](https://github.com/vtexdocs/devportal/commit/28ed257fde2de433439c8e36033a8a1d49b01ef8))
+* **faststore:** using logger ([9180f6c](https://github.com/vtexdocs/devportal/commit/9180f6cbe09855a3a92f972d209118041c9492f6))
+* get all build files ([c32ba10](https://github.com/vtexdocs/devportal/commit/c32ba10248fe510fe805799c45e6ab377b27e900))
+* **markdown-renderer:** add Tab and Tabs to faststore components ([79810f9](https://github.com/vtexdocs/devportal/commit/79810f92b6cee0d412b4fc09f793c21575306151))
+* **pages:** use code hike in all page types ([fafa8ac](https://github.com/vtexdocs/devportal/commit/fafa8acf0bd5f7b3c35e85162f2720f75e47257f))
+* update rapidoc submodule ([3ce25a2](https://github.com/vtexdocs/devportal/commit/3ce25a21c3c9915f81ae5527b346ba33c02c22ee))
+* update rapidoc submodule ([66a6666](https://github.com/vtexdocs/devportal/commit/66a6666a089781b341873fd9191ac73ac73f96ac))
+* use MarkdownRenderer and toc from library ([204aaab](https://github.com/vtexdocs/devportal/commit/204aaab78fae621d7c32b30dc2194887390a6817))
+
+
+### Bug Fixes
+
+* add headingList as prop ([4ceecea](https://github.com/vtexdocs/devportal/commit/4ceecea6653718ad9120d5a0a4b4e9a02d370bbf))
+* **api-reference:** try to stop category indexing to prevent no-canonical errors by google crawler ([029db98](https://github.com/vtexdocs/devportal/commit/029db98fcd75544c9f1fdc7fc8af923a88ebf3cb))
+* **apps:** add warning about app version ([b8be03e](https://github.com/vtexdocs/devportal/commit/b8be03e358c0fd78664fc83326e554e68b94ee42))
+* change markdown renderer prop name ([cc88231](https://github.com/vtexdocs/devportal/commit/cc882319e973349460d6e5f37f288c7f4fc4adea))
+* **codehiketheme:** change folder and file name ([c947ffa](https://github.com/vtexdocs/devportal/commit/c947ffa35772d6bda738bacada0c3027d532db18))
+* edit [child].tsx ([572170f](https://github.com/vtexdocs/devportal/commit/572170f2a8d41200d8bd991ff52f847be8892d32))
+* edit getChildDocApp.ts ([ad4d2c9](https://github.com/vtexdocs/devportal/commit/ad4d2c9faf80c58da22fee0e3733dd0aadfeace3))
+* **faststore-components:** remove propsection export ([359fec9](https://github.com/vtexdocs/devportal/commit/359fec981a7b35facdfc433b51982beb556bfdbc))
+* **faststore:** add pagination, article title and description; fix frontmatter render ([5893838](https://github.com/vtexdocs/devportal/commit/5893838fde6238f28242cb6be5cf6c613acbbefc))
+* **faststore:** fix imports and exports ([c315230](https://github.com/vtexdocs/devportal/commit/c31523012056fa7bb2cb8f94067e1dd1d752ec36))
+* **faststore:** fix lint problems ([e6d1af9](https://github.com/vtexdocs/devportal/commit/e6d1af9583f4bca5efa107dc6d62a15016bf43f2))
+* **faststore:** fix mocks imports ([2c92f8d](https://github.com/vtexdocs/devportal/commit/2c92f8d84ededbe63a1120fada3f5cb00d6c8a63))
+* **faststore:** get components from frontmatter ([93da725](https://github.com/vtexdocs/devportal/commit/93da7253a42859891a1a8ff1510fe016df64765a))
+* **faststore:** hydration error ([6241cd5](https://github.com/vtexdocs/devportal/commit/6241cd56d7957829773673320ca8fb56b5f2eb24))
+* **faststore:** remove branch argument ([fe5192f](https://github.com/vtexdocs/devportal/commit/fe5192fa24db4d913646335da4472a0d638588a5))
+* **faststore:** remove css reset and fix section component ([4c77899](https://github.com/vtexdocs/devportal/commit/4c77899cd6403ac79f58ded47c0b75c75a4711e3))
+* **faststore:** remove window usage ([bdb3cf9](https://github.com/vtexdocs/devportal/commit/bdb3cf9c8509db6a3f18f4cd7f51c020968936ed))
+* **faststore:** rename and add the faststore site components style to global css ([1d988b8](https://github.com/vtexdocs/devportal/commit/1d988b86fb47030c8fae3d242ce5e7550e89fecd))
+* **faststore:** update components and add scope ([c98ed12](https://github.com/vtexdocs/devportal/commit/c98ed12a689fa1becfcf408f7dce1af276d1f2b0))
+* **faststore:** update components and scope ([1a15ddd](https://github.com/vtexdocs/devportal/commit/1a15ddd9a88b7165369d1532ddbd0e1b8ce46855))
+* **faststore:** use next-mdx-remote ([25131c7](https://github.com/vtexdocs/devportal/commit/25131c79040c8de03a3e50ef178d943af774ceb2))
+* hide faststore menu and move it to guides ([69a2561](https://github.com/vtexdocs/devportal/commit/69a25615181a11f791d169b95e0df6ae590533c6))
+* **mytheme:** fix component declaration ([e057f3b](https://github.com/vtexdocs/devportal/commit/e057f3b99373b48e4b2a308bf840e33a84030871))
+* **mytheme:** fix import ([6d682a2](https://github.com/vtexdocs/devportal/commit/6d682a281405a4257556876e1a963dc45e4ea7e6))
+* **openapi preview:** rapidoc route prefix ([d955d66](https://github.com/vtexdocs/devportal/commit/d955d660e34b06aeba50dbc7efc07f1abc0c20be))
+* **openapi-preview:** remove auth component ([c289e97](https://github.com/vtexdocs/devportal/commit/c289e972d16be696413689c0ff4db7bda6adfd80))
+* **package:** removing esbuild and mdx-bundler ([83957ed](https://github.com/vtexdocs/devportal/commit/83957edcc59b3a41e550f3c8ecc913267afcbe15))
+* **propsSection:** replacing process.cwd() ([55d4eca](https://github.com/vtexdocs/devportal/commit/55d4eca94b7acaf810e3ad282d98b3c596a0bbfd))
+* restore header ([42fd828](https://github.com/vtexdocs/devportal/commit/42fd82811bf4377b690bdb132230eaa991bedd3b))
+* **server-sitemap:** fix url redirects ([cdfbac7](https://github.com/vtexdocs/devportal/commit/cdfbac7b2b3d7abf272e90fcfdda717993c58d97))
+* update callout message ([890bb69](https://github.com/vtexdocs/devportal/commit/890bb6937af79457bd9c83e2585a8cd4e9b8795f))
+* update faststore images paths ([64c7f8f](https://github.com/vtexdocs/devportal/commit/64c7f8fc5e4d805b366e0848926a5f856e1e93a4))
+* update prebuild script ([4706ede](https://github.com/vtexdocs/devportal/commit/4706ede5cc6841e598a432c3a5f14e7be71a64db))
+* update rapidoc submodule ([b6d82dc](https://github.com/vtexdocs/devportal/commit/b6d82dc5548472b74b9003d844058020c7b7804b))
+* use announcements as header props ([f737c39](https://github.com/vtexdocs/devportal/commit/f737c39e9243195e4b98767f712591fa6ae50fdd))
+* use ImageGalleryViewer ([b66986d](https://github.com/vtexdocs/devportal/commit/b66986db5df6faf7d8d67398a529866327e1fea4))
+* use library config ([102bed3](https://github.com/vtexdocs/devportal/commit/102bed3431455cc99610fb5eb60261b36e8558bc))
+* use MarkdownRenderer from components lib ([cd32d32](https://github.com/vtexdocs/devportal/commit/cd32d32d675ce16211534a64787d08d440a5cb4b))
+* use router to check if it is preview ([09dc196](https://github.com/vtexdocs/devportal/commit/09dc196d5cb0e471ef6711a1a0808a20f7c001ea))
+
+
+### Tests
+
+* **api-reference:** add additional wait to tests in reference page ([f014c0c](https://github.com/vtexdocs/devportal/commit/f014c0cf21167248251508945aa04dacafb5bde9))
+* **documentation-page-status:** add retries on error ([36fdc7b](https://github.com/vtexdocs/devportal/commit/36fdc7b3d0a225f97f1f7bfc2754439363d3f2b1))
+
+
+### Refactoring
+
+* **openapi-preview:** update header text and remove unnecessary rapidoc attributes ([0dac9aa](https://github.com/vtexdocs/devportal/commit/0dac9aa8e365bb9a3e3fcb77207c5a85c9da9e25))
+* use header from library ([538f7c6](https://github.com/vtexdocs/devportal/commit/538f7c617fa7451d0e64ddcd8321314108f66a79))
+* use librarycontext ([30eb652](https://github.com/vtexdocs/devportal/commit/30eb652e16551c44448a1a8618e683fd9afdffca))
+* use was this helpful component from lib ([b2baaea](https://github.com/vtexdocs/devportal/commit/b2baaeae54f049fa30cf5219afdaa025905ae4f6))
+* using search components from lib ([d2300d3](https://github.com/vtexdocs/devportal/commit/d2300d366ad59c4c86e22fa1c0bfcb404d876e0e))
+
+
+### Revert Changes
+
+* remove lib build files from public ([6fdcd4b](https://github.com/vtexdocs/devportal/commit/6fdcd4bc95436fae9d78e1b3aafc61a3b2c7184e))
+
+
+### Chore
+
+* **code-samples:** improve code-samples page ([9e45814](https://github.com/vtexdocs/devportal/commit/9e45814dbbb9e478d72bc177e819ed465b1e1bd6))
+* delete all search related components ([39c1a76](https://github.com/vtexdocs/devportal/commit/39c1a76d2d259deaf1d9b399d9cadf53450d40af))
+* delete all sidebar related components ([b03aeb3](https://github.com/vtexdocs/devportal/commit/b03aeb3d17cd6ff9a29df5789cb42a6d2b22b0e7))
+* delete mermaidInit file ([2213fab](https://github.com/vtexdocs/devportal/commit/2213fabce9544dd11975bcf44424253c489c4b17))
+* delete unused file ([6a4923d](https://github.com/vtexdocs/devportal/commit/6a4923d1a2c964aca1cf39bfcf7f7d9c119079af))
+* delete unused files ([97f6ba3](https://github.com/vtexdocs/devportal/commit/97f6ba3b46875637625dc990360d0ceb9a2756fe))
+* **global.css:** update scrollycoding styles ([a4aa47e](https://github.com/vtexdocs/devportal/commit/a4aa47e44cae76298eb8a7dbeb67af5fd9c9ede5))
+* **last-updates-section:** min fixes ([223b9ee](https://github.com/vtexdocs/devportal/commit/223b9ee85410826ee560d1248c78c4af09f11f73))
+* **last-updates-section:** update last release ([5364b7b](https://github.com/vtexdocs/devportal/commit/5364b7b79b5a30df7078efb3fdabfc1b103ce54a))
+* **markdown-preview:** (temp) remove auth ([0a60965](https://github.com/vtexdocs/devportal/commit/0a60965b221205b110dd3e59c989c552800a92f6))
+* **markdown-preview:** enable codehike preview ([8f8b3c7](https://github.com/vtexdocs/devportal/commit/8f8b3c707064315d010fe85a098921a1026954ca))
+* **markdown-preview:** undo changes to markdown-preview ([eafdf19](https://github.com/vtexdocs/devportal/commit/eafdf19e966adb819723e5f5762d8521bef8289c))
+* **navigation.json:** add release note to navigation ([e7338b3](https://github.com/vtexdocs/devportal/commit/e7338b3ab767302df0cf0061bbba0d4a4b24cd68))
+* **navigation.json:** update api guides navigation ([8e53e22](https://github.com/vtexdocs/devportal/commit/8e53e220aebee3b898ddb8c5a5abc2b33527ed6a))
+* **package.json:** update faststore dependencies ([3f73dbf](https://github.com/vtexdocs/devportal/commit/3f73dbf6d0c7864d192ad68f1088ac3719b41519))
+* **rapidoc:** update rapidoc ([2a7d22a](https://github.com/vtexdocs/devportal/commit/2a7d22a3680b28a843cec396808a5018ec9032a6))
+* **rapidoc:** update rapidoc submodule ([f1b8fb9](https://github.com/vtexdocs/devportal/commit/f1b8fb90410a05b17e3b59fd0d883c4cff79599b))
+* update component lib version ([d76dd55](https://github.com/vtexdocs/devportal/commit/d76dd553b534ca0cc7eb56facc20057e14df97dd))
+* update components lib version ([b14d2c2](https://github.com/vtexdocs/devportal/commit/b14d2c25ff2c141ed1e22d14b75ae33204ea1b57))
+* update components lib version ([398ffd1](https://github.com/vtexdocs/devportal/commit/398ffd10288b4b2f99badb3dd6713f783e405749))
+* update lock file ([a3168d6](https://github.com/vtexdocs/devportal/commit/a3168d65fc9dcc0d79e022cf44aa8eb356d9c3d8))
+* update yarn.lock ([91af2c1](https://github.com/vtexdocs/devportal/commit/91af2c159f9ed6502597717902efc8d6f139aad5))
+
+
+### Style
+
+* add components lib css ([491657e](https://github.com/vtexdocs/devportal/commit/491657e0e837b98c759dd7e219d21541bf44023c))
+* **code-samples:** add content and improve styles ([1f018d1](https://github.com/vtexdocs/devportal/commit/1f018d119e631c6397262be6749aa6ceef4e5ec5))
+* **global.css:** fix code hike style ([4bef05b](https://github.com/vtexdocs/devportal/commit/4bef05b7a5b939fd3fb67f7d06694a68d3a34d2a))
+* **global:** update codehike styles ([958c054](https://github.com/vtexdocs/devportal/commit/958c054a8ea7bbbd9999fd1ea32939489cbb63ba))
+* **guides:** update codehike theme ([8ac35fc](https://github.com/vtexdocs/devportal/commit/8ac35fc686f99a37b49502bb88af05e7d2abcd4c))
+* import utilities ([1129476](https://github.com/vtexdocs/devportal/commit/11294765d1f49d8eaa445eb97d6f6503150cad3b))
+* **release-notes:** add info release type + improve styles ([016108c](https://github.com/vtexdocs/devportal/commit/016108cba910c835d2a724662d251c432a0eef46))
+
+
+### Build
+
+* update components lib versoin ([e954c8b](https://github.com/vtexdocs/devportal/commit/e954c8b27ecf20d3ca320d25bd9092e7b6ef07d1))
+* update components version ([1ea5959](https://github.com/vtexdocs/devportal/commit/1ea59591579311511f912f30133c3eebd63903e2))
+
+
+### Docs
+
+* create redirect ([ca3fb79](https://github.com/vtexdocs/devportal/commit/ca3fb793fb0a430c2bc3b724555a53438d2642dc))
+* create redirects ([48ac082](https://github.com/vtexdocs/devportal/commit/48ac082c6c3ed286a36e65abcd855b9be8d2b844))
+* creating redirect ([647c8ca](https://github.com/vtexdocs/devportal/commit/647c8caf891137f0e236f2d7eab04fc63c4db0fe))
+* edit [slug].tsx ([96fb7c5](https://github.com/vtexdocs/devportal/commit/96fb7c5c49e1d1e1c7359fe969796fd280269c07))
+* edit api name ([64655fb](https://github.com/vtexdocs/devportal/commit/64655fb19a5feebe38b217ede3e3a3c13b004a44))
+* edit getReferencePaths.ts ([f7f31dd](https://github.com/vtexdocs/devportal/commit/f7f31ddadf774f95857e5372a37c7c5ab469d437))
+* edit netlify.toml ([b525987](https://github.com/vtexdocs/devportal/commit/b525987f14243163ad71c63cba946cdee0f20626))
+* **navigation:** add intelligent search api ([a585508](https://github.com/vtexdocs/devportal/commit/a585508b21c23178f6c7f3807eec9bc4809fc1e1))
+* **navigation:** add LM api delete user ([304792c](https://github.com/vtexdocs/devportal/commit/304792cff671f786ca333c1ed790747d2f0f58ff))
+* **navigation:** update auth guides ([e32ceeb](https://github.com/vtexdocs/devportal/commit/e32ceeb32f4bc08fc8e6d993611d50bf78b77722))
+* **navigation:** update master data v1 title ([222f30f](https://github.com/vtexdocs/devportal/commit/222f30fd8260ede205127b6defbcbfbab11e365d))
+* redirect ([8c22200](https://github.com/vtexdocs/devportal/commit/8c2220050cd12ff163efae523cb0120592d19749))
+
 ### [1.9.29](https://github.com/vtexdocs/devportal/compare/v1.9.28...v1.9.29) (2023-10-02)
 
 
