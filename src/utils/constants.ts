@@ -61,6 +61,12 @@ export const documentationData: DocDataElement[] = [
     description: messages['documentation_vtexio_apps.description'],
     link: '/docs/vtex-io-apps',
   },
+  /*   {
+    Icon: FastStoreIcon,
+    title: 'FastStore',
+    description: messages['documentation_vtexio_apps.description'],
+    link: '/docs/faststore',
+  }, */
 ]
 
 export const adminData: AdminDataElement[] = [

@@ -135,6 +135,30 @@ const seeMoreLink: SxStyleProp = {
   fontSize: '16px',
 }
 
+const grid: SxStyleProp = {
+  flexWrap: 'wrap',
+  justifyContent: 'space-between',
+  gap: '3rem',
+  marginY: '20px',
+}
+
+const gridElement: SxStyleProp = {
+  maxWidth: ['100%', '45%', '45%', '45%', '45%', '30%'],
+}
+
+const gridTitle: SxStyleProp = {
+  marginBottom: '15px',
+  fontSize: ['24px', '24px'],
+  lineHeight: ['32px', '32px'],
+  fontWeight: '400',
+}
+
+const gridContent: SxStyleProp = {
+  fontSize: ['16px', '16px'],
+  lineHeight: ['22px', '22px'],
+  fontWeight: '400',
+}
+
 export default {
   container,
   mainContainer,
@@ -153,4 +177,8 @@ export default {
   link,
   divider,
   seeMoreLink,
+  grid,
+  gridElement,
+  gridTitle,
+  gridContent,
 }
