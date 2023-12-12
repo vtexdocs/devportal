@@ -16,15 +16,13 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import DocumentContextProvider from 'utils/contexts/documentContext'
-import { SidebarContext } from 'utils/contexts/sidebar'
 
-import type { Item } from 'components/table-of-contents'
 import Contributors from 'components/contributors'
-import MarkdownRenderer from 'components/markdown-renderer'
+import { Item, LibraryContext, MarkdownRenderer } from '@vtexdocs/components'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
-import TableOfContents from 'components/table-of-contents'
+import { TableOfContents } from '@vtexdocs/components'
 import Breadcrumb from 'components/breadcrumb'
 
 import getHeadings from 'utils/getHeadings'
@@ -54,7 +52,7 @@ const docsPathsGLOBAL = await getDocsPaths()
 interface Props {
   sectionSelected: string
   parentsArray: string[]
-  breadcumbList: { slug: string; name: string; type: string }[]
+  breadcrumbList: { slug: string; name: string; type: string }[]
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
@@ -67,8 +65,14 @@ interface Props {
     category: string
   }[]
   pagination: {
-    previousDoc: { slug: string | null; name: string | null }
-    nextDoc: { slug: string | null; name: string | null }
+    previousDoc: {
+      slug: string | null
+      name: { en: string; pt: string; es: string } | null | null
+    }
+    nextDoc: {
+      slug: string | null
+      name: { en: string; pt: string; es: string } | null | null
+    }
   }
   isListed: boolean
   branch: string
@@ -85,13 +89,13 @@ const TutorialPage: NextPage<Props> = ({
   seeAlsoData,
   pagination,
   isListed,
-  breadcumbList,
+  breadcrumbList,
   branch,
 }) => {
   const [headings, setHeadings] = useState<Item[]>([])
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
-  const { setActiveSidebarElement } = useContext(SidebarContext)
+  const { setActiveSidebarElement } = useContext(LibraryContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
     setHeadings(headingList)
@@ -117,7 +121,7 @@ const TutorialPage: NextPage<Props> = ({
             <Box sx={styles.contentContainer}>
               <article>
                 <header>
-                  <Breadcrumb breadcumbList={breadcumbList} />
+                  <Breadcrumb breadcrumbList={breadcrumbList} />
                   <Text sx={styles.documentationTitle} className="title">
                     {serialized.frontmatter?.title}
                   </Text>
@@ -153,7 +157,7 @@ const TutorialPage: NextPage<Props> = ({
           </Box>
           <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />
-            <TableOfContents />
+            <TableOfContents headingList={headings} />
           </Box>
           <OnThisPage />
         </Flex>
@@ -354,9 +358,9 @@ export const getStaticProps: GetStaticProps = async ({
       )
     }
 
-    const breadcumbList: { slug: string; name: string; type: string }[] = []
+    const breadcrumbList: { slug: string; name: string; type: string }[] = []
     parentsArrayName.forEach((_el: string, idx: number) => {
-      breadcumbList.push({
+      breadcrumbList.push({
         slug: `/docs/tutorial/${parentsArray[idx]}`,
         name: parentsArrayName[idx],
         type: parentsArrayType[idx],
@@ -376,7 +380,7 @@ export const getStaticProps: GetStaticProps = async ({
         seeAlsoData,
         pagination,
         isListed,
-        breadcumbList,
+        breadcrumbList,
         branch,
       },
     }

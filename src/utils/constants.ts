@@ -18,7 +18,9 @@ import {
   ResourceDataElement,
 } from './typings/types'
 import { IntlShape } from 'react-intl'
+import libraryConfig from './libraryConfig'
 
+libraryConfig
 export const messages = getMessages()
 
 export const documentationData = (intl: IntlShape) => {

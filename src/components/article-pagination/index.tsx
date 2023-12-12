@@ -2,14 +2,21 @@ import { Link, Grid, Text, Box } from '@vtex/brand-ui'
 import { useRouter } from 'next/router'
 interface Props {
   pagination: {
-    previousDoc: { slug: string | null; name: string | null }
-    nextDoc: { slug: string | null; name: string | null }
+    previousDoc: {
+      slug: string | null
+      name: { en: string; pt: string; es: string } | null
+    }
+    nextDoc: {
+      slug: string | null
+      name: { en: string; pt: string; es: string } | null
+    }
   }
   hidePaginationPrevious: boolean
   hidePaginationNext: boolean
 }
 
 import styles from './styles'
+import { useIntl } from 'react-intl'
 
 const ArticlePagination = ({
   pagination,
@@ -17,10 +24,11 @@ const ArticlePagination = ({
   hidePaginationPrevious,
 }: Props) => {
   const router = useRouter()
+  const locale = useIntl().locale as 'en' | 'pt' | 'es'
 
   const handleClick = (e: { preventDefault: () => void }, slug: string) => {
     e.preventDefault()
-    router.push(`/docs/tutorial/${slug}`)
+    router.push(`${slug}`)
   }
   return (
     <Box sx={styles.mainContainer}>
@@ -28,14 +36,14 @@ const ArticlePagination = ({
         {!hidePaginationPrevious && pagination.previousDoc.slug && (
           <Link
             sx={styles.paginationLinkPrevious}
-            href={`/docs/tutorial/${pagination.previousDoc.slug}`}
+            href={pagination.previousDoc.slug}
             onClick={(e: { preventDefault: () => void }) => {
               handleClick(e, pagination.previousDoc.slug as string)
             }}
           >
             <Box sx={styles.paginationBox}>
               <Text sx={styles.paginationText}>
-                {pagination.previousDoc.name}
+                {pagination.previousDoc.name?.[locale]}
               </Text>
               <Text sx={styles.subTitle}>« Previous</Text>
             </Box>
@@ -44,13 +52,15 @@ const ArticlePagination = ({
         {!hidePaginationNext && pagination.nextDoc.slug && (
           <Link
             sx={styles.paginationLinkNext}
-            href={`/docs/tutorial/${pagination.nextDoc.slug}`}
+            href={pagination.nextDoc.slug}
             onClick={(e: { preventDefault: () => void }) => {
               handleClick(e, pagination.nextDoc.slug as string)
             }}
           >
             <Box sx={styles.paginationBox}>
-              <Text sx={styles.paginationText}>{pagination.nextDoc.name}</Text>
+              <Text sx={styles.paginationText}>
+                {pagination.nextDoc.name?.[locale]}
+              </Text>
               <Text sx={styles.subTitle}>Next »</Text>
             </Box>
           </Link>

@@ -8,7 +8,6 @@ import {
 import { useContext, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 
-import HamburgerMenu from './hamburger-menu'
 import DropdownMenu from 'components/dropdown-menu'
 import VTEXHelpCenterIcon from 'components/icons/vtex-helpcenter-icon'
 import GridIcon from 'components/icons/grid-icon'
@@ -16,13 +15,13 @@ import LongArrowIcon from 'components/icons/long-arrow-icon'
 
 import { getFeedbackURL } from 'utils/get-url'
 
-import SearchInput from 'components/search-input'
 import AnnouncementBar from 'components/announcement-bar'
 import LocaleSwitcher from 'components/locale-switcher'
 
 import styles from './styles'
 import { PreviewContext } from 'utils/contexts/preview'
 import { FormattedMessage, useIntl } from 'react-intl'
+import { HamburgerMenu, SearchInput } from '@vtexdocs/components'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Header = () => {

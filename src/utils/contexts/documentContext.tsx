@@ -1,7 +1,6 @@
+import { Item } from '@vtexdocs/components'
 import type { Dispatch, SetStateAction } from 'react'
 import { createContext, useState } from 'react'
-
-import type { Item } from 'components/table-of-contents'
 
 type ActiveItem = {
   item: string

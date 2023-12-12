@@ -4,9 +4,9 @@ import Image from 'next/image'
 import landingProduct from '../../../public/images/Diversity-2.png'
 import styles from 'components/newsletter-section/styles'
 import imgStyle from './styles.module.css'
-import SearchInput from 'components/search-input'
 
 import { FormattedMessage } from 'react-intl'
+import { SearchInput } from '@vtexdocs/components'
 
 const NewsletterSection = () => {
   return (

@@ -3,17 +3,17 @@ import { Link, Flex, IconCaret, Text } from '@vtex/brand-ui'
 import styles from './styles'
 
 interface Props {
-  breadcumbList: { slug: string; name: string; type: string }[]
+  breadcrumbList: { slug: string; name: string; type: string }[]
 }
 
-const Breadcrumb = ({ breadcumbList }: Props) => {
+const Breadcrumb = ({ breadcrumbList }: Props) => {
   return (
     <Flex sx={styles.breadcrumb}>
-      {breadcumbList.map((item, idx) =>
+      {breadcrumbList.map((item, idx) =>
         item.type === 'category' ? (
           <>
             <Text>{item.name}</Text>
-            {idx < breadcumbList.length - 1 ? (
+            {idx < breadcrumbList.length - 1 ? (
               <IconCaret direction="right" size={16} />
             ) : (
               ''
@@ -24,7 +24,7 @@ const Breadcrumb = ({ breadcumbList }: Props) => {
             <Link sx={styles.breadcrumbItem} href={item.slug}>
               {item.name}
             </Link>
-            {idx < breadcumbList.length - 1 ? (
+            {idx < breadcrumbList.length - 1 ? (
               <IconCaret direction="right" size={16} />
             ) : (
               ''
