@@ -7731,7 +7731,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/payments/-paymentId-/inbound-request/-action-",
+                  "endpoint": "/payments/-paymentId-/inbound/-action-",
                   "children": []
                 }
               ]
