@@ -12964,6 +12964,21 @@
               "type": "category",
               "children": [
                 {
+                  "name": "A/B test information: maximum time for tests is now limited to 30 days",
+                  "slug": "ab-test-information-maximum-time-for-tests-is-now-limited-to-30-days",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "December",
+              "slug": "december-2023",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
                   "name": "New TLS security protocol cryptographic cipher suite required for PCI-DSS compliance guidelines",
                   "slug": "new-tls-security-protocol-cryptographic-cipher-suite-required-for-pci-dss-compliance-guidelines",
                   "origin": "",
