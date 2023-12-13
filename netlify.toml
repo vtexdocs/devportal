@@ -889,3 +889,15 @@ force = true
 from = "/docs/api-reference/session-manager-api#overview"
 status = 308
 to = "/docs/api-reference/session-manager-api"
+
+[[redirects]]
+force = true
+from = "/api-reference/session-manager-api"
+status = 308
+to = "/docs/api-reference/session-manager-api"
+
+[[redirects]]
+force = true
+from = "/api-reference/session-manager-api#overview"
+status = 308
+to = "/docs/api-reference/session-manager-api"
