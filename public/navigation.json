@@ -10461,6 +10461,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Workspace behavior with app installations",
+              "slug": "vtex-io-documentation-workspace-behavior-with-app-installations",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
