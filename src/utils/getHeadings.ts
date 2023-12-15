@@ -17,10 +17,16 @@ const getHeadings = ({ headingList }: Heading) => {
           slug: slugify(toString(node)),
           children: [],
         })
-      } else if (node['depth'] === 3) {
+      } else if (node['depth'] === 3 && headingList.length > 0) {
         headingList[headingList.length - 1]?.children.push({
           title: toString(node),
           slug: slugify(toString(node)),
+        })
+      } else {
+        headingList.push({
+          title: toString(node),
+          slug: slugify(toString(node)),
+          children: [],
         })
       }
     })
