@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1](https://github.com/vtexdocs/devportal/compare/v1.10.0...v1.10.1) (2023-12-15)
+
+
+### Bug Fixes
+
+* revert ol and ul styling ([6a3f4cf](https://github.com/vtexdocs/devportal/commit/6a3f4cf1bfa2df08dcba0b6b7e155493b866e2ed))
+
+
+### Docs
+
+* create session manager api redirect ([0bf7421](https://github.com/vtexdocs/devportal/commit/0bf742117060f651bdf36277066fc76bdff5408f))
+* edit redirects ([1f1264d](https://github.com/vtexdocs/devportal/commit/1f1264dbc380b27c5eb33b819e8ec85d2574e75a))
+
 ## [1.10.0](https://github.com/vtexdocs/devportal/compare/v1.9.29...v1.10.0) (2023-12-11)
 
 
