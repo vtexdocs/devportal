@@ -8117,7 +8117,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/sessions/",
+                  "endpoint": "/sessions",
                   "children": []
                 }
               ]
