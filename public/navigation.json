@@ -7784,7 +7784,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Installments options",
+                  "name": "Get installments options",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "GET",
@@ -7800,7 +7800,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Affiliations",
+                  "name": "List all affiliations",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "GET",
@@ -7809,7 +7809,7 @@
                   "children": []
                 },
                 {
-                  "name": "Insert Affiliation",
+                  "name": "Insert a new affiliation",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7818,7 +7818,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update Affiliation",
+                  "name": "Update affiliation by ID",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -7827,7 +7827,7 @@
                   "children": []
                 },
                 {
-                  "name": "Affiliation By Id",
+                  "name": "Get affiliation by ID",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "GET",
@@ -7837,7 +7837,7 @@
                 },
                 {
                   "name": "Rules",
-                  "slug": "payments-gateway-api",
+                  "slug": "List all payment rules",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -7845,7 +7845,7 @@
                   "children": []
                 },
                 {
-                  "name": "Insert Rule",
+                  "name": "Insert a new payment rule",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7854,7 +7854,7 @@
                   "children": []
                 },
                 {
-                  "name": "Rule By Id",
+                  "name": "Get payment rule by ID",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "GET",
@@ -7863,7 +7863,7 @@
                   "children": []
                 },
                 {
-                  "name": "Rule By Id",
+                  "name": "Update payment rule by ID",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -7872,7 +7872,7 @@
                   "children": []
                 },
                 {
-                  "name": "Delete Rule",
+                  "name": "Delete payment rule by ID",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -7881,7 +7881,7 @@
                   "children": []
                 },
                 {
-                  "name": "Available Payment Methods",
+                  "name": "List all available payment methods",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "GET",
@@ -7906,7 +7906,7 @@
                   "children": []
                 },
                 {
-                  "name": "2.1 Send Payments Information Public",
+                  "name": "2.1 Send payments information public",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7915,7 +7915,7 @@
                   "children": []
                 },
                 {
-                  "name": "2.2 Send Payments With Saved Credit Card",
+                  "name": "2.2 Send payments with saved credit card",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7924,7 +7924,7 @@
                   "children": []
                 },
                 {
-                  "name": "3. Send Additional Data",
+                  "name": "3. Send additional data",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7933,7 +7933,7 @@
                   "children": []
                 },
                 {
-                  "name": "Do authorization",
+                  "name": "Authorize new transaction",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7942,7 +7942,7 @@
                   "children": []
                 },
                 {
-                  "name": "Transaction Details",
+                  "name": "Get transaction details",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "GET",
@@ -7951,7 +7951,7 @@
                   "children": []
                 },
                 {
-                  "name": "Payment Details",
+                  "name": "Get payment details",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "GET",
@@ -7960,7 +7960,7 @@
                   "children": []
                 },
                 {
-                  "name": "Transaction Settlement  Details",
+                  "name": "Get transaction settlement details",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "GET",
