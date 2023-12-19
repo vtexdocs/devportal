@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'info',
     description:
-      'Temporary freeze on automatic app distribution in preparation for Black Friday 2023',
-    date: new Date('11/17/2023'),
+      'A/B test information: maximum time for tests is now limited to 30 days',
+    date: new Date('12/13/2023'),
   },
   updateType: 'release-notes',
 }
