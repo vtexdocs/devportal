@@ -1,7 +1,7 @@
 import type { IconProps } from '@vtex/brand-ui'
 import { Icon } from '@vtex/brand-ui'
 
-const FbIcon = (props: IconProps) => (
+const FacebookIcon = (props: IconProps) => (
   <Icon
     {...props}
     viewBox="0 0 33 33"
@@ -31,4 +31,4 @@ const FbIcon = (props: IconProps) => (
   </Icon>
 )
 
-export default FbIcon
+export default FacebookIcon
