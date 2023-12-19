@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.2](https://github.com/vtexdocs/devportal/compare/v1.10.1...v1.10.2) (2023-12-19)
+
+
+### Bug Fixes
+
+* **getdocspaths:** do not fetch docs/release-notes paths for guides ([deaefef](https://github.com/vtexdocs/devportal/commit/deaefef5229a9c2c7b6b4a095e1dda0a2e038d8d))
+
 ### [1.10.1](https://github.com/vtexdocs/devportal/compare/v1.10.0...v1.10.1) (2023-12-15)
 
 
