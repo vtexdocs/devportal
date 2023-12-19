@@ -26,7 +26,7 @@ import { removeHTML } from 'utils/string-utils'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
-import getDocsPaths from 'utils/getReleasePaths'
+import getReleasePaths from 'utils/getReleasePaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
@@ -37,7 +37,7 @@ import styles from 'styles/documentation-page'
 import { PreviewContext } from 'utils/contexts/preview'
 import { remarkCodeHike } from '@code-hike/mdx'
 
-const docsPathsGLOBAL = await getDocsPaths()
+const docsPathsGLOBAL = await getReleasePaths()
 
 interface Props {
   content: string
@@ -123,7 +123,7 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // const slugs = Object.keys(await getDocsPaths())
+  // const slugs = Object.keys(await getReleasePaths())
   // const paths = slugs.map((slug) => ({
   //   params: { slug },
   // }))
@@ -148,7 +148,7 @@ export const getStaticProps: GetStaticProps = async ({
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
       ? docsPathsGLOBAL
-      : await getDocsPaths(branch)
+      : await getReleasePaths(branch)
 
   const path = docsPaths[slug]
   if (!path) {
