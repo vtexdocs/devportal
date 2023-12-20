@@ -7836,8 +7836,8 @@
                   "children": []
                 },
                 {
-                  "name": "Rules",
-                  "slug": "List all payment rules",
+                  "name": "List all payment rules",
+                  "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
