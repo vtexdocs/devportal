@@ -10533,6 +10533,70 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Developing services on VTEX IO",
+              "slug": "developing-services-on-vtex-io",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "1. Getting started with the boilerplate",
+                  "slug": "services-1-getting-started-with-the-boilerplate",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "2. Handling and receiving events",
+                  "slug": "services-2-handling-and-receiving-events",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "3. Using the Analytics client",
+                  "slug": "services-3-using-the-analytics-client",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "4. Using events as triggers",
+                  "slug": "services-4-using-events-as-triggers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "5. Using the Master Data client",
+                  "slug": "services-5-using-the-master-data-client",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "6. Using GraphQL to retrieve data from Master Data",
+                  "slug": "services-6-graphql-retrieving-data-from-master-data",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "7. Using GraphiQL",
+                  "slug": "services-7-using-graphiql",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Services - Conclusion",
+                  "slug": "services-conclusion",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
