@@ -6,8 +6,8 @@ export const getDeveloperPortalURL = () => {
   return `https://developers.vtex.com/`
 }
 
-export const getHelpCenterURL = () => {
-  return `https://help.vtex.com/`
+export const getGithubURL = () => {
+  return `https://github.com/vtexdocs/helpcenter`
 }
 
 export const getCommunityURL = () => {
@@ -20,4 +20,28 @@ export const getLearningCenterURL = () => {
 
 export const getSupportURL = () => {
   return 'https://help.vtex.com/en/support'
+}
+
+export const getSiteMapURL = () => {
+  return 'https://help.vtex.com/en/support' // TODO: get site map
+}
+
+export const getLinkedinURL = () => {
+  return 'https://linkedin.com/company/vtex'
+}
+
+export const getFacebookURL = () => {
+  return 'https://www.facebook.com/vtexcommerce/'
+}
+
+export const getInstagramURL = () => {
+  return 'https://www.instagram.com/vtexbrasil/'
+}
+
+export const getYoutubeURL = () => {
+  return 'https://www.youtube.com/c/VTEX-Commerce/featured'
+}
+
+export const getTwitterURL = () => {
+  return 'https://twitter.com/vtexonline'
 }

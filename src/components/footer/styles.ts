@@ -1,37 +1,47 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
-const footerLeftLinks: SxStyleProp = {
-  ml: ['0px', '32px'],
-  mb: ['24px', '0px'],
-  textAlign: 'left',
+const test: SxStyleProp = {
+  display: 'flex',
+  backgroundColor: 'aquamarine',
 }
 
-const footerRightLinks: SxStyleProp = {
-  ...footerLeftLinks,
-  textAlign: 'right',
+const outerBox: SxStyleProp = {
+  bg: '#142032;',
+  display: ['flex'],
+  flexDirection: ['column', 'row'],
+  padding: '48px 32px 48px 48px',
+  alignItems: ['flex-start', 'center'],
+  justifyContent: 'space-between',
+  flexWrap: 'wrap',
+  rowGap: '32px',
+  overflow: 'auto',
 }
 
-const footerLinks: SxStyleProp = {
-  '& > footer': {
-    px: ['0px', '32px'],
-    '& > div': {
-      flexDirection: ['column', 'row'],
-      alignItems: ['flex-start', 'center'],
-      px: ['32px', '0px'],
-      py: ['32px'],
-      width: ['100vw', '100%'],
-      '& > :last-child': {
-        mt: ['32px', '0px'],
-        display: ['grid', 'flex'],
-        justifyItems: ['stretch', 'initial'],
-        justifyContent: ['space-between', 'flex-end'],
-      },
-    },
-  },
+const socialMediaIcons: SxStyleProp = {
+  gap: '16px',
+  alignItems: 'center',
+  paddingTop: '5px',
+}
+
+const textLinkItems: SxStyleProp = {
+  fontSize: '16px',
+  gap: ['48px', '30px', '45px'],
+  rowGap: ['45px'],
+  flexWrap: 'wrap',
+  justifyItems: 'left',
+  alignItems: 'center',
+}
+
+const localeSwitchLanding: SxStyleProp = {
+  marginLeft: '0',
+  justifySelf: 'left',
+  positionBottom: '5px',
 }
 
 export default {
-  footerLinks,
-  footerLeftLinks,
-  footerRightLinks,
+  localeSwitchLanding,
+  test,
+  outerBox,
+  socialMediaIcons,
+  textLinkItems,
 }
