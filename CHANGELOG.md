@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/vtexdocs/devportal/compare/v1.10.2...v1.11.0) (2023-12-22)
+
+
+### Features
+
+* **faststore-components:** feat GiftTemplate components ([1c1a4c9](https://github.com/vtexdocs/devportal/commit/1c1a4c9b7ef38375502c9c99b065a4fdcb675c62))
+
+
+### Bug Fixes
+
+* **gift:** add Icon attributes ([0912dda](https://github.com/vtexdocs/devportal/commit/0912ddabb498e5d6d864d581cdba6f35f49a1b3a))
+
+
+### Docs
+
+* **navigation:** add services course ([09543d8](https://github.com/vtexdocs/devportal/commit/09543d8e3b535610f4af01fa0a862410385c8d21))
+
 ### [1.10.2](https://github.com/vtexdocs/devportal/compare/v1.10.1...v1.10.2) (2023-12-19)
 
 
