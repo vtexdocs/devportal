@@ -127,7 +127,7 @@ const FastStorePage: NextPage<Props> = ({ branch }) => {
           </Flex>
           <Box sx={styles.divider}></Box>
           <Text sx={styles.contentTitle}>Ecommerce-focused UI components</Text>
-          <Link href="/docs/faststore/components-index" legacyBehavior>
+          <Link href="/docs/guides/faststore/components-index" legacyBehavior>
             <Box sx={styles.boxTip}>
               <Text>
                 Use FastStore components to create modern storefronts that
