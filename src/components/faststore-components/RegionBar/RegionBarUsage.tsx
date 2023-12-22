@@ -1,10 +1,20 @@
-import { RegionBar, RegionModal, useUI } from '@faststore/ui'
+import { Icon, RegionBar, RegionModal, useUI } from '@faststore/ui'
 
 const RegionBarUsage = () => {
   const { modal, openModal } = useUI()
   return (
     <>
-      <RegionBar onButtonClick={() => openModal()} label={''} />
+      <RegionBar
+        icon={
+          <Icon
+            name="MapPin"
+            onResize={undefined}
+            onResizeCapture={undefined}
+          />
+        }
+        label="Set your location"
+        onButtonClick={() => openModal()}
+      />
       {modal && <RegionModal fadeOutOnSubmit={true} />}
     </>
   )
