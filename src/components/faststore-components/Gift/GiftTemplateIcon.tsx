@@ -3,7 +3,15 @@ import { useFormattedPrice } from '../utilities/usePriceFormatter'
 
 const GiftTemplateIcon = () => {
   return (
-    <Gift icon={<Icon name="ShoppingCart" />}>
+    <Gift
+      icon={
+        <Icon
+          name="ShoppingCart"
+          onResize={undefined}
+          onResizeCapture={undefined}
+        />
+      }
+    >
       <GiftImage>
         <img
           src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"

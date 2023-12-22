@@ -3,7 +3,11 @@ import { useFormattedPrice } from '../utilities/usePriceFormatter'
 
 const GiftTemplateWithoutBadge = () => {
   return (
-    <Gift icon={<Icon name="Tag" />}>
+    <Gift
+      icon={
+        <Icon name="Tag" onResize={undefined} onResizeCapture={undefined} />
+      }
+    >
       <GiftImage>
         <img
           src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
