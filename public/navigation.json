@@ -5130,7 +5130,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-projectId-",
+                  "endpoint": "/_v/cms/api/-projectId-/",
                   "children": []
                 },
                 {
@@ -5148,7 +5148,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-projectId-/-content-type-/-document-id-",
+                  "endpoint": "/_v/cms/api/-projectId-/-content-type-/-document-id-/",
                   "children": []
                 }
               ]
