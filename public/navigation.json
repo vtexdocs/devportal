@@ -5125,16 +5125,16 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get all Content Types",
+                  "name": "Get all content types",
                   "slug": "headless-cms-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-projectId-/",
+                  "endpoint": "/_v/cms/api/-projectId-",
                   "children": []
                 },
                 {
-                  "name": "Get all CMS pages by Content Type",
+                  "name": "Get all CMS pages by content type",
                   "slug": "headless-cms-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5148,7 +5148,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/_v/cms/api/-projectId-/-content-type-/-document-id-/",
+                  "endpoint": "/_v/cms/api/-projectId-/-content-type-/-document-id-",
                   "children": []
                 }
               ]
