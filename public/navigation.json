@@ -10597,6 +10597,42 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Calling commerce APIs on VTEX IO",
+              "slug": "calling-commerce-apis-on-vtex-io",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "1. Getting the Service app boilerplate",
+                  "slug": "calling-commerce-apis-1-getting-the-service-app-boilerplate",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "2. Discovering VTEX Commerce APIs and authentication",
+                  "slug": "calling-commerce-apis-2-discovering-vtex-commerce-apis-and-authentication",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "3. Using VTEX IO clients",
+                  "slug": "calling-commerce-apis-3-using-vtex-io-clients",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Calling Commerce APIs - Conclusion",
+                  "slug": "calling-commerce-apis-conclusion",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
