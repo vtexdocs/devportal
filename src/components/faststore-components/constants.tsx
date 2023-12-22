@@ -72,6 +72,20 @@ export const constants = {
         "Namespace ID prefix for the current Accordion item's panel and button to avoid ID duplication when multiple instances are on the same page.",
     },
   ],
+  propsSROnly: [
+    {
+      name: 'text',
+      type: 'string',
+      description: 'Defines component element type (e.g.: span).',
+      required: true,
+    },
+    {
+      name: 'as',
+      type: 'ElementType',
+      description: 'Defines component element type (e.g.: span, div, h1).',
+      default: 'span',
+    },
+  ],
   propsSkuOptions: [
     {
       name: 'alt',
@@ -125,6 +139,62 @@ export const constants = {
     {
       type: 'Dimensions',
       value: '7 x 3 x 9 in',
+    },
+  ],
+  propsLink: [
+    {
+      name: 'testId',
+      type: 'string',
+      description:
+        'ID to find this component in testing tools (e.g.: cypress, testing library, and jest).',
+      default: 'fs-link',
+    },
+    {
+      name: 'variant',
+      type: "'default' | 'display' | 'inline'",
+      description: 'Specifies the component variant.',
+      default: 'default',
+    },
+    {
+      name: 'size',
+      type: "'small' | 'regular'",
+      description: 'Specifies the size variant.',
+      default: 'regular',
+    },
+    {
+      name: 'inverse',
+      type: 'boolean',
+      description: 'Defines the use of inverted colors.',
+    },
+    {
+      name: 'as',
+      type: 'string | PolymorphicComponentPropsWithRef',
+      description: 'Defines how this component should behave.',
+      default: 'a',
+    },
+  ],
+  propsRange: [
+    {
+      name: 'absolute',
+      type: 'number',
+      description: 'The absolute value of the slider.',
+    },
+    {
+      name: 'selected',
+      type: 'number',
+      description: 'The selected value of the slider.',
+    },
+  ],
+  propsRangeLabel: [
+    {
+      name: 'min',
+      type: 'string | ReactNode',
+      description: 'Label for minimum range value.',
+    },
+    {
+      name: 'max',
+      type: 'string | ReactNode',
+      description: 'Label for maximum range value.',
     },
   ],
   propsToast: [
@@ -187,6 +257,131 @@ export const constants = {
     {
       url: 'https://storeframework.vtexassets.com/arquivos/ids/190930/chris-hardy-182PzOtcmWc-unsplash.jpg?v=637867509778300000',
       alternateName: 'magicscale',
+    },
+  ],
+  propsRadioGroup: [
+    {
+      name: 'name',
+      type: 'string',
+      description: 'Name to link children by context.',
+      required: true,
+    },
+    {
+      name: 'selectedValue',
+      type: 'string | number',
+      description: 'Value of checked child.',
+    },
+    {
+      name: 'onChange',
+      type: 'ChangeEventHandler<HTMLInputElement>',
+      description: 'Function that is triggered when any children is checked.',
+    },
+  ],
+  propsLinkButton: [
+    {
+      name: 'testId',
+      type: 'string',
+      description:
+        'ID to find this component in testing tools (e.g.: cypress, testing library, and jest).',
+      default: 'fs-link-button',
+    },
+    {
+      name: 'variant',
+      type: "'primary' | 'secondary' | 'tertiary'",
+      description: 'Specifies the component color variant.',
+      default: 'primary',
+    },
+    {
+      name: 'size',
+      type: "'small' | 'regular'",
+      description: 'Specifies the size variant.',
+      default: 'regular',
+    },
+    {
+      name: 'inverse',
+      type: 'boolean',
+      description: 'Defines the use of inverted colors.',
+    },
+    {
+      name: 'disabled',
+      type: 'boolean',
+      description: 'Specifies that this button should be disabled.',
+    },
+    {
+      name: 'icon',
+      type: 'ReactNode',
+      description: 'A React component that will be rendered as an icon.',
+    },
+    {
+      name: 'iconPosition',
+      type: "'left' | 'right'",
+      description: 'Specifies where the icon should be positioned.',
+    },
+  ],
+  propsInputField: [
+    {
+      name: 'testId',
+      type: 'string',
+      description:
+        'ID to find this component in testing tools (e.g.: cypress, testing library, and jest).',
+      default: 'fs-input-field',
+    },
+    {
+      name: 'id',
+      type: 'string',
+      description: 'ID to identify input and corresponding label.',
+      required: true,
+    },
+    {
+      name: 'label',
+      type: 'string',
+      description: 'The text displayed to identify input text.',
+      required: true,
+    },
+    {
+      name: 'error',
+      type: 'string',
+      description: 'The error message is displayed when an error occurs.',
+    },
+    {
+      name: 'inputRef',
+      type: 'MutableRefObject<HTMLInputElement | null>',
+      description: "Component's ref.",
+    },
+    {
+      name: 'disabled',
+      type: 'boolean',
+      description:
+        'Specifies that the whole input component should be disabled.',
+    },
+    {
+      name: 'actionable',
+      type: 'boolean',
+      description: 'Adds a Button to the component.',
+    },
+    {
+      name: 'onSubmit',
+      type: '() => void',
+      description:
+        'Callback function when button is clicked. Required for actionable input.*',
+    },
+    {
+      name: 'onClear',
+      type: '() => void',
+      description:
+        'Callback function when clear button is clicked. Required for actionable input.*',
+    },
+    {
+      name: 'buttonActionText',
+      type: 'string',
+      description:
+        'The text displayed on the Button. Suggestion: maximum 9 characters.',
+      default: 'Apply',
+    },
+    {
+      name: 'displayClearButton',
+      type: 'boolean',
+      description: 'Boolean that controls the clear button.',
     },
   ],
   propsImageElementData: [
