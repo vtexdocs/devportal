@@ -8801,12 +8801,12 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get Product Rating",
+                  "name": "Get product rating",
                   "slug": "reviews-and-ratings-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/rating/-productId-",
+                  "endpoint": "/reviews-and-ratings/api/rating/-productId-",
                   "children": []
                 }
               ]
@@ -8817,30 +8817,30 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get Review by Review ID",
+                  "name": "Get product review by review ID",
                   "slug": "reviews-and-ratings-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/review/-reviewId-",
+                  "endpoint": "/reviews-and-ratings/api/review/-reviewId-",
                   "children": []
                 },
                 {
-                  "name": "Delete Review",
+                  "name": "Delete review",
                   "slug": "reviews-and-ratings-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/review/-reviewId-",
+                  "endpoint": "/reviews-and-ratings/api/review/-reviewId-",
                   "children": []
                 },
                 {
-                  "name": "Update a Review",
+                  "name": "Update a review",
                   "slug": "reviews-and-ratings-api",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/review/-reviewId-",
+                  "endpoint": "/reviews-and-ratings/api/review/-reviewId-",
                   "children": []
                 },
                 {
@@ -8849,7 +8849,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/reviews",
+                  "endpoint": "/reviews-and-ratings/api/reviews",
                   "children": []
                 },
                 {
@@ -8858,7 +8858,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/reviews",
+                  "endpoint": "/reviews-and-ratings/api/reviews",
                   "children": []
                 },
                 {
@@ -8867,16 +8867,16 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/reviews",
+                  "endpoint": "/reviews-and-ratings/api/reviews",
                   "children": []
                 },
                 {
-                  "name": "Create a Review",
+                  "name": "Create a review",
                   "slug": "reviews-and-ratings-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/review",
+                  "endpoint": "/reviews-and-ratings/api/review",
                   "children": []
                 }
               ]
