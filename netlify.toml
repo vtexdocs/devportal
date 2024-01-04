@@ -907,3 +907,9 @@ force = true
 from = "/vtex-rest-api/reference/using-postman"
 status = 308
 to = "/docs/guides/making-your-first-request"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/get-to-know-vtex-apis"
+status = 308
+to = "/docs/api-reference"
