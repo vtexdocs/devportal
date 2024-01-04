@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1](https://github.com/vtexdocs/devportal/compare/v1.11.0...v1.11.1) (2024-01-04)
+
+
+### Chore
+
+* **faststore-components/constants:** update faststore constants ([018d60d](https://github.com/vtexdocs/devportal/commit/018d60dfe4331f827c64295550fcc105c608b241))
+
+
+### Docs
+
+* **navigation:** add calling commerce apis course ([dcadc12](https://github.com/vtexdocs/devportal/commit/dcadc12f16b9d3106177a5318ce3994939155619))
+* **netlify.toml:** redirect legacy page get-to-know-vtex-apis ([5b8b629](https://github.com/vtexdocs/devportal/commit/5b8b629f6aab73342967584ed549bca04f9d9773))
+* **netlify.toml:** redirect legacy page using-postman ([e4d695c](https://github.com/vtexdocs/devportal/commit/e4d695c7f0913a34593854e1ed255754682e6e0c))
+* **redirect:** fix redirect using-postman ([faba12b](https://github.com/vtexdocs/devportal/commit/faba12b6bb27aa12e6697ce18054826d0886dfc1))
+
 ## [1.11.0](https://github.com/vtexdocs/devportal/compare/v1.10.2...v1.11.0) (2023-12-22)
 
 
