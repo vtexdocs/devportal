@@ -901,3 +901,9 @@ force = true
 from = "/api-reference/session-manager-api#overview"
 status = 308
 to = "/docs/api-reference/session-manager-api"
+
+[[redirects]]
+force = true
+from = "/vtex-rest-api/reference/using-postman"
+status = 308
+to = "/docs/guides/making-your-first-request"
