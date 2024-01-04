@@ -913,3 +913,9 @@ force = true
 from = "/docs/api-reference/get-to-know-vtex-apis"
 status = 308
 to = "/docs/api-reference"
+
+[[redirects]]
+force = true
+from = "/docs/guides/2023-06-06-new-integration-guide-headless-commerce"
+status = 308
+to = "/updates/release-notes/2023-06-06-new-integration-guide-headless-commerce"
