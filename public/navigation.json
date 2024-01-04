@@ -10797,6 +10797,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Documentation best practices",
+                  "slug": "vtex-io-documentation-documentation-guidelines",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             }
