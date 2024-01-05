@@ -40,6 +40,8 @@ import { getLogger } from 'utils/logging/log-util'
 import { Item, LibraryContext, TableOfContents } from '@vtexdocs/components'
 import MarkdownRenderer from 'components/faststore-components/markdown-renderer'
 
+const docsPathsGLOBAL = await getFastStorePaths()
+
 interface Props {
   serialized: MDXRemoteSerializeResult
   frontmatter: {
@@ -55,6 +57,8 @@ interface Props {
     hidePaginationPrevious: boolean
   }
   sectionSelected: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  sidebarfallback: any
   parentsArray: string[]
   breadcumbList: { slug: string; name: string; type: string }[]
   slug: string
@@ -74,28 +78,26 @@ interface Props {
   isListed: boolean
 }
 
-const docsPathsGLOBAL = await getFastStorePaths()
-
 const FastStorePage: NextPage<Props> = ({
-  serialized,
-  frontmatter,
-  sectionSelected,
-  breadcumbList,
   slug,
+  serialized,
   filePath,
+  frontmatter,
   headingList,
   contributors,
+  pagination,
+  sectionSelected,
+  isListed,
+  breadcumbList,
   mdxProps,
   branch,
-  pagination,
-  isListed,
 }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   const { setActiveSidebarElement } = useContext(LibraryContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
     setBranchPreview(branch)
-  }, [])
+  }, [serialized.frontmatter])
   return (
     <>
       <Head>
@@ -172,8 +174,10 @@ export const getStaticProps: GetStaticProps = async ({
     preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
       ? JSON.parse(JSON.stringify(previewData)).branch
       : 'main'
-  const slug = params?.slug as string
+  const simplifiedSlug = params?.slug as string
+  const slug = `faststore/${simplifiedSlug}`
   const branch = preview ? previewBranch : 'feat/faststore-docs'
+  console.log(`Slug: ${slug}`)
 
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
@@ -182,7 +186,7 @@ export const getStaticProps: GetStaticProps = async ({
 
   const logger = getLogger('FastStore')
 
-  const filePath = docsPaths[slug]
+  const filePath = docsPaths[simplifiedSlug]
   if (!filePath) {
     return {
       notFound: true,
@@ -215,22 +219,17 @@ export const getStaticProps: GetStaticProps = async ({
     ''
   )
 
-  const sidebarfallback = await getNavigation()
-  const flattenedSidebar = flattenJSON(sidebarfallback)
-  const isListed: boolean = getKeyByValue(flattenedSidebar, slug) ? true : false
-  const cleanSlug = getKeyByValue(flattenedSidebar, slug)
-  const keyPath = cleanSlug
-    ? getKeyByValue(flattenedSidebar, slug)
-    : getKeyByValue(flattenedSidebar, `faststore/${slug}`)
-
   const parentsArray: string[] = []
   const parentsArrayName: string[] = []
   const parentsArrayType: string[] = []
-  const sectionSelected = 'FastStore'
-
+  const sidebarfallback = await getNavigation()
+  const sectionSelected = 'Storefront Development'
+  const flattenedSidebar = flattenJSON(sidebarfallback)
+  const keyPath = getKeyByValue(flattenedSidebar, `faststore/${simplifiedSlug}`)
+  const isListed: boolean = keyPath ? true : false
   if (keyPath) {
     getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
-    cleanSlug ? parentsArray.push(slug) : parentsArray.push(`guides/${slug}`)
+    parentsArray.push(slug)
     getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
     getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
   }
@@ -243,7 +242,6 @@ export const getStaticProps: GetStaticProps = async ({
       type: parentsArrayType[idx],
     })
   })
-
   function transformer(ast: Node) {
     visit(ast, 'element', visitor)
 
@@ -304,12 +302,11 @@ export const getStaticProps: GetStaticProps = async ({
       sidebarfallback,
       `$..[?(@.type=='markdown')]..name`
     )
-    const indexOfSlug = docsListSlug.indexOf(slug)
-
+    const indexOfSlug = docsListSlug.indexOf(`faststore/${simplifiedSlug}`)
     const pagination = {
       previousDoc: {
         slug: docsListSlug[indexOfSlug - 1]
-          ? `/docs/faststore/${docsListSlug[indexOfSlug - 1]}`
+          ? `/docs/guides/${docsListSlug[indexOfSlug - 1]}`
           : null,
         name: docsListName[indexOfSlug - 1]
           ? docsListName[indexOfSlug - 1]
@@ -317,7 +314,7 @@ export const getStaticProps: GetStaticProps = async ({
       },
       nextDoc: {
         slug: docsListSlug[indexOfSlug + 1]
-          ? `/docs/faststore/${docsListSlug[indexOfSlug + 1]}`
+          ? `/docs/guides/${docsListSlug[indexOfSlug + 1]}`
           : null,
         name: docsListName[indexOfSlug + 1]
           ? docsListName[indexOfSlug + 1]
@@ -327,19 +324,20 @@ export const getStaticProps: GetStaticProps = async ({
 
     return {
       props: {
-        serialized,
         sectionSelected,
+        sidebarfallback,
         parentsArray,
         slug,
-        filePath,
+        serialized,
+        headingList,
         contributors,
+        filePath,
+        pagination,
+        isListed,
+        breadcumbList,
+        branch,
         frontmatter: serialized.frontmatter,
         mdxProps,
-        breadcumbList,
-        headingList,
-        branch,
-        isListed,
-        pagination,
       },
     }
   } catch (error) {
