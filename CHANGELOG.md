@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.2](https://github.com/vtexdocs/devportal/compare/v1.11.1...v1.11.2) (2024-01-04)
+
+
+### Docs
+
+* **netlify.toml:** redirect headless commerce release note ([4653527](https://github.com/vtexdocs/devportal/commit/465352743f86200efc3cf726aa3e8572106e95bf))
+
 ### [1.11.1](https://github.com/vtexdocs/devportal/compare/v1.11.0...v1.11.1) (2024-01-04)
 
 
