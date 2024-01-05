@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/vtexbr-buybox-context"
+status = 308
+to = "/docs/apps/vtexbr.buybox-context"
+
+[[redirects]]
+force = true
 from = "/docs/apps/vtex.store-icons/iconpack"
 status = 308
 to = "/docs/guides/vtex-store-icons-iconpack"
