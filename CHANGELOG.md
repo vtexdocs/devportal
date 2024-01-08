@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.3](https://github.com/vtexdocs/devportal/compare/v1.11.2...v1.11.3) (2024-01-08)
+
+
+### Bug Fixes
+
+* **faststore/[slug].tsx:** allows listing faststore docs ([dbac5f8](https://github.com/vtexdocs/devportal/commit/dbac5f8c797bd65cd0425960f52cca565f1a9382))
+
 ### [1.11.2](https://github.com/vtexdocs/devportal/compare/v1.11.1...v1.11.2) (2024-01-04)
 
 
