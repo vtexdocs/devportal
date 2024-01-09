@@ -37,7 +37,8 @@ const nextConfig = {
     return config
   },
   env: {
-    navigationJsonUrl: 'https://developers.vtex.com/navigation.json',
+    navigationJsonUrl:
+      'https://raw.githubusercontent.com/vtexdocs/devportal/chore/update-navigation-with-faststore-docs/public/navigation.json',
     contentOrg: '',
     contentRepo: '',
     contentBranch: '',
