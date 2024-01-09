@@ -936,3 +936,9 @@ force = true
 from = "/docs/guides/2023-06-06-new-integration-guide-headless-commerce"
 status = 308
 to = "/updates/release-notes/2023-06-06-new-integration-guide-headless-commerce"
+
+[[redirects]]
+force = true
+from = "/reference/master-data-api-v2-overview"
+status = 308
+to = "/docs/api-reference/master-data-api-v2"
