@@ -1,23 +1,21 @@
 {
     "exportFormatVersion": 2,
-    "exportTime": "2023-09-18 14:07:56",
+    "exportTime": "2024-01-09 19:56:30",
     "containerVersion": {
-        "path": "accounts/6003163501/containers/164701425/versions/4",
+        "path": "accounts/6003163501/containers/164701425/versions/0",
         "accountId": "6003163501",
         "containerId": "164701425",
-        "containerVersionId": "4",
-        "name": "GA4 installation with enriched items data - VTEX v2",
-        "description": "We added a custom HTML to enrich the items object. \nThis improvement aims to complete the attribution data with information about the promotion banners and/or the list's name.",
+        "containerVersionId": "0",
         "container": {
             "path": "accounts/6003163501/containers/164701425",
             "accountId": "6003163501",
             "containerId": "164701425",
-            "name": "Google Analytics 4",
-            "publicId": "GTM-USEYOUROWN",
+            "name": "Google Analytics 4 - official container",
+            "publicId": "GTM-KMGXQP86",
             "usageContext": [
                 "WEB"
             ],
-            "fingerprint": "1693668351144",
+            "fingerprint": "1695046170433",
             "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6003163501/containers/164701425/workspaces?apiLink=container",
             "features": {
                 "supportUserPermissions": true,
@@ -36,7 +34,7 @@
                 "supportTransformations": false
             },
             "tagIds": [
-                "GTM-USEYOUROWN"
+                "GTM-KMGXQP86"
             ]
         },
         "tag": [
@@ -1748,7 +1746,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "html",
-                        "value": "// The outer self-invoking function serves to encapsulate the logic     \n// and avoid polluting the global namespace with the intermediate variables used in the script.\n\n<script> \n    (function() {\n        function handleDataLayerUpdate(dataLayer) {\n         // Get the latest event from the data layer (the last element in the array).\n         var latestEvent = dataLayer[dataLayer.length - 1];\n\n        // If the event is \"gtm.load\", \"gtm.dom\", or \"gtm.scroll\", use the second latest event instead.\n        if (['gtm.load', 'gtm.dom', 'gtm.scroll'].includes(latestEvent.event) && dataLayer.length > 1) {\n            latestEvent = dataLayer[dataLayer.length - 2];\n        }\n            // Get previously stored values from the session storage or set to an empty string if undefined.\n            var creativeName = sessionStorage.getItem('creative_name') || \"\";\n            var creativeSlot = sessionStorage.getItem('creative_slot') || \"\";\n            var itemListName = sessionStorage.getItem('item_list_name') || \"\";\n            var promotionName = sessionStorage.getItem('promotion_name') || \"\";\n            var promotionId = sessionStorage.getItem('promotion_id') || \"\";\n\n            // If the latest event is a 'select_promotion' event, update the session storage \n            // with the promotion name and creative slot if they are present in the event data.\n            if (latestEvent.event === 'select_promotion') {\n                if (latestEvent.ecommerce && latestEvent.ecommerce.promotion_name !== undefined) {\n                    sessionStorage.setItem('promotion_name', latestEvent.ecommerce.promotion_name);\n                }\n                if (latestEvent.ecommerce && latestEvent.ecommerce.creative_slot !== undefined) {\n                    sessionStorage.setItem('creative_slot', latestEvent.ecommerce.creative_slot);\n                }\n                if (latestEvent.ecommerce && latestEvent.ecommerce.promotion_id !== undefined) {\n                    sessionStorage.setItem('promotion_id', latestEvent.ecommerce.promotion_id);\n                }\n                if (latestEvent.ecommerce && latestEvent.ecommerce.creative_name !== undefined) {\n                    sessionStorage.setItem('creative_name', latestEvent.ecommerce.creative_name);\n                }\n            }\n           \n            // If the latest event is a 'select_item' event, update the session storage \n            // with the item list name if it is present in the event data.\n            if (latestEvent.event === 'select_item') {\n                if (latestEvent.ecommerce && latestEvent.ecommerce.item_list_name !== undefined) {\n                    sessionStorage.setItem('item_list_name', latestEvent.ecommerce.item_list_name);\n                }\n            }\n           \n            // If the latest event is one of the listed e-commerce events, \n            // enrich the event data with the stored session data.\n            if (['add_to_cart', 'remove_from_cart', 'add_to_wishlist', 'view_cart', 'begin_checkout', 'add_shipping_info', 'add_payment_info', 'purchase'].indexOf(latestEvent.event) !== -1) {\n                // Create a new object to hold the enriched e-commerce data, starting with the existing data.\n                var ecommerce = latestEvent.ecommerce || {};\n                var items = ecommerce.items || [];\n                // Map over the items array, creating a new array with the enriched data.\n                items = items.map(function(item) {\n                    // Create a new item object, using Object.assign to copy the existing item data.\n                    var newItem = Object.assign({}, item);\n                    // If the session storage contains values for promotion name, creative slot, and item list name, \n                    // add them to the new item object.\n                    if (creativeName) newItem.promotion_name = promotionName;\n                    if (creativeName) newItem.creative_name = creativeName;\n                    if (creativeSlot) newItem.creative_slot = creativeSlot;\n                    if (creativeSlot) newItem.promotion_slot = promotionId;\n                    if (itemListName) newItem.item_list_name = itemListName;\n                     // Return the new item object to be included in the new items array.\n                    return newItem;\n                });\n                // Create a new object to hold the enriched e-commerce data.\n                var enrichedEcommerceData = {\n                    coupon: ecommerce.coupon,\n                    currency: ecommerce.currency,\n                    payment_type: ecommerce.payment_type,\n                    shipping: ecommerce.shipping,\n                    shipping_tier: ecommerce.shipping_tier,\n                    tax: ecommerce.tax,\n                    transaction_id: ecommerce.transaction_id,\n                    value: ecommerce.value,\n                    items: items,\n                };\n                // Push a new event to the data layer with the '_enriched' suffix \n                // and the enriched e-commerce data.\n                dataLayer.push({\n                    'event': latestEvent.event + '_enriched',\n                    'ecommerce': enrichedEcommerceData\n                });\n            }\n\n            // Clear all data from the session storage after a purchase event\n            if (latestEvent.event === 'purchase') {\n                sessionStorage.clear();\n            }\n        }\n\n        // Ensure that the data layer array exists on the window object, creating it if necessary.\n        window.dataLayer = window.dataLayer || [];\n        // Override the push method of the data layer array to include a call to the handleDataLayerUpdate function \n        // each time an item is pushed to the data layer.\n        window.dataLayer.push = (function(pushOriginal) {\n            return function() {\n                pushOriginal.apply(window.dataLayer, arguments);\n                handleDataLayerUpdate(window.dataLayer);\n            };\n        })(window.dataLayer.push);\n    })();\n</script>"
+                        "value": "<script> \n    (function() {\n        function handleDataLayerUpdate(dataLayer) {\n         // Get the latest event from the data layer (the last element in the array).\n         var latestEvent = dataLayer[dataLayer.length - 1];\n\n        // If the event is \"gtm.load\", \"gtm.dom\", or \"gtm.scroll\", use the second latest event instead.\n        if (['gtm.load', 'gtm.dom', 'gtm.scroll'].includes(latestEvent.event) && dataLayer.length > 1) {\n            latestEvent = dataLayer[dataLayer.length - 2];\n        }\n            // Get previously stored values from the session storage or set to an empty string if undefined.\n            var creativeName = sessionStorage.getItem('creative_name') || \"\";\n            var creativeSlot = sessionStorage.getItem('creative_slot') || \"\";\n            var itemListName = sessionStorage.getItem('item_list_name') || \"\";\n            var promotionName = sessionStorage.getItem('promotion_name') || \"\";\n            var promotionId = sessionStorage.getItem('promotion_id') || \"\";\n\n            // If the latest event is a 'select_promotion' event, update the session storage \n            // with the promotion name and creative slot if they are present in the event data.\n            if (latestEvent.event === 'select_promotion') {\n                if (latestEvent.ecommerce && latestEvent.ecommerce.promotion_name !== undefined) {\n                    sessionStorage.setItem('promotion_name', latestEvent.ecommerce.promotion_name);\n                }\n                if (latestEvent.ecommerce && latestEvent.ecommerce.creative_slot !== undefined) {\n                    sessionStorage.setItem('creative_slot', latestEvent.ecommerce.creative_slot);\n                }\n                if (latestEvent.ecommerce && latestEvent.ecommerce.promotion_id !== undefined) {\n                    sessionStorage.setItem('promotion_id', latestEvent.ecommerce.promotion_id);\n                }\n                if (latestEvent.ecommerce && latestEvent.ecommerce.creative_name !== undefined) {\n                    sessionStorage.setItem('creative_name', latestEvent.ecommerce.creative_name);\n                }\n            }\n           \n            // If the latest event is a 'select_item' event, update the session storage \n            // with the item list name if it is present in the event data.\n            if (latestEvent.event === 'select_item') {\n                if (latestEvent.ecommerce && latestEvent.ecommerce.item_list_name !== undefined) {\n                    sessionStorage.setItem('item_list_name', latestEvent.ecommerce.item_list_name);\n                }\n            }\n           \n            // If the latest event is one of the listed e-commerce events, \n            // enrich the event data with the stored session data.\n            if (['add_to_cart', 'remove_from_cart', 'add_to_wishlist', 'view_cart', 'begin_checkout', 'add_shipping_info', 'add_payment_info', 'purchase'].indexOf(latestEvent.event) !== -1) {\n                // Create a new object to hold the enriched e-commerce data, starting with the existing data.\n                var ecommerce = latestEvent.ecommerce || {};\n                var items = ecommerce.items || [];\n                // Map over the items array, creating a new array with the enriched data.\n                items = items.map(function(item) {\n                    // Create a new item object, using Object.assign to copy the existing item data.\n                    var newItem = Object.assign({}, item);\n                    // If the session storage contains values for promotion name, creative slot, and item list name, \n                    // add them to the new item object.\n                    if (creativeName) newItem.promotion_name = promotionName;\n                    if (creativeName) newItem.creative_name = creativeName;\n                    if (creativeSlot) newItem.creative_slot = creativeSlot;\n                    if (creativeSlot) newItem.promotion_slot = promotionId;\n                    if (itemListName) newItem.item_list_name = itemListName;\n                     // Return the new item object to be included in the new items array.\n                    return newItem;\n                });\n                // Create a new object to hold the enriched e-commerce data.\n                var enrichedEcommerceData = {\n                    coupon: ecommerce.coupon,\n                    currency: ecommerce.currency,\n                    payment_type: ecommerce.payment_type,\n                    shipping: ecommerce.shipping,\n                    shipping_tier: ecommerce.shipping_tier,\n                    tax: ecommerce.tax,\n                    transaction_id: ecommerce.transaction_id,\n                    value: ecommerce.value,\n                    items: items,\n                };\n                // Push a new event to the data layer with the '_enriched' suffix \n                // and the enriched e-commerce data.\n                dataLayer.push({\n                    'event': latestEvent.event + '_enriched',\n                    'ecommerce': enrichedEcommerceData\n                });\n            }\n\n            // Clear all data from the session storage after a purchase event\n            if (latestEvent.event === 'purchase') {\n                sessionStorage.clear();\n            }\n        }\n\n        // Ensure that the data layer array exists on the window object, creating it if necessary.\n        window.dataLayer = window.dataLayer || [];\n        // Override the push method of the data layer array to include a call to the handleDataLayerUpdate function \n        // each time an item is pushed to the data layer.\n        window.dataLayer.push = (function(pushOriginal) {\n            return function() {\n                pushOriginal.apply(window.dataLayer, arguments);\n                handleDataLayerUpdate(window.dataLayer);\n            };\n        })(window.dataLayer.push);\n    })();\n</script>"
                     },
                     {
                         "type": "BOOLEAN",
@@ -1756,7 +1754,7 @@
                         "value": "false"
                     }
                 ],
-                "fingerprint": "1695045596500",
+                "fingerprint": "1699982737706",
                 "firingTriggerId": [
                     "10",
                     "28",
@@ -3108,10 +3106,10 @@
                     {
                         "type": "TEMPLATE",
                         "key": "value",
-                        "value": "!!! add your measurement ID !!!"
+                        "value": "G-909XJNHVVE"
                     }
                 ],
-                "fingerprint": "1694806129431",
+                "fingerprint": "1695046749888",
                 "parentFolderId": "3",
                 "formatValue": {}
             }
@@ -3169,7 +3167,7 @@
                 "name": "Click ID"
             }
         ],
-        "fingerprint": "1695045979175",
-        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6003163501/containers/164701425/versions/4?apiLink=version"
+        "fingerprint": "1704830190507",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6003163501/containers/164701425/versions/0?apiLink=version"
     }
 }
