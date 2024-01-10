@@ -11,7 +11,7 @@
             "accountId": "6003163501",
             "containerId": "164701425",
             "name": "Google Analytics 4 - official container",
-            "publicId": "GTM-KMGXQP86",
+            "publicId": "GTM-USEYOUROWN",
             "usageContext": [
                 "WEB"
             ],
@@ -34,7 +34,7 @@
                 "supportTransformations": false
             },
             "tagIds": [
-                "GTM-KMGXQP86"
+                "GTM-USEYOUROWN"
             ]
         },
         "tag": [
@@ -3106,7 +3106,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "value",
-                        "value": "G-909XJNHVVE"
+                        "value": "!!! add your measurement ID !!!"
                     }
                 ],
                 "fingerprint": "1695046749888",
