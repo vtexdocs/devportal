@@ -12432,8 +12432,8 @@
               ]
             },
             {
-              "name": "FastStore UI",
-              "slug": "faststore/components",
+              "name": "UI components",
+              "slug": "faststore/components-index",
               "origin": "",
               "type": "markdown",
               "children": [
