@@ -4,6 +4,8 @@
     display: grid;
     row-gap: var(--fs-spacing-3);
     column-gap: var(--fs-spacing-3);
+    list-style-type: none;
+    padding: 0;
   }
   
   .cardList [data-doc-card-grid-columns="4"] {
@@ -42,6 +44,7 @@
     border: 1px solid #e5e7eb;
     border-radius: 4px;
     overflow: hidden;
+    color: #4a4a4a;
   }
   
   .cardList [data-doc-card-item-component] {
@@ -93,13 +96,14 @@
   .cardList [data-doc-card-item-title] {
     margin-bottom: var(--fs-spacing-0);
     font-weight: var(--fs-text-weight-bold);
-    font-size: var(--fs-text-size-3);
+    font-size: var(--fs-text-size-2);
   }
   
   .cardList [data-doc-card-item-content] {
     height: 100%;
     padding: var(--fs-spacing-3);
     background-color: #f1f2f386;
+    font-size: var(--fs-text-size-1);
   }
   
   .cardList [data-doc-card-item-content] p { line-height: 1.35; }

@@ -36,14 +36,9 @@ const Tabs = ({ items, defaultIndex, children }: TabsProps) => {
 
 const Tab = ({ children }: { children: ReactChildren }) => <Box>{children}</Box>
 
-const Steps = ({ children }: { children: ReactChildren }) => (
-  <Box>{children}</Box>
-)
-
 export default {
   Tabs,
   Tab,
-  Steps,
   ...usageComponents,
   ...components,
   SearchProvider,
