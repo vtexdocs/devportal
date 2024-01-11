@@ -78,9 +78,14 @@ const documentationTitle: SxStyleProp = {
 
 const documentationExcerpt: SxStyleProp = {
   color: '#A1A8B3',
-  padding: '0.5em 0 1.2em',
   lineHeight: '1.5em',
   fontWeight: '400',
+  code: {
+    fontSize: '0.8rem',
+    backgroundColor: '#f7f8fa',
+    padding: '2px 4px',
+    borderRadius: '4px',
+  },
 }
 
 const bottomContributorsContainer: SxStyleProp = {
