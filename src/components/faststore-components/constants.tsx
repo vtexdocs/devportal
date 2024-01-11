@@ -34,6 +34,7 @@ export const constants = {
   searchContent: 'Appl',
   suggestions: [{ value: 'apple airpods' }, { value: 'apple tv' }],
   searchContentAlt: 'So',
+  NavigationUsage: () => null,
   suggestionsAlt: [
     {
       value: 'sony headphone',
@@ -257,6 +258,12 @@ export const constants = {
     {
       url: 'https://storeframework.vtexassets.com/arquivos/ids/190930/chris-hardy-182PzOtcmWc-unsplash.jpg?v=637867509778300000',
       alternateName: 'magicscale',
+    },
+  ],
+  imagesWithoutSelector: [
+    {
+      url: 'https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000',
+      alternateName: 'Magicwhite',
     },
   ],
   propsRadioGroup: [

@@ -1,5 +1,8 @@
 export { default as ButtonLoading } from './Button/ButtonLoading'
-export { CarouselUsage } from './Carousel/CarouselUsage'
+export { default as CarouselUsage } from './Carousel/CarouselUsage'
+export { default as CarouselSimpleUsage } from './Carousel/CarouselSimpleUsage'
+export { default as CardList } from './CardList/CardList'
+export { default as CardItem } from './CardList/CardItem'
 export {
   CartSidebarUsage,
   activeVariations,
@@ -41,8 +44,8 @@ export {
   usePriceFormatter,
 } from './utilities/usePriceFormatter'
 export { default as RegionModalUsage } from './RegionModal/RegionModalUsage'
-export { default as AccordionUsage } from './Accordion/AccordionUsage'
-export { default as AccordionMultipleUsage } from './Accordion/AccordionMultipleUsage'
+export { default as UsageAccordion } from './Accordion/UsageAccordion'
+export { default as UsageAccordionMultiple } from './Accordion/UsageAccordionMultiple'
 export { default as ModalBase } from './Modal/ModalBase'
 export { default as ModalTemplate } from './Modal/ModalTemplate'
 export { default as CartItemExample } from './CartItem/CartItemExample'
