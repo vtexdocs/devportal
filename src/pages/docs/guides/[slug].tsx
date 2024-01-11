@@ -44,6 +44,7 @@ import getFileContributors, {
 import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { LibraryContext } from '@vtexdocs/components'
+import ReactMarkdown from 'react-markdown'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -123,9 +124,11 @@ const DocumentationPage: NextPage<Props> = ({
                   <Text sx={styles.documentationTitle} className="title">
                     {serialized.frontmatter?.title}
                   </Text>
-                  <Text sx={styles.documentationExcerpt}>
-                    {serialized.frontmatter?.excerpt}
-                  </Text>
+                  <Box sx={styles.documentationExcerpt}>
+                    <ReactMarkdown>
+                      {serialized.frontmatter?.excerpt as string}
+                    </ReactMarkdown>
+                  </Box>
                 </header>
                 <MarkdownRenderer serialized={serialized} />
               </article>

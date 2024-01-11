@@ -1,47 +1,103 @@
-.faststore-sectionList [data-doc-section-grid="row"] {
-  row-gap: var(--fs-spacing-4);
+/* Section List */
+
+.faststore-sectionList [data-doc-section-grid] {
   display: flex;
   flex-direction: column;
+  row-gap: var(--fs-spacing-4);
+}
+.faststore-sectionItem-description [data-fs-button] span {
+  color: #e31d58;
 }
 
-.faststore-sectionList [data-doc-section-grid="row"] .faststore-sectionItem > div {
-  width: 35%;
+@media screen and (min-width: 1024px) {
+  .faststore-sectionList [data-doc-section-grid='row'] {
+    row-gap: var(--fs-spacing-4);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .faststore-sectionList [data-doc-section-grid='column'] {
+    display: grid;
+    grid-gap: var(--fs-spacing-5) var(--fs-spacing-4);
+    padding: 0;
+  }
+
+  .faststore-sectionList
+    [data-doc-section-grid='column'][data-doc-section-grid-columns='2'] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .faststore-sectionList
+    [data-doc-section-grid='column'][data-doc-section-grid-columns='3'] {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Section Item */
+
+.faststore-sectionList
+  [data-doc-section-grid='row']
+  .faststore-sectionItem
+  > div {
   flex-shrink: 0;
   align-self: stretch;
 }
 
-.faststore-sectionList [data-doc-section-grid="column"] {
+@media screen and (min-width: 1024px) {
+  .faststore-sectionList
+    [data-doc-section-grid='row']
+    .faststore-sectionItem
+    > div {
+    width: 35%;
+  }
+}
+
+.faststore-sectionList [data-doc-section-grid='column'] .faststore-sectionItem {
   display: grid;
-  grid-gap: var(--fs-spacing-5) var(--fs-spacing-4);
+  grid-template-rows: 200px 1fr;
 }
 
-.faststore-sectionList [data-doc-section-grid="column"][data-doc-section-grid-columns="2"] {
-  grid-template-columns: repeat(2, 1fr);
+@media screen and (min-width: 1024px) {
+  .faststore-sectionList
+    [data-doc-section-grid='column']
+    .faststore-sectionItem {
+    grid-template-rows: 2fr 1fr;
+  }
 }
 
-.faststore-sectionList [data-doc-section-grid="column"][data-doc-section-grid-columns="3"] {
-  grid-template-columns: repeat(3, 1fr);
+.faststore-sectionList
+  [data-doc-section-grid='column']
+  .faststore-sectionItem[data-doc-section-item-small-height] {
+  grid-template-rows: 1fr 1fr;
 }
 
-.faststore-sectionList [data-doc-section-grid="column"] .faststore-sectionItem {
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-}
-
-.faststore-sectionList [data-doc-section-grid="column"] .faststore-sectionItem > div {
+.faststore-sectionList
+  [data-doc-section-grid='column']
+  .faststore-sectionItem
+  > div {
   height: 100%;
 }
 
-.faststore-sectionList [data-doc-section-grid="column"] .faststore-sectionItem > article {
+.faststore-sectionList
+  [data-doc-section-grid='column']
+  .faststore-sectionItem
+  > article {
   height: 100%;
   width: 100%;
 }
 
 .faststore-sectionItem {
   display: flex;
+  flex-direction: column;
   align-items: center;
   column-gap: var(--fs-spacing-4);
   row-gap: var(--fs-spacing-3);
+}
+
+@media screen and (min-width: 1024px) {
+  .faststore-sectionItem {
+    flex-direction: row;
+  }
 }
 
 .faststore-sectionItem > div {
@@ -53,7 +109,21 @@
   background-color: var(--fs-color-neutral-bkg);
   border-radius: 4px;
   overflow-y: auto;
-  max-height: 21rem;
+  max-height: 24rem;
+}
+
+.faststore-sectionItem[data-doc-section-item-full-width] > div > * {
+  width: 100%;
+}
+
+.faststore-sectionItem[data-doc-section-item-full-width]
+  [data-fs-product-shelf-items] {
+  width: 100%;
+}
+
+.faststore-sectionItem[data-doc-section-item-zoom-out='true'] > div > * {
+  width: 100%;
+  zoom: 60%;
 }
 
 .faststore-sectionItem > article [data-fs-button] {
@@ -66,16 +136,21 @@
   margin-top: 0;
 }
 
+/* Tokens Links */
+
 .faststore-tokensLinks {
   margin-top: var(--fs-spacing-4);
 }
 
-.faststore-tokensLinks [data-doc-section-grid="column"] .faststore-sectionItem {
+.faststore-tokensLinks [data-doc-section-grid='column'] .faststore-sectionItem {
   display: flex;
   flex-direction: column;
 }
 
-.faststore-tokensLinks [data-doc-section-grid="column"] .faststore-sectionItem > div {
+.faststore-tokensLinks
+  [data-doc-section-grid='column']
+  .faststore-sectionItem
+  > div {
   height: 170px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -94,27 +169,27 @@
 }
 
 .faststore-tokensLinks .faststore-sectionItem:nth-child(1) > div {
-  background-image: url("https://vtexhelp.vtexassets.com/assets/docs/src/colors___038effcf345acf3d037bc63ed8671455.png");
+  background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/colors___038effcf345acf3d037bc63ed8671455.png');
 }
 
 .faststore-tokensLinks .faststore-sectionItem:nth-child(2) > div {
-  background-image: url("https://vtexhelp.vtexassets.com/assets/docs/src/typography___318fbc78202402728a2113e63b47241f.png");
+  background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/typography___318fbc78202402728a2113e63b47241f.png');
 }
 
 .faststore-tokensLinks .faststore-sectionItem:nth-child(3) > div {
-  background-image: url("https://vtexhelp.vtexassets.com/assets/docs/src/spacing___ca1d02b0bcc238811347eddc66a807ad.png");
+  background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/spacing___ca1d02b0bcc238811347eddc66a807ad.png');
 }
 
 .faststore-tokensLinks .faststore-sectionItem:nth-child(4) > div {
-  background-image: url("https://vtexhelp.vtexassets.com/assets/docs/src/grid___6dfb4949712be94273bc119b7945babf.png");
+  background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/grid___6dfb4949712be94273bc119b7945babf.png');
 }
 
 .faststore-tokensLinks .faststore-sectionItem:nth-child(5) > div {
-  background-image: url("https://vtexhelp.vtexassets.com/assets/docs/src/controls___a8302bd539d61653e60cb0aacd1c18e7.png");
+  background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/controls___a8302bd539d61653e60cb0aacd1c18e7.png');
 }
 
 .faststore-tokensLinks .faststore-sectionItem:nth-child(6) > div {
-  background-image: url("https://vtexhelp.vtexassets.com/assets/docs/src/refinements___ca4c7814b2771e84601f4a6d457612fd.png");
+  background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/refinements___ca4c7814b2771e84601f4a6d457612fd.png');
 }
 
 .faststore-tokensLinks .faststore-sectionItem > article [data-fs-button] {

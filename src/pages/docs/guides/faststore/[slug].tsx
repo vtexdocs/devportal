@@ -39,6 +39,8 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { getLogger } from 'utils/logging/log-util'
 import { Item, LibraryContext, TableOfContents } from '@vtexdocs/components'
 import MarkdownRenderer from 'components/faststore-components/markdown-renderer'
+import { remarkCodeHike } from '@code-hike/mdx'
+import ReactMarkdown from 'react-markdown'
 
 const docsPathsGLOBAL = await getFastStorePaths()
 
@@ -101,9 +103,18 @@ const FastStorePage: NextPage<Props> = ({
   return (
     <>
       <Head>
-        <title>FastStore</title>
+        <title>{serialized.frontmatter?.title}</title>
         <meta name="docsearch:doctype" content={sectionSelected} />
-        <meta name="docsearch:doctitle" content={'FastStore Doc'} />
+        <meta
+          name="docsearch:doctitle"
+          content={serialized.frontmatter?.title as string}
+        />
+        {serialized.frontmatter?.excerpt && (
+          <meta
+            property="og:description"
+            content={serialized.frontmatter?.excerpt as string}
+          />
+        )}
       </Head>
       <APIGuideContextProvider headings={headingList}>
         <Flex sx={styles.innerContainer}>
@@ -115,11 +126,13 @@ const FastStorePage: NextPage<Props> = ({
                   <Text sx={styles.documentationTitle} className="title">
                     {frontmatter.title}
                   </Text>
-                  <Text sx={styles.documentationExcerpt}>
-                    {frontmatter.excerpt
-                      ? frontmatter.excerpt
-                      : frontmatter.description}
-                  </Text>
+                  <Box sx={styles.documentationExcerpt}>
+                    <ReactMarkdown>
+                      {frontmatter.excerpt
+                        ? frontmatter.excerpt
+                        : frontmatter.description}
+                    </ReactMarkdown>
+                  </Box>
                 </header>
                 <MarkdownRenderer serialized={serialized} mdxProps={mdxProps} />
               </article>
@@ -177,7 +190,6 @@ export const getStaticProps: GetStaticProps = async ({
   const simplifiedSlug = params?.slug as string
   const slug = `faststore/${simplifiedSlug}`
   const branch = preview ? previewBranch : 'feat/faststore-docs'
-  console.log(`Slug: ${slug}`)
 
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
@@ -262,6 +274,17 @@ export const getStaticProps: GetStaticProps = async ({
       parseFrontmatter: true,
       mdxOptions: {
         remarkPlugins: [
+          [
+            remarkCodeHike,
+            {
+              autoImport: false,
+              showCopyButton: true,
+              lineNumbers: true,
+              skipLanguages: ['mermaid'],
+              staticMediaQuery: 'not screen, (max-width: 850px)',
+              theme: 'poimandres',
+            },
+          ],
           remarkGFM,
           remarkImages,
           [getHeadings, { headingList }],
@@ -272,6 +295,7 @@ export const getStaticProps: GetStaticProps = async ({
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
           changeParagraphTag,
         ],
+        useDynamicImport: true,
         format: 'mdx',
       },
     })

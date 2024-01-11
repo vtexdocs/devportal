@@ -2,33 +2,11 @@
   width: 100%;
   display: table;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 4px;
-  border-spacing: 0;
-  border-collapse: unset;
-}
-
-.faststore-tokenTable th {
-  color: var(--fs-color-text);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 10px;
-}
-
-.faststore-tokenTable th:first-child {
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.faststore-tokenTable tr:last-child td {
-  border-bottom: none;
 }
 
 .faststore-tokenTable td {
   width: 50%;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: var(--fs-spacing-1);
-}
-
-.faststore-tokenTable td:first-child {
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .faststore-tokenTable td code {
@@ -36,10 +14,8 @@
   padding: 3px 5px;
   white-space: nowrap;
   border-radius: 3px;
+  background-color: var(--md-code-background, #f6f8fa);
   font-size: 13px;
-  border: 1px solid rgb(238, 238, 238);
-  color: rgba(51, 51, 51, 0.9);
-  background-color: rgb(248, 248, 248);
 }
 
 .faststore-tokenTable td code {
@@ -57,9 +33,9 @@
 }
 
 .faststore-tokenDivider td {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #e7e7ee;
   padding: 0;
-  height: 12px;
+  height: 3px;
 }
 
 .faststore-tokenDivider td:first-of-type {
