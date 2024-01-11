@@ -4,7 +4,9 @@
   display: flex;
   flex-direction: column;
   row-gap: var(--fs-spacing-4);
+  padding: 0;
 }
+
 .faststore-sectionItem-description [data-fs-button] span {
   color: #e31d58;
 }
