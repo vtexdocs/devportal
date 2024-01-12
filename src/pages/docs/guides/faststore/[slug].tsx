@@ -16,6 +16,7 @@ import Breadcrumb from 'components/breadcrumb'
 import Contributors from 'components/contributors'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
+import SeeAlsoSection from 'components/see-also-section'
 import { getComponentPropsFrom } from 'components/faststore-components/utilities/propsSection'
 
 import { PreviewContext } from 'utils/contexts/preview'
@@ -52,6 +53,11 @@ interface Props {
     description: string
     excerpt: string
     keywords: string[]
+    seeAlso?: {
+      url: string
+      title: string
+      category: string
+    }[]
     sidebar_custom_props?: {
       image: string
     }
@@ -66,6 +72,11 @@ interface Props {
   slug: string
   filePath: string
   headingList: Item[]
+  seeAlsoData: {
+    url: string
+    title: string
+    category: string
+  }[]
   contributors: ContributorsType[]
   code: string
   mdxProps: {
@@ -93,6 +104,7 @@ const FastStorePage: NextPage<Props> = ({
   breadcumbList,
   mdxProps,
   branch,
+  seeAlsoData,
 }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   const { setActiveSidebarElement } = useContext(LibraryContext)
@@ -155,6 +167,7 @@ const FastStorePage: NextPage<Props> = ({
                 pagination={pagination}
               />
             )}
+            {frontmatter?.seeAlso && <SeeAlsoSection docs={seeAlsoData} />}
           </Box>
           <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />
@@ -304,6 +317,43 @@ export const getStaticProps: GetStaticProps = async ({
       ? JSON.parse(JSON.stringify(serialized.frontmatter.components as string))
       : []
 
+    const seeAlsoData: {
+      url: string
+      title: string
+      category: string
+    }[] = []
+    const seeAlsoUrls = serialized.frontmatter?.seeAlso
+      ? JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
+      : []
+    await Promise.all(
+      seeAlsoUrls.map(async (seeAlsoUrl: string) => {
+        const category = seeAlsoUrl.includes('api-reference')
+          ? 'API Reference'
+          : seeAlsoUrl.includes('/faststore/')
+          ? 'Storefront Development'
+          : seeAlsoUrl.includes('/apps/')
+          ? 'VTEX IO Apps'
+          : 'Guides'
+        if (seeAlsoUrl.startsWith('/docs')) {
+          try {
+            const response = await fetch(
+              `https://developers.vtex.com${seeAlsoUrl}`
+            )
+            if (response.ok) {
+              const html = await response.text()
+              const titleMatch = html.match(/<title>(.*?)<\/title>/i)
+              const pageTitle = titleMatch ? titleMatch[1] : 'Untitled'
+              seeAlsoData.push({
+                url: seeAlsoUrl,
+                title: pageTitle,
+                category: category,
+              })
+            }
+          } catch (error) {}
+        }
+      })
+    )
+
     const mdxPath = filePath.split('/')
 
     const componentPath = mdxPath
@@ -354,6 +404,7 @@ export const getStaticProps: GetStaticProps = async ({
         slug,
         serialized,
         headingList,
+        seeAlsoData,
         contributors,
         filePath,
         pagination,
