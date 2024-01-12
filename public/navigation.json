@@ -12391,7 +12391,22 @@
                   "slug": "faststore/getting-started-1-faststore-onboarding",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "Starting a new FastStore project",
+                      "slug": "faststore/1-faststore-onboarding-onboarding",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Dashboard",
+                      "slug": "faststore/1-faststore-onboarding-dashboard",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "2. Setting up the project",
