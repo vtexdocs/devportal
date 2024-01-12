@@ -74,6 +74,7 @@ const documentationTitle: SxStyleProp = {
   fontSize: ['20px', '28px'],
   lineHeight: ['30px', '38px'],
   fontWeight: '400',
+  marginBottom: '14px',
 }
 
 const documentationExcerpt: SxStyleProp = {
