@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.4](https://github.com/vtexdocs/devportal/compare/v1.11.3...v1.11.4) (2024-01-12)
+
+
+### Bug Fixes
+
+* **apps:** edit specifiedVersion checks ([8235f61](https://github.com/vtexdocs/devportal/commit/8235f61e247caf94314b347576863ee876022d04))
+* **package:** fix path ([665601d](https://github.com/vtexdocs/devportal/commit/665601d618a81d237ae4c5233866aa4b4a80d4a7))
+* **sectionitem:** icon usage ([e0862c2](https://github.com/vtexdocs/devportal/commit/e0862c2e1cc6b2738d9427bc55576cb3fc7eb027))
+
+
+### Docs
+
+* create redirect master data api v2 ([e1a54ad](https://github.com/vtexdocs/devportal/commit/e1a54ad2e06af9eaa35eede2daa48b70abcc7d95))
+
+
+### Style
+
+* **faststore-components:** improve faststore content rendering styles ([ffd6bc8](https://github.com/vtexdocs/devportal/commit/ffd6bc835a30775f95d7ea430bb0ec7e364dd307))
+* **section-item:** update section item styles ([3d0e148](https://github.com/vtexdocs/devportal/commit/3d0e14843b3fdefb64b3ab3b67d81c94367c032e))
+
+
+### Chore
+
+* **faststore-componentes:** update faststore components and constants ([d57880f](https://github.com/vtexdocs/devportal/commit/d57880fd3d74dc70e87d68e3dd5270d6a374352f))
+* **package.json:** update components lib version ([e84365e](https://github.com/vtexdocs/devportal/commit/e84365e903c83f1bc85762fca98b8b23b65251c8))
+* **package:** @vtexdocs/components version ([65784fc](https://github.com/vtexdocs/devportal/commit/65784fc61a17f8d5a8998c5a96f6ecf2631877ac))
+* **package:** update dependencies ([db61da1](https://github.com/vtexdocs/devportal/commit/db61da110308a1c60f9293065bbf7ea67a33861f))
+
 ### [1.11.3](https://github.com/vtexdocs/devportal/compare/v1.11.2...v1.11.3) (2024-01-08)
 
 
