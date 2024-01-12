@@ -9,8 +9,6 @@ const tabItem: SxStyleProp = {
   padding: '8px',
   color: '#4A596B',
   cursor: 'pointer',
-  borderTopLeftRadius: '4px',
-  borderTopRightRadius: '4px',
   transition: '0.15s ease-in',
   '&:hover': {
     transition: '0.15s ease-in',
@@ -21,8 +19,7 @@ const tabItem: SxStyleProp = {
 const tabItemActive: SxStyleProp = {
   ...tabItem,
   color: '#E31C58',
-  borderTop: '1px solid #E31C58',
-  borderInline: '1px solid #E31C58',
+  boxShadow: '0 2px 0 0 #E31C58',
   '&:hover': {
     color: '#E31C58',
   },
