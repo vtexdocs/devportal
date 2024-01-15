@@ -16,6 +16,7 @@ import Breadcrumb from 'components/breadcrumb'
 import Contributors from 'components/contributors'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
+import SeeAlsoSection from 'components/see-also-section'
 import { getComponentPropsFrom } from 'components/faststore-components/utilities/propsSection'
 
 import { PreviewContext } from 'utils/contexts/preview'
@@ -39,6 +40,10 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { getLogger } from 'utils/logging/log-util'
 import { Item, LibraryContext, TableOfContents } from '@vtexdocs/components'
 import MarkdownRenderer from 'components/faststore-components/markdown-renderer'
+import { remarkCodeHike } from '@code-hike/mdx'
+import ReactMarkdown from 'react-markdown'
+
+const docsPathsGLOBAL = await getFastStorePaths()
 
 interface Props {
   serialized: MDXRemoteSerializeResult
@@ -48,6 +53,11 @@ interface Props {
     description: string
     excerpt: string
     keywords: string[]
+    seeAlso?: {
+      url: string
+      title: string
+      category: string
+    }[]
     sidebar_custom_props?: {
       image: string
     }
@@ -55,11 +65,18 @@ interface Props {
     hidePaginationPrevious: boolean
   }
   sectionSelected: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  sidebarfallback: any
   parentsArray: string[]
   breadcumbList: { slug: string; name: string; type: string }[]
   slug: string
   filePath: string
   headingList: Item[]
+  seeAlsoData: {
+    url: string
+    title: string
+    category: string
+  }[]
   contributors: ContributorsType[]
   code: string
   mdxProps: {
@@ -74,34 +91,42 @@ interface Props {
   isListed: boolean
 }
 
-const docsPathsGLOBAL = await getFastStorePaths()
-
 const FastStorePage: NextPage<Props> = ({
-  serialized,
-  frontmatter,
-  sectionSelected,
-  breadcumbList,
   slug,
+  serialized,
   filePath,
+  frontmatter,
   headingList,
   contributors,
+  pagination,
+  sectionSelected,
+  isListed,
+  breadcumbList,
   mdxProps,
   branch,
-  pagination,
-  isListed,
+  seeAlsoData,
 }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   const { setActiveSidebarElement } = useContext(LibraryContext)
   useEffect(() => {
     setActiveSidebarElement(slug)
     setBranchPreview(branch)
-  }, [])
+  }, [serialized.frontmatter])
   return (
     <>
       <Head>
-        <title>FastStore</title>
+        <title>{serialized.frontmatter?.title}</title>
         <meta name="docsearch:doctype" content={sectionSelected} />
-        <meta name="docsearch:doctitle" content={'FastStore Doc'} />
+        <meta
+          name="docsearch:doctitle"
+          content={serialized.frontmatter?.title as string}
+        />
+        {serialized.frontmatter?.excerpt && (
+          <meta
+            property="og:description"
+            content={serialized.frontmatter?.excerpt as string}
+          />
+        )}
       </Head>
       <APIGuideContextProvider headings={headingList}>
         <Flex sx={styles.innerContainer}>
@@ -113,11 +138,13 @@ const FastStorePage: NextPage<Props> = ({
                   <Text sx={styles.documentationTitle} className="title">
                     {frontmatter.title}
                   </Text>
-                  <Text sx={styles.documentationExcerpt}>
-                    {frontmatter.excerpt
-                      ? frontmatter.excerpt
-                      : frontmatter.description}
-                  </Text>
+                  <Box sx={styles.documentationExcerpt}>
+                    <ReactMarkdown>
+                      {frontmatter.excerpt
+                        ? frontmatter.excerpt
+                        : frontmatter.description}
+                    </ReactMarkdown>
+                  </Box>
                 </header>
                 <MarkdownRenderer serialized={serialized} mdxProps={mdxProps} />
               </article>
@@ -140,6 +167,7 @@ const FastStorePage: NextPage<Props> = ({
                 pagination={pagination}
               />
             )}
+            {frontmatter?.seeAlso && <SeeAlsoSection docs={seeAlsoData} />}
           </Box>
           <Box sx={styles.rightContainer}>
             <Contributors contributors={contributors} />
@@ -172,7 +200,8 @@ export const getStaticProps: GetStaticProps = async ({
     preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
       ? JSON.parse(JSON.stringify(previewData)).branch
       : 'main'
-  const slug = params?.slug as string
+  const simplifiedSlug = params?.slug as string
+  const slug = `faststore/${simplifiedSlug}`
   const branch = preview ? previewBranch : 'feat/faststore-docs'
 
   const docsPaths =
@@ -182,7 +211,7 @@ export const getStaticProps: GetStaticProps = async ({
 
   const logger = getLogger('FastStore')
 
-  const filePath = docsPaths[slug]
+  const filePath = docsPaths[simplifiedSlug]
   if (!filePath) {
     return {
       notFound: true,
@@ -215,22 +244,17 @@ export const getStaticProps: GetStaticProps = async ({
     ''
   )
 
-  const sidebarfallback = await getNavigation()
-  const flattenedSidebar = flattenJSON(sidebarfallback)
-  const isListed: boolean = getKeyByValue(flattenedSidebar, slug) ? true : false
-  const cleanSlug = getKeyByValue(flattenedSidebar, slug)
-  const keyPath = cleanSlug
-    ? getKeyByValue(flattenedSidebar, slug)
-    : getKeyByValue(flattenedSidebar, `faststore/${slug}`)
-
   const parentsArray: string[] = []
   const parentsArrayName: string[] = []
   const parentsArrayType: string[] = []
-  const sectionSelected = 'FastStore'
-
+  const sidebarfallback = await getNavigation()
+  const sectionSelected = 'Storefront Development'
+  const flattenedSidebar = flattenJSON(sidebarfallback)
+  const keyPath = getKeyByValue(flattenedSidebar, `faststore/${simplifiedSlug}`)
+  const isListed: boolean = keyPath ? true : false
   if (keyPath) {
     getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
-    cleanSlug ? parentsArray.push(slug) : parentsArray.push(`guides/${slug}`)
+    parentsArray.push(slug)
     getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
     getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
   }
@@ -243,7 +267,6 @@ export const getStaticProps: GetStaticProps = async ({
       type: parentsArrayType[idx],
     })
   })
-
   function transformer(ast: Node) {
     visit(ast, 'element', visitor)
 
@@ -264,6 +287,17 @@ export const getStaticProps: GetStaticProps = async ({
       parseFrontmatter: true,
       mdxOptions: {
         remarkPlugins: [
+          [
+            remarkCodeHike,
+            {
+              autoImport: false,
+              showCopyButton: true,
+              lineNumbers: true,
+              skipLanguages: ['mermaid'],
+              staticMediaQuery: 'not screen, (max-width: 850px)',
+              theme: 'poimandres',
+            },
+          ],
           remarkGFM,
           remarkImages,
           [getHeadings, { headingList }],
@@ -274,6 +308,7 @@ export const getStaticProps: GetStaticProps = async ({
           [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
           changeParagraphTag,
         ],
+        useDynamicImport: true,
         format: 'mdx',
       },
     })
@@ -281,6 +316,43 @@ export const getStaticProps: GetStaticProps = async ({
     const componentsFiles = serialized.frontmatter?.components
       ? JSON.parse(JSON.stringify(serialized.frontmatter.components as string))
       : []
+
+    const seeAlsoData: {
+      url: string
+      title: string
+      category: string
+    }[] = []
+    const seeAlsoUrls = serialized.frontmatter?.seeAlso
+      ? JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
+      : []
+    await Promise.all(
+      seeAlsoUrls.map(async (seeAlsoUrl: string) => {
+        const category = seeAlsoUrl.includes('api-reference')
+          ? 'API Reference'
+          : seeAlsoUrl.includes('/faststore/')
+          ? 'Storefront Development'
+          : seeAlsoUrl.includes('/apps/')
+          ? 'VTEX IO Apps'
+          : 'Guides'
+        if (seeAlsoUrl.startsWith('/docs')) {
+          try {
+            const response = await fetch(
+              `https://developers.vtex.com${seeAlsoUrl}`
+            )
+            if (response.ok) {
+              const html = await response.text()
+              const titleMatch = html.match(/<title>(.*?)<\/title>/i)
+              const pageTitle = titleMatch ? titleMatch[1] : 'Untitled'
+              seeAlsoData.push({
+                url: seeAlsoUrl,
+                title: pageTitle,
+                category: category,
+              })
+            }
+          } catch (error) {}
+        }
+      })
+    )
 
     const mdxPath = filePath.split('/')
 
@@ -304,12 +376,11 @@ export const getStaticProps: GetStaticProps = async ({
       sidebarfallback,
       `$..[?(@.type=='markdown')]..name`
     )
-    const indexOfSlug = docsListSlug.indexOf(slug)
-
+    const indexOfSlug = docsListSlug.indexOf(`faststore/${simplifiedSlug}`)
     const pagination = {
       previousDoc: {
         slug: docsListSlug[indexOfSlug - 1]
-          ? `/docs/faststore/${docsListSlug[indexOfSlug - 1]}`
+          ? `/docs/guides/${docsListSlug[indexOfSlug - 1]}`
           : null,
         name: docsListName[indexOfSlug - 1]
           ? docsListName[indexOfSlug - 1]
@@ -317,7 +388,7 @@ export const getStaticProps: GetStaticProps = async ({
       },
       nextDoc: {
         slug: docsListSlug[indexOfSlug + 1]
-          ? `/docs/faststore/${docsListSlug[indexOfSlug + 1]}`
+          ? `/docs/guides/${docsListSlug[indexOfSlug + 1]}`
           : null,
         name: docsListName[indexOfSlug + 1]
           ? docsListName[indexOfSlug + 1]
@@ -327,19 +398,21 @@ export const getStaticProps: GetStaticProps = async ({
 
     return {
       props: {
-        serialized,
         sectionSelected,
+        sidebarfallback,
         parentsArray,
         slug,
-        filePath,
+        serialized,
+        headingList,
+        seeAlsoData,
         contributors,
+        filePath,
+        pagination,
+        isListed,
+        breadcumbList,
+        branch,
         frontmatter: serialized.frontmatter,
         mdxProps,
-        breadcumbList,
-        headingList,
-        branch,
-        isListed,
-        pagination,
       },
     }
   } catch (error) {

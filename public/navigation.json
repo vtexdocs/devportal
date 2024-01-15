@@ -2071,18 +2071,18 @@
       "slugPrefix": "docs/api-reference",
       "categories": [
         {
-          "name": "Antifraud Provider API",
+          "name": "Anti-fraud Provider API",
           "slug": "antifraud-provider-protocol",
           "origin": "",
           "type": "openapi",
           "children": [
             {
-              "name": "Antifraud  Flow",
+              "name": "Anti-fraud  Flow",
               "slug": "antifraud-provider-protocol-antifraud-flow",
               "type": "category",
               "children": [
                 {
-                  "name": "Send Antifraud Pre-Analysis Data (optional)",
+                  "name": "Send Anti-fraud Pre-Analysis Data (optional)",
                   "slug": "antifraud-provider-protocol",
                   "type": "openapi",
                   "method": "POST",
@@ -2091,7 +2091,7 @@
                   "children": []
                 },
                 {
-                  "name": "Send Antifraud Data",
+                  "name": "Send Anti-fraud Data",
                   "slug": "antifraud-provider-protocol",
                   "type": "openapi",
                   "method": "POST",
@@ -2100,7 +2100,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update Antifraud Transactions (optional)",
+                  "name": "Update Anti-fraud Transactions (optional)",
                   "slug": "antifraud-provider-protocol",
                   "type": "openapi",
                   "method": "PUT",
@@ -2109,7 +2109,7 @@
                   "children": []
                 },
                 {
-                  "name": "List Antifraud Provider Manifest",
+                  "name": "List Anti-fraud Provider Manifest",
                   "slug": "antifraud-provider-protocol",
                   "type": "openapi",
                   "method": "GET",
@@ -2118,7 +2118,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Antifraud Status",
+                  "name": "Get Anti-fraud Status",
                   "slug": "antifraud-provider-protocol",
                   "type": "openapi",
                   "method": "GET",
@@ -2127,7 +2127,7 @@
                   "children": []
                 },
                 {
-                  "name": "Stop Antifraud Analysis (optional)",
+                  "name": "Stop Anti-fraud Analysis (optional)",
                   "slug": "antifraud-provider-protocol",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4490,7 +4490,7 @@
                   "children": []
                 },
                 {
-                  "name": "Retrieve an account by id",
+                  "name": "Retrieve an account by ID",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4607,7 +4607,7 @@
                   "children": []
                 },
                 {
-                  "name": "Partially or fully refund a settlement",
+                  "name": "Partially or totally refund a settlement",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4632,7 +4632,7 @@
                   "children": []
                 },
                 {
-                  "name": "Retrieve invoice by id",
+                  "name": "Retrieve invoice by ID",
                   "slug": "customer-credit-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4721,7 +4721,7 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Gift Card",
+              "name": "Gift cards",
               "slug": "giftcard-api-gift-card",
               "type": "category",
               "children": [
@@ -4755,7 +4755,7 @@
               ]
             },
             {
-              "name": "Transaction",
+              "name": "Transactions",
               "slug": "giftcard-api-transaction",
               "type": "category",
               "children": [
@@ -4787,7 +4787,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get GiftCard Transaction Authorizations",
+                  "name": "Get GiftCard Transaction Authorization",
                   "slug": "giftcard-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4805,7 +4805,7 @@
                   "children": []
                 },
                 {
-                  "name": "List All GiftCard Transaction Cancellations",
+                  "name": "List All GiftCard Transactions Cancellations",
                   "slug": "giftcard-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4836,13 +4836,13 @@
           ]
         },
         {
-          "name": "Giftcard Provider Protocol",
+          "name": "Giftcard Provider Protocol API",
           "slug": "giftcard-provider-protocol",
           "origin": "",
           "type": "openapi",
           "children": [
             {
-              "name": "Gift Cards",
+              "name": "Gift cards",
               "slug": "giftcard-provider-protocol-gift-cards",
               "type": "category",
               "children": [
@@ -4963,12 +4963,46 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Provider",
+              "name": "Gift cards",
+              "slug": "giftcard-hub-api-giftcards",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create GiftCard in GiftCard Provider",
+                  "slug": "giftcard-hub-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard from GiftCard Provider",
+                  "slug": "giftcard-hub-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/_search",
+                  "children": []
+                },
+                {
+                  "name": "Get GiftCard from GiftCard Provider by ID",
+                  "slug": "giftcard-hub-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Providers",
               "slug": "giftcard-hub-api-provider",
               "type": "category",
               "children": [
                 {
-                  "name": "Create/Update GiftCard Provider by Id",
+                  "name": "Create/Update GiftCard Provider by ID",
                   "slug": "giftcard-hub-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -5006,37 +5040,10 @@
               ]
             },
             {
-              "name": "Transaction",
+              "name": "Transactions",
               "slug": "giftcard-hub-api-transaction",
               "type": "category",
               "children": [
-                {
-                  "name": "Create GiftCard in GiftCard Provider",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard from GiftCard Provider",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/_search",
-                  "children": []
-                },
-                {
-                  "name": "Get GiftCard from GiftCard Provider by ID",
-                  "slug": "giftcard-hub-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/giftcardproviders/-giftCardProviderId-/giftcards/-giftCardId-",
-                  "children": []
-                },
                 {
                   "name": "Create GiftCard Transaction",
                   "slug": "giftcard-hub-api",
@@ -7670,7 +7677,7 @@
           ]
         },
         {
-          "name": "Payment Provider Protocol",
+          "name": "Payment Provider Protocol API",
           "slug": "payment-provider-protocol",
           "origin": "",
           "type": "openapi",

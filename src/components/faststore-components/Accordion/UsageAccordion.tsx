@@ -7,15 +7,10 @@ import {
   List,
 } from '@faststore/ui'
 
-export const UsageAccordionMultiple = () => {
-  const [indices, setIndices] = useState<Set<number>>(new Set([]))
+const UsageAccordion = () => {
+  const [indices, setIndices] = useState([0])
   const onChange = (index: number) => {
-    if (indices.has(index)) {
-      indices.delete(index)
-      setIndices(new Set(indices))
-    } else {
-      setIndices(new Set(indices.add(index)))
-    }
+    setIndices([index])
   }
   return (
     <Accordion indices={indices} onChange={onChange}>
@@ -51,4 +46,4 @@ export const UsageAccordionMultiple = () => {
   )
 }
 
-export default UsageAccordionMultiple
+export default UsageAccordion

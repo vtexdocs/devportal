@@ -4,6 +4,17 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/404/docs/recipes/style/using-css-handles-for-store-customization"
+status = 308
+to = "/docs/guides/vtex-io-documentation-using-css-handles-for-store-customization"
+[[redirects]]
+force = true
+from = "/docs/guides/vtexbr-buybox-context"
+status = 308
+to = "/docs/apps/vtexbr.buybox-context"
+
+[[redirects]]
+force = true
 from = "/docs/apps/vtex.store-icons/iconpack"
 status = 308
 to = "/docs/guides/vtex-store-icons-iconpack"
@@ -904,6 +915,12 @@ to = "/docs/api-reference/session-manager-api"
 
 [[redirects]]
 force = true
+from = "/reference/session-manager-api-overview"
+status = 308
+to = "/docs/api-reference/session-manager-api"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/using-postman"
 status = 308
 to = "/docs/guides/making-your-first-request"
@@ -919,3 +936,9 @@ force = true
 from = "/docs/guides/2023-06-06-new-integration-guide-headless-commerce"
 status = 308
 to = "/updates/release-notes/2023-06-06-new-integration-guide-headless-commerce"
+
+[[redirects]]
+force = true
+from = "/reference/master-data-api-v2-overview"
+status = 308
+to = "/docs/api-reference/master-data-api-v2"

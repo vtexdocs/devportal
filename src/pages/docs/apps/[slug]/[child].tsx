@@ -187,9 +187,20 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const appId = data.appId
     const latestVersion = data.latestVersion
     const currentVersion = data.currentVersion
-    const specifiedVersion = app.split('@')[1]
+    let specifiedVersion = app.split('@')[1]
       ? app.split('@')[1]
       : currentVersion
+
+    if (specifiedVersion.endsWith('.')) {
+      specifiedVersion += '0'
+    }
+    if (specifiedVersion.split('.').length === 1) {
+      specifiedVersion += '.0'
+    }
+    if (specifiedVersion.split('.').length === 2) {
+      specifiedVersion += '.0'
+    }
+
     const headingList: Item[] = []
     if (markdown) {
       {
