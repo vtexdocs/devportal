@@ -10806,8 +10806,8 @@
                   "children": []
                 },
                 {
-                  "name": "Documentation best practices",
-                  "slug": "vtex-io-documentation-documentation-guidelines",
+                  "name": "Documentation guidelines",
+                  "slug": "vtex-io-documentation-docs-guidelines",
                   "origin": "",
                   "type": "markdown",
                   "children": []
