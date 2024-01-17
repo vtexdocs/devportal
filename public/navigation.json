@@ -7093,7 +7093,7 @@
                   "children": []
                 },
                 {
-                  "name": "Put version",
+                  "name": "Update version",
                   "slug": "master-data-api-v2",
                   "type": "openapi",
                   "method": "PUT",
@@ -7142,7 +7142,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Validate Document by Clusters",
+                  "name": "Validate document by clusters",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7192,16 +7192,16 @@
                   "children": []
                 },
                 {
-                  "name": "Create or update entire document",
+                  "name": "Create document with custom ID or Update entire document",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/api/dataentities/-acronym-/documents",
+                  "endpoint": "/api/dataentities/-acronym-/documents/-id-",
                   "children": []
                 },
                 {
-                  "name": "Create or update partial document",
+                  "name": "Create partial document",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PATCH",
@@ -7214,15 +7214,6 @@
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/-acronym-/documents/-id-",
-                  "children": []
-                },
-                {
-                  "name": "Update entire document",
-                  "slug": "masterdata-api",
-                  "type": "openapi",
-                  "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/dataentities/-acronym-/documents/-id-",
                   "children": []
@@ -7253,7 +7244,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Put scores",
+                  "name": "Update scores",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -7262,7 +7253,7 @@
                   "children": []
                 },
                 {
-                  "name": "Put score by field",
+                  "name": "Update score by field",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -7337,7 +7328,7 @@
                   "children": []
                 },
                 {
-                  "name": "Put version",
+                  "name": "Update version",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PUT",
