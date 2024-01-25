@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.5](https://github.com/vtexdocs/devportal/compare/v1.11.4...v1.11.5) (2024-01-12)
+
+
+### Features
+
+* **faststore/[slug].tsx:** enable seeAlso functionality ([c6f105c](https://github.com/vtexdocs/devportal/commit/c6f105c0da8640340111afb4f7cea20b9292e448))
+
 ### [1.11.4](https://github.com/vtexdocs/devportal/compare/v1.11.3...v1.11.4) (2024-01-12)
 
 

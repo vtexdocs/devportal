@@ -7093,7 +7093,7 @@
                   "children": []
                 },
                 {
-                  "name": "Put version",
+                  "name": "Update version",
                   "slug": "master-data-api-v2",
                   "type": "openapi",
                   "method": "PUT",
@@ -7142,7 +7142,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Validate Document by Clusters",
+                  "name": "Validate document by clusters",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7192,16 +7192,16 @@
                   "children": []
                 },
                 {
-                  "name": "Create or update entire document",
+                  "name": "Create document with custom ID or Update entire document",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/api/dataentities/-acronym-/documents",
+                  "endpoint": "/api/dataentities/-acronym-/documents/-id-",
                   "children": []
                 },
                 {
-                  "name": "Create or update partial document",
+                  "name": "Create partial document",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PATCH",
@@ -7214,15 +7214,6 @@
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/-acronym-/documents/-id-",
-                  "children": []
-                },
-                {
-                  "name": "Update entire document",
-                  "slug": "masterdata-api",
-                  "type": "openapi",
-                  "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/dataentities/-acronym-/documents/-id-",
                   "children": []
@@ -7253,7 +7244,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Put scores",
+                  "name": "Update scores",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -7262,7 +7253,7 @@
                   "children": []
                 },
                 {
-                  "name": "Put score by field",
+                  "name": "Update score by field",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -7337,7 +7328,7 @@
                   "children": []
                 },
                 {
-                  "name": "Put version",
+                  "name": "Update version",
                   "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -10100,63 +10091,6 @@
           "type": "markdown",
           "children": [
             {
-              "name": "Storefront",
-              "slug": "getting-started-3",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "1. Setting up your development environment",
-                  "slug": "vtex-io-documentation-1-basicsetup",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "2. Configuring your account",
-                  "slug": "vtex-io-documentation-2-prerequesites",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "3. Creating a Store Theme project",
-                  "slug": "vtex-io-documentation-3-settingyourstoretheme",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "4. Configuring templates",
-                  "slug": "vtex-io-documentation-4-configuringtemplates",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "5. Defining styles",
-                  "slug": "vtex-io-documentation-5-definingstyles",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "6. Building your own store theme",
-                  "slug": "vtex-io-documentation-6-buildingyourownstoretheme",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "7. Making your store theme public",
-                  "slug": "vtex-io-documentation-making-your-theme-content-public",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Storefront apps",
               "slug": "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io",
               "origin": "",
@@ -10801,6 +10735,13 @@
                 {
                   "name": "Engineering guidelines",
                   "slug": "vtex-io-documentation-engineering-guidelines",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Documentation guidelines",
+                  "slug": "vtex-io-documentation-docs-guidelines",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13344,11 +13285,61 @@
           "type": "markdown",
           "children": [
             {
-              "name": "What is VTEX Store Framework",
-              "slug": "vtex-io-documentation-what-is-vtex-store-framework",
+              "name": "Getting started",
+              "slug": "getting-started-3",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "1. Setting up your development environment",
+                  "slug": "vtex-io-documentation-1-basicsetup",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "2. Configuring your account",
+                  "slug": "vtex-io-documentation-2-prerequesites",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "3. Creating a Store Theme project",
+                  "slug": "vtex-io-documentation-3-settingyourstoretheme",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "4. Configuring templates",
+                  "slug": "vtex-io-documentation-4-configuringtemplates",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "5. Defining styles",
+                  "slug": "vtex-io-documentation-5-definingstyles",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "6. Building your own store theme",
+                  "slug": "vtex-io-documentation-6-buildingyourownstoretheme",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "7. Making your store theme public",
+                  "slug": "vtex-io-documentation-making-your-theme-content-public",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Concepts",
@@ -13408,25 +13399,11 @@
               ]
             },
             {
-              "name": "Guides",
-              "slug": "storefront-development-category",
+              "name": "Building pages",
+              "slug": "building-pages",
               "origin": "",
               "type": "category",
               "children": [
-                {
-                  "name": "Building a Carousel using Slider Layout",
-                  "slug": "vtex-io-documentation-building-a-carousel-using-slider-layout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Building a horizontal Product Summary",
-                  "slug": "vtex-io-documentation-building-a-horizontal-product-summary",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
                 {
                   "name": "Building a Product Details Page",
                   "slug": "vtex-io-documentation-building-a-product-details-page",
@@ -13437,34 +13414,6 @@
                 {
                   "name": "Building a search results page with multiple layouts",
                   "slug": "vtex-io-documentation-building-a-search-results-page-with-multiple-layouts",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Building a Shelf",
-                  "slug": "vtex-io-documentation-building-a-shelf",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Collecting user session data",
-                  "slug": "vtex-io-documentation-collecting-user-session-data",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Cleaning cart data on log out",
-                  "slug": "vtex-io-documentation-cleaning-cart-data-on-log-out",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Configuring custom images for the SKU Selector",
-                  "slug": "vtex-io-documentation-configuring-custom-images-for-the-sku-selector",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13484,15 +13433,65 @@
                   "children": []
                 },
                 {
-                  "name": "Creating a native form for your store users",
-                  "slug": "vtex-io-documentation-creating-a-native-form-for-your-store-users",
+                  "name": "Creating a new custom page",
+                  "slug": "vtex-io-documentation-creating-a-new-custom-page",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Creating a new custom page",
-                  "slug": "vtex-io-documentation-creating-a-new-custom-page",
+                  "name": "Customizing the Header and Footer blocks by page",
+                  "slug": "vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Creating an institutional page with Content types",
+                  "slug": "creating-an-institutional-page-with-content-types-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Using components",
+              "slug": "using-components",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Building a Carousel using Slider Layout",
+                  "slug": "vtex-io-documentation-building-a-carousel-using-slider-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Building a horizontal Product Summary",
+                  "slug": "vtex-io-documentation-building-a-horizontal-product-summary",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Building a Shelf",
+                  "slug": "vtex-io-documentation-building-a-shelf",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Configuring custom images for the SKU Selector",
+                  "slug": "vtex-io-documentation-configuring-custom-images-for-the-sku-selector",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Creating a native form for your store users",
+                  "slug": "vtex-io-documentation-creating-a-native-form-for-your-store-users",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13512,29 +13511,8 @@
                   "children": []
                 },
                 {
-                  "name": "Customizing the Header and Footer blocks by page",
-                  "slug": "vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Improving filter navigator experience",
-                  "slug": "vtex-io-documentation-improving-filter-navigator-experience",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Rendering a badge on top of a product",
                   "slug": "vtex-io-documentation-rendering-a-badge",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using events to trigger side effects on store components",
-                  "slug": "vtex-io-documentation-using-events-to-trigger-side-effects-on-store-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13559,10 +13537,53 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                }
+              ]
+            },
+            {
+              "name": "Styling",
+              "slug": "styling-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Contributing with new CSS Handles",
+                  "slug": "vtex-io-documentation-contributing-with-new-css-handles",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                  "name": "Creating an institutional page with Content types",
-                  "slug": "creating-an-institutional-page-with-content-types-1",
+                  "name": "Customizing your store's icons",
+                  "slug": "vtex-io-documentation-customizing-your-stores-icons",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Customizing your store’s typography",
+                  "slug": "vtex-io-documentation-customizing-your-stores-typography",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Interactively inspecting storefront blocks",
+                  "slug": "how-to-interactively-inspect-blocks-on-a-store-framework-store",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using CSS Handles for store customization",
+                  "slug": "vtex-io-documentation-using-css-handles-for-store-customization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using the Markers prop to customize a block's message",
+                  "slug": "vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13570,7 +13591,65 @@
               ]
             },
             {
-              "name": "B2B setup",
+              "name": "Dealing with events",
+              "slug": "dealing-with-events",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Collecting user session data",
+                  "slug": "vtex-io-documentation-collecting-user-session-data",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Cleaning cart data on log out",
+                  "slug": "vtex-io-documentation-cleaning-cart-data-on-log-out",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Improving filter navigator experience",
+                  "slug": "vtex-io-documentation-improving-filter-navigator-experience",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using events to trigger side effects on store components",
+                  "slug": "vtex-io-documentation-using-events-to-trigger-side-effects-on-store-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Configuring Google Tag Manager",
+              "slug": "google-tag-manager",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Installing Google Tag Manager",
+                  "slug": "vtex-io-documentation-installing-google-tag-manager",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up Google Tag Manager events and triggers",
+                  "slug": "vtex-io-documentation-setting-up-google-tag-manager",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Setting up B2B stores",
               "slug": "b2b-setup",
               "origin": "",
               "type": "markdown",
@@ -13627,13 +13706,13 @@
               ]
             },
             {
-              "name": "Cross-border stores",
+              "name": "Setting up cross-border stores",
               "slug": "vtex-io-cross-border-stores",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Checking your store's binding id",
+                  "name": "Checking your store's binding ID",
                   "slug": "checking-your-stores-binding-id",
                   "origin": "",
                   "type": "markdown",
@@ -13670,43 +13749,21 @@
               ]
             },
             {
-              "name": "Google Tag Manager",
-              "slug": "google-tag-manager",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Installing Google Tag Manager",
-                  "slug": "vtex-io-documentation-installing-google-tag-manager",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up Google Tag Manager",
-                  "slug": "vtex-io-documentation-setting-up-google-tag-manager",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Internationalization",
+              "name": "Handling internationalization",
               "slug": "vtex-io-multi-language-stores",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Disabling automatic translation",
-                  "slug": "vtex-io-documentation-disabling-automatic-translation",
+                  "name": "Internationalizing product prices",
+                  "slug": "vtex-io-documentation-internationalizing-product-prices",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Internationalizing product prices",
-                  "slug": "vtex-io-documentation-internationalizing-product-prices",
+                  "name": "Disabling automatic translation",
+                  "slug": "vtex-io-documentation-disabling-automatic-translation",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13771,7 +13828,7 @@
               ]
             },
             {
-              "name": "Performance",
+              "name": "Managing performance",
               "slug": "performance-category",
               "origin": "",
               "type": "category",
@@ -13849,80 +13906,15 @@
               ]
             },
             {
-              "name": "Styling",
-              "slug": "styling-category",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Contributing with new CSS Handles",
-                  "slug": "vtex-io-documentation-contributing-with-new-css-handles",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Customizing your store's icons",
-                  "slug": "vtex-io-documentation-customizing-your-stores-icons",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Customizing your store’s typography",
-                  "slug": "vtex-io-documentation-customizing-your-stores-typography",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Interactively inspecting storefront blocks",
-                  "slug": "how-to-interactively-inspect-blocks-on-a-store-framework-store",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using CSS Handles for store customization",
-                  "slug": "vtex-io-documentation-using-css-handles-for-store-customization",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using the Markers prop to customize a block's message",
-                  "slug": "vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Going live",
-              "slug": "vtex-io-documentation-going-live",
+              "slug": "vtex-io-documentation-go-live",
               "origin": "",
               "type": "markdown",
-              "children": [
-                {
-                  "name": "Going live with a new store",
-                  "slug": "vtex-io-documentation-go-live",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Migrating your storefront from Legacy CMS Portal to Store Framework",
-                  "slug": "vtex-io-documentation-migrating-storefront-from-legacy-to-io",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "children": []
             },
             {
-              "name": "Best practices",
-              "slug": "best-practices-category",
+              "name": "Updating live stores",
+              "slug": "updating-live-stores",
               "origin": "",
               "type": "category",
               "children": [
@@ -13950,6 +13942,13 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "Migrating your storefront from Legacy CMS Portal to Store Framework",
+              "slug": "vtex-io-documentation-migrating-storefront-from-legacy-to-io",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "Can I order my product as I want?",
               "slug": "can-i-order-my-product-as-i-want",
