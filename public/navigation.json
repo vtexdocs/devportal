@@ -12316,33 +12316,33 @@
           "children": [
             {
               "name": "Getting Started",
-              "slug": "faststore/docs-getting-started-overview",
+              "slug": "faststore/getting-started-overview",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
                   "name": "Requirements",
-                  "slug": "faststore/docs-getting-started-requirements",
+                  "slug": "faststore/getting-started-requirements",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "1. FastStore onboarding",
-                  "slug": "faststore/getting-started-1-faststore-onboarding",
+                  "slug": "faststore/1-onboarding-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": [
                     {
                       "name": "Starting a new FastStore project",
-                      "slug": "faststore/1-faststore-onboarding-onboarding",
+                      "slug": "faststore/1-onboarding-starting-the-project",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
                       "name": "Dashboard",
-                      "slug": "faststore/1-faststore-onboarding-dashboard",
+                      "slug": "faststore/1-onboarding-dashboard",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -12358,21 +12358,21 @@
                 },
                 {
                   "name": "3. FastStore CLI",
-                  "slug": "faststore/getting-started-4-faststore-cli",
+                  "slug": "faststore/getting-started-3-faststore-cli",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "5. Next steps",
-                  "slug": "faststore/getting-started-5-next-steps",
+                  "slug": "faststore/getting-started-4-next-steps",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Glossary",
-                  "slug": "faststore/docs-getting-started-glossary",
+                  "slug": "faststore/getting-started-glossary",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12381,20 +12381,27 @@
             },
             {
               "name": "Project structure",
-              "slug": "faststore/getting-started-3-project-structure",
+              "slug": "faststore/project-structure-overview",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
                   "name": "Configuration options",
-                  "slug": "faststore/docs-faststore-config-options",
+                  "slug": "faststore/project-structure-config-options",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "enableCypressExtension",
-                  "slug": "faststore/faststore-config-options-custom-cypress-test",
+                  "slug": "faststore/project-structure-custom-cypress",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Adding third-party scripts",
+                  "slug": "faststore/project-structure-adding-third-party-scripts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12416,7 +12423,7 @@
                 },
                 {
                   "name": "Atoms",
-                  "slug": "faststore/atoms",
+                  "slug": "faststore/atoms-overview",
                   "origin": "",
                   "type": "category",
                   "children": [
@@ -12536,7 +12543,7 @@
                 },
                 {
                   "name": "Molecules",
-                  "slug": "faststore/molecules",
+                  "slug": "faststore/molecules-overview",
                   "origin": "",
                   "type": "category",
                   "children": [
@@ -12796,7 +12803,7 @@
                 },
                 {
                   "name": "Organisms",
-                  "slug": "faststore/organisms",
+                  "slug": "faststore/organisms-overview",
                   "origin": "",
                   "type": "category",
                   "children": [
@@ -12932,27 +12939,27 @@
             },
             {
               "name": "Storefront features",
-              "slug": "faststore/storefront-features",
+              "slug": "faststore/components-features",
               "origin": "",
               "type": "category",
               "children": [
                 {
                   "name": "Navigation",
-                  "slug": "faststore/components-feature-navigation",
+                  "slug": "faststore/features-navigation",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Regionalization",
-                  "slug": "faststore/components-feature-regionalization",
+                  "slug": "faststore/features-regionalization",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Search",
-                  "slug": "faststore/components-feature-search",
+                  "slug": "faststore/features-search",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12961,7 +12968,7 @@
             },
             {
               "name": "FastStore API",
-              "slug": "faststore/docs-faststore-api",
+              "slug": "faststore/faststore-api-overview",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12995,58 +13002,58 @@
                   ]
                 },
                 {
-                  "name": "Global tokens",
-                  "slug": "faststore/global-tokens-global-tokens-overview",
+                  "name": "Iconography",
+                  "slug": "faststore/themes-icons",
                   "origin": "",
                   "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Colors",
-                      "slug": "faststore/global-tokens-global-tokens-colors",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Grid and Layout",
-                      "slug": "faststore/global-tokens-global-tokens-grid-and-layout",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Interactive controls",
-                      "slug": "faststore/global-tokens-interactive-controls",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Refinements",
-                      "slug": "faststore/global-tokens-global-tokens-refinements",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Spacing",
-                      "slug": "faststore/global-tokens-spacing",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Typography",
-                      "slug": "faststore/global-tokens-typography",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Global tokens",
+              "slug": "faststore/global-tokens-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Colors",
+                  "slug": "faststore/global-tokens-colors",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                  "name": "Iconography",
-                  "slug": "faststore/docs-icons",
+                  "name": "Grid and Layout",
+                  "slug": "faststore/global-tokens-grid-and-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Interactive controls",
+                  "slug": "faststore/global-tokens-interactive-controls",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Refinements",
+                  "slug": "faststore/global-tokens-refinements",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Spacing",
+                  "slug": "faststore/global-tokens-spacing",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Typography",
+                  "slug": "faststore/global-tokens-typography",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13055,41 +13062,41 @@
             },
             {
               "name": "Integrating your storefront with Headless CMS",
-              "slug": "faststore/docs-headless-cms-overview",
+              "slug": "faststore/headless-cms-overview",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
                   "name": "1. Configuring your VTEX account",
-                  "slug": "faststore/headless-cms-integration-1-configuring-the-vtex-account",
+                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "2. Setting up the Headless CMS",
-                  "slug": "faststore/headless-cms-integration-2-setting-up-the-headless-cms",
+                  "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "3. Structuring Content Types and Sections",
-                  "slug": "faststore/headless-cms-integration-3-adding-content-types-and-sections",
+                  "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "4. Promoting your changes",
-                  "slug": "faststore/headless-cms-integration-4-Promoting-your-changes",
+                  "slug": "faststore/headless-cms-4-Promoting-your-changes",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Troubleshooting",
-                  "slug": "faststore/headless-cms-troubleshooting-error-installing-headless-cms",
+                  "slug": "faststore/troubleshooting-error-installing-headless-cms",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13098,27 +13105,27 @@
             },
             {
               "name": "Using themes",
-              "slug": "faststore/docs-theming-overview",
+              "slug": "faststore/using-themes-overview",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
                   "name": "Styling the layout and breakpoints",
-                  "slug": "faststore/customizing-mixins-breakpoints",
+                  "slug": "faststore/using-themes-mixins-breakpoints",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Styling a component",
-                  "slug": "faststore/customizing-components",
+                  "slug": "faststore/using-themes-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Styling a section",
-                  "slug": "faststore/customizing-pages",
+                  "slug": "faststore/using-themes-pages",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13127,7 +13134,7 @@
             },
             {
               "name": "Customizing sections and components",
-              "slug": "faststore/building-sections-component-customization-overview",
+              "slug": "faststore/building-sections-overview",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -13156,7 +13163,7 @@
             },
             {
               "name": "Extending the FastStore API",
-              "slug": "faststore/docs-api-extensions",
+              "slug": "faststore/api-extensions-overview",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -13198,7 +13205,7 @@
               "children": [
                 {
                   "name": "Before you begin",
-                  "slug": "faststore/go-live-go-live-before-you-start",
+                  "slug": "faststore/go-live-before-you-begin",
                   "origin": "",
                   "type": "markdown",
                   "children": []
