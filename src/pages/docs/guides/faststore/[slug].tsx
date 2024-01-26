@@ -140,9 +140,7 @@ const FastStorePage: NextPage<Props> = ({
                   </Text>
                   <Box sx={styles.documentationExcerpt}>
                     <ReactMarkdown>
-                      {frontmatter.excerpt
-                        ? frontmatter.excerpt
-                        : frontmatter.description}
+                      {frontmatter?.excerpt as string}
                     </ReactMarkdown>
                   </Box>
                 </header>
@@ -202,7 +200,7 @@ export const getStaticProps: GetStaticProps = async ({
       : 'main'
   const simplifiedSlug = params?.slug as string
   const slug = `faststore/${simplifiedSlug}`
-  const branch = preview ? previewBranch : 'feat/faststore-docs'
+  const branch = preview ? previewBranch : 'main'
 
   const docsPaths =
     process.env.NEXT_PHASE === PHASE_PRODUCTION_BUILD
