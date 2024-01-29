@@ -18,9 +18,7 @@ async function getGithubTree(org: string, repo: string, ref: string) {
 
 //https://api.github.com/repos/vtexdocs/devportal/commits?path=README.md
 
-export default async function getFastStorePaths(
-  branch = 'feat/faststore-docs'
-) {
+export default async function getFastStorePaths(branch = 'main') {
   const repoTree = await getGithubTree('vtexdocs', 'dev-portal-content', branch)
   // @ts-ignore
   repoTree.tree.map((node: any) => {
