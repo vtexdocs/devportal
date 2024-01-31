@@ -12329,7 +12329,7 @@
                 },
                 {
                   "name": "1. FastStore onboarding",
-                  "slug": "faststore/1-onboarding-overview",
+                  "slug": "faststore/getting-started-1-onboarding-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": [
@@ -12381,7 +12381,7 @@
             },
             {
               "name": "Project structure",
-              "slug": "faststore/project-structure-overview",
+              "slug": "faststore/getting-started-project-structure-overview",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -12968,7 +12968,7 @@
             },
             {
               "name": "FastStore API",
-              "slug": "faststore/faststore-api-overview",
+              "slug": "faststore/getting-started-faststore-api-overview",
               "origin": "",
               "type": "markdown",
               "children": []
