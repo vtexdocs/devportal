@@ -6,11 +6,7 @@ const RegionBarEditUsage = () => {
     <>
       <RegionBar
         icon={
-          <Icon
-            name="MapPin"
-            onResize={undefined}
-            onResizeCapture={undefined}
-          />
+          <Icon name="MapPin" onReset={undefined} onResetCapture={undefined} />
         }
         postalCode={'151515'}
         onButtonClick={() => openModal()}

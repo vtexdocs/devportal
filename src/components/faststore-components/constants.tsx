@@ -38,17 +38,15 @@ export const constants = {
   suggestionsAlt: [
     {
       value: 'sony headphone',
-      icon: (
-        <Icon name="Tag" onResize={undefined} onResizeCapture={undefined} />
-      ),
+      icon: <Icon name="Tag" onReset={undefined} onResetCapture={undefined} />,
     },
     {
       value: 'sound speaker',
       icon: (
         <Icon
           name="FadersHorizontal"
-          onResize={undefined}
-          onResizeCapture={undefined}
+          onReset={undefined}
+          onResetCapture={undefined}
         />
       ),
     },

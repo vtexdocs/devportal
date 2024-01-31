@@ -31,8 +31,8 @@ export const NavbarSlider = () => {
               name="Storefront"
               width={32}
               height={32}
-              onResize={undefined}
-              onResizeCapture={undefined}
+              onReset={undefined}
+              onResetCapture={undefined}
             />
           }
         />
@@ -59,8 +59,8 @@ const NavbarSliderUsage = () => {
             name="List"
             width={32}
             height={32}
-            onResize={undefined}
-            onResizeCapture={undefined}
+            onReset={undefined}
+            onResetCapture={undefined}
           />
         }
         onClick={openNavbar}

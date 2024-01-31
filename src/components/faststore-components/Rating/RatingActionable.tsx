@@ -11,9 +11,7 @@ const RatingActionable = (props: RatingActionableProps) => {
   return (
     <Rating
       value={rating}
-      icon={
-        <Icon name="Star" onResize={undefined} onResizeCapture={undefined} />
-      }
+      icon={<Icon name="Star" onReset={undefined} onResetCapture={undefined} />}
       onChange={setRating}
     />
   )

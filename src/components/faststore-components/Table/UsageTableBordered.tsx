@@ -11,14 +11,7 @@ import { options } from '../constants'
 
 const UsageTableBordered = () => {
   return (
-    <Table
-      variant="bordered"
-      align={undefined}
-      bgcolor={undefined}
-      border={undefined}
-      frame={undefined}
-      rules={undefined}
-    >
+    <Table variant="bordered">
       <TableHead>
         <TableRow>
           <TableCell scope="col" variant="header" align="left">
