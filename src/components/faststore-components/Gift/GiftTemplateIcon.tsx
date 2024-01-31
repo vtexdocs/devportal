@@ -7,8 +7,8 @@ const GiftTemplateIcon = () => {
       icon={
         <Icon
           name="ShoppingCart"
-          onResize={undefined}
-          onResizeCapture={undefined}
+          onReset={undefined}
+          onResetCapture={undefined}
         />
       }
     >

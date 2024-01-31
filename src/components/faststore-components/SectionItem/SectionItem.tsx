@@ -46,8 +46,8 @@ const SectionItem = ({
             icon={
               <Icon
                 name="ArrowRight"
-                onResize={undefined}
-                onResizeCapture={undefined}
+                onReset={undefined}
+                onResetCapture={undefined}
               />
             }
             iconPosition="right"

@@ -31,8 +31,8 @@ function NavbarUsage() {
                 name="List"
                 width={30}
                 height={30}
-                onResize={undefined}
-                onResizeCapture={undefined}
+                onReset={undefined}
+                onResetCapture={undefined}
               />
             }
             onClick={openNavbar}
@@ -63,8 +63,8 @@ function NavbarUsage() {
                     width={18}
                     height={18}
                     weight="bold"
-                    onResize={undefined}
-                    onResizeCapture={undefined}
+                    onReset={undefined}
+                    onResetCapture={undefined}
                   />
                 }
               >
@@ -79,8 +79,8 @@ function NavbarUsage() {
                     name="ShoppingCart"
                     width={32}
                     height={32}
-                    onResize={undefined}
-                    onResizeCapture={undefined}
+                    onReset={undefined}
+                    onResetCapture={undefined}
                   />
                 }
               />

@@ -11,13 +11,7 @@ import { options } from '../constants'
 
 const UsageTableColored = () => {
   return (
-    <Table
-      align={undefined}
-      bgcolor={undefined}
-      border={undefined}
-      frame={undefined}
-      rules={undefined}
-    >
+    <Table>
       <TableHead>
         <TableRow>
           <TableCell scope="col" variant="header" align="left">

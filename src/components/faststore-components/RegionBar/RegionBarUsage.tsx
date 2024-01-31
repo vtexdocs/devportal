@@ -6,11 +6,7 @@ const RegionBarUsage = () => {
     <>
       <RegionBar
         icon={
-          <Icon
-            name="MapPin"
-            onResize={undefined}
-            onResizeCapture={undefined}
-          />
+          <Icon name="MapPin" onReset={undefined} onResetCapture={undefined} />
         }
         label="Set your location"
         onButtonClick={() => openModal()}

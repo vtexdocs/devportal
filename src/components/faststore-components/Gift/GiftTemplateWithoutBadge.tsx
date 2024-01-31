@@ -4,9 +4,7 @@ import { useFormattedPrice } from '../utilities/usePriceFormatter'
 const GiftTemplateWithoutBadge = () => {
   return (
     <Gift
-      icon={
-        <Icon name="Tag" onResize={undefined} onResizeCapture={undefined} />
-      }
+      icon={<Icon name="Tag" onReset={undefined} onResetCapture={undefined} />}
     >
       <GiftImage>
         <img
