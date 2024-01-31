@@ -42,11 +42,7 @@ export const CartSidebarUsage = () => {
         <CartSidebar
           totalItems={0}
           alertIcon={
-            <Icon
-              name="Truck"
-              onResize={undefined}
-              onResizeCapture={undefined}
-            />
+            <Icon name="Truck" onReset={undefined} onResetCapture={undefined} />
           }
           alertText="Free shipping starts at $300"
           onClose={closeCart}
@@ -76,8 +72,8 @@ export const CartSidebarUsage = () => {
               icon={
                 <Icon
                   name="Tag"
-                  onResize={undefined}
-                  onResizeCapture={undefined}
+                  onReset={undefined}
+                  onResetCapture={undefined}
                 />
               }
             >
@@ -114,8 +110,8 @@ export const CartSidebarUsage = () => {
                   name="ArrowRight"
                   width={18}
                   height={18}
-                  onResize={undefined}
-                  onResizeCapture={undefined}
+                  onReset={undefined}
+                  onResetCapture={undefined}
                 />
               }
               iconPosition="right"
