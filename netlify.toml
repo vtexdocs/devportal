@@ -33,6 +33,12 @@ to = "/docs/api-reference/tracking"
 
 [[redirects]]
 force = true
+from = "/docs/api-reference/vtex-tracking-api-authentication"
+status = 308
+to = "/docs/api-reference/tracking#post-/auth"
+
+[[redirects]]
+force = true
 from = "/reference/createupdatewarehouse"
 status = 308
 to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/warehouses"
@@ -942,3 +948,9 @@ force = true
 from = "/reference/master-data-api-v2-overview"
 status = 308
 to = "/docs/api-reference/master-data-api-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/how-to-use-and-create-clients-on-vtex-io"
+status = 308
+to = "/docs/guides/vtex-io-documentation-how-to-create-and-use-clients"     
