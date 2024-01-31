@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.6](https://github.com/vtexdocs/devportal/compare/v1.11.5...v1.11.6) (2024-01-31)
+
+
+### Bug Fixes
+
+* **getdocspaths:** do not fetch docs/faststore in getDocsPaths() ([a6f9698](https://github.com/vtexdocs/devportal/commit/a6f9698bfa6cee5a5b130c42d5875019aab8104f))
+* **package.json:** update faststore version ([7033429](https://github.com/vtexdocs/devportal/commit/703342966e2cbce0a76df198187b4f80b8d63cb4))
+
+
+### Docs
+
+* creating a redirect ([faaeb57](https://github.com/vtexdocs/devportal/commit/faaeb57d8687136bfb48d8310b6e1ec6c02067fd))
+* **navigation:** edit category title ([e5e399a](https://github.com/vtexdocs/devportal/commit/e5e399a1aad7dcbcdb9a5435d63cc073838e4068))
+* **navigation:** edit store framework navigation ([83dcec0](https://github.com/vtexdocs/devportal/commit/83dcec0bb4a0a90749f182336a2526822d7097aa))
+* **navigation:** fix master data api v1 and v2 navigation ([1d0d821](https://github.com/vtexdocs/devportal/commit/1d0d821c79afdd62cb7e3c3ba9af5f9a5c69666b))
+
+
+### Chore
+
+* **faststore-components:** feat: newsletterusage example ([6b3db40](https://github.com/vtexdocs/devportal/commit/6b3db406ba58350311091551a88e7afbc29941b5))
+* **faststore-components:** update usage examples ([49d52fd](https://github.com/vtexdocs/devportal/commit/49d52fdd071ab55a0baa368d231700912e813bab))
+* **getfaststorepaths:** update FastStore docs branch ([0da00cb](https://github.com/vtexdocs/devportal/commit/0da00cbb1ae0e2e109e7c1d2808e97b7f84b2122))
+* **package.json:** update faststore version ([4e9446a](https://github.com/vtexdocs/devportal/commit/4e9446a846da5098fb0548ee02d1e531e5ea4a99))
+* **package.json:** update FS version ([59e117d](https://github.com/vtexdocs/devportal/commit/59e117d802d2c2cbfa2663116517a5da740d0c6d))
+
 ### [1.11.5](https://github.com/vtexdocs/devportal/compare/v1.11.4...v1.11.5) (2024-01-12)
 
 
