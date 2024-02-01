@@ -10419,63 +10419,6 @@
           "type": "markdown",
           "children": [
             {
-              "name": "Clients",
-              "slug": "vtex-io-documentation-clients",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Developing custom Clients",
-                  "slug": "vtex-io-documentation-how-to-create-and-use-clients",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using Clients in Node apps",
-                  "slug": "using-node-clients",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Routes",
-              "slug": "service-path-patterns",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Developing service configuration apps",
-              "slug": "vtex-io-documentation-developing-service-configuration-apps",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Connecting to VTEX Core Commerce APIs",
-              "slug": "how-to-connect-with-vtex-core-commerce-apis-using-vtex-io",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Receiving Catalog Changes on VTEX IO",
-              "slug": "how-to-receive-catalog-changes-on-vtex-io",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Receiving Order Notifications",
-              "slug": "how-to-receive-order-notifications-on-vtex-io",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Developing services on VTEX IO",
               "slug": "developing-services-on-vtex-io",
               "origin": "",
@@ -10574,6 +10517,71 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Clients",
+              "slug": "vtex-io-documentation-clients",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Developing custom Clients",
+                  "slug": "vtex-io-documentation-how-to-create-and-use-clients",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Connecting to VTEX Core Commerce APIs",
+                  "slug": "how-to-connect-with-vtex-core-commerce-apis-using-vtex-io",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using Clients in Node apps",
+                  "slug": "using-node-clients",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Handling events",
+              "slug": "vtex-io-handling-events-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Receiving Catalog Changes on VTEX IO",
+                  "slug": "how-to-receive-catalog-changes-on-vtex-io",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Receiving Order Notifications",
+                  "slug": "how-to-receive-order-notifications-on-vtex-io",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Path patterns",
+              "slug": "service-path-patterns",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Developing service configuration apps",
+              "slug": "vtex-io-documentation-developing-service-configuration-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
