@@ -957,6 +957,6 @@ to = "/docs/guides/vtex-io-documentation-how-to-create-and-use-clients"
 
 [[redirects]]
 force = true
-from = "/docs/app/vtex.custom-product-context"
+from = "/docs/apps/vtex.custom-product-context"
 status = 308
 to = "/docs/apps/vtex.product-context"     
