@@ -10030,9 +10030,9 @@
                   "name": "Check authenticated user",
                   "slug": "vtex-id-api",
                   "type": "openapi",
-                  "method": "GET",
+                  "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/vtexid/pub/authenticated/user",
+                  "endpoint": "/api/vtexid/credential/validate",
                   "children": []
                 },
                 {
