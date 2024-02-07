@@ -33,6 +33,12 @@ to = "/docs/api-reference/tracking"
 
 [[redirects]]
 force = true
+from = "/reference/orders#getorder"
+status = 308
+to = "/docs/api-reference/orders-api#get-/api/oms/pvt/orders/-orderId-"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/vtex-tracking-api-authentication"
 status = 308
 to = "/docs/api-reference/tracking#post-/auth"
