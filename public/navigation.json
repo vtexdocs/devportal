@@ -12961,26 +12961,19 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Available themes",
-                  "slug": "faststore/available-themes",
-                  "origin": "",
-                  "type": "category",
-                  "children": [
-                    {
-                      "name": "Soft blue",
-                      "slug": "faststore/themes-soft-blue",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Midnight",
-                      "slug": "faststore/themes-midnight",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
+                  {
+                    "name": "Soft blue",
+                    "slug": "faststore/themes-soft-blue",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                  },
+                  {
+                    "name": "Midnight",
+                    "slug": "faststore/themes-midnight",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
                 },
                 {
                   "name": "Iconography",
