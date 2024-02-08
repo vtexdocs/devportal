@@ -5190,6 +5190,15 @@
                   "origin": "",
                   "endpoint": "/autocomplete_suggestions",
                   "children": []
+                },
+                {
+                  "name": "Get list of suggested terms similar to the search term",
+                  "slug": "intelligent-search-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/search_suggestions",
+                  "children": []
                 }
               ]
             },
@@ -5214,15 +5223,6 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/banners/-facets-",
-                  "children": []
-                },
-                {
-                  "name": "Get list of suggested terms similar to the search term",
-                  "slug": "intelligent-search-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/search_suggestions",
                   "children": []
                 },
                 {
