@@ -37,7 +37,6 @@ const referencePaths = objectFlip({
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
   'VTEX - Payments Gateway API': 'payments-gateway-api',
   'VTEX - Policies System API': 'policies-system-api',
-  'VTEX - Price Simulations': 'price-simulations',
   'VTEX - Pricing API': 'pricing-api',
   'VTEX - Pricing Hub': 'pricing-hub',
   'VTEX - Profile System': 'profile-system',
