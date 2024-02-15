@@ -965,7 +965,7 @@ to = "/docs/guides/vtex-io-documentation-how-to-create-and-use-clients"
 force = true
 from = "/docs/apps/vtex.custom-product-context"
 status = 308
-to = "/docs/apps/vtex.product-context"
+to = "/docs/apps/vtex.product-context"     
 
 [[redirects]]
 force = true
@@ -978,3 +978,9 @@ force = true
 from = "/docs/guides/legacy-b2b-solution"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/versions"
+status = 308
+to = "/docs/api-reference/masterdata-api"
