@@ -903,6 +903,12 @@ to = "/docs/api-reference/data-subject-rights-api"
 
 [[redirects]]
 force = true
+from = "/docs/api-reference/price-simulations?endpoint=overview"
+status = 308
+to = "/docs/api-reference/pricing-api"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/session-manager-api-overview"
 status = 308
 to = "/docs/api-reference/session-manager-api"
