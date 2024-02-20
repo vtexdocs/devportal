@@ -990,3 +990,9 @@ force = true
 from = "/docs/api-reference/versions"
 status = 308
 to = "/docs/api-reference/masterdata-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-graphql"
+status = 308
+to = "/docs/apps/vtex.search-graphql"
