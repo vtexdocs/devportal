@@ -995,4 +995,4 @@ to = "/docs/api-reference/masterdata-api"
 force = true
 from = "/docs/guides/vtex-store-sitemap"
 status = 308
-to = "/docs/apps/vtex-store-sitemap"
+to = "/docs/apps/vtex.store-sitemap"
