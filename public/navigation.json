@@ -2031,6 +2031,20 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Segmenting the search result",
+              "slug": "vtex-io-documentation-segmenting-the-search-result",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Access Control List",
+              "slug": "access-control-list",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
