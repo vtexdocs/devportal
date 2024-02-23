@@ -12239,7 +12239,7 @@
                 },
                 {
                   "name": "1. FastStore onboarding",
-                  "slug": "faststore/getting-started-1-onboarding-overview",
+                  "slug": "faststore/1-onboarding-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": [
@@ -12291,7 +12291,7 @@
             },
             {
               "name": "Project structure",
-              "slug": "faststore/reference-project-structure-project-structure",
+              "slug": "faststore/project-structure-overview",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -12311,7 +12311,7 @@
                 },
                 {
                   "name": "Adding third-party scripts",
-                  "slug": "faststore/project-structure-adding-third-party-scripts",
+                  "slug": "faststore/project-structure-handling-third-party-scripts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12849,7 +12849,7 @@
             },
             {
               "name": "Storefront features",
-              "slug": "faststore/components-features",
+              "slug": "faststore/features-overview",
               "origin": "",
               "type": "category",
               "children": [
@@ -12878,7 +12878,7 @@
             },
             {
               "name": "FastStore API",
-              "slug": "faststore/getting-started-faststore-api-overview",
+              "slug": "faststore/faststore-api-overview",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12905,7 +12905,7 @@
                 },
                 {
                   "name": "Iconography",
-                  "slug": "faststore/themes-icons",
+                  "slug": "faststore/reference-icons",
                   "origin": "",
                   "type": "markdown",
                   "children": []
