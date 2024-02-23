@@ -12335,7 +12335,7 @@
                   "name": "Atoms",
                   "slug": "faststore/atoms-overview",
                   "origin": "",
-                  "type": "category",
+                  "type": "markdown",
                   "children": [
                     {
                       "name": "Badge",
@@ -12455,7 +12455,7 @@
                   "name": "Molecules",
                   "slug": "faststore/molecules-overview",
                   "origin": "",
-                  "type": "category",
+                  "type": "markdown",
                   "children": [
                     {
                       "name": "Accordion",
@@ -12715,7 +12715,7 @@
                   "name": "Organisms",
                   "slug": "faststore/organisms-overview",
                   "origin": "",
-                  "type": "category",
+                  "type": "markdown",
                   "children": [
                     {
                       "name": "Banner Text",
