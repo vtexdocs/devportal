@@ -903,6 +903,12 @@ to = "/docs/api-reference/data-subject-rights-api"
 
 [[redirects]]
 force = true
+from = "/docs/api-reference/price-simulations?endpoint=overview"
+status = 308
+to = "/docs/api-reference/pricing-api"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/session-manager-api-overview"
 status = 308
 to = "/docs/api-reference/session-manager-api"
@@ -959,10 +965,34 @@ to = "/docs/api-reference/master-data-api-v2"
 force = true
 from = "/docs/guides/how-to-use-and-create-clients-on-vtex-io"
 status = 308
-to = "/docs/guides/vtex-io-documentation-how-to-create-and-use-clients"     
+to = "/docs/guides/vtex-io-documentation-how-to-create-and-use-clients"
 
 [[redirects]]
 force = true
 from = "/docs/apps/vtex.custom-product-context"
 status = 308
 to = "/docs/apps/vtex.product-context"     
+
+[[redirects]]
+force = true
+from = "/docs/guides/b2b-setup"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "/docs/guides/legacy-b2b-solution"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/versions"
+status = 308
+to = "/docs/api-reference/masterdata-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-store-sitemap"
+status = 308
+to = "/docs/apps/vtex.store-sitemap"

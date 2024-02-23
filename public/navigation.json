@@ -2031,6 +2031,20 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Segmenting the search result",
+              "slug": "vtex-io-documentation-segmenting-the-search-result",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Access Control List",
+              "slug": "access-control-list",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -5190,6 +5204,15 @@
                   "origin": "",
                   "endpoint": "/autocomplete_suggestions",
                   "children": []
+                },
+                {
+                  "name": "Get list of suggested terms similar to the search term",
+                  "slug": "intelligent-search-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/search_suggestions",
+                  "children": []
                 }
               ]
             },
@@ -5214,15 +5237,6 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/banners/-facets-",
-                  "children": []
-                },
-                {
-                  "name": "Get list of suggested terms similar to the search term",
-                  "slug": "intelligent-search-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/search_suggestions",
                   "children": []
                 },
                 {
@@ -8083,98 +8097,6 @@
           ]
         },
         {
-          "name": "Price Simulations API",
-          "slug": "price-simulations",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Custom Prices",
-              "slug": "price-simulations-custom-prices",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get custom prices schema",
-                  "slug": "price-simulations",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/_v/custom-prices/session/schema",
-                  "children": []
-                },
-                {
-                  "name": "Create or Update custom prices schema",
-                  "slug": "price-simulations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/_v/custom-prices/session/schema",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Session Management",
-              "slug": "price-simulations-session-management",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Update Order Configuration",
-                  "slug": "price-simulations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/sessions",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Price Association",
-              "slug": "price-simulations-price-association",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get price association by ID",
-                  "slug": "price-simulations",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/_v/custom-prices/rules/-priceAssociationId-",
-                  "children": []
-                },
-                {
-                  "name": "Update price association by ID",
-                  "slug": "price-simulations",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/_v/custom-prices/rules/-priceAssociationId-",
-                  "children": []
-                },
-                {
-                  "name": "Disassociate price association by ID",
-                  "slug": "price-simulations",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/_v/custom-prices/rules/-priceAssociationId-",
-                  "children": []
-                },
-                {
-                  "name": "Create price association",
-                  "slug": "price-simulations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/_v/custom-prices/rules",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "Pricing API",
           "slug": "pricing-api",
           "origin": "",
@@ -10415,6 +10337,13 @@
             {
               "name": "Workspace behavior with app installations",
               "slug": "vtex-io-documentation-workspace-behavior-with-app-installations",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Best practices on workspaces management",
+              "slug": "vtex-io-documentation-workspaces-best-practices",
               "origin": "",
               "type": "markdown",
               "children": []
