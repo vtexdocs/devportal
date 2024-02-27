@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'info',
     description:
-      'A/B test information: maximum time for tests is now limited to 30 days',
-    date: new Date('12/13/2023'),
+      'Onboarding Guide: Building and expanding your store operation with VTEX',
+    date: new Date('02/23/2024'),
   },
   updateType: 'release-notes',
 }
