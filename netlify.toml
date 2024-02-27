@@ -1079,7 +1079,7 @@ to = "/docs/guides/faststore/components-index"
 force = true
 from = "/components/getting-started"
 status = 308
-to = "/docs/guides/faststore/components-getting started"
+to = "/docs/guides/faststore/components-getting-started"
 
 [[redirects]]
 force = true
