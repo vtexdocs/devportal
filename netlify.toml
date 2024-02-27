@@ -1104,3 +1104,129 @@ force = true
 from = "/components/atoms/*"
 status = 308
 to = "/docs/guides/faststore/atoms-:splat"
+
+[[redirects]]
+force = true
+from = "/components/molecules/*"
+status = 308
+to = "/docs/guides/faststore/molecules-:splat"
+
+[[redirects]]
+force = true
+from = "/components/organisms/*"
+status = 308
+to = "/docs/guides/faststore/organisms-:splat"
+
+[[redirects]]
+force = true
+from = "/docs/faststore-api/*"
+status = 308
+to = "/docs/guides/faststore/faststore-api-:splat"
+
+[[redirects]]
+force = true
+from = "/docs/themes/*"
+status = 308
+to = "/docs/guides/faststore/themes-:splat"
+
+[[redirects]]
+force = true
+from = "/docs/global-tokens/*"
+status = 308
+to = "/docs/guides/faststore/global-tokens-:splat"
+
+[[redirects]]
+force = true
+from = "/docs/icons"
+status = 308
+to = "/docs/guides/faststore/reference-icons"
+
+[[redirects]]
+force = true
+from = "/docs/headless-cms-overview"
+status = 308
+to = "/docs/guides/faststore/headless-cms-overview"
+
+[[redirects]]
+force = true
+from = "/docs/headless-cms-integration/*"
+status = 308
+to = "/docs/guides/faststore/headless-cms-integration-:splat"
+
+[[redirects]]
+force = true
+from = "/docs/headless-cms-troubleshooting/error-installing-headless-cms"
+status = 308
+to = "/docs/guides/faststore/troubleshooting-error-installing-headless-cms"
+
+[[redirects]]
+force = true
+from = "/docs/theming-overview"
+status = 308
+to = "/docs/guides/faststore/using-themes-overview"
+
+[[redirects]]
+force = true
+from = "/docs/customizing/mixins-breakpoints"
+status = 308
+to = "/docs/guides/faststore/using-themes-mixins-breakpoints"
+
+[[redirects]]
+force = true
+from = "/docs/customizing/styling-components"
+status = 308
+to = "/docs/guides/faststore/using-themes-components"
+
+[[redirects]]
+force = true
+from = "/docs/customizing/styling-pages"
+status = 308
+to = "/docs/guides/faststore/using-themes-pages"
+
+[[redirects]]
+force = true
+from = "/docs/building-sections/*"
+status = 308
+to = "/docs/guides/faststore/building-sections-:splat"
+
+[[redirects]]
+force = true
+from = "/docs/contextual-images"
+status = 308
+to = "docs/guides/faststore/contextual-images"
+
+[[redirects]]
+force = true
+from = "/docs/api-extensions"
+status = 308
+to = "/docs/guides/faststore/api-extensions-overview"
+
+[[redirects]]
+force = true
+from = "/docs/api-extensions/*"
+status = 308
+to = "/docs/guides/faststore/api-extensions-:splat"
+
+[[redirects]]
+force = true
+from = "/docs/go-live/*"
+status = 308
+to = "/docs/guides/faststore/go-live-:splat"
+
+[[redirects]]
+force = true
+from = "/docs/go-live/before-you-start"
+status = 308
+to = "/docs/guides/faststore/go-live-before-you-begin"
+
+[[redirects]]
+force = true
+from = "/docs/troubleshooting/*"
+status = 308
+to = "/docs/guides/faststore/troubleshooting-:splat"
+
+[[redirects]]
+force = true
+from = "/docs/handling-third-party-scripts/"
+status = 308
+to = "/docs/guides/faststore/project-structure-handling-third-party-scripts"
