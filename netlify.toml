@@ -1221,9 +1221,27 @@ to = "/docs/guides/faststore/go-live-before-you-begin"
 
 [[redirects]]
 force = true
-from = "/docs/troubleshooting/*"
+from = "/docs/troubleshooting/overview"
 status = 308
-to = "/docs/guides/faststore/troubleshooting-:splat"
+to = "/docs/guides/faststore/troubleshooting-overview"
+
+[[redirects]]
+force = true
+from = "/docs/troubleshooting/tracing-the-error-source"
+status = 308
+to = "/docs/guides/faststore/troubleshooting-tracing-the-error-source"
+
+[[redirects]]
+force = true
+from = "/docs/troubleshooting/identifying-development-errors-and-starter-bugs"
+status = 308
+to = "/docs/guides/faststore/troubleshooting-identifying-development-errors-and-starter-bugs"
+
+[[redirects]]
+force = true
+from = "/docs/troubleshooting/analytics-and-partytown"
+status = 308
+to = "/docs/guides/faststore/troubleshooting-analytics-and-partytown"
 
 [[redirects]]
 force = true
