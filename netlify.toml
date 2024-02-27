@@ -1119,6 +1119,12 @@ to = "/docs/guides/faststore/organisms-:splat"
 
 [[redirects]]
 force = true
+from = "/docs/faststore-api"
+status = 308
+to = "/docs/guides/faststore/faststore-api-overview"
+
+[[redirects]]
+force = true
 from = "/docs/faststore-api/*"
 status = 308
 to = "/docs/guides/faststore/faststore-api-:splat"
@@ -1151,13 +1157,19 @@ to = "/docs/guides/faststore/headless-cms-overview"
 force = true
 from = "/docs/headless-cms-integration/*"
 status = 308
-to = "/docs/guides/faststore/headless-cms-integration-:splat"
+to = "/docs/guides/faststore/headless-cms-:splat"
 
 [[redirects]]
 force = true
 from = "/docs/headless-cms-troubleshooting/error-installing-headless-cms"
 status = 308
 to = "/docs/guides/faststore/troubleshooting-error-installing-headless-cms"
+
+[[redirects]]
+force = true
+from = "/docs/headless-cms-troubleshooting/error-permission-denied"
+status = 308
+to = "/docs/guides/faststore/troubleshooting-error-permission-denied"
 
 [[redirects]]
 force = true
@@ -1179,9 +1191,21 @@ to = "/docs/guides/faststore/using-themes-components"
 
 [[redirects]]
 force = true
-from = "/docs/customizing/styling-pages"
+from = "/docs/customizing/pages"
 status = 308
 to = "/docs/guides/faststore/using-themes-pages"
+
+[[redirects]]
+force = true
+from = "/docs/customizing/importing-styles-to-faststore-ui-components"
+status = 308
+to = "/docs/guides/faststore/using-themes-importing-ui-components-styles"
+
+[[redirects]]
+force = true
+from = "/docs/building-sections/component-customization-overview"
+status = 308
+to = "/docs/guides/faststore/building-sections-overview"
 
 [[redirects]]
 force = true
@@ -1209,15 +1233,15 @@ to = "/docs/guides/faststore/api-extensions-:splat"
 
 [[redirects]]
 force = true
-from = "/docs/go-live/*"
-status = 308
-to = "/docs/guides/faststore/go-live-:splat"
-
-[[redirects]]
-force = true
 from = "/docs/go-live/before-you-start"
 status = 308
 to = "/docs/guides/faststore/go-live-before-you-begin"
+
+[[redirects]]
+force = true
+from = "/docs/go-live/*"
+status = 308
+to = "/docs/guides/faststore/go-live-:splat"
 
 [[redirects]]
 force = true
