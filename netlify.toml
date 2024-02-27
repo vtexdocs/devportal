@@ -996,3 +996,111 @@ force = true
 from = "/docs/guides/vtex-store-sitemap"
 status = 308
 to = "/docs/apps/vtex.store-sitemap"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started-overview"
+status = 308
+to = "/docs/guides/faststore/getting-started-overview"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started-requirements"
+status = 308
+to = "/docs/guides/faststore/getting-started-requirements"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started/1-faststore-onboarding"
+status = 308
+to = "/docs/guides/faststore/1-onboarding-overview"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started/1-faststore-onboarding/onboarding"
+status = 308
+to = "/docs/guides/faststore/1-onboarding-starting-the-project"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started/1-faststore-onboarding/dashboard"
+status = 308
+to = "/docs/guides/faststore/1-onboarding-dashboard"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started/2-setting-up-the-project"
+status = 308
+to = "/docs/guides/faststore/getting-started-2-setting-up-the-project"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started/4-faststore-cli"
+status = 308
+to = "/docs/guides/faststore/getting-started-3-faststore-cli"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started/5-next-steps"
+status = 308
+to = "/docs/guides/faststore/getting-started-4-next-steps"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started-glossary"
+status = 308
+to = "/docs/guides/faststore/getting-started-glossary"
+
+[[redirects]]
+force = true
+from = "/docs/getting-started/3-project-structure"
+status = 308
+to = "/docs/guides/faststore/project-structure-overview"
+
+[[redirects]]
+force = true
+from = "/docs/faststore-config-options"
+status = 308
+to = "/docs/guides/faststore/project-structure-config-options"
+
+[[redirects]]
+force = true
+from = "/docs/faststore-config-options/custom-cypress-test"
+status = 308
+to = "/docs/guides/faststore/project-structure-custom-cypress"
+
+[[redirects]]
+force = true
+from = "/components"
+status = 308
+to = "/docs/guides/faststore/components-index"
+
+[[redirects]]
+force = true
+from = "/components/getting-started"
+status = 308
+to = "/docs/guides/faststore/components-getting started"
+
+[[redirects]]
+force = true
+from = "/components/feature-regionalization"
+status = 308
+to = "/docs/guides/faststore/features-regionalization"
+
+[[redirects]]
+force = true
+from = "/components/feature-search"
+status = 308
+to = "/docs/guides/faststore/features-search"
+
+[[redirects]]
+force = true
+from = "/components/feature-navigation"
+status = 308
+to = "/docs/guides/faststore/features-navigation"
+
+[[redirects]]
+force = true
+from = "/components/atoms/*"
+status = 308
+to = "/docs/guides/faststore/atoms-:splat"
