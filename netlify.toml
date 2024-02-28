@@ -63,6 +63,12 @@ to = "/docs/guides/order-canceling-improvements"
 
 [[redirects]]
 force = true
+from = "/docs/api-reference/vtex-log-tracking-app"
+status = 308
+to = "/docs/api-reference/tracking"
+
+[[redirects]]
+force = true
 from = "/docs/guides/lead-time-beta"
 status = 308
 to = "https://help.vtex.com/en/tutorial/lead_time-shipping-time-at-sku-level--16yv5Mkj6bTyWR1hCN2f4B"
