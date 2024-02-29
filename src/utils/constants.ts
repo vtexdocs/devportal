@@ -32,30 +32,35 @@ export const messages = getMessages()
 
 export const documentationData: DocDataElement[] = [
   {
+    id: 'Guides',
     Icon: APIGuidesIcon,
     title: 'Guides',
     description: messages['documentation_api_guides.description'],
     link: '/docs/guides',
   },
   {
+    id: 'API Reference',
     Icon: APIReferenceIcon,
     title: 'API Reference',
     description: messages['documentation_api_reference.description'],
     link: '/docs/api-reference',
   },
   {
+    id: 'App Development',
     Icon: AppDevelopmentIcon,
     title: 'App Development',
     description: messages['documentation_app_development.description'],
     link: '/docs/app-development',
   },
   {
+    id: 'Storefront Development',
     Icon: StorefrontDevelopmentIcon,
     title: 'Storefront Development',
     description: messages['documentation_storefront.description'],
     link: '/docs/storefront-development',
   },
   {
+    id: 'VTEX IO Apps',
     Icon: VTEXIOAppsIcon,
     title: 'VTEX IO Apps',
     description: messages['documentation_vtexio_apps.description'],
@@ -92,6 +97,7 @@ export const adminData: AdminDataElement[] = [
 
 export const updatesData: UpdatesDataElement[] = [
   {
+    id: 'Release Notes',
     Icon: ReleaseNotesIcon,
     title: 'Release Notes',
     description: messages['updates_release_notes.description'],

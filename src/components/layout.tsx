@@ -51,6 +51,7 @@ export default function Layout({
         isPreview={isPreview}
         fallback={sidebarfallback}
         sectionSelected={sectionSelected ?? ''}
+        hamburguerMenuSections={[documentationData, updatesData]}
       >
         <iframe
           src="https://www.googletagmanager.com/ns.html?id=GTM-WGQQ964"
