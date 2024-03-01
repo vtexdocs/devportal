@@ -26,9 +26,11 @@ export type DataElement = {
 }
 export interface DocDataElement extends DataElement {
   title: DocumentationTitle
+  id: string
 }
 export interface UpdatesDataElement extends DataElement {
   title: UpdatesTitle
+  id: string
 }
 export interface AdminDataElement extends DataElement {
   title: AdminTitle

@@ -1501,12 +1501,13 @@
   resolved "https://registry.yarnpkg.com/@exodus/schemasafe/-/schemasafe-1.0.1.tgz#e4e2d86ae176b7c96fbff033f3b1a8b1cfd390fb"
   integrity sha512-PQdbF8dGd4LnbwBlcc4ML8RKYdplm+e9sUeWBTr4zgF13/Shiuov9XznvM4T8cb1CfyKK21yTUkuAIIh/DAH/g==
 
-"@faststore/api@^2.1.31":
-  version "2.2.38"
-  resolved "https://registry.yarnpkg.com/@faststore/api/-/api-2.2.38.tgz#72fe54b4a8a06afce98d49e67e58cb608fc1809c"
-  integrity sha512-NgpyAR7jwAEDpvCJEO24XlkZEr/Xtv+WTgA76lWRDMc/7kqPPgi+0jL1igiCSuKww4sKz390AbDd/0SIxzAKyQ==
+"@faststore/api@^2.2.78":
+  version "2.2.78"
+  resolved "https://registry.yarnpkg.com/@faststore/api/-/api-2.2.78.tgz#820f151e95fa82d55f63c92e6dbb994b008d1ff9"
+  integrity sha512-CZZQNh+0RfCEhz37mjQ5ocui3DcgF9y5ijPDCpBjgnO0K2C2z6jDvTpoP0Vmtqyk5eutFS9pBGNqJEdAG32kyQ==
   dependencies:
     "@envelop/on-resolve" "^2.0.6"
+    "@graphql-tools/load-files" "^7.0.0"
     "@graphql-tools/schema" "^9.0.0"
     "@opentelemetry/exporter-logs-otlp-grpc" "^0.39.1"
     "@opentelemetry/exporter-trace-otlp-grpc" "^0.39.1"
@@ -1519,28 +1520,37 @@
     p-limit "^3.1.0"
     sanitize-html "^2.11.0"
 
-"@faststore/components@^2.2.38":
-  version "2.2.38"
-  resolved "https://registry.yarnpkg.com/@faststore/components/-/components-2.2.38.tgz#60b965ac4cd4c18ba18f47a0741e5b16f1795351"
-  integrity sha512-fKlZc5UMg6dbYCp+91vJYkibI++adNhhXo1ilFdih9sxaW/9DmjYN/cXYHy4LrJn/9EgQVHMAwwtw7Rzf+b17g==
+"@faststore/components@^2.2.78":
+  version "2.2.78"
+  resolved "https://registry.yarnpkg.com/@faststore/components/-/components-2.2.78.tgz#407c1c43059de7d9fbd049316d32298ca5119e9e"
+  integrity sha512-PUIsVYXwjIpydedtf6mTdpIhW+e9MAVVv1jxSMt8pD+2yIOmBwv3hHVSCPzgio4P/3EbwQNbffs0r95JDe26sw==
 
-"@faststore/sdk@^2.1.31":
-  version "2.2.38"
-  resolved "https://registry.yarnpkg.com/@faststore/sdk/-/sdk-2.2.38.tgz#1b72464ef9a5e25af608e66b27d54b639cbe51da"
-  integrity sha512-4Fbf8QuKfzvA4QHp9eOhIsQ2Xy95474sRIoT/lnzzwTHaSP1kVuZ6xUkoxJPCz311JG0nbCiRXVVL1G4X2W1wQ==
+"@faststore/sdk@^2.2.78":
+  version "2.2.78"
+  resolved "https://registry.yarnpkg.com/@faststore/sdk/-/sdk-2.2.78.tgz#50157da97ab708e32663d65e49cb69a607a9f63c"
+  integrity sha512-SL2EzkV1Fw2RR7hxoEetuw4G6+ukqlIAGHc7lwm9Q71Hp/03hGF9Fy/AYJXeX1ezqchndxXA/XUF5hROSPVTGA==
   dependencies:
     idb-keyval "^5.1.3"
 
-"@faststore/ui@^2.1.31":
-  version "2.2.38"
-  resolved "https://registry.yarnpkg.com/@faststore/ui/-/ui-2.2.38.tgz#885afd384dc92a5adffc3328342604221a222bc9"
-  integrity sha512-OpcxYJK+fdyeHR5hxl2dcESWMbi95U6rDBDk3W2+xlu6Jbx3+KGpWUeoghcnRJHZJmiCKYjK7mVbTagaQXrGSQ==
+"@faststore/ui@^2.2.78":
+  version "2.2.78"
+  resolved "https://registry.yarnpkg.com/@faststore/ui/-/ui-2.2.78.tgz#4da06c676dddd0aeedf17e86841903911cbab418"
+  integrity sha512-XpD14lpZlygeMyDnUixV3+fBDEj0lv8mQB6Y2TSY1uDJxowunQMwfZ5Oi2uIFE17dedALRJ8F04j48TA6VrJUg==
   dependencies:
-    "@faststore/components" "^2.2.38"
+    "@faststore/components" "^2.2.78"
     include-media "^1.4.10"
     modern-normalize "^1.1.0"
     react-swipeable "^7.0.0"
     tabbable "^5.2.1"
+
+"@graphql-tools/load-files@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@graphql-tools/load-files/-/load-files-7.0.0.tgz#206833042c9c6fdf089996accb065ae448ba6819"
+  integrity sha512-P98amERIwI7FD8Bsq6xUbz9Mj63W8qucfrE/WQjad5jFMZYdFFt46a99FFdfx8S/ZYgpAlj/AZbaTtWLitMgNQ==
+  dependencies:
+    globby "11.1.0"
+    tslib "^2.4.0"
+    unixify "1.0.0"
 
 "@graphql-tools/merge@^8.4.1":
   version "8.4.2"
@@ -3493,9 +3503,9 @@
   resolved "https://registry.yarnpkg.com/@vtex/tsconfig/-/tsconfig-0.6.0.tgz#c9dfffc95d2ef55195237411f9c15269ca30b2a5"
   integrity sha512-SVQBxaSdEVdpJFja1aVTIiZBgpQKePyYOUWGzcYq6LYkSWqSbz2LoC7TuLUsmfweYmVkv8+4eVuxcDpQVEpq1A==
 
-"@vtexdocs/components@https://github.com/vtexdocs/components.git#v1.1.15":
-  version "1.1.15"
-  resolved "https://github.com/vtexdocs/components.git#ed6391ab063187bc8cc8226fd7d2efc7d886dfb4"
+"@vtexdocs/components@https://github.com/vtexdocs/components.git#v2.0.3":
+  version "2.0.3"
+  resolved "https://github.com/vtexdocs/components.git#8a304cc60af7a78d48cce93028184c794b80cfb2"
   dependencies:
     "@code-hike/mdx" "^0.9.0"
     "@vtex/brand-ui" "^0.46.1"
@@ -3504,6 +3514,7 @@
     mermaid "^10.1.0"
     next-mdx-remote "^4.1.0"
     react-animate-height "^3.0.4"
+    react-cookie-consent "^9.0.0"
     react-dom "18.2.0"
     react-instantsearch-dom "^6.37.0"
     react-intersection-observer "^9.5.2"
@@ -7071,7 +7082,7 @@ globalthis@^1.0.3:
   dependencies:
     define-properties "^1.1.3"
 
-globby@^11.0.3, globby@^11.1.0:
+globby@11.1.0, globby@^11.0.3, globby@^11.1.0:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/globby/-/globby-11.1.0.tgz#bd4be98bb042f83d796f7e3811991fbe82a0d34b"
   integrity sha512-jhIXaOzy1sb8IyocaruWSn1TjmnBVs8Ayhcy83rmxNJ8q2uWKCAj3CnJY+KpGSXCueAPc0i05kVvVKtP1t9S3g==
@@ -8001,6 +8012,11 @@ jose@^4.11.4, jose@^4.14.1:
   version "4.14.4"
   resolved "https://registry.yarnpkg.com/jose/-/jose-4.14.4.tgz#59e09204e2670c3164ee24cbfe7115c6f8bff9ca"
   integrity sha512-j8GhLiKmUAh+dsFXlX1aJCbt5KMibuKb+d7j1JaOJG6s2UjX1PQlW+OKB/sD4a/5ZYF4RcmYmLSndOoU3Lt/3g==
+
+js-cookie@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
+  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
@@ -9649,6 +9665,13 @@ normalize-package-data@^3.0.0:
     semver "^7.3.4"
     validate-npm-package-license "^3.0.1"
 
+normalize-path@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-2.1.1.tgz#1ab28b556e198363a8c1a6f7e6fa20137fe6aed9"
+  integrity sha512-3pKJwH184Xo/lnH6oyP1q2pMd7HcypqqmRs91/6/i2CGtWwIKGCkOOMTm/zXbgTEWHw1uNpNi/igc3ePOYHb6w==
+  dependencies:
+    remove-trailing-separator "^1.0.1"
+
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
@@ -10530,6 +10553,13 @@ react-animate-height@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-animate-height/-/react-animate-height-3.1.1.tgz#3e324c417a5d18afcdd78d2ad71108c14868a28b"
   integrity sha512-UkC6+V3ZlCneBRaSM7aUctDJ+PRP6ztcGtxvU7MTeoMMWPhz8BQNaX7QWaZrkzp1ih1G8uZZ+DI9nfLvtD6OdQ==
 
+react-cookie-consent@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-9.0.0.tgz#26dc3a3387cc8524275864a4ed4584af881435f0"
+  integrity sha512-Blyj+m+Zz7SFHYqT18p16EANgnSg2sIyU6Yp3vk83AnOnSW7qnehPkUe4+8+qxztJrNmCH5GP+VHsWzAKVOoZA==
+  dependencies:
+    js-cookie "^2.2.1"
+
 react-docgen-typescript@^2.2.2:
   version "2.2.2"
   resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-2.2.2.tgz#4611055e569edc071204aadb20e1c93e1ab1659c"
@@ -10933,6 +10963,11 @@ remark-rehype@^10.0.0:
     "@types/mdast" "^3.0.0"
     mdast-util-to-hast "^12.1.0"
     unified "^10.0.0"
+
+remove-trailing-separator@^1.0.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
+  integrity sha512-/hS+Y0u3aOfIETiaiirUFwDBDzmXPvO+jAfKTitUngIPzdKc6Z0LoFjM/CK5PL4C+eKwHohlHAb6H0VFfmmUsw==
 
 remove-undefined-objects@^2.0.2:
   version "2.0.2"
@@ -12402,6 +12437,13 @@ universalify@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-2.0.0.tgz#75a4984efedc4b08975c5aeb73f530d02df25717"
   integrity sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==
+
+unixify@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/unixify/-/unixify-1.0.0.tgz#3a641c8c2ffbce4da683a5c70f03a462940c2090"
+  integrity sha512-6bc58dPYhCMHHuwxldQxO3RRNZ4eCogZ/st++0+fcC1nr0jiGUtAdBJ2qzmLQWSxbtz42pWt4QQMiZ9HvZf5cg==
+  dependencies:
+    normalize-path "^2.1.1"
 
 unraw@=2.0.1:
   version "2.0.1"
