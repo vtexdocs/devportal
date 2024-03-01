@@ -2,6 +2,13 @@
 external_node_modules = ["sharp"]
 included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/docs-brandless"
+status = 308
+to = "/docs/guides/faststore/themes-brandless"
+
 [[redirects]]
 force = true
 from = "/404/docs/recipes/style/using-css-handles-for-store-customization"
