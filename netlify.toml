@@ -1009,3 +1009,21 @@ force = true
 from = "/docs/guides/vtex-store-sitemap"
 status = 308
 to = "/docs/apps/vtex.store-sitemap"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/orders-api-overview"
+status = 308
+to = "/docs/api-reference/orders-api"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/logistics-api-overview"
+status = 308
+to = "/docs/api-reference/logistics-api"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/pricing-api-overview"
+status = 308
+to = "/docs/api-reference/pricing-api"
