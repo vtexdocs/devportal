@@ -12937,6 +12937,21 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "March",
+              "slug": "march-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore content new home",
+                  "slug": "2024-06-08-faststore-content-in-the-developer-portal",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
