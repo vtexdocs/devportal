@@ -24,3 +24,44 @@ ul {
   margin: revert;
   list-style: revert;
 }
+
+/* Checklist */
+
+.nx-section-checklist {
+  background-color: #f8f7fc;
+  padding: var(--fs-spacing-4);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--fs-spacing-4);
+}
+
+.nx-section-checklist label {
+  font-weight: bold;
+  padding-bottom: 4px
+}
+.nx-section-checklist li {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--fs-spacing-1);
+}
+
+.nx-section-checklist summary {
+  display: block;
+}
+.nx-section-checklist details {
+  margin: 0;
+  background-color: white;
+}
+
+.nx-section-checklist details > div {
+  margin: var(--fs-spacing-1) var(--fs-spacing-4);
+}
+.nx-section-checklist details > table {
+  margin: var(--fs-spacing-1) var(--fs-spacing-4);
+}
+
+.nx-section-checklist table {
+  width: 100%;
+  display: table;
+}
