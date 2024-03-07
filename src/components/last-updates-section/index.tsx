@@ -8,9 +8,8 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'info',
-    description:
-      'Onboarding Guide: Building and expanding your store operation with VTEX',
-    date: new Date('02/23/2024'),
+    description: 'FastStore content new home',
+    date: new Date('03/07/2024'),
   },
   updateType: 'release-notes',
 }
