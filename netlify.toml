@@ -2,6 +2,13 @@
 external_node_modules = ["sharp"]
 included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/docs-brandless"
+status = 308
+to = "/docs/guides/faststore/themes-brandless"
+
 [[redirects]]
 force = true
 from = "/404/docs/recipes/style/using-css-handles-for-store-customization"
@@ -60,6 +67,12 @@ force = true
 from = "/docs/guides/order-canceling-improvements-beta"
 status = 308
 to = "/docs/guides/order-canceling-improvements"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/vtex-log-tracking-app"
+status = 308
+to = "/docs/api-reference/tracking"
 
 [[redirects]]
 force = true
@@ -996,3 +1009,21 @@ force = true
 from = "/docs/guides/vtex-store-sitemap"
 status = 308
 to = "/docs/apps/vtex.store-sitemap"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/orders-api-overview"
+status = 308
+to = "/docs/api-reference/orders-api"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/logistics-api-overview"
+status = 308
+to = "/docs/api-reference/logistics-api"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/pricing-api-overview"
+status = 308
+to = "/docs/api-reference/pricing-api"

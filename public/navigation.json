@@ -13880,6 +13880,29 @@
       "slugPrefix": "updates/release-notes",
       "categories": [
         {
+          "name": "2024",
+          "slug": "2024-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "February",
+              "slug": "february-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Onboarding Guide: Building and expanding your store operation with VTEX",
+                  "slug": "2024-02-23-onboarding-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "2023",
           "slug": "2023-category",
           "origin": "",

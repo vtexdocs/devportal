@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/vtexdocs/devportal/compare/v1.11.6...v1.12.0) (2024-03-06)
+
+
+### Features
+
+* add Checkout Config API ([d8ffec2](https://github.com/vtexdocs/devportal/commit/d8ffec20b8737bd0bf0d5d64fc6362c4d2df3081))
+
+
+### Chore
+
+* **last-updates-section:** update lastreleasenote ([5f27356](https://github.com/vtexdocs/devportal/commit/5f273561a285fafedcfc4558faa3d62d71e581d2))
+* **navigation.json:** update navigation ([fa89191](https://github.com/vtexdocs/devportal/commit/fa891915970879f1005f0a9ef333dff586d1334b))
+* **netlify.toml:** add redirect ([a3bd2c9](https://github.com/vtexdocs/devportal/commit/a3bd2c927d8cf47902f3420b82235d9326a3fe86))
+* **netlify.toml:** update redirect ([9844af3](https://github.com/vtexdocs/devportal/commit/9844af358889252c12c1f86b4564c26f97c072fa))
+
+
+### Docs
+
+* create redirect ([70f459a](https://github.com/vtexdocs/devportal/commit/70f459a843ecbee84e1ae11e178830d52cd0e4f9))
+* create redirect master data api ([fff2260](https://github.com/vtexdocs/devportal/commit/fff22606b00138db71c2eb1fbeea2a4be41f97a9))
+* create redirects api overviews ([85dbc68](https://github.com/vtexdocs/devportal/commit/85dbc68ef7e00f1f43804fa6a0cf1ad5dbf249d8))
+* **navigation:** edit intelligent search api ([348cd31](https://github.com/vtexdocs/devportal/commit/348cd31da66b21c574b642f97ad331683fa88138))
+* **navigation:** update VTEX ID API ([1d87b2e](https://github.com/vtexdocs/devportal/commit/1d87b2edcceb8ba4648ee4d213d1f0ea2407be9f))
+* redirect ([45a441f](https://github.com/vtexdocs/devportal/commit/45a441f1bca9a650295b1c632caaab3d6cee633a))
+
 ### [1.11.6](https://github.com/vtexdocs/devportal/compare/v1.11.5...v1.11.6) (2024-01-31)
 
 
