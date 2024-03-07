@@ -10,6 +10,7 @@ const referencePaths = objectFlip({
   'VTEX - Catalog API Seller Portal': 'catalog-api-seller-portal',
   'VTEX - Catalog API': 'catalog-api',
   'VTEX - Checkout API': 'checkout-api',
+  'VTEX - Checkout Configuration API': 'checkout-configuration-api',
   'VTEX - Customer Credit API': 'customer-credit-api',
   'VTEX - GiftCard Hub API': 'giftcard-hub-api',
   'VTEX - Giftcard API': 'giftcard-api',

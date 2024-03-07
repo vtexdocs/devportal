@@ -1285,3 +1285,21 @@ force = true
 from = "/docs/handling-third-party-scripts/"
 status = 308
 to = "/docs/guides/faststore/project-structure-handling-third-party-scripts"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/orders-api-overview"
+status = 308
+to = "/docs/api-reference/orders-api"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/logistics-api-overview"
+status = 308
+to = "/docs/api-reference/logistics-api"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/pricing-api-overview"
+status = 308
+to = "/docs/api-reference/pricing-api"
