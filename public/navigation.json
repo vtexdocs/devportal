@@ -6882,74 +6882,6 @@
               ]
             },
             {
-              "name": "Customer profiles",
-              "slug": "master-data-api-v2-customer-profiles",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create new customer profile",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Client/documents",
-                  "children": []
-                },
-                {
-                  "name": "Update customer profile",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Client/documents/-id-",
-                  "children": []
-                },
-                {
-                  "name": "Delete customer profile",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Client/documents/-id-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Addresses",
-              "slug": "master-data-api-v2-addresses",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create new customer address",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Address/documents",
-                  "children": []
-                },
-                {
-                  "name": "Update customer address",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Address/documents/-id-",
-                  "children": []
-                },
-                {
-                  "name": "Delete customer address",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Address/documents/-id-",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Search",
               "slug": "master-data-api-v2-search",
               "type": "category",
@@ -7248,6 +7180,74 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/dataentities/-acronym-/documents/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Customer profiles",
+              "slug": "master-data-api-customer-profiles",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create new customer profile",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents",
+                  "children": []
+                },
+                {
+                  "name": "Update customer profile",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete customer profile",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Addresses",
+              "slug": "masterdata-api-addresses",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create new customer address",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents",
+                  "children": []
+                },
+                {
+                  "name": "Update customer address",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete customer address",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-id-",
                   "children": []
                 }
               ]
