@@ -7195,7 +7195,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/dataentities/Client/documents",
+                  "endpoint": "/api/dataentities/CL/documents",
                   "children": []
                 },
                 {
@@ -7204,7 +7204,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/Client/documents/-id-",
+                  "endpoint": "/api/dataentities/CL/documents/-id-",
                   "children": []
                 },
                 {
@@ -7213,7 +7213,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/Client/documents/-id-",
+                  "endpoint": "/api/dataentities/CL/documents/-id-",
                   "children": []
                 }
               ]
@@ -7225,11 +7225,11 @@
               "children": [
                 {
                   "name": "Create new customer address",
-                  "slug": "master-data-api-v2",
+                  "slug": "masterdata-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/dataentities/Address/documents",
+                  "endpoint": "/api/dataentities/AD/documents",
                   "children": []
                 },
                 {
@@ -7238,7 +7238,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/Address/documents/-id-",
+                  "endpoint": "/api/dataentities/AD/documents/-id-",
                   "children": []
                 },
                 {
@@ -7247,7 +7247,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/Address/documents/-id-",
+                  "endpoint": "/api/dataentities/AD/documents/-id-",
                   "children": []
                 }
               ]
