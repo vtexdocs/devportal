@@ -12990,6 +12990,13 @@
                   "children": []
                 },
                 {
+                  "name": "Widgets for Headless CMS",
+                  "slug": "faststore/headless-cms-widgets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "4. Promoting your changes",
                   "slug": "faststore/headless-cms-4-Promoting-your-changes",
                   "origin": "",
