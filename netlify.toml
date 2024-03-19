@@ -988,6 +988,12 @@ to = "/docs/apps/vtex.product-context"
 
 [[redirects]]
 force = true
+from = "/docs/guides/b2b-setup"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
 from = "/docs/guides/legacy-b2b-solution"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
