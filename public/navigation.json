@@ -12209,6 +12209,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Querying B2B order statuses",
+              "slug": "apps/querying-b2b-order-statuses",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
@@ -12582,21 +12589,6 @@
                 {
                   "name": "Setting up Google Tag Manager events and triggers",
                   "slug": "vtex-io-documentation-setting-up-google-tag-manager",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Setting up B2B stores",
-              "slug": "b2b-setup",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Querying B2B order statuses",
-                  "slug": "querying-b2b-order-statuses",
                   "origin": "",
                   "type": "markdown",
                   "children": []
