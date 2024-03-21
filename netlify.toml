@@ -1320,4 +1320,4 @@ to = "/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app"
 force = true
 from = "/docs/recipes/development/creating-a-development-workspace/"
 status = 308
-to = "https://developers.vtex.com/docs/guides/vtex-io-documentation-creating-a-development-workspace"
+to = "/docs/guides/vtex-io-documentation-creating-a-development-workspace"
