@@ -10542,6 +10542,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Policies from License Manager",
+              "slug": "vtex-io-documentation-policies-from-license-manager",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
