@@ -1318,6 +1318,6 @@ to = "/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app"
 
 [[redirects]]
 force = true
-from = "/docs/recipes/development/creating-a-development-workspace/"
+from = "/docs/recipes/development/creating-a-development-workspace"
 status = 308
 to = "/docs/guides/vtex-io-documentation-creating-a-development-workspace"
