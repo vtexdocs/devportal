@@ -1731,6 +1731,29 @@
           ]
         },
         {
+          "name": "B2B Suite",
+          "slug": "b2b-suite-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "B2B Organizations",
+              "slug": "b2b-organizations",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Bulk Import Spreadsheet",
+                  "slug": "bulk-import-spreadsheet",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "VTEX Sales App",
           "slug": "vtex-sale-app-category",
           "origin": "",
