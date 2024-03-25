@@ -13011,6 +13011,13 @@
                   "children": []
                 },
                 {
+                  "name": "Widgets for Headless CMS",
+                  "slug": "faststore/headless-cms-widgets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Troubleshooting",
                   "slug": "faststore/troubleshooting-error-installing-headless-cms",
                   "origin": "",
