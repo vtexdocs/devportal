@@ -10766,20 +10766,20 @@
           "origin": "",
           "type": "markdown",
           "children": [
-        {
-          "name": "Rewriter GraphQL",
-          "slug": "rewriter-graphql",
-          "origin": "",
-          "type": "markdown",
-          "children": []
-        },
-        {
-          "name": "Search GraphQL",
-          "slug": "Search GraphQL",
-          "origin": "",
-          "type": "markdown",
-          "children": []
-        }
+            {
+              "name": "Rewriter GraphQL",
+              "slug": "rewriter-graphql",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Search GraphQL",
+              "slug": "search-graphQL",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
           ]
         },
         {
