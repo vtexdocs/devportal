@@ -1306,7 +1306,7 @@ to = "/docs/api-reference/pricing-api"
 
 [[redirects]]
 force = true
-from = "/docs/recipes/development/vtex-io-cli-installation-and-command-reference/#command-reference"
+from = "/docs/recipes/development/vtex-io-cli-installation-and-command-reference"
 status = 308
 to = "/docs/guides/vtex-io-documentation-vtex-io-cli-install"
 
