@@ -10761,6 +10761,28 @@
           "children": []
         },
         {
+          "name": "GraphQL",
+          "slug": "graphql-ide",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+        {
+          "name": "Rewriter GraphQL",
+          "slug": "rewriter-graphql",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        },
+        {
+          "name": "Search GraphQL",
+          "slug": "Search GraphQL",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        }
+          ]
+        },
+        {
           "name": "Frequently asked questions",
           "slug": "vtex-io-documentation-frequently-asked-questions",
           "origin": "",
@@ -11515,6 +11537,20 @@
             {
               "name": "Responsive Values",
               "slug": "apps/vtex.responsive-values",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Rewriter",
+              "slug": "rewriter",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Render Server",
+              "slug": "render-server",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -13292,13 +13328,6 @@
                   "children": []
                 },
                 {
-                  "name": "Routes",
-                  "slug": "vtex-io-documentation-routes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Site Editor",
                   "slug": "vtex-io-documentation-site-editor",
                   "origin": "",
@@ -13652,7 +13681,7 @@
             },
             {
               "name": "Routing",
-              "slug": "store-framework-routing-category",
+              "slug": "vtex-io-documentation-routing",
               "origin": "",
               "type": "category",
               "children": [
