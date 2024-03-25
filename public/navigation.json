@@ -12216,6 +12216,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Querying B2B order statuses",
+              "slug": "apps/querying-b2b-order-statuses",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
