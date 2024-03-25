@@ -13004,6 +13004,20 @@
                   "children": []
                 },
                 {
+                  "name": "Multiple page templates",
+                  "slug": "faststore/headless-cms-multiple-page-template",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Widgets for Headless CMS",
+                  "slug": "faststore/headless-cms-widgets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Troubleshooting",
                   "slug": "faststore/troubleshooting-error-installing-headless-cms",
                   "origin": "",
