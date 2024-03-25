@@ -13943,6 +13943,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New cache configuration for Rewriter and Render Server apps",
+                  "slug": "new-cache-configuration-for-rewriter-and-render-server-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore content new home",
                   "slug": "2024-03-07-faststore-content-in-the-developer-portal",
                   "origin": "",
