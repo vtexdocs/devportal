@@ -28,6 +28,10 @@ import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { remarkCodeHike } from '@code-hike/mdx'
+import remarkMermaid from 'utils/remark_plugins/mermaid'
+import escapeCurlyBraces from 'utils/escapeCurlyBraces'
+import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
+import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -170,11 +174,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
   try {
     const sidebarfallback = await getNavigation()
-    const format: 'md' | 'mdx' = 'md'
+    const format: 'md' | 'mdx' = 'mdx'
     const sectionSelected = 'VTEX IO Apps'
     const vendor = data.vendor
     const title = data.title
-    let markdown = data.markdown
+    let markdown = JSON.parse(
+      JSON.stringify(data?.markdown?.split('## Contributors')[0])
+    )
     const latestVersion = data.latestVersion
     const currentVersion = data.currentVersion
     let specifiedVersion = app.split('@')[1]
@@ -257,7 +263,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               markdown)
           : ''
       }
-      let serialized = await serialize(markdown.split('## Contributors')[0], {
+      const { result } = escapeCurlyBraces(markdown)
+      markdown = result
+      markdown = replaceHTMLBlocks(markdown)
+      markdown = await replaceMagicBlocks(markdown)
+      let serialized = await serialize(markdown, {
         parseFrontmatter: true,
         mdxOptions: {
           remarkPlugins: [
@@ -276,6 +286,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             remarkImages,
             [getHeadings, { headingList }],
             remarkBlockquote,
+            remarkMermaid,
           ],
           rehypePlugins: [
             [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
