@@ -1321,3 +1321,9 @@ force = true
 from = "/docs/recipes/development/creating-a-development-workspace"
 status = 308
 to = "/docs/guides/vtex-io-documentation-creating-a-development-workspace"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-safedata"
+status = 308
+to = "/docs/apps/vtex.safedata"
