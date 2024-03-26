@@ -12219,7 +12219,7 @@
             },
             {
               "name": "Querying B2B order statuses",
-              "slug": "apps/querying-b2b-order-statuses",
+              "slug": "guides/querying-b2b-order-statuses",
               "origin": "",
               "type": "markdown",
               "children": []
