@@ -1012,73 +1012,67 @@ to = "/docs/apps/vtex.store-sitemap"
 
 [[redirects]]
 force = true
-from = "/docs/getting-started-overview"
+from = "/docs/guides/faststore"
 status = 308
-to = "/docs/guides/faststore/getting-started-overview"
+to = "/docs/guides/faststore/docs-what-is-faststore"
 
 [[redirects]]
 force = true
-from = "/docs/getting-started-requirements"
+from = "/docs/guides/faststore/global-tokens/*"
 status = 308
-to = "/docs/guides/faststore/getting-started-requirements"
+to = "/docs/guides/faststore/global-tokens-:splat"
 
 [[redirects]]
 force = true
-from = "/docs/getting-started/1-faststore-onboarding"
+from = "/docs/guides/faststore/getting-started/1-faststore-onboarding"
 status = 308
 to = "/docs/guides/faststore/1-onboarding-overview"
 
 [[redirects]]
 force = true
-from = "/docs/getting-started/1-faststore-onboarding/onboarding"
+from = "/docs/guides/faststore/getting-started/1-faststore-onboarding/onboarding"
 status = 308
 to = "/docs/guides/faststore/1-onboarding-starting-the-project"
 
 [[redirects]]
 force = true
-from = "/docs/getting-started/1-faststore-onboarding/dashboard"
+from = "/docs/guides/faststore/getting-started/1-faststore-onboarding/dashboard"
 status = 308
 to = "/docs/guides/faststore/1-onboarding-dashboard"
 
 [[redirects]]
 force = true
-from = "/docs/getting-started/2-setting-up-the-project"
+from = "/docs/guides/faststore/getting-started/2-setting-up-the-project"
 status = 308
 to = "/docs/guides/faststore/getting-started-2-setting-up-the-project"
 
 [[redirects]]
 force = true
-from = "/docs/getting-started/4-faststore-cli"
+from = "/docs/guides/faststore/getting-started/4-faststore-cli"
 status = 308
 to = "/docs/guides/faststore/getting-started-3-faststore-cli"
 
 [[redirects]]
 force = true
-from = "/docs/getting-started/5-next-steps"
+from = "/docs/guides/faststore/getting-started/5-next-steps"
 status = 308
 to = "/docs/guides/faststore/getting-started-4-next-steps"
 
 [[redirects]]
 force = true
-from = "/docs/getting-started-glossary"
-status = 308
-to = "/docs/guides/faststore/getting-started-glossary"
-
-[[redirects]]
-force = true
-from = "/docs/getting-started/3-project-structure"
+from = "/docs/guides/faststore/getting-started/3-project-structure"
 status = 308
 to = "/docs/guides/faststore/project-structure-overview"
 
 [[redirects]]
 force = true
-from = "/docs/faststore-config-options"
+from = "/docs/guides/faststore/faststore-config-options"
 status = 308
 to = "/docs/guides/faststore/project-structure-config-options"
 
 [[redirects]]
 force = true
-from = "/docs/faststore-config-options/custom-cypress-test"
+from = "/docs/guides/faststore/faststore-config-options/custom-cypress-test"
 status = 308
 to = "/docs/guides/faststore/project-structure-custom-cypress"
 
@@ -1090,199 +1084,163 @@ to = "/docs/guides/faststore/components-index"
 
 [[redirects]]
 force = true
-from = "/components/getting-started"
+from = "/docs/guides/faststore/getting-started"
 status = 308
 to = "/docs/guides/faststore/components-getting-started"
 
 [[redirects]]
 force = true
-from = "/components/feature-regionalization"
+from = "/docs/guides/faststore/feature-regionalization"
 status = 308
 to = "/docs/guides/faststore/features-regionalization"
 
 [[redirects]]
 force = true
-from = "/components/feature-search"
+from = "/docs/guides/faststore/feature-search"
 status = 308
 to = "/docs/guides/faststore/features-search"
 
 [[redirects]]
 force = true
-from = "/components/feature-navigation"
+from = "/docs/guides/faststore/feature-navigation"
 status = 308
 to = "/docs/guides/faststore/features-navigation"
 
 [[redirects]]
 force = true
-from = "/components/atoms/*"
-status = 308
-to = "/docs/guides/faststore/atoms-:splat"
-
-[[redirects]]
-force = true
-from = "/components/molecules/*"
-status = 308
-to = "/docs/guides/faststore/molecules-:splat"
-
-[[redirects]]
-force = true
-from = "/components/organisms/*"
-status = 308
-to = "/docs/guides/faststore/organisms-:splat"
-
-[[redirects]]
-force = true
-from = "/docs/faststore-api"
+from = "/docs/guides/faststore/faststore-api"
 status = 308
 to = "/docs/guides/faststore/faststore-api-overview"
 
 [[redirects]]
 force = true
-from = "/docs/faststore-api/*"
+from = "/docs/guides/faststore/faststore-api/*"
 status = 308
 to = "/docs/guides/faststore/faststore-api-:splat"
 
 [[redirects]]
 force = true
-from = "/docs/themes/*"
+from = "/docs/guides/faststore/themes/*"
 status = 308
 to = "/docs/guides/faststore/themes-:splat"
 
 [[redirects]]
 force = true
-from = "/docs/global-tokens/*"
-status = 308
-to = "/docs/guides/faststore/global-tokens-:splat"
-
-[[redirects]]
-force = true
-from = "/docs/icons"
+from = "/docs/guides/faststore/icons"
 status = 308
 to = "/docs/guides/faststore/reference-icons"
 
 [[redirects]]
 force = true
-from = "/docs/headless-cms-overview"
-status = 308
-to = "/docs/guides/faststore/headless-cms-overview"
-
-[[redirects]]
-force = true
-from = "/docs/headless-cms-integration/*"
+from = "/docs/guides/faststore/headless-cms-integration/*"
 status = 308
 to = "/docs/guides/faststore/headless-cms-:splat"
 
 [[redirects]]
 force = true
-from = "/docs/headless-cms-troubleshooting/error-installing-headless-cms"
+from = "/docs/guides/faststore/headless-cms-troubleshooting/error-installing-headless-cms"
 status = 308
 to = "/docs/guides/faststore/troubleshooting-error-installing-headless-cms"
 
 [[redirects]]
 force = true
-from = "/docs/headless-cms-troubleshooting/error-permission-denied"
+from = "/docs/guides/faststore/headless-cms-troubleshooting/error-permission-denied"
 status = 308
 to = "/docs/guides/faststore/troubleshooting-error-permission-denied"
 
 [[redirects]]
 force = true
-from = "/docs/theming-overview"
+from = "/docs/guides/faststore/theming-overview"
 status = 308
 to = "/docs/guides/faststore/using-themes-overview"
 
 [[redirects]]
 force = true
-from = "/docs/customizing/mixins-breakpoints"
+from = "/docs/guides/faststore/customizing/mixins-breakpoints"
 status = 308
 to = "/docs/guides/faststore/using-themes-mixins-breakpoints"
 
 [[redirects]]
 force = true
-from = "/docs/customizing/styling-components"
+from = "/docs/guides/faststore/customizing/styling-components"
 status = 308
 to = "/docs/guides/faststore/using-themes-components"
 
 [[redirects]]
 force = true
-from = "/docs/customizing/pages"
+from = "/docs/guides/faststore/customizing/pages"
 status = 308
 to = "/docs/guides/faststore/using-themes-pages"
 
 [[redirects]]
 force = true
-from = "/docs/customizing/importing-styles-to-faststore-ui-components"
+from = "/docs/guides/faststore/customizing/importing-styles-to-faststore-ui-components"
 status = 308
 to = "/docs/guides/faststore/using-themes-importing-ui-components-styles"
 
 [[redirects]]
 force = true
-from = "/docs/building-sections/component-customization-overview"
+from = "/docs/guides/faststore/building-sections/component-customization-overview"
 status = 308
 to = "/docs/guides/faststore/building-sections-overview"
 
 [[redirects]]
 force = true
-from = "/docs/building-sections/*"
+from = "/docs/guides/faststore/building-sections/*"
 status = 308
 to = "/docs/guides/faststore/building-sections-:splat"
 
 [[redirects]]
 force = true
-from = "/docs/contextual-images"
-status = 308
-to = "docs/guides/faststore/contextual-images"
-
-[[redirects]]
-force = true
-from = "/docs/api-extensions"
+from = "/docs/guides/faststore/api-extensions"
 status = 308
 to = "/docs/guides/faststore/api-extensions-overview"
 
 [[redirects]]
 force = true
-from = "/docs/api-extensions/*"
+from = "/docs/guides/faststore/api-extensions/*"
 status = 308
 to = "/docs/guides/faststore/api-extensions-:splat"
 
 [[redirects]]
 force = true
-from = "/docs/go-live/before-you-start"
+from = "/docs/guides/faststore/go-live/before-you-start"
 status = 308
 to = "/docs/guides/faststore/go-live-before-you-begin"
 
 [[redirects]]
 force = true
-from = "/docs/go-live/*"
+from = "/docs/guides/faststore/go-live/*"
 status = 308
 to = "/docs/guides/faststore/go-live-:splat"
 
 [[redirects]]
 force = true
-from = "/docs/troubleshooting/overview"
+from = "/docs/guides/faststore/troubleshooting/overview"
 status = 308
 to = "/docs/guides/faststore/troubleshooting-overview"
 
 [[redirects]]
 force = true
-from = "/docs/troubleshooting/tracing-the-error-source"
+from = "/docs/guides/faststore/troubleshooting/tracing-the-error-source"
 status = 308
 to = "/docs/guides/faststore/troubleshooting-tracing-the-error-source"
 
 [[redirects]]
 force = true
-from = "/docs/troubleshooting/identifying-development-errors-and-starter-bugs"
+from = "/docs/guides/faststore/troubleshooting/identifying-development-errors-and-starter-bugs"
 status = 308
 to = "/docs/guides/faststore/troubleshooting-identifying-development-errors-and-starter-bugs"
 
 [[redirects]]
 force = true
-from = "/docs/troubleshooting/analytics-and-partytown"
+from = "/docs/guides/faststore/troubleshooting/analytics-and-partytown"
 status = 308
 to = "/docs/guides/faststore/troubleshooting-analytics-and-partytown"
 
 [[redirects]]
 force = true
-from = "/docs/handling-third-party-scripts/"
+from = "/docs/guides/faststore/handling-third-party-scripts/"
 status = 308
 to = "/docs/guides/faststore/project-structure-handling-third-party-scripts"
 
