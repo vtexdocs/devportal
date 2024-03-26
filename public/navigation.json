@@ -1740,7 +1740,7 @@
               "name": "B2B Organizations",
               "slug": "b2b-organizations",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Bulk Import Spreadsheet",
