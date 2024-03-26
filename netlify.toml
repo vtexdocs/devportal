@@ -1303,3 +1303,21 @@ force = true
 from = "/docs/api-reference/pricing-api-overview"
 status = 308
 to = "/docs/api-reference/pricing-api"
+
+[[redirects]]
+force = true
+from = "/docs/recipes/development/vtex-io-cli-installation-and-command-reference"
+status = 308
+to = "/docs/guides/vtex-io-documentation-vtex-io-cli-install"
+
+[[redirects]]
+force = true
+from = "/docs/recipes/store/installing-an-app"
+status = 308
+to = "/docs/guides/vtex-io-documentation-vtex-io-cli-usage#installing-an-app"
+
+[[redirects]]
+force = true
+from = "/docs/recipes/development/creating-a-development-workspace"
+status = 308
+to = "/docs/guides/vtex-io-documentation-creating-a-development-workspace"
