@@ -1018,6 +1018,12 @@ to = "/docs/guides/faststore/docs-what-is-faststore"
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/global-tokens"
+status = 308
+to = "/docs/guides/faststore/global-tokens-overview"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/global-tokens/*"
 status = 308
 to = "/docs/guides/faststore/global-tokens-:splat"
@@ -1120,6 +1126,12 @@ to = "/docs/guides/faststore/faststore-api-:splat"
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/themes"
+status = 308
+to = "/docs/guides/faststore/themes-overview"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/themes/*"
 status = 308
 to = "/docs/guides/faststore/themes-:splat"
@@ -1129,6 +1141,12 @@ force = true
 from = "/docs/guides/faststore/icons"
 status = 308
 to = "/docs/guides/faststore/reference-icons"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/headless-cms-integration"
+status = 308
+to = "/docs/guides/faststore/headless-cms-overview"
 
 [[redirects]]
 force = true
@@ -1207,6 +1225,12 @@ force = true
 from = "/docs/guides/faststore/go-live/before-you-start"
 status = 308
 to = "/docs/guides/faststore/go-live-before-you-begin"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/go-live"
+status = 308
+to = "/docs/guides/faststore/go-live-overview"
 
 [[redirects]]
 force = true
