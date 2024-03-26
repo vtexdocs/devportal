@@ -1743,8 +1743,8 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Bulk Import Spreadsheet",
-                  "slug": "bulk-import-spreadsheet",
+                  "name": "Bulk Import Buyer Organizations Spreadsheet",
+                  "slug": "bulk-import-buyer-organizations-spreadsheet",
                   "origin": "",
                   "type": "markdown",
                   "children": []
