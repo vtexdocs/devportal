@@ -174,7 +174,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
   try {
     const sidebarfallback = await getNavigation()
-    const format: 'md' | 'mdx' = 'mdx'
+    const format: 'md' | 'mdx' = 'md'
     const sectionSelected = 'VTEX IO Apps'
     const vendor = data.vendor
     const title = data.title

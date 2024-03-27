@@ -7,9 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'info',
-    description: 'FastStore content new home',
-    date: new Date('03/07/2024'),
+    type: 'added',
+    description:
+      'New fields available for sending metadata in payment flow routes',
+    date: new Date('03/27/2024'),
   },
   updateType: 'release-notes',
 }
