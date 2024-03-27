@@ -8252,6 +8252,57 @@
           ]
         },
         {
+          "name": "Buyer organizations",
+          "slug": "buyer-organizations",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Bulk Import",
+              "slug": "bulk-import",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Uploading a file",
+                  "slug": "bulk-import",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs",
+                  "children": []
+                },
+                {
+                  "name": "Check progress",
+                  "slug": "bulk-import",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Start the import",
+                  "slug": "bulk-import",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Validate the file",
+                  "slug": "bulk-import",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Pricing Hub",
           "slug": "pricing-hub",
           "origin": "",
