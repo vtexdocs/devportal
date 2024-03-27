@@ -12795,6 +12795,13 @@
                       "children": []
                     },
                     {
+                      "name": "Newsletter",
+                      "slug": "faststore/organisms-newsletter",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Out Of Stock",
                       "slug": "faststore/organisms-out-of-stock",
                       "origin": "",
@@ -13193,13 +13200,6 @@
                 {
                   "name": "Identifying development errors and Starter bugs",
                   "slug": "faststore/troubleshooting-identifying-development-errors-and-starter-bugs",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Handling third-party scripts",
-                  "slug": "faststore/docs-handling-third-party-scripts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
