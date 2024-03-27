@@ -10,7 +10,7 @@ const lastReleaseNote: CardProps = {
     type: 'added',
     description:
       'New fields available for sending metadata in payment flow routes',
-    date: new Date('03/27/2024'),
+    date: new Date('03/25/2024'),
   },
   updateType: 'release-notes',
 }
