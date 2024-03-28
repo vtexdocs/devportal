@@ -1309,3 +1309,9 @@ force = true
 from = "/reference/master-data-api-v1-overview"
 status = 308
 to = "/docs/api-reference/masterdata-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/how-the-queries-in-master-data-v1-work"
+status = 308
+to = "/docs/guides/querying-documents-in-master-data-v1"
