@@ -10190,7 +10190,15 @@
               "slug": "vtex-io-documentation-builders",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                    "name": "Docs Builder",
+                    "slug": "vtex-io-documentation-docs-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                }
+              ]
             },
             {
               "name": "Dependencies",
