@@ -29,9 +29,6 @@ import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { remarkCodeHike } from '@code-hike/mdx'
 import remarkMermaid from 'utils/remark_plugins/mermaid'
-import escapeCurlyBraces from 'utils/escapeCurlyBraces'
-import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
-import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -263,10 +260,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               markdown)
           : ''
       }
-      const { result } = escapeCurlyBraces(markdown)
-      markdown = result
-      markdown = replaceHTMLBlocks(markdown)
-      markdown = await replaceMagicBlocks(markdown)
       let serialized = await serialize(markdown, {
         parseFrontmatter: true,
         mdxOptions: {
