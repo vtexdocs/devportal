@@ -35,6 +35,7 @@ import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { remarkCodeHike } from '@code-hike/mdx'
+import { officialVendors } from 'utils/constants'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -86,7 +87,7 @@ const AppChildPage: NextPage<Props> = ({
       category: 'VTEX IO Apps',
     },
   ]
-  const officialVendors = ['vtex', 'vtexarg', 'vtexventures']
+
   return (
     <>
       <Head>
