@@ -29,6 +29,7 @@ import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { remarkCodeHike } from '@code-hike/mdx'
 import remarkMermaid from 'utils/remark_plugins/mermaid'
+import { officialVendors } from 'utils/constants'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -74,7 +75,6 @@ const AppReadmePage: NextPage<Props> = ({
       category: 'VTEX IO Apps',
     },
   ]
-  const officialVendors = ['vtex', 'vtexarg', 'vtexventures', 'vtexus']
 
   childrenDocs?.forEach((doc) =>
     seeAlsoData.push({
