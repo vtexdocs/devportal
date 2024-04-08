@@ -74,7 +74,7 @@ const AppReadmePage: NextPage<Props> = ({
       category: 'VTEX IO Apps',
     },
   ]
-  const officialVendors = ['vtex', 'vtexarg', 'vtexventures']
+  const officialVendors = ['vtex', 'vtexarg', 'vtexventures', 'vtexus']
 
   childrenDocs?.forEach((doc) =>
     seeAlsoData.push({
