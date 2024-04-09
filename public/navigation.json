@@ -254,6 +254,21 @@
               ]
             },
             {
+              "name": "Customer Credit",
+              "slug": "customer-credit-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Managing a Customer Credit account",
+                  "slug": "managing-a-customer-credit-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "External Marketplace",
               "slug": "external-marketplace-integration-guide",
               "origin": "",
