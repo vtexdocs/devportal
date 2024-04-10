@@ -7452,6 +7452,67 @@
               ]
             },
             {
+              "name": "Change order (beta)",
+              "slug": "orders-api-change-order-beta",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes",
+                  "children": []
+                },
+                {
+                  "name": "Preview order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/preview",
+                  "children": []
+                },
+                {
+                  "name": "Get order change details",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-",
+                  "children": []
+                },
+                {
+                  "name": "Get order change history",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes",
+                  "children": []
+                },
+                {
+                  "name": "Retry order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/retry",
+                  "children": []
+                },
+                {
+                  "name": "Cancel order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/cancel",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Invoice",
               "slug": "orders-api-invoice",
               "type": "category",
