@@ -1688,6 +1688,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "VTEX Shipping Network Labels Integration",
+                  "slug": "vtex-shipping-network-labels-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -1748,6 +1755,14 @@
                   "type": "markdown",
                   "children": []
                 }
+              ]
+            },
+            {
+              "name": "Pickup point",
+              "slug": "setting-up-white-label-seller-as-pickup-point",
+              "origin": "",
+              "type": "markdown",
+              "children": [
               ]
             }
           ]
