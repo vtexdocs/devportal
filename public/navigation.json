@@ -1576,6 +1576,13 @@
               "children": []
             },
             {
+              "name": "Cancel order",
+              "slug": "order-canceling-improvements",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Actions in orders",
               "slug": "actions-orders",
               "origin": "",
