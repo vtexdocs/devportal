@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
     description:
-      'New fields available for sending metadata in payment flow routes',
-    date: new Date('03/25/2024'),
+      'FastStore: Create flexible PLPs and PDPs with Multiple page templates',
+    date: new Date('04/10/2024'),
   },
   updateType: 'release-notes',
 }
