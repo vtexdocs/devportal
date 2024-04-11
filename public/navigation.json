@@ -1650,8 +1650,8 @@
           ]
         },
         {
-          "name": "Fulfillment",
-          "slug": "fulfillment-category",
+          "name": "Logistics",
+          "slug": "logistics-category",
           "origin": "",
           "type": "category",
           "children": [
