@@ -14026,6 +14026,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Master Data v1: Calculated Field and Change field value trigger deprecation",
+                  "slug": "2024-04-17-master-data-v1-calculated-field-and-change-field-value-trigger-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Create flexible PLPs and PDPs with Multiple page templates",
                   "slug": "2024-04-10-multiple-page-templates",
                   "origin": "",
