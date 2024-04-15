@@ -69,6 +69,8 @@ export const documentationData: DocDataElement[] = [
   }, */
 ]
 
+export const officialVendors = ['vtex', 'vtexarg', 'vtexventures', 'vtexus']
+
 export const adminData: AdminDataElement[] = [
   {
     Icon: MenuIcon,

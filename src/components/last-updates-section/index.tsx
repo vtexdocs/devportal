@@ -7,9 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'info',
-    description: 'FastStore content new home',
-    date: new Date('03/07/2024'),
+    type: 'added',
+    description:
+      'FastStore: Create flexible PLPs and PDPs with Multiple page templates',
+    date: new Date('04/10/2024'),
   },
   updateType: 'release-notes',
 }

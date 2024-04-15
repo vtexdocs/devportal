@@ -254,6 +254,21 @@
               ]
             },
             {
+              "name": "Customer Credit",
+              "slug": "customer-credit-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Managing a Customer Credit account",
+                  "slug": "managing-a-customer-credit-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "External Marketplace",
               "slug": "external-marketplace-integration-guide",
               "origin": "",
@@ -1561,6 +1576,13 @@
               "children": []
             },
             {
+              "name": "Cancel order",
+              "slug": "order-canceling-improvements",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Actions in orders",
               "slug": "actions-orders",
               "origin": "",
@@ -1628,8 +1650,8 @@
           ]
         },
         {
-          "name": "Fulfillment",
-          "slug": "fulfillment-category",
+          "name": "Logistics",
+          "slug": "logistics-category",
           "origin": "",
           "type": "category",
           "children": [
@@ -1663,6 +1685,13 @@
                 {
                   "name": "Tracking",
                   "slug": "tracking-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Shipping Network Labels Integration",
+                  "slug": "vtex-shipping-network-labels-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1726,6 +1755,14 @@
                   "type": "markdown",
                   "children": []
                 }
+              ]
+            },
+            {
+              "name": "Pickup point",
+              "slug": "setting-up-white-label-seller-as-pickup-point",
+              "origin": "",
+              "type": "markdown",
+              "children": [
               ]
             }
           ]
@@ -7437,6 +7474,67 @@
               ]
             },
             {
+              "name": "Change order (beta)",
+              "slug": "orders-api-change-order-beta",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes",
+                  "children": []
+                },
+                {
+                  "name": "Preview order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/preview",
+                  "children": []
+                },
+                {
+                  "name": "Get order change details",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-",
+                  "children": []
+                },
+                {
+                  "name": "Get order change history",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes",
+                  "children": []
+                },
+                {
+                  "name": "Retry order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/retry",
+                  "children": []
+                },
+                {
+                  "name": "Cancel order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/cancel",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Invoice",
               "slug": "orders-api-invoice",
               "type": "category",
@@ -10190,7 +10288,15 @@
               "slug": "vtex-io-documentation-builders",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                    "name": "Docs Builder",
+                    "slug": "vtex-io-documentation-docs-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                }
+              ]
             },
             {
               "name": "Dependencies",
@@ -12795,6 +12901,13 @@
                       "children": []
                     },
                     {
+                      "name": "Newsletter",
+                      "slug": "faststore/organisms-newsletter",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Out Of Stock",
                       "slug": "faststore/organisms-out-of-stock",
                       "origin": "",
@@ -13193,13 +13306,6 @@
                 {
                   "name": "Identifying development errors and Starter bugs",
                   "slug": "faststore/troubleshooting-identifying-development-errors-and-starter-bugs",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Handling third-party scripts",
-                  "slug": "faststore/docs-handling-third-party-scripts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13914,14 +14020,14 @@
           "type": "category",
           "children": [
             {
-              "name": "February",
-              "slug": "february-2024",
+              "name": "April",
+              "slug": "april-2024",
               "origin": "",
               "type": "category",
               "children": [
                 {
-                  "name": "Onboarding Guide: Building and expanding your store operation with VTEX",
-                  "slug": "2024-02-23-onboarding-guide",
+                  "name": "FastStore: Create flexible PLPs and PDPs with Multiple page templates",
+                  "slug": "2024-04-10-multiple-page-templates",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13935,8 +14041,37 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New fields available for sending metadata in payment flow routes",
+                  "slug": "new-fields-available-for-sending-metadata-in-payment-flow-routes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New tax calculation field on Checkout API",
+                  "slug": "2024-03-19-new-field-isMarketplaceResponsibleForTaxes-checkout-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore content new home",
                   "slug": "2024-03-07-faststore-content-in-the-developer-portal",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "February",
+              "slug": "february-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Onboarding Guide: Building and expanding your store operation with VTEX",
+                  "slug": "2024-02-23-onboarding-guide",
                   "origin": "",
                   "type": "markdown",
                   "children": []
