@@ -1543,6 +1543,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Metadata information in payment transactions",
+                  "slug": "metadata-information-in-payment-transactions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             }
