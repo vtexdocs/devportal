@@ -1306,6 +1306,12 @@ to = "/docs/guides/vtex-io-documentation-creating-a-development-workspace"
 
 [[redirects]]
 force = true
+from = "/docs/guides/vtex-safedata"
+status = 308
+to = "/docs/apps/vtex.safedata"
+
+[[redirects]]
+force = true
 from = "/reference/master-data-api-v1-overview"
 status = 308
 to = "/docs/api-reference/masterdata-api"
