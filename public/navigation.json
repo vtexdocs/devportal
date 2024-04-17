@@ -14033,6 +14033,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Master Data v1: Calculated Field and Change field value trigger deprecation",
+                  "slug": "2024-04-17-master-data-v1-calculated-field-and-change-field-value-trigger-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Secure Proxy custom tokens: Base64 encoding method is now available",
                   "slug": "secure-proxy-custom-tokens-base64-encoding-method-is-now-available",
                   "origin": "",
