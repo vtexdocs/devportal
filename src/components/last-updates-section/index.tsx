@@ -7,10 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'info',
+    type: 'added',
     description:
-      'Onboarding Guide: Building and expanding your store operation with VTEX',
-    date: new Date('02/23/2024'),
+      'FastStore: Create flexible PLPs and PDPs with Multiple page templates',
+    date: new Date('04/10/2024'),
   },
   updateType: 'release-notes',
 }
