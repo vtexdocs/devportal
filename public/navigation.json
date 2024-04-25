@@ -2091,7 +2091,7 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Anti-fraud  Flow",
+              "name": "Anti-fraud Flow",
               "slug": "antifraud-provider-protocol-antifraud-flow",
               "type": "category",
               "children": [
@@ -8021,6 +8021,134 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/pvt/transactions/-transactionId-/cancellation-request",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pick and Pack Protocol API",
+          "slug": "pick-and-pack-protocol-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Authentication",
+              "slug": "pick-and-pack-protocol-api-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create JWT token",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/token",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Service integration",
+              "slug": "pick-and-pack-protocol-api-service-integration",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create service",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Shipping updates",
+              "slug": "pick-and-pack-protocol-api-shipping-updates",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get service",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/carrierId/serviceId",
+                  "children": []
+                },
+                {
+                  "name": "Update service",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/carrierId/serviceId",
+                  "children": []
+                },
+                {
+                  "name": "Update service",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/carrierId/serviceId",
+                  "children": []
+                },
+                {
+                  "name": "Create notes",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/notes/carrierId/serviceId",
+                  "children": []
+                },
+                {
+                  "name": "Create notes",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/notes/carrierId/serviceId",
+                  "children": []
+                },
+                {
+                  "name": "Create evidence",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/evidences/carrierId/serviceId",
+                  "children": []
+                },
+                {
+                  "name": "Create label",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/labels/carrierId/serviceId",
+                  "children": []
+                },
+                {
+                  "name": "Cancel service",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/cancel/carrierId/serviceId",
+                  "children": []
+                },
+                {
+                  "name": "Create on hold service",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/on-hold/carrierId/serviceId",
                   "children": []
                 }
               ]
