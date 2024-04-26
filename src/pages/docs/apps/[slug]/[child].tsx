@@ -12,6 +12,9 @@ import remarkImages from 'utils/remark_plugins/plaiceholder'
 import Breadcrumb from 'components/breadcrumb'
 import ArticlePagination from 'components/article-pagination'
 import jp from 'jsonpath'
+import replaceMagicBlocks from 'utils/replaceMagicBlocks'
+import escapeCurlyBraces from 'utils/escapeCurlyBraces'
+import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
 
 import getChildDocApp from 'utils/getChildDocApp'
 import { getLogger } from 'utils/logging/log-util'
@@ -180,7 +183,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
   try {
     const sidebarfallback = await getNavigation()
-    const format: 'md' | 'mdx' = 'md'
     const sectionSelected = 'VTEX IO Apps'
     const title = data.title
     let markdown = data.markdown
@@ -215,6 +217,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               `>❗ This page is about version **${currentVersion}** of the app, which is not the most recent version. The latest stable version is **${latestVersion}**. \n\n` +
               markdown)
           : ''
+      }
+      let format: 'md' | 'mdx' = 'mdx'
+      try {
+        const { result } = escapeCurlyBraces(markdown)
+        markdown = result
+        markdown = replaceHTMLBlocks(markdown)
+        markdown = await replaceMagicBlocks(markdown)
+      } catch (error) {
+        logger.error(`${error}`)
+        format = 'md'
       }
       let serialized = await serialize(markdown.split('## Contributors')[0], {
         parseFrontmatter: true,
