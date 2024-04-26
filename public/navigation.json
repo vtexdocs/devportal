@@ -10376,6 +10376,20 @@
                     "origin": "",
                     "type": "markdown",
                     "children": []
+                },
+                {
+                    "name": "React Builder",
+                    "slug": "vtex-io-documentation-react-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
+                    "name": "Styles Builder",
+                    "slug": "vtex-io-documentation-styles-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
                 }
               ]
             },
