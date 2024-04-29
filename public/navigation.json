@@ -8392,7 +8392,7 @@
               "children": [
                 {
                   "name": "Uploading a file",
-                  "slug": "bulk-import",
+                  "slug": "buyer-organizations",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -8401,7 +8401,7 @@
                 },
                 {
                   "name": "Check progress",
-                  "slug": "bulk-import",
+                  "slug": "buyer-organizations",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -8410,7 +8410,7 @@
                 },
                 {
                   "name": "Start the import",
-                  "slug": "bulk-import",
+                  "slug": "buyer-organizations",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -8419,7 +8419,7 @@
                 },
                 {
                   "name": "Validate the file",
-                  "slug": "bulk-import",
+                  "slug": "buyer-organizations",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
