@@ -7,10 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'info',
+    type: 'added',
     description:
-      'A/B test information: maximum time for tests is now limited to 30 days',
-    date: new Date('12/13/2023'),
+      'FastStore: Create flexible PLPs and PDPs with Multiple page templates',
+    date: new Date('04/10/2024'),
   },
   updateType: 'release-notes',
 }

@@ -254,6 +254,21 @@
               ]
             },
             {
+              "name": "Customer Credit",
+              "slug": "customer-credit-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Managing a Customer Credit account",
+                  "slug": "managing-a-customer-credit-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "External Marketplace",
               "slug": "external-marketplace-integration-guide",
               "origin": "",
@@ -1528,6 +1543,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Metadata information in payment transactions",
+                  "slug": "metadata-information-in-payment-transactions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             }
@@ -1556,6 +1578,13 @@
             {
               "name": "Change seller",
               "slug": "change-seller",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Cancel order",
+              "slug": "order-canceling-improvements",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -1628,8 +1657,8 @@
           ]
         },
         {
-          "name": "Fulfillment",
-          "slug": "fulfillment-category",
+          "name": "Logistics",
+          "slug": "logistics-category",
           "origin": "",
           "type": "category",
           "children": [
@@ -1663,6 +1692,13 @@
                 {
                   "name": "Tracking",
                   "slug": "tracking-1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Shipping Network Labels Integration",
+                  "slug": "vtex-shipping-network-labels-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1722,6 +1758,37 @@
                 {
                   "name": "Change chain orders in external marketplaces",
                   "slug": "change-orders-multilevel-omnichannel-inventory-external-marketplaces",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Pickup point",
+              "slug": "setting-up-white-label-seller-as-pickup-point",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B2B Suite",
+          "slug": "b2b-suite-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "B2B Organizations",
+              "slug": "b2b-organizations",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Bulk Import Buyer Organizations Spreadsheet",
+                  "slug": "bulk-import-buyer-organizations-spreadsheet",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2028,6 +2095,20 @@
             {
               "name": "Get a list of the possible facets for a specific search",
               "slug": "get-a-list-of-the-possible-facets-for-a-specific-search",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Segmenting the search result",
+              "slug": "vtex-io-documentation-segmenting-the-search-result",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Access Control List",
+              "slug": "access-control-list",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -6868,74 +6949,6 @@
               ]
             },
             {
-              "name": "Customer profiles",
-              "slug": "master-data-api-v2-customer-profiles",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create new customer profile",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Client/documents",
-                  "children": []
-                },
-                {
-                  "name": "Update customer profile",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Client/documents/-id-",
-                  "children": []
-                },
-                {
-                  "name": "Delete customer profile",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Client/documents/-id-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Addresses",
-              "slug": "master-data-api-v2-addresses",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create new customer address",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Address/documents",
-                  "children": []
-                },
-                {
-                  "name": "Update customer address",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Address/documents/-id-",
-                  "children": []
-                },
-                {
-                  "name": "Delete customer address",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/Address/documents/-id-",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Search",
               "slug": "master-data-api-v2-search",
               "type": "category",
@@ -7239,6 +7252,74 @@
               ]
             },
             {
+              "name": "Customer profiles",
+              "slug": "master-data-api-customer-profiles",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create new customer profile",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents",
+                  "children": []
+                },
+                {
+                  "name": "Update customer profile",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete customer profile",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Addresses",
+              "slug": "masterdata-api-addresses",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create new customer address",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents",
+                  "children": []
+                },
+                {
+                  "name": "Update customer address",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete customer address",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Score",
               "slug": "masterdata-api-score",
               "type": "category",
@@ -7418,6 +7499,67 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/oms/pvt/orders/-orderId-/changes",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Change order (beta)",
+              "slug": "orders-api-change-order-beta",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes",
+                  "children": []
+                },
+                {
+                  "name": "Preview order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/preview",
+                  "children": []
+                },
+                {
+                  "name": "Get order change details",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-",
+                  "children": []
+                },
+                {
+                  "name": "Get order change history",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes",
+                  "children": []
+                },
+                {
+                  "name": "Retry order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/retry",
+                  "children": []
+                },
+                {
+                  "name": "Cancel order change",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/cancel",
                   "children": []
                 }
               ]
@@ -8231,6 +8373,57 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/pricing/tables",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Buyer organizations",
+          "slug": "buyer-organizations",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Bulk Import",
+              "slug": "bulk-import",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Uploading a file",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs",
+                  "children": []
+                },
+                {
+                  "name": "Check progress",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Start the import",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Validate the file",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
                   "children": []
                 }
               ]
@@ -10176,7 +10369,29 @@
               "slug": "vtex-io-documentation-builders",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                    "name": "Docs Builder",
+                    "slug": "vtex-io-documentation-docs-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
+                    "name": "React Builder",
+                    "slug": "vtex-io-documentation-react-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
+                    "name": "Styles Builder",
+                    "slug": "vtex-io-documentation-styles-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                }
+              ]
             },
             {
               "name": "Dependencies",
@@ -10323,6 +10538,13 @@
             {
               "name": "Workspace behavior with app installations",
               "slug": "vtex-io-documentation-workspace-behavior-with-app-installations",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Best practices on workspaces management",
+              "slug": "vtex-io-documentation-workspaces-best-practices",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -10518,6 +10740,13 @@
             {
               "name": "VTEX Resource Name (VRN)",
               "slug": "vtex-io-documentation-vrn",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Policies from License Manager",
+              "slug": "vtex-io-documentation-policies-from-license-manager",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12188,6 +12417,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Querying B2B order statuses",
+              "slug": "guides/querying-b2b-order-statuses",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
@@ -12197,6 +12433,989 @@
       "documentation": "Storefront Development",
       "slugPrefix": "docs/guides/",
       "categories": [
+        {
+          "name": "FastStore",
+          "slug": "faststore/docs-what-is-faststore",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Getting Started",
+              "slug": "faststore/getting-started-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Requirements",
+                  "slug": "faststore/getting-started-requirements",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "1. FastStore onboarding",
+                  "slug": "faststore/1-onboarding-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Starting a new FastStore project",
+                      "slug": "faststore/1-onboarding-starting-the-project",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Dashboard",
+                      "slug": "faststore/1-onboarding-dashboard",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "2. Setting up the project",
+                  "slug": "faststore/getting-started-2-setting-up-the-project",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "3. FastStore CLI",
+                  "slug": "faststore/getting-started-3-faststore-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "4. Next steps",
+                  "slug": "faststore/getting-started-4-next-steps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Glossary",
+                  "slug": "faststore/getting-started-glossary",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Project structure",
+              "slug": "faststore/project-structure-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Configuration options",
+                  "slug": "faststore/project-structure-config-options",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "enableCypressExtension",
+                  "slug": "faststore/project-structure-custom-cypress",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Adding third-party scripts",
+                  "slug": "faststore/project-structure-handling-third-party-scripts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "UI components",
+              "slug": "faststore/components-index",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Getting started",
+                  "slug": "faststore/components-getting-started",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Atoms",
+                  "slug": "faststore/atoms-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Badge",
+                      "slug": "faststore/atoms-badge",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Button",
+                      "slug": "faststore/atoms-button",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Checkbox",
+                      "slug": "faststore/atoms-checkbox",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Icon",
+                      "slug": "faststore/atoms-icon",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Input",
+                      "slug": "faststore/atoms-input",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Label",
+                      "slug": "faststore/atoms-label",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Link",
+                      "slug": "faststore/atoms-link",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "List",
+                      "slug": "faststore/atoms-list",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Loader",
+                      "slug": "faststore/atoms-loader",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Overlay",
+                      "slug": "faststore/atoms-overlay",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Price",
+                      "slug": "faststore/atoms-price",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Radio",
+                      "slug": "faststore/atoms-radio",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Select",
+                      "slug": "faststore/atoms-select",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "SROnly",
+                      "slug": "faststore/atoms-sr-only",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Skeleton",
+                      "slug": "faststore/atoms-skeleton",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    },
+                    {
+                      "name": "Slider",
+                      "slug": "faststore/atoms-slider",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Molecules",
+                  "slug": "faststore/molecules-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Accordion",
+                      "slug": "faststore/molecules-accordion",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Alert",
+                      "slug": "faststore/molecules-alert",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Breadcrumb",
+                      "slug": "faststore/molecules-breadcrumb",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Buy button",
+                      "slug": "faststore/molecules-buy-button",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Carousel",
+                      "slug": "faststore/molecules-carousel",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Cart item",
+                      "slug": "faststore/molecules-cart-item",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Checkbox field",
+                      "slug": "faststore/molecules-checkbox-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Discount badge",
+                      "slug": "faststore/molecules-discount-badge",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Dropdown",
+                      "slug": "faststore/molecules-dropdown",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Gift",
+                      "slug": "faststore/molecules-gift",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Icon button",
+                      "slug": "faststore/molecules-icon-button",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Input field",
+                      "slug": "faststore/molecules-input-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Link button",
+                      "slug": "faststore/molecules-link-button",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Modal",
+                      "slug": "faststore/molecules-modal",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Navbar links",
+                      "slug": "faststore/molecules-navbar-links",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Order summary",
+                      "slug": "faststore/molecules-order-summary",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Product card",
+                      "slug": "faststore/molecules-product-card",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Product title",
+                      "slug": "faststore/molecules-product-title",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Quantity selector",
+                      "slug": "faststore/molecules-quantity-selector",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Radio Group",
+                      "slug": "faststore/molecules-radio-group",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Rating",
+                      "slug": "faststore/molecules-rating",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Region bar",
+                      "slug": "faststore/molecules-region-bar",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Search autocomplete",
+                      "slug": "faststore/molecules-search-auto-complete",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Search dropdown",
+                      "slug": "faststore/molecules-search-dropdown",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Search history",
+                      "slug": "faststore/molecules-search-history",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Search input field",
+                      "slug": "faststore/molecules-search-input-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Search products",
+                      "slug": "faststore/molecules-search-products",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Search top",
+                      "slug": "faststore/molecules-search-top",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Select field",
+                      "slug": "faststore/molecules-select-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "SKU selector",
+                      "slug": "faststore/molecules-sku-selector",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Radio field",
+                      "slug": "faststore/molecules-radio-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Table",
+                      "slug": "faststore/molecules-table",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Tag",
+                      "slug": "faststore/molecules-tag",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Toast",
+                      "slug": "faststore/molecules-toast",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Toggle",
+                      "slug": "faststore/molecules-toggle",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Toggle field",
+                      "slug": "faststore/molecules-toggle-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Organisms",
+                  "slug": "faststore/organisms-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Banner Text",
+                      "slug": "faststore/organisms-banner-text",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Cart Sidebar",
+                      "slug": "faststore/organisms-cart-sidebar",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Empty State",
+                      "slug": "faststore/organisms-empty-state",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Filter Slider",
+                      "slug": "faststore/organisms-filter-slider",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Filter",
+                      "slug": "faststore/organisms-filter",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Hero",
+                      "slug": "faststore/organisms-hero",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Image Gallery",
+                      "slug": "faststore/organisms-image-gallery",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Navbar Slider",
+                      "slug": "faststore/organisms-navbar-slider",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Navbar",
+                      "slug": "faststore/organisms-navbar",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Newsletter",
+                      "slug": "faststore/organisms-newsletter",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Out Of Stock",
+                      "slug": "faststore/organisms-out-of-stock",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Payment Methods",
+                      "slug": "faststore/organisms-payment-methods",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Price Range",
+                      "slug": "faststore/organisms-price-range",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Product Grid",
+                      "slug": "faststore/organisms-product-grid",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Product Shelf",
+                      "slug": "faststore/organisms-product-shelf",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Region Modal",
+                      "slug": "faststore/organisms-region-modal",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Search Input",
+                      "slug": "faststore/organisms-search-input",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Shipping Simulation",
+                      "slug": "faststore/organisms-shipping-simulation",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Slide Over",
+                      "slug": "faststore/organisms-slide-over",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Storefront features",
+              "slug": "faststore/features-overview",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Navigation",
+                  "slug": "faststore/features-navigation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Regionalization",
+                  "slug": "faststore/features-regionalization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search",
+                  "slug": "faststore/features-search",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "FastStore API",
+              "slug": "faststore/faststore-api-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Themes reference",
+              "slug": "faststore/themes-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                  {
+                    "name": "Soft blue",
+                    "slug": "faststore/themes-soft-blue",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                  },
+                  {
+                    "name": "Midnight",
+                    "slug": "faststore/themes-midnight",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
+                  "name": "Iconography",
+                  "slug": "faststore/reference-icons",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Global tokens",
+              "slug": "faststore/global-tokens-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Colors",
+                  "slug": "faststore/global-tokens-colors",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Grid and Layout",
+                  "slug": "faststore/global-tokens-grid-and-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Interactive controls",
+                  "slug": "faststore/global-tokens-interactive-controls",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Refinements",
+                  "slug": "faststore/global-tokens-refinements",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Spacing",
+                  "slug": "faststore/global-tokens-spacing",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Typography",
+                  "slug": "faststore/global-tokens-typography",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Integrating your storefront with Headless CMS",
+              "slug": "faststore/headless-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "1. Configuring your VTEX account",
+                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "2. Setting up the Headless CMS",
+                  "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "3. Structuring Content Types and Sections",
+                  "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "4. Promoting your changes",
+                  "slug": "faststore/headless-cms-4-Promoting-your-changes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Multiple page templates",
+                  "slug": "faststore/headless-cms-multiple-page-template",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Widgets for Headless CMS",
+                  "slug": "faststore/headless-cms-widgets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Troubleshooting",
+                  "slug": "faststore/troubleshooting-error-installing-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Using themes",
+              "slug": "faststore/using-themes-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Styling the layout and breakpoints",
+                  "slug": "faststore/using-themes-mixins-breakpoints",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Styling a component",
+                  "slug": "faststore/using-themes-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Styling a section",
+                  "slug": "faststore/using-themes-pages",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Customizing sections and components",
+              "slug": "faststore/building-sections-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Overriding native components and props",
+                  "slug": "faststore/building-sections-overriding-components-and-props",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Creating a new section",
+                  "slug": "faststore/building-sections-creating-a-new-section",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "List of native sections and overridable components",
+                  "slug": "faststore/building-sections-list-of-native-sections",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Extending the FastStore API",
+              "slug": "faststore/api-extensions-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Extending API schemas",
+                  "slug": "faststore/api-extensions-extending-api-schema",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Extending queries using fragments",
+                  "slug": "faststore/api-extensions-extending-queries-using-fragments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Consuming FastStore API extension with custom components",
+                  "slug": "faststore/api-extensions-consuming-api-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Troubleshooting",
+                  "slug": "faststore/api-extensions-troubleshooting",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Going live",
+              "slug": "faststore/go-live-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Before you begin",
+                  "slug": "faststore/go-live-before-you-begin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "1. Setting up a VTEX account for FastStore",
+                  "slug": "faststore/go-live-1-setting-up-vtex-account-for-faststore",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "2. Configuring external DNS",
+                  "slug": "faststore/go-live-2-configuring-external-dns",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "3. Integrating the VTEX Login",
+                  "slug": "faststore/go-live-3-integrating-the-vtex-login",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "4. Integrating the VTEX Checkout",
+                  "slug": "faststore/go-live-4-integrating-the-vtex-checkout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "5. Integrating the VTEX Order Placed and My Account",
+                  "slug": "faststore/go-live-5-integrating-the-vtex-order-placed-and-my-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Troubleshooting",
+              "slug": "faststore/troubleshooting-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Debugging Partytown and analytics issues",
+                  "slug": "faststore/troubleshooting-analytics-and-partytown",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Identifying development errors and Starter bugs",
+                  "slug": "faststore/troubleshooting-identifying-development-errors-and-starter-bugs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tracing the error source",
+                  "slug": "faststore/troubleshooting-tracing-the-error-source",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "Store Framework",
           "slug": "storefront-implementation",
@@ -12882,13 +14101,6 @@
               "children": []
             }
           ]
-        },
-        {
-          "name": "FastStore",
-          "slug": "https://www.faststore.dev/",
-          "origin": "",
-          "type": "link",
-          "children": []
         }
       ]
     },
@@ -12896,6 +14108,87 @@
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",
       "categories": [
+        {
+          "name": "2024",
+          "slug": "2024-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "April",
+              "slug": "april-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Master Data v1: Calculated Field and Change field value trigger deprecation",
+                  "slug": "2024-04-17-master-data-v1-calculated-field-and-change-field-value-trigger-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Secure Proxy custom tokens: Base64 encoding method is now available",
+                  "slug": "secure-proxy-custom-tokens-base64-encoding-method-is-now-available",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Create flexible PLPs and PDPs with Multiple page templates",
+                  "slug": "2024-04-10-multiple-page-templates",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "March",
+              "slug": "march-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New fields available for sending metadata in payment flow routes",
+                  "slug": "new-fields-available-for-sending-metadata-in-payment-flow-routes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New tax calculation field on Checkout API",
+                  "slug": "2024-03-19-new-field-isMarketplaceResponsibleForTaxes-checkout-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore content new home",
+                  "slug": "2024-03-07-faststore-content-in-the-developer-portal",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "February",
+              "slug": "february-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Onboarding Guide: Building and expanding your store operation with VTEX",
+                  "slug": "2024-02-23-onboarding-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "2023",
           "slug": "2023-category",

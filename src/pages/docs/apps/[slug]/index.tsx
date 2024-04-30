@@ -11,6 +11,9 @@ import type { Item } from '@vtexdocs/components'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 import Breadcrumb from 'components/breadcrumb'
 import ArticlePagination from 'components/article-pagination'
+import replaceMagicBlocks from 'utils/replaceMagicBlocks'
+import escapeCurlyBraces from 'utils/escapeCurlyBraces'
+import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
 import jp from 'jsonpath'
 
 import getAppReadme from 'utils/getAppReadme'
@@ -28,6 +31,8 @@ import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { remarkCodeHike } from '@code-hike/mdx'
+import remarkMermaid from 'utils/remark_plugins/mermaid'
+import { officialVendors } from 'utils/constants'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -73,7 +78,6 @@ const AppReadmePage: NextPage<Props> = ({
       category: 'VTEX IO Apps',
     },
   ]
-  const officialVendors = ['vtex', 'vtexarg', 'vtexventures']
 
   childrenDocs?.forEach((doc) =>
     seeAlsoData.push({
@@ -170,11 +174,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
   try {
     const sidebarfallback = await getNavigation()
-    const format: 'md' | 'mdx' = 'md'
     const sectionSelected = 'VTEX IO Apps'
     const vendor = data.vendor
     const title = data.title
-    let markdown = data.markdown
+    let markdown = JSON.parse(
+      JSON.stringify(data?.markdown?.split('## Contributors')[0])
+    )
     const latestVersion = data.latestVersion
     const currentVersion = data.currentVersion
     let specifiedVersion = app.split('@')[1]
@@ -257,7 +262,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               markdown)
           : ''
       }
-      let serialized = await serialize(markdown.split('## Contributors')[0], {
+      let format: 'md' | 'mdx' = 'mdx'
+      try {
+        const { result } = escapeCurlyBraces(markdown)
+        markdown = result
+        markdown = replaceHTMLBlocks(markdown)
+        markdown = await replaceMagicBlocks(markdown)
+      } catch (error) {
+        logger.error(`${error}`)
+        format = 'md'
+      }
+      let serialized = await serialize(markdown, {
         parseFrontmatter: true,
         mdxOptions: {
           remarkPlugins: [
@@ -276,6 +291,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             remarkImages,
             [getHeadings, { headingList }],
             remarkBlockquote,
+            remarkMermaid,
           ],
           rehypePlugins: [
             [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
