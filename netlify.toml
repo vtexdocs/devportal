@@ -1327,3 +1327,9 @@ force = true
 from = "/docs/guides/using-the-docs-builder-to-publish-app-documentation"
 status = 308
 to = "/docs/guides/vtex-io-documentation-docs-builder"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-graphql"
+status = 308
+to = "/docs/apps/vtex.search-graphql"
