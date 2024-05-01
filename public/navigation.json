@@ -14108,7 +14108,7 @@
      "documentation": "Troubleshooting",
       "slugPrefix": "docs/guides",
       "categories": []
-    }
+    },
     {
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",
