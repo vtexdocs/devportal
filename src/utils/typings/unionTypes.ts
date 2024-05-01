@@ -7,6 +7,7 @@ export type DocumentationTitle =
   | 'Storefront Development'
   | 'VTEX IO Apps'
   | 'FastStore'
+  | 'Troubleshooting'
 
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
@@ -22,6 +23,7 @@ export type SlugPrefix =
   | 'storefront-development'
   | 'vtex-io-apps'
   | 'faststore'
+  | 'troubleshooting'
 
 export type ResourceTitle =
   | 'Community'
