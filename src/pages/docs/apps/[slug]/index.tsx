@@ -11,6 +11,9 @@ import type { Item } from '@vtexdocs/components'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 import Breadcrumb from 'components/breadcrumb'
 import ArticlePagination from 'components/article-pagination'
+import replaceMagicBlocks from 'utils/replaceMagicBlocks'
+import escapeCurlyBraces from 'utils/escapeCurlyBraces'
+import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
 import jp from 'jsonpath'
 
 import getAppReadme from 'utils/getAppReadme'
@@ -171,7 +174,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   }
   try {
     const sidebarfallback = await getNavigation()
-    const format: 'md' | 'mdx' = 'md'
     const sectionSelected = 'VTEX IO Apps'
     const vendor = data.vendor
     const title = data.title
@@ -259,6 +261,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               `>❗ This page is about version **${currentVersion}** of the app, which is not the most recent version. The latest stable version is **${latestVersion}**. \n\n` +
               markdown)
           : ''
+      }
+      let format: 'md' | 'mdx' = 'mdx'
+      try {
+        const { result } = escapeCurlyBraces(markdown)
+        markdown = result
+        markdown = replaceHTMLBlocks(markdown)
+        markdown = await replaceMagicBlocks(markdown)
+      } catch (error) {
+        logger.error(`${error}`)
+        format = 'md'
       }
       let serialized = await serialize(markdown, {
         parseFrontmatter: true,

@@ -1473,8 +1473,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "How the queries in Master Data v1 work",
-                  "slug": "how-the-queries-in-master-data-v1-work",
+                  "name": "Querying documents in Master Data v1",
+                  "slug": "querying-documents-in-master-data-v1",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1770,6 +1770,29 @@
               "origin": "",
               "type": "markdown",
               "children": [
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B2B Suite",
+          "slug": "b2b-suite-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "B2B Organizations",
+              "slug": "b2b-organizations",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Bulk Import Buyer Organizations Spreadsheet",
+                  "slug": "bulk-import-buyer-organizations-spreadsheet",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
               ]
             }
           ]
@@ -8485,6 +8508,57 @@
           ]
         },
         {
+          "name": "Buyer organizations",
+          "slug": "buyer-organizations",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Bulk Import",
+              "slug": "bulk-import",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Uploading a file",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs",
+                  "children": []
+                },
+                {
+                  "name": "Check progress",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Start the import",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Validate the file",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Pricing Hub",
           "slug": "pricing-hub",
           "origin": "",
@@ -10427,6 +10501,20 @@
                 {
                     "name": "Docs Builder",
                     "slug": "vtex-io-documentation-docs-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
+                    "name": "React Builder",
+                    "slug": "vtex-io-documentation-react-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
+                    "name": "Styles Builder",
+                    "slug": "vtex-io-documentation-styles-builder",
                     "origin": "",
                     "type": "markdown",
                     "children": []
