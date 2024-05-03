@@ -1473,8 +1473,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "How the queries in Master Data v1 work",
-                  "slug": "how-the-queries-in-master-data-v1-work",
+                  "name": "Querying documents in Master Data v1",
+                  "slug": "querying-documents-in-master-data-v1",
                   "origin": "",
                   "type": "markdown",
                   "children": []
