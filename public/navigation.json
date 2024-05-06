@@ -8204,7 +8204,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/carrierId/serviceId",
+                  "endpoint": "/-carrierId-/-serviceId-",
                   "children": []
                 },
                 {
@@ -8213,7 +8213,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/carrierId/serviceId",
+                  "endpoint": "/-carrierId-/-serviceId-",
                   "children": []
                 },
                 {
@@ -8222,7 +8222,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/carrierId/serviceId",
+                  "endpoint": "/-carrierId-/-serviceId-",
                   "children": []
                 },
                 {
@@ -8231,7 +8231,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/notes/carrierId/serviceId",
+                  "endpoint": "/notes/-carrierId-/-serviceId-",
                   "children": []
                 },
                 {
@@ -8240,7 +8240,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/notes/carrierId/serviceId",
+                  "endpoint": "/notes/-carrierId-/-serviceId-",
                   "children": []
                 },
                 {
@@ -8249,7 +8249,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/evidences/carrierId/serviceId",
+                  "endpoint": "/evidences/-carrierId-/-serviceId-",
                   "children": []
                 },
                 {
@@ -8258,7 +8258,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/labels/carrierId/serviceId",
+                  "endpoint": "/labels/-carrierId-/-serviceId-",
                   "children": []
                 },
                 {
@@ -8267,7 +8267,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/cancel/carrierId/serviceId",
+                  "endpoint": "/cancel/-carrierId-/-serviceId-",
                   "children": []
                 },
                 {
@@ -8276,7 +8276,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/on-hold/carrierId/serviceId",
+                  "endpoint": "/on-hold/-carrierId-/-serviceId-",
                   "children": []
                 }
               ]
