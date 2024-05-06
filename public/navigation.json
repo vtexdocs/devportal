@@ -10499,6 +10499,20 @@
               "type": "markdown",
               "children": [
                 {
+                    "name": "Admin Builder",
+                    "slug": "vtex-io-documentation-admin-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
+                    "name": "Assets Builder",
+                    "slug": "vtex-io-documentation-assets-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
                     "name": "Docs Builder",
                     "slug": "vtex-io-documentation-docs-builder",
                     "origin": "",
@@ -10506,8 +10520,22 @@
                     "children": []
                 },
                 {
+                    "name": "Node Builder",
+                    "slug": "vtex-io-documentation-node-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
                     "name": "React Builder",
                     "slug": "vtex-io-documentation-react-builder",
+                    "origin": "",
+                    "type": "markdown",
+                    "children": []
+                },
+                {
+                    "name": "Store Builder",
+                    "slug": "vtex-io-documentation-store-builder",
                     "origin": "",
                     "type": "markdown",
                     "children": []
