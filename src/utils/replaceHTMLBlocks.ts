@@ -48,6 +48,8 @@ const replaceHTMLBlocks: (content: string) => string = (content) => {
   return content
     .replace(/<>/g, '\\<\\>')
     .replace(/(<br>\s*<\/br>)/g, '<br />')
+    .replace(/(<br>\s*<\/br>)/g, '<br />')
+    .replace(/<img[^>]*?>/g, (match) => match.replace(/\/?>$/, ' />'))
     .replace(/<br>/g, '<br />')
     .replace(/<!--.*?-->/gs, '')
     .replace(HTMLBlockRegex, HTMLBlockReplacer)
