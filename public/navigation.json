@@ -13433,11 +13433,61 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Overriding native components and props",
-                  "slug": "faststore/building-sections-overriding-components-and-props",
+                  "name": "Section override",
+                  "slug": "faststore/overrides-overview",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "Overriding native component's props",
+                      "slug": "faststore/overrides-component-props",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Overriding a native component",
+                      "slug": "faststore/overrides-native-component",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Overriding section styles",
+                      "slug": "faststore/overrides-section-styles",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "`getOverriddenSection` function",
+                      "slug": "faststore/overrides-getoverriddensection-function",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Syncing components with the Headless CMS",
+                      "slug": "faststore/overrides-syncing-components-with-the-headless-cms",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Migrating Overrides v1 to v2",
+                      "slug": "faststore/overrides-migrating-v1-to-v2",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Overriding native components and props (v1)",
+                      "slug": "faststore/overrides-components-and-props-v1",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "Creating a new section",
