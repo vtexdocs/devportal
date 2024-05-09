@@ -50,6 +50,7 @@ const fileSlugMap = {
   'VTEX - Orders API': 'orders-api',
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
   'VTEX - Payments Gateway API': 'payments-gateway-api',
+  'VTEX - Pick and Pack Protocol API': 'pick-and-pack-protocol-api',
   'VTEX - Policies System API': 'policies-system-api',
   'VTEX - Pricing API': 'pricing-api',
   'VTEX - Pricing Hub': 'pricing-hub',
@@ -70,6 +71,7 @@ const fileSlugMap = {
   'VTEX - Intelligent Search Events API - Headless':
     'intelligent-search-events-api-headless',
   'VTEX - Data Subject Rights': 'data-subject-rights-api',
+  'VTEX - Buyer Organizations': 'buyer-organizations',
 }
 
 export default async function getReferencePaths() {
