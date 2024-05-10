@@ -139,6 +139,9 @@
   @import '@faststore/ui/src/styles/base/typography.scss';
 
   border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: var(--fs-spacing-4) 0;
   margin: var(--fs-spacing-3) 0;
   background-image: radial-gradient(#ededed 1px, transparent 0);
@@ -146,7 +149,6 @@
   background-position: -22px -24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: auto;
-  text-align: -webkit-center;
 }
 
 .faststore-overviewSection[data-doc-overview-dark="true"] {

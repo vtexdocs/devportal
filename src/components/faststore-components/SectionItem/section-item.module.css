@@ -45,6 +45,12 @@
   grid-template-rows: 200px 1fr;
 }
 
+.faststore-sectionList [data-doc-section-grid='row'] .faststore-sectionItem {
+  grid-auto-flow: column;
+  display: grid;
+  grid-template-cols: 200px 1fr;
+}
+
 .faststore-sectionList
   [data-doc-section-grid='column']
   .faststore-sectionItem[data-doc-section-item-small-height] {
@@ -74,11 +80,13 @@
   align-items: center;
   column-gap: 1.5rem;
   row-gap: 1rem;
+  width: fit-content;
 }
 
 .faststore-sectionItem-description{
-  padding: 0 16px;
+  padding: 8px 16px;
   margin-bottom: 8px;
+  max-width: 350px
 }
 
 .faststore-sectionItem-description code {
