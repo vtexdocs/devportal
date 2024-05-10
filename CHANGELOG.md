@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.1](https://github.com/vtexdocs/devportal/compare/v1.13.0...v1.13.1) (2024-05-10)
+
+
+### Bug Fixes
+
+* remove duplicated ([f9b631b](https://github.com/vtexdocs/devportal/commit/f9b631bb79d21d5d5649d22edb815ce58e137501))
+* **replacehtmlblocks:** close open img tags ([9b18646](https://github.com/vtexdocs/devportal/commit/9b1864659f4fdd56de014eb491356c42e31cdc67))
+* **replacehtmlblocks:** consider <img...></img> case ([b72bf74](https://github.com/vtexdocs/devportal/commit/b72bf7450aeea5774326c5187621f1e50e01340e))
+
+
+### Chore
+
+* **layout.tsx:** update LibraryContextProvider ([759824d](https://github.com/vtexdocs/devportal/commit/759824d18a3661c7091b1de5c769f8d44aa92e80))
+* **package.json:** update components package ([c5aa97a](https://github.com/vtexdocs/devportal/commit/c5aa97a91eb72378b43f57b77178e37fc39b4576))
+
 ## [1.13.0](https://github.com/vtexdocs/devportal/compare/v1.12.0...v1.13.0) (2024-05-07)
 
 
