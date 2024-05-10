@@ -43,6 +43,7 @@
 .faststore-sectionList [data-doc-section-grid='column'] .faststore-sectionItem {
   display: grid;
   grid-template-rows: 200px 1fr;
+  width: 100%;
 }
 
 .faststore-sectionList [data-doc-section-grid='row'] .faststore-sectionItem {
