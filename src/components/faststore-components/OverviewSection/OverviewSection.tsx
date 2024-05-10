@@ -25,10 +25,11 @@ const OverviewSection = ({
       data-doc-overview-dark={dark}
       data-doc-overview-direction={direction}
       data-doc-overview-big-gap={bigGap}
-      style={containerStyle}
       {...otherProps}
     >
-      <div className="overviewSectionContent">{children}</div>
+      <div className="overviewSectionContent" style={containerStyle}>
+        {children}
+      </div>
     </div>
   )
 }

@@ -38,7 +38,14 @@ pre {
   overflow-x: auto;
 }
 
-table {
+pre,
+code,
+pre *,
+code * {
+  font-family: Consolas, monaco, monospace !important;
+}
+
+table:not([data-fs-table]) {
   border-collapse: collapse;
   max-width: 100%;
   overflow-x: auto;
@@ -47,26 +54,19 @@ table {
   border-radius: 4px;
 }
 
-table thead {
+table thead:not([data-fs-table-head]) {
   border: 1px solid #e7e9ef;
   font-weight: 500;
 }
 
-pre,
-code,
-pre *,
-code * {
-  font-family: Consolas, monaco, monospace !important;
-}
-
-table td,
-table th {
+table td:not([data-fs-table-cell]),
+table th:not([data-fs-table-cell]) {
   font-size: 0.875em;
   border: 1px solid #e7e9ef;
   padding: 0.5em;
 }
 
-table tbody tr:nth-of-type(even) {
+table tbody tr:nth-of-type(even):not([data-fs-table-row]) {
   background-color: #f8f7fc;
 }
 

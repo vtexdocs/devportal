@@ -7,10 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'added',
+    type: 'deprecated',
     description:
-      'FastStore: Create flexible PLPs and PDPs with Multiple page templates',
-    date: new Date('04/10/2024'),
+      'Master Data v1: Calculated Field and Change field value trigger deprecation',
+    date: new Date('04/17/2024'),
   },
   updateType: 'release-notes',
 }
