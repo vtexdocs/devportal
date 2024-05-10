@@ -27,6 +27,7 @@ const CardItem = ({
           data-doc-card-item-component-zoom={zoomOut}
           data-doc-card-item-component-full-width={fullWidth}
           style={containerStyle}
+          className="overviewSectionContent"
         >
           {children}
         </div>

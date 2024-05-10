@@ -2,8 +2,8 @@
 
 .cardList [data-doc-card-grid-columns] {
     display: grid;
-    row-gap: var(--fs-spacing-3);
-    column-gap: var(--fs-spacing-3);
+    row-gap: 1rem;
+    column-gap: 1rem;
     list-style-type: none;
     padding: 0;
   }
@@ -51,8 +51,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: var(--fs-spacing-3);
-    margin: var(--fs-spacing-4);
+    column-gap: 1rem;
+    margin: 1.5rem;
     border-radius: 4px;
     height: 169px;
     overflow: hidden;
@@ -63,6 +63,7 @@
   }
   
   .cardList [data-doc-card-item-component] [data-fs-out-of-stock] { width: 100%; }
+  .cardList [data-doc-card-item-component] [data-fs-product-price] { zoom: 30%; }
   .cardList [data-doc-card-item-component] > [data-fs-product-card] {
     zoom: 70%;
     width: 30%;
@@ -101,9 +102,9 @@
   
   .cardList [data-doc-card-item-content] {
     height: 100%;
-    padding: var(--fs-spacing-3);
+    padding: 1rem;
     background-color: #f1f2f386;
-    font-size: var(--fs-text-size-1);
+    font-size: 14px;
   }
   
   .cardList [data-doc-card-item-content] p { line-height: 1.35; }

@@ -1,67 +1,196 @@
 @import '@faststore/ui/src/styles/base/utilities.scss';
-@import '@faststore/ui/src/styles/global.scss';
-@import '@faststore/ui/src/styles/components.scss';
+@import '@faststore/ui/src/styles/base/tokens.scss';
 
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: revert;
+// ----------------------------------------------------------
+// FS UI STYLES
+// Reset
+// ----------------------------------------------------------
+
+@layer base {
+  @import '~modern-normalize/modern-normalize';
+
+  // Reset default styles
+  .overviewSectionContent body {
+    padding: 0;
+    margin: 0;
+  }
+
+  // Remove all of the default margins
+  .overviewSectionContent div,
+  .overviewSectionContent blockquote,
+  .overviewSectionContent dl,
+  .overviewSectionContent dd,
+  .overviewSectionContent h1,
+  .overviewSectionContent h2,
+  .overviewSectionContent h3,
+  .overviewSectionContent h4,
+  .overviewSectionContent h5,
+  .overviewSectionContent h6,
+  .overviewSectionContent hr,
+  .overviewSectionContent figure,
+  .overviewSectionContent p,
+  .overviewSectionContent pre {
+    margin: 0;
+    margin-block: 0;
+  }
+
+  // Remove heading elements default style
+  .overviewSectionContent h1,
+  .overviewSectionContent h2,
+  .overviewSectionContent h3,
+  .overviewSectionContent h4,
+  .overviewSectionContent h5,
+  .overviewSectionContent h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  // Remove list elements default style
+  .overviewSectionContent ol,
+  .overviewSectionContent ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .overviewSectionContent button {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .overviewSectionContent html {
+    font-size: 100%;
+  }
 }
 
-ol,
-ul {
-  padding: revert;
-  margin: revert;
-  list-style: revert;
+// ----------------------------------------------------------
+// FS UI STYLES
+// Layout
+// ----------------------------------------------------------
+
+@layer base {
+  .overviewSectionContent body {
+    min-height: 100vh;
+    color: var(--fs-color-text);
+    background: var(--fs-body-bkg);
+  }
+
+  .overviewSectionContent main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .overviewSectionContent .layout__section {
+    margin-bottom: var(--fs-spacing-4);
+    margin-top: var(--fs-spacing-4);
+
+    @include media('>=notebook') {
+      margin-bottom: var(--fs-grid-padding);
+      margin-top: var(--fs-grid-padding);
+    }
+  }
+
+  .overviewSectionContent .layout__content {
+    box-sizing: border-box;
+    width: 100%;
+    width: calc(100% - var(--fs-grid-padding) - var(--fs-grid-padding));
+    max-width: var(--fs-grid-max-width);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  [data-fs-content] {
+    @include layout-content;
+  }
+
+  .overviewSectionContent .no-scroll {
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  // Helper class
+  .overviewSectionContent .display-mobile {
+    @include media('>=notebook') {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  // Helper class
+  .overviewSectionContent .hidden-mobile {
+    @include media('<notebook') {
+      display: none;
+      visibility: hidden;
+    }
+  }
+
+  // Image
+  .overviewSectionContent [data-fs-image] {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
-/* Checklist */
+.faststore-overviewSection {
+  @import '@faststore/ui/src/styles/base/typography.scss';
 
-.nx-section-checklist {
-  background-color: #f8f7fc;
-  padding: var(--fs-spacing-4);
-  border-radius: 10px;
+  border-radius: 4px;
   display: flex;
-  flex-direction: column;
-  row-gap: var(--fs-spacing-4);
+  justify-content: center;
+  align-items: center;
+  padding: var(--fs-spacing-4) 0;
+  margin: var(--fs-spacing-3) 0;
+  background-image: radial-gradient(#ededed 1px, transparent 0);
+  background-size: 18px 18px;
+  background-position: -22px -24px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: auto;
 }
 
-.nx-section-checklist label {
-  font-weight: bold;
-  padding-bottom: 4px
+.faststore-overviewSection[data-doc-overview-dark="true"] {
+  background-color: #171a1c;
+  background-image: radial-gradient(rgba(225, 225, 225, 0.094) 1px, transparent 0);
 }
-.nx-section-checklist li {
+
+.overviewSectionContent {
+  column-gap: 18px;
+  row-gap: 18px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @import '@faststore/ui/src/styles/components.scss';
+  width: 80%;
+}
+
+
+.overviewSectionContent[data-doc-overview-direction="row"] {
+  flex-direction: row;
+}
+
+.overviewSectionContent[data-doc-overview-direction="column"] {
   flex-direction: column;
-  row-gap: var(--fs-spacing-1);
+  row-gap: 16px;
+  align-items: stretch;
 }
 
-.nx-section-checklist summary {
-  display: block;
-}
-.nx-section-checklist details {
-  margin: 0;
-  background-color: white;
+.overviewSectionContent[data-doc-overview-big-gap="true"] {
+  column-gap: 60px;
 }
 
-.nx-section-checklist details > div {
-  margin: var(--fs-spacing-1) var(--fs-spacing-4);
-}
-.nx-section-checklist details > table {
-  margin: var(--fs-spacing-1) var(--fs-spacing-4);
+.overviewSectionContent > [data-doc-overview-group] {
+  display: flex;
+  align-items: center;
+  column-gap: 60px;
+  width: inherit;
 }
 
-.nx-section-checklist table {
-  width: 100%;
-  display: table;
+.overviewSectionContent>[data-doc-overview-group] [data-doc-overview-group-title] {
+  text-align: left;
+  width: 20%;
+  line-height: 16px;
 }
