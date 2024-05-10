@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.2](https://github.com/vtexdocs/devportal/compare/v1.13.1...v1.13.2) (2024-05-10)
+
+
+### Style
+
+* **faststore.scss:** fix rating styles ([83dd59f](https://github.com/vtexdocs/devportal/commit/83dd59f4a822c26babe90ec21e3badb17df7a3e7))
+* **faststore.scss:** fixes ([db4298c](https://github.com/vtexdocs/devportal/commit/db4298c9898d17966117de3b8d8d8e1876c593c8))
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components version ([e6a4ba0](https://github.com/vtexdocs/devportal/commit/e6a4ba0ef1d556490060e03b3606c28b899e0f5c))
+* **package.json:** update components version ([60c77f4](https://github.com/vtexdocs/devportal/commit/60c77f48dbcd34575044042313122f93260ac5ca))
+
 ### [1.13.1](https://github.com/vtexdocs/devportal/compare/v1.13.0...v1.13.1) (2024-05-10)
 
 
