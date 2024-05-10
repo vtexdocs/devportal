@@ -48,6 +48,7 @@ export default function Layout({
     <ThemeProvider>
       <LibraryContextProvider
         sections={[documentationData, updatesData]}
+        hamburguerMenuSections={[documentationData, updatesData]}
         isPreview={isPreview}
         fallback={sidebarfallback}
         sectionSelected={sectionSelected ?? ''}
