@@ -89,6 +89,7 @@ interface Props {
     nextDoc: { slug: string | null; name: string | null }
   }
   isListed: boolean
+  hideTOC: boolean
 }
 
 const FastStorePage: NextPage<Props> = ({
@@ -105,6 +106,7 @@ const FastStorePage: NextPage<Props> = ({
   mdxProps,
   branch,
   seeAlsoData,
+  hideTOC,
 }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   const { setActiveSidebarElement } = useContext(LibraryContext)
@@ -167,10 +169,12 @@ const FastStorePage: NextPage<Props> = ({
             )}
             {frontmatter?.seeAlso && <SeeAlsoSection docs={seeAlsoData} />}
           </Box>
-          <Box sx={styles.rightContainer}>
-            <Contributors contributors={contributors} />
-            <TableOfContents />
-          </Box>
+          {!hideTOC && (
+            <Box sx={styles.rightContainer}>
+              <Contributors contributors={contributors} />
+              <TableOfContents />
+            </Box>
+          )}
           <OnThisPage />
         </Flex>
       </APIGuideContextProvider>
@@ -366,6 +370,8 @@ export const getStaticProps: GetStaticProps = async ({
         })
     )
 
+    const hideTOC = serialized.frontmatter?.hideTOC === true
+
     const docsListSlug = jp.query(
       sidebarfallback,
       `$..[?(@.type=='markdown')]..slug`
@@ -411,6 +417,7 @@ export const getStaticProps: GetStaticProps = async ({
         branch,
         frontmatter: serialized.frontmatter,
         mdxProps,
+        hideTOC,
       },
     }
   } catch (error) {
