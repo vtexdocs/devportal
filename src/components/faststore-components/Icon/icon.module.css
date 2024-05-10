@@ -3,29 +3,32 @@
   flex-direction: row;
   flex: 0 25%;
   align-items: center;
-  column-gap: var(--fs-spacing-3);
-  font-size: var(--fs-text-size-1);
+  column-gap: 1rem;
+  font-size: 14px;
 }
 
 .faststore-iconItem {
   box-shadow: 0 0 5px rgb(0 0 0 / 20%);
-  padding: var(--fs-spacing-1);
-  border-radius: var(--fs-border-radius-medium);
-  background-color: var(--fs-color-neutral-0);
+  padding: .5rem;
+  border-radius: 8px;
+  background-color: #ffffff;
 }
-.faststore-icon svg {
-  width: 20px;
-  height: 20px;
+
+.faststore-iconItem > * {
+  vertical-align: middle;
+
 }
 
 .faststore-iconList {
   display: grid;
-  row-gap: var(--fs-spacing-4);
+  row-gap: 1.5rem;
+  margin-left:0;
+  padding-left:0;
 }
 
 @media screen and (min-width: 1000px) {
   .faststore-iconList {
     grid-template-columns: repeat(4, 1fr);
-    row-gap: var(--fs-spacing-4);
+    row-gap: 1.5rem;
   }
 }

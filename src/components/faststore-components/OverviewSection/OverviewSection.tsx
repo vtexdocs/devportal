@@ -28,7 +28,7 @@ const OverviewSection = ({
       style={containerStyle}
       {...otherProps}
     >
-      {children}
+      <div className="overviewSectionContent">{children}</div>
     </div>
   )
 }

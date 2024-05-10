@@ -1,9 +1,9 @@
 .faststore-typeset {
   display: flex;
   flex-direction: column;
-  row-gap: var(--fs-spacing-1);
-  padding: var(--fs-spacing-4) var(--fs-spacing-5);
-  margin: var(--fs-spacing-4) 0;
+  row-gap: .5rem;
+  padding: 1.5rem var(--fs-spacing-5);
+  margin: 1.5rem 0;
   background-image: radial-gradient(#ededed 1px, transparent 0);
   background-size: 8px 8px;
   background-position: -22px -24px;
@@ -15,7 +15,7 @@
 .faststore-typeset li {
   display: flex;
   align-items: baseline;
-  column-gap: var(--fs-spacing-3);
+  column-gap: 1rem;
 }
 
 .faststore-typeset span {

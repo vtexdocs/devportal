@@ -36,10 +36,6 @@ const articleBox: SxStyleProp = {
       mb: '0.5em',
     },
   },
-  header: {
-    borderBottom: '1px solid #E7E9EE',
-    marginBottom: '24px',
-  },
   h1: {
     fontSize: '1.75em',
     fontWeight: '400',
@@ -79,6 +75,8 @@ const documentationTitle: SxStyleProp = {
 
 const documentationExcerpt: SxStyleProp = {
   color: '#A1A8B3',
+  borderBottom: '1px solid #E7E9EE',
+  marginBottom: '24px',
   lineHeight: '1.5em',
   fontWeight: '400',
   code: {

@@ -1,6 +1,7 @@
 import { CSSProperties, PropsWithChildren, ReactNode } from 'react'
 
 import { Icon, LinkButton } from '@faststore/ui'
+import ReactMarkdown from 'react-markdown'
 
 export type SectionItemProps = {
   title: string
@@ -32,12 +33,12 @@ const SectionItem = ({
       data-doc-section-item-small-height={smallHeight}
       {...otherProps}
     >
-      <div style={containerStyle}>{children}</div>
+      <div className="overviewSectionContent" style={containerStyle}>
+        {children}
+      </div>
       <article className="faststore-sectionItem-description">
-        <h3 className="nx-font-semibold nx-tracking-tight nx-mt-8 nx-text-2xl">
-          {title}
-        </h3>
-        <p>{description}</p>
+        <h3 className="faststore-sectionItem-title">{title}</h3>
+        <ReactMarkdown>{description as string}</ReactMarkdown>
         {actionPath && (
           <LinkButton
             size="small"
@@ -45,6 +46,7 @@ const SectionItem = ({
             href={actionPath}
             icon={
               <Icon
+                width={18}
                 name="ArrowRight"
                 onReset={undefined}
                 onResetCapture={undefined}

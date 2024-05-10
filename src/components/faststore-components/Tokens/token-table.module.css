@@ -1,21 +1,23 @@
 .faststore-tokenTable {
   width: 100%;
   display: table;
-  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .faststore-tokenTable td {
   width: 50%;
-  padding: var(--fs-spacing-1);
+  padding: .5rem;
 }
 
 .faststore-tokenTable td code {
-  margin: 0px 2px;
-  padding: 3px 5px;
-  white-space: nowrap;
-  border-radius: 3px;
-  background-color: var(--md-code-background, #f6f8fa);
-  font-size: 13px;
+  background-color: #f6f8fa;
+  border-radius: 4px;
+  color: var(--md-code-text);
+  margin: 0;
+  padding: 0.2em 0.4em;
+  font-size: 0.875em;
+  max-width: 100%;
+  word-wrap: break-word;
+  display: inline-block;
 }
 
 .faststore-tokenTable td code {

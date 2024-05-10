@@ -5,6 +5,9 @@ body,
 * {
   font-family: 'VTEX Trust Regular', -apple-system, system-ui,
     BlinkMacSystemFont, sans-serif !important;
+  font-variation-settings: 'wght' 92;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.16px;
 }
 
 body.modal-open {
@@ -236,7 +239,7 @@ details > summary::before {
   vertical-align: -4px;
   height: 1.2em;
   width: 1.2em;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
   float: left;
   line-height: 32px;
 }
