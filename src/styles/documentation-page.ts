@@ -48,13 +48,6 @@ const articleBox: SxStyleProp = {
     mt: '1.3em',
     mb: '0.875em',
   },
-  h3: {
-    fontSize: '1.125em',
-    fontWeight: '600',
-    lineHeight: '1.875em',
-    mt: '1.5em',
-    mb: '1em',
-  },
   strong: {
     fontWeight: '600',
   },
