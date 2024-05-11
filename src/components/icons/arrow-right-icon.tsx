@@ -11,14 +11,14 @@ const ArrowRightIcon = (props: IconProps) => (
     {' '}
     <path
       d="M3.48682 8.9847H13.4801"
-      stroke="#4A596B"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M9.48877 4.99023L13.5134 8.99823L9.48877 13.0062"
-      stroke="#4A596B"
+      stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
