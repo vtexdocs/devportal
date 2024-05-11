@@ -35,7 +35,7 @@ const CardItem = ({
         </div>
         <article data-doc-card-item-content>
           <Text sx={{ fontWeight: 'bold', fontSize: '1.125em' }}>{title}</Text>
-          <ReactMarkdown>{description}</ReactMarkdown>
+          <ReactMarkdown>{description as string}</ReactMarkdown>
         </article>
       </a>
     </li>
