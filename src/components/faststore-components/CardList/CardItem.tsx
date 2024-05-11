@@ -1,4 +1,6 @@
 import { CSSProperties, PropsWithChildren, ReactNode } from 'react'
+import { Text } from '@vtex/brand-ui'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 
 export type CardItemProps = {
   title: string
@@ -32,8 +34,8 @@ const CardItem = ({
           {children}
         </div>
         <article data-doc-card-item-content>
-          <h3 data-doc-card-item-title>{title}</h3>
-          <p>{description}</p>
+          <Text sx={{ fontWeight: 'bold', fontSize: '1.125em' }}>{title}</Text>
+          <ReactMarkdown>{description}</ReactMarkdown>
         </article>
       </a>
     </li>

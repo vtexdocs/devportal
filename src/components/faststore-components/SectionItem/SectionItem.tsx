@@ -1,7 +1,9 @@
 import { CSSProperties, PropsWithChildren, ReactNode } from 'react'
 
-import { Icon, LinkButton } from '@faststore/ui'
 import ReactMarkdown from 'react-markdown'
+import Link from 'next/link'
+import ArrowRightIcon from 'components/icons/arrow-right-icon'
+import { Text } from '@vtex/brand-ui'
 
 export type SectionItemProps = {
   title: string
@@ -37,25 +39,21 @@ const SectionItem = ({
         {children}
       </div>
       <article className="faststore-sectionItem-description">
-        <h3 className="faststore-sectionItem-title">{title}</h3>
+        <Text sx={{ fontWeight: 'bold', fontSize: '1.125em' }}>{title}</Text>
         <ReactMarkdown>{description as string}</ReactMarkdown>
         {actionPath && (
-          <LinkButton
-            size="small"
-            variant="tertiary"
-            href={actionPath}
-            icon={
-              <Icon
-                width={18}
-                name="ArrowRight"
-                onReset={undefined}
-                onResetCapture={undefined}
-              />
-            }
-            iconPosition="right"
-          >
+          <Link href={actionPath}>
             See more
-          </LinkButton>
+            <ArrowRightIcon
+              direction="right"
+              size={18}
+              sx={{
+                display: 'inline',
+                verticalAlign: 'text-top',
+                ml: '3px',
+              }}
+            />
+          </Link>
         )}
       </article>
     </li>

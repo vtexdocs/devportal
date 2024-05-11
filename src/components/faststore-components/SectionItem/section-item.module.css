@@ -6,28 +6,28 @@
   row-gap: 1.5rem;
   padding: 0;
 }
-@media screen and (min-width: 1024px) {
-  .faststore-sectionList [data-doc-section-grid='row'] {
-    row-gap: 1.5rem;
-    display: flex;
-    flex-direction: column;
-  }
 
-  .faststore-sectionList [data-doc-section-grid='column'] {
-    display: grid;
-    grid-gap: var(--fs-spacing-5) 1.5rem;
-    padding: 0;
-  }
+.faststore-sectionList [data-doc-section-grid='row'] {
+  row-gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap
+}
 
-  .faststore-sectionList
-    [data-doc-section-grid='column'][data-doc-section-grid-columns='2'] {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.faststore-sectionList [data-doc-section-grid='column'] {
+  display: grid;
+  grid-gap: var(--fs-spacing-5) 1.5rem;
+  padding: 0;
+}
 
-  .faststore-sectionList
-    [data-doc-section-grid='column'][data-doc-section-grid-columns='3'] {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.faststore-sectionList
+  [data-doc-section-grid='column'][data-doc-section-grid-columns='2'] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.faststore-sectionList
+  [data-doc-section-grid='column'][data-doc-section-grid-columns='3'] {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Section Item */
@@ -74,7 +74,7 @@
 }
 
 .faststore-sectionItem {
-  border: 1px solid #E7E9EE;
+  border: 1px solid #e7e9ee;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -84,10 +84,8 @@
   width: fit-content;
 }
 
-.faststore-sectionItem-description{
-  padding: 8px 16px;
-  margin-bottom: 8px;
-  max-width: 350px
+.faststore-sectionItem-description {
+  padding: 0 16px 16px;
 }
 
 .faststore-sectionItem-description code {
@@ -191,9 +189,4 @@
 
 .faststore-tokensLinks .faststore-sectionItem:nth-child(6) > div {
   background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/refinements___ca4c7814b2771e84601f4a6d457612fd.png');
-}
-
-.faststore-sectionItem [data-fs-button-icon] {
-  vertical-align: top;
-  padding-left: 4px;
 }
