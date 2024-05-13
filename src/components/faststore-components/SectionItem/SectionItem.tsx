@@ -35,13 +35,11 @@ const SectionItem = ({
       data-doc-section-item-small-height={smallHeight}
       {...otherProps}
     >
-      <div className="overviewSectionContent" style={containerStyle}>
-        {children}
+      <div className="sectionImage" style={containerStyle}>
+        <div className="overviewSectionContent">{children}</div>
       </div>
-      <article className="faststore-sectionItem-description">
-        <Text sx={{ fontWeight: 'bold', fontSize: '1.125em', pt: '1em' }}>
-          {title}
-        </Text>
+      <div className="faststore-sectionItem-description">
+        <Text sx={{ fontWeight: 'bold', fontSize: '1.125em' }}>{title}</Text>
         <ReactMarkdown>{description as string}</ReactMarkdown>
         {actionPath && (
           <Link href={actionPath}>
@@ -57,7 +55,7 @@ const SectionItem = ({
             />
           </Link>
         )}
-      </article>
+      </div>
     </li>
   )
 }
