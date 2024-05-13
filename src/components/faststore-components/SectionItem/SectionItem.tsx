@@ -39,7 +39,9 @@ const SectionItem = ({
         {children}
       </div>
       <article className="faststore-sectionItem-description">
-        <Text sx={{ fontWeight: 'bold', fontSize: '1.125em' }}>{title}</Text>
+        <Text sx={{ fontWeight: 'bold', fontSize: '1.125em', pt: '1em' }}>
+          {title}
+        </Text>
         <ReactMarkdown>{description as string}</ReactMarkdown>
         {actionPath && (
           <Link href={actionPath}>

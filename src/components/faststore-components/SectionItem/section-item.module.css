@@ -1,55 +1,54 @@
 /* Section List */
 
-.faststore-sectionList [data-doc-section-grid] {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
-  padding: 0;
-}
-
 .faststore-sectionList [data-doc-section-grid='row'] {
-  row-gap: 1.5rem;
   display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
   flex-direction: column;
-  flex-wrap: wrap
 }
 
 .faststore-sectionList [data-doc-section-grid='column'] {
-  display: grid;
-  grid-gap: var(--fs-spacing-5) 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   padding: 0;
-}
-
-.faststore-sectionList
-  [data-doc-section-grid='column'][data-doc-section-grid-columns='2'] {
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.faststore-sectionList
-  [data-doc-section-grid='column'][data-doc-section-grid-columns='3'] {
-  grid-template-columns: repeat(3, 1fr);
+  flex-direction: row;
 }
 
 /* Section Item */
 
-.faststore-sectionList
-  [data-doc-section-grid='row']
-  .faststore-sectionItem
-  > div {
-  flex-shrink: 0;
-  align-self: stretch;
+.faststore-sectionItem {
+  border: 1px solid #e7e9ee;
+  border-radius: 4px;
 }
+
+.faststore-sectionItem-description {
+  padding: 0 16px 16px;
+  align-content: center;
+}
+
+/* Section Item Column*/
 
 .faststore-sectionList [data-doc-section-grid='column'] .faststore-sectionItem {
   display: grid;
   grid-template-rows: 200px 1fr;
-  width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
 }
 
+.faststore-sectionList [data-doc-section-grid='column'][data-doc-section-grid-columns='2'] .faststore-sectionItem {
+  min-width: 49%;
+}
+.faststore-sectionList [data-doc-section-grid='column'][data-doc-section-grid-columns='3'] .faststore-sectionItem {
+  min-width: 32%;
+}
+
+/* Section Item Row*/
+
 .faststore-sectionList [data-doc-section-grid='row'] .faststore-sectionItem {
-  grid-auto-flow: column;
   display: grid;
-  grid-template-cols: 200px 1fr;
+  grid-auto-flow: column;
 }
 
 .faststore-sectionList
@@ -61,49 +60,12 @@
 .faststore-sectionList
   [data-doc-section-grid='column']
   .faststore-sectionItem
-  > div {
-  height: 100%;
-}
-
-.faststore-sectionList
-  [data-doc-section-grid='column']
-  .faststore-sectionItem
   > article {
   height: 100%;
   width: 100%;
 }
 
-.faststore-sectionItem {
-  border: 1px solid #e7e9ee;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  column-gap: 1.5rem;
-  row-gap: 1rem;
-  width: fit-content;
-}
-
-.faststore-sectionItem-description {
-  padding: 0 16px 16px;
-}
-
-.faststore-sectionItem-description code {
-  background-color: #f6f8fa;
-  border-radius: 4px;
-  margin: 0;
-  padding: 0.2em 0.4em;
-  font-size: 0.85em;
-  max-width: 100%;
-  word-wrap: break-word;
-  display: inline-block;
-}
-
-@media screen and (min-width: 1024px) {
-  .faststore-sectionItem {
-    flex-direction: row;
-  }
-}
+/* Section Item Image */
 
 .faststore-sectionItem > div {
   width: 100%;
@@ -115,6 +77,21 @@
   border-radius: 4px;
   overflow-y: auto;
   max-height: 24rem;
+}
+
+.faststore-sectionList
+  [data-doc-section-grid='column']
+  .faststore-sectionItem
+  > div {
+  height: 100%;
+}
+
+.faststore-sectionList
+  [data-doc-section-grid='row']
+  .faststore-sectionItem
+  > div {
+  flex-shrink: 0;
+  align-self: stretch;
 }
 
 .faststore-sectionItem[data-doc-section-item-full-width] > div > * {
@@ -129,10 +106,6 @@
 .faststore-sectionItem[data-doc-section-item-zoom-out='true'] > div > * {
   width: 100%;
   zoom: 60%;
-}
-
-.faststore-sectionItem > article > h3 {
-  margin-top: 0;
 }
 
 /* Tokens Links */

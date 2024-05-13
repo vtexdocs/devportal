@@ -21,34 +21,34 @@ const articleBox: SxStyleProp = {
   fontSize: '1em',
   lineHeight: '1.5em',
   width: '100%',
-  a: {
+  ':not(overviewSectionContent) a': {
     color: '#E31C58',
   },
-  ul: {
+  ':not(overviewSectionContent) ul': {
     li: {
       mt: '0.5em',
       mb: '0.5em',
     },
   },
-  ol: {
+  ':not(overviewSectionContent) ol': {
     li: {
       mt: '0.5em',
       mb: '0.5em',
     },
   },
-  h1: {
+  ':not(overviewSectionContent) h1': {
     fontSize: '1.75em',
     fontWeight: '400',
     lineHeight: '2.375em',
   },
-  h2: {
+  ':not(overviewSectionContent) h2': {
     fontSize: '1.375em',
     lineHeight: '2em',
     fontWeight: '400',
     mt: '1.3em',
     mb: '0.875em',
   },
-  strong: {
+  ':not(overviewSectionContent) strong': {
     fontWeight: '600',
   },
 }
