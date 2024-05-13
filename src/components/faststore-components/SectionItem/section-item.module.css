@@ -62,7 +62,8 @@
 /* Section Item Image */
 
 .faststore-sectionItem .sectionImage {
-  width: 100%;
+  min-width: 30%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
