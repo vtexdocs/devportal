@@ -1333,3 +1333,9 @@ force = true
 from = "/docs/guides/search-graphql"
 status = 308
 to = "/docs/apps/vtex.search-graphql"
+
+[[redirects]]
+force = true
+from = "/docs/guides/pii-data-architecture"
+status = 308
+to = "/docs/guides/data-protection-plus"
