@@ -10621,58 +10621,65 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Get order",
+              "name": "Orders API - PII Data Architecture",
               "slug": "orders-api-pii-version",
-              "type": "openapi",
-              "method": "GET",
-              "origin": "",
-              "endpoint": "/api/orders/pvt/document/-orderId-",
-              "children": []
-            },
-            {
-              "name": "List orders",
-              "slug": "orders-api-pii-version",
-              "type": "openapi",
-              "method": "POST",
-              "origin": "",
-              "endpoint": "/api/orders/extendsearch/orders",
-              "children": []
-            },
-            {
-              "name": "Start handling order",
-              "slug": "orders-api-pii-version",
-              "type": "openapi",
-              "method": "POST",
-              "origin": "",
-              "endpoint": "/api/orders/pvt/document/-orderId-/actions/start-handling",
-              "children": []
-            },
-            {
-              "name": "Cancel order",
-              "slug": "orders-api-pii-version",
-              "type": "openapi",
-              "method": "POST",
-              "origin": "",
-              "endpoint": "/api/orders/pvt/document/-orderId-/cancel",
-              "children": []
-            },
-            {
-              "name": "Order invoice notification",
-              "slug": "orders-api-pii-version",
-              "type": "openapi",
-              "method": "POST",
-              "origin": "",
-              "endpoint": "/api/orders/pvt/document/-orderId-/invoices",
-              "children": []
-            },
-            {
-              "name": "Send payment notification",
-              "slug": "orders-api-pii-version",
-              "type": "openapi",
-              "method": "POST",
-              "origin": "",
-              "endpoint": "/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment",
-              "children": []
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get order",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-",
+                  "children": []
+                },
+                {
+                  "name": "List orders",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/extendsearch/orders",
+                  "children": []
+                },
+                {
+                  "name": "Start handling order",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/actions/start-handling",
+                  "children": []
+                },
+                {
+                  "name": "Cancel order",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/cancel",
+                  "children": []
+                },
+                {
+                  "name": "Order invoice notification",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/invoices",
+                  "children": []
+                },
+                {
+                  "name": "Send payment notification",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment",
+                  "children": []
+                }
+              ]
             }
           ]
         }
