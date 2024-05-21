@@ -2131,6 +2131,56 @@
           ]
         },
         {
+          "name": "Data Protection Plus",
+          "slug": "data-protection-plus",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "PII Data Architecture specifications",
+              "slug": "pii-data-architecture-specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Data residency",
+              "slug": "data-residency",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Profile System integration",
+              "slug": "profile-system",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Working with schemas in the Profile System",
+              "slug": "working-with-schemas-in-the-profile-system",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Changes in VTEX features behavior to handle PII data",
+              "slug": "changes-in-vtex-features-behavior-to-handle-pii-data",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Limitations of the PII data architecture during closed beta",
+              "slug": "changes-in-vtex-features-behavior-to-handle-pii-data",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Troubleshooting",
           "slug": "troubleshooting-category",
           "origin": "",
