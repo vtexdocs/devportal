@@ -1339,3 +1339,9 @@ force = true
 from = "/docs/guides/pii-data-architecture"
 status = 308
 to = "/docs/guides/data-protection-plus"
+
+[[redirects]]
+force = true
+from = "/docs/guides/storefront-implementation"
+status = 308
+to = "/docs/guides/store-framework"
