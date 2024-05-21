@@ -13631,7 +13631,7 @@
         },
         {
           "name": "Store Framework",
-          "slug": "storefront-implementation",
+          "slug": "store-framework",
           "origin": "",
           "type": "markdown",
           "children": [
