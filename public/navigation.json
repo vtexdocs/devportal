@@ -1769,8 +1769,7 @@
               "slug": "setting-up-white-label-seller-as-pickup-point",
               "origin": "",
               "type": "markdown",
-              "children": [
-              ]
+              "children": []
             }
           ]
         },
@@ -10344,6 +10343,338 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Profile System (Data Protection Plus)",
+          "slug": "profile-system",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Profiles",
+              "slug": "profile-system-profiles",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create client profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles",
+                  "children": []
+                },
+                {
+                  "name": "Get profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-",
+                  "children": []
+                },
+                {
+                  "name": "Update client profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete client profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/unmask",
+                  "children": []
+                },
+                {
+                  "name": "Get profile by version",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/versions/-profileVersionId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked profile by version",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/versions/-profileVersionId-/unmask",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Addresses",
+              "slug": "profile-system-addresses",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create client address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses",
+                  "children": []
+                },
+                {
+                  "name": "Get client addresses",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked client addresses",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/unmask",
+                  "children": []
+                },
+                {
+                  "name": "Get address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Update client address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/unmask",
+                  "children": []
+                },
+                {
+                  "name": "Get address by version",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/versions/-addressVersionId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked address by version",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/versions/-addressVersionId-/unmask",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Prospects",
+              "slug": "profile-system-prospects",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects",
+                  "children": []
+                },
+                {
+                  "name": "Get prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects/-prospectId-",
+                  "children": []
+                },
+                {
+                  "name": "Update prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects/-prospectId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects/-prospectId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects/-prospectId-/unmask",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Purchase information",
+              "slug": "profile-system-purchase-information",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create purchase information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info",
+                  "children": []
+                },
+                {
+                  "name": "Get purchase information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info",
+                  "children": []
+                },
+                {
+                  "name": "Update purchase information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info",
+                  "children": []
+                },
+                {
+                  "name": "Delete purchase information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked profile information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info/unmask",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Orders API - PII Data Architecture (Data Protection Plus)",
+          "slug": "orders-api-pii-version",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Get order",
+              "slug": "orders-api-pii-version",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/orders/pvt/document/-orderId-",
+              "children": []
+            },
+            {
+              "name": "List orders",
+              "slug": "orders-api-pii-version",
+              "type": "openapi",
+              "method": "POST",
+              "origin": "",
+              "endpoint": "/api/orders/extendsearch/orders",
+              "children": []
+            },
+            {
+              "name": "Start handling order",
+              "slug": "orders-api-pii-version",
+              "type": "openapi",
+              "method": "POST",
+              "origin": "",
+              "endpoint": "/api/orders/pvt/document/-orderId-/actions/start-handling",
+              "children": []
+            },
+            {
+              "name": "Cancel order",
+              "slug": "orders-api-pii-version",
+              "type": "openapi",
+              "method": "POST",
+              "origin": "",
+              "endpoint": "/api/orders/pvt/document/-orderId-/cancel",
+              "children": []
+            },
+            {
+              "name": "Order invoice notification",
+              "slug": "orders-api-pii-version",
+              "type": "openapi",
+              "method": "POST",
+              "origin": "",
+              "endpoint": "/api/orders/pvt/document/-orderId-/invoices",
+              "children": []
+            },
+            {
+              "name": "Send payment notification",
+              "slug": "orders-api-pii-version",
+              "type": "openapi",
+              "method": "POST",
+              "origin": "",
+              "endpoint": "/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment",
+              "children": []
+            }
+          ]
         }
       ]
     },
@@ -10549,53 +10880,53 @@
               "type": "markdown",
               "children": [
                 {
-                    "name": "Admin Builder",
-                    "slug": "vtex-io-documentation-admin-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Admin Builder",
+                  "slug": "vtex-io-documentation-admin-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Assets Builder",
-                    "slug": "vtex-io-documentation-assets-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Assets Builder",
+                  "slug": "vtex-io-documentation-assets-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Docs Builder",
-                    "slug": "vtex-io-documentation-docs-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Docs Builder",
+                  "slug": "vtex-io-documentation-docs-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Node Builder",
-                    "slug": "vtex-io-documentation-node-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Node Builder",
+                  "slug": "vtex-io-documentation-node-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "React Builder",
-                    "slug": "vtex-io-documentation-react-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "React Builder",
+                  "slug": "vtex-io-documentation-react-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Store Builder",
-                    "slug": "vtex-io-documentation-store-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Store Builder",
+                  "slug": "vtex-io-documentation-store-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Styles Builder",
-                    "slug": "vtex-io-documentation-styles-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Styles Builder",
+                  "slug": "vtex-io-documentation-styles-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -13317,19 +13648,19 @@
               "origin": "",
               "type": "markdown",
               "children": [
-                  {
-                    "name": "Soft blue",
-                    "slug": "faststore/themes-soft-blue",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
-                  },
-                  {
-                    "name": "Midnight",
-                    "slug": "faststore/themes-midnight",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                {
+                  "name": "Soft blue",
+                  "slug": "faststore/themes-soft-blue",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Midnight",
+                  "slug": "faststore/themes-midnight",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
                   "name": "Iconography",
