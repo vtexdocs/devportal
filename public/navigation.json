@@ -3214,7 +3214,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/copy/-skuIdfrom-/-skuIdto-/file/",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/copy/-skuIdfrom-/-skuIdto-/file",
                   "children": []
                 },
                 {
