@@ -18,6 +18,7 @@ interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
   branch: string
+  troubleshootingData: TroubleshootingCardsElements[]
 }
 
 const TroubleshootingPage: NextPage<Props> = ({
