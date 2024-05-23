@@ -72,9 +72,6 @@ export default async function getTroubleshootingData(branch = 'main') {
       description: frontmatter?.excerpt,
     })
   })
-  troubleshootingData.sort(function (a, b) {
-    return Date.parse(b.createdAt) - Date.parse(a.createdAt)
-  })
 
   return JSON.parse(JSON.stringify(troubleshootingData))
 }
