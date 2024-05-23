@@ -14311,6 +14311,19 @@
       ]
     },
     {
+      "documentation": "Troubleshooting",
+      "slugPrefix": "docs/troubleshooting",
+      "categories": [
+        {
+          "name": "I can’t access the Headless CMS",
+          "slug": "unable-to-access-headless-cms",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        }
+      ]
+    },
+    {
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",
       "categories": [

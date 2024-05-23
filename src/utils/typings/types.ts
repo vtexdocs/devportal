@@ -46,6 +46,13 @@ export type UpdateElement = {
   actionType: ActionType
 }
 
+export type TroubleshootingCardsElements = {
+  slug: string
+  title: string
+  createdAt?: string
+  description: string
+}
+
 export type WhatsNextDataElement = {
   title: string
   description: string

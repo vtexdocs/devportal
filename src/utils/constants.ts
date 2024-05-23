@@ -4,6 +4,7 @@ import AppDevelopmentIcon from 'components/icons/app-development-icon'
 import StorefrontDevelopmentIcon from 'components/icons/storefront-development-icon'
 import VTEXIOAppsIcon from 'components/icons/vtex-io-apps-icon'
 import ReleaseNotesIcon from 'components/icons/release-notes-icon'
+import TroubleshootingIcon from 'components/icons/troubleshooting-icon'
 
 import { getMessages } from 'utils/get-messages'
 import {
@@ -66,12 +67,13 @@ export const documentationData: DocDataElement[] = [
     description: messages['documentation_vtexio_apps.description'],
     link: '/docs/vtex-io-apps',
   },
-  /*   {
-    Icon: FastStoreIcon,
-    title: 'FastStore',
-    description: messages['documentation_vtexio_apps.description'],
-    link: '/docs/faststore',
-  }, */
+  {
+    id: 'Troubleshooting',
+    Icon: TroubleshootingIcon,
+    title: 'Troubleshooting',
+    description: messages['troubleshooting.description'],
+    link: '/docs/troubleshooting',
+  },
 ]
 
 export const officialVendors = ['vtex', 'vtexarg', 'vtexventures', 'vtexus']
