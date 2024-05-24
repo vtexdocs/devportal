@@ -10,7 +10,7 @@ const TroubleshootingCard = ({
   slug,
 }: TroubleshootingCardsElements) => {
   return (
-    <Link href={`docs/troubleshooting/${slug}`} sx={styles.container}>
+    <Link href={`/docs/troubleshooting/${slug}`} sx={styles.container}>
       <Box>
         <Text sx={styles.title} className="title">
           {title}
