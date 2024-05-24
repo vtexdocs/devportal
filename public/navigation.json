@@ -10329,8 +10329,8 @@
           "type": "markdown",
           "children": [
             {
-              "name": "Storefront apps",
-              "slug": "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io",
+              "name": " apps",
+              "slug": "vtex-io-documentation-1-developing--apps-using-react-and-vtex-io",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -13248,6 +13248,13 @@
                 {
                   "name": "Search",
                   "slug": "faststore/features-search",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Authenticated content",
+                  "slug": "faststore/features-auth-content",
                   "origin": "",
                   "type": "markdown",
                   "children": []
