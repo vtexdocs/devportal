@@ -3263,7 +3263,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/stockkeepingunit/copy/-skuIdfrom-/-skuIdto-/file/",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/copy/-skuIdfrom-/-skuIdto-/file",
                   "children": []
                 },
                 {
@@ -10717,8 +10717,8 @@
           "type": "markdown",
           "children": [
             {
-              "name": "Storefront apps",
-              "slug": "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io",
+              "name": " apps",
+              "slug": "vtex-io-documentation-1-developing--apps-using-react-and-vtex-io",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -13639,6 +13639,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Authenticated content",
+                  "slug": "faststore/features-auth-content",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -14019,7 +14026,7 @@
         },
         {
           "name": "Store Framework",
-          "slug": "storefront-implementation",
+          "slug": "store-framework",
           "origin": "",
           "type": "markdown",
           "children": [
@@ -14715,6 +14722,21 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "May",
+              "slug": "may-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Changes in authentication requirements for external gift card providers",
+                  "slug": "2024-05-27-changes-in-authentication-requirements-for-external-gift-card-providers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "April",
               "slug": "april-2024",
