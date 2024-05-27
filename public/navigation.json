@@ -31,7 +31,7 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "API authentication using application keys",
+                  "name": "authentication using application keys",
                   "slug": "api-authentication-using-application-keys",
                   "origin": "",
                   "type": "markdown",
@@ -45,7 +45,7 @@
                   "children": []
                 },
                 {
-                  "name": "API authentication using user tokens",
+                  "name": "authentication using user tokens",
                   "slug": "api-authentication-using-user-tokens",
                   "origin": "",
                   "type": "markdown",
@@ -883,7 +883,7 @@
               "children": []
             },
             {
-              "name": "Alternative API requests",
+              "name": "Alternative requests",
               "slug": "alternative-api-requests",
               "origin": "",
               "type": "markdown",
@@ -1480,7 +1480,7 @@
                   "children": []
                 },
                 {
-                  "name": "Search and scroll API queries",
+                  "name": "Search and scroll queries",
                   "slug": "search-and-scroll-api-queries",
                   "origin": "",
                   "type": "markdown",
@@ -1712,7 +1712,7 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Integrating external orders via API to be used with VTEX Tracking",
+                  "name": "Integrating external orders via to be used with VTEX Tracking",
                   "slug": "integrate-external-orders-vtex-tracking",
                   "origin": "",
                   "type": "markdown",
@@ -1749,7 +1749,7 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Multilevel omnichannel inventory API integration",
+                  "name": "Multilevel omnichannel inventory integration",
                   "slug": "multilevel-omnichannel-inventory-api-integration",
                   "origin": "",
                   "type": "markdown",
@@ -13525,6 +13525,13 @@
               "origin": "",
               "type": "markdown",
               "children": [
+                 {
+                  "name": "Best practices for using API extensions",
+                  "slug": "faststore/api-extensions-best-practices",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Extending API schemas",
                   "slug": "faststore/api-extensions-extending-api-schema",
