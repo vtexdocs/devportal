@@ -14335,6 +14335,21 @@
           "type": "category",
           "children": [
             {
+              "name": "May",
+              "slug": "may-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Changes in authentication requirements for external gift card providers",
+                  "slug": "2024-05-27-changes-in-authentication-requirements-for-external-gift-card-providers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "April",
               "slug": "april-2024",
               "origin": "",
