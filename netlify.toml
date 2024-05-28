@@ -838,12 +838,6 @@ to = '/docs/apps/vtexventures.livestreaming'
 
 [[redirects]]
 force = true
-from = '/docs/guides/data-privacy'
-status = 308
-to = '/docs/guides/pii-data-architecture'
-
-[[redirects]]
-force = true
 from = '/docs/guides/pii-platform-version'
 status = 308
 to = '/docs/guides/pii-data-architecture'
