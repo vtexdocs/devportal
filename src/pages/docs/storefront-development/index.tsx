@@ -208,7 +208,7 @@ const StorefrontDevelopmentPage: NextPage<Props> = ({ branch }) => {
     {
       title: 'FastStore',
       description:
-        'Build high-performance stores based on the Jamstack architecture.',
+        'Build high-performance stores based on the Jamstack architecture',
       getStarted:
         'https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore',
       links: [
@@ -232,12 +232,12 @@ const StorefrontDevelopmentPage: NextPage<Props> = ({ branch }) => {
     {
       title: 'Store Framework',
       description:
-        'Leverage the VTEX IO infrastructure to build store themes using VTEX IO apps.',
+        'Leverage the VTEX IO infrastructure to build store themes using VTEX IO apps',
       getStarted: 'https://developers.vtex.com/docs/guides/store-framework',
       links: [
         {
           href: 'https://developers.vtex.com/docs/guides/vtex-io-documentation-building-a-product-details-page',
-          title: 'Get started with Store Framework blocks',
+          title: 'Build your store theme with VTEX IO apps',
           icon: <SFAppsIcon />,
         },
         {
@@ -247,7 +247,7 @@ const StorefrontDevelopmentPage: NextPage<Props> = ({ branch }) => {
         },
         {
           href: 'https://developers.vtex.com/docs/guides/vtex-io-documentation-site-editor',
-          title: 'Manage content with CMS and Site Editor',
+          title: 'Manage content with CMS - Site Editor',
           icon: <SFCMSIcon />,
         },
       ],
