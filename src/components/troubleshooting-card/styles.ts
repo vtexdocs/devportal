@@ -5,7 +5,7 @@ const container: SxStyleProp = {
   padding: '16px',
   borderRadius: '4px',
   border: '1px solid #E7E9EE',
-  width: ['100%', '49%'],
+  width: ['100%', '90%'],
   transition: 'all 0.3s ease-out',
   ':hover': {
     cursor: 'pointer',
