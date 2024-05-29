@@ -1052,7 +1052,7 @@
             },
             {
               "name": "Security",
-              "slug": "security",
+              "slug": "checkout-security",
               "origin": "",
               "type": "markdown",
               "children": [
