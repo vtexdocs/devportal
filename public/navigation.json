@@ -14310,7 +14310,7 @@
         }
       ]
     },
-    {
+   {
       "documentation": "Troubleshooting",
       "slugPrefix": "docs/troubleshooting",
       "categories": [
@@ -14321,8 +14321,30 @@
           "type": "markdown",
           "children": [
             {
-              "name": "Getting started",
-              "slug": "getting-started-3",
+              "name": "Development",
+              "slug": "",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "I can’t access the Headless CMS",
+                  "slug": "unable-to-access-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "My multi-language store is not functioning in the development workspace",
+                  "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Store performance",
+              "slug": "",
               "origin": "",
               "type": "markdown",
               "children": [
