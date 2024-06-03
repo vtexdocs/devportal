@@ -1052,7 +1052,7 @@
             },
             {
               "name": "Security",
-              "slug": "security",
+              "slug": "checkout-security",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -8205,7 +8205,7 @@
           ]
         },
         {
-          "name": "Pick and Pack Protocol API",
+          "name": "Pick and Pack Last Mile Protocol API",
           "slug": "pick-and-pack-protocol-api",
           "origin": "",
           "type": "openapi",
@@ -8237,7 +8237,31 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/",
+                  "endpoint": "/create-service",
+                  "children": []
+                }
+              ]
+            },{
+              "name": "Carriers",
+              "slug": "pick-and-pack-protocol-api-carriers",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Calculate rates",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/create-service",
+                  "children": []
+                },
+                {
+                  "name": "List carriers",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/list-carriers",
                   "children": []
                 }
               ]
@@ -8263,24 +8287,6 @@
                   "method": "PATCH",
                   "origin": "",
                   "endpoint": "/-carrierId-/-serviceId-",
-                  "children": []
-                },
-                {
-                  "name": "Update service",
-                  "slug": "pick-and-pack-protocol-api",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/-carrierId-/-serviceId-",
-                  "children": []
-                },
-                {
-                  "name": "Create notes",
-                  "slug": "pick-and-pack-protocol-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/notes/-carrierId-/-serviceId-",
                   "children": []
                 },
                 {
@@ -8311,12 +8317,30 @@
                   "children": []
                 },
                 {
-                  "name": "Cancel service",
+                  "name": "Cancel ongoing service",
                   "slug": "pick-and-pack-protocol-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/cancel/-carrierId-/-serviceId-",
+                  "children": []
+                },
+                {
+                  "name": "Cancel service",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/cancel-service",
+                  "children": []
+                },
+                {
+                  "name": "Pause and resume service",
+                  "slug": "pick-and-pack-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/pause-service",
                   "children": []
                 },
                 {
