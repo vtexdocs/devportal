@@ -1,6 +1,9 @@
 import { CSSProperties, PropsWithChildren, ReactNode } from 'react'
 
-import { Icon, LinkButton } from '@faststore/ui'
+import ReactMarkdown from 'react-markdown'
+import Link from 'next/link'
+import ArrowRightIcon from 'components/icons/arrow-right-icon'
+import { Text } from '@vtex/brand-ui'
 
 export type SectionItemProps = {
   title: string
@@ -32,30 +35,27 @@ const SectionItem = ({
       data-doc-section-item-small-height={smallHeight}
       {...otherProps}
     >
-      <div style={containerStyle}>{children}</div>
-      <article className="faststore-sectionItem-description">
-        <h3 className="nx-font-semibold nx-tracking-tight nx-mt-8 nx-text-2xl">
-          {title}
-        </h3>
-        <p>{description}</p>
+      <div className="sectionImage" style={containerStyle}>
+        <div className="overviewSectionContent">{children}</div>
+      </div>
+      <div className="faststore-sectionItem-description">
+        <Text sx={{ fontWeight: 'bold', fontSize: '1.125em' }}>{title}</Text>
+        <ReactMarkdown>{description as string}</ReactMarkdown>
         {actionPath && (
-          <LinkButton
-            size="small"
-            variant="tertiary"
-            href={actionPath}
-            icon={
-              <Icon
-                name="ArrowRight"
-                onReset={undefined}
-                onResetCapture={undefined}
-              />
-            }
-            iconPosition="right"
-          >
+          <Link href={actionPath}>
             See more
-          </LinkButton>
+            <ArrowRightIcon
+              direction="right"
+              size={18}
+              sx={{
+                display: 'inline',
+                verticalAlign: 'text-top',
+                ml: '3px',
+              }}
+            />
+          </Link>
         )}
-      </article>
+      </div>
     </li>
   )
 }

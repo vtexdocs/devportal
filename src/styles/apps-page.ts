@@ -6,6 +6,8 @@ const details: SxStyleProp = {
   fontSize: '16px',
   mt: '12px',
   mb: '18px',
+  borderBottom: '1px solid #E7E9EE',
+  pb: '16px',
 }
 
 const iconDetails: SxStyleProp = {

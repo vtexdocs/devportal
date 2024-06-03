@@ -47,6 +47,9 @@ const selfClosingHTMLTagReplacer: (
 const replaceHTMLBlocks: (content: string) => string = (content) => {
   return content
     .replace(/<>/g, '\\<\\>')
+    .replace(/(<br>\s*<\/br>)/g, '<br />')
+    .replace(/<img([^>]*)>\s*<\s*\/\s*img\s*>/g, '<img$1 />') // Replaces <img...></img> with <img.../>
+    .replace(/<img([^>]*)>/g, (match) => match.replace(/\/?>$/, ' />')) // Replaces <img...> with <img.../>
     .replace(/<br>/g, '<br />')
     .replace(/<!--.*?-->/gs, '')
     .replace(HTMLBlockRegex, HTMLBlockReplacer)

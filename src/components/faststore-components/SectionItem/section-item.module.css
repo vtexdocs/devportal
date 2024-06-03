@@ -1,70 +1,49 @@
 /* Section List */
 
-.faststore-sectionList [data-doc-section-grid] {
+.faststore-sectionList [data-doc-section-grid='row'] {
   display: flex;
-  flex-direction: column;
-  row-gap: var(--fs-spacing-4);
+  flex-wrap: wrap;
+  gap: 0.5rem;
   padding: 0;
+  flex-direction: column;
 }
 
-.faststore-sectionItem-description [data-fs-button] span {
-  color: #e31d58;
-}
-
-@media screen and (min-width: 1024px) {
-  .faststore-sectionList [data-doc-section-grid='row'] {
-    row-gap: var(--fs-spacing-4);
-    display: flex;
-    flex-direction: column;
-  }
-
-  .faststore-sectionList [data-doc-section-grid='column'] {
-    display: grid;
-    grid-gap: var(--fs-spacing-5) var(--fs-spacing-4);
-    padding: 0;
-  }
-
-  .faststore-sectionList
-    [data-doc-section-grid='column'][data-doc-section-grid-columns='2'] {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .faststore-sectionList
-    [data-doc-section-grid='column'][data-doc-section-grid-columns='3'] {
-    grid-template-columns: repeat(3, 1fr);
-  }
+.faststore-sectionList [data-doc-section-grid='column'] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  flex-direction: row;
 }
 
 /* Section Item */
 
-.faststore-sectionList
-  [data-doc-section-grid='row']
-  .faststore-sectionItem
-  > div {
-  flex-shrink: 0;
-  align-self: stretch;
+.faststore-sectionItem {
+  border: 1px solid #e7e9ee;
+  border-radius: 4px;
 }
 
-@media screen and (min-width: 1024px) {
-  .faststore-sectionList
-    [data-doc-section-grid='row']
-    .faststore-sectionItem
-    > div {
-    width: 35%;
-  }
-}
+/* Section Item Column*/
 
 .faststore-sectionList [data-doc-section-grid='column'] .faststore-sectionItem {
   display: grid;
   grid-template-rows: 200px 1fr;
+  flex-basis: 0;
+  flex-grow: 1;
 }
 
-@media screen and (min-width: 1024px) {
-  .faststore-sectionList
-    [data-doc-section-grid='column']
-    .faststore-sectionItem {
-    grid-template-rows: 2fr 1fr;
-  }
+.faststore-sectionList [data-doc-section-grid='column'][data-doc-section-grid-columns='2'] .faststore-sectionItem {
+  min-width: 49%;
+}
+.faststore-sectionList [data-doc-section-grid='column'][data-doc-section-grid-columns='3'] .faststore-sectionItem {
+  min-width: 32%;
+}
+
+/* Section Item Row*/
+
+.faststore-sectionList [data-doc-section-grid='row'] .faststore-sectionItem {
+  display: flex;
+  width: 100%
 }
 
 .faststore-sectionList
@@ -73,48 +52,37 @@
   grid-template-rows: 1fr 1fr;
 }
 
-.faststore-sectionList
-  [data-doc-section-grid='column']
-  .faststore-sectionItem
-  > div {
-  height: 100%;
-}
-
-.faststore-sectionList
-  [data-doc-section-grid='column']
-  .faststore-sectionItem
-  > article {
-  height: 100%;
+.faststore-sectionList .faststore-sectionItem-description {
+  max-height: 24em;
   width: 100%;
+  align-content: center;
+  padding: 16px;
 }
 
-.faststore-sectionItem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  column-gap: var(--fs-spacing-4);
-  row-gap: var(--fs-spacing-3);
-}
+/* Section Item Image */
 
-@media screen and (min-width: 1024px) {
-  .faststore-sectionItem {
-    flex-direction: row;
-  }
-}
-
-.faststore-sectionItem > div {
-  width: 100%;
+.faststore-sectionItem .sectionImage {
+  min-width: 30%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--fs-spacing-4) var(--fs-spacing-3);
+  padding: 1.5rem 1rem;
   background-color: var(--fs-color-neutral-bkg);
   border-radius: 4px;
   overflow-y: auto;
   max-height: 24rem;
 }
 
-.faststore-sectionItem[data-doc-section-item-full-width] > div > * {
+.faststore-sectionList
+  [data-doc-section-grid='column']
+  .faststore-sectionItem
+  .sectionImage {
+  height: 100%;
+}
+
+
+.faststore-sectionItem[data-doc-section-item-full-width] .sectionImage > * {
   width: 100%;
 }
 
@@ -123,25 +91,15 @@
   width: 100%;
 }
 
-.faststore-sectionItem[data-doc-section-item-zoom-out='true'] > div > * {
+.faststore-sectionItem[data-doc-section-item-zoom-out='true'] .sectionImage > * {
   width: 100%;
   zoom: 60%;
-}
-
-.faststore-sectionItem > article [data-fs-button] {
-  position: relative;
-  left: calc(-1 * var(--fs-spacing-3));
-  margin-top: var(--fs-spacing-3);
-}
-
-.faststore-sectionItem > article > h3 {
-  margin-top: 0;
 }
 
 /* Tokens Links */
 
 .faststore-tokensLinks {
-  margin-top: var(--fs-spacing-4);
+  margin-top: 1.5rem;
 }
 
 .faststore-tokensLinks [data-doc-section-grid='column'] .faststore-sectionItem {
@@ -152,51 +110,38 @@
 .faststore-tokensLinks
   [data-doc-section-grid='column']
   .faststore-sectionItem
-  > div {
+  .sectionImage {
   height: 170px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 30% auto;
 }
 
-.faststore-tokensLinks .faststore-sectionItem > article {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-basis: 50%;
-}
 
-.faststore-tokensLinks .faststore-sectionItem:nth-child(odd) > div {
+.faststore-tokensLinks .faststore-sectionItem:nth-child(odd) .sectionImage {
   background-color: var(--fs-color-main-2);
 }
 
-.faststore-tokensLinks .faststore-sectionItem:nth-child(1) > div {
+.faststore-tokensLinks .faststore-sectionItem:nth-child(1) .sectionImage {
   background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/colors___038effcf345acf3d037bc63ed8671455.png');
 }
 
-.faststore-tokensLinks .faststore-sectionItem:nth-child(2) > div {
+.faststore-tokensLinks .faststore-sectionItem:nth-child(2) .sectionImage {
   background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/typography___318fbc78202402728a2113e63b47241f.png');
 }
 
-.faststore-tokensLinks .faststore-sectionItem:nth-child(3) > div {
+.faststore-tokensLinks .faststore-sectionItem:nth-child(3) .sectionImage {
   background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/spacing___ca1d02b0bcc238811347eddc66a807ad.png');
 }
 
-.faststore-tokensLinks .faststore-sectionItem:nth-child(4) > div {
+.faststore-tokensLinks .faststore-sectionItem:nth-child(4) .sectionImage {
   background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/grid___6dfb4949712be94273bc119b7945babf.png');
 }
 
-.faststore-tokensLinks .faststore-sectionItem:nth-child(5) > div {
+.faststore-tokensLinks .faststore-sectionItem:nth-child(5) .sectionImage {
   background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/controls___a8302bd539d61653e60cb0aacd1c18e7.png');
 }
 
-.faststore-tokensLinks .faststore-sectionItem:nth-child(6) > div {
+.faststore-tokensLinks .faststore-sectionItem:nth-child(6) .sectionImage {
   background-image: url('https://vtexhelp.vtexassets.com/assets/docs/src/refinements___ca4c7814b2771e84601f4a6d457612fd.png');
-}
-
-.faststore-tokensLinks .faststore-sectionItem > article [data-fs-button] {
-  width: fit-content;
-  position: relative;
-  left: calc(-1 * var(--fs-spacing-1));
-  margin-top: auto;
 }

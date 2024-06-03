@@ -21,45 +21,34 @@ const articleBox: SxStyleProp = {
   fontSize: '1em',
   lineHeight: '1.5em',
   width: '100%',
-  a: {
+  ':not(overviewSectionContent) a': {
     color: '#E31C58',
   },
-  ul: {
+  ':not(overviewSectionContent) ul': {
     li: {
       mt: '0.5em',
       mb: '0.5em',
     },
   },
-  ol: {
+  ':not(overviewSectionContent) ol': {
     li: {
       mt: '0.5em',
       mb: '0.5em',
     },
   },
-  header: {
-    borderBottom: '1px solid #E7E9EE',
-    marginBottom: '24px',
-  },
-  h1: {
+  ':not(overviewSectionContent) h1': {
     fontSize: '1.75em',
     fontWeight: '400',
     lineHeight: '2.375em',
   },
-  h2: {
+  ':not(overviewSectionContent) h2': {
     fontSize: '1.375em',
     lineHeight: '2em',
     fontWeight: '400',
     mt: '1.3em',
     mb: '0.875em',
   },
-  h3: {
-    fontSize: '1.125em',
-    fontWeight: '600',
-    lineHeight: '1.875em',
-    mt: '1.5em',
-    mb: '1em',
-  },
-  strong: {
+  ':not(overviewSectionContent) strong': {
     fontWeight: '600',
   },
 }
@@ -79,6 +68,8 @@ const documentationTitle: SxStyleProp = {
 
 const documentationExcerpt: SxStyleProp = {
   color: '#A1A8B3',
+  borderBottom: '1px solid #E7E9EE',
+  marginBottom: '24px',
   lineHeight: '1.5em',
   fontWeight: '400',
   code: {

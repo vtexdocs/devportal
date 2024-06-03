@@ -838,12 +838,6 @@ to = '/docs/apps/vtexventures.livestreaming'
 
 [[redirects]]
 force = true
-from = '/docs/guides/data-privacy'
-status = 308
-to = '/docs/guides/pii-data-architecture'
-
-[[redirects]]
-force = true
 from = '/docs/guides/pii-platform-version'
 status = 308
 to = '/docs/guides/pii-data-architecture'
@@ -1327,3 +1321,27 @@ force = true
 from = "/docs/guides/using-the-docs-builder-to-publish-app-documentation"
 status = 308
 to = "/docs/guides/vtex-io-documentation-docs-builder"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-graphql"
+status = 308
+to = "/docs/apps/vtex.search-graphql"
+
+[[redirects]]
+force = true
+from = "/docs/guides/pii-data-architecture"
+status = 308
+to = "/docs/guides/data-protection-plus"
+
+[[redirects]]
+force = true
+from = "/docs/guides/storefront-implementation"
+status = 308
+to = "/docs/guides/store-framework"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-search-banner"
+status = 308
+to = "/docs/apps/vtex.search/banner"

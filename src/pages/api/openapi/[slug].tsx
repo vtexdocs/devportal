@@ -37,6 +37,7 @@ const referencePaths = objectFlip({
   'VTEX - Orders API': 'orders-api',
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
   'VTEX - Payments Gateway API': 'payments-gateway-api',
+  'VTEX - Pick and Pack Last Mile Protocol API': 'pick-and-pack-protocol-api',
   'VTEX - Policies System API': 'policies-system-api',
   'VTEX - Pricing API': 'pricing-api',
   'VTEX - Pricing Hub': 'pricing-hub',
@@ -57,6 +58,7 @@ const referencePaths = objectFlip({
   'VTEX - Intelligent Search Events API - Headless':
     'intelligent-search-events-api-headless',
   'VTEX - Data Subject Rights': 'data-subject-rights-api',
+  'VTEX - Buyer Organizations': 'buyer-organizations',
 })
 
 function objectFlip(obj: { [x: string]: string }) {

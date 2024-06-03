@@ -2,6 +2,93 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.13.2](https://github.com/vtexdocs/devportal/compare/v1.13.1...v1.13.2) (2024-05-10)
+
+
+### Style
+
+* **faststore.scss:** fix rating styles ([83dd59f](https://github.com/vtexdocs/devportal/commit/83dd59f4a822c26babe90ec21e3badb17df7a3e7))
+* **faststore.scss:** fixes ([db4298c](https://github.com/vtexdocs/devportal/commit/db4298c9898d17966117de3b8d8d8e1876c593c8))
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components version ([e6a4ba0](https://github.com/vtexdocs/devportal/commit/e6a4ba0ef1d556490060e03b3606c28b899e0f5c))
+* **package.json:** update components version ([60c77f4](https://github.com/vtexdocs/devportal/commit/60c77f48dbcd34575044042313122f93260ac5ca))
+
+### [1.13.1](https://github.com/vtexdocs/devportal/compare/v1.13.0...v1.13.1) (2024-05-10)
+
+
+### Bug Fixes
+
+* remove duplicated ([f9b631b](https://github.com/vtexdocs/devportal/commit/f9b631bb79d21d5d5649d22edb815ce58e137501))
+* **replacehtmlblocks:** close open img tags ([9b18646](https://github.com/vtexdocs/devportal/commit/9b1864659f4fdd56de014eb491356c42e31cdc67))
+* **replacehtmlblocks:** consider <img...></img> case ([b72bf74](https://github.com/vtexdocs/devportal/commit/b72bf7450aeea5774326c5187621f1e50e01340e))
+
+
+### Chore
+
+* **layout.tsx:** update LibraryContextProvider ([759824d](https://github.com/vtexdocs/devportal/commit/759824d18a3661c7091b1de5c769f8d44aa92e80))
+* **package.json:** update components package ([c5aa97a](https://github.com/vtexdocs/devportal/commit/c5aa97a91eb72378b43f57b77178e37fc39b4576))
+
+## [1.13.0](https://github.com/vtexdocs/devportal/compare/v1.12.0...v1.13.0) (2024-05-07)
+
+
+### Features
+
+* add pick and pack api ([947e5be](https://github.com/vtexdocs/devportal/commit/947e5be8b6c6e31b6fe9b98c10c9d68f3a18cf22))
+
+
+### Bug Fixes
+
+* **apps/[slug]:** parse markdown value from json ([ee0b420](https://github.com/vtexdocs/devportal/commit/ee0b4207575b7d912d03dc5138140c4c31e3b3a9))
+* **apps/slug:** do not use replacemagicblocks ([b38f34a](https://github.com/vtexdocs/devportal/commit/b38f34a9cf64326d9dc2e782e3a2d49250528c9a))
+* faststore docs path ([6ff2a4f](https://github.com/vtexdocs/devportal/commit/6ff2a4fab2e0787bf3bcb369e5be5c6e8e720394))
+* **next.config.js:** use branch navigation url ([e25d99f](https://github.com/vtexdocs/devportal/commit/e25d99f596c343bec01cfbdc5b62ae2965c869d3))
+* **pages/docs/apps:** use replaceHTMLBlocks ([a1f874e](https://github.com/vtexdocs/devportal/commit/a1f874eb3a2154567423176bd29c43057399dc9f))
+
+
+### Style
+
+* **faststore.scss:** update checklist styles ([8e0b451](https://github.com/vtexdocs/devportal/commit/8e0b451f9f14044e14bc89c44c4739ef479f6976))
+
+
+### Tests
+
+* project structure slug ([96d5a18](https://github.com/vtexdocs/devportal/commit/96d5a18908c3fec5bce02a011e16c3792dad2460))
+
+
+### Docs
+
+* adding change order beta to navigation ([e835d2c](https://github.com/vtexdocs/devportal/commit/e835d2cd70706b0949791542cc5e30ab9524ccf5))
+* adding to logistics navigation ([9acd0d5](https://github.com/vtexdocs/devportal/commit/9acd0d5f5349c48da9461e4db47c961d6c4adc4a))
+* adding to oms navigation ([fcdb6d6](https://github.com/vtexdocs/devportal/commit/fcdb6d63e93c196db50ca5cd15e74616fa1a8963))
+* changing category name ([2b3bd55](https://github.com/vtexdocs/devportal/commit/2b3bd5507312888d75f2bc6b5597341e87d4b3c5))
+* create redirect ([84958ac](https://github.com/vtexdocs/devportal/commit/84958aca0acbcb1cb1d837d463f1043978a01beb))
+* create redirect search graphql ([a039572](https://github.com/vtexdocs/devportal/commit/a0395729060babfb1ab7c1f4bea0f8b9d992805c))
+* create redirect to safedata app doc ([fd83462](https://github.com/vtexdocs/devportal/commit/fd834621daaa0b67cce26483bff107379f369dee))
+* fixing redirect ([2255646](https://github.com/vtexdocs/devportal/commit/225564689cd484bc93fc99663ab3bf990f9fe49c))
+* **navigation:** fix sidebar link ([f6f9651](https://github.com/vtexdocs/devportal/commit/f6f9651d4a23057e6f85cfe8617ba04c9bbe16a3))
+* **navigation:** update master data apis navigation ([1287d82](https://github.com/vtexdocs/devportal/commit/1287d82f130d827b7c83326662571f347cfffa4e))
+
+
+### Chore
+
+* **apps/slug:** add official vendor vtexus ([1578ad4](https://github.com/vtexdocs/devportal/commit/1578ad4c1104a6b33b845baad6dd28500dd73b37))
+* **constants:** export const officialvendors ([a6d0b3a](https://github.com/vtexdocs/devportal/commit/a6d0b3a228a960cba60f2e8c98dbcec833276183))
+* **last-updates-section:** update last rn ([7b99b1d](https://github.com/vtexdocs/devportal/commit/7b99b1d29155960da11fddcbda6922d836c317cd))
+* **navigation.json:** update faststore nav ([4f74f17](https://github.com/vtexdocs/devportal/commit/4f74f17b8b9675f791bec5731d2920766a24f246))
+* **navigation:** fix doc path ([42584b0](https://github.com/vtexdocs/devportal/commit/42584b039e4460664452292d88d5acf7c1581be4))
+* **navigation:** wIP add faststore docs ([32e7f9e](https://github.com/vtexdocs/devportal/commit/32e7f9e4ce0c18724b9d6630bef893f37b79c3fd))
+* **netlify.toml:** add faststore redirects ([31ea78d](https://github.com/vtexdocs/devportal/commit/31ea78d64b72cc943bae76e6f6127e9e7b93064d))
+* **netlify.toml:** add faststore redirects ([d2d611f](https://github.com/vtexdocs/devportal/commit/d2d611f91d7446a99659e556a1814b550922732c))
+* **netlify.toml:** add missing redirects ([3d40a89](https://github.com/vtexdocs/devportal/commit/3d40a8986c442f16091661b9f8b00a93262cb6b8))
+* **netlify.toml:** fix faststore redirects ([e4fdf29](https://github.com/vtexdocs/devportal/commit/e4fdf2989281395e41c5b8ac5df3a77fbbc96d6e))
+* **netlify.toml:** fix redirect typo ([07a2b8f](https://github.com/vtexdocs/devportal/commit/07a2b8f73e2dc817ac8b52b2a16fac33991c353c))
+* **netlify.toml:** specify troubleshooting docs to avoid future issues ([e7ae844](https://github.com/vtexdocs/devportal/commit/e7ae844085fbfe04eaf9690a2749d12dae2bcc94))
+* **netlify.toml:** update faststore redirects ([fe59206](https://github.com/vtexdocs/devportal/commit/fe59206d25198a1d7f5ecd683c347929431a080a))
+* **package.json:** update faststore major ([353130d](https://github.com/vtexdocs/devportal/commit/353130d670596633277cf3b5d31dedf79cf08a9b))
+
 ## [1.12.0](https://github.com/vtexdocs/devportal/compare/v1.11.6...v1.12.0) (2024-03-06)
 
 

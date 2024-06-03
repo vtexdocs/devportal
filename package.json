@@ -1,6 +1,6 @@
 {
   "name": "devportal",
-  "version": "1.12.0",
+  "version": "1.13.2",
   "private": true,
   "engines": {
     "npm": "please-use-yarn",
@@ -23,9 +23,9 @@
   },
   "dependencies": {
     "@code-hike/mdx": "^0.9.0",
-    "@faststore/api": "^2.2.78",
-    "@faststore/sdk": "^2.2.78",
-    "@faststore/ui": "^2.2.78",
+    "@faststore/api": "^3.0.0",
+    "@faststore/sdk": "^3.0.0",
+    "@faststore/ui": "^3.0.0",
     "@highlightjs/cdn-assets": "^11.7.0",
     "@lit-labs/nextjs": "^0.1.1",
     "@openreplay/tracker": "^5.0.1",
@@ -35,7 +35,7 @@
     "@types/react-svg-pan-zoom": "^3.3.5",
     "@types/uuid": "^9.0.0",
     "@vtex/brand-ui": "^0.46.1",
-    "@vtexdocs/components": "https://github.com/vtexdocs/components.git#v1.4.0",
+    "@vtexdocs/components": "https://github.com/vtexdocs/components.git#v2.0.7",
     "algoliasearch": "^4.14.2",
     "chalk": "^5.2.0",
     "copy-text-to-clipboard": "^3.0.1",
