@@ -13794,6 +13794,13 @@
                   "children": []
                 },
                 {
+                  "name": "How to preview Headless CMS changes in development mode",
+                  "slug": "faststore/headless-cms-how-to-preview-changes-in-development-mode",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Multiple page templates",
                   "slug": "faststore/headless-cms-multiple-page-template",
                   "origin": "",
