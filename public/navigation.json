@@ -13001,6 +13001,13 @@
       "documentation": "Storefront Development",
       "slugPrefix": "docs/guides/",
       "categories": [
+         {
+          "name": "Getting started with storefront solutions",
+          "slug": "getting-started-with-storefront-solutions",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        },
         {
           "name": "FastStore",
           "slug": "faststore/docs-what-is-faststore",
