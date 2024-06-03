@@ -1345,3 +1345,9 @@ force = true
 from = "/docs/guides/vtex-search-banner"
 status = 308
 to = "/docs/apps/vtex.search/banner"
+
+[[redirects]]
+force = true
+from = "/docs/guides/getting-started-platform-overview"
+status = 308
+to = "/docs/guides/vtex-platform-overview"
