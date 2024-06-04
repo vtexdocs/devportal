@@ -1345,3 +1345,9 @@ force = true
 from = "/docs/guides/vtex-search-banner"
 status = 308
 to = "/docs/apps/vtex.search/banner"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-composable-and-complete"
+status = 308
+to = "/docs/guides/composability"
