@@ -14049,6 +14049,13 @@
               ]
             },
             {
+              "name": "Managing performance",
+              "slug": "faststore/managing-performance-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Going live",
               "slug": "faststore/go-live-overview",
               "origin": "",
