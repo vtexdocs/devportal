@@ -7,6 +7,7 @@ import { getLogger } from 'utils/logging/log-util'
 import getTroubleshootingPaths from './getTroubleshootingPaths'
 
 type ITroubleshootingFrontmatter = {
+  linkTitle: string
   slug: string
   title: string
   createdAt: string
@@ -70,6 +71,7 @@ export default async function getTroubleshootingData(branch = 'main') {
       title: frontmatter?.title,
       createdAt: frontmatter?.createdAt,
       description: frontmatter?.excerpt,
+      linkTitle: frontmatter?.linkTitle,
     })
   })
 
