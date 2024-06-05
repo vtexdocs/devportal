@@ -14828,6 +14828,19 @@
           "type": "category",
           "children": [
             {
+              "name": "June",
+              "slug": "june-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "VTEX Platform Overview: a new set of technical guides",
+                  "slug": "2024-06-05-vtex-platform-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+            {
               "name": "May",
               "slug": "may-2024",
               "origin": "",
