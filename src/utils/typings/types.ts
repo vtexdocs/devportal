@@ -45,12 +45,14 @@ export type UpdateElement = {
   description: string
   actionType: ActionType
 }
-
-export type TroubleshootingCardsElements = {
+export type TroubleshootingItem = {
   slug: string
   title: string
-  createdAt?: string
   description: string
+}
+export interface TroubleshootingCardsElements extends TroubleshootingItem {
+  createdAt?: string
+  linkTitle: string
 }
 
 export type WhatsNextDataElement = {

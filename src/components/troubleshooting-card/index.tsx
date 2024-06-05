@@ -1,6 +1,6 @@
 import { Box, Text, Link } from '@vtex/brand-ui'
 
-import type { TroubleshootingCardsElements } from 'utils/typings/types'
+import type { TroubleshootingItem } from 'utils/typings/types'
 
 import styles from './styles'
 
@@ -8,7 +8,7 @@ const TroubleshootingCard = ({
   title,
   description,
   slug,
-}: TroubleshootingCardsElements) => {
+}: TroubleshootingItem) => {
   return (
     <Link href={`/docs/troubleshooting/${slug}`} sx={styles.container}>
       <Box>

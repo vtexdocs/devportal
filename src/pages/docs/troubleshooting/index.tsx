@@ -1,4 +1,4 @@
-import { Fragment, useContext } from 'react'
+import { Fragment, useState, useContext, useMemo } from 'react'
 import { Box, Flex } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
@@ -7,12 +7,12 @@ import PageHeader from 'components/page-header'
 import { getMessages } from 'utils/get-messages'
 import image from '../../../../public/images/troubleshooting-image-header.png'
 import styles from 'styles/documentation-landing-page'
-
 import { TroubleshootingCardsElements } from 'utils/typings/types'
 import Head from 'next/head'
 import { PreviewContext } from 'utils/contexts/preview'
 import getTroubleshootingData from 'utils/getTroubleshootingData'
 import TroubleshootingCard from 'components/troubleshooting-card'
+import Pagination from 'components/pagination'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -28,6 +28,21 @@ const TroubleshootingPage: NextPage<Props> = ({
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
   const messages = getMessages()
+  const itemsPerPage = 5
+  const [page, setPage] = useState({
+    curr: 1,
+    total: Math.ceil(troubleshootingData.length / itemsPerPage),
+  })
+  const paginatedResult = useMemo(() => {
+    return troubleshootingData.slice(
+      (page.curr - 1) * itemsPerPage,
+      page.curr * itemsPerPage
+    )
+  }, [page])
+  function handleClick(props: { selected: number }) {
+    if (props.selected !== undefined && props.selected !== page.curr)
+      setPage({ ...page, curr: props.selected })
+  }
   return (
     <>
       <Head>
@@ -51,7 +66,7 @@ const TroubleshootingPage: NextPage<Props> = ({
           imageAlt={messages['troubleshooting.title']}
         />
         <Box sx={styles.contentContainer}>
-          {troubleshootingData.map((item: TroubleshootingCardsElements) => (
+          {paginatedResult.map((item: TroubleshootingCardsElements) => (
             <Flex>
               <TroubleshootingCard
                 title={item.title}
@@ -60,6 +75,12 @@ const TroubleshootingPage: NextPage<Props> = ({
               />
             </Flex>
           ))}
+
+          <Pagination
+            forcePage={page.curr}
+            pageCount={page.total}
+            onPageChange={handleClick}
+          />
         </Box>
       </Fragment>
     </>
