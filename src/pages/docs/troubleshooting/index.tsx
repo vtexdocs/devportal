@@ -97,7 +97,7 @@ export const getStaticProps: GetStaticProps = async ({
     preview && JSON.parse(JSON.stringify(previewData)).hasOwnProperty('branch')
       ? JSON.parse(JSON.stringify(previewData)).branch
       : 'main'
-  const branch = preview ? previewBranch : 'troubleshooting-docs'
+  const branch = preview ? previewBranch : 'main'
   const troubleshootingData = await getTroubleshootingData(branch)
   return {
     props: {
