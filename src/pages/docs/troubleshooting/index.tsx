@@ -28,7 +28,7 @@ const TroubleshootingPage: NextPage<Props> = ({
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
   const messages = getMessages()
-  const itemsPerPage = 5
+  const itemsPerPage = 4
   const [page, setPage] = useState({
     curr: 1,
     total: Math.ceil(troubleshootingData.length / itemsPerPage),

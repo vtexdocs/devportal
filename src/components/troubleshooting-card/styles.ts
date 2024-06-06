@@ -2,7 +2,7 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 
 const container: SxStyleProp = {
   mt: '16px',
-  padding: '16px',
+  padding: '25px',
   borderRadius: '4px',
   border: '1px solid #E7E9EE',
   width: ['100%', '90%'],
