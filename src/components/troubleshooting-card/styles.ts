@@ -29,17 +29,22 @@ const container: SxStyleProp = {
 
 const title: SxStyleProp = {
   mb: '8px',
-  fontSize: '16px',
+  fontSize: ['14px', '20px'],
   fontWeight: '400',
-  lineHeight: ['22px', '18px'],
+  lineHeight: ['22px', '30px'],
   color: 'muted.0',
 }
 
 const description: SxStyleProp = {
-  fontSize: '14px',
+  fontSize: '16px',
+  lineHeight: '22px',
   fontWeight: '400',
-  lineHeight: '20px',
-  color: 'muted.0',
+  color: 'muted.1',
+  minHeight: '44px',
+  overflow: 'hidden',
+  width: '100%',
+  height: '50%',
+  display: ['none', 'none', 'block', 'block', 'block', 'block', 'block'],
 }
 
 const linkContainer: SxStyleProp = {
