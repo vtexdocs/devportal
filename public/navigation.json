@@ -11358,6 +11358,13 @@
               "children": []
             },
             {
+              "name": "Configuring dynamic routes in VTEX IO services",
+              "slug": "configuring-dynamic-routes-in-vtex-io-services",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Developing service configuration apps",
               "slug": "vtex-io-documentation-developing-service-configuration-apps",
               "origin": "",
