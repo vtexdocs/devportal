@@ -10815,8 +10815,8 @@
           "type": "markdown",
           "children": [
             {
-              "name": " apps",
-              "slug": "vtex-io-documentation-1-developing--apps-using-react-and-vtex-io",
+              "name": "Storefront apps",
+              "slug": "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -11353,6 +11353,13 @@
             {
               "name": "Path patterns",
               "slug": "service-path-patterns",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Configuring dynamic routes in VTEX IO services",
+              "slug": "configuring-dynamic-routes-in-vtex-io-services",
               "origin": "",
               "type": "markdown",
               "children": []
