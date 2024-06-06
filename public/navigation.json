@@ -13084,7 +13084,7 @@
         },
         {
           "name": "FastStore",
-          "slug": "faststore/docs-what-is-faststore",
+          "slug": "faststore",
           "origin": "",
           "type": "markdown",
           "children": [
