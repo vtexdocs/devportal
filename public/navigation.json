@@ -13091,7 +13091,7 @@
         },
         {
           "name": "FastStore",
-          "slug": "faststore",
+          "slug": "guides/faststore",
           "origin": "",
           "type": "markdown",
           "children": [
