@@ -5,6 +5,79 @@
       "slugPrefix": "docs/guides",
       "categories": [
         {
+          "name": "VTEX Platform Overview",
+          "slug": "vtex-platform-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Cloud infrastructure",
+              "slug": "cloud-infrastructure",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Security",
+              "slug": "security",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Data privacy",
+              "slug": "data-privacy",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Composability",
+              "slug": "composability",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "VTEX Composable Components",
+                  "slug": "vtex-composable-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Interactive Marchitecture tool",
+                  "slug": "interactive-marchitecture-tool",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Store architecture",
+              "slug": "store-architecture",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Understanding VTEX reference architectures",
+                  "slug": "understanding-vtex-reference-architectures",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Developer experience",
+              "slug": "developer-experience",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "API usage",
           "slug": "api-usage-category",
           "origin": "",
@@ -8241,7 +8314,8 @@
                   "children": []
                 }
               ]
-            },{
+            },
+            {
               "name": "Carriers",
               "slug": "pick-and-pack-protocol-api-carriers",
               "type": "category",
@@ -13001,7 +13075,7 @@
       "documentation": "Storefront Development",
       "slugPrefix": "docs/guides/",
       "categories": [
-         {
+        {
           "name": "Getting started with storefront solutions",
           "slug": "getting-started-with-storefront-solutions",
           "origin": "",
@@ -13975,6 +14049,13 @@
               ]
             },
             {
+              "name": "Managing performance",
+              "slug": "faststore/managing-performance-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Going live",
               "slug": "faststore/go-live-overview",
               "origin": "",
@@ -14753,6 +14834,21 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "June",
+              "slug": "june-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "VTEX Platform Overview: a new set of technical guides",
+                  "slug": "2024-06-05-vtex-platform-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "May",
               "slug": "may-2024",

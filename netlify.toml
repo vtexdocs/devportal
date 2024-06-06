@@ -1351,3 +1351,9 @@ force = true
 from = "/docs/guides/getting-started-platform-overview"
 status = 308
 to = "/docs/guides/vtex-platform-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-composable-and-complete"
+status = 308
+to = "/docs/guides/composability"
