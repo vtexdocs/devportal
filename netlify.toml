@@ -1006,9 +1006,9 @@ to = "/docs/apps/vtex.store-sitemap"
 
 [[redirects]]
 force = true
-from = "/docs/guides/faststore"
+from = "/docs/guides/faststore/docs-what-is-faststore"
 status = 308
-to = "/docs/guides/faststore/docs-what-is-faststore"
+to = "/docs/guides/faststore"
 
 [[redirects]]
 force = true
