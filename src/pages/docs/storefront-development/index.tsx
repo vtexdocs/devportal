@@ -209,8 +209,7 @@ const StorefrontDevelopmentPage: NextPage<Props> = ({ branch }) => {
       title: 'FastStore',
       description:
         'Build high-performance stores based on the Jamstack architecture',
-      getStarted:
-        'https://developers.vtex.com/docs/guides/faststore/docs-what-is-faststore',
+      getStarted: 'https://developers.vtex.com/docs/guides/faststore',
       links: [
         {
           href: 'https://developers.vtex.com/docs/guides/faststore/components-index',
