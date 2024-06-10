@@ -10719,8 +10719,8 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Orders API - PII Data Architecture",
-              "slug": "orders-api-pii-version",
+              "name": "Orders - PII Data Architecture",
+              "slug": "orders-pii",
               "type": "category",
               "children": [
                 {
