@@ -232,6 +232,10 @@ const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
             our Headless architecture. Our API Guides and Reference cover VTEX
             Core Services, as illustrated in the image below.
           </Text>
+          <Text sx={styles.contentDescription}>
+            For details about customizing and composing each service, see our
+            <Link href="/docs/guides/composability"> Composability</Link> guide.
+          </Text>
           <Image2 />
         </Box>
       </Fragment>
