@@ -233,7 +233,7 @@ const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
             Core Services, as illustrated in the image below.
           </Text>
           <Text sx={styles.contentDescription}>
-            For details about customizing and composing each service, see our <a href="https://developers.vtex.com/docs/guides/composability">Composability</a> guide.
+            For details about customizing and composing each service, see our <Link href="https://developers.vtex.com/docs/guides/composability">Composability</Link> guide.
           </Text>
           <Image2 />
         </Box>
