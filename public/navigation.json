@@ -14849,6 +14849,13 @@
               "children": []
             },
             {
+              "name": "Modal Layout closes when I click a SKU",
+              "slug": "modal-layout-closes-when-i-click-a-sku",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "My multi-language store is not functioning in the development workspace",
               "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
               "origin": "",
