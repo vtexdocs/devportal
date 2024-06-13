@@ -14067,7 +14067,15 @@
               "slug": "faststore/managing-performance-overview",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Testing the server-side rendering",
+                  "slug": "faststore/managing-performance-testing-the-server-side-rendering",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Going live",
