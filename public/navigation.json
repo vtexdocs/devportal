@@ -2258,21 +2258,6 @@
               "children": []
             }
           ]
-        },
-        {
-          "name": "Troubleshooting",
-          "slug": "troubleshooting-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "My store is slow or unavailable",
-              "slug": "my-store-is-slow-or-unavailable",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
         }
       ]
     },
@@ -14851,7 +14836,7 @@
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
-          "name": "Development",
+          "name": "Troubleshooting",
           "slug": "",
           "origin": "",
           "type": "markdown",
