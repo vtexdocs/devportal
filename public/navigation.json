@@ -14846,6 +14846,78 @@
         }
       ]
     },
+   {
+      "documentation": "Troubleshooting",
+      "slugPrefix": "docs/troubleshooting",
+      "categories": [
+        {
+          "name": "Development",
+          "slug": "",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Development",
+              "slug": "",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "My store does not reflect the overrides I created",
+                  "slug": "my-store-does-not-reflect-the-overrides-i-created",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "I can’t access the Headless CMS",
+                  "slug": "unable-to-access-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "My multi-language store is not functioning in the development workspace",
+                  "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "I cannot install VTEX IO CLI",
+                  "slug": "i-cannot-install-vtex-io-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Store performance",
+              "slug": "",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "My store is slow or unavailable",
+                  "slug": "my-store-is-slow-or-unavailable",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "I cannot complete a purchase on a FastStore website",
+                  "slug": "i-cannot-complete-a-purchase-on-a-faststore-website",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
     {
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",

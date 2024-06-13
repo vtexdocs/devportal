@@ -68,6 +68,7 @@
     "react-instantsearch-dom": "^6.37.0",
     "react-intersection-observer": "^9.2.2",
     "react-markdown": "^8.0.3",
+    "react-paginate": "^8.2.0",
     "react-simple-code-editor": "^0.13.1",
     "react-svg-pan-zoom": "^3.12.1",
     "react-toastify": "^9.1.1",
