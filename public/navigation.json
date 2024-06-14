@@ -14930,6 +14930,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New Logistics API endpoints to update inventory lead time and quantity",
+                  "slug": "2024-06-13-new-logistics-api-endpoints-to-update-inventory-lead-time-and-quantity",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX Platform Overview: a new set of technical guides",
                   "slug": "2024-06-05-vtex-platform-overview",
                   "origin": "",
