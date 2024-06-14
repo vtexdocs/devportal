@@ -5916,6 +5916,24 @@
                   "children": []
                 },
                 {
+                  "name": "Update inventory quantity by SKU and warehouse",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/quantity",
+                  "children": []
+                },
+                {
+                  "name": "Update inventory lead time by SKU and warehouse",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/lead-time",
+                  "children": []
+                },
+                {
                   "name": "List inventory per dock",
                   "slug": "logistics-api",
                   "type": "openapi",
