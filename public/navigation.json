@@ -338,6 +338,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Managing a Customer Credit invoice",
+                  "slug": "managing-a-customer-credit-invoice",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2246,21 +2253,6 @@
             {
               "name": "Limitations of the PII data architecture during closed beta",
               "slug": "changes-in-vtex-features-behavior-to-handle-pii-data",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Troubleshooting",
-          "slug": "troubleshooting-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "My store is slow or unavailable",
-              "slug": "my-store-is-slow-or-unavailable",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -5921,6 +5913,24 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-",
+                  "children": []
+                },
+                {
+                  "name": "Update inventory quantity by SKU and warehouse",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/quantity",
+                  "children": []
+                },
+                {
+                  "name": "Update inventory lead time by SKU and warehouse",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/lead-time",
                   "children": []
                 },
                 {
@@ -10719,8 +10729,8 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Orders API - PII Data Architecture",
-              "slug": "orders-api-pii-version",
+              "name": "Orders - PII Data Architecture",
+              "slug": "orders-pii",
               "type": "category",
               "children": [
                 {
@@ -10815,8 +10825,8 @@
           "type": "markdown",
           "children": [
             {
-              "name": " apps",
-              "slug": "vtex-io-documentation-1-developing--apps-using-react-and-vtex-io",
+              "name": "Storefront apps",
+              "slug": "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -11353,6 +11363,13 @@
             {
               "name": "Path patterns",
               "slug": "service-path-patterns",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Configuring dynamic routes in VTEX IO services",
+              "slug": "configuring-dynamic-routes-in-vtex-io-services",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -13084,7 +13101,7 @@
         },
         {
           "name": "FastStore",
-          "slug": "faststore/docs-what-is-faststore",
+          "slug": "faststore",
           "origin": "",
           "type": "markdown",
           "children": [
@@ -14053,7 +14070,15 @@
               "slug": "faststore/managing-performance-overview",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Testing the server-side rendering",
+                  "slug": "faststore/managing-performance-testing-the-server-side-rendering",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Going live",
@@ -14824,6 +14849,70 @@
         }
       ]
     },
+   {
+      "documentation": "Troubleshooting",
+      "slugPrefix": "docs/troubleshooting",
+      "categories": [
+        {
+          "name": "Development",
+          "slug": "",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "I can’t access the Headless CMS",
+              "slug": "unable-to-access-headless-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Modal Layout closes when I click a SKU",
+              "slug": "modal-layout-closes-when-i-click-a-sku",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My multi-language store is not functioning in the development workspace",
+              "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I cannot install VTEX IO CLI",
+              "slug": "i-cannot-install-vtex-io-cli",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Store performance",
+          "slug": "",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "My store is slow or unavailable",
+              "slug": "my-store-is-slow-or-unavailable",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I cannot complete a purchase on a FastStore website",
+              "slug": "i-cannot-complete-a-purchase-on-a-faststore-website",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
     {
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",
@@ -14840,6 +14929,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "New Logistics API endpoints to update inventory lead time and quantity",
+                  "slug": "2024-06-13-new-logistics-api-endpoints-to-update-inventory-lead-time-and-quantity",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Deprecation of vtex.order-sms-notification",
                   "slug": "2024-06-06-deprecation-of-vtex-order-sms-notification",
