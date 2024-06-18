@@ -14952,6 +14952,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Customize your home and landing pages with Dynamic Content",
+                  "slug": "2024-06-18-faststore-dynamic-content",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "New Logistics API endpoints to update inventory lead time and quantity",
                   "slug": "2024-06-13-new-logistics-api-endpoints-to-update-inventory-lead-time-and-quantity",
                   "origin": "",
