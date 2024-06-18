@@ -5,6 +5,79 @@
       "slugPrefix": "docs/guides",
       "categories": [
         {
+          "name": "VTEX Platform Overview",
+          "slug": "vtex-platform-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Cloud infrastructure",
+              "slug": "cloud-infrastructure",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Security",
+              "slug": "security",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Data privacy",
+              "slug": "data-privacy",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Composability",
+              "slug": "composability",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "VTEX Composable Components",
+                  "slug": "vtex-composable-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Interactive Marchitecture tool",
+                  "slug": "interactive-marchitecture-tool",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Store architecture",
+              "slug": "store-architecture",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Understanding VTEX reference architectures",
+                  "slug": "understanding-vtex-reference-architectures",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Developer experience",
+              "slug": "developer-experience",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "API usage",
           "slug": "api-usage-category",
           "origin": "",
@@ -262,6 +335,13 @@
                 {
                   "name": "Managing a Customer Credit account",
                   "slug": "managing-a-customer-credit-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing a Customer Credit invoice",
+                  "slug": "managing-a-customer-credit-invoice",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1769,8 +1849,7 @@
               "slug": "setting-up-white-label-seller-as-pickup-point",
               "origin": "",
               "type": "markdown",
-              "children": [
-              ]
+              "children": []
             }
           ]
         },
@@ -2131,14 +2210,49 @@
           ]
         },
         {
-          "name": "Troubleshooting",
-          "slug": "troubleshooting-category",
+          "name": "Data Protection Plus",
+          "slug": "data-protection-plus",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
-              "name": "My store is slow or unavailable",
-              "slug": "my-store-is-slow-or-unavailable",
+              "name": "PII Data Architecture specifications",
+              "slug": "pii-data-architecture-specifications",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Data residency",
+              "slug": "data-residency",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Profile System integration",
+              "slug": "profile-system",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Working with schemas in the Profile System",
+              "slug": "working-with-schemas-in-the-profile-system",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Changes in VTEX features behavior to handle PII data",
+              "slug": "changes-in-vtex-features-behavior-to-handle-pii-data",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Limitations of the PII data architecture during closed beta",
+              "slug": "changes-in-vtex-features-behavior-to-handle-pii-data",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -5802,6 +5916,24 @@
                   "children": []
                 },
                 {
+                  "name": "Update inventory quantity by SKU and warehouse",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/quantity",
+                  "children": []
+                },
+                {
+                  "name": "Update inventory lead time by SKU and warehouse",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/lead-time",
+                  "children": []
+                },
+                {
                   "name": "List inventory per dock",
                   "slug": "logistics-api",
                   "type": "openapi",
@@ -8192,7 +8324,8 @@
                   "children": []
                 }
               ]
-            },{
+            },
+            {
               "name": "Carriers",
               "slug": "pick-and-pack-protocol-api-carriers",
               "type": "category",
@@ -10318,6 +10451,345 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Profile System (Data Protection Plus)",
+          "slug": "profile-system",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Profiles",
+              "slug": "profile-system-profiles",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create client profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles",
+                  "children": []
+                },
+                {
+                  "name": "Get profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-",
+                  "children": []
+                },
+                {
+                  "name": "Update client profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete client profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked profile",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/unmask",
+                  "children": []
+                },
+                {
+                  "name": "Get profile by version",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/versions/-profileVersionId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked profile by version",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/versions/-profileVersionId-/unmask",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Addresses",
+              "slug": "profile-system-addresses",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create client address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses",
+                  "children": []
+                },
+                {
+                  "name": "Get client addresses",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked client addresses",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/unmask",
+                  "children": []
+                },
+                {
+                  "name": "Get address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Update client address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked address",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/unmask",
+                  "children": []
+                },
+                {
+                  "name": "Get address by version",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/versions/-addressVersionId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked address by version",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/addresses/-addressId-/versions/-addressVersionId-/unmask",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Prospects",
+              "slug": "profile-system-prospects",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects",
+                  "children": []
+                },
+                {
+                  "name": "Get prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects/-prospectId-",
+                  "children": []
+                },
+                {
+                  "name": "Update prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects/-prospectId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects/-prospectId-",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked prospect",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/prospects/-prospectId-/unmask",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Purchase information",
+              "slug": "profile-system-purchase-information",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create purchase information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info",
+                  "children": []
+                },
+                {
+                  "name": "Get purchase information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info",
+                  "children": []
+                },
+                {
+                  "name": "Update purchase information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info",
+                  "children": []
+                },
+                {
+                  "name": "Delete purchase information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info",
+                  "children": []
+                },
+                {
+                  "name": "Get unmasked profile information",
+                  "slug": "profile-system",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/storage/profile-system/profiles/-profileId-/purchase-info/unmask",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Orders API - PII Data Architecture (Data Protection Plus)",
+          "slug": "orders-api-pii-version",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Orders - PII Data Architecture",
+              "slug": "orders-pii",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get order",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-",
+                  "children": []
+                },
+                {
+                  "name": "List orders",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/extendsearch/orders",
+                  "children": []
+                },
+                {
+                  "name": "Start handling order",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/actions/start-handling",
+                  "children": []
+                },
+                {
+                  "name": "Cancel order",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/cancel",
+                  "children": []
+                },
+                {
+                  "name": "Order invoice notification",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/invoices",
+                  "children": []
+                },
+                {
+                  "name": "Send payment notification",
+                  "slug": "orders-api-pii-version",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment",
+                  "children": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -10353,8 +10825,8 @@
           "type": "markdown",
           "children": [
             {
-              "name": " apps",
-              "slug": "vtex-io-documentation-1-developing--apps-using-react-and-vtex-io",
+              "name": "Storefront apps",
+              "slug": "vtex-io-documentation-1-developing-storefront-apps-using-react-and-vtex-io",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -10523,53 +10995,53 @@
               "type": "markdown",
               "children": [
                 {
-                    "name": "Admin Builder",
-                    "slug": "vtex-io-documentation-admin-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Admin Builder",
+                  "slug": "vtex-io-documentation-admin-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Assets Builder",
-                    "slug": "vtex-io-documentation-assets-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Assets Builder",
+                  "slug": "vtex-io-documentation-assets-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Docs Builder",
-                    "slug": "vtex-io-documentation-docs-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Docs Builder",
+                  "slug": "vtex-io-documentation-docs-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Node Builder",
-                    "slug": "vtex-io-documentation-node-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Node Builder",
+                  "slug": "vtex-io-documentation-node-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "React Builder",
-                    "slug": "vtex-io-documentation-react-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "React Builder",
+                  "slug": "vtex-io-documentation-react-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Store Builder",
-                    "slug": "vtex-io-documentation-store-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Store Builder",
+                  "slug": "vtex-io-documentation-store-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
-                    "name": "Styles Builder",
-                    "slug": "vtex-io-documentation-styles-builder",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                  "name": "Styles Builder",
+                  "slug": "vtex-io-documentation-styles-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -10891,6 +11363,13 @@
             {
               "name": "Path patterns",
               "slug": "service-path-patterns",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Configuring dynamic routes in VTEX IO services",
+              "slug": "configuring-dynamic-routes-in-vtex-io-services",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12614,8 +13093,15 @@
       "slugPrefix": "docs/guides/",
       "categories": [
         {
+          "name": "Getting started with storefront solutions",
+          "slug": "getting-started-with-storefront-solutions",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        },
+        {
           "name": "FastStore",
-          "slug": "faststore/docs-what-is-faststore",
+          "slug": "faststore",
           "origin": "",
           "type": "markdown",
           "children": [
@@ -13298,19 +13784,19 @@
               "origin": "",
               "type": "markdown",
               "children": [
-                  {
-                    "name": "Soft blue",
-                    "slug": "faststore/themes-soft-blue",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
-                  },
-                  {
-                    "name": "Midnight",
-                    "slug": "faststore/themes-midnight",
-                    "origin": "",
-                    "type": "markdown",
-                    "children": []
+                {
+                  "name": "Soft blue",
+                  "slug": "faststore/themes-soft-blue",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Midnight",
+                  "slug": "faststore/themes-midnight",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
                   "name": "Iconography",
@@ -13573,6 +14059,43 @@
                 {
                   "name": "Troubleshooting",
                   "slug": "faststore/api-extensions-troubleshooting",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Customizing pages with Dynamic Content",
+              "slug": "faststore/dynamic-content-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Setting up the store code",
+                  "slug": "faststore/dynamic-content-setting-up-the-store-code-for-dynamic-content",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Consuming the Dynamic Content in custom sections",
+                  "slug": "faststore/dynamic-content-consuming-the-dynamic-content-in-custom-sections",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Managing performance",
+              "slug": "faststore/managing-performance-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Testing the server-side rendering",
+                  "slug": "faststore/managing-performance-testing-the-server-side-rendering",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14348,6 +14871,70 @@
         }
       ]
     },
+   {
+      "documentation": "Troubleshooting",
+      "slugPrefix": "docs/troubleshooting",
+      "categories": [
+        {
+          "name": "Development",
+          "slug": "",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "I can’t access the Headless CMS",
+              "slug": "unable-to-access-headless-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Modal Layout closes when I click a SKU",
+              "slug": "modal-layout-closes-when-i-click-a-sku",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My multi-language store is not functioning in the development workspace",
+              "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I cannot install VTEX IO CLI",
+              "slug": "i-cannot-install-vtex-io-cli",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Store performance",
+          "slug": "",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "My store is slow or unavailable",
+              "slug": "my-store-is-slow-or-unavailable",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I cannot complete a purchase on a FastStore website",
+              "slug": "i-cannot-complete-a-purchase-on-a-faststore-website",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
     {
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",
@@ -14358,6 +14945,42 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "June",
+              "slug": "june-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Customize your home and landing pages with Dynamic Content",
+                  "slug": "2024-06-18-faststore-dynamic-content",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New Logistics API endpoints to update inventory lead time and quantity",
+                  "slug": "2024-06-13-new-logistics-api-endpoints-to-update-inventory-lead-time-and-quantity",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Deprecation of vtex.order-sms-notification",
+                  "slug": "2024-06-06-deprecation-of-vtex-order-sms-notification",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Platform Overview: a new set of technical guides",
+                  "slug": "2024-06-05-vtex-platform-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "May",
               "slug": "may-2024",
