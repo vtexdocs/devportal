@@ -2378,6 +2378,57 @@
           ]
         },
         {
+          "name": "Buyer organizations",
+          "slug": "buyer-organizations",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Bulk Import",
+              "slug": "bulk-import",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Uploading a file",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs",
+                  "children": []
+                },
+                {
+                  "name": "Check progress",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Start the import",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Validate the file",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Legacy CMS Portal API",
           "slug": "legacy-cms-portal-api",
           "origin": "",
@@ -8658,57 +8709,6 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/pricing/tables",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Buyer organizations",
-          "slug": "buyer-organizations",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Bulk Import",
-              "slug": "bulk-import",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Uploading a file",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs",
-                  "children": []
-                },
-                {
-                  "name": "Check progress",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
-                  "children": []
-                },
-                {
-                  "name": "Start the import",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
-                  "children": []
-                },
-                {
-                  "name": "Validate the file",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
                   "children": []
                 }
               ]
