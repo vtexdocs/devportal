@@ -2389,7 +2389,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Uploading a file",
+                  "name": "Upload file",
                   "slug": "buyer-organizations",
                   "type": "openapi",
                   "method": "POST",
