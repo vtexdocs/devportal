@@ -993,7 +993,67 @@ to = "/docs/apps/vtex.b2b-suite"
 
 [[redirects]]
 force = true
+from = "/docs/guides/installing-b2b-easy-set-up"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-configuring-a-b2b-environment"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "installing-the-b2b-store-theme"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "customizing-the-b2b-store-theme"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "vtex-b2b-supplier"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "vtex-buyer-org-supplier"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
 from = "/docs/guides/legacy-b2b-solution"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "vtex-admin-organizations"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "vtex-organizations"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "vtex-organizations-challenge"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "vtex-challenge-tp-condition"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
 
