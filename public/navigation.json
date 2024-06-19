@@ -14883,7 +14883,7 @@
           "children": [
             {
               "name": "Development",
-              "slug": "",
+              "slug": "development-overview",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -14919,7 +14919,7 @@
             },
             {
               "name": "Store performance",
-              "slug": "",
+              "slug": "store-performance-overview",
               "origin": "",
               "type": "markdown",
               "children": [
