@@ -14903,8 +14903,8 @@
               "children": []
             },
             {
-              "name": "I cannot install VTEX IO CLI",
-              "slug": "i-cannot-install-vtex-io-cli",
+              "name": "I can't install VTEX IO CLI",
+              "slug": "i-cant-install-vtex-io-cli",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14925,8 +14925,8 @@
               "children": []
             },
             {
-              "name": "I cannot complete a purchase on a FastStore website",
-              "slug": "i-cannot-complete-a-purchase-on-a-faststore-website",
+              "name": "I can't complete a purchase on a FastStore website",
+              "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
               "origin": "",
               "type": "markdown",
               "children": []
