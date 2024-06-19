@@ -14871,21 +14871,21 @@
         }
       ]
     },
-   {
+    {
       "documentation": "Troubleshooting",
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
           "name": "VTEX Troubleshooting overview",
-          "slug": "",
+          "slug": "troubleshooting-overview",
           "origin": "",
           "type": "markdown",
           "children": [
             {
               "name": "Development",
-              "slug": "development-overview",
+              "slug": "development",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "I can’t access the Headless CMS",
@@ -14919,9 +14919,9 @@
             },
             {
               "name": "Store performance",
-              "slug": "store-performance-overview",
+              "slug": "store-performance",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "My store is slow or unavailable",
