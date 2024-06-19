@@ -2416,7 +2416,7 @@
                   "children": []
                 },
                 {
-                  "name": "Validate the file",
+                  "name": "Validate file",
                   "slug": "buyer-organizations",
                   "type": "openapi",
                   "method": "POST",
