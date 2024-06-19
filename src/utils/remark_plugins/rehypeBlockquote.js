@@ -2,7 +2,7 @@ import { u } from 'unist-builder'
 import { visit, SKIP } from 'unist-util-visit'
 
 const extendedNames = {
-  info: /^ℹ️/,
+  info: /^ℹ️|ℹ/,
   warning: /^\u26A0/,
   danger: /^\u2757/,
   success: /^\u2705/,
