@@ -2407,7 +2407,7 @@
                   "children": []
                 },
                 {
-                  "name": "Start the import",
+                  "name": "Start import",
                   "slug": "buyer-organizations",
                   "type": "openapi",
                   "method": "POST",
