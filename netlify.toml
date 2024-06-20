@@ -1047,7 +1047,7 @@ to = "/docs/apps/vtex.b2b-suite"
 
 [[redirects]]
 force = true
-from = "vtex-organizations-challenge"
+from = "/docs/guides/vtex-organizations-challenge"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
 
