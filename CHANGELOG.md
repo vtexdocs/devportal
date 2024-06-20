@@ -2,6 +2,104 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/vtexdocs/devportal/compare/v1.14.0...v1.15.0) (2024-06-20)
+
+
+### Features
+
+* **index.tsx:** adding new support component to the troubleshooting page ([78f691b](https://github.com/vtexdocs/devportal/commit/78f691b8d4a57d7bd28184d67b4d190f715eee42))
+* **navigation.json:** add dynamic content release note ([c7f83ba](https://github.com/vtexdocs/devportal/commit/c7f83baf3d7ab1a99fd63eb3fb8996ad476c4094))
+* **navigation.json:** add fs dynamic content ([07197c1](https://github.com/vtexdocs/devportal/commit/07197c13e74ebbc1f5e149f2cbe6106e6e34eb85))
+* **navigation.json:** update troubleshooting sidebar ([a6e0a61](https://github.com/vtexdocs/devportal/commit/a6e0a61c30c314664baaf15c23ce7d4a861286eb))
+
+
+### Bug Fixes
+
+* **navigation.json:** troubleshooting docs name ([6e13b65](https://github.com/vtexdocs/devportal/commit/6e13b65670a4b56a84bca4ef10df63ea721ffb90))
+* **navigation.json:** troubleshooting sidebar ([fea4836](https://github.com/vtexdocs/devportal/commit/fea4836a8db875a5084142281a2f950da6a747ec))
+* **navigation.json:** troubleshooting sidebar ([b22df06](https://github.com/vtexdocs/devportal/commit/b22df06a2fd121df4dc0c7ceb821f4c94165c58a))
+* **navigation.json:** troubleshooting sidebar navigation ([4df5444](https://github.com/vtexdocs/devportal/commit/4df5444d5d5b755b9add6acf35c1f54c64aba0cf))
+
+
+### Docs
+
+* add new enpoints to navitation ([b7e1ccc](https://github.com/vtexdocs/devportal/commit/b7e1cccfefc7f42703ab73fc3b574016f7ec9c47))
+* adding dev experience link ([88f5c60](https://github.com/vtexdocs/devportal/commit/88f5c60b752e607b9493b1b5558e8ca0e70801a6))
+* adding to navigation ([8a0a9b3](https://github.com/vtexdocs/devportal/commit/8a0a9b371161496d33eeea0bbdc771389891ea49))
+* **navigation:** add troubleshooting modal layout ([cd8bb07](https://github.com/vtexdocs/devportal/commit/cd8bb07c935772b0a8ef1ac2746388ddad6be721))
+
+## [1.14.0](https://github.com/vtexdocs/devportal/compare/v1.13.2...v1.14.0) (2024-06-13)
+
+
+### Features
+
+* **faststore/[slug].tsx:** allow hideTOC frontmatter option ([1cfc2c7](https://github.com/vtexdocs/devportal/commit/1cfc2c746a81501ebf55b05722c4295b8ec6edab))
+* **navigation.json:** add a  new doc to the sidebar ([690b56c](https://github.com/vtexdocs/devportal/commit/690b56c59ce1513c0c2d6f9404130f0cae4e2625))
+* **navigation.json:** add fs managing performance ([3c3ea57](https://github.com/vtexdocs/devportal/commit/3c3ea571242129e295f4c68d09aaa796635158b6))
+* **navigation.json:** add fs testing-the-server-side-rendering doc ([df541b3](https://github.com/vtexdocs/devportal/commit/df541b358a662e02193d41a2d4dfd03d06aeee45))
+* **navigation.json:** new troubleshooting ([b6c608a](https://github.com/vtexdocs/devportal/commit/b6c608a08135cd306e996dfb468ed0023cc9006d))
+* **navigation.json:** update faststore overview doc slug ([398e4d5](https://github.com/vtexdocs/devportal/commit/398e4d57389c06adf2e8ff3a50f940248bfee238))
+* **navigation.json:** update navigation.json ([30cb875](https://github.com/vtexdocs/devportal/commit/30cb875ab38b4abcda083f38c7d7a181471cb41b))
+* new sidebar category ([296eb01](https://github.com/vtexdocs/devportal/commit/296eb01f055a4620b55445727c9afd268184eb46))
+* **pagination:** create pagination component ([863c061](https://github.com/vtexdocs/devportal/commit/863c06122f1f15cc94a17268143dda43f8d7ef77))
+* **productgridusage:** add ProductGridUsage faststore component ([e265f86](https://github.com/vtexdocs/devportal/commit/e265f862fc02d716eaaf0a58c1d2b2c428b1d4a6))
+* **storefront-development:** update storefront-developemnt page with faststore content ([4fbf9a8](https://github.com/vtexdocs/devportal/commit/4fbf9a8eb4628d9888d7ca543e1705bfb6563141))
+* **troubleshooting:** create troubleshooting page ([f5d10bd](https://github.com/vtexdocs/devportal/commit/f5d10bde5b6dfac6cf0646ff8d262fcf530b0327))
+
+
+### Bug Fixes
+
+* **carditem:** fix type ([be2c798](https://github.com/vtexdocs/devportal/commit/be2c798544a5b4ded394a2b7df9550819e3bbc7b))
+* **gettroubleshootingdata:** fix frontmatter data ([7b7c401](https://github.com/vtexdocs/devportal/commit/7b7c401b6aa7c5514d5389fa9b99c1d2e5482296))
+* **netlify.toml:** redirect troubleshooting article ([7c2740c](https://github.com/vtexdocs/devportal/commit/7c2740ca872a455e49172e7d0a83e4d63fdb5abe))
+* **styles.ts:** fix card component styles ([00fcb9f](https://github.com/vtexdocs/devportal/commit/00fcb9f4aceef927b0db667c032828f02f3b8b1a))
+* **styles.ts:** fix card styles ([ed84982](https://github.com/vtexdocs/devportal/commit/ed8498275f509d612fc2b614a102b6f4235d1fc7))
+* **troubleshooting fix:** fix troubleshooting props ([01b017c](https://github.com/vtexdocs/devportal/commit/01b017cff6303e38dfb262800509f7819a5c81de))
+* **troubleshooting:** change branch to main ([9d98a09](https://github.com/vtexdocs/devportal/commit/9d98a092b8ebfce413699de802ae832b47f251f1))
+* **troubleshooting:** fix navigation.json ([163f949](https://github.com/vtexdocs/devportal/commit/163f949acdc31e6cc735a5429c380644d7c95fab))
+* **troubleshooting:** fix update getTroubleshootingData ([c0f0492](https://github.com/vtexdocs/devportal/commit/c0f049203a946fbb91686978597a2e02e02b63df))
+* update navigation.json ([36d5119](https://github.com/vtexdocs/devportal/commit/36d511976f39b0b204174d2227950a71529c68fd))
+* updating pick and pack api ([126f3f3](https://github.com/vtexdocs/devportal/commit/126f3f3896fa7e8ea9e31e9ed9ada7ab053acc0f))
+
+
+### Style
+
+* **apps-page:** update apps-page css ([1afd567](https://github.com/vtexdocs/devportal/commit/1afd567c2e818b27d6ef131d180ac0ae56ccf97f))
+* **faststore.scss:** fix styles ([43811e7](https://github.com/vtexdocs/devportal/commit/43811e733a95a766319ded0587f0e87d9ca5272c))
+* **faststore.scss:** update faststore table styles ([3aa8e87](https://github.com/vtexdocs/devportal/commit/3aa8e8797b02c878e6264cfd7be0d0778f9b4a77))
+* **section-item.module.css:** update faststore-sectionItem ([f10aa67](https://github.com/vtexdocs/devportal/commit/f10aa67566458065778dcaa24d48767bc29574b2))
+* **section-item.module.css:** update sectionimage min max width ([3c0a477](https://github.com/vtexdocs/devportal/commit/3c0a477a7973462f49503120726de7fff0161047))
+* **sectionitem:** update sectionitem styles ([6e76182](https://github.com/vtexdocs/devportal/commit/6e761826f38b4581d07cadb773b54e70724dca54))
+* **sectionitem:** update styles ([e8142cd](https://github.com/vtexdocs/devportal/commit/e8142cdeaeb3a43540cacf4142d1718a9801fa65))
+* update troubleshooting card styles ([9c06a68](https://github.com/vtexdocs/devportal/commit/9c06a68b6e4e6feee96b482691f72a3f08e18df3))
+
+
+### Chore
+
+* **faststore/index.tsx:** remove unused page ([6f410c7](https://github.com/vtexdocs/devportal/commit/6f410c7d56b7f93cba301c10f6b288399e1c78a4))
+* **last-update-section:** udpate lastreleasenote ([b0b4731](https://github.com/vtexdocs/devportal/commit/b0b473147a9b38514f5e37599ebd9269a9bd6041))
+* **navigation.json:** fix navigation error ([476f172](https://github.com/vtexdocs/devportal/commit/476f172c4949d146cfc4b63b324e4312e03769f1))
+* **netlify.toml:** update redirect ([752aad8](https://github.com/vtexdocs/devportal/commit/752aad8ab6fe957289a9e4a3ddc211bab2c96310))
+* **package.json:** update vtexdocs/components version ([ae4239e](https://github.com/vtexdocs/devportal/commit/ae4239ea5eca6006e624aa6a62436f14981fc065))
+* **storefront-development:** update copy ([8fe31b7](https://github.com/vtexdocs/devportal/commit/8fe31b7f203b92a9701c000f16e370a5623ff57a))
+* **storefront-development:** update faststore link ([eb7bb3f](https://github.com/vtexdocs/devportal/commit/eb7bb3f1798c6997629cc937bd754c6f51959de3))
+
+
+### Docs
+
+* add new category and docs to navigation ([6116830](https://github.com/vtexdocs/devportal/commit/6116830cca1c1f6dbbb25b46bf43f318404c2517))
+* create redirect for store framework guide ([aa6d2a7](https://github.com/vtexdocs/devportal/commit/aa6d2a7593c8cd786729960135d525409ef9b706))
+* create redirect to new platform overview category ([91f55c4](https://github.com/vtexdocs/devportal/commit/91f55c4566262406589db57dd02357ed3a4f8d19))
+* edit store framework category nav ([e6f7630](https://github.com/vtexdocs/devportal/commit/e6f7630b3b074a28cf45d326072eae8e772309b2))
+* fix orders pii api navigation ([44278c7](https://github.com/vtexdocs/devportal/commit/44278c797b1d9d536c4d5dbd844e2b5b7a3fd2fe))
+* **navigation:** add data protection plus guides ([9fecaa9](https://github.com/vtexdocs/devportal/commit/9fecaa9da3f1f948c09cb48aef32c54aa2b4ed69))
+* **navigation:** add orders pii api ([2ff2cd9](https://github.com/vtexdocs/devportal/commit/2ff2cd90f4c92dbffdf4c9b7ff2cde34a8c06f53))
+* **navigation:** edit pii api navigation ([c1c67e0](https://github.com/vtexdocs/devportal/commit/c1c67e0c03f77321773162620c29ea6cbb93b6c3))
+* **navigation:** fix checkout security subcategory ([200e138](https://github.com/vtexdocs/devportal/commit/200e1385e30c8a293c8765bdc19669ba1f9fd9d7))
+* **navigation:** fix copy sku files endpoint nav ([2500518](https://github.com/vtexdocs/devportal/commit/250051827690258b44d5b667ee52dd18b3e8cee5))
+* **redirect:** data protection plus ([1d5913a](https://github.com/vtexdocs/devportal/commit/1d5913aed4954f9cffdf9c6bb887039fd87c6eed))
+* remove data-privacy redirect ([cece66f](https://github.com/vtexdocs/devportal/commit/cece66fb84358c6d52bcf00e100d9f16505268d6))
+
 ### [1.13.2](https://github.com/vtexdocs/devportal/compare/v1.13.1...v1.13.2) (2024-05-10)
 
 

@@ -2,6 +2,11 @@
 external_node_modules = ["sharp"]
 included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
+[[redirects]]
+force = true
+from = "/docs/guides/my-store-is-slow-or-unavailable"
+status = 308
+to = "/docs/troubleshooting/my-store-is-slow-or-unavailable"
 
 [[redirects]]
 force = true
@@ -1006,9 +1011,9 @@ to = "/docs/apps/vtex.store-sitemap"
 
 [[redirects]]
 force = true
-from = "/docs/guides/faststore"
+from = "/docs/guides/faststore/docs-what-is-faststore"
 status = 308
-to = "/docs/guides/faststore/docs-what-is-faststore"
+to = "/docs/guides/faststore"
 
 [[redirects]]
 force = true

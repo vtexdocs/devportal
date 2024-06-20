@@ -7,6 +7,7 @@ import {
   UpdatesTitle,
   ResourceTitle,
   AdminTitle,
+  ResourceTitleTroubleshooting,
 } from './unionTypes'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
@@ -45,6 +46,15 @@ export type UpdateElement = {
   description: string
   actionType: ActionType
 }
+export type TroubleshootingItem = {
+  slug: string
+  title: string
+  description: string
+}
+export interface TroubleshootingCardsElements extends TroubleshootingItem {
+  createdAt?: string
+  linkTitle: string
+}
 
 export type WhatsNextDataElement = {
   title: string
@@ -64,6 +74,12 @@ export type CodeSamplesElement = {
 
 export type ResourceDataElement = {
   title: ResourceTitle
+  description: string
+  link: string
+}
+
+export type ResourceDataTroubleshooting = {
+  title: ResourceTitleTroubleshooting
   description: string
   link: string
 }

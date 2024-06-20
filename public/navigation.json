@@ -338,6 +338,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Managing a Customer Credit invoice",
+                  "slug": "managing-a-customer-credit-invoice",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2251,21 +2258,6 @@
               "children": []
             }
           ]
-        },
-        {
-          "name": "Troubleshooting",
-          "slug": "troubleshooting-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "My store is slow or unavailable",
-              "slug": "my-store-is-slow-or-unavailable",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
         }
       ]
     },
@@ -2379,6 +2371,57 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/authorization/credentials",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Buyer organizations",
+          "slug": "buyer-organizations",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Bulk Import",
+              "slug": "bulk-import",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Upload file",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs",
+                  "children": []
+                },
+                {
+                  "name": "Check progress",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Start import",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Validate file",
+                  "slug": "buyer-organizations",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
                   "children": []
                 }
               ]
@@ -5924,6 +5967,24 @@
                   "children": []
                 },
                 {
+                  "name": "Update inventory quantity by SKU and warehouse",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/quantity",
+                  "children": []
+                },
+                {
+                  "name": "Update inventory lead time by SKU and warehouse",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/logistics/pvt/inventory/skus/-skuId-/warehouses/-warehouseId-/lead-time",
+                  "children": []
+                },
+                {
                   "name": "List inventory per dock",
                   "slug": "logistics-api",
                   "type": "openapi",
@@ -8655,57 +8716,6 @@
           ]
         },
         {
-          "name": "Buyer organizations",
-          "slug": "buyer-organizations",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Bulk Import",
-              "slug": "bulk-import",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Uploading a file",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs",
-                  "children": []
-                },
-                {
-                  "name": "Check progress",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
-                  "children": []
-                },
-                {
-                  "name": "Start the import",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
-                  "children": []
-                },
-                {
-                  "name": "Validate the file",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "Pricing Hub",
           "slug": "pricing-hub",
           "origin": "",
@@ -10719,8 +10729,8 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Orders API - PII Data Architecture",
-              "slug": "orders-api-pii-version",
+              "name": "Orders - PII Data Architecture",
+              "slug": "orders-pii",
               "type": "category",
               "children": [
                 {
@@ -13109,7 +13119,7 @@
                   "children": []
                 },
                 {
-                  "name": "1. FastStore onboarding",
+                  "name": "1. FastStore WebOps",
                   "slug": "faststore/1-onboarding-overview",
                   "origin": "",
                   "type": "markdown",
@@ -13176,6 +13186,13 @@
                 {
                   "name": "enableCypressExtension",
                   "slug": "faststore/project-structure-custom-cypress",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Updating the @fastore/core package version",
+                  "slug": "faststore/project-structure-updating-the-core-package-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14047,8 +14064,37 @@
                   "children": []
                 },
                 {
+                  "name": "Best practices for using API extensions",
+                  "slug": "faststore/api-extensions-best-practices",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Troubleshooting",
                   "slug": "faststore/api-extensions-troubleshooting",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Customizing pages with Dynamic Content",
+              "slug": "faststore/dynamic-content-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Setting up the store code",
+                  "slug": "faststore/dynamic-content-setting-up-the-store-code-for-dynamic-content",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Consuming the Dynamic Content in custom sections",
+                  "slug": "faststore/dynamic-content-consuming-the-dynamic-content-in-custom-sections",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14060,7 +14106,15 @@
               "slug": "faststore/managing-performance-overview",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Testing the server-side rendering",
+                  "slug": "faststore/managing-performance-testing-the-server-side-rendering",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Going live",
@@ -14832,6 +14886,78 @@
       ]
     },
     {
+      "documentation": "Troubleshooting",
+      "slugPrefix": "docs/troubleshooting",
+      "categories": [
+        {
+          "name": "VTEX Troubleshooting overview",
+          "slug": "overview",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Development",
+              "slug": "development",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "I can’t access the Headless CMS",
+                  "slug": "unable-to-access-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "I can't install VTEX IO CLI",
+                  "slug": "i-cant-install-vtex-io-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Modal Layout closes when I click a SKU",
+                  "slug": "modal-layout-closes-when-i-click-a-sku",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "My multi-language store is not functioning in the development workspace",
+                  "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Store performance",
+              "slug": "store-performance",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "I can't complete a purchase on a FastStore website",
+                  "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "My store is slow or unavailable",
+                  "slug": "my-store-is-slow-or-unavailable",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",
       "categories": [
@@ -14847,6 +14973,27 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore: Customize your home and landing pages with Dynamic Content",
+                  "slug": "2024-06-18-faststore-dynamic-content",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New Logistics API endpoints to update inventory lead time and quantity",
+                  "slug": "2024-06-13-new-logistics-api-endpoints-to-update-inventory-lead-time-and-quantity",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Deprecation of vtex.order-sms-notification",
+                  "slug": "2024-06-06-deprecation-of-vtex-order-sms-notification",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "VTEX Platform Overview: a new set of technical guides",
                   "slug": "2024-06-05-vtex-platform-overview",
