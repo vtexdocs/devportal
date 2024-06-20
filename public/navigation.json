@@ -14871,65 +14871,73 @@
         }
       ]
     },
-   {
+    {
       "documentation": "Troubleshooting",
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
-          "name": "Development",
-          "slug": "",
+          "name": "VTEX Troubleshooting overview",
+          "slug": "overview",
           "origin": "",
           "type": "markdown",
           "children": [
             {
-              "name": "I can’t access the Headless CMS",
-              "slug": "unable-to-access-headless-cms",
+              "name": "Development",
+              "slug": "development",
               "origin": "",
-              "type": "markdown",
-              "children": []
+              "type": "category",
+              "children": [
+                {
+                  "name": "I can’t access the Headless CMS",
+                  "slug": "unable-to-access-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "I can't install VTEX IO CLI",
+                  "slug": "i-cant-install-vtex-io-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Modal Layout closes when I click a SKU",
+                  "slug": "modal-layout-closes-when-i-click-a-sku",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "My multi-language store is not functioning in the development workspace",
+                  "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
-              "name": "Modal Layout closes when I click a SKU",
-              "slug": "modal-layout-closes-when-i-click-a-sku",
+              "name": "Store performance",
+              "slug": "store-performance",
               "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "My multi-language store is not functioning in the development workspace",
-              "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't install VTEX IO CLI",
-              "slug": "i-cant-install-vtex-io-cli",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Store performance",
-          "slug": "",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "My store is slow or unavailable",
-              "slug": "my-store-is-slow-or-unavailable",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't complete a purchase on a FastStore website",
-              "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
-              "origin": "",
-              "type": "markdown",
-              "children": []
+              "type": "category",
+              "children": [
+                {
+                  "name": "I can't complete a purchase on a FastStore website",
+                  "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "My store is slow or unavailable",
+                  "slug": "my-store-is-slow-or-unavailable",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         }
