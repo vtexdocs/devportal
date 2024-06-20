@@ -1053,7 +1053,7 @@ to = "/docs/apps/vtex.b2b-suite"
 
 [[redirects]]
 force = true
-from = "vtex-challenge-tp-condition"
+from = "/docs/guides/vtex-challenge-tp-condition"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
 
