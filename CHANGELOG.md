@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.15.0](https://github.com/vtexdocs/devportal/compare/v1.14.0...v1.15.0) (2024-06-20)
+
+
+### Features
+
+* **index.tsx:** adding new support component to the troubleshooting page ([78f691b](https://github.com/vtexdocs/devportal/commit/78f691b8d4a57d7bd28184d67b4d190f715eee42))
+* **navigation.json:** add dynamic content release note ([c7f83ba](https://github.com/vtexdocs/devportal/commit/c7f83baf3d7ab1a99fd63eb3fb8996ad476c4094))
+* **navigation.json:** add fs dynamic content ([07197c1](https://github.com/vtexdocs/devportal/commit/07197c13e74ebbc1f5e149f2cbe6106e6e34eb85))
+* **navigation.json:** update troubleshooting sidebar ([a6e0a61](https://github.com/vtexdocs/devportal/commit/a6e0a61c30c314664baaf15c23ce7d4a861286eb))
+
+
+### Bug Fixes
+
+* **navigation.json:** troubleshooting docs name ([6e13b65](https://github.com/vtexdocs/devportal/commit/6e13b65670a4b56a84bca4ef10df63ea721ffb90))
+* **navigation.json:** troubleshooting sidebar ([fea4836](https://github.com/vtexdocs/devportal/commit/fea4836a8db875a5084142281a2f950da6a747ec))
+* **navigation.json:** troubleshooting sidebar ([b22df06](https://github.com/vtexdocs/devportal/commit/b22df06a2fd121df4dc0c7ceb821f4c94165c58a))
+* **navigation.json:** troubleshooting sidebar navigation ([4df5444](https://github.com/vtexdocs/devportal/commit/4df5444d5d5b755b9add6acf35c1f54c64aba0cf))
+
+
+### Docs
+
+* add new enpoints to navitation ([b7e1ccc](https://github.com/vtexdocs/devportal/commit/b7e1cccfefc7f42703ab73fc3b574016f7ec9c47))
+* adding dev experience link ([88f5c60](https://github.com/vtexdocs/devportal/commit/88f5c60b752e607b9493b1b5558e8ca0e70801a6))
+* adding to navigation ([8a0a9b3](https://github.com/vtexdocs/devportal/commit/8a0a9b371161496d33eeea0bbdc771389891ea49))
+* **navigation:** add troubleshooting modal layout ([cd8bb07](https://github.com/vtexdocs/devportal/commit/cd8bb07c935772b0a8ef1ac2746388ddad6be721))
+
 ## [1.14.0](https://github.com/vtexdocs/devportal/compare/v1.13.2...v1.14.0) (2024-06-13)
 
 
