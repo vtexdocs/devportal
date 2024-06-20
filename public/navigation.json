@@ -14879,7 +14879,7 @@
           "name": "VTEX Troubleshooting overview",
           "slug": "overview",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
               "name": "Development",

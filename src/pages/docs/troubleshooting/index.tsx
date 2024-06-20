@@ -1,5 +1,5 @@
 import { Fragment, useState, useContext, useMemo } from 'react'
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
@@ -13,6 +13,7 @@ import { PreviewContext } from 'utils/contexts/preview'
 import getTroubleshootingData from 'utils/getTroubleshootingData'
 import TroubleshootingCard from 'components/troubleshooting-card'
 import Pagination from 'components/pagination'
+import { resourceTroubleshooting } from 'utils/constants'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -81,6 +82,30 @@ const TroubleshootingPage: NextPage<Props> = ({
             pageCount={page.total}
             onPageChange={handleClick}
           />
+          <Box sx={styles.resourcesSectionContainer}>
+            <Text sx={styles.contentTitle}>
+              {messages['troubleshooting_page_other_resources.title']}
+            </Text>
+            <Box>
+              {resourceTroubleshooting.map((resourceTroubleshooting) => (
+                <Box
+                  key={resourceTroubleshooting.title}
+                  sx={styles.resourceContainer}
+                >
+                  <Link
+                    target="_blank"
+                    href={resourceTroubleshooting.link}
+                    sx={styles.resourceTitle}
+                  >
+                    {resourceTroubleshooting.title}
+                  </Link>
+                  <Text sx={styles.resourceDescription}>
+                    {resourceTroubleshooting.description}
+                  </Text>
+                </Box>
+              ))}
+            </Box>
+          </Box>
         </Box>
       </Fragment>
     </>
