@@ -1011,7 +1011,7 @@ to = "/docs/apps/vtex.b2b-suite"
 
 [[redirects]]
 force = true
-from = "customizing-the-b2b-store-theme"
+from = "/docs/guides/customizing-the-b2b-store-theme"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
 
