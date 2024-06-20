@@ -13191,6 +13191,13 @@
                   "children": []
                 },
                 {
+                  "name": "Updating the @fastore/core package version",
+                  "slug": "faststore/project-structure-updating-the-core-package-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Adding third-party scripts",
                   "slug": "faststore/project-structure-handling-third-party-scripts",
                   "origin": "",
@@ -14052,6 +14059,13 @@
                 {
                   "name": "Consuming FastStore API extension with custom components",
                   "slug": "faststore/api-extensions-consuming-api-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Best practices for using API extensions",
+                  "slug": "faststore/api-extensions-best-practices",
                   "origin": "",
                   "type": "markdown",
                   "children": []
