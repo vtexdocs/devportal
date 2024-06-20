@@ -14446,6 +14446,65 @@
               ]
             },
             {
+              "name": "Using Site Editor",
+              "slug": "using-site-editor",
+              "origin": "",
+              "type": "category",
+              "children": [
+                 {
+                  "name": "Making a custom component editable in the Site Editor",
+                  "slug": "vtex-io-documentation-making-a-custom-commponent-editable-in-the-site-editor",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Site Editor schema examples",
+                      "slug": "vtex-io-documentation-site-editor-schema-examples",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": [
+                        {
+                          "name": "String",
+                          "slug": "vtex-io-documentation-site-editor-string-schema",
+                          "origin": "",
+                          "type": "markdown",
+                          "children": []
+                        },
+                        {
+                          "name": "Boolean",
+                          "slug": "vtex-io-documentation-site-editor-boolean-schema",
+                          "origin": "",
+                          "type": "markdown",
+                          "children": []
+                        },
+                        {
+                          "name": "Object",
+                          "slug": "vtex-io-documentation-site-editor-object-schema",
+                          "origin": "",
+                          "type": "markdown",
+                          "children": []
+                        },
+                        {
+                          "name": "Array",
+                          "slug": "vtex-io-documentation-site-editor-array-schema",
+                          "origin": "",
+                          "type": "markdown",
+                          "children": []
+                        },
+                        {
+                          "name": "enum and enumNames",
+                          "slug": "vtex-io-documentation-site-editor-enum-enumnames-schema",
+                          "origin": "",
+                          "type": "markdown",
+                          "children": []
+                        },
+                      ]
+                    },
+                  ]
+                },
+              ]
+            },
+            {
               "name": "Styling",
               "slug": "styling-category",
               "origin": "",
