@@ -30,6 +30,11 @@ export type ResourceTitle =
   | 'Help Center'
   | 'Support'
 
+export type ResourceTitleTroubleshooting =
+  | 'Community'
+  | 'Help Center'
+  | 'Support'
+
 export type MethodType = 'POST' | 'GET' | 'PUT' | 'DELETE' | 'PATCH'
 
 export function isMethodType(value: string): value is MethodType {
