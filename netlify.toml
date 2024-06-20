@@ -2,6 +2,11 @@
 external_node_modules = ["sharp"]
 included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
+[[redirects]]
+force = true
+from = "/docs/guides/my-store-is-slow-or-unavailable"
+status = 308
+to = "/docs/troubleshooting/my-store-is-slow-or-unavailable"
 
 [[redirects]]
 force = true
@@ -838,12 +843,6 @@ to = '/docs/apps/vtexventures.livestreaming'
 
 [[redirects]]
 force = true
-from = '/docs/guides/data-privacy'
-status = 308
-to = '/docs/guides/pii-data-architecture'
-
-[[redirects]]
-force = true
 from = '/docs/guides/pii-platform-version'
 status = 308
 to = '/docs/guides/pii-data-architecture'
@@ -1012,9 +1011,9 @@ to = "/docs/apps/vtex.store-sitemap"
 
 [[redirects]]
 force = true
-from = "/docs/guides/faststore"
+from = "/docs/guides/faststore/docs-what-is-faststore"
 status = 308
-to = "/docs/guides/faststore/docs-what-is-faststore"
+to = "/docs/guides/faststore"
 
 [[redirects]]
 force = true
@@ -1345,3 +1344,21 @@ force = true
 from = "/docs/guides/storefront-implementation"
 status = 308
 to = "/docs/guides/store-framework"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-search-banner"
+status = 308
+to = "/docs/apps/vtex.search/banner"
+
+[[redirects]]
+force = true
+from = "/docs/guides/getting-started-platform-overview"
+status = 308
+to = "/docs/guides/vtex-platform-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-composable-and-complete"
+status = 308
+to = "/docs/guides/composability"

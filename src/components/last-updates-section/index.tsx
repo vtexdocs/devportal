@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'deprecated',
     description:
-      'Master Data v1: Calculated Field and Change field value trigger deprecation',
-    date: new Date('04/17/2024'),
+      'FastStore: Customize your home and landing pages with Dynamic Content',
+    date: new Date('06/18/2024'),
   },
   updateType: 'release-notes',
 }
