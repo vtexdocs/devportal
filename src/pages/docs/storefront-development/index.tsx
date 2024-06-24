@@ -356,7 +356,6 @@ export const getStaticProps: GetStaticProps = async ({
       branch,
     },
   }
-  
 }
 
 export default StorefrontDevelopmentPage
