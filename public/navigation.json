@@ -14896,6 +14896,13 @@
           "type": "category",
           "children": [
             {
+              "name": "My store does not reflect the overrides I created",
+              "slug": "my-store-does-not-reflect-the-overrides-i-created",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "I can’t access the Headless CMS",
               "slug": "unable-to-access-headless-cms",
               "origin": "",
