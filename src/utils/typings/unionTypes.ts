@@ -6,7 +6,7 @@ export type DocumentationTitle =
   | 'App Development'
   | 'Storefront Development'
   | 'VTEX IO Apps'
-  | 'FastStore'
+  | 'Troubleshooting'
 
 export type UpdatesTitle = 'Release Notes' | 'Documentation Updates'
 
@@ -27,6 +27,11 @@ export type ResourceTitle =
   | 'Community'
   | 'Learning Center'
   | 'GitHub'
+  | 'Help Center'
+  | 'Support'
+
+export type ResourceTitleTroubleshooting =
+  | 'Community'
   | 'Help Center'
   | 'Support'
 

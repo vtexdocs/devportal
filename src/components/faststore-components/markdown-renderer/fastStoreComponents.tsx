@@ -1,4 +1,4 @@
-import { ReactChildren, useState } from 'react'
+import React, { ReactChildren, useState } from 'react'
 import { Box, Flex } from '@vtex/brand-ui'
 import styles from './fastStoreComponentsStyle'
 import * as usageComponents from 'components/faststore-components'
@@ -7,11 +7,11 @@ import { SearchProvider } from '@faststore/sdk'
 
 interface TabsProps {
   items: string[]
-  defaultIndex: number
+  defaultIndex?: string | number
   children: ReactChildren[]
 }
 
-const Tabs = ({ items, defaultIndex, children }: TabsProps) => {
+const Tabs = ({ items, defaultIndex = 0, children }: TabsProps) => {
   const [selectedItem, setSelectedItem] = useState(Number(defaultIndex))
   return (
     <Box>
@@ -19,6 +19,7 @@ const Tabs = ({ items, defaultIndex, children }: TabsProps) => {
         {items.map((item, index) => {
           return (
             <Flex
+              key={index}
               sx={
                 selectedItem === index ? styles.tabItemActive : styles.tabItem
               }
@@ -29,7 +30,7 @@ const Tabs = ({ items, defaultIndex, children }: TabsProps) => {
           )
         })}
       </Flex>
-      {children[selectedItem]}
+      {React.Children.toArray(children)[selectedItem]}
     </Box>
   )
 }

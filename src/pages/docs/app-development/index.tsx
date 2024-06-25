@@ -56,6 +56,16 @@ const AppDevelopmentPage: NextPage<Props> = ({ branch }) => {
             ))}
           </Flex>
           <Box sx={styles.resourcesSectionContainer}>
+            <Text sx={styles.contentDescription}>
+              Learn more about our resources for developers in the{' '}
+              <Link
+                target="_blank"
+                href="https://developers.vtex.com/docs/guides/developer-experience"
+              >
+                Developer experience
+              </Link>{' '}
+              guide.
+            </Text>
             <Text sx={styles.contentTitle}>
               {messages['app_development_page_other_resources.title']}
             </Text>

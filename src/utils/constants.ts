@@ -4,6 +4,7 @@ import AppDevelopmentIcon from 'components/icons/app-development-icon'
 import StorefrontDevelopmentIcon from 'components/icons/storefront-development-icon'
 import VTEXIOAppsIcon from 'components/icons/vtex-io-apps-icon'
 import ReleaseNotesIcon from 'components/icons/release-notes-icon'
+import TroubleshootingIcon from 'components/icons/troubleshooting-icon'
 
 import { getMessages } from 'utils/get-messages'
 import {
@@ -11,6 +12,7 @@ import {
   getLearningCenterURL,
   getGithubURL,
   getHelpCenterURL,
+  getHelpCenterTroubleshootingURL,
   getSupportURL,
 } from 'utils/get-url'
 
@@ -21,6 +23,7 @@ import {
   CodeSamplesElement,
   ResourceDataElement,
   AdminDataElement,
+  ResourceDataTroubleshooting,
 } from './typings/types'
 import EditIcon from 'components/icons/edit-icon'
 import MenuIcon from 'components/icons/menu-icon'
@@ -66,12 +69,13 @@ export const documentationData: DocDataElement[] = [
     description: messages['documentation_vtexio_apps.description'],
     link: '/docs/vtex-io-apps',
   },
-  /*   {
-    Icon: FastStoreIcon,
-    title: 'FastStore',
-    description: messages['documentation_vtexio_apps.description'],
-    link: '/docs/faststore',
-  }, */
+  {
+    id: 'Troubleshooting',
+    Icon: TroubleshootingIcon,
+    title: 'Troubleshooting',
+    description: messages['troubleshooting.description'],
+    link: '/docs/troubleshooting',
+  },
 ]
 
 export const officialVendors = ['vtex', 'vtexarg', 'vtexventures', 'vtexus']
@@ -173,6 +177,27 @@ export const resources: ResourceDataElement[] = [
     description:
       messages['app_development_page_other_resources_help_center.description'],
     link: getHelpCenterURL(),
+  },
+  {
+    title: 'Support',
+    description:
+      messages['app_development_page_other_resources_support.description'],
+    link: getSupportURL(),
+  },
+]
+
+export const resourceTroubleshooting: ResourceDataTroubleshooting[] = [
+  {
+    title: 'Community',
+    description:
+      messages['app_development_page_other_resources_community.description'],
+    link: getCommunityURL(),
+  },
+  {
+    title: 'Help Center',
+    description:
+      messages['app_development_page_other_resources_help_center.description'],
+    link: getHelpCenterTroubleshootingURL(),
   },
   {
     title: 'Support',

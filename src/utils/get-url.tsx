@@ -10,6 +10,10 @@ export const getHelpCenterURL = () => {
   return `https://help.vtex.com/`
 }
 
+export const getHelpCenterTroubleshootingURL = () => {
+  return `https://help.vtex.com/category/troubleshooting--39pDkp8qxSll6mGj0tWViz`
+}
+
 export const getCommunityURL = () => {
   return `https://community.vtex.com/?_ga=2.198523433.743584735.1647618303-1974737580.1645714642`
 }
