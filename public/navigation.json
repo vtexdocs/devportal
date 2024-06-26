@@ -11112,21 +11112,21 @@
           ]
         },
         {
-          "name": "Local development",
-          "slug": "local-development-category",
+          "name": "Workspace",
+          "slug": "vtex-io-documentation-workspace",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
-              "name": "Workspace",
-              "slug": "vtex-io-documentation-workspace",
+              "name": "Creating a Development workspace",
+              "slug": "vtex-io-documentation-creating-a-development-workspace",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Creating a Development workspace",
-              "slug": "vtex-io-documentation-creating-a-development-workspace",
+              "name": "Creating a Development workspace for a Legacy CMS store",
+              "slug": "vtex-io-documentation-creating-development-workspace-for-cms-legacy",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11139,12 +11139,27 @@
               "children": []
             },
             {
-              "name": "Deprecating an app",
-              "slug": "vtex-io-documentation-deprecating-an-app",
+              "name": "Workspace behavior with app installations",
+              "slug": "vtex-io-documentation-workspace-behavior-with-app-installations",
               "origin": "",
               "type": "markdown",
               "children": []
             },
+            {
+              "name": "Best practices on workspaces management",
+              "slug": "vtex-io-documentation-workspaces-best-practices",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Managing apps",
+          "slug": "managing-apps-category",
+          "origin": "",
+          "type": "category",
+          "children": [
             {
               "name": "Installing an app",
               "slug": "vtex-io-documentation-installing-an-app",
@@ -11167,6 +11182,21 @@
               "children": []
             },
             {
+              "name": "Deprecating an app",
+              "slug": "vtex-io-documentation-deprecating-an-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        }, 
+        {
+          "name": "Development guides",
+          "slug": "development-guides-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
               "name": "Managing application logs",
               "slug": "vtex-io-documentation-managing-application-logs",
               "origin": "",
@@ -11181,22 +11211,8 @@
               "children": []
             },
             {
-              "name": "Creating a Development workspace for a Legacy CMS store",
-              "slug": "vtex-io-documentation-creating-development-workspace-for-cms-legacy",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Workspace behavior with app installations",
-              "slug": "vtex-io-documentation-workspace-behavior-with-app-installations",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Best practices on workspaces management",
-              "slug": "vtex-io-documentation-workspaces-best-practices",
+              "name": "Creating an interface for your app settings",
+              "slug": "vtex-io-documentation-creating-an-interface-for-your-app-settings",
               "origin": "",
               "type": "markdown",
               "children": []
