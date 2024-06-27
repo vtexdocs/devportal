@@ -14044,6 +14044,28 @@
                   ]
                 },
                 {
+                  "name": "Section override - Use cases",
+                  "slug": "faststore/override-use-cases-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Adding more icon options to the Alert component",
+                      "slug": "faststore/override-use-cases-adding-more-icon-options-to-the-alert-component",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Adding an image to the Alert component",
+                      "slug": "/faststore/override-use-cases-adding-an-image-to-the-alert-component",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
                   "name": "Creating a new section",
                   "slug": "faststore/building-sections-creating-a-new-section",
                   "origin": "",
