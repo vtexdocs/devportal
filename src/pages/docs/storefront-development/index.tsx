@@ -301,6 +301,36 @@ const StorefrontDevelopmentPage: NextPage<Props> = ({ branch }) => {
               </Flex>
             </Box>
           </Link>
+          <Box>
+            <Text
+              sx={{
+                mx: 'auto',
+                mb: ['16px', '32px'],
+                width: [
+                  'auto',
+                  '544px',
+                  '544px',
+                  '544px',
+                  '720px',
+                  '720px',
+                  '1400px',
+                ],
+                backgroundColor: '#F8F7FC',
+                border: '1px solid #E7E9EE',
+                padding: '12px',
+                fontSize: ['12px', '14px'],
+              }}
+            >
+              Learn more about our resources for developers in the{' '}
+              <Link
+                target="_blank"
+                href="https://developers.vtex.com/docs/guides/developer-experience"
+              >
+                Developer experience
+              </Link>{' '}
+              guide.
+            </Text>
+          </Box>
         </Box>
       </Fragment>
     </>
