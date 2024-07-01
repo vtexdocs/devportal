@@ -7,10 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'deprecated',
+    type: 'added',
     description:
-      'FastStore: Customize your home and landing pages with Dynamic Content',
-    date: new Date('06/18/2024'),
+      'Enhanced shipping estimate display in Checkout',
+    date: new Date('06/24/2024'),
   },
   updateType: 'release-notes',
 }
