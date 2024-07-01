@@ -10,7 +10,7 @@ const lastReleaseNote: CardProps = {
     type: 'added',
     description:
       'Enhanced shipping estimate display in Checkout',
-    date: new Date('07/01/2024'),
+    date: new Date('06/24/2024'),
   },
   updateType: 'release-notes',
 }
