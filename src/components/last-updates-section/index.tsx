@@ -8,8 +8,7 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
-    description:
-      'Enhanced shipping estimate display in Checkout',
+    description: 'Enhanced shipping estimate display in Checkout',
     date: new Date('06/24/2024'),
   },
   updateType: 'release-notes',
