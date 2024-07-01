@@ -56,7 +56,6 @@ const fileSlugMap = {
   'VTEX - Pricing Hub': 'pricing-hub',
   'VTEX - Profile System': 'profile-system',
   'VTEX - Promotions & Taxes API': 'promotions-and-taxes-api',
-  'VTEX - Recurrence (v1 - deprecated)': 'recurrence-v1-deprecated',
   'VTEX - Reviews and Ratings API': 'reviews-and-ratings-api',
   'VTEX - SKU Bindings API': 'sku-bindings-api',
   'VTEX - Search API': 'search-api',
