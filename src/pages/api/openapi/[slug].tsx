@@ -50,7 +50,7 @@ const referencePaths = objectFlip({
   'VTEX - Subscriptions API (v2)': 'subscriptions-api-v2',
   'VTEX - Subscriptions API (v3)': 'subscriptions-api-v3',
   'VTEX - Tracking': 'tracking',
-  'VTEX - VTEX Do API': 'vtex-do-api',
+  'VTEX - VTEX DO API': 'vtex-do-api',
   'VTEX - VTEX ID API': 'vtex-id-api',
   'VTEX - VTEX Shipping Network API': 'vtex-shipping-network-api',
   'VTEX - Promotions & Taxes API - v2': 'promotions-and-taxes-api-v2',
