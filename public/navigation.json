@@ -10308,7 +10308,7 @@
           ]
         },
         {
-          "name": "VTEX Do API",
+          "name": "VTEX DO API",
           "slug": "vtex-do-api",
           "origin": "",
           "type": "openapi",
@@ -10319,7 +10319,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Create Note",
+                  "name": "Create note",
                   "slug": "vtex-do-api",
                   "type": "openapi",
                   "method": "POST",
@@ -10328,7 +10328,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Notes by orderId",
+                  "name": "Get notes by order ID",
                   "slug": "vtex-do-api",
                   "type": "openapi",
                   "method": "GET",
@@ -10337,7 +10337,7 @@
                   "children": []
                 },
                 {
-                  "name": "Retrieve Note",
+                  "name": "Retrieve note",
                   "slug": "vtex-do-api",
                   "type": "openapi",
                   "method": "GET",
@@ -10353,7 +10353,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Create Task",
+                  "name": "Create task",
                   "slug": "vtex-do-api",
                   "type": "openapi",
                   "method": "POST",
@@ -10371,7 +10371,7 @@
                   "children": []
                 },
                 {
-                  "name": "Retrieve Task",
+                  "name": "Retrieve task",
                   "slug": "vtex-do-api",
                   "type": "openapi",
                   "method": "GET",
@@ -10380,7 +10380,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update Task",
+                  "name": "Update task",
                   "slug": "vtex-do-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -10389,7 +10389,7 @@
                   "children": []
                 },
                 {
-                  "name": "Add Comment on a Task",
+                  "name": "Add comment on a task",
                   "slug": "vtex-do-api",
                   "type": "openapi",
                   "method": "POST",
