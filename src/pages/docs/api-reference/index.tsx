@@ -208,7 +208,7 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/subscriptions-api-v3',
   },
   {
-    title: 'VTEX Do API',
+    title: 'VTEX DO API',
     description:
       'Manage and retrieve notes or tasks related to orders from the VTEX DO task manager.',
     linkTitle: 'See more',
