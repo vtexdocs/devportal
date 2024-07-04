@@ -2378,6 +2378,64 @@
           ]
         },
         {
+          "name": "Audience API",
+          "slug": "audience-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Audience Manager",
+              "slug": "audience-manager",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Fetch audience",
+                  "slug": "audience-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/audience-manager/pvt/audience",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Price Table Mapper",
+              "slug": "price-table-mapper",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get price table mapping",
+                  "slug": "audience-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/price-table-mapper/pvt/mapping/-audienceId-",
+                  "children": []
+                },
+                {
+                  "name": "Set price table mapping",
+                  "slug": "audience-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/price-table-mapper/pvt/mapping/-audienceId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete price table mapping",
+                  "slug": "audience-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/price-table-mapper/pvt/mapping/-audienceId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Buyer organizations",
           "slug": "buyer-organizations",
           "origin": "",
