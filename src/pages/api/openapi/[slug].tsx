@@ -58,6 +58,7 @@ const referencePaths = objectFlip({
     'intelligent-search-events-api-headless',
   'VTEX - Data Subject Rights': 'data-subject-rights-api',
   'VTEX - Buyer Organizations': 'buyer-organizations',
+  'VTEX - Audience API': 'audience-api',
 })
 
 function objectFlip(obj: { [x: string]: string }) {

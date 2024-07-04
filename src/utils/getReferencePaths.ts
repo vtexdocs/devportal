@@ -71,6 +71,7 @@ const fileSlugMap = {
     'intelligent-search-events-api-headless',
   'VTEX - Data Subject Rights': 'data-subject-rights-api',
   'VTEX - Buyer Organizations': 'buyer-organizations',
+  'VTEX - Audience API': 'audience-api',
 }
 
 export default async function getReferencePaths() {
