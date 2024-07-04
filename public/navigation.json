@@ -10243,7 +10243,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "",
+                  "name": "Get sponsored products for a query",
                   "slug": "vtex-ad-network-api",
                   "type": "openapi",
                   "method": "GET",
