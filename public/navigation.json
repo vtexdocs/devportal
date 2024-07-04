@@ -10232,6 +10232,30 @@
           ]
         },
         {
+          "name": "VTEX Ad Network API",
+          "slug": "vtex-ad-network-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Sponsored products",
+              "slug": "sponsored-products",
+              "type": "category",
+              "children": [
+                {
+                  "name": "",
+                  "slug": "vtex-ad-network-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/sponsored_products/-facets-",
+                  "children": [] 
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "VTEX Shipping Network API",
           "slug": "vtex-shipping-network-api",
           "origin": "",

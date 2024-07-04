@@ -10,6 +10,7 @@ const referencePaths = objectFlip({
   'VTEX - Catalog API Seller Portal': 'catalog-api-seller-portal',
   'VTEX - Catalog API': 'catalog-api',
   'VTEX - Checkout API': 'checkout-api',
+  'VTEX - Checkout Configuration API': 'checkout-configuration-api',
   'VTEX - Customer Credit API': 'customer-credit-api',
   'VTEX - GiftCard Hub API': 'giftcard-hub-api',
   'VTEX - Giftcard API': 'giftcard-api',
@@ -36,13 +37,12 @@ const referencePaths = objectFlip({
   'VTEX - Orders API': 'orders-api',
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
   'VTEX - Payments Gateway API': 'payments-gateway-api',
+  'VTEX - Pick and Pack Last Mile Protocol API': 'pick-and-pack-protocol-api',
   'VTEX - Policies System API': 'policies-system-api',
-  'VTEX - Price Simulations': 'price-simulations',
   'VTEX - Pricing API': 'pricing-api',
   'VTEX - Pricing Hub': 'pricing-hub',
   'VTEX - Profile System': 'profile-system',
   'VTEX - Promotions & Taxes API': 'promotions-and-taxes-api',
-  'VTEX - Recurrence (v1 - deprecated)': 'recurrence-v1-deprecated',
   'VTEX - Reviews and Ratings API': 'reviews-and-ratings-api',
   'VTEX - SKU Bindings API': 'sku-bindings-api',
   'VTEX - Search API': 'search-api',
@@ -54,6 +54,12 @@ const referencePaths = objectFlip({
   'VTEX - VTEX ID API': 'vtex-id-api',
   'VTEX - VTEX Shipping Network API': 'vtex-shipping-network-api',
   'VTEX - Promotions & Taxes API - v2': 'promotions-and-taxes-api-v2',
+  'VTEX - Intelligent Search Events API - Headless':
+    'intelligent-search-events-api-headless',
+  'VTEX - Data Subject Rights': 'data-subject-rights-api',
+  'VTEX - Buyer Organizations': 'buyer-organizations',
+  'VTEX - Audience API': 'audience-api',
+  'VTEX - Ad Network API': 'vtex-ad-network-api',
 })
 
 function objectFlip(obj: { [x: string]: string }) {
