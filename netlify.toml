@@ -4,6 +4,18 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/dynamic-content-setting-up-the-store-code-for-dynamic-content"
+status = 308
+to = "/docs/guides/faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/dynamic-content-consuming-the-dynamic-content-in-custom-sections"
+status = 308
+to = "/docs/guides/faststore/dynamic-content-step-2-handling-the-dynamic-content-in-custom-sections"
+
+[[redirects]]
+force = true
 from = "/docs/guides/my-store-is-slow-or-unavailable"
 status = 308
 to = "/docs/troubleshooting/my-store-is-slow-or-unavailable"
