@@ -1368,3 +1368,9 @@ force = true
 from = "/docs/guides/vtex-composable-and-complete"
 status = 308
 to = "/docs/guides/composability"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/how-to-preview-headless-cms-changes-in-development-mode"
+status = 308
+to = "/docs/guides/faststore/headless-cms-previewing-changes-in-development-mode"
