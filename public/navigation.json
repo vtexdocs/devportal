@@ -14213,15 +14213,15 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Setting up the store code",
-                  "slug": "faststore/dynamic-content-setting-up-the-store-code-for-dynamic-content",
+                  "name": "Step 1 - Setting up the store code for Dynamic Content",
+                  "slug": "faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Consuming the Dynamic Content in custom sections",
-                  "slug": "faststore/dynamic-content-consuming-the-dynamic-content-in-custom-sections",
+                  "name": "Step 2 - Handling Dynamic Content in custom sections",
+                  "slug": "faststore/dynamic-content-step-2-handling-the-dynamic-content-in-custom-sections",
                   "origin": "",
                   "type": "markdown",
                   "children": []
