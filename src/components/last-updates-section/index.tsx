@@ -8,7 +8,8 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
-    description: 'VTEX Troubleshooting guides: Your new resource for problem-solving',
+    description:
+      'VTEX Troubleshooting guides: Your new resource for problem-solving',
     date: new Date('07/10/2024'),
   },
   updateType: 'release-notes',
