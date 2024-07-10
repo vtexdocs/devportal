@@ -15094,6 +15094,21 @@
           "type": "category",
           "children": [
             {
+              "name": "July",
+              "slug": "july-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "VTEX Troubleshooting guides: Your new resource for problem-solving",
+                  "slug": "2024-07-10-new-vtex-troubleshooting-guides",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "June",
               "slug": "june-2024",
               "origin": "",
