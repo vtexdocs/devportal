@@ -1579,6 +1579,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Interacting with Master Data v1 through VTEX IO services",
+                  "slug": "interacting-with-master-data-v1-through-vtex-io-services",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             }
