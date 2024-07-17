@@ -14205,6 +14205,28 @@
                   "children": []
                 },
                 {
+                  "name": "API extensions - Use cases",
+                  "slug": "faststore/api-extensions-use-cases-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Adding a contact form to the landing page",
+                      "slug": "faststore/api-extensions-use-cases-adding-a-contact-form-to-a-landing-page",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Adding available installment information in PDP",
+                      "slug": "faststore/api-extensions-use-cases-adding-installment-information-in-the-product-details-page",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
                   "name": "Troubleshooting",
                   "slug": "faststore/api-extensions-troubleshooting",
                   "origin": "",
