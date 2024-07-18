@@ -14242,8 +14242,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Testing the server-side rendering",
-                  "slug": "faststore/managing-performance-testing-the-server-side-rendering",
+                  "name": "Testing server-side rendering",
+                  "slug": "faststore/managing-performance-testing-server-side-rendering",
                   "origin": "",
                   "type": "markdown",
                   "children": []
