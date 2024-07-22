@@ -54,6 +54,13 @@
               ]
             },
             {
+              "name": "Extensibility",
+              "slug": "extensibility",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Store architecture",
               "slug": "store-architecture",
               "origin": "",
