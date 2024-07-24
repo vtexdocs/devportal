@@ -648,7 +648,7 @@
                   "children": []
                 },
                 {
-                  "name": "Payment Provider Protocol applied to payments with POS",
+                  "name": "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App",
                   "slug": "payments-integration-ppp-applied-to-pos",
                   "origin": "",
                   "type": "markdown",
