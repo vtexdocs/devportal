@@ -14455,6 +14455,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },                
+                {
+                  "name": "Store Theme",
+                  "slug": "vtex-io-documentation-store-theme",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
