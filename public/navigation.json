@@ -14644,6 +14644,29 @@
               ]
             },
             {
+              "name": "Working with Site Editor",
+              "slug": "site-editor-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Making a custom component available in Site Editor",
+                  "slug": "vtex-io-documentation-making-a-custom-component-available-in-site-editor",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Site Editor schema examples",
+                      "slug": "vtex-io-documentation-site-editor-schema-examples",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                  ]
+                }
+              ]
+            },
+            {
               "name": "Styling",
               "slug": "styling-category",
               "origin": "",
