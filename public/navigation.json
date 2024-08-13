@@ -14374,6 +14374,13 @@
           "type": "markdown",
           "children": [
             {
+              "name": "Store Theme",
+              "slug": "vtex-io-documentation-store-theme",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Getting started",
               "slug": "getting-started-3",
               "origin": "",
@@ -14488,13 +14495,6 @@
                 {
                   "name": "Slots",
                   "slug": "vtex-io-documentation-slots",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },                
-                {
-                  "name": "Store Theme",
-                  "slug": "vtex-io-documentation-store-theme",
                   "origin": "",
                   "type": "markdown",
                   "children": []
