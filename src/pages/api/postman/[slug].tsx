@@ -47,7 +47,6 @@ const referencePaths = objectFlip({
   'VTEX - SKU Bindings API': 'sku-bindings-api',
   'VTEX - Search API': 'search-api',
   'VTEX - Session Manager API': 'session-manager-api',
-  'VTEX - Subscriptions API (v2)': 'subscriptions-api-v2',
   'VTEX - Subscriptions API (v3)': 'subscriptions-api-v3',
   'VTEX - Tracking': 'tracking',
   'VTEX - VTEX Do API': 'vtex-do-api',
