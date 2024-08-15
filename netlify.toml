@@ -57,6 +57,12 @@ to = "/docs/api-reference/orders-api#put-/api/oms/pvt/orders/-orderId-/invoice/-
 
 [[redirects]]
 force = true
+from = "/docs/api-reference/subscriptions-api-v2"
+status = 308
+to = "/docs/api-reference/subscriptions-api-v3"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/vtex-tracking-overview"
 status = 308
 to = "/docs/api-reference/tracking"
