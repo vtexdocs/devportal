@@ -9931,321 +9931,6 @@
           ]
         },
         {
-          "name": "Subscriptions API (v2 - DEPRECATED)",
-          "slug": "subscriptions-api-v2",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Subscriptions",
-              "slug": "subscriptions-api-v2-subscriptions",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Retrieve subscription by ID",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions/-subscriptionId-",
-                  "children": []
-                },
-                {
-                  "name": "Update Subscriptions by SubscriptionId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/subscriptions/-subscriptionId-",
-                  "children": []
-                },
-                {
-                  "name": "Cancel Subscriptions by SubscriptionId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/subscriptions/-subscriptionId-/cancel",
-                  "children": []
-                },
-                {
-                  "name": "Get Subscription List",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions/list",
-                  "children": []
-                },
-                {
-                  "name": "Retrieve customer's subscriptions",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions",
-                  "children": []
-                },
-                {
-                  "name": "Insert Addresses for Subscription",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/subscriptions/-subscriptionId-/addresses",
-                  "children": []
-                },
-                {
-                  "name": "Get frequency options by subscriptionId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions/-subscriptionId-/frequency-options",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Subscription Group",
-              "slug": "subscriptions-api-v2-subscription-group",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Subscription by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-",
-                  "children": []
-                },
-                {
-                  "name": "Update Subscription by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-",
-                  "children": []
-                },
-                {
-                  "name": "List All subscription groups",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group",
-                  "children": []
-                },
-                {
-                  "name": "Get subscription group list",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/list",
-                  "children": []
-                },
-                {
-                  "name": "Get Simulation by subscription-group",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/simulate/-groupId-",
-                  "children": []
-                },
-                {
-                  "name": "Cancel Subscription by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-/cancel",
-                  "children": []
-                },
-                {
-                  "name": "Add Subscription item by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-/additem",
-                  "children": []
-                },
-                {
-                  "name": "Get addresses by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-/addresses",
-                  "children": []
-                },
-                {
-                  "name": "Insert Addresses by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-/addresses",
-                  "children": []
-                },
-                {
-                  "name": "Get payment System by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-/payment-systems",
-                  "children": []
-                },
-                {
-                  "name": "Get frequency options by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-/frequency-options",
-                  "children": []
-                },
-                {
-                  "name": "Retry subscription by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupid-/instances/-instanceId-/retry",
-                  "children": []
-                },
-                {
-                  "name": "Get Conversation Message by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-/conversation-message",
-                  "children": []
-                },
-                {
-                  "name": "List 'Will create' by groupId",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-/will-create",
-                  "children": []
-                },
-                {
-                  "name": "List Subscription group's Configuration",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/-groupId-/config",
-                  "children": []
-                },
-                {
-                  "name": "Get Next purchase",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/subscriptions-group/nextPurchase/-dateStr-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Report",
-              "slug": "subscriptions-api-v2-report",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Retrieve Subscription report by Status",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/report/subscriptionsByStatus",
-                  "children": []
-                },
-                {
-                  "name": "Retrieve Subscription report by date",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/report/subscriptionsByDate",
-                  "children": []
-                },
-                {
-                  "name": "Retrieve Subscription report by schedule",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/report/subscriptionsScheduled",
-                  "children": []
-                },
-                {
-                  "name": "Retrieve Subscription report by order date",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/report/subscriptionsOrderByDate",
-                  "children": []
-                },
-                {
-                  "name": "Request report by update",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/report/subscriptionsUpdated",
-                  "children": []
-                },
-                {
-                  "name": "Get report status by ID",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/report/reportStatus/-reportId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Settings",
-              "slug": "subscriptions-api-v2-settings",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Subscriptions Settings",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/settings",
-                  "children": []
-                },
-                {
-                  "name": "Edit Subscriptions settings",
-                  "slug": "subscriptions-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/settings",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "VTEX Ad Network API",
           "slug": "vtex-ad-network-api",
           "origin": "",
@@ -14374,6 +14059,13 @@
           "type": "markdown",
           "children": [
             {
+              "name": "Store Theme",
+              "slug": "vtex-io-documentation-store-theme",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Getting started",
               "slug": "getting-started-3",
               "origin": "",
@@ -14488,13 +14180,6 @@
                 {
                   "name": "Slots",
                   "slug": "vtex-io-documentation-slots",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },                
-                {
-                  "name": "Store Theme",
-                  "slug": "vtex-io-documentation-store-theme",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -15133,6 +14818,21 @@
             {
               "name": "My multi-language store is not functioning in the development workspace",
               "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I am getting 500 errors in VTEX IO CLI",
+              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+            ,
+            {
+              "name": "The Price in the shelf or in the search results is different from the product page",
+              "slug": "the-price-in-the-shelf-or-in-the-search-results-is-different-from-the-product-page",
               "origin": "",
               "type": "markdown",
               "children": []
