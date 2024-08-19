@@ -14874,6 +14874,21 @@
           "type": "category",
           "children": [
             {
+              "name": "August",
+              "slug": "august-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: New @faststore/core package version",
+                  "slug": "2024-08-19-faststore-core-new-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "July",
               "slug": "july-2024",
               "origin": "",
