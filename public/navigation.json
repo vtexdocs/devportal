@@ -10804,6 +10804,13 @@
                   "children": []
                 },
                 {
+                  "name": "PaymentPrvovider Builder",
+                  "slug": "vtex-io-documentation-paymentprovider-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "React Builder",
                   "slug": "vtex-io-documentation-react-builder",
                   "origin": "",
