@@ -14816,6 +14816,13 @@
               "children": []
             },
             {
+              "name": "I can’t integrate my external Search Provider",
+              "slug": "i-cant-integrate-my-external-search-provider",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Modal Layout closes when I click a SKU",
               "slug": "modal-layout-closes-when-i-click-a-sku",
               "origin": "",
