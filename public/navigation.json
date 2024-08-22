@@ -14342,6 +14342,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Integrating a frontend app with Site Editor",
+                  "slug": "vtex-io-documentation-integrating-frontend-app-with-site-editor",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Making a custom component available in Site Editor",
                   "slug": "vtex-io-documentation-making-a-custom-component-available-in-site-editor",
                   "origin": "",
