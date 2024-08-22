@@ -10804,7 +10804,7 @@
                   "children": []
                 },
                 {
-                  "name": "PaymentPrvovider Builder",
+                  "name": "PaymentProvider Builder",
                   "slug": "vtex-io-documentation-paymentprovider-builder",
                   "origin": "",
                   "type": "markdown",
