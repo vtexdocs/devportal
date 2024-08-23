@@ -13587,7 +13587,50 @@
               "slug": "faststore/faststore-api-overview",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Queries",
+                  "slug": "faststore/schema-queries",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Mutations",
+                  "slug": "faststore/schema-mutations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Objects",
+                  "slug": "faststore/schema-objects",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Inputs",
+                  "slug": "faststore/schema-inputs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Enums",
+                  "slug": "faststore/schema-enums",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Scalars",
+                  "slug": "faststore/schema-scalars",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+              ]
             },
             {
               "name": "Themes reference",
