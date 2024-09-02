@@ -14838,6 +14838,21 @@
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
+          "name": "API",
+          "slug": "api",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "I can't update the EAN of my SKUs via API",
+              "slug": "i-cant-update-the-ean-of-my-skus-via-api",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Development",
           "slug": "development",
           "origin": "",
