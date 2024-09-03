@@ -1392,3 +1392,9 @@ force = true
 from = "/docs/guides/faststore/how-to-preview-headless-cms-changes-in-development-mode"
 status = 308
 to = "/docs/guides/faststore/headless-cms-previewing-changes-in-development-mode"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-associating-a-custom-page-to-a-content-type"
+status = 308
+to = "/docs/guides/vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type"
