@@ -14945,6 +14945,21 @@
           "type": "category",
           "children": [
             {
+              "name": "September",
+              "slug": "semptember-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Simplified FastStore setup with FastStore CLI dependency update",
+                  "slug": "2024-09-06-fastore-cli-dependency",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "August",
               "slug": "august-2024",
               "origin": "",
