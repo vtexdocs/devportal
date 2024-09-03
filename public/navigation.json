@@ -14608,8 +14608,8 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Associating a custom page to a content type",
-                  "slug": "vtex-io-documentation-associating-a-custom-page-to-a-content-type",
+                  "name": "Best practices for associating a custom page with a content type",
+                  "slug": "vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type",
                   "origin": "",
                   "type": "markdown",
                   "children": []
