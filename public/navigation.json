@@ -14608,8 +14608,8 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Associating a custom page to a content type",
-                  "slug": "vtex-io-documentation-associating-a-custom-page-to-a-content-type",
+                  "name": "Best practices for associating a custom page with a content type",
+                  "slug": "vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14906,19 +14906,24 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            }
-            ,
+            },
             {
               "name": "The Price in the shelf or in the search results is different from the product page",
               "slug": "the-price-in-the-shelf-or-in-the-search-results-is-different-from-the-product-page",
               "origin": "",
               "type": "markdown",
               "children": []
-            }
-            ,
+            },
             {
               "name": "My store catalog does not display the price range filter",
               "slug": "my-store-catalog-does-not-show-the-price-range-filter",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "vtex release CLI command returns an EBADF message",
+              "slug": "vtex-release-cli-command-returns-ebadf-message",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14941,6 +14946,13 @@
             {
               "name": "My store is slow or unavailable",
               "slug": "my-store-is-slow-or-unavailable",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Google Analytics 4 is tracking inconsistent data from my store",
+              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
               "origin": "",
               "type": "markdown",
               "children": []
