@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
     description:
-      'VTEX Troubleshooting guides: Your new resource for problem-solving',
-    date: new Date('07/10/2024'),
+      'FastStore WebOps: Preview your store changes before deployment',
+    date: new Date('09/09/2024'),
   },
   updateType: 'release-notes',
 }
