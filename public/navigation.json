@@ -13283,6 +13283,13 @@
                       "children": []
                     },
                     {
+                      "name": "Radio field",
+                      "slug": "faststore/molecules-radio-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Radio Group",
                       "slug": "faststore/molecules-radio-group",
                       "origin": "",
@@ -13355,13 +13362,6 @@
                     {
                       "name": "SKU selector",
                       "slug": "faststore/molecules-sku-selector",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Radio field",
-                      "slug": "faststore/molecules-radio-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
