@@ -14965,6 +14965,21 @@
           "type": "category",
           "children": [
             {
+              "name": "September",
+              "slug": "september-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore WebOps: Preview your store changes before deployment",
+                  "slug": "2024-09-09-updates-webops-permissions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "August",
               "slug": "august-2024",
               "origin": "",
