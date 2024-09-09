@@ -14186,13 +14186,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "CMS",
-                  "slug": "vtex-io-documentation-cms",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Components",
                   "slug": "vtex-io-documentation-components",
                   "origin": "",
@@ -14223,13 +14216,6 @@
                 {
                   "name": "Routes",
                   "slug": "vtex-io-documentation-routes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Site Editor",
-                  "slug": "vtex-io-documentation-site-editor",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14387,7 +14373,7 @@
             },
             {
               "name": "Working with Site Editor",
-              "slug": "site-editor",
+              "slug": "working-with-site-editor",
               "origin": "",
               "type": "markdown",
               "children": [
