@@ -196,7 +196,7 @@ export const getStaticProps: GetStaticProps = async ({
       ? docsPathsGLOBAL
       : await getTroubleshootingPaths(branch)
 
-  const logger = getLogger('Guides')
+  const logger = getLogger('Troubleshooting')
 
   const path = docsPaths[slug]
   if (!path) {
@@ -323,7 +323,7 @@ export const getStaticProps: GetStaticProps = async ({
     const pagination = {
       previousDoc: {
         slug: docsListSlug[indexOfSlug - 1]
-          ? `/docs/guides/${docsListSlug[indexOfSlug - 1]}`
+          ? `/docs/troubleshooting/${docsListSlug[indexOfSlug - 1]}`
           : null,
         name: docsListName[indexOfSlug - 1]
           ? docsListName[indexOfSlug - 1]
@@ -331,7 +331,7 @@ export const getStaticProps: GetStaticProps = async ({
       },
       nextDoc: {
         slug: docsListSlug[indexOfSlug + 1]
-          ? `/docs/guides/${docsListSlug[indexOfSlug + 1]}`
+          ? `/docs/troubleshooting/${docsListSlug[indexOfSlug + 1]}`
           : null,
         name: docsListName[indexOfSlug + 1]
           ? docsListName[indexOfSlug + 1]
@@ -346,7 +346,7 @@ export const getStaticProps: GetStaticProps = async ({
     const cleanSlug = getKeyByValue(flattenedSidebar, slug)
     const keyPath = cleanSlug
       ? getKeyByValue(flattenedSidebar, slug)
-      : getKeyByValue(flattenedSidebar, `guides/${slug}`)
+      : getKeyByValue(flattenedSidebar, `troubleshooting/${slug}`)
     const parentsArray: string[] = []
     const parentsArrayName: string[] = []
     const parentsArrayType: string[] = []
@@ -354,7 +354,9 @@ export const getStaticProps: GetStaticProps = async ({
     if (keyPath) {
       sectionSelected = flattenedSidebar[`${keyPath[0]}.documentation`]
       getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
-      cleanSlug ? parentsArray.push(slug) : parentsArray.push(`guides/${slug}`)
+      cleanSlug
+        ? parentsArray.push(slug)
+        : parentsArray.push(`troubleshooting/${slug}`)
       getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
       getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
     }
@@ -362,7 +364,7 @@ export const getStaticProps: GetStaticProps = async ({
     const breadcumbList: { slug: string; name: string; type: string }[] = []
     parentsArrayName.forEach((_el: string, idx: number) => {
       breadcumbList.push({
-        slug: `/docs/guides/${parentsArray[idx]}`,
+        slug: `/docs/troubleshooting/${parentsArray[idx]}`,
         name: parentsArrayName[idx],
         type: parentsArrayType[idx],
       })
