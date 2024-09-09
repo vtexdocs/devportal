@@ -13276,6 +13276,13 @@
                       "children": []
                     },
                     {
+                      "name": "Product Price",
+                      "slug": "faststore/molecules-product-price",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Product title",
                       "slug": "faststore/molecules-product-title",
                       "origin": "",
