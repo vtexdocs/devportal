@@ -10811,6 +10811,13 @@
                   "children": []
                 },
                 {
+                  "name": "Pixel Builder",
+                  "slug": "vtex-io-documentation-pixel-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "React Builder",
                   "slug": "vtex-io-documentation-react-builder",
                   "origin": "",
