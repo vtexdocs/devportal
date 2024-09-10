@@ -12911,6 +12911,21 @@
           "children": []
         },
         {
+          "name": "Storefront best practices",
+          "slug": "storefront-best-practices",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Performance",
+              "slug": "storefront-performance",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+          ]
+        },
+        {
           "name": "FastStore",
           "slug": "faststore",
           "origin": "",
