@@ -14983,6 +14983,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "FastStore: Simplified FastStore setup with FastStore CLI dependency update",
+                  "slug": "2024-09-11-faststore-cli-dependency",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
