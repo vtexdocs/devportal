@@ -27,6 +27,7 @@ export default async function getDocsPaths(branch = 'main') {
     if (
       path.startsWith('docs') &&
       !path.startsWith('docs/release-notes') &&
+      !path.startsWith('docs/troubleshooting') &&
       !path.startsWith('docs/faststore')
     ) {
       const match = path.match(re)

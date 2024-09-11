@@ -10811,6 +10811,13 @@
                   "children": []
                 },
                 {
+                  "name": "Pixel Builder",
+                  "slug": "vtex-io-documentation-pixel-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "React Builder",
                   "slug": "vtex-io-documentation-react-builder",
                   "origin": "",
@@ -13283,6 +13290,13 @@
                       "children": []
                     },
                     {
+                      "name": "Radio field",
+                      "slug": "faststore/molecules-radio-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Radio Group",
                       "slug": "faststore/molecules-radio-group",
                       "origin": "",
@@ -13355,13 +13369,6 @@
                     {
                       "name": "SKU selector",
                       "slug": "faststore/molecules-sku-selector",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Radio field",
-                      "slug": "faststore/molecules-radio-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -14179,13 +14186,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "CMS",
-                  "slug": "vtex-io-documentation-cms",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Components",
                   "slug": "vtex-io-documentation-components",
                   "origin": "",
@@ -14216,13 +14216,6 @@
                 {
                   "name": "Routes",
                   "slug": "vtex-io-documentation-routes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Site Editor",
-                  "slug": "vtex-io-documentation-site-editor",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14380,7 +14373,7 @@
             },
             {
               "name": "Working with Site Editor",
-              "slug": "site-editor",
+              "slug": "working-with-site-editor",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -14608,8 +14601,8 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Associating a custom page to a content type",
-                  "slug": "vtex-io-documentation-associating-a-custom-page-to-a-content-type",
+                  "name": "Best practices for associating a custom page with a content type",
+                  "slug": "vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14838,6 +14831,21 @@
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
+          "name": "API",
+          "slug": "api",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "I can't update the EAN of my SKUs via API",
+              "slug": "i-cant-update-the-ean-of-my-skus-via-api",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Development",
           "slug": "development",
           "origin": "",
@@ -14891,19 +14899,31 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            }
-            ,
+            },
             {
               "name": "The Price in the shelf or in the search results is different from the product page",
               "slug": "the-price-in-the-shelf-or-in-the-search-results-is-different-from-the-product-page",
               "origin": "",
               "type": "markdown",
               "children": []
-            }
-            ,
+            },
             {
               "name": "My store catalog does not display the price range filter",
               "slug": "my-store-catalog-does-not-show-the-price-range-filter",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "vtex release CLI command returns an EBADF message",
+              "slug": "vtex-release-cli-command-returns-ebadf-message",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "The promotion highlight flag does not appear on the product",
+              "slug": "the-promotion-highlight-flag-does-not-appear-on-the-product",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14929,6 +14949,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Google Analytics 4 is tracking inconsistent data from my store",
+              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
@@ -14946,13 +14973,13 @@
           "children": [
             {
               "name": "September",
-              "slug": "semptember-2024",
+              "slug": "september-2024",
               "origin": "",
               "type": "category",
               "children": [
                 {
-                  "name": "FastStore: Simplified FastStore setup with FastStore CLI dependency update",
-                  "slug": "2024-09-06-fastore-cli-dependency",
+                  "name": "FastStore WebOps: Preview your store changes before deployment",
+                  "slug": "2024-09-09-updates-webops-permissions",
                   "origin": "",
                   "type": "markdown",
                   "children": []
