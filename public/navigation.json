@@ -13185,6 +13185,13 @@
                       "children": []
                     },
                     {
+                      "name": "Card",
+                      "slug": "faststore/molecules-card",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Carousel",
                       "slug": "faststore/molecules-carousel",
                       "origin": "",
