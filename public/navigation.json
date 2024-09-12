@@ -10797,6 +10797,13 @@
                   "children": []
                 },
                 {
+                  "name": "Messages Builder",
+                  "slug": "vtex-io-documentation-messages-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Node Builder",
                   "slug": "vtex-io-documentation-node-builder",
                   "origin": "",
