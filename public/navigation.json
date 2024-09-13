@@ -10804,6 +10804,13 @@
                   "children": []
                 },
                 {
+                  "name": "Messages Builder",
+                  "slug": "vtex-io-documentation-messages-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Node Builder",
                   "slug": "vtex-io-documentation-node-builder",
                   "origin": "",
@@ -13192,6 +13199,13 @@
                       "children": []
                     },
                     {
+                      "name": "Card",
+                      "slug": "faststore/molecules-card",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Carousel",
                       "slug": "faststore/molecules-carousel",
                       "origin": "",
@@ -14987,6 +15001,13 @@
                 {
                   "name": "FastStore WebOps: Preview your store changes before deployment",
                   "slug": "2024-09-09-updates-webops-permissions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Simplified FastStore setup with FastStore CLI dependency update",
+                  "slug": "2024-09-11-faststore-cli-dependency",
                   "origin": "",
                   "type": "markdown",
                   "children": []
