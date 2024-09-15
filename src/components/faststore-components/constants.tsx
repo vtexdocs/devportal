@@ -414,6 +414,8 @@ export const constants = {
     { icon: { icon: 'Stripe' }, alt: 'Stripe' },
     { icon: { icon: 'GooglePay' }, alt: 'GooglePay' },
     { icon: { icon: 'ApplePay' }, alt: 'ApplePay' },
+    { icon: { icon: 'Amex' }, alt: 'Amex' },
+    { icon: { icon: 'Pix' }, alt: 'Pix' },
   ],
   propsFlag: [
     {
