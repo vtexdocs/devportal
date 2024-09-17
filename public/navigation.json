@@ -14235,13 +14235,6 @@
                   "children": []
                 },
                 {
-                  "name": "Routes",
-                  "slug": "vtex-io-documentation-routes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Slots",
                   "slug": "vtex-io-documentation-slots",
                   "origin": "",
@@ -14617,9 +14610,9 @@
             },
             {
               "name": "Routing",
-              "slug": "store-framework-routing-category",
+              "slug": "routing",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Best practices for associating a custom page with a content type",
