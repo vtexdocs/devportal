@@ -12163,6 +12163,13 @@
               "children": []
             },
             {
+              "name": "Broadcaster",
+              "slug": "apps/vtex.broadcaster",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Catalog Images",
               "slug": "apps/vtex.catalog-images",
               "origin": "",
