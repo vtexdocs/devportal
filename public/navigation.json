@@ -14610,7 +14610,7 @@
             },
             {
               "name": "Routing",
-              "slug": "routing",
+              "slug": "store-framework-routing",
               "origin": "",
               "type": "markdown",
               "children": [
