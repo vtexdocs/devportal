@@ -1415,4 +1415,4 @@ to = "/docs/guides/working-with-site-editor"
 force = true
 from = "/docs/guides/vtex-io-documentation-routes"
 status = 308
-to = "/docs/guides/routing"
+to = "/docs/guides/store-framework-routing"
