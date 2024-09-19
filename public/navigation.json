@@ -12032,13 +12032,6 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            },
-            {
-              "name": "Wishlist",
-              "slug": "apps/vtex.wish-list",
-              "origin": "",
-              "type": "markdown",
-              "children": []
             }
           ]
         },
@@ -12049,13 +12042,6 @@
           "type": "markdown",
           "children": [
             {
-              "name": "Location Availability",
-              "slug": "apps/vtex.location-availability",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Order Configuration",
               "slug": "apps/vtex.order-configuration",
               "origin": "",
@@ -12063,22 +12049,8 @@
               "children": []
             },
             {
-              "name": "Order Quote",
-              "slug": "apps/vtex.orderquote",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Quickorder",
               "slug": "apps/vtex.quickorder",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Shopper Location",
-              "slug": "apps/vtex.shopper-location",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12347,13 +12319,6 @@
           "type": "markdown",
           "children": [
             {
-              "name": "accessiBe",
-              "slug": "apps/vtex.accessibe",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Alexa Certify",
               "slug": "apps/vtex.alexa-certify-code",
               "origin": "",
@@ -12363,13 +12328,6 @@
             {
               "name": "Audara",
               "slug": "apps/vtex.audara",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Bazaarvoice",
-              "slug": "apps/vtex.bazaarvoice",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12410,13 +12368,6 @@
               "children": []
             },
             {
-              "name": "Curbside Pickup",
-              "slug": "apps/vtex.curbside-pickup",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "CyberSource Fingerprint",
               "slug": "apps/vtex.cybersource-fingerprint",
               "origin": "",
@@ -12440,20 +12391,6 @@
             {
               "name": "Facebook Domain Verification",
               "slug": "apps/vtex.facebook-domain-verification",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Facebook Business Extension",
-              "slug": "apps/vtex.facebook-fbe",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Flixmedia",
-              "slug": "apps/vtex.flixmedia",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12508,13 +12445,6 @@
               "children": []
             },
             {
-              "name": "Listrak",
-              "slug": "apps/vtex.listrak-pixel",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "LogRocket",
               "slug": "apps/vtex.logrocket",
               "origin": "",
@@ -12524,13 +12454,6 @@
             {
               "name": "Lucky Orange",
               "slug": "apps/vtex.lucky-orange",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "PowerReviews",
-              "slug": "apps/vtex.powerreviews",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12557,13 +12480,6 @@
               "children": []
             },
             {
-              "name": "Speech to Text Search",
-              "slug": "apps/vtexarg.speech-to-text",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Suiteshare",
               "slug": "apps/vtex.suite-share",
               "origin": "",
@@ -12578,29 +12494,8 @@
               "children": []
             },
             {
-              "name": "TikTok for Business",
-              "slug": "apps/vtexbr.tiktok-tbp",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Trustpilot",
               "slug": "apps/vtex.trustpilot",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Wordpress Integration",
-              "slug": "apps/vtex.wordpress-integration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Yotpo Reviews Integration",
-              "slug": "apps/vtex.yotpo",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12615,147 +12510,6 @@
             {
               "name": "Zopim",
               "slug": "apps/vtex.zopim",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Gift List",
-          "slug": "apps/vtex.list",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Add To Cart Button",
-              "slug": "apps/vtex.list/listaddtocartbutton",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Add New Item",
-              "slug": "apps/vtex.list/addnewitem",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Go Back To List",
-              "slug": "apps/vtex.list/gobacktolist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Auth Condition",
-              "slug": "apps/vtex.list/authcondition",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Add To List Button",
-              "slug": "apps/vtex.list/addtolistbutton",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Search List",
-              "slug": "apps/vtex.list/searchlist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Gallery List Items",
-              "slug": "apps/vtex.list/gallerylistitems",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "List Migration",
-              "slug": "apps/vtex.list/listmigration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "List Modal",
-              "slug": "apps/vtex.list/listmodal",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "User Lists",
-              "slug": "apps/vtex.list/userlists",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Share List",
-              "slug": "apps/vtex.list/sharelist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Breadcrumb",
-              "slug": "apps/vtex.list/breadcrumbs",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Gifted Button",
-              "slug": "apps/vtex.list/giftedbutton",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "List Info",
-              "slug": "apps/vtex.list/listinfo",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Modal",
-              "slug": "apps/vtex.list/productmodal",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Wallet List",
-              "slug": "apps/vtex.list/storewalletlist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Quantity Selector",
-              "slug": "apps/vtex.list/quantity%20selector",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Wrappers",
-              "slug": "apps/vtex.list/wrappers",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "List Items Order By",
-              "slug": "apps/vtex.list/listitemsorderby",
               "origin": "",
               "type": "markdown",
               "children": []
