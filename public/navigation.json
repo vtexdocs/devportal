@@ -14767,6 +14767,13 @@
                   "children": []
                 },
                 {
+                  "name": "Change to the availableQuantity field in the search API",
+                  "slug": "2024-09-10-change-available-quantity-field-search-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Simplified FastStore setup with FastStore CLI dependency update",
                   "slug": "2024-09-11-faststore-cli-dependency",
                   "origin": "",
