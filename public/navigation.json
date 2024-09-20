@@ -12960,7 +12960,7 @@
                       "children": []
                     },
                     {
-                      "name": "Buy button",
+                      "name": "BuyButton",
                       "slug": "faststore/molecules-buy-button",
                       "origin": "",
                       "type": "markdown",
@@ -12981,21 +12981,21 @@
                       "children": []
                     },
                     {
-                      "name": "Cart item",
+                      "name": "CartItem",
                       "slug": "faststore/molecules-cart-item",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Checkbox field",
+                      "name": "CheckboxField",
                       "slug": "faststore/molecules-checkbox-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Discount badge",
+                      "name": "DiscountBadge",
                       "slug": "faststore/molecules-discount-badge",
                       "origin": "",
                       "type": "markdown",
@@ -13016,21 +13016,21 @@
                       "children": []
                     },
                     {
-                      "name": "Icon button",
+                      "name": "IconButton",
                       "slug": "faststore/molecules-icon-button",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Input field",
+                      "name": "InputField",
                       "slug": "faststore/molecules-input-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Link button",
+                      "name": "LinkButton",
                       "slug": "faststore/molecules-link-button",
                       "origin": "",
                       "type": "markdown",
@@ -13044,49 +13044,56 @@
                       "children": []
                     },
                     {
-                      "name": "Navbar links",
+                      "name": "NavbarLinks",
                       "slug": "faststore/molecules-navbar-links",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Order summary",
+                      "name": "OrderSummary",
                       "slug": "faststore/molecules-order-summary",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product card",
+                      "name": "ProductCard",
                       "slug": "faststore/molecules-product-card",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product title",
+                      "name": "ProductPrice",
+                      "slug": "faststore/molecules-product-price",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "ProductTitle",
                       "slug": "faststore/molecules-product-title",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Quantity selector",
+                      "name": "QuantitySelector",
                       "slug": "faststore/molecules-quantity-selector",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Radio field",
+                      "name": "RadioField",
                       "slug": "faststore/molecules-radio-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Radio Group",
+                      "name": "RadioGroup",
                       "slug": "faststore/molecules-radio-group",
                       "origin": "",
                       "type": "markdown",
@@ -13100,63 +13107,63 @@
                       "children": []
                     },
                     {
-                      "name": "Region bar",
+                      "name": "RegionBar",
                       "slug": "faststore/molecules-region-bar",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search autocomplete",
+                      "name": "SearchAutocomplete",
                       "slug": "faststore/molecules-search-auto-complete",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search dropdown",
+                      "name": "SearchDropdown",
                       "slug": "faststore/molecules-search-dropdown",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search history",
+                      "name": "SearchHistory",
                       "slug": "faststore/molecules-search-history",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search input field",
+                      "name": "SearchInputField",
                       "slug": "faststore/molecules-search-input-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search products",
+                      "name": "SearchProducts",
                       "slug": "faststore/molecules-search-products",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search top",
+                      "name": "SearchTop",
                       "slug": "faststore/molecules-search-top",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Select field",
+                      "name": "SelectField",
                       "slug": "faststore/molecules-select-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "SKU selector",
+                      "name": "SKUSelector",
                       "slug": "faststore/molecules-sku-selector",
                       "origin": "",
                       "type": "markdown",
@@ -13191,7 +13198,7 @@
                       "children": []
                     },
                     {
-                      "name": "Toggle field",
+                      "name": "ToggleField",
                       "slug": "faststore/molecules-toggle-field",
                       "origin": "",
                       "type": "markdown",
