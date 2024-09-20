@@ -12921,7 +12921,15 @@
               "slug": "storefront-performance",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Getting started with Lighthouse",
+                  "slug": "storefront-getting-started-with-lighthouse",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -14675,13 +14683,6 @@
                 {
                   "name": "Enabling the Order Form optimization",
                   "slug": "vtex-io-documentation-enabling-order-form-optimization",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Getting started with Lighthouse performance audit",
-                  "slug": "vtex-io-documentation-getting-started-with-lighthouse",
                   "origin": "",
                   "type": "markdown",
                   "children": []
