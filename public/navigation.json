@@ -12813,13 +12813,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Getting started",
-                  "slug": "faststore/components-getting-started",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Atoms",
                   "slug": "faststore/atoms-overview",
                   "origin": "",
