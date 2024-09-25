@@ -14191,10 +14191,17 @@
             },
             {
               "name": "Styling",
-              "slug": "styling-category",
+              "slug": "store-framework-styling",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
+                {
+                  "name": "Using CSS Handles for store customization",
+                  "slug": "vtex-io-documentation-using-css-handles-for-store-customization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Contributing with new CSS Handles",
                   "slug": "vtex-io-documentation-contributing-with-new-css-handles",
@@ -14219,13 +14226,6 @@
                 {
                   "name": "Interactively inspecting storefront blocks",
                   "slug": "how-to-interactively-inspect-blocks-on-a-store-framework-store",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using CSS Handles for store customization",
-                  "slug": "vtex-io-documentation-using-css-handles-for-store-customization",
                   "origin": "",
                   "type": "markdown",
                   "children": []
