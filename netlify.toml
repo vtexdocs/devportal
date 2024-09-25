@@ -1416,3 +1416,9 @@ force = true
 from = "/docs/guides/vtex-io-documentation-routes"
 status = 308
 to = "/docs/guides/store-framework-routing"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-wordpress-integration"
+status = 308
+to = "/docs/apps/vtex.wordpress-integration"
