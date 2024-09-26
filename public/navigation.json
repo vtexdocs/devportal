@@ -12930,6 +12930,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "SEO",
+              "slug": "storefront-seo",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
