@@ -1428,3 +1428,9 @@ force = true
 from = "/docs/guides/vtex-wordpress-integration"
 status = 308
 to = "/docs/apps/vtex.wordpress-integration"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-catalog-images"
+status = 308
+to = "/docs/apps/vtex.catalog-images"
