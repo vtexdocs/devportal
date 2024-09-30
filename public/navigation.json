@@ -13213,28 +13213,28 @@
                   "type": "markdown",
                   "children": [
                     {
-                      "name": "Banner Text",
+                      "name": "BannerText",
                       "slug": "faststore/organisms-banner-text",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Cart Sidebar",
+                      "name": "CartSidebar",
                       "slug": "faststore/organisms-cart-sidebar",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Empty State",
+                      "name": "EmptyState",
                       "slug": "faststore/organisms-empty-state",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Filter Slider",
+                      "name": "FilterSlider",
                       "slug": "faststore/organisms-filter-slider",
                       "origin": "",
                       "type": "markdown",
@@ -13255,14 +13255,14 @@
                       "children": []
                     },
                     {
-                      "name": "Image Gallery",
+                      "name": "ImageGallery",
                       "slug": "faststore/organisms-image-gallery",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Navbar Slider",
+                      "name": "NavbarSlider",
                       "slug": "faststore/organisms-navbar-slider",
                       "origin": "",
                       "type": "markdown",
@@ -13283,63 +13283,63 @@
                       "children": []
                     },
                     {
-                      "name": "Out Of Stock",
+                      "name": "OutOfStock",
                       "slug": "faststore/organisms-out-of-stock",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Payment Methods",
+                      "name": "PaymentMethods",
                       "slug": "faststore/organisms-payment-methods",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Price Range",
+                      "name": "PriceRange",
                       "slug": "faststore/organisms-price-range",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product Grid",
+                      "name": "ProductGrid",
                       "slug": "faststore/organisms-product-grid",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product Shelf",
+                      "name": "ProductShelf",
                       "slug": "faststore/organisms-product-shelf",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Region Modal",
+                      "name": "RegionModal",
                       "slug": "faststore/organisms-region-modal",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search Input",
+                      "name": "SearchInput",
                       "slug": "faststore/organisms-search-input",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Shipping Simulation",
+                      "name": "ShippingSimulation",
                       "slug": "faststore/organisms-shipping-simulation",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Slide Over",
+                      "name": "SlideOver",
                       "slug": "faststore/organisms-slide-over",
                       "origin": "",
                       "type": "markdown",
