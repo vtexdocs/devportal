@@ -1440,3 +1440,9 @@ force = true
 from = "/docs/guides/vtex-catalog-images"
 status = 308
 to = "/docs/apps/vtex.catalog-images"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-components"
+status = 308
+to = "/docs/guides/store-framework-using-components"
