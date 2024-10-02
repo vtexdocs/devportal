@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.1](https://github.com/vtexdocs/devportal/compare/v1.16.0...v1.16.1) (2024-10-02)
+
+
+### Bug Fixes
+
+* personal shopper navigation.json ([7c8fd0b](https://github.com/vtexdocs/devportal/commit/7c8fd0b3e45d5706fce730b180f6fb62715b3c6c))
+
 ## [1.16.0](https://github.com/vtexdocs/devportal/compare/v1.15.0...v1.16.0) (2024-10-02)
 
 
