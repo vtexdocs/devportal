@@ -203,9 +203,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   let api
   if (slugs.includes(slug as string)) {
     try {
-      api = await SwaggerParser.dereference(
-        `https://developers.vtex.com/api/openapi/${slug}`
-      )
+      api = await SwaggerParser.dereference(url)
     } catch (error) {
       logger.error(`Parse Error on file ${slug}`)
       return {
