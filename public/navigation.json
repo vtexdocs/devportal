@@ -7837,6 +7837,24 @@
                   "origin": "",
                   "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/cancel",
                   "children": []
+                },
+                {
+                  "name": "Get Change order settings",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/changes/settings",
+                  "children": []
+                },
+                {
+                  "name": "Update Change order settings",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/changes/settings",
+                  "children": []
                 }
               ]
             },
