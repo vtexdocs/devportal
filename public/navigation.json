@@ -7839,7 +7839,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Change order settings",
+                  "name": "Update Change order settings",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -7848,7 +7848,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update Change order settings",
+                  "name": "Get Change order settings",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "GET",
