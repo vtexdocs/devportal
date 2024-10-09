@@ -7837,6 +7837,24 @@
                   "origin": "",
                   "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/cancel",
                   "children": []
+                },
+                {
+                  "name": "Update Change order settings",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/changes/settings",
+                  "children": []
+                },
+                {
+                  "name": "Get Change order settings",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/changes/settings",
+                  "children": []
                 }
               ]
             },
@@ -11908,7 +11926,7 @@
               "children": []
             },
             {
-              "name": "Personal Shoper",
+              "name": "Personal Shopper",
               "slug": "apps/vtexventures.personal-shopper-free",
               "origin": "",
               "type": "markdown",
