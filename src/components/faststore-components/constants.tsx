@@ -406,11 +406,13 @@ export const constants = {
     },
   ],
   flags: [
+    { icon: { icon: 'Amex' }, alt: 'Amex' },
     { icon: { icon: 'Visa' }, alt: 'Visa' },
     { icon: { icon: 'Diners' }, alt: 'Diners Club' },
     { icon: { icon: 'Mastercard' }, alt: 'Mastercard' },
     { icon: { icon: 'EloCard' }, alt: 'Elo Card' },
     { icon: { icon: 'PayPal' }, alt: 'PayPal' },
+    { icon: { icon: 'Pix' }, alt: 'Pix' },
     { icon: { icon: 'Stripe' }, alt: 'Stripe' },
     { icon: { icon: 'GooglePay' }, alt: 'GooglePay' },
     { icon: { icon: 'ApplePay' }, alt: 'ApplePay' },
