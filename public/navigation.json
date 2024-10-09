@@ -11237,6 +11237,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Node builder 7.x migration guide",
+              "slug": "node-builder-7x-migration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -14791,6 +14798,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Node builder update to version 7.x and deprecation of previous builder versions",
+                  "slug": "2024-10-10-node-builder-update-to-version-7x-and-deprecation-of-previous-builder-versions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
                 {
                   "name": "Apps and payment connector homologation freeze in preparation for Black Friday 2024",
                   "slug": "2024-09-26-apps-and-payment-connector-homologation-freeze-in-preparation-for-black-friday-2024",
