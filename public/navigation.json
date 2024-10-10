@@ -7742,6 +7742,15 @@
                   "children": []
                 },
                 {
+                  "name": "Get orders by order group ID",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/oms/pvt/orders/order-group/-orderGroup-",
+                  "children": []
+                },
+                {
                   "name": "List orders",
                   "slug": "orders-api",
                   "type": "openapi",
