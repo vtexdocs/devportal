@@ -1899,15 +1899,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "Settings",
-              "slug": "settings",
-              "origin": "",
-              "type": "category",
-              "children": [
+                },
                 {
                   "name": "How to configure tradeName to use in the organization search field",
                   "slug": "configure-tradename",
