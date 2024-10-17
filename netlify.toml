@@ -1446,3 +1446,9 @@ force = true
 from = "/docs/guides/vtex-catalog-images"
 status = 308
 to = "/docs/apps/vtex.catalog-images"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-and-scroll-api-queries"
+status = 308
+to = "/docs/guides/extracting-data-from-master-data-with-search-and-scroll"
