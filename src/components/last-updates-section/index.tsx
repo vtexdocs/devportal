@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
     description:
-      'FastStore WebOps: Preview your store changes before deployment',
-    date: new Date('09/09/2024'),
+      'FastStore WebOps: Build logs now integrated into the app',
+    date: new Date('10/17/2024'),
   },
   updateType: 'release-notes',
 }
