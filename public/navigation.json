@@ -1481,6 +1481,13 @@
                   "children": []
                 },
                 {
+                  "name": "Extracting data from Master Data with search and scroll",
+                  "slug": "extracting-data-from-master-data-with-search-and-scroll",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Pagination in the Master Data API",
                   "slug": "pagination-in-the-master-data-api",
                   "origin": "",
