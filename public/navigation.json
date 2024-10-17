@@ -1581,13 +1581,6 @@
                   "children": []
                 },
                 {
-                  "name": "Search and scroll API queries",
-                  "slug": "search-and-scroll-api-queries",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Implementing newletter opt in with Master Data v1",
                   "slug": "newsletter-inclusion-master-data-v1",
                   "origin": "",
