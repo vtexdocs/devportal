@@ -1497,7 +1497,7 @@
               ]
             },
             {
-              "name": "v2 Guides",
+              "name": "Master Data v2",
               "slug": "master-data-v2-guides",
               "origin": "",
               "type": "markdown",
@@ -1568,7 +1568,7 @@
               ]
             },
             {
-              "name": "v1 Guides",
+              "name": "Master Data v1",
               "slug": "v1-guides",
               "origin": "",
               "type": "markdown",
@@ -1576,13 +1576,6 @@
                 {
                   "name": "Querying documents in Master Data v1",
                   "slug": "querying-documents-in-master-data-v1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Search and scroll API queries",
-                  "slug": "search-and-scroll-api-queries",
                   "origin": "",
                   "type": "markdown",
                   "children": []
