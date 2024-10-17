@@ -8,8 +8,7 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
-    description:
-      'FastStore WebOps: Build logs now integrated into the app',
+    description: 'FastStore WebOps: Build logs now integrated into the app',
     date: new Date('10/17/2024'),
   },
   updateType: 'release-notes',
