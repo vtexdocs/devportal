@@ -13760,6 +13760,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Experimental exports - Hooks and Components",
+                  "slug": "faststore/experimental-exports-hooks-and-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
