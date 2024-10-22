@@ -99,6 +99,12 @@ to = "/docs/guides/order-canceling-improvements"
 
 [[redirects]]
 force = true
+from = "/docs/guides/subscriptions-v3-migration-guide"
+status = 308
+to = "/docs/guides/subscriptions"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/vtex-log-tracking-app"
 status = 308
 to = "/docs/api-reference/tracking"
@@ -1007,7 +1013,7 @@ to = "/docs/guides/vtex-io-documentation-how-to-create-and-use-clients"
 force = true
 from = "/docs/apps/vtex.custom-product-context"
 status = 308
-to = "/docs/apps/vtex.product-context"     
+to = "/docs/apps/vtex.product-context"
 
 [[redirects]]
 force = true
@@ -1018,6 +1024,12 @@ to = "/docs/apps/vtex.b2b-suite"
 [[redirects]]
 force = true
 from = "/docs/guides/legacy-b2b-solution"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "/docs/guides/installing-b2b-easy-set-up"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
 
@@ -1428,3 +1440,15 @@ force = true
 from = "/docs/guides/vtex-wordpress-integration"
 status = 308
 to = "/docs/apps/vtex.wordpress-integration"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-catalog-images"
+status = 308
+to = "/docs/apps/vtex.catalog-images"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-and-scroll-api-queries"
+status = 308
+to = "/docs/guides/extracting-data-from-master-data-with-search-and-scroll"

@@ -1481,6 +1481,13 @@
                   "children": []
                 },
                 {
+                  "name": "Extracting data from Master Data with search and scroll",
+                  "slug": "extracting-data-from-master-data-with-search-and-scroll",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Pagination in the Master Data API",
                   "slug": "pagination-in-the-master-data-api",
                   "origin": "",
@@ -1490,7 +1497,7 @@
               ]
             },
             {
-              "name": "v2 Guides",
+              "name": "Master Data v2",
               "slug": "master-data-v2-guides",
               "origin": "",
               "type": "markdown",
@@ -1561,7 +1568,7 @@
               ]
             },
             {
-              "name": "v1 Guides",
+              "name": "Master Data v1",
               "slug": "v1-guides",
               "origin": "",
               "type": "markdown",
@@ -1569,13 +1576,6 @@
                 {
                   "name": "Querying documents in Master Data v1",
                   "slug": "querying-documents-in-master-data-v1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Search and scroll API queries",
-                  "slug": "search-and-scroll-api-queries",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1896,6 +1896,13 @@
                 {
                   "name": "Bulk Import Buyer Organizations Spreadsheet",
                   "slug": "bulk-import-buyer-organizations-spreadsheet",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "How to configure tradeName to use in the organization search field",
+                  "slug": "how-to-configure-tradename-to-use-in-the-organization-search-field",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -7742,6 +7749,15 @@
                   "children": []
                 },
                 {
+                  "name": "Get orders by order group ID",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/oms/pvt/orders/order-group/-orderGroup-",
+                  "children": []
+                },
+                {
                   "name": "List orders",
                   "slug": "orders-api",
                   "type": "openapi",
@@ -7836,6 +7852,24 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/cancel",
+                  "children": []
+                },
+                {
+                  "name": "Update Change order settings",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/changes/settings",
+                  "children": []
+                },
+                {
+                  "name": "Get Change order settings",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/changes/settings",
                   "children": []
                 }
               ]
@@ -10739,7 +10773,7 @@
                   "children": []
                 },
                 {
-                  "name": "4. Writing the header and body scripts",
+                  "name": "4. Writing the head and body scripts",
                   "slug": "vtex-io-documentation-5-writingtheheaderandbodyscripts",
                   "origin": "",
                   "type": "markdown",
@@ -11216,6 +11250,13 @@
             {
               "name": "Developing service configuration apps",
               "slug": "vtex-io-documentation-developing-service-configuration-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Node builder 7.x migration guide",
+              "slug": "node-builder-7x-migration-guide",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11908,7 +11949,7 @@
               "children": []
             },
             {
-              "name": "Personal Shoper",
+              "name": "Personal Shopper",
               "slug": "apps/vtexventures.personal-shopper-free",
               "origin": "",
               "type": "markdown",
@@ -12813,13 +12854,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Getting started",
-                  "slug": "faststore/components-getting-started",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Atoms",
                   "slug": "faststore/atoms-overview",
                   "origin": "",
@@ -12967,7 +13001,7 @@
                       "children": []
                     },
                     {
-                      "name": "Buy button",
+                      "name": "BuyButton",
                       "slug": "faststore/molecules-buy-button",
                       "origin": "",
                       "type": "markdown",
@@ -12988,21 +13022,21 @@
                       "children": []
                     },
                     {
-                      "name": "Cart item",
+                      "name": "CartItem",
                       "slug": "faststore/molecules-cart-item",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Checkbox field",
+                      "name": "CheckboxField",
                       "slug": "faststore/molecules-checkbox-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Discount badge",
+                      "name": "DiscountBadge",
                       "slug": "faststore/molecules-discount-badge",
                       "origin": "",
                       "type": "markdown",
@@ -13023,21 +13057,21 @@
                       "children": []
                     },
                     {
-                      "name": "Icon button",
+                      "name": "IconButton",
                       "slug": "faststore/molecules-icon-button",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Input field",
+                      "name": "InputField",
                       "slug": "faststore/molecules-input-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Link button",
+                      "name": "LinkButton",
                       "slug": "faststore/molecules-link-button",
                       "origin": "",
                       "type": "markdown",
@@ -13051,49 +13085,56 @@
                       "children": []
                     },
                     {
-                      "name": "Navbar links",
+                      "name": "NavbarLinks",
                       "slug": "faststore/molecules-navbar-links",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Order summary",
+                      "name": "OrderSummary",
                       "slug": "faststore/molecules-order-summary",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product card",
+                      "name": "ProductCard",
                       "slug": "faststore/molecules-product-card",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product title",
+                      "name": "ProductPrice",
+                      "slug": "faststore/molecules-product-price",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "ProductTitle",
                       "slug": "faststore/molecules-product-title",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Quantity selector",
+                      "name": "QuantitySelector",
                       "slug": "faststore/molecules-quantity-selector",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Radio field",
+                      "name": "RadioField",
                       "slug": "faststore/molecules-radio-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Radio Group",
+                      "name": "RadioGroup",
                       "slug": "faststore/molecules-radio-group",
                       "origin": "",
                       "type": "markdown",
@@ -13107,63 +13148,63 @@
                       "children": []
                     },
                     {
-                      "name": "Region bar",
+                      "name": "RegionBar",
                       "slug": "faststore/molecules-region-bar",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search autocomplete",
+                      "name": "SearchAutocomplete",
                       "slug": "faststore/molecules-search-auto-complete",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search dropdown",
+                      "name": "SearchDropdown",
                       "slug": "faststore/molecules-search-dropdown",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search history",
+                      "name": "SearchHistory",
                       "slug": "faststore/molecules-search-history",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search input field",
+                      "name": "SearchInputField",
                       "slug": "faststore/molecules-search-input-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search products",
+                      "name": "SearchProducts",
                       "slug": "faststore/molecules-search-products",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search top",
+                      "name": "SearchTop",
                       "slug": "faststore/molecules-search-top",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Select field",
+                      "name": "SelectField",
                       "slug": "faststore/molecules-select-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "SKU selector",
+                      "name": "SKUSelector",
                       "slug": "faststore/molecules-sku-selector",
                       "origin": "",
                       "type": "markdown",
@@ -13198,7 +13239,7 @@
                       "children": []
                     },
                     {
-                      "name": "Toggle field",
+                      "name": "ToggleField",
                       "slug": "faststore/molecules-toggle-field",
                       "origin": "",
                       "type": "markdown",
@@ -13213,28 +13254,28 @@
                   "type": "markdown",
                   "children": [
                     {
-                      "name": "Banner Text",
+                      "name": "BannerText",
                       "slug": "faststore/organisms-banner-text",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Cart Sidebar",
+                      "name": "CartSidebar",
                       "slug": "faststore/organisms-cart-sidebar",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Empty State",
+                      "name": "EmptyState",
                       "slug": "faststore/organisms-empty-state",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Filter Slider",
+                      "name": "FilterSlider",
                       "slug": "faststore/organisms-filter-slider",
                       "origin": "",
                       "type": "markdown",
@@ -13255,14 +13296,14 @@
                       "children": []
                     },
                     {
-                      "name": "Image Gallery",
+                      "name": "ImageGallery",
                       "slug": "faststore/organisms-image-gallery",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Navbar Slider",
+                      "name": "NavbarSlider",
                       "slug": "faststore/organisms-navbar-slider",
                       "origin": "",
                       "type": "markdown",
@@ -13283,63 +13324,63 @@
                       "children": []
                     },
                     {
-                      "name": "Out Of Stock",
+                      "name": "OutOfStock",
                       "slug": "faststore/organisms-out-of-stock",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Payment Methods",
+                      "name": "PaymentMethods",
                       "slug": "faststore/organisms-payment-methods",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Price Range",
+                      "name": "PriceRange",
                       "slug": "faststore/organisms-price-range",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product Grid",
+                      "name": "ProductGrid",
                       "slug": "faststore/organisms-product-grid",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product Shelf",
+                      "name": "ProductShelf",
                       "slug": "faststore/organisms-product-shelf",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Region Modal",
+                      "name": "RegionModal",
                       "slug": "faststore/organisms-region-modal",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search Input",
+                      "name": "SearchInput",
                       "slug": "faststore/organisms-search-input",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Shipping Simulation",
+                      "name": "ShippingSimulation",
                       "slug": "faststore/organisms-shipping-simulation",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Slide Over",
+                      "name": "SlideOver",
                       "slug": "faststore/organisms-slide-over",
                       "origin": "",
                       "type": "markdown",
@@ -14723,6 +14764,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "I am getting errors with my service configuration app",
+              "slug": "i-am-getting-errors-with-my-service-configuration-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -14767,6 +14815,35 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "October",
+              "slug": "october-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore WebOps: Build logs now integrated into the app",
+                  "slug": "2024-10-17-build-logs-integrated-into-webops",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Node builder update to version 7.x and deprecation of previous builder versions",
+                  "slug": "2024-10-10-node-builder-update-to-version-7x-and-deprecation-of-previous-builder-versions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Apps and payment connector homologation freeze in preparation for Black Friday 2024",
+                  "slug": "2024-09-26-apps-and-payment-connector-homologation-freeze-in-preparation-for-black-friday-2024",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "September",
               "slug": "september-2024",
