@@ -8837,6 +8837,15 @@
                   "origin": "",
                   "endpoint": "/pricing/tables",
                   "children": []
+                },
+                {
+                  "name": "Create price table",
+                  "slug": "pricing-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/pricing/tables/-priceTableId-",
+                  "children": []
                 }
               ]
             }
