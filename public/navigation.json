@@ -12832,8 +12832,8 @@
                   "children": []
                 },
                 {
-                  "name": "Updating the @fastore/core package version",
-                  "slug": "faststore/project-structure-updating-the-core-package-version",
+                  "name": "Updating the @fastore/cli package version",
+                  "slug": "faststore/project-structure-updating-the-cli-package-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
