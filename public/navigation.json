@@ -8837,6 +8837,15 @@
                   "origin": "",
                   "endpoint": "/pricing/tables",
                   "children": []
+                },
+                {
+                  "name": "Create price table",
+                  "slug": "pricing-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/pricing/tables/-priceTableId-",
+                  "children": []
                 }
               ]
             }
@@ -13760,6 +13769,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Experimental exports - Hooks and Components",
+                  "slug": "faststore/building-sections-experimental-exports-hooks-and-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -13849,6 +13865,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Managing URLs with redirects and rewrite paths",
+              "slug": "faststore/routing-managing-urls-with-redirects-and-rewrite-paths",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             },
             {
               "name": "Managing performance",
