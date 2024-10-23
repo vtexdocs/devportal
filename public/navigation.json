@@ -14086,7 +14086,7 @@
               "name": "Building pages",
               "slug": "building-pages",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Building a Product Details Page",
