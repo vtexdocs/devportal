@@ -1458,3 +1458,9 @@ force = true
 from = "/docs/guides/search-and-scroll-api-queries"
 status = 308
 to = "/docs/guides/extracting-data-from-master-data-with-search-and-scroll"
+
+[[redirects]]
+force = true
+from = "/pt/tutorial/pedidos-para-entrega--4K7Z6FNIJgEt55B5vqVeCen"
+status = 308
+to = "/docs/guides/extracting-data-from-master-data-with-search-and-scroll"
