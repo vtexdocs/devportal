@@ -11515,13 +11515,6 @@
           "origin": "",
           "type": "markdown",
           "children": []
-        },
-        {
-          "name": "Other resources",
-          "slug": "other-resources",
-          "origin": "",
-          "type": "markdown",
-          "children": []
         }
       ]
     },
@@ -14126,13 +14119,6 @@
                 {
                   "name": "Customizing the Header and Footer blocks by page",
                   "slug": "vtex-io-documentation-customizing-the-header-and-footer-blocks-by-page",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Creating an institutional page with Content types",
-                  "slug": "creating-an-institutional-page-with-content-types-1",
                   "origin": "",
                   "type": "markdown",
                   "children": []
