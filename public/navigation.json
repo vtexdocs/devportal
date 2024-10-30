@@ -10821,11 +10821,18 @@
           ]
         },
         {
-          "name": "Manifest",
-          "slug": "vtex-io-documentation-manifest",
+          "name": "Project structure",
+          "slug": "vtex-io-documentation-project-structure",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
+            {
+              "name": "Manifest",
+              "slug": "vtex-io-documentation-manifest",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "Billing Options",
               "slug": "vtex-io-documentation-billing-options",
