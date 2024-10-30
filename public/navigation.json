@@ -14838,6 +14838,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore WebOps: Fixed the app integration with the Headless CMS",
+                  "slug": "2024-10-30-webops-integration-with-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore WebOps: Build logs now integrated into the app",
                   "slug": "2024-10-17-build-logs-integrated-into-webops",
                   "origin": "",
