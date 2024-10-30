@@ -8,7 +8,7 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'fixed',
-    description: 
+    description:
       'FastStore WebOps: Fixed the app integration with the Headless CMS',
     date: new Date('10/30/2024'),
   },
