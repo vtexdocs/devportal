@@ -14825,6 +14825,21 @@
           "type": "category",
           "children": [
             {
+              "name": "November",
+              "slug": "november-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore WebOps app: Users can now install the app by themselves",
+                  "slug": "2024-11-01-webops-installation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "October",
               "slug": "october-2024",
               "origin": "",

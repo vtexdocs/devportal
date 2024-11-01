@@ -7,10 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'fixed',
+    type: 'improved',
     description:
-      'FastStore WebOps: Fixed the app integration with the Headless CMS',
-    date: new Date('10/30/2024'),
+      'FastStore WebOps app: Users can now install the app by themselves',
+    date: new Date('11/01/2024'),
   },
   updateType: 'release-notes',
 }
