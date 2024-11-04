@@ -14824,12 +14824,19 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New password field for sending secure data in the anti-fraud flow",
+                  "slug": "2024-11-04-new-password-field-for-sending-secure-data-in-the-anti-fraud-flow",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore WebOps app: Users can now install the app by themselves",
                   "slug": "2024-11-01-webops-installation",
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
+                }                
               ]
             },
             {
