@@ -7,10 +7,10 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'added',
+    type: 'improved',
     description:
-      'FastStore WebOps: Preview your store changes before deployment',
-    date: new Date('09/09/2024'),
+      'FastStore WebOps app: Users can now install the app by themselves',
+    date: new Date('11/01/2024'),
   },
   updateType: 'release-notes',
 }
