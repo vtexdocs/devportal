@@ -1467,6 +1467,12 @@ to = "/docs/guides/enable-the-region-for-skus"
 
 [[redirects]]
 force = true
+from = "/docs/guides/vtex-io-documentation-components"
+status = 308
+to = "/docs/guides/store-framework-using-components"
+
+[[redirects]]
+force = true
 from = "/docs/guides/dealing-with-events"
 status = 308
 to = "/docs/guides/store-framework-dealing-with-events"

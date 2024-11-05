@@ -14039,13 +14039,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Components",
-                  "slug": "vtex-io-documentation-components",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Composition",
                   "slug": "vtex-io-documentation-composition",
                   "origin": "",
@@ -14127,9 +14120,9 @@
             },
             {
               "name": "Using components",
-              "slug": "using-components",
+              "slug": "store-framework-using-components",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Building a Carousel using Slider Layout",
