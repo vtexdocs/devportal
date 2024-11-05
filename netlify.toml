@@ -1464,3 +1464,9 @@ force = true
 from = "/docs/guides/how-to-configure-region-feature-sku"
 status = 308
 to = "/docs/guides/enable-the-region-for-skus"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-components"
+status = 308
+to = "/docs/guides/store-framework-using-components"
