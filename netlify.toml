@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/project-structure-updating-the-core-package-version"
+status = 308
+to = "/docs/guides/faststore/project-structure-updating-the-cli-package-version"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/dynamic-content-setting-up-the-store-code-for-dynamic-content"
 status = 308
 to = "/docs/guides/faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content"
@@ -96,6 +102,12 @@ force = true
 from = "/docs/guides/order-canceling-improvements-beta"
 status = 308
 to = "/docs/guides/order-canceling-improvements"
+
+[[redirects]]
+force = true
+from = "/docs/guides/subscriptions-v3-migration-guide"
+status = 308
+to = "/docs/guides/subscriptions"
 
 [[redirects]]
 force = true
@@ -1440,6 +1452,18 @@ force = true
 from = "/docs/guides/vtex-catalog-images"
 status = 308
 to = "/docs/apps/vtex.catalog-images"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-and-scroll-api-queries"
+status = 308
+to = "/docs/guides/extracting-data-from-master-data-with-search-and-scroll"
+
+[[redirects]]
+force = true
+from = "/docs/guides/how-to-configure-region-feature-sku"
+status = 308
+to = "/docs/guides/enable-the-region-for-skus"
 
 [[redirects]]
 force = true
