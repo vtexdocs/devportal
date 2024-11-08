@@ -14284,9 +14284,9 @@
             },
             {
               "name": "Dealing with events",
-              "slug": "dealing-with-events",
+              "slug": "store-framework-dealing-with-events",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Collecting user session data",
