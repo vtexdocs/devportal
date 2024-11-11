@@ -14070,9 +14070,9 @@
             },
             {
               "name": "Building pages",
-              "slug": "building-pages",
+              "slug": "store-framework-building-pages",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Building a Product Details Page",
