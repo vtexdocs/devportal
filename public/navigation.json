@@ -14549,9 +14549,9 @@
             },
             {
               "name": "Updating live stores",
-              "slug": "updating-live-stores",
+              "slug": "store-framework-updating-live-stores",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Migrating CMS settings after a Store Theme major update",
