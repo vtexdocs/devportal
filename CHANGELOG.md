@@ -2,6 +2,44 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.2](https://github.com/vtexdocs/devportal/compare/v1.16.1...v1.16.2) (2024-11-12)
+
+
+### Features
+
+* removing article from navigation ([6e96eaa](https://github.com/vtexdocs/devportal/commit/6e96eaa68f3bbfdf3f6545b2f713d843711350e2))
+* **Update navigation.json:** New FastStore release note ([5935711](https://github.com/vtexdocs/devportal/commit/5935711e9926cc87d642fad1528675eef7f77a83))
+
+
+### Bug Fixes
+
+* **navigation.json:** update FastStore title and slug name (updating-the-cli-package-version) ([39530ab](https://github.com/vtexdocs/devportal/commit/39530ab92f8d7b35297a586baa6572ea4940b33b))
+
+
+### Docs
+
+* adding new endpoint to navigation ([6127d73](https://github.com/vtexdocs/devportal/commit/6127d73d8d2a235d70c6aa44e1870eaabcb2bc5e))
+* adding new endpoints to navigation ([eee135f](https://github.com/vtexdocs/devportal/commit/eee135f4e4f02dc8735eee14f5177f97964be177))
+* correcting endpoint name ([f315980](https://github.com/vtexdocs/devportal/commit/f31598085c55e03e3ba8a6b1b75f66e3154b5941))
+* create redirect ([2353176](https://github.com/vtexdocs/devportal/commit/2353176d56b5b2a68076726870c3482a57d53c1d))
+* create redirect ([6010df1](https://github.com/vtexdocs/devportal/commit/6010df1da1ff613fa1b7d27cdbeef11ce28f9468))
+* **navigation.json:** building pages ([5beb49b](https://github.com/vtexdocs/devportal/commit/5beb49bd5d88f92104353c13c1ae0da6de171fac))
+* **navigation.json:** fixing slug ([c4b53bd](https://github.com/vtexdocs/devportal/commit/c4b53bd8ef2400e3034445ea9074db0485d847c8))
+* **navigation.json:** updating live stores ([1a6b003](https://github.com/vtexdocs/devportal/commit/1a6b00375a75577f06f34c9963538835dd506af5))
+* **navigation.json:** using components ([dde67a4](https://github.com/vtexdocs/devportal/commit/dde67a48eec64472fdb8574f2931f2bab2684008))
+* **navigation:** add master data guide ([e5c5cd6](https://github.com/vtexdocs/devportal/commit/e5c5cd62986d2a389ae07f85daedb4bc5961d076))
+* **navigation:** remove old version of search and scroll guide ([8efa60a](https://github.com/vtexdocs/devportal/commit/8efa60a112f96446739ceb70236694232a9776f7))
+* **navigation:** rename master data categories ([6fe6c45](https://github.com/vtexdocs/devportal/commit/6fe6c4513922fee9ab4fc41b1eea5a7dafd00397))
+* **netlify.toml:** redirect dealing with events ([0fe70ec](https://github.com/vtexdocs/devportal/commit/0fe70ec6674a8f5b7af5ab15748169c4dff0862b))
+* **netlify.toml:** redirect using components ([72013fa](https://github.com/vtexdocs/devportal/commit/72013fac28d5165e15db8392b07702b952a4c00b))
+* update documents names ([17a1fc6](https://github.com/vtexdocs/devportal/commit/17a1fc6b4efd9971880668c4005e9b2310c0a67b))
+
+
+### Chore
+
+* **faststore-components:** update available gs icons ([6be0bbb](https://github.com/vtexdocs/devportal/commit/6be0bbb741659c72a6c575711f9a1f812f502b2b))
+* update components package ([2f49da1](https://github.com/vtexdocs/devportal/commit/2f49da15784fe6690e78a9ec2e16f7dc579de7c0))
+
 ### [1.16.1](https://github.com/vtexdocs/devportal/compare/v1.16.0...v1.16.1) (2024-10-02)
 
 
