@@ -48,9 +48,9 @@ CHROMEDRIVER_PATH=./chromedriver
 
 PIPENV_VENV_IN_PROJECT=true pipenv install
 
-pipenv run ./docsearch run ./configs/scraper_md.json
-
 pipenv run ./docsearch run ./configs/scraper_openapi.json
+
+pipenv run ./docsearch run ./configs/scraper_md.json
 
 echo "🚀 Successfully indexed and uploaded the results to Algolia"
 

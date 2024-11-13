@@ -7,26 +7,14 @@ on:
     types: [closed]
 
 jobs:
-  guides-build:
+  devportal-scraper:
     runs-on: ubuntu-latest
-    name: Scraper running
+    name: Run scraper_openapi and scraper_md
     steps:
     - uses: actions/checkout@v2
-    - name: Devportal Scraper
+    - name: Run Devportal Scraper
       uses: vtexdocs/devportal-docsearch-action@main
       with:
         algolia_application_id: '${{ secrets.ALGOLIA_APP_ID }}'
         algolia_api_key: ${{ secrets.ALGOLIA_WRITE_KEY }}
-        file: './configs/scraper_md.json'
-  reference-build:
-    runs-on: ubuntu-latest
-    name: Scraper running
-    steps:
-    - uses: actions/checkout@v2
-    - name: Devportal Scraper
-      uses: vtexdocs/devportal-docsearch-action@main
-      with:
-        algolia_application_id: '${{ secrets.ALGOLIA_APP_ID }}'
-        algolia_api_key: ${{ secrets.ALGOLIA_WRITE_KEY }}
-        file: './configs/scraper_openapi.json'
-    needs: guides-build
+        files: './configs/scraper_openapi.json ./configs/scraper_md.json'
