@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.4](https://github.com/vtexdocs/devportal/compare/v1.16.3...v1.16.4) (2024-11-13)
+
+
+### Features
+
+* adjust docsearch-scraper action considering pr [#5](https://github.com/vtexdocs/devportal/issues/5) ([6da0314](https://github.com/vtexdocs/devportal/commit/6da031480445cec21dfcb477c43b72de20e15fb6))
+
 ### [1.16.3](https://github.com/vtexdocs/devportal/compare/v1.16.2...v1.16.3) (2024-11-13)
 
 
