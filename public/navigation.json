@@ -14684,8 +14684,22 @@
           "type": "category",
           "children": [
             {
-              "name": "My store does not reflect the overrides I created",
-              "slug": "my-store-does-not-reflect-the-overrides-i-created",
+              "name": "I am getting 500 errors in VTEX IO CLI",
+              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I am getting errors with my service configuration app",
+              "slug": "i-am-getting-errors-with-my-service-configuration-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Issues during extending the FastStore API schema",
+              "slug": "issues-during-extending-the-faststore-api-schema",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14712,29 +14726,8 @@
               "children": []
             },
             {
-              "name": "Modal Layout closes when I click a SKU",
-              "slug": "modal-layout-closes-when-i-click-a-sku",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "My multi-language store is not functioning in the development workspace",
               "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I am getting 500 errors in VTEX IO CLI",
-              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "The Price in the shelf or in the search results is different from the product page",
-              "slug": "the-price-in-the-shelf-or-in-the-search-results-is-different-from-the-product-page",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14747,8 +14740,22 @@
               "children": []
             },
             {
-              "name": "vtex release CLI command returns an EBADF message",
-              "slug": "vtex-release-cli-command-returns-ebadf-message",
+              "name": "My store does not reflect the overrides I created",
+              "slug": "my-store-does-not-reflect-the-overrides-i-created",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Modal Layout closes when I click a SKU",
+              "slug": "modal-layout-closes-when-i-click-a-sku",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "The Price in the shelf or in the search results is different from the product page",
+              "slug": "the-price-in-the-shelf-or-in-the-search-results-is-different-from-the-product-page",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14761,8 +14768,8 @@
               "children": []
             },
             {
-              "name": "I am getting errors with my service configuration app",
-              "slug": "i-am-getting-errors-with-my-service-configuration-app",
+              "name": "vtex release CLI command returns an EBADF message",
+              "slug": "vtex-release-cli-command-returns-ebadf-message",
               "origin": "",
               "type": "markdown",
               "children": []
