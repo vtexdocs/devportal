@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { useEffect, useContext } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
-import jp from 'jsonpath'
 import ArticlePagination from 'components/article-pagination'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
@@ -42,7 +41,12 @@ import getFileContributors, {
 } from 'utils/getFileContributors'
 
 import { getLogger } from 'utils/logging/log-util'
-import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import {
+  findBreadcrumbTrail,
+  extractMarkdownEntries,
+  getKeyByValue,
+  flattenJSON,
+} from 'utils/navigation-utils'
 import { LibraryContext } from '@vtexdocs/components'
 import ReactMarkdown from 'react-markdown'
 
@@ -50,8 +54,7 @@ const docsPathsGLOBAL = await getDocsPaths()
 
 interface Props {
   sectionSelected: string
-  parentsArray: string[]
-  breadcumbList: { slug: string; name: string; type: string }[]
+  breadcrumbList: { slug: string; name: string; type: string }[]
   content: string
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
@@ -83,7 +86,7 @@ const DocumentationPage: NextPage<Props> = ({
   seeAlsoData,
   pagination,
   isListed,
-  breadcumbList,
+  breadcrumbList,
   branch,
   sectionSelected,
   hideTOC,
@@ -120,7 +123,7 @@ const DocumentationPage: NextPage<Props> = ({
             <Box sx={styles.contentContainer}>
               <article>
                 <header>
-                  <Breadcrumb breadcumbList={breadcumbList} />
+                  <Breadcrumb breadcumbList={breadcrumbList} />
                   <Text sx={styles.documentationTitle} className="title">
                     {serialized.frontmatter?.title}
                   </Text>
@@ -311,62 +314,61 @@ export const getStaticProps: GetStaticProps = async ({
 
     const hideTOC = serialized.frontmatter?.hideTOC === true
 
-    const docsListSlug = jp.query(
-      sidebarfallback,
-      `$..[?(@.type=='markdown')]..slug`
+    const flattenedSidebar = flattenJSON(sidebarfallback)
+
+    const keyPath =
+      getKeyByValue(flattenedSidebar, slug) ||
+      getKeyByValue(flattenedSidebar, `guides/${slug}`)
+    const navigationSlug = keyPath ? flattenedSidebar[keyPath] : ''
+    const isListed = Boolean(keyPath)
+
+    /* Section Selected */
+    const sectionSelected = keyPath
+      ? flattenedSidebar[`${keyPath[0]}.documentation`]
+      : []
+
+    const sidebarIndex = isListed
+      ? sidebarfallback.findIndex(
+          (item: { documentation: string }) =>
+            item.documentation === sectionSelected
+        )
+      : 0
+    /****/
+
+    /* Breadcrumbs */
+    const breadcrumbList = isListed
+      ? findBreadcrumbTrail(
+          sidebarfallback[sidebarIndex].categories,
+          navigationSlug
+        )
+      : []
+    /****/
+
+    /* Navigation */
+    const parentsArray: string[] = isListed
+      ? breadcrumbList?.map((item) => item.slug) ?? []
+      : []
+
+    /* Pagination */
+    const entries = extractMarkdownEntries(sidebarfallback[sidebarIndex])
+    const entryIndex = entries.findIndex(
+      (entry) => entry.slug === `/docs/guides/${slug}`
     )
-    const docsListName = jp.query(
-      sidebarfallback,
-      `$..[?(@.type=='markdown')]..name`
-    )
-    const indexOfSlug = docsListSlug.indexOf(slug)
     const pagination = {
       previousDoc: {
-        slug: docsListSlug[indexOfSlug - 1]
-          ? `/docs/guides/${docsListSlug[indexOfSlug - 1]}`
+        slug: entries[entryIndex - 1]
+          ? `/${entries[entryIndex - 1].slug}`
           : null,
-        name: docsListName[indexOfSlug - 1]
-          ? docsListName[indexOfSlug - 1]
-          : null,
+        name: entries[entryIndex - 1] ? entries[entryIndex - 1].name : null,
       },
       nextDoc: {
-        slug: docsListSlug[indexOfSlug + 1]
-          ? `/docs/guides/${docsListSlug[indexOfSlug + 1]}`
+        slug: entries[entryIndex + 1]
+          ? `/${entries[entryIndex + 1].slug}`
           : null,
-        name: docsListName[indexOfSlug + 1]
-          ? docsListName[indexOfSlug + 1]
-          : null,
+        name: entries[entryIndex + 1] ? entries[entryIndex + 1].name : null,
       },
     }
-
-    const flattenedSidebar = flattenJSON(sidebarfallback)
-    const isListed: boolean = getKeyByValue(flattenedSidebar, slug)
-      ? true
-      : false
-    const cleanSlug = getKeyByValue(flattenedSidebar, slug)
-    const keyPath = cleanSlug
-      ? getKeyByValue(flattenedSidebar, slug)
-      : getKeyByValue(flattenedSidebar, `guides/${slug}`)
-    const parentsArray: string[] = []
-    const parentsArrayName: string[] = []
-    const parentsArrayType: string[] = []
-    let sectionSelected = ''
-    if (keyPath) {
-      sectionSelected = flattenedSidebar[`${keyPath[0]}.documentation`]
-      getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
-      cleanSlug ? parentsArray.push(slug) : parentsArray.push(`guides/${slug}`)
-      getParents(keyPath, 'name', flattenedSidebar, parentsArrayName)
-      getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
-    }
-
-    const breadcumbList: { slug: string; name: string; type: string }[] = []
-    parentsArrayName.forEach((_el: string, idx: number) => {
-      breadcumbList.push({
-        slug: `/docs/guides/${parentsArray[idx]}`,
-        name: parentsArrayName[idx],
-        type: parentsArrayType[idx],
-      })
-    })
+    /****/
 
     return {
       props: {
@@ -381,7 +383,7 @@ export const getStaticProps: GetStaticProps = async ({
         seeAlsoData,
         pagination,
         isListed,
-        breadcumbList,
+        breadcrumbList,
         branch,
         hideTOC,
       },

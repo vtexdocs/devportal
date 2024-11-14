@@ -21,9 +21,15 @@ import type { Item } from '@vtexdocs/components'
 import { MarkdownRenderer } from '@vtexdocs/components'
 import FeedbackSection from 'components/feedback-section'
 import OnThisPage from 'components/on-this-page'
+import ArticlePagination from 'components/article-pagination'
 
 import { removeHTML } from 'utils/string-utils'
-import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
+import {
+  extractMarkdownEntries,
+  flattenJSON,
+  getKeyByValue,
+  getParents,
+} from 'utils/navigation-utils'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getReleasePaths from 'utils/getReleasePaths'
@@ -44,9 +50,19 @@ interface Props {
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
   branch: string
+  isListed: boolean
+  pagination: {
+    previousDoc: { slug: string | null; name: string | null }
+    nextDoc: { slug: string | null; name: string | null }
+  }
 }
 
-const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
+const DocumentationPage: NextPage<Props> = ({
+  serialized,
+  branch,
+  isListed,
+  pagination,
+}) => {
   const [headings, setHeadings] = useState<Item[]>([])
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
@@ -114,6 +130,18 @@ const DocumentationPage: NextPage<Props> = ({ serialized, branch }) => {
               </article>
             </Box>
             <FeedbackSection suggestEdits={false} />
+            {isListed && (
+              <ArticlePagination
+                hidePaginationNext={
+                  Boolean(serialized.frontmatter?.hidePaginationNext) || false
+                }
+                hidePaginationPrevious={
+                  Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
+                  false
+                }
+                pagination={pagination}
+              />
+            )}
           </Box>
           <OnThisPage />
         </Flex>
@@ -211,9 +239,34 @@ export const getStaticProps: GetStaticProps = async ({
       getParents(keyPath, 'slug', flattenedSidebar, parentsArray)
       parentsArray.push(slug)
     }
+    const isListed: boolean = keyPath ? true : false
+
+    /* Pagination */
+    const entries = extractMarkdownEntries(sidebarfallback[6])
+    const entryIndex = entries.findIndex(
+      (entry) => entry.slug === `/updates/release-notes/${slug}`
+    )
+    const pagination = {
+      previousDoc: {
+        slug: entries[entryIndex + 1]
+          ? `/${entries[entryIndex + 1].slug}`
+          : null,
+        name: entries[entryIndex + 1] ? entries[entryIndex + 1].name : null,
+      },
+      nextDoc: {
+        slug: entries[entryIndex - 1]
+          ? `/${entries[entryIndex - 1].slug}`
+          : null,
+        name: entries[entryIndex - 1] ? entries[entryIndex - 1].name : null,
+      },
+    }
+    /****/
+
     return {
       props: {
         parentsArray,
+        pagination,
+        isListed,
         serialized,
         sidebarfallback,
         sectionSelected,

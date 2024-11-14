@@ -1,3 +1,86 @@
+type BreadcrumbEntry = {
+  name: string
+  slug: string
+  type: string
+}
+
+export const findBreadcrumbTrail = (
+  items: DocEntry[],
+  targetSlug: string
+): BreadcrumbEntry[] | null => {
+  for (const item of items) {
+    // If the item is the target, return it as the base of the breadcrumb trail
+    if (item.slug === targetSlug) {
+      return [{ name: item.name, slug: item.slug, type: item.type }]
+    }
+
+    // Recursively search in children
+    if (item.children && item.children.length > 0) {
+      const trail = findBreadcrumbTrail(item.children, targetSlug)
+
+      // If the target is found in children, add the current item to the breadcrumb trail
+      if (trail) {
+        return [{ name: item.name, slug: item.slug, type: item.type }, ...trail]
+      }
+    }
+  }
+
+  // Return null if the target is not found at this level
+  return null
+}
+
+type MarkdownEntry = {
+  name: string
+  slug: string
+}
+
+type NavEntry = {
+  documentation: string
+  slugPrefix: string
+  categories: DocEntry[]
+}
+
+type DocEntry = {
+  name: string
+  slug: string
+  origin: string
+  type: string
+  children: DocEntry[]
+}
+
+export const extractMarkdownEntries = (navItems: NavEntry): MarkdownEntry[] => {
+  const basePath = navItems.slugPrefix
+  const markdownEntries: MarkdownEntry[] = []
+  const processChild = (item: DocEntry) => {
+    // Recursively check children
+    item.children.forEach((item) => {
+      // If the item type is "markdown", add it to the list
+      if (item.type === 'markdown' && item.name && item.slug) {
+        const slug = `/${basePath}/${item.slug}`.replace('//', '/')
+        markdownEntries.push({ name: item.name, slug })
+      }
+      if (item.children && item.children.length > 0) {
+        processChild(item)
+      }
+    })
+  }
+
+  navItems.categories.forEach((item) => {
+    // If the item type is "markdown", add it to the list
+    if (item.type === 'markdown' && item.name && item.slug) {
+      const slug = `/${basePath}/${item.slug}`.replace('//', '/')
+      markdownEntries.push({ name: item.name, slug })
+    }
+
+    // Recursively check children
+    if (item.children && item.children.length > 0) {
+      processChild(item)
+    }
+  })
+
+  return markdownEntries
+}
+
 export const flattenJSON = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   obj: any = {},

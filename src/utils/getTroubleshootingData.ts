@@ -26,7 +26,6 @@ async function getFrontmatter(releaseContent: string) {
 
 export default async function getTroubleshootingData(branch = 'main') {
   const docs = await getTroubleshootingPaths(branch)
-  console.log(docs)
   const troubleshooting = Object.values(docs)
   const troubleshootingContent: string[] = []
   const troubleshootingFrontmatter: ITroubleshootingFrontmatter[] = []
