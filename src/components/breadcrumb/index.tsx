@@ -1,5 +1,5 @@
 import { Link, Flex, IconCaret, Text } from '@vtex/brand-ui'
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 
 import styles from './styles'
 
@@ -8,19 +8,8 @@ interface Props {
 }
 
 const Breadcrumb = ({ breadcumbList }: Props) => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [isTruncated, setIsTruncated] = useState(false)
   const breadcrumbRef = useRef<HTMLDivElement>(null)
   const lastItemRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (breadcrumbRef.current && lastItemRef.current) {
-      const breadcrumbWidth = breadcrumbRef.current.offsetWidth
-      const lastItemWidth = lastItemRef.current.offsetWidth
-
-      setIsTruncated(breadcrumbWidth < lastItemWidth)
-    }
-  }, [breadcumbList])
 
   return (
     <Flex sx={styles.breadcrumb} ref={breadcrumbRef}>
