@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.5](https://github.com/vtexdocs/devportal/compare/v1.16.4...v1.16.5) (2024-11-14)
+
+
+### Features
+
+* **release-notes:** add pagination ([e761ee3](https://github.com/vtexdocs/devportal/commit/e761ee3f2930a9b792422ccbb9e7c068a4a35da0))
+
+
+### Bug Fixes
+
+* remove unused ([1a1c239](https://github.com/vtexdocs/devportal/commit/1a1c239f32e7108476cc0b1248acef11dfcd2d2a))
+
+
+### Docs
+
+* **navigation.json:** working-with-site-editor-fixing-slug ([c7c2b6f](https://github.com/vtexdocs/devportal/commit/c7c2b6f277021152f4c789e4a0b10b58c747dd7f))
+* **netlify.toml:** working with site editor fixing slug ([ab73abc](https://github.com/vtexdocs/devportal/commit/ab73abc7aefc97479b5a3b5e2ef63ae9d4f086cd))
+
+
+### Chore
+
+* **package.json:** update components package version ([38ff788](https://github.com/vtexdocs/devportal/commit/38ff7883ecbf8e1df445b2e61ceea1cdac6f0174))
+
 ### [1.16.4](https://github.com/vtexdocs/devportal/compare/v1.16.3...v1.16.4) (2024-11-13)
 
 
