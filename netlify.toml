@@ -1476,3 +1476,9 @@ force = true
 from = "/docs/guides/dealing-with-events"
 status = 308
 to = "/docs/guides/store-framework-dealing-with-events"
+
+[[redirects]]
+force = true
+from = "/docs/guides/delivery-window-blocker-app"
+status = 308
+to = "/docs/apps/vtex.delivery-window-blocker"
