@@ -12269,13 +12269,6 @@
               "children": []
             },
             {
-              "name": "Delivery Window Blocker",
-              "slug": "guides/delivery-window-blocker-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Affiliates Program",
               "slug": "guides/affiliates-program-app",
               "origin": "",
@@ -15547,13 +15540,6 @@
                 {
                   "name": "Payment Provider Framework: Develop payment connectors with VTEX IO",
                   "slug": "payment-provider-framework-develop-payment-connectors-with-vtex-io",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Delivery Window Blocker App",
-                  "slug": "delivery-window-blocker-app",
                   "origin": "",
                   "type": "markdown",
                   "children": []
