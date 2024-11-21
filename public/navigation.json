@@ -14824,6 +14824,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Store Framework: Sitemap generation disabled during Shopping Season",
+                  "slug": "2024-11-21-store-framework-sitemap-generation-disabled-during-shopping-season",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },                
+                {
                   "name": "New password field for sending secure data in the anti-fraud flow",
                   "slug": "2024-11-04-new-password-field-for-sending-secure-data-in-the-anti-fraud-flow",
                   "origin": "",
