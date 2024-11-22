@@ -1482,3 +1482,9 @@ force = true
 from = "/docs/guides/delivery-window-blocker-app"
 status = 308
 to = "/docs/apps/vtex.delivery-window-blocker"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-best-practices-for-rendering-images"
+status = 308
+to = "/docs/guides/vtex-io-documentation-optimizing-image-rendering"
