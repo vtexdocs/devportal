@@ -10005,7 +10005,7 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/sponsored_products/-facets-",
-                  "children": [] 
+                  "children": []
                 }
               ]
             }
@@ -11055,7 +11055,7 @@
               "children": []
             }
           ]
-        }, 
+        },
         {
           "name": "Development guides",
           "slug": "development-guides-category",
@@ -11086,72 +11086,80 @@
           ]
         },
         {
-          "name": "Services",
-          "slug": "vtex-io-documentation-service",
+          "name": "Node apps",
+          "slug": "vtex-io-documentation-node-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
-              "name": "Developing services on VTEX IO",
-              "slug": "developing-services-on-vtex-io",
+              "name": "Services",
+              "slug": "vtex-io-documentation-service",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "1. Getting started with the boilerplate",
-                  "slug": "services-1-getting-started-with-the-boilerplate",
+                  "name": "Developing services on VTEX IO",
+                  "slug": "developing-services-on-vtex-io",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "2. Handling and receiving events",
-                  "slug": "services-2-handling-and-receiving-events",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "3. Using the Analytics client",
-                  "slug": "services-3-using-the-analytics-client",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "4. Using events as triggers",
-                  "slug": "services-4-using-events-as-triggers",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "5. Using the Master Data client",
-                  "slug": "services-5-using-the-master-data-client",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "6. Using GraphQL to retrieve data from Master Data",
-                  "slug": "services-6-graphql-retrieving-data-from-master-data",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "7. Using GraphiQL",
-                  "slug": "services-7-using-graphiql",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Services - Conclusion",
-                  "slug": "services-conclusion",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "1. Getting started with the boilerplate",
+                      "slug": "services-1-getting-started-with-the-boilerplate",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "2. Handling and receiving events",
+                      "slug": "services-2-handling-and-receiving-events",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "3. Using the Analytics client",
+                      "slug": "services-3-using-the-analytics-client",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "4. Using events as triggers",
+                      "slug": "services-4-using-events-as-triggers",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "5. Using the Master Data client",
+                      "slug": "services-5-using-the-master-data-client",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "6. Using GraphQL to retrieve data from Master Data",
+                      "slug": "services-6-graphql-retrieving-data-from-master-data",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "7. Using GraphiQL",
+                      "slug": "services-7-using-graphiql",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Services - Conclusion",
+                      "slug": "services-conclusion",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -14231,11 +14239,11 @@
                   "children": []
                 },
                 {
-                   "name": "Site Editor schema examples",
-                   "slug": "vtex-io-documentation-site-editor-schema-examples",
-                   "origin": "",
-                   "type": "markdown",
-                   "children": []
+                  "name": "Site Editor schema examples",
+                  "slug": "vtex-io-documentation-site-editor-schema-examples",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -14836,7 +14844,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },                
+                },
                 {
                   "name": "New password field for sending secure data in the anti-fraud flow",
                   "slug": "2024-11-04-new-password-field-for-sending-secure-data-in-the-anti-fraud-flow",
@@ -14850,7 +14858,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }                
+                }
               ]
             },
             {
