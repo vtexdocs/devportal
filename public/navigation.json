@@ -13878,6 +13878,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Improving store performance with Preact",
+                  "slug": "faststore/managing-performance-improving-store-performance-with-preact",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
