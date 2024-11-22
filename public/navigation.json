@@ -14466,18 +14466,11 @@
               "name": "Managing performance",
               "slug": "performance-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Deactivating the VTEX IO native service worker",
                   "slug": "vtex-io-documentation-deactivating-the-vtex-io-native-service-worker",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Debugging performance issues",
-                  "slug": "vtex-io-documentation-debugging-performance-issues",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14497,22 +14490,8 @@
                   "children": []
                 },
                 {
-                  "name": "Getting started with Lighthouse performance audit",
-                  "slug": "vtex-io-documentation-getting-started-with-lighthouse",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Safely enabling performance settings",
+                  "name": "Enabling performance settings",
                   "slug": "vtex-io-documentation-safely-enabling-performance-settings",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Tracking changes in Lighthouse performance score",
-                  "slug": "vtex-io-documentation-tracking-changes-in-lighthouse-performance-score",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14520,13 +14499,6 @@
                 {
                   "name": "Lazy loading components",
                   "slug": "vtex-io-documentation-using-the-fold-blocks",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Optimizing performance",
-                  "slug": "vtex-io-documentation-best-practices-for-optimizing-performance",
                   "origin": "",
                   "type": "markdown",
                   "children": []
