@@ -1485,6 +1485,18 @@ to = "/docs/apps/vtex.delivery-window-blocker"
 
 [[redirects]]
 force = true
+from = "/docs/guides/define-payment-methods-displayed-on-instore"
+status = 308
+to = "/docs/guides/define-payment-methods-displayed-on-vtex-sales-app"
+
+[[redirects]]
+force = true
+from = "/docs/guides/set-up-the-order-summary-printing"
+status = 308
+to = "/docs/guides/how-to-customize-vtex-sales-app#list-of-customizations"
+
+[[redirects]]
+force = true
 from = "/docs/guides/vtex-io-documentation-best-practices-for-rendering-images"
 status = 308
 to = "/docs/guides/vtex-io-documentation-optimizing-image-rendering"
