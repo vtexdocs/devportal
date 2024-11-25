@@ -1500,3 +1500,9 @@ force = true
 from = "/docs/guides/vtex-io-documentation-best-practices-for-rendering-images"
 status = 308
 to = "/docs/guides/vtex-io-documentation-optimizing-image-rendering"
+
+[[redirects]]
+force = true
+from = "/docs/guides/how-to-customize-instore"
+status = 308
+to = "/docs/guides/how-to-customize-vtex-sales-app"
