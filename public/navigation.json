@@ -86,9 +86,9 @@
         },
         {
           "name": "API usage",
-          "slug": "api-usage-category",
+          "slug": "api-usage",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
               "name": "List of REST APIs",
