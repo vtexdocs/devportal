@@ -1506,3 +1506,45 @@ force = true
 from = "/docs/guides/how-to-customize-instore"
 status = 308
 to = "/docs/guides/how-to-customize-vtex-sales-app"
+
+[[redirects]]
+force = true
+from = "/docs/guides/use-master-data-with-orders"
+status = 308
+to = "/docs/guides/using-master-data-v2-triggers-to-interact-with-orders"
+
+[[redirects]]
+force = true
+from = "/docs/guides/creating-relationships-between-data-entities-using-api"
+status = 308
+to = "/docs/guides/creating-relationships-between-data-entities-using-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/adding-document-field-values-with-dynamic-expressions"
+status = 308
+to = "/docs/guides/using-dynamic-expressions-in-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-by-geo-coordinates"
+status = 308
+to = "/docs/guides/searching-by-geo-coordinates-in-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/setting-up-alternate-keys"
+status = 308
+to = "/docs/guides/setting-up-alternate-keys-on-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/auto-increment-field"
+status = 308
+to = "/docs/guides/setting-up-an-auto-increment-field-on-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/v1-guides"
+status = 308
+to = "/docs/guides/master-data-v1-guides"
