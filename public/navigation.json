@@ -1447,8 +1447,37 @@
               ]
             },
             {
-              "name": "Getting started",
-              "slug": "getting-started-1",
+              "name": "Getting started with Master Data",
+              "slug": "getting-started-master-data",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Extracting data from Master Data with search and scroll",
+                  "slug": "extracting-data-from-master-data-with-search-and-scroll",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Pagination in the Master Data API",
+                  "slug": "pagination-in-the-master-data-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Avoiding CORS in your MasterData requests",
+                  "slug": "avoiding-cors-in-your-masterdata-requests",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Master Data v2",
+              "slug": "master-data-v2-guides",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -1473,35 +1502,6 @@
                   "type": "markdown",
                   "children": []
                 },
-                {
-                  "name": "Avoiding CORS in your MasterData requests",
-                  "slug": "avoiding-cors-in-your-masterdata-requests",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Extracting data from Master Data with search and scroll",
-                  "slug": "extracting-data-from-master-data-with-search-and-scroll",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Pagination in the Master Data API",
-                  "slug": "pagination-in-the-master-data-api",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Master Data v2",
-              "slug": "master-data-v2-guides",
-              "origin": "",
-              "type": "markdown",
-              "children": [
                 {
                   "name": "Using Master Data v2 triggers to interact with orders",
                   "slug": "using-master-data-v2-triggers-to-interact-with-orders",
