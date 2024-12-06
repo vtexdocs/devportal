@@ -1506,3 +1506,9 @@ force = true
 from = "/docs/guides/how-to-customize-instore"
 status = 308
 to = "/docs/guides/how-to-customize-vtex-sales-app"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-admin-customers"
+status = 308
+to = "/docs/apps/vtex.admin-customers"
