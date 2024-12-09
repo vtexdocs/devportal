@@ -14847,6 +14847,21 @@
           "type": "category",
           "children": [
             {
+              "name": "December",
+              "slug": "december-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Store Framework: Simplified custom header management now available in VTEX admin",
+                  "slug": "2024-12-05-store-framework-simplified-custom-header-management-now-available-in-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "November",
               "slug": "november-2024",
               "origin": "",
