@@ -14448,6 +14448,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Adding custom headers to your Store Framework store",
+                  "slug": "adding-custom-headers-to-your-store-framework-store",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Best practices for associating a custom page with a content type",
                   "slug": "vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type",
                   "origin": "",
@@ -14839,6 +14846,21 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "December",
+              "slug": "december-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Store Framework: Simplified custom header management now available in VTEX admin",
+                  "slug": "2024-12-05-store-framework-simplified-custom-header-management-now-available-in-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "November",
               "slug": "november-2024",

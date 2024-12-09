@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'improved',
     description:
-      'FastStore WebOps app: Users can now install the app by themselves',
-    date: new Date('11/01/2024'),
+      'Store Framework: Simplified custom header management now available in VTEX admin',
+    date: new Date('12/05/2024'),
   },
   updateType: 'release-notes',
 }
