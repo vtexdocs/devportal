@@ -14448,6 +14448,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Adding custom headers to your Store Framework store",
+                  "slug": "adding-custom-headers-to-your-store-framework-store",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Best practices for associating a custom page with a content type",
                   "slug": "vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type",
                   "origin": "",
