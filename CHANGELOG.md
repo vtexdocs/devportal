@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.6](https://github.com/vtexdocs/devportal/compare/v1.16.5...v1.16.6) (2024-12-09)
+
+
+### Docs
+
+* **navigation.json:** Adding custom headers to your Store Framework store ([5be0d87](https://github.com/vtexdocs/devportal/commit/5be0d871e9d0a9f23dbf97177e43e60e592ead74))
+* **navigation.json:** Optimizing image rendering ([f6c0112](https://github.com/vtexdocs/devportal/commit/f6c011290eac45ce9f1f63cc3d685e5fd951a8fd))
+* **netlify.toml:** creating redirect ([48f7574](https://github.com/vtexdocs/devportal/commit/48f75744f7d2052fe9b2b31a22792146ed99e94c))
+* **netlify.toml:** Optimizing image rendering ([5cb2605](https://github.com/vtexdocs/devportal/commit/5cb2605a931c4215122ae2e5dbaa8a2f6b897241))
+
+
+### Chore
+
+* **navigation.json:** add rn to navigation file ([534df40](https://github.com/vtexdocs/devportal/commit/534df400e7e38bbfbfa4a652816af45a70ad8859))
+* **navigation.json:** update navigation ([ab1344f](https://github.com/vtexdocs/devportal/commit/ab1344fb3c956b8589cf02259eef698c526debd4))
+* **navigation.json:** update navigation file ([a9eeac6](https://github.com/vtexdocs/devportal/commit/a9eeac6c1da255f8be716f1bd440097a5ecc99c9))
+* **navigation.json:** update navigation file ([195ac54](https://github.com/vtexdocs/devportal/commit/195ac54e9f0f3b9ea095589ce2325e911678c772))
+* **package.json:** update dependencies ([0a739d8](https://github.com/vtexdocs/devportal/commit/0a739d86d6c61eeda454e0def3af47caf20f37e1))
+
 ### [1.16.5](https://github.com/vtexdocs/devportal/compare/v1.16.4...v1.16.5) (2024-11-14)
 
 
