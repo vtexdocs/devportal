@@ -9,6 +9,12 @@ status = 308
 to = "/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows"
 
 [[redirects]]
+from = "/docs/guides/faststore/api-extensions-troubleshooting"
+status = 308
+to = "/docs/troubleshooting/issues-during-extending-the-faststore-api-schema"
+
+
+[[redirects]]
 force = true
 from = "/docs/guides/faststore/project-structure-updating-the-core-package-version"
 status = 308
