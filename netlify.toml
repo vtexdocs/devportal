@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/troubleshooting-error-installing-headless-cms"
+status = 308
+to = "/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/project-structure-updating-the-core-package-version"
 status = 308
 to = "/docs/guides/faststore/project-structure-updating-the-cli-package-version"
