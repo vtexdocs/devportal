@@ -6,11 +6,11 @@ import { getMessages } from 'utils/get-messages'
 import styles from './styles'
 
 const lastReleaseNote: CardProps = {
-  action: {
+   action: {
     type: 'improved',
     description:
-      'Store Framework: Simplified custom header management now available in VTEX admin',
-    date: new Date('12/05/2024'),
+      'FastStore: `faststore.config.js` file is now `discovery.config.js`',
+    date: new Date('17/12/2024'),
   },
   updateType: 'release-notes',
 }
