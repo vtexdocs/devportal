@@ -13619,13 +13619,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Troubleshooting",
-                  "slug": "faststore/troubleshooting-error-installing-headless-cms",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
@@ -14722,6 +14715,13 @@
             {
               "name": "I can’t access the Headless CMS",
               "slug": "unable-to-access-headless-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I can’t install the Headless CMS plugins in my account",
+              "slug": "error-installing-headless-cms-plugins-on-windows",
               "origin": "",
               "type": "markdown",
               "children": []
