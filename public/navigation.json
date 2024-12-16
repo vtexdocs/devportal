@@ -14757,6 +14757,13 @@
               "children": []
             },
             {
+              "name": "I can’t install the Headless CMS plugins in my account",
+              "slug": "error-installing-headless-cms-plugins-on-windows",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "I can't install VTEX IO CLI",
               "slug": "i-cant-install-vtex-io-cli",
               "origin": "",

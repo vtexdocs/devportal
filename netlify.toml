@@ -4,9 +4,15 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/troubleshooting-error-installing-headless-cms"
+status = 308
+to = "/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows"
+
+[[redirects]]
 from = "/docs/guides/faststore/api-extensions-troubleshooting"
 status = 308
 to = "/docs/troubleshooting/issues-during-extending-the-faststore-api-schema"
+
 
 [[redirects]]
 force = true
