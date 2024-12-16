@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'improved',
     description:
-      'Store Framework: Simplified custom header management now available in VTEX admin',
-    date: new Date('12/05/2024'),
+      'FastStore: faststore.config.js file is now discovery.config.js',
+    date: new Date('16/12/2024'),
   },
   updateType: 'release-notes',
 }

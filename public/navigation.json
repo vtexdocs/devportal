@@ -14846,6 +14846,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: `faststore.config.js` file is now `discovery.config.js`",
+                  "slug": "2024-12-16-discovery-config-file",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Store Framework: Simplified custom header management now available in VTEX admin",
                   "slug": "2024-12-05-store-framework-simplified-custom-header-management-now-available-in-vtex-admin",
                   "origin": "",
