@@ -9,7 +9,7 @@ const lastReleaseNote: CardProps = {
    action: {
     type: 'improved',
     description:
-      'FastStore: `faststore.config.js` file is now `discovery.config.js`',
+      'FastStore: faststore.config.js file is now discovery.config.js',
     date: new Date('16/12/2024'),
   },
   updateType: 'release-notes',
