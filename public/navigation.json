@@ -13828,13 +13828,6 @@
                       "children": []
                     }
                   ]
-                },
-                {
-                  "name": "Troubleshooting",
-                  "slug": "faststore/api-extensions-troubleshooting",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
