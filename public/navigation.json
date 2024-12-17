@@ -14542,8 +14542,8 @@
                   "children": []
                 },
                 {
-                  "name": "Safely enabling performance settings",
-                  "slug": "vtex-io-documentation-safely-enabling-performance-settings",
+                  "name": "Enabling performance settings",
+                  "slug": "vtex-io-documentation-enabling-performance-settings",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14558,13 +14558,6 @@
                 {
                   "name": "Lazy loading components",
                   "slug": "vtex-io-documentation-using-the-fold-blocks",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Optimizing performance",
-                  "slug": "vtex-io-documentation-best-practices-for-optimizing-performance",
                   "origin": "",
                   "type": "markdown",
                   "children": []
