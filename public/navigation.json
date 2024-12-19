@@ -14876,6 +14876,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Improved search query with the `sponsoredCount` parameter",
+                  "slug": "2024-12-20-new-sponsored-count-parameter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "New feature available for anti-fraud providers: Gift card transaction analysis",
                   "slug": "2024-12-19-new-feature-available-for-anti-fraud-providers-gift-card-transaction-analysis",
                   "origin": "",
