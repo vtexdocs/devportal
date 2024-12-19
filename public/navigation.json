@@ -14876,6 +14876,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New feature available for anti-fraud providers: Gift card transaction analysis`",
+                  "slug": "2024-12-19-new-feature-available-for-anti-fraud-providers-gift-card-transaction-analysis",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: `faststore.config.js` file is now `discovery.config.js`",
                   "slug": "2024-12-16-discovery-config-file",
                   "origin": "",
