@@ -6,7 +6,10 @@
   "sitemap_urls_regexs": ["/api-reference/"],
   "force_sitemap_urls_crawling": true,
   "selectors": {
-    "lvl0": "h1",
+    "lvl0": {
+      "selector": "h2[part='section-operation-summary'], h2[part='section-overview-title']",
+      "type": "css"
+    },
     "lvl1": "h2",
     "lvl2": "h3",
     "lvl3": "h4",
@@ -29,8 +32,9 @@
       "url_without_anchor",
       "type",
       "doctype",
-      "docTitle",
-      "docCategory"
+      "doctitle",
+      "docCategory",
+      "method"
     ]
   },
   "js_render": true,

@@ -86,9 +86,9 @@
         },
         {
           "name": "API usage",
-          "slug": "api-usage-category",
+          "slug": "api-usage",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
               "name": "List of REST APIs",
@@ -1479,11 +1479,25 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Extracting data from Master Data with search and scroll",
+                  "slug": "extracting-data-from-master-data-with-search-and-scroll",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Pagination in the Master Data API",
+                  "slug": "pagination-in-the-master-data-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
             {
-              "name": "v2 Guides",
+              "name": "Master Data v2",
               "slug": "master-data-v2-guides",
               "origin": "",
               "type": "markdown",
@@ -1554,7 +1568,7 @@
               ]
             },
             {
-              "name": "v1 Guides",
+              "name": "Master Data v1",
               "slug": "v1-guides",
               "origin": "",
               "type": "markdown",
@@ -1562,13 +1576,6 @@
                 {
                   "name": "Querying documents in Master Data v1",
                   "slug": "querying-documents-in-master-data-v1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Search and scroll API queries",
-                  "slug": "search-and-scroll-api-queries",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1740,8 +1747,8 @@
                   "children": []
                 },
                 {
-                  "name": "Subscriptions v3 migration guide",
-                  "slug": "subscriptions-v3-migration-guide",
+                  "name": "How to keep attachments from original orders in subscriptions",
+                  "slug": "how-to-keep-attachments-from-original-orders-in-subscriptions",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1882,6 +1889,13 @@
                 {
                   "name": "Bulk Import Buyer Organizations Spreadsheet",
                   "slug": "bulk-import-buyer-organizations-spreadsheet",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "How to configure tradeName to use in the organization search field",
+                  "slug": "how-to-configure-tradename-to-use-in-the-organization-search-field",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2086,6 +2100,13 @@
             {
               "name": "Scheduling prices for a range of hours",
               "slug": "scheduling-prices-for-a-range-of-hours",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Contextual price per seller",
+              "slug": "contextual-price-per-seller",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -7721,6 +7742,15 @@
                   "children": []
                 },
                 {
+                  "name": "Get orders by order group ID",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/oms/pvt/orders/order-group/-orderGroup-",
+                  "children": []
+                },
+                {
                   "name": "List orders",
                   "slug": "orders-api",
                   "type": "openapi",
@@ -7815,6 +7845,24 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/order-system/orders/-changeOrderId-/changes/-changeRequestId-/cancel",
+                  "children": []
+                },
+                {
+                  "name": "Update Change order settings",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/changes/settings",
+                  "children": []
+                },
+                {
+                  "name": "Get Change order settings",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/order-system/orders/changes/settings",
                   "children": []
                 }
               ]
@@ -8781,6 +8829,15 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/pricing/tables",
+                  "children": []
+                },
+                {
+                  "name": "Create price table",
+                  "slug": "pricing-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/pricing/tables/-priceTableId-",
                   "children": []
                 }
               ]
@@ -9948,7 +10005,7 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/sponsored_products/-facets-",
-                  "children": [] 
+                  "children": []
                 }
               ]
             }
@@ -10718,7 +10775,7 @@
                   "children": []
                 },
                 {
-                  "name": "4. Writing the header and body scripts",
+                  "name": "4. Writing the head and body scripts",
                   "slug": "vtex-io-documentation-5-writingtheheaderandbodyscripts",
                   "origin": "",
                   "type": "markdown",
@@ -10757,11 +10814,18 @@
           ]
         },
         {
-          "name": "Manifest",
-          "slug": "vtex-io-documentation-manifest",
+          "name": "Project structure",
+          "slug": "vtex-io-documentation-project-structure",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
+            {
+              "name": "Manifest",
+              "slug": "vtex-io-documentation-manifest",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "Billing Options",
               "slug": "vtex-io-documentation-billing-options",
@@ -10792,6 +10856,13 @@
                 {
                   "name": "Docs Builder",
                   "slug": "vtex-io-documentation-docs-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Messages Builder",
+                  "slug": "vtex-io-documentation-messages-builder",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -10984,7 +11055,7 @@
               "children": []
             }
           ]
-        }, 
+        },
         {
           "name": "Development guides",
           "slug": "development-guides-category",
@@ -11015,72 +11086,80 @@
           ]
         },
         {
-          "name": "Services",
-          "slug": "vtex-io-documentation-service",
+          "name": "Node apps",
+          "slug": "vtex-io-documentation-node-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
-              "name": "Developing services on VTEX IO",
-              "slug": "developing-services-on-vtex-io",
+              "name": "Services",
+              "slug": "vtex-io-documentation-service",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "1. Getting started with the boilerplate",
-                  "slug": "services-1-getting-started-with-the-boilerplate",
+                  "name": "Developing services on VTEX IO",
+                  "slug": "developing-services-on-vtex-io",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "2. Handling and receiving events",
-                  "slug": "services-2-handling-and-receiving-events",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "3. Using the Analytics client",
-                  "slug": "services-3-using-the-analytics-client",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "4. Using events as triggers",
-                  "slug": "services-4-using-events-as-triggers",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "5. Using the Master Data client",
-                  "slug": "services-5-using-the-master-data-client",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "6. Using GraphQL to retrieve data from Master Data",
-                  "slug": "services-6-graphql-retrieving-data-from-master-data",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "7. Using GraphiQL",
-                  "slug": "services-7-using-graphiql",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Services - Conclusion",
-                  "slug": "services-conclusion",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "1. Getting started with the boilerplate",
+                      "slug": "services-1-getting-started-with-the-boilerplate",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "2. Handling and receiving events",
+                      "slug": "services-2-handling-and-receiving-events",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "3. Using the Analytics client",
+                      "slug": "services-3-using-the-analytics-client",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "4. Using events as triggers",
+                      "slug": "services-4-using-events-as-triggers",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "5. Using the Master Data client",
+                      "slug": "services-5-using-the-master-data-client",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "6. Using GraphQL to retrieve data from Master Data",
+                      "slug": "services-6-graphql-retrieving-data-from-master-data",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "7. Using GraphiQL",
+                      "slug": "services-7-using-graphiql",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Services - Conclusion",
+                      "slug": "services-conclusion",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -11188,6 +11267,13 @@
             {
               "name": "Developing service configuration apps",
               "slug": "vtex-io-documentation-developing-service-configuration-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Node builder 7.x migration guide",
+              "slug": "node-builder-7x-migration-guide",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -11434,13 +11520,6 @@
         {
           "name": "Frequently asked questions",
           "slug": "vtex-io-documentation-frequently-asked-questions",
-          "origin": "",
-          "type": "markdown",
-          "children": []
-        },
-        {
-          "name": "Other resources",
-          "slug": "other-resources",
           "origin": "",
           "type": "markdown",
           "children": []
@@ -11880,7 +11959,7 @@
               "children": []
             },
             {
-              "name": "Personal Shoper",
+              "name": "Personal Shopper",
               "slug": "apps/vtexventures.personal-shopper-free",
               "origin": "",
               "type": "markdown",
@@ -12011,13 +12090,6 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            },
-            {
-              "name": "Wishlist",
-              "slug": "apps/vtex.wish-list",
-              "origin": "",
-              "type": "markdown",
-              "children": []
             }
           ]
         },
@@ -12028,13 +12100,6 @@
           "type": "markdown",
           "children": [
             {
-              "name": "Location Availability",
-              "slug": "apps/vtex.location-availability",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Order Configuration",
               "slug": "apps/vtex.order-configuration",
               "origin": "",
@@ -12042,22 +12107,8 @@
               "children": []
             },
             {
-              "name": "Order Quote",
-              "slug": "apps/vtex.orderquote",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Quickorder",
               "slug": "apps/vtex.quickorder",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Shopper Location",
-              "slug": "apps/vtex.shopper-location",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12149,6 +12200,13 @@
               "children": []
             },
             {
+              "name": "Broadcaster",
+              "slug": "apps/vtex.broadcaster",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Catalog Images",
               "slug": "apps/vtex.catalog-images",
               "origin": "",
@@ -12214,13 +12272,6 @@
             {
               "name": "Assembly Options",
               "slug": "guides/assembly-options-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Delivery Window Blocker",
-              "slug": "guides/delivery-window-blocker-app",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12319,13 +12370,6 @@
           "type": "markdown",
           "children": [
             {
-              "name": "accessiBe",
-              "slug": "apps/vtex.accessibe",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Alexa Certify",
               "slug": "apps/vtex.alexa-certify-code",
               "origin": "",
@@ -12335,13 +12379,6 @@
             {
               "name": "Audara",
               "slug": "apps/vtex.audara",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Bazaarvoice",
-              "slug": "apps/vtex.bazaarvoice",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12382,13 +12419,6 @@
               "children": []
             },
             {
-              "name": "Curbside Pickup",
-              "slug": "apps/vtex.curbside-pickup",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "CyberSource Fingerprint",
               "slug": "apps/vtex.cybersource-fingerprint",
               "origin": "",
@@ -12412,20 +12442,6 @@
             {
               "name": "Facebook Domain Verification",
               "slug": "apps/vtex.facebook-domain-verification",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Facebook Business Extension",
-              "slug": "apps/vtex.facebook-fbe",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Flixmedia",
-              "slug": "apps/vtex.flixmedia",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12480,13 +12496,6 @@
               "children": []
             },
             {
-              "name": "Listrak",
-              "slug": "apps/vtex.listrak-pixel",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "LogRocket",
               "slug": "apps/vtex.logrocket",
               "origin": "",
@@ -12496,13 +12505,6 @@
             {
               "name": "Lucky Orange",
               "slug": "apps/vtex.lucky-orange",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "PowerReviews",
-              "slug": "apps/vtex.powerreviews",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12529,13 +12531,6 @@
               "children": []
             },
             {
-              "name": "Speech to Text Search",
-              "slug": "apps/vtexarg.speech-to-text",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Suiteshare",
               "slug": "apps/vtex.suite-share",
               "origin": "",
@@ -12550,29 +12545,8 @@
               "children": []
             },
             {
-              "name": "TikTok for Business",
-              "slug": "apps/vtexbr.tiktok-tbp",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Trustpilot",
               "slug": "apps/vtex.trustpilot",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Wordpress Integration",
-              "slug": "apps/vtex.wordpress-integration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Yotpo Reviews Integration",
-              "slug": "apps/vtex.yotpo",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12587,147 +12561,6 @@
             {
               "name": "Zopim",
               "slug": "apps/vtex.zopim",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Gift List",
-          "slug": "apps/vtex.list",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Add To Cart Button",
-              "slug": "apps/vtex.list/listaddtocartbutton",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Add New Item",
-              "slug": "apps/vtex.list/addnewitem",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Go Back To List",
-              "slug": "apps/vtex.list/gobacktolist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Auth Condition",
-              "slug": "apps/vtex.list/authcondition",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Add To List Button",
-              "slug": "apps/vtex.list/addtolistbutton",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Search List",
-              "slug": "apps/vtex.list/searchlist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Gallery List Items",
-              "slug": "apps/vtex.list/gallerylistitems",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "List Migration",
-              "slug": "apps/vtex.list/listmigration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "List Modal",
-              "slug": "apps/vtex.list/listmodal",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "User Lists",
-              "slug": "apps/vtex.list/userlists",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Share List",
-              "slug": "apps/vtex.list/sharelist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Breadcrumb",
-              "slug": "apps/vtex.list/breadcrumbs",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Gifted Button",
-              "slug": "apps/vtex.list/giftedbutton",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "List Info",
-              "slug": "apps/vtex.list/listinfo",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Modal",
-              "slug": "apps/vtex.list/productmodal",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Wallet List",
-              "slug": "apps/vtex.list/storewalletlist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Quantity Selector",
-              "slug": "apps/vtex.list/quantity%20selector",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Wrappers",
-              "slug": "apps/vtex.list/wrappers",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "List Items Order By",
-              "slug": "apps/vtex.list/listitemsorderby",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -13032,8 +12865,8 @@
                   "children": []
                 },
                 {
-                  "name": "Updating the @fastore/core package version",
-                  "slug": "faststore/project-structure-updating-the-core-package-version",
+                  "name": "Updating the @fastore/cli package version",
+                  "slug": "faststore/project-structure-updating-the-cli-package-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13048,18 +12881,75 @@
               ]
             },
             {
+              "name": "Integrating your storefront with Headless CMS",
+              "slug": "faststore/headless-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "1. Configuring your VTEX account",
+                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "2. Setting up the Headless CMS",
+                  "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "3. Structuring Content Types and Sections",
+                  "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "4. Promoting your changes",
+                  "slug": "faststore/headless-cms-4-Promoting-your-changes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing content with 'scopes' and 'requiredScopes'",
+                  "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Multiple page templates",
+                  "slug": "faststore/headless-cms-multiple-page-template",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Previewing Headless CMS in development mode",
+                  "slug": "faststore/headless-cms-previewing-changes-in-development-mode",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Widgets for Headless CMS",
+                  "slug": "faststore/headless-cms-widgets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "UI components",
               "slug": "faststore/components-index",
               "origin": "",
               "type": "markdown",
               "children": [
-                {
-                  "name": "Getting started",
-                  "slug": "faststore/components-getting-started",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
                 {
                   "name": "Atoms",
                   "slug": "faststore/atoms-overview",
@@ -13208,8 +13098,15 @@
                       "children": []
                     },
                     {
-                      "name": "Buy button",
+                      "name": "BuyButton",
                       "slug": "faststore/molecules-buy-button",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Card",
+                      "slug": "faststore/molecules-card",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -13222,21 +13119,21 @@
                       "children": []
                     },
                     {
-                      "name": "Cart item",
+                      "name": "CartItem",
                       "slug": "faststore/molecules-cart-item",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Checkbox field",
+                      "name": "CheckboxField",
                       "slug": "faststore/molecules-checkbox-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Discount badge",
+                      "name": "DiscountBadge",
                       "slug": "faststore/molecules-discount-badge",
                       "origin": "",
                       "type": "markdown",
@@ -13257,21 +13154,21 @@
                       "children": []
                     },
                     {
-                      "name": "Icon button",
+                      "name": "IconButton",
                       "slug": "faststore/molecules-icon-button",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Input field",
+                      "name": "InputField",
                       "slug": "faststore/molecules-input-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Link button",
+                      "name": "LinkButton",
                       "slug": "faststore/molecules-link-button",
                       "origin": "",
                       "type": "markdown",
@@ -13285,49 +13182,56 @@
                       "children": []
                     },
                     {
-                      "name": "Navbar links",
+                      "name": "NavbarLinks",
                       "slug": "faststore/molecules-navbar-links",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Order summary",
+                      "name": "OrderSummary",
                       "slug": "faststore/molecules-order-summary",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product card",
+                      "name": "ProductCard",
                       "slug": "faststore/molecules-product-card",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product title",
+                      "name": "ProductPrice",
+                      "slug": "faststore/molecules-product-price",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "ProductTitle",
                       "slug": "faststore/molecules-product-title",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Quantity selector",
+                      "name": "QuantitySelector",
                       "slug": "faststore/molecules-quantity-selector",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Radio field",
+                      "name": "RadioField",
                       "slug": "faststore/molecules-radio-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Radio Group",
+                      "name": "RadioGroup",
                       "slug": "faststore/molecules-radio-group",
                       "origin": "",
                       "type": "markdown",
@@ -13341,63 +13245,63 @@
                       "children": []
                     },
                     {
-                      "name": "Region bar",
+                      "name": "RegionBar",
                       "slug": "faststore/molecules-region-bar",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search autocomplete",
+                      "name": "SearchAutocomplete",
                       "slug": "faststore/molecules-search-auto-complete",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search dropdown",
+                      "name": "SearchDropdown",
                       "slug": "faststore/molecules-search-dropdown",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search history",
+                      "name": "SearchHistory",
                       "slug": "faststore/molecules-search-history",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search input field",
+                      "name": "SearchInputField",
                       "slug": "faststore/molecules-search-input-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search products",
+                      "name": "SearchProducts",
                       "slug": "faststore/molecules-search-products",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search top",
+                      "name": "SearchTop",
                       "slug": "faststore/molecules-search-top",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Select field",
+                      "name": "SelectField",
                       "slug": "faststore/molecules-select-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "SKU selector",
+                      "name": "SKUSelector",
                       "slug": "faststore/molecules-sku-selector",
                       "origin": "",
                       "type": "markdown",
@@ -13432,7 +13336,7 @@
                       "children": []
                     },
                     {
-                      "name": "Toggle field",
+                      "name": "ToggleField",
                       "slug": "faststore/molecules-toggle-field",
                       "origin": "",
                       "type": "markdown",
@@ -13447,28 +13351,28 @@
                   "type": "markdown",
                   "children": [
                     {
-                      "name": "Banner Text",
+                      "name": "BannerText",
                       "slug": "faststore/organisms-banner-text",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Cart Sidebar",
+                      "name": "CartSidebar",
                       "slug": "faststore/organisms-cart-sidebar",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Empty State",
+                      "name": "EmptyState",
                       "slug": "faststore/organisms-empty-state",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Filter Slider",
+                      "name": "FilterSlider",
                       "slug": "faststore/organisms-filter-slider",
                       "origin": "",
                       "type": "markdown",
@@ -13489,14 +13393,14 @@
                       "children": []
                     },
                     {
-                      "name": "Image Gallery",
+                      "name": "ImageGallery",
                       "slug": "faststore/organisms-image-gallery",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Navbar Slider",
+                      "name": "NavbarSlider",
                       "slug": "faststore/organisms-navbar-slider",
                       "origin": "",
                       "type": "markdown",
@@ -13517,63 +13421,63 @@
                       "children": []
                     },
                     {
-                      "name": "Out Of Stock",
+                      "name": "OutOfStock",
                       "slug": "faststore/organisms-out-of-stock",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Payment Methods",
+                      "name": "PaymentMethods",
                       "slug": "faststore/organisms-payment-methods",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Price Range",
+                      "name": "PriceRange",
                       "slug": "faststore/organisms-price-range",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product Grid",
+                      "name": "ProductGrid",
                       "slug": "faststore/organisms-product-grid",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Product Shelf",
+                      "name": "ProductShelf",
                       "slug": "faststore/organisms-product-shelf",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Region Modal",
+                      "name": "RegionModal",
                       "slug": "faststore/organisms-region-modal",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Search Input",
+                      "name": "SearchInput",
                       "slug": "faststore/organisms-search-input",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Shipping Simulation",
+                      "name": "ShippingSimulation",
                       "slug": "faststore/organisms-shipping-simulation",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Slide Over",
+                      "name": "SlideOver",
                       "slug": "faststore/organisms-slide-over",
                       "origin": "",
                       "type": "markdown",
@@ -13670,6 +13574,36 @@
               ]
             },
             {
+              "name": "FastStore SDK",
+              "slug": "faststore/faststore-overview",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Analytics",
+                  "slug": "faststore/analytics-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "sendAnalyticsEvent",
+                      "slug": "faststore/analytics-send-analytics-event",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useAnalyticsEvent",
+                      "slug": "faststore/analytics-use-analytics-event",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "name": "Themes reference",
               "slug": "faststore/themes-overview",
               "origin": "",
@@ -13742,77 +13676,6 @@
                 {
                   "name": "Typography",
                   "slug": "faststore/global-tokens-typography",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Integrating your storefront with Headless CMS",
-              "slug": "faststore/headless-cms-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "1. Configuring your VTEX account",
-                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "2. Setting up the Headless CMS",
-                  "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "3. Structuring Content Types and Sections",
-                  "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "4. Promoting your changes",
-                  "slug": "faststore/headless-cms-4-Promoting-your-changes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing content with 'scopes' and 'requiredScopes'",
-                  "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Multiple page templates",
-                  "slug": "faststore/headless-cms-multiple-page-template",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Previewing Headless CMS in development mode",
-                  "slug": "faststore/headless-cms-previewing-changes-in-development-mode",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Widgets for Headless CMS",
-                  "slug": "faststore/headless-cms-widgets",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Troubleshooting",
-                  "slug": "faststore/troubleshooting-error-installing-headless-cms",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13953,6 +13816,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Experimental exports - Hooks and Components",
+                  "slug": "faststore/building-sections-experimental-exports-hooks-and-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -14011,13 +13881,6 @@
                       "children": []
                     }
                   ]
-                },
-                {
-                  "name": "Troubleshooting",
-                  "slug": "faststore/api-extensions-troubleshooting",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
@@ -14044,6 +13907,20 @@
               ]
             },
             {
+              "name": "Managing URLs with redirects and rewrite paths",
+              "slug": "faststore/routing-managing-urls-with-redirects-and-rewrite-paths",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Managing product images in specific contexts",
+              "slug": "faststore/customization-managing-product-images-in-specific-contexts",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Managing performance",
               "slug": "faststore/managing-performance-overview",
               "origin": "",
@@ -14052,6 +13929,13 @@
                 {
                   "name": "Testing server-side rendering",
                   "slug": "faststore/managing-performance-testing-server-side-rendering",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Improving store performance with Preact",
+                  "slug": "faststore/managing-performance-improving-store-performance-with-preact",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14216,13 +14100,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Components",
-                  "slug": "vtex-io-documentation-components",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Composition",
                   "slug": "vtex-io-documentation-composition",
                   "origin": "",
@@ -14244,13 +14121,6 @@
                   "children": []
                 },
                 {
-                  "name": "Routes",
-                  "slug": "vtex-io-documentation-routes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Slots",
                   "slug": "vtex-io-documentation-slots",
                   "origin": "",
@@ -14261,9 +14131,9 @@
             },
             {
               "name": "Building pages",
-              "slug": "building-pages",
+              "slug": "store-framework-building-pages",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Building a Product Details Page",
@@ -14306,21 +14176,14 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Creating an institutional page with Content types",
-                  "slug": "creating-an-institutional-page-with-content-types-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
             {
               "name": "Using components",
-              "slug": "using-components",
+              "slug": "store-framework-using-components",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Building a Carousel using Slider Layout",
@@ -14403,7 +14266,7 @@
             },
             {
               "name": "Working with Site Editor",
-              "slug": "working-with-site-editor",
+              "slug": "store-framework-working-with-site-editor",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -14422,20 +14285,27 @@
                   "children": []
                 },
                 {
-                   "name": "Site Editor schema examples",
-                   "slug": "vtex-io-documentation-site-editor-schema-examples",
-                   "origin": "",
-                   "type": "markdown",
-                   "children": []
+                  "name": "Site Editor schema examples",
+                  "slug": "vtex-io-documentation-site-editor-schema-examples",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
             {
               "name": "Styling",
-              "slug": "styling-category",
+              "slug": "store-framework-styling",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
+                {
+                  "name": "Using CSS Handles for store customization",
+                  "slug": "vtex-io-documentation-using-css-handles-for-store-customization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Contributing with new CSS Handles",
                   "slug": "vtex-io-documentation-contributing-with-new-css-handles",
@@ -14465,13 +14335,6 @@
                   "children": []
                 },
                 {
-                  "name": "Using CSS Handles for store customization",
-                  "slug": "vtex-io-documentation-using-css-handles-for-store-customization",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Using the Markers prop to customize a block's message",
                   "slug": "vtex-io-documentation-using-the-markers-prop-to-customize-a-blocks-message",
                   "origin": "",
@@ -14482,9 +14345,9 @@
             },
             {
               "name": "Dealing with events",
-              "slug": "dealing-with-events",
+              "slug": "store-framework-dealing-with-events",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Collecting user session data",
@@ -14626,10 +14489,17 @@
             },
             {
               "name": "Routing",
-              "slug": "store-framework-routing-category",
+              "slug": "store-framework-routing",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
+                {
+                  "name": "Adding custom headers to your Store Framework store",
+                  "slug": "adding-custom-headers-to-your-store-framework-store",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Best practices for associating a custom page with a content type",
                   "slug": "vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type",
@@ -14695,8 +14565,15 @@
                   "children": []
                 },
                 {
-                  "name": "Safely enabling performance settings",
-                  "slug": "vtex-io-documentation-safely-enabling-performance-settings",
+                  "name": "Getting started with Lighthouse performance audit",
+                  "slug": "vtex-io-documentation-getting-started-with-lighthouse",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Enabling performance settings",
+                  "slug": "vtex-io-documentation-enabling-performance-settings",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14716,15 +14593,8 @@
                   "children": []
                 },
                 {
-                  "name": "Optimizing performance",
-                  "slug": "vtex-io-documentation-best-practices-for-optimizing-performance",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Rendering images",
-                  "slug": "vtex-io-documentation-best-practices-for-rendering-images",
+                  "name": "Optimizing image rendering",
+                  "slug": "vtex-io-documentation-optimizing-image-rendering",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14740,9 +14610,9 @@
             },
             {
               "name": "Updating live stores",
-              "slug": "updating-live-stores",
+              "slug": "store-framework-updating-live-stores",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Migrating CMS settings after a Store Theme major update",
@@ -14875,8 +14745,22 @@
           "type": "category",
           "children": [
             {
-              "name": "My store does not reflect the overrides I created",
-              "slug": "my-store-does-not-reflect-the-overrides-i-created",
+              "name": "I am getting 500 errors in VTEX IO CLI",
+              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I am getting errors with my service configuration app",
+              "slug": "i-am-getting-errors-with-my-service-configuration-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Issues during extending the FastStore API schema",
+              "slug": "issues-during-extending-the-faststore-api-schema",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14884,6 +14768,13 @@
             {
               "name": "I can’t access the Headless CMS",
               "slug": "unable-to-access-headless-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I can’t install the Headless CMS plugins in my account",
+              "slug": "error-installing-headless-cms-plugins-on-windows",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14903,13 +14794,6 @@
               "children": []
             },
             {
-              "name": "Modal Layout closes when I click a SKU",
-              "slug": "modal-layout-closes-when-i-click-a-sku",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "My multi-language store is not functioning in the development workspace",
               "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
               "origin": "",
@@ -14917,8 +14801,29 @@
               "children": []
             },
             {
-              "name": "I am getting 500 errors in VTEX IO CLI",
-              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
+              "name": "My store catalog does not display the price range filter",
+              "slug": "my-store-catalog-does-not-show-the-price-range-filter",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My pages are taking too long to be published on Headless CMS",
+              "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store does not reflect the overrides I created",
+              "slug": "my-store-does-not-reflect-the-overrides-i-created",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Modal Layout closes when I click a SKU",
+              "slug": "modal-layout-closes-when-i-click-a-sku",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14931,8 +14836,8 @@
               "children": []
             },
             {
-              "name": "My store catalog does not display the price range filter",
-              "slug": "my-store-catalog-does-not-show-the-price-range-filter",
+              "name": "The promotion highlight flag does not appear on the product",
+              "slug": "the-promotion-highlight-flag-does-not-appear-on-the-product",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14988,6 +14893,107 @@
           "type": "category",
           "children": [
             {
+              "name": "December",
+              "slug": "december-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Improved search query with the `sponsoredCount` parameter",
+                  "slug": "2024-12-20-new-sponsored-count-parameter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New feature available for anti-fraud providers: Gift card transaction analysis",
+                  "slug": "2024-12-19-new-feature-available-for-anti-fraud-providers-gift-card-transaction-analysis",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: `faststore.config.js` file is now `discovery.config.js`",
+                  "slug": "2024-12-16-discovery-config-file",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Framework: Simplified custom header management now available in VTEX admin",
+                  "slug": "2024-12-05-store-framework-simplified-custom-header-management-now-available-in-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "November",
+              "slug": "november-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Store Framework: Sitemap generation disabled during Shopping Season",
+                  "slug": "2024-11-21-store-framework-sitemap-generation-disabled-during-shopping-season",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New password field for sending secure data in the anti-fraud flow",
+                  "slug": "2024-11-04-new-password-field-for-sending-secure-data-in-the-anti-fraud-flow",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps app: Users can now install the app by themselves",
+                  "slug": "2024-11-01-webops-installation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "October",
+              "slug": "october-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore WebOps: Fixed the app integration with the Headless CMS",
+                  "slug": "2024-10-30-webops-integration-with-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Build logs now integrated into the app",
+                  "slug": "2024-10-17-build-logs-integrated-into-webops",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Node builder update to version 7.x and deprecation of previous builder versions",
+                  "slug": "2024-10-10-node-builder-update-to-version-7x-and-deprecation-of-previous-builder-versions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Apps and payment connector homologation freeze in preparation for Black Friday 2024",
+                  "slug": "2024-09-26-apps-and-payment-connector-homologation-freeze-in-preparation-for-black-friday-2024",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "September",
               "slug": "september-2024",
               "origin": "",
@@ -14996,6 +15002,20 @@
                 {
                   "name": "FastStore WebOps: Preview your store changes before deployment",
                   "slug": "2024-09-09-updates-webops-permissions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Change to the availableQuantity field in the search API",
+                  "slug": "2024-09-10-change-available-quantity-field-search-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Simplified FastStore setup with FastStore CLI dependency update",
+                  "slug": "2024-09-11-faststore-cli-dependency",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -15645,13 +15665,6 @@
                 {
                   "name": "Payment Provider Framework: Develop payment connectors with VTEX IO",
                   "slug": "payment-provider-framework-develop-payment-connectors-with-vtex-io",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Delivery Window Blocker App",
-                  "slug": "delivery-window-blocker-app",
                   "origin": "",
                   "type": "markdown",
                   "children": []

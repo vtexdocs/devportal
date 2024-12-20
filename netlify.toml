@@ -4,6 +4,24 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/troubleshooting-error-installing-headless-cms"
+status = 308
+to = "/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows"
+
+[[redirects]]
+from = "/docs/guides/faststore/api-extensions-troubleshooting"
+status = 308
+to = "/docs/troubleshooting/issues-during-extending-the-faststore-api-schema"
+
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/project-structure-updating-the-core-package-version"
+status = 308
+to = "/docs/guides/faststore/project-structure-updating-the-cli-package-version"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/dynamic-content-setting-up-the-store-code-for-dynamic-content"
 status = 308
 to = "/docs/guides/faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content"
@@ -96,6 +114,12 @@ force = true
 from = "/docs/guides/order-canceling-improvements-beta"
 status = 308
 to = "/docs/guides/order-canceling-improvements"
+
+[[redirects]]
+force = true
+from = "/docs/guides/subscriptions-v3-migration-guide"
+status = 308
+to = "/docs/guides/subscriptions"
 
 [[redirects]]
 force = true
@@ -1007,7 +1031,7 @@ to = "/docs/guides/vtex-io-documentation-how-to-create-and-use-clients"
 force = true
 from = "/docs/apps/vtex.custom-product-context"
 status = 308
-to = "/docs/apps/vtex.product-context"     
+to = "/docs/apps/vtex.product-context"
 
 [[redirects]]
 force = true
@@ -1018,6 +1042,12 @@ to = "/docs/apps/vtex.b2b-suite"
 [[redirects]]
 force = true
 from = "/docs/guides/legacy-b2b-solution"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "/docs/guides/installing-b2b-easy-set-up"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
 
@@ -1403,13 +1433,115 @@ to = "/docs/guides/vtex-io-documentation-best-practices-for-associating-a-custom
 force = true
 from = "/docs/guides/vtex-io-documentation-site-editor"
 status = 308
-to = "/docs/guides/working-with-site-editor"
+to = "/docs/guides/store-framework-working-with-site-editor"
 
 [[redirects]]
 force = true
 from = "/docs/guides/vtex-io-documentation-cms"
 status = 308
 to = "/docs/guides/working-with-site-editor"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-routes"
+status = 308
+to = "/docs/guides/store-framework-routing"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-abandoned-cart-service"
+status = 308
+to = "/docs/apps/vtex.abandoned-cart-service"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-wordpress-integration"
+status = 308
+to = "/docs/apps/vtex.wordpress-integration"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-catalog-images"
+status = 308
+to = "/docs/apps/vtex.catalog-images"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-and-scroll-api-queries"
+status = 308
+to = "/docs/guides/extracting-data-from-master-data-with-search-and-scroll"
+
+[[redirects]]
+force = true
+from = "/docs/guides/how-to-configure-region-feature-sku"
+status = 308
+to = "/docs/guides/enable-the-region-for-skus"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-components"
+status = 308
+to = "/docs/guides/store-framework-using-components"
+
+[[redirects]]
+force = true
+from = "/docs/guides/dealing-with-events"
+status = 308
+to = "/docs/guides/store-framework-dealing-with-events"
+
+[[redirects]]
+force = true
+from = "/docs/guides/delivery-window-blocker-app"
+status = 308
+to = "/docs/apps/vtex.delivery-window-blocker"
+
+[[redirects]]
+force = true
+from = "/docs/guides/define-payment-methods-displayed-on-instore"
+status = 308
+to = "/docs/guides/define-payment-methods-displayed-on-vtex-sales-app"
+
+[[redirects]]
+force = true
+from = "/docs/guides/set-up-the-order-summary-printing"
+status = 308
+to = "/docs/guides/how-to-customize-vtex-sales-app#list-of-customizations"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-best-practices-for-rendering-images"
+status = 308
+to = "/docs/guides/vtex-io-documentation-optimizing-image-rendering"
+
+[[redirects]]
+force = true
+from = "/docs/guides/how-to-customize-instore"
+status = 308
+to = "/docs/guides/how-to-customize-vtex-sales-app"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-enabling-404-pages"
+status = 308
+to = "/docs/guides/vtex-io-documentation-enabling-404-pages-for-invalid-single-segment-paths"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-admin-customers"
+status = 308
+to = "/docs/apps/vtex.admin-customers"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-safely-enabling-performance-settings"
+status = 308
+to = "/docs/apps/vtex-io-documentation-enabling-performance-settings"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance"
+status = 308
+to = "/docs/apps/vtex-io-documentation-enabling-performance-settings"
 
 [[redirects]]
 force = true
