@@ -14869,6 +14869,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Performance improvements for mobile devices",
+                  "slug": "2024-12-23-faststore-improvements",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Improved search query with the `sponsoredCount` parameter",
                   "slug": "2024-12-20-new-sponsored-count-parameter",
                   "origin": "",
