@@ -12917,36 +12917,6 @@
           "type": "markdown",
           "children": [
             {
-              "name": "Analytics",
-              "slug": "storefront-analytics",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Analytics on Store Framework",
-                  "slug": "storefront-analytics-on-store-framework",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Installing Google Tag Manager",
-                      "slug": "store-framework-analytics-installing-google-tag-manager",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Setting up Google Tag Manager",
-                      "slug": "store-framework-analytics-setting-up-google-tag-manager",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
-                }
-              ]    
-            },
-            {
               "name": "Performance",
               "slug": "storefront-performance",
               "origin": "",
