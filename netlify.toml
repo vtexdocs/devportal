@@ -1439,7 +1439,7 @@ to = "/docs/guides/store-framework-working-with-site-editor"
 force = true
 from = "/docs/guides/vtex-io-documentation-cms"
 status = 308
-to = "/docs/guides/store-framework-working-with-site-editor"
+to = "/docs/guides/working-with-site-editor"
 
 [[redirects]]
 force = true
@@ -1542,3 +1542,9 @@ force = true
 from = "/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance"
 status = 308
 to = "/docs/apps/vtex-io-documentation-enabling-performance-settings"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-getting-started-with-lighthouse"
+status = 308
+to = "/docs/guides/storefront-getting-started-with-lighthouse"
