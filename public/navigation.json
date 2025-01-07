@@ -1101,21 +1101,6 @@
               ]
             },
             {
-              "name": "Marketing UTMs",
-              "slug": "marketing-utms",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Check marketing UTMs used at Checkout",
-                  "slug": "check-marketing-utms-used-at-checkout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Order Placement",
               "slug": "orders-2",
               "origin": "",
@@ -12853,6 +12838,70 @@
               ]
             },
             {
+              "name": "Integrating your storefront with Headless CMS",
+              "slug": "faststore/headless-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "1. Configuring your VTEX account",
+                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "2. Setting up the Headless CMS",
+                  "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "3. Structuring Content Types and Sections",
+                  "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "4. Promoting your changes",
+                  "slug": "faststore/headless-cms-4-Promoting-your-changes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing content with 'scopes' and 'requiredScopes'",
+                  "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Multiple page templates",
+                  "slug": "faststore/headless-cms-multiple-page-template",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Previewing Headless CMS in development mode",
+                  "slug": "faststore/headless-cms-previewing-changes-in-development-mode",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Widgets for Headless CMS",
+                  "slug": "faststore/headless-cms-widgets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "UI components",
               "slug": "faststore/components-index",
               "origin": "",
@@ -13482,6 +13531,36 @@
               ]
             },
             {
+              "name": "FastStore SDK",
+              "slug": "faststore/faststore-overview",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Analytics",
+                  "slug": "faststore/analytics-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "sendAnalyticsEvent",
+                      "slug": "faststore/analytics-send-analytics-event",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useAnalyticsEvent",
+                      "slug": "faststore/analytics-use-analytics-event",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "name": "Themes reference",
               "slug": "faststore/themes-overview",
               "origin": "",
@@ -13554,77 +13633,6 @@
                 {
                   "name": "Typography",
                   "slug": "faststore/global-tokens-typography",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Integrating your storefront with Headless CMS",
-              "slug": "faststore/headless-cms-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "1. Configuring your VTEX account",
-                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "2. Setting up the Headless CMS",
-                  "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "3. Structuring Content Types and Sections",
-                  "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "4. Promoting your changes",
-                  "slug": "faststore/headless-cms-4-Promoting-your-changes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing content with 'scopes' and 'requiredScopes'",
-                  "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Multiple page templates",
-                  "slug": "faststore/headless-cms-multiple-page-template",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Previewing Headless CMS in development mode",
-                  "slug": "faststore/headless-cms-previewing-changes-in-development-mode",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Widgets for Headless CMS",
-                  "slug": "faststore/headless-cms-widgets",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Troubleshooting",
-                  "slug": "faststore/troubleshooting-error-installing-headless-cms",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13830,13 +13838,6 @@
                       "children": []
                     }
                   ]
-                },
-                {
-                  "name": "Troubleshooting",
-                  "slug": "faststore/api-extensions-troubleshooting",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
@@ -14450,6 +14451,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Adding custom headers to your Store Framework store",
+                  "slug": "adding-custom-headers-to-your-store-framework-store",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Best practices for associating a custom page with a content type",
                   "slug": "vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type",
                   "origin": "",
@@ -14521,8 +14529,8 @@
                   "children": []
                 },
                 {
-                  "name": "Safely enabling performance settings",
-                  "slug": "vtex-io-documentation-safely-enabling-performance-settings",
+                  "name": "Enabling performance settings",
+                  "slug": "vtex-io-documentation-enabling-performance-settings",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14537,13 +14545,6 @@
                 {
                   "name": "Lazy loading components",
                   "slug": "vtex-io-documentation-using-the-fold-blocks",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Optimizing performance",
-                  "slug": "vtex-io-documentation-best-practices-for-optimizing-performance",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14729,6 +14730,13 @@
               "children": []
             },
             {
+              "name": "I can’t install the Headless CMS plugins in my account",
+              "slug": "error-installing-headless-cms-plugins-on-windows",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "I can't install VTEX IO CLI",
               "slug": "i-cant-install-vtex-io-cli",
               "origin": "",
@@ -14826,6 +14834,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "UTMs are not being applied to the cart at Checkout",
+              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
@@ -14841,6 +14856,49 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "December",
+              "slug": "december-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Performance improvements for mobile devices",
+                  "slug": "2024-12-23-faststore-improvements",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Improved search query with the `sponsoredCount` parameter",
+                  "slug": "2024-12-20-new-sponsored-count-parameter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New feature available for anti-fraud providers: Gift card transaction analysis",
+                  "slug": "2024-12-19-new-feature-available-for-anti-fraud-providers-gift-card-transaction-analysis",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: `faststore.config.js` file is now `discovery.config.js`",
+                  "slug": "2024-12-16-discovery-config-file",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Framework: Simplified custom header management now available in VTEX admin",
+                  "slug": "2024-12-05-store-framework-simplified-custom-header-management-now-available-in-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "November",
               "slug": "november-2024",

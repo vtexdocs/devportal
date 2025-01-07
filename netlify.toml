@@ -4,6 +4,24 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/check-marketing-utms-used-at-checkout"
+status = 308
+to = "/docs/troubleshooting/utms-are-not-being-applied-to-the-cart-at-checkout"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/troubleshooting-error-installing-headless-cms"
+status = 308
+to = "/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows"
+
+[[redirects]]
+from = "/docs/guides/faststore/api-extensions-troubleshooting"
+status = 308
+to = "/docs/troubleshooting/issues-during-extending-the-faststore-api-schema"
+
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/project-structure-updating-the-core-package-version"
 status = 308
 to = "/docs/guides/faststore/project-structure-updating-the-cli-package-version"
@@ -1506,6 +1524,30 @@ force = true
 from = "/docs/guides/how-to-customize-instore"
 status = 308
 to = "/docs/guides/how-to-customize-vtex-sales-app"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-enabling-404-pages"
+status = 308
+to = "/docs/guides/vtex-io-documentation-enabling-404-pages-for-invalid-single-segment-paths"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-admin-customers"
+status = 308
+to = "/docs/apps/vtex.admin-customers"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-safely-enabling-performance-settings"
+status = 308
+to = "/docs/apps/vtex-io-documentation-enabling-performance-settings"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance"
+status = 308
+to = "/docs/apps/vtex-io-documentation-enabling-performance-settings"
 
 [[redirects]]
 force = true
