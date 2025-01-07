@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'improved',
     description:
-      'FastStore WebOps app: Users can now install the app by themselves',
-    date: new Date('11/01/2024'),
+      'FastStore: faststore.config.js file is now discovery.config.js',
+    date: new Date('12/16/2024'),
   },
   updateType: 'release-notes',
 }
