@@ -1101,21 +1101,6 @@
               ]
             },
             {
-              "name": "Marketing UTMs",
-              "slug": "marketing-utms",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Check marketing UTMs used at Checkout",
-                  "slug": "check-marketing-utms-used-at-checkout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Order Placement",
               "slug": "orders-2",
               "origin": "",
@@ -14844,6 +14829,13 @@
             {
               "name": "Google Analytics 4 is tracking inconsistent data from my store",
               "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "UTMs are not being applied to the cart at Checkout",
+              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
               "origin": "",
               "type": "markdown",
               "children": []
