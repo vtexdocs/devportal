@@ -86,9 +86,9 @@
         },
         {
           "name": "API usage",
-          "slug": "api-usage-category",
+          "slug": "api-usage",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
               "name": "List of REST APIs",
@@ -1094,21 +1094,6 @@
                 {
                   "name": "Configure the Global Checkout",
                   "slug": "configure-the-global-checkout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Marketing UTMs",
-              "slug": "marketing-utms",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Check marketing UTMs used at Checkout",
-                  "slug": "check-marketing-utms-used-at-checkout",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -10005,7 +9990,7 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/sponsored_products/-facets-",
-                  "children": [] 
+                  "children": []
                 }
               ]
             }
@@ -11055,7 +11040,7 @@
               "children": []
             }
           ]
-        }, 
+        },
         {
           "name": "Development guides",
           "slug": "development-guides-category",
@@ -11086,72 +11071,80 @@
           ]
         },
         {
-          "name": "Services",
-          "slug": "vtex-io-documentation-service",
+          "name": "Node apps",
+          "slug": "vtex-io-documentation-node-category",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
-              "name": "Developing services on VTEX IO",
-              "slug": "developing-services-on-vtex-io",
+              "name": "Services",
+              "slug": "vtex-io-documentation-service",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "1. Getting started with the boilerplate",
-                  "slug": "services-1-getting-started-with-the-boilerplate",
+                  "name": "Developing services on VTEX IO",
+                  "slug": "developing-services-on-vtex-io",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "2. Handling and receiving events",
-                  "slug": "services-2-handling-and-receiving-events",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "3. Using the Analytics client",
-                  "slug": "services-3-using-the-analytics-client",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "4. Using events as triggers",
-                  "slug": "services-4-using-events-as-triggers",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "5. Using the Master Data client",
-                  "slug": "services-5-using-the-master-data-client",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "6. Using GraphQL to retrieve data from Master Data",
-                  "slug": "services-6-graphql-retrieving-data-from-master-data",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "7. Using GraphiQL",
-                  "slug": "services-7-using-graphiql",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Services - Conclusion",
-                  "slug": "services-conclusion",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "1. Getting started with the boilerplate",
+                      "slug": "services-1-getting-started-with-the-boilerplate",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "2. Handling and receiving events",
+                      "slug": "services-2-handling-and-receiving-events",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "3. Using the Analytics client",
+                      "slug": "services-3-using-the-analytics-client",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "4. Using events as triggers",
+                      "slug": "services-4-using-events-as-triggers",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "5. Using the Master Data client",
+                      "slug": "services-5-using-the-master-data-client",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "6. Using GraphQL to retrieve data from Master Data",
+                      "slug": "services-6-graphql-retrieving-data-from-master-data",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "7. Using GraphiQL",
+                      "slug": "services-7-using-graphiql",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Services - Conclusion",
+                      "slug": "services-conclusion",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -12843,6 +12836,70 @@
               ]
             },
             {
+              "name": "Integrating your storefront with Headless CMS",
+              "slug": "faststore/headless-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "1. Configuring your VTEX account",
+                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "2. Setting up the Headless CMS",
+                  "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "3. Structuring Content Types and Sections",
+                  "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "4. Promoting your changes",
+                  "slug": "faststore/headless-cms-4-Promoting-your-changes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing content with 'scopes' and 'requiredScopes'",
+                  "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Multiple page templates",
+                  "slug": "faststore/headless-cms-multiple-page-template",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Previewing Headless CMS in development mode",
+                  "slug": "faststore/headless-cms-previewing-changes-in-development-mode",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Widgets for Headless CMS",
+                  "slug": "faststore/headless-cms-widgets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "UI components",
               "slug": "faststore/components-index",
               "origin": "",
@@ -13472,6 +13529,36 @@
               ]
             },
             {
+              "name": "FastStore SDK",
+              "slug": "faststore/faststore-overview",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Analytics",
+                  "slug": "faststore/analytics-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "sendAnalyticsEvent",
+                      "slug": "faststore/analytics-send-analytics-event",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useAnalyticsEvent",
+                      "slug": "faststore/analytics-use-analytics-event",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "name": "Themes reference",
               "slug": "faststore/themes-overview",
               "origin": "",
@@ -13544,77 +13631,6 @@
                 {
                   "name": "Typography",
                   "slug": "faststore/global-tokens-typography",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Integrating your storefront with Headless CMS",
-              "slug": "faststore/headless-cms-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "1. Configuring your VTEX account",
-                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "2. Setting up the Headless CMS",
-                  "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "3. Structuring Content Types and Sections",
-                  "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "4. Promoting your changes",
-                  "slug": "faststore/headless-cms-4-Promoting-your-changes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing content with 'scopes' and 'requiredScopes'",
-                  "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Multiple page templates",
-                  "slug": "faststore/headless-cms-multiple-page-template",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Previewing Headless CMS in development mode",
-                  "slug": "faststore/headless-cms-previewing-changes-in-development-mode",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Widgets for Headless CMS",
-                  "slug": "faststore/headless-cms-widgets",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Troubleshooting",
-                  "slug": "faststore/troubleshooting-error-installing-headless-cms",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13820,13 +13836,6 @@
                       "children": []
                     }
                   ]
-                },
-                {
-                  "name": "Troubleshooting",
-                  "slug": "faststore/api-extensions-troubleshooting",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
@@ -13875,6 +13884,13 @@
                 {
                   "name": "Testing server-side rendering",
                   "slug": "faststore/managing-performance-testing-server-side-rendering",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Improving store performance with Preact",
+                  "slug": "faststore/managing-performance-improving-store-performance-with-preact",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14224,11 +14240,11 @@
                   "children": []
                 },
                 {
-                   "name": "Site Editor schema examples",
-                   "slug": "vtex-io-documentation-site-editor-schema-examples",
-                   "origin": "",
-                   "type": "markdown",
-                   "children": []
+                  "name": "Site Editor schema examples",
+                  "slug": "vtex-io-documentation-site-editor-schema-examples",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -14433,6 +14449,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Adding custom headers to your Store Framework store",
+                  "slug": "adding-custom-headers-to-your-store-framework-store",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Best practices for associating a custom page with a content type",
                   "slug": "vtex-io-documentation-best-practices-for-associating-a-custom-page-with-a-content-type",
                   "origin": "",
@@ -14464,13 +14487,20 @@
             },
             {
               "name": "Managing performance",
-              "slug": "performance-category",
+              "slug": "store-framework-managing-performance",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Deactivating the VTEX IO native service worker",
                   "slug": "vtex-io-documentation-deactivating-the-vtex-io-native-service-worker",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Debugging performance issues",
+                  "slug": "vtex-io-documentation-debugging-performance-issues",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14490,8 +14520,22 @@
                   "children": []
                 },
                 {
+                  "name": "Getting started with Lighthouse performance audit",
+                  "slug": "vtex-io-documentation-getting-started-with-lighthouse",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Enabling performance settings",
-                  "slug": "vtex-io-documentation-safely-enabling-performance-settings",
+                  "slug": "vtex-io-documentation-enabling-performance-settings",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tracking changes in Lighthouse performance score",
+                  "slug": "vtex-io-documentation-tracking-changes-in-lighthouse-performance-score",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14684,6 +14728,13 @@
               "children": []
             },
             {
+              "name": "I can’t install the Headless CMS plugins in my account",
+              "slug": "error-installing-headless-cms-plugins-on-windows",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "I can't install VTEX IO CLI",
               "slug": "i-cant-install-vtex-io-cli",
               "origin": "",
@@ -14707,6 +14758,13 @@
             {
               "name": "My store catalog does not display the price range filter",
               "slug": "my-store-catalog-does-not-show-the-price-range-filter",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My pages are taking too long to be published on Headless CMS",
+              "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -14774,6 +14832,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "UTMs are not being applied to the cart at Checkout",
+              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
@@ -14784,11 +14849,77 @@
       "slugPrefix": "updates/release-notes",
       "categories": [
         {
+          "name": "2025",
+          "slug": "2025-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "January",
+              "slug": "january-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Simplified Lighthouse dependency for projects",
+                  "slug": "2025-01-08-simplified-lighthouse-dependency",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "2024",
           "slug": "2024-category",
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "December",
+              "slug": "december-2024",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Performance improvements for mobile devices",
+                  "slug": "2024-12-23-faststore-improvements",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Improved search query with the `sponsoredCount` parameter",
+                  "slug": "2024-12-20-new-sponsored-count-parameter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New feature available for anti-fraud providers: Gift card transaction analysis",
+                  "slug": "2024-12-19-new-feature-available-for-anti-fraud-providers-gift-card-transaction-analysis",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: `faststore.config.js` file is now `discovery.config.js`",
+                  "slug": "2024-12-16-discovery-config-file",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Framework: Simplified custom header management now available in VTEX admin",
+                  "slug": "2024-12-05-store-framework-simplified-custom-header-management-now-available-in-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "November",
               "slug": "november-2024",
@@ -14801,7 +14932,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },                
+                },
                 {
                   "name": "New password field for sending secure data in the anti-fraud flow",
                   "slug": "2024-11-04-new-password-field-for-sending-secure-data-in-the-anti-fraud-flow",
@@ -14815,7 +14946,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }                
+                }
               ]
             },
             {
