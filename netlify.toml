@@ -1565,7 +1565,7 @@ to = "/docs/guides/creating-relationships-between-data-entities-using-master-dat
 force = true
 from = "/docs/guides/adding-document-field-values-with-dynamic-expressions"
 status = 308
-to = "/docs/guides/using-dynamic-expressions-in-master-data-v2"
+to = "/docs/guides/using-dynamic-expressions-on-master-data-v2"
 
 [[redirects]]
 force = true
@@ -1577,13 +1577,13 @@ to = "/docs/guides/searching-by-geo-coordinates-in-master-data-v2"
 force = true
 from = "/docs/guides/setting-up-alternate-keys"
 status = 308
-to = "/docs/guides/setting-up-alternate-keys-on-master-data-v2"
+to = "/docs/guides/setting-up-alternate-keys-in-master-data-v2"
 
 [[redirects]]
 force = true
 from = "/docs/guides/auto-increment-field"
 status = 308
-to = "/docs/guides/setting-up-an-auto-increment-field-on-master-data-v2"
+to = "/docs/guides/setting-up-an-auto-increment-field-in-master-data-v2"
 
 [[redirects]]
 force = true
@@ -1656,3 +1656,15 @@ force = true
 from = "/docs/guides/uploading-files-to-master-data"
 status = 308
 to = "/docs/guides/uploading-files-to-master-data-v1"
+
+[[redirects]]
+force = true
+from = "/docs/guides/setting-up-triggers-in-master-data-v2"
+status = 308
+to = "/docs/guides/setting-up-triggers-on-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/sending-emails-with-triggers-in-master-data-v2"
+status = 308
+to = "/docs/guides/sending-emails-with-triggers-on-master-data-v2"
