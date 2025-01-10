@@ -1481,8 +1481,8 @@
                   "type": "markdown",
                   "children": [
                     {
-                      "name": "Setting up triggers in Master Data v2",
-                      "slug": "setting-up-triggers-in-master-data-v2",
+                      "name": "Setting up triggers on Master Data v2",
+                      "slug": "setting-up-triggers-on-master-data-v2",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -1502,8 +1502,8 @@
                       "children": []
                     },
                     {
-                      "name": "Sending emails with triggers in Master Data v2",
-                      "slug": "sending-emails-with-triggers-in-master-data-v2",
+                      "name": "Sending emails with triggers on Master Data v2",
+                      "slug": "sending-emails-with-triggers-on-master-data-v2",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -1525,8 +1525,8 @@
                   "children": []
                 },
                 {
-                  "name": "Using dynamic expressions in Master Data v2",
-                  "slug": "using-dynamic-expressions-in-master-data-v2",
+                  "name": "Using dynamic expressions on Master Data v2",
+                  "slug": "using-dynamic-expressions-on-master-data-v2",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1539,15 +1539,15 @@
                   "children": []
                 },
                 {
-                  "name": "Setting up alternate keys on Master Data v2",
-                  "slug": "setting-up-alternate-keys-on-master-data-v2",
+                  "name": "Setting up alternate keys in Master Data v2",
+                  "slug": "setting-up-alternate-keys-in-master-data-v2",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Setting up an auto increment field on Master Data v2",
-                  "slug": "setting-up-an-auto-increment-field-on-master-data-v2",
+                  "name": "Setting up an auto increment field in Master Data v2",
+                  "slug": "setting-up-an-auto-increment-field-in-master-data-v2",
                   "origin": "",
                   "type": "markdown",
                   "children": []
