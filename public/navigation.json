@@ -1456,7 +1456,7 @@
                   "name": "Schemas",
                   "slug": "schemas",
                   "origin": "",
-                  "type": "markdown",
+                  "type": "category",
                   "children": [
                     {
                       "name": "Schema Lifecycle",
@@ -1478,7 +1478,7 @@
                   "name": "Triggers",
                   "slug": "triggers",
                   "origin": "",
-                  "type": "markdown",
+                  "type": "category",
                   "children": [
                     {
                       "name": "Setting up triggers in Master Data v2",
