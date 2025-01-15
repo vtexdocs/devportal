@@ -1548,3 +1548,15 @@ force = true
 from = "/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance"
 status = 308
 to = "/docs/apps/vtex-io-documentation-enabling-performance-settings"
+
+[[redirects]]
+force = true
+from = "/docs/guides/installing-the-b2b-store-theme"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "/docs/guides/customizing-the-b2b-store-theme"
+status = 308
+to = "/docs/apps/vtex.b2b-suite"
