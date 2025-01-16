@@ -1551,6 +1551,126 @@ to = "/docs/apps/vtex-io-documentation-enabling-performance-settings"
 
 [[redirects]]
 force = true
+from = "/docs/guides/use-master-data-with-orders"
+status = 308
+to = "/docs/guides/using-master-data-v2-triggers-to-interact-with-orders"
+
+[[redirects]]
+force = true
+from = "/docs/guides/creating-relationships-between-data-entities-using-api"
+status = 308
+to = "/docs/guides/creating-relationships-between-data-entities-using-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/adding-document-field-values-with-dynamic-expressions"
+status = 308
+to = "/docs/guides/using-dynamic-expressions-on-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-by-geo-coordinates"
+status = 308
+to = "/docs/guides/searching-by-geo-coordinates-in-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/setting-up-alternate-keys"
+status = 308
+to = "/docs/guides/setting-up-alternate-keys-in-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/auto-increment-field"
+status = 308
+to = "/docs/guides/setting-up-an-auto-increment-field-in-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/v1-guides"
+status = 308
+to = "/docs/guides/master-data-v1"
+
+[[redirects]]
+force = true
+from = "/docs/guides/master-data-introduction"
+status = 308
+to = "/docs/guides/master-data"
+
+[[redirects]]
+force = true
+from = "/docs/guides/master-data-how-it-works"
+status = 308
+to = "/docs/guides/understanding-master-data"
+
+[[redirects]]
+force = true
+from = "/docs/guides/master-data-introduction"
+status = 308
+to = "/docs/guides/master-data"
+
+[[redirects]]
+force = true
+from = "/docs/guides/master-data-architecture"
+status = 308
+to = "/docs/guides/master-data-infrastructure"
+
+[[redirects]]
+force = true
+from = "/docs/guides/master-data-consistency-level"
+status = 308
+to = "/docs/guides/data-consistency-and-synchronization-in-master-data"
+
+[[redirects]]
+force = true
+from = "/docs/guides/getting-started-master-data"
+status = 308
+to = "/docs/guides/master-data-best-practices"
+
+[[redirects]]
+force = true
+from = "/docs/guides/avoiding-cors-in-your-masterdata-requests"
+status = 308
+to = "/docs/guides/avoiding-cors-in-master-data-requests"
+
+[[redirects]]
+force = true
+from = "/docs/guides/master-data-v2-guides"
+status = 308
+to = "/docs/guides/master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/starting-to-work-on-master-data-with-json-schema"
+status = 308
+to = "/docs/guides/working-with-json-schemas-in-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/searching-by-geo-coordinates-in-master-data-v2"
+status = 308
+to = "/docs/guides/searching-by-geocoordinates-in-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/uploading-files-to-master-data"
+status = 308
+to = "/docs/guides/uploading-files-to-master-data-v1"
+
+[[redirects]]
+force = true
+from = "/docs/guides/setting-up-triggers-in-master-data-v2"
+status = 308
+to = "/docs/guides/setting-up-triggers-on-master-data-v2"
+
+[[redirects]]
+force = true
+from = "/docs/guides/sending-emails-with-triggers-in-master-data-v2"
+status = 308
+to = "/docs/guides/sending-emails-with-triggers-on-master-data-v2"
+
+[[redirects]]
+force = true
 from = "/docs/guides/installing-the-b2b-store-theme"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
