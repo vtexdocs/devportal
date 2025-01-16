@@ -1671,6 +1671,12 @@ to = "/docs/guides/sending-emails-with-triggers-on-master-data-v2"
 
 [[redirects]]
 force = true
+from = "/docs/guides/newsletter-inclusion-master-data-v1"
+status = 308
+to = "/docs/guides/implementing-newsletter-opt-in-with-master-data-v1"
+
+[[redirects]]
+force = true
 from = "/docs/guides/installing-the-b2b-store-theme"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
