@@ -14150,13 +14150,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Building a Carousel using Slider Layout",
-                  "slug": "vtex-io-documentation-building-a-carousel-using-slider-layout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Building a horizontal Product Summary",
                   "slug": "vtex-io-documentation-building-a-horizontal-product-summary",
                   "origin": "",
@@ -14192,34 +14185,6 @@
                   "children": []
                 },
                 {
-                  "name": "Creating a Quickview using Modal Layout",
-                  "slug": "vtex-io-documentation-creating-a-quickview-using-modal-layout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Creating modals using icons",
-                  "slug": "vtex-io-documentation-creating-modals-using-icons",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Rendering a badge on top of a product",
-                  "slug": "vtex-io-documentation-rendering-a-badge",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using Flex Layout",
-                  "slug": "vtex-io-documentation-using-flex-layout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Using Sandbox blocks",
                   "slug": "vtex-io-documentation-using-sandbox-blocks",
                   "origin": "",
@@ -14235,6 +14200,49 @@
                 }
               ]
             },
+            {
+              "name": "Using advanced layouts",
+              "slug": "store-framework-using-advanced-layouts",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Building a Carousel using Slider Layout",
+                  "slug": "vtex-io-documentation-building-a-carousel-using-slider-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Configuring a quickview using Modal Layout",
+                  "slug": "vtex-io-documentation-configuring-a-quickview-using-modal-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                  {
+                  "name": "Creating modals using icons",
+                  "slug": "vtex-io-documentation-creating-modals-using-icons",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Rendering a badge on top of a product",
+                  "slug": "vtex-io-documentation-rendering-a-badge",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                                {
+                  "name": "Using Flex Layout",
+                  "slug": "vtex-io-documentation-using-flex-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+              ]
+            }, 
             {
               "name": "Working with Site Editor",
               "slug": "store-framework-working-with-site-editor",
