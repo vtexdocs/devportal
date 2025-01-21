@@ -14877,6 +14877,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Store Framework CMS: VTEX CLI plugin updated to prevent Site Editor content loss",
+                  "slug": "2025-01-21-store-framework-cms-vtex-cli-plugin-updated-to-prevent-site-editor-content-loss",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Simplified Lighthouse dependency for projects",
                   "slug": "2025-01-08-simplified-lighthouse-dependency",
                   "origin": "",
