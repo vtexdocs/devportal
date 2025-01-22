@@ -13920,36 +13920,29 @@
                   "children": []
                 },
                 {
-                  "name": "1. Setting up a VTEX account for FastStore",
-                  "slug": "faststore/go-live-1-setting-up-vtex-account-for-faststore",
+                  "name": "1. Configuring external DNS",
+                  "slug": "faststore/go-live-1-configuring-external-dns",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "2. Configuring external DNS",
-                  "slug": "faststore/go-live-2-configuring-external-dns",
+                  "name": "2. Integrating the VTEX Login",
+                  "slug": "faststore/go-live-2-integrating-the-vtex-login",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "3. Integrating the VTEX Login",
-                  "slug": "faststore/go-live-3-integrating-the-vtex-login",
+                  "name": "3. Integrating the VTEX Checkout",
+                  "slug": "faststore/go-live-3-integrating-the-vtex-checkout",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "4. Integrating the VTEX Checkout",
-                  "slug": "faststore/go-live-4-integrating-the-vtex-checkout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "5. Integrating the VTEX Order Placed and My Account",
-                  "slug": "faststore/go-live-5-integrating-the-vtex-order-placed-and-my-account",
+                  "name": "4. Integrating the VTEX Order Placed and My Account",
+                  "slug": "faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account",
                   "origin": "",
                   "type": "markdown",
                   "children": []

@@ -4,6 +4,36 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/go-live-5-integrating-the-vtex-order-placed-and-my-account"
+status = 308
+to = "/docs/guides/faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/go-live-4-integrating-the-vtex-checkout"
+status = 308
+to = "/docs/guides/faststore/go-live-3-integrating-the-vtex-checkout"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/go-live-3-integrating-the-vtex-login"
+status = 308
+to = "/docs/guides/faststore/go-live-2-integrating-the-vtex-login"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/go-live-2-configuring-external-dns"
+status = 308
+to = "/docs/guides/faststore/go-live-1-configuring-external-dns"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/go-live-1-setting-up-vtex-account-for-faststore"
+status = 308
+to = "/docs/guides/faststore/go-live-before-you-begin"
+
+[[redirects]]
+force = true
 from = "/docs/guides/check-marketing-utms-used-at-checkout"
 status = 308
 to = "/docs/troubleshooting/utms-are-not-being-applied-to-the-cart-at-checkout"
