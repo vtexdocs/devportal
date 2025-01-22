@@ -1686,9 +1686,3 @@ force = true
 from = "/docs/guides/customizing-the-b2b-store-theme"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
-
-[[redirects]]
-force = true
-from = "/docs/guides/vtex-io-documentation-enabling-404-pages"
-status = 308
-to = "/docs/guides/vtex-io-documentation-enabling-404-pages-for-invalid-single-segment-paths"
