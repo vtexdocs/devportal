@@ -9,8 +9,8 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'improved',
     description:
-      'FastStore: faststore.config.js file is now discovery.config.js',
-    date: new Date('12/16/2024'),
+      'Store Framework CMS: VTEX CLI plugin updated to prevent Site Editor content loss',
+    date: new Date('01/21/2025'),
   },
   updateType: 'release-notes',
 }
