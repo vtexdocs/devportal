@@ -14143,13 +14143,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Building a Carousel using Slider Layout",
-                  "slug": "vtex-io-documentation-building-a-carousel-using-slider-layout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Building a horizontal Product Summary",
                   "slug": "vtex-io-documentation-building-a-horizontal-product-summary",
                   "origin": "",
@@ -14185,13 +14178,42 @@
                   "children": []
                 },
                 {
-                  "name": "Creating a Quickview using Modal Layout",
-                  "slug": "vtex-io-documentation-creating-a-quickview-using-modal-layout",
+                  "name": "Using Sandbox blocks",
+                  "slug": "vtex-io-documentation-using-sandbox-blocks",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
+                  "name": "Using the Assets Builder",
+                  "slug": "vtex-io-documentation-using-the-assets-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Using advanced layouts",
+              "slug": "store-framework-using-advanced-layouts",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Building a Carousel using Slider Layout",
+                  "slug": "vtex-io-documentation-building-a-carousel-using-slider-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Configuring a quickview using Modal Layout",
+                  "slug": "vtex-io-documentation-configuring-a-quickview-using-modal-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                  {
                   "name": "Creating modals using icons",
                   "slug": "vtex-io-documentation-creating-modals-using-icons",
                   "origin": "",
@@ -14211,23 +14233,9 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Using Sandbox blocks",
-                  "slug": "vtex-io-documentation-using-sandbox-blocks",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using the Assets Builder",
-                  "slug": "vtex-io-documentation-using-the-assets-builder",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
-            },
+            }, 
             {
               "name": "Working with Site Editor",
               "slug": "store-framework-working-with-site-editor",
@@ -14472,8 +14480,15 @@
                   "children": []
                 },
                 {
-                  "name": "Enabling 404 pages",
-                  "slug": "vtex-io-documentation-enabling-404-pages",
+                  "name": "Customizing your 404 page",
+                  "slug": "vtex-io-documentation-customizing-your-404-page",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Enabling 404 pages for invalid single-segment paths",
+                  "slug": "vtex-io-documentation-enabling-404-pages-for-invalid-single-segment-paths",
                   "origin": "",
                   "type": "markdown",
                   "children": []
