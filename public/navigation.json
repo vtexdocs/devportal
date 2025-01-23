@@ -12731,36 +12731,6 @@
           "children": []
         },
         {
-          "name": "Storefront best practices",
-          "slug": "storefront-best-practices",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Performance",
-              "slug": "storefront-performance",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Getting started with Lighthouse",
-                  "slug": "storefront-getting-started-with-lighthouse",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "SEO",
-              "slug": "storefront-seo",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
           "name": "FastStore",
           "slug": "faststore",
           "origin": "",
@@ -14720,6 +14690,43 @@
             {
               "name": "Control to disable the canonical tag",
               "slug": "control-to-disable-the-canonical-tag",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Storefront best practices",
+          "slug": "storefront-best-practices",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Analytics",
+              "slug": "storefront-analytics",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Performance",
+              "slug": "storefront-performance",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Getting started with Lighthouse",
+                  "slug": "storefront-getting-started-with-lighthouse",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "SEO",
+              "slug": "storefront-seo",
               "origin": "",
               "type": "markdown",
               "children": []
