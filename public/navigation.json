@@ -1101,21 +1101,6 @@
               ]
             },
             {
-              "name": "Marketing UTMs",
-              "slug": "marketing-utms",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Check marketing UTMs used at Checkout",
-                  "slug": "check-marketing-utms-used-at-checkout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Order Placement",
               "slug": "orders-2",
               "origin": "",
@@ -1392,54 +1377,40 @@
         },
         {
           "name": "Master Data",
-          "slug": "master-data-introduction",
+          "slug": "master-data",
           "origin": "",
           "type": "markdown",
           "children": [
             {
-              "name": "How it works",
-              "slug": "master-data-how-it-works",
+              "name": "Understanding Master Data",
+              "slug": "understanding-master-data",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Components",
+                  "name": "Master Data components",
                   "slug": "master-data-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Architecture",
-                  "slug": "master-data-architecture",
+                  "name": "Master Data infrastructure",
+                  "slug": "master-data-infrastructure",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "API",
+                  "name": "Master Data API",
                   "slug": "master-data-api",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Consistency Level",
-                  "slug": "master-data-consistency-level",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Schema Lifecycle",
-                  "slug": "master-data-schema-lifecycle",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "VTable",
-                  "slug": "vtable",
+                  "name": "Data consistency and synchronization in Master Data",
+                  "slug": "data-consistency-and-synchronization-in-master-data",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1447,39 +1418,11 @@
               ]
             },
             {
-              "name": "Getting started",
-              "slug": "getting-started-1",
+              "name": "Master Data best practices",
+              "slug": "master-data-best-practices",
               "origin": "",
               "type": "markdown",
               "children": [
-                {
-                  "name": "Master Data v2 basics",
-                  "slug": "master-data-v2-basics",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Starting to work on Master Data v2 with JSON Schemas",
-                  "slug": "starting-to-work-on-master-data-with-json-schema",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up triggers in Master Data v2",
-                  "slug": "setting-up-triggers-in-master-data-v2",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Avoiding CORS in your MasterData requests",
-                  "slug": "avoiding-cors-in-your-masterdata-requests",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
                 {
                   "name": "Extracting data from Master Data with search and scroll",
                   "slug": "extracting-data-from-master-data-with-search-and-scroll",
@@ -1493,63 +1436,79 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Avoiding CORS in Master Data requests",
+                  "slug": "avoiding-cors-in-master-data-requests",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
             {
               "name": "Master Data v2",
-              "slug": "master-data-v2-guides",
+              "slug": "master-data-v2",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Use v2 triggers to interact with orders",
-                  "slug": "use-master-data-with-orders",
+                  "name": "Schemas",
+                  "slug": "schemas",
                   "origin": "",
-                  "type": "markdown",
-                  "children": []
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Schema Lifecycle",
+                      "slug": "master-data-schema-lifecycle",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Working with JSON Schemas in Master Data v2",
+                      "slug": "working-with-json-schemas-in-master-data-v2",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
-                  "name": "Creating relationships between data entities using API",
-                  "slug": "creating-relationships-between-data-entities-using-api",
+                  "name": "Triggers",
+                  "slug": "triggers",
                   "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "A/B testing Master Data v2 trigger actions",
-                  "slug": "trigger-ab-test",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Sending emails with triggers in Master Data v2",
-                  "slug": "sending-emails-with-triggers-in-master-data-v2",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Dynamic expressions in Master Data v2",
-                  "slug": "adding-document-field-values-with-dynamic-expressions",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Search by geocoordinates",
-                  "slug": "search-by-geo-coordinates",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up alternate keys",
-                  "slug": "setting-up-alternate-keys",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Setting up triggers on Master Data v2",
+                      "slug": "setting-up-triggers-on-master-data-v2",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Using Master Data v2 triggers to interact with orders",
+                      "slug": "using-master-data-v2-triggers-to-interact-with-orders",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "A/B testing Master Data v2 trigger actions",
+                      "slug": "trigger-ab-test",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Sending emails with triggers on Master Data v2",
+                      "slug": "sending-emails-with-triggers-on-master-data-v2",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "Master Data v2 document saving flow",
@@ -1559,8 +1518,36 @@
                   "children": []
                 },
                 {
-                  "name": "Setting up an auto increment field",
-                  "slug": "auto-increment-field",
+                  "name": "Creating relationships between data entities using Master Data v2",
+                  "slug": "creating-relationships-between-data-entities-using-master-data-v2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using dynamic expressions on Master Data v2",
+                  "slug": "using-dynamic-expressions-on-master-data-v2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Searching by geocoordinates in Master Data v2",
+                  "slug": "searching-by-geocoordinates-in-master-data-v2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up alternate keys in Master Data v2",
+                  "slug": "setting-up-alternate-keys-in-master-data-v2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up an auto increment field in Master Data v2",
+                  "slug": "setting-up-an-auto-increment-field-in-master-data-v2",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1569,7 +1556,7 @@
             },
             {
               "name": "Master Data v1",
-              "slug": "v1-guides",
+              "slug": "master-data-v1",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -1581,15 +1568,15 @@
                   "children": []
                 },
                 {
-                  "name": "Implementing newletter opt in with Master Data v1",
-                  "slug": "newsletter-inclusion-master-data-v1",
+                  "name": "Implementing newletter opt-in with Master Data v1",
+                  "slug": "implementing-newsletter-opt-in-with-master-data-v1",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Uploading files to Master Data v1",
-                  "slug": "uploading-files-to-master-data",
+                  "slug": "uploading-files-to-master-data-v1",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13921,6 +13908,13 @@
               "children": []
             },
             {
+              "name": "Integrating FastStore with VTEX Ad Network",
+              "slug": "faststore/integrating-with-vtex-products-integrating-with-vtex-ad-network",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Managing performance",
               "slug": "faststore/managing-performance-overview",
               "origin": "",
@@ -13956,36 +13950,29 @@
                   "children": []
                 },
                 {
-                  "name": "1. Setting up a VTEX account for FastStore",
-                  "slug": "faststore/go-live-1-setting-up-vtex-account-for-faststore",
+                  "name": "1. Configuring external DNS",
+                  "slug": "faststore/go-live-1-configuring-external-dns",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "2. Configuring external DNS",
-                  "slug": "faststore/go-live-2-configuring-external-dns",
+                  "name": "2. Integrating the VTEX Login",
+                  "slug": "faststore/go-live-2-integrating-the-vtex-login",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "3. Integrating the VTEX Login",
-                  "slug": "faststore/go-live-3-integrating-the-vtex-login",
+                  "name": "3. Integrating the VTEX Checkout",
+                  "slug": "faststore/go-live-3-integrating-the-vtex-checkout",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "4. Integrating the VTEX Checkout",
-                  "slug": "faststore/go-live-4-integrating-the-vtex-checkout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "5. Integrating the VTEX Order Placed and My Account",
-                  "slug": "faststore/go-live-5-integrating-the-vtex-order-placed-and-my-account",
+                  "name": "4. Integrating the VTEX Order Placed and My Account",
+                  "slug": "faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14186,13 +14173,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Building a Carousel using Slider Layout",
-                  "slug": "vtex-io-documentation-building-a-carousel-using-slider-layout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Building a horizontal Product Summary",
                   "slug": "vtex-io-documentation-building-a-horizontal-product-summary",
                   "origin": "",
@@ -14228,6 +14208,42 @@
                   "children": []
                 },
                 {
+                  "name": "Using Sandbox blocks",
+                  "slug": "vtex-io-documentation-using-sandbox-blocks",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using the Assets Builder",
+                  "slug": "vtex-io-documentation-using-the-assets-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Using advanced layouts",
+              "slug": "store-framework-using-advanced-layouts",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Building a Carousel using Slider Layout",
+                  "slug": "vtex-io-documentation-building-a-carousel-using-slider-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Configuring a quickview using Modal Layout",
+                  "slug": "vtex-io-documentation-configuring-a-quickview-using-modal-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                  {
                   "name": "Creating modals using icons",
                   "slug": "vtex-io-documentation-creating-modals-using-icons",
                   "origin": "",
@@ -14247,23 +14263,9 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Using Sandbox blocks",
-                  "slug": "vtex-io-documentation-using-sandbox-blocks",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using the Assets Builder",
-                  "slug": "vtex-io-documentation-using-the-assets-builder",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
-            },
+            }, 
             {
               "name": "Working with Site Editor",
               "slug": "store-framework-working-with-site-editor",
@@ -14508,8 +14510,15 @@
                   "children": []
                 },
                 {
-                  "name": "Enabling 404 pages",
-                  "slug": "vtex-io-documentation-enabling-404-pages",
+                  "name": "Customizing your 404 page",
+                  "slug": "vtex-io-documentation-customizing-your-404-page",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Enabling 404 pages for invalid single-segment paths",
+                  "slug": "vtex-io-documentation-enabling-404-pages-for-invalid-single-segment-paths",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14877,6 +14886,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "UTMs are not being applied to the cart at Checkout",
+              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
@@ -14886,6 +14902,43 @@
       "documentation": "Release Notes",
       "slugPrefix": "updates/release-notes",
       "categories": [
+        {
+          "name": "2025",
+          "slug": "2025-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "January",
+              "slug": "january-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Store Framework CMS: VTEX CLI plugin updated to prevent Site Editor content loss",
+                  "slug": "2025-01-21-store-framework-cms-vtex-cli-plugin-updated-to-prevent-site-editor-content-loss",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Simplified Lighthouse dependency for projects",
+                  "slug": "2025-01-08-simplified-lighthouse-dependency",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: New integration with VTEX Ad Network",
+                  "slug": "2025-01-06-integrating-faststore-with-vtex-ad-network",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
         {
           "name": "2024",
           "slug": "2024-category",
@@ -14898,6 +14951,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore: Performance improvements for mobile devices",
+                  "slug": "2024-12-23-faststore-improvements",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore: Improved search query with the `sponsoredCount` parameter",
                   "slug": "2024-12-20-new-sponsored-count-parameter",
