@@ -1716,3 +1716,9 @@ force = true
 from = "/docs/guides/customizing-the-b2b-store-theme"
 status = 308
 to = "/docs/apps/vtex.b2b-suite"
+
+[[redirects]]
+force = true
+from = "/docs/guides/arquitetura-vtex"
+status = 308
+to = "/docs/guides/cloud-infrastructure"
