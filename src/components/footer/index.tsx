@@ -1,4 +1,5 @@
 import { Box, FooterLanding } from '@vtex/brand-ui'
+import { useRouter } from 'next/router'
 import { getMessages } from 'utils/get-messages'
 import styles from './styles'
 import {
@@ -9,6 +10,8 @@ import {
 } from 'utils/get-url'
 
 const messages = getMessages()
+const router = useRouter()
+const currentPage = router.asPath.split('?')[0]
 
 const links = [
   {
@@ -25,7 +28,7 @@ const links = [
   },
   {
     message: messages['landing_page_footer_feedback.message'],
-    to: () => getFeedbackURL(),
+    to: () => `${getFeedbackURL()}https://developers.vtex.com${currentPage}`,
   },
 ]
 
