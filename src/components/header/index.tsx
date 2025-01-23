@@ -30,6 +30,7 @@ interface Props {
 const Header = ({ isEditor }: Props) => {
   const router = useRouter()
   const isBranchPreview = router.isPreview
+  const currentPage = router.asPath.split('?')[0]
 
   const { branchPreview } = useContext(PreviewContext)
 
@@ -153,7 +154,7 @@ const Header = ({ isEditor }: Props) => {
 
           <VtexLink
             sx={styles.rightLinksItem}
-            href={getFeedbackURL()}
+            href={`${getFeedbackURL()}https://developers.vtex.com${currentPage}`}
             target="_blank"
           >
             <LongArrowIcon />
