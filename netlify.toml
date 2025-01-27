@@ -1722,3 +1722,9 @@ force = true
 from = "/docs/guides/arquitetura-vtex"
 status = 308
 to = "/docs/guides/cloud-infrastructure"
+
+[[redirects]]
+force = true
+from = "/docs/guides/google-tag-manager"
+status = 308
+to = "/docs/guides/store-framework-configuring-analytics-google-tag-manager"
