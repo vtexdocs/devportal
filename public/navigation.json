@@ -14352,8 +14352,8 @@
               ]
             },
             {
-              "name": "Configuring Google Tag Manager",
-              "slug": "google-tag-manager",
+              "name": "Configuring Analytics (Google Tag Manager)",
+              "slug": "store-framework-configuring-analytics-google-tag-manager",
               "origin": "",
               "type": "markdown",
               "children": [

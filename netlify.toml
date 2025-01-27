@@ -1725,6 +1725,12 @@ to = "/docs/guides/cloud-infrastructure"
 
 [[redirects]]
 force = true
+from = "/docs/guides/google-tag-manager"
+status = 308
+to = "/docs/guides/store-framework-configuring-analytics-google-tag-manager"
+
+[[redirects]]
+force = true
 from = "/docs/guides/vtex-io-documentation-getting-started-with-lighthouse"
 status = 308
 to = "/docs/guides/storefront-getting-started-with-lighthouse"
