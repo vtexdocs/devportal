@@ -1719,6 +1719,12 @@ to = "/docs/apps/vtex.b2b-suite"
 
 [[redirects]]
 force = true
+from = "/docs/guides/arquitetura-vtex"
+status = 308
+to = "/docs/guides/cloud-infrastructure"
+
+[[redirects]]
+force = true
 from = "/docs/guides/vtex-io-documentation-getting-started-with-lighthouse"
 status = 308
 to = "/docs/guides/storefront-getting-started-with-lighthouse"
