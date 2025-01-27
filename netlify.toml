@@ -1571,13 +1571,13 @@ to = "/docs/apps/vtex.admin-customers"
 force = true
 from = "/docs/guides/vtex-io-documentation-safely-enabling-performance-settings"
 status = 308
-to = "/docs/apps/vtex-io-documentation-enabling-performance-settings"
+to = "/docs/guides/vtex-io-documentation-enabling-performance-settings"
 
 [[redirects]]
 force = true
 from = "/docs/guides/vtex-io-documentation-best-practices-for-optimizing-performance"
 status = 308
-to = "/docs/apps/vtex-io-documentation-enabling-performance-settings"
+to = "/docs/guides/vtex-io-documentation-enabling-performance-settings"
 
 [[redirects]]
 force = true
