@@ -14511,9 +14511,9 @@
             },
             {
               "name": "Managing performance",
-              "slug": "performance-category",
+              "slug": "store-framework-managing-performance",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Deactivating the VTEX IO native service worker",
