@@ -1734,3 +1734,9 @@ force = true
 from = "/docs/guides/vtex-io-documentation-getting-started-with-lighthouse"
 status = 308
 to = "/docs/guides/storefront-getting-started-with-lighthouse"
+
+[[redirects]]
+force = true
+from = "/docs/guides/boosting-performance"
+status = 308
+to = "/docs/guides/store-framework-managing-performance"
