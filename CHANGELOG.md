@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.7](https://github.com/vtexdocs/devportal/compare/v1.16.6...v1.16.7) (2025-01-28)
+
+
+### Features
+
+* add pick and pack order changes api ([00beb60](https://github.com/vtexdocs/devportal/commit/00beb601f4046a128ca3d04e585a9d755de3914f))
+
+
+### Docs
+
+* create redirect ([7f0197a](https://github.com/vtexdocs/devportal/commit/7f0197a562ef0655d5d3dba43e7ab41a3610b2cd))
+* create redirect for architecture guide ([c679688](https://github.com/vtexdocs/devportal/commit/c6796888e648e4fe1ad5a1b54fa81507b1561385))
+* create redirects for master data guides ([b230075](https://github.com/vtexdocs/devportal/commit/b2300750d5d2985fee5608970cfbe011b1551da6))
+* edit navigation ([9aeaca7](https://github.com/vtexdocs/devportal/commit/9aeaca7a5730cd99e1245b6777611c2994ccd7e1))
+* edit schemas and triggers in navigation.json ([5f15739](https://github.com/vtexdocs/devportal/commit/5f15739382414a2634e84f4244fc34fdb930827c))
+* **navigation.json:** 404 page doc ([d545d28](https://github.com/vtexdocs/devportal/commit/d545d2815cc19cedcd0a758f52dd6808fe212fa5))
+* **navigation.json:** adding advanced layout docs to sidebar ([69231f4](https://github.com/vtexdocs/devportal/commit/69231f44beb085cbd91144f0269c725471fb052e))
+* **navigation.json:** adding analytics docs to sidebar ([0bcc9bf](https://github.com/vtexdocs/devportal/commit/0bcc9bf8a4fb4a7885c68bf8c184bc35b17ffc12))
+* **navigation.json:** adding doc to sidebar ([8ee8f22](https://github.com/vtexdocs/devportal/commit/8ee8f22c1467ca97fa4f95d9e205873a15093609))
+* **navigation.json:** adding doc to sidebar ([cbbc2eb](https://github.com/vtexdocs/devportal/commit/cbbc2ebe660a037d214173e4f935d70ff44af871))
+* **navigation.json:** configuring analytics gtm ([e5bd9a4](https://github.com/vtexdocs/devportal/commit/e5bd9a454c8408c7f0e6be864a403a646b5ce9d3))
+* **navigation.json:** enabling performance settings ([c4d8527](https://github.com/vtexdocs/devportal/commit/c4d85277086557ae14f635d9a4fa4d459e7140a7))
+* **navigation.json:** fixing ([f870e28](https://github.com/vtexdocs/devportal/commit/f870e28cf40e6653f359fafd8f4658abb19b7078))
+* **navigation.json:** fixing type ([af58e6a](https://github.com/vtexdocs/devportal/commit/af58e6a7ee83c2d4144c1318860a62618b337fff))
+* **navigation.json:** managing performance ([4753043](https://github.com/vtexdocs/devportal/commit/4753043499d2a58386611e740e3f0b3bdb028fbf))
+* **navigation.json:** removing analytics docs from sidebar ([910b44f](https://github.com/vtexdocs/devportal/commit/910b44f9f0b348e50ceab35d644b27a53992279f))
+* **navigation.json:** storefront best practices ([6f2b173](https://github.com/vtexdocs/devportal/commit/6f2b1738ecb3358244a3aeebada68c38b2f95efe))
+* **navigation.json:** storefront best practices - performance ([d89ee0b](https://github.com/vtexdocs/devportal/commit/d89ee0b9e659747909e6124cad90c5ba15bc75cb))
+* **navigation.json:** storefront performance docs ([f82bd31](https://github.com/vtexdocs/devportal/commit/f82bd31aab621db194cda78c63fa52a4eb906cdd))
+* **navigation:** update master data guides ([1e2ea30](https://github.com/vtexdocs/devportal/commit/1e2ea30841685a8c1af632e6d00e3458af58f5a8))
+* **navigation:** update md guides ([cbb5bb7](https://github.com/vtexdocs/devportal/commit/cbb5bb7458b097a1834794cd274abaf463ec0bfa))
+* **navigation:** update prepositions ([427fbf1](https://github.com/vtexdocs/devportal/commit/427fbf108ab46ec6bff8e56027f82357a29bb96d))
+* **netlify.toml:** configuring analytics ([42c03c0](https://github.com/vtexdocs/devportal/commit/42c03c08ec9f6ef8ea07cf3644438cc805e406f0))
+* **netlify.toml:** creating redirect ([0409bc7](https://github.com/vtexdocs/devportal/commit/0409bc716f92ba301f4913a42d2af8de20dcd2da))
+* **netlify.toml:** creating redirect ([fb691d9](https://github.com/vtexdocs/devportal/commit/fb691d9e5c4f2eebe2e03b2e22a17b36725ed987))
+* **netlify.toml:** enabling performance settings ([8c21a5b](https://github.com/vtexdocs/devportal/commit/8c21a5b2a719cf7234e79358441c89fc880a5e07))
+* **netlify.toml:** performance ([703c8d6](https://github.com/vtexdocs/devportal/commit/703c8d69f0f318e505ce286e37ef05b240e67217))
+* **netlify.toml:** removing duplicated redirect ([dfb75ea](https://github.com/vtexdocs/devportal/commit/dfb75eaf485075a12f2fd8dbb523fc8762c7dce1))
+* update navigation.json ([535b8bf](https://github.com/vtexdocs/devportal/commit/535b8bf4a2647aa2793375a767edacd56e73c0b7))
+* update redirects ([606d75e](https://github.com/vtexdocs/devportal/commit/606d75e5c79a7d92b126d007d714302ef4cba504))
+* update redirects ([f6f37d7](https://github.com/vtexdocs/devportal/commit/f6f37d7da9d420b55c847b39776134d5454ab1b5))
+
 ### [1.16.6](https://github.com/vtexdocs/devportal/compare/v1.16.5...v1.16.6) (2024-12-09)
 
 
