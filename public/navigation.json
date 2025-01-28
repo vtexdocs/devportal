@@ -8599,6 +8599,32 @@
           ]
         },
         {
+          "name": "Pick and Pack Order Changes API",
+          "slug": "pick-and-pack-order-changes-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+              {
+                "name": "Update order deadline",
+                "slug": "pick-and-pack-order-changes-api",
+                "type": "openapi",
+                "method": "PUT",
+                "origin": "",
+                "endpoint": "/orders/-orderId-/deadline",
+                "children": []
+              },
+              {
+                "name": "Update items of the order",
+                "slug": "pick-and-pack-order-changes-api",
+                "type": "openapi",
+                "method": "POST",
+                "origin": "",
+                "endpoint": "/order/changes",
+                "children": []
+            }
+          ]
+        },
+        {
           "name": "Policies System API",
           "slug": "policies-system-api",
           "origin": "",

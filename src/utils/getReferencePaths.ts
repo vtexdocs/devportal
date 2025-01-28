@@ -51,6 +51,7 @@ const fileSlugMap = {
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
   'VTEX - Payments Gateway API': 'payments-gateway-api',
   'VTEX - Pick and Pack Last Mile Protocol API': 'pick-and-pack-protocol-api',
+  'VTEX - Pick and Pack Order Changes API': 'pick-and-pack-order-changes-api',
   'VTEX - Policies System API': 'policies-system-api',
   'VTEX - Pricing API': 'pricing-api',
   'VTEX - Pricing Hub': 'pricing-hub',
