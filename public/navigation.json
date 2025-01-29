@@ -14948,6 +14948,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New Pick and Pack Order Changes API",
+                  "slug": "2025-01-29-new-pick-pack-order-changes-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Store Framework CMS: VTEX CLI plugin updated to prevent Site Editor content loss",
                   "slug": "2025-01-21-store-framework-cms-vtex-cli-plugin-updated-to-prevent-site-editor-content-loss",
                   "origin": "",
