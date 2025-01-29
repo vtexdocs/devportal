@@ -122,6 +122,19 @@ const APIPage: NextPage<Props> = ({
   }, [])
 
   useEffect(() => {
+    const handleHashChange = () => {
+      const newHash = window.location.hash.substring(1)
+      router.push(`${window.location.pathname}?endpoint=${newHash}`)
+    }
+
+    window.addEventListener('hashchange', handleHashChange)
+
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange)
+    }
+  }, [router])
+
+  useEffect(() => {
     setEndpointPagination(
       pagination[endpointPath] ? pagination[endpointPath] : pag
     )
