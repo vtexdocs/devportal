@@ -160,20 +160,6 @@ const APIPage: NextPage<Props> = ({
         <meta name="docsearch:doccategory" content={pageTitle} />
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
-      <a href="#post-/pre-analysis">Hu</a>
-      <a href="http://localhost:3000/docs/api-reference/antifraud-provider-protocol#get-/transactions/-transactions.id-">
-        Localhost
-      </a>
-      <a href="http://localhost:3000/docs/api-reference/legacy-cms-portal-api">
-        New
-      </a>
-      <a href="http://localhost:3000/docs/api-reference/legacy-cms-portal-api#put-/api/catalog_system/pvt/virtualfolder/changeurischema/-protocol-">
-        New with hash
-      </a>
-      <a href="http://localhost:3000/docs/api-reference/antifraud-provider-protocol#delete-/transactions/-transactions.Id-">
-        Fails
-      </a>
-
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
         <rapi-doc
           ref={rapidoc}
