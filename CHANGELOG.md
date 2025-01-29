@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.8](https://github.com/vtexdocs/devportal/compare/v1.16.7...v1.16.8) (2025-01-29)
+
+
+### Chore
+
+* **api-reference:** update the position in the sidebar when an api-reference hash link is clicked ([e6096cc](https://github.com/vtexdocs/devportal/commit/e6096cc2e343febbdce43bf3a0a4f25881e30f75))
+
 ### [1.16.7](https://github.com/vtexdocs/devportal/compare/v1.16.6...v1.16.7) (2025-01-28)
 
 
