@@ -123,8 +123,7 @@ const APIPage: NextPage<Props> = ({
 
   useEffect(() => {
     const handleHashChange = () => {
-      const newHash = window.location.hash.substring(1)
-      router.push(`${window.location.pathname}?endpoint=${newHash}`)
+      router.push(window.location.href)
     }
 
     window.addEventListener('hashchange', handleHashChange)
