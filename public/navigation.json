@@ -10021,6 +10021,54 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Ad events",
+              "slug": "ad-events",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Send ad events",
+                  "slug": "vtex-ad-network-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/ads",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Order events",
+              "slug": "order-events",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Send order events",
+                  "slug": "vtex-ad-network-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/order",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Banner",
+              "slug": "banner",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get banner information",
+                  "slug": "vtex-ad-network-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/banner/query",
+                  "children": []
+                }
+              ]
             }
           ]
         },
