@@ -8442,6 +8442,31 @@
                   "children": []
                 }
               ]
+            },
+                        {
+              "name": "Payment Notification",
+              "slug": "payments-gateway-api-payment-notification",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Send payment notification with payment ID",
+                  "slug": "payments-gateway-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/payments/-paymentId-/payment-notification",
+                  "children": []
+                },
+                {
+                  "name": "Send payment notification with payment ID, date, and value paid",
+                  "slug": "payments-gateway-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/payments/-paymentId-/payment-notification",
+                  "children": []
+                }
+              ]
             }
           ]
         },
