@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/troubleshooting/error-installing-headless-cms-plugins-on-windows"
+status = 308
+to = "/docs/troubleshooting/unable-to-access-headless-cms"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/go-live-5-integrating-the-vtex-order-placed-and-my-account"
 status = 308
 to = "/docs/guides/faststore/go-live-4-integrating-the-vtex-order-placed-and-my-account"
