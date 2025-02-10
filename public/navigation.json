@@ -1657,8 +1657,8 @@
               "children": []
             },
             {
-              "name": "Change order",
-              "slug": "change-order",
+              "name": "Order modifications",
+              "slug": "order-modifications",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -7776,12 +7776,12 @@
               ]
             },
             {
-              "name": "Change order (beta)",
-              "slug": "orders-api-change-order-beta",
+              "name": "Order modifications",
+              "slug": "orders-api-order-modifications",
               "type": "category",
               "children": [
                 {
-                  "name": "Create order change",
+                  "name": "Create order modifications",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "PATCH",
@@ -7790,7 +7790,7 @@
                   "children": []
                 },
                 {
-                  "name": "Preview order change",
+                  "name": "Preview order modifications",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7799,7 +7799,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get order change details",
+                  "name": "Get order modifications details",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "GET",
@@ -7808,7 +7808,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get order change history",
+                  "name": "Get order modifications history",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "GET",
@@ -7817,7 +7817,7 @@
                   "children": []
                 },
                 {
-                  "name": "Retry order change",
+                  "name": "Retry order modifications",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7826,7 +7826,7 @@
                   "children": []
                 },
                 {
-                  "name": "Cancel order change",
+                  "name": "Cancel order modifications",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "POST",
@@ -7835,7 +7835,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update Change order settings",
+                  "name": "Update Order modifications settings",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -7844,7 +7844,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Change order settings",
+                  "name": "Get Order modifications settings",
                   "slug": "orders-api",
                   "type": "openapi",
                   "method": "GET",

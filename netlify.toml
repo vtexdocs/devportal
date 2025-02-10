@@ -1752,3 +1752,15 @@ force = true
 from = "/docs/guides/managing-seo"
 status = 308
 to = "/docs/guides/storefront-seo"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/orders-api-change-order-beta"
+status = 308
+to = "/docs/api-reference/orders-api-order-modifications"
+
+[[redirects]]
+force = true
+from = "/docs/guides/change-order"
+status = 308
+to = "/docs/guides/order-modifications"
