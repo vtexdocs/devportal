@@ -1752,3 +1752,9 @@ force = true
 from = "/docs/guides/managing-seo"
 status = 308
 to = "/docs/guides/storefront-seo"
+
+[[redirects]]
+force = true
+from = "/docs/guides/seller-price"
+status = 308
+to = "/docs/guides/contextual-price-per-seller"
