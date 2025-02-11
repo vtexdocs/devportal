@@ -14777,6 +14777,13 @@
           "type": "markdown",
           "children": [
             {
+              "name": "Accessibility",
+              "slug": "storefront-accessibility",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Analytics",
               "slug": "storefront-analytics",
               "origin": "",
