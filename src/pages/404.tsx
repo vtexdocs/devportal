@@ -20,7 +20,7 @@ const FourOhFour: Page<Props> = ({ branch }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
   const currentPage = router.asPath.split('?')[0]
-  const feedbackUrl = `${getFeedbackURL()}https://developers.vtex.com${currentPage}`
+  const feedbackUrl = `${getFeedbackURL()}https://developers.vtex.com${currentPage}&entry.358925425=Page+not+found`
 
   return (
     <>
