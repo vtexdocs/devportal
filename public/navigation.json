@@ -1488,13 +1488,6 @@
                       "children": []
                     },
                     {
-                      "name": "Using Master Data v2 triggers to interact with orders",
-                      "slug": "using-master-data-v2-triggers-to-interact-with-orders",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
                       "name": "A/B testing Master Data v2 trigger actions",
                       "slug": "trigger-ab-test",
                       "origin": "",
