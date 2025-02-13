@@ -2092,8 +2092,8 @@
               "children": []
             },
             {
-              "name": "Contextual price per seller",
-              "slug": "contextual-price-per-seller",
+              "name": "Contextual price per shopper",
+              "slug": "contextual-price-per-shopper",
               "origin": "",
               "type": "markdown",
               "children": []
