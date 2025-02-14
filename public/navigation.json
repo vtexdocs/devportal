@@ -12303,6 +12303,21 @@
               "children": []
             },
             {
+              "name": "Session Client",
+              "slug": "apps/vtex.session-client",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Session Client GraphQL API",
+                  "slug": "apps/vtex.session-client/session-client-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Store Icons",
               "slug": "apps/vtex.store-icons",
               "origin": "",
