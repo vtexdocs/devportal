@@ -1755,11 +1755,12 @@ to = "/docs/guides/storefront-seo"
 
 [[redirects]]
 force = true
-
 from = "/docs/guides/seller-price"
 status = 308
 to = "/docs/guides/contextual-price-per-seller"
 
+[[redirects]]
+force = true
 from = "/docs/api-reference/orders-api-change-order-beta"
 status = 308
 to = "/docs/api-reference/orders-api-order-modifications"
@@ -1774,4 +1775,4 @@ to = "/docs/guides/order-modifications"
 force = true
 from = "/docs/guides/using-master-data-v2-triggers-to-interact-with-orders"
 status = 308
-to = "https://developers.vtex.com/docs/guides/orders-feed"
+to = "/docs/guides/orders-feed"
