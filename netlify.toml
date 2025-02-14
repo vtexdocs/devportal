@@ -1770,3 +1770,8 @@ from = "/docs/guides/change-order"
 status = 308
 to = "/docs/guides/order-modifications"
 
+[[redirects]]
+force = true
+from = "/docs/guides/using-master-data-v2-triggers-to-interact-with-orders"
+status = 308
+to = "https://developers.vtex.com/docs/guides/orders-feed"
