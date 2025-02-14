@@ -380,7 +380,15 @@
                   "slug": "external-marketplace-integration-app-template",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "External Marketplace Integration app GraphQL API",
+                      "slug": "external-marketplace-integration-app-graphql-api",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "Catalog Integration",
