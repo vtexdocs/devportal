@@ -15013,6 +15013,29 @@
           "type": "category",
           "children": [
             {
+              "name": "February",
+              "slug": "february-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Payments Gateway API: Deprecation of payment information routes",
+                  "slug": "2025-02-18-deprecation-of-payment-information-routes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "2025",
+          "slug": "2025-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
               "name": "January",
               "slug": "january-2025",
               "origin": "",
