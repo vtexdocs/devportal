@@ -10349,6 +10349,31 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Token renewal",
+              "slug": "vtex-id-api-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Initiate token renewal",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/apikey/-apiKey-/apitoken/renew",
+                  "children": []
+                },
+                {
+                  "name": "Complete token renewal",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/apikey/-apiKey-/apitoken/finish-renewal",
+                  "children": []
+                }
+              ]
             }
           ]
         },
