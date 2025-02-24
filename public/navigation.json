@@ -15037,7 +15037,7 @@
           "origin": "",
           "type": "category",
           "children": [
-            {
+           {
               "name": "February",
               "slug": "february-2025",
               "origin": "",
@@ -15051,15 +15051,7 @@
                   "children": []
                 }
               ]
-            }
-          ]
-        },
-        {
-          "name": "2025",
-          "slug": "2025-category",
-          "origin": "",
-          "type": "category",
-          "children": [
+            },
             {
               "name": "January",
               "slug": "january-2025",
