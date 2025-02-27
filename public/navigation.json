@@ -12255,7 +12255,15 @@
               "slug": "apps/vtex.b2b-quotes",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "B2B Quotes GraphQL API",
+                  "slug": "apps/vtex.b2b-quotes-graphql/b2bquotes-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
