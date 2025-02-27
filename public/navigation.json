@@ -13647,9 +13647,9 @@
             },
             {
               "name": "FastStore SDK",
-              "slug": "faststore/faststore-overview",
+              "slug": "faststore/sdk-overview",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Analytics",
