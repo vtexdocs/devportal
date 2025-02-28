@@ -16,6 +16,7 @@
     - [How to make a commit](#how-to-make-a-commit)
   - [Branches](#branches)
     - [Feature Branches](#feature-branches)
+  - [Docker](#docker)
 - [Contributing](#contributing)
   - [How to develop and propose a new contribution](#how-to-develop-and-propose-a-new-contribution)
   - [What to do when someone updated the `main` branch and I'm developing something on my *feature branch*](#what-to-do-when-someone-updated-the-main-branch-and-im-developing-something-on-my-feature-branch)
@@ -239,6 +240,40 @@ The *feature branch* description must be short and written with kebab-case. It s
 E.g.: `git checkout -b feature/landing-page`.
 
 >**Important note:** Only *commits* should be made in a *feature branch*. None *release or merge commits* should be made.
+
+### Docker development environment
+
+To run the application using Docker, follow these steps:
+
+1. Ensure you have Docker and Docker Compose installed on your machine.
+2. Build and start the Docker containers using Docker Compose:
+    ```bash
+    docker compose up --build
+    ```
+3. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+For Windows users:
+- If you encounter issues with file watching, you may need to enable polling by uncommenting the `WATCHPACK_POLLING=true` line in the `docker-compose.yml` file.
+
+```dockercompose
+version: "3.8"
+services: 
+  frontend:
+    container_name: frontend
+    build:
+      context: . #if your Dockerfile is not at the same level change the path here (./frontend)
+      target: dev
+    restart: always
+    command: yarn dev
+    environment:
+      - NODE_ENV=development 
+      #if you’re using Windows, you may need to uncomment the next line - Sol from @Kobe E
+      #- WATCHPACK_POLLING=true
+    volumes:
+      - .:/devportal
+    ports:
+      - 3000:3000
+```
 
 ## Contributing
 

@@ -55,3 +55,4 @@ yarn-error.log*
 cypress.log
 src/tests/cypress/screenshots
 src/tests/cypress/videos
+RapiDoc
