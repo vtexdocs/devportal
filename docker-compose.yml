@@ -1,0 +1,17 @@
+version: "3.8"
+services: 
+  frontend:
+    container_name: VTEX-DEVPORTAL-DEV
+    build:
+      context: . #if your Dockerfile is not at the same level change the path here (./frontend)
+      target: dev
+    command: yarn dev
+    environment:
+      - NODE_ENV=development 
+      #if you’re using Windows, you may need to uncomment the next line - Sol from @Kobe E
+      #- WATCHPACK_POLLING=true
+    volumes:
+      - .:/devportal
+    ports:
+      - 3000:3000
+    stdin_open: true
