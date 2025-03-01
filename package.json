@@ -19,7 +19,8 @@
     "cz-commit": "cz",
     "release": "standard-version",
     "index": "chmod +x ./algolia/scripts/scraper.sh && ./algolia/scripts/scraper.sh",
-    "cypress": "cypress open"
+    "cypress": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@code-hike/mdx": "^0.9.0",

@@ -73,6 +73,47 @@ flowchart TB
 
   [Cypress](https://www.cypress.io/) is an automated testing tool that was added to the repository so pre-defined E2E or unitary tests (inside cypress directory) will be executed whenever a PR is opened.
 
+### Cypress Tests
+
+The Cypress tests are designed to ensure the functionality and stability of the Developers Portal. The tests cover various aspects of the portal, including:
+
+- **Status of documentation pages:** Verifies that documentation pages load correctly and checks for any broken links or missing content.
+- **API reference documentation page:** Tests the functionality of the API reference page, including the sidebar collapse button, random guide page loading, title presence, and response tab functionality.
+- **API guides documentation page:** Tests the functionality of the API guides page, including the sidebar collapse button, random guide page loading, title presence, document contributor links, feedback submission, and table of contents navigation.
+
+#### What to Expect in Terms of Reports
+
+After the Cypress tests are executed, a summary report is generated. The report includes:
+
+- The total number of tests that failed.
+- Detailed information about each failing test, including the test title and the specific errors encountered.
+
+The summary report is posted as a comment on the Pull Request, providing a quick overview of the test results.
+
+#### How to Deal with Errors
+
+If any tests fail, follow these steps to address the issues:
+
+1. **Review the Summary Report:** Check the summary report posted on the Pull Request to identify the failing tests and the specific errors encountered.
+2. **Reproduce the Errors Locally:** Run the Cypress tests locally to reproduce the errors and investigate the root cause.
+3. **Fix the Issues:** Make the necessary code changes to fix the issues identified by the failing tests.
+4. **Re-run the Tests:** After fixing the issues, re-run the Cypress tests locally to ensure that the errors have been resolved.
+5. **Push the Changes:** Push the changes to the remote repository and verify that the Cypress tests pass in the CI environment.
+
+To run the Cypress tests locally, use the following command:
+
+```bash
+yarn cypress:open
+```
+
+To run the Cypress tests in the CI environment, use the following command:
+
+```bash
+yarn cypress:run
+```
+
+This command will run the Cypress tests in the CI environment and generate the necessary reports.
+
 ## Development
 
 Clone this repo, access the command line at its root directory and install all dependencies:
