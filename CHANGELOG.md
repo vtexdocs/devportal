@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.17.1](https://github.com/vtexdocs/devportal/compare/v1.17.0...v1.17.1) (2025-03-01)
+
+
+### Bug Fixes
+
+* **openreplay tracker:** have to remove tracker code ([5de4a70](https://github.com/vtexdocs/devportal/commit/5de4a700d1913425950c5bc13ad89bdb0f9058cb))
+* **openreplay tracker:** really remove ([c6a094b](https://github.com/vtexdocs/devportal/commit/c6a094bbac3163b8abc4deced71cd43ad54b8a42))
+* **openreplay:** remove openreplay tracker ([d7d3945](https://github.com/vtexdocs/devportal/commit/d7d39450cccd2f64a1ccb2908e0b93a3dd14e83f))
+
 ## [1.17.0](https://github.com/vtexdocs/devportal/compare/v1.16.8...v1.17.0) (2025-03-01)
 
 
