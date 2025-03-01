@@ -1796,11 +1796,6 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
-"@medv/finder@^3.0.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@medv/finder/-/finder-3.1.0.tgz#e157c68f166ade9f113a1314603365bf81dd8b8c"
-  integrity sha512-ojkXjR3K0Zz3jnCR80tqPL+0yvbZk/lEodb6RIVjLz7W8RVA2wrw8ym/CzCpXO9SYVUIKHFUpc7jvf8UKfIM3w==
-
 "@next/env@13.2.4":
   version "13.2.4"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-13.2.4.tgz#8b763700262b2445140a44a8c8d088cef676dbae"
@@ -4249,6 +4244,11 @@ caniuse-lite@^1.0.30001406, caniuse-lite@^1.0.30001449:
   version "1.0.30001487"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001487.tgz#d882d1a34d89c11aea53b8cdc791931bdab5fe1b"
   integrity sha512-83564Z3yWGqXsh2vaH/mhXfEM0wX+NlBCm1jYHOb97TrTWJEmPTccZgeLTPBUUb0PNVo+oomb7wkimZBIERClA==
+
+caniuse-lite@^1.0.30001701:
+  version "1.0.30001701"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001701.tgz#ad9c90301f7153cf6b3314d16cc30757285bf9e7"
+  integrity sha512-faRs/AW3jA9nTwmJBSO1PQ6L/EOgsB5HMQQq4iCu5zhPgVVgO/pZRHlmatwijZKetFw8/Pr4q6dEN8sJuq8qTw==
 
 caseless@~0.12.0:
   version "0.12.0"

@@ -1,5 +1,10 @@
 import { defineConfig } from 'cypress'
-import clipboardy from 'clipboardy'
+
+interface Global {
+  url?: string
+}
+
+declare const global: Global & typeof globalThis
 
 export default defineConfig({
   video: false,
@@ -11,7 +16,7 @@ export default defineConfig({
   experimentalMemoryManagement: true,
   e2e: {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    setupNodeEvents(on, config) {
+    setupNodeEvents(on, _config) {
       on('task', {
         setUrl: (url) => {
           global.url = url
@@ -19,9 +24,6 @@ export default defineConfig({
         },
         getUrl: () => {
           return global.url
-        },
-        getClipboard: () => {
-          return clipboardy.readSync()
         },
       })
     },
