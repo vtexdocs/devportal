@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.17.0](https://github.com/vtexdocs/devportal/compare/v1.16.8...v1.17.0) (2025-03-01)
+
+
+### Features
+
+* **dockerfile:** add dockerfile for running devmode ([4657e29](https://github.com/vtexdocs/devportal/commit/4657e29e2549c6af51188862622a0c7882a1bd52))
+
+
+### Bug Fixes
+
+* **api-reference:** review hash link behavior ([b6c32d4](https://github.com/vtexdocs/devportal/commit/b6c32d4904c689585d16e373d3bd8a4d862158d4))
+
+
+### Chore
+
+* **api-reference:** remove test ([abe1773](https://github.com/vtexdocs/devportal/commit/abe1773fbd6e287b9ca47e822d5ad4343cef848b))
+
+
+### Docs
+
+* create redirect ([e4c724a](https://github.com/vtexdocs/devportal/commit/e4c724a243cfd990bd9f40894a06831a3e366abf))
+* **navigation.json:** accessibility ([7f614ba](https://github.com/vtexdocs/devportal/commit/7f614bab5b611465d0d1f57f620d87c3b7b5a94b))
+* **navigation.json:** add marketplace integration app graphql ([3b7615b](https://github.com/vtexdocs/devportal/commit/3b7615beda3498b0bfd6c073fde7c591272a7c4b))
+* **navigation.json:** add session client app and graphql ([b7c2627](https://github.com/vtexdocs/devportal/commit/b7c2627ece8825c6d1e5ac25d9515d3ec5750fcb))
+* **navigation:** add ad network integration endpoints ([e761f4c](https://github.com/vtexdocs/devportal/commit/e761f4cac86b0f29f299bf09b266585c5dcd6017))
+* **navigation:** add token renewal endpoints ([788692e](https://github.com/vtexdocs/devportal/commit/788692e8291a4b8b30f8369c33dae2ebf1f45bda))
+* **netlify.toml:** SEO ([ebdece6](https://github.com/vtexdocs/devportal/commit/ebdece6b87393ba931cb08e4f8a2dbc769c49dfc))
+* remove deprecated guide from navigation ([2ec45dd](https://github.com/vtexdocs/devportal/commit/2ec45dd45c6792c5dabc3fa9ff273949c00bb86a))
+
 ### [1.16.8](https://github.com/vtexdocs/devportal/compare/v1.16.7...v1.16.8) (2025-01-29)
 
 
