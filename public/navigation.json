@@ -8443,6 +8443,31 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Payment Notification",
+              "slug": "payments-gateway-api-payment-notification",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Send payment notification with payment ID",
+                  "slug": "payments-gateway-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/payments/-paymentId-/payment-notification",
+                  "children": []
+                },
+                {
+                  "name": "Send payment notification with payment ID, date, and value paid",
+                  "slug": "payments-gateway-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/payments/-paymentId-/payment-notification",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -15051,6 +15076,20 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "February",
+              "slug": "february-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Payments Gateway API: New permission required for approving payments",
+                  "slug": "2025-03-10-payments-gateway-api-new-permission-required-for-approving-payments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
             },
             {
               "name": "January",
