@@ -8,8 +8,7 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'improved',
-    description:
-      'FastStore: New global Content Types',
+    description: 'FastStore: New global Content Types',
     date: new Date('03/11/2025'),
   },
   updateType: 'release-notes',
