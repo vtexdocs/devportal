@@ -8459,7 +8459,7 @@
                   "children": []
                 },
                 {
-                  "name": "Send payment notification with payment ID, date and value paid",
+                  "name": "Send payment notification with payment ID, date, and value paid",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
