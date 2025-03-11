@@ -15069,27 +15069,20 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Payments Gateway API: Deprecation of payment information routes",
-                  "slug": "2025-02-18-deprecation-of-payment-information-routes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "February",
-              "slug": "february-2025",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
                   "name": "Payments Gateway API: New permission required for approving payments",
                   "slug": "2025-03-10-payments-gateway-api-new-permission-required-for-approving-payments",
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
+                },
+                {
+                  "name": "Payments Gateway API: Deprecation of payment information routes",
+                  "slug": "2025-02-18-deprecation-of-payment-information-routes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }                
+              ]
             },
             {
               "name": "January",
