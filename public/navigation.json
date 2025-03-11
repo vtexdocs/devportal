@@ -15071,6 +15071,21 @@
           "type": "category",
           "children": [
            {
+              "name": "March",
+              "slug": "march-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: New global Content Types",
+                  "slug": "2025-03-11-faststore-new-content-types",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+           {
               "name": "February",
               "slug": "february-2025",
               "origin": "",
