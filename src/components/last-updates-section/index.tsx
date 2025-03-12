@@ -9,7 +9,7 @@ const lastReleaseNote: CardProps = {
   action: {
     type: 'improved',
     description: 'FastStore: New global Content Types',
-    date: new Date('03/11/2025'),
+    date: new Date('03/12/2025'),
   },
   updateType: 'release-notes',
 }
