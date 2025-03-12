@@ -8,9 +8,8 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'improved',
-    description:
-      'Store Framework CMS: VTEX CLI plugin updated to prevent Site Editor content loss',
-    date: new Date('01/21/2025'),
+    description: 'FastStore: New global Content Types',
+    date: new Date('03/12/2025'),
   },
   updateType: 'release-notes',
 }

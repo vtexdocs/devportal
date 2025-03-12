@@ -15099,6 +15099,21 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: New global Content Types",
+                  "slug": "2025-03-12-faststore-new-content-types",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+           {
+              "name": "February",
+              "slug": "february-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
                   "name": "Payments Gateway API: New permission required for approving payments",
                   "slug": "2025-03-10-payments-gateway-api-new-permission-required-for-approving-payments",
                   "origin": "",
