@@ -14055,6 +14055,28 @@
               ]
             },
             {
+              "name": "SEO",
+              "slug": "faststore/seo-overview",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Configuring SEO for Product Listing Pages (PLPs)",
+                  "slug": "faststore/managing-performance-configuring-seo-for-plp",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Optimizing SEO by managing lazy loading on Product Listing Pages (PLPs)",
+                  "slug": "faststore/managing-performance-optimizing-seo-by-managing-lazy-loading-on-plp",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Going live",
               "slug": "faststore/go-live-overview",
               "origin": "",
@@ -15097,7 +15119,15 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
+                }
+              ]
+            },
+            {
+              "name": "February",
+              "slug": "february-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
                 {
                   "name": "Payments Gateway API: Deprecation of payment information routes",
                   "slug": "2025-02-18-deprecation-of-payment-information-routes",
