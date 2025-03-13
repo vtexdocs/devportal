@@ -75,18 +75,52 @@ flowchart TB
 
 ### Cypress Tests
 
-The Cypress tests are designed to ensure the functionality and stability of the Developers Portal. The tests cover various aspects of the portal, including:
+The Cypress tests are designed to ensure the functionality and stability of the Developers Portal. The tests cover three main areas:
 
-- **Status of documentation pages:** Verifies that documentation pages load correctly and checks for any broken links or missing content.
-- **API reference documentation page:** Tests the functionality of the API reference page, including the sidebar collapse button, random guide page loading, title presence, and response tab functionality.
-- **API guides documentation page:** Tests the functionality of the API guides page, including the sidebar collapse button, random guide page loading, title presence, document contributor links, feedback submission, and table of contents navigation.
+1. **Documentation Pages Status Tests**
+   - Randomly selects and verifies the loading status of documentation pages
+   - Includes retry mechanisms for both run mode (3 retries) and open mode (3 retries)
+   - Logs any failed page checks for debugging purposes
+
+2. **API Reference Documentation Tests**
+   - Verifies sidebar functionality:
+     - Tests the collapse/expand button behavior
+     - Confirms sidebar visibility states
+   - Tests navigation:
+     - Verifies random guide page loading through sidebar navigation
+     - Ensures proper URL patterns for API reference pages
+   - Validates content:
+     - Checks for presence of API documentation title
+     - Tests response tab functionality and content visibility
+
+3. **API Guides Documentation Tests**
+   - Verifies sidebar functionality:
+     - Tests the collapse/expand button behavior
+     - Confirms sidebar visibility states
+   - Tests navigation:
+     - Verifies random guide page loading through sidebar navigation
+     - Ensures proper URL patterns for guide pages
+   - Validates content and features:
+     - Checks for presence of guide titles
+     - Tests document contributor links (verifies GitHub redirects)
+     - Validates feedback system:
+       - Tests feedback section visibility
+       - Verifies feedback modal functionality
+       - Tests feedback submission process
+     - Tests table of contents navigation:
+       - Verifies all headings are properly linked
+       - Tests navigation to the last section
+       - Validates scroll behavior
 
 #### What to Expect in Terms of Reports
 
 After the Cypress tests are executed, a summary report is generated. The report includes:
 
-- The total number of tests that failed.
-- Detailed information about each failing test, including the test title and the specific errors encountered.
+- The total number of tests that failed
+- Detailed information about each failing test, including:
+  - Test title and description
+  - The specific URL where the test failed
+  - The error message and stack trace
 
 The summary report is posted as a comment on the Pull Request, providing a quick overview of the test results.
 
@@ -308,7 +342,7 @@ services:
     command: yarn dev
     environment:
       - NODE_ENV=development 
-      #if you’re using Windows, you may need to uncomment the next line - Sol from @Kobe E
+      #if you're using Windows, you may need to uncomment the next line - Sol from @Kobe E
       #- WATCHPACK_POLLING=true
     volumes:
       - .:/devportal
