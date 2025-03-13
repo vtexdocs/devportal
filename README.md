@@ -73,6 +73,81 @@ flowchart TB
 
   [Cypress](https://www.cypress.io/) is an automated testing tool that was added to the repository so pre-defined E2E or unitary tests (inside cypress directory) will be executed whenever a PR is opened.
 
+### Cypress Tests
+
+The Cypress tests are designed to ensure the functionality and stability of the Developers Portal. The tests cover three main areas:
+
+1. **Documentation Pages Status Tests**
+   - Randomly selects and verifies the loading status of documentation pages
+   - Includes retry mechanisms for both run mode (3 retries) and open mode (3 retries)
+   - Logs any failed page checks for debugging purposes
+
+2. **API Reference Documentation Tests**
+   - Verifies sidebar functionality:
+     - Tests the collapse/expand button behavior
+     - Confirms sidebar visibility states
+   - Tests navigation:
+     - Verifies random guide page loading through sidebar navigation
+     - Ensures proper URL patterns for API reference pages
+   - Validates content:
+     - Checks for presence of API documentation title
+     - Tests response tab functionality and content visibility
+
+3. **API Guides Documentation Tests**
+   - Verifies sidebar functionality:
+     - Tests the collapse/expand button behavior
+     - Confirms sidebar visibility states
+   - Tests navigation:
+     - Verifies random guide page loading through sidebar navigation
+     - Ensures proper URL patterns for guide pages
+   - Validates content and features:
+     - Checks for presence of guide titles
+     - Tests document contributor links (verifies GitHub redirects)
+     - Validates feedback system:
+       - Tests feedback section visibility
+       - Verifies feedback modal functionality
+       - Tests feedback submission process
+     - Tests table of contents navigation:
+       - Verifies all headings are properly linked
+       - Tests navigation to the last section
+       - Validates scroll behavior
+
+#### What to Expect in Terms of Reports
+
+After the Cypress tests are executed, a summary report is generated. The report includes:
+
+- The total number of tests that failed
+- Detailed information about each failing test, including:
+  - Test title and description
+  - The specific URL where the test failed
+  - The error message and stack trace
+
+The summary report is posted as a comment on the Pull Request, providing a quick overview of the test results.
+
+#### How to Deal with Errors
+
+If any tests fail, follow these steps to address the issues:
+
+1. **Review the Summary Report:** Check the summary report posted on the Pull Request to identify the failing tests and the specific errors encountered.
+2. **Reproduce the Errors Locally:** Run the Cypress tests locally to reproduce the errors and investigate the root cause.
+3. **Fix the Issues:** Make the necessary code changes to fix the issues identified by the failing tests.
+4. **Re-run the Tests:** After fixing the issues, re-run the Cypress tests locally to ensure that the errors have been resolved.
+5. **Push the Changes:** Push the changes to the remote repository and verify that the Cypress tests pass in the CI environment.
+
+To run the Cypress tests locally, use the following command:
+
+```bash
+yarn cypress:open
+```
+
+To run the Cypress tests in the CI environment, use the following command:
+
+```bash
+yarn cypress:run
+```
+
+This command will run the Cypress tests in the CI environment and generate the necessary reports.
+
 ## Development
 
 Clone this repo, access the command line at its root directory and install all dependencies:
@@ -267,7 +342,7 @@ services:
     command: yarn dev
     environment:
       - NODE_ENV=development 
-      #if you’re using Windows, you may need to uncomment the next line - Sol from @Kobe E
+      #if you're using Windows, you may need to uncomment the next line - Sol from @Kobe E
       #- WATCHPACK_POLLING=true
     volumes:
       - .:/devportal
