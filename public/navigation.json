@@ -8443,6 +8443,31 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Payment Notification",
+              "slug": "payments-gateway-api-payment-notification",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Send payment notification with payment ID",
+                  "slug": "payments-gateway-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/payments/-paymentId-/payment-notification",
+                  "children": []
+                },
+                {
+                  "name": "Send payment notification with payment ID, date, and value paid",
+                  "slug": "payments-gateway-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/payments/-paymentId-/payment-notification",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -12255,7 +12280,15 @@
               "slug": "apps/vtex.b2b-quotes",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "B2B Quotes GraphQL API",
+                  "slug": "apps/vtex.b2b-quotes-graphql/b2bquotes-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -14022,6 +14055,28 @@
               ]
             },
             {
+              "name": "SEO",
+              "slug": "faststore/seo-overview",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Configuring SEO for Product Listing Pages (PLPs)",
+                  "slug": "faststore/managing-performance-configuring-seo-for-plp",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Optimizing SEO by managing lazy loading on Product Listing Pages (PLPs)",
+                  "slug": "faststore/managing-performance-optimizing-seo-by-managing-lazy-loading-on-plp",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Going live",
               "slug": "faststore/go-live-overview",
               "origin": "",
@@ -15038,6 +15093,36 @@
           "type": "category",
           "children": [
            {
+              "name": "March",
+              "slug": "march-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: New global Content Types",
+                  "slug": "2025-03-12-faststore-new-content-types",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+           {
+              "name": "February",
+              "slug": "february-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Payments Gateway API: New permission required for approving payments",
+                  "slug": "2025-03-10-payments-gateway-api-new-permission-required-for-approving-payments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "February",
               "slug": "february-2025",
               "origin": "",
