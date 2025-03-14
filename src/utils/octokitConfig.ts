@@ -10,10 +10,17 @@ const MAX_RETRIES = 5
 const MAX_RETRY_DELAY = 60000 // 60 seconds in milliseconds
 const EXPONENTIAL_BACKOFF = true
 
-const calculateRetryDelay = (retryCount: number, baseDelay: number): number => {
-  if (!EXPONENTIAL_BACKOFF) return baseDelay * 1000
+const calculateRetryDelay = (
+  retryCount: number,
+  baseDelay: number
+): number | null => {
+  if (!EXPONENTIAL_BACKOFF) {
+    const delay = baseDelay * 1000
+    return delay > MAX_RETRY_DELAY ? null : delay
+  }
   const delay = Math.min(1000 * Math.pow(2, retryCount), MAX_RETRY_DELAY)
-  return Math.max(delay, baseDelay * 1000) // Ensure we wait at least the suggested retryAfter time
+  const finalDelay = Math.max(delay, baseDelay * 1000)
+  return finalDelay > MAX_RETRY_DELAY ? null : finalDelay
 }
 
 const handleRateLimitExhaustion = () => {
@@ -34,10 +41,9 @@ const octokitConfig = {
   throttle: {
     onRateLimit: (retryAfter: number, options: any, octokit: any) => {
       const retryCount = options.request.retryCount || 0
+      const delay = calculateRetryDelay(retryCount, retryAfter)
 
-      if (retryCount < MAX_RETRIES) {
-        const delay = calculateRetryDelay(retryCount, retryAfter)
-
+      if (retryCount < MAX_RETRIES && delay !== null) {
         octokit.log.warn(
           `Rate limit exceeded for request ${options.method} ${options.url}`
         )
@@ -52,16 +58,19 @@ const octokitConfig = {
       }
 
       octokit.log.warn(
-        `Rate limit exceeded for request ${options.method} ${options.url}. Max retries (${MAX_RETRIES}) reached.`
+        `Rate limit exceeded for request ${options.method} ${options.url}. ${
+          delay === null
+            ? 'Required delay exceeds maximum allowed time.'
+            : 'Max retries reached.'
+        }`
       )
       throw handleRateLimitExhaustion()
     },
     onSecondaryRateLimit: (retryAfter: number, options: any, octokit: any) => {
       const retryCount = options.request.retryCount || 0
+      const delay = calculateRetryDelay(retryCount, retryAfter)
 
-      if (retryCount < MAX_RETRIES) {
-        const delay = calculateRetryDelay(retryCount, retryAfter)
-
+      if (retryCount < MAX_RETRIES && delay !== null) {
         octokit.log.warn(
           `Secondary rate limit hit for request ${options.method} ${options.url}`
         )
@@ -76,7 +85,13 @@ const octokitConfig = {
       }
 
       octokit.log.warn(
-        `Secondary rate limit hit for request ${options.method} ${options.url}. Max retries (${MAX_RETRIES}) reached.`
+        `Secondary rate limit hit for request ${options.method} ${
+          options.url
+        }. ${
+          delay === null
+            ? 'Required delay exceeds maximum allowed time.'
+            : 'Max retries reached.'
+        }`
       )
       throw handleRateLimitExhaustion()
     },
