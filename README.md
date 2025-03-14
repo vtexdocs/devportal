@@ -12,6 +12,7 @@
     - [Directory Tree](#directory-tree)
     - [React Preferences](#react-preferences)
     - [Code Linting and Format](#code-linting-and-format)
+  - [API Slug Mapping](#api-slug-mapping)
   - [Commits](#commits)
     - [How to make a commit](#how-to-make-a-commit)
   - [Branches](#branches)
@@ -212,6 +213,31 @@ flowchart TB
     Before any change is committed, a pre-commit hook will run Prettier and correct errors found in the appropriate files (ignored paths are included in `.prettierignore`).
 
 You might want to configure ESLint and Prettier in your code editor to see errors and correction suggestions at development time.
+
+### API Slug Mapping
+
+The mapping between API display names and their corresponding slugs is centralized in a single file to make maintenance easier:
+
+```
+src/utils/api-slug-mapping.ts
+```
+
+This mapping is used in various parts of the application:
+
+1. In `getReferencePaths.ts` to generate paths for API reference documentation
+2. In `api/openapi/[slug].tsx` to handle OpenAPI schema requests
+3. In `api/postman/[slug].tsx` to handle Postman collection requests
+
+When adding a new API or modifying an existing one, you should update only this file, and all parts of the system that use this mapping will automatically get the updated information.
+
+Example:
+```typescript
+// src/utils/api-slug-mapping.ts
+export const apiSlugMap: { [key: string]: string } = {
+  'VTEX - New API': 'new-api-slug',
+  // ... other mappings
+}
+```
 
 ### Commits
 
