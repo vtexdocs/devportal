@@ -28,7 +28,7 @@ export async function fetchFromRawGithub(
   return await response.text()
 }
 
-interface GitHubErrorResponse {
+export interface GitHubErrorResponse {
   status?: number
   response?: {
     headers?: {
@@ -40,6 +40,15 @@ interface GitHubErrorResponse {
     }
   }
   name?: string
+}
+
+interface TreeResponse {
+  data: {
+    tree: Array<{
+      path: string
+      type: string
+    }>
+  }
 }
 
 export function isRateLimitError(error: GitHubErrorResponse): boolean {
@@ -103,7 +112,7 @@ export async function retryWithRateLimit<T>(
 }
 
 export async function getGithubTree(org: string, repo: string, ref: string) {
-  return retryWithRateLimit(() =>
+  return retryWithRateLimit<TreeResponse>(() =>
     octokit.request('GET /repos/{org}/{repo}/git/trees/{ref}?recursive=true', {
       org,
       repo,
