@@ -41,7 +41,7 @@ const octokitConfig = {
         octokit.log.warn(
           `Rate limit exceeded for request ${options.method} ${options.url}`
         )
-        octokit.log.info(
+        octokit.log.warn(
           `Retrying after ${
             delay / 1000
           } seconds with exponential backoff! (Attempt ${
@@ -65,7 +65,7 @@ const octokitConfig = {
         octokit.log.warn(
           `Secondary rate limit hit for request ${options.method} ${options.url}`
         )
-        octokit.log.info(
+        octokit.log.warn(
           `Retrying after ${
             delay / 1000
           } seconds with exponential backoff! (Attempt ${
