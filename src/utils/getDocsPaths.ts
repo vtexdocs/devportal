@@ -1,12 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const docsPaths: { [slug: string]: string } = {}
 
 import { getGithubTree } from './github-utils'
 
 export default async function getDocsPaths(branch = 'main') {
   const repoTree = await getGithubTree('vtexdocs', 'dev-portal-content', branch)
-  // @ts-ignore
-  repoTree.tree.map((node: any) => {
+  repoTree.tree.forEach((node: { path: string; type: string }) => {
     const path = node.path
     const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
     if (

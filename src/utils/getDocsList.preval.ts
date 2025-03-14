@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import preval from 'next-plugin-preval'
 import { getGithubTree } from './github-utils'
 import { getLogger } from './logging/log-util'
@@ -16,8 +16,7 @@ async function getDocsList() {
       'dev-portal-content',
       'main'
     )
-    // @ts-ignore
-    repoTree.tree.map((node: any) => {
+    repoTree.tree.forEach((node: { path: string; type: string }) => {
       const path = node.path
       const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
       if (path.startsWith('docs')) {
