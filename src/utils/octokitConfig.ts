@@ -6,6 +6,9 @@ import { config } from 'utils/config'
 
 const MyOctokit = Octokit.plugin(throttling)
 
+const MAX_RETRIES = 3
+const MAX_RETRY_AFTER = 30 // maximum seconds to wait for retry
+
 const octokitConfig = {
   authStrategy: createAppAuth,
   auth: {
@@ -14,19 +17,45 @@ const octokitConfig = {
     installationId: config.GITHUB_INSTALLATIONID,
   },
   throttle: {
-    onRateLimit: (retryAfter: any, options: any, octokit: any) => {
+    onRateLimit: (retryAfter: number, options: any, octokit: any) => {
+      const retryCount = options.request.retryCount || 0
+
+      if (retryCount < MAX_RETRIES && retryAfter < MAX_RETRY_AFTER) {
+        octokit.log.warn(
+          `Request quota exhausted for request ${options.method} ${options.url}`
+        )
+        octokit.log.info(
+          `Retrying after ${retryAfter} seconds! (Attempt ${
+            retryCount + 1
+          }/${MAX_RETRIES})`
+        )
+        return true
+      }
+
       octokit.log.warn(
-        `Request quota exhausted for request ${options.method} ${options.url}`
+        `Request quota exhausted for request ${options.method} ${options.url}. Max retries reached or retry time too long.`
       )
-      octokit.log.info(`Retrying after ${retryAfter} seconds!`)
-      return true
+      return false
     },
-    onSecondaryRateLimit: (retryAfter: any, options: any, octokit: any) => {
-      retryAfter = retryAfter
-      // does not retry, only logs a warning
+    onSecondaryRateLimit: (retryAfter: number, options: any, octokit: any) => {
+      const retryCount = options.request.retryCount || 0
+
+      if (retryCount < MAX_RETRIES && retryAfter < MAX_RETRY_AFTER) {
+        octokit.log.warn(
+          `Secondary rate limit hit for request ${options.method} ${options.url}`
+        )
+        octokit.log.info(
+          `Retrying after ${retryAfter} seconds! (Attempt ${
+            retryCount + 1
+          }/${MAX_RETRIES})`
+        )
+        return true
+      }
+
       octokit.log.warn(
-        `SecondaryRateLimit detected for request ${options.method} ${options.url}`
+        `Secondary rate limit hit for request ${options.method} ${options.url}. Max retries reached or retry time too long.`
       )
+      return false
     },
   },
 }
