@@ -14,7 +14,7 @@ const Breadcrumb = ({ breadcumbList }: Props) => {
   return (
     <Flex sx={styles.breadcrumb} ref={breadcrumbRef}>
       {breadcumbList.map((item, idx) => (
-        <>
+        <div key={`breadcrumb-item-${item.slug}-${idx}`}>
           {item.type === 'category' ? (
             <Text
               ref={idx === breadcumbList.length - 1 ? lastItemRef : undefined}
@@ -36,7 +36,7 @@ const Breadcrumb = ({ breadcumbList }: Props) => {
           {idx < breadcumbList.length - 1 && (
             <IconCaret direction="right" size={16} />
           )}
-        </>
+        </div>
       ))}
     </Flex>
   )
