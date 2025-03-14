@@ -57,7 +57,9 @@ export default async function getReferencePaths(branch = 'master') {
             ? match?.groups?.filetype
             : ''
           if (filetype === 'json' || filetype === 'yaml') {
-            referencePaths[fileSlugMap[filename] || filename] = path
+            referencePaths[
+              fileSlugMap[filename] || filename
+            ] = `https://cdn.jsdelivr.net/gh/vtex/openapi-schemas/${path}`
           }
         }
       }
