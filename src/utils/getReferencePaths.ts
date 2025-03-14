@@ -40,18 +40,14 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - User Data Rights API': 'user-data-rights-api',
 }
 
-export default async function getReferencePaths(branch = 'main') {
+export default async function getReferencePaths(branch = 'master') {
   const logger = getLogger('getReferencePaths')
   try {
-    const repoTree = await getGithubTree(
-      'vtexdocs',
-      'dev-portal-content',
-      branch
-    )
+    const repoTree = await getGithubTree('vtex', 'openapi-schemas', branch)
     repoTree.tree.forEach((node: { path: string; type: string }) => {
       const path = node.path
       const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
-      if (path.startsWith('docs/api-reference')) {
+      if (!path.includes('/')) {
         if (node.type === 'blob') {
           const match = path.match(re)
           const filename = match?.groups?.filename
