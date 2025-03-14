@@ -6,8 +6,23 @@ import { config } from 'utils/config'
 
 const MyOctokit = Octokit.plugin(throttling)
 
-const MAX_RETRIES = 3
-const MAX_RETRY_AFTER = 30 // maximum seconds to wait for retry
+const MAX_RETRIES = 5
+const MAX_RETRY_DELAY = 60000 // 60 seconds in milliseconds
+const EXPONENTIAL_BACKOFF = true
+
+const calculateRetryDelay = (retryCount: number, baseDelay: number): number => {
+  if (!EXPONENTIAL_BACKOFF) return baseDelay * 1000
+  const delay = Math.min(1000 * Math.pow(2, retryCount), MAX_RETRY_DELAY)
+  return Math.max(delay, baseDelay * 1000) // Ensure we wait at least the suggested retryAfter time
+}
+
+const handleRateLimitExhaustion = () => {
+  const error = new Error(
+    `GitHub API rate limit exceeded. Please try again later.`
+  )
+  error.name = 'RateLimitError'
+  return error
+}
 
 const octokitConfig = {
   authStrategy: createAppAuth,
@@ -20,12 +35,16 @@ const octokitConfig = {
     onRateLimit: (retryAfter: number, options: any, octokit: any) => {
       const retryCount = options.request.retryCount || 0
 
-      if (retryCount < MAX_RETRIES && retryAfter < MAX_RETRY_AFTER) {
+      if (retryCount < MAX_RETRIES) {
+        const delay = calculateRetryDelay(retryCount, retryAfter)
+
         octokit.log.warn(
-          `Request quota exhausted for request ${options.method} ${options.url}`
+          `Rate limit exceeded for request ${options.method} ${options.url}`
         )
         octokit.log.info(
-          `Retrying after ${retryAfter} seconds! (Attempt ${
+          `Retrying after ${
+            delay / 1000
+          } seconds with exponential backoff! (Attempt ${
             retryCount + 1
           }/${MAX_RETRIES})`
         )
@@ -33,19 +52,23 @@ const octokitConfig = {
       }
 
       octokit.log.warn(
-        `Request quota exhausted for request ${options.method} ${options.url}. Max retries reached or retry time too long.`
+        `Rate limit exceeded for request ${options.method} ${options.url}. Max retries (${MAX_RETRIES}) reached.`
       )
-      return false
+      throw handleRateLimitExhaustion()
     },
     onSecondaryRateLimit: (retryAfter: number, options: any, octokit: any) => {
       const retryCount = options.request.retryCount || 0
 
-      if (retryCount < MAX_RETRIES && retryAfter < MAX_RETRY_AFTER) {
+      if (retryCount < MAX_RETRIES) {
+        const delay = calculateRetryDelay(retryCount, retryAfter)
+
         octokit.log.warn(
           `Secondary rate limit hit for request ${options.method} ${options.url}`
         )
         octokit.log.info(
-          `Retrying after ${retryAfter} seconds! (Attempt ${
+          `Retrying after ${
+            delay / 1000
+          } seconds with exponential backoff! (Attempt ${
             retryCount + 1
           }/${MAX_RETRIES})`
         )
@@ -53,9 +76,9 @@ const octokitConfig = {
       }
 
       octokit.log.warn(
-        `Secondary rate limit hit for request ${options.method} ${options.url}. Max retries reached or retry time too long.`
+        `Secondary rate limit hit for request ${options.method} ${options.url}. Max retries (${MAX_RETRIES}) reached.`
       )
-      return false
+      throw handleRateLimitExhaustion()
     },
   },
 }
