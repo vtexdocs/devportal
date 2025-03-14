@@ -1,21 +1,19 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import { getServerSession } from 'next-auth'
 import octokit from 'utils/octokitConfig'
+import { retryWithRateLimit } from 'utils/github-utils'
 
 import { authOptions } from './auth/[...nextauth]'
 
 async function getGithubBranch(org: string, repo: string, branch: string) {
-  const response = octokit.request(
-    'GET /repos/{owner}/{repo}/branches/{branch}',
-    {
+  const response = await retryWithRateLimit<{ status: number }>(() =>
+    octokit.request('GET /repos/{owner}/{repo}/branches/{branch}', {
       owner: org,
       repo: repo,
       branch: branch,
-    }
+    })
   )
-  const branchExists = (await response).status == 200 ? true : false
-
-  return branchExists
+  return response.status === 200
 }
 
 export default async function handler(

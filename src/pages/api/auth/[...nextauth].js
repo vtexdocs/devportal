@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth'
 import GithubProvider from 'next-auth/providers/github'
-
 import octokit from '../../../utils/octokitConfig'
+import { retryWithRateLimit } from '../../../utils/github-utils'
 
 export const authOptions = {
   providers: [
@@ -13,12 +13,13 @@ export const authOptions = {
   callbacks: {
     async signIn({ profile }) {
       try {
-        await octokit.rest.repos.checkCollaborator({
-          owner: 'vtexdocs',
-          repo: 'dev-portal-content',
-          username: profile.login,
-        })
-
+        await retryWithRateLimit(() =>
+          octokit.rest.repos.checkCollaborator({
+            owner: 'vtexdocs',
+            repo: 'dev-portal-content',
+            username: profile.login,
+          })
+        )
         return true
       } catch (err) {
         console.log(err)
