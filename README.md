@@ -35,6 +35,12 @@ As the Developer Portal provides VTEX documentation to users, some of its main f
 - Markdown files rendering
 
   [Markdown](https://www.markdownguide.org/) is a very popular markup language that helps making plaintext documents more semantic by adding formatting elements defined in its syntax. VTEX developers and many tech writers reccur to Markdown to write documentation, including those served by the Developers Portal.
+- GitHub API Integration with Rate Limit Handling
+  
+  The portal uses GitHub's API through Octokit to fetch documentation content. To handle GitHub API rate limits gracefully:
+  - Configurable retry mechanism with max retries and timeout
+  - Automatic fallback to raw.githubusercontent.com when API limits are hit
+  - Smart throttling to prevent excessive API calls
 
 ## Versioning
 
