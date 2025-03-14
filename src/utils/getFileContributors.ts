@@ -12,15 +12,34 @@ export interface ContributorsType {
   userPage: string
 }
 
+interface CommitAuthor {
+  login: string
+  avatar_url: string
+  html_url: string
+}
+
+interface CommitData {
+  commit: {
+    author: {
+      name: string
+    }
+  }
+  author: CommitAuthor
+}
+
+interface ListCommitsResponse {
+  data: CommitData[]
+}
+
 export default async function getFileContributors(
   owner: string,
   repo: string,
   ref: string,
   path: string
-): Promise<unknown> {
+): Promise<ContributorsType[]> {
   try {
     const contributors: ContributorsType[] = []
-    const response = await retryWithRateLimit(() =>
+    const response = await retryWithRateLimit<ListCommitsResponse>(() =>
       octokit.rest.repos.listCommits({
         owner,
         repo,
@@ -29,16 +48,18 @@ export default async function getFileContributors(
       })
     )
 
-    response.data.forEach((commitData: any) => {
-      if (commitData?.author)
-        if (!contributors.find((e) => e.login === commitData?.author?.login)) {
-          contributors.push({
-            name: commitData.commit.author?.name,
-            login: commitData.author?.login,
-            avatar: commitData.author?.avatar_url,
-            userPage: commitData.author?.html_url,
-          })
-        }
+    response.data.forEach((commitData) => {
+      if (
+        commitData?.author &&
+        !contributors.find((e) => e.login === commitData.author.login)
+      ) {
+        contributors.push({
+          name: commitData.commit.author?.name,
+          login: commitData.author.login,
+          avatar: commitData.author.avatar_url,
+          userPage: commitData.author.html_url,
+        })
+      }
     })
 
     return contributors
