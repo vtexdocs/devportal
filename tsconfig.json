@@ -14,7 +14,7 @@
     "strictFunctionTypes": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
-    "target": "es2017",
+    "target": "es2018",
     "allowJs": true,
     "strict": true,
     "noEmit": true,
@@ -26,9 +26,10 @@
     "baseUrl": "src",
     "lib": [
       "ES2021.String",
-      "es2017",
+      "es2018",
       "dom",
       "es2018.promise",
+      "es2018.regexp",
       "esnext.asynciterable"
     ],
     "forceConsistentCasingInFileNames": true,
