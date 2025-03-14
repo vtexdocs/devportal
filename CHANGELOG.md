@@ -2,6 +2,77 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.18.0](https://github.com/vtexdocs/devportal/compare/v1.17.1...v1.18.0) (2025-03-14)
+
+
+### Features
+
+* add GitHub API rate limit handling utilities ([118e3ee](https://github.com/vtexdocs/devportal/commit/118e3ee4056966f9c3f475a406bea73b8a62828b))
+* implement GitHub API rate limiting and error handling ([6b13a01](https://github.com/vtexdocs/devportal/commit/6b13a01d742eab76369f3ecafe8cf66d2494f268))
+* **index.tsx:** update 'last-update' card ([df6b69e](https://github.com/vtexdocs/devportal/commit/df6b69eca75b6114d8cb04a1e36467a70289a3cf))
+* **index.tsx:** update 'last-updates-section' ([4dd6a6f](https://github.com/vtexdocs/devportal/commit/4dd6a6fa2e0560293261a7a3218c0c51e64f642d))
+* update Gift components to use Next.js Image component ([44f0cc7](https://github.com/vtexdocs/devportal/commit/44f0cc7437db476e83fb749ff41b148827723595))
+
+
+### Bug Fixes
+
+* **build:** handle github api rate limits with fallback mechanism ([3165c38](https://github.com/vtexdocs/devportal/commit/3165c388cb74cd3a5782d428afa076e1c636f7f4))
+* **cypress config:** makes the config buildable ([d6641d1](https://github.com/vtexdocs/devportal/commit/d6641d117fad0496e46169bbba4d26154b43148f))
+* **cypress:** handle PDF content-type and React hydration errors ([ad17fce](https://github.com/vtexdocs/devportal/commit/ad17fcef31fc160054cf8bfc0a7debb1a9cb2a3b)), closes [#423](https://github.com/vtexdocs/devportal/issues/423)
+* **getreferencepaths:** get correct paths ([8b1cb7b](https://github.com/vtexdocs/devportal/commit/8b1cb7bc41d7f1fc7c90244c92b832d95e6933e4))
+* **getreferencepaths:** restore complete API fileSlugMap ([797b89e](https://github.com/vtexdocs/devportal/commit/797b89e29bf01b3bb20a5ffdda195846f15219ae))
+* **getreferencepaths:** use correct Repo ([7f42427](https://github.com/vtexdocs/devportal/commit/7f4242789b26789fbe78ae72b928a8ad4dc70a3a))
+* improve icon handling in see-also-section ([ed0e05e](https://github.com/vtexdocs/devportal/commit/ed0e05efa399e72bc8f8c5ca3c43b919440bab32))
+* **openreplay tracker:** have to remove tracker code ([f40c3d7](https://github.com/vtexdocs/devportal/commit/f40c3d7f06af45fbd73266ebfe4e3673d30b8b7e))
+* **openreplay tracker:** really remove ([1a13aae](https://github.com/vtexdocs/devportal/commit/1a13aae216668c1df3ba5d120b126b3c9a853aee))
+* **openreplay:** remove openreplay tracker ([56809a2](https://github.com/vtexdocs/devportal/commit/56809a24fbe759f2c1398686e14ae51a598d973b))
+* prevent long build delays by failing fast when retry delay exceeds 60s ([570274c](https://github.com/vtexdocs/devportal/commit/570274c72c81a7f027656518e91c2baf9210de74))
+* remove legacyBehavior prop from Link components and fix linting issues ([184be81](https://github.com/vtexdocs/devportal/commit/184be81800b87a384e3076fdb2620ebe0437919a))
+* resolve key prop warning in Breadcrumb and useLayoutEffect warning in Contributors ([1ae1146](https://github.com/vtexdocs/devportal/commit/1ae1146d3aeaa1176521ed18fb65cb7c5e3ed5b2))
+
+
+### Chore
+
+* **release:** 1.17.0 ([010916c](https://github.com/vtexdocs/devportal/commit/010916ca938285e70bd9373fcad923066dc036b7))
+
+
+### Performance
+
+* **contributors:** prevent layout flash during SSR by using placeholder content ([b1e3ce3](https://github.com/vtexdocs/devportal/commit/b1e3ce30ceaca8073e2ea842841305d72232d8bd))
+
+
+### CI
+
+* **cypress:** add Node.js 18 setup to fix yarn install issues ([3a342b3](https://github.com/vtexdocs/devportal/commit/3a342b319bae9f531c37317316f0e115e5215447))
+
+
+### Tests
+
+* **cypress:** handle React hydration errors in documentation page tests ([3caaa95](https://github.com/vtexdocs/devportal/commit/3caaa95b294ee103fa03c34711628d4aa26162b1))
+
+
+### Docs
+
+* add GitHub API rate limiting documentation ([9f8fc74](https://github.com/vtexdocs/devportal/commit/9f8fc7472bda3473a415d4032a0803263f34a749))
+* **improve cypress test documentation:** - Add detailed descriptions of test coverage areas ([a3392d7](https://github.com/vtexdocs/devportal/commit/a3392d726bc137e3d55c9447f8b109ff06d7c359))
+* **navigation.json:** add b2b quotes graphql ([4b1a63a](https://github.com/vtexdocs/devportal/commit/4b1a63ab1354a33677782226bcb158c2925fe4af))
+* **navigation:** add payment notification endpoints ([6fc0503](https://github.com/vtexdocs/devportal/commit/6fc0503ccf7c2ea320f9c049cc673723fe247669))
+* **navigation:** add payments release notes ([2fed8fd](https://github.com/vtexdocs/devportal/commit/2fed8fdd035c7b39f74c0232910038178b8b164a))
+* **navigation:** fix spacing ([c4ea48a](https://github.com/vtexdocs/devportal/commit/c4ea48a044ec428ae567c381cc0dbca0dff896ad))
+
+
+### Refactoring
+
+* add TypeScript types for GitHub API responses ([148e436](https://github.com/vtexdocs/devportal/commit/148e4364b30334e9b0c32b4ad47ac256e3de36ba))
+* add TypeScript types to GitHub API clients ([f3a8f71](https://github.com/vtexdocs/devportal/commit/f3a8f71fc1f9cd1cbd61ff7ac884393140ac5e52))
+* **cypress tests:** add docs and improve compatibility ([c9549c3](https://github.com/vtexdocs/devportal/commit/c9549c3d4477dd2c1918ef893a5e716e4c9b5bb8))
+* **cypress tests:** add docs and improve compatibility ([381a373](https://github.com/vtexdocs/devportal/commit/381a373da5fdfc415b9930feb4de5d5fb90b4e49))
+* **github:** make repository configurations configurable via environment variables ([44bddeb](https://github.com/vtexdocs/devportal/commit/44bddeb1e1bef4b8336f1cbae80faedb45329adc))
+* improve GitHub file content handling ([46ee614](https://github.com/vtexdocs/devportal/commit/46ee6141c7cd82615319aaebc18f95b5868902e8))
+* improve tree node typing in path utility functions ([456e0bb](https://github.com/vtexdocs/devportal/commit/456e0bbcb8eecde657d98486d2902390b1b46c16))
+* replace octokit error logging with warn and custom error handling ([147873b](https://github.com/vtexdocs/devportal/commit/147873b23db2386f62d47fba457203037d318668))
+* standardize on warn for all octokit logging ([d41bb42](https://github.com/vtexdocs/devportal/commit/d41bb42778ab4258a8450423d16de7b18d746fe6))
+
 ### [1.17.1](https://github.com/vtexdocs/devportal/compare/v1.17.0...v1.17.1) (2025-03-01)
 
 
