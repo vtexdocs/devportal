@@ -11623,13 +11623,6 @@
           ]
         },
         {
-          "name": "Troubleshooting",
-          "slug": "troubleshooting",
-          "origin": "",
-          "type": "markdown",
-          "children": []
-        },
-        {
           "name": "Frequently asked questions",
           "slug": "vtex-io-documentation-frequently-asked-questions",
           "origin": "",
@@ -15041,6 +15034,27 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "I can't create a new workspace",
+              "slug": "i-cant-create-a-new-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I can't install an app with a major other than 0.x",
+              "slug": "i-cant-install-an-app-with-a-major-other-than-0x",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I don't see my Store Theme changes",
+              "slug": "i-dont-see-my-store-theme-changes",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -15074,6 +15088,27 @@
             {
               "name": "UTMs are not being applied to the cart at Checkout",
               "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My routes are not behaving as expected",
+              "slug": "my-routes-are-not-behaving-as-expected",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store is presenting price inconsistencies",
+              "slug": "my-store-is-presenting-price-inconsistencies",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store translation is not behaving as expected",
+              "slug": "my-store-translation-is-not-behaving-as-expected",
               "origin": "",
               "type": "markdown",
               "children": []
