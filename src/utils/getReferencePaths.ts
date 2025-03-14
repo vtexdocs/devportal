@@ -3,6 +3,7 @@ const referencePaths: { [slug: string]: string } = {}
 
 import { getGithubTree } from './github-utils'
 import { getLogger } from './logging/log-util'
+import { githubConfig } from './github-config'
 
 const fileSlugMap: { [key: string]: string } = {
   'VTEX - Antifraud Provider API': 'antifraud-provider-protocol',
@@ -40,10 +41,16 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - User Data Rights API': 'user-data-rights-api',
 }
 
-export default async function getReferencePaths(branch = 'master') {
+export default async function getReferencePaths(
+  branch: string = githubConfig.openapiBranch
+) {
   const logger = getLogger('getReferencePaths')
   try {
-    const repoTree = await getGithubTree('vtex', 'openapi-schemas', branch)
+    const repoTree = await getGithubTree(
+      githubConfig.openapiOrg,
+      githubConfig.openapiRepo,
+      branch
+    )
     repoTree.tree.forEach((node: { path: string; type: string }) => {
       const path = node.path
       const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/

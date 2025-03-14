@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { getLogger } from 'utils/logging/log-util'
 import octokit from 'utils/octokitConfig'
+import { githubConfig } from 'utils/github-config'
 
 const logger = getLogger('github-utils')
 
@@ -8,9 +9,9 @@ const logger = getLogger('github-utils')
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export async function fetchFromRawGithub(
-  owner: string,
-  repo: string,
-  ref: string,
+  owner: string = githubConfig.defaultOrg,
+  repo: string = githubConfig.defaultRepo,
+  ref: string = githubConfig.defaultBranch,
   path: string
 ): Promise<string> {
   logger.info(
@@ -71,17 +72,17 @@ function getRetryDelay(error: GitHubErrorResponse): number {
     const resetDate = new Date(Number(resetTime) * 1000)
     const now = new Date()
     const delayMs = resetDate.getTime() - now.getTime()
-    return delayMs > 0 ? delayMs : 5000 // Use 5s if reset time is in the past
+    return delayMs > 0 ? delayMs : githubConfig.defaultRetryDelay
   }
 
-  // Default delay of 5 seconds if we can't determine reset time
-  return 5000
+  // Default delay from config
+  return githubConfig.defaultRetryDelay
 }
 
 // Generic retry function for GitHub API requests that hit rate limits
 export async function retryWithRateLimit<T>(
   operation: () => Promise<T>,
-  maxRetries = 3
+  maxRetries = githubConfig.maxRetries
 ): Promise<T> {
   let retryCount = 0
 
@@ -111,7 +112,11 @@ export async function retryWithRateLimit<T>(
   }
 }
 
-export async function getGithubTree(org: string, repo: string, ref: string) {
+export async function getGithubTree(
+  org: string = githubConfig.defaultOrg,
+  repo: string = githubConfig.defaultRepo,
+  ref: string = githubConfig.defaultBranch
+) {
   return retryWithRateLimit<TreeResponse>(() =>
     octokit.request('GET /repos/{org}/{repo}/git/trees/{ref}?recursive=true', {
       org,

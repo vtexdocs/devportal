@@ -3,12 +3,13 @@ import { Octokit } from 'octokit'
 import { createAppAuth } from '@octokit/auth-app'
 import { throttling } from '@octokit/plugin-throttling'
 import { config } from 'utils/config'
+import { githubConfig } from 'utils/github-config'
 
 const MyOctokit = Octokit.plugin(throttling)
 
-const MAX_RETRIES = 5
-const MAX_RETRY_DELAY = 60000 // 60 seconds in milliseconds
-const EXPONENTIAL_BACKOFF = true
+const MAX_RETRIES = githubConfig.maxRetries
+const MAX_RETRY_DELAY = githubConfig.maxRetryDelay // 60 seconds in milliseconds
+const EXPONENTIAL_BACKOFF = githubConfig.useExponentialBackoff
 
 const calculateRetryDelay = (
   retryCount: number,
@@ -34,9 +35,9 @@ const handleRateLimitExhaustion = () => {
 const octokitConfig = {
   authStrategy: createAppAuth,
   auth: {
-    appId: config.GITHUB_APPID,
-    privateKey: config.GITHUB_PRIVATEKEY,
-    installationId: config.GITHUB_INSTALLATIONID,
+    appId: config.GITHUB_APPID || githubConfig.appId,
+    privateKey: config.GITHUB_PRIVATEKEY || githubConfig.privateKey,
+    installationId: config.GITHUB_INSTALLATIONID || githubConfig.installationId,
   },
   throttle: {
     onRateLimit: (retryAfter: number, options: any, octokit: any) => {
