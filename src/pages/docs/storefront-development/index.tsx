@@ -278,10 +278,7 @@ const StorefrontDevelopmentPage: NextPage<Props> = ({ branch }) => {
           {cardsContent.map((content) => (
             <OverviewSection key={content.title} content={content} />
           ))}
-          <Link
-            href="/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io"
-            legacyBehavior
-          >
+          <Link href="/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io">
             <Box sx={styles.boxTip}>
               <Text sx={styles.boxTitle}>Legacy CMS Portal</Text>
               <Text>

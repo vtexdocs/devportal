@@ -2868,6 +2868,11 @@
     "@swagger-api/apidom-parser-adapter-openapi-yaml-3-1" "^0.69.3"
     "@swagger-api/apidom-parser-adapter-yaml-1-2" "^0.69.3"
 
+"@swc/helpers@0.3.3":
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.3.3.tgz#8ea0e4a96ba18c2d33463aa4dbc7b0ef46232cd6"
+  integrity sha512-NdRQSjcceaXsQDNYyK0wWyRvrn5rsvugK8vnTiRB2i0UCaD2slUFUq28tmojILW5A04oF+sZRMxd0Cy7xS/y0A==
+
 "@swc/helpers@0.4.14", "@swc/helpers@^0.4.14":
   version "0.4.14"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.14.tgz#1352ac6d95e3617ccb7c1498ff019654f1e12a74"

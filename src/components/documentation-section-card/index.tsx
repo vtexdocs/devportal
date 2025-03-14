@@ -37,7 +37,7 @@ const DocumentationSectionCard = ({
 
   return (
     <Tooltip placement="top" label={tooltipDescription} isCard={tooltipState}>
-      <Link href={link} legacyBehavior>
+      <Link href={link}>
         <Flex sx={styles.cardContainer}>
           <Flex sx={styles.infoContainer}>
             <Icon sx={styles.icon} />

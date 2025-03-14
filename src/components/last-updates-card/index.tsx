@@ -28,7 +28,6 @@ const LastUpdatesCard = ({ action, updateType }: CardProps) => {
     <Link
       href={`/updates/${updateType}`}
       style={{ display: 'flex', justifyContent: 'center', width: '100%' }}
-      legacyBehavior
     >
       <Flex sx={styles.cardContainer}>
         <Flex sx={styles.updateContainer}>

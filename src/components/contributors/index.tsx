@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Box, Flex, Grid, IconCaret, Text } from '@vtex/brand-ui'
 
 import Tooltip from 'components/tooltip'
@@ -15,32 +15,43 @@ interface Props {
 
 const Contributors = ({ contributors }: Props) => {
   const messages = getMessages()
-
+  const [mounted, setMounted] = useState(false)
   const [showAll, setShowAll] = useState(false)
   const [pageWidth, setPageWidth] = useState(0)
-  const [photosPerRow, setPhotosPerRow] = useState(0)
-  const [minRows, setMinRows] = useState(0)
+  const [photosPerRow, setPhotosPerRow] = useState(6) // Default to 6 for SSR
+  const [minRows, setMinRows] = useState(1) // Default to 1 for SSR
   const photosContainer = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!mounted) return
+
     const updatePageWidth = () => {
       setPageWidth(window.innerWidth)
     }
 
     window.addEventListener('resize', updatePageWidth)
     return () => window.removeEventListener('resize', updatePageWidth)
-  }, [])
-
-  useLayoutEffect(() => {
-    if (photosContainer.current) {
-      const gridStyle = window.getComputedStyle(photosContainer.current)
-      setPhotosPerRow(gridStyle.gridTemplateColumns.split(' ').length)
-    }
-  }, [pageWidth])
+  }, [mounted])
 
   useEffect(() => {
+    if (!mounted || !photosContainer.current) return
+
+    const gridStyle = window.getComputedStyle(photosContainer.current)
+    setPhotosPerRow(gridStyle.gridTemplateColumns.split(' ').length)
+  }, [pageWidth, mounted])
+
+  useEffect(() => {
+    if (!mounted) return
     setMinRows(photosPerRow === 6 ? 1 : 2)
-  }, [photosPerRow])
+  }, [photosPerRow, mounted])
+
+  const visibleContributors = mounted
+    ? contributors
+    : contributors.slice(0, photosPerRow * minRows)
 
   return (
     <Flex sx={styles.container}>
@@ -60,25 +71,23 @@ const Contributors = ({ contributors }: Props) => {
         ref={photosContainer}
         data-cy="contributors-container"
       >
-        {contributors.map((contributor) => {
-          return (
-            <Box sx={styles.photo} key={contributor.login}>
-              <a key={contributor.login} href={contributor.userPage}>
-                <Tooltip label={contributor.name}>
-                  <Image
-                    src={contributor.avatar}
-                    alt="Photo of the contributor"
-                    width={32}
-                    height={32}
-                  />
-                </Tooltip>
-              </a>
-            </Box>
-          )
-        })}
+        {visibleContributors.map((contributor) => (
+          <Box sx={styles.photo} key={contributor.login}>
+            <a href={contributor.userPage}>
+              <Tooltip label={contributor.name}>
+                <Image
+                  src={contributor.avatar}
+                  alt="Photo of the contributor"
+                  width={32}
+                  height={32}
+                />
+              </Tooltip>
+            </a>
+          </Box>
+        ))}
       </Grid>
 
-      {contributors.length > minRows * photosPerRow && (
+      {contributors.length > minRows * photosPerRow && mounted && (
         <Flex
           sx={styles.collapseButton}
           onClick={() => {
