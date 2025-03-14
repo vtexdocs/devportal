@@ -29,7 +29,7 @@ export default defineConfig({
     },
     specPattern: 'src/tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: 'src/tests/cypress/support/index.js',
-    defaultCommandTimeout: 10000,
+    defaultCommandTimeout: 20000, // Increased timeout for hydration
     baseUrl: 'http://localhost:3000',
   },
 })
