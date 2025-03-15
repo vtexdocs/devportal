@@ -1,4 +1,4 @@
-name: Integration tests
+name: Integration and Component tests
 on: [pull_request]
 jobs:
   cypress-run:
@@ -13,6 +13,23 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      
+      # Run component tests first since they don't need the preview deployment
+      - name: Cypress component tests
+        uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+          component: true
+      
+      # Ensure component test results are included in the log file
+      - name: Preserve component test results
+        if: always()
+        run: |
+          if [[ -f "./cypress.log" ]]; then
+            cp cypress.log component-tests.log
+          fi
+      
+      # Then run integration tests after preview is ready
       - name: Waiting for pages to change
         uses: fountainhead/action-wait-for-check@v1.1.0
         id: wait-for-pages-changed
@@ -21,6 +38,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           checkName: 'Pages changed - elated-hoover-5c29bf'
           timeoutSeconds: 3600
+      
       - name: Waiting for 200 from the Netlify Preview
         if: steps.wait-for-pages-changed.outputs.conclusion == 'neutral'
         uses: jakepartusch/wait-for-netlify-action@v1.4
@@ -30,11 +48,13 @@ jobs:
           max_timeout: 3600
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+      
       - name: Fetch navigation.json
         uses: wei/curl@v1
         with:
           args: -o src/tests/cypress/fixtures/navigation.json https://developers.vtex.com/navigation.json
-      - name: Cypress run
+      
+      - name: Cypress integration tests
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
@@ -42,14 +62,22 @@ jobs:
         env:
           CYPRESS_baseUrl: ${{ steps.wait-for-netflify-preview.outputs.url }}
           CYPRESS_testProbability: 0.1
+      
+      # Merge component and integration test results
       - name: Generate summary report
         if: always()
         run: |
           touch src/tests/summary.md
+          # Merge component test results if they exist
+          if [[ -f "./component-tests.log" ]]; then
+            cat component-tests.log >> cypress.log
+          fi
           if [[ -f "./cypress.log" ]]; then
             node src/tests/utils/summary-report.js > src/tests/summary.md
             rm cypress.log
+            rm -f component-tests.log
           fi
+      
       - name: Comment PR with summary report
         if: always()
         uses: thollander/actions-comment-pull-request@v2

@@ -19,6 +19,9 @@ const nextConfig = {
       },
     ],
   },
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'].filter(
+    (ext) => !ext.includes('cy.')
+  ),
   webpack: (config, options) => {
     // this will override the experiments
     config.experiments = { ...config.experiments, ...{ topLevelAwait: true } }

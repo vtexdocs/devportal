@@ -35,14 +35,10 @@
     "forceConsistentCasingInFileNames": true,
     "paths": {
       "@components-library/*": ["../public/components/*"]
-    }
+    },
+    "types": ["cypress", "node"]
   },
   "typeRoots": ["./typings", "./node_modules/@types"],
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "src/tests/cypress/support/commands.js"
-  ],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", "src/tests/cypress/**/*"]
 }

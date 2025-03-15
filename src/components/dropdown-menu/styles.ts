@@ -10,7 +10,7 @@ const outerContainer: SxStyleProp = {
   background: 'white',
   padding: '8px',
   maxHeight: 'calc(100vh - 5rem)',
-  zIndex: -1,
+  zIndex: 10,
 }
 
 const innerContainer: SxStyleProp = {
