@@ -2,7 +2,11 @@ import React from 'react'
 import { mount } from 'cypress/react18'
 import DropdownMenu from '../../../components/dropdown-menu'
 import { ThemeProvider } from '@vtex/brand-ui'
-import { documentationData, adminData, updatesData } from '../../../utils/constants'
+import {
+  documentationData,
+  adminData,
+  updatesData,
+} from '../../../utils/constants'
 import { writeLog } from '../support/functions'
 
 describe('DropdownMenu Component', () => {
@@ -24,10 +28,10 @@ describe('DropdownMenu Component', () => {
         <DropdownMenu isEditor={false} />
       </ThemeProvider>
     )
-    
+
     // Check for container existence
     cy.get('[data-cy="dropdown-menu"]').should('exist')
-    
+
     // Test first section (documentation)
     cy.get('[data-cy="dropdown-menu-first-section"]').within(() => {
       documentationData.forEach((card) => {
@@ -35,7 +39,7 @@ describe('DropdownMenu Component', () => {
         cy.contains(card.description).should('exist')
       })
     })
-    
+
     // Test second section (updates)
     cy.get('[data-cy="dropdown-menu-second-section"]').within(() => {
       updatesData.forEach((card) => {
@@ -51,10 +55,10 @@ describe('DropdownMenu Component', () => {
         <DropdownMenu isEditor={true} />
       </ThemeProvider>
     )
-    
+
     // Check for container existence
     cy.get('[data-cy="dropdown-menu"]').should('exist')
-    
+
     // Test first section (admin)
     cy.get('[data-cy="dropdown-menu-first-section"]').within(() => {
       adminData.forEach((card) => {
@@ -62,7 +66,7 @@ describe('DropdownMenu Component', () => {
         cy.contains(card.description).should('exist')
       })
     })
-    
+
     // Second section should not exist in editor mode
     cy.get('[data-cy="dropdown-menu-second-section"]').should('not.exist')
   })
@@ -73,13 +77,13 @@ describe('DropdownMenu Component', () => {
         <DropdownMenu isEditor={false} />
       </ThemeProvider>
     )
-    
+
     // Check outer container styles
     cy.get('[data-cy="dropdown-menu"]')
       .parent()
       .should('have.css', 'position', 'absolute')
       .and('have.css', 'z-index', '10')
-    
+
     // Check inner container styles
     cy.get('[data-cy="dropdown-menu"]')
       .should('be.visible')
@@ -92,7 +96,7 @@ describe('DropdownMenu Component', () => {
         <DropdownMenu isEditor={false} />
       </ThemeProvider>
     )
-    
+
     // Check if first documentation card links to correct URL
     const firstCard = documentationData[0]
     cy.contains(firstCard.title)

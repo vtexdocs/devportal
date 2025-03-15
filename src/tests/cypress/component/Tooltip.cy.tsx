@@ -21,14 +21,14 @@ describe('Tooltip Component', () => {
         </Tooltip>
       </ThemeProvider>
     )
-    
+
     // Initially no tooltip
     cy.contains('Test tooltip').should('not.exist')
-    
+
     // Show tooltip
     cy.get('button').trigger('mouseover')
     cy.contains('Test tooltip').should('be.visible')
-    
+
     // Hide tooltip
     cy.get('button').trigger('mouseout')
     // Force a repaint by triggering mousemove elsewhere
@@ -45,14 +45,12 @@ describe('Tooltip Component', () => {
       </ThemeProvider>
     )
 
-    cy.get('button')
-      .should('exist')
-      .and('have.text', 'Hover me')
+    cy.get('button').should('exist').and('have.text', 'Hover me')
   })
 
   it('applies different placement positions', () => {
     const placements = ['top', 'bottom', 'left', 'right'] as const
-    
+
     placements.forEach((placement) => {
       mount(
         <ThemeProvider>
@@ -61,10 +59,10 @@ describe('Tooltip Component', () => {
           </Tooltip>
         </ThemeProvider>
       )
-      
+
       cy.get('button').trigger('mouseover')
       cy.contains('Test tooltip').should('be.visible')
-      
+
       cy.get('button').trigger('mouseout')
       cy.get('body').trigger('mousemove', { clientX: 0, clientY: 0 })
       cy.contains('Test tooltip').should('not.exist')
@@ -81,21 +79,21 @@ describe('Tooltip Component', () => {
     )
 
     cy.get('button').trigger('mouseover')
-    
+
     cy.contains('Card tooltip')
       .should('be.visible')
       .parent()
       .should('have.css', 'width')
       .and('not.eq', '0px')
-      
+
     cy.get('button').trigger('mouseout')
   })
 
   it('applies custom styles through sx prop', () => {
     mount(
       <ThemeProvider>
-        <Tooltip 
-          label="Styled tooltip" 
+        <Tooltip
+          label="Styled tooltip"
           sx={{ backgroundColor: 'rgb(255, 0, 0)' }}
         >
           <button>Hover for styled tooltip</button>
@@ -104,13 +102,13 @@ describe('Tooltip Component', () => {
     )
 
     cy.get('button').trigger('mouseover')
-    
+
     cy.contains('Styled tooltip')
       .should('be.visible')
       .parent()
       .should('have.css', 'background-color')
       .and('not.eq', 'rgba(0, 0, 0, 0)')
-      
+
     cy.get('button').trigger('mouseout')
   })
 })
