@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { defineConfig } from 'cypress'
 import path from 'path'
 
@@ -24,8 +25,8 @@ export default defineConfig({
           alias: {
             components: path.resolve(__dirname, './src/components'),
             utils: path.resolve(__dirname, './src/utils'),
-            styles: path.resolve(__dirname, './src/styles')
-          }
+            styles: path.resolve(__dirname, './src/styles'),
+          },
         },
         module: {
           rules: [
@@ -35,17 +36,17 @@ export default defineConfig({
               use: {
                 loader: 'babel-loader',
                 options: {
-                  configFile: path.resolve(__dirname, '.babelrc.cypress.js')
-                }
-              }
-            }
-          ]
-        }
-      }
+                  configFile: path.resolve(__dirname, '.babelrc.cypress.js'),
+                },
+              },
+            },
+          ],
+        },
+      },
     },
     specPattern: 'src/tests/cypress/component/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: 'src/tests/cypress/support/component.ts',
-    indexHtmlFile: 'cypress/support/component-index.html'
+    indexHtmlFile: 'cypress/support/component-index.html',
   },
   e2e: {
     setupNodeEvents(on, _config) {
