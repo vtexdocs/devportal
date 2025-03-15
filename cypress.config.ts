@@ -1,4 +1,5 @@
 import { defineConfig } from 'cypress'
+import path from 'path'
 
 interface Global {
   url?: string
@@ -14,8 +15,39 @@ export default defineConfig({
   chromeWebSecurity: false,
   numTestsKeptInMemory: 10,
   experimentalMemoryManagement: true,
+  component: {
+    devServer: {
+      framework: 'next',
+      bundler: 'webpack',
+      webpackConfig: {
+        resolve: {
+          alias: {
+            components: path.resolve(__dirname, './src/components'),
+            utils: path.resolve(__dirname, './src/utils'),
+            styles: path.resolve(__dirname, './src/styles')
+          }
+        },
+        module: {
+          rules: [
+            {
+              test: /\.[jt]sx?$/,
+              exclude: /node_modules/,
+              use: {
+                loader: 'babel-loader',
+                options: {
+                  configFile: path.resolve(__dirname, '.babelrc.cypress.js')
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    specPattern: 'src/tests/cypress/component/**/*.cy.{js,jsx,ts,tsx}',
+    supportFile: 'src/tests/cypress/support/component.ts',
+    indexHtmlFile: 'cypress/support/component-index.html'
+  },
   e2e: {
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     setupNodeEvents(on, _config) {
       on('task', {
         setUrl: (url) => {
@@ -29,7 +61,7 @@ export default defineConfig({
     },
     specPattern: 'src/tests/cypress/integration/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: 'src/tests/cypress/support/index.js',
-    defaultCommandTimeout: 20000, // Increased timeout for hydration
+    defaultCommandTimeout: 20000,
     baseUrl: 'http://localhost:3000',
   },
 })
