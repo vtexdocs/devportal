@@ -22,7 +22,11 @@ const DocumentationCard = ({
   onClick,
 }: CardProps) => {
   return (
-    <Link href={link} onClick={onClick} style={{ width: '100%', display: 'block' }}>
+    <Link
+      href={link}
+      onClick={onClick}
+      style={{ width: '100%', display: 'block' }}
+    >
       <Box sx={cardContainer(containerType)}>
         <Flex sx={titleContainer(containerType)}>
           <Icon sx={{ color: '#4A596B' }} size={24} />
