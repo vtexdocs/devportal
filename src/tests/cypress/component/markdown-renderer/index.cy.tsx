@@ -8,34 +8,47 @@ import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { writeLog } from '../../support/functions'
 
 // Test-specific implementation to avoid FastStore component dependencies
-const TestMarkdownRenderer = ({ serialized, mdxProps }: {
-  serialized: MDXRemoteSerializeResult,
+const TestMarkdownRenderer = ({
+  serialized,
+  mdxProps,
+}: {
+  serialized: MDXRemoteSerializeResult
   mdxProps?: { componentName: string; componentAttributes: RowItem[] }[]
 }) => {
   // Extract component name from the compiledSource using a simple regex
-  const componentMatch = serialized.compiledSource.match(/<ComponentPropsSection component="([^"]+)"/)
+  const componentMatch = serialized.compiledSource.match(
+    /<ComponentPropsSection component="([^"]+)"/
+  )
   const requestedComponent = componentMatch ? componentMatch[1] : null
 
-  const customComponents = mdxProps && requestedComponent ? {
-    ComponentPropsSection: ({ component }: { component: string }) => {
-      const props = mdxProps.find(p => p.componentName === component)
-      return props ? (
-        <div className="faststore-propsSection" data-testid="props-section">
-          {props.componentAttributes.map(attr => (
-            <div key={attr.name} data-testid="prop-item">
-              {attr.name}: {attr.type}
-            </div>
-          ))}
-        </div>
-      ) : null
-    }
-  } : undefined
+  const customComponents =
+    mdxProps && requestedComponent
+      ? {
+          ComponentPropsSection: ({ component }: { component: string }) => {
+            const props = mdxProps.find((p) => p.componentName === component)
+            return props ? (
+              <div
+                className="faststore-propsSection"
+                data-testid="props-section"
+              >
+                {props.componentAttributes.map((attr) => (
+                  <div key={attr.name} data-testid="prop-item">
+                    {attr.name}: {attr.type}
+                  </div>
+                ))}
+              </div>
+            ) : null
+          },
+        }
+      : undefined
 
   return (
     <div data-testid="markdown-renderer">
       <div className="markdown-content">{serialized.compiledSource}</div>
       {customComponents?.ComponentPropsSection && requestedComponent && (
-        <customComponents.ComponentPropsSection component={requestedComponent} />
+        <customComponents.ComponentPropsSection
+          component={requestedComponent}
+        />
       )}
     </div>
   )
@@ -63,9 +76,9 @@ describe('MarkdownRenderer Component', () => {
     const mockSerialized = {
       compiledSource: '# Hello\n\nThis is basic markdown.',
       frontmatter: {
-        title: 'Basic Test'
+        title: 'Basic Test',
       },
-      scope: {}
+      scope: {},
     }
 
     mount(
@@ -80,23 +93,27 @@ describe('MarkdownRenderer Component', () => {
   })
 
   it('renders FastStore component documentation when mdxProps are provided', () => {
-    const mockProps = [{
-      componentName: 'Button',
-      componentAttributes: [{
-        name: 'variant',
-        type: "'primary' | 'secondary'",
-        description: 'Button variant style',
-        default: 'primary',
-        required: false
-      }] as RowItem[]
-    }]
+    const mockProps = [
+      {
+        componentName: 'Button',
+        componentAttributes: [
+          {
+            name: 'variant',
+            type: "'primary' | 'secondary'",
+            description: 'Button variant style',
+            default: 'primary',
+            required: false,
+          },
+        ] as RowItem[],
+      },
+    ]
 
     const mockSerialized = {
       compiledSource: '<ComponentPropsSection component="Button" />',
       frontmatter: {
-        title: 'Button Documentation'
+        title: 'Button Documentation',
       },
-      scope: {}
+      scope: {},
     }
 
     mount(
@@ -115,23 +132,28 @@ describe('MarkdownRenderer Component', () => {
   })
 
   it('handles missing component documentation gracefully', () => {
-    const mockProps = [{
-      componentName: 'Button',
-      componentAttributes: [{
-        name: 'variant',
-        type: "'primary' | 'secondary'",
-        description: 'Button variant style',
-        default: 'primary',
-        required: false
-      }] as RowItem[]
-    }]
+    const mockProps = [
+      {
+        componentName: 'Button',
+        componentAttributes: [
+          {
+            name: 'variant',
+            type: "'primary' | 'secondary'",
+            description: 'Button variant style',
+            default: 'primary',
+            required: false,
+          },
+        ] as RowItem[],
+      },
+    ]
 
     const mockSerialized = {
-      compiledSource: '<ComponentPropsSection component="NonExistentComponent" />',
+      compiledSource:
+        '<ComponentPropsSection component="NonExistentComponent" />',
       frontmatter: {
-        title: 'Missing Component'
+        title: 'Missing Component',
       },
-      scope: {}
+      scope: {},
     }
 
     mount(
@@ -149,16 +171,20 @@ describe('MarkdownRenderer Component', () => {
   })
 
   it('handles markdown with mixed content types', () => {
-    const mockProps = [{
-      componentName: 'Button',
-      componentAttributes: [{
-        name: 'variant',
-        type: "'primary' | 'secondary'",
-        description: 'Button variant style',
-        default: 'primary',
-        required: false
-      }] as RowItem[]
-    }]
+    const mockProps = [
+      {
+        componentName: 'Button',
+        componentAttributes: [
+          {
+            name: 'variant',
+            type: "'primary' | 'secondary'",
+            description: 'Button variant style',
+            default: 'primary',
+            required: false,
+          },
+        ] as RowItem[],
+      },
+    ]
 
     const mockSerialized = {
       compiledSource: `
@@ -171,9 +197,9 @@ Regular markdown content.
 More markdown content.
       `,
       frontmatter: {
-        title: 'Mixed Content Test'
+        title: 'Mixed Content Test',
       },
-      scope: {}
+      scope: {},
     }
 
     mount(

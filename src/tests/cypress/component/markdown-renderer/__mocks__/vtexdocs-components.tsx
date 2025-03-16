@@ -17,12 +17,14 @@ export const MarkdownRenderer = ({ serialized, customComponents }: Props) => {
     <div data-testid="mock-markdown-base">
       <div data-testid="mock-content">{serialized.compiledSource}</div>
       {customComponents && (
-        <div data-testid="mock-custom-components">Has custom FastStore components</div>
+        <div data-testid="mock-custom-components">
+          Has custom FastStore components
+        </div>
       )}
     </div>
   )
 }
 
 export default {
-  MarkdownRenderer
+  MarkdownRenderer,
 }
