@@ -9,12 +9,14 @@ describe('Contributors Component', () => {
       login: 'johndoe',
       avatar: 'https://github.com/johndoe.png',
       userPage: 'https://github.com/johndoe',
+      date: new Date().toISOString(), // Add valid ISO date string
     },
     {
       name: 'Jane Smith',
       login: 'janesmith',
       avatar: 'https://github.com/janesmith.png',
       userPage: 'https://github.com/janesmith',
+      date: new Date().toISOString(), // Add valid ISO date string
     },
   ]
 
