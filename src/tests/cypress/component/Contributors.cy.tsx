@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+import React from 'react'
 import Contributors from '../../../components/contributors'
 import * as messages from '../../../utils/get-messages'
 
@@ -9,14 +10,14 @@ describe('Contributors Component', () => {
       login: 'johndoe',
       avatar: 'https://github.com/johndoe.png',
       userPage: 'https://github.com/johndoe',
-      date: new Date().toISOString(), // Add valid ISO date string
+      date: '2024-03-15T10:00:00Z', // Fixed ISO date string
     },
     {
       name: 'Jane Smith',
       login: 'janesmith',
       avatar: 'https://github.com/janesmith.png',
       userPage: 'https://github.com/janesmith',
-      date: new Date().toISOString(), // Add valid ISO date string
+      date: '2024-03-14T10:00:00Z', // Fixed ISO date string
     },
   ]
 
