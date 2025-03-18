@@ -22,20 +22,22 @@ const DocumentationCard = ({
   onClick,
 }: CardProps) => {
   return (
-    <Link href={link}>
-      <a onClick={onClick} style={{ width: '100%' }}>
-        <Box sx={cardContainer(containerType)}>
-          <Flex sx={titleContainer(containerType)}>
-            <Icon sx={{ color: '#4A596B' }} size={24} />
-            <Text className="title" sx={cardTitle(containerType)}>
-              {title}
-            </Text>
-          </Flex>
-          <Text className="description" sx={styles.description}>
-            {description}
+    <Link
+      href={link}
+      onClick={onClick}
+      style={{ width: '100%', display: 'block' }}
+    >
+      <Box sx={cardContainer(containerType)}>
+        <Flex sx={titleContainer(containerType)}>
+          <Icon sx={{ color: '#4A596B' }} size={24} />
+          <Text className="title" sx={cardTitle(containerType)}>
+            {title}
           </Text>
-        </Box>
-      </a>
+        </Flex>
+        <Text className="description" sx={styles.description}>
+          {description}
+        </Text>
+      </Box>
     </Link>
   )
 }

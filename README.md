@@ -81,7 +81,7 @@ flowchart TB
 
 ### Cypress Tests
 
-The Cypress tests are designed to ensure the functionality and stability of the Developers Portal. The tests cover three main areas:
+The Cypress tests are designed to ensure the functionality and stability of the Developers Portal. The tests cover four main areas:
 
 1. **Documentation Pages Status Tests**
    - Randomly selects and verifies the loading status of documentation pages
@@ -117,6 +117,22 @@ The Cypress tests are designed to ensure the functionality and stability of the 
        - Verifies all headings are properly linked
        - Tests navigation to the last section
        - Validates scroll behavior
+
+4. **Component Tests**
+   - **MarkdownRenderer Component**:
+     - Tests basic markdown content rendering without FastStore integration
+     - Verifies FastStore component documentation:
+       - Tests proper rendering of component props sections
+       - Validates component attribute display
+     - Handles edge cases:
+       - Gracefully handles missing component documentation
+       - Tests mixed content with both markdown and FastStore components
+   - **DropdownMenu Component**:
+     - Tests section rendering in different modes
+     - Verifies content visibility and interaction
+   - **Contributors Component**:
+     - Tests avatar display and GitHub profile links
+     - Validates contributor information rendering
 
 #### What to Expect in Terms of Reports
 
