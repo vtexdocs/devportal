@@ -15134,6 +15134,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "VTEX ID API: New endpoints for token renewal",
+                  "slug": "2025-03-14-vtex-id-api-new-endpoints-for-token-renewal",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: New global Content Types",
                   "slug": "2025-03-12-faststore-new-content-types",
                   "origin": "",
