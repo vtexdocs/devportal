@@ -12884,6 +12884,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "FastStore versions and support levels",
+                  "slug": "faststore/getting-started-faststore-versions-and-support-levels",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Requirements",
                   "slug": "faststore/getting-started-requirements",
                   "origin": "",
