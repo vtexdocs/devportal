@@ -13705,6 +13705,35 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "name": "Search",
+                  "slug": "faststore/search-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "SearchProvider",
+                      "slug": "faststore/search-search-provider",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "usePagination",
+                      "slug": "faststore/search-use-pagination",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useSearch",
+                      "slug": "faststore/search-use-search",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
