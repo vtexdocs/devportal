@@ -12884,6 +12884,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "FastStore versions and support levels",
+                  "slug": "faststore/getting-started-faststore-versions-and-support-levels",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Requirements",
                   "slug": "faststore/getting-started-requirements",
                   "origin": "",
@@ -13693,6 +13700,35 @@
                     {
                       "name": "useAnalyticsEvent",
                       "slug": "faststore/analytics-use-analytics-event",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Search",
+                  "slug": "faststore/search-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "SearchProvider",
+                      "slug": "faststore/search-search-provider",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "usePagination",
+                      "slug": "faststore/search-use-pagination",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useSearch",
+                      "slug": "faststore/search-use-search",
                       "origin": "",
                       "type": "markdown",
                       "children": []
