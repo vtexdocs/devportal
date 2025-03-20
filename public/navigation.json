@@ -12341,6 +12341,21 @@
               "children": []
             },
             {
+              "name": "Messages",
+              "slug": "apps/vtex.messages",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Messages GraphQL API",
+                  "slug": "apps/vtex.messages/messages-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Product Context",
               "slug": "apps/vtex.product-context",
               "origin": "",
