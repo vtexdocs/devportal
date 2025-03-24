@@ -8758,6 +8758,15 @@
                   "children": []
                 },
                 {
+                  "name": "Create or Update Base Price or Fixed Prices",
+                  "slug": "pricing-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/pricing/prices/-itemId-",
+                  "children": []
+                },
+                {
                   "name": "Get Fixed Prices",
                   "slug": "pricing-api",
                   "type": "openapi",
