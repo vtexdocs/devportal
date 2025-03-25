@@ -15185,6 +15185,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Discontinuation of the Pricing V1 module compatibility routes",
+                  "slug": "2025-03-24-discontinuation-of-the-pricing-v1-module-compatiblity-routes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX ID API: New endpoints for token renewal",
                   "slug": "2025-03-14-vtex-id-api-new-endpoints-for-token-renewal",
                   "origin": "",
