@@ -7710,6 +7710,59 @@
           ]
         },
         {
+          "name": "Operational Capacity API",
+          "slug": "operational-capacity-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Get locations capacities by account",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/capacity/by-parent-account-name",
+              "children": []
+            },
+            {
+              "name": "Configure location capacity",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "PUT",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/location/-locationId-/capacities/-code-",
+              "children": []
+            },
+            {
+              "name": "List location capacities",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/location/-locationId-/capacities",
+              "children": []
+            },
+            {
+              "name": "List locations",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/location",
+              "children": []
+            },
+            {
+              "name": "Update location status",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "PUT",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/location/-locationId-/status",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Orders API",
           "slug": "orders-api",
           "origin": "",
