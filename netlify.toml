@@ -1788,3 +1788,9 @@ force = true
 from = "/docs/api-reference/prices-and-fixed-prices"
 status = 308
 to = "/docs/api-reference/pricing-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/allow-manual-prices-on-instore"
+status = 308
+to = "/docs/guides/allow-manual-prices-on-vtex-sales-app"
