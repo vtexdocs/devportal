@@ -34,6 +34,7 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - Master Data API - v2': 'master-data-api-v2',
   'VTEX - MasterData API - v10.2': 'masterdata-api',
   'VTEX - Message Center API': 'message-center-api',
+  'VTEX - Operational Capacity API': 'operational-capacity-api',
   'VTEX - Orders API PII version': 'orders-api-pii-version',
   'VTEX - Orders API': 'orders-api',
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
