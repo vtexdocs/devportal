@@ -14167,15 +14167,15 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Configuring SEO for Product Listing Pages (PLPs)",
-                  "slug": "faststore/managing-performance-configuring-seo-for-plp",
+                  "name": "Configuring SEO for PLPs and PDPs",
+                  "slug": "faststore/seo-configuring-seo-for-plp-and-pdp",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Optimizing SEO by managing lazy loading on Product Listing Pages (PLPs)",
-                  "slug": "faststore/managing-performance-optimizing-seo-by-managing-lazy-loading-on-plp",
+                  "name": "Optimizing SEO by managing lazy loading on PLPs and PDPs",
+                  "slug": "faststore/seo-optimizing-seo-by-managing-lazy-loading-on-plp-and-pdp",
                   "origin": "",
                   "type": "markdown",
                   "children": []
