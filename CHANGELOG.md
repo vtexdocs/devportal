@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.2](https://github.com/vtexdocs/devportal/compare/v1.18.1...v1.18.2) (2025-03-27)
+
+
+### Features
+
+* add Operational Capacity API ([0d9e7e9](https://github.com/vtexdocs/devportal/commit/0d9e7e9fb54a6352ea63703487b5efd8e1103282))
+* **navigation.json:** update SEO category ([ae1a423](https://github.com/vtexdocs/devportal/commit/ae1a423f4748226a9406ad935dd62aab2f4fa138))
+* **netlify.toml:** FastStore SEO redirects ([c4f4a71](https://github.com/vtexdocs/devportal/commit/c4f4a717d7ffc5cc1209df0680aec9b3422bb9e7))
+
 ### [1.18.1](https://github.com/vtexdocs/devportal/compare/v1.18.0...v1.18.1) (2025-03-26)
 
 
