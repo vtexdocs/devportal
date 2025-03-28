@@ -16,7 +16,15 @@
     - [How to make a commit](#how-to-make-a-commit)
   - [Branches](#branches)
     - [Feature Branches](#feature-branches)
-  - [Docker](#docker)
+  - [Docker development environment](#docker-development-environment)
+- [GitHub Actions](#github-actions)
+  - [Integration and Component Tests](#integration-and-component-tests-cypressyml)
+  - [Release Version](#release-version-release-versionyml)
+  - [Verify PR Labels](#verify-pr-labels-verify-pr-labelsyml)
+  - [Extensive Tests](#extensive-tests-cypress-extensiveyml)
+  - [DocSearch Scraper](#docsearch-scraper-docsearch-scraperyml)
+  - [Lighthouse Mobile](#lighthouse-mobile-lighthouse-mobileyml)
+  - [Lighthouse Desktop](#lighthouse-desktop-lighthouse-desktopyml)
 - [Contributing](#contributing)
   - [How to develop and propose a new contribution](#how-to-develop-and-propose-a-new-contribution)
   - [What to do when someone updated the `main` branch and I'm developing something on my *feature branch*](#what-to-do-when-someone-updated-the-main-branch-and-im-developing-something-on-my-feature-branch)
@@ -371,6 +379,77 @@ services:
     ports:
       - 3000:3000
 ```
+
+## GitHub Actions
+
+The repository uses several GitHub Actions to automate various processes. Below is a detailed description of each action:
+
+### Integration and Component Tests (`cypress.yml`)
+
+This action runs Cypress tests on pull requests to ensure code quality and functionality.
+
+**Dependencies:**
+- `actions/checkout@v3`: Checks out the repository code
+- `actions/setup-node@v3`: Sets up Node.js environment with version 18
+- `cypress-io/github-action@v5`: Runs Cypress tests
+- `fountainhead/action-wait-for-check@v1.1.0`: Waits for Netlify preview deployment
+- `jakepartusch/wait-for-netlify-action@v1.4`: Ensures Netlify preview is accessible
+- `wei/curl@v1`: Fetches navigation data
+- `thollander/actions-comment-pull-request@v2`: Posts test results as PR comments
+
+### Release Version (`release-version.yml`)
+
+Automates version releases when pull requests are merged into the main branch.
+
+**Dependencies:**
+- `de-vri-es/setup-git-credentials@v2`: Sets up Git credentials
+- `actions/checkout@v3`: Checks out the repository code
+- `actions/create-release@v1`: Creates GitHub releases
+
+### Verify PR Labels (`verify-pr-labels.yml`)
+
+Validates pull request labels to ensure proper versioning.
+
+**Dependencies:**
+- `jesusvasquez333/verify-pr-label-action@v1.4.0`: Validates PR labels
+
+### Extensive Tests (`cypress-extensive.yml`)
+
+Runs comprehensive Cypress tests on demand.
+
+**Dependencies:**
+- `actions/checkout@v1`: Checks out the repository code
+- `wei/curl@v1`: Fetches navigation data
+- `cypress-io/github-action@v5`: Runs Cypress tests
+
+### DocSearch Scraper (`docsearch-scraper.yml`)
+
+Updates Algolia search index when pull requests are merged.
+
+**Dependencies:**
+- `actions/checkout@v2`: Checks out the repository code
+- `vtexdocs/devportal-docsearch-action@main`: Updates Algolia search index
+
+### Lighthouse Mobile (`lighthouse-mobile.yml`)
+
+Runs Lighthouse performance tests on mobile devices for pull requests.
+
+**Dependencies:**
+- `actions/checkout@v1`: Checks out the repository code
+- `actions/setup-node@v1`: Sets up Node.js environment
+- `kamranayub/wait-for-netlify-action@2.0.0`: Waits for Netlify preview
+
+### Lighthouse Desktop (`lighthouse-desktop.yml`)
+
+Runs Lighthouse performance tests on desktop devices for pull requests.
+
+**Dependencies:**
+- `actions/checkout@v1`: Checks out the repository code
+- `fountainhead/action-wait-for-check@v1.1.0`: Waits for Netlify preview deployment
+- `jakepartusch/wait-for-netlify-action@v1.4`: Ensures Netlify preview is accessible
+- `actions/github-script@v6`: Executes GitHub API scripts
+- `treosh/lighthouse-ci-action@v10`: Runs Lighthouse tests
+- `thollander/actions-comment-pull-request@v2`: Posts test results as PR comments
 
 ## Contributing
 

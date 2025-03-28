@@ -2,6 +2,57 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.2](https://github.com/vtexdocs/devportal/compare/v1.18.1...v1.18.2) (2025-03-27)
+
+
+### Features
+
+* add Operational Capacity API ([0d9e7e9](https://github.com/vtexdocs/devportal/commit/0d9e7e9fb54a6352ea63703487b5efd8e1103282))
+* **navigation.json:** update SEO category ([ae1a423](https://github.com/vtexdocs/devportal/commit/ae1a423f4748226a9406ad935dd62aab2f4fa138))
+* **netlify.toml:** FastStore SEO redirects ([c4f4a71](https://github.com/vtexdocs/devportal/commit/c4f4a717d7ffc5cc1209df0680aec9b3422bb9e7))
+
+### [1.18.1](https://github.com/vtexdocs/devportal/compare/v1.18.0...v1.18.1) (2025-03-26)
+
+
+### Features
+
+* add Cypress component testing setup and initial tests ([e03e9c3](https://github.com/vtexdocs/devportal/commit/e03e9c33a5bf9fe10dd6eceb1dc5f656aee5076e))
+* add Operational Capacity API to navigation ([6ce1546](https://github.com/vtexdocs/devportal/commit/6ce1546b7b0213cf8f93befc9b0b66276dc8e53e))
+* **navigation.json:** add FastStore Search guides ([e16616f](https://github.com/vtexdocs/devportal/commit/e16616f0aca9aaf0ef0599d3bc29a91841dbf122))
+* **navigation.json:** add new FastStore guide ([a1c50c4](https://github.com/vtexdocs/devportal/commit/a1c50c482214f6866fa9f46b1b52620c9cab81d7))
+
+
+### Bug Fixes
+
+* **cypress:** add valid date strings to Contributors test mock data ([32c1be3](https://github.com/vtexdocs/devportal/commit/32c1be3525bf394ac171b78d217a875b4578e20b))
+* **cypress:** use fixed ISO date strings in Contributors test ([ec7dcd3](https://github.com/vtexdocs/devportal/commit/ec7dcd3fe73de73227f7023a384d7218480b1c0d))
+* update documentation card component to support testing ([91dd126](https://github.com/vtexdocs/devportal/commit/91dd1267bbec1cdac84aa67cf3c161f264653f6b))
+
+
+### Chore
+
+* add eslint disable comment for unused vars in cypress config ([bb6cd10](https://github.com/vtexdocs/devportal/commit/bb6cd109b02b70195f4016f14ef4912146d6f8d1))
+* configure TypeScript for Cypress component tests ([b548604](https://github.com/vtexdocs/devportal/commit/b54860451dfb844e1e87fdca28ee9e27d0242297))
+* update Next.js config to handle Cypress test files ([f35ff1a](https://github.com/vtexdocs/devportal/commit/f35ff1a57af092f14a1314f99167f84a01f05d96))
+
+
+### Tests
+
+* **cypress:** add MarkdownRenderer component tests and documentation ([c874fc8](https://github.com/vtexdocs/devportal/commit/c874fc87abc16daca98246cfc45448173e7325fa))
+* fix component test setup and types ([c02a2d8](https://github.com/vtexdocs/devportal/commit/c02a2d89ed6a05e39a30924c02fd805e09c1d718))
+
+
+### Refactoring
+
+* **markdownrenderer:** linting ([1c2635a](https://github.com/vtexdocs/devportal/commit/1c2635ae5a4b0f09733b2d50dcc929f0da70a541))
+
+
+### Docs
+
+* document github actions and its dependencies ([b12a612](https://github.com/vtexdocs/devportal/commit/b12a612e1bbc99e22c05910aa2651a1d98a1f082))
+* **navigation.json:** move apps troubleshooting ([bde48d1](https://github.com/vtexdocs/devportal/commit/bde48d1d374dd8f5bb5b420b69b37ed407b186ef))
+* **navigation:** add vtex id release notes ([8668d02](https://github.com/vtexdocs/devportal/commit/8668d029f1f394f6ec5a27affa30333a0baa930d))
+
 ## [1.18.0](https://github.com/vtexdocs/devportal/compare/v1.17.1...v1.18.0) (2025-03-14)
 
 

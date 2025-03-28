@@ -8811,6 +8811,15 @@
                   "children": []
                 },
                 {
+                  "name": "Create or Update Base Price or Fixed Prices",
+                  "slug": "pricing-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/pricing/prices/-itemId-",
+                  "children": []
+                },
+                {
                   "name": "Get Fixed Prices",
                   "slug": "pricing-api",
                   "type": "openapi",
@@ -12394,6 +12403,21 @@
               "children": []
             },
             {
+              "name": "Messages",
+              "slug": "apps/vtex.messages",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Messages GraphQL API",
+                  "slug": "apps/vtex.messages/messages-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Product Context",
               "slug": "apps/vtex.product-context",
               "origin": "",
@@ -14143,15 +14167,15 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Configuring SEO for Product Listing Pages (PLPs)",
-                  "slug": "faststore/managing-performance-configuring-seo-for-plp",
+                  "name": "Configuring SEO for PLPs and PDPs",
+                  "slug": "faststore/seo-configuring-seo-for-plp-and-pdp",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Optimizing SEO by managing lazy loading on Product Listing Pages (PLPs)",
-                  "slug": "faststore/managing-performance-optimizing-seo-by-managing-lazy-loading-on-plp",
+                  "name": "Optimizing SEO by managing lazy loading on PLPs and PDPs",
+                  "slug": "faststore/seo-optimizing-seo-by-managing-lazy-loading-on-plp-and-pdp",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -15222,6 +15246,20 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Discontinuation of the Pricing V1 module compatibility routes",
+                  "slug": "2025-03-24-discontinuation-of-the-pricing-v1-module-compatiblity-routes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX ID API: New endpoints for token renewal",
+                  "slug": "2025-03-14-vtex-id-api-new-endpoints-for-token-renewal",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore: New global Content Types",
                   "slug": "2025-03-12-faststore-new-content-types",
