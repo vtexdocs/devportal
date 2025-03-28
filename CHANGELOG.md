@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.3](https://github.com/vtexdocs/devportal/compare/v1.18.2...v1.18.3) (2025-03-28)
+
+
+### Features
+
+* add Operational Capacity API ([d9a4907](https://github.com/vtexdocs/devportal/commit/d9a4907e873574cec1a361f4ef849482ea5d9249))
+* add Operational Capacity API to navigation ([4b670b6](https://github.com/vtexdocs/devportal/commit/4b670b6abeb267ea1faaee6a7c0e20295404b8d2))
+
+
+### Bug Fixes
+
+* fix endpoint path ([011a840](https://github.com/vtexdocs/devportal/commit/011a840b7d4cc1529a8bba7f7696f77fcbc4fed2))
+
 ### [1.18.2](https://github.com/vtexdocs/devportal/compare/v1.18.1...v1.18.2) (2025-03-27)
 
 
