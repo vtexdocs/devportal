@@ -7739,7 +7739,7 @@
               "type": "openapi",
               "method": "GET",
               "origin": "",
-              "endpoint": "/api/fulfillment-locations/location/-locationId-/capacities",
+              "endpoint": "/api/fulfillment-locations/locations/-locationId-/capacities",
               "children": []
             },
             {
@@ -7757,7 +7757,7 @@
               "type": "openapi",
               "method": "PUT",
               "origin": "",
-              "endpoint": "/api/fulfillment-locations/location/-locationId-/status",
+              "endpoint": "/api/fulfillment-locations/locations/-locationId-/status",
               "children": []
             }
           ]
