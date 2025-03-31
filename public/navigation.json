@@ -15254,6 +15254,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New Operational Capacity API",
+                  "slug": "2025-03-20-operational-capacity-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Discontinuation of the Pricing V1 module compatibility routes",
                   "slug": "2025-03-24-discontinuation-of-the-pricing-v1-module-compatiblity-routes",
                   "origin": "",
