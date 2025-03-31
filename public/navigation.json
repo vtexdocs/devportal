@@ -13811,6 +13811,13 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "name": "Session",
+                  "slug": "faststore/sdk-session",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
