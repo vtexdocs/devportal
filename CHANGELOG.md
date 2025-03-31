@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.4](https://github.com/vtexdocs/devportal/compare/v1.18.3...v1.18.4) (2025-03-31)
+
+
+### Features
+
+* add operational capacity api release note to navigation ([263994b](https://github.com/vtexdocs/devportal/commit/263994b9bb929c451f9dc2db3a15a8364977493d))
+* **navigation.json:** EDU-14516 - Add Session guide ([e5af0af](https://github.com/vtexdocs/devportal/commit/e5af0afd6b90fc685bf99ce3388792d8638cf2c3))
+
+
+### Bug Fixes
+
+* correct release note slug ([12088a7](https://github.com/vtexdocs/devportal/commit/12088a702791122aac9273e2ce675ec8de36bdcc))
+* **navigation.json:** typo ([dd13f43](https://github.com/vtexdocs/devportal/commit/dd13f43592948ecd6559708fb5273925bef65105))
+
 ### [1.18.3](https://github.com/vtexdocs/devportal/compare/v1.18.2...v1.18.3) (2025-03-28)
 
 
