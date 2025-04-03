@@ -607,13 +607,6 @@
                 {
                   "name": "Webstore (OAuth 2.0)",
                   "slug": "login-integration-guide-webstore-oauth2",
-                  "origin": "unifying-login-for-different-accounts",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Unifying login for different accounts",
-                  "slug": "unifying-login-for-different-accounts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
