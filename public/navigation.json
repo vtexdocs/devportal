@@ -15169,6 +15169,21 @@
           "type": "category",
           "children": [
            {
+              "name": "April",
+              "slug": "april-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore WebOps: Self-service domain setup now available",
+                  "slug": "2025-04-04-faststore-webops-self-service-domain-setup-now-available",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+           {
               "name": "March",
               "slug": "march-2025",
               "origin": "",
