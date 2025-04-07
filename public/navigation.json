@@ -144,6 +144,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Refresh token flow for headless implementations",
+                  "slug": "refresh-token-flow-for-headless-implementations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -10379,6 +10386,49 @@
                   "method": "PATCH",
                   "origin": "",
                   "endpoint": "/api/vtexid/apikey/-apiKey-/apitoken/finish-renewal",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Refresh token (Headless)",
+              "slug": "vtex-id-api-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Start authentication",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/authentication/start",
+                  "children": []
+                },
+                {
+                  "name": "Send access key",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/authentication/accesskey/send",
+                  "children": []
+                },
+                {
+                  "name": "Validate session",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/authentication/accesskey/validate",
+                  "children": []
+                },
+                {
+                  "name": "Refresh token",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/refreshtoken/webstore",
                   "children": []
                 }
               ]
