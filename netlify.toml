@@ -4,6 +4,18 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/managing-performance-optimizing-seo-by-managing-lazy-loading-on-plp"
+status = 308
+to = "/docs/guides/faststore/seo-optimizing-seo-by-managing-lazy-loading-on-plp-and-pdp"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/managing-performance-configuring-seo-for-plp"
+status = 308
+to = "/docs/guides/faststore/seo-configuring-seo-for-plp-and-pdp"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/building-sections-experimental-exports"
 status = 308
 to = "/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components"
@@ -1794,3 +1806,4 @@ force = true
 from = "/docs/guides/allow-manual-prices-on-instore"
 status = 308
 to = "/docs/guides/allow-manual-prices-on-vtex-sales-app"
+

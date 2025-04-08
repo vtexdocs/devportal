@@ -2,6 +2,42 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.18.4](https://github.com/vtexdocs/devportal/compare/v1.18.3...v1.18.4) (2025-03-31)
+
+
+### Features
+
+* add operational capacity api release note to navigation ([263994b](https://github.com/vtexdocs/devportal/commit/263994b9bb929c451f9dc2db3a15a8364977493d))
+* **navigation.json:** EDU-14516 - Add Session guide ([e5af0af](https://github.com/vtexdocs/devportal/commit/e5af0afd6b90fc685bf99ce3388792d8638cf2c3))
+
+
+### Bug Fixes
+
+* correct release note slug ([12088a7](https://github.com/vtexdocs/devportal/commit/12088a702791122aac9273e2ce675ec8de36bdcc))
+* **navigation.json:** typo ([dd13f43](https://github.com/vtexdocs/devportal/commit/dd13f43592948ecd6559708fb5273925bef65105))
+
+### [1.18.3](https://github.com/vtexdocs/devportal/compare/v1.18.2...v1.18.3) (2025-03-28)
+
+
+### Features
+
+* add Operational Capacity API ([d9a4907](https://github.com/vtexdocs/devportal/commit/d9a4907e873574cec1a361f4ef849482ea5d9249))
+* add Operational Capacity API to navigation ([4b670b6](https://github.com/vtexdocs/devportal/commit/4b670b6abeb267ea1faaee6a7c0e20295404b8d2))
+
+
+### Bug Fixes
+
+* fix endpoint path ([011a840](https://github.com/vtexdocs/devportal/commit/011a840b7d4cc1529a8bba7f7696f77fcbc4fed2))
+
+### [1.18.2](https://github.com/vtexdocs/devportal/compare/v1.18.1...v1.18.2) (2025-03-27)
+
+
+### Features
+
+* add Operational Capacity API ([0d9e7e9](https://github.com/vtexdocs/devportal/commit/0d9e7e9fb54a6352ea63703487b5efd8e1103282))
+* **navigation.json:** update SEO category ([ae1a423](https://github.com/vtexdocs/devportal/commit/ae1a423f4748226a9406ad935dd62aab2f4fa138))
+* **netlify.toml:** FastStore SEO redirects ([c4f4a71](https://github.com/vtexdocs/devportal/commit/c4f4a717d7ffc5cc1209df0680aec9b3422bb9e7))
+
 ### [1.18.1](https://github.com/vtexdocs/devportal/compare/v1.18.0...v1.18.1) (2025-03-26)
 
 
