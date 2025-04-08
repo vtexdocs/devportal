@@ -13762,6 +13762,13 @@
                   ]
                 },
                 {
+                  "name": "Cart",
+                  "slug": "faststore/cart-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Search",
                   "slug": "faststore/search-overview",
                   "origin": "",
