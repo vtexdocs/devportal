@@ -13766,7 +13766,15 @@
                   "slug": "faststore/cart-overview",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "useCart",
+                      "slug": "faststore/cart-use-cart",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "Search",
