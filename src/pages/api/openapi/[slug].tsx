@@ -210,12 +210,13 @@ async function resolveReferences(
     // Parse the raw spec to get a JS object
     const parsedSpec = JSON.parse(spec)
 
-    // Use SwaggerParser to resolve all references
-    const resolvedSpec = await SwaggerParser.resolve(parsedSpec)
+    // Use SwaggerParser.bundle() instead of resolve() to properly handle references
+    // bundle() creates a spec with only internal references that's safe for serialization
+    const bundledSpec = await SwaggerParser.bundle(parsedSpec)
 
     // Convert back to string and indicate success
     return {
-      spec: JSON.stringify(resolvedSpec),
+      spec: JSON.stringify(bundledSpec),
       resolved: true,
     }
   } catch (error) {
