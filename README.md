@@ -16,7 +16,15 @@
     - [How to make a commit](#how-to-make-a-commit)
   - [Branches](#branches)
     - [Feature Branches](#feature-branches)
-  - [Docker](#docker)
+  - [Docker development environment](#docker-development-environment)
+- [GitHub Actions](#github-actions)
+  - [Integration and Component Tests](#integration-and-component-tests-cypressyml)
+  - [Release Version](#release-version-release-versionyml)
+  - [Verify PR Labels](#verify-pr-labels-verify-pr-labelsyml)
+  - [Extensive Tests](#extensive-tests-cypress-extensiveyml)
+  - [DocSearch Scraper](#docsearch-scraper-docsearch-scraperyml)
+  - [Lighthouse Mobile](#lighthouse-mobile-lighthouse-mobileyml)
+  - [Lighthouse Desktop](#lighthouse-desktop-lighthouse-desktopyml)
 - [Contributing](#contributing)
   - [How to develop and propose a new contribution](#how-to-develop-and-propose-a-new-contribution)
   - [What to do when someone updated the `main` branch and I'm developing something on my *feature branch*](#what-to-do-when-someone-updated-the-main-branch-and-im-developing-something-on-my-feature-branch)
@@ -35,6 +43,12 @@ As the Developer Portal provides VTEX documentation to users, some of its main f
 - Markdown files rendering
 
   [Markdown](https://www.markdownguide.org/) is a very popular markup language that helps making plaintext documents more semantic by adding formatting elements defined in its syntax. VTEX developers and many tech writers reccur to Markdown to write documentation, including those served by the Developers Portal.
+- GitHub API Integration with Rate Limit Handling
+  
+  The portal uses GitHub's API through Octokit to fetch documentation content. To handle GitHub API rate limits gracefully:
+  - Configurable retry mechanism with max retries and timeout
+  - Automatic fallback to raw.githubusercontent.com when API limits are hit
+  - Smart throttling to prevent excessive API calls
 
 ## Versioning
 
@@ -72,6 +86,97 @@ flowchart TB
 - Automated tests
 
   [Cypress](https://www.cypress.io/) is an automated testing tool that was added to the repository so pre-defined E2E or unitary tests (inside cypress directory) will be executed whenever a PR is opened.
+
+### Cypress Tests
+
+The Cypress tests are designed to ensure the functionality and stability of the Developers Portal. The tests cover four main areas:
+
+1. **Documentation Pages Status Tests**
+   - Randomly selects and verifies the loading status of documentation pages
+   - Includes retry mechanisms for both run mode (3 retries) and open mode (3 retries)
+   - Logs any failed page checks for debugging purposes
+
+2. **API Reference Documentation Tests**
+   - Verifies sidebar functionality:
+     - Tests the collapse/expand button behavior
+     - Confirms sidebar visibility states
+   - Tests navigation:
+     - Verifies random guide page loading through sidebar navigation
+     - Ensures proper URL patterns for API reference pages
+   - Validates content:
+     - Checks for presence of API documentation title
+     - Tests response tab functionality and content visibility
+
+3. **API Guides Documentation Tests**
+   - Verifies sidebar functionality:
+     - Tests the collapse/expand button behavior
+     - Confirms sidebar visibility states
+   - Tests navigation:
+     - Verifies random guide page loading through sidebar navigation
+     - Ensures proper URL patterns for guide pages
+   - Validates content and features:
+     - Checks for presence of guide titles
+     - Tests document contributor links (verifies GitHub redirects)
+     - Validates feedback system:
+       - Tests feedback section visibility
+       - Verifies feedback modal functionality
+       - Tests feedback submission process
+     - Tests table of contents navigation:
+       - Verifies all headings are properly linked
+       - Tests navigation to the last section
+       - Validates scroll behavior
+
+4. **Component Tests**
+   - **MarkdownRenderer Component**:
+     - Tests basic markdown content rendering without FastStore integration
+     - Verifies FastStore component documentation:
+       - Tests proper rendering of component props sections
+       - Validates component attribute display
+     - Handles edge cases:
+       - Gracefully handles missing component documentation
+       - Tests mixed content with both markdown and FastStore components
+   - **DropdownMenu Component**:
+     - Tests section rendering in different modes
+     - Verifies content visibility and interaction
+   - **Contributors Component**:
+     - Tests avatar display and GitHub profile links
+     - Validates contributor information rendering
+
+#### What to Expect in Terms of Reports
+
+After the Cypress tests are executed, a summary report is generated. The report includes:
+
+- The total number of tests that failed
+- Detailed information about each failing test, including:
+  - Test title and description
+  - The specific URL where the test failed
+  - The error message and stack trace
+
+The summary report is posted as a comment on the Pull Request, providing a quick overview of the test results.
+
+#### How to Deal with Errors
+
+If any tests fail, follow these steps to address the issues:
+
+1. **Review the Summary Report:** Check the summary report posted on the Pull Request to identify the failing tests and the specific errors encountered.
+2. **Reproduce the Errors Locally:** Run the Cypress tests locally to reproduce the errors and investigate the root cause.
+3. **Fix the Issues:** Make the necessary code changes to fix the issues identified by the failing tests.
+4. **Re-run the Tests:** After fixing the issues, re-run the Cypress tests locally to ensure that the errors have been resolved.
+5. **Push the Changes:** Push the changes to the remote repository and verify that the Cypress tests pass in the CI environment.
+
+To run the Cypress tests locally, use the following command:
+
+```bash
+yarn cypress:open
+```
+
+To run the Cypress tests in the CI environment, use the following command:
+
+```bash
+yarn cypress:run
+```
+
+This command will run the Cypress tests in the CI environment and generate the necessary reports.
 
 ## Development
 
@@ -267,13 +372,84 @@ services:
     command: yarn dev
     environment:
       - NODE_ENV=development 
-      #if you’re using Windows, you may need to uncomment the next line - Sol from @Kobe E
+      #if you're using Windows, you may need to uncomment the next line - Sol from @Kobe E
       #- WATCHPACK_POLLING=true
     volumes:
       - .:/devportal
     ports:
       - 3000:3000
 ```
+
+## GitHub Actions
+
+The repository uses several GitHub Actions to automate various processes. Below is a detailed description of each action:
+
+### Integration and Component Tests (`cypress.yml`)
+
+This action runs Cypress tests on pull requests to ensure code quality and functionality.
+
+**Dependencies:**
+- `actions/checkout@v3`: Checks out the repository code
+- `actions/setup-node@v3`: Sets up Node.js environment with version 18
+- `cypress-io/github-action@v5`: Runs Cypress tests
+- `fountainhead/action-wait-for-check@v1.1.0`: Waits for Netlify preview deployment
+- `jakepartusch/wait-for-netlify-action@v1.4`: Ensures Netlify preview is accessible
+- `wei/curl@v1`: Fetches navigation data
+- `thollander/actions-comment-pull-request@v2`: Posts test results as PR comments
+
+### Release Version (`release-version.yml`)
+
+Automates version releases when pull requests are merged into the main branch.
+
+**Dependencies:**
+- `de-vri-es/setup-git-credentials@v2`: Sets up Git credentials
+- `actions/checkout@v3`: Checks out the repository code
+- `actions/create-release@v1`: Creates GitHub releases
+
+### Verify PR Labels (`verify-pr-labels.yml`)
+
+Validates pull request labels to ensure proper versioning.
+
+**Dependencies:**
+- `jesusvasquez333/verify-pr-label-action@v1.4.0`: Validates PR labels
+
+### Extensive Tests (`cypress-extensive.yml`)
+
+Runs comprehensive Cypress tests on demand.
+
+**Dependencies:**
+- `actions/checkout@v1`: Checks out the repository code
+- `wei/curl@v1`: Fetches navigation data
+- `cypress-io/github-action@v5`: Runs Cypress tests
+
+### DocSearch Scraper (`docsearch-scraper.yml`)
+
+Updates Algolia search index when pull requests are merged.
+
+**Dependencies:**
+- `actions/checkout@v2`: Checks out the repository code
+- `vtexdocs/devportal-docsearch-action@main`: Updates Algolia search index
+
+### Lighthouse Mobile (`lighthouse-mobile.yml`)
+
+Runs Lighthouse performance tests on mobile devices for pull requests.
+
+**Dependencies:**
+- `actions/checkout@v1`: Checks out the repository code
+- `actions/setup-node@v1`: Sets up Node.js environment
+- `kamranayub/wait-for-netlify-action@2.0.0`: Waits for Netlify preview
+
+### Lighthouse Desktop (`lighthouse-desktop.yml`)
+
+Runs Lighthouse performance tests on desktop devices for pull requests.
+
+**Dependencies:**
+- `actions/checkout@v1`: Checks out the repository code
+- `fountainhead/action-wait-for-check@v1.1.0`: Waits for Netlify preview deployment
+- `jakepartusch/wait-for-netlify-action@v1.4`: Ensures Netlify preview is accessible
+- `actions/github-script@v6`: Executes GitHub API scripts
+- `treosh/lighthouse-ci-action@v10`: Runs Lighthouse tests
+- `thollander/actions-comment-pull-request@v2`: Posts test results as PR comments
 
 ## Contributing
 

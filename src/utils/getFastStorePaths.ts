@@ -1,27 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const docsPaths: { [slug: string]: string } = {}
 
-import octokit from 'utils/octokitConfig'
-
-async function getGithubTree(org: string, repo: string, ref: string) {
-  const response = octokit.request(
-    'GET /repos/{org}/{repo}/git/trees/{ref}?recursive=true',
-    {
-      org: org,
-      repo: repo,
-      ref: ref,
-    }
-  )
-
-  return (await response).data
-}
-
-//https://api.github.com/repos/vtexdocs/devportal/commits?path=README.md
+import { getGithubTree } from './github-utils'
 
 export default async function getFastStorePaths(branch = 'main') {
   const repoTree = await getGithubTree('vtexdocs', 'dev-portal-content', branch)
-  // @ts-ignore
-  repoTree.tree.map((node: any) => {
+  repoTree.tree.forEach((node: { path: string; type: string }) => {
     const path = node.path
     const re = /^(?<path>.+\/)*(?<folder>.+)\/(?<filename>.+)\.(?<filetype>.+)$/
     if (path.startsWith('docs/faststore')) {
@@ -34,6 +18,5 @@ export default async function getFastStorePaths(branch = 'main') {
       }
     }
   })
-
   return docsPaths
 }

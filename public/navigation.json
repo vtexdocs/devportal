@@ -144,6 +144,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Refresh token flow for headless implementations",
+                  "slug": "refresh-token-flow-for-headless-implementations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -607,13 +614,6 @@
                 {
                   "name": "Webstore (OAuth 2.0)",
                   "slug": "login-integration-guide-webstore-oauth2",
-                  "origin": "unifying-login-for-different-accounts",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Unifying login for different accounts",
-                  "slug": "unifying-login-for-different-accounts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -7710,6 +7710,59 @@
           ]
         },
         {
+          "name": "Operational Capacity API",
+          "slug": "operational-capacity-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Get locations capacities by account",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/capacity/by-parent-account-name",
+              "children": []
+            },
+            {
+              "name": "Configure location capacity",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "PUT",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/location/-locationId-/capacities/-code-",
+              "children": []
+            },
+            {
+              "name": "List location capacities",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/locations/-locationId-/capacities",
+              "children": []
+            },
+            {
+              "name": "List locations",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/location",
+              "children": []
+            },
+            {
+              "name": "Update location status",
+              "slug": "operational-capacity-api",
+              "type": "openapi",
+              "method": "PUT",
+              "origin": "",
+              "endpoint": "/api/fulfillment-locations/locations/-locationId-/status",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Orders API",
           "slug": "orders-api",
           "origin": "",
@@ -8753,6 +8806,15 @@
                   "slug": "pricing-api",
                   "type": "openapi",
                   "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/pricing/prices/-itemId-",
+                  "children": []
+                },
+                {
+                  "name": "Create or Update Base Price or Fixed Prices",
+                  "slug": "pricing-api",
+                  "type": "openapi",
+                  "method": "PATCH",
                   "origin": "",
                   "endpoint": "/pricing/prices/-itemId-",
                   "children": []
@@ -10027,78 +10089,6 @@
           ]
         },
         {
-          "name": "VTEX Ad Network API",
-          "slug": "vtex-ad-network-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Sponsored products",
-              "slug": "sponsored-products",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get sponsored products for a query",
-                  "slug": "vtex-ad-network-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/sponsored_products/-facets-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Ad events",
-              "slug": "ad-events",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Send ad events",
-                  "slug": "vtex-ad-network-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/ads",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Order events",
-              "slug": "order-events",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Send order events",
-                  "slug": "vtex-ad-network-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/order",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Banner",
-              "slug": "banner",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get banner information",
-                  "slug": "vtex-ad-network-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/banner/query",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "VTEX Shipping Network API",
           "slug": "vtex-shipping-network-api",
           "origin": "",
@@ -10396,6 +10386,49 @@
                   "method": "PATCH",
                   "origin": "",
                   "endpoint": "/api/vtexid/apikey/-apiKey-/apitoken/finish-renewal",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Refresh token (Headless)",
+              "slug": "vtex-id-api-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Start authentication",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/authentication/start",
+                  "children": []
+                },
+                {
+                  "name": "Send access key",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/authentication/accesskey/send",
+                  "children": []
+                },
+                {
+                  "name": "Validate session",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pub/authentication/accesskey/validate",
+                  "children": []
+                },
+                {
+                  "name": "Refresh token",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/refreshtoken/webstore",
                   "children": []
                 }
               ]
@@ -11623,13 +11656,6 @@
           ]
         },
         {
-          "name": "Troubleshooting",
-          "slug": "troubleshooting",
-          "origin": "",
-          "type": "markdown",
-          "children": []
-        },
-        {
           "name": "Frequently asked questions",
           "slug": "vtex-io-documentation-frequently-asked-questions",
           "origin": "",
@@ -12348,6 +12374,21 @@
               "children": []
             },
             {
+              "name": "Messages",
+              "slug": "apps/vtex.messages",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Messages GraphQL API",
+                  "slug": "apps/vtex.messages/messages-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Product Context",
               "slug": "apps/vtex.product-context",
               "origin": "",
@@ -12890,6 +12931,13 @@
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "FastStore versions and support levels",
+                  "slug": "faststore/getting-started-faststore-versions-and-support-levels",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Requirements",
                   "slug": "faststore/getting-started-requirements",
@@ -13703,8 +13751,58 @@
                       "origin": "",
                       "type": "markdown",
                       "children": []
+                    },
+                    {
+                      "name": "Sending custom events",
+                      "slug": "faststore/analytics-sending-custon-events",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
                     }
                   ]
+                },
+                {
+                  "name": "Cart",
+                  "slug": "faststore/cart-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search",
+                  "slug": "faststore/search-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "SearchProvider",
+                      "slug": "faststore/search-search-provider",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "usePagination",
+                      "slug": "faststore/search-use-pagination",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useSearch",
+                      "slug": "faststore/search-use-search",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Session",
+                  "slug": "faststore/sdk-session",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -14026,13 +14124,6 @@
               "children": []
             },
             {
-              "name": "Integrating FastStore with VTEX Ad Network",
-              "slug": "faststore/integrating-with-vtex-products-integrating-with-vtex-ad-network",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Managing performance",
               "slug": "faststore/managing-performance-overview",
               "origin": "",
@@ -14061,15 +14152,15 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Configuring SEO for Product Listing Pages (PLPs)",
-                  "slug": "faststore/managing-performance-configuring-seo-for-plp",
+                  "name": "Configuring SEO for PLPs and PDPs",
+                  "slug": "faststore/seo-configuring-seo-for-plp-and-pdp",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Optimizing SEO by managing lazy loading on Product Listing Pages (PLPs)",
-                  "slug": "faststore/managing-performance-optimizing-seo-by-managing-lazy-loading-on-plp",
+                  "name": "Optimizing SEO by managing lazy loading on PLPs and PDPs",
+                  "slug": "faststore/seo-optimizing-seo-by-managing-lazy-loading-on-plp-and-pdp",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14637,7 +14728,7 @@
               "children": [
                 {
                   "name": "Adding custom headers to your Store Framework store",
-                  "slug": "adding-custom-headers-to-your-store-framework-store",
+                  "slug": "vtex-io-documentation-adding-custom-headers-to-your-store-framework-store",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -15041,6 +15132,27 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "I can't create a new workspace",
+              "slug": "i-cant-create-a-new-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I can't install an app with a major other than 0.x",
+              "slug": "i-cant-install-an-app-with-a-major-other-than-0x",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I don't see my Store Theme changes",
+              "slug": "i-dont-see-my-store-theme-changes",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -15077,6 +15189,27 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "My routes are not behaving as expected",
+              "slug": "my-routes-are-not-behaving-as-expected",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store is presenting price inconsistencies",
+              "slug": "my-store-is-presenting-price-inconsistencies",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store translation is not behaving as expected",
+              "slug": "my-store-translation-is-not-behaving-as-expected",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
@@ -15093,6 +15226,57 @@
           "type": "category",
           "children": [
            {
+              "name": "April",
+              "slug": "april-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore WebOps: Self-service domain setup now available",
+                  "slug": "2025-04-08-faststore-webops-self-service-domain-setup-now-available",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+           {
+              "name": "March",
+              "slug": "march-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New Operational Capacity API",
+                  "slug": "2025-03-20-operational-capacity-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Discontinuation of the Pricing V1 module compatibility routes",
+                  "slug": "2025-03-24-discontinuation-of-the-pricing-v1-module-compatiblity-routes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX ID API: New endpoints for token renewal",
+                  "slug": "2025-03-14-vtex-id-api-new-endpoints-for-token-renewal",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: New global Content Types",
+                  "slug": "2025-03-12-faststore-new-content-types",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+           {
               "name": "February",
               "slug": "february-2025",
               "origin": "",
@@ -15104,7 +15288,15 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
+                }
+              ]
+            },
+            {
+              "name": "February",
+              "slug": "february-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
                 {
                   "name": "Payments Gateway API: Deprecation of payment information routes",
                   "slug": "2025-02-18-deprecation-of-payment-information-routes",

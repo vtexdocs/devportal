@@ -1,5 +1,6 @@
 import { Gift, GiftContent, GiftImage, Icon } from '@faststore/ui'
 import { useFormattedPrice } from '../utilities/usePriceFormatter'
+import Image from 'next/image'
 
 const GiftTemplateIcon = () => {
   return (
@@ -13,7 +14,7 @@ const GiftTemplateIcon = () => {
       }
     >
       <GiftImage>
-        <img
+        <Image
           src="https://storeframework.vtexassets.com/arquivos/ids/190902/unsplash-magic-mouse.jpg?v=637800136963870000"
           alt="Magicwhite"
           width={89}

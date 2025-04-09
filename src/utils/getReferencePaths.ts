@@ -1,23 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const referencePaths: { [slug: string]: string } = {}
 
-import octokit from 'utils/octokitConfig'
+import { getGithubTree } from './github-utils'
 import { getLogger } from './logging/log-util'
+import { githubConfig } from './github-config'
 
-async function getGithubTree(org: string, repo: string, ref: string) {
-  const response = octokit.request(
-    'GET /repos/{org}/{repo}/git/trees/{ref}?recursive=true',
-    {
-      org: org,
-      repo: repo,
-      ref: ref,
-    }
-  )
-
-  return (await response).data
-}
-
-const fileSlugMap = {
+const fileSlugMap: { [key: string]: string } = {
   'VTEX - Antifraud Provider API': 'antifraud-provider-protocol',
   'VTEX - Legacy CMS Portal API': 'legacy-cms-portal-api',
   'VTEX - Catalog API Seller Portal': 'catalog-api-seller-portal',
@@ -46,6 +34,7 @@ const fileSlugMap = {
   'VTEX - Master Data API - v2': 'master-data-api-v2',
   'VTEX - MasterData API - v10.2': 'masterdata-api',
   'VTEX - Message Center API': 'message-center-api',
+  'VTEX - Operational Capacity API': 'operational-capacity-api',
   'VTEX - Orders API PII version': 'orders-api-pii-version',
   'VTEX - Orders API': 'orders-api',
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
@@ -72,34 +61,41 @@ const fileSlugMap = {
   'VTEX - Data Subject Rights': 'data-subject-rights-api',
   'VTEX - Buyer Organizations': 'buyer-organizations',
   'VTEX - Audience API': 'audience-api',
-  'VTEX - Ad Network API': 'vtex-ad-network-api',
 }
 
-export default async function getReferencePaths() {
+export default async function getReferencePaths(
+  branch: string = githubConfig.openapiBranch
+) {
   const logger = getLogger('getReferencePaths')
-  const repoTree = await getGithubTree('vtex', 'openapi-schemas', 'master')
-  repoTree.tree.map((node: any) => {
-    const path = node.path
-    const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
-    if (!path.includes('/')) {
-      const match = path.match(re)
-      const filename = match?.groups?.filename ? match?.groups?.filename : ''
-      const filetype = match?.groups?.filetype ? match?.groups?.filetype : ''
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      const fileslug = fileSlugMap[filename as string]
-      if (filetype === 'json' && filename !== 'VTEX_TEMPLATE') {
-        if (!fileslug)
-          logger.error(
-            `Couldn't find slug for this file: ${filename} in ${path}`
-          )
-        else
-          (referencePaths as any)[
-            fileslug
-          ] = `https://cdn.jsdelivr.net/gh/vtex/openapi-schemas/${path}`
+  try {
+    const repoTree = await getGithubTree(
+      githubConfig.openapiOrg,
+      githubConfig.openapiRepo,
+      branch
+    )
+    repoTree.tree.forEach((node: { path: string; type: string }) => {
+      const path = node.path
+      const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
+      if (!path.includes('/')) {
+        if (node.type === 'blob') {
+          const match = path.match(re)
+          const filename = match?.groups?.filename
+            ? match?.groups?.filename
+            : ''
+          const filetype = match?.groups?.filetype
+            ? match?.groups?.filetype
+            : ''
+          if (filetype === 'json' || filetype === 'yaml') {
+            referencePaths[
+              fileSlugMap[filename] || filename
+            ] = `https://cdn.jsdelivr.net/gh/vtex/openapi-schemas/${path}`
+          }
+        }
       }
-    }
-  })
-
-  return referencePaths
+    })
+    return referencePaths
+  } catch (error) {
+    logger.error(`Failed to get reference paths: ${error}`)
+    throw error
+  }
 }

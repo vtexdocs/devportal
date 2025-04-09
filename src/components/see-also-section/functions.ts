@@ -1,6 +1,5 @@
 import { capitalizeFirstLetter } from 'utils/string-utils'
 import { getIcon } from 'utils/constants'
-
 import { DocumentProps } from 'components/documentation-card'
 
 const getDoctype = (category: string) => {
@@ -32,11 +31,23 @@ export const createDocFromUrl = (doc: {
   title: string
   category: string
 }): DocumentProps => {
-  const Icon = getIcon(getDoctype(doc.category))!
-  const title = getTitleFromUrl(doc.title)
-
+  const docType = getDoctype(doc.category)
+  const Icon = getIcon(docType)
+  if (!Icon) {
+    // If no icon found for the docType, use Guides icon as fallback
+    const GuidesIcon = getIcon('Guides')
+    if (!GuidesIcon) {
+      throw new Error('Could not find any valid icon')
+    }
+    return {
+      title: getTitleFromUrl(doc.title),
+      Icon: GuidesIcon,
+      description: getTitleFromUrl(doc.category),
+      link: doc.url,
+    }
+  }
   return {
-    title,
+    title: getTitleFromUrl(doc.title),
     Icon,
     description: getTitleFromUrl(doc.category),
     link: doc.url,

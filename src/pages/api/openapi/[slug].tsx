@@ -33,6 +33,7 @@ const referencePaths = objectFlip({
   'VTEX - Master Data API - v2': 'master-data-api-v2',
   'VTEX - MasterData API - v10.2': 'masterdata-api',
   'VTEX - Message Center API': 'message-center-api',
+  'VTEX - Operational Capacity API': 'operational-capacity-api',
   'VTEX - Orders API PII version': 'orders-api-pii-version',
   'VTEX - Orders API': 'orders-api',
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
@@ -59,7 +60,6 @@ const referencePaths = objectFlip({
   'VTEX - Data Subject Rights': 'data-subject-rights-api',
   'VTEX - Buyer Organizations': 'buyer-organizations',
   'VTEX - Audience API': 'audience-api',
-  'VTEX - Ad Network API': 'vtex-ad-network-api',
 })
 
 function objectFlip(obj: { [x: string]: string }) {
