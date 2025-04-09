@@ -196,8 +196,15 @@ async function fetchFromGithubRaw(
 
 /**
  * Resolves references in an OpenAPI spec using SwaggerParser
+ * @returns An object with the resolved spec and a flag indicating if resolution succeeded
  */
-async function resolveReferences(spec: string, slug: string): Promise<string> {
+async function resolveReferences(
+  spec: string,
+  slug: string
+): Promise<{
+  spec: string
+  resolved: boolean
+}> {
   try {
     logger.info(`Resolving references for ${slug} spec using SwaggerParser`)
     // Parse the raw spec to get a JS object
@@ -206,16 +213,22 @@ async function resolveReferences(spec: string, slug: string): Promise<string> {
     // Use SwaggerParser to resolve all references
     const resolvedSpec = await SwaggerParser.resolve(parsedSpec)
 
-    // Convert back to string
-    return JSON.stringify(resolvedSpec)
+    // Convert back to string and indicate success
+    return {
+      spec: JSON.stringify(resolvedSpec),
+      resolved: true,
+    }
   } catch (error) {
     logger.error(
       `Error resolving references for ${slug}: ${
         error instanceof Error ? error.message : String(error)
       }`
     )
-    // If reference resolution fails, return the original spec
-    return spec
+    // If reference resolution fails, return the original spec with resolved=false
+    return {
+      spec,
+      resolved: false,
+    }
   }
 }
 
@@ -302,10 +315,16 @@ export default async function handler(req: any, res: any) {
     // Return result if any source succeeded
     if (finalResult && finalResult.success && finalResult.body) {
       // Use SwaggerParser to resolve all references in the spec
-      const resolvedSpec = await resolveReferences(finalResult.body, slug)
+      const resolvedResult = await resolveReferences(finalResult.body, slug)
 
       logger.info(
-        `Successfully served OpenAPI spec for ${slug} from ${finalResult.source} with references resolved`
+        `Successfully served OpenAPI spec for ${slug} from ${
+          finalResult.source
+        } with references ${
+          resolvedResult.resolved
+            ? 'successfully resolved'
+            : 'not fully resolved'
+        }`
       )
 
       return res
@@ -314,8 +333,8 @@ export default async function handler(req: any, res: any) {
           `public, s-maxage=${configuredMaxAge}, stale-while-revalidate=${staleWhileRevalidate}`
         )
         .setHeader('X-Source', finalResult.source)
-        .setHeader('X-References-Resolved', 'true')
-        .send(resolvedSpec)
+        .setHeader('X-References-Resolved', resolvedResult.resolved.toString())
+        .send(resolvedResult.spec)
     }
 
     // All sources failed
