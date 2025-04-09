@@ -1782,3 +1782,9 @@ force = true
 from = "/docs/guides/using-master-data-v2-triggers-to-interact-with-orders"
 status = 308
 to = "/docs/guides/orders-feed"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-cross-border-stores"
+status = 308
+to = "/docs/guides/store-framework-setting-up-cross-border-stores"
