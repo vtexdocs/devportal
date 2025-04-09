@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.19.0](https://github.com/vtexdocs/devportal/compare/v1.18.4...v1.19.0) (2025-04-09)
+
+
+### Features
+
+* **api:** improve OpenAPI spec delivery with tiered caching strategy ([88bbf15](https://github.com/vtexdocs/devportal/commit/88bbf15398d0f7243eaf678c6f078c588cc95ca4))
+
+
+### Docs
+
+* **navigation.json:** Add 'Sending custom events' guide ([d0df27d](https://github.com/vtexdocs/devportal/commit/d0df27dd7553c5ff4cd57f331c95e3d1454ca5ee))
+* **navigation.json:** add FastStore Cart overview ([d365026](https://github.com/vtexdocs/devportal/commit/d365026adc4f790b8d23c221bc974e23e9a93823))
+* **navigation.json:** domain management in webops ([36c0aa2](https://github.com/vtexdocs/devportal/commit/36c0aa2f83495cfd61b63c9ff018eea526dfcf33))
+* **navigation.json:** fixing slug ([8339442](https://github.com/vtexdocs/devportal/commit/833944283f4b967aaf5e6e98bffe41809056c4f3))
+* **navigation.json:** remove FastStore and Ad Network integration guide ([8b7bf90](https://github.com/vtexdocs/devportal/commit/8b7bf90ecb97f714313f49ce04df9634acf1d632))
+* **navigation:** add refresh token api ref and guide ([87197e6](https://github.com/vtexdocs/devportal/commit/87197e6d8e09c123244ecaeca8641a0188e4c155))
+* **navigation:** remove deprecated guide ([da30d1d](https://github.com/vtexdocs/devportal/commit/da30d1d1927f0329ea1a059df98b752ec5b330bb))
+* **navigation:** remove vtex ad network api ([3add51a](https://github.com/vtexdocs/devportal/commit/3add51a5ea76e065a26e88d8a1abd466fb49172b))
+* remove references to vtex ad network api ([83f78cb](https://github.com/vtexdocs/devportal/commit/83f78cbb84dfac7d2f54b0002e8bce7f6e30aefd))
+
+
+### Chore
+
+* **modalbase.tsx:** add ModalFooter to FastStore Modal usage example ([9e1f8ab](https://github.com/vtexdocs/devportal/commit/9e1f8ab662e426612f964b76712fab7b4618f84e))
+
 ### [1.18.4](https://github.com/vtexdocs/devportal/compare/v1.18.3...v1.18.4) (2025-03-31)
 
 
