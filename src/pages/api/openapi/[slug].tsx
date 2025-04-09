@@ -6,6 +6,7 @@ export const config = {
 
 import { githubConfig } from 'utils/github-config'
 import { getLogger } from 'utils/logging/log-util'
+import SwaggerParser from '@apidevtools/swagger-parser'
 
 const logger = getLogger('openapi-endpoint')
 
@@ -79,6 +80,7 @@ function objectFlip(obj: { [x: string]: string }) {
 interface FetchResult {
   success: boolean
   body?: string
+  spec?: Record<string, unknown> // Store the parsed specification
   age?: number
   maxAge?: number
   source: string
@@ -192,6 +194,31 @@ async function fetchFromGithubRaw(
   }
 }
 
+/**
+ * Resolves references in an OpenAPI spec using SwaggerParser
+ */
+async function resolveReferences(spec: string, slug: string): Promise<string> {
+  try {
+    logger.info(`Resolving references for ${slug} spec using SwaggerParser`)
+    // Parse the raw spec to get a JS object
+    const parsedSpec = JSON.parse(spec)
+
+    // Use SwaggerParser to resolve all references
+    const resolvedSpec = await SwaggerParser.resolve(parsedSpec)
+
+    // Convert back to string
+    return JSON.stringify(resolvedSpec)
+  } catch (error) {
+    logger.error(
+      `Error resolving references for ${slug}: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    )
+    // If reference resolution fails, return the original spec
+    return spec
+  }
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function handler(req: any, res: any) {
   const { slug } = req.query
@@ -274,16 +301,21 @@ export default async function handler(req: any, res: any) {
 
     // Return result if any source succeeded
     if (finalResult && finalResult.success && finalResult.body) {
+      // Use SwaggerParser to resolve all references in the spec
+      const resolvedSpec = await resolveReferences(finalResult.body, slug)
+
       logger.info(
-        `Successfully served OpenAPI spec for ${slug} from ${finalResult.source}`
+        `Successfully served OpenAPI spec for ${slug} from ${finalResult.source} with references resolved`
       )
+
       return res
         .setHeader(
           'Cache-Control',
           `public, s-maxage=${configuredMaxAge}, stale-while-revalidate=${staleWhileRevalidate}`
         )
         .setHeader('X-Source', finalResult.source)
-        .send(finalResult.body)
+        .setHeader('X-References-Resolved', 'true')
+        .send(resolvedSpec)
     }
 
     // All sources failed
