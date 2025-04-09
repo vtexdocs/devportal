@@ -86,9 +86,9 @@ export default async function getReferencePaths(
             ? match?.groups?.filetype
             : ''
           if (filetype === 'json' || filetype === 'yaml') {
-            referencePaths[
-              fileSlugMap[filename] || filename
-            ] = `https://cdn.jsdelivr.net/gh/vtex/openapi-schemas/${path}`
+            // Use internal API route instead of jsDelivr
+            const slug = fileSlugMap[filename] || filename
+            referencePaths[slug] = `/api/openapi/${slug}`
           }
         }
       }
