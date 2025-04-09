@@ -4,6 +4,11 @@ export const config = {
   },
 }
 
+import { githubConfig } from 'utils/github-config'
+import { getLogger } from 'utils/logging/log-util'
+
+const logger = getLogger('openapi-endpoint')
+
 const referencePaths = objectFlip({
   'VTEX - Antifraud Provider API': 'antifraud-provider-protocol',
   'VTEX - Legacy CMS Portal API': 'legacy-cms-portal-api',
@@ -71,24 +76,231 @@ function objectFlip(obj: { [x: string]: string }) {
   }, {})
 }
 
+interface FetchResult {
+  success: boolean
+  body?: string
+  age?: number
+  maxAge?: number
+  source: string
+}
+
+/**
+ * Fetches OpenAPI spec from jsDelivr CDN
+ */
+async function fetchFromJsdelivr(
+  path: string,
+  slug: string
+): Promise<FetchResult> {
+  try {
+    const jsdelivrUrl = `https://cdn.jsdelivr.net/gh/vtex/openapi-schemas/${path}.json`
+    const jsDelivrResponse = await fetch(jsdelivrUrl)
+
+    if (jsDelivrResponse.ok) {
+      const body = await jsDelivrResponse.text()
+
+      // Extract cache information from headers
+      const cacheAge = parseInt(jsDelivrResponse.headers.get('age') || '0', 10)
+      const cacheControl = jsDelivrResponse.headers.get('cache-control') || ''
+      const maxAgeMatch = cacheControl.match(/max-age=(\d+)/)
+      const maxAge = maxAgeMatch ? parseInt(maxAgeMatch[1], 10) : undefined
+
+      logger.info(
+        `jsdelivr cache info for ${slug}: age=${cacheAge}, cache-control=${cacheControl}, max-age=${maxAge}`
+      )
+
+      return {
+        success: true,
+        body,
+        age: cacheAge,
+        maxAge,
+        source: 'jsdelivr',
+      }
+    }
+
+    logger.info(
+      `jsdelivr returned non-OK response for ${slug}: ${jsDelivrResponse.status}`
+    )
+    return {
+      success: false,
+      source: 'jsdelivr',
+    }
+  } catch (error) {
+    logger.error(
+      `Error fetching from jsdelivr for ${slug}: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    )
+    return {
+      success: false,
+      source: 'jsdelivr',
+    }
+  }
+}
+
+/**
+ * Fetches OpenAPI spec from GitHub raw content
+ */
+async function fetchFromGithubRaw(
+  path: string,
+  slug: string
+): Promise<FetchResult> {
+  try {
+    const rawGithubUrl = `https://raw.githubusercontent.com/${githubConfig.openapiOrg}/${githubConfig.openapiRepo}/${githubConfig.openapiBranch}/${path}.json`
+    const response = await fetch(rawGithubUrl, {
+      headers: { Accept: 'application/json' },
+    })
+
+    if (response.ok) {
+      const body = await response.text()
+
+      // Extract cache information from headers if available
+      const cacheAge = parseInt(response.headers.get('age') || '0', 10)
+      const cacheControl = response.headers.get('cache-control') || ''
+      const maxAgeMatch = cacheControl.match(/max-age=(\d+)/)
+      const maxAge = maxAgeMatch ? parseInt(maxAgeMatch[1], 10) : undefined
+
+      logger.info(
+        `GitHub raw cache info for ${slug}: age=${cacheAge}, cache-control=${cacheControl}`
+      )
+
+      return {
+        success: true,
+        body,
+        age: cacheAge,
+        maxAge,
+        source: 'github-raw',
+      }
+    }
+
+    logger.info(
+      `GitHub raw returned non-OK response for ${slug}: ${response.status}`
+    )
+    return {
+      success: false,
+      source: 'github-raw',
+    }
+  } catch (error) {
+    logger.error(
+      `Error fetching from GitHub raw for ${slug}: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    )
+    return {
+      success: false,
+      source: 'github-raw',
+    }
+  }
+}
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function handler(req: any, res: any) {
   const { slug } = req.query
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const path = referencePaths[slug] || ''
-  if (path) {
-    const response = await fetch(
-      `https://raw.githubusercontent.com/vtex/openapi-schemas/master/${path}.json`
-    )
-    const body = await response.text()
-    res
-      .setHeader(
-        'Cache-Control',
-        'public, s-maxage=300, stale-while-revalidate=250'
+
+  if (!path) {
+    return res
+      .status(404)
+      .json({ error: `OpenAPI specification not found for: ${slug}` })
+  }
+
+  // Get cache configuration from github-config
+  const configuredMaxAge = githubConfig.cacheTTL || 3600
+  const staleWhileRevalidate = configuredMaxAge * 24
+
+  // Track successful response for returning
+  let finalResult: FetchResult | null = null
+
+  try {
+    // Step 1: Try jsdelivr first (primary source)
+    const jsdelivrResult = await fetchFromJsdelivr(path, slug)
+
+    // Check if jsdelivr succeeded but cache is stale
+    if (jsdelivrResult.success) {
+      const isCacheFresh =
+        !jsdelivrResult.age || jsdelivrResult.age < configuredMaxAge
+
+      if (isCacheFresh) {
+        logger.info(
+          `Using fresh jsdelivr response for ${slug}, age: ${
+            jsdelivrResult.age || 0
+          }s`
+        )
+        finalResult = jsdelivrResult
+      } else {
+        logger.info(
+          `jsdelivr cache too old for ${slug} (age: ${jsdelivrResult.age}s, limit: ${configuredMaxAge}s), trying GitHub raw`
+        )
+      }
+    }
+
+    // Step 2: Try GitHub raw if jsdelivr failed or had stale cache
+    if (!finalResult) {
+      const githubRawResult = await fetchFromGithubRaw(path, slug)
+
+      if (githubRawResult.success) {
+        // Check if GitHub raw cache is fresh enough
+        const isCacheFresh =
+          !githubRawResult.age || githubRawResult.age < configuredMaxAge
+
+        if (isCacheFresh) {
+          logger.info(
+            `Using GitHub raw response for ${slug}, age: ${
+              githubRawResult.age || 0
+            }s`
+          )
+          finalResult = githubRawResult
+        } else {
+          logger.info(
+            `GitHub raw cache also too old for ${slug} (age: ${githubRawResult.age}s, limit: ${configuredMaxAge}s)`
+          )
+
+          // If GitHub raw succeeded but was stale, still use it as fallback
+          if (!finalResult) {
+            finalResult = githubRawResult
+          }
+        }
+      }
+    }
+
+    // Step 3: Potential third fallback could be added here following the same pattern
+    // if (!finalResult) {
+    //   const thirdSourceResult = await fetchFromThirdSource(path, slug)
+    //   if (thirdSourceResult.success) {
+    //     finalResult = thirdSourceResult
+    //   }
+    // }
+
+    // Return result if any source succeeded
+    if (finalResult && finalResult.success && finalResult.body) {
+      logger.info(
+        `Successfully served OpenAPI spec for ${slug} from ${finalResult.source}`
       )
-      .send(body)
-  } else {
-    res.status(404)
+      return res
+        .setHeader(
+          'Cache-Control',
+          `public, s-maxage=${configuredMaxAge}, stale-while-revalidate=${staleWhileRevalidate}`
+        )
+        .setHeader('X-Source', finalResult.source)
+        .send(finalResult.body)
+    }
+
+    // All sources failed
+    logger.error(`Failed to fetch OpenAPI spec for ${slug} from all sources`)
+    return res.status(502).json({
+      error: `Failed to fetch OpenAPI specification for: ${slug}`,
+      path: path,
+    })
+  } catch (error) {
+    logger.error(
+      `Unexpected error fetching OpenAPI specification for ${slug}: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    )
+    return res.status(500).json({
+      error: `Internal error fetching OpenAPI specification for: ${slug}`,
+      message: error instanceof Error ? error.message : String(error),
+    })
   }
 }
