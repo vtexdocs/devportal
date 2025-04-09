@@ -63,7 +63,19 @@ function getDescription(description: string) {
   )
 }
 
-const referencePaths = await getReferencePaths()
+// Ensure the URL has a proper protocol during build time
+function getAbsoluteUrl(path: string): string {
+  // During SSR
+  if (typeof window === 'undefined') {
+    const baseUrl =
+      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
+    return `${baseUrl}${path}`
+  }
+  // In browser
+  return path
+}
+
+// Using await here without wasting the result
 const slugs = Object.keys(await getReferencePaths())
 
 const APIPage: NextPage<Props> = ({
@@ -105,6 +117,9 @@ const APIPage: NextPage<Props> = ({
     },
   }
   const [endpointPagination, setEndpointPagination] = useState(pag)
+
+  // Generate the absolute spec URL
+  const specUrl = getAbsoluteUrl(`/api/openapi/${slug}`)
 
   useEffect(() => {
     const scrollDoc = () => {
@@ -163,8 +178,8 @@ const APIPage: NextPage<Props> = ({
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
         <rapi-doc
           ref={rapidoc}
-          spec-url={`/api/openapi/${slug}`}
-          postman-url={`/api/postman/${slug}`}
+          spec-url={specUrl}
+          postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
           spec={doc}
           layout="column"
           render-style="focused"
@@ -208,14 +223,34 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug || ''
-  const url = referencePaths[slug as string]
   const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()
   const logger = getLogger('API Reference')
-  let api
+
   if (slugs.includes(slug as string)) {
+    // Use the production URL for fetching specs during build time
+    const baseUrl =
+      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
+    const url = `${baseUrl}/api/openapi/${slug}`
+
+    let api
     try {
-      api = await SwaggerParser.dereference(url)
+      // Use fetch directly during build to avoid file system access issues with SwaggerParser
+      if (
+        process.env.NODE_ENV === 'production' &&
+        typeof window === 'undefined'
+      ) {
+        const response = await fetch(url)
+        if (!response.ok) {
+          throw new Error(
+            `Failed to fetch OpenAPI spec for ${slug}: ${response.status}`
+          )
+        }
+        api = await response.json()
+      } else {
+        // In development, use SwaggerParser
+        api = await SwaggerParser.dereference(url)
+      }
     } catch (error) {
       logger.error(`Parse Error on file ${slug}`)
       console.log(error)
@@ -223,6 +258,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         notFound: true,
       }
     }
+
     const doc = JSON.stringify(await SwaggerParser.parse(api))
     const endpointFile = new Oas(doc)
     const { info, paths } = endpointFile.getDefinition()
@@ -331,7 +367,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       props: {
         slug,
         doc,
-        url,
         sectionSelected,
         sidebarfallback,
         endpoints,
