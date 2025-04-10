@@ -280,12 +280,13 @@ export default async function handler(
   }
 
   // Get cache configuration from github-config
-  const configuredMaxAge = githubConfig.cacheTTL || 3600
+  // If no TTL is configured, use 5 minutes (300 seconds) as default instead of 1 hour
+  const configuredMaxAge = githubConfig.cacheTTL || 300
 
   // Define more cache parameters
-  const PRIMARY_TTL = configuredMaxAge
-  const FALLBACK_TTL = Math.floor(configuredMaxAge / 2)
-  const SWR_FACTOR = 24 // stale-while-revalidate multiplier
+  const PRIMARY_TTL = Math.min(configuredMaxAge, 300) // Cap at 5 minutes
+  const FALLBACK_TTL = Math.min(Math.floor(configuredMaxAge / 2), 180) // Cap at 3 minutes
+  const SWR_FACTOR = 10 // Reduce stale-while-revalidate multiplier from 24 to 10
 
   // Track successful response for returning
   let finalResult: FetchResult | null = null
