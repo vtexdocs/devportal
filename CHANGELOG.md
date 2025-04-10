@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.1](https://github.com/vtexdocs/devportal/compare/v1.19.0...v1.19.1) (2025-04-10)
+
+
+### Features
+
+* **api:** integrate SwaggerParser to resolve OpenAPI references ([8ab24b9](https://github.com/vtexdocs/devportal/commit/8ab24b923c75ff79f59fbd09a03ba54a55cb9a95))
+
+
+### Bug Fixes
+
+* **api:** improve OpenAPI reference resolution with SwaggerParser.bundle() ([92b91f5](https://github.com/vtexdocs/devportal/commit/92b91f57c50a07a4daea2271c2f52d602cc6b4f1))
+* **api:** improve OpenAPI spec reference resolution and error handling ([337bd78](https://github.com/vtexdocs/devportal/commit/337bd78a581e8169e66082815369d38d75d6cd90))
+* **api:** make X-References-Resolved header accurately reflect resolution success ([3590ae9](https://github.com/vtexdocs/devportal/commit/3590ae92f4ffc89c37c9bf00c54f31303ebb83c9))
+* correct OpenAPI spec handling in static site generation ([71df125](https://github.com/vtexdocs/devportal/commit/71df12559d6e59fb22bcfefcce10ca6361329dd1))
+
+
+### Refactoring
+
+* **api:** update getReferencePaths to use internal API routes ([698deb7](https://github.com/vtexdocs/devportal/commit/698deb7fca21745b6fb2e278b9f567074c0033d1))
+
 ## [1.19.0](https://github.com/vtexdocs/devportal/compare/v1.18.4...v1.19.0) (2025-04-09)
 
 
