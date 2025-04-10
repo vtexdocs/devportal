@@ -286,7 +286,7 @@ export default async function handler(
   // Define more cache parameters
   const PRIMARY_TTL = Math.min(configuredMaxAge, 300) // Cap at 5 minutes
   const FALLBACK_TTL = Math.min(Math.floor(configuredMaxAge / 2), 180) // Cap at 3 minutes
-  const SWR_FACTOR = 10 // Reduce stale-while-revalidate multiplier from 24 to 10
+  const SWR_FACTOR = 3 // Reduce stale-while-revalidate multiplier from 24 to 3
 
   // Track successful response for returning
   let finalResult: FetchResult | null = null
