@@ -67,46 +67,41 @@ async function fetchWithClientSideResolution(url: string): Promise<string> {
       throw new Error(`Failed to fetch OpenAPI spec: ${response.status}`)
     }
 
-    // Check if references were resolved server-side
-    const refsResolved = response.headers.get('X-References-Resolved')
+    // Get the spec text first
+    const specText = await response.text()
 
-    // If server-side resolution was successful, return the response as-is
-    if (refsResolved === 'true') {
-      clientLogger.info('Using server-resolved OpenAPI spec')
-      return await response.text()
+    // Always try to resolve references client-side in production
+    // This ensures references are properly handled even if server-side resolution fails
+    if (typeof window !== 'undefined') {
+      try {
+        // Validate it's proper JSON first
+        JSON.parse(specText)
+
+        clientLogger.info('Resolving references client-side')
+
+        // Use dereference instead of bundle to fully resolve all references
+        const parser = new SwaggerParser()
+        const dereferenced = await parser.dereference(JSON.parse(specText), {
+          dereference: {
+            circular: true, // Allow circular references
+          },
+        })
+
+        // Return the fully dereferenced spec
+        return JSON.stringify(dereferenced)
+      } catch (error) {
+        clientLogger.error(
+          `Failed to resolve references client-side: ${
+            error instanceof Error ? error.message : String(error)
+          }`
+        )
+        // If client-side resolution fails, return the original spec
+        return specText
+      }
     }
 
-    // Otherwise, resolve references client-side using the proper approach
-    clientLogger.info(
-      'Server did not resolve references, resolving client-side'
-    )
-
-    try {
-      // First, get the text version of the spec
-      const specText = await response.text()
-
-      // Parse it to get the initial object (SwaggerParser will do its own parsing,
-      // but we need to check if we got valid JSON first)
-      JSON.parse(specText) // Just to validate it's proper JSON
-
-      // Use SwaggerParser.bundle instead of resolve+JSON.stringify
-      // Bundle creates a spec with only internal references and no circular references
-      // which makes it safe for serialization
-      const bundledSpec = await SwaggerParser.bundle(url)
-
-      // Return the bundled spec
-      return JSON.stringify(bundledSpec)
-    } catch (error) {
-      clientLogger.error(
-        `Failed to resolve references client-side: ${
-          error instanceof Error ? error.message : String(error)
-        }`
-      )
-      // If client-side resolution fails, fall back to the original spec
-      const fallbackText = await response.clone().text()
-      clientLogger.warn('Falling back to unresolved spec from server')
-      return fallbackText
-    }
+    // If we're not in the browser or client-side resolution fails, return the original spec
+    return specText
   } catch (error) {
     clientLogger.error(
       `Error fetching OpenAPI spec: ${

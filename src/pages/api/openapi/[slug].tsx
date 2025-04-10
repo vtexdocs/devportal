@@ -214,14 +214,39 @@ async function resolveReferences(
     // Parse the raw spec to get a JS object
     const parsedSpec = JSON.parse(spec)
 
-    // Use SwaggerParser.bundle() instead of resolve() to properly handle references
-    // bundle() creates a spec with only internal references that's safe for serialization
-    const bundledSpec = await SwaggerParser.bundle(parsedSpec)
+    // Create a new parser instance
+    const parser = new SwaggerParser()
 
-    // Convert back to string and indicate success
-    return {
-      spec: JSON.stringify(bundledSpec),
-      resolved: true,
+    try {
+      // First attempt to fully dereference - this is more thorough but may fail on complex specs
+      const dereferencedSpec = await parser.dereference(parsedSpec, {
+        dereference: {
+          circular: true, // Handle circular references
+        },
+      })
+
+      logger.info(`Successfully dereferenced spec for ${slug}`)
+
+      return {
+        spec: JSON.stringify(dereferencedSpec),
+        resolved: true,
+      }
+    } catch (dereferenceError) {
+      logger.info(
+        `Could not fully dereference spec for ${slug}: ${
+          dereferenceError instanceof Error
+            ? dereferenceError.message
+            : String(dereferenceError)
+        }. Falling back to bundle.`
+      )
+
+      // Fall back to bundle which handles references differently
+      const bundledSpec = await SwaggerParser.bundle(parsedSpec)
+
+      return {
+        spec: JSON.stringify(bundledSpec),
+        resolved: true,
+      }
     }
   } catch (error) {
     logger.error(
