@@ -352,7 +352,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
     const url = `${baseUrl}/api/openapi/${slug}`
 
-    let api
+    let apiSpec: string
     try {
       // Use fetch directly during build to avoid file system access issues with SwaggerParser
       if (
@@ -365,10 +365,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             `Failed to fetch OpenAPI spec for ${slug}: ${response.status}`
           )
         }
-        api = await response.json()
+        // Get the raw text directly
+        apiSpec = await response.text()
       } else {
-        // In development, use SwaggerParser
-        api = await SwaggerParser.dereference(url)
+        // In development, use SwaggerParser directly
+        const bundledSpec = await SwaggerParser.bundle(url)
+        apiSpec = JSON.stringify(bundledSpec) // Convert the bundled spec to string
       }
     } catch (error) {
       logger.error(`Parse Error on file ${slug}`)
@@ -378,16 +380,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       }
     }
 
-    const doc = JSON.stringify(await SwaggerParser.parse(api))
-    const endpointFile = new Oas(doc)
+    // Use Oas to process the spec string
+    const endpointFile = new Oas(apiSpec)
     const { info, paths } = endpointFile.getDefinition()
     const endpoints: {
       [key: string]: Endpoint
     } = {}
 
     endpoints[slug as string] = {
-      title: info.title,
-      description: getDescription(info.description || ''),
+      title: info?.title || slug,
+      description: getDescription(info?.description || ''),
     }
 
     if (paths) {
@@ -485,7 +487,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         slug,
-        doc,
+        doc: apiSpec,
         sectionSelected,
         sidebarfallback,
         endpoints,
