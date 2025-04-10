@@ -7,6 +7,7 @@ export const config = {
 import { githubConfig } from 'utils/github-config'
 import { getLogger } from 'utils/logging/log-util'
 import SwaggerParser from '@apidevtools/swagger-parser'
+import { NextApiRequest, NextApiResponse } from 'next'
 
 const logger = getLogger('openapi-endpoint')
 
@@ -68,10 +69,13 @@ const referencePaths = objectFlip({
   'VTEX - Audience API': 'audience-api',
 })
 
-function objectFlip(obj: { [x: string]: string }) {
-  return Object.keys(obj).reduce((ret, key) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+// Type for reference paths mapping
+interface ReferencePathsMapping {
+  [key: string]: string
+}
+
+function objectFlip(obj: { [x: string]: string }): ReferencePathsMapping {
+  return Object.keys(obj).reduce((ret: ReferencePathsMapping, key) => {
     ret[obj[key]] = key
     return ret
   }, {})
@@ -196,34 +200,52 @@ async function fetchFromGithubRaw(
 
 /**
  * Resolves references in an OpenAPI spec using SwaggerParser
+ * @returns An object with the resolved spec and a flag indicating if resolution succeeded
  */
-async function resolveReferences(spec: string, slug: string): Promise<string> {
+async function resolveReferences(
+  spec: string,
+  slug: string
+): Promise<{
+  spec: string
+  resolved: boolean
+}> {
   try {
     logger.info(`Resolving references for ${slug} spec using SwaggerParser`)
     // Parse the raw spec to get a JS object
     const parsedSpec = JSON.parse(spec)
 
-    // Use SwaggerParser to resolve all references
-    const resolvedSpec = await SwaggerParser.resolve(parsedSpec)
+    // Use SwaggerParser.bundle() instead of resolve() to properly handle references
+    // bundle() creates a spec with only internal references that's safe for serialization
+    const bundledSpec = await SwaggerParser.bundle(parsedSpec)
 
-    // Convert back to string
-    return JSON.stringify(resolvedSpec)
+    // Convert back to string and indicate success
+    return {
+      spec: JSON.stringify(bundledSpec),
+      resolved: true,
+    }
   } catch (error) {
     logger.error(
       `Error resolving references for ${slug}: ${
         error instanceof Error ? error.message : String(error)
       }`
     )
-    // If reference resolution fails, return the original spec
-    return spec
+    // If reference resolution fails, return the original spec with resolved=false
+    return {
+      spec,
+      resolved: false,
+    }
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function handler(req: any, res: any) {
-  const { slug } = req.query
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
+/**
+ * API handler for OpenAPI specifications
+ */
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const slugParam = req.query.slug
+  const slug = Array.isArray(slugParam) ? slugParam[0] : slugParam || ''
   const path = referencePaths[slug] || ''
 
   if (!path) {
@@ -302,10 +324,16 @@ export default async function handler(req: any, res: any) {
     // Return result if any source succeeded
     if (finalResult && finalResult.success && finalResult.body) {
       // Use SwaggerParser to resolve all references in the spec
-      const resolvedSpec = await resolveReferences(finalResult.body, slug)
+      const resolvedResult = await resolveReferences(finalResult.body, slug)
 
       logger.info(
-        `Successfully served OpenAPI spec for ${slug} from ${finalResult.source} with references resolved`
+        `Successfully served OpenAPI spec for ${slug} from ${
+          finalResult.source
+        } with references ${
+          resolvedResult.resolved
+            ? 'successfully resolved'
+            : 'not fully resolved'
+        }`
       )
 
       return res
@@ -314,8 +342,8 @@ export default async function handler(req: any, res: any) {
           `public, s-maxage=${configuredMaxAge}, stale-while-revalidate=${staleWhileRevalidate}`
         )
         .setHeader('X-Source', finalResult.source)
-        .setHeader('X-References-Resolved', 'true')
-        .send(resolvedSpec)
+        .setHeader('X-References-Resolved', resolvedResult.resolved.toString())
+        .send(resolvedResult.spec)
     }
 
     // All sources failed

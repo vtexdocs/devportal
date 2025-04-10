@@ -15,6 +15,13 @@ import '../../../../RapiDoc/src/rapidoc.js'
 import { flattenWithChildren } from 'utils/navigation-utils'
 import { getLogger } from 'utils/logging/log-util'
 
+// Client-side logger
+const clientLogger = {
+  info: (message: string) => console.info(`[OpenAPI Client] ${message}`),
+  warn: (message: string) => console.warn(`[OpenAPI Client] ${message}`),
+  error: (message: string) => console.error(`[OpenAPI Client] ${message}`),
+}
+
 interface Endpoint {
   title: string
   description: string
@@ -47,6 +54,69 @@ interface ReadmeSlugObj {
   apiMethod: string
 }
 
+/**
+ * Fetches OpenAPI spec and performs client-side reference resolution if needed
+ * @param url The URL to fetch the OpenAPI spec from
+ * @returns The OpenAPI spec with resolved references
+ */
+async function fetchWithClientSideResolution(url: string): Promise<string> {
+  try {
+    const response = await fetch(url)
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch OpenAPI spec: ${response.status}`)
+    }
+
+    // Check if references were resolved server-side
+    const refsResolved = response.headers.get('X-References-Resolved')
+
+    // If server-side resolution was successful, return the response as-is
+    if (refsResolved === 'true') {
+      clientLogger.info('Using server-resolved OpenAPI spec')
+      return await response.text()
+    }
+
+    // Otherwise, resolve references client-side using the proper approach
+    clientLogger.info(
+      'Server did not resolve references, resolving client-side'
+    )
+
+    try {
+      // First, get the text version of the spec
+      const specText = await response.text()
+
+      // Parse it to get the initial object (SwaggerParser will do its own parsing,
+      // but we need to check if we got valid JSON first)
+      JSON.parse(specText) // Just to validate it's proper JSON
+
+      // Use SwaggerParser.bundle instead of resolve+JSON.stringify
+      // Bundle creates a spec with only internal references and no circular references
+      // which makes it safe for serialization
+      const bundledSpec = await SwaggerParser.bundle(url)
+
+      // Return the bundled spec
+      return JSON.stringify(bundledSpec)
+    } catch (error) {
+      clientLogger.error(
+        `Failed to resolve references client-side: ${
+          error instanceof Error ? error.message : String(error)
+        }`
+      )
+      // If client-side resolution fails, fall back to the original spec
+      const fallbackText = await response.clone().text()
+      clientLogger.warn('Falling back to unresolved spec from server')
+      return fallbackText
+    }
+  } catch (error) {
+    clientLogger.error(
+      `Error fetching OpenAPI spec: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    )
+    throw error
+  }
+}
+
 function capitalize(content: string) {
   return content.replace(/^./, content[0].toUpperCase())
 }
@@ -67,6 +137,10 @@ function getDescription(description: string) {
 function getAbsoluteUrl(path: string): string {
   // During SSR
   if (typeof window === 'undefined') {
+    // Use localhost for development mode
+    if (process.env.NODE_ENV === 'development') {
+      return `http://localhost:3000${path}`
+    }
     const baseUrl =
       process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
     return `${baseUrl}${path}`
@@ -92,6 +166,11 @@ const APIPage: NextPage<Props> = ({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     resolvedSpec: any
   }>(null)
+  // State for client-side resolved spec
+  const [resolvedSpec, setResolvedSpec] = useState<string | null>(null)
+  const [isLoadingSpec, setIsLoadingSpec] = useState<boolean>(false)
+  const [errorLoadingSpec, setErrorLoadingSpec] = useState<string | null>(null)
+
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
   const hasHashTag = router.asPath.indexOf('#') > -1
@@ -120,6 +199,33 @@ const APIPage: NextPage<Props> = ({
 
   // Generate the absolute spec URL
   const specUrl = getAbsoluteUrl(`/api/openapi/${slug}`)
+
+  // Effect to handle client-side fetching and reference resolution
+  useEffect(() => {
+    // Only run in the browser, not during SSR
+    if (typeof window !== 'undefined') {
+      const fetchAndResolveSpec = async () => {
+        try {
+          setIsLoadingSpec(true)
+          setErrorLoadingSpec(null)
+
+          const resolvedSpecText = await fetchWithClientSideResolution(specUrl)
+          setResolvedSpec(resolvedSpecText)
+        } catch (error) {
+          setErrorLoadingSpec(
+            error instanceof Error
+              ? error.message
+              : 'Failed to load API specification'
+          )
+          clientLogger.error(`Failed to fetch and resolve spec: ${error}`)
+        } finally {
+          setIsLoadingSpec(false)
+        }
+      }
+
+      fetchAndResolveSpec()
+    }
+  }, [specUrl])
 
   useEffect(() => {
     const scrollDoc = () => {
@@ -154,6 +260,20 @@ const APIPage: NextPage<Props> = ({
     )
   }, [endpointPath])
 
+  // Display an error message if the spec couldn't be loaded
+  if (errorLoadingSpec && !doc) {
+    return (
+      <Box sx={{ mx: 'auto', p: '2em', maxWidth: '90%' }}>
+        <h2>Error Loading API Reference</h2>
+        <p>{errorLoadingSpec}</p>
+        <p>
+          Please try refreshing the page. If the problem persists, contact
+          support.
+        </p>
+      </Box>
+    )
+  }
+
   return (
     <>
       <Head>
@@ -176,11 +296,16 @@ const APIPage: NextPage<Props> = ({
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
+        {isLoadingSpec && !doc && (
+          <Box sx={{ textAlign: 'center', p: '2em' }}>
+            <p>Loading API specification...</p>
+          </Box>
+        )}
         <rapi-doc
           ref={rapidoc}
           spec-url={specUrl}
           postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
-          spec={doc}
+          spec={resolvedSpec}
           layout="column"
           render-style="focused"
           show-header="false"
@@ -196,8 +321,13 @@ const APIPage: NextPage<Props> = ({
           load-fonts={false}
           schema-style="table"
           schema-description-expanded={true}
+          schema-expand-level="2"
           id="the-doc"
           allow-spec-file-download={true}
+          allow-server-selection={true}
+          allow-spec-url-load={false}
+          allow-spec-file-load={false}
+          persist-auth="true"
         />
         <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
           <ArticlePagination
@@ -233,7 +363,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
     const url = `${baseUrl}/api/openapi/${slug}`
 
-    let api
+    let apiSpec: string
     try {
       // Use fetch directly during build to avoid file system access issues with SwaggerParser
       if (
@@ -246,29 +376,55 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             `Failed to fetch OpenAPI spec for ${slug}: ${response.status}`
           )
         }
-        api = await response.json()
+        // Get the raw text directly
+        apiSpec = await response.text()
+
+        try {
+          // Validate that it's valid JSON by parsing it
+          JSON.parse(apiSpec)
+        } catch (parseError) {
+          logger.error(`Invalid JSON in OpenAPI spec for ${slug}`)
+          throw new Error(`Invalid JSON in OpenAPI spec for ${slug}`)
+        }
       } else {
-        // In development, use SwaggerParser
-        api = await SwaggerParser.dereference(url)
+        // In development, use SwaggerParser directly with better error handling
+        try {
+          const bundledSpec = await SwaggerParser.bundle(url)
+          apiSpec = JSON.stringify(bundledSpec) // Convert the bundled spec to string
+        } catch (bundleError) {
+          // If we can't bundle the spec, try to at least fetch it as raw text
+          logger.info(
+            `Could not bundle spec for ${slug}, falling back to raw fetch`
+          )
+          const response = await fetch(url)
+          if (!response.ok) {
+            throw new Error(
+              `Failed to fetch raw OpenAPI spec for ${slug}: ${response.status}`
+            )
+          }
+          apiSpec = await response.text()
+        }
       }
     } catch (error) {
       logger.error(`Parse Error on file ${slug}`)
-      console.log(error)
+      logger.error(error instanceof Error ? error.message : String(error))
+
+      // Return notFound for any API spec that fails to parse
       return {
         notFound: true,
       }
     }
 
-    const doc = JSON.stringify(await SwaggerParser.parse(api))
-    const endpointFile = new Oas(doc)
+    // Use Oas to process the spec string
+    const endpointFile = new Oas(apiSpec)
     const { info, paths } = endpointFile.getDefinition()
     const endpoints: {
       [key: string]: Endpoint
     } = {}
 
     endpoints[slug as string] = {
-      title: info.title,
-      description: getDescription(info.description || ''),
+      title: info?.title || (slug as string),
+      description: getDescription(info?.description || ''),
     }
 
     if (paths) {
@@ -366,7 +522,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         slug,
-        doc,
+        doc: apiSpec,
         sectionSelected,
         sidebarfallback,
         endpoints,
