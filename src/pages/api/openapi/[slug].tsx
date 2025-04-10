@@ -281,7 +281,11 @@ export default async function handler(
 
   // Get cache configuration from github-config
   const configuredMaxAge = githubConfig.cacheTTL || 3600
-  const staleWhileRevalidate = configuredMaxAge * 24
+
+  // Define more cache parameters
+  const PRIMARY_TTL = configuredMaxAge
+  const FALLBACK_TTL = Math.floor(configuredMaxAge / 2)
+  const SWR_FACTOR = 24 // stale-while-revalidate multiplier
 
   // Track successful response for returning
   let finalResult: FetchResult | null = null
@@ -361,13 +365,27 @@ export default async function handler(
         }`
       )
 
+      // Calculate TTL based on source (primary source gets longer TTL)
+      const ttl = finalResult.source === 'jsdelivr' ? PRIMARY_TTL : FALLBACK_TTL
+      const swr = ttl * SWR_FACTOR
+
       return res
         .setHeader(
-          'Cache-Control',
-          `public, s-maxage=${configuredMaxAge}, stale-while-revalidate=${staleWhileRevalidate}`
+          'Netlify-CDN-Cache-Control',
+          `public, s-maxage=${ttl}, stale-while-revalidate=${swr}, durable`
         )
+        .setHeader(
+          'Cache-Control',
+          `public, max-age=0, s-maxage=${ttl}, stale-while-revalidate=${swr}, must-revalidate`
+        )
+        .setHeader('Netlify-Cache-Tag', `openapi,${slug}`)
+        .setHeader('Vary', 'Accept')
         .setHeader('X-Source', finalResult.source)
         .setHeader('X-References-Resolved', resolvedResult.resolved.toString())
+        .setHeader(
+          'X-Cache-Debug',
+          `source=${finalResult.source},resolved=${resolvedResult.resolved},ttl=${ttl}`
+        )
         .send(resolvedResult.spec)
     }
 
