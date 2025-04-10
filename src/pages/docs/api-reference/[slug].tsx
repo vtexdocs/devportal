@@ -103,7 +103,9 @@ async function fetchWithClientSideResolution(url: string): Promise<string> {
         }`
       )
       // If client-side resolution fails, fall back to the original spec
-      return await response.text()
+      const fallbackText = await response.clone().text()
+      clientLogger.warn('Falling back to unresolved spec from server')
+      return fallbackText
     }
   } catch (error) {
     clientLogger.error(
@@ -135,6 +137,10 @@ function getDescription(description: string) {
 function getAbsoluteUrl(path: string): string {
   // During SSR
   if (typeof window === 'undefined') {
+    // Use localhost for development mode
+    if (process.env.NODE_ENV === 'development') {
+      return `http://localhost:3000${path}`
+    }
     const baseUrl =
       process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
     return `${baseUrl}${path}`
@@ -297,9 +303,9 @@ const APIPage: NextPage<Props> = ({
         )}
         <rapi-doc
           ref={rapidoc}
-          spec-url={resolvedSpec ? undefined : specUrl}
+          spec-url={specUrl}
           postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
-          spec={resolvedSpec || doc}
+          spec={resolvedSpec}
           layout="column"
           render-style="focused"
           show-header="false"
@@ -315,8 +321,13 @@ const APIPage: NextPage<Props> = ({
           load-fonts={false}
           schema-style="table"
           schema-description-expanded={true}
+          schema-expand-level="2"
           id="the-doc"
           allow-spec-file-download={true}
+          allow-server-selection={true}
+          allow-spec-url-load={false}
+          allow-spec-file-load={false}
+          persist-auth="true"
         />
         <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
           <ArticlePagination
@@ -367,14 +378,38 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         }
         // Get the raw text directly
         apiSpec = await response.text()
+
+        try {
+          // Validate that it's valid JSON by parsing it
+          JSON.parse(apiSpec)
+        } catch (parseError) {
+          logger.error(`Invalid JSON in OpenAPI spec for ${slug}`)
+          throw new Error(`Invalid JSON in OpenAPI spec for ${slug}`)
+        }
       } else {
-        // In development, use SwaggerParser directly
-        const bundledSpec = await SwaggerParser.bundle(url)
-        apiSpec = JSON.stringify(bundledSpec) // Convert the bundled spec to string
+        // In development, use SwaggerParser directly with better error handling
+        try {
+          const bundledSpec = await SwaggerParser.bundle(url)
+          apiSpec = JSON.stringify(bundledSpec) // Convert the bundled spec to string
+        } catch (bundleError) {
+          // If we can't bundle the spec, try to at least fetch it as raw text
+          logger.info(
+            `Could not bundle spec for ${slug}, falling back to raw fetch`
+          )
+          const response = await fetch(url)
+          if (!response.ok) {
+            throw new Error(
+              `Failed to fetch raw OpenAPI spec for ${slug}: ${response.status}`
+            )
+          }
+          apiSpec = await response.text()
+        }
       }
     } catch (error) {
       logger.error(`Parse Error on file ${slug}`)
-      console.log(error)
+      logger.error(error instanceof Error ? error.message : String(error))
+
+      // Return notFound for any API spec that fails to parse
       return {
         notFound: true,
       }
@@ -388,7 +423,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     } = {}
 
     endpoints[slug as string] = {
-      title: info?.title || slug,
+      title: info?.title || (slug as string),
       description: getDescription(info?.description || ''),
     }
 

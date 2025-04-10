@@ -7,6 +7,7 @@ export const config = {
 import { githubConfig } from 'utils/github-config'
 import { getLogger } from 'utils/logging/log-util'
 import SwaggerParser from '@apidevtools/swagger-parser'
+import { NextApiRequest, NextApiResponse } from 'next'
 
 const logger = getLogger('openapi-endpoint')
 
@@ -68,10 +69,13 @@ const referencePaths = objectFlip({
   'VTEX - Audience API': 'audience-api',
 })
 
-function objectFlip(obj: { [x: string]: string }) {
-  return Object.keys(obj).reduce((ret, key) => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
+// Type for reference paths mapping
+interface ReferencePathsMapping {
+  [key: string]: string
+}
+
+function objectFlip(obj: { [x: string]: string }): ReferencePathsMapping {
+  return Object.keys(obj).reduce((ret: ReferencePathsMapping, key) => {
     ret[obj[key]] = key
     return ret
   }, {})
@@ -233,11 +237,15 @@ async function resolveReferences(
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function handler(req: any, res: any) {
-  const { slug } = req.query
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
+/**
+ * API handler for OpenAPI specifications
+ */
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  const slugParam = req.query.slug
+  const slug = Array.isArray(slugParam) ? slugParam[0] : slugParam || ''
   const path = referencePaths[slug] || ''
 
   if (!path) {
