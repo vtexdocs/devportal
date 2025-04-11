@@ -2139,21 +2139,6 @@
           ]
         },
         {
-          "name": "Conversational Commerce",
-          "slug": "conversational-commerce-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Create Zendesk integration",
-              "slug": "create-zendesk-integration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
           "name": "Search",
           "slug": "search-category",
           "origin": "",
