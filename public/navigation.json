@@ -15217,6 +15217,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore WebOps: Improved the integration with the Headless CMS",
+                  "slug": "2025-04-15-faststore-webops-improved-the-integration-with-the-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore WebOps: Self-service domain setup now available",
                   "slug": "2025-04-08-faststore-webops-self-service-domain-setup-now-available",
                   "origin": "",
