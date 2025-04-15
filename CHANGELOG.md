@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.3](https://github.com/vtexdocs/devportal/compare/v1.19.2...v1.19.3) (2025-04-15)
+
+
+### Features
+
+* optimize OpenAPI route with Netlify-specific caching improvements ([9d5c7b2](https://github.com/vtexdocs/devportal/commit/9d5c7b2d6ac20baf34af74599fc5b9cae54021ae))
+* reduce OpenAPI cache TTL to 5 minutes for faster updates ([fa7a819](https://github.com/vtexdocs/devportal/commit/fa7a8196bf2d6257c01f25fe87d0b7ec3e441848))
+* update netlify.toml / add redirect ([b6abefc](https://github.com/vtexdocs/devportal/commit/b6abefc5ab820640e904f7da2e145b71ed2093a9))
+
+
+### Performance
+
+* **auth:** optimize session handling and caching ([572437f](https://github.com/vtexdocs/devportal/commit/572437f454654ed685b67c3b312703dcd1fec1da))
+
+
+### Chore
+
+* update RapiDoc submodule to latest commit ([fa96ff9](https://github.com/vtexdocs/devportal/commit/fa96ff9d41777908dee678cf6c832ebe6f9a2aae))
+
+
+### Docs
+
+* add caching documentation for technical writers and reduce cache expiration times ([d8a8b4c](https://github.com/vtexdocs/devportal/commit/d8a8b4c46aac84704703ec3984254ee29f505258))
+* add comprehensive architecture documentation for the Dev Portal ([fc9a9d9](https://github.com/vtexdocs/devportal/commit/fc9a9d9329af82bacbb1dcbfc7c055e22046dc2a))
+* remove Conversational Commerce from navigation ([248fd02](https://github.com/vtexdocs/devportal/commit/248fd02e2c54536751989bfd043236741a5ba8d3))
+
 ### [1.19.2](https://github.com/vtexdocs/devportal/compare/v1.19.1...v1.19.2) (2025-04-10)
 
 
