@@ -15,6 +15,13 @@ import '../../../../RapiDoc/src/rapidoc.js'
 import { flattenWithChildren } from 'utils/navigation-utils'
 import { getLogger } from 'utils/logging/log-util'
 
+// Client-side logger
+const clientLogger = {
+  info: (message: string) => console.info(`[OpenAPI Client] ${message}`),
+  warn: (message: string) => console.warn(`[OpenAPI Client] ${message}`),
+  error: (message: string) => console.error(`[OpenAPI Client] ${message}`),
+}
+
 interface Endpoint {
   title: string
   description: string
@@ -47,6 +54,64 @@ interface ReadmeSlugObj {
   apiMethod: string
 }
 
+/**
+ * Fetches OpenAPI spec and performs client-side reference resolution if needed
+ * @param url The URL to fetch the OpenAPI spec from
+ * @returns The OpenAPI spec with resolved references
+ */
+async function fetchWithClientSideResolution(url: string): Promise<string> {
+  try {
+    const response = await fetch(url)
+
+    if (!response.ok) {
+      throw new Error(`Failed to fetch OpenAPI spec: ${response.status}`)
+    }
+
+    // Get the spec text first
+    const specText = await response.text()
+
+    // Always try to resolve references client-side in production
+    // This ensures references are properly handled even if server-side resolution fails
+    if (typeof window !== 'undefined') {
+      try {
+        // Validate it's proper JSON first
+        JSON.parse(specText)
+
+        clientLogger.info('Resolving references client-side')
+
+        // Use dereference instead of bundle to fully resolve all references
+        const parser = new SwaggerParser()
+        const dereferenced = await parser.dereference(JSON.parse(specText), {
+          dereference: {
+            circular: true, // Allow circular references
+          },
+        })
+
+        // Return the fully dereferenced spec
+        return JSON.stringify(dereferenced)
+      } catch (error) {
+        clientLogger.error(
+          `Failed to resolve references client-side: ${
+            error instanceof Error ? error.message : String(error)
+          }`
+        )
+        // If client-side resolution fails, return the original spec
+        return specText
+      }
+    }
+
+    // If we're not in the browser or client-side resolution fails, return the original spec
+    return specText
+  } catch (error) {
+    clientLogger.error(
+      `Error fetching OpenAPI spec: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    )
+    throw error
+  }
+}
+
 function capitalize(content: string) {
   return content.replace(/^./, content[0].toUpperCase())
 }
@@ -63,7 +128,23 @@ function getDescription(description: string) {
   )
 }
 
-const referencePaths = await getReferencePaths()
+// Ensure the URL has a proper protocol during build time
+function getAbsoluteUrl(path: string): string {
+  // During SSR
+  if (typeof window === 'undefined') {
+    // Use localhost for development mode
+    if (process.env.NODE_ENV === 'development') {
+      return `http://localhost:3000${path}`
+    }
+    const baseUrl =
+      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
+    return `${baseUrl}${path}`
+  }
+  // In browser
+  return path
+}
+
+// Using await here without wasting the result
 const slugs = Object.keys(await getReferencePaths())
 
 const APIPage: NextPage<Props> = ({
@@ -80,6 +161,11 @@ const APIPage: NextPage<Props> = ({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     resolvedSpec: any
   }>(null)
+  // State for client-side resolved spec
+  const [resolvedSpec, setResolvedSpec] = useState<string | null>(null)
+  const [isLoadingSpec, setIsLoadingSpec] = useState<boolean>(false)
+  const [errorLoadingSpec, setErrorLoadingSpec] = useState<string | null>(null)
+
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
   const hasHashTag = router.asPath.indexOf('#') > -1
@@ -105,6 +191,36 @@ const APIPage: NextPage<Props> = ({
     },
   }
   const [endpointPagination, setEndpointPagination] = useState(pag)
+
+  // Generate the absolute spec URL
+  const specUrl = getAbsoluteUrl(`/api/openapi/${slug}`)
+
+  // Effect to handle client-side fetching and reference resolution
+  useEffect(() => {
+    // Only run in the browser, not during SSR
+    if (typeof window !== 'undefined') {
+      const fetchAndResolveSpec = async () => {
+        try {
+          setIsLoadingSpec(true)
+          setErrorLoadingSpec(null)
+
+          const resolvedSpecText = await fetchWithClientSideResolution(specUrl)
+          setResolvedSpec(resolvedSpecText)
+        } catch (error) {
+          setErrorLoadingSpec(
+            error instanceof Error
+              ? error.message
+              : 'Failed to load API specification'
+          )
+          clientLogger.error(`Failed to fetch and resolve spec: ${error}`)
+        } finally {
+          setIsLoadingSpec(false)
+        }
+      }
+
+      fetchAndResolveSpec()
+    }
+  }, [specUrl])
 
   useEffect(() => {
     const scrollDoc = () => {
@@ -139,6 +255,20 @@ const APIPage: NextPage<Props> = ({
     )
   }, [endpointPath])
 
+  // Display an error message if the spec couldn't be loaded
+  if (errorLoadingSpec && !doc) {
+    return (
+      <Box sx={{ mx: 'auto', p: '2em', maxWidth: '90%' }}>
+        <h2>Error Loading API Reference</h2>
+        <p>{errorLoadingSpec}</p>
+        <p>
+          Please try refreshing the page. If the problem persists, contact
+          support.
+        </p>
+      </Box>
+    )
+  }
+
   return (
     <>
       <Head>
@@ -161,11 +291,16 @@ const APIPage: NextPage<Props> = ({
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
+        {isLoadingSpec && !doc && (
+          <Box sx={{ textAlign: 'center', p: '2em' }}>
+            <p>Loading API specification...</p>
+          </Box>
+        )}
         <rapi-doc
           ref={rapidoc}
-          spec-url={`/api/openapi/${slug}`}
-          postman-url={`/api/postman/${slug}`}
-          spec={doc}
+          spec-url={specUrl}
+          postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
+          spec={resolvedSpec}
           layout="column"
           render-style="focused"
           show-header="false"
@@ -181,8 +316,13 @@ const APIPage: NextPage<Props> = ({
           load-fonts={false}
           schema-style="table"
           schema-description-expanded={true}
+          schema-expand-level="2"
           id="the-doc"
           allow-spec-file-download={true}
+          allow-server-selection={true}
+          allow-spec-url-load={false}
+          allow-spec-file-load={false}
+          persist-auth="true"
         />
         <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
           <ArticlePagination
@@ -208,31 +348,78 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug || ''
-  const url = referencePaths[slug as string]
   const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()
   const logger = getLogger('API Reference')
-  let api
+
   if (slugs.includes(slug as string)) {
+    // Use the production URL for fetching specs during build time
+    const baseUrl =
+      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
+    const url = `${baseUrl}/api/openapi/${slug}`
+
+    let apiSpec: string
     try {
-      api = await SwaggerParser.dereference(url)
+      // Use fetch directly during build to avoid file system access issues with SwaggerParser
+      if (
+        process.env.NODE_ENV === 'production' &&
+        typeof window === 'undefined'
+      ) {
+        const response = await fetch(url)
+        if (!response.ok) {
+          throw new Error(
+            `Failed to fetch OpenAPI spec for ${slug}: ${response.status}`
+          )
+        }
+        // Get the raw text directly
+        apiSpec = await response.text()
+
+        try {
+          // Validate that it's valid JSON by parsing it
+          JSON.parse(apiSpec)
+        } catch (parseError) {
+          logger.error(`Invalid JSON in OpenAPI spec for ${slug}`)
+          throw new Error(`Invalid JSON in OpenAPI spec for ${slug}`)
+        }
+      } else {
+        // In development, use SwaggerParser directly with better error handling
+        try {
+          const bundledSpec = await SwaggerParser.bundle(url)
+          apiSpec = JSON.stringify(bundledSpec) // Convert the bundled spec to string
+        } catch (bundleError) {
+          // If we can't bundle the spec, try to at least fetch it as raw text
+          logger.info(
+            `Could not bundle spec for ${slug}, falling back to raw fetch`
+          )
+          const response = await fetch(url)
+          if (!response.ok) {
+            throw new Error(
+              `Failed to fetch raw OpenAPI spec for ${slug}: ${response.status}`
+            )
+          }
+          apiSpec = await response.text()
+        }
+      }
     } catch (error) {
       logger.error(`Parse Error on file ${slug}`)
-      console.log(error)
+      logger.error(error instanceof Error ? error.message : String(error))
+
+      // Return notFound for any API spec that fails to parse
       return {
         notFound: true,
       }
     }
-    const doc = JSON.stringify(await SwaggerParser.parse(api))
-    const endpointFile = new Oas(doc)
+
+    // Use Oas to process the spec string
+    const endpointFile = new Oas(apiSpec)
     const { info, paths } = endpointFile.getDefinition()
     const endpoints: {
       [key: string]: Endpoint
     } = {}
 
     endpoints[slug as string] = {
-      title: info.title,
-      description: getDescription(info.description || ''),
+      title: info?.title || (slug as string),
+      description: getDescription(info?.description || ''),
     }
 
     if (paths) {
@@ -330,8 +517,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         slug,
-        doc,
-        url,
+        doc: apiSpec,
         sectionSelected,
         sidebarfallback,
         endpoints,

@@ -2139,21 +2139,6 @@
           ]
         },
         {
-          "name": "Conversational Commerce",
-          "slug": "conversational-commerce-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Create Zendesk integration",
-              "slug": "create-zendesk-integration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
           "name": "Search",
           "slug": "search-category",
           "origin": "",
@@ -15231,6 +15216,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore WebOps: Improved the integration with the Headless CMS",
+                  "slug": "2025-04-15-faststore-webops-improved-the-integration-with-the-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore WebOps: Self-service domain setup now available",
                   "slug": "2025-04-08-faststore-webops-self-service-domain-setup-now-available",
