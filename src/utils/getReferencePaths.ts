@@ -13,7 +13,8 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - Checkout API': 'checkout-api',
   'VTEX - Checkout Configuration API': 'checkout-configuration-api',
   'VTEX - Customer Credit API': 'customer-credit-api',
-  'VTEX - Delivery Promise Notification API': 'delivery-promise-notification-api',
+  'VTEX - Delivery Promise Notification API':
+    'delivery-promise-notification-api',
   'VTEX - GiftCard Hub API': 'giftcard-hub-api',
   'VTEX - Giftcard API': 'giftcard-api',
   'VTEX - Giftcard Provider Protocol': 'giftcard-provider-protocol',
