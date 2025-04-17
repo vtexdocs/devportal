@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.5](https://github.com/vtexdocs/devportal/compare/v1.19.4...v1.19.5) (2025-04-17)
+
+
+### Features
+
+* add delivery promise api release note ([a2c0845](https://github.com/vtexdocs/devportal/commit/a2c084544e50f9837e9d78a0916967d4fd30c852))
+
+
+### Bug Fixes
+
+* **getreferencepaths:** fix prettier issues ([54afd62](https://github.com/vtexdocs/devportal/commit/54afd626f7174e6cf271b781e1dad3d612f118a0))
+
 ### [1.19.4](https://github.com/vtexdocs/devportal/compare/v1.19.3...v1.19.4) (2025-04-17)
 
 
