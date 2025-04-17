@@ -15241,6 +15241,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New Delivery Promise Notification API",
+                  "slug": "2025-04-16-new-delivery-promise-notification-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Store Framework: Improved image dimension control with Store Image",
                   "slug": "2025-04-16-store-framework-improved-image-dimension-control-with-store-image",
                   "origin": "",
