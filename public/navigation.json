@@ -4128,7 +4128,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/brand/-categoryId-",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/category/-categoryId-",
                   "children": []
                 },
                 {
