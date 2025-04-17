@@ -5027,6 +5027,30 @@
           ]
         },
         {
+          "name": "Delivery Promise Notification API",
+          "slug": "delivery-promise-notification-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Delivery Promise",
+              "slug": "delivery-promise-notification-api-delivery-promise",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Update external product availability",
+                  "slug": "delivery-promise-notification-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "GiftCard API",
           "slug": "giftcard-api",
           "origin": "",
@@ -15210,7 +15234,7 @@
           "origin": "",
           "type": "category",
           "children": [
-           {
+            {
               "name": "April",
               "slug": "april-2025",
               "origin": "",
@@ -15239,7 +15263,7 @@
                 }
               ]
             },
-           {
+            {
               "name": "March",
               "slug": "march-2025",
               "origin": "",
@@ -15275,7 +15299,7 @@
                 }
               ]
             },
-           {
+            {
               "name": "February",
               "slug": "february-2025",
               "origin": "",
