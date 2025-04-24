@@ -5,6 +5,7 @@ import NewsletterSection from 'components/newsletter-section'
 import DocumentationSection from 'components/documentation-section'
 import LastUpdatesSection from 'components/last-updates-section'
 import EducationSection from 'components/education-section'
+import SubscriptionList from 'components/subscription-list'
 
 import Head from 'next/head'
 import styles from 'styles/landing-page'
@@ -41,6 +42,7 @@ const Home: Page<Props> = ({ branch }) => {
         <DocumentationSection />
         <LastUpdatesSection />
         <EducationSection />
+        <SubscriptionList />
       </Grid>
     </>
   )
