@@ -1,5 +1,10 @@
 import React, { useState } from 'react'
+import { Box, Text, Flex } from '@vtex/brand-ui'
+import { getMessages } from 'utils/get-messages'
+import { getSubscritionURL } from 'utils/get-url'
 import styles from './styles'
+
+const messages = getMessages()
 
 const SubscriptionList: React.FC = () => {
   const [email, setEmail] = useState('')
@@ -32,26 +37,49 @@ const SubscriptionList: React.FC = () => {
   }
 
   return (
-    <div style={styles.container}>
-      <h2 style={styles.title}>Stay updated on documentation</h2>
-      <p style={styles.description}>Subscribe to our monthly newsletter.</p>
-      <div style={styles.inputContainer}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Enter your email"
-          style={styles.input}
-        />
-        <button onClick={handleSubscribe} style={styles.button}>
-          Subscribe
-        </button>
-      </div>
-      <p style={styles.privacyText}>
-        By subscribing to our newsletter you agree to our Privacy Policy
-      </p>
-      {message && <p style={styles.message(message)}>{message}</p>}
-    </div>
+    <Box sx={styles.sectionContainer}>
+      <Text sx={styles.title}>
+        {messages['landing_page_subscription.title']}
+      </Text>
+      <Flex sx={styles.cardContainer}>
+        <div sx={styles.container}>
+          <Text sx={styles.description}>
+            {messages['landing_page_subscription.description']}
+          </Text>
+          <div sx={styles.inputContainer}>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              sx={styles.input}
+            />
+            <button onClick={handleSubscribe} sx={styles.button}>
+              {messages['landing_page_newsletter.Button']}
+            </button>
+          </div>
+          <Text sx={styles.privacyText}>
+            {
+              messages['landing_page_subscription.textLink'].split(
+                'Privacy Policy'
+              )[0]
+            }
+            <a
+              href={getSubscritionURL()}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy Policy
+            </a>
+          </Text>
+          {message && (
+            <p sx={styles.message(message.includes('successfully'))}>
+              {message}
+            </p>
+          )}
+        </div>
+      </Flex>
+    </Box>
   )
 }
 
