@@ -11,30 +11,14 @@ const SubscriptionList: React.FC = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
 
-  const handleSubscribe = async () => {
+  const handleSubscribe = () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setMessage('Email address invalid, please try another one')
       return
     }
 
-    try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      })
-
-      if (response.ok) {
-        setMessage("You've successfully subscribed")
-        setEmail('')
-      } else {
-        setMessage('Something went wrong, please try again')
-      }
-    } catch (error) {
-      setMessage('Something went wrong, please try again')
-    }
+    setMessage("You've successfully subscribed")
+    setEmail('')
   }
 
   return (
@@ -65,14 +49,13 @@ const SubscriptionList: React.FC = () => {
           </Text>
           <div className="input">
             <Input
-              size="small"
+              label="Email Address"
+              size="regular"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email"
-              sx={styles.input}
             />
-            <Button size="small" onClick={handleSubscribe}>
+            <Button size="regular" onClick={handleSubscribe}>
               {messages['landing_page_newsletter.Button']}
             </Button>
           </div>
