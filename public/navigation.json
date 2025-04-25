@@ -13407,6 +13407,13 @@
                       "children": []
                     },
                     {
+                      "name": "RatingField",
+                      "slug": "faststore/molecules-rating-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "RegionBar",
                       "slug": "faststore/molecules-region-bar",
                       "origin": "",
