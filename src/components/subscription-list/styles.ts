@@ -36,6 +36,16 @@ const inputContainer: SxStyleProp = {
   width: '100%',
 }
 
+const container: SxStyleProp = {
+  maxWidth: '400px',
+  margin: '0 auto',
+  textAlign: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+}
+
 const input: SxStyleProp = {
   flex: 1,
   padding: ['12px', '16px'],
@@ -89,6 +99,7 @@ const description: SxStyleProp = {
 export default {
   sectionContainer,
   cardContainer,
+  container,
   title,
   description,
   inputContainer,
