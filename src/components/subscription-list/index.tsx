@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Box, Text, Flex } from '@vtex/brand-ui'
 import { getMessages } from 'utils/get-messages'
-import { getSubscritionURL } from 'utils/get-url'
+import { getSubscritionURL, getNewsletterURL } from 'utils/get-url'
 import styles from './styles'
 
 const messages = getMessages()
@@ -44,7 +44,23 @@ const SubscriptionList: React.FC = () => {
       <Flex sx={styles.cardContainer}>
         <div sx={styles.container}>
           <Text sx={styles.description}>
-            {messages['landing_page_subscription.description']}
+            {
+              messages['landing_page_subscription.description'].split(
+                'newsletter'
+              )[0]
+            }
+            <a
+              href={getNewsletterURL()}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              newsletter
+            </a>
+            {
+              messages['landing_page_subscription.description'].split(
+                'newsletter'
+              )[1]
+            }
           </Text>
           <div sx={styles.inputContainer}>
             <input
