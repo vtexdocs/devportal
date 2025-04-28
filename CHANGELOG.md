@@ -2,6 +2,124 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.6](https://github.com/vtexdocs/devportal/compare/v1.19.5...v1.19.6) (2025-04-28)
+
+
+### Features
+
+* add pick and pack api and release note to navigation ([14afd66](https://github.com/vtexdocs/devportal/commit/14afd66aac54926e670d60cec039ecf20b956ebc))
+
+
+### Docs
+
+* **navigation.json:** update ([f23a6ec](https://github.com/vtexdocs/devportal/commit/f23a6ec42cf3cddc16f0f6caa9679e1250163d09))
+* **navigation.json:** update ([843f536](https://github.com/vtexdocs/devportal/commit/843f5367c88c34e2d90e0dae0b116ba9f1ccedf3))
+* **netlify.toml:** redirect ([38dcd4f](https://github.com/vtexdocs/devportal/commit/38dcd4fcde186b0d224a1403d5528995460836d8))
+* the endpoint path changed ([002345b](https://github.com/vtexdocs/devportal/commit/002345b757ecd870da5c011c3d4eaeb6b13c478d))
+
+### [1.19.5](https://github.com/vtexdocs/devportal/compare/v1.19.4...v1.19.5) (2025-04-17)
+
+
+### Features
+
+* add delivery promise api release note ([a2c0845](https://github.com/vtexdocs/devportal/commit/a2c084544e50f9837e9d78a0916967d4fd30c852))
+
+
+### Bug Fixes
+
+* **getreferencepaths:** fix prettier issues ([54afd62](https://github.com/vtexdocs/devportal/commit/54afd626f7174e6cf271b781e1dad3d612f118a0))
+
+### [1.19.4](https://github.com/vtexdocs/devportal/compare/v1.19.3...v1.19.4) (2025-04-17)
+
+
+### Features
+
+* add delivery promise api ([8315018](https://github.com/vtexdocs/devportal/commit/831501873d2c0aa752617bbd1808dba7ce72b0f2))
+
+
+### Docs
+
+* **navigation.json:** update ([b07cb07](https://github.com/vtexdocs/devportal/commit/b07cb07460e2bf7e20720e6bd8f65332533b6fce))
+* **navigation.json:** update ([fc50656](https://github.com/vtexdocs/devportal/commit/fc50656e8686d90664159801270afaa1c3512361))
+
+### [1.19.3](https://github.com/vtexdocs/devportal/compare/v1.19.2...v1.19.3) (2025-04-15)
+
+
+### Features
+
+* optimize OpenAPI route with Netlify-specific caching improvements ([9d5c7b2](https://github.com/vtexdocs/devportal/commit/9d5c7b2d6ac20baf34af74599fc5b9cae54021ae))
+* reduce OpenAPI cache TTL to 5 minutes for faster updates ([fa7a819](https://github.com/vtexdocs/devportal/commit/fa7a8196bf2d6257c01f25fe87d0b7ec3e441848))
+* update netlify.toml / add redirect ([b6abefc](https://github.com/vtexdocs/devportal/commit/b6abefc5ab820640e904f7da2e145b71ed2093a9))
+
+
+### Performance
+
+* **auth:** optimize session handling and caching ([572437f](https://github.com/vtexdocs/devportal/commit/572437f454654ed685b67c3b312703dcd1fec1da))
+
+
+### Chore
+
+* update RapiDoc submodule to latest commit ([fa96ff9](https://github.com/vtexdocs/devportal/commit/fa96ff9d41777908dee678cf6c832ebe6f9a2aae))
+
+
+### Docs
+
+* add caching documentation for technical writers and reduce cache expiration times ([d8a8b4c](https://github.com/vtexdocs/devportal/commit/d8a8b4c46aac84704703ec3984254ee29f505258))
+* add comprehensive architecture documentation for the Dev Portal ([fc9a9d9](https://github.com/vtexdocs/devportal/commit/fc9a9d9329af82bacbb1dcbfc7c055e22046dc2a))
+* remove Conversational Commerce from navigation ([248fd02](https://github.com/vtexdocs/devportal/commit/248fd02e2c54536751989bfd043236741a5ba8d3))
+
+### [1.19.2](https://github.com/vtexdocs/devportal/compare/v1.19.1...v1.19.2) (2025-04-10)
+
+
+### Bug Fixes
+
+* **api:** correct SwaggerParser options for handling circular references ([57607f5](https://github.com/vtexdocs/devportal/commit/57607f53942625d558a9f4b92dccdea5d0492044))
+
+### [1.19.1](https://github.com/vtexdocs/devportal/compare/v1.19.0...v1.19.1) (2025-04-10)
+
+
+### Features
+
+* **api:** integrate SwaggerParser to resolve OpenAPI references ([8ab24b9](https://github.com/vtexdocs/devportal/commit/8ab24b923c75ff79f59fbd09a03ba54a55cb9a95))
+
+
+### Bug Fixes
+
+* **api:** improve OpenAPI reference resolution with SwaggerParser.bundle() ([92b91f5](https://github.com/vtexdocs/devportal/commit/92b91f57c50a07a4daea2271c2f52d602cc6b4f1))
+* **api:** improve OpenAPI spec reference resolution and error handling ([337bd78](https://github.com/vtexdocs/devportal/commit/337bd78a581e8169e66082815369d38d75d6cd90))
+* **api:** make X-References-Resolved header accurately reflect resolution success ([3590ae9](https://github.com/vtexdocs/devportal/commit/3590ae92f4ffc89c37c9bf00c54f31303ebb83c9))
+* correct OpenAPI spec handling in static site generation ([71df125](https://github.com/vtexdocs/devportal/commit/71df12559d6e59fb22bcfefcce10ca6361329dd1))
+
+
+### Refactoring
+
+* **api:** update getReferencePaths to use internal API routes ([698deb7](https://github.com/vtexdocs/devportal/commit/698deb7fca21745b6fb2e278b9f567074c0033d1))
+
+## [1.19.0](https://github.com/vtexdocs/devportal/compare/v1.18.4...v1.19.0) (2025-04-09)
+
+
+### Features
+
+* **api:** improve OpenAPI spec delivery with tiered caching strategy ([88bbf15](https://github.com/vtexdocs/devportal/commit/88bbf15398d0f7243eaf678c6f078c588cc95ca4))
+
+
+### Docs
+
+* **navigation.json:** Add 'Sending custom events' guide ([d0df27d](https://github.com/vtexdocs/devportal/commit/d0df27dd7553c5ff4cd57f331c95e3d1454ca5ee))
+* **navigation.json:** add FastStore Cart overview ([d365026](https://github.com/vtexdocs/devportal/commit/d365026adc4f790b8d23c221bc974e23e9a93823))
+* **navigation.json:** domain management in webops ([36c0aa2](https://github.com/vtexdocs/devportal/commit/36c0aa2f83495cfd61b63c9ff018eea526dfcf33))
+* **navigation.json:** fixing slug ([8339442](https://github.com/vtexdocs/devportal/commit/833944283f4b967aaf5e6e98bffe41809056c4f3))
+* **navigation.json:** remove FastStore and Ad Network integration guide ([8b7bf90](https://github.com/vtexdocs/devportal/commit/8b7bf90ecb97f714313f49ce04df9634acf1d632))
+* **navigation:** add refresh token api ref and guide ([87197e6](https://github.com/vtexdocs/devportal/commit/87197e6d8e09c123244ecaeca8641a0188e4c155))
+* **navigation:** remove deprecated guide ([da30d1d](https://github.com/vtexdocs/devportal/commit/da30d1d1927f0329ea1a059df98b752ec5b330bb))
+* **navigation:** remove vtex ad network api ([3add51a](https://github.com/vtexdocs/devportal/commit/3add51a5ea76e065a26e88d8a1abd466fb49172b))
+* remove references to vtex ad network api ([83f78cb](https://github.com/vtexdocs/devportal/commit/83f78cbb84dfac7d2f54b0002e8bce7f6e30aefd))
+
+
+### Chore
+
+* **modalbase.tsx:** add ModalFooter to FastStore Modal usage example ([9e1f8ab](https://github.com/vtexdocs/devportal/commit/9e1f8ab662e426612f964b76712fab7b4618f84e))
+
 ### [1.18.4](https://github.com/vtexdocs/devportal/compare/v1.18.3...v1.18.4) (2025-03-31)
 
 

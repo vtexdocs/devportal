@@ -1807,3 +1807,14 @@ from = "/docs/guides/allow-manual-prices-on-instore"
 status = 308
 to = "/docs/guides/allow-manual-prices-on-vtex-sales-app"
 
+[[redirects]]
+force = true
+from = "/docs/api-reference/shopping-cart#itemsupdate"
+status = 308
+to = "/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForm/-orderFormId-/items/update"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-io-cross-border-stores"
+status = 308
+to = "/docs/guides/store-framework-setting-up-cross-border-stores"

@@ -5,6 +5,7 @@
 - [About](#about)
   - [Objective](#objective)
   - [Concepts and Features](#concepts-and-features)
+  - [Caching Structure for Technical Writers](#caching-structure-for-technical-writers)
 - [Versioning](#versioning)
 - [Tests](#tests)
 - [Development](#development)
@@ -49,6 +50,43 @@ As the Developer Portal provides VTEX documentation to users, some of its main f
   - Configurable retry mechanism with max retries and timeout
   - Automatic fallback to raw.githubusercontent.com when API limits are hit
   - Smart throttling to prevent excessive API calls
+
+### Caching Structure for Technical Writers
+
+The Developer Portal uses Netlify's CDN and caching infrastructure to optimize performance. When updating documentation, technical writers should be aware of how caching affects the visibility of their changes:
+
+#### OpenAPI Documentation Caching
+
+When you update an OpenAPI specification file in the GitHub repository:
+
+1. **Cache Duration**: 
+   - Updated specs will be visible after the cache expires, typically:
+     - Primary source (jsdelivr): 5 minutes (300 seconds)
+     - Fallback source (GitHub raw): 3 minutes (180 seconds)
+   - A stale-while-revalidate period of up to 15 minutes may follow
+
+2. **Cache Invalidation Options**:
+   - **Automatic Expiration**: Wait for the cache to naturally expire (~5 minutes)
+   - **Manual Purging**: For urgent updates, you can request cache purging via Netlify's Cache Purge API using cache tags:
+     ```bash
+     curl -X POST "https://api.netlify.com/api/v1/sites/{site-id}/builds/cache" \
+       -H "Authorization: Bearer {access-token}" \
+       -H "Content-Type: application/json" \
+       -d '{"cache_tags": ["openapi,spec-name"]}'
+     ```
+
+3. **Debugging Cache Status**:
+   - The API response includes debugging headers to help track cache status:
+     - `X-Source`: Shows which source provided the spec (jsdelivr or github-raw)
+     - `X-References-Resolved`: Indicates if spec references were resolved
+     - `X-Cache-Debug`: Contains source, resolution status, and TTL information
+
+4. **Testing Updates**:
+   - To verify changes immediately without waiting for cache expiration:
+     - Add a unique query parameter to force a cache miss: `?v=timestamp`
+     - Request cache purging from your development team
+
+Understanding this caching structure helps set appropriate expectations for when documentation updates will become visible to users.
 
 ## Versioning
 

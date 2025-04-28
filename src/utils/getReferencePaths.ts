@@ -13,6 +13,8 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - Checkout API': 'checkout-api',
   'VTEX - Checkout Configuration API': 'checkout-configuration-api',
   'VTEX - Customer Credit API': 'customer-credit-api',
+  'VTEX - Delivery Promise Notification API':
+    'delivery-promise-notification-api',
   'VTEX - GiftCard Hub API': 'giftcard-hub-api',
   'VTEX - Giftcard API': 'giftcard-api',
   'VTEX - Giftcard Provider Protocol': 'giftcard-provider-protocol',
@@ -39,6 +41,7 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - Orders API': 'orders-api',
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
   'VTEX - Payments Gateway API': 'payments-gateway-api',
+  'VTEX - Pick and Pack API': 'pick-and-pack-api',
   'VTEX - Pick and Pack Last Mile Protocol API': 'pick-and-pack-protocol-api',
   'VTEX - Pick and Pack Order Changes API': 'pick-and-pack-order-changes-api',
   'VTEX - Policies System API': 'policies-system-api',
@@ -86,9 +89,9 @@ export default async function getReferencePaths(
             ? match?.groups?.filetype
             : ''
           if (filetype === 'json' || filetype === 'yaml') {
-            referencePaths[
-              fileSlugMap[filename] || filename
-            ] = `https://cdn.jsdelivr.net/gh/vtex/openapi-schemas/${path}`
+            // Use internal API route instead of jsDelivr
+            const slug = fileSlugMap[filename] || filename
+            referencePaths[slug] = `/api/openapi/${slug}`
           }
         }
       }

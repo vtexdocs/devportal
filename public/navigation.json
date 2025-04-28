@@ -2139,21 +2139,6 @@
           ]
         },
         {
-          "name": "Conversational Commerce",
-          "slug": "conversational-commerce-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Create Zendesk integration",
-              "slug": "create-zendesk-integration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
           "name": "Search",
           "slug": "search-category",
           "origin": "",
@@ -4143,7 +4128,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/brand/-categoryId-",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/category/-categoryId-",
                   "children": []
                 },
                 {
@@ -5035,6 +5020,30 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/creditcontrol/storeconfig",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Delivery Promise Notification API",
+          "slug": "delivery-promise-notification-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Delivery Promise",
+              "slug": "delivery-promise-notification-api-delivery-promise",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Update external product availability",
+                  "slug": "delivery-promise-notification-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
                   "children": []
                 }
               ]
@@ -8518,6 +8527,121 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/payments/pvt/payments/-paymentId-/payment-notification",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pick and Pack API",
+          "slug": "pick-and-pack-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Authentication",
+              "slug": "pick-and-pack-api-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate JWT token",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/token",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Orders",
+              "slug": "pick-and-pack-api-orders",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get order by ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/orders/-orderId-",
+                  "children": []
+                },
+                {
+                  "name": "Set order delivery",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/orders/-orderId-/tracking",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Worksheets",
+              "slug": "pick-and-pack-api-worksheets",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get worksheet by ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/worksheets/-worksheetId-",
+                  "children": []
+                },
+                {
+                  "name": "Get worksheets by order ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/worksheets",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Facilities",
+              "slug": "pick-and-pack-api-facilities",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get facility by ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/facilities/-facilityId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Shipments",
+              "slug": "pick-and-pack-api-shipments",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get shipment by shipment ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/shipments/-shipmentId-",
+                  "children": []
+                },
+                {
+                  "name": "List shipments by order ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/shipments/-orderId-",
                   "children": []
                 }
               ]
@@ -13398,6 +13522,13 @@
                       "children": []
                     },
                     {
+                      "name": "RatingField",
+                      "slug": "faststore/molecules-rating-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "RegionBar",
                       "slug": "faststore/molecules-region-bar",
                       "origin": "",
@@ -14644,7 +14775,7 @@
             },
             {
               "name": "Setting up cross-border stores",
-              "slug": "vtex-io-cross-border-stores",
+              "slug": "store-framework-setting-up-cross-border-stores",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -15233,7 +15364,50 @@
           "origin": "",
           "type": "category",
           "children": [
-           {
+            {
+              "name": "April",
+              "slug": "april-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New Pick and Pack API",
+                  "slug": "2025-04-25-pick-and-pack-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New Delivery Promise Notification API",
+                  "slug": "2025-04-16-new-delivery-promise-notification-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Framework: Improved image dimension control with Store Image",
+                  "slug": "2025-04-16-store-framework-improved-image-dimension-control-with-store-image",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Improved the integration with the Headless CMS",
+                  "slug": "2025-04-15-faststore-webops-improved-the-integration-with-the-headless-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Self-service domain setup now available",
+                  "slug": "2025-04-08-faststore-webops-self-service-domain-setup-now-available",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "March",
               "slug": "march-2025",
               "origin": "",
@@ -15269,7 +15443,7 @@
                 }
               ]
             },
-           {
+            {
               "name": "February",
               "slug": "february-2025",
               "origin": "",
