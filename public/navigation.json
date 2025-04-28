@@ -15248,6 +15248,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Use `GET` requests for custom queries to improve store caching",
+                  "slug": "2025-04-30-faststore-custom-queries",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "New Delivery Promise Notification API",
                   "slug": "2025-04-16-new-delivery-promise-notification-api",
                   "origin": "",
