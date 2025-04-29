@@ -13854,6 +13854,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Configuring GraphQL cache control for GET requests",
+                  "slug": "faststore/faststore-api-configuring-graphql-cache-control",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
