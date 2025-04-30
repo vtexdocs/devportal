@@ -8534,6 +8534,121 @@
           ]
         },
         {
+          "name": "Pick and Pack API",
+          "slug": "pick-and-pack-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Authentication",
+              "slug": "pick-and-pack-api-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate JWT token",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/token",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Orders",
+              "slug": "pick-and-pack-api-orders",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get order by ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/orders/-orderId-",
+                  "children": []
+                },
+                {
+                  "name": "Set order delivery",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/orders/-orderId-/tracking",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Worksheets",
+              "slug": "pick-and-pack-api-worksheets",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get worksheet by ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/worksheets/-worksheetId-",
+                  "children": []
+                },
+                {
+                  "name": "Get worksheets by order ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/worksheets",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Facilities",
+              "slug": "pick-and-pack-api-facilities",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get facility by ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/facilities/-facilityId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Shipments",
+              "slug": "pick-and-pack-api-shipments",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get shipment by shipment ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/shipments/-shipmentId-",
+                  "children": []
+                },
+                {
+                  "name": "List shipments by order ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/shipments/-orderId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Pick and Pack Last Mile Protocol API",
           "slug": "pick-and-pack-protocol-api",
           "origin": "",
@@ -13739,6 +13854,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Configuring GraphQL cache control for GET requests",
+                  "slug": "faststore/faststore-api-configuring-graphql-cache-control",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -13782,7 +13904,15 @@
                   "slug": "faststore/cart-overview",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "useCart",
+                      "slug": "faststore/cart-use-cart",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "Search",
@@ -15250,6 +15380,13 @@
                 {
                   "name": "FastStore: Use `GET` requests for custom queries to improve store caching",
                   "slug": "2025-04-30-faststore-custom-queries",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New Pick and Pack API",
+                  "slug": "2025-04-25-pick-and-pack-api",
                   "origin": "",
                   "type": "markdown",
                   "children": []

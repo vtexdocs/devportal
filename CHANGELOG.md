@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.6](https://github.com/vtexdocs/devportal/compare/v1.19.5...v1.19.6) (2025-04-28)
+
+
+### Features
+
+* add pick and pack api and release note to navigation ([14afd66](https://github.com/vtexdocs/devportal/commit/14afd66aac54926e670d60cec039ecf20b956ebc))
+
+
+### Docs
+
+* **navigation.json:** update ([f23a6ec](https://github.com/vtexdocs/devportal/commit/f23a6ec42cf3cddc16f0f6caa9679e1250163d09))
+* **navigation.json:** update ([843f536](https://github.com/vtexdocs/devportal/commit/843f5367c88c34e2d90e0dae0b116ba9f1ccedf3))
+* **netlify.toml:** redirect ([38dcd4f](https://github.com/vtexdocs/devportal/commit/38dcd4fcde186b0d224a1403d5528995460836d8))
+* the endpoint path changed ([002345b](https://github.com/vtexdocs/devportal/commit/002345b757ecd870da5c011c3d4eaeb6b13c478d))
+
 ### [1.19.5](https://github.com/vtexdocs/devportal/compare/v1.19.4...v1.19.5) (2025-04-17)
 
 
