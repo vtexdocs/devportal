@@ -15378,6 +15378,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Use `GET` requests for custom queries to improve store caching",
+                  "slug": "2025-04-30-faststore-custom-queries",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "New Pick and Pack API",
                   "slug": "2025-04-25-pick-and-pack-api",
                   "origin": "",
