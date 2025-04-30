@@ -11550,6 +11550,13 @@
           ]
         },
         {
+          "name": "GraphQL in VTEX IO",
+          "slug": "graphql-in-vtex-io",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        },
+        {
           "name": "Policies and permissions",
           "slug": "vtex-io-documentation-policies",
           "origin": "",
