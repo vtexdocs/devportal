@@ -15372,6 +15372,21 @@
           "type": "category",
           "children": [
             {
+              "name": "May",
+              "slug": "may-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Improved breadcrumb navigation",
+                  "slug": "2025-05-02-breadcrumb-improvement",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "April",
               "slug": "april-2025",
               "origin": "",
