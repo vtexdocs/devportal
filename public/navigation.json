@@ -11130,6 +11130,13 @@
                   "children": []
                 },
                 {
+                  "name": "GraphQL Builder",
+                  "slug": "vtex-io-documentation-graphql-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Messages Builder",
                   "slug": "vtex-io-documentation-messages-builder",
                   "origin": "",
