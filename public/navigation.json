@@ -13918,6 +13918,13 @@
                       "origin": "",
                       "type": "markdown",
                       "children": []
+                    },
+                    {
+                      "name": "CartProvider",
+                      "slug": "faststore/cart-cart-provider",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
                     }
                   ]
                 },
