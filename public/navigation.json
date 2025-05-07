@@ -6913,6 +6913,49 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Affiliates",
+              "slug": "marketplace-apis-affiliates",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List affiliates",
+                  "slug": "marketplace-apis",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/fulfillment/pvt/affiliates",
+                  "children": []
+                },
+                {
+                  "name": "Get affiliate by ID",
+                  "slug": "marketplace-apis",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/fulfillment/pvt/affiliates/-affiliateId-",
+                  "children": []
+                },
+                {
+                  "name": "Update affiliate by ID",
+                  "slug": "marketplace-apis",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/fulfillment/pvt/affiliates/-affiliateId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete affiliate by ID",
+                  "slug": "marketplace-apis",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/fulfillment/pvt/affiliates/-affiliateId-",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -15398,6 +15441,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Marketplace API new affiliate endpoints",
+                  "slug": "2025-05-06-marketplace-api-new-affiliate-endpoints",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore: Improved breadcrumb navigation",
                   "slug": "2025-05-02-breadcrumb-improvement",
