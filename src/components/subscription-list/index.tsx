@@ -68,9 +68,8 @@ const SubscriptionList: React.FC = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              sx={styles.input} // Apply the input styles
             />
-            <Button size="regular" onClick={handleSubscribe} sx={styles.button}>
+            <Button size="regular" onClick={handleSubscribe}>
               {messages['landing_page_newsletter.Button']}
             </Button>
           </div>
