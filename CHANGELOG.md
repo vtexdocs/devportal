@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.19.7](https://github.com/vtexdocs/devportal/compare/v1.19.6...v1.19.7) (2025-05-07)
+
+
+### Features
+
+* add new affiliate endpoints ([b8cae76](https://github.com/vtexdocs/devportal/commit/b8cae7618cdb6b321735db52d71b569234dff7d6))
+* **index.tsx:** update `last-updates-section` component ([8424c91](https://github.com/vtexdocs/devportal/commit/8424c913692ac951e4c9c98409c306417221a235))
+
+
+### Bug Fixes
+
+* **index.tsx:** fix prettier issues ([f38edf4](https://github.com/vtexdocs/devportal/commit/f38edf4b8a5203c49629f0327d903ea128f144e7))
+* **index.tsx:** fix prettier issues ([c2264fe](https://github.com/vtexdocs/devportal/commit/c2264fe5fdaf6b9741c65f21b5fc89516b729819))
+* **index.tsx:** fix prettier issues ([7d5c2ad](https://github.com/vtexdocs/devportal/commit/7d5c2ad93ed1f7c12a0a3ad5dfc1583bd7b9628b))
+
+
+### Docs
+
+* **navigation.json:** add `useCart` guide ([fc6198e](https://github.com/vtexdocs/devportal/commit/fc6198edbfbbd6a73338bff17980f709bdfedd2a))
+* **navigation.json:** add FastStore GraphQL cache control guide ([f2d82dc](https://github.com/vtexdocs/devportal/commit/f2d82dc538ef093d532d343265ada5f9cf3b0e8a))
+* **navigation.json:** add new FastStore release note ([990ddcd](https://github.com/vtexdocs/devportal/commit/990ddcd07604289eb07191866dd14ba55fcf4268))
+* **navigation.json:** add new sdk doc ([4e69dd2](https://github.com/vtexdocs/devportal/commit/4e69dd23ee69c5744b29080abfeaf9634d545522))
+* **navigation.json:** add section cover "graphql in vtex io" ([ca8b715](https://github.com/vtexdocs/devportal/commit/ca8b715ff46b234800b0c644ae2aa65556e079db))
+* **navigation.json:** fix guide slug ([d03cf11](https://github.com/vtexdocs/devportal/commit/d03cf11b215e8151ba96155296e2df14d2f745b7))
+* **navigation.json:** Release note - FastStore: Improved breadcrumb navigation ([55fb7a1](https://github.com/vtexdocs/devportal/commit/55fb7a11b347dbb8bf89da407256c3ceb3bcf79c))
+
 ### [1.19.6](https://github.com/vtexdocs/devportal/compare/v1.19.5...v1.19.6) (2025-04-28)
 
 
