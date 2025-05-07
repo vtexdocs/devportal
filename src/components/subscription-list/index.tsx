@@ -17,8 +17,22 @@ const SubscriptionList: React.FC = () => {
       return
     }
 
-    setMessage("You've successfully subscribed")
-    setEmail('')
+    const baseURL = 'https://hooks.zapier.com/hooks/catch/11585741/2pahup2/?email='
+    const urlEnd = '&locale=pt-BR&date=May 05 2025 00:00:00'
+    const emailEncoded = encodeURIComponent(email)
+    const url = baseURL + emailEncoded + urlEnd
+    
+    fetch(url, 
+      {
+      method: 'POST'
+      })
+      .then(function (response) {
+        return response.blob();
+      })
+      .then(function (myBlob) {
+        setMessage("You've successfully subscribed")
+        setEmail('')
+      });
   }
 
   return (
@@ -47,17 +61,19 @@ const SubscriptionList: React.FC = () => {
               )[1]
             }
           </Text>
-          <div className="input">
+          <div sx={styles.inputContainer}>
             <Input
               label="Email Address"
               size="regular"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-            />
-            <Button size="regular" onClick={handleSubscribe}>
+              sx={styles.input} // Apply the input styles
+            />           
+            <Button size="regular" onClick={handleSubscribe} sx={styles.button}>
               {messages['landing_page_newsletter.Button']}
             </Button>
+
           </div>
           <Text sx={styles.privacyText}>
             {
