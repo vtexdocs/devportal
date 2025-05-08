@@ -1818,3 +1818,9 @@ force = true
 from = "/docs/guides/vtex-io-cross-border-stores"
 status = 308
 to = "/docs/guides/store-framework-setting-up-cross-border-stores"
+
+[[redirects]]
+force = true
+from = "/docs/guides/app-development-guides"
+status = 308
+to = "/docs/app-development"
