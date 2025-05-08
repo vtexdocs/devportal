@@ -10033,6 +10033,48 @@
           ]
         },
         {
+          "name": "SSL Certificates API",
+          "slug": "ssl-certificates-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "SSL Certificates",
+              "slug": "ssl-certificates-api",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List SSL certificates",
+                  "slug": "ssl-certificates-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/edge/certificates",
+                  "children": []
+                },
+                {
+                  "name": "Get SSL certificate by ID",
+                  "slug": "ssl-certificates-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/edge/certificates/-certificateId-",
+                  "children": []
+                },
+                {
+                  "name": "Install or renew SSL certificate",
+                  "slug": "ssl-certificates-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/edge/certificates",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Subscriptions API (v3)",
           "slug": "subscriptions-api-v3",
           "origin": "",
