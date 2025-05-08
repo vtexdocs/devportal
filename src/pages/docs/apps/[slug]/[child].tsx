@@ -9,6 +9,7 @@ import getHeadings from 'utils/getHeadings'
 import { serialize } from 'next-mdx-remote/serialize'
 import type { Item } from '@vtexdocs/components'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
+import remarkMermaid from 'utils/remark_plugins/mermaid'
 import Breadcrumb from 'components/breadcrumb'
 import ArticlePagination from 'components/article-pagination'
 import jp from 'jsonpath'
@@ -246,6 +247,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             remarkGFM,
             remarkImages,
             [getHeadings, { headingList }],
+            remarkMermaid,
             remarkBlockquote,
           ],
           rehypePlugins: [
