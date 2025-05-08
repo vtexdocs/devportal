@@ -13401,6 +13401,13 @@
                       "type": "markdown",
                       "origin": "",
                       "children": []
+                    },
+                    {
+                      "name": "Textarea",
+                      "slug": "faststore/atoms-textarea",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
                     }
                   ]
                 },
@@ -13658,6 +13665,13 @@
                     {
                       "name": "Tag",
                       "slug": "faststore/molecules-tag",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "TextareaField",
+                      "slug": "faststore/molecules-textarea-field",
                       "origin": "",
                       "type": "markdown",
                       "children": []
