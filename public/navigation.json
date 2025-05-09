@@ -13682,6 +13682,13 @@
                       "origin": "",
                       "type": "markdown",
                       "children": []
+                    },
+                    {
+                      "name": "Tooltip",
+                      "slug": "faststore/molecules-tooltip",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
                     }
                   ]
                 },
