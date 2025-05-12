@@ -804,6 +804,13 @@
                   "children": []
                 },
                 {
+                  "name": "Tax Protocol GraphQL API",
+                  "slug": "tax-protocol-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Reference Implementations",
                   "slug": "external-search-provider-reference",
                   "origin": "",
