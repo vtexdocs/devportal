@@ -12584,6 +12584,21 @@
               "children": []
             },
             {
+              "name": "Rewriter",
+              "slug": "apps/vtex.rewriter",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Rewriter GraphQL API",
+                  "slug": "apps/vtex.rewriter/rewriter-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Responsive Values",
               "slug": "apps/vtex.responsive-values",
               "origin": "",
