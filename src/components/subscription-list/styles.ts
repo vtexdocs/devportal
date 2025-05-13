@@ -62,16 +62,16 @@ const inputContainer: SxStyleProp = {
 }
 
 const input: SxStyleProp = {
-  height: '54px', // Explicitly set height to match the Button
-  width: '100%', // Responsive width
-  boxSizing: 'border-box', // Ensure padding and border are included in height
+  height: '54px',
+  width: '100%',
+  boxSizing: 'border-box',
 }
 
 const button: SxStyleProp = {
-  height: '54px', // Match height with Input
-  marginLeft: '12px', // Add spacing between input and button
-  boxSizing: 'border-box', // Ensure padding and border are included in height
-}
+  height: '54px',
+  marginLeft: '12px',
+  boxSizing: 'border-box',
+};
 
 const privacyText: SxStyleProp = {
   fontSize: ['8px', '12px'],
@@ -79,56 +79,33 @@ const privacyText: SxStyleProp = {
   pl: ['22px', '32px'],
   fontWeight: '400',
   marginTop: '16px',
-}
+};
 
 const message = (isSuccess: boolean): SxStyleProp => ({
-  marginTop: '10px',
-  color: isSuccess ? 'green' : 'red',
-})
+  backgroundColor: isSuccess ? 'lightgreen' : 'lightcoral',
+  padding: '10px',
+  borderRadius: '5px',
+});
 
 const messageCard: SxStyleProp = {
-  position: 'relative', // Ensure it stays within the component
-  marginTop: '16px', // Add spacing from the privacy policy
-  padding: ['8px', '16px'], // Responsive padding
-  borderRadius: '8px',
-  textAlign: 'center',
-  backgroundColor: (theme) => (theme.messageType === 'success' ? 'lightgreen' : 'lightcoral'), // Dynamic background color
-  boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.1)',
-  width: ['90%', '500px'], // Responsive width
-  maxWidth: '500px', // Ensure it doesn't exceed 500px
-  height: 'auto', // Adjust height dynamically
-  display: 'flex', // Use flexbox for alignment
-  alignItems: 'center', // Center content vertically
-  justifyContent: 'center', // Center content horizontally
-  marginLeft: 'auto', // Center horizontally
-  marginRight: 'auto', // Center horizontally
-}
+  backgroundColor: 'lightgray',
+  padding: '10px',
+  borderRadius: '5px',
+};
 
 const popupCard: SxStyleProp = {
-  position: 'relative', // Ensure it stays within the component
-  marginTop: '16px', // Add spacing from the privacy policy
-  padding: ['8px', '16px'], // Responsive padding
+  backgroundColor: 'white',
+  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+  padding: '20px',
   borderRadius: '8px',
-  textAlign: 'center',
-  backgroundColor: (theme) => (theme.messageType === 'success' ? 'lightgreen' : 'lightcoral'), // Dynamic background color
-  boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.1)',
-  width: ['90%', '500px'], // Responsive width
-  maxWidth: '100px', // Ensure it doesn't exceed 500px
-  height: 'auto', // Adjust height dynamically
-  display: 'flex', // Use flexbox for alignment
-  alignItems: 'center', // Center content vertically
-  justifyContent: 'center', // Center content horizontally
-  marginLeft: 'auto', // Center horizontally
-  marginRight: 'auto', // Center horizontally
-}
+};
 
-// Add keyframes for fade-in animation
 const globalStyles: SxStyleProp = {
   '@keyframes fadeIn': {
     from: { opacity: 0 },
     to: { opacity: 1 },
   },
-}
+};
 
 export default {
   sectionContainer,
