@@ -73,6 +73,50 @@ const message = (isSuccess: boolean): SxStyleProp => ({
   color: isSuccess ? 'green' : 'red',
 })
 
+const messageCard: SxStyleProp = {
+  position: 'relative', // Ensure it stays within the component
+  marginTop: '16px', // Add spacing from the privacy policy
+  padding: ['8px', '16px'], // Responsive padding
+  borderRadius: '8px',
+  textAlign: 'center',
+  backgroundColor: (theme) => (theme.messageType === 'success' ? 'lightgreen' : 'lightcoral'), // Dynamic background color
+  boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.1)',
+  width: ['90%', '500px'], // Responsive width
+  maxWidth: '500px', // Ensure it doesn't exceed 500px
+  height: 'auto', // Adjust height dynamically
+  display: 'flex', // Use flexbox for alignment
+  alignItems: 'center', // Center content vertically
+  justifyContent: 'center', // Center content horizontally
+  marginLeft: 'auto', // Center horizontally
+  marginRight: 'auto', // Center horizontally
+}
+
+const popupCard: SxStyleProp = {
+  position: 'relative', // Ensure it stays within the component
+  marginTop: '16px', // Add spacing from the privacy policy
+  padding: ['8px', '16px'], // Responsive padding
+  borderRadius: '8px',
+  textAlign: 'center',
+  backgroundColor: (theme) => (theme.messageType === 'success' ? 'lightgreen' : 'lightcoral'), // Dynamic background color
+  boxShadow: '0px 0px 8px rgba(0, 0, 0, 0.1)',
+  width: ['90%', '500px'], // Responsive width
+  maxWidth: '100px', // Ensure it doesn't exceed 500px
+  height: 'auto', // Adjust height dynamically
+  display: 'flex', // Use flexbox for alignment
+  alignItems: 'center', // Center content vertically
+  justifyContent: 'center', // Center content horizontally
+  marginLeft: 'auto', // Center horizontally
+  marginRight: 'auto', // Center horizontally
+}
+
+// Add keyframes for fade-in animation
+const globalStyles: SxStyleProp = {
+  '@keyframes fadeIn': {
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+  },
+}
+
 export default {
   sectionContainer,
   cardContainer,
@@ -82,4 +126,7 @@ export default {
   inputContainer,
   privacyText,
   message,
+  messageCard,
+  popupCard,
+  globalStyles,
 }
