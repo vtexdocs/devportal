@@ -105,5 +105,5 @@ export default {
   button,
   privacyText,
   message,
-  popupCard
+  popupCard,
 }
