@@ -92,13 +92,6 @@ const popupCard: SxStyleProp = {
   borderRadius: '6px',
 }
 
-const globalStyles: SxStyleProp = {
-  '@keyframes fadeIn': {
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-  },
-}
-
 export default {
   sectionContainer,
   cardContainer,
@@ -109,6 +102,5 @@ export default {
   button,
   privacyText,
   message,
-  popupCard,
-  globalStyles,
+  popupCard
 }
