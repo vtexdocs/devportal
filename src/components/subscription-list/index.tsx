@@ -99,7 +99,7 @@ const SubscriptionList: React.FC = () => {
               size="regular"
               id="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)} 
+              onChange={(e) => setEmail(e.target.value)}
             />
             <Button
               size="regular" onClick={handleSubscribe}
