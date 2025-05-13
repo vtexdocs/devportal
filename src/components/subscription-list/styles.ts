@@ -29,10 +29,11 @@ const cardContainer: SxStyleProp = {
 }
 
 const title: SxStyleProp = {
-  fontSize: ['20px', '28px', '32px'],
-  fontWeight: 'bold',
+  fontSize: ['20px', '28px', '28px', '40px'],
+  lineHeight: ['30px', '38px', '38px', '50px'],
+  fontWeight: '400',
+  color: '#4A4A4A',
   textAlign: 'center',
-  marginBottom: '16px',
 }
 
 const description: SxStyleProp = {
@@ -58,6 +59,18 @@ const inputContainer: SxStyleProp = {
   gap: ['8px', '12px'],
   marginBottom: '16px',
   width: '100%',
+}
+
+const input: SxStyleProp = {
+  height: '54px', // Explicitly set height to match the Button
+  width: '100%', // Responsive width
+  boxSizing: 'border-box', // Ensure padding and border are included in height
+}
+
+const button: SxStyleProp = {
+  height: '54px', // Match height with Input
+  marginLeft: '12px', // Add spacing between input and button
+  boxSizing: 'border-box', // Ensure padding and border are included in height
 }
 
 const privacyText: SxStyleProp = {
@@ -124,6 +137,8 @@ export default {
   title,
   description,
   inputContainer,
+  input,
+  button,
   privacyText,
   message,
   messageCard,
