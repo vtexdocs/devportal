@@ -122,7 +122,7 @@ const SubscriptionList: React.FC = () => {
             <Box
               sx={{
                 ...styles.messageCard,
-                backgroundColor: 
+                backgroundColor:
                   messageType === 'success' ? '#dff1e0' : '#f8e3e3',
               }}
             >
