@@ -21,11 +21,6 @@ const cardContainer: SxStyleProp = {
   borderRadius: '8px',
   border: '1px solid #E7E9EE',
   boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
-  transition: 'all 0.3s ease-out',
-
-  ':hover': {
-    boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.2)',
-  },
 }
 
 const title: SxStyleProp = {
@@ -88,18 +83,24 @@ const message = (isSuccess: boolean): SxStyleProp => ({
 })
 
 const messageCard: SxStyleProp = {
-  backgroundColor: 'lightgray',
+  backgroundColor: 'white',
+  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   padding: '10px',
-  borderRadius: '5px',
+  borderRadius: '8px',
 }
 
 const popupCard: SxStyleProp = {
   backgroundColor: 'white',
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-  padding: '20px',
+  width: '100%',
+  maxWidth: '400px',
+  padding: ['16px', '20px'],
+  boxSizing: 'border-box',
+  margin: '0 auto',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
   borderRadius: '8px',
-  width: '300px',
-  maxWidth: '90%',
 }
 
 const globalStyles: SxStyleProp = {
