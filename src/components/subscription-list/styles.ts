@@ -57,14 +57,7 @@ const inputContainer: SxStyleProp = {
 }
 
 const input: SxStyleProp = {
-  height: '54px',
-  width: '100%',
-  boxSizing: 'border-box',
-}
-
-const button: SxStyleProp = {
-  height: '54px',
-  marginLeft: '12px',
+  maxWidth: '100%',
   boxSizing: 'border-box',
 }
 
@@ -118,7 +111,6 @@ export default {
   description,
   inputContainer,
   input,
-  button,
   privacyText,
   message,
   messageCard,
