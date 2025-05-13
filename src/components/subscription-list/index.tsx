@@ -13,25 +13,49 @@ const SubscriptionList: React.FC = () => {
 
   const handleSubscribe = () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setMessage('Email address invalid, please try another one')
+      setMessage('Email address invalid, please try another one.')
       return
     }
 
     const baseURL =
       'https://hooks.zapier.com/hooks/catch/11585741/2pahup2/?email='
-    const urlEnd = '&locale=pt-BR&date=May 05 2025 00:00:00'
+
+    // Dynamically generate locale and date
+    const locale = navigator.language || 'en-US'
+    const currentDate = new Date()
+    const formattedDate = currentDate.toLocaleString(locale, {
+      month: 'short',
+      day: '2-digit',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: false,
+    })
+
+    const urlEnd = `&locale=${locale}&date=${encodeURIComponent(formattedDate)}`
     const emailEncoded = encodeURIComponent(email)
     const url = baseURL + emailEncoded + urlEnd
 
     fetch(url, {
       method: 'POST',
     })
-      .then(function (response) {
-        return response.blob()
-      })
-      .then(function () {
-        setMessage("You've successfully subscribed")
+      .then((response) => response.blob())
+      .then(() => {
+        setMessage("You've successfully subscribed!")
         setEmail('')
+        setTimeout(() => {
+          setMessage('')
+        }, 6000)
+      })
+      .catch((error) => {
+        console.error('Error:', error)
+        setMessage(
+          "Sorry, we couldn't subscribe you. Please try again later."
+        )
+        setTimeout(() => {
+          setMessage('')
+        }, 6000)
       })
   }
 
