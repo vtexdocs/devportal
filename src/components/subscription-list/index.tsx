@@ -93,18 +93,22 @@ const SubscriptionList: React.FC = () => {
               )[1]
             }
           </Text>
-          <div sx={styles.inputContainer}>
+          <Flex sx={styles.inputContainer}>
             <Input
               label="Email Address"
               size="regular"
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              
             />
-            <Button size="regular" onClick={handleSubscribe}>
+            <Button
+              size="regular"
+              onClick={handleSubscribe}
+            >
               {messages['landing_page_newsletter.Button']}
             </Button>
-          </div>
+          </Flex>
           <Text sx={styles.privacyText}>
             {
               messages['landing_page_subscription.textLink'].split(
