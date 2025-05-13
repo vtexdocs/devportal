@@ -99,6 +99,7 @@ const SubscriptionList: React.FC = () => {
               id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              sx={styles.input}
             />
             <Button size="regular" onClick={handleSubscribe}>
               {messages['landing_page_newsletter.Button']}
@@ -121,7 +122,7 @@ const SubscriptionList: React.FC = () => {
           {message && (
             <Box
               sx={{
-                ...styles.messageCard,
+                ...styles.popupCard,
                 backgroundColor:
                   messageType === 'success' ? '#dff1e0' : '#f8e3e3',
               }}
