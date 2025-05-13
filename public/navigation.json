@@ -869,6 +869,13 @@
                   "children": []
                 },
                 {
+                  "name": "Tax Protocol GraphQL API",
+                  "slug": "tax-protocol-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Reference Implementations",
                   "slug": "tax-services-reference-implementation",
                   "origin": "",
