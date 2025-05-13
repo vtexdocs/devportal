@@ -99,12 +99,10 @@ const SubscriptionList: React.FC = () => {
               size="regular"
               id="email"
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              
+              onChange={(e) => setEmail(e.target.value)} 
             />
             <Button
-              size="regular"
-              onClick={handleSubscribe}
+              size="regular" onClick={handleSubscribe}
             >
               {messages['landing_page_newsletter.Button']}
             </Button>
@@ -127,7 +125,7 @@ const SubscriptionList: React.FC = () => {
             <Box
               sx={{
                 ...styles.messageCard,
-                backgroundColor: messageType === 'success' ? '#dff1e0' : '#f8e3e3', // Updated colors
+                backgroundColor: messageType === 'success' ? '#dff1e0' : '#f8e3e3',
               }}
             >
               <Text>{message}</Text>
