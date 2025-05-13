@@ -71,7 +71,7 @@ const button: SxStyleProp = {
   height: '54px',
   marginLeft: '12px',
   boxSizing: 'border-box',
-};
+}
 
 const privacyText: SxStyleProp = {
   fontSize: ['8px', '12px'],
@@ -79,33 +79,35 @@ const privacyText: SxStyleProp = {
   pl: ['22px', '32px'],
   fontWeight: '400',
   marginTop: '16px',
-};
+}
 
 const message = (isSuccess: boolean): SxStyleProp => ({
   backgroundColor: isSuccess ? 'lightgreen' : 'lightcoral',
   padding: '10px',
   borderRadius: '5px',
-});
+})
 
 const messageCard: SxStyleProp = {
   backgroundColor: 'lightgray',
   padding: '10px',
   borderRadius: '5px',
-};
+}
 
 const popupCard: SxStyleProp = {
   backgroundColor: 'white',
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   padding: '20px',
   borderRadius: '8px',
-};
+  width: '300px',
+  maxWidth: '90%',
+}
 
 const globalStyles: SxStyleProp = {
   '@keyframes fadeIn': {
     from: { opacity: 0 },
     to: { opacity: 1 },
   },
-};
+}
 
 export default {
   sectionContainer,
