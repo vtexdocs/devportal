@@ -10,10 +10,16 @@ const messages = getMessages()
 const SubscriptionList: React.FC = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [messageType, setMessageType] = useState<'success' | 'error' | ''>('')
 
   const handleSubscribe = () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setMessageType('error')
       setMessage('Email address invalid, please try another one.')
+      setTimeout(() => {
+        setMessage('')
+        setMessageType('')
+      }, 3000)
       return
     }
 
@@ -42,20 +48,22 @@ const SubscriptionList: React.FC = () => {
     })
       .then((response) => response.blob())
       .then(() => {
+        setMessageType('success')
         setMessage("You've successfully subscribed!")
         setEmail('')
         setTimeout(() => {
           setMessage('')
-        }, 6000)
+          setMessageType('')
+        }, 3000)
       })
       .catch((error) => {
         console.error('Error:', error)
-        setMessage(
-          "Sorry, we couldn't subscribe you. Please try again later."
-        )
+        setMessageType('error')
+        setMessage("Sorry, we couldn't subscribe you. Please try again later.")
         setTimeout(() => {
           setMessage('')
-        }, 6000)
+          setMessageType('')
+        }, 3000)
       })
   }
 
@@ -112,9 +120,14 @@ const SubscriptionList: React.FC = () => {
             </a>
           </Text>
           {message && (
-            <p sx={styles.message(message.includes('successfully'))}>
-              {message}
-            </p>
+            <Box
+              sx={{
+                ...styles.messageCard,
+                backgroundColor: messageType === 'success' ? '#dff1e0' : '#f8e3e3', // Updated colors
+              }}
+            >
+              <Text>{message}</Text>
+            </Box>
           )}
         </div>
       </Flex>
