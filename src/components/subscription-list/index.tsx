@@ -101,9 +101,7 @@ const SubscriptionList: React.FC = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Button
-              size="regular" onClick={handleSubscribe}
-            >
+            <Button size="regular" onClick={handleSubscribe}>
               {messages['landing_page_newsletter.Button']}
             </Button>
           </Flex>
