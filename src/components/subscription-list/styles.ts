@@ -51,14 +51,17 @@ const container: SxStyleProp = {
 const inputContainer: SxStyleProp = {
   display: 'flex',
   flexDirection: ['column', 'row'],
-  gap: ['8px', '12px'],
-  marginBottom: '16px',
+  gap: '5px',
+  justifyContent: 'center',
+  alignItems: 'center',
   width: '100%',
 }
 
-const input: SxStyleProp = {
-  maxWidth: '100%',
-  boxSizing: 'border-box',
+const button: SxStyleProp = {
+  height: '55px',
+  alignItems: 'center',
+  justifyContent: 'center',
+  marginBottom: '9px',
 }
 
 const privacyText: SxStyleProp = {
@@ -103,7 +106,7 @@ export default {
   title,
   description,
   inputContainer,
-  input,
+  button,
   privacyText,
   message,
   popupCard,
