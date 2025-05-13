@@ -13,7 +13,7 @@ const sectionContainer: SxStyleProp = {
 
 const cardContainer: SxStyleProp = {
   mt: ['16px', '24px', '32px'],
-  px: ['16px', '24px', '32px'],
+  px: ['16px', '24px', '50px'],
   py: ['16px', '24px', '40px'],
   width: ['100%', '90%', '80%'],
   maxWidth: '1035px',
@@ -33,7 +33,7 @@ const title: SxStyleProp = {
 
 const description: SxStyleProp = {
   fontSize: ['14px', '16px'],
-  lineHeight: ['16px', '22px'],
+  lineHeight: '25px',
   textAlign: 'center',
   marginBottom: '16px',
 }
@@ -65,11 +65,11 @@ const button: SxStyleProp = {
 }
 
 const privacyText: SxStyleProp = {
-  fontSize: ['11px', '14px'],
+  fontSize: ['12px', '14px'],
   lineHeight: ['16px', '22px'],
   pl: ['22px', '32px'],
   fontWeight: '400',
-  marginTop: '16px',
+  margin: '16px',
 }
 
 const message = (isSuccess: boolean): SxStyleProp => ({
@@ -83,13 +83,16 @@ const popupCard: SxStyleProp = {
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   width: '100%',
   maxWidth: '400px',
-  padding: ['16px', '20px'],
+  padding: ['8px', '12px'],
   boxSizing: 'border-box',
   margin: '0 auto',
   display: 'flex',
-  justifyContent: 'center',
+  flexDirection: 'column',
   alignItems: 'center',
+  justifyContent: 'center',
   borderRadius: '6px',
+  marginTop: '16px',
+  alignSelf: 'center',
 }
 
 export default {
