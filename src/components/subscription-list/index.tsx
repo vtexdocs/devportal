@@ -26,7 +26,6 @@ const SubscriptionList: React.FC = () => {
     const baseURL =
       'https://hooks.zapier.com/hooks/catch/11585741/2pahup2/?email='
 
-    // Dynamically generate locale and date
     const locale = navigator.language || 'en-US'
     const currentDate = new Date()
     const formattedDate = currentDate.toLocaleString(locale, {
