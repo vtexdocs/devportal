@@ -13904,21 +13904,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "My Account",
-                  "slug": "faststore/my-account-overview",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Extending My Account",
-                      "slug": "faststore/my-account-extensions",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
                 }
               ]
             },
