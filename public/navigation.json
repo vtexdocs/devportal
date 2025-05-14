@@ -869,6 +869,13 @@
                   "children": []
                 },
                 {
+                  "name": "Tax Protocol GraphQL API",
+                  "slug": "tax-protocol-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Reference Implementations",
                   "slug": "tax-services-reference-implementation",
                   "origin": "",
@@ -4128,7 +4135,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/brand/-categoryId-",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/category/-categoryId-",
                   "children": []
                 },
                 {
@@ -6913,6 +6920,49 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Affiliates",
+              "slug": "marketplace-apis-affiliates",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List affiliates",
+                  "slug": "marketplace-apis",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/fulfillment/pvt/affiliates",
+                  "children": []
+                },
+                {
+                  "name": "Get affiliate by ID",
+                  "slug": "marketplace-apis",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/fulfillment/pvt/affiliates/-affiliateId-",
+                  "children": []
+                },
+                {
+                  "name": "Update affiliate by ID",
+                  "slug": "marketplace-apis",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/fulfillment/pvt/affiliates/-affiliateId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete affiliate by ID",
+                  "slug": "marketplace-apis",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/fulfillment/pvt/affiliates/-affiliateId-",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -8527,6 +8577,121 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/payments/pvt/payments/-paymentId-/payment-notification",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pick and Pack API",
+          "slug": "pick-and-pack-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Authentication",
+              "slug": "pick-and-pack-api-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate JWT token",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/token",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Orders",
+              "slug": "pick-and-pack-api-orders",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get order by ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/orders/-orderId-",
+                  "children": []
+                },
+                {
+                  "name": "Set order delivery",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/orders/-orderId-/tracking",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Worksheets",
+              "slug": "pick-and-pack-api-worksheets",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get worksheet by ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/worksheets/-worksheetId-",
+                  "children": []
+                },
+                {
+                  "name": "Get worksheets by order ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/worksheets",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Facilities",
+              "slug": "pick-and-pack-api-facilities",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get facility by ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/facilities/-facilityId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Shipments",
+              "slug": "pick-and-pack-api-shipments",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get shipment by shipment ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/shipments/-shipmentId-",
+                  "children": []
+                },
+                {
+                  "name": "List shipments by order ID",
+                  "slug": "pick-and-pack-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/shipments/-orderId-",
                   "children": []
                 }
               ]
@@ -11015,6 +11180,13 @@
                   "children": []
                 },
                 {
+                  "name": "GraphQL Builder",
+                  "slug": "vtex-io-documentation-graphql-builder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Messages Builder",
                   "slug": "vtex-io-documentation-messages-builder",
                   "origin": "",
@@ -11433,6 +11605,13 @@
               "children": []
             }
           ]
+        },
+        {
+          "name": "GraphQL in VTEX IO",
+          "slug": "graphql-in-vtex-io",
+          "origin": "",
+          "type": "markdown",
+          "children": []
         },
         {
           "name": "Policies and permissions",
@@ -12412,6 +12591,21 @@
               "children": []
             },
             {
+              "name": "Rewriter",
+              "slug": "apps/vtex.rewriter",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Rewriter GraphQL API",
+                  "slug": "apps/vtex.rewriter/rewriter-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Responsive Values",
               "slug": "apps/vtex.responsive-values",
               "origin": "",
@@ -13229,6 +13423,13 @@
                       "type": "markdown",
                       "origin": "",
                       "children": []
+                    },
+                    {
+                      "name": "Textarea",
+                      "slug": "faststore/atoms-textarea",
+                      "type": "markdown",
+                      "origin": "",
+                      "children": []
                     }
                   ]
                 },
@@ -13407,6 +13608,13 @@
                       "children": []
                     },
                     {
+                      "name": "RatingField",
+                      "slug": "faststore/molecules-rating-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "RegionBar",
                       "slug": "faststore/molecules-region-bar",
                       "origin": "",
@@ -13484,6 +13692,13 @@
                       "children": []
                     },
                     {
+                      "name": "TextareaField",
+                      "slug": "faststore/molecules-textarea-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Toast",
                       "slug": "faststore/molecules-toast",
                       "origin": "",
@@ -13500,6 +13715,13 @@
                     {
                       "name": "ToggleField",
                       "slug": "faststore/molecules-toggle-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Tooltip",
+                      "slug": "faststore/molecules-tooltip",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -13682,6 +13904,21 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "My Account",
+                  "slug": "faststore/my-account-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Extending My Account",
+                      "slug": "faststore/my-account-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -13732,6 +13969,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Configuring GraphQL cache control for GET requests",
+                  "slug": "faststore/faststore-api-configuring-graphql-cache-control",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -13763,7 +14007,7 @@
                     },
                     {
                       "name": "Sending custom events",
-                      "slug": "faststore/analytics-sending-custon-events",
+                      "slug": "faststore/analytics-sending-custom-events",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -13775,7 +14019,22 @@
                   "slug": "faststore/cart-overview",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "useCart",
+                      "slug": "faststore/cart-use-cart",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "CartProvider",
+                      "slug": "faststore/cart-cart-provider",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "Search",
@@ -14645,7 +14904,7 @@
             },
             {
               "name": "Setting up cross-border stores",
-              "slug": "vtex-io-cross-border-stores",
+              "slug": "store-framework-setting-up-cross-border-stores",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -15235,11 +15494,47 @@
           "type": "category",
           "children": [
             {
+              "name": "May",
+              "slug": "may-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Marketplace API new affiliate endpoints",
+                  "slug": "2025-05-06-marketplace-api-new-affiliate-endpoints",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Improved breadcrumb navigation",
+                  "slug": "2025-05-02-breadcrumb-improvement",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "April",
               "slug": "april-2025",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore: Use `GET` requests for custom queries to improve store caching",
+                  "slug": "2025-04-30-faststore-custom-queries",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New Pick and Pack API",
+                  "slug": "2025-04-25-pick-and-pack-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "New Delivery Promise Notification API",
                   "slug": "2025-04-16-new-delivery-promise-notification-api",
@@ -15303,15 +15598,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "February",
-              "slug": "february-2025",
-              "origin": "",
-              "type": "category",
-              "children": [
+                },
                 {
                   "name": "Payments Gateway API: New permission required for approving payments",
                   "slug": "2025-03-10-payments-gateway-api-new-permission-required-for-approving-payments",
