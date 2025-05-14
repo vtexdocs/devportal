@@ -31,5 +31,5 @@ export const getSubscritionURL = () => {
 }
 
 export const getNewsletterURL = () => {
-  return `https://help.vtex.com/educationnewsletter`
+  return `https://help.vtex.com/educationnewsletter-en`
 }
