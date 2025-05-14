@@ -15,7 +15,7 @@ const SubscriptionList: React.FC = () => {
   const handleSubscribe = () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setMessageType('error')
-      setMessage('Email address invalid, please try another one.')
+      setMessage('Invalid email address, please try another one.')
       setTimeout(() => {
         setMessage('')
         setMessageType('')
