@@ -14514,6 +14514,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Glossary",
+                  "slug": "store-framework-glossary",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "1. Setting up your development environment",
                   "slug": "vtex-io-documentation-1-basicsetup",
                   "origin": "",
