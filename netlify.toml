@@ -1829,4 +1829,4 @@ to = "/docs/app-development"
 force = true
 from = "/docs/api-reference/dkim-configuration#createdkim"
 status = 308
-to = "/docs/api-reference/message-center-api#overview"
+to = "/docs/api-reference/message-center-api"
