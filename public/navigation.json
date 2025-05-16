@@ -15492,6 +15492,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: new experimental SEO flags for search engines",
+                  "slug": "2025-05-16-faststore-new-seo-flags",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Marketplace API new affiliate endpoints",
                   "slug": "2025-05-06-marketplace-api-new-affiliate-endpoints",
                   "origin": "",

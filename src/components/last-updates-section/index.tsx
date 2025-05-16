@@ -7,10 +7,9 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'improved',
-    description:
-      'FastStore: Use `GET` requests for custom queries to improve store caching',
-    date: new Date('04/30/2025'),
+    type: 'added',
+    description: 'FastStore: new experimental SEO flags for search engines',
+    date: new Date('05/16/2025'),
   },
   updateType: 'release-notes',
 }
