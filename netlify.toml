@@ -1827,6 +1827,6 @@ to = "/docs/app-development"
 
 [[redirects]]
 force = true
-from = "/docs/api-reference/dkim-configuration#createdkim"
+from = "/docs/api-reference/dkim-configuration"
 status = 308
 to = "/docs/api-reference/message-center-api"
