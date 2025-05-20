@@ -15499,6 +15499,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Configuring GraphQL cache control for `GET` requests",
+                  "slug": "2025-05-20-graphql-cache-control",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: new experimental SEO flags for search engines",
                   "slug": "2025-05-16-faststore-new-seo-flags",
                   "origin": "",

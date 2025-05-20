@@ -8,8 +8,9 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
-    description: 'FastStore: new experimental SEO flags for search engines',
-    date: new Date('05/16/2025'),
+    description:
+      'FastStore: Configuring GraphQL cache control for `GET` requests',
+    date: new Date('05/20/2025'),
   },
   updateType: 'release-notes',
 }
