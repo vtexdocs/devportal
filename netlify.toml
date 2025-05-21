@@ -1830,3 +1830,10 @@ force = true
 from = "/docs/api-reference/dkim-configuration"
 status = 308
 to = "/docs/api-reference/message-center-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/pricing-api-overview"
+status = 308
+to = "/docs/api-reference/pricing-api"
+
