@@ -25,3 +25,11 @@ export const getLearningCenterURL = () => {
 export const getSupportURL = () => {
   return 'https://help.vtex.com/en/support'
 }
+
+export const getSubscritionURL = () => {
+  return `https://vtex.com/br-pt/privacy-and-agreements/general-external-privacy-notice/`
+}
+
+export const getNewsletterURL = () => {
+  return `https://help.vtex.com/educationnewsletter/en`
+}
