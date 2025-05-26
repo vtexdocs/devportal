@@ -10047,7 +10047,7 @@
           "children": [
             {
               "name": "SSL Certificates",
-              "slug": "ssl-certificates-api",
+              "slug": "ssl-certificates-api-category",
               "type": "category",
               "children": [
                 {
