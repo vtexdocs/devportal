@@ -64,6 +64,7 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - Data Subject Rights': 'data-subject-rights-api',
   'VTEX - Buyer Organizations': 'buyer-organizations',
   'VTEX - Audience API': 'audience-api',
+  'VTEX - SSL Certificates API': 'ssl-certificates-api',
 }
 
 export default async function getReferencePaths(
