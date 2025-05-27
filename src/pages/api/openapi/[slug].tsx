@@ -70,6 +70,7 @@ const referencePaths = objectFlip({
   'VTEX - Data Subject Rights': 'data-subject-rights-api',
   'VTEX - Buyer Organizations': 'buyer-organizations',
   'VTEX - Audience API': 'audience-api',
+  'VTEX - SSL Certificates API': 'ssl-certificates-api',
 })
 
 // Type for reference paths mapping

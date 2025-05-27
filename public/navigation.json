@@ -10040,6 +10040,48 @@
           ]
         },
         {
+          "name": "SSL Certificates API",
+          "slug": "ssl-certificates-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "SSL Certificates",
+              "slug": "ssl-certificates-api-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List SSL certificates",
+                  "slug": "ssl-certificates-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/edge/certificates",
+                  "children": []
+                },
+                {
+                  "name": "Get SSL certificate by ID",
+                  "slug": "ssl-certificates-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/edge/certificates/-certificateId-",
+                  "children": []
+                },
+                {
+                  "name": "Install or renew SSL certificate",
+                  "slug": "ssl-certificates-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/edge/certificates",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Subscriptions API (v3)",
           "slug": "subscriptions-api-v3",
           "origin": "",
@@ -14417,6 +14459,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Validating UTM tracking in FastStore",
+                  "slug": "faststore/seo-validating-utm-tracking-in-faststore",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -14513,6 +14562,13 @@
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "Glossary",
+                  "slug": "store-framework-glossary",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "1. Setting up your development environment",
                   "slug": "vtex-io-documentation-1-basicsetup",
@@ -15484,6 +15540,27 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Legacy Webservice API deprecation",
+                  "slug": "2025-05-23-legacy-webservice-api-deprecation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Configuring GraphQL cache control for `GET` requests",
+                  "slug": "2025-05-20-graphql-cache-control",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: new experimental SEO flags for search engines",
+                  "slug": "2025-05-16-faststore-new-seo-flags",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Marketplace API new affiliate endpoints",
                   "slug": "2025-05-06-marketplace-api-new-affiliate-endpoints",
