@@ -2,6 +2,83 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.20.0](https://github.com/vtexdocs/devportal/compare/v1.19.7...v1.20.0) (2025-05-27)
+
+
+### Features
+
+* add ssl certificates api ([b57687d](https://github.com/vtexdocs/devportal/commit/b57687dc696545b24c049a648b84aee7e774f15b))
+* **get-url.tsx:** add newsletter URL const ([7202d5e](https://github.com/vtexdocs/devportal/commit/7202d5e101967ec8c15f3e723da2f8e940496801))
+* **get-url.tsx:** add Privacy Policy link ([a985f5c](https://github.com/vtexdocs/devportal/commit/a985f5c3b62ec2fafe8b87a308b446f4bf26d4f2))
+* **index.js:** get the date and time from the user's browser and improve error message ([cc2906c](https://github.com/vtexdocs/devportal/commit/cc2906c8866d1b3afa6aa220749d87a28c079fb3))
+* **index.js:** implementing fetch ([8e1b429](https://github.com/vtexdocs/devportal/commit/8e1b4291af575d212fdca9bcdd211e76abd6d100))
+* **index.tsx:** add component to the home page ([a760b66](https://github.com/vtexdocs/devportal/commit/a760b6639af79f7f21bd11dbd695dfd7dca525a6))
+* **index.tsx:** add input and button default components from@vtex/brand-ui ([deddbb0](https://github.com/vtexdocs/devportal/commit/deddbb070d9140f2ca0e00bb7cc25fff64292547))
+* **index.tsx:** add Input style ([dc96d7f](https://github.com/vtexdocs/devportal/commit/dc96d7f4dc13e3331dc953e78eff9c16eeb4bedb))
+* **index.tsx:** add messages and wrap the component ([4a47dff](https://github.com/vtexdocs/devportal/commit/4a47dff305f5a4ad7b93880c0b6b7edae261db78))
+* **index.tsx:** add newsletter link to the component ([82bead8](https://github.com/vtexdocs/devportal/commit/82bead821ab302f0bba303e3d1c510db4987cc0e))
+* **index.tsx:** creating the new component ([4d36db9](https://github.com/vtexdocs/devportal/commit/4d36db98b732e1cae22cea410b95dde5e8f45960))
+* **index.tsx:** fix lint issues ([0ee3330](https://github.com/vtexdocs/devportal/commit/0ee3330ef5704d100ac02c988f3faf31a61146b3))
+* **index.tsx:** improve UI message feedback ([d99c493](https://github.com/vtexdocs/devportal/commit/d99c49341dbeb35beb5dce48143c6c3490f0d310))
+* **index.tsx:** input and button styles ([da5dad5](https://github.com/vtexdocs/devportal/commit/da5dad5e3cdf1a35b43d7c13c86e3e390a7de8a3))
+* **index.tsx:** update 'LastUpdatesCard' date ([ab06f7c](https://github.com/vtexdocs/devportal/commit/ab06f7c8b11062f82f08398f391d916fbbceb165))
+* **index.tsx:** update LastUpdatesCard ([34888fc](https://github.com/vtexdocs/devportal/commit/34888fc721372ec554d6db7364040bb4f398ebf7))
+* **language.json:** add subscription messages ([1a41d9c](https://github.com/vtexdocs/devportal/commit/1a41d9c641933810d323aac3cba69852f2c5bc96))
+* **styles.ts:** improve UI message feedback ([174a38a](https://github.com/vtexdocs/devportal/commit/174a38af22d822ce8e5fb2982cfc6aea10d959af))
+
+
+### Bug Fixes
+
+* **get-url.tsx:** new newsletter link ([7c549f5](https://github.com/vtexdocs/devportal/commit/7c549f5e2707dba269aa37db6d50a8c51799862f))
+* **get-url.tsx:** newsletter link ([73db0b7](https://github.com/vtexdocs/devportal/commit/73db0b75d449f37e7a548d0da971cb13469b17dc))
+* **get-url.tsx:** newsletter link ([21ef7ee](https://github.com/vtexdocs/devportal/commit/21ef7eed0207bd77b747a81f4f109a18e5c274b2))
+* **index.js:** lint errors ([aa0af50](https://github.com/vtexdocs/devportal/commit/aa0af50e1ef3b68e618be62e8aa1a25fc06b574e))
+* **index.tsx:** fix format ([e819064](https://github.com/vtexdocs/devportal/commit/e819064048f5ea70d90bd44c62877011f19632f0))
+* **index.tsx:** fix Input and Button props errors ([1309128](https://github.com/vtexdocs/devportal/commit/1309128ac359bfe6191a775093df9c50d9ab549b))
+* **index.tsx:** fix syntax ([885846f](https://github.com/vtexdocs/devportal/commit/885846f1ab1090aeb721595275566f5175870ca4))
+* **index.tsx:** fix syntax ([01de843](https://github.com/vtexdocs/devportal/commit/01de8436adf02f419a02ad22d9da4d230f39119c))
+* **index.tsx:** fix syntax ([02ab759](https://github.com/vtexdocs/devportal/commit/02ab75901d1a4858e537aa724af19f8a6d010ad0))
+* **index.tsx:** fix syntax ([1c18c60](https://github.com/vtexdocs/devportal/commit/1c18c600190b560cfef08a03a015133ecfff119f))
+* **index.tsx:** fix syntax formatting ([b81bdbc](https://github.com/vtexdocs/devportal/commit/b81bdbcfc1c8cb515acdc58dbde6f001ad66da47))
+* **index.tsx:** form tags ([5f41fd1](https://github.com/vtexdocs/devportal/commit/5f41fd16e38fed81252d63d13cc2627def2c87d6))
+* **index.tsx:** input label ([cbf1c8d](https://github.com/vtexdocs/devportal/commit/cbf1c8d3c84be08111af130d74a3bf246dd518a6))
+* **index.tsx:** prettier formatting ([de2640b](https://github.com/vtexdocs/devportal/commit/de2640b4bfa16abe33b0622e9ea6be0d00676463))
+* **index.tsx:** prettier issues ([db97ade](https://github.com/vtexdocs/devportal/commit/db97ade411b50e55f53464f91ffc5ccdd9c42756))
+* **index.tsx:** remove form styles ([c8fbea7](https://github.com/vtexdocs/devportal/commit/c8fbea7ebc009800c0b2d3d9e57ea478fc9e9e4c))
+* **index.tsx:** testing syntax ([189abd8](https://github.com/vtexdocs/devportal/commit/189abd85bcadcbfbf8533da2224a659ae2a1f94d))
+* **index.tsx:** UX writing review ([4f87a82](https://github.com/vtexdocs/devportal/commit/4f87a82751bef2adee5bfa75e909fec112a66ebb))
+* **language.json:** fix "landing_page_subscription.title" ([0a0411a](https://github.com/vtexdocs/devportal/commit/0a0411a489dceac88b41edf5dbefdf705ac55efd))
+* **language.json:** typos ([7e96e9c](https://github.com/vtexdocs/devportal/commit/7e96e9cef666bdb849b8bfe4ecc7b7f75299b8ef))
+* **language.json:** UX writing review ([09ce1d9](https://github.com/vtexdocs/devportal/commit/09ce1d9251a9a1ae1bddbe75c28b56d24d7bdbe8))
+* ssl-certificates-api navigation ([04e201c](https://github.com/vtexdocs/devportal/commit/04e201c6f59a2058c6094af865259d0226e2a563))
+* **styles.ts:** define missing styles for component responsiveness ([f25405d](https://github.com/vtexdocs/devportal/commit/f25405d8b0463af2784d6e43f77f55803e0a0bc6))
+
+
+### Style
+
+* **styles.ts:** delete input and button styles ([f2e3b1d](https://github.com/vtexdocs/devportal/commit/f2e3b1d50c0d4127e533806a7bbaa2b179aeadab))
+* **styles.ts:** fix container ([c489bcb](https://github.com/vtexdocs/devportal/commit/c489bcbf3026fe4911e291897bef4b36e26f8a64))
+* **styles.tsx:** adding the component's styles ([ba3037c](https://github.com/vtexdocs/devportal/commit/ba3037c074d4dd0b0eb0d8deb5ac4c67dcbbe9d2))
+
+
+### Chore
+
+* **apps/[slug]/[child].tsx:** add remarkMermaid ([0076b13](https://github.com/vtexdocs/devportal/commit/0076b137c9d97f1b12f9c338c3e057b1cfbb91cd))
+* **netlify.toml:** add redirect ([a3f3b09](https://github.com/vtexdocs/devportal/commit/a3f3b09f58f5cf866a3ccc0521fdfa7bd8fe1e58))
+
+
+### Docs
+
+* adding release note to navigation ([04a493d](https://github.com/vtexdocs/devportal/commit/04a493dced94a34b8ed6b5769bf7f46a85a5166f))
+* **navigation.json:** adding `Textarea` and `TextareaField` to sidebar ([82f5866](https://github.com/vtexdocs/devportal/commit/82f586612e59a29a6e42f065ebbb879093e099a1))
+* **navigation.json:** FastStore new release note (SEO flags) ([ed07a1e](https://github.com/vtexdocs/devportal/commit/ed07a1ec167ea6209157d57f00c4f162b9b62aef))
+* **navigation.json:** my account faststore ([5d0037a](https://github.com/vtexdocs/devportal/commit/5d0037aced2b6bef4c6b5bfe066374158da33d3d))
+* **navigation.json:** Release note: new experimental flag'graphqlCacheControl ([5189ce1](https://github.com/vtexdocs/devportal/commit/5189ce160af06eca8746de430839a834f764eb28))
+* **navigation.json:** removing my account docs from sidebar ([85ec4e0](https://github.com/vtexdocs/devportal/commit/85ec4e0b560a518bda5bdb83074049ac781bcf8a))
+* **navigation.json:** update ([6bd6550](https://github.com/vtexdocs/devportal/commit/6bd655062856d3dac736cc8773b3a403993547e3))
+* **navigation.json:** update ([d8652e7](https://github.com/vtexdocs/devportal/commit/d8652e729daf620091b876321eaf1ca6dfe6cfb5))
+* **navigation.json:** Validating UTM tracking ([cdb5360](https://github.com/vtexdocs/devportal/commit/cdb5360afe1257fd15e029a281c11c6e3585e186))
+
 ### [1.19.7](https://github.com/vtexdocs/devportal/compare/v1.19.6...v1.19.7) (2025-05-07)
 
 
