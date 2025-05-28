@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { Button, Popover, useUI } from '@faststore/ui';
+import React, { useRef } from 'react'
+import { Button, Popover, useUI } from '@faststore/ui'
 
 export function PopoverUsage() {
   const { popover: displayPopover, openPopover, closePopover } = useUI()
