@@ -12465,6 +12465,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Shipping Option Components",
+              "slug": "apps/vtex.shipping-option-components",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
