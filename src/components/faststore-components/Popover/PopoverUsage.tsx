@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { Button, Popover, useUI } from '@faststore/ui'
 
-export function PopoverUsage() {
+function PopoverUsage() {
   const { popover: displayPopover, openPopover, closePopover } = useUI()
   const buttonRef = useRef(null)
 
@@ -15,16 +15,18 @@ export function PopoverUsage() {
         Popover Trigger
       </Button>
 
-      <Popover
-        title="Popover Title"
-        content={<div>Popover content goes here</div>}
-        dismissible
-        onDismiss={closePopover}
-        isOpen={displayPopover.isOpen}
-        triggerRef={displayPopover.triggerRef}
-        placement="bottom-start"
-        offsetTop={-16}
-      />
+      {displayPopover.isOpen && (
+        <Popover
+          title="Popover Title"
+          content={<div>Popover content goes here</div>}
+          dismissible
+          onDismiss={closePopover}
+          isOpen={displayPopover.isOpen}
+          triggerRef={displayPopover.triggerRef}
+          placement="bottom-start"
+          offsetTop={-16}
+        />
+      )}
     </>
   )
 }

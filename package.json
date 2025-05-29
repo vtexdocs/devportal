@@ -29,7 +29,7 @@
     "@code-hike/mdx": "^0.9.0",
     "@faststore/api": "^3.0.0",
     "@faststore/sdk": "^3.0.0",
-    "@faststore/ui": "^3.1.0",
+    "@faststore/ui": "^3.49.1",
     "@highlightjs/cdn-assets": "^11.7.0",
     "@lit-labs/nextjs": "^0.1.1",
     "@plaiceholder/next": "^2.5.0",
