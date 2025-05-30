@@ -2206,6 +2206,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Delivery promise for headless stores (Beta)",
+              "slug": "delivery-promise-for-headless-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -8857,23 +8864,23 @@
           "origin": "",
           "type": "openapi",
           "children": [
-              {
-                "name": "Update order deadline",
-                "slug": "pick-and-pack-order-changes-api",
-                "type": "openapi",
-                "method": "PUT",
-                "origin": "",
-                "endpoint": "/orders/-orderId-/deadline",
-                "children": []
-              },
-              {
-                "name": "Update items of the order",
-                "slug": "pick-and-pack-order-changes-api",
-                "type": "openapi",
-                "method": "POST",
-                "origin": "",
-                "endpoint": "/order/changes",
-                "children": []
+            {
+              "name": "Update order deadline",
+              "slug": "pick-and-pack-order-changes-api",
+              "type": "openapi",
+              "method": "PUT",
+              "origin": "",
+              "endpoint": "/orders/-orderId-/deadline",
+              "children": []
+            },
+            {
+              "name": "Update items of the order",
+              "slug": "pick-and-pack-order-changes-api",
+              "type": "openapi",
+              "method": "POST",
+              "origin": "",
+              "endpoint": "/order/changes",
+              "children": []
             }
           ]
         },
@@ -12458,6 +12465,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Shipping Option Components",
+              "slug": "apps/vtex.shipping-option-components",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -14760,6 +14774,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Setting up Delivery Promise components (Beta)",
+                  "slug": "setting-up-delivery-promise-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -14783,7 +14804,7 @@
                   "type": "markdown",
                   "children": []
                 },
-                  {
+                {
                   "name": "Creating modals using icons",
                   "slug": "vtex-io-documentation-creating-modals-using-icons",
                   "origin": "",
@@ -14805,7 +14826,7 @@
                   "children": []
                 }
               ]
-            }, 
+            },
             {
               "name": "Working with Site Editor",
               "slug": "store-framework-working-with-site-editor",
