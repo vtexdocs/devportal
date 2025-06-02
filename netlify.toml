@@ -1837,3 +1837,8 @@ from = "/docs/guides/pricing-api-overview"
 status = 308
 to = "/docs/api-reference/pricing-api"
 
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-gift-list"
+status = 308
+to = "/docs/apps/vtex.list"
