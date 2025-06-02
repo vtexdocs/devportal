@@ -1842,3 +1842,15 @@ force = true
 from = "/docs/guides/vtex-gift-list"
 status = 308
 to = "/docs/apps/vtex.list"
+
+[[redirects]]
+force = true
+from = "/docs/guides/payment-provider-protocol"
+status = 308
+to = "/docs/guides/payments-integration-payment-provider-protocol"
+
+[[redirects]]
+force = true
+from = "/reference/giftcard-provider-protocol-api-overview"
+status = 308
+to = "/docs/api-reference/giftcard-provider-protocol"
