@@ -1837,3 +1837,9 @@ from = "/docs/guides/pricing-api-overview"
 status = 308
 to = "/docs/api-reference/pricing-api"
 
+[[redirects]]
+force = true
+from = "/docs/guides/payment-provider-protocol"
+status = 308
+to = "/docs/guides/payments-integration-payment-provider-protocol"
+
