@@ -19,20 +19,18 @@ const SubscriptionList: React.FC = () => {
     }, 3000)
   }
 
-  const checkEmail = async (
-  email: string
-): Promise<boolean> => {
-    const url = `https://check-mail.org/api/v1/verify?email=${encodeURIComponent(email)}`
+  const checkEmail = async (email: string): Promise<boolean> => {
+  const url = `https://check-mail.org/api/v1/verify?email=${encodeURIComponent(email)}`
 
-    try {
-      const response = await fetch(url)
-      const data = await response.json()
-      return data.valid
-    } catch (fault) {
-      console.error('Error while verifying email:', fault)
-      return false
-    }
+  try {
+    const response = await fetch(url)
+    const data = await response.json()
+    return data.valid
+  } catch (fault) {
+    console.error('Error while verifying email:', fault)
+    return false
   }
+}
 
   const handleSubscribe = async () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
