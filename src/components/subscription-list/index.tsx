@@ -27,19 +27,19 @@ const SubscriptionList: React.FC = () => {
 
     try {
       const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'x-rapidapi-host': 'mailcheck.p.rapidapi.com',
-        'x-rapidapi-key': apiKey,
-      },
-    });
+        method: 'GET',
+        headers: {
+          'x-rapidapi-host': 'mailcheck.p.rapidapi.com',
+          'x-rapidapi-key': apiKey,
+        },
+      })
 
-    const data = await response.json()
-    return data.valid
+      const data = await response.json()
+      return data.valid
     } catch (error) {
-    return false
+      return false
     }
-    }
+  }
 
   const handleSubscribe = async () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
