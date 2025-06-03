@@ -20,19 +20,26 @@ const SubscriptionList: React.FC = () => {
   }
 
   const checkEmail = async (email: string): Promise<boolean> => {
-    const url = `https://check-mail.org/api/v1/verify?email=${encodeURIComponent(
+    const apiKey = 'e8ed0eb649msh5054f327a1dc9d7p168b47jsn142a5fd7951b'
+    const url = `https://mailcheck.p.rapidapi.com/?email=${encodeURIComponent(
       email
     )}`
 
     try {
-      const response = await fetch(url)
-      const data = await response.json()
-      return data.valid
-    } catch (fault) {
-      console.error('Error while verifying email:', fault)
-      return false
+      const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'x-rapidapi-host': 'mailcheck.p.rapidapi.com',
+        'x-rapidapi-key': apiKey,
+      },
+    });
+
+    const data = await response.json()
+    return data.valid
+    } catch (error) {
+    return false
     }
-  }
+    }
 
   const handleSubscribe = async () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
