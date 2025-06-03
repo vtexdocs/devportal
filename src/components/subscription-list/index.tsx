@@ -26,8 +26,8 @@ const SubscriptionList: React.FC = () => {
       const response = await fetch(url)
       const data = await response.json()
       return data.valid
-    } catch (erro) {
-      console.error('Error while verifying email:', erro)
+    } catch (fault) {
+      console.error('Error while verifying email:', fault)
       return false
     }
   }
