@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.20.1](https://github.com/vtexdocs/devportal/compare/v1.20.0...v1.20.1) (2025-06-03)
+
+
+### Features
+
+* **faststore-components:** export PopoverUsage ([8d71563](https://github.com/vtexdocs/devportal/commit/8d71563f8a09e98c87c096fdc2c963758bd0bf5d))
+* **PopoverUsage.tsx:** adding popover usage example ([043f900](https://github.com/vtexdocs/devportal/commit/043f9002b802697892f605a5ad4dc4971816ae4a))
+
+
+### Bug Fixes
+
+* **PopoverUsage.tsx:** fixing prettier format ([44097b1](https://github.com/vtexdocs/devportal/commit/44097b16219ffa311683f39297583ebe3192360e))
+* **PopoverUsage.tsx:** removing extra semicolons ([a24daa8](https://github.com/vtexdocs/devportal/commit/a24daa843ccb8b06a6ab076a88cfc9961378fb60))
+
+
+### Chore
+
+* **rapidoc:** update submodule commit ([109f7f7](https://github.com/vtexdocs/devportal/commit/109f7f76f8eb55783999da867c87db14d2cb39c1))
+
 ## [1.20.0](https://github.com/vtexdocs/devportal/compare/v1.19.7...v1.20.0) (2025-05-27)
 
 
