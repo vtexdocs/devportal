@@ -19,7 +19,9 @@ const SubscriptionList: React.FC = () => {
     }, 3000)
   }
 
-  const checkEmail = async (email: string): Promise<boolean> => {
+  const checkEmail = async (
+  email: string
+): Promise<boolean> => {
     const url = `https://check-mail.org/api/v1/verify?email=${encodeURIComponent(email)}`
 
     try {
