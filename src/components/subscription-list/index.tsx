@@ -75,19 +75,13 @@ const SubscriptionList: React.FC = () => {
         setMessageType('success')
         setMessage("You've successfully subscribed!")
         setEmail('')
-        setTimeout(() => {
-          setMessage('')
-          setMessageType('')
-        }, 3000)
+        clearMessageAfterTimeout()
       })
       .catch((error) => {
         console.error('Error:', error)
         setMessageType('error')
         setMessage("Sorry, we couldn't subscribe you. Please try again later.")
-        setTimeout(() => {
-          setMessage('')
-          setMessageType('')
-        }, 3000)
+        clearMessageAfterTimeout()
       })
   }
 
@@ -126,7 +120,11 @@ const SubscriptionList: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
               sx={styles.inputContainer}
             />
-            <Button size="regular" onClick={handleSubscribe} sx={styles.button}>
+            <Button
+              size="regular"
+              onClick={handleSubscribe}
+              sx={styles.button}
+            >
               {messages['landing_page_newsletter.Button']}
             </Button>
           </Flex>
