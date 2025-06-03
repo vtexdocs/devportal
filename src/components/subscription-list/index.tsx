@@ -20,7 +20,9 @@ const SubscriptionList: React.FC = () => {
   }
 
   const checkEmail = async (email: string): Promise<boolean> => {
-    const url = `https://check-mail.org/api/v1/verify?email=${encodeURIComponent(email)}`
+    const url = `https://check-mail.org/api/v1/verify?email=${
+      encodeURIComponent(email)
+    }`
 
     try {
       const response = await fetch(url)
@@ -75,13 +77,19 @@ const SubscriptionList: React.FC = () => {
         setMessageType('success')
         setMessage("You've successfully subscribed!")
         setEmail('')
-        clearMessageAfterTimeout()
+        setTimeout(() => {
+          setMessage('')
+          setMessageType('')
+        }, 3000)
       })
       .catch((error) => {
         console.error('Error:', error)
         setMessageType('error')
         setMessage("Sorry, we couldn't subscribe you. Please try again later.")
-        clearMessageAfterTimeout()
+        setTimeout(() => {
+          setMessage('')
+          setMessageType('')
+        }, 3000)
       })
   }
 
@@ -120,11 +128,7 @@ const SubscriptionList: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
               sx={styles.inputContainer}
             />
-            <Button
-              size="regular"
-              onClick={handleSubscribe}
-              sx={styles.button}
-            >
+            <Button size="regular" onClick={handleSubscribe} sx={styles.button}>
               {messages['landing_page_newsletter.Button']}
             </Button>
           </Flex>
