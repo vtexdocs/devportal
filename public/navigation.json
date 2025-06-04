@@ -3445,6 +3445,15 @@
                   "children": []
                 },
                 {
+                  "name": "Reorder SKU files",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/reorder",
+                  "children": []
+                },
+                {
                   "name": "Delete SKU Image File",
                   "slug": "catalog-api",
                   "type": "openapi",
