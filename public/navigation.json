@@ -13042,8 +13042,8 @@
           ]
         },
         {
-          "name": "Deprecated",
-          "slug": "guides/deprecated",
+          "name": "VTEX IO deprecated apps",
+          "slug": "guides/vtex-io-deprecated-apps",
           "origin": "",
           "type": "markdown",
           "children": []
