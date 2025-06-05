@@ -27,7 +27,7 @@ export const getSupportURL = () => {
 }
 
 export const getSubscritionURL = () => {
-  return `https://vtex.com/br-pt/privacy-and-agreements/general-external-privacy-notice/`
+  return `https://vtex.com/us-en/privacy-and-agreements/general-external-privacy-notice/`
 }
 
 export const getNewsletterURL = () => {
