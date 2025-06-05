@@ -36,7 +36,7 @@ const SubscriptionList: React.FC = () => {
 
       const data = await response.json()
       // Block if not valid, or if block/disposable is true
-      return data.valid && !data.block && !data.disposable
+      return !data.block
     } catch (error) {
       return false
     }
