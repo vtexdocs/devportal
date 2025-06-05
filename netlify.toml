@@ -1854,3 +1854,9 @@ force = true
 from = "/reference/giftcard-provider-protocol-api-overview"
 status = 308
 to = "/docs/api-reference/giftcard-provider-protocol"
+
+[[redirects]]
+force = true
+from = "/docs/guides/deprecated"
+status = 308
+to = "/docs/guides/vtex-io-deprecated-apps"
