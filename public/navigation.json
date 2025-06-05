@@ -14779,6 +14779,13 @@
                   "children": []
                 },
                 {
+                  "name": "Overriding native app blocks",
+                  "slug": "vtex-io-documentation-overriding-native-app-blocks",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },                
+                {
                   "name": "Using Sandbox blocks",
                   "slug": "vtex-io-documentation-using-sandbox-blocks",
                   "origin": "",
