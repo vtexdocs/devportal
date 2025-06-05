@@ -3445,6 +3445,15 @@
                   "children": []
                 },
                 {
+                  "name": "Reorder SKU files",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/reorder",
+                  "children": []
+                },
+                {
                   "name": "Delete SKU Image File",
                   "slug": "catalog-api",
                   "type": "openapi",
@@ -14806,8 +14815,8 @@
                   "children": []
                 },
                 {
-                  "name": "Configuring a quickview using Modal Layout",
-                  "slug": "vtex-io-documentation-configuring-a-quickview-using-modal-layout",
+                  "name": "Creating a Quickview using Modal Layout",
+                  "slug": "vtex-io-documentation-creating-a-quickview-using-modal-layout",
                   "origin": "",
                   "type": "markdown",
                   "children": []
