@@ -15573,6 +15573,21 @@
           "type": "category",
           "children": [
             {
+              "name": "June",
+              "slug": "june-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Enhanced UTM tracking and personalized search",
+                  "slug": "2025-06-05-utm-tracking-and-personalized-search",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "May",
               "slug": "may-2025",
               "origin": "",

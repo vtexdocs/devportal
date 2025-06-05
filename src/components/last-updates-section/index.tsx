@@ -7,10 +7,9 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'added',
-    description:
-      'FastStore: Configuring GraphQL cache control for `GET` requests',
-    date: new Date('05/20/2025'),
+    type: 'improved',
+    description: 'FastStore: Enhanced UTM tracking and personalized search',
+    date: new Date('06/05/2025'),
   },
   updateType: 'release-notes',
 }
