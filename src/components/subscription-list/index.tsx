@@ -12,14 +12,49 @@ const SubscriptionList: React.FC = () => {
   const [message, setMessage] = useState('')
   const [messageType, setMessageType] = useState<'success' | 'error' | ''>('')
 
-  const handleSubscribe = () => {
+  const clearMessageAfterTimeout = () => {
+    setTimeout(() => {
+      setMessage('')
+      setMessageType('')
+    }, 3000)
+  }
+
+  const checkEmail = async (email: string): Promise<boolean> => {
+    const apiKey = 'e8ed0eb649msh5054f327a1dc9d7p168b47jsn142a5fd7951b'
+    const url = `https://mailcheck.p.rapidapi.com/?email=${encodeURIComponent(
+      email
+    )}`
+
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'x-rapidapi-host': 'mailcheck.p.rapidapi.com',
+          'x-rapidapi-key': apiKey,
+        },
+      })
+
+      const data = await response.json()
+      // Block if not valid, or if block/disposable is true
+      return !data.block
+    } catch (error) {
+      return false
+    }
+  }
+
+  const handleSubscribe = async () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setMessageType('error')
       setMessage('Invalid email address, please try another one.')
-      setTimeout(() => {
-        setMessage('')
-        setMessageType('')
-      }, 3000)
+      clearMessageAfterTimeout()
+      return
+    }
+
+    const isValid = await checkEmail(email)
+    if (!isValid) {
+      setMessageType('error')
+      setMessage('Invalid email address, please try another one.')
+      clearMessageAfterTimeout()
       return
     }
 
