@@ -15445,6 +15445,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "VTEX IO Apps: End of official support for legacy apps",
+                  "slug": "2025-06-06-vtex-io-apps-end-of-official-support-for-legacy-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Enhanced UTM tracking and personalized search",
                   "slug": "2025-06-05-utm-tracking-and-personalized-search",
                   "origin": "",
