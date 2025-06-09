@@ -14302,6 +14302,13 @@
               ]
             },
             {
+              "name": "Managing Secrets",
+              "slug": "faststore/security-managing-secrets",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Managing URLs with redirects and rewrite paths",
               "slug": "faststore/routing-managing-urls-with-redirects-and-rewrite-paths",
               "origin": "",
