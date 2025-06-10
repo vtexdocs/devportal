@@ -1,16 +1,14 @@
 import { Button, RegionPopover } from '@faststore/ui'
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 
 function RegionPopoverUsage() {
   const popoverTrigger = useRef(null)
 
   return (
     <section>
-      <Button
-        ref={popoverTrigger}
-        variant="primary"
-          >
-        Change region</Button>
+      <Button ref={popoverTrigger} variant="primary">
+        Change region
+      </Button>
       <RegionPopover
         triggerRef={popoverTrigger}
         title="Update Location"
