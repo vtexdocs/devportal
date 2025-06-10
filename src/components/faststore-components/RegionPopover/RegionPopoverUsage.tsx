@@ -23,7 +23,9 @@ function RegionPopoverUsage() {
         placement="bottom-center"
         offsetTop={12}
         offsetLeft={8}
-        onDismiss={() => { alert('RegionPopover dismissed') }}
+        onDismiss={() => {
+          alert('RegionPopover dismissed')
+        }}
       />
     </>
   )
