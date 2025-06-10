@@ -32,6 +32,7 @@ export { default as ProductShelfCarouselUsage } from './ProductShelf/ProductShel
 export { default as PropsSection } from './PropsSection'
 export { default as RatingActionable } from './Rating/RatingActionable'
 export type { RatingActionableProps } from './Rating/RatingActionable'
+export { default as RegionPopoverUsage } from './RegionPopover/RegionPopoverUsage'
 export { default as SearchInputUsage } from './Search/SearchInputUsage'
 export { default as SearchDropdownUsage } from './Search/SearchDropdownUsage'
 export * from './SectionItem'
