@@ -13949,35 +13949,42 @@
               ]
             },
             {
-              "name": "Storefront features",
-              "slug": "faststore/features-overview",
+              "name": "Building storefront pages",
+              "slug": "faststore/storefront-pages-overview",
               "origin": "",
               "type": "category",
               "children": [
                 {
-                  "name": "Navigation",
-                  "slug": "faststore/features-navigation",
+                  "name": "Building navigation menus",
+                  "slug": "faststore/storefront-pages-building-navigation-menus",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Regionalization",
-                  "slug": "faststore/features-regionalization",
+                  "name": "Implementing regionalization features",
+                  "slug": "faststore/storefront-pages-implementing-regionalization-features",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Search",
-                  "slug": "faststore/features-search",
+                  "name": "Implementing search features",
+                  "slug": "faststore/storefront-pages-implementing-search-features",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Authenticated content",
-                  "slug": "faststore/features-auth-content",
+                  "name": "Displaying content for authenticated users",
+                  "slug": "faststore/storefront-pages-displaying-content-for-authenticated-users",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing product images in specific contexts",
+                  "slug": "faststore/customization-managing-product-images-in-specific-contexts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14449,13 +14456,6 @@
             {
               "name": "Managing URLs with redirects and rewrite paths",
               "slug": "faststore/routing-managing-urls-with-redirects-and-rewrite-paths",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Managing product images in specific contexts",
-              "slug": "faststore/customization-managing-product-images-in-specific-contexts",
               "origin": "",
               "type": "markdown",
               "children": []
