@@ -13117,11 +13117,11 @@
                   "children": []
                 },
                 {
-                  "name": "3. FastStore CLI",
-                  "slug": "faststore/getting-started-3-faststore-cli",
+                  "name": "3. Project structure",
+                  "slug": "faststore/getting-started-faststore-project-structure",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
                 },
                 {
                   "name": "4. Next steps",
@@ -13226,39 +13226,32 @@
               ]
             },
             {
-              "name": "Project structure",
-              "slug": "faststore/project-structure-overview",
+              "name": "Developer tools and references",
+              "slug": "faststore/developer-tools",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
-                  "name": "Configuration options",
-                  "slug": "faststore/project-structure-config-options",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "enableCypressExtension",
-                  "slug": "faststore/project-structure-custom-cypress",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Updating the @fastore/cli package version",
-                  "slug": "faststore/project-structure-updating-the-cli-package-version",
+                  "slug": "faststore/developer-tools-updating-the-cli-package-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Adding third-party scripts",
-                  "slug": "faststore/project-structure-handling-third-party-scripts",
+                  "name": "Configuration options",
+                  "slug": "faststore/developer-tools-config-options",
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
+                },
+                                {
+                  "name": "FastStore CLI",
+                  "slug": "faststore/developer-tools-faststore-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                } 
               ]
             },
             {
