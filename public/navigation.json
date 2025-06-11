@@ -13949,42 +13949,49 @@
               ]
             },
             {
-              "name": "Building storefront pages",
-              "slug": "faststore/storefront-pages-overview",
+              "name": "Implementing storefront features",
+              "slug": "faststore/storefront-features-overview",
               "origin": "",
               "type": "category",
               "children": [
                 {
                   "name": "Building navigation menus",
-                  "slug": "faststore/storefront-pages-building-navigation-menus",
+                  "slug": "faststore/storefront-features-building-navigation-menus",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Implementing regionalization features",
-                  "slug": "faststore/storefront-pages-implementing-regionalization-features",
+                  "slug": "faststore/storefront-features-implementing-regionalization-features",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Implementing search features",
-                  "slug": "faststore/storefront-pages-implementing-search-features",
+                  "slug": "faststore/storefront-features-implementing-search-features",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Displaying content for authenticated users",
-                  "slug": "faststore/storefront-pages-displaying-content-for-authenticated-users",
+                  "slug": "faststore/storefront-features-displaying-content-for-authenticated-users",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Managing product images in specific contexts",
-                  "slug": "faststore/customization-managing-product-images-in-specific-contexts",
+                  "slug": "faststore/storefront-features-managing-product-images-in-specific-contexts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Adding third-party scripts",
+                  "slug": "faststore/storefront-feature-handling-third-party-scripts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
