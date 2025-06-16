@@ -23,5 +23,4 @@ export const config = preval({
   GITHUB_APPID: getEnvironmentVariable('GITHUB_APPID'),
   GITHUB_PRIVATEKEY: PEM,
   GITHUB_INSTALLATIONID: getEnvironmentVariable('GITHUB_INSTALLATIONID'),
-  NEWSLETTER_API_KEY: getEnvironmentVariable('NEWSLETTER_API_KEY'),
 })
