@@ -1845,12 +1845,6 @@ to = "/docs/apps/vtex.list"
 
 [[redirects]]
 force = true
-from = "/docs/guides/vtex-gift-list"
-status = 308
-to = "/docs/apps/vtex.list"
-
-[[redirects]]
-force = true
 from = "/docs/guides/vtex-list-listaddtocartbutton"
 status = 308
 to = "/docs/apps/vtex.list/ListAddToCartButton"
