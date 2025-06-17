@@ -1917,6 +1917,18 @@ to = "/docs/apps/vtex.list/Quantity Selector"
 
 [[redirects]]
 force = true
+from = "/docs/guides/vtex-list-quantity-selector-1"
+status = 308
+to = "/docs/apps/vtex.list/Quantity Selector"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-quantity-selector-2"
+status = 308
+to = "/docs/apps/vtex.list/Quantity Selector"
+
+[[redirects]]
+force = true
 from = "/docs/guides/vtex-list-searchlist"
 status = 308
 to = "/docs/apps/vtex.list/SearchList"
