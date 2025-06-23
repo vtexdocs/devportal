@@ -15459,6 +15459,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Supports B2B Price Tables and personalized promotions",
+                  "slug": "2025-06-23-faststore-b2b-price-tables-session-cookies",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX IO Apps: End of official support for legacy apps",
                   "slug": "2025-06-06-vtex-io-apps-end-of-official-support-for-legacy-apps",
                   "origin": "",
