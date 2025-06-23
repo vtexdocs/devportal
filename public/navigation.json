@@ -2232,6 +2232,21 @@
           ]
         },
         {
+          "name": "VTEX Shield",
+          "slug": "vtex-shield",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Managing SSL Certificates",
+              "slug": "managing-ssl-certificates",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Data Protection Plus",
           "slug": "data-protection-plus",
           "origin": "",
@@ -15461,6 +15476,13 @@
                 {
                   "name": "FastStore: Supports B2B Price Tables and personalized promotions",
                   "slug": "2025-06-23-faststore-b2b-price-tables-session-cookies",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Shield: New SSL Certificates API",
+                  "slug": "2025-06-03-vtex-shield-new-ssl-certificates-api",
                   "origin": "",
                   "type": "markdown",
                   "children": []
