@@ -15474,6 +15474,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Supports B2B Price Tables and personalized promotions",
+                  "slug": "2025-06-23-faststore-b2b-price-tables-session-cookies",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX Shield: New SSL Certificates API",
                   "slug": "2025-06-03-vtex-shield-new-ssl-certificates-api",
                   "origin": "",
