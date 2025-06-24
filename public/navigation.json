@@ -15474,6 +15474,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore WebOps: Centralized secrets management",
+                  "slug": "2025-06-24-faststore-webops-centralized-secrets-management",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Supports B2B Price Tables and personalized promotions",
                   "slug": "2025-06-23-faststore-b2b-price-tables-session-cookies",
                   "origin": "",
