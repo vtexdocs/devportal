@@ -8889,22 +8889,72 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Update order deadline",
-              "slug": "pick-and-pack-order-changes-api",
-              "type": "openapi",
-              "method": "PUT",
-              "origin": "",
-              "endpoint": "/orders/-orderId-/deadline",
-              "children": []
+              "name": "Order changes",
+              "slug": "pick-and-pack-order-changes-api-order-changes",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Update order deadline",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/orders/-orderId-/deadline",
+                  "children": []
+                },
+                {
+                  "name": "Update items of the order",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/order/changes",
+                  "children": []
+                }
+              ]
             },
             {
-              "name": "Update items of the order",
-              "slug": "pick-and-pack-order-changes-api",
-              "type": "openapi",
-              "method": "POST",
-              "origin": "",
-              "endpoint": "/order/changes",
-              "children": []
+              "name": "BIN locations",
+              "slug": "pick-and-pack-order-changes-api-bin-locations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get BIN location",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/-skuId-/warehouses/-warehouseId-",
+                  "children": []
+                },
+                {
+                  "name": "Create BIN location",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-skuId-/warehouses/-warehouseId-",
+                  "children": []
+                },
+                {
+                  "name": "Update BIN location",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-skuId-/warehouses/-warehouseId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete BIN location",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/-skuId-/warehouses/-warehouseId-",
+                  "children": []
+                }
+              ]
             }
           ]
         },
