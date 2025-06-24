@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.21.0](https://github.com/vtexdocs/devportal/compare/v1.20.1...v1.21.0) (2025-06-24)
+
+
+### Features
+
+* **config.ts:** new environment variable ([c2f5898](https://github.com/vtexdocs/devportal/commit/c2f58984b3fb5958edd0b79cf8d19fd72af2b7ab))
+* **index.tsx:** improve email validation to block disposable and blacklisted addresses ([7ef5412](https://github.com/vtexdocs/devportal/commit/7ef5412ac8d1218ace4b6cd9d6f5c35404c24bac))
+* **index.tsx:** new environment variable ([1f7ea84](https://github.com/vtexdocs/devportal/commit/1f7ea8486b96bd9a0c4978b912f12f1a800cd4fb))
+* **index.tsx:** update 'last-updates-section' ([4716324](https://github.com/vtexdocs/devportal/commit/47163247a496a7637702434f59afd6eb5b478fad))
+
+
+### Bug Fixes
+
+* **get-url.tsx:** fix privacy link ([0ff4493](https://github.com/vtexdocs/devportal/commit/0ff44936225042f9009c23601732b80181cb00bf))
+* **index.tsx:** test ([e20f879](https://github.com/vtexdocs/devportal/commit/e20f8795582e1659f48cc043e0c2bd42d06ad344))
+* newsletter authentication ([301e6e7](https://github.com/vtexdocs/devportal/commit/301e6e7405988383839889afa86b0ba0eb74910e))
+
+
+### Docs
+
+* add ssl certificates documentation to navigation ([79d9abe](https://github.com/vtexdocs/devportal/commit/79d9abe3d474e792532f6ef6ca6304b461232429))
+* adding to navigation ([6f0de4c](https://github.com/vtexdocs/devportal/commit/6f0de4c9ceb2614dc024c00927410fbb7f957680))
+* **navigation.json:** add new release note ([0538d43](https://github.com/vtexdocs/devportal/commit/0538d43088829d062ac68bc2716371647ff3fb4d))
+* **navigation.json:** deprecated apps ([da49fd2](https://github.com/vtexdocs/devportal/commit/da49fd2739ae31de2c46eea5f836f7301a97b320))
+* **navigation.json:** EDU-15086-secrets ([02b0b75](https://github.com/vtexdocs/devportal/commit/02b0b75f597adb92426d9dafc2700c36c8012945))
+* **navigation.json:** fixing typo ([d16b2b0](https://github.com/vtexdocs/devportal/commit/d16b2b00995c8e2fdc596a568a5630eb128fc5cf))
+* **navigation.json:** new faststore release note ([647de91](https://github.com/vtexdocs/devportal/commit/647de914fcad3b55971299efef383db487baf8e2))
+* **navigation.json:** secrets ([4a3a2a6](https://github.com/vtexdocs/devportal/commit/4a3a2a6ee3dd333552d62a58610373dc54ed3025))
+* **navigation.json:** updating sidebar ([47a6d5e](https://github.com/vtexdocs/devportal/commit/47a6d5ea09472358e06691fe4d1ca6af9674b0b7))
+
 ### [1.20.1](https://github.com/vtexdocs/devportal/compare/v1.20.0...v1.20.1) (2025-06-03)
 
 
