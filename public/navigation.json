@@ -14363,7 +14363,7 @@
               "name": "SEO",
               "slug": "faststore/seo-overview",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Configuring SEO for PLPs and PDPs",
