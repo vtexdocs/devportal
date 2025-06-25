@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.21.1](https://github.com/vtexdocs/devportal/compare/v1.21.0...v1.21.1) (2025-06-25)
+
+
+### Features
+
+* add new endpoints ([792670e](https://github.com/vtexdocs/devportal/commit/792670e3f6cdb3122514a0701736b92395f8ce13))
+* add release note ([cb299a2](https://github.com/vtexdocs/devportal/commit/cb299a2019ca3f55080d4298596e4db107557efd))
+
+
+### Docs
+
+* **navigation.json:** seo-overview ([e1396e2](https://github.com/vtexdocs/devportal/commit/e1396e2f53361a2f24049c85668cda744304d6c5))
+
 ## [1.21.0](https://github.com/vtexdocs/devportal/compare/v1.20.1...v1.21.0) (2025-06-24)
 
 
