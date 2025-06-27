@@ -14009,6 +14009,13 @@
                       "children": []
                     },
                     {
+                      "name": "Extending and customizing native types",
+                      "slug": "faststore/analytics-extending-and-customizing-native-types",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Use case: Implementing custom newsletter analytics events",
                       "slug": "faststore/analytics-implementing-custom-newsletter-analytics-events",
                       "origin": "",
