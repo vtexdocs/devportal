@@ -11741,6 +11741,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "GraphQL authorization in IO apps",
+              "slug": "graphql-authorization-in-io-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
