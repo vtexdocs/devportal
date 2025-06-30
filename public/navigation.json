@@ -13570,6 +13570,13 @@
                       "children": []
                     },
                     {
+                      "name": "Popover",
+                      "slug": "faststore/molecules-popover",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "ProductCard",
                       "slug": "faststore/molecules-product-card",
                       "origin": "",
