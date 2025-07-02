@@ -9668,6 +9668,39 @@
           ]
         },
         {
+          "name": "Punchout API",
+          "slug": "punchout-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Punchout login",
+              "slug": "punchout-login",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Start VTEX user punchout flow",
+                  "slug": "punchout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/punchout/start",
+                  "children": []
+                },
+                {
+                  "name": "Start pre-authenticated user punchout flow",
+                  "slug": "punchout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/punchout/authenticated/start",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Reviews and Ratings API",
           "slug": "reviews-and-ratings-api",
           "origin": "",
@@ -14750,7 +14783,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },                
+                },
                 {
                   "name": "Using Sandbox blocks",
                   "slug": "vtex-io-documentation-using-sandbox-blocks",
