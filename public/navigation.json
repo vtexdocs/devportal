@@ -11748,6 +11748,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Admin GraphQL IDE",
+              "slug": "graphql-ide",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
