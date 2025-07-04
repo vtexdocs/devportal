@@ -9071,7 +9071,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/pricing/prices/-itemId-",
+                  "endpoint": "/pricing/prices/-itemId-/fixed",
                   "children": []
                 },
                 {
