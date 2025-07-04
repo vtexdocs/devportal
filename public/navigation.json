@@ -7800,6 +7800,39 @@
           ]
         },
         {
+          "name": "mTLS API",
+          "slug": "mtls-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Certificate management",
+              "slug": "certificate-management",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Sign certificate",
+                  "slug": "mtls-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/edge/private-certificates/sign",
+                  "children": []
+                },
+                {
+                  "name": "Revoke certificate",
+                  "slug": "mtls-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/edge/private-certificates/-serialNumber-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Operational Capacity API",
           "slug": "operational-capacity-api",
           "origin": "",
