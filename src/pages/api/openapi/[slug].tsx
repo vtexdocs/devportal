@@ -72,6 +72,7 @@ const referencePaths = objectFlip({
   'VTEX - Audience API': 'audience-api',
   'VTEX - SSL Certificates API': 'ssl-certificates-api',
   'VTEX - Punchout API': 'punchout-api',
+  'VTEX - mTLS API': 'mtls-api',
 })
 
 // Type for reference paths mapping
