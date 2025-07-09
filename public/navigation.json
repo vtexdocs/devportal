@@ -4007,19 +4007,10 @@
               ]
             },
             {
-              "name": "Collection Beta",
-              "slug": "catalog-api-collection-beta",
+              "name": "Collection",
+              "slug": "catalog-api-collection",
               "type": "category",
               "children": [
-                {
-                  "name": "Get All Collections",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/collection/search",
-                  "children": []
-                },
                 {
                   "name": "Get All Inactive Collections",
                   "slug": "catalog-api",
@@ -4036,15 +4027,6 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/collection/",
-                  "children": []
-                },
-                {
-                  "name": "Get Collections by search terms",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/collection/search/-searchTerms-",
                   "children": []
                 },
                 {
