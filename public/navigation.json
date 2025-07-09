@@ -4012,7 +4012,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get All Inactive Collections",
+                  "name": "Get all inactive collections",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4021,16 +4021,16 @@
                   "children": []
                 },
                 {
-                  "name": "Create Collection",
+                  "name": "Create collection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/collection/",
+                  "endpoint": "/api/catalog/pvt/collection",
                   "children": []
                 },
                 {
-                  "name": "Import Collection file example",
+                  "name": "Import collection file example",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4039,7 +4039,7 @@
                   "children": []
                 },
                 {
-                  "name": "Add products to Collection by imported file",
+                  "name": "Add products to collection by imported file",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4048,7 +4048,7 @@
                   "children": []
                 },
                 {
-                  "name": "Remove products from Collection by imported file",
+                  "name": "Remove products from collection by imported file",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4064,16 +4064,9 @@
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/collection/-collectionId-/products",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "Legacy Collection",
-              "slug": "catalog-api-legacy-collection",
-              "type": "category",
-              "children": [
+                },
                 {
-                  "name": "Get Collection",
+                  "name": "Get collection by ID",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4082,7 +4075,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update Collection",
+                  "name": "Update collection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4091,21 +4084,12 @@
                   "children": []
                 },
                 {
-                  "name": "Delete Collection",
+                  "name": "Delete collection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/collection/-collectionId-",
-                  "children": []
-                },
-                {
-                  "name": "Create Collection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/collection",
                   "children": []
                 }
               ]
