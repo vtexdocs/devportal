@@ -4095,12 +4095,12 @@
               ]
             },
             {
-              "name": "Legacy Subcollection",
-              "slug": "catalog-api-legacy-subcollection",
+              "name": "Subcollection",
+              "slug": "catalog-api-subcollection",
               "type": "category",
               "children": [
                 {
-                  "name": "Add SKU to Subcollection",
+                  "name": "Add SKU to subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4109,7 +4109,7 @@
                   "children": []
                 },
                 {
-                  "name": "Delete SKU from Subcollection",
+                  "name": "Delete SKU from subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4118,7 +4118,7 @@
                   "children": []
                 },
                 {
-                  "name": "Associate Category to Subcollection",
+                  "name": "Associate category to subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4127,7 +4127,7 @@
                   "children": []
                 },
                 {
-                  "name": "Delete Category from Subcollection",
+                  "name": "Delete category from subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4136,7 +4136,7 @@
                   "children": []
                 },
                 {
-                  "name": "Associate Brand to Subcollection",
+                  "name": "Associate brand to subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4145,7 +4145,7 @@
                   "children": []
                 },
                 {
-                  "name": "Delete Brand from Subcollection",
+                  "name": "Delete brand from subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4154,7 +4154,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Subcollection by Collection ID",
+                  "name": "Get subcollection by collection ID",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4163,7 +4163,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Subcollection",
+                  "name": "Get subcollection by subcollection ID",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4172,7 +4172,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update Subcollection",
+                  "name": "Update subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4181,7 +4181,7 @@
                   "children": []
                 },
                 {
-                  "name": "Delete Subcollection",
+                  "name": "Delete subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4190,7 +4190,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create Subcollection",
+                  "name": "Create subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4199,12 +4199,39 @@
                   "children": []
                 },
                 {
-                  "name": "Reposition SKU on the Subcollection",
+                  "name": "Reposition SKU on the subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/collection/-collectionId-/position",
+                  "children": []
+                },
+                {
+                  "name": "Get specification values by subcollection ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/specificationvalue",
+                  "children": []
+                },
+                {
+                  "name": "Use specification value in subcollection by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/specificationvalue",
+                  "children": []
+                },
+                {
+                  "name": "Delete specification value from subcollection by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/specificationvalue",
                   "children": []
                 }
               ]
