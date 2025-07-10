@@ -15605,6 +15605,21 @@
           "type": "category",
           "children": [
             {
+              "name": "July",
+              "slug": "july-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New Catalog API endpoints to define the collection scope using specifications as parameters",
+                  "slug": "2025-07-09-new-catalog-api-endpoints-to-define-the-collection-scope-using-specifications-as-parameters",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },           
+            {
               "name": "June",
               "slug": "june-2025",
               "origin": "",
