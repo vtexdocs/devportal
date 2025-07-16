@@ -1992,3 +1992,9 @@ force = true
 from = "/docs/guides/deprecated"
 status = 308
 to = "/docs/guides/vtex-io-deprecated-apps"
+
+[[redirects]]
+force = true
+from = "/docs/guides/installing-affirm-payment-app-1"
+status = 308
+to = "/docs/apps/vtex.affirm-payment"
