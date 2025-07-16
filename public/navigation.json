@@ -754,13 +754,6 @@
                   "children": []
                 },
                 {
-                  "name": "Installing Affirm Payment App",
-                  "slug": "installing-affirm-payment-app-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "PSE Payment Method",
                   "slug": "pse-payment-method",
                   "origin": "",
