@@ -13358,9 +13358,9 @@
             },
             {
               "name": "Developer tools and references",
-              "slug": "faststore/developer-tools",
+              "slug": "faststore/developer-tools-overview",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Updating the @fastore/cli package version",
