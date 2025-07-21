@@ -13118,7 +13118,7 @@
                 },
                 {
                   "name": "3. Project structure",
-                  "slug": "faststore/getting-started-faststore-project-structure",
+                  "slug": "faststore/getting-started-3-faststore-project-structure",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14266,8 +14266,8 @@
               ]
             },
             {
-              "name": "Customizing sections and components",
-              "slug": "faststore/building-sections-overview",
+              "name": "Developing and overriding UI components",
+              "slug": "faststore/developing-and-overriding-components-overview",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -14352,21 +14352,21 @@
                 },
                 {
                   "name": "Creating a new section",
-                  "slug": "faststore/building-sections-creating-a-new-section",
+                  "slug": "faststore/developing-and-overriding-components-creating-a-new-section",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "List of native sections and overridable components",
-                  "slug": "faststore/building-sections-list-of-native-sections",
+                  "slug": "faststore/developing-and-overriding-components-list-of-native-sections",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Experimental exports - Hooks and Components",
-                  "slug": "faststore/building-sections-experimental-exports-hooks-and-components",
+                  "slug": "faststore/developing-and-overriding-components-experimental-exports-hooks-and-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14428,28 +14428,6 @@
                       "children": []
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "name": "Customizing pages with Dynamic Content",
-              "slug": "faststore/dynamic-content-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Step 1 - Setting up the store code for Dynamic Content",
-                  "slug": "faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Step 2 - Handling Dynamic Content in custom sections",
-                  "slug": "faststore/dynamic-content-step-2-handling-the-dynamic-content-in-custom-sections",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
