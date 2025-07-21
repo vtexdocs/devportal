@@ -2236,6 +2236,20 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Implementing Mutual Transport Layer Security (mTLS)",
+              "slug": "implementing-mtls",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Revoking SSL private certificates when using Mutual Transport Layer Security (mTLS)",
+              "slug": "revoking-ssl-private-certificates-when-using-mtls",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -15618,7 +15632,7 @@
                   "children": []
                 }
               ]
-            },           
+            },
             {
               "name": "June",
               "slug": "june-2025",
