@@ -1929,6 +1929,138 @@ to = "/docs/apps/vtex.list"
 
 [[redirects]]
 force = true
+from = "/docs/guides/vtex-list-listaddtocartbutton"
+status = 308
+to = "/docs/apps/vtex.list/ListAddToCartButton"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-addtolistbutton"
+status = 308
+to = "/docs/apps/vtex.list/AddToListButton"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-authcondition"
+status = 308
+to = "/docs/apps/vtex.list/AuthCondition"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-addnewitem"
+status = 308
+to = "/docs/apps/vtex.list/AddNewItem"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-breadcrumbs"
+status = 308
+to = "/docs/apps/vtex.list/BreadCrumbs"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-listmodal"
+status = 308
+to = "/docs/apps/vtex.list/ListModal"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-gallerylistitems"
+status = 308
+to = "/docs/apps/vtex.list/GalleryListItems"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-giftedbutton"
+status = 308
+to = "/docs/apps/vtex.list/GiftedButton"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-gobacktolist"
+status = 308
+to = "/docs/apps/vtex.list/GoBackToList"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-listinfo"
+status = 308
+to = "/docs/apps/vtex.list/ListInfo"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-productmodal"
+status = 308
+to = "/docs/apps/vtex.list/ProductModal"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-quantity-selector"
+status = 308
+to = "/docs/apps/vtex.list/Quantity Selector"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-quantity-selector-1"
+status = 308
+to = "/docs/apps/vtex.list/Quantity Selector"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-quantity-selector-2"
+status = 308
+to = "/docs/apps/vtex.list/Quantity Selector"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-searchlist"
+status = 308
+to = "/docs/apps/vtex.list/SearchList"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-storewalletlist"
+status = 308
+to = "/docs/apps/vtex.list/StoreWalletList"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-sharelist"
+status = 308
+to = "/docs/apps/vtex.list/ShareList"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-userlists"
+status = 308
+to = "/docs/apps/vtex.list/UserLists"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-wrappers"
+status = 308
+to = "/docs/apps/vtex.list/Wrappers"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-gift-list-wrappers"
+status = 308
+to = "/docs/apps/vtex.list/Wrappers"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-gift-list-listitemsorderby"
+status = 308
+to = "/docs/apps/vtex.list/ListItemsOrderBy"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-list-listmigration"
+status = 308
+to = "/docs/apps/vtex.list/ListMigration"
+
+[[redirects]]
+force = true
 from = "/docs/guides/payment-provider-protocol"
 status = 308
 to = "/docs/guides/payments-integration-payment-provider-protocol"
@@ -1944,3 +2076,9 @@ force = true
 from = "/docs/guides/deprecated"
 status = 308
 to = "/docs/guides/vtex-io-deprecated-apps"
+
+[[redirects]]
+force = true
+from = "/docs/guides/installing-affirm-payment-app-1"
+status = 308
+to = "/docs/apps/vtex.affirm-payment"

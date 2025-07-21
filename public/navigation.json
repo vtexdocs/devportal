@@ -754,13 +754,6 @@
                   "children": []
                 },
                 {
-                  "name": "Installing Affirm Payment App",
-                  "slug": "installing-affirm-payment-app-1",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "PSE Payment Method",
                   "slug": "pse-payment-method",
                   "origin": "",
@@ -2225,6 +2218,21 @@
             {
               "name": "Sessions System Overview",
               "slug": "sessions-system-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "VTEX Shield",
+          "slug": "vtex-shield",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Managing SSL Certificates",
+              "slug": "managing-ssl-certificates",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -3992,21 +4000,12 @@
               ]
             },
             {
-              "name": "Collection Beta",
-              "slug": "catalog-api-collection-beta",
+              "name": "Collection",
+              "slug": "catalog-api-collection",
               "type": "category",
               "children": [
                 {
-                  "name": "Get All Collections",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/collection/search",
-                  "children": []
-                },
-                {
-                  "name": "Get All Inactive Collections",
+                  "name": "Get all inactive collections",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4015,25 +4014,16 @@
                   "children": []
                 },
                 {
-                  "name": "Create Collection",
+                  "name": "Create collection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/collection/",
+                  "endpoint": "/api/catalog/pvt/collection",
                   "children": []
                 },
                 {
-                  "name": "Get Collections by search terms",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/catalog_system/pvt/collection/search/-searchTerms-",
-                  "children": []
-                },
-                {
-                  "name": "Import Collection file example",
+                  "name": "Import collection file example",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4042,7 +4032,7 @@
                   "children": []
                 },
                 {
-                  "name": "Add products to Collection by imported file",
+                  "name": "Add products to collection by imported file",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4051,7 +4041,7 @@
                   "children": []
                 },
                 {
-                  "name": "Remove products from Collection by imported file",
+                  "name": "Remove products from collection by imported file",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4067,16 +4057,9 @@
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/collection/-collectionId-/products",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "Legacy Collection",
-              "slug": "catalog-api-legacy-collection",
-              "type": "category",
-              "children": [
+                },
                 {
-                  "name": "Get Collection",
+                  "name": "Get collection by ID",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4085,7 +4068,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update Collection",
+                  "name": "Update collection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4094,32 +4077,23 @@
                   "children": []
                 },
                 {
-                  "name": "Delete Collection",
+                  "name": "Delete collection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/collection/-collectionId-",
                   "children": []
-                },
-                {
-                  "name": "Create Collection",
-                  "slug": "catalog-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/catalog/pvt/collection",
-                  "children": []
                 }
               ]
             },
             {
-              "name": "Legacy Subcollection",
-              "slug": "catalog-api-legacy-subcollection",
+              "name": "Subcollection",
+              "slug": "catalog-api-subcollection",
               "type": "category",
               "children": [
                 {
-                  "name": "Add SKU to Subcollection",
+                  "name": "Add SKU to subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4128,7 +4102,7 @@
                   "children": []
                 },
                 {
-                  "name": "Delete SKU from Subcollection",
+                  "name": "Delete SKU from subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4137,7 +4111,7 @@
                   "children": []
                 },
                 {
-                  "name": "Associate Category to Subcollection",
+                  "name": "Associate category to subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4146,7 +4120,7 @@
                   "children": []
                 },
                 {
-                  "name": "Delete Category from Subcollection",
+                  "name": "Delete category from subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4155,7 +4129,7 @@
                   "children": []
                 },
                 {
-                  "name": "Associate Brand to Subcollection",
+                  "name": "Associate brand to subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4164,7 +4138,7 @@
                   "children": []
                 },
                 {
-                  "name": "Delete Brand from Subcollection",
+                  "name": "Delete brand from subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4173,7 +4147,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Subcollection by Collection ID",
+                  "name": "Get subcollection by collection ID",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4182,7 +4156,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Subcollection",
+                  "name": "Get subcollection by subcollection ID",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -4191,7 +4165,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update Subcollection",
+                  "name": "Update subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -4200,7 +4174,7 @@
                   "children": []
                 },
                 {
-                  "name": "Delete Subcollection",
+                  "name": "Delete subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -4209,7 +4183,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create Subcollection",
+                  "name": "Create subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -4218,12 +4192,39 @@
                   "children": []
                 },
                 {
-                  "name": "Reposition SKU on the Subcollection",
+                  "name": "Reposition SKU on the subcollection",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/collection/-collectionId-/position",
+                  "children": []
+                },
+                {
+                  "name": "Get specification values by subcollection ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/specificationvalue",
+                  "children": []
+                },
+                {
+                  "name": "Use specification value in subcollection by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/specificationvalue",
+                  "children": []
+                },
+                {
+                  "name": "Delete specification value from subcollection by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/subcollection/-subCollectionId-/specificationvalue",
                   "children": []
                 }
               ]
@@ -7785,6 +7786,39 @@
           ]
         },
         {
+          "name": "mTLS API",
+          "slug": "mtls-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Certificate management",
+              "slug": "certificate-management",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Sign certificate",
+                  "slug": "mtls-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/edge/private-certificates/sign",
+                  "children": []
+                },
+                {
+                  "name": "Revoke certificate",
+                  "slug": "mtls-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/edge/private-certificates/-serialNumber-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Operational Capacity API",
           "slug": "operational-capacity-api",
           "origin": "",
@@ -8874,22 +8908,72 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Update order deadline",
-              "slug": "pick-and-pack-order-changes-api",
-              "type": "openapi",
-              "method": "PUT",
-              "origin": "",
-              "endpoint": "/orders/-orderId-/deadline",
-              "children": []
+              "name": "Order changes",
+              "slug": "pick-and-pack-order-changes-api-order-changes",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Update order deadline",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/orders/-orderId-/deadline",
+                  "children": []
+                },
+                {
+                  "name": "Update items of the order",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/order/changes",
+                  "children": []
+                }
+              ]
             },
             {
-              "name": "Update items of the order",
-              "slug": "pick-and-pack-order-changes-api",
-              "type": "openapi",
-              "method": "POST",
-              "origin": "",
-              "endpoint": "/order/changes",
-              "children": []
+              "name": "BIN locations",
+              "slug": "pick-and-pack-order-changes-api-bin-locations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get BIN location",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/-skuId-/warehouses/-warehouseId-",
+                  "children": []
+                },
+                {
+                  "name": "Create BIN location",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-skuId-/warehouses/-warehouseId-",
+                  "children": []
+                },
+                {
+                  "name": "Update BIN location",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-skuId-/warehouses/-warehouseId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete BIN location",
+                  "slug": "pick-and-pack-order-changes-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/-skuId-/warehouses/-warehouseId-",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -9006,7 +9090,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/pricing/prices/-itemId-",
+                  "endpoint": "/pricing/prices/-itemId-/fixed",
                   "children": []
                 },
                 {
@@ -9596,6 +9680,39 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/rnb/v2/pvt/coupon/usage-count/group/-groupingKey-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Punchout API",
+          "slug": "punchout-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Punchout login",
+              "slug": "punchout-login",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Start VTEX user punchout flow",
+                  "slug": "punchout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/punchout/start",
+                  "children": []
+                },
+                {
+                  "name": "Start pre-authenticated user punchout flow",
+                  "slug": "punchout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/punchout/authenticated/start",
                   "children": []
                 }
               ]
@@ -11676,6 +11793,20 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "GraphQL authorization in IO apps",
+              "slug": "graphql-authorization-in-io-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Admin GraphQL IDE",
+              "slug": "graphql-ide",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -13636,6 +13767,13 @@
                       "children": []
                     },
                     {
+                      "name": "Popover",
+                      "slug": "faststore/molecules-popover",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "ProductCard",
                       "slug": "faststore/molecules-product-card",
                       "origin": "",
@@ -14087,6 +14225,20 @@
                       "origin": "",
                       "type": "markdown",
                       "children": []
+                    },
+                    {
+                      "name": "Extending and customizing native types",
+                      "slug": "faststore/analytics-extending-and-customizing-native-types",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Use case: Implementing custom newsletter analytics events",
+                      "slug": "faststore/analytics-implementing-custom-newsletter-analytics-events",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
                     }
                   ]
                 },
@@ -14471,7 +14623,7 @@
               "name": "SEO",
               "slug": "faststore/seo-overview",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Configuring SEO for PLPs and PDPs",
@@ -14780,7 +14932,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },                
+                },
                 {
                   "name": "Using Sandbox blocks",
                   "slug": "vtex-io-documentation-using-sandbox-blocks",
@@ -15576,11 +15728,54 @@
           "type": "category",
           "children": [
             {
+              "name": "July",
+              "slug": "july-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New Catalog API endpoints to define the collection scope using specifications as parameters",
+                  "slug": "2025-07-09-new-catalog-api-endpoints-to-define-the-collection-scope-using-specifications-as-parameters",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },           
+            {
               "name": "June",
               "slug": "june-2025",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Pick and Pack: New API Endpoints for Managing BIN Locations",
+                  "slug": "2025-06-18-pick-pack-bin-location-management-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Centralized secrets management",
+                  "slug": "2025-06-24-faststore-webops-centralized-secrets-management",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Supports B2B Price Tables and personalized promotions",
+                  "slug": "2025-06-23-faststore-b2b-price-tables-session-cookies",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Shield: New SSL Certificates API",
+                  "slug": "2025-06-03-vtex-shield-new-ssl-certificates-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "VTEX IO Apps: End of official support for legacy apps",
                   "slug": "2025-06-06-vtex-io-apps-end-of-official-support-for-legacy-apps",

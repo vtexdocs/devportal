@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Box, Text, Flex, Input, Button } from '@vtex/brand-ui'
 import { getMessages } from 'utils/get-messages'
 import { getSubscritionURL, getNewsletterURL } from 'utils/get-url'
-
 import styles from './styles'
 
 const messages = getMessages()
@@ -20,7 +19,12 @@ const SubscriptionList: React.FC = () => {
   }
 
   const checkEmail = async (email: string): Promise<boolean> => {
-    const apiKey = 'e8ed0eb649msh5054f327a1dc9d7p168b47jsn142a5fd7951b'
+    const apiKey = process.env.NEXT_PUBLIC_NEWSLETTER_API_KEY
+    if (!apiKey) {
+      console.error('Newsletter API key is not defined')
+      return false
+    }
+
     const url = `https://mailcheck.p.rapidapi.com/?email=${encodeURIComponent(
       email
     )}`
