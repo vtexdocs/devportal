@@ -13363,22 +13363,29 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Updating the @fastore/cli package version",
-                  "slug": "faststore/developer-tools-updating-the-cli-package-version",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Configuration options",
+                  "name": "Configuration options for discovery.config.js",
                   "slug": "faststore/developer-tools-config-options",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
-                                {
+                {
+                  "name": "Custom Cypress integration",
+                  "slug": "faststore/developer-tools-enablecypressextension",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore CLI",
                   "slug": "faststore/developer-tools-faststore-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Updating the @fastore/cli package version",
+                  "slug": "faststore/developer-tools-updating-the-cli-package-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
