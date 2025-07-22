@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/features-search"
+status = 308
+to = "/docs/guides/faststore/storefront-features-implementing-search-features"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/building-sections-list-of-native-sections"
 status = 308
 to = "/docs/guides/faststore/developing-and-overriding-components-list-of-native-sections"
@@ -60,7 +66,7 @@ to = "/docs/guides/faststore/storefront-features-implementing-regionalization-fe
 force = true
 from = "/docs/guides/faststore/project-structure-handling-third-party-scripts"
 status = 308
-to = "/docs/guides/faststore/storefront-feature-handling-third-party-scripts"
+to = "/docs/guides/faststore/storefront-features-handling-third-party-scripts"
 
 [[redirects]]
 force = true
