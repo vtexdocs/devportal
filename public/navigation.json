@@ -13400,7 +13400,7 @@
               "children": [
                 {
                   "name": "Themes reference",
-                  "slug": "faststore/styling-themes-overview",
+                  "slug": "faststore/themes-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": [
@@ -13422,7 +13422,7 @@
                 },
                 {
                   "name": "Global tokens",
-                  "slug": "faststore/styling-global-tokens-overview",
+                  "slug": "faststore/global-tokens-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": [
