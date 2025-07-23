@@ -111,8 +111,15 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "API authentication using application keys",
+                  "name": "API authentication using API keys",
                   "slug": "api-authentication-using-application-keys",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Rotating VTEX API tokens",
+                  "slug": "rotating-vtex-api-tokens",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -614,6 +621,21 @@
                 {
                   "name": "Webstore (OAuth 2.0)",
                   "slug": "login-integration-guide-webstore-oauth2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Punchout",
+              "slug": "punchout",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Punchout login integration",
+                  "slug": "punchout-login-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
