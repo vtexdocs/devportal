@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/features-delivery-promise"
+status = 308
+to = "/docs/guides/faststore/storefront-features-delivery-promise"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/features-search"
 status = 308
 to = "/docs/guides/faststore/storefront-features-implementing-search-features"
