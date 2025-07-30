@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.22.0](https://github.com/vtexdocs/devportal/compare/v1.21.1...v1.22.0) (2025-07-30)
+
+
+### Features
+
+* add mtls api ([93fba30](https://github.com/vtexdocs/devportal/commit/93fba30bf40b15b9f52327f7ed3ed8a9646f8b8d))
+* add mtls api to navigation ([cdc086e](https://github.com/vtexdocs/devportal/commit/cdc086e315b26376283cc0aa5b8f66fbbe2c9e27))
+* add punchout api ([c51a16f](https://github.com/vtexdocs/devportal/commit/c51a16f06ea8cd0e118ef1a29f3a49bd90d972d4))
+
+
+### Docs
+
+* add identity guides to navigation ([15e7252](https://github.com/vtexdocs/devportal/commit/15e725235fa96ac32b29371c31728c0c6a992223))
+* adding new endpoints do navigation ([324afd9](https://github.com/vtexdocs/devportal/commit/324afd9dea4fea08376490651d34ddae25f2e229))
+* adding to navigation ([016ff34](https://github.com/vtexdocs/devportal/commit/016ff34b058ca61702c43759dc00c96079a48b8b))
+* changing navigation ([d6e9af2](https://github.com/vtexdocs/devportal/commit/d6e9af2cdab64ffa7822cbf9ffcb9b140b1e9bb3))
+* deleting from navigation ([2313a74](https://github.com/vtexdocs/devportal/commit/2313a7413eb857eed89368619e56b02456031a23))
+* **navigation.json:** add "Admin GraphQL IDE" ([3fe2de6](https://github.com/vtexdocs/devportal/commit/3fe2de6abd5957fe1493888be2cef341a45c10a0))
+* **navigation.json:** add "GraphQL Authorization in VTEX IO" ([1a26731](https://github.com/vtexdocs/devportal/commit/1a2673172f5f66c79a7e9a5240fab12f37dfc553))
+* **navigation.json:** delivery promise ([77e94c1](https://github.com/vtexdocs/devportal/commit/77e94c1f74e916a9f8bc107c09df897f40b47898))
+* **navigation.json:** new analytics guide ([3b55a3b](https://github.com/vtexdocs/devportal/commit/3b55a3b4ad006aa0961e2f63cb7b794856e6a5d6))
+* **navigation.json:** new faststore analytics guide ([0238640](https://github.com/vtexdocs/devportal/commit/0238640c8220ce64454834513f40ce0f888d588d))
+* **navigation.json:** popover ([69788b7](https://github.com/vtexdocs/devportal/commit/69788b7f916a243819efea5c798bfd511a48c046))
+
+
+### Chore
+
+* **navigation:** make a meaningless change ([b8f419b](https://github.com/vtexdocs/devportal/commit/b8f419b335fc8ef8e2516a623ab47f1e00b666a5))
+* Update [slug].tsx ([463b234](https://github.com/vtexdocs/devportal/commit/463b2344b7f07b0b7750520818c1265d5f6d64ef))
+
 ### [1.21.1](https://github.com/vtexdocs/devportal/compare/v1.21.0...v1.21.1) (2025-06-25)
 
 
