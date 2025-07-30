@@ -1998,3 +1998,9 @@ force = true
 from = "/docs/guides/installing-affirm-payment-app-1"
 status = 308
 to = "/docs/apps/vtex.affirm-payment"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-product-context"
+status = 308
+to = "/docs/apps/vtex.product-context"
