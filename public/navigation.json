@@ -9089,7 +9089,7 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Prices and Fixed Prices",
+              "name": "Prices and Fixed Prices ",
               "slug": "pricing-api-prices-and-fixed-prices",
               "type": "category",
               "children": [
