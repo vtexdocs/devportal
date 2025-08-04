@@ -111,8 +111,15 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "API authentication using application keys",
+                  "name": "API authentication using API keys",
                   "slug": "api-authentication-using-application-keys",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Rotating VTEX API tokens",
+                  "slug": "rotating-vtex-api-tokens",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -614,6 +621,21 @@
                 {
                   "name": "Webstore (OAuth 2.0)",
                   "slug": "login-integration-guide-webstore-oauth2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Punchout",
+              "slug": "punchout",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Punchout login integration",
+                  "slug": "punchout-login-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2233,6 +2255,20 @@
             {
               "name": "Managing SSL Certificates",
               "slug": "managing-ssl-certificates",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Implementing Mutual Transport Layer Security (mTLS)",
+              "slug": "implementing-mtls",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Revoking SSL private certificates when using Mutual Transport Layer Security (mTLS)",
+              "slug": "revoking-ssl-private-certificates-when-using-mtls",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -9053,7 +9089,7 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Prices and Fixed Prices",
+              "name": "Prices and Fixed Prices ",
               "slug": "pricing-api-prices-and-fixed-prices",
               "type": "category",
               "children": [
@@ -14140,6 +14176,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Delivery Promise (Beta)",
+                  "slug": "faststore/features-delivery-promise",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -15633,7 +15676,7 @@
                   "children": []
                 }
               ]
-            },           
+            },
             {
               "name": "June",
               "slug": "june-2025",
