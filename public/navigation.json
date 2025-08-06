@@ -15648,6 +15648,21 @@
           "type": "category",
           "children": [
             {
+              "name": "August",
+              "slug": "august-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Coupons persist through store cart validation",
+                  "slug": "2025-08-06-faststore-store-coupons",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "July",
               "slug": "july-2025",
               "origin": "",
