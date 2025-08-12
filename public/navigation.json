@@ -2232,6 +2232,116 @@
           ]
         },
         {
+          "name": "VTEX Ads",
+          "slug": "vtex-ads",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Getting started with VTEX Ads API",
+              "slug": "getting-started-vtex-ads-api",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Synchronizing the catalog with VTEX Ads",
+                  "slug": "synchronizing-the-catalog-with-vtex-ads",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Synchronizing product information",
+                      "slug": "synchronizing-product-information",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Synchronizing inventory information",
+                      "slug": "synchronizing-inventory-information",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Retrieving ads",
+                  "slug": "retrieving-ads",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Segmenting campaigns",
+                      "slug": "segmenting-campaigns",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Digital Signage",
+                      "slug": "digital-signage",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Ads events",
+                  "slug": "ads-events",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Understanding ads events",
+                      "slug": "understanding-ads-events",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Ads events notification",
+                      "slug": "ads-events-notification",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Impressions",
+                      "slug": "impressions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Views",
+                      "slug": "views",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Clicks",
+                      "slug": "clicks",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Conversion",
+                      "slug": "conversion",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "VTEX Session",
           "slug": "session-category",
           "origin": "",
@@ -10467,6 +10577,98 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/rns/settings",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "VTEX Ads API",
+          "slug": "vtex-ads-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Catalog synchronization",
+              "slug": "vtex-ads-api-catalog-synchronization",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Synchronize product information",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/product/bulk/products",
+                  "children": []
+                },
+                {
+                  "name": "Synchronize inventory information",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/product/bulk/inventories",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Ads events notification",
+              "slug": "vtex-ads-api-events-notification",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Tracking ad impressions",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/v1/beacon/impression/-ad_id-",
+                  "children": []
+                },
+                {
+                  "name": "Track ad clicks",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/v1/beacon/click/-ad_id-",
+                  "children": []
+                },
+                {
+                  "name": "Track ad views",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/v1/beacon/view/-ad_id-",
+                  "children": []
+                },
+                {
+                  "name": "Track conversions",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/v1/beacon/conversion",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Ads",
+              "slug": "vtex-ads-api-ads",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get ads",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/v1/rma/-publisher_id-",
                   "children": []
                 }
               ]
