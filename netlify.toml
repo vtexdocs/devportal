@@ -2004,3 +2004,9 @@ force = true
 from = "/docs/guides/api-authentication-using-application-keys"
 status = 308
 to = "/docs/guides/api-authentication-using-api-keys"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-product-context"
+status = 308
+to = "/docs/apps/vtex.product-context"
