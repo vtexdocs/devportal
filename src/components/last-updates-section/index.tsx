@@ -7,9 +7,9 @@ import styles from './styles'
 
 const lastReleaseNote: CardProps = {
   action: {
-    type: 'improved',
-    description: 'FastStore: Enhanced UTM tracking and personalized search',
-    date: new Date('06/05/2025'),
+    type: 'fixed',
+    description: 'FastStore: Coupons persist through store cart validation',
+    date: new Date('08/06/2025'),
   },
   updateType: 'release-notes',
 }

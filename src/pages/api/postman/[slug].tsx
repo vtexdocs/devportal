@@ -66,6 +66,7 @@ const referencePaths = objectFlip({
   'VTEX - SSL Certificates API': 'ssl-certificates-api',
   'VTEX - Punchout API': 'punchout-api',
   'VTEX - mTLS API': 'mtls-api',
+  'VTEX - Ads API': 'vtex-ads-api',
 })
 
 function objectFlip(obj: { [x: string]: string }) {
