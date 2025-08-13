@@ -12033,8 +12033,22 @@
               "children": []
             },
             {
+              "name": "Developing a GraphQL API in service apps",
+              "slug": "developing-a-graphql-api-in-service-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "GraphQL authorization in IO apps",
               "slug": "graphql-authorization-in-io-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Implementing cache in GraphQL APIs for IO apps",
+              "slug": "implementing-cache-in-graphql-apis-for-io-apps",
               "origin": "",
               "type": "markdown",
               "children": []
