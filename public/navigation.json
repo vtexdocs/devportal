@@ -14705,7 +14705,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Enabling refresh token on FastStore ",
+                  "name": "Enabling refresh token on FastStore",
                   "slug": "faststore/security-enabling-refresh-token",
                   "origin": "",
                   "type": "markdown",
