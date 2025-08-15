@@ -14699,11 +14699,26 @@
               ]
             },
             {
-              "name": "Managing Secrets",
-              "slug": "faststore/security-managing-secrets",
+              "name": "Security",
+              "slug": "faststore/security-overview",
               "origin": "",
-              "type": "markdown",
-              "children": []
+              "type": "category",
+              "children": [
+                {
+                  "name": "Enabling refresh token on FastStore",
+                  "slug": "faststore/security-enabling-refresh-token",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing Secrets",
+                  "slug": "faststore/security-managing-secrets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Managing URLs with redirects and rewrite paths",
