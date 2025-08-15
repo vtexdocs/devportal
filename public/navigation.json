@@ -9708,22 +9708,6 @@
                   "children": []
                 }
               ]
-            },
-            {
-              "name": "Notifications",
-              "slug": "promotions-and-taxes-api-notifications",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Usage notification",
-                  "slug": "promotions-and-taxes-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/rnb/pub/notifications",
-                  "children": []
-                }
-              ]
             }
           ]
         },
