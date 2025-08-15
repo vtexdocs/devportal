@@ -2010,3 +2010,9 @@ force = true
 from = "/docs/guides/vtex-product-context"
 status = 308
 to = "/docs/apps/vtex.product-context"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/features-delivery-promise"
+status = 308
+to = "/docs/guides/faststore/features-delivery-promise-overview"
