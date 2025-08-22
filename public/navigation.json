@@ -9708,22 +9708,6 @@
                   "children": []
                 }
               ]
-            },
-            {
-              "name": "Notifications",
-              "slug": "promotions-and-taxes-api-notifications",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Usage notification",
-                  "slug": "promotions-and-taxes-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/rnb/pub/notifications",
-                  "children": []
-                }
-              ]
             }
           ]
         },
@@ -14707,11 +14691,26 @@
               ]
             },
             {
-              "name": "Managing Secrets",
-              "slug": "faststore/security-managing-secrets",
+              "name": "Security",
+              "slug": "faststore/security-overview",
               "origin": "",
-              "type": "markdown",
-              "children": []
+              "type": "category",
+              "children": [
+                {
+                  "name": "Enabling refresh token on FastStore",
+                  "slug": "faststore/security-enabling-refresh-token",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing Secrets",
+                  "slug": "faststore/security-managing-secrets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Managing URLs with redirects and rewrite paths",
@@ -15863,6 +15862,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore: Support for refresh token sessions",
+                  "slug": "2025-08-15-faststore-refresh-token",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore: Coupons persist through store cart validation",
                   "slug": "2025-08-06-faststore-store-coupons",
