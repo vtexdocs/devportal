@@ -14206,10 +14206,18 @@
                 },
                 {
                   "name": "Delivery Promise (Beta)",
-                  "slug": "faststore/features-delivery-promise",
+                  "slug": "faststore/delivery-promise-overview",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "Implementing Delivery Promise",
+                      "slug": "faststore/delivery-promise-implementation",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
