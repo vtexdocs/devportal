@@ -14222,13 +14222,13 @@
                 },
                 {
                   "name": "Delivery Promise (Beta)",
-                  "slug": "faststore/features-delivery-promise-overview",
+                  "slug": "faststore/delivery-promise-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": [
                     {
                       "name": "Implementing Delivery Promise",
-                      "slug": "faststore/features-delivery-promise-implementation",
+                      "slug": "faststore/delivery-promise-implementation",
                       "origin": "",
                       "type": "markdown",
                       "children": []
