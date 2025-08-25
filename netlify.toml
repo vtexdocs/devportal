@@ -2111,4 +2111,4 @@ to = "/docs/apps/vtex.product-context"
 force = true
 from = "/docs/guides/faststore/features-delivery-promise"
 status = 308
-to = "/docs/guides/faststore/features-delivery-promise-overview"
+to = "/docs/guides/faststore/delivery-promise-overview"
