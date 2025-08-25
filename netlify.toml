@@ -2094,3 +2094,21 @@ force = true
 from = "/docs/guides/installing-affirm-payment-app-1"
 status = 308
 to = "/docs/apps/vtex.affirm-payment"
+
+[[redirects]]
+force = true
+from = "/docs/guides/api-authentication-using-application-keys"
+status = 308
+to = "/docs/guides/api-authentication-using-api-keys"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-product-context"
+status = 308
+to = "/docs/apps/vtex.product-context"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/features-delivery-promise"
+status = 308
+to = "/docs/guides/faststore/features-delivery-promise-overview"
