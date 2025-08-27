@@ -9844,6 +9844,15 @@
                   "origin": "",
                   "endpoint": "/api/authenticator/punchout/authenticated/start",
                   "children": []
+                },
+                {
+                  "name": "Finish punchout login flow (headless)",
+                  "slug": "punchout-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/punchout/finish",
+                  "children": []
                 }
               ]
             }
