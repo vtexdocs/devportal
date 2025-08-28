@@ -112,7 +112,7 @@
               "children": [
                 {
                   "name": "API authentication using API keys",
-                  "slug": "api-authentication-using-application-keys",
+                  "slug": "api-authentication-using-api-keys",
                   "origin": "",
                   "type": "markdown",
                   "children": []
