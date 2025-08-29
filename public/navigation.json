@@ -112,7 +112,7 @@
               "children": [
                 {
                   "name": "API authentication using API keys",
-                  "slug": "api-authentication-using-application-keys",
+                  "slug": "api-authentication-using-api-keys",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -9844,6 +9844,15 @@
                   "origin": "",
                   "endpoint": "/api/authenticator/punchout/authenticated/start",
                   "children": []
+                },
+                {
+                  "name": "Finish punchout login flow (headless)",
+                  "slug": "punchout-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/punchout/finish",
+                  "children": []
                 }
               ]
             }
@@ -12017,8 +12026,22 @@
               "children": []
             },
             {
+              "name": "Developing a GraphQL API in service apps",
+              "slug": "developing-a-graphql-api-in-service-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "GraphQL authorization in IO apps",
               "slug": "graphql-authorization-in-io-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Implementing cache in GraphQL APIs for IO apps",
+              "slug": "implementing-cache-in-graphql-apis-for-io-apps",
               "origin": "",
               "type": "markdown",
               "children": []
