@@ -15886,6 +15886,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Orders API: support for NT 2025.001 fields",
+                  "slug": "2025-08-29-new-mandatory-fields-for-invoice-insurance",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Support for refresh token sessions",
                   "slug": "2025-08-15-faststore-refresh-token",
                   "origin": "",
