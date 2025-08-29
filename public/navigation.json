@@ -15887,7 +15887,7 @@
               "children": [
                 {
                   "name": "Orders API: support for NT 2025.001 fields",
-                  "slug": "2025-08-29-new-mandatory-fields-for-invoice-insurance",
+                  "slug": "2025-08-29-orders-api-support-for-nt-2025-001-fields",
                   "origin": "",
                   "type": "markdown",
                   "children": []
