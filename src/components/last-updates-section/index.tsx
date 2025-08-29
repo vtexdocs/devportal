@@ -8,8 +8,8 @@ import styles from './styles'
 const lastReleaseNote: CardProps = {
   action: {
     type: 'added',
-    description: 'Enabling refresh token on FastStore',
-    date: new Date('08/15/2025'),
+    description: 'Orders API: support for NT 2025.001 fields',
+    date: new Date('08/29/2025'),
   },
   updateType: 'release-notes',
 }
