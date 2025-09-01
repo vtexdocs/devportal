@@ -13616,7 +13616,7 @@
                 },
                 {
                   "name": "Custom Cypress integration",
-                  "slug": "faststore/developer-tools-enablecypressextension",
+                  "slug": "faststore/developer-tools-custom-cypress",
                   "origin": "",
                   "type": "markdown",
                   "children": []
