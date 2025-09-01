@@ -4,6 +4,30 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/using-themes/overview"
+status = 308
+to = "/docs/guides/faststore/using-themes-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/reference-icons"
+status = 308
+to = "/docs/guides/faststore/styling-icons"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/storefront-feature-handling-third-party-scripts"
+status = 308
+to = "/docs/guides/faststore/storefront-features-handling-third-party-scripts"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/developer-tools-enablecypressextension"
+status = 308
+to = "/docs/guides/faststore/developer-tools-custom-cypress"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/features-delivery-promise"
 status = 308
 to = "/docs/guides/faststore/delivery-promise-overview"
