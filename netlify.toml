@@ -4,6 +4,102 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/features-delivery-promise"
+status = 308
+to = "/docs/guides/faststore/delivery-promise-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/features-search"
+status = 308
+to = "/docs/guides/faststore/storefront-features-implementing-search-features"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/building-sections-list-of-native-sections"
+status = 308
+to = "/docs/guides/faststore/developing-and-overriding-components-list-of-native-sections"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/building-sections-creating-a-new-section"
+status = 308
+to = "/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/building-sections-experimental-exports-hooks-and-components"
+status = 308
+to = "/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/building-sections-overview"
+status = 308
+to = "/docs/guides/faststore/developing-and-overriding-components-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/project-structure-updating-the-cli-package-version"
+status = 308
+to = "/docs/guides/faststore/developer-tools-updating-the-cli-package-version"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/project-structure-config-options"
+status = 308
+to = "/docs/guides/faststore/developer-tools-config-options"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/project-structure-custom-cypress"
+status = 308
+to = "/docs/guides/faststore/developer-tools-custom-cypress"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/customization-managing-product-images-in-specific-contexts"
+status = 308
+to = "/docs/guides/faststore/storefront-features-managing-product-images-in-specific-contexts"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/features-regionalization"
+status = 308
+to = "/docs/guides/faststore/storefront-features-implementing-regionalization-features"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/project-structure-handling-third-party-scripts"
+status = 308
+to = "/docs/guides/faststore/storefront-features-handling-third-party-scripts"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/features-auth-content"
+status = 308
+to = "/docs/guides/faststore/storefront-features-displaying-content-for-authenticated-users"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/features-navigation"
+status = 308
+to = "/docs/guides/faststore/storefront-features-building-navigation-menus"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/project-structure-overview"
+status = 308
+to = "/docs/guides/faststore/getting-started-3-faststore-project-structure"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-3-faststore-cli"
+status = 308
+to = "/docs/guides/faststore/developer-tools-faststore-cli"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/managing-performance-optimizing-seo-by-managing-lazy-loading-on-plp"
 status = 308
 to = "/docs/guides/faststore/seo-optimizing-seo-by-managing-lazy-loading-on-plp-and-pdp"

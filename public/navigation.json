@@ -13493,8 +13493,8 @@
                   "children": []
                 },
                 {
-                  "name": "3. FastStore CLI",
-                  "slug": "faststore/getting-started-3-faststore-cli",
+                  "name": "3. Project structure",
+                  "slug": "faststore/getting-started-3-faststore-project-structure",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13516,43 +13516,7 @@
               ]
             },
             {
-              "name": "Project structure",
-              "slug": "faststore/project-structure-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Configuration options",
-                  "slug": "faststore/project-structure-config-options",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "enableCypressExtension",
-                  "slug": "faststore/project-structure-custom-cypress",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Updating the @fastore/cli package version",
-                  "slug": "faststore/project-structure-updating-the-cli-package-version",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Adding third-party scripts",
-                  "slug": "faststore/project-structure-handling-third-party-scripts",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Integrating your storefront with Headless CMS",
+              "name": "Working with Headless CMS",
               "slug": "faststore/headless-cms-overview",
               "origin": "",
               "type": "markdown",
@@ -13612,6 +13576,187 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                "name": "Customizing pages with Dynamic Content",
+                "slug": "faststore/dynamic-content-overview",
+                "origin": "",
+                "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Step 1 - Setting up the store code for Dynamic Content",
+                      "slug": "faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Step 2 - Handling Dynamic Content in custom sections",
+                      "slug": "faststore/dynamic-content-step-2-handling-the-dynamic-content-in-custom-sections",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Developer tools and references",
+              "slug": "faststore/developer-tools-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Configuration options for discovery.config.js",
+                  "slug": "faststore/developer-tools-config-options",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Custom Cypress integration",
+                  "slug": "faststore/developer-tools-enablecypressextension",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore CLI",
+                  "slug": "faststore/developer-tools-faststore-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Updating the @fastore/cli package version",
+                  "slug": "faststore/developer-tools-updating-the-cli-package-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                } 
+              ]
+            },
+            {
+              "name": "Styling",
+              "slug": "faststore/styling-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Themes reference",
+                  "slug": "faststore/themes-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Soft blue",
+                      "slug": "faststore/themes-soft-blue",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Midnight",
+                      "slug": "faststore/themes-midnight",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Global tokens",
+                  "slug": "faststore/global-tokens-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Colors",
+                      "slug": "faststore/global-tokens-colors",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Grid and Layout",
+                      "slug": "faststore/global-tokens-grid-and-layout",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Interactive controls",
+                      "slug": "faststore/global-tokens-interactive-controls",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Refinements",
+                      "slug": "faststore/global-tokens-refinements",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Spacing",
+                      "slug": "faststore/global-tokens-spacing",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Typography",
+                      "slug": "faststore/global-tokens-typography",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Iconography",
+                  "slug": "faststore/styling-icons",
+                  "origin": "",
+                      "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using themes",
+                  "slug": "faststore/using-themes-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Styling the layout and breakpoints",
+                      "slug": "faststore/using-themes-mixins-breakpoints",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Styling a component",
+                      "slug": "faststore/using-themes-components",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Styling a section",
+                      "slug": "faststore/using-themes-pages",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Importing FastStore UI component styles",
+                      "slug": "faststore/using-themes-importing-ui-components-styles",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -14194,35 +14339,49 @@
               ]
             },
             {
-              "name": "Storefront features",
-              "slug": "faststore/features-overview",
+              "name": "Implementing storefront features",
+              "slug": "faststore/storefront-features-overview",
               "origin": "",
               "type": "category",
               "children": [
                 {
-                  "name": "Navigation",
-                  "slug": "faststore/features-navigation",
+                  "name": "Adding third-party scripts",
+                  "slug": "faststore/storefront-feature-handling-third-party-scripts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Regionalization",
-                  "slug": "faststore/features-regionalization",
+                  "name": "Building navigation menus",
+                  "slug": "faststore/storefront-features-building-navigation-menus",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Search",
-                  "slug": "faststore/features-search",
+                  "name": "Displaying content for authenticated users",
+                  "slug": "faststore/storefront-features-displaying-content-for-authenticated-users",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Authenticated content",
-                  "slug": "faststore/features-auth-content",
+                  "name": "Implementing regionalization features",
+                  "slug": "faststore/storefront-features-implementing-regionalization-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing search features",
+                  "slug": "faststore/storefront-features-implementing-search-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing product images in specific contexts",
+                  "slug": "faststore/storefront-features-managing-product-images-in-specific-contexts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14411,123 +14570,8 @@
               ]
             },
             {
-              "name": "Themes reference",
-              "slug": "faststore/themes-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Soft blue",
-                  "slug": "faststore/themes-soft-blue",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Midnight",
-                  "slug": "faststore/themes-midnight",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Iconography",
-                  "slug": "faststore/reference-icons",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Global tokens",
-              "slug": "faststore/global-tokens-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Colors",
-                  "slug": "faststore/global-tokens-colors",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Grid and Layout",
-                  "slug": "faststore/global-tokens-grid-and-layout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Interactive controls",
-                  "slug": "faststore/global-tokens-interactive-controls",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Refinements",
-                  "slug": "faststore/global-tokens-refinements",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Spacing",
-                  "slug": "faststore/global-tokens-spacing",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Typography",
-                  "slug": "faststore/global-tokens-typography",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Using themes",
-              "slug": "faststore/using-themes-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Styling the layout and breakpoints",
-                  "slug": "faststore/using-themes-mixins-breakpoints",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Styling a component",
-                  "slug": "faststore/using-themes-components",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Styling a section",
-                  "slug": "faststore/using-themes-pages",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Importing FastStore UI component styles",
-                  "slug": "faststore/using-themes-importing-ui-components-styles",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Customizing sections and components",
-              "slug": "faststore/building-sections-overview",
+              "name": "Developing and overriding UI components",
+              "slug": "faststore/developing-and-overriding-components-overview",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -14612,21 +14656,21 @@
                 },
                 {
                   "name": "Creating a new section",
-                  "slug": "faststore/building-sections-creating-a-new-section",
+                  "slug": "faststore/developing-and-overriding-components-creating-a-new-section",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "List of native sections and overridable components",
-                  "slug": "faststore/building-sections-list-of-native-sections",
+                  "slug": "faststore/developing-and-overriding-components-list-of-native-sections",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Experimental exports - Hooks and Components",
-                  "slug": "faststore/building-sections-experimental-exports-hooks-and-components",
+                  "slug": "faststore/developing-and-overriding-components-experimental-exports-hooks-and-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -14713,11 +14757,11 @@
                 }
               ]
             },
-            {
+             {
               "name": "Security",
               "slug": "faststore/security-overview",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Enabling refresh token on FastStore",
@@ -14738,13 +14782,6 @@
             {
               "name": "Managing URLs with redirects and rewrite paths",
               "slug": "faststore/routing-managing-urls-with-redirects-and-rewrite-paths",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Managing product images in specific contexts",
-              "slug": "faststore/customization-managing-product-images-in-specific-contexts",
               "origin": "",
               "type": "markdown",
               "children": []
