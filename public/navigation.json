@@ -14342,11 +14342,11 @@
               "name": "Implementing storefront features",
               "slug": "faststore/storefront-features-overview",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Adding third-party scripts",
-                  "slug": "faststore/storefront-feature-handling-third-party-scripts",
+                  "slug": "faststore/storefront-features-handling-third-party-scripts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
