@@ -14387,14 +14387,21 @@
                   "children": []
                 },
                 {
-                  "name": "Delivery Promise (Beta)",
-                  "slug": "faststore/delivery-promise-overview",
+                  "name": "Implementing Delivery Promise",
+                  "slug": "faststore/delivery-promise-implementation",
                   "origin": "",
                   "type": "markdown",
                   "children": [
                     {
-                      "name": "Implementing Delivery Promise",
-                      "slug": "faststore/delivery-promise-implementation",
+                      "name": "Understanding Delivery Promise operation",
+                      "slug": "faststore/delivery-promise-overview",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Working with Delivery Promise components",
+                      "slug": "faststore/delivery-promise-components",
                       "origin": "",
                       "type": "markdown",
                       "children": []
