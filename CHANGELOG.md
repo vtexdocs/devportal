@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.2](https://github.com/vtexdocs/devportal/compare/v1.22.1...v1.22.2) (2025-09-04)
+
+
+### Docs
+
+* update license manager and VTEX ID APIs navigation ([5caf48b](https://github.com/vtexdocs/devportal/commit/5caf48b0a86433633025ef1f49f78fcbef576a3b))
+
+
+### Style
+
+* **breadcrumb:** fix icon colors and breadcrumb wrapping ([e353d0a](https://github.com/vtexdocs/devportal/commit/e353d0a8ec3542cc198e1bb8c3ca0ad5fda59c81))
+
+
+### Chore
+
+* **package.json:** use previous components version ([1287003](https://github.com/vtexdocs/devportal/commit/12870034aba858b70921885b3f6129e78df2cef6))
+
 ### [1.22.1](https://github.com/vtexdocs/devportal/compare/v1.22.0...v1.22.1) (2025-09-04)
 
 
