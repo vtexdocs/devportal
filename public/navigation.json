@@ -5796,7 +5796,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get User",
+                  "name": "Get user information by user ID",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5805,7 +5805,16 @@
                   "children": []
                 },
                 {
-                  "name": "Delete User",
+                  "name": "Get user information by user email",
+                  "slug": "license-manager-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/users/-userEmail-/roles",
+                  "children": []
+                },
+                {
+                  "name": "Delete user",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -5814,7 +5823,7 @@
                   "children": []
                 },
                 {
-                  "name": "Create User",
+                  "name": "Create user",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "POST",
@@ -5823,7 +5832,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get List of Users",
+                  "name": "Get list of users",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5839,7 +5848,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Put Roles in User/appKey",
+                  "name": "Add roles to user or API Key",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -5848,7 +5857,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get Roles by User/appKey",
+                  "name": "Get roles by user ID or API Key",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5857,7 +5866,7 @@
                   "children": []
                 },
                 {
-                  "name": "Remove Role from User/appKey",
+                  "name": "Remove Role from user or API Key",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -5866,7 +5875,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get List of Roles",
+                  "name": "Get list of roles",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5877,12 +5886,12 @@
               ]
             },
             {
-              "name": "App Keys",
-              "slug": "license-manager-api-app-keys",
+              "name": "API Keys",
+              "slug": "license-manager-api-api-keys",
               "type": "category",
               "children": [
                 {
-                  "name": "Create new appkey",
+                  "name": "Create new API Key",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "POST",
@@ -5891,7 +5900,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get appKeys from account",
+                  "name": "Get API Keys from account",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5900,7 +5909,7 @@
                   "children": []
                 },
                 {
-                  "name": "Update appkey",
+                  "name": "Update API Key",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -5916,7 +5925,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Get Stores",
+                  "name": "Get stores",
                   "slug": "license-manager-api",
                   "type": "openapi",
                   "method": "GET",
@@ -10948,6 +10957,15 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/vtexid/password/expire",
+                  "children": []
+                },
+                {
+                  "name": "Get user ID by email",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pvt/user/id",
                   "children": []
                 }
               ]
