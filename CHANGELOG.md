@@ -2,6 +2,65 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.22.1](https://github.com/vtexdocs/devportal/compare/v1.22.0...v1.22.1) (2025-09-04)
+
+
+### Features
+
+* add delivery promise doc ([d1f154b](https://github.com/vtexdocs/devportal/commit/d1f154b6de0eb65fdb66a6ee01044b0cb53ea32b))
+* add reference paths to VTEX Ads API ([a62b6a6](https://github.com/vtexdocs/devportal/commit/a62b6a649c93c4a8336698b324c5b31fb6d5bb03))
+* add VTEX Ads API to navigation ([9365511](https://github.com/vtexdocs/devportal/commit/936551181bc037e98345adb4502b87f71ce818fd))
+* **index.tsx:** add new release note ([9712b47](https://github.com/vtexdocs/devportal/commit/9712b47cea78c7f58bfbf4bc83ac4c04aa8a2ba5))
+* **index.tsx:** fix 'type' ([edd0162](https://github.com/vtexdocs/devportal/commit/edd0162bce00de70830c8cd89151db4c07efe225))
+* **index.tsx:** update 'last-updates-sections' ([e19bfd7](https://github.com/vtexdocs/devportal/commit/e19bfd7ced3b11d2151e28e3fc3051f51a89dc91))
+* **index.tsx:** update the last-updates-section ([c3833d3](https://github.com/vtexdocs/devportal/commit/c3833d3f50a33ad020a7c8947af9d74735283bf0))
+
+
+### Bug Fixes
+
+* broken link ([f07daf3](https://github.com/vtexdocs/devportal/commit/f07daf3010caa98501832dd4ded0615db76fe159))
+* **netlify.toml:** fix redirect ([11bfa6a](https://github.com/vtexdocs/devportal/commit/11bfa6a1adfb0cdb253447273b1c2ca83996512f))
+* slug for API authentication guide ([9d97f4f](https://github.com/vtexdocs/devportal/commit/9d97f4f2561c053efdbf25a8e09eec161d7be1b6))
+
+
+### Revert Changes
+
+* add blank line ([d1196a4](https://github.com/vtexdocs/devportal/commit/d1196a4ced049460a225509f627abb267fe631a1))
+
+
+### Docs
+
+* create api keys redirect ([fab563b](https://github.com/vtexdocs/devportal/commit/fab563b4e12839c4f41da6b66d8305ee750f0097))
+* **navigation.json:** add developer tools overview ([1a4e314](https://github.com/vtexdocs/devportal/commit/1a4e314f7006186b359445bdefeecc8ceafdcfd6))
+* **navigation.json:** add GraphQL development and cache in IO guides ([7a11d6f](https://github.com/vtexdocs/devportal/commit/7a11d6f7fdc9af0988441d2beaf6778a3f141de5))
+* **navigation.json:** add new release note ([d6a5d7f](https://github.com/vtexdocs/devportal/commit/d6a5d7f1567f60ef8b2bf79042d5a0dc3fd41ba4))
+* **navigation.json:** add new release note ([1f9b7ef](https://github.com/vtexdocs/devportal/commit/1f9b7ef52143e48d885f971186ff167c1c1198c4))
+* **navigation.json:** add styling overview ([2a4b6ec](https://github.com/vtexdocs/devportal/commit/2a4b6ec6a01c41280211c6767c3fa7b7ae079f92))
+* **navigation.json:** building storefront pages category ([7053a7a](https://github.com/vtexdocs/devportal/commit/7053a7a59e243ed4a9f3155b8aa89d58df059043))
+* **navigation.json:** category working with headless cms ([83f36d0](https://github.com/vtexdocs/devportal/commit/83f36d0bda04d958a44d08e0d2cb3eda3ce22153))
+* **navigation.json:** delete old headless cms category ([e87ce88](https://github.com/vtexdocs/devportal/commit/e87ce88133e9c02780f75d90d5ffae633d0c4410))
+* **navigation.json:** developer tools category ([fa9b833](https://github.com/vtexdocs/devportal/commit/fa9b833949106a5421853ae86e08479fd4c34476))
+* **navigation.json:** fix custom cypress guide slug ([4231988](https://github.com/vtexdocs/devportal/commit/4231988eed967d7a0c713628b0045994296f7a63))
+* **navigation.json:** fix dynamic content and override ([3cf0081](https://github.com/vtexdocs/devportal/commit/3cf00815ceaa8a6f0a516a7fca6bbae88247e216))
+* **navigation.json:** fix storefront features link ([591a3f3](https://github.com/vtexdocs/devportal/commit/591a3f31192ee5ee06e482274c03edb3dfc56997))
+* **navigation.json:** fix typo ([c1131a2](https://github.com/vtexdocs/devportal/commit/c1131a23f3709192ea1a0700d8efadd22323bc90))
+* **navigation.json:** fix typo ([fc1681b](https://github.com/vtexdocs/devportal/commit/fc1681b4f04026352ff0e5621f968cf257207e1d))
+* **navigation.json:** implementing storefront features ([5d801c3](https://github.com/vtexdocs/devportal/commit/5d801c384c33ab551068efdb7b758bb5b5ab3e15))
+* **navigation.json:** new release note ([eee20b7](https://github.com/vtexdocs/devportal/commit/eee20b720f886703e7136a85d5f6e158280872ea))
+* **navigation.json:** remove duplicate content ([716a89c](https://github.com/vtexdocs/devportal/commit/716a89cf5731dd5af3f9338b779ee3bcab159fd6))
+* **navigation.json:** reorganizing Delivery Promise docs ([17b9974](https://github.com/vtexdocs/devportal/commit/17b997411771878e6f2898f558561b15858ec807))
+* **navigation.json:** review developer tools section ([40cd34b](https://github.com/vtexdocs/devportal/commit/40cd34bdd6e015e8f4df19fb42796e3dfa900800))
+* **navigation.json:** review storefront features ([46f5019](https://github.com/vtexdocs/devportal/commit/46f501928a2600b228e88f13de399db8a5dbc012))
+* **navigation.json:** review styling section ([ceb4e06](https://github.com/vtexdocs/devportal/commit/ceb4e06afed309f190adbe8c3c9f5532d846e843))
+* **navigation.json:** styling category ([7075898](https://github.com/vtexdocs/devportal/commit/707589809ae1cad46d09a72cf26e2968e6d61edc))
+* **navigation.json:** update security type ([ac2e5fb](https://github.com/vtexdocs/devportal/commit/ac2e5fb02fa5c64214a754f872982c4e783e4468))
+* **netlify.toml:** create redirects ([05fd241](https://github.com/vtexdocs/devportal/commit/05fd24111bb001e70cd824329faf0614edb73711))
+* **netlify.toml:** fix redirects ([abde3ab](https://github.com/vtexdocs/devportal/commit/abde3ab13623e677e9d3845f7a39aa44241da191))
+* **netlify.toml:** redirect ([05fd0aa](https://github.com/vtexdocs/devportal/commit/05fd0aae8ca0051df38885dc19df593f1d58d6e2))
+* **netlify.toml:** storefront features redirect ([06a9568](https://github.com/vtexdocs/devportal/commit/06a95683e271e91f789715b0e529982adae39d3c))
+* **netlify.toml:** update delivery promise redirect ([8dc38fb](https://github.com/vtexdocs/devportal/commit/8dc38fb9937262805bf902cde3d36647b4afbf4f))
+* **netlify.toml:** update with new doc ([8957e8f](https://github.com/vtexdocs/devportal/commit/8957e8f64cff20b7dc1ffa7ac03a0d5c5d5a9d1b))
+
 ## [1.22.0](https://github.com/vtexdocs/devportal/compare/v1.21.1...v1.22.0) (2025-07-30)
 
 
