@@ -3,21 +3,14 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 const breadcrumb: SxStyleProp = {
   alignItems: 'center',
   color: '#6b7785',
-  mb: '24px',
-  lineHeight: '18px',
-  display: 'flex',
-  flexWrap: 'nowrap',
-  overflow: 'hidden',
+  lineHeight: '24px',
+  flexWrap: 'wrap',
 }
 
 const breadcrumbItem: SxStyleProp = {
-  color: '#6b7785 !important',
-  whiteSpace: 'nowrap',
-  textOverflow: 'ellipsis',
-  overflow: 'hidden',
-  maxWidth: '90%',
+  color: '#6b7785',
   ':hover': {
-    color: '#5E6E84 !important',
+    color: '#5E6E84',
   },
 }
 

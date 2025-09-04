@@ -1,5 +1,5 @@
-import { Link, Flex, IconCaret, Text } from '@vtex/brand-ui'
-import { useRef } from 'react'
+import { Flex, IconCaret, Text } from '@vtex/brand-ui'
+import Link from 'next/link'
 
 import styles from './styles'
 
@@ -8,35 +8,24 @@ interface Props {
 }
 
 const Breadcrumb = ({ breadcumbList }: Props) => {
-  const breadcrumbRef = useRef<HTMLDivElement>(null)
-  const lastItemRef = useRef<HTMLDivElement>(null)
-
   return (
-    <Flex sx={styles.breadcrumb} ref={breadcrumbRef}>
-      {breadcumbList.map((item, idx) => (
-        <div key={`breadcrumb-item-${item.slug}-${idx}`}>
-          {item.type === 'category' ? (
-            <Text
-              ref={idx === breadcumbList.length - 1 ? lastItemRef : undefined}
-              title={item.name}
-              sx={styles.breadcrumbItem}
-            >
-              {item.name}
-            </Text>
-          ) : (
-            <Link
-              ref={idx === breadcumbList.length - 1 ? lastItemRef : undefined}
-              sx={styles.breadcrumbItem}
-              href={item.slug}
-              title={item.name}
-            >
-              {item.name}
+    <Flex sx={styles.breadcrumb}>
+      {breadcumbList?.map((item, idx) => (
+        <Flex
+          key={`breadcrumb-${idx}-${item.slug}`}
+          sx={{ alignItems: 'center' }}
+        >
+          {item.type === 'markdown' ? (
+            <Link href={item.slug}>
+              <Text sx={styles.breadcrumbItem}>{item.name || 'Untitled'}</Text>
             </Link>
+          ) : (
+            <Text>{item.name || 'Untitled'}</Text>
           )}
-          {idx < breadcumbList.length - 1 && (
+          {idx < breadcumbList.length - 1 ? (
             <IconCaret direction="right" size={16} />
-          )}
-        </div>
+          ) : null}
+        </Flex>
       ))}
     </Flex>
   )
