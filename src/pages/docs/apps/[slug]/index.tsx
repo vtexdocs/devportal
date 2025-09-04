@@ -241,7 +241,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     }
     parentsArray.push(`apps/${appName}`)
     const isListed: boolean = keyPath ? true : false
-    const breadcumbList: { slug: string; name: string; type: string }[] = []
+    const breadcumbList: { slug: string; name: string; type: string }[] = [
+      {
+        slug: '/docs/vtex-io-apps',
+        name: 'VTEX IO Apps',
+        type: 'markdown',
+      },
+    ]
     parentsArrayName.forEach((_el: string, idx: number) => {
       breadcumbList.push({
         slug: `/docs/${parentsArray[idx]}`,

@@ -83,6 +83,7 @@ const boxTip: SxStyleProp = {
   fontSize: '16px',
   marginY: '20px',
   cursor: 'pointer',
+  color: 'muted.0',
   ':active, :hover': {
     borderColor: 'muted.2',
     boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
@@ -90,12 +91,10 @@ const boxTip: SxStyleProp = {
 
     '.description': {
       transition: 'all 0.3s ease-out',
-      color: '#000711',
     },
 
     '.link, .caret': {
       transition: 'all 0.3s ease-out',
-      color: 'muted.0',
     },
   },
 }

@@ -261,7 +261,13 @@ export const getStaticProps: GetStaticProps = async ({
     getParents(keyPath, 'type', flattenedSidebar, parentsArrayType)
   }
 
-  const breadcumbList: { slug: string; name: string; type: string }[] = []
+  const breadcumbList: { slug: string; name: string; type: string }[] = [
+    {
+      slug: '/docs/storefront-development',
+      name: 'Storefront development',
+      type: 'markdown',
+    },
+  ]
   parentsArrayName.forEach((_el: string, idx: number) => {
     breadcumbList.push({
       slug: `/docs/guides/${parentsArray[idx]}`,

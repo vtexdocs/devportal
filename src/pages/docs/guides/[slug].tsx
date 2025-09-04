@@ -49,6 +49,7 @@ import {
 } from 'utils/navigation-utils'
 import { LibraryContext } from '@vtexdocs/components'
 import ReactMarkdown from 'react-markdown'
+import { slugify } from 'utils/string-utils'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -336,12 +337,23 @@ export const getStaticProps: GetStaticProps = async ({
     /****/
 
     /* Breadcrumbs */
-    const breadcrumbList = isListed
-      ? findBreadcrumbTrail(
-          sidebarfallback[sidebarIndex].categories,
-          navigationSlug
-        )
-      : []
+    const breadcrumbList: { slug: string; name: string; type: string }[] = [
+      {
+        slug: sidebarIndex
+          ? `/docs/${slugify(sidebarfallback[sidebarIndex].documentation)}`
+          : '/docs/guides',
+        name: sectionSelected,
+        type: 'markdown',
+      },
+    ]
+
+    if (isListed) {
+      const breadcrumbs = findBreadcrumbTrail(
+        sidebarfallback[sidebarIndex].categories,
+        navigationSlug
+      )
+      breadcrumbList.push(...(breadcrumbs ?? []))
+    }
     /****/
 
     /* Navigation */
