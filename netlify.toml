@@ -2141,4 +2141,4 @@ to = "/docs/guides/faststore/delivery-promise-overview"
 force = true
 from = "docs/guides/getting-started"
 status = 308
-to = "docs/guides/orders-overview"
+to = "/docs/guides/orders-overview"
