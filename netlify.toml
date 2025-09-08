@@ -2136,3 +2136,9 @@ force = true
 from = "/docs/guides/faststore/features-delivery-promise"
 status = 308
 to = "/docs/guides/faststore/delivery-promise-overview"
+
+[[redirects]]
+force = true
+from = "docs/guides/getting-started"
+status = 308
+to = "docs/guides/orders-overview"
