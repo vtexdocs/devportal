@@ -2139,6 +2139,6 @@ to = "/docs/guides/faststore/delivery-promise-overview"
 
 [[redirects]]
 force = true
-from = "docs/guides/getting-started"
+from = "/docs/guides/orders-getting-started"
 status = 308
 to = "/docs/guides/orders-overview"
