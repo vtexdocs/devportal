@@ -30,6 +30,7 @@
     "@faststore/api": "^3.0.0",
     "@faststore/sdk": "^3.0.0",
     "@faststore/ui": "^3.49.1",
+    "@fortawesome/fontawesome-free": "^7.0.1",
     "@highlightjs/cdn-assets": "^11.7.0",
     "@lit-labs/nextjs": "^0.1.1",
     "@plaiceholder/next": "^2.5.0",
