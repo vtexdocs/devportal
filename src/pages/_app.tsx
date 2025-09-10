@@ -8,6 +8,7 @@ import 'styles/global.css'
 import 'styles/rapidoc.css'
 import 'styles/faststore.scss'
 import '@vtexdocs/components/dist/index.css'
+import '@fortawesome/fontawesome-free/css/all.css'
 
 import Layout from 'components/layout'
 import { AuthProvider } from 'utils/contexts/auth'

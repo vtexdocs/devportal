@@ -2,7 +2,7 @@
 
 html,
 body,
-* {
+*:not(i) {
   font-family: 'VTEX Trust Regular', -apple-system, system-ui,
     BlinkMacSystemFont, sans-serif !important;
   font-variation-settings: 'wght' 92;
