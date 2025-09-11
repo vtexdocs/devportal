@@ -13087,6 +13087,13 @@
               "children": []
             },
             {
+              "name": "Search GraphQL",
+              "slug": "apps/vtex.search-graphql",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Session Client",
               "slug": "apps/vtex.session-client",
               "origin": "",
