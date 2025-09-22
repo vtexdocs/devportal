@@ -9618,6 +9618,15 @@
                   "origin": "",
                   "endpoint": "/api/rnb/pvt/archive/taxes/calculatorConfiguration",
                   "children": []
+                },
+                {
+                  "name": "Seller opt-in or opt-out",
+                  "slug": "promotions-and-taxes-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/rnb/pvt/calculatorconfiguration/-promotionId-/seller-opt",
+                  "children": []
                 }
               ]
             },
