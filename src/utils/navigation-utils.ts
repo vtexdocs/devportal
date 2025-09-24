@@ -38,6 +38,7 @@ type NavEntry = {
   documentation: string
   slugPrefix: string
   categories: DocEntry[]
+  name: string
 }
 
 type DocEntry = {
