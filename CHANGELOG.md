@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.23.0](https://github.com/vtexdocs/devportal/compare/v1.22.2...v1.23.0) (2025-09-24)
+
+
+### Features
+
+* **navigation.json:** update navigation structure to allow for components package update ([303ee2c](https://github.com/vtexdocs/devportal/commit/303ee2ca3fa2369a74f7bd9e458f270de6efd3aa))
+* **package.json:** install fontawesome ([16d989f](https://github.com/vtexdocs/devportal/commit/16d989fab97315ca0240580b594be501c8327229))
+
+
+### Docs
+
+* **navigation.json:** add "governance and security in io" ([63e9ab1](https://github.com/vtexdocs/devportal/commit/63e9ab14b9557f27c42d72372f4555c26ffcc868))
+* **navigation.json:** add search graphql app ([d1af361](https://github.com/vtexdocs/devportal/commit/d1af361e7972d1306980b06912eb4d404a989e02))
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components ([34c7ad7](https://github.com/vtexdocs/devportal/commit/34c7ad74a7c021a7bdc4ac6a00c816acc9256e9b))
+
 ### [1.22.2](https://github.com/vtexdocs/devportal/compare/v1.22.1...v1.22.2) (2025-09-04)
 
 
