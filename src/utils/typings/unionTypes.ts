@@ -3,6 +3,7 @@ export type Locale = 'en' | 'pt' | 'es'
 export type DocumentationTitle =
   | 'Guides'
   | 'API Reference'
+  | 'Learning Center'
   | 'App Development'
   | 'Storefront Development'
   | 'VTEX IO Apps'
@@ -18,6 +19,7 @@ export type AdminTitle =
 export type SlugPrefix =
   | 'guides'
   | 'api-reference'
+  | 'learn'
   | 'app-development'
   | 'storefront-development'
   | 'vtex-io-apps'

@@ -1,5 +1,5 @@
 import { Flex, Box } from '@vtex/brand-ui'
-import type { ReactElement } from 'react'
+import { type ReactElement } from 'react'
 import { ThemeProvider } from '@vtex/brand-ui'
 
 import styles from 'styles/documentation-page'
@@ -9,7 +9,7 @@ import Footer from 'components/footer'
 import { Sidebar, LibraryContextProvider } from '@vtexdocs/components'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
-import { documentationData, updatesData } from 'utils/constants'
+import { documentationData, learningData, updatesData } from 'utils/constants'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -33,7 +33,16 @@ export default function Layout({
   return (
     <ThemeProvider>
       <LibraryContextProvider
-        sections={[documentationData, updatesData]}
+        sidebarSections={
+          sectionSelected == 'Learning Center'
+            ? [[...documentationData, ...learningData], updatesData]
+            : [documentationData, updatesData]
+        }
+        sections={
+          sectionSelected == 'Learning Center'
+            ? [[...documentationData, ...learningData], updatesData]
+            : [documentationData, updatesData]
+        }
         hamburguerMenuSections={[documentationData, updatesData]}
         isPreview={isPreview}
         fallback={sidebarfallback}

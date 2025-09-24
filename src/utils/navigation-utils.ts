@@ -43,7 +43,7 @@ type NavEntry = {
 type DocEntry = {
   name: string
   slug: string
-  origin: string
+  origin?: string
   type: string
   children: DocEntry[]
 }

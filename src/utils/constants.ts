@@ -29,6 +29,7 @@ import EditIcon from 'components/icons/edit-icon'
 import MenuIcon from 'components/icons/menu-icon'
 import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 import libraryConfig from './libraryConfig'
+import LearningIcon from 'components/icons/learning-icon'
 
 libraryConfig
 export const messages = getMessages()
@@ -75,6 +76,16 @@ export const documentationData: DocDataElement[] = [
     title: 'Troubleshooting',
     description: messages['troubleshooting.description'],
     link: '/docs/troubleshooting',
+  },
+]
+
+export const learningData: DocDataElement[] = [
+  {
+    id: 'Learning Center',
+    Icon: LearningIcon,
+    title: 'Learning Center',
+    description: messages['troubleshooting.description'],
+    link: '/learn',
   },
 ]
 

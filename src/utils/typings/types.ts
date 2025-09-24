@@ -59,8 +59,9 @@ export interface TroubleshootingCardsElements extends TroubleshootingItem {
 export type WhatsNextDataElement = {
   title: string
   description: string
-  linkTitle: string
+  linkTitle?: string
   linkTo: string
+  imgSrc?: string
 }
 
 export type CodeSamplesElement = {
