@@ -68,7 +68,7 @@ const TroubleshootingPage: NextPage<Props> = ({
         />
         <Box sx={styles.contentContainer}>
           {paginatedResult.map((item: TroubleshootingCardsElements) => (
-            <Flex>
+            <Flex key={item.slug}>
               <TroubleshootingCard
                 title={item.title}
                 description={item.description}

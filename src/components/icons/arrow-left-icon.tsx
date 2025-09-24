@@ -12,16 +12,16 @@ const ArrowLeftIcon = (props: IconProps) => (
     <path
       d="M19.5195 12.0195L4.52953 12.0195"
       stroke="#4A596B"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M10.5176 18.0117L4.48058 11.9997L10.5176 5.98772"
       stroke="#4A596B"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </Icon>
 )
