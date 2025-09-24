@@ -33,9 +33,11 @@ export async function getServerSideProps(ctx: any) {
     (document: any) => document.documentation === 'API Reference'
   )
   let references: any[] = []
-  referenceCategories.categories.forEach((category: any) => {
-    references = references.concat(getEndpoint(category))
-  })
+  if (referenceCategories && referenceCategories.categories) {
+    referenceCategories.categories.forEach((category: any) => {
+      references = references.concat(getEndpoint(category))
+    })
+  }
 
   return await getServerSideSitemap(ctx, references)
 }

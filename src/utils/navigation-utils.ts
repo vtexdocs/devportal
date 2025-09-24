@@ -38,12 +38,13 @@ type NavEntry = {
   documentation: string
   slugPrefix: string
   categories: DocEntry[]
+  name: string
 }
 
 type DocEntry = {
   name: string
   slug: string
-  origin: string
+  origin?: string
   type: string
   children: DocEntry[]
 }
