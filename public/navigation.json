@@ -18933,48 +18933,48 @@
         },
         {
           "name": "Styling Your Store for a Unique Brand Experience",
-          "slug": "course-styles-lang-en",
+          "slug": "course-styles-course-lang-en",
           "origin": "",
           "type": "markdown",
           "children": [
             {
               "name": "1. Introduction",
-              "slug": "course-styles-step00introduction-lang-en",
+              "slug": "course-styles-course-step00introduction-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "2. CSS Handles and the power of customizing blocks",
-              "slug": "course-styles-step01csshandles-lang-en",
+              "slug": "course-styles-course-step01csshandles-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "3. Global styles",
-              "slug": "course-styles-step02styles-lang-en",
+              "slug": "course-styles-course-step02styles-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "4. Creating custom templates",
-              "slug": "course-styles-step03custom-template-lang-en",
+              "slug": "course-styles-course-step03custom-template-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "5. Exploring the power behind rich text",
-              "slug": "course-styles-step04richtextmarkdown-lang-en",
+              "slug": "course-styles-course-step04richtextmarkdown-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "6. Building a custom search landing page",
-              "slug": "course-styles-step05landing-lang-en",
+              "slug": "course-styles-course-step05landing-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
@@ -19033,62 +19033,62 @@
         },
         {
           "name": "Creating Backend Services in VTEX IO",
-          "slug": "course-service-lang-en",
+          "slug": "course-service-course-lang-en",
           "origin": "",
           "type": "markdown",
           "children": [
             {
               "name": "1. Services in VTEX IO",
-              "slug": "course-service-step01services-lang-en",
+              "slug": "course-service-course-step01services-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "2. Overview: Understanding the Boilerplate",
-              "slug": "course-service-step02boilerplate-lang-en",
+              "slug": "course-service-course-step02boilerplate-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "3. Events: handling and receiving events",
-              "slug": "course-service-step03events-lang-en",
+              "slug": "course-service-course-step03events-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "4. Getting to know more about clients",
-              "slug": "course-service-step04clients-analytics-lang-en",
+              "slug": "course-service-course-step04clients-analytics-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "5. Using events as triggers",
-              "slug": "course-service-step05events-triggers-lang-en",
+              "slug": "course-service-course-step05events-triggers-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "6. Clients: Using Master Data",
-              "slug": "course-service-step06clients-masterdata-lang-en",
+              "slug": "course-service-course-step06clients-masterdata-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "7. GraphQL: Retrieving data from Masterdata",
-              "slug": "course-service-step07graphql-implementation-lang-en",
+              "slug": "course-service-course-step07graphql-implementation-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
             },
             {
               "name": "8. GraphQL: Using GraphiQL",
-              "slug": "course-service-step08graphiql-lang-en",
+              "slug": "course-service-course-step08graphiql-lang-en",
               "type": "markdown",
               "origin": "",
               "children": []
