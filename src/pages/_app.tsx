@@ -33,6 +33,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: Props) {
             property="og:image"
             content="https://cdn.jsdelivr.net/gh/vtexdocs/devportal@main/public/images/meta-image.png"
           />
+          <meta name="docsearch:language" content="en" />
         </Head>
         <PreviewContextProvider>
           <Layout
