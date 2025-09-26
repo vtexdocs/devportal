@@ -15986,6 +15986,21 @@
           "type": "category",
           "children": [
             {
+              "name": "September",
+              "slug": "september-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "",
+                  "slug": "GraphQL builder: Update to 2.x, 1.x deprecation",
+                  "origin": "2025-09-30-graphql-builder-update-2x",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "August",
               "slug": "august-2025",
               "origin": "",
