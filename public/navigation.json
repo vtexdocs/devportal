@@ -15992,9 +15992,9 @@
               "type": "category",
               "children": [
                 {
-                  "name": "",
-                  "slug": "GraphQL builder: Update to 2.x, 1.x deprecation",
-                  "origin": "2025-09-30-graphql-builder-update-2x",
+                  "name": "GraphQL builder: Update to 2.x, 1.x deprecation",
+                  "slug": "2025-09-30-graphql-builder-update-2x",
+                  "origin": "",
                   "type": "markdown",
                   "children": []
                 }
