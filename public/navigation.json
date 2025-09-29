@@ -15997,20 +15997,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "FastStore: Support for refresh token sessions",
-                  "slug": "2025-08-15-faststore-refresh-token",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "FastStore: Coupons persist through store cart validation",
-                  "slug": "2025-08-06-faststore-store-coupons",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
