@@ -220,6 +220,12 @@ to = "/docs/troubleshooting/my-store-is-slow-or-unavailable"
 
 [[redirects]]
 force = true
+from = "/docs/guides/enable-order-filter-by-sales-associate"
+status = 308
+to = "/docs/guides/how-to-customize-vtex-sales-app"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/docs-brandless"
 status = 308
 to = "/docs/guides/faststore/themes-brandless"
