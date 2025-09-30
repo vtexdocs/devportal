@@ -15992,6 +15992,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "GraphQL builder: Update to 2.x, 1.x deprecation",
+                  "slug": "2025-09-30-graphql-builder-update-2x",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Payment connector homologation freeze in preparation for Black Friday 2025",
                   "slug": "2025-09-29-payment-connector-homologation-freeze-in-preparation-for-black-friday-2025",
                   "origin": "",
