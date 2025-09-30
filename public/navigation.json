@@ -1977,13 +1977,6 @@
                   "children": []
                 },
                 {
-                  "name": "Enable order filter by sales associate",
-                  "slug": "enable-order-filter-by-sales-associate",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Force stock availability",
                   "slug": "force-stock-availability",
                   "origin": "",
