@@ -41,15 +41,19 @@ export interface AdminDataElement extends DataElement {
 export type UpdateElement = {
   slug: string
   title: string
-  createdAt: string
-  hidden: boolean
-  description: string
-  actionType: ActionType
+  createdAt?: string
+  hidden?: boolean
+  description?: string
+  excerpt?: string
+  type?: ActionType
+  actionType?: ActionType
+  tags?: string[]
 }
 export type TroubleshootingItem = {
   slug: string
   title: string
   description: string
+  tags?: string[]
 }
 export interface TroubleshootingCardsElements extends TroubleshootingItem {
   createdAt?: string

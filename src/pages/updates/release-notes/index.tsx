@@ -58,7 +58,13 @@ export const getStaticProps: GetStaticProps = async ({
       ? JSON.parse(JSON.stringify(previewData)).branch
       : 'main'
   const branch = preview ? previewBranch : 'main'
-  const releasesData = await getReleasesData(branch)
+  const releasesData = (await getReleasesData(branch)).sort(
+    (a: UpdateElement, b: UpdateElement) => {
+      const aDate = new Date(a.createdAt ?? 0).getTime()
+      const bDate = new Date(b.createdAt ?? 0).getTime()
+      return bDate - aDate
+    }
+  )
   const actionTypes = getActionTypes(releasesData)
 
   return {

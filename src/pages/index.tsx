@@ -1,5 +1,5 @@
 import { Grid } from '@vtex/brand-ui'
-import type { Page } from 'utils/typings/types'
+import type { Page, UpdateElement } from 'utils/typings/types'
 
 import NewsletterSection from 'components/newsletter-section'
 import DocumentationSection from 'components/documentation-section'
@@ -13,12 +13,16 @@ import getNavigation from 'utils/getNavigation'
 import { GetStaticProps } from 'next'
 import { useContext } from 'react'
 import { PreviewContext } from 'utils/contexts/preview'
+import getReleasePaths from 'utils/getReleasePaths'
+import getGithubFile from 'utils/getGithubFile'
+import { serialize } from 'next-mdx-remote/serialize'
 
 interface Props {
   branch: string
+  releaseData: UpdateElement
 }
 
-const Home: Page<Props> = ({ branch }) => {
+const Home: Page<Props> = ({ branch, releaseData }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
 
@@ -40,7 +44,7 @@ const Home: Page<Props> = ({ branch }) => {
       <Grid sx={styles.grid}>
         <NewsletterSection />
         <DocumentationSection />
-        <LastUpdatesSection />
+        <LastUpdatesSection releaseData={releaseData} />
         <EducationSection />
         <SubscriptionList />
       </Grid>
@@ -60,10 +64,26 @@ export const getStaticProps: GetStaticProps = async ({
       ? JSON.parse(JSON.stringify(previewData)).branch
       : 'main'
   const branch = preview ? previewBranch : 'main'
+  const releasePaths = await getReleasePaths()
+  const lastReleaseSlug = Object.keys(releasePaths)
+    .filter((slug) => slug.startsWith('20'))
+    .sort((a, b) => b.localeCompare(a))[0]
+
+  const releaseContent = await getGithubFile(
+    'vtexdocs',
+    'dev-portal-content',
+    'main',
+    releasePaths[lastReleaseSlug]
+  )
+  const releaseData = await serialize(releaseContent, {
+    parseFrontmatter: true,
+  })
+
   return {
     props: {
       sidebarfallback,
       branch,
+      releaseData: releaseData.frontmatter,
     },
   }
 }
