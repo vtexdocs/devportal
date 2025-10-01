@@ -40,6 +40,7 @@ import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { remarkCodeHike } from '@code-hike/mdx'
 import { officialVendors } from 'utils/constants'
+import FeedbackSection from 'components/feedback-section'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -47,6 +48,7 @@ interface IParams extends ParsedUrlQuery {
 }
 
 interface Props {
+  slug: string
   title: string
   vendor: string
   latestVersion: string
@@ -76,6 +78,7 @@ const AppChildPage: NextPage<Props> = ({
   appId,
   pagination,
   isListed,
+  slug,
 }) => {
   const headings: Item[] = headingList
 
@@ -151,7 +154,14 @@ const AppChildPage: NextPage<Props> = ({
               <SeeAlsoSection docs={seeAlsoData} />
             </Box>
             <Box sx={styles.rightContainer}>
-              <TableOfContents headingList={headingList} />
+              <TableOfContents headingList={headingList}>
+                <FeedbackSection
+                  slug={slug}
+                  small={true}
+                  suggestEdits={false}
+                  sectionSelected="apps"
+                />
+              </TableOfContents>
             </Box>
           </Flex>
         </APIGuideContextProvider>

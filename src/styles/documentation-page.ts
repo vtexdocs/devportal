@@ -21,34 +21,34 @@ const articleBox: SxStyleProp = {
   fontSize: '1em',
   lineHeight: '1.5em',
   width: '100%',
-  ':not(overviewSectionContent) a': {
+  a: {
     color: '#E31C58',
   },
-  ':not(overviewSectionContent) ul': {
+  ul: {
     li: {
       mt: '0.5em',
       mb: '0.5em',
     },
   },
-  ':not(overviewSectionContent) ol': {
+  ol: {
     li: {
       mt: '0.5em',
       mb: '0.5em',
     },
   },
-  ':not(overviewSectionContent) h1': {
+  h1: {
     fontSize: '1.75em',
     fontWeight: '400',
     lineHeight: '2.375em',
   },
-  ':not(overviewSectionContent) h2': {
+  h2: {
     fontSize: '1.375em',
     lineHeight: '2em',
     fontWeight: '400',
     mt: '1.3em',
     mb: '0.875em',
   },
-  ':not(overviewSectionContent) strong': {
+  strong: {
     fontWeight: '600',
   },
 }
@@ -81,7 +81,7 @@ const documentationExcerpt: SxStyleProp = {
 }
 
 const bottomContributorsContainer: SxStyleProp = {
-  display: ['none', 'initial', 'initial', 'initial', 'none'],
+  display: ['initial', 'initial', 'initial', 'initial', 'none'],
 }
 
 const bottomContributorsDivider: SxStyleProp = {
@@ -101,7 +101,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
-  width: [0, 0, 0, 0, '184px', '184px', '284px'],
+  width: [0, 0, 0, 0, '220px', '220px', '284px'],
 }
 
 const releaseAction: SxStyleProp = {
