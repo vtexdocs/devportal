@@ -116,6 +116,19 @@ const divider: SxStyleProp = {
   borderBottom: '1px solid #E7E9EE',
 }
 
+const button: SxStyleProp = {
+  padding: '8px 24px',
+  background: '#111827',
+  color: 'white',
+  border: 0,
+  borderRadius: 8,
+  cursor: 'pointer',
+  fontSize: '12px',
+  height: 'min-content',
+  textTransform: 'none',
+  minWidth: '100%',
+}
+
 export default {
   container,
   mainContainer,
@@ -129,4 +142,5 @@ export default {
   documentationExcerpt,
   innerContainer,
   divider,
+  button,
 }
