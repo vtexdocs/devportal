@@ -96,9 +96,9 @@ const ReleaseNote = ({
               {title}
             </Text>
           </Link>
-          {getReleaseDate(createdAt)}
+          {getReleaseDate(createdAt ?? '')}
           <Description
-            description={description}
+            description={description ?? ''}
             releaseStatus={releaseElementStatus}
           ></Description>
         </Flex>

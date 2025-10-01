@@ -4,18 +4,23 @@ import LastUpdatesCard, { CardProps } from '../last-updates-card'
 import { getMessages } from 'utils/get-messages'
 
 import styles from './styles'
+import { ActionType } from 'components/last-updates-card/functions'
+import { UpdateElement } from 'utils/typings/types'
 
-const lastReleaseNote: CardProps = {
-  action: {
-    type: 'added',
-    description: 'Orders API: support for NT 2025.001 fields',
-    date: new Date('08/29/2025'),
-  },
-  updateType: 'release-notes',
+interface LastUpdatesSectionProps {
+  releaseData: UpdateElement
 }
 
-const LastUpdatesSection = () => {
+const LastUpdatesSection = ({ releaseData }: LastUpdatesSectionProps) => {
   const messages = getMessages()
+  const lastReleaseNote: CardProps = {
+    action: {
+      type: releaseData?.type as ActionType,
+      description: releaseData?.title || '',
+      date: new Date(releaseData?.createdAt ?? new Date()),
+    },
+    updateType: 'release-notes',
+  }
 
   return (
     <Box sx={styles.sectionContainer}>
