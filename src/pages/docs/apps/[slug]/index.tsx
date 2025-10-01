@@ -319,6 +319,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       serialized = JSON.parse(JSON.stringify(serialized))
       return {
         props: {
+          slug,
           title,
           vendor,
           latestVersion,

@@ -327,6 +327,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       })
       return {
         props: {
+          slug,
           title,
           vendor,
           latestVersion,

@@ -1,4 +1,4 @@
-import { Fragment, useState, useContext, useMemo } from 'react'
+import { Fragment, useState, useContext, useMemo, useEffect } from 'react'
 import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
@@ -14,6 +14,8 @@ import getTroubleshootingData from 'utils/getTroubleshootingData'
 import TroubleshootingCard from 'components/troubleshooting-card'
 import Pagination from 'components/pagination'
 import { resourceTroubleshooting } from 'utils/constants'
+import { Input } from '@vtexdocs/components'
+import searchIcon from 'components/icons/search-icon'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -28,22 +30,40 @@ const TroubleshootingPage: NextPage<Props> = ({
 }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
+  const [search, setSearch] = useState<string>('')
+
+  const filteredResult = useMemo(() => {
+    return troubleshootingData.filter((troubleshooting) =>
+      troubleshooting.title.toLowerCase().includes(search.toLowerCase())
+    )
+  }, [search, troubleshootingData])
+
   const messages = getMessages()
   const itemsPerPage = 4
   const [page, setPage] = useState({
     curr: 1,
     total: Math.ceil(troubleshootingData.length / itemsPerPage),
   })
+
+  useEffect(() => {
+    setPage({
+      curr: 1,
+      total: Math.ceil(filteredResult.length / itemsPerPage),
+    })
+  }, [filteredResult])
+
   const paginatedResult = useMemo(() => {
-    return troubleshootingData.slice(
+    return filteredResult.slice(
       (page.curr - 1) * itemsPerPage,
       page.curr * itemsPerPage
     )
-  }, [page])
+  }, [filteredResult, page, itemsPerPage])
+
   function handleClick(props: { selected: number }) {
     if (props.selected !== undefined && props.selected !== page.curr)
       setPage({ ...page, curr: props.selected })
   }
+
   return (
     <>
       <Head>
@@ -67,16 +87,25 @@ const TroubleshootingPage: NextPage<Props> = ({
           imageAlt={messages['troubleshooting.title']}
         />
         <Box sx={styles.contentContainer}>
-          {paginatedResult.map((item: TroubleshootingCardsElements) => (
-            <Flex>
-              <TroubleshootingCard
-                title={item.title}
-                description={item.description}
-                slug={item.slug}
-              />
-            </Flex>
-          ))}
-
+          <Input
+            placeholder="Search for identified issues, diagnostics, and fixes..."
+            Icon={searchIcon}
+            value={search}
+            onChange={(value: string) => setSearch(value)}
+          />
+          {paginatedResult.length > 0 ? (
+            paginatedResult.map((item: TroubleshootingCardsElements) => (
+              <Flex>
+                <TroubleshootingCard
+                  title={item.title}
+                  description={item.description}
+                  slug={item.slug}
+                />
+              </Flex>
+            ))
+          ) : (
+            <Text sx={styles.noResultsText}>No results found</Text>
+          )}
           <Pagination
             forcePage={page.curr}
             pageCount={page.total}

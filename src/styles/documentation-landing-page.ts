@@ -158,6 +158,12 @@ const gridContent: SxStyleProp = {
   fontWeight: '400',
 }
 
+const noResultsText: SxStyleProp = {
+  py: '32px',
+  textAlign: 'center',
+  fontSize: '16px',
+}
+
 export default {
   container,
   mainContainer,
@@ -180,4 +186,5 @@ export default {
   gridElement,
   gridTitle,
   gridContent,
+  noResultsText,
 }
