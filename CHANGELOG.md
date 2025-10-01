@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.24.0](https://github.com/vtexdocs/devportal/compare/v1.23.0...v1.24.0) (2025-10-01)
+
+
+### Features
+
+* **articlerender:** create ArticleRender component and update feedback component position ([bbc3323](https://github.com/vtexdocs/devportal/commit/bbc33234a48806848bc3308860dae7eb50e4f63f))
+
+
+### Chore
+
+* **_app.tsx:** update metadata ([ca8d3a2](https://github.com/vtexdocs/devportal/commit/ca8d3a2a85f73808d4ea3cf47e6b7c0a2423ed44))
+* **algolia:** update scraper for compatibility with components package ([15531f9](https://github.com/vtexdocs/devportal/commit/15531f9ba441b39e3d4bc92c1e889b88c23dff0e))
+* **navigation.json:** update paths ([12afcf4](https://github.com/vtexdocs/devportal/commit/12afcf497eaa26afb12ef29dcf422aac81ffb49e))
+
+
+### Docs
+
+* create redirect ([86f61aa](https://github.com/vtexdocs/devportal/commit/86f61aa92a835f47603ccc81f108b76e3e79e5d9))
+* navigation change ([190e91e](https://github.com/vtexdocs/devportal/commit/190e91eb46ff7fa93a8e3427b5262d0bf7df1f28))
+* **navigation.json:** add graphql builder 2.x release note ([fc93103](https://github.com/vtexdocs/devportal/commit/fc931031f2cd51967af41530e2dd8c3298506ad3))
+
 ## [1.23.0](https://github.com/vtexdocs/devportal/compare/v1.22.2...v1.23.0) (2025-09-24)
 
 
