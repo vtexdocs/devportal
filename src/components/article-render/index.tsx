@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Box, Button, Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 import Breadcrumb from 'components/breadcrumb'
 
 import FeedbackSection from 'components/feedback-section'
@@ -17,8 +17,6 @@ import { CopyLinkButton } from '@vtexdocs/components'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 import ReactMarkdown from 'react-markdown'
 import { RowItem } from 'components/faststore-components/PropsSection/PropsSection'
-import FeedbackModal from 'components/feedback-modal'
-import { useState } from 'react'
 
 export interface MarkDownProps {
   slug: string
@@ -63,8 +61,6 @@ const ArticleRender = ({
   isListed,
 }: MarkDownProps) => {
   const { frontmatter } = serialized
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
   return (
     <>
       <Head>
@@ -136,18 +132,6 @@ const ArticleRender = ({
               <Contributors contributors={contributors} />
               <TableOfContents headingList={headingList}>
                 <FeedbackSection docPath={filePath} slug={slug} small={true} />
-                <Button
-                  onClick={() => setIsModalOpen(true)}
-                  sx={styles.button}
-                  variant="secondary"
-                >
-                  Send feedback
-                </Button>
-                <FeedbackModal
-                  isOpen={isModalOpen}
-                  onClose={() => setIsModalOpen(false)}
-                  initialMessage={`https://developers.vtex.com/docs/guides/${slug}`}
-                />
               </TableOfContents>
             </Box>
           )}
