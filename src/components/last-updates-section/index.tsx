@@ -13,12 +13,11 @@ interface LastUpdatesSectionProps {
 
 const LastUpdatesSection = ({ releaseData }: LastUpdatesSectionProps) => {
   const messages = getMessages()
-  const date = releaseData?.slug?.split('-').slice(0, 3).join('-')
   const lastReleaseNote: CardProps = {
     action: {
       type: releaseData?.type as ActionType,
       description: releaseData?.title || '',
-      date: new Date(date ?? new Date()),
+      date: new Date(releaseData?.createdAt ?? new Date()),
     },
     updateType: 'release-notes',
   }
