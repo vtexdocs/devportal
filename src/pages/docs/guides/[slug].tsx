@@ -1,8 +1,6 @@
-import Head from 'next/head'
 import { useEffect, useContext } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
-import ArticlePagination from 'components/article-pagination'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import remarkGFM from 'remark-gfm'
@@ -13,18 +11,7 @@ import remarkMermaid from 'utils/remark_plugins/mermaid'
 import { remarkCodeHike } from '@code-hike/mdx'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 
-import { Box, Flex, Text } from '@vtex/brand-ui'
-
-import APIGuideContextProvider from 'utils/contexts/api-guide'
-
 import type { Item } from '@vtexdocs/components'
-import Contributors from 'components/contributors'
-import { MarkdownRenderer } from '@vtexdocs/components'
-import FeedbackSection from 'components/feedback-section'
-import OnThisPage from 'components/on-this-page'
-import SeeAlsoSection from 'components/see-also-section'
-import { TableOfContents } from '@vtexdocs/components'
-import Breadcrumb from 'components/breadcrumb'
 
 import getHeadings from 'utils/getHeadings'
 import getNavigation from 'utils/getNavigation'
@@ -35,7 +22,6 @@ import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
 import { PreviewContext } from 'utils/contexts/preview'
 
-import styles from 'styles/documentation-page'
 import getFileContributors, {
   ContributorsType,
 } from 'utils/getFileContributors'
@@ -48,8 +34,8 @@ import {
   flattenJSON,
 } from 'utils/navigation-utils'
 import { LibraryContext } from '@vtexdocs/components'
-import ReactMarkdown from 'react-markdown'
 import { slugify } from 'utils/string-utils'
+import ArticleRender from 'components/article-render'
 
 const docsPathsGLOBAL = await getDocsPaths()
 
@@ -92,7 +78,6 @@ const DocumentationPage: NextPage<Props> = ({
   sectionSelected,
   hideTOC,
 }) => {
-  const headings: Item[] = headingList
   const hidden =
     sectionSelected === '' || serialized.frontmatter.hidden === true
   const { setBranchPreview } = useContext(PreviewContext)
@@ -102,74 +87,21 @@ const DocumentationPage: NextPage<Props> = ({
     setBranchPreview(branch)
   }, [serialized.frontmatter])
   return (
-    <>
-      <Head>
-        <title>{serialized.frontmatter?.title as string}</title>
-        <meta name="docsearch:doctype" content={sectionSelected} />
-        <meta
-          name="docsearch:doctitle"
-          content={serialized.frontmatter?.title as string}
-        />
-        {hidden && <meta name="robots" content="noindex" />}
-        {serialized.frontmatter?.excerpt && (
-          <meta
-            property="og:description"
-            content={serialized.frontmatter?.excerpt as string}
-          />
-        )}
-      </Head>
-      <APIGuideContextProvider headings={headings}>
-        <Flex sx={styles.innerContainer}>
-          <Box sx={styles.articleBox}>
-            <Box sx={styles.contentContainer}>
-              <article>
-                <header>
-                  <Breadcrumb breadcumbList={breadcrumbList} />
-                  <Text sx={styles.documentationTitle} className="title">
-                    {serialized.frontmatter?.title}
-                  </Text>
-                  <Box sx={styles.documentationExcerpt}>
-                    <ReactMarkdown>
-                      {serialized.frontmatter?.excerpt as string}
-                    </ReactMarkdown>
-                  </Box>
-                </header>
-                <MarkdownRenderer serialized={serialized} />
-              </article>
-            </Box>
-
-            <Box sx={styles.bottomContributorsContainer}>
-              <Box sx={styles.bottomContributorsDivider} />
-              <Contributors contributors={contributors} />
-            </Box>
-
-            <FeedbackSection docPath={path} slug={slug} />
-            {isListed && (
-              <ArticlePagination
-                hidePaginationNext={
-                  Boolean(serialized.frontmatter?.hidePaginationNext) || false
-                }
-                hidePaginationPrevious={
-                  Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
-                  false
-                }
-                pagination={pagination}
-              />
-            )}
-            {serialized.frontmatter?.seeAlso && (
-              <SeeAlsoSection docs={seeAlsoData} />
-            )}
-          </Box>
-          {!hideTOC && (
-            <Box sx={styles.rightContainer}>
-              <Contributors contributors={contributors} />
-              <TableOfContents headingList={headingList} />
-            </Box>
-          )}
-          <OnThisPage />
-        </Flex>
-      </APIGuideContextProvider>
-    </>
+    <ArticleRender
+      serialized={serialized}
+      breadcumbList={breadcrumbList}
+      sectionSelected={sectionSelected}
+      filePath={path}
+      hideTOC={hideTOC}
+      contributors={contributors}
+      headingList={headingList}
+      seeAlsoData={seeAlsoData}
+      slug={slug}
+      pagination={pagination}
+      isListed={isListed}
+      branch={branch}
+      hidden={hidden}
+    />
   )
 }
 
