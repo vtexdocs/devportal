@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.25.0](https://github.com/vtexdocs/devportal/compare/v1.24.0...v1.25.0) (2025-10-02)
+
+
+### Features
+
+* **feedback-google:** update default options ([3374aa0](https://github.com/vtexdocs/devportal/commit/3374aa019cac0f5d099201d9d9b8a4401b08f1c2))
+* **feedback-google:** update form ([3d0fc99](https://github.com/vtexdocs/devportal/commit/3d0fc99ea518234e29aaabff5a6f02849ae1569b))
+* **feedback-modal:** feat feedback modal integrated with google forms ([569b977](https://github.com/vtexdocs/devportal/commit/569b97788e401082fed89fde4080980bed3d5a39))
+* **feedback-modal:** feat: feedback modal integrated with google forms ([06feb31](https://github.com/vtexdocs/devportal/commit/06feb313e7b2ffb7ab6331d98a4d4ad45e10aece))
+* **last-updates-section:** automatically fetch the last release ([a875272](https://github.com/vtexdocs/devportal/commit/a875272a6f45acedee397f53a0c2461f7eae90d6))
+* **troubleshooting:** add input search ([c3b63a6](https://github.com/vtexdocs/devportal/commit/c3b63a6cd06c662df008a80e2378e823da1848e1))
+
+
+### Bug Fixes
+
+* **article-render:** revert wip feature ([bb4121b](https://github.com/vtexdocs/devportal/commit/bb4121b4fb1a3b6d1deac743b0f33cf6303785fe))
+* **last-updates-section:** use frontmatter data ([34cabba](https://github.com/vtexdocs/devportal/commit/34cabbaee18c54cce805d5bf0d28387e47100e0b))
+* **modal:** fix any type ([5836d28](https://github.com/vtexdocs/devportal/commit/5836d281e2b146189906e63782001ff5c347297d))
+* **release-note:** handle undesired behaviors ([62a89a0](https://github.com/vtexdocs/devportal/commit/62a89a0afb4df85c2ff0214853ac73911944716f))
+
 ## [1.24.0](https://github.com/vtexdocs/devportal/compare/v1.23.0...v1.24.0) (2025-10-01)
 
 
