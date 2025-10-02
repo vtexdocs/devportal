@@ -20,7 +20,14 @@ export default function Modal({
   if (!isOpen) return null
 
   return (
-    <Box sx={styles.wrapContainer} onClick={onClose}>
+    <Box
+      sx={styles.wrapContainer}
+      onClick={onClose}
+      className="modal"
+      data-open="true"
+      role="dialog"
+      aria-modal="true"
+    >
       <Box
         sx={styles.innerContainer}
         onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}

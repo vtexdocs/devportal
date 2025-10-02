@@ -8,6 +8,7 @@ const container: SxStyleProp = {
 const mainContainer: SxStyleProp = {
   justifyContent: 'center',
   width: '100%',
+  mb: '40px',
 }
 
 const innerContainer: SxStyleProp = {

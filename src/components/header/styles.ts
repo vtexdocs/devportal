@@ -27,7 +27,9 @@ const headerContainer: SxStyleProp = {
   position: 'sticky',
   zIndex: 9999,
   width: '100%',
-  transition: 'top 0.3s',
+  'body:has(.modal[data-open="true"]) &': {
+    zIndex: 0,
+  },
 }
 
 const hamburgerContainer: SxStyleProp = {
@@ -43,6 +45,7 @@ const headerBrand: SxStyleProp = {
   gridTemplateColumns: '1fr 1fr 0fr 1fr',
   width: '100%',
   position: 'relative',
+  transition: 'top 0.3s',
 }
 
 const headerBrandLink: SxStyleProp = {

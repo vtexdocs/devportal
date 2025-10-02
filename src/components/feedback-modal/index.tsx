@@ -37,14 +37,14 @@ export default function FeedbackModal({
     const name = String(formData.get('name') || '')
     const email = String(formData.get('email') || '')
     const type = String(formData.get('type') || '')
-    const article = String(formData.get('article') || '')
-    const message = String(formData.get('message') || '')
+    const url = String(formData.get('url') || '')
+    const feedback = String(formData.get('feedback') || '')
 
     try {
       const res = await fetch('/api/feedback-google', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, type, message, article }),
+        body: JSON.stringify({ name, email, type, feedback, url }),
       })
       if (!res.ok) {
         const data = await res.json().catch(() => ({}))
@@ -83,11 +83,11 @@ export default function FeedbackModal({
           onSubmit={handleSubmit}
           style={{ display: submitted ? 'none' : 'block' }}
         >
-          <Box style={{ display: 'grid', gap: 16 }}>
+          <Box style={{ display: 'grid', gap: 12 }}>
             <Flex sx={styles.labelContainer}>
               <Text sx={styles.label}>Article</Text>
               <input
-                name="article"
+                name="url"
                 defaultValue={initialMessage}
                 style={styles.input}
               />
@@ -98,7 +98,7 @@ export default function FeedbackModal({
                 Message <span style={{ color: 'red' }}>*</span>
               </Text>
               <textarea
-                name="message"
+                name="feedback"
                 aria-required="true"
                 required
                 rows={6}
@@ -114,16 +114,7 @@ export default function FeedbackModal({
 
             <Flex sx={styles.labelContainer}>
               <Text sx={styles.label}>Feedback type</Text>
-              <select
-                name="type"
-                style={{
-                  flex: 1,
-                  padding: '10px 12px',
-                  border: '1px solid #d0d7de',
-                  borderRadius: 8,
-                  background: 'white',
-                }}
-              >
+              <select name="type" style={styles.dropdownMenu}>
                 <option value="">Select feedback type</option>
                 <option value="Comment">Comment</option>
                 <option value="Question">Question</option>

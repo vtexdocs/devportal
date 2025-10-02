@@ -52,6 +52,21 @@ const submitButton = {
   cursor: 'pointer',
 }
 
+const textarea = {
+  padding: '10px 12px',
+  border: '1px solid #d0d7de',
+  borderRadius: 8,
+  resize: 'vertical',
+}
+
+const dropdownMenu = {
+  flex: 1,
+  padding: '10px 12px',
+  border: '1px solid #d0d7de',
+  borderRadius: 8,
+  background: 'white',
+}
+
 export default {
   feedbackSuccessText,
   feedbackErrorText,
@@ -60,4 +75,6 @@ export default {
   label,
   cancelButton,
   submitButton,
+  textarea,
+  dropdownMenu,
 }

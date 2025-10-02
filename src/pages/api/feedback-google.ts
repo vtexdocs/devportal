@@ -9,53 +9,32 @@ export default async function handler(
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
 
-  const formAction =
-    'https://docs.google.com/forms/d/e/1FAIpQLScV7i3RHjESPkIwBYeVfNtwjE7fhWjrde_7fMt5ynIteCMR0g/formResponse'
+  const formAction = process.env.FEEDBACK_FORM_ACTION
+
+  if (!formAction) {
+    return res
+      .status(500)
+      .json({ error: 'Missing FEEDBACK_FORM_ACTION env var' })
+  }
 
   try {
-    const { name, email, message, article } = req.body || {}
+    const { name, email, feedback, url, type } = req.body || {}
 
-    if (!message || typeof message !== 'string') {
+    if (!feedback || typeof feedback !== 'string') {
       return res.status(400).json({ error: 'Message is required' })
     }
 
-    const form = new URLSearchParams()
-    const entryMessage = 'entry.1364853586'
-    const entryName = 'entry.1509064102'
-    const entryEmail = 'entry.357850341'
-    //const entryType = 'entry.1591633300'
-    //form.append(entryMessage, message)
-    form.append(entryMessage, article)
-    form.append(entryName, name)
-    form.append(entryEmail, email)
-    //form.append(entryType, type)
-    //form.append('entry.1799503232', 'developers.vtex.com')
-    //form.append('entry.326955045', 'Yes')
-    //form.append('entry.1696159737', '')
-    //form.append('entry.1036201995', 'No')
-    //form.append(entryMessage, message)
-    if (entryName && typeof name === 'string' && name.trim()) {
-      form.append(entryName, name)
-    }
-    if (entryEmail && typeof email === 'string' && email.trim()) {
-      form.append(entryEmail, email)
-    }
-
-    const response = await fetch(formAction, {
+    const upstream = await fetch(formAction, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
-      },
-      body: form.toString(),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, feedback, url, type }),
     })
 
-    // Google Forms often returns 200 with an HTML page; treat non-network failures as success
-    if (!response.ok) {
-      // Still attempt to read text for debugging
-      const text = await response.text().catch(() => '')
+    if (upstream.status < 200 || upstream.status >= 400) {
+      const text = await upstream.text().catch(() => '')
       return res
         .status(502)
-        .json({ error: 'Upstream error', status: response.status, text })
+        .json({ error: 'Upstream error', status: upstream.status, text })
     }
 
     return res.status(200).json({ ok: true })
