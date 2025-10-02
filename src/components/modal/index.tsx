@@ -21,7 +21,10 @@ export default function Modal({
 
   return (
     <Box sx={styles.wrapContainer} onClick={onClose}>
-      <Box sx={styles.innerContainer} onClick={(e) => e.stopPropagation()}>
+      <Box
+        sx={styles.innerContainer}
+        onClick={(e: React.MouseEvent<HTMLDivElement>) => e.stopPropagation()}
+      >
         <Button
           variant="tertiary"
           onClick={onClose}
