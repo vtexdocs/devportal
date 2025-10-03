@@ -12084,6 +12084,13 @@
               "children": []
             },
             {
+              "name": "Integrating an app with a GraphQL API",
+              "slug": "integrating-an-app-with-a-graphql-api",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Implementing cache in GraphQL APIs for IO apps",
               "slug": "implementing-cache-in-graphql-apis-for-io-apps",
               "origin": "",
