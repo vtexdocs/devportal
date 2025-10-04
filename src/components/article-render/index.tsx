@@ -94,7 +94,7 @@ const ArticleRender = ({
                   </Flex>
                   <Box sx={styles.documentationTitle}>
                     <ReactMarkdown className="title">
-                      {frontmatter.title}
+                      {frontmatter?.title as string}
                     </ReactMarkdown>
                   </Box>
                   <Box sx={styles.documentationExcerpt}>
