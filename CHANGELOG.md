@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.27.0](https://github.com/vtexdocs/devportal/compare/v1.26.0...v1.27.0) (2025-10-04)
+
+
+### Features
+
+* **serializewithfallback:** avoid serialize failures with fallback option ([cb6fe10](https://github.com/vtexdocs/devportal/commit/cb6fe10179d76cfef0887be33b9fa7a2a956fc19))
+
+
+### Bug Fixes
+
+* **article-render:** reactMarkdown usage ([64a57ea](https://github.com/vtexdocs/devportal/commit/64a57eaff8d84b4bf38fc611dc0c571ab917d27a))
+
+
+### Chore
+
+* **serializewithfallback:** try md first ([2d40f35](https://github.com/vtexdocs/devportal/commit/2d40f3510e2b4422113a257ab4670ad22ce908e0))
+
 ## [1.26.0](https://github.com/vtexdocs/devportal/compare/v1.25.0...v1.26.0) (2025-10-04)
 
 
