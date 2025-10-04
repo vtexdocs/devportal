@@ -11,23 +11,21 @@ import Head from 'next/head'
 import { getMessages } from 'utils/get-messages'
 import { PreviewContext } from 'utils/contexts/preview'
 import { useContext } from 'react'
-import getActionTypes from 'utils/getActionTypes'
+
+type UpdateWithTs = UpdateElement & { __ts: number }
+type ReleasesByType = Record<string, UpdateWithTs[]>
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
-  releasesData: UpdateElement[]
+  releasesByType: ReleasesByType
   actionTypes: SelectOption[]
   branch: string
 }
 
 const messages = getMessages()
 
-const ReleasePage: NextPage<Props> = ({
-  releasesData,
-  actionTypes,
-  branch,
-}) => {
+const ReleasePage: NextPage<Props> = ({ releasesByType, branch }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
   return (
@@ -41,7 +39,7 @@ const ReleasePage: NextPage<Props> = ({
         />
       </Head>
       <Flex sx={styles.container}>
-        <ReleaseSection releasesData={releasesData} actionTypes={actionTypes} />
+        <ReleaseSection releasesByType={releasesByType} />
       </Flex>
     </>
   )
@@ -58,21 +56,32 @@ export const getStaticProps: GetStaticProps = async ({
       ? JSON.parse(JSON.stringify(previewData)).branch
       : 'main'
   const branch = preview ? previewBranch : 'main'
-  const releasesData = (await getReleasesData(branch)).sort(
-    (a: UpdateElement, b: UpdateElement) => {
-      const aDate = new Date(a.createdAt ?? 0).getTime()
-      const bDate = new Date(b.createdAt ?? 0).getTime()
-      return bDate - aDate
-    }
-  )
-  const actionTypes = getActionTypes(releasesData)
+
+  const releasesDataRaw: UpdateElement[] = await getReleasesData(branch)
+
+  const releasesData: UpdateWithTs[] = releasesDataRaw
+    .map((r) => ({
+      ...r,
+      __ts: new Date(r.createdAt).getTime(),
+    }))
+    .sort((a, b) => b.__ts - a.__ts)
+
+  const grouped: Record<string, UpdateWithTs[]> = {}
+  for (const item of releasesData) {
+    const type = item.actionType ?? 'other'
+    ;(grouped[type] ??= []).push(item)
+  }
+
+  const releasesByType: Record<string, UpdateWithTs[]> = {
+    all: releasesData,
+    ...grouped,
+  }
 
   return {
     props: {
       sidebarfallback,
       sectionSelected,
-      releasesData,
-      actionTypes,
+      releasesByType,
       branch,
     },
   }
