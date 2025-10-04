@@ -54,21 +54,20 @@ export async function serializeWithFallback({
   })
 
   try {
-    // Try to serialize as MDX first
     const serialized: MDXRemoteSerializeResult = await serialize(content, {
       parseFrontmatter: true,
-      mdxOptions: mdxOptionsBase('mdx', headingList) as SerializeMdxOptions,
+      mdxOptions: mdxOptionsBase('md', headingList) as SerializeMdxOptions,
     })
     return serialized
   } catch (error) {
     logger.warn(
-      `MDX serialization failed for ${path}, falling back to MD.\n${error}`
+      `MD serialization failed for ${path}, falling back to MDX.\n${error}`
     )
 
     try {
       const serialized: MDXRemoteSerializeResult = await serialize(content, {
         parseFrontmatter: true,
-        mdxOptions: mdxOptionsBase('md', headingList) as SerializeMdxOptions,
+        mdxOptions: mdxOptionsBase('mdx', headingList) as SerializeMdxOptions,
       })
       return serialized
     } catch (fallbackError) {
