@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.26.0](https://github.com/vtexdocs/devportal/compare/v1.25.0...v1.26.0) (2025-10-04)
+
+
+### Features
+
+* **chip-filter:** update release note page with chip filters ([8c2e2f7](https://github.com/vtexdocs/devportal/commit/8c2e2f7e90d6c1ae6bcecbcf4b4dbd0a09cd1a1e))
+* **functions:** export const ([90972a7](https://github.com/vtexdocs/devportal/commit/90972a75488e5fc0c70d6c7d6730d20cb703eb1d))
+
+
+### Docs
+
+* **navigation.json:** add "Integrating an app with a GraphQL API" ([cb47f4f](https://github.com/vtexdocs/devportal/commit/cb47f4fadb6382b18693dfb00885dc85ec9aea6f))
+
 ## [1.25.0](https://github.com/vtexdocs/devportal/compare/v1.24.0...v1.25.0) (2025-10-02)
 
 
