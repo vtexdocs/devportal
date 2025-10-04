@@ -27,7 +27,7 @@ export async function serializeWithFallback({
   logger: { warn: (msg: string) => void; error: (msg: string) => void }
   path: string
 }) {
-  const mdxOptionsBase = (format: 'md' | 'mdx', headingList: Item[] = []) => ({
+  const mdxOptions = (headingList: Item[] = []) => ({
     remarkPlugins: [
       [
         remarkCodeHike,
@@ -50,24 +50,39 @@ export async function serializeWithFallback({
     rehypePlugins: [
       [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
     ],
-    format,
+    format: 'mdx',
+  })
+
+  const mdOptions = (headingList: Item[] = []) => ({
+    remarkPlugins: [
+      remarkGFM,
+      remarkImages,
+      [getHeadings, { headingList }],
+      remarkBlockquote,
+      remarkMermaid,
+    ],
+    rehypePlugins: [
+      [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
+    ],
+    format: 'md',
   })
 
   try {
+    // Try to serialize as MDX first
     const serialized: MDXRemoteSerializeResult = await serialize(content, {
       parseFrontmatter: true,
-      mdxOptions: mdxOptionsBase('md', headingList) as SerializeMdxOptions,
+      mdxOptions: mdxOptions(headingList) as SerializeMdxOptions,
     })
     return serialized
   } catch (error) {
     logger.warn(
-      `MD serialization failed for ${path}, falling back to MDX.\n${error}`
+      `MDX serialization failed for ${path}, falling back to MD.\n${error}`
     )
 
     try {
       const serialized: MDXRemoteSerializeResult = await serialize(content, {
         parseFrontmatter: true,
-        mdxOptions: mdxOptionsBase('mdx', headingList) as SerializeMdxOptions,
+        mdxOptions: mdOptions(headingList) as SerializeMdxOptions,
       })
       return serialized
     } catch (fallbackError) {

@@ -235,6 +235,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         logger,
         path: slug,
       })
+
+      if (!serialized) {
+        logger.warn(`Serialized result is null/invalid for ${slug}`)
+        return { notFound: true }
+      }
+
       serialized = JSON.parse(JSON.stringify(serialized))
       const parentsArray: string[] = []
       const parentsArrayName: string[] = []

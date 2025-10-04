@@ -164,6 +164,11 @@ export const getStaticProps: GetStaticProps = async ({
       path,
     })
 
+    if (!serialized) {
+      logger.warn(`Serialized result is null/invalid for ${slug} (${path})`)
+      return { notFound: true }
+    }
+
     const sidebarfallback = await getNavigation()
     serialized = JSON.parse(JSON.stringify(serialized))
 
