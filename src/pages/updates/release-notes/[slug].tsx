@@ -3,14 +3,9 @@ import { useContext, useEffect, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 
-import { serialize } from 'next-mdx-remote/serialize'
+import { serializeWithFallback } from 'utils/serializeWithFallback'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import remarkGFM from 'remark-gfm'
-import rehypeHighlight from 'rehype-highlight'
-import hljsCurl from 'highlightjs-curl'
-import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 
-import remarkImages from 'utils/remark_plugins/plaiceholder'
 import { getLogger } from 'utils/logging/log-util'
 
 import { Box, Flex, Text } from '@vtex/brand-ui'
@@ -41,7 +36,6 @@ import { ActionType, getAction } from 'components/last-updates-card/functions'
 
 import styles from 'styles/documentation-page'
 import { PreviewContext } from 'utils/contexts/preview'
-import { remarkCodeHike } from '@code-hike/mdx'
 
 const docsPathsGLOBAL = await getReleasePaths()
 
@@ -201,31 +195,11 @@ export const getStaticProps: GetStaticProps = async ({
       documentationContent = await replaceMagicBlocks(documentationContent)
     }
 
-    let serialized = await serialize(documentationContent, {
-      parseFrontmatter: true,
-      mdxOptions: {
-        remarkPlugins: [
-          [
-            remarkCodeHike,
-            {
-              autoImport: false,
-              showCopyButton: true,
-              lineNumbers: true,
-              skipLanguages: ['mermaid'],
-              staticMediaQuery: 'not screen, (max-width: 850px)',
-              theme: 'poimandres',
-            },
-          ],
-          remarkGFM,
-          remarkImages,
-          remarkBlockquote,
-        ],
-        rehypePlugins: [
-          [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
-        ],
-        useDynamicImport: true,
-        format: 'mdx',
-      },
+    let serialized = await serializeWithFallback({
+      content: documentationContent,
+      headingList: [],
+      logger,
+      path: slug,
     })
 
     const sidebarfallback = await getNavigation()

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Box, Button, Flex, Text } from '@vtex/brand-ui'
+import { Box, Button, Flex } from '@vtex/brand-ui'
 import Breadcrumb from 'components/breadcrumb'
 
 import FeedbackSection from 'components/feedback-section'
@@ -92,9 +92,11 @@ const ArticleRender = ({
                     <Breadcrumb breadcumbList={breadcumbList} />
                     <CopyLinkButton />
                   </Flex>
-                  <Text sx={styles.documentationTitle} className="title">
-                    {frontmatter.title}
-                  </Text>
+                  <Box sx={styles.documentationTitle}>
+                    <ReactMarkdown className="title">
+                      {frontmatter?.title as string}
+                    </ReactMarkdown>
+                  </Box>
                   <Box sx={styles.documentationExcerpt}>
                     <ReactMarkdown>
                       {frontmatter?.excerpt as string}

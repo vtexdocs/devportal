@@ -2,19 +2,11 @@ import { useEffect, useContext } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
 import jp from 'jsonpath'
-import { serialize } from 'next-mdx-remote/serialize'
+import { serializeWithFallback } from 'utils/serializeWithFallback'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import remarkGFM from 'remark-gfm'
-import rehypeHighlight from 'rehype-highlight'
-import hljsCurl from 'highlightjs-curl'
-import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
-import remarkMermaid from 'utils/remark_plugins/mermaid'
-import { remarkCodeHike } from '@code-hike/mdx'
-import remarkImages from 'utils/remark_plugins/plaiceholder'
 
 import type { Item } from '@vtexdocs/components'
 
-import getHeadings from 'utils/getHeadings'
 import getNavigation from 'utils/getNavigation'
 import getGithubFile from 'utils/getGithubFile'
 import getTroubleshootingPaths from 'utils/getTroubleshootingPaths'
@@ -31,6 +23,7 @@ import { getLogger } from 'utils/logging/log-util'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { LibraryContext } from '@vtexdocs/components'
 import ArticleRender from 'components/article-render'
+import { serialize } from 'next-mdx-remote/serialize'
 
 const docsPathsGLOBAL = await getTroubleshootingPaths()
 
@@ -151,7 +144,6 @@ export const getStaticProps: GetStaticProps = async ({
     path
   )
 
-  let format: 'md' | 'mdx' = 'mdx'
   try {
     if (path.endsWith('.md')) {
       const { result } = escapeCurlyBraces(documentationContent)
@@ -161,38 +153,15 @@ export const getStaticProps: GetStaticProps = async ({
     }
   } catch (error) {
     logger.error(`${error}`)
-    format = 'md'
   }
 
   try {
     const headingList: Item[] = []
-    let serialized = await serialize(documentationContent, {
-      parseFrontmatter: true,
-      mdxOptions: {
-        remarkPlugins: [
-          [
-            remarkCodeHike,
-            {
-              autoImport: false,
-              showCopyButton: true,
-              lineNumbers: true,
-              skipLanguages: ['mermaid'],
-              staticMediaQuery: 'not screen, (max-width: 850px)',
-              theme: 'poimandres',
-            },
-          ],
-          remarkGFM,
-          remarkImages,
-          [getHeadings, { headingList }],
-          remarkBlockquote,
-          remarkMermaid,
-        ],
-        rehypePlugins: [
-          [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
-        ],
-        useDynamicImport: true,
-        format,
-      },
+    let serialized = await serializeWithFallback({
+      content: documentationContent,
+      headingList,
+      logger,
+      path,
     })
 
     const sidebarfallback = await getNavigation()
@@ -204,7 +173,7 @@ export const getStaticProps: GetStaticProps = async ({
       title: string
       category: string
     }[] = []
-    const seeAlsoUrls = serialized.frontmatter?.seeAlso
+    const seeAlsoUrls = serialized?.frontmatter?.seeAlso
       ? JSON.parse(JSON.stringify(serialized.frontmatter.seeAlso as string))
       : []
     await Promise.all(
@@ -241,7 +210,7 @@ export const getStaticProps: GetStaticProps = async ({
       })
     )
 
-    const hideTOC = serialized.frontmatter?.hideTOC === true
+    const hideTOC = serialized?.frontmatter?.hideTOC === true
 
     const docsListSlug = jp.query(
       sidebarfallback,

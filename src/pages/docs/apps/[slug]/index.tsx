@@ -1,14 +1,8 @@
 import { Fragment } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
-import remarkGFM from 'remark-gfm'
-import rehypeHighlight from 'rehype-highlight'
-import hljsCurl from 'highlightjs-curl'
-import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
-import getHeadings from 'utils/getHeadings'
-import { serialize } from 'next-mdx-remote/serialize'
+import { serializeWithFallback } from 'utils/serializeWithFallback'
 import type { Item } from '@vtexdocs/components'
-import remarkImages from 'utils/remark_plugins/plaiceholder'
 import Breadcrumb from 'components/breadcrumb'
 import ArticlePagination from 'components/article-pagination'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
@@ -30,8 +24,6 @@ import Head from 'next/head'
 import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
-import { remarkCodeHike } from '@code-hike/mdx'
-import remarkMermaid from 'utils/remark_plugins/mermaid'
 import { officialVendors } from 'utils/constants'
 import FeedbackSection from 'components/feedback-section'
 
@@ -278,7 +270,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               markdown)
           : ''
       }
-      let format: 'md' | 'mdx' = 'mdx'
       try {
         const { result } = escapeCurlyBraces(markdown)
         markdown = result
@@ -286,35 +277,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         markdown = await replaceMagicBlocks(markdown)
       } catch (error) {
         logger.error(`${error}`)
-        format = 'md'
       }
-      let serialized = await serialize(markdown, {
-        parseFrontmatter: true,
-        mdxOptions: {
-          remarkPlugins: [
-            [
-              remarkCodeHike,
-              {
-                autoImport: false,
-                showCopyButton: true,
-                lineNumbers: true,
-                skipLanguages: ['mermaid'],
-                staticMediaQuery: 'not screen, (max-width: 850px)',
-                theme: 'poimandres',
-              },
-            ],
-            remarkGFM,
-            remarkImages,
-            [getHeadings, { headingList }],
-            remarkBlockquote,
-            remarkMermaid,
-          ],
-          rehypePlugins: [
-            [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
-          ],
-          useDynamicImport: true,
-          format,
-        },
+      let serialized = await serializeWithFallback({
+        content: markdown,
+        headingList,
+        logger,
+        path: slug,
       })
       serialized = JSON.parse(JSON.stringify(serialized))
       return {
