@@ -15,7 +15,7 @@ const innerContainer: SxStyleProp = {
   justifyContent: 'center',
   pt: '64px',
   mx: 'auto',
-  px: ['auto', '5em', '7em', '7em', '7em', '7em', '20em'],
+  px: ['auto', '5em', '6em', '6em', '6em', '6em', '20em'],
 }
 
 const articleBox: SxStyleProp = {
@@ -97,7 +97,7 @@ const bottomContributorsDivider: SxStyleProp = {
 }
 
 const rightContainer: SxStyleProp = {
-  ml: ['38px', '38px', '48px', '48px', '58px', '68px', '200px'],
+  ml: ['38px', '38px', '48px', '48px', '68px', '68px', '200px'],
   display: [
     'none !important',
     'none !important',
@@ -105,7 +105,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
-  width: [0, 0, 0, 0, '220px', '220px', '284px'],
+  width: [0, 0, 0, 0, '240px', '240px', '284px'],
 }
 
 const releaseAction: SxStyleProp = {
@@ -116,21 +116,40 @@ const releaseAction: SxStyleProp = {
 }
 
 const divider: SxStyleProp = {
-  marginTop: '20px',
-  borderBottom: '1px solid #E7E9EE',
+  borderTop: '1px solid #E7E9EE',
+  pt: 4,
+  mt: 4,
 }
 
 const button: SxStyleProp = {
-  padding: '8px 24px',
-  background: '#111827',
-  color: 'white',
-  border: 0,
-  borderRadius: 8,
+  mt: '8px',
+  px: 3,
+  minHeight: 36,
+  background: '#fff',
+  borderRadius: '4px',
   cursor: 'pointer',
-  fontSize: '12px',
+  fontSize: 12,
   height: 'min-content',
   textTransform: 'none',
-  minWidth: '100%',
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 3,
+  width: '100%',
+  color: 'muted.0',
+  border: '1px solid #E7E9EE',
+  '&:hover': { backgroundColor: '#F8F7FC', color: '#000711' },
+}
+
+const editContainer: SxStyleProp = {
+  mb: 3,
+  alignItems: 'center',
+  gap: 2,
+  fontSize: 12,
+  ':hover': {
+    color: '#000711 !important',
+  },
+  color: '#4A596B !important',
+  display: 'flex',
 }
 
 export default {
@@ -147,4 +166,5 @@ export default {
   innerContainer,
   divider,
   button,
+  editContainer,
 }
