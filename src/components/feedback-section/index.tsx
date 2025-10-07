@@ -15,13 +15,12 @@ const FeedbackSection = ({
   suggestEdits = true,
   small,
 }: DocPath) => {
-  const sendFeedback = async (comment: string, liked: boolean) => {
+  const sendFeedback = async (liked: boolean) => {
     const feedback = {
       data: [
         new Date().toISOString(),
         `https://developers.vtex.com/docs/${sectionSelected}/${slug}`,
         liked ? 'positive' : 'negative',
-        comment,
       ],
     }
 

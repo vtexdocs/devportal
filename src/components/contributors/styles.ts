@@ -1,7 +1,7 @@
 import type { SxStyleProp } from '@vtex/brand-ui'
 
 const container: SxStyleProp = {
-  mb: '32px',
+  mb: '24px',
   flexDirection: 'column',
   alignItems: ['center', 'center', 'center', 'center', 'initial'],
 }

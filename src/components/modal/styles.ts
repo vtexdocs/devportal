@@ -36,15 +36,16 @@ const innerContainer: SxStyleProp = {
 }
 
 const modalTitle: SxStyleProp = {
-  fontSize: '1.5rem',
+  fontSize: '1.25rem',
   mb: '0.7rem',
   mr: '2rem',
 }
 
 const modalDescription: SxStyleProp = {
   color: 'muted.0',
-  pb: '1rem',
-  mb: '1.5rem',
+  pb: '0.5rem',
+  mb: '1rem',
+  fontSize: '0.9rem',
   lineHeight: '1.6rem',
   borderBottom: '1px solid #E7E9EE',
 }
