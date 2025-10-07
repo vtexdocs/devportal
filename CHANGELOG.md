@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.28.0](https://github.com/vtexdocs/devportal/compare/v1.27.0...v1.28.0) (2025-10-07)
+
+
+### Features
+
+* **llm-content:** update article render with copy page button ([d615f3a](https://github.com/vtexdocs/devportal/commit/d615f3aae0ead8b98ed72267dc5f4b79e43179ac))
+
+
+### Bug Fixes
+
+* **serializewithfallback:** update md and mdx options ([fe25d4a](https://github.com/vtexdocs/devportal/commit/fe25d4a5e36313de2a7362f88220cabb77a034c0))
+
 ## [1.27.0](https://github.com/vtexdocs/devportal/compare/v1.26.0...v1.27.0) (2025-10-04)
 
 
