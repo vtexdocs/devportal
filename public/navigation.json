@@ -1145,8 +1145,8 @@
                   "children": []
                 },
                 {
-                  "name": "Create a regular order from an existing cart",
-                  "slug": "create-a-regular-order-from-an-existing-cart",
+                  "name": "Creating a regular order from an existing cart",
+                  "slug": "creating-a-regular-order-from-an-existing-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
