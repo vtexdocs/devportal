@@ -2148,3 +2148,9 @@ force = true
 from = "/docs/guides/orders-getting-started"
 status = 308
 to = "/docs/guides/orders-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/create-a-regular-order-from-an-existing-cart"
+status = 308
+to = "/docs/guides/creating-a-regular-order-from-an-existing-cart"
