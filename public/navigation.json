@@ -10381,6 +10381,93 @@
           ]
         },
         {
+          "name": "Storefront Permissions API",
+          "slug": "storefront-permissions-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Storefront Permissions",
+              "slug": "storefront-permissions-api-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create storefront user",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users",
+                  "children": []
+                },
+                {
+                  "name": "Assign storefront role to user",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/roles/assign",
+                  "children": []
+                },
+                {
+                  "name": "Revoke storefront role from user",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/roles/revoke",
+                  "children": []
+                },
+                {
+                  "name": "Check storefront user resource access",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users/-userId-/resources/-resourceKey-/granted",
+                  "children": []
+                },
+                {
+                  "name": "Remove storefront user",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/remove/users/-userId-",
+                  "children": []
+                },
+                {
+                  "name": "Fetch storefront user roles by ID",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users/-userId-/roles",
+                  "children": []
+                },
+                {
+                  "name": "Fetch storefront user roles by email",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users/-email-/roles",
+                  "children": []
+                },
+                {
+                  "name": "Fetch storefront user details",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users/-userId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Subscriptions API (v3)",
           "slug": "subscriptions-api-v3",
           "origin": "",
