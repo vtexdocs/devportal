@@ -3,6 +3,8 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 const container: SxStyleProp = {
   width: '100%',
   backgroundColor: 'white',
+  maxWidth: '2024px',
+  mx: 'auto',
 }
 
 const mainContainer: SxStyleProp = {

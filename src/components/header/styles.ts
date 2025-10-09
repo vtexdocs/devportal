@@ -30,6 +30,8 @@ const headerContainer: SxStyleProp = {
   'body:has(.modal[data-open="true"]) &': {
     zIndex: 0,
   },
+  maxWidth: '2024px',
+  mx: 'auto',
 }
 
 const hamburgerContainer: SxStyleProp = {
