@@ -96,7 +96,30 @@ const ArticleRender = ({
                     <Breadcrumb breadcumbList={breadcumbList} />
                   </Flex>
                   <Box sx={styles.documentationTitle}>
-                    <ReactMarkdown className="title">
+                    <ReactMarkdown
+                      components={{
+                        ol: ({
+                          node,
+                          children,
+                        }: {
+                          node: import('hast').Element
+                          children: React.ReactNode
+                        }) => {
+                          const start = node.properties?.start as
+                            | number
+                            | undefined
+                          return (
+                            <p>
+                              {start ? `${start}. ` : ''}
+                              {children}
+                            </p>
+                          )
+                        },
+                        li: ({ children }: { children: React.ReactNode }) => (
+                          <>{children}</>
+                        ),
+                      }}
+                    >
                       {frontmatter?.title as string}
                     </ReactMarkdown>
                   </Box>
