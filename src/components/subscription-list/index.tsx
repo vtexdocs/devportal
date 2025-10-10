@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Text, Flex, Input, Button } from '@vtex/brand-ui'
+import { Box, Text, Flex, Input, Button, Link } from '@vtex/brand-ui'
 import { getMessages } from 'utils/get-messages'
 import { getSubscritionURL, getNewsletterURL } from 'utils/get-url'
 import styles from './styles'
@@ -150,13 +150,13 @@ const SubscriptionList: React.FC = () => {
                 'Privacy Policy'
               )[0]
             }
-            <a
+            <Link
               href={getSubscritionURL()}
               target="_blank"
               rel="noopener noreferrer"
             >
               Privacy Policy
-            </a>
+            </Link>
           </Text>
           {message && (
             <Box

@@ -93,7 +93,7 @@ const ReleaseNote = ({
                   : styles.releaseTitle
               }
             >
-              {title}
+              <ReactMarkdown>{title}</ReactMarkdown>
             </Text>
           </Link>
           {getReleaseDate(createdAt ?? '')}

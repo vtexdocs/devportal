@@ -5,11 +5,11 @@ const chipButtonWrapper: SxStyleProp = {
   display: 'flex',
   userSelect: 'none',
   width: '100%',
+  alignItems: 'center',
+  marginBottom: '32px',
 }
 
 const chipsContainer: SxStyleProp = {
-  margin: '12px 0px 32px 0px',
-  padding: '0 16px',
   scrollbarWidth: 'none',
   '-ms-overflow-style': 'none',
   overflow: 'scroll',

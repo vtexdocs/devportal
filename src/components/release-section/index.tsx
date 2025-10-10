@@ -7,43 +7,22 @@ import { getMessages } from 'utils/get-messages'
 import { UpdateElement } from 'utils/typings/types'
 import ChipFilter from 'components/chip-filter'
 import { Action, actions } from 'components/last-updates-card/functions'
+import Filter from 'components/filter'
 
 const messages = getMessages()
 
 type UpdateWithTs = UpdateElement & { __ts: number }
 const VISIBLE_BATCH_SIZE = 100
 
-const mergeSorted = (lists: UpdateWithTs[][]): UpdateWithTs[] => {
-  const heads = lists.map(() => 0)
-  const out: UpdateWithTs[] = []
-
-  while (true) {
-    let bestList = -1
-    let bestItem: UpdateWithTs | null = null
-
-    for (let li = 0; li < lists.length; li++) {
-      const idx = heads[li]
-      const list = lists[li]
-      if (idx >= list.length) continue
-      const cand = list[idx]
-      if (!bestItem || cand.__ts > bestItem.__ts) {
-        bestItem = cand
-        bestList = li
-      }
-    }
-    if (!bestItem) break
-    out.push(bestItem)
-    heads[bestList]++
-  }
-  return out
-}
-
 const ReleaseSection = ({
   releasesByType,
+  availableTags,
 }: {
   releasesByType: Record<string, UpdateWithTs[]>
+  availableTags: string[]
 }) => {
-  const [filters, setFilters] = useState<string[]>([])
+  const [tagFilters, setTagFilters] = useState<string[]>([])
+  const [actionTypeFilters, setActionTypeFilters] = useState<string[]>([])
   const [visibleCount, setVisibleCount] = useState(VISIBLE_BATCH_SIZE)
   const chipCategories: Action[] = actions
 
@@ -53,33 +32,56 @@ const ReleaseSection = ({
   )
 
   const filteredResult = useMemo<UpdateWithTs[]>(() => {
-    if (!filters.length) return releasesByType['all'] ?? []
-    if (filters.length === 1) return releasesByType[filters[0]] ?? []
+    const allReleases = releasesByType['all'] ?? []
 
-    const lists = filters
-      .map((f) => releasesByType[f] ?? [])
-      .filter((l) => l.length)
-    if (lists.length <= 1) return lists[0] ?? []
-    return mergeSorted(lists)
-  }, [filters, releasesByType])
+    if (!tagFilters.length && !actionTypeFilters.length) {
+      return allReleases
+    }
+
+    return allReleases.filter((release) => {
+      const matchesTagFilter =
+        !tagFilters.length ||
+        tagFilters.some((tag) => release.tags?.includes(tag))
+
+      const matchesActionTypeFilter =
+        !actionTypeFilters.length ||
+        actionTypeFilters.includes(release.actionType ?? 'other')
+
+      return matchesTagFilter && matchesActionTypeFilter
+    })
+  }, [tagFilters, actionTypeFilters, releasesByType])
 
   const getCategoryAmount = useCallback(
-    (category: string) => releasesByType[category]?.length ?? 0,
-    [releasesByType]
+    (category: string) => {
+      const allReleases = releasesByType['all'] ?? []
+      return allReleases.filter((release) => {
+        const matchesTagFilter =
+          !tagFilters.length ||
+          tagFilters.some((tag) => release.tags?.includes(tag))
+
+        const matchesCategory = release.actionType === category
+
+        return matchesTagFilter && matchesCategory
+      }).length
+    },
+    [releasesByType, tagFilters]
   )
 
   const handleCategoriesSelection = useCallback((category: string) => {
-    setFilters((prev) => (prev.includes(category) ? prev : [...prev, category]))
+    setActionTypeFilters((prev) =>
+      prev.includes(category) ? prev : [...prev, category]
+    )
     setVisibleCount(VISIBLE_BATCH_SIZE)
   }, [])
 
   const handleFilterRemoval = useCallback((category: string) => {
-    setFilters((prev) => prev.filter((c) => c !== category))
+    setActionTypeFilters((prev) => prev.filter((c) => c !== category))
     setVisibleCount(VISIBLE_BATCH_SIZE)
   }, [])
 
   const handleFilterReset = useCallback(() => {
-    setFilters([])
+    setActionTypeFilters([])
+    setTagFilters([])
     setVisibleCount(VISIBLE_BATCH_SIZE)
   }, [])
 
@@ -121,10 +123,17 @@ const ReleaseSection = ({
         <hr aria-hidden="true" />
       </Box>
 
+      <Filter
+        filterName="Products"
+        checkBoxFilter={availableTags}
+        onApply={(newFilters) => setTagFilters(newFilters.checklist)}
+        selectedCheckboxes={tagFilters}
+      />
+
       <ChipFilter
         removeCategory={handleFilterRemoval}
         resetFilters={handleFilterReset}
-        filters={filters}
+        filters={actionTypeFilters}
         getCategoryAmount={getCategoryAmount}
         categories={chipCategories}
         applyCategory={handleCategoriesSelection}

@@ -21,11 +21,16 @@ interface Props {
   releasesByType: ReleasesByType
   actionTypes: SelectOption[]
   branch: string
+  availableTags: string[]
 }
 
 const messages = getMessages()
 
-const ReleasePage: NextPage<Props> = ({ releasesByType, branch }) => {
+const ReleasePage: NextPage<Props> = ({
+  releasesByType,
+  branch,
+  availableTags,
+}) => {
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
   return (
@@ -39,7 +44,10 @@ const ReleasePage: NextPage<Props> = ({ releasesByType, branch }) => {
         />
       </Head>
       <Flex sx={styles.container}>
-        <ReleaseSection releasesByType={releasesByType} />
+        <ReleaseSection
+          releasesByType={releasesByType}
+          availableTags={availableTags}
+        />
       </Flex>
     </>
   )
@@ -77,12 +85,20 @@ export const getStaticProps: GetStaticProps = async ({
     ...grouped,
   }
 
+  const allTags = new Set<string>()
+  releasesDataRaw.forEach((release) => {
+    const tags = release.tags
+    tags?.forEach((tag) => allTags.add(tag))
+  })
+  const availableTags = Array.from(allTags).sort()
+
   return {
     props: {
       sidebarfallback,
       sectionSelected,
       releasesByType,
       branch,
+      availableTags,
     },
   }
 }

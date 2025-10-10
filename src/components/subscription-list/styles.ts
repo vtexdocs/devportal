@@ -1,6 +1,7 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const sectionContainer: SxStyleProp = {
+  borderTop: '1px solid #e7e9ef',
   px: ['16px', '24px', '32px'],
   py: ['24px', '32px', '64px'],
   backgroundColor: 'muted.4',
@@ -20,7 +21,6 @@ const cardContainer: SxStyleProp = {
   backgroundColor: 'white',
   borderRadius: '8px',
   border: '1px solid #E7E9EE',
-  boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
 }
 
 const title: SxStyleProp = {
@@ -65,7 +65,8 @@ const button: SxStyleProp = {
 }
 
 const privacyText: SxStyleProp = {
-  fontSize: ['12px', '14px'],
+  fontSize: ['14px', '16px'],
+  color: '#A1A8B3',
   lineHeight: ['16px', '22px'],
   pl: ['22px', '32px'],
   fontWeight: '400',
