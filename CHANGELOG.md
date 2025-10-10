@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.29.1](https://github.com/vtexdocs/devportal/compare/v1.29.0...v1.29.1) (2025-10-10)
+
+
+### Style
+
+* **last-updates-section:** minor styles improvements and app development page updates ([a010840](https://github.com/vtexdocs/devportal/commit/a0108403b72740e881c32b7d5d7227fa7891b4a0))
+
+
+### Chore
+
+* **language.json:** minor copy updates ([9cdb061](https://github.com/vtexdocs/devportal/commit/9cdb06165b89a3e05f4643b2328fa19b95063926))
+
 ## [1.29.0](https://github.com/vtexdocs/devportal/compare/v1.28.0...v1.29.0) (2025-10-10)
 
 
