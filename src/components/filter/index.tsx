@@ -154,7 +154,7 @@ const Filter = ({
         <Box sx={styles.blanket} onClick={() => setIsModalOpen(false)} />
         <Box sx={styles.container}>
           <Box sx={styles.topContainer}>
-            <Text sx={styles.modalTitle}>Filtros</Text>
+            <Text sx={styles.modalTitle}>Filters</Text>
             <Flex
               sx={styles.closeButtonContainer}
               onClick={() => setIsModalOpen(false)}
