@@ -1,5 +1,4 @@
 import { SxStyleProp } from '@vtex/brand-ui'
-import { KnownIssueStatus } from 'utils/typings/types'
 
 const tag: SxStyleProp = {
   borderRadius: '11.5px',
@@ -13,38 +12,8 @@ const tag: SxStyleProp = {
 }
 
 const statusColors: {
-  [status in
-    | KnownIssueStatus
-    | 'Default'
-    | 'Selected'
-    | 'New'
-    | 'Gray']: SxStyleProp
+  [status in 'Default' | 'Selected' | 'New' | 'Gray']: SxStyleProp
 } = {
-  Backlog: {
-    border: '1px solid #D3D3D3',
-    color: '#4A596B',
-    background: '#E9E9E9',
-  },
-  Fixed: {
-    border: '1px solid #9FCDB4',
-    color: '#3A6E32',
-    background: '#DFF5DB',
-  },
-  Closed: {
-    border: '1px solid #A5C0FF',
-    color: '#2953B2',
-    background: '#DEE8FE',
-  },
-  Scheduled: {
-    border: '1px solid #FFD581',
-    color: '#D77809',
-    background: '#FFF3DA',
-  },
-  No_Fix: {
-    border: '1px solid #FAA397',
-    color: '#CB2610',
-    background: '#FFDFDB',
-  },
   Default: {
     border: '1px solid #A1AAB7',
     color: '#A1AAB7',
