@@ -40,7 +40,6 @@ const description: SxStyleProp = {
   lineHeight: '22px',
   fontWeight: '400',
   color: 'muted.1',
-  minHeight: '44px',
   overflow: 'hidden',
   width: '100%',
   height: '50%',
@@ -57,4 +56,24 @@ const link: SxStyleProp = {
   color: 'muted.1',
 }
 
-export default { container, title, description, linkContainer, link }
+const tag: SxStyleProp = {
+  width: 'max-content',
+  px: '8px',
+  margin: '4px',
+}
+
+const tagsContainer: SxStyleProp = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  mt: '12px',
+}
+
+export default {
+  container,
+  title,
+  description,
+  linkContainer,
+  link,
+  tag,
+  tagsContainer,
+}
