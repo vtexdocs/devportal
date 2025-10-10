@@ -17,10 +17,11 @@ const innerContainer: SxStyleProp = {
   pt: '64px',
   mx: 'auto',
   px: ['auto', '5em', '6em', '6em', '6em', '6em', '20em'],
+  pb: '72px',
 }
 
 const articleBox: SxStyleProp = {
-  fontSize: '1em',
+  fontSize: '0.95em',
   lineHeight: '1.5em',
   width: '100%',
   a: {
@@ -66,7 +67,7 @@ const documentationTitle: SxStyleProp = {
   lineHeight: ['30px', '38px'],
   fontWeight: '400',
   marginBottom: '14px',
-  p: {
+  '*': {
     margin: '0px',
   },
 }

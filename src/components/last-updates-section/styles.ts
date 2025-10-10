@@ -10,7 +10,7 @@ const sectionContainer: SxStyleProp = {
 }
 
 const title: SxStyleProp = {
-  fontSize: '48px',
+  fontSize: ['20px', '28px', '28px', '40px'],
   lineHeight: ['30px', '38px', '38px', '50px'],
   fontWeight: '400',
   color: '#4A4A4A',

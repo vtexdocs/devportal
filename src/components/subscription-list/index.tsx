@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, Text, Flex, Input, Button, Link } from '@vtex/brand-ui'
+import { Box, Text, Flex, Input, Link } from '@vtex/brand-ui'
 import { getMessages } from 'utils/get-messages'
 import { getSubscritionURL, getNewsletterURL } from 'utils/get-url'
 import styles from './styles'
@@ -140,9 +140,9 @@ const SubscriptionList: React.FC = () => {
               onChange={(e) => setEmail(e.target.value)}
               sx={styles.inputContainer}
             />
-            <Button size="regular" onClick={handleSubscribe} sx={styles.button}>
+            <Box as="button" onClick={handleSubscribe} sx={styles.button}>
               {messages['landing_page_newsletter.Button']}
-            </Button>
+            </Box>
           </Flex>
           <Text sx={styles.privacyText}>
             {

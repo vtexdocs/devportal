@@ -11950,9 +11950,9 @@
         },
         {
           "name": "Node apps",
-          "slug": "vtex-io-documentation-node-category",
+          "slug": "app-development-guides",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
               "name": "Services",
