@@ -23,8 +23,8 @@ const TroubleshootingCard = ({
           {tags &&
             tags
               .filter((moduleTag: string) => moduleTag !== '')
-              .map((moduleTag: string) => (
-                <Tag sx={styles.tag} color={'Gray'}>
+              .map((moduleTag: string, index) => (
+                <Tag sx={styles.tag} color={'Gray'} key={`tags-${tags[index]}`}>
                   {moduleTag}
                 </Tag>
               ))}

@@ -1,4 +1,4 @@
-import { Fragment, useState, useContext, useMemo, useEffect } from 'react'
+import { Fragment, useState, useMemo, useEffect } from 'react'
 import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
@@ -9,7 +9,6 @@ import image from '../../../../public/images/troubleshooting-image-header.png'
 import styles from 'styles/documentation-landing-page'
 import { TroubleshootingCardsElements } from 'utils/typings/types'
 import Head from 'next/head'
-import { PreviewContext } from 'utils/contexts/preview'
 import getTroubleshootingData, {
   ITroubleshootingFrontmatter,
 } from 'utils/getTroubleshootingData'
@@ -23,18 +22,14 @@ import Filter from 'components/filter'
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
-  branch: string
   troubleshootingData: TroubleshootingCardsElements[]
   availableTags: string[]
 }
 
 const TroubleshootingPage: NextPage<Props> = ({
   troubleshootingData,
-  branch,
   availableTags,
 }) => {
-  const { setBranchPreview } = useContext(PreviewContext)
-  setBranchPreview(branch)
   const [search, setSearch] = useState<string>('')
 
   const [tagFilters, setTagFilters] = useState<string[]>([])
@@ -122,7 +117,7 @@ const TroubleshootingPage: NextPage<Props> = ({
           />
           {paginatedResult.length > 0 ? (
             paginatedResult.map((item: TroubleshootingCardsElements) => (
-              <Flex>
+              <Flex key={item.slug}>
                 <TroubleshootingCard
                   title={item.title}
                   description={item.description}
