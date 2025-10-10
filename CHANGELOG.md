@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.30.0](https://github.com/vtexdocs/devportal/compare/v1.29.1...v1.30.0) (2025-10-10)
+
+
+### Features
+
+* **troubleshooting:** add troubleshooting filters ([0d0bd50](https://github.com/vtexdocs/devportal/commit/0d0bd50dead9b73592c49992bf919089df28a623))
+
+
+### Bug Fixes
+
+* **icons:** fix console errors ([e1f70fd](https://github.com/vtexdocs/devportal/commit/e1f70fd98ea57715de51cd0da90db921e623a98d))
+
 ### [1.29.1](https://github.com/vtexdocs/devportal/compare/v1.29.0...v1.29.1) (2025-10-10)
 
 
