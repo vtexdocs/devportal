@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.29.0](https://github.com/vtexdocs/devportal/compare/v1.28.0...v1.29.0) (2025-10-10)
+
+
+### Features
+
+* **constants:** export fs function ([792173f](https://github.com/vtexdocs/devportal/commit/792173fd835415099d9afc2b25f224e8c14dde38))
+* **release-notes:** feat filters ([0685fea](https://github.com/vtexdocs/devportal/commit/0685fea410b1f5238b8679a91b941a7f0e00e918))
+
+
+### Bug Fixes
+
+* **filter:** update modal title ([5a1cd6c](https://github.com/vtexdocs/devportal/commit/5a1cd6cd9f58a15c5d277fa9f89e4e50ed7f586c))
+* **tag:** update types ([9befcdd](https://github.com/vtexdocs/devportal/commit/9befcdd5785a75dc4bd6e1745ca2a2c08b976862))
+
+
+### Chore
+
+* add mappings for storefront permissions api ([ca238c8](https://github.com/vtexdocs/devportal/commit/ca238c88c44a1fee0849df1d1e13605897886a80))
+* add storefront permissions api to navigation ([295975f](https://github.com/vtexdocs/devportal/commit/295975f7970c137a246c20cb8baffe69802fd0aa))
+
 ## [1.28.0](https://github.com/vtexdocs/devportal/compare/v1.27.0...v1.28.0) (2025-10-07)
 
 
