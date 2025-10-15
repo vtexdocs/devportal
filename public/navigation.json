@@ -8423,6 +8423,22 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Interactions",
+              "slug": "orders-api-interactions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Add Log in Orders",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/oms/pvt/orders/-orderId-/interactions",
+                  "children": []
+                }
+              ]
             }
           ]
         },
