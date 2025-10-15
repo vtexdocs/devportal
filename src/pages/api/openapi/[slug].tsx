@@ -75,6 +75,7 @@ const referencePaths = objectFlip({
   'VTEX - mTLS API': 'mtls-api',
   'VTEX - Ads API': 'vtex-ads-api',
   'VTEX - Storefront Permissions API': 'storefront-permissions-api',
+  'VTEX - Recommendations BFF API.json': 'recommendations-bff-api',
 })
 
 // Type for reference paths mapping
