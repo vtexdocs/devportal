@@ -290,7 +290,7 @@ const APIPage: NextPage<Props> = ({
         <meta name="docsearch:doccategory" content={pageTitle} />
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
-      <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
+      <Box sx={{ mx: 'auto' }}>
         {isLoadingSpec && !doc && (
           <Box sx={{ textAlign: 'center', p: '2em' }}>
             <p>Loading API specification...</p>
@@ -324,7 +324,7 @@ const APIPage: NextPage<Props> = ({
           allow-spec-file-load={false}
           persist-auth="true"
         />
-        <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
+        <Box sx={{ mx: ['0', '0', '80px'] }}>
           <ArticlePagination
             hidePaginationNext={false}
             hidePaginationPrevious={false}

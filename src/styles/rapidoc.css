@@ -54,10 +54,6 @@ rapi-doc::part(section-operation-summary){
   padding-top: 0px;
 }
 
-rapi-doc::part(section-overview){
-  padding: 0px;
-}
-
 rapi-doc::part(section-overview-title){
   padding-top: 32px;
   line-height: 38px;
