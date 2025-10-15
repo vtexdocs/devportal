@@ -9980,6 +9980,80 @@
           ]
         },
         {
+          "name": "Recommendations BFF API",
+          "slug": "recommendations-bff-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Events",
+              "slug": "recommendations-bff-api-events",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Recommendation view",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/events/recommendation-view",
+                  "children": []
+                },
+                {
+                  "name": "Recommendation click",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/events/recommendation-click",
+                  "children": []
+                },
+                {
+                  "name": "Product view",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/events/product-view",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Recommendations",
+              "slug": "recommendations-bff-api-recommendations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Fetch recommendations",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/recommendations",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Users",
+              "slug": "recommendations-bff-api-users",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Start session",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/users/start-session",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "SKU Bindings API",
           "slug": "sku-bindings-api",
           "origin": "",
