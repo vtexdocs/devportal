@@ -16180,6 +16180,21 @@
           "type": "category",
           "children": [
             {
+              "name": "October",
+              "slug": "october-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Delivery Promise Notification API: New endpoint to update delivery promises for external sellers",
+                  "slug": "2025-10-23-updates-delivery-promise-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "September",
               "slug": "september-2025",
               "origin": "",
