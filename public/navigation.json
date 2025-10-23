@@ -16171,6 +16171,21 @@
           "type": "category",
           "children": [
             {
+              "name": "October",
+              "slug": "october-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Theme switching without server restart",
+                  "slug": "2025-10-23-faststore-theme-switch-fix",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "September",
               "slug": "september-2025",
               "origin": "",
