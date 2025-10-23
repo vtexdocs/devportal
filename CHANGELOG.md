@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.30.1](https://github.com/vtexdocs/devportal/compare/v1.30.0...v1.30.1) (2025-10-23)
+
+
+### Features
+
+* add new delivery promise endpoint ([ef6a619](https://github.com/vtexdocs/devportal/commit/ef6a6190bc1df9679ff194e04cdea771eb685248))
+* add new release note ([2e0200d](https://github.com/vtexdocs/devportal/commit/2e0200db70694bf607f33ddc2657de84db508e74))
+
+
+### Bug Fixes
+
+* **getreferencepaths:** fix Recommendation BFF API map ([c6d0aa5](https://github.com/vtexdocs/devportal/commit/c6d0aa5b2a1e9c9ff0530150d217c26a463dcf38))
+
+
+### Chore
+
+* add bff recommendations api references ([7f3669a](https://github.com/vtexdocs/devportal/commit/7f3669a68473d98f490746cfcdb9311b0ddea638))
+* add bff recommendations api to navigation ([45db8d0](https://github.com/vtexdocs/devportal/commit/45db8d0c49799fd7c95a7c7922618a6f991d8494))
+
+
+### Docs
+
+* add to navigation ([ad55566](https://github.com/vtexdocs/devportal/commit/ad5556652d2453a32ab0ac13d56258ce5785c0a5))
+* creating redirect for removed content ([0c09920](https://github.com/vtexdocs/devportal/commit/0c0992030587caf7d1b8660b19fa3f5a53873051))
+* **navigationg.json:** add new release note ([495e754](https://github.com/vtexdocs/devportal/commit/495e75407b55a3c8996d6ec6cfc01931c338855b))
+* removing deleted file from navigation ([6744a44](https://github.com/vtexdocs/devportal/commit/6744a442b75292fed4d90de33c9ab55a24bd6f68))
+* update navigation ([2e97168](https://github.com/vtexdocs/devportal/commit/2e971689b03ab1d2182776e20d11b818dc2f5865))
+
 ## [1.30.0](https://github.com/vtexdocs/devportal/compare/v1.29.1...v1.30.0) (2025-10-10)
 
 
