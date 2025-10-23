@@ -5217,6 +5217,15 @@
                   "origin": "",
                   "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
                   "children": []
+                }, 
+                {
+                  "name": "Update delivery promises for an external seller’s item",
+                  "slug": "delivery-promise-notification-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
+                  "children": []
                 }
               ]
             }
