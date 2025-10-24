@@ -16191,6 +16191,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "FastStore: Theme switching without server restart",
+                  "slug": "2025-10-23-faststore-theme-switch-fix",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
