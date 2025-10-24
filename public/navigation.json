@@ -2233,6 +2233,21 @@
           ]
         },
         {
+          "name": "Storefront Permissions",
+          "slug": "storefront-permissions-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Storefront Permissions Overview",
+              "slug": "storefront-permissions",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "VTEX Ads",
           "slug": "vtex-ads",
           "origin": "",
@@ -5217,7 +5232,7 @@
                   "origin": "",
                   "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
                   "children": []
-                }, 
+                },
                 {
                   "name": "Update delivery promises for an external seller’s item",
                   "slug": "delivery-promise-notification-api",
