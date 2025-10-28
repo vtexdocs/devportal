@@ -11,14 +11,6 @@ interface ImageComponentProps {
 }
 
 export const useMockSKUMatrix = () => {
-  const { setAllVariantProducts, isOpen } = useSKUMatrix()
-
-  useEffect(() => {
-    if (isOpen) {
-      setAllVariantProducts(mockVariantProducts)
-    }
-  }, [isOpen, setAllVariantProducts])
-
   const columns = {
     name: 'Product',
     additionalColumns: [{ label: 'Size', value: 'size' }],
@@ -59,4 +51,16 @@ export const useMockSKUMatrix = () => {
     buyProps,
     ImageComponent,
   }
+}
+
+export const MockSKUMatrixInitializer = () => {
+  const { setAllVariantProducts, isOpen } = useSKUMatrix()
+
+  useEffect(() => {
+    if (isOpen) {
+      setAllVariantProducts(mockVariantProducts)
+    }
+  }, [isOpen, setAllVariantProducts])
+
+  return null
 }
