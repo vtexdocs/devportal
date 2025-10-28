@@ -17,7 +17,11 @@ const SKUMatrixBasicUsage = () => {
         formatter={formatter}
         buyProps={buyProps}
         ImageComponent={ImageComponent}
-      />
+        direction="rightSide"
+        size="partial"
+      >
+        {/* Optional additional content can be added here */}
+      </SKUMatrixSidebar>
     </SKUMatrix>
   )
 }
