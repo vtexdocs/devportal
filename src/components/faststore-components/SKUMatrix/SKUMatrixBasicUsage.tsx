@@ -1,11 +1,12 @@
 import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
-import { useMockSKUMatrix } from './useMockSKUMatrix'
+import { useMockSKUMatrix, MockSKUMatrixInitializer } from './useMockSKUMatrix'
 
 const SKUMatrixBasicUsage = () => {
   const { columns, buyProps, formatter, ImageComponent } = useMockSKUMatrix()
 
   return (
     <SKUMatrix>
+      <MockSKUMatrixInitializer />
       <SKUMatrixTrigger style={{ width: '15rem' }}>
         Buy Multiple Sizes
       </SKUMatrixTrigger>
