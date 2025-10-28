@@ -5,6 +5,8 @@ const sectionContainer: SxStyleProp = {
   py: ['32px', '64px'],
   backgroundColor: 'muted.4',
   textAlign: ['center', 'center', 'initial'],
+  borderTop: '1px solid #e7e9ef',
+  borderBottom: '1px solid #e7e9ef',
 }
 
 const title: SxStyleProp = {
@@ -16,7 +18,6 @@ const title: SxStyleProp = {
 }
 
 const cardsContainer: SxStyleProp = {
-  mt: ['16px', '40px'],
   flexDirection: 'column',
   alignItems: 'center',
   display: ['inline-block', 'inline-block', 'flex'],

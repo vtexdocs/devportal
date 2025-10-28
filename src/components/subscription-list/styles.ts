@@ -1,8 +1,9 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const sectionContainer: SxStyleProp = {
+  borderTop: '1px solid #e7e9ef',
   px: ['16px', '24px', '32px'],
-  py: ['24px', '32px', '64px'],
+  py: ['42px', '44px', '64px'],
   backgroundColor: 'muted.4',
   textAlign: 'center',
   display: 'flex',
@@ -20,7 +21,6 @@ const cardContainer: SxStyleProp = {
   backgroundColor: 'white',
   borderRadius: '8px',
   border: '1px solid #E7E9EE',
-  boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
 }
 
 const title: SxStyleProp = {
@@ -33,7 +33,7 @@ const title: SxStyleProp = {
 
 const description: SxStyleProp = {
   fontSize: ['14px', '16px'],
-  lineHeight: '25px',
+  lineHeight: ['20px', '22px'],
   textAlign: 'center',
   marginBottom: '16px',
 }
@@ -55,17 +55,29 @@ const inputContainer: SxStyleProp = {
   justifyContent: 'center',
   alignItems: 'center',
   width: '100%',
+  '& label': {
+    fontSize: '14px',
+  },
 }
 
 const button: SxStyleProp = {
-  height: '55px',
+  display: 'inline-flex',
   alignItems: 'center',
+  px: '16px',
+  minHeight: '48px',
+  backgroundColor: '#e31c58',
+  color: '#fff',
+  border: 'none',
+  borderRadius: '24px',
+  cursor: 'pointer',
+  '&:hover': { backgroundColor: '#C81E51' },
   justifyContent: 'center',
-  marginBottom: '9px',
+  fontSize: ['14px', '16px'],
 }
 
 const privacyText: SxStyleProp = {
-  fontSize: ['12px', '14px'],
+  fontSize: ['14px', '16px'],
+  color: '#A1A8B3',
   lineHeight: ['16px', '22px'],
   pl: ['22px', '32px'],
   fontWeight: '400',

@@ -5,7 +5,7 @@ const container: SxStyleProp = {
   padding: '25px',
   borderRadius: '4px',
   border: '1px solid #E7E9EE',
-  width: ['100%', '90%'],
+  width: '100%',
   transition: 'all 0.3s ease-out',
   ':hover': {
     cursor: 'pointer',
@@ -40,7 +40,6 @@ const description: SxStyleProp = {
   lineHeight: '22px',
   fontWeight: '400',
   color: 'muted.1',
-  minHeight: '44px',
   overflow: 'hidden',
   width: '100%',
   height: '50%',
@@ -57,4 +56,24 @@ const link: SxStyleProp = {
   color: 'muted.1',
 }
 
-export default { container, title, description, linkContainer, link }
+const tag: SxStyleProp = {
+  width: 'max-content',
+  px: '8px',
+  margin: '4px',
+}
+
+const tagsContainer: SxStyleProp = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  mt: '12px',
+}
+
+export default {
+  container,
+  title,
+  description,
+  linkContainer,
+  link,
+  tag,
+  tagsContainer,
+}

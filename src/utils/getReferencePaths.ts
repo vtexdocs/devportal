@@ -68,6 +68,8 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - Punchout API': 'punchout-api',
   'VTEX - mTLS API': 'mtls-api',
   'VTEX - Ads API': 'vtex-ads-api',
+  'VTEX - Storefront Permissions API': 'storefront-permissions-api',
+  'VTEX - Recommendations BFF API': 'recommendations-bff-api',
 }
 
 export default async function getReferencePaths(

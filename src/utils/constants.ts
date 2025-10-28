@@ -140,7 +140,7 @@ export const whatsNextData: WhatsNextDataElement[] = [
     title: messages['app_development_page_build_foundations.title'],
     description: messages['app_development_page_build_foundations.description'],
     linkTitle: messages['app_development_page_build_foundations.link'],
-    linkTo: '/docs/guides/concepts',
+    linkTo: '/docs/guides/vtex-io-documentation-manifest',
   },
   {
     title: messages['app_development_page_go_further.title'],

@@ -23,7 +23,7 @@
   "selectors_exclude": [],
   "custom_settings": {
     "separatorsToIndex": "_",
-    "attributesForFaceting": ["doctype"],
+    "attributesForFaceting": ["doctype", "language"],
     "attributesToRetrieve": [
       "hierarchy",
       "content",
@@ -32,6 +32,7 @@
       "url_without_anchor",
       "type",
       "doctype",
+      "language",
       "doctitle",
       "docCategory",
       "method"

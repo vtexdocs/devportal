@@ -2,6 +2,7 @@
   "navbar": [
     {
       "documentation": "Guides",
+      "name": "Guides",
       "slugPrefix": "docs/guides",
       "categories": [
         {
@@ -1012,13 +1013,6 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            },
-            {
-              "name": "Webservice (Legacy)",
-              "slug": "webservice-deprecated",
-              "origin": "",
-              "type": "markdown",
-              "children": []
             }
           ]
         },
@@ -1144,8 +1138,8 @@
                   "children": []
                 },
                 {
-                  "name": "Create a regular order from an existing cart",
-                  "slug": "create-a-regular-order-from-an-existing-cart",
+                  "name": "Creating a regular order from an existing cart",
+                  "slug": "creating-a-regular-order-from-an-existing-cart",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1976,13 +1970,6 @@
                   "children": []
                 },
                 {
-                  "name": "Enable order filter by sales associate",
-                  "slug": "enable-order-filter-by-sales-associate",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Force stock availability",
                   "slug": "force-stock-availability",
                   "origin": "",
@@ -2146,6 +2133,13 @@
             {
               "name": "Using Policy Engine API on Promotion Alerts",
               "slug": "using-policy-engine-api-on-promotion-alerts",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Seller Opt-in Promotions",
+              "slug": "seller-opt-in-promotions",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -2446,6 +2440,7 @@
     },
     {
       "documentation": "API Reference",
+      "name": "API Reference",
       "slugPrefix": "docs/api-reference",
       "categories": [
         {
@@ -5221,6 +5216,15 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
+                  "children": []
+                }, 
+                {
+                  "name": "Update delivery promises for an external seller’s item",
+                  "slug": "delivery-promise-notification-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
                   "children": []
                 }
               ]
@@ -8421,6 +8425,22 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Interactions",
+              "slug": "orders-api-interactions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Add Log in Orders",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/oms/pvt/orders/-orderId-/interactions",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -9611,6 +9631,15 @@
                   "origin": "",
                   "endpoint": "/api/rnb/pvt/archive/taxes/calculatorConfiguration",
                   "children": []
+                },
+                {
+                  "name": "Seller opt-in or opt-out",
+                  "slug": "promotions-and-taxes-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/rnb/pvt/calculatorconfiguration/-promotionId-/seller-opt",
+                  "children": []
                 }
               ]
             },
@@ -9962,6 +9991,80 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/reviews-and-ratings/api/review",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Recommendations BFF API",
+          "slug": "recommendations-bff-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Events",
+              "slug": "recommendations-bff-api-events",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Recommendation view",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/events/recommendation-view",
+                  "children": []
+                },
+                {
+                  "name": "Recommendation click",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/events/recommendation-click",
+                  "children": []
+                },
+                {
+                  "name": "Product view",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/events/product-view",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Recommendations",
+              "slug": "recommendations-bff-api-recommendations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Fetch recommendations",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/recommendations",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Users",
+              "slug": "recommendations-bff-api-users",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Start session",
+                  "slug": "recommendations-bff-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/recommend-bff/v2/users/start-session",
                   "children": []
                 }
               ]
@@ -10363,6 +10466,93 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/edge/certificates",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Storefront Permissions API",
+          "slug": "storefront-permissions-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Storefront Permissions",
+              "slug": "storefront-permissions-api-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create storefront user",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users",
+                  "children": []
+                },
+                {
+                  "name": "Assign storefront role to user",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/roles/assign",
+                  "children": []
+                },
+                {
+                  "name": "Revoke storefront role from user",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/roles/revoke",
+                  "children": []
+                },
+                {
+                  "name": "Check storefront user resource access",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users/-userId-/resources/-resourceKey-/granted",
+                  "children": []
+                },
+                {
+                  "name": "Remove storefront user",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/remove/users/-userId-",
+                  "children": []
+                },
+                {
+                  "name": "Fetch storefront user roles by ID",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users/-userId-/roles",
+                  "children": []
+                },
+                {
+                  "name": "Fetch storefront user roles by email",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users/-email-/roles",
+                  "children": []
+                },
+                {
+                  "name": "Fetch storefront user details",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/users/-userId-",
                   "children": []
                 }
               ]
@@ -11383,6 +11573,7 @@
     },
     {
       "documentation": "App Development",
+      "name": "App Development",
       "slugPrefix": "docs/guides/",
       "categories": [
         {
@@ -11395,6 +11586,13 @@
         {
           "name": "What is a VTEX App",
           "slug": "vtex-io-documentation-what-is-a-vtex-app",
+          "origin": "",
+          "type": "markdown",
+          "children": []
+        },
+        {
+          "name": "Governance and shared security in VTEX IO apps",
+          "slug": "governance-and-shared-security-in-vtex-io-apps",
           "origin": "",
           "type": "markdown",
           "children": []
@@ -11844,9 +12042,9 @@
         },
         {
           "name": "Node apps",
-          "slug": "vtex-io-documentation-node-category",
+          "slug": "app-development-guides",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
               "name": "Services",
@@ -12060,6 +12258,13 @@
             {
               "name": "GraphQL authorization in IO apps",
               "slug": "graphql-authorization-in-io-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Integrating an app with a GraphQL API",
+              "slug": "integrating-an-app-with-a-graphql-api",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -12321,6 +12526,7 @@
     },
     {
       "documentation": "VTEX IO Apps",
+      "name": "VTEX IO Apps",
       "slugPrefix": "docs/",
       "categories": [
         {
@@ -13460,6 +13666,7 @@
     },
     {
       "documentation": "Storefront Development",
+      "name": "Storefront Development",
       "slugPrefix": "docs/guides/",
       "categories": [
         {
@@ -13610,10 +13817,10 @@
                   "children": []
                 },
                 {
-                "name": "Customizing pages with Dynamic Content",
-                "slug": "faststore/dynamic-content-overview",
-                "origin": "",
-                "type": "markdown",
+                  "name": "Customizing pages with Dynamic Content",
+                  "slug": "faststore/dynamic-content-overview",
+                  "origin": "",
+                  "type": "markdown",
                   "children": [
                     {
                       "name": "Step 1 - Setting up the store code for Dynamic Content",
@@ -13666,7 +13873,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                } 
+                }
               ]
             },
             {
@@ -13751,7 +13958,7 @@
                   "name": "Iconography",
                   "slug": "faststore/styling-icons",
                   "origin": "",
-                      "type": "markdown",
+                  "type": "markdown",
                   "children": []
                 },
                 {
@@ -14439,6 +14646,21 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "name": "Implementing Live Shopping for FastStore",
+                  "slug": "faststore/storefront-features-implementing-live-shopping-for-faststore",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Implementing Live Shopping for FastStore previous versions",
+                      "slug": "faststore/storefront-features-implementing-live-shopping-for-faststore-previous-versions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -14796,7 +15018,7 @@
                 }
               ]
             },
-             {
+            {
               "name": "Security",
               "slug": "faststore/security-overview",
               "origin": "",
@@ -15735,6 +15957,7 @@
     },
     {
       "documentation": "Troubleshooting",
+      "name": "Troubleshooting",
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
@@ -15947,6 +16170,7 @@
     },
     {
       "documentation": "Release Notes",
+      "name": "Release Notes",
       "slugPrefix": "updates/release-notes",
       "categories": [
         {
@@ -15955,6 +16179,43 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "October",
+              "slug": "october-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Theme switching without server restart",
+                  "slug": "2025-10-23-faststore-theme-switch-fix",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "September",
+              "slug": "september-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "GraphQL builder: Update to 2.x, 1.x deprecation",
+                  "slug": "2025-09-30-graphql-builder-update-2x",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment connector homologation freeze in preparation for Black Friday 2025",
+                  "slug": "2025-09-29-payment-connector-homologation-freeze-in-preparation-for-black-friday-2025",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "August",
               "slug": "august-2025",
@@ -18627,6 +18888,527 @@
                   "children": []
                 }
               ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "documentation": "Learning Center",
+      "name": "Learning Center",
+      "slugPrefix": "learn",
+      "categories": [
+        {
+          "name": "Onboarding",
+          "slug": "course-onboarding-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Setting up your environment for VTEX IO",
+              "slug": "course-onboarding-step01introduction-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Requirements",
+              "slug": "course-onboarding-step02technical-requirements-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Learning flow",
+              "slug": "course-onboarding-step03learning-flow-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Getting started with basic Store Framework blocks",
+          "slug": "course-basic-blocks-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "1. Set up",
+              "slug": "course-basic-blocks-step00setup-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "2. Introduction and Boilerplate",
+              "slug": "course-basic-blocks-step01intro-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "3. Getting started with Rich Text",
+              "slug": "course-basic-blocks-step02richtext-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "4. Info Card: Store Framework's call to action",
+              "slug": "course-basic-blocks-step03infocard-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "5. Product page",
+              "slug": "course-basic-blocks-step04pdp-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "6. Evolving your product page",
+              "slug": "course-basic-blocks-step05pdp2-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "7. Search page",
+              "slug": "course-basic-blocks-step06search-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Designing Advanced Layouts with Composition Blocks",
+          "slug": "course-layout-blocks-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "1. Introducing Layout Blocks",
+              "slug": "course-layout-blocks-step01introducing-layout-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "2. Flex layout",
+              "slug": "course-layout-blocks-step02flexlayout-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "3. Carousel blocks",
+              "slug": "course-layout-blocks-step03slider-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "4. Making Responsive Content",
+              "slug": "course-layout-blocks-step04responsive-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "5. Tab Layout",
+              "slug": "course-layout-blocks-step05tab-layout-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "6. Modal Layout",
+              "slug": "course-layout-blocks-step06modal-layout-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "7. Quick View",
+              "slug": "course-layout-blocks-step07quick-view-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "8. Stack Layout",
+              "slug": "course-layout-blocks-step08stack-layout-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "9. Conditional Layout",
+              "slug": "course-layout-blocks-step09conditional-layout-lang-en",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Developing Custom Blocks in VTEX IO",
+          "slug": "course-store-block-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "1. Introduction",
+              "slug": "course-store-block-step00introduction-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "2. Getting to know an app on VTEX IO",
+              "slug": "course-store-block-step01manifest-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "3. Linking an app and using it on a store's theme",
+              "slug": "course-store-block-step02component-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "4. Making the countdown block customizable",
+              "slug": "course-store-block-step03props-implementation-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "5. Creating the countdown block feature",
+              "slug": "course-store-block-step04countdown-implementation-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "6. Modifying the countdown block to have configurable styles",
+              "slug": "course-store-block-step05css-handles-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "7. Internationalization practices in VTEX IO",
+              "slug": "course-store-block-step06messages-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "8. Componentizing the countdown block",
+              "slug": "course-store-block-step07separating-title-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "9. Connecting backend and frontend",
+              "slug": "course-store-block-step08react-apollo-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Customizing Stores with VTEX IO CLI and Site Editor",
+          "slug": "course-content-workflow-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "1. Getting to know about workspaces",
+              "slug": "course-content-workflow-step01workspaces-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "2. Publishing an app on VTEX IO",
+              "slug": "course-content-workflow-step02publishing-app-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "3. Installing an app on a VTEX account",
+              "slug": "course-content-workflow-step03installing-app-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "4. Changing the store front through Site Editor",
+              "slug": "course-content-workflow-step04site-editor-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Styling Your Store for a Unique Brand Experience",
+          "slug": "course-styles-course-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "1. Introduction",
+              "slug": "course-styles-course-step00introduction-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "2. CSS Handles and the power of customizing blocks",
+              "slug": "course-styles-course-step01csshandles-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "3. Global styles",
+              "slug": "course-styles-course-step02styles-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "4. Creating custom templates",
+              "slug": "course-styles-course-step03custom-template-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "5. Exploring the power behind rich text",
+              "slug": "course-styles-course-step04richtextmarkdown-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "6. Building a custom search landing page",
+              "slug": "course-styles-course-step05landing-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Optimizing Storefront Performance",
+          "slug": "course-store-performance-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "1. Improving Initial Load",
+              "slug": "course-store-performance-step01fold-block-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "2. Menu's Optimization",
+              "slug": "course-store-performance-step02menu-items-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "3. Submenu's Optimization",
+              "slug": "course-store-performance-step03submenu-optimization-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "4. Images",
+              "slug": "course-store-performance-step04images-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "5. Search Improvements",
+              "slug": "course-store-performance-step05searching-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "6. Refactoring Blocks",
+              "slug": "course-store-performance-step06blocks-refact-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Creating Backend Services in VTEX IO",
+          "slug": "course-service-course-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "1. Services in VTEX IO",
+              "slug": "course-service-course-step01services-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "2. Overview: Understanding the Boilerplate",
+              "slug": "course-service-course-step02boilerplate-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "3. Events: handling and receiving events",
+              "slug": "course-service-course-step03events-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "4. Getting to know more about clients",
+              "slug": "course-service-course-step04clients-analytics-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "5. Using events as triggers",
+              "slug": "course-service-course-step05events-triggers-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "6. Clients: Using Master Data",
+              "slug": "course-service-course-step06clients-masterdata-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "7. GraphQL: Retrieving data from Masterdata",
+              "slug": "course-service-course-step07graphql-implementation-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "8. GraphQL: Using GraphiQL",
+              "slug": "course-service-course-step08graphiql-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Using VTEX core commerce APIs in your apps",
+          "slug": "course-calling-commerce-apis-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "1. Course Introduction",
+              "type": "markdown",
+              "slug": "course-calling-commerce-apis-step01introduction-lang-en",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "2. Discovering VTEX Commerce APIs",
+              "type": "markdown",
+              "slug": "course-calling-commerce-apis-step02references-lang-en",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "3. Importing Clients from VTEX package",
+              "type": "markdown",
+              "slug": "course-calling-commerce-apis-step03importing-client-lang-en",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "4. Using Catalog Client to make requests",
+              "type": "markdown",
+              "slug": "course-calling-commerce-apis-step04using-client-lang-en",
+              "origin": "",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Extending VTEX Admin with custom apps",
+          "slug": "course-admin-lang-en",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "1. Admin framework",
+              "slug": "course-admin-step01-introduction-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "2. Navigation and routes",
+              "slug": "course-admin-step02-navigation-routes-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "3. Improving navigation",
+              "slug": "course-admin-step03-enhancing-navigation-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "4. Sub sections",
+              "slug": "course-admin-step04-sub-sections-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "5. Look and feel",
+              "slug": "course-admin-step05-look-n-feel-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
+            },
+            {
+              "name": "6. Connecting to a service",
+              "slug": "course-admin-step06-connecting-to-service-lang-en",
+              "type": "markdown",
+              "origin": "",
+              "children": []
             }
           ]
         }

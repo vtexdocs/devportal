@@ -93,12 +93,12 @@ const ReleaseNote = ({
                   : styles.releaseTitle
               }
             >
-              {title}
+              <ReactMarkdown>{title}</ReactMarkdown>
             </Text>
           </Link>
-          {getReleaseDate(createdAt)}
+          {getReleaseDate(createdAt ?? '')}
           <Description
-            description={description}
+            description={description ?? ''}
             releaseStatus={releaseElementStatus}
           ></Description>
         </Flex>

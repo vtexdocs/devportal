@@ -28,6 +28,8 @@ const footerLinks: SxStyleProp = {
       },
     },
   },
+  maxWidth: '2024px',
+  mx: 'auto',
 }
 
 export default {
