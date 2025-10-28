@@ -31,7 +31,7 @@ const SKUMatrixStockQuantity = () => {
         direction="rightSide"
         size="partial"
       >
-        {/* Optional additional content can be added here */}
+        <></>
       </SKUMatrixSidebar>
     </SKUMatrix>
   )

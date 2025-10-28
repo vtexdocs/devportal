@@ -35,7 +35,7 @@ const SKUMatrixMultiColumn = () => {
         direction="rightSide"
         size="partial"
       >
-        {/* Optional additional content can be added here */}
+        <div>SKU Matrix Content</div>
       </SKUMatrixSidebar>
     </SKUMatrix>
   )
