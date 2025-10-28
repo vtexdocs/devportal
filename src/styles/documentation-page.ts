@@ -3,6 +3,8 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 const container: SxStyleProp = {
   width: '100%',
   backgroundColor: 'white',
+  maxWidth: '2024px',
+  mx: 'auto',
 }
 
 const mainContainer: SxStyleProp = {
@@ -14,41 +16,42 @@ const innerContainer: SxStyleProp = {
   justifyContent: 'center',
   pt: '64px',
   mx: 'auto',
-  px: ['auto', '5em', '7em', '7em', '7em', '7em', '20em'],
+  px: ['auto', '5em', '6em', '6em', '6em', '6em', '20em'],
+  pb: '72px',
 }
 
 const articleBox: SxStyleProp = {
-  fontSize: '1em',
+  fontSize: '0.95em',
   lineHeight: '1.5em',
   width: '100%',
-  ':not(overviewSectionContent) a': {
+  a: {
     color: '#E31C58',
   },
-  ':not(overviewSectionContent) ul': {
+  ul: {
     li: {
       mt: '0.5em',
       mb: '0.5em',
     },
   },
-  ':not(overviewSectionContent) ol': {
+  ol: {
     li: {
       mt: '0.5em',
       mb: '0.5em',
     },
   },
-  ':not(overviewSectionContent) h1': {
+  h1: {
     fontSize: '1.75em',
     fontWeight: '400',
     lineHeight: '2.375em',
   },
-  ':not(overviewSectionContent) h2': {
+  h2: {
     fontSize: '1.375em',
     lineHeight: '2em',
     fontWeight: '400',
     mt: '1.3em',
     mb: '0.875em',
   },
-  ':not(overviewSectionContent) strong': {
+  strong: {
     fontWeight: '600',
   },
 }
@@ -64,6 +67,9 @@ const documentationTitle: SxStyleProp = {
   lineHeight: ['30px', '38px'],
   fontWeight: '400',
   marginBottom: '14px',
+  '*': {
+    margin: '0px',
+  },
 }
 
 const documentationExcerpt: SxStyleProp = {
@@ -81,7 +87,7 @@ const documentationExcerpt: SxStyleProp = {
 }
 
 const bottomContributorsContainer: SxStyleProp = {
-  display: ['none', 'initial', 'initial', 'initial', 'none'],
+  display: ['initial', 'initial', 'initial', 'initial', 'none'],
 }
 
 const bottomContributorsDivider: SxStyleProp = {
@@ -93,7 +99,7 @@ const bottomContributorsDivider: SxStyleProp = {
 }
 
 const rightContainer: SxStyleProp = {
-  ml: ['38px', '38px', '48px', '48px', '58px', '68px', '200px'],
+  ml: ['38px', '38px', '48px', '48px', '68px', '68px', '200px'],
   display: [
     'none !important',
     'none !important',
@@ -101,7 +107,7 @@ const rightContainer: SxStyleProp = {
     'none !important',
     'initial !important',
   ],
-  width: [0, 0, 0, 0, '184px', '184px', '284px'],
+  width: [0, 0, 0, 0, '240px', '240px', '284px'],
 }
 
 const releaseAction: SxStyleProp = {
@@ -112,8 +118,40 @@ const releaseAction: SxStyleProp = {
 }
 
 const divider: SxStyleProp = {
-  marginTop: '20px',
-  borderBottom: '1px solid #E7E9EE',
+  borderTop: '1px solid #E7E9EE',
+  pt: 4,
+  mt: 4,
+}
+
+const button: SxStyleProp = {
+  mt: '8px',
+  px: 3,
+  minHeight: 36,
+  background: '#fff',
+  borderRadius: '4px',
+  cursor: 'pointer',
+  fontSize: 12,
+  height: 'min-content',
+  textTransform: 'none',
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: 3,
+  width: '100%',
+  color: 'muted.0',
+  border: '1px solid #E7E9EE',
+  '&:hover': { backgroundColor: '#F8F7FC', color: '#000711' },
+}
+
+const editContainer: SxStyleProp = {
+  mb: 3,
+  alignItems: 'center',
+  gap: 2,
+  fontSize: 12,
+  ':hover': {
+    color: '#000711 !important',
+  },
+  color: '#4A596B !important',
+  display: 'flex',
 }
 
 export default {
@@ -129,4 +167,6 @@ export default {
   documentationExcerpt,
   innerContainer,
   divider,
+  button,
+  editContainer,
 }

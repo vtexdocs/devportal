@@ -220,6 +220,12 @@ to = "/docs/troubleshooting/my-store-is-slow-or-unavailable"
 
 [[redirects]]
 force = true
+from = "/docs/guides/enable-order-filter-by-sales-associate"
+status = 308
+to = "/docs/guides/how-to-customize-vtex-sales-app"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/docs-brandless"
 status = 308
 to = "/docs/guides/faststore/themes-brandless"
@@ -1085,7 +1091,7 @@ to = "/docs/api-reference/catalog-api-seller-portal"
 force = true
 from = "/docs/guides/webservice-deprecated"
 status = 308
-to = "https://assets.ctfassets.net/alneenqid6w5/4OdeCFbcVQtEgkuWsuuidl/80b79448cf2b327e07b567a8411afaa0/vtex_WebServiceGuide.pdf"
+to = "/updates/release-notes/2025-05-23-legacy-webservice-api-deprecation"
 
 [[redirects]]
 force = true
@@ -1941,12 +1947,6 @@ to = "/docs/guides/store-framework-setting-up-cross-border-stores"
 
 [[redirects]]
 force = true
-from = "/docs/guides/app-development-guides"
-status = 308
-to = "/docs/app-development"
-
-[[redirects]]
-force = true
 from = "/docs/api-reference/dkim-configuration"
 status = 308
 to = "/docs/api-reference/message-center-api"
@@ -2142,3 +2142,9 @@ force = true
 from = "/docs/guides/orders-getting-started"
 status = 308
 to = "/docs/guides/orders-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/create-a-regular-order-from-an-existing-cart"
+status = 308
+to = "/docs/guides/creating-a-regular-order-from-an-existing-cart"

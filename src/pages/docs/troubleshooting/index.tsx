@@ -1,4 +1,4 @@
-import { Fragment, useState, useContext, useMemo } from 'react'
+import { Fragment, useState, useMemo, useEffect } from 'react'
 import { Box, Flex, Link, Text } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
@@ -9,41 +9,77 @@ import image from '../../../../public/images/troubleshooting-image-header.png'
 import styles from 'styles/documentation-landing-page'
 import { TroubleshootingCardsElements } from 'utils/typings/types'
 import Head from 'next/head'
-import { PreviewContext } from 'utils/contexts/preview'
-import getTroubleshootingData from 'utils/getTroubleshootingData'
+import getTroubleshootingData, {
+  ITroubleshootingFrontmatter,
+} from 'utils/getTroubleshootingData'
 import TroubleshootingCard from 'components/troubleshooting-card'
 import Pagination from 'components/pagination'
 import { resourceTroubleshooting } from 'utils/constants'
+import { Input } from '@vtexdocs/components'
+import searchIcon from 'components/icons/search-icon'
+import Filter from 'components/filter'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
-  branch: string
   troubleshootingData: TroubleshootingCardsElements[]
+  availableTags: string[]
 }
 
 const TroubleshootingPage: NextPage<Props> = ({
   troubleshootingData,
-  branch,
+  availableTags,
 }) => {
-  const { setBranchPreview } = useContext(PreviewContext)
-  setBranchPreview(branch)
+  const [search, setSearch] = useState<string>('')
+
+  const [tagFilters, setTagFilters] = useState<string[]>([])
+
+  const filteredResult = useMemo(() => {
+    const selectedLower = new Set(tagFilters.map((t) => t.toLowerCase()))
+    const hasTagFilters = selectedLower.size > 0
+
+    return troubleshootingData.filter((troubleshooting) => {
+      const matchesSearch = troubleshooting.title
+        .toLowerCase()
+        .includes(search.toLowerCase())
+
+      if (!hasTagFilters) return matchesSearch
+
+      const itemTagsLower = (troubleshooting.tags || []).map((t) =>
+        t.toLowerCase()
+      )
+      const matchesTags = itemTagsLower.some((t) => selectedLower.has(t))
+
+      return matchesSearch && matchesTags
+    })
+  }, [search, troubleshootingData, tagFilters])
+
   const messages = getMessages()
   const itemsPerPage = 4
   const [page, setPage] = useState({
     curr: 1,
     total: Math.ceil(troubleshootingData.length / itemsPerPage),
   })
+
+  useEffect(() => {
+    setPage({
+      curr: 1,
+      total: Math.ceil(filteredResult.length / itemsPerPage),
+    })
+  }, [filteredResult])
+
   const paginatedResult = useMemo(() => {
-    return troubleshootingData.slice(
+    return filteredResult.slice(
       (page.curr - 1) * itemsPerPage,
       page.curr * itemsPerPage
     )
-  }, [page])
+  }, [filteredResult, page, itemsPerPage])
+
   function handleClick(props: { selected: number }) {
     if (props.selected !== undefined && props.selected !== page.curr)
       setPage({ ...page, curr: props.selected })
   }
+
   return (
     <>
       <Head>
@@ -67,16 +103,32 @@ const TroubleshootingPage: NextPage<Props> = ({
           imageAlt={messages['troubleshooting.title']}
         />
         <Box sx={styles.contentContainer}>
-          {paginatedResult.map((item: TroubleshootingCardsElements) => (
-            <Flex>
-              <TroubleshootingCard
-                title={item.title}
-                description={item.description}
-                slug={item.slug}
-              />
-            </Flex>
-          ))}
-
+          <Filter
+            filterName="Products"
+            checkBoxFilter={availableTags}
+            onApply={(newFilters) => setTagFilters(newFilters.checklist)}
+            selectedCheckboxes={tagFilters}
+          />
+          <Input
+            placeholder="Search for identified issues, diagnostics, and fixes..."
+            Icon={searchIcon}
+            value={search}
+            onChange={(value: string) => setSearch(value)}
+          />
+          {paginatedResult.length > 0 ? (
+            paginatedResult.map((item: TroubleshootingCardsElements) => (
+              <Flex key={item.slug}>
+                <TroubleshootingCard
+                  title={item.title}
+                  description={item.description}
+                  slug={item.slug}
+                  tags={item?.tags}
+                />
+              </Flex>
+            ))
+          ) : (
+            <Text sx={styles.noResultsText}>No results found</Text>
+          )}
           <Pagination
             forcePage={page.curr}
             pageCount={page.total}
@@ -124,12 +176,23 @@ export const getStaticProps: GetStaticProps = async ({
       : 'main'
   const branch = preview ? previewBranch : 'main'
   const troubleshootingData = await getTroubleshootingData(branch)
+
+  const allTags = new Set<string>()
+  troubleshootingData.forEach(
+    (troubleshooting: ITroubleshootingFrontmatter) => {
+      const tags = troubleshooting.tags
+      tags?.forEach((tag) => allTags.add(tag))
+    }
+  )
+  const availableTags = Array.from(allTags).sort()
+
   return {
     props: {
       sidebarfallback,
       sectionSelected,
       troubleshootingData,
       branch,
+      availableTags,
     },
   }
 }

@@ -12,7 +12,6 @@ const newsletter: SxStyleProp = {
 
 const newsletterContainer: SxStyleProp = {
   position: 'relative',
-  borderBottom: '1px solid #E7E9EE',
   display: ['flex', 'flex', 'flex', 'block', 'flex'],
   zIndex: '3',
   flexDirection: 'column',

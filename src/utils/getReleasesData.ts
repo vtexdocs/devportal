@@ -14,6 +14,7 @@ type IReleasesFrontmatter = {
   hidden: string
   type: string
   excerpt: string
+  tags: string[]
 }
 
 async function getFrontmatter(releaseContent: string) {
@@ -72,6 +73,7 @@ export default async function getReleasesData(branch = 'main') {
       hidden: frontmatter?.hidden as unknown as boolean,
       description: frontmatter?.excerpt,
       actionType: frontmatter?.type as ActionType,
+      tags: frontmatter?.tags,
     })
   })
   releasesData.sort(function (a, b) {

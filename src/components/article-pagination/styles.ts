@@ -5,6 +5,8 @@ const mainContainer: SxStyleProp = {
   mt: '32px',
   mb: '52px',
   maxWidth: '100%',
+  borderTop: '1px solid #E7E9EE',
+  pt: '36px',
 }
 const flexContainer: SxStyleProp = {
   fontWeight: 'bold',

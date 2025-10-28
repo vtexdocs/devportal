@@ -45,11 +45,15 @@ export type UpdateElement = {
   hidden: boolean
   description: string
   actionType: ActionType
+  excerpt?: string
+  type?: ActionType
+  tags?: string[]
 }
 export type TroubleshootingItem = {
   slug: string
   title: string
   description: string
+  tags?: string[]
 }
 export interface TroubleshootingCardsElements extends TroubleshootingItem {
   createdAt?: string

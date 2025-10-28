@@ -35,6 +35,9 @@ export const constants = {
   suggestions: [{ value: 'apple airpods' }, { value: 'apple tv' }],
   searchContentAlt: 'So',
   NavigationUsage: () => null,
+  openAlert: () => {
+    alert('You clicked the button! Action triggered.')
+  },
   suggestionsAlt: [
     {
       value: 'sony headphone',

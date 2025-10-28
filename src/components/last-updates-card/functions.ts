@@ -32,7 +32,7 @@ export interface Update {
   Icon: IconComponent
 }
 
-const actions: Action[] = [
+export const actions: Action[] = [
   {
     type: 'added',
     title: 'Added',

@@ -6,12 +6,13 @@ import { TroubleshootingCardsElements } from './typings/types'
 import { getLogger } from 'utils/logging/log-util'
 import getTroubleshootingPaths from './getTroubleshootingPaths'
 
-type ITroubleshootingFrontmatter = {
+export type ITroubleshootingFrontmatter = {
   linkTitle: string
   slug: string
   title: string
   createdAt: string
   excerpt: string
+  tags?: string[]
 }
 
 async function getFrontmatter(releaseContent: string) {
@@ -71,6 +72,7 @@ export default async function getTroubleshootingData(branch = 'main') {
       createdAt: frontmatter?.createdAt,
       description: frontmatter?.excerpt,
       linkTitle: frontmatter?.linkTitle,
+      tags: frontmatter?.tags,
     })
   })
 

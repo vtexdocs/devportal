@@ -32,10 +32,13 @@ const releaseDate: SxStyleProp = {
 }
 
 const releaseTitle: SxStyleProp = {
-  color: '#4A596B',
-  fontSize: '1.125rem',
-  lineHeight: '1.5rem',
-  cursor: 'pointer',
+  '& p': {
+    color: '#4A596B',
+    fontSize: '1.125rem',
+    lineHeight: '1.5rem',
+    cursor: 'pointer',
+    m: 0,
+  },
 }
 
 const releaseTitleActive: SxStyleProp = {

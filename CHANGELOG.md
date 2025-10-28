@@ -2,6 +2,180 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.30.1](https://github.com/vtexdocs/devportal/compare/v1.30.0...v1.30.1) (2025-10-23)
+
+
+### Features
+
+* add new delivery promise endpoint ([ef6a619](https://github.com/vtexdocs/devportal/commit/ef6a6190bc1df9679ff194e04cdea771eb685248))
+* add new release note ([2e0200d](https://github.com/vtexdocs/devportal/commit/2e0200db70694bf607f33ddc2657de84db508e74))
+
+
+### Bug Fixes
+
+* **getreferencepaths:** fix Recommendation BFF API map ([c6d0aa5](https://github.com/vtexdocs/devportal/commit/c6d0aa5b2a1e9c9ff0530150d217c26a463dcf38))
+
+
+### Chore
+
+* add bff recommendations api references ([7f3669a](https://github.com/vtexdocs/devportal/commit/7f3669a68473d98f490746cfcdb9311b0ddea638))
+* add bff recommendations api to navigation ([45db8d0](https://github.com/vtexdocs/devportal/commit/45db8d0c49799fd7c95a7c7922618a6f991d8494))
+
+
+### Docs
+
+* add to navigation ([ad55566](https://github.com/vtexdocs/devportal/commit/ad5556652d2453a32ab0ac13d56258ce5785c0a5))
+* creating redirect for removed content ([0c09920](https://github.com/vtexdocs/devportal/commit/0c0992030587caf7d1b8660b19fa3f5a53873051))
+* **navigationg.json:** add new release note ([495e754](https://github.com/vtexdocs/devportal/commit/495e75407b55a3c8996d6ec6cfc01931c338855b))
+* removing deleted file from navigation ([6744a44](https://github.com/vtexdocs/devportal/commit/6744a442b75292fed4d90de33c9ab55a24bd6f68))
+* update navigation ([2e97168](https://github.com/vtexdocs/devportal/commit/2e971689b03ab1d2182776e20d11b818dc2f5865))
+
+## [1.30.0](https://github.com/vtexdocs/devportal/compare/v1.29.1...v1.30.0) (2025-10-10)
+
+
+### Features
+
+* **troubleshooting:** add troubleshooting filters ([0d0bd50](https://github.com/vtexdocs/devportal/commit/0d0bd50dead9b73592c49992bf919089df28a623))
+
+
+### Bug Fixes
+
+* **icons:** fix console errors ([e1f70fd](https://github.com/vtexdocs/devportal/commit/e1f70fd98ea57715de51cd0da90db921e623a98d))
+
+### [1.29.1](https://github.com/vtexdocs/devportal/compare/v1.29.0...v1.29.1) (2025-10-10)
+
+
+### Style
+
+* **last-updates-section:** minor styles improvements and app development page updates ([a010840](https://github.com/vtexdocs/devportal/commit/a0108403b72740e881c32b7d5d7227fa7891b4a0))
+
+
+### Chore
+
+* **language.json:** minor copy updates ([9cdb061](https://github.com/vtexdocs/devportal/commit/9cdb06165b89a3e05f4643b2328fa19b95063926))
+
+## [1.29.0](https://github.com/vtexdocs/devportal/compare/v1.28.0...v1.29.0) (2025-10-10)
+
+
+### Features
+
+* **constants:** export fs function ([792173f](https://github.com/vtexdocs/devportal/commit/792173fd835415099d9afc2b25f224e8c14dde38))
+* **release-notes:** feat filters ([0685fea](https://github.com/vtexdocs/devportal/commit/0685fea410b1f5238b8679a91b941a7f0e00e918))
+
+
+### Bug Fixes
+
+* **filter:** update modal title ([5a1cd6c](https://github.com/vtexdocs/devportal/commit/5a1cd6cd9f58a15c5d277fa9f89e4e50ed7f586c))
+* **tag:** update types ([9befcdd](https://github.com/vtexdocs/devportal/commit/9befcdd5785a75dc4bd6e1745ca2a2c08b976862))
+
+
+### Chore
+
+* add mappings for storefront permissions api ([ca238c8](https://github.com/vtexdocs/devportal/commit/ca238c88c44a1fee0849df1d1e13605897886a80))
+* add storefront permissions api to navigation ([295975f](https://github.com/vtexdocs/devportal/commit/295975f7970c137a246c20cb8baffe69802fd0aa))
+
+## [1.28.0](https://github.com/vtexdocs/devportal/compare/v1.27.0...v1.28.0) (2025-10-07)
+
+
+### Features
+
+* **llm-content:** update article render with copy page button ([d615f3a](https://github.com/vtexdocs/devportal/commit/d615f3aae0ead8b98ed72267dc5f4b79e43179ac))
+
+
+### Bug Fixes
+
+* **serializewithfallback:** update md and mdx options ([fe25d4a](https://github.com/vtexdocs/devportal/commit/fe25d4a5e36313de2a7362f88220cabb77a034c0))
+
+## [1.27.0](https://github.com/vtexdocs/devportal/compare/v1.26.0...v1.27.0) (2025-10-04)
+
+
+### Features
+
+* **serializewithfallback:** avoid serialize failures with fallback option ([cb6fe10](https://github.com/vtexdocs/devportal/commit/cb6fe10179d76cfef0887be33b9fa7a2a956fc19))
+
+
+### Bug Fixes
+
+* **article-render:** reactMarkdown usage ([64a57ea](https://github.com/vtexdocs/devportal/commit/64a57eaff8d84b4bf38fc611dc0c571ab917d27a))
+
+
+### Chore
+
+* **serializewithfallback:** try md first ([2d40f35](https://github.com/vtexdocs/devportal/commit/2d40f3510e2b4422113a257ab4670ad22ce908e0))
+
+## [1.26.0](https://github.com/vtexdocs/devportal/compare/v1.25.0...v1.26.0) (2025-10-04)
+
+
+### Features
+
+* **chip-filter:** update release note page with chip filters ([8c2e2f7](https://github.com/vtexdocs/devportal/commit/8c2e2f7e90d6c1ae6bcecbcf4b4dbd0a09cd1a1e))
+* **functions:** export const ([90972a7](https://github.com/vtexdocs/devportal/commit/90972a75488e5fc0c70d6c7d6730d20cb703eb1d))
+
+
+### Docs
+
+* **navigation.json:** add "Integrating an app with a GraphQL API" ([cb47f4f](https://github.com/vtexdocs/devportal/commit/cb47f4fadb6382b18693dfb00885dc85ec9aea6f))
+
+## [1.25.0](https://github.com/vtexdocs/devportal/compare/v1.24.0...v1.25.0) (2025-10-02)
+
+
+### Features
+
+* **feedback-google:** update default options ([3374aa0](https://github.com/vtexdocs/devportal/commit/3374aa019cac0f5d099201d9d9b8a4401b08f1c2))
+* **feedback-google:** update form ([3d0fc99](https://github.com/vtexdocs/devportal/commit/3d0fc99ea518234e29aaabff5a6f02849ae1569b))
+* **feedback-modal:** feat feedback modal integrated with google forms ([569b977](https://github.com/vtexdocs/devportal/commit/569b97788e401082fed89fde4080980bed3d5a39))
+* **feedback-modal:** feat: feedback modal integrated with google forms ([06feb31](https://github.com/vtexdocs/devportal/commit/06feb313e7b2ffb7ab6331d98a4d4ad45e10aece))
+* **last-updates-section:** automatically fetch the last release ([a875272](https://github.com/vtexdocs/devportal/commit/a875272a6f45acedee397f53a0c2461f7eae90d6))
+* **troubleshooting:** add input search ([c3b63a6](https://github.com/vtexdocs/devportal/commit/c3b63a6cd06c662df008a80e2378e823da1848e1))
+
+
+### Bug Fixes
+
+* **article-render:** revert wip feature ([bb4121b](https://github.com/vtexdocs/devportal/commit/bb4121b4fb1a3b6d1deac743b0f33cf6303785fe))
+* **last-updates-section:** use frontmatter data ([34cabba](https://github.com/vtexdocs/devportal/commit/34cabbaee18c54cce805d5bf0d28387e47100e0b))
+* **modal:** fix any type ([5836d28](https://github.com/vtexdocs/devportal/commit/5836d281e2b146189906e63782001ff5c347297d))
+* **release-note:** handle undesired behaviors ([62a89a0](https://github.com/vtexdocs/devportal/commit/62a89a0afb4df85c2ff0214853ac73911944716f))
+
+## [1.24.0](https://github.com/vtexdocs/devportal/compare/v1.23.0...v1.24.0) (2025-10-01)
+
+
+### Features
+
+* **articlerender:** create ArticleRender component and update feedback component position ([bbc3323](https://github.com/vtexdocs/devportal/commit/bbc33234a48806848bc3308860dae7eb50e4f63f))
+
+
+### Chore
+
+* **_app.tsx:** update metadata ([ca8d3a2](https://github.com/vtexdocs/devportal/commit/ca8d3a2a85f73808d4ea3cf47e6b7c0a2423ed44))
+* **algolia:** update scraper for compatibility with components package ([15531f9](https://github.com/vtexdocs/devportal/commit/15531f9ba441b39e3d4bc92c1e889b88c23dff0e))
+* **navigation.json:** update paths ([12afcf4](https://github.com/vtexdocs/devportal/commit/12afcf497eaa26afb12ef29dcf422aac81ffb49e))
+
+
+### Docs
+
+* create redirect ([86f61aa](https://github.com/vtexdocs/devportal/commit/86f61aa92a835f47603ccc81f108b76e3e79e5d9))
+* navigation change ([190e91e](https://github.com/vtexdocs/devportal/commit/190e91eb46ff7fa93a8e3427b5262d0bf7df1f28))
+* **navigation.json:** add graphql builder 2.x release note ([fc93103](https://github.com/vtexdocs/devportal/commit/fc931031f2cd51967af41530e2dd8c3298506ad3))
+
+## [1.23.0](https://github.com/vtexdocs/devportal/compare/v1.22.2...v1.23.0) (2025-09-24)
+
+
+### Features
+
+* **navigation.json:** update navigation structure to allow for components package update ([303ee2c](https://github.com/vtexdocs/devportal/commit/303ee2ca3fa2369a74f7bd9e458f270de6efd3aa))
+* **package.json:** install fontawesome ([16d989f](https://github.com/vtexdocs/devportal/commit/16d989fab97315ca0240580b594be501c8327229))
+
+
+### Docs
+
+* **navigation.json:** add "governance and security in io" ([63e9ab1](https://github.com/vtexdocs/devportal/commit/63e9ab14b9557f27c42d72372f4555c26ffcc868))
+* **navigation.json:** add search graphql app ([d1af361](https://github.com/vtexdocs/devportal/commit/d1af361e7972d1306980b06912eb4d404a989e02))
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components ([34c7ad7](https://github.com/vtexdocs/devportal/commit/34c7ad74a7c021a7bdc4ac6a00c816acc9256e9b))
+
 ### [1.22.2](https://github.com/vtexdocs/devportal/compare/v1.22.1...v1.22.2) (2025-09-04)
 
 

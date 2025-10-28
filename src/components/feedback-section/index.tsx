@@ -4,16 +4,23 @@ interface DocPath {
   slug?: string
   docPath?: string
   suggestEdits?: boolean
+  small?: boolean
+  sectionSelected?: string
 }
 
-const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
-  const sendFeedback = async (comment: string, liked: boolean) => {
+const FeedbackSection = ({
+  slug,
+  sectionSelected = 'guides',
+  docPath,
+  suggestEdits = true,
+  small,
+}: DocPath) => {
+  const sendFeedback = async (liked: boolean) => {
     const feedback = {
       data: [
         new Date().toISOString(),
-        `https://developers.vtex.com/docs/guides/${slug}`,
+        `https://developers.vtex.com/docs/${sectionSelected}/${slug}`,
         liked ? 'positive' : 'negative',
-        comment,
       ],
     }
 
@@ -23,7 +30,9 @@ const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
     })
   }
 
-  const urlToEdit = `https://github.com/vtexdocs/dev-portal-content/edit/main/${docPath}`
+  const urlToEdit = suggestEdits
+    ? `https://github.com/vtexdocs/dev-portal-content/edit/main/${docPath}`
+    : undefined
 
   return (
     <FeedbackSectionComponent
@@ -31,6 +40,7 @@ const FeedbackSection = ({ slug, docPath, suggestEdits = true }: DocPath) => {
       urlToEdit={urlToEdit}
       suggestEdits={suggestEdits}
       slug={slug}
+      small={small}
     />
   )
 }

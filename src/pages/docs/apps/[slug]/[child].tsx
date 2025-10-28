@@ -1,15 +1,8 @@
 import { Fragment } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
-import remarkGFM from 'remark-gfm'
-import rehypeHighlight from 'rehype-highlight'
-import hljsCurl from 'highlightjs-curl'
-import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
-import getHeadings from 'utils/getHeadings'
-import { serialize } from 'next-mdx-remote/serialize'
+import { serializeWithFallback } from 'utils/serializeWithFallback'
 import type { Item } from '@vtexdocs/components'
-import remarkImages from 'utils/remark_plugins/plaiceholder'
-import remarkMermaid from 'utils/remark_plugins/mermaid'
 import Breadcrumb from 'components/breadcrumb'
 import ArticlePagination from 'components/article-pagination'
 import jp from 'jsonpath'
@@ -38,8 +31,8 @@ import Head from 'next/head'
 import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
-import { remarkCodeHike } from '@code-hike/mdx'
 import { officialVendors } from 'utils/constants'
+import FeedbackSection from 'components/feedback-section'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -47,6 +40,7 @@ interface IParams extends ParsedUrlQuery {
 }
 
 interface Props {
+  slug: string
   title: string
   vendor: string
   latestVersion: string
@@ -76,6 +70,7 @@ const AppChildPage: NextPage<Props> = ({
   appId,
   pagination,
   isListed,
+  slug,
 }) => {
   const headings: Item[] = headingList
 
@@ -151,7 +146,14 @@ const AppChildPage: NextPage<Props> = ({
               <SeeAlsoSection docs={seeAlsoData} />
             </Box>
             <Box sx={styles.rightContainer}>
-              <TableOfContents headingList={headingList} />
+              <TableOfContents headingList={headingList}>
+                <FeedbackSection
+                  slug={slug}
+                  small={true}
+                  suggestEdits={false}
+                  sectionSelected="apps"
+                />
+              </TableOfContents>
             </Box>
           </Flex>
         </APIGuideContextProvider>
@@ -219,7 +221,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               markdown)
           : ''
       }
-      let format: 'md' | 'mdx' = 'mdx'
       try {
         const { result } = escapeCurlyBraces(markdown)
         markdown = result
@@ -227,36 +228,19 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         markdown = await replaceMagicBlocks(markdown)
       } catch (error) {
         logger.error(`${error}`)
-        format = 'md'
       }
-      let serialized = await serialize(markdown.split('## Contributors')[0], {
-        parseFrontmatter: true,
-        mdxOptions: {
-          remarkPlugins: [
-            [
-              remarkCodeHike,
-              {
-                autoImport: false,
-                showCopyButton: true,
-                lineNumbers: true,
-                skipLanguages: ['mermaid'],
-                staticMediaQuery: 'not screen, (max-width: 850px)',
-                theme: 'poimandres',
-              },
-            ],
-            remarkGFM,
-            remarkImages,
-            [getHeadings, { headingList }],
-            remarkMermaid,
-            remarkBlockquote,
-          ],
-          rehypePlugins: [
-            [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
-          ],
-          useDynamicImport: true,
-          format,
-        },
+      let serialized = await serializeWithFallback({
+        content: markdown.split('## Contributors')[0],
+        headingList,
+        logger,
+        path: slug,
       })
+
+      if (!serialized) {
+        logger.warn(`Serialized result is null/invalid for ${slug}`)
+        return { notFound: true }
+      }
+
       serialized = JSON.parse(JSON.stringify(serialized))
       const parentsArray: string[] = []
       const parentsArrayName: string[] = []
@@ -317,6 +301,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       })
       return {
         props: {
+          slug,
           title,
           vendor,
           latestVersion,
