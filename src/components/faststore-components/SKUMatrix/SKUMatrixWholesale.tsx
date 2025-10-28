@@ -1,5 +1,5 @@
 import { SKUMatrix, SKUMatrixTrigger, SKUMatrixSidebar } from '@faststore/ui'
-import { useMockSKUMatrix } from './useMockSKUMatrix'
+import { useMockSKUMatrix, MockSKUMatrixInitializer } from './useMockSKUMatrix'
 
 const SKUMatrixWholesale = () => {
   const { ImageComponent } = useMockSKUMatrix()
@@ -54,6 +54,7 @@ const SKUMatrixWholesale = () => {
       </div>
 
       <SKUMatrix>
+        <MockSKUMatrixInitializer />
         <SKUMatrixTrigger variant="primary" style={{ width: '100%' }}>
           Open Bulk Order Form
         </SKUMatrixTrigger>
