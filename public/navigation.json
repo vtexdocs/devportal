@@ -16148,6 +16148,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Mandatory migration to vtexvault.com for 'Send Payments' request",
+                  "slug": "2025-10-28-mandatory-migration-to-vtexvault-com-for-send-payments-request",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Theme switching without server restart",
                   "slug": "2025-10-23-faststore-theme-switch-fix",
                   "origin": "",
