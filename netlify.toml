@@ -16,9 +16,15 @@ to = "/docs/guides/faststore/getting-started-6-next-steps"
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/getting-started-promoting-your-changes"
+status = 308
+to = "/docs/guides/faststore/getting-started-promoting-your-headless-cms-changes"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/headless-cms-4-Promoting-your-changes"
 status = 308
-to = "/docs/guides/faststore/getting-started-promoting-your-changes"
+to = "/docs/guides/faststore/getting-started-promoting-your-headless-cms-changes"
 
 [[redirects]]
 force = true
@@ -31,6 +37,12 @@ force = true
 from = "/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms"
 status = 308
 to = "/docs/guides/faststore/getting-started-setting-up-the-headless-cms"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-5-integrating-with-the-headless-cms"
+status = 308
+to = "/docs/guides/faststore/getting-started-5-integrating-your-project-with-the-headless-cms"
 
 [[redirects]]
 force = true
