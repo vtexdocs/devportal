@@ -8672,7 +8672,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "1. Starts a new transaction",
+                  "name": "Starts a new transaction",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -8681,25 +8681,16 @@
                   "children": []
                 },
                 {
-                  "name": "2.1 Send payments information public",
+                  "name": "Send payments information",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/pub/transactions/-transactionId-/payments",
+                  "endpoint": "/api/payments/transactions/-transactionId-/payments",
                   "children": []
                 },
                 {
-                  "name": "2.2 Send payments with saved credit card",
-                  "slug": "payments-gateway-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/pvt/transactions/-transactionId-/payments",
-                  "children": []
-                },
-                {
-                  "name": "3. Send additional data",
+                  "name": "Send additional data",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -8708,7 +8699,7 @@
                   "children": []
                 },
                 {
-                  "name": "3.1 Update additional data (optional)",
+                  "name": "Update additional data (optional)",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "PATCH",
