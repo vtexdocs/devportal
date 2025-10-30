@@ -18,7 +18,7 @@ to = "/docs/guides/faststore/getting-started-6-next-steps"
 force = true
 from = "/docs/guides/faststore/headless-cms-4-Promoting-your-changes"
 status = 308
-to = "/docs/guides/faststore/getting-started-promoting-your-changes"
+to = "/docs/guides/faststore/getting-started-promoting-your-headless-cms-changes"
 
 [[redirects]]
 force = true
