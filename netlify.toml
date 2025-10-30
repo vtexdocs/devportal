@@ -40,6 +40,12 @@ to = "/docs/guides/faststore/getting-started-setting-up-the-headless-cms"
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/getting-started-5-integrating-with-the-headless-cms"
+status = 308
+to = "/docs/guides/faststore/getting-started-5-integrating-your-project-with-the-headless-cms"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account"
 status = 308
 to = "/docs/guides/faststore/getting-started-5-integrating-your-project-with-the-headless-cms"
