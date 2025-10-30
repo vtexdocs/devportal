@@ -13688,55 +13688,55 @@
               "children": [
                 {
                   "name": "1. Setting up your environment",
-                  "slug": "faststore/getting-started-requirements",
+                  "slug": "faststore/getting-started-1-setting-up-your-environment",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "2. Starting a new FastStore project",
-                  "slug": "faststore/1-onboarding-starting-the-project",
+                  "slug": "faststore/getting-started-2-starting-the-project",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "3. Running the project locally",
-                  "slug": "faststore/getting-started-2-setting-up-the-project",
+                  "slug": "faststore/getting-started-3-running-the-project-locally",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "4. Understanding the project structure",
-                  "slug": "faststore/getting-started-3-faststore-project-structure",
+                  "slug": "faststore/getting-started-4-understanding-the-project-structure",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "5. Integrating your project with the Headless CMS",
-                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
+                  "slug": "faststore/getting-started-5-integrating-your-project-with-the-headless-cms",
                   "origin": "",
                   "type": "markdown",
                   "children": [
                     {
                       "name": "Setting up the Headless CMS",
-                      "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
+                      "slug": "faststore/getting-started-setting-up-the-headless-cms",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
                       "name": "Structuring Content Types and Sections",
-                      "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
+                      "slug": "faststore/getting-started-structuring-content-types-and-sections",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
                       "name": "Promoting your changes",
-                      "slug": "faststore/headless-cms-4-Promoting-your-changes",
+                      "slug": "faststore/getting-started-promoting-your-changes",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -13745,7 +13745,7 @@
                 },
                 {
                   "name": "6. Next steps",
-                  "slug": "faststore/getting-started-4-next-steps",
+                  "slug": "faststore/getting-started-6-next-steps",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13761,7 +13761,7 @@
             },
             {
               "name": "FastStore WebOps",
-              "slug": "faststore/1-onboarding-dashboard",
+              "slug": "faststore/webops-dashboard",
               "origin": "",
               "type": "markdown",
               "children": []
