@@ -4,6 +4,60 @@ included_files = ["node_modules/sharp/**/*", "./github.pem"]
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/1-onboarding-dashboard"
+status = 308
+to = "/docs/guides/faststore/webops-dashboard"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-4-next-steps"
+status = 308
+to = "/docs/guides/faststore/getting-started-6-next-steps"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/headless-cms-4-Promoting-your-changes"
+status = 308
+to = "/docs/guides/faststore/getting-started-promoting-your-changes"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/headless-cms-3-adding-content-types-and-sections"
+status = 308
+to = "/docs/guides/faststore/getting-started-structuring-content-types-and-sections"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/headless-cms-2-setting-up-the-headless-cms"
+status = 308
+to = "/docs/guides/faststore/getting-started-setting-up-the-headless-cms"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/headless-cms-1-configuring-the-vtex-account"
+status = 308
+to = "/docs/guides/faststore/getting-started-5-integrating-your-project-with-the-headless-cms"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-2-setting-up-the-project"
+status = 308
+to = "/docs/guides/faststore/getting-started-3-running-the-project-locally"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/1-onboarding-starting-the-project"
+status = 308
+to = "/docs/guides/faststore/getting-started-2-starting-the-project"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-requirements"
+status = 308
+to = "/docs/guides/faststore/getting-started-1-setting-up-your-environment"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/using-themes/overview"
 status = 308
 to = "/docs/guides/faststore/using-themes-overview"
