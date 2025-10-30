@@ -13687,15 +13687,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Prerequisites",
+                  "name": "1. Setting up your environment",
                   "slug": "faststore/getting-started-requirements",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "1. Setting up the FastStore WebOps app",
-                  "slug": "faststore/1-onboarding-overview",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13751,7 +13744,7 @@
                   ]
                 },
                 {
-                  "name": "5. Next steps",
+                  "name": "6. Next steps",
                   "slug": "faststore/getting-started-4-next-steps",
                   "origin": "",
                   "type": "markdown",
@@ -15161,13 +15154,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Glossary",
-                  "slug": "store-framework-glossary",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "1. Setting up your development environment",
                   "slug": "vtex-io-documentation-1-basicsetup",
                   "origin": "",
@@ -15212,6 +15198,13 @@
                 {
                   "name": "7. Making your store theme public",
                   "slug": "vtex-io-documentation-making-your-theme-content-public",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Glossary",
+                  "slug": "store-framework-glossary",
                   "origin": "",
                   "type": "markdown",
                   "children": []
