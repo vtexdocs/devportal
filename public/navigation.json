@@ -2233,6 +2233,21 @@
           ]
         },
         {
+          "name": "Storefront Permissions",
+          "slug": "storefront-permissions-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Storefront Permissions Overview",
+              "slug": "storefront-permissions",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "VTEX Ads",
           "slug": "vtex-ads",
           "origin": "",
@@ -8672,7 +8687,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "1. Starts a new transaction",
+                  "name": "Starts a new transaction",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -8681,25 +8696,16 @@
                   "children": []
                 },
                 {
-                  "name": "2.1 Send payments information public",
+                  "name": "Send payments information",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/pub/transactions/-transactionId-/payments",
+                  "endpoint": "/api/payments/transactions/-transactionId-/payments",
                   "children": []
                 },
                 {
-                  "name": "2.2 Send payments with saved credit card",
-                  "slug": "payments-gateway-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/pvt/transactions/-transactionId-/payments",
-                  "children": []
-                },
-                {
-                  "name": "3. Send additional data",
+                  "name": "Send additional data",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "POST",
@@ -8708,7 +8714,7 @@
                   "children": []
                 },
                 {
-                  "name": "3.1 Update additional data (optional)",
+                  "name": "Update additional data (optional)",
                   "slug": "payments-gateway-api",
                   "type": "openapi",
                   "method": "PATCH",
@@ -13708,41 +13714,69 @@
           "type": "markdown",
           "children": [
             {
+              "name": "FastStore versions and support levels",
+              "slug": "faststore/getting-started-faststore-versions-and-support-levels",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Getting Started",
               "slug": "faststore/getting-started-overview",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "FastStore versions and support levels",
-                  "slug": "faststore/getting-started-faststore-versions-and-support-levels",
+                  "name": "1. Setting up your environment",
+                  "slug": "faststore/getting-started-1-setting-up-your-environment",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Requirements",
-                  "slug": "faststore/getting-started-requirements",
+                  "name": "2. Starting a new FastStore project",
+                  "slug": "faststore/getting-started-2-starting-the-project",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "1. FastStore WebOps",
-                  "slug": "faststore/1-onboarding-overview",
+                  "name": "3. Running the project locally",
+                  "slug": "faststore/getting-started-3-running-the-project-locally",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "4. Understanding the project structure",
+                  "slug": "faststore/getting-started-4-understanding-the-project-structure",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "5. Integrating your project with the Headless CMS",
+                  "slug": "faststore/getting-started-5-integrating-your-project-with-the-headless-cms",
                   "origin": "",
                   "type": "markdown",
                   "children": [
                     {
-                      "name": "Starting a new FastStore project",
-                      "slug": "faststore/1-onboarding-starting-the-project",
+                      "name": "Setting up the Headless CMS",
+                      "slug": "faststore/getting-started-setting-up-the-headless-cms",
                       "origin": "",
                       "type": "markdown",
                       "children": []
                     },
                     {
-                      "name": "Dashboard",
-                      "slug": "faststore/1-onboarding-dashboard",
+                      "name": "Structuring Content Types and Sections",
+                      "slug": "faststore/getting-started-structuring-content-types-and-sections",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Promoting your changes",
+                      "slug": "faststore/getting-started-promoting-your-headless-cms-changes",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -13750,22 +13784,8 @@
                   ]
                 },
                 {
-                  "name": "2. Setting up the project",
-                  "slug": "faststore/getting-started-2-setting-up-the-project",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "3. Project structure",
-                  "slug": "faststore/getting-started-3-faststore-project-structure",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "4. Next steps",
-                  "slug": "faststore/getting-started-4-next-steps",
+                  "name": "6. Next steps",
+                  "slug": "faststore/getting-started-6-next-steps",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13780,39 +13800,18 @@
               ]
             },
             {
-              "name": "Working with Headless CMS",
+              "name": "FastStore WebOps",
+              "slug": "faststore/webops-dashboard",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Headless CMS",
               "slug": "faststore/headless-cms-overview",
               "origin": "",
               "type": "markdown",
               "children": [
-                {
-                  "name": "1. Configuring your VTEX account",
-                  "slug": "faststore/headless-cms-1-configuring-the-vtex-account",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "2. Setting up the Headless CMS",
-                  "slug": "faststore/headless-cms-2-setting-up-the-headless-cms",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "3. Structuring Content Types and Sections",
-                  "slug": "faststore/headless-cms-3-adding-content-types-and-sections",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "4. Promoting your changes",
-                  "slug": "faststore/headless-cms-4-Promoting-your-changes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
                 {
                   "name": "Managing content with 'scopes' and 'requiredScopes'",
                   "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
@@ -15022,28 +15021,6 @@
               ]
             },
             {
-              "name": "Customizing pages with Dynamic Content",
-              "slug": "faststore/dynamic-content-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Step 1 - Setting up the store code for Dynamic Content",
-                  "slug": "faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Step 2 - Handling Dynamic Content in custom sections",
-                  "slug": "faststore/dynamic-content-step-2-handling-the-dynamic-content-in-custom-sections",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Security",
               "slug": "faststore/security-overview",
               "origin": "",
@@ -15217,13 +15194,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Glossary",
-                  "slug": "store-framework-glossary",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "1. Setting up your development environment",
                   "slug": "vtex-io-documentation-1-basicsetup",
                   "origin": "",
@@ -15268,6 +15238,13 @@
                 {
                   "name": "7. Making your store theme public",
                   "slug": "vtex-io-documentation-making-your-theme-content-public",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Glossary",
+                  "slug": "store-framework-glossary",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -16210,6 +16187,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Mandatory migration to vtexvault.com for 'Send Payments' request",
+                  "slug": "2025-10-28-mandatory-migration-to-vtexvault-com-for-send-payments-request",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore: Theme switching without server restart",
                   "slug": "2025-10-23-faststore-theme-switch-fix",
