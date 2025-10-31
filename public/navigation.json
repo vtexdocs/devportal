@@ -2233,6 +2233,21 @@
           ]
         },
         {
+          "name": "Storefront Permissions",
+          "slug": "storefront-permissions-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Storefront Permissions Overview",
+              "slug": "storefront-permissions",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "VTEX Ads",
           "slug": "vtex-ads",
           "origin": "",
