@@ -5217,7 +5217,7 @@
                   "origin": "",
                   "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
                   "children": []
-                }, 
+                },
                 {
                   "name": "Update delivery promises for an external seller’s item",
                   "slug": "delivery-promise-notification-api",
@@ -10484,7 +10484,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Create storefront user",
+                  "name": "Assign storefront roles or create user with storefront roles",
                   "slug": "storefront-permissions-api",
                   "type": "openapi",
                   "method": "POST",
@@ -10493,7 +10493,7 @@
                   "children": []
                 },
                 {
-                  "name": "Assign storefront role to user",
+                  "name": "Assign one storefront role",
                   "slug": "storefront-permissions-api",
                   "type": "openapi",
                   "method": "POST",
@@ -11161,8 +11161,33 @@
               ]
             },
             {
+              "name": "Storefront users",
+              "slug": "vtex-id-api-storefront-users",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create storefront user with username",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/storefront/users",
+                  "children": []
+                },
+                {
+                  "name": "Get storefront user by identifier",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/pvt/user/info",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Token renewal",
-              "slug": "vtex-id-api-authentication",
+              "slug": "vtex-id-api-token-renewal",
               "type": "category",
               "children": [
                 {
@@ -11187,7 +11212,7 @@
             },
             {
               "name": "Refresh token (Headless)",
-              "slug": "vtex-id-api-authentication",
+              "slug": "vtex-id-api-refresh-token",
               "type": "category",
               "children": [
                 {
