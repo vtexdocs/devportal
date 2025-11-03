@@ -16188,6 +16188,21 @@
           "origin": "",
           "type": "category",
           "children": [
+                        {
+              "name": "november",
+              "slug": "november-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Access control by permissions in the B2B Suite",
+                  "slug": "2025-11-03-access-control-by-permissions-in-the-b2b-suite",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "October",
               "slug": "october-2025",
