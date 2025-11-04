@@ -16200,21 +16200,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "November",
-              "slug": "november-2025",
-              "origin": "",
-              "type": "category",
-              "children": [
+                },
                 {
                   "name": "FastStore WebOps: New permission controls for secrets management",
                   "slug": "2025-11-03-faststore-webops-new-permission-controls-for-secrets-management",
-                   "origin": "",
-                   "type": "markdown",
-                   "children": []
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -16234,6 +16226,13 @@
                 {
                   "name": "FastStore: Theme switching without server restart",
                   "slug": "2025-10-23-faststore-theme-switch-fix",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 3.90.0",
+                  "slug": "2025-10-13-faststore-release-notes",
                   "origin": "",
                   "type": "markdown",
                   "children": []
