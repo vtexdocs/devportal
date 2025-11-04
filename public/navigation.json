@@ -12330,6 +12330,20 @@
           "type": "markdown",
           "children": [
             {
+              "name": "Accessing external resources within a VTEX IO app",
+              "slug": "accessing-external-resources-within-a-vtex-io-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Controlling access to app resources",
+              "slug": "controlling-access-to-app-resources",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Roles",
               "slug": "vtex-io-documentation-roles",
               "origin": "",
