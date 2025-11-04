@@ -8168,6 +8168,15 @@
                   "children": []
                 },
                 {
+                  "name": "Get order modifications summary",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-changeOrderId-/change-summary",
+                  "children": []
+                },
+                {
                   "name": "Retry order modifications",
                   "slug": "orders-api",
                   "type": "openapi",
