@@ -10101,7 +10101,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/catalog/pvt/skusellers/-skuId-",
+                  "endpoint": "/sku-binding/pvt/skusellers/-skuId-",
                   "children": []
                 },
                 {
