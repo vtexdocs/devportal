@@ -321,6 +321,12 @@ to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/fr
 
 [[redirects]]
 force = true
+from = "/docs/api-reference/catalog-api-getproductandskuids"
+status = 308
+to = "/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetProductAndSkuIds"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/updateordertrackingstatus"
 status = 308
 to = "/docs/api-reference/orders-api#put-/api/oms/pvt/orders/-orderId-/invoice/-invoiceNumber-/tracking"
