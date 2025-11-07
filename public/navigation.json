@@ -16233,6 +16233,13 @@
                   "children": []
                 },
                 {
+                  "name": "FastStore Release Notes — Version 3.90.0",
+                  "slug": "2025-10-13-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Theme switching without server restart",
                   "slug": "2025-10-23-faststore-theme-switch-fix",
                   "origin": "",
@@ -16240,8 +16247,8 @@
                   "children": []
                 },
                 {
-                  "name": "FastStore Release Notes — Version 3.90.0",
-                  "slug": "2025-10-13-faststore-release-notes-version",
+                  "name": "FastStore Release Notes — Version 3.91.0",
+                  "slug": "2025-10-24-faststore-release-notes-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
