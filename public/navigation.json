@@ -16204,6 +16204,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "VTEX Help Center: Improved interface and new features",
+                  "slug": "2025-11-07-vtex-help-center-improved-interface-and-new-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Access control by permissions in the B2B Suite",
                   "slug": "2025-11-03-access-control-by-permissions-in-the-b2b-suite",
                   "origin": "",
