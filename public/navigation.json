@@ -16204,6 +16204,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "VTEX Help Center: Improved interface and new features",
+                  "slug": "2025-11-07-vtex-help-center-improved-interface-and-new-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Access control by permissions in the B2B Suite",
                   "slug": "2025-11-03-access-control-by-permissions-in-the-b2b-suite",
                   "origin": "",
@@ -16233,6 +16240,13 @@
                   "children": []
                 },
                 {
+                  "name": "FastStore Release Notes — Version 3.90.0",
+                  "slug": "2025-10-13-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Theme switching without server restart",
                   "slug": "2025-10-23-faststore-theme-switch-fix",
                   "origin": "",
@@ -16240,8 +16254,8 @@
                   "children": []
                 },
                 {
-                  "name": "FastStore Release Notes — Version 3.90.0",
-                  "slug": "2025-10-13-faststore-release-notes-version",
+                  "name": "FastStore Release Notes — Version 3.91.0",
+                  "slug": "2025-10-24-faststore-release-notes-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
