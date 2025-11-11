@@ -8173,7 +8173,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/orders/pvt/document/-changeOrderId-/change-summary",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/change-summary",
                   "children": []
                 },
                 {
