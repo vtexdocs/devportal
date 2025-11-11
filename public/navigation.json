@@ -16204,6 +16204,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Updates to the Delivery Promise API",
+                  "slug": "2025-11-11-updates-delivery-promise-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX Help Center: Improved interface and new features",
                   "slug": "2025-11-07-vtex-help-center-improved-interface-and-new-features",
                   "origin": "",
