@@ -12577,651 +12577,75 @@
       "slugPrefix": "docs/",
       "categories": [
         {
-          "name": "Basic components",
-          "slug": "guides/basic-components",
+          "name": "B2B",
+          "slug": "guides/b2b-apps",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
-              "name": "Add To Cart Button",
-              "slug": "apps/vtex.add-to-cart-button",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Autocomplete",
-              "slug": "apps/vtex.search/Autocomplete",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Banner",
-              "slug": "apps/vtex.search/banner",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Breadcrumb",
-              "slug": "apps/vtex.breadcrumb",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Footer",
-              "slug": "apps/vtex.store-footer",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Google One-Tap Login",
-              "slug": "guides/google-one-tap-login",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Header",
-              "slug": "apps/vtex.store-header",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Locale Switcher",
-              "slug": "apps/vtex.locale-switcher",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Login",
-              "slug": "apps/vtex.login",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Menu",
-              "slug": "apps/vtex.menu",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Minicart",
-              "slug": "apps/vtex.minicart",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Order Placed",
-              "slug": "apps/vtex.order-placed",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Customizer",
-              "slug": "apps/vtex.product-customizer",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Highlights",
-              "slug": "apps/vtex.product-highlights",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Identifier",
-              "slug": "apps/vtex.product-identifier",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product List",
-              "slug": "apps/vtex.product-list",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Price",
-              "slug": "apps/vtex.product-price",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Quantity",
-              "slug": "apps/vtex.product-quantity",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Specifications",
-              "slug": "apps/vtex.product-specifications",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary",
-              "slug": "apps/vtex.product-summary",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary Attachment List",
-              "slug": "apps/vtex.product-summary/productsummaryattachmentlist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary Buy Button",
-              "slug": "apps/vtex.product-summary/productsummarybuybutton",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary Description",
-              "slug": "apps/vtex.product-summary/productsummarydescription",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary Image",
-              "slug": "apps/vtex.product-summary/productsummaryimage",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary List",
-              "slug": "apps/vtex.product-summary/productsummarylist",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary Name",
-              "slug": "apps/vtex.product-summary/productsummaryname",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary Shelf",
-              "slug": "apps/vtex.product-summary/productsummaryshelf",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary SKU Selector",
-              "slug": "apps/vtex.product-summary/productsummaryskuselector",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Summary SKU Name",
-              "slug": "apps/vtex.product-summary/productsummaryskuname",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Rich Text",
-              "slug": "apps/vtex.rich-text",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Search",
-              "slug": "apps/vtex.search",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Suggestions",
-              "slug": "apps/vtex.search/suggestions",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "DidYouMean",
-              "slug": "apps/vtex.search/didyoumean",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Search Result",
-              "slug": "apps/vtex.search-result",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Image",
-              "slug": "apps/vtex.store-image",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Store Components",
-          "slug": "guides/store-components",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Autocomplete Result List",
-              "slug": "apps/vtex.store-components/autocompleteresults",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Availability Subscriber",
-              "slug": "apps/vtex.store-components/availabilitysubscriber",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Back To Top Button",
-              "slug": "apps/vtex.store-components/backtotopbutton",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Image",
-              "slug": "apps/vtex.store-components/image",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Info Card",
-              "slug": "apps/vtex.store-components/infocard",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Logo",
-              "slug": "apps/vtex.store-components/logo",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Notification",
-              "slug": "apps/vtex.store-components/notification",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Brand",
-              "slug": "apps/vtex.store-components/productbrand",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Description",
-              "slug": "apps/vtex.store-components/productdescription",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Images",
-              "slug": "apps/vtex.store-components/productimages",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Name",
-              "slug": "apps/vtex.store-components/productname",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product SKU Attributes",
-              "slug": "apps/vtex.store-components/productskuattributes",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Search Bar",
-              "slug": "apps/vtex.store-components/searchbar",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Share",
-              "slug": "apps/vtex.store-components/share",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Shipping Simulator",
-              "slug": "apps/vtex.store-components/shippingsimulator",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "SKU Selector",
-              "slug": "apps/vtex.store-components/skuselector",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Advanced components",
-          "slug": "guides/advanced-components",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Availability Notify",
-              "slug": "apps/vtex.availability-notify",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Category Menu",
-              "slug": "apps/vtex.category-menu",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Kit Look",
-              "slug": "apps/vtexbr.kitlook",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Icon Pack list",
-              "slug": "apps/vtex.store-icons/iconpack",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Iframe",
-              "slug": "apps/vtex.iframe",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Live Shopping",
-              "slug": "apps/vtexventures.livestreaming",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "PayPal Checkout with Smart Payment Buttons",
-              "slug": "apps/vtex.connector-paypal-commerce-platform",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Personal Shopper",
-              "slug": "apps/vtexventures.personal-shopper-free",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Availability",
-              "slug": "apps/vtex.product-availability",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Comparison",
-              "slug": "apps/vtex.product-comparison",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Gifts",
-              "slug": "apps/vtex.product-gifts",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Highlight by VTEX Segment",
-              "slug": "apps/vtexarg.product-highlight-by-vtex-segment",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product Specification Badges",
-              "slug": "apps/vtex.product-specification-badges",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Quantity On Cart",
-              "slug": "apps/vtexarg.quantity-on-cart",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Reviews and Ratings",
-              "slug": "apps/vtex.reviews-and-ratings",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Querying personal MasterData Information with SafeData",
-              "slug": "apps/vtex.safedata",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Seller Selector",
-              "slug": "apps/vtex.seller-selector",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Similar Products Variants",
-              "slug": "apps/vtex.similar-products-variants",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Drawer",
-              "slug": "apps/vtex.store-drawer",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Locator",
-              "slug": "apps/vtex.store-locator",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Form",
-              "slug": "apps/vtex.store-form",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Link",
-              "slug": "apps/vtex.store-link",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Media",
-              "slug": "apps/vtex.store-media",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Newsletter",
-              "slug": "apps/vtex.store-newsletter",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Video",
-              "slug": "apps/vtex.store-video",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "VTEX IO Sandbox Component",
-              "slug": "apps/vtex.sandbox",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Shipping Option Components",
-              "slug": "apps/vtex.shipping-option-components",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "B2B components",
-          "slug": "guides/b2b-components",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Order Configuration",
-              "slug": "apps/vtex.order-configuration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Quickorder",
-              "slug": "apps/vtex.quickorder",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "SKU List",
-              "slug": "apps/vtex.sku-list",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "B2B Suite",
-          "slug": "apps/vtex.b2b-suite",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Storefront Permissions",
-              "slug": "apps/vtex.storefront-permissions",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Storefront Permissions UI",
-              "slug": "apps/vtex.storefront-permissions-ui",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "B2B Organizations",
-              "slug": "apps/vtex.b2b-organizations",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "B2B Checkout Settings",
-              "slug": "apps/vtex.b2b-checkout-settings",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "B2B Orders History",
-              "slug": "apps/vtex.b2b-orders-history",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "B2B Quotes & Carts",
-              "slug": "apps/vtex.b2b-quotes",
+              "name": "B2B Components",
+              "slug": "guides/b2b-components",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "Order Configuration",
+                  "slug": "apps/vtex.order-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "SKU List",
+                  "slug": "apps/vtex.sku-list",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+
+                }
+              ]
+            },
+            {
+              "name": "B2B Suite",
+              "slug": "apps/vtex.b2b-suite",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Storefront Permissions",
+                  "slug": "apps/vtex.storefront-permissions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Storefront Permissions UI",
+                  "slug": "apps/vtex.storefront-permissions-ui",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B Checkout Settings",
+                  "slug": "apps/vtex.b2b-checkout-settings",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B Orders History",
+                  "slug": "apps/vtex.b2b-orders-history",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B Quotes & Carts",
+                  "slug": "apps/vtex.b2b-quotes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "B2B Quotes GraphQL API",
                   "slug": "apps/vtex.b2b-quotes-graphql/b2bquotes-graphql-api",
@@ -13234,69 +12658,132 @@
           ]
         },
         {
-          "name": "Functional Apps",
-          "slug": "guides/functional-apps",
+          "name": "Business tools",
+          "slug": "guides/business-tools",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
-              "name": "AB Tester",
-              "slug": "apps/vtexarg.abtester",
+              "name": "External integrations",
+              "slug": "guides/external-integrations",
               "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Abandoned Cart Service",
-              "slug": "apps/vtex.abandoned-cart-service",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Badges",
-              "slug": "apps/vtex.badges",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Broadcaster",
-              "slug": "apps/vtex.broadcaster",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Catalog Images",
-              "slug": "apps/vtex.catalog-images",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Checkout UI Custom",
-              "slug": "apps/vtex.checkout-ui-custom",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Checkout UI Settings",
-              "slug": "apps/vtex.checkout-ui-settings",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Messages",
-              "slug": "apps/vtex.messages",
-              "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
-                  "name": "Messages GraphQL API",
-                  "slug": "apps/vtex.messages/messages-graphql-api",
+                  "name": "Bluecore",
+                  "slug": "apps/vtex.bluecore",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Blueknow app",
+                  "slug": "apps/vtex.blueknow",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Cookie Script",
+                  "slug": "apps/vtex.cookie-script",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "CyberSource Fingerprint",
+                  "slug": "apps/vtex.cybersource-fingerprint",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Elfsight",
+                  "slug": "apps/vtex.elfsight",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Facebook Domain Verification",
+                  "slug": "apps/vtex.facebook-domain-verification",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Google Customer Reviews",
+                  "slug": "apps/vtex.google-customer-reviews",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Idea CRM",
+                  "slug": "apps/vtex.ideacrm",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Iubenda",
+                  "slug": "apps/vtex.iubenda",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "JivoChat",
+                  "slug": "apps/vtex.jivochat",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search Console",
+                  "slug": "apps/vtex.google-search-console",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "smarthint",
+                  "slug": "apps/vtex.smarthint",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Suiteshare",
+                  "slug": "apps/vtex.suite-share",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tawk.to",
+                  "slug": "apps/vtex.tawk-to",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Trustpilot",
+                  "slug": "apps/vtex.trustpilot",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Zendesk Chat",
+                  "slug": "apps/vtex.zendesk-chat",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Zopim",
+                  "slug": "apps/vtex.zopim",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13304,28 +12791,21 @@
               ]
             },
             {
-              "name": "Product Context",
-              "slug": "apps/vtex.product-context",
+              "name": "Live commerce",
+              "slug": "guides/live-commerce",
               "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Pickup point selector",
-              "slug": "apps/vtexbr.pickup-selector",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Rewriter",
-              "slug": "apps/vtex.rewriter",
-              "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
-                  "name": "Rewriter GraphQL API",
-                  "slug": "apps/vtex.rewriter/rewriter-graphql-api",
+                  "name": "Live Shopping",
+                  "slug": "apps/vtexventures.livestreaming",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                { 
+                  "name": "Personal Shopper",
+                  "slug": "apps/vtexventures.personal-shopper-free",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -13333,25 +12813,99 @@
               ]
             },
             {
-              "name": "Responsive Values",
-              "slug": "apps/vtex.responsive-values",
+              "name": "Marketing and CRM",
+              "slug": "guides/marketing-and-crm",
               "origin": "",
-              "type": "markdown",
-              "children": []
-            },
+              "type": "category",
+              "children": [
+                {
+                  "name": "Availability Notify",
+                  "slug": "apps/vtex.availability-notify",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Newsletter",
+                  "slug": "apps/vtex.store-newsletter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Customer account and authentication",
+          "slug": "guides/customer-account-and-authentication",
+          "origin": "",
+          "type": "category",
+          "children": [
             {
-              "name": "Search GraphQL",
-              "slug": "apps/vtex.search-graphql",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Session Client",
-              "slug": "apps/vtex.session-client",
+              "name": "My Account",
+              "slug": "vtex.mmy-account",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "My Account Commons",
+                  "slug": "apps/vtex.my-account-commons",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "My Authentication",
+                  "slug": "apps/vtex.my-authentication",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Security and data",
+              "slug": "guides/security-and-data",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Querying personal MasterData Information with SafeData",
+                  "slug": "apps/vtex.safedata",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Form",
+                  "slug": "apps/vtex.store-form",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "User authentication and login",
+              "slug": "guides/user-authentication",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Login",
+                  "slug": "apps/vtex.login",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Session Client",
+                  "slug": "apps/vtex.session-client",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Session Client GraphQL API",
                   "slug": "apps/vtex.session-client/session-client-graphql-api",
@@ -13360,124 +12914,11 @@
                   "children": []
                 }
               ]
-            },
-            {
-              "name": "Store Icons",
-              "slug": "apps/vtex.store-icons",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Store Sitemap",
-              "slug": "apps/vtex.store-sitemap",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "VTEX Telemarketing",
-              "slug": "apps/vtex.telemarketing",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Assembly Options",
-              "slug": "guides/assembly-options-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Affiliates Program",
-              "slug": "guides/affiliates-program-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
             }
           ]
         },
         {
-          "name": "Layout Apps",
-          "slug": "guides/layout-apps",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Condition Layout",
-              "slug": "apps/vtex.condition-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Disclosure Layout",
-              "slug": "apps/vtex.disclosure-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Flex Layout",
-              "slug": "apps/vtex.flex-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Modal Layout",
-              "slug": "apps/vtex.modal-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Overlay Layout",
-              "slug": "apps/vtex.overlay-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Responsive Layout",
-              "slug": "apps/vtex.responsive-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Slider Layout",
-              "slug": "apps/vtex.slider-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Stack Layout",
-              "slug": "apps/vtex.stack-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Sticky Layout",
-              "slug": "apps/vtex.sticky-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Tab Layout",
-              "slug": "apps/vtex.tab-layout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Pixel Apps",
+          "name": "Pixel apps",
           "slug": "guides/pixel-apps",
           "origin": "",
           "type": "markdown",
@@ -13497,20 +12938,6 @@
               "children": []
             },
             {
-              "name": "Bluecore",
-              "slug": "apps/vtex.bluecore",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Blueknow app",
-              "slug": "apps/vtex.blueknow",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "BTG360",
               "slug": "apps/vtex.btg360",
               "origin": "",
@@ -13525,36 +12952,8 @@
               "children": []
             },
             {
-              "name": "Cookie Script",
-              "slug": "apps/vtex.cookie-script",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "CyberSource Fingerprint",
-              "slug": "apps/vtex.cybersource-fingerprint",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Elfsight",
-              "slug": "apps/vtex.elfsight",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Facebook pixel",
               "slug": "apps/vtex.facebook-pixel",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Facebook Domain Verification",
-              "slug": "apps/vtex.facebook-domain-verification",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -13567,36 +12966,8 @@
               "children": []
             },
             {
-              "name": "Google Customer Reviews",
-              "slug": "apps/vtex.google-customer-reviews",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Hotjar",
               "slug": "apps/vtex.hotjar",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Idea CRM",
-              "slug": "apps/vtex.ideacrm",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Iubenda",
-              "slug": "apps/vtex.iubenda",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "JivoChat",
-              "slug": "apps/vtex.jivochat",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -13623,57 +12994,8 @@
               "children": []
             },
             {
-              "name": "Search Console",
-              "slug": "apps/vtex.google-search-console",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Shareasale",
               "slug": "apps/vtex.shareasale",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "smarthint",
-              "slug": "apps/vtex.smarthint",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Suiteshare",
-              "slug": "apps/vtex.suite-share",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Tawk.to",
-              "slug": "apps/vtex.tawk-to",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Trustpilot",
-              "slug": "apps/vtex.trustpilot",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Zendesk Chat",
-              "slug": "apps/vtex.zendesk-chat",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Zopim",
-              "slug": "apps/vtex.zopim",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -13681,24 +13003,660 @@
           ]
         },
         {
-          "name": "My Account - StoreV2 version",
-          "slug": "apps/vtex.my-account",
+          "name": "Shopper experience",
+          "slug": "guides/shopper-experience",
           "origin": "",
-          "type": "markdown",
+          "type": "category",
           "children": [
             {
-              "name": "My Account Commons",
-              "slug": "apps/vtex.my-account-commons",
+              "name": "Product Availability",
+              "slug": "apps/vtex.product-availability",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My Authentication",
-              "slug": "apps/vtex.my-authentication",
+              "name": "Reviews and Ratings",
+              "slug": "apps/vtex.reviews-and-ratings",
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "AB Tester",
+              "slug": "apps/vtex.abtester",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Pickup point selector",
+              "slug": "apps/vtexbr.pickup-selector",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX Telemarketing",
+              "slug": "apps/vtex.telemarketing",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Affiliates Program",
+              "slug": "apps/vtex.affiliates-program-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Store Framework",
+          "slug": "guides/store-framework-apps",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Cart and checkout",
+              "slug": "guides/cart-and-checkout",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Add to cart button",
+                  "slug": "apps/vtex.add-to-cart-button",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Minicart",
+                  "slug": "apps/vtex.minicart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Order Placed",
+                  "slug": "apps/vtex.order-placed",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "PayPal Checkout with Smart Payment Buttons",
+                  "slug": "apps/vtex.connector-paypal-commerce-platform",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Quantity On Cart",
+                  "slug": "apps/vtexarg.quantity-on-cart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Shipping Option Components",
+                  "slug": "apps/vtex.shipping-option-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Abandoned Cart Service",
+                  "slug": "apps/vtex.abandoned-cart-service",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Checkout UI Custom",
+                  "slug": "apps/vtex.checkout-ui-custom",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Checkout UI Settings",
+                  "slug": "apps/vtex.checkout-ui-settings",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Layout and interaction patterns",
+              "slug": "guides/layout-and-interacion-patterns",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Icon Pack list",
+                  "slug": "apps/vtex.store-icons/iconpack",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Iframe",
+                  "slug": "apps/vtex.iframe",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX IO Sandbox Component",
+                  "slug": "apps/vtex.sandbox",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Condition Layout",
+                  "slug": "apps/vtex.condition-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Disclosure Layout",
+                  "slug": "apps/vtex.disclosure-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Flex Layout",
+                  "slug": "apps/vtex.flex-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Modal Layout",
+                  "slug": "apps/vtex.modal-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Overlay Layout",
+                  "slug": "apps/vtex.overlay-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Responsive Layout",
+                  "slug": "apps/vtex.responsive-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Slider Layout",
+                  "slug": "apps/vtex.slider-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Sticky Layout",
+                  "slug": "apps/vtex.sticky-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Tab Layout",
+                  "slug": "apps/vtex.tab-layout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Navigation and search",
+              "slug": "guides/navigation-and-search",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Autocomplete",
+                  "slug": "apps/vtex.vtex.search/autocomplete",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Breadcrumb",
+                  "slug": "apps/vtex.breadcrumb",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Locale Switcher",
+                  "slug": "apps/vtex.locale-switcher",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Menu",
+                  "slug": "apps/vtex.menu",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search",
+                  "slug": "apps/vtex.search",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Suggestions",
+                  "slug": "apps/vtex.vtex.search/suggestions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "DidYouMean",
+                  "slug": "apps/vtex.search/didyoumean",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search Result",
+                  "slug": "apps/vtex.search-result",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Category Menu",
+                  "slug": "apps/vtex.category-menu",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Seller Selector",
+                  "slug": "apps/vtex.seller-selector",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Drawer",
+                  "slug": "apps/vtex.store-drawer",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Locator",
+                  "slug": "apps/vtex.store-locator",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Sitemap",
+                  "slug": "apps/vtex.store-sitemap",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Product display",
+              "slug": "guides/product-display",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Product Customizer",
+                  "slug": "apps/vtexarg.product-customizer",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Highlights",
+                  "slug": "apps/vtex.product-highlights",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Identifier",
+                  "slug": "apps/vtex.product-identifier",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product List",
+                  "slug": "apps/vtex.product-list",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Price",
+                  "slug": "apps/vtex.product-price",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Quantity",
+                  "slug": "apps/vtex.product-quantity",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Specifications",
+                  "slug": "apps/vtex.product-specifications",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary",
+                  "slug": "apps/vtex.product-summary",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary Attachment List",
+                  "slug": "apps/vtex.product-summary/productsummaryattachmentlist",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary Buy Button",
+                  "slug": "apps/vtex.product-summary/productsummarybuybutton",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary Description",
+                  "slug": "apps/vtex.product-summary/productsummarydescription",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary Image",
+                  "slug": "apps/vtex.product-summary/productsummaryimage",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary List",
+                  "slug": "apps/vtex.product-summary/productsummarylist",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary Name",
+                  "slug": "apps/vtex.product-summary/productsummaryname",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary Shelf",
+                  "slug": "apps/vtex.product-summary/productsummaryshelf",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary SKU Selector",
+                  "slug": "apps/vtex.product-summary/productsummaryskuselector",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Summary SKU Name",
+                  "slug": "apps/vtex.product-summary/productsummaryskuname",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Kit Look",
+                  "slug": "apps/vtexbr.kitlook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Comparison",
+                  "slug": "apps/vtex.product-comparison",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Gifts",
+                  "slug": "apps/vtex.product-gifts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Highlight by VTEX Segment",
+                  "slug": "apps/vtexarg.product-highlight-by-vtex-segment",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Specification Badges",
+                  "slug": "apps/vtex.product-specification-badges",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Similar Products Variants",
+                  "slug": "apps/vtex.similar-products-variants",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Link",
+                  "slug": "apps/vtex.store-link",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Media",
+                  "slug": "apps/vtex.store-media",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Video",
+                  "slug": "apps/vtex.store-video",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Badges",
+                  "slug": "apps/vtex.badges",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Catalog Images",
+                  "slug": "apps/vtex.catalog-images",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Context",
+                  "slug": "apps/vtex.product-context",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Assembly Options",
+                  "slug": "guides/vtex.assembly-options-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Store Components",
+              "slug": "guides/store-components",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Autocomplete Result List",
+                  "slug": "apps/vtex.store-components/autocompleteresults",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Availability Subscriber",
+                  "slug": "apps/vtex.store-components/availabilitysubscriber",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Back To Top Button",
+                  "slug": "apps/vtex.store-components/backtotopbutton",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Image",
+                  "slug": "apps/vtex.store-components/image",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Info Card",
+                  "slug": "apps/vtex.store-components/infocard",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Logo",
+                  "slug": "apps/vtex.store-components/logo",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Notification",
+                  "slug": "apps/vtex.store-components/notification",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Brand",
+                  "slug": "apps/vtex.store-components/productbrand",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Description",
+                  "slug": "apps/vtex.store-components/productdescription",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Images",
+                  "slug": "apps/vtex.store-components/productimages",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product Name",
+                  "slug": "apps/vtex.store-components/productname",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Product SKU Attributes",
+                  "slug": "apps/vtex.store-components/productskuattributes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Search Bar",
+                  "slug": "apps/vtex.store-components/searchbar",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Share",
+                  "slug": "apps/vtex.store-components/share",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Shipping Simulator",
+                  "slug": "apps/vtex.store-components/shippingsimulator",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "SKU Selector",
+                  "slug": "apps/vtex.store-components/skuselector",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -15547,6 +15505,13 @@
               ]
             },
             {
+              "name": "Implementing Google One-Tap Login",
+              "slug": "guides/google-one-tap-login",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+             },
+             {
               "name": "Dealing with events",
               "slug": "store-framework-dealing-with-events",
               "origin": "",
@@ -16203,13 +16168,6 @@
               "origin": "",
               "type": "category",
               "children": [
-                {
-                  "name": "Updates to the Delivery Promise API",
-                  "slug": "2025-11-11-updates-delivery-promise-api",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
                 {
                   "name": "VTEX Help Center: Improved interface and new features",
                   "slug": "2025-11-07-vtex-help-center-improved-interface-and-new-features",
