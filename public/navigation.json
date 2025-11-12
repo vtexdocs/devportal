@@ -12893,13 +12893,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Google One-Tap Login",
-                  "slug": "apps/vtex.google-one-tap-login",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Login",
                   "slug": "apps/vtex.login",
                   "origin": "",
@@ -15512,6 +15505,13 @@
               ]
             },
             {
+              "name": "Implementing Google One-Tap Login",
+              "slug": "guides/google-one-tap-login",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+             },
+             {
               "name": "Dealing with events",
               "slug": "store-framework-dealing-with-events",
               "origin": "",
