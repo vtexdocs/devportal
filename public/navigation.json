@@ -16204,6 +16204,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Simplified domain configuration",
+                  "slug": "2025-11-14-faststore-single-domain-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Updates to the Delivery Promise API",
                   "slug": "2025-11-11-updates-delivery-promise-api",
                   "origin": "",
