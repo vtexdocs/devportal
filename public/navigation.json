@@ -2457,6 +2457,78 @@
               "children": []
             }
           ]
+        },
+        {
+          "name": "Weni by VTEX",
+          "slug": "weni-by-vtex",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Weni by VTEX CLI",
+              "slug": "weni-by-vtex-cli",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Using the Weni by VTEX CLI",
+                  "slug": "wenibyvtex-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Weni by VTEX CLI Command Reference",
+                  "slug": "wenicli-command-reference",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Authenticating with your Weni by VTEX account",
+                  "slug": "authentication",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing your Weni by VTEX projects",
+                  "slug": "project-management",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Understanding the core concepts",
+                  "slug": "core-concepts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Working with agents",
+                  "slug": "working-with-agents",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Fetching and filtering logs",
+                  "slug": "logs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Testing the Tool Run feature",
+                  "slug": "tool-run",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
