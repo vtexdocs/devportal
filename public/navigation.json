@@ -8476,6 +8476,215 @@
           ]
         },
         {
+          "name": "Organization Units API",
+          "slug": "organization-units-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Users",
+              "slug": "organization-units-api-users",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get user scopes",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/users/-userId-/scopes",
+                  "children": []
+                },
+                {
+                  "name": "Get user's organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-userId-/unit",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Organization Units",
+              "slug": "organization-units-api-organization-units",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1",
+                  "children": []
+                },
+                {
+                  "name": "Search organization units",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1",
+                  "children": []
+                },
+                {
+                  "name": "Get organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                  "children": []
+                },
+                {
+                  "name": "Rename organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                  "children": []
+                },
+                {
+                  "name": "Get all children organization units",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/children",
+                  "children": []
+                },
+                {
+                  "name": "Get root organization units",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/roots",
+                  "children": []
+                },
+                {
+                  "name": "Move organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/path",
+                  "children": []
+                },
+                {
+                  "name": "Add user to organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "children": []
+                },
+                {
+                  "name": "Remove users from organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "children": []
+                },
+                {
+                  "name": "List users from organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "children": []
+                },
+                {
+                  "name": "Find all organization units with scope value",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/scope/-scope-/value/-scopeValue-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Scopes",
+              "slug": "organization-units-api-scopes",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get organization unit scopes",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
+                  "children": []
+                },
+                {
+                  "name": "Delete all scopes",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
+                  "children": []
+                },
+                {
+                  "name": "Create organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                  "children": []
+                },
+                {
+                  "name": "Update organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                  "children": []
+                },
+                {
+                  "name": "Remove values from organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-/remove",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Payment Provider Protocol API",
           "slug": "payment-provider-protocol",
           "origin": "",

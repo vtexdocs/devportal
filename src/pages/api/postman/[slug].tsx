@@ -69,6 +69,7 @@ const referencePaths = objectFlip({
   'VTEX - Ads API': 'vtex-ads-api',
   'VTEX - Storefront Permissions API': 'storefront-permissions-api',
   'VTEX - Recommendations BFF API': 'recommendations-bff-api',
+  'VTEX - Organization Units API': 'organization-units-api',
 })
 
 function objectFlip(obj: { [x: string]: string }) {
