@@ -70,6 +70,7 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - Ads API': 'vtex-ads-api',
   'VTEX - Storefront Permissions API': 'storefront-permissions-api',
   'VTEX - Recommendations BFF API': 'recommendations-bff-api',
+  'VTEX - Organization Units API': 'organization-units-api',
 }
 
 export default async function getReferencePaths(
