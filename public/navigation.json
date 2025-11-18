@@ -2743,7 +2743,7 @@
                   "name": "Update card token",
                   "slug": "card-token-vault-api",
                   "type": "openapi",
-                  "method": "POST",
+                  "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/card-token-vault/tokens/-id-",
                   "children": []
@@ -2788,7 +2788,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/card-token-vault/tokens/import/-importid-",
+                  "endpoint": "/api/card-token-vault/tokens/import/-importId-",
                   "children": []
                 },
                 {
@@ -2797,7 +2797,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/card-token-vault/tokens/import/-importid-/report",
+                  "endpoint": "/api/card-token-vault/tokens/import/-importId-/report",
                   "children": []
                 }
               ]
