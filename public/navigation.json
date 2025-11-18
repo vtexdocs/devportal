@@ -2761,7 +2761,7 @@
                   "name": "Delete card token",
                   "slug": "card-token-vault-api",
                   "type": "openapi",
-                  "method": "DEL",
+                  "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/payments/pvt/accounts/-id-",
                   "children": []
