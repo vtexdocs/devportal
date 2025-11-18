@@ -2720,6 +2720,91 @@
           ]
         },
         {
+          "name": "Card Token Vault API",
+          "slug": "card-token-vault-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Card tokens operations",
+              "slug": "card-tokens-operations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create card token",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens",
+                  "children": []
+                },
+                {
+                  "name": "Update card token",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Get card token by ID",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/accounts/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete card token",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/accounts/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Card tokens import",
+              "slug": "card-tokens-import",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Import card tokens",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/import",
+                  "children": []
+                },
+                {
+                  "name": "Get card token import status",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/import/-importid-",
+                  "children": []
+                },
+                {
+                  "name": "Get card token import report",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/import/-importid-/report",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Catalog API - Seller Portal",
           "slug": "catalog-api-seller-portal",
           "origin": "",
