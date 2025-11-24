@@ -2220,3 +2220,9 @@ force = true
 from = "/docs/guides/create-a-regular-order-from-an-existing-cart"
 status = 308
 to = "/docs/guides/creating-a-regular-order-from-an-existing-cart"
+
+[[redirects]]
+force = true
+from = "/docs/guides/create-a-regular-order-using-the-checkout-api"
+status = 308
+to = "/docs/guides/creating-a-regular-order-with-the-checkout-api"
