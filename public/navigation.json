@@ -1131,8 +1131,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Create a regular order using the Checkout API",
-                  "slug": "create-a-regular-order-using-the-checkout-api",
+                  "name": "Creating a regular order with the Checkout API",
+                  "slug": "creating-a-regular-order-with-the-checkout-api",
                   "origin": "",
                   "type": "markdown",
                   "children": []
