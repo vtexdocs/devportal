@@ -16570,6 +16570,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 3.92.0",
+                  "slug": "2025-11-26-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Simplified domain configuration",
                   "slug": "2025-11-14-faststore-single-domain-configuration",
                   "origin": "",
