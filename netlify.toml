@@ -321,6 +321,12 @@ to = "/docs/api-reference/logistics-api#post-/api/logistics/pvt/configuration/fr
 
 [[redirects]]
 force = true
+from = "/docs/api-reference/catalog-api-getproductandskuids"
+status = 308
+to = "/docs/api-reference/catalog-api#get-/api/catalog_system/pvt/products/GetProductAndSkuIds"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/updateordertrackingstatus"
 status = 308
 to = "/docs/api-reference/orders-api#put-/api/oms/pvt/orders/-orderId-/invoice/-invoiceNumber-/tracking"
@@ -2214,3 +2220,9 @@ force = true
 from = "/docs/guides/create-a-regular-order-from-an-existing-cart"
 status = 308
 to = "/docs/guides/creating-a-regular-order-from-an-existing-cart"
+
+[[redirects]]
+force = true
+from = "/docs/guides/create-a-regular-order-using-the-checkout-api"
+status = 308
+to = "/docs/guides/creating-a-regular-order-with-the-checkout-api"

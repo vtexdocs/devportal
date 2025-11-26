@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.31.0](https://github.com/vtexdocs/devportal/compare/v1.30.1...v1.31.0) (2025-11-26)
+
+
+### Features
+
+* adding to navigation ([4ada126](https://github.com/vtexdocs/devportal/commit/4ada126c728a10e1a4992981861fd00d64b83a8d))
+* redirect ([901f8c8](https://github.com/vtexdocs/devportal/commit/901f8c8a053efe0d9585adb97734ae84e6f12e11))
+
+
+### Bug Fixes
+
+* **netlify.toml:** add redirects for promoting changes in faststore ([71f7f04](https://github.com/vtexdocs/devportal/commit/71f7f04e3577e42152dcf2041aea3a3c8360bc34))
+* **netlify.toml:** redirects ([a345ea5](https://github.com/vtexdocs/devportal/commit/a345ea52bb6f38dc8682564085413b93b25b41a1))
+* **netlify.toml:** redirects for hcms integration guides ([51145f8](https://github.com/vtexdocs/devportal/commit/51145f83f431510fd29469c82a92ea1485a5c918))
+
+
+### Docs
+
+* add release note entry for Delivery Promise API updates (2025-11-11) ([4807f7f](https://github.com/vtexdocs/devportal/commit/4807f7fc712c91de8cfc2b95c32dec8c80d97b86))
+* **navigation.json:** add faststore domain configuration entry ([c8c391e](https://github.com/vtexdocs/devportal/commit/c8c391e3fdeb90afb85a4fcc8551423b718e6bf6))
+* **navigation.json:** faststore package release notes 3.91.0 ([9c22625](https://github.com/vtexdocs/devportal/commit/9c226257928032b76c84e6d4e71caf1e11d38e98))
+* **navigation.json:** fix fs sidebar links ([dd1a9bc](https://github.com/vtexdocs/devportal/commit/dd1a9bcc67531989a437a18e9048d7a4ac8c8e2a))
+* **navigations.json:** update slug for promoting changes section ([dcbe1fd](https://github.com/vtexdocs/devportal/commit/dcbe1fd97db36ba875115fbd18e05686ca6f7fdf))
+* **netlify.toml:** fix redirects ([8b23b1e](https://github.com/vtexdocs/devportal/commit/8b23b1e02524a194c9fad34becf871fd60e95468))
+* update endpoint path ([336149a](https://github.com/vtexdocs/devportal/commit/336149a7617e582d2ae65ddbe9ae8716adcc151a))
+
+
+### Chore
+
+* add organization units api reference ([e7a73ec](https://github.com/vtexdocs/devportal/commit/e7a73ec8dfbfb3b3c1a1bd070edf62590ee238e8))
+* add storefront permissions guide to navigation ([c13156b](https://github.com/vtexdocs/devportal/commit/c13156b329dce84f63931a31ad6cc81bf9903cf6))
+* add user provisioning endpoints to navigation.json ([9c54c84](https://github.com/vtexdocs/devportal/commit/9c54c8491a04d7f5baebb7b6c25c40933cbdbbb3))
+* **navigation.json:** update faststore nav ([88db23c](https://github.com/vtexdocs/devportal/commit/88db23c921a6ffc8cf6622e4ae0eba79e98697a3))
+* **navigation.json:** update nav ([3bc801d](https://github.com/vtexdocs/devportal/commit/3bc801deb0c6050e4469d0b39c21802f751484cd))
+* **src:** remove duplicated or unused code ([252cf22](https://github.com/vtexdocs/devportal/commit/252cf22225e67d6bf2bc975fd6c7515df676afc0))
+* update navigation ([9011410](https://github.com/vtexdocs/devportal/commit/9011410739e1efdfebe1a1ff483fcff87a076af5))
+
 ### [1.30.1](https://github.com/vtexdocs/devportal/compare/v1.30.0...v1.30.1) (2025-10-23)
 
 

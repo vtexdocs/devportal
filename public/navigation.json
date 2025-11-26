@@ -1131,8 +1131,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Create a regular order using the Checkout API",
-                  "slug": "create-a-regular-order-using-the-checkout-api",
+                  "name": "Creating a regular order with the Checkout API",
+                  "slug": "creating-a-regular-order-with-the-checkout-api",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2457,6 +2457,78 @@
               "children": []
             }
           ]
+        },
+        {
+          "name": "Weni by VTEX",
+          "slug": "weni-by-vtex",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Weni by VTEX CLI",
+              "slug": "weni-by-vtex-cli",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Using the Weni by VTEX CLI",
+                  "slug": "wenibyvtex-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Weni by VTEX CLI Command Reference",
+                  "slug": "wenicli-command-reference",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Authenticating with your Weni by VTEX account",
+                  "slug": "authentication",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing your Weni by VTEX projects",
+                  "slug": "project-management",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Understanding the core concepts",
+                  "slug": "core-concepts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Working with agents",
+                  "slug": "working-with-agents",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Fetching and filtering logs",
+                  "slug": "logs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Testing the Tool Run feature",
+                  "slug": "tool-run",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -2713,6 +2785,91 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/catalog_system/pvt/virtualfolder/site/-websiteId-/changeurischema/-protocol-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Card Token Vault API",
+          "slug": "card-token-vault-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Card tokens operations",
+              "slug": "card-tokens-operations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create card token",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens",
+                  "children": []
+                },
+                {
+                  "name": "Update card token",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Get card token by ID",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/accounts/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete card token",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/accounts/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Card tokens import",
+              "slug": "card-tokens-import",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Import card tokens",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/import",
+                  "children": []
+                },
+                {
+                  "name": "Get card token import status",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/import/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Get card token import report",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/import/-importId-/report",
                   "children": []
                 }
               ]
@@ -8168,6 +8325,15 @@
                   "children": []
                 },
                 {
+                  "name": "Get order modifications summary",
+                  "slug": "orders-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/change-summary",
+                  "children": []
+                },
+                {
                   "name": "Retry order modifications",
                   "slug": "orders-api",
                   "type": "openapi",
@@ -8460,6 +8626,215 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/oms/pvt/orders/-orderId-/interactions",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Organization Units API",
+          "slug": "organization-units-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Users",
+              "slug": "organization-units-api-users",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get user scopes",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/users/-userId-/scopes",
+                  "children": []
+                },
+                {
+                  "name": "Get user's organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-userId-/unit",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Organization Units",
+              "slug": "organization-units-api-organization-units",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1",
+                  "children": []
+                },
+                {
+                  "name": "Search organization units",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1",
+                  "children": []
+                },
+                {
+                  "name": "Get organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                  "children": []
+                },
+                {
+                  "name": "Rename organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                  "children": []
+                },
+                {
+                  "name": "Get all children organization units",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/children",
+                  "children": []
+                },
+                {
+                  "name": "Get root organization units",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/roots",
+                  "children": []
+                },
+                {
+                  "name": "Move organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/path",
+                  "children": []
+                },
+                {
+                  "name": "Add user to organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "children": []
+                },
+                {
+                  "name": "Remove users from organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "children": []
+                },
+                {
+                  "name": "List users from organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "children": []
+                },
+                {
+                  "name": "Find all organization units with scope value",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/scope/-scope-/value/-scopeValue-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Scopes",
+              "slug": "organization-units-api-scopes",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get organization unit scopes",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
+                  "children": []
+                },
+                {
+                  "name": "Delete all scopes",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
+                  "children": []
+                },
+                {
+                  "name": "Create organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                  "children": []
+                },
+                {
+                  "name": "Update organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                  "children": []
+                },
+                {
+                  "name": "Remove values from organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-/remove",
                   "children": []
                 }
               ]
@@ -16209,26 +16584,39 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Simplified domain configuration",
+                  "slug": "2025-11-14-faststore-single-domain-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Updates to the Delivery Promise API",
+                  "slug": "2025-11-11-updates-delivery-promise-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Help Center: Improved interface and new features",
+                  "slug": "2025-11-07-vtex-help-center-improved-interface-and-new-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Access control by permissions in the B2B Suite",
                   "slug": "2025-11-03-access-control-by-permissions-in-the-b2b-suite",
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "November",
-              "slug": "november-2025",
-              "origin": "",
-              "type": "category",
-              "children": [
+                },
                 {
                   "name": "FastStore WebOps: New permission controls for secrets management",
                   "slug": "2025-11-03-faststore-webops-new-permission-controls-for-secrets-management",
-                   "origin": "",
-                   "type": "markdown",
-                   "children": []
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -16246,8 +16634,22 @@
                   "children": []
                 },
                 {
+                  "name": "FastStore Release Notes — Version 3.90.0",
+                  "slug": "2025-10-13-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Theme switching without server restart",
                   "slug": "2025-10-23-faststore-theme-switch-fix",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 3.91.0",
+                  "slug": "2025-10-24-faststore-release-notes-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
