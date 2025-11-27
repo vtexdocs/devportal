@@ -1,10 +1,14 @@
-import APIGuidesIcon from 'components/icons/api-guides-icon'
-import APIReferenceIcon from 'components/icons/api-reference-icon'
-import AppDevelopmentIcon from 'components/icons/app-development-icon'
-import StorefrontDevelopmentIcon from 'components/icons/storefront-development-icon'
-import VTEXIOAppsIcon from 'components/icons/vtex-io-apps-icon'
-import ReleaseNotesIcon from 'components/icons/release-notes-icon'
-import TroubleshootingIcon from 'components/icons/troubleshooting-icon'
+import {
+  APIGuidesIcon,
+  APIReferenceIcon,
+  AppDevelopmentIcon,
+  StorefrontDevelopmentIcon,
+  VTEXIOAppsIcon,
+  ReleaseNotesIcon,
+  TroubleshootingIcon,
+  DocumentationUpdatesIcon,
+  EditIcon,
+} from '@vtexdocs/components'
 
 import { getMessages } from 'utils/get-messages'
 import {
@@ -15,6 +19,7 @@ import {
   getHelpCenterTroubleshootingURL,
   getSupportURL,
 } from 'utils/get-url'
+import MenuIcon from 'components/icons/menu-icon'
 
 import {
   DocDataElement,
@@ -25,9 +30,6 @@ import {
   AdminDataElement,
   ResourceDataTroubleshooting,
 } from './typings/types'
-import EditIcon from 'components/icons/edit-icon'
-import MenuIcon from 'components/icons/menu-icon'
-import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
 import libraryConfig from './libraryConfig'
 
 libraryConfig
