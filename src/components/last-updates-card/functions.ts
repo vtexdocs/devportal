@@ -1,13 +1,15 @@
 import type { IconComponent } from 'utils/typings/types'
 
-import AddedIcon from 'components/icons/added-icon'
-import DeprecatedIcon from 'components/icons/deprecated-icon'
-import DocumentationUpdatesIcon from 'components/icons/documentation-updates-icon'
-import FixedIcon from 'components/icons/fixed-icon'
-import ImprovedIcon from 'components/icons/improved-icon'
-import ReleaseNotesIcon from 'components/icons/release-notes-icon'
-import RemovedIcon from 'components/icons/removed-icon'
-import InfoIcon from 'components/icons/info-icon'
+import {
+  DocumentationUpdatesIcon,
+  AddedIcon,
+  DeprecatedIcon,
+  FixedIcon,
+  ImprovedIcon,
+  ReleaseNotesIcon,
+  RemovedIcon,
+  InfoIcon,
+} from '@vtexdocs/components'
 
 export type ActionType =
   | 'added'

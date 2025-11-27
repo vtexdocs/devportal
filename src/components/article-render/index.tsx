@@ -19,7 +19,7 @@ import { RowItem } from 'components/faststore-components/PropsSection/PropsSecti
 import FeedbackModal from 'components/feedback-modal'
 import { useState } from 'react'
 import AskAIMenu from 'components/ask-ai'
-import EditIcon from 'components/icons/edit-icon'
+import { EditIcon } from '@vtexdocs/components'
 
 export interface MarkDownProps {
   slug: string

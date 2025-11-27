@@ -10,8 +10,7 @@ import { useRouter } from 'next/router'
 
 import DropdownMenu from 'components/dropdown-menu'
 import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
-import GridIcon from 'components/icons/grid-icon'
-import LongArrowIcon from 'components/icons/long-arrow-icon'
+import { GridIcon, LongArrowIcon } from '@vtexdocs/components'
 
 import { getFeedbackURL } from 'utils/get-url'
 import { getMessages } from 'utils/get-messages'

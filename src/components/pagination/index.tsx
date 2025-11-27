@@ -1,5 +1,5 @@
 import { Box } from '@vtex/brand-ui'
-import ArrowLeftIcon from 'components/icons/arrow-left-icon'
+import { ArrowLeftIcon } from '@vtexdocs/components'
 import ArrowRightIcon from 'components/icons/arrow-right-icon'
 import ReactPaginate from 'react-paginate'
 import styles from './styles'

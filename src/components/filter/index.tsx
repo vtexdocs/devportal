@@ -1,5 +1,5 @@
 import { Box, Button, Checkbox, Flex, Text } from '@vtex/brand-ui'
-import CloseIcon from 'components/icons/close-icon'
+import { CloseIcon } from '@vtexdocs/components'
 import FilterIcon from 'components/icons/filter-icon'
 import TrashcanIcon from 'components/icons/trashcan-icon'
 import Tag from 'components/tag'

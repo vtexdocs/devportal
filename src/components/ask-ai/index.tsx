@@ -6,7 +6,7 @@ import ChatGPTIcon from 'components/icons/chatgpt-icon'
 import GeminiIcon from 'components/icons/gemini-icon'
 import CopilotIcon from 'components/icons/copilot-icon'
 import { styles } from './styles'
-import LongArrowIcon from 'components/icons/long-arrow-icon'
+import { LongArrowIcon } from '@vtexdocs/components'
 
 type Provider = {
   id: string
