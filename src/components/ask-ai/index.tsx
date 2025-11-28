@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import copy from 'copy-text-to-clipboard'
 import { Box, Text, IconCaret } from '@vtex/brand-ui'
-import ClaudeIcon from 'components/icons/claude-icon'
-import ChatGPTIcon from 'components/icons/chatgpt-icon'
-import GeminiIcon from 'components/icons/gemini-icon'
-import CopilotIcon from 'components/icons/copilot-icon'
+import {
+  ClaudeIcon,
+  ChatGPTIcon,
+  GeminiIcon,
+  CopilotIcon,
+} from '@vtexdocs/components'
 import { styles } from './styles'
 import { LongArrowIcon } from '@vtexdocs/components'
 

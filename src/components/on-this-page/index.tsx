@@ -4,8 +4,7 @@ import AnimateHeight from 'react-animate-height'
 
 import { APIGuideContext } from 'utils/contexts/api-guide'
 
-import MenuIcon from 'components/icons/menu-icon'
-import { CloseIcon } from '@vtexdocs/components'
+import { MenuIcon, CloseIcon } from '@vtexdocs/components'
 
 import { TableOfContents } from '@vtexdocs/components'
 

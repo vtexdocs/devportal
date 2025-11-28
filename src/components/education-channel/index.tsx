@@ -3,7 +3,7 @@ import type { IconComponent } from 'utils/typings/types'
 import Link from 'next/link'
 import { Flex, Text } from '@vtex/brand-ui'
 
-import ArrowRightIcon from 'components/icons/arrow-right-icon'
+import { ArrowRightIcon } from '@vtexdocs/components'
 
 import styles from './styles'
 
