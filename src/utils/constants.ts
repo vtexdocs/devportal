@@ -8,6 +8,7 @@ import {
   TroubleshootingIcon,
   DocumentationUpdatesIcon,
   EditIcon,
+  MenuIcon,
 } from '@vtexdocs/components'
 
 import { getMessages } from 'utils/get-messages'
@@ -19,7 +20,6 @@ import {
   getHelpCenterTroubleshootingURL,
   getSupportURL,
 } from 'utils/get-url'
-import MenuIcon from 'components/icons/menu-icon'
 
 import {
   DocDataElement,
