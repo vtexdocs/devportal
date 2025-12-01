@@ -2226,3 +2226,9 @@ force = true
 from = "/docs/guides/create-a-regular-order-using-the-checkout-api"
 status = 308
 to = "/docs/guides/creating-a-regular-order-with-the-checkout-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/google-one-tap-login"
+status = 308
+to = "/docs/guides/implementing-google-one-tap-login"
