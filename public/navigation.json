@@ -16192,6 +16192,13 @@
               ]
             },
             {
+              "name": "Improving store accessibility with semantic HTML migration",
+              "slug": "vtex-io-documentation-semantic-html-migration",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Going live",
               "slug": "vtex-io-documentation-go-live",
               "origin": "",
@@ -16577,6 +16584,21 @@
           "origin": "",
           "type": "category",
           "children": [
+           {
+              "name": "December",
+              "slug": "december-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                 {
+                  "name": "Store Framework: Improve store accessibility with semantic HTML",
+                  "slug": "2025-12-02-store-framework-improve-store-accessibility-with-semantic-html",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
            {
               "name": "November",
               "slug": "november-2025",
