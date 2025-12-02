@@ -2255,7 +2255,7 @@
           ]
         },
         {
-          "name": "VTEX Activity Flow"
+          "name": "VTEX Activity Flow",
           "slug": "activity-flow",
           "origin": "",
           "type": "markdown",
