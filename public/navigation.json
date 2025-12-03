@@ -5411,6 +5411,57 @@
           ]
         },
         {
+          "name": "Default Values API",
+          "slug": "default-values-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Default values",
+              "slug": "default-values",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                },
+                {
+                  "name": "Update default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "GiftCard API",
           "slug": "giftcard-api",
           "origin": "",
