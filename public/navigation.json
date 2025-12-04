@@ -2361,6 +2361,50 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "VTEX Ads JavaScript SDK",
+              "slug": "vtex-ads-javascript-sdk",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "VTEX Ads Core Package",
+                  "slug": "vtex-ads-core-package-quickstart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "VTEX Ads Core Package Basic Usage",
+                      "slug": "vtex-ads-core-package-basic-usage",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Core Package Custom Hydration",
+                      "slug": "vtex-ads-core-package-custom-hydration",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Core Package Examples",
+                      "slug": "vtex-ads-core-package-examples",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "VTEX Ads React Package",
+                  "slug": "vtex-ads-react-package-quickstart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
