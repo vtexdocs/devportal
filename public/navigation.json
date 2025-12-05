@@ -16584,6 +16584,21 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "December",
+              "slug": "december-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore Release Notes — Version 3.93.0",
+                  "slug": "2025-12-03-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
            {
               "name": "December",
               "slug": "december-2025",
