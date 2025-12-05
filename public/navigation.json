@@ -14207,6 +14207,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Managing Secrets",
+                  "slug": "faststore/webops-managing-secrets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -15254,7 +15261,15 @@
                   "slug": "faststore/sdk-session",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "Enabling refresh token on FastStore",
+                      "slug": "faststore/session-enabling-refresh-token",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                  ]
                 }
               ]
             },
@@ -15421,28 +15436,6 @@
                       "children": []
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "name": "Security",
-              "slug": "faststore/security-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Enabling refresh token on FastStore",
-                  "slug": "faststore/security-enabling-refresh-token",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing Secrets",
-                  "slug": "faststore/security-managing-secrets",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
