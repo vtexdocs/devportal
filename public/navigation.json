@@ -16192,6 +16192,13 @@
               ]
             },
             {
+              "name": "Improving store accessibility with semantic HTML migration",
+              "slug": "vtex-io-documentation-semantic-html-migration",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Going live",
               "slug": "vtex-io-documentation-go-live",
               "origin": "",
@@ -16584,6 +16591,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Store Framework: Improve store accessibility with semantic HTML",
+                  "slug": "2025-12-05-store-framework-improve-store-accessibility-with-semantic-html",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore Release Notes — Version 3.93.0",
                   "slug": "2025-12-03-faststore-release-notes-version",
                   "origin": "",
@@ -16592,7 +16606,7 @@
                 }
               ]
             },
-           {
+            {
               "name": "November",
               "slug": "november-2025",
               "origin": "",
