@@ -16591,23 +16591,15 @@
               "type": "category",
               "children": [
                 {
-                  "name": "FastStore Release Notes — Version 3.93.0",
-                  "slug": "2025-12-03-faststore-release-notes-version",
+                  "name": "Store Framework: Improve store accessibility with semantic HTML",
+                  "slug": "2025-12-05-store-framework-improve-store-accessibility-with-semantic-html",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 }
-              ]
-            },
-           {
-              "name": "December",
-              "slug": "december-2025",
-              "origin": "",
-              "type": "category",
-              "children": [
-                 {
-                  "name": "Store Framework: Improve store accessibility with semantic HTML",
-                  "slug": "2025-12-05-store-framework-improve-store-accessibility-with-semantic-html",
+                {
+                  "name": "FastStore Release Notes — Version 3.93.0",
+                  "slug": "2025-12-03-faststore-release-notes-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
