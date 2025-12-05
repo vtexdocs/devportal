@@ -14200,7 +14200,15 @@
               "slug": "faststore/webops-dashboard",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Configuring production and preview branches in WebOps",
+                  "slug": "faststore/webops-configuring-production-and-preview-branches",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Headless CMS",
@@ -16590,6 +16598,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore WebOps: Custom branch configuration for production and preview",
+                  "slug": "2025-12-05-faststore-webops-custom-branch-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Store Framework: Improve store accessibility with semantic HTML",
                   "slug": "2025-12-05-store-framework-improve-store-accessibility-with-semantic-html",
