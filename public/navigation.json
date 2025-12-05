@@ -16596,7 +16596,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
+                },
                 {
                   "name": "FastStore Release Notes — Version 3.93.0",
                   "slug": "2025-12-03-faststore-release-notes-version",
@@ -16606,7 +16606,7 @@
                 }
               ]
             },
-           {
+            {
               "name": "November",
               "slug": "november-2025",
               "origin": "",
