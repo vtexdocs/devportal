@@ -4293,6 +4293,49 @@
               ]
             },
             {
+              "name": "Multi-language beta",
+              "slug": "catalog-api-multi-language-beta",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get product translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/product/-productId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Create or update product translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/product/-productId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Get product specification translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/products/-productId-/specification/-specificationId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Create or update product specification translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/products/-productId-/specification/-specificationId-/language",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Similar Category",
               "slug": "catalog-api-similar-category",
               "type": "category",
