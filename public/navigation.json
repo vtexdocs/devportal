@@ -4332,6 +4332,282 @@
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/products/-productId-/specification/-specificationId-/language",
                   "children": []
+                },
+                {
+                  "name": "Multi-language SKU beta",
+                  "slug": "catalog-api-multi-language-sku-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get SKU translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU attribute translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-attributeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU attribute translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-attributeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU file translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-fileId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU file translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-fileId-/language",
+                      "children": []  
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language specification beta",
+                  "slug": "catalog-api-multi-language-specification-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get specification group translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-specificationGroupId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update specification group translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-specificationGroupId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get specification translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-specificationId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update specification translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-specificationId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get specification value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-valueId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update specification value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-valueId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language category beta",
+                  "slug": "catalog-api-multi-language-category-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get category translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/category/-categoryId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update category translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/category/-categoryId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language brand beta",
+                  "slug": "catalog-api-multi-language-brand-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get brand translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/brand/-brandId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update brand translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/brand/-brandId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language attachment and service beta",
+                  "slug": "catalog-api-multi-language-attachment-and-service-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get attachment translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/attachment/-attachmentId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update attachment translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/attachment/-attachmentId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU service type translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/service/-serviceTypeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU service type translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/service/-serviceTypeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU service translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/service/-skuserviceId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU service translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/service/-skuserviceId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU service value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/service/-skuServiceValueId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU service value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/service/-skuServiceValueId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language collection beta",
+                  "slug": "catalog-api-multi-language-collection-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get collection translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/collection/-collectionId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update collection translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/collection/-collectionId-/language",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
