@@ -4362,7 +4362,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-attributeId-/language",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language",
                       "children": []
                     },
                     {
@@ -4371,7 +4371,7 @@
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-attributeId-/language",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language",
                       "children": []
                     },
                     {
@@ -4380,7 +4380,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-fileId-/language",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-/language",
                       "children": []
                     },
                     {
@@ -4389,7 +4389,7 @@
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-fileId-/language",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-/language",
                       "children": []  
                     }
                   ]
@@ -4405,7 +4405,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/specification/-specificationGroupId-/language",
+                      "endpoint": "/api/catalog/pvt/specificationgroup/-specificationGroupId-/language",
                       "children": []
                     },
                     {
@@ -4414,7 +4414,7 @@
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/specification/-specificationGroupId-/language",
+                      "endpoint": "/api/catalog/pvt/specificationgroup/-specificationGroupId-/language",
                       "children": []
                     },
                     {
@@ -4441,7 +4441,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/specification/-valueId-/language",
+                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language",
                       "children": []
                     },
                     {
@@ -4450,7 +4450,7 @@
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/specification/-valueId-/language",
+                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language",
                       "children": []
                     }
                   ]
@@ -4534,7 +4534,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/service/-serviceTypeId-/language",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-/language",
                       "children": []
                     },
                     {
@@ -4543,7 +4543,7 @@
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/service/-serviceTypeId-/language",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-/language",
                       "children": []
                     },
                     {
@@ -4552,7 +4552,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/service/-skuserviceId-/language",
+                      "endpoint": "/api/catalog/pvt/skuservice/-skuserviceId-/language",
                       "children": []
                     },
                     {
@@ -4561,7 +4561,7 @@
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/service/-skuserviceId-/language",
+                      "endpoint": "/api/catalog/pvt/skuservice/-skuserviceId-/language",
                       "children": []
                     },
                     {
@@ -4570,7 +4570,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/service/-skuServiceValueId-/language",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-/language",
                       "children": []
                     },
                     {
@@ -4579,7 +4579,7 @@
                       "type": "openapi",
                       "method": "PUT",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/service/-skuServiceValueId-/language",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-/language",
                       "children": []
                     }
                   ]
