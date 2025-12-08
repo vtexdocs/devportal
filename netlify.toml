@@ -2231,7 +2231,7 @@ to = "/docs/guides/creating-a-regular-order-with-the-checkout-api"
 force = true
 from = "/docs/guides/faststore/security-enabling-refresh-token"
 status = 308
-to = "/docs/guides/faststore/session-enabling-refresh-tokens"
+to = "/docs/guides/faststore/session-enabling-refresh-token"
 
 [[redirects]]
 force = true
