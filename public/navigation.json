@@ -8156,6 +8156,49 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Shopper data",
+              "slug": "master-data-api-v2-shopper-data",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get shopper schema",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/schemas/v1",
+                  "children": []
+                },
+                {
+                  "name": "Create shopper document",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get shopper document by user ID",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents/-shopperId-",
+                  "children": []
+                },
+                {
+                  "name": "Search shopper document by user ID",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/search",
+                  "children": []
+                }
+              ]
             }
           ]
         },
