@@ -8357,6 +8357,33 @@
                   "origin": "",
                   "endpoint": "/api/dataentities/AD/documents/-id-",
                   "children": []
+                },
+                {
+                  "name": "Get address by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Update address by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete address by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
                 }
               ]
             },
@@ -8456,6 +8483,65 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/dataentities/-acronym-/documents/-id-/versions/-versionId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Contracts",
+              "slug": "masterdata-api-contracts",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Update contract by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                  "children": []
+                },
+                {
+                  "name": "Get contract by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete contract by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Contact information",
+              "slug": "masterdata-api-contact-information",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create new contact information",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents",
+                  "children": []
+                },
+                {
+                  "name": "Search contact information",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/search",
                   "children": []
                 }
               ]
