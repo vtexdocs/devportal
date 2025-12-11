@@ -2796,6 +2796,116 @@
           ]
         },
         {
+          "name": "Buying Policies API",
+          "slug": "buying-policies-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Dimensions",
+              "slug": "dimensions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create dimension",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions",
+                  "children": []
+                },
+                {
+                  "name": "Get dimensions information",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions",
+                  "children": []
+                },
+                {
+                  "name": "Update dimension",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete dimension",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Rules",
+              "slug": "rules",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create dimension rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                  "children": []
+                },
+                {
+                  "name": "Update all dimension rules",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                  "children": []
+                },
+                {
+                  "name": "Update dimension rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete dimension rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Manual authorization",
+              "slug": "manual-authorization",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Accept or deny rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/commercial-authorizations/-orderAuthId-/callback",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Legacy CMS Portal API",
           "slug": "legacy-cms-portal-api",
           "origin": "",
