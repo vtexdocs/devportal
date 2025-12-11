@@ -14470,15 +14470,7 @@
               "slug": "faststore/getting-started-faststore-versions-and-support-levels",
               "origin": "",
               "type": "markdown",
-              "children": [
-                {
-                  "name": "Upgrading from FastStore v2 to v3",
-                  "slug": "faststore/getting-started-faststore-v2-to-v3",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "children": []
             },
             {
               "name": "Getting Started",
