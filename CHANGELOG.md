@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.31.1](https://github.com/vtexdocs/devportal/compare/v1.31.0...v1.31.1) (2025-12-11)
+
+
+### Features
+
+* add new endpoints ([3ed7079](https://github.com/vtexdocs/devportal/commit/3ed7079485e0478b7356a08a1a4627b40e2d1c35))
+* add to navigation ([ed00e09](https://github.com/vtexdocs/devportal/commit/ed00e09d117f0eeed3da35fd1fc95eccaf3c8fc2))
+* add to navigation ([6d6b053](https://github.com/vtexdocs/devportal/commit/6d6b05390b84ff45d9ce59e1dd442aa04eea4b7c))
+* update master data v1 navigation ([e03ccc3](https://github.com/vtexdocs/devportal/commit/e03ccc3709b0c322ce2461d8eb5713d33a3171e5))
+* update master data v2 ([31856f3](https://github.com/vtexdocs/devportal/commit/31856f32439b1a09ab6caba9880998e9d08d7c63))
+
+
+### Chore
+
+* **components:** use icon from @vtexdocs/components and remove duplicated icons ([4c38e0c](https://github.com/vtexdocs/devportal/commit/4c38e0c9fbaaa9ee90b4c24ea2d7b04d3503e1a4))
+* **icons:** remove icons from repo. migrate and use all icons from @vtexdocs/components ([179f3f2](https://github.com/vtexdocs/devportal/commit/179f3f2f9667f98a223c84ce2842a0ca74b8bf12))
+
+
+### Docs
+
+* **navigation.json:** fix release note position ([a190817](https://github.com/vtexdocs/devportal/commit/a190817b8c73b4d3065ccbe9c4958313f9096d3b))
+* **netlify.toml:** fix faststore redirect ([12f5086](https://github.com/vtexdocs/devportal/commit/12f50867fed1268ae4f252242a9e34c0a77230f1))
+
 ## [1.31.0](https://github.com/vtexdocs/devportal/compare/v1.30.1...v1.31.0) (2025-11-26)
 
 
