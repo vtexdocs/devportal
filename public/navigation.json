@@ -2509,56 +2509,56 @@
               "children": [
                 {
                   "name": "Using the Weni by VTEX CLI",
-                  "slug": "wenibyvtex-guide",
+                  "slug": "using-the-weni-by-vtex-cli",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Weni by VTEX CLI Command Reference",
-                  "slug": "wenicli-command-reference",
+                  "slug": "weni-by-vtex-cli-command-reference",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Authenticating with your Weni by VTEX account",
-                  "slug": "authentication",
+                  "slug": "authenticating-with-your-weni-by-vtex-account",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Managing your Weni by VTEX projects",
-                  "slug": "project-management",
+                  "slug": "managing-your-weni-by-vtex-projects",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Understanding the core concepts",
-                  "slug": "core-concepts",
+                  "slug": "weni-by-vtex-understanding-the-core-concepts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Working with agents",
-                  "slug": "working-with-agents",
+                  "name": "Working with Weni by VTEX agents",
+                  "slug": "working-with-weni-by-vtex-agents",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Fetching and filtering logs",
-                  "slug": "logs",
+                  "slug": "weni-by-vtex-fetching-and-filtering-logs",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Testing the Tool Run feature",
-                  "slug": "tool-run",
+                  "name": "Using Weni Run to execute tool tests",
+                  "slug": "using-weni-run-to-execute-tool-tests",
                   "origin": "",
                   "type": "markdown",
                   "children": []
