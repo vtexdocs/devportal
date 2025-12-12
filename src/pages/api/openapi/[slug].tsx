@@ -13,6 +13,7 @@ const logger = getLogger('openapi-endpoint')
 
 const referencePaths = objectFlip({
   'VTEX - Antifraud Provider API': 'antifraud-provider-protocol',
+  'VTEX - Buying Policies API': 'buying-policies-api',
   'VTEX - Legacy CMS Portal API': 'legacy-cms-portal-api',
   'VTEX - Catalog API Seller Portal': 'catalog-api-seller-portal',
   'VTEX - Catalog API': 'catalog-api',
