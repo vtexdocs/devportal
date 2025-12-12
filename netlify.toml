@@ -2247,18 +2247,18 @@ to = "/docs/guides/faststore/session-overview"
 
 [[redirects]]
 force = true
-from = "docs/guides/wenibyvtex-guide"
+from = "/docs/guides/wenibyvtex-guide"
 status = 308
 to = "/docs/guides/using-the-weni-by-vtex-cli"
 
 [[redirects]]
 force = true
-from = "docs/guides/wenicli-command-reference"
+from = "/docs/guides/wenicli-command-reference"
 status = 308
 to = "/docs/guides/weni-by-vtex-cli-command-reference"
 
 [[redirects]]
 force = true
-from = "docs/guides/tool-run"
+from = "/docs/guides/tool-run"
 status = 308
 to = "/docs/guides/using-weni-run-to-execute-tool-tests"
