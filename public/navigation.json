@@ -17077,6 +17077,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Activity Flow: Monitoring Headless stores and mobile apps",
+                  "slug": "2025-12-11-activity-flow-monitoring-headless-stores-and-mobile-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore WebOps: Custom branch configuration for production and preview",
                   "slug": "2025-12-05-faststore-webops-custom-branch-configuration",
                   "origin": "",
