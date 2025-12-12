@@ -78,6 +78,7 @@ const referencePaths = objectFlip({
   'VTEX - Recommendations BFF API': 'recommendations-bff-api',
   'VTEX - Organization Units API': 'organization-units-api',
   'VTEX - Card Token Vault API': 'card-token-vault-api',
+  'VTEX - Default Values API': 'default-values-api',
 })
 
 // Type for reference paths mapping
