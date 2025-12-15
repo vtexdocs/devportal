@@ -13483,13 +13483,6 @@
               "children": []
             },
             {
-              "name": "Google One-Tap Login",
-              "slug": "guides/google-one-tap-login",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Header",
               "slug": "apps/vtex.store-header",
               "origin": "",
@@ -16676,6 +16669,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Implementing Google One-tap login",
+              "slug": "implementing-google-one-tap-login",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             },
             {
               "name": "Improving store accessibility with semantic HTML migration",
