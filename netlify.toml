@@ -2267,4 +2267,4 @@ to = "/docs/guides/using-weni-run-to-execute-tool-tests"
 force = true
 from = "/docs/guides/google-one-tap-login"
 status = 308
-to = "/docs/guides/implementing-google-one-tap-login"
+to = "/docs/guides/vtex-io-documentation-implementing-google-one-tap-login"
