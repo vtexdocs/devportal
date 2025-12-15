@@ -2796,6 +2796,274 @@
           ]
         },
         {
+          "name": "Budgets API",
+          "slug": "budgets-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Statements",
+              "slug": "statements",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Budget Statements",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/statements",
+                  "children": []
+                },
+                {
+                  "name": "Get Allocation Statements",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/statements",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Transactions",
+              "slug": "transactions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Transaction",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Refund Transaction",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-/refund",
+                  "children": []
+                },
+                {
+                  "name": "Get Transaction",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Reservations",
+              "slug": "reservations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
+                  "children": []
+                },
+                {
+                  "name": "List Reservations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
+                  "children": []
+                },
+                {
+                  "name": "Get Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                  "children": []
+                },
+                {
+                  "name": "Confirmation Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-/confirmation",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Allocations",
+              "slug": "allocations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                  "children": []
+                },
+                {
+                  "name": "List Budget Allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                  "children": []
+                },
+                {
+                  "name": "Create Batch of Allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/batch",
+                  "children": []
+                },
+                {
+                  "name": "Get Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Update Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Change allocation status",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/status",
+                  "children": []
+                },
+                {
+                  "name": "Update allocation usage",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/usage",
+                  "children": []
+                },
+                {
+                  "name": "Query allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/allocations/query",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Budgets",
+              "slug": "budgets",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-",
+                  "children": []
+                },
+                {
+                  "name": "List budgets",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-",
+                  "children": []
+                },
+                {
+                  "name": "Get budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Update budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Update budget status",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/status",
+                  "children": [] 
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Legacy CMS Portal API",
           "slug": "legacy-cms-portal-api",
           "origin": "",
