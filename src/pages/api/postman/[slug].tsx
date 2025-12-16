@@ -71,6 +71,7 @@ const referencePaths = objectFlip({
   'VTEX - Recommendations BFF API': 'recommendations-bff-api',
   'VTEX - Organization Units API': 'organization-units-api',
   'VTEX - Card Token Vault API': 'card-token-vault-api',
+  'VTEX - Budgets API': 'budgets-api',
 })
 
 function objectFlip(obj: { [x: string]: string }) {

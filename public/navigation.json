@@ -2509,56 +2509,56 @@
               "children": [
                 {
                   "name": "Using the Weni by VTEX CLI",
-                  "slug": "wenibyvtex-guide",
+                  "slug": "using-the-weni-by-vtex-cli",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Weni by VTEX CLI Command Reference",
-                  "slug": "wenicli-command-reference",
+                  "slug": "weni-by-vtex-cli-command-reference",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Authenticating with your Weni by VTEX account",
-                  "slug": "authentication",
+                  "slug": "authenticating-with-your-weni-by-vtex-account",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Managing your Weni by VTEX projects",
-                  "slug": "project-management",
+                  "slug": "managing-your-weni-by-vtex-projects",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Understanding the core concepts",
-                  "slug": "core-concepts",
+                  "slug": "weni-by-vtex-understanding-the-core-concepts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Working with agents",
-                  "slug": "working-with-agents",
+                  "name": "Working with Weni by VTEX agents",
+                  "slug": "working-with-weni-by-vtex-agents",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Fetching and filtering logs",
-                  "slug": "logs",
+                  "slug": "weni-by-vtex-fetching-and-filtering-logs",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Testing the Tool Run feature",
-                  "slug": "tool-run",
+                  "name": "Using Weni Run to execute tool tests",
+                  "slug": "using-weni-run-to-execute-tool-tests",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2796,110 +2796,268 @@
           ]
         },
         {
-          "name": "Buying Policies API",
-          "slug": "buying-policies-api",
+          "name": "Budgets API",
+          "slug": "budgets-api",
           "origin": "",
           "type": "openapi",
           "children": [
             {
-              "name": "Dimensions",
-              "slug": "dimensions",
+              "name": "Statements",
+              "slug": "statements",
               "type": "category",
               "children": [
                 {
-                  "name": "Create dimension",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions",
-                  "children": []
-                },
-                {
-                  "name": "Get dimensions information",
-                  "slug": "buying-policies-api",
+                  "name": "Get Budget Statements",
+                  "slug": "budgets-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/statements",
                   "children": []
                 },
                 {
-                  "name": "Update dimension",
-                  "slug": "buying-policies-api",
+                  "name": "Get Allocation Statements",
+                  "slug": "budgets-api",
                   "type": "openapi",
-                  "method": "PUT",
+                  "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete dimension",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/statements",
                   "children": []
                 }
               ]
             },
             {
-              "name": "Rules",
-              "slug": "rules",
+              "name": "Transactions",
+              "slug": "transactions",
               "type": "category",
               "children": [
                 {
-                  "name": "Create dimension rule",
-                  "slug": "buying-policies-api",
+                  "name": "Create Transaction",
+                  "slug": "budgets-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions",
                   "children": []
                 },
                 {
-                  "name": "Update all dimension rules",
-                  "slug": "buying-policies-api",
+                  "name": "Refund Transaction",
+                  "slug": "budgets-api",
                   "type": "openapi",
-                  "method": "PUT",
+                  "method": "POST",
                   "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-/refund",
                   "children": []
                 },
                 {
-                  "name": "Update dimension rule",
-                  "slug": "buying-policies-api",
+                  "name": "Get Transaction",
+                  "slug": "budgets-api",
                   "type": "openapi",
-                  "method": "PUT",
+                  "method": "GET",
                   "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete dimension rule",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-",
                   "children": []
                 }
               ]
             },
             {
-              "name": "Manual authorization",
-              "slug": "manual-authorization",
+              "name": "Reservations",
+              "slug": "reservations",
               "type": "category",
               "children": [
                 {
-                  "name": "Accept or deny rule",
-                  "slug": "buying-policies-api",
+                  "name": "Create Reservation",
+                  "slug": "budgets-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/commercial-authorizations/-orderAuthId-/callback",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
                   "children": []
+                },
+                {
+                  "name": "List Reservations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
+                  "children": []
+                },
+                {
+                  "name": "Get Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                  "children": []
+                },
+                {
+                  "name": "Confirmation Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-/confirmation",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Allocations",
+              "slug": "allocations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                  "children": []
+                },
+                {
+                  "name": "List Budget Allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                  "children": []
+                },
+                {
+                  "name": "Create Batch of Allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/batch",
+                  "children": []
+                },
+                {
+                  "name": "Get Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Update Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Change allocation status",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/status",
+                  "children": []
+                },
+                {
+                  "name": "Update allocation usage",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/usage",
+                  "children": []
+                },
+                {
+                  "name": "Query allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/allocations/query",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Budgets",
+              "slug": "budgets",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-",
+                  "children": []
+                },
+                {
+                  "name": "List budgets",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-",
+                  "children": []
+                },
+                {
+                  "name": "Get budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Update budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Update budget status",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/status",
+                  "children": [] 
                 }
               ]
             }
@@ -17186,6 +17344,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Activity Flow: Monitoring Headless stores and mobile apps",
+                  "slug": "2025-12-11-activity-flow-monitoring-headless-stores-and-mobile-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore WebOps: Custom branch configuration for production and preview",
                   "slug": "2025-12-05-faststore-webops-custom-branch-configuration",
