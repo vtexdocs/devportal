@@ -789,6 +789,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Managing tokenized cards",
+                  "slug": "managing-tokenized-cards",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -9922,6 +9929,15 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/pvt/merchants/payment-systems",
+                  "children": []
+                },
+                {
+                  "name": "Get card data",
+                  "slug": "payments-gateway-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/account/-cardId-",
                   "children": []
                 }
               ]
