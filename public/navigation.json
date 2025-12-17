@@ -17455,6 +17455,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 3.95.0",
+                  "slug": "2025-12-17-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Activity Flow: Monitoring Headless stores and mobile apps",
                   "slug": "2025-12-11-activity-flow-monitoring-headless-stores-and-mobile-apps",
                   "origin": "",
