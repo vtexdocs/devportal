@@ -17345,6 +17345,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: New parameter for custom analytics events",
+                  "slug": "2025-12-18-faststore-custom-event-parameter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Activity Flow: Monitoring Headless stores and mobile apps",
                   "slug": "2025-12-11-activity-flow-monitoring-headless-stores-and-mobile-apps",
                   "origin": "",
