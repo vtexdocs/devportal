@@ -8151,6 +8151,15 @@
                   "origin": "",
                   "endpoint": "/pvt/orders/-marketplaceOrderId-/cancel",
                   "children": []
+                },
+                {
+                  "name": "Send agreement for order modifications",
+                  "slug": "marketplace-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/pvt/orders/-participantOrderId-/changes/-changeRequestId-/send-agreement",
+                  "children": []
                 }
               ]
             },
