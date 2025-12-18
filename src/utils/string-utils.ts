@@ -17,23 +17,6 @@ export const slugify = (str: string) => {
     .replace(/[^a-z0-9\-]/g, '')
 }
 
-type Child = string | { props: { children: Child[] } }
-
-export const childrenToString: (children: Child[]) => string = (children) => {
-  if (!children) return ''
-  else if (Array.isArray(children))
-    return children
-      .map((child) => {
-        if (typeof child === 'string') return child
-        return childrenToString(child.props.children)
-      })
-      .join('')
-  else {
-    if (typeof children === 'string') return children
-    return childrenToString(children['props']['children'])
-  }
-}
-
 export const matrixToMarkdownTable: (matrix: string[][]) => string = (
   matrix
 ) => {

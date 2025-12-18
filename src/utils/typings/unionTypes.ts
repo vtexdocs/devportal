@@ -1,5 +1,3 @@
-export type Locale = 'en' | 'pt' | 'es'
-
 export type DocumentationTitle =
   | 'Guides'
   | 'API Reference'
@@ -14,14 +12,6 @@ export type AdminTitle =
   | 'Sidebar Editor'
   | 'API Index Generator'
   | 'Markdown Preview'
-
-export type SlugPrefix =
-  | 'guides'
-  | 'api-reference'
-  | 'app-development'
-  | 'storefront-development'
-  | 'vtex-io-apps'
-  | 'faststore'
 
 export type ResourceTitle =
   | 'Community'
