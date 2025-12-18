@@ -6133,6 +6133,143 @@
           ]
         },
         {
+          "name": "Custom Field API",
+          "slug": "custom-field-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Custom Field Settings",
+              "slug": "custom-field-api-custom-field-settings",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Custom Field Settings",
+                  "slug": "custom-field-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get Custom Field Settings",
+                  "slug": "custom-field-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/search",
+                  "children": []
+                },
+                {
+                  "name": "Update Custom Field Settings",
+                  "slug": "custom-field-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents/{documentId}",
+                  "children": []
+                },
+                {
+                  "name": "Delete Custom Field Settings",
+                  "slug": "custom-field-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents/{documentId}",
+                  "children": []
+                }
+              ]
+            },
+              {
+                "name": "Custom Field Values",
+                "slug": "custom-field-api-custom-field-values",
+                "type": "category",
+                "children": [
+                  {
+                    "name": "Get Custom Field Values",
+                    "slug": "custom-field-api",
+                    "type": "openapi",
+                    "method": "GET",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/documents/{customFieldValueId}",
+                    "children": []
+                  },
+                  {
+                    "name": "Create Custom Field Value",
+                    "slug": "custom-field-api",
+                    "type": "openapi",
+                    "method": "POST",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/documents",
+                    "children": []
+                  },
+                  {
+                    "name": "Update Custom Field Value",
+                    "slug": "custom-field-api",
+                    "type": "openapi",
+                    "method": "PATCH",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/documents/{customFieldValueId}",
+                    "children": []
+                  },
+                  {
+                    "name": "Delete Custom Field Value",
+                    "slug": "custom-field-api",
+                    "type": "openapi",
+                    "method": "DELETE",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/documents/{customFieldValueId}",
+                    "children": []
+                  },
+                  {
+                    "name": "Search Custom Field Values",
+                    "slug": "custom-field-api",
+                    "type": "openapi",
+                    "method": "GET",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/search",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "OrderForm management",
+                "slug": "custom-field-api-orderform-management",
+                "type": "category",
+                "children": [
+                  {
+                    "name": "Create or update custom field in orderForm",
+                    "slug": "custom-field-api",
+                    "type": "openapi",
+                    "method": "PUT",
+                    "origin": "",
+                    "endpoint":"/api/checkout/pub/orderForm/{orderFormId}/customFields/{linkedEntity.type}/{linkedEntity.id}",
+                    "children": []
+                  },
+                  {
+                    "name": "Create or update custom fields in orderForm in batch",
+                    "slug": "custom-field-api",
+                    "type": "openapi",
+                    "method": "PUT",
+                    "origin": "",
+                    "endpoint":"/api/checkout/pub/orderForm/{orderFormId}/customFields",
+                    "children": []
+                  },
+                  {
+                    "name": "Delete custom field in orderForm",
+                    "slug": "custom-field-api",
+                    "type": "openapi",
+                    "method": "DELETE",
+                    "origin": "",
+                    "endpoint":"/api/checkout/pub/orderForm/{orderFormId}/customFields/{linkedEntity.type}/{linkedEntity.id}/{fieldName}",
+                    "children": []
+                  }
+                ]
+              }
+              ]
+        },
+        {
           "name": "Delivery Promise Notification API",
           "slug": "delivery-promise-notification-api",
           "origin": "",
