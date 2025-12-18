@@ -6167,7 +6167,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/customFieldSettings/documents/{documentId}",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
                   "children": []
                 },
                 {
@@ -6176,7 +6176,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/customFieldSettings/documents/{documentId}",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
                   "children": []
                 }
               ]
@@ -6192,7 +6192,7 @@
                     "type": "openapi",
                     "method": "GET",
                     "origin": "",
-                    "endpoint":"/api/dataentities/customFieldValues/documents/{customFieldValueId}",
+                    "endpoint":"/api/dataentities/customFieldValues/documents/-customFieldValueId-",
                     "children": []
                   },
                   {
@@ -6210,7 +6210,7 @@
                     "type": "openapi",
                     "method": "PATCH",
                     "origin": "",
-                    "endpoint":"/api/dataentities/customFieldValues/documents/{customFieldValueId}",
+                    "endpoint":"/api/dataentities/customFieldValues/documents/-customFieldValueId-",
                     "children": []
                   },
                   {
@@ -6219,7 +6219,7 @@
                     "type": "openapi",
                     "method": "DELETE",
                     "origin": "",
-                    "endpoint":"/api/dataentities/customFieldValues/documents/{customFieldValueId}",
+                    "endpoint":"/api/dataentities/customFieldValues/documents/-customFieldValueId-",
                     "children": []
                   },
                   {
