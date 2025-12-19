@@ -6,6 +6,7 @@ export const config = {
 
 const referencePaths = objectFlip({
   'VTEX - Antifraud Provider API': 'antifraud-provider-protocol',
+  'VTEX - Buying Policies API': 'buying-policies-api',
   'VTEX - Legacy CMS Portal API': 'legacy-cms-portal-api',
   'VTEX - Catalog API Seller Portal': 'catalog-api-seller-portal',
   'VTEX - Catalog API': 'catalog-api',
@@ -71,6 +72,8 @@ const referencePaths = objectFlip({
   'VTEX - Recommendations BFF API': 'recommendations-bff-api',
   'VTEX - Organization Units API': 'organization-units-api',
   'VTEX - Card Token Vault API': 'card-token-vault-api',
+  'VTEX - Budgets API': 'budgets-api',
+  'VTEX - Default Values API': 'default-values-api',
 })
 
 function objectFlip(obj: { [x: string]: string }) {

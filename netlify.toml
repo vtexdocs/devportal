@@ -2226,3 +2226,45 @@ force = true
 from = "/docs/guides/create-a-regular-order-using-the-checkout-api"
 status = 308
 to = "/docs/guides/creating-a-regular-order-with-the-checkout-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/security-enabling-refresh-token"
+status = 308
+to = "/docs/guides/faststore/session-enabling-refresh-token"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/security-managing-secrets"
+status = 308
+to = "/docs/guides/faststore/webops-managing-secrets"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/sdk-session"
+status = 308
+to = "/docs/guides/faststore/session-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/wenibyvtex-guide"
+status = 308
+to = "/docs/guides/using-the-weni-by-vtex-cli"
+
+[[redirects]]
+force = true
+from = "/docs/guides/wenicli-command-reference"
+status = 308
+to = "/docs/guides/weni-by-vtex-cli-command-reference"
+
+[[redirects]]
+force = true
+from = "/docs/guides/tool-run"
+status = 308
+to = "/docs/guides/using-weni-run-to-execute-tool-tests"
+
+[[redirects]]
+force = true
+from = "/docs/guides/google-one-tap-login"
+status = 308
+to = "/docs/guides/vtex-io-documentation-implementing-google-one-tap-login"

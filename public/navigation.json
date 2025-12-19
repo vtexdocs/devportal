@@ -789,6 +789,27 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "PPP Versioning",
+                  "slug": "ppp-versioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing payments tokenization",
+                  "slug": "implementing-payments-tokenization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing tokenized cards",
+                  "slug": "managing-tokenized-cards",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2255,6 +2276,43 @@
           ]
         },
         {
+          "name": "VTEX Activity Flow",
+          "slug": "activity-flow",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Installing Activity Flow in Headless stores",
+              "slug": "installing-activity-flow-in-headless-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Installing Activity Flow in mobile apps",
+              "slug": "installing-activity-flow-in-mobile-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Installing Activity Flow in Flutter apps",
+                  "slug": "installing-activity-flow-in-flutter-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Installing Activity Flow in React Native apps",
+                  "slug": "installing-activity-flow-in-react-native-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "VTEX Ads",
           "slug": "vtex-ads",
           "origin": "",
@@ -2472,56 +2530,56 @@
               "children": [
                 {
                   "name": "Using the Weni by VTEX CLI",
-                  "slug": "wenibyvtex-guide",
+                  "slug": "using-the-weni-by-vtex-cli",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Weni by VTEX CLI Command Reference",
-                  "slug": "wenicli-command-reference",
+                  "slug": "weni-by-vtex-cli-command-reference",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Authenticating with your Weni by VTEX account",
-                  "slug": "authentication",
+                  "slug": "authenticating-with-your-weni-by-vtex-account",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Managing your Weni by VTEX projects",
-                  "slug": "project-management",
+                  "slug": "managing-your-weni-by-vtex-projects",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Understanding the core concepts",
-                  "slug": "core-concepts",
+                  "slug": "weni-by-vtex-understanding-the-core-concepts",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Working with agents",
-                  "slug": "working-with-agents",
+                  "name": "Working with Weni by VTEX agents",
+                  "slug": "working-with-weni-by-vtex-agents",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Fetching and filtering logs",
-                  "slug": "logs",
+                  "slug": "weni-by-vtex-fetching-and-filtering-logs",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Testing the Tool Run feature",
-                  "slug": "tool-run",
+                  "name": "Using Weni Run to execute tool tests",
+                  "slug": "using-weni-run-to-execute-tool-tests",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2752,6 +2810,384 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Budgets API",
+          "slug": "budgets-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Statements",
+              "slug": "statements",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Budget Statements",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/statements",
+                  "children": []
+                },
+                {
+                  "name": "Get Allocation Statements",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/statements",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Transactions",
+              "slug": "transactions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Transaction",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Refund Transaction",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-/refund",
+                  "children": []
+                },
+                {
+                  "name": "Get Transaction",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Reservations",
+              "slug": "reservations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
+                  "children": []
+                },
+                {
+                  "name": "List Reservations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
+                  "children": []
+                },
+                {
+                  "name": "Get Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                  "children": []
+                },
+                {
+                  "name": "Confirmation Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-/confirmation",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Allocations",
+              "slug": "allocations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                  "children": []
+                },
+                {
+                  "name": "List Budget Allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                  "children": []
+                },
+                {
+                  "name": "Create Batch of Allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/batch",
+                  "children": []
+                },
+                {
+                  "name": "Get Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Update Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Change allocation status",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/status",
+                  "children": []
+                },
+                {
+                  "name": "Update allocation usage",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/usage",
+                  "children": []
+                },
+                {
+                  "name": "Query allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/allocations/query",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Budgets",
+              "slug": "budgets",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-",
+                  "children": []
+                },
+                {
+                  "name": "List budgets",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-",
+                  "children": []
+                },
+                {
+                  "name": "Get budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Update budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Update budget status",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/status",
+                  "children": [] 
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Buying Policies API",
+          "slug": "buying-policies-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Dimensions",
+              "slug": "dimensions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create dimension",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions",
+                  "children": []
+                },
+                {
+                  "name": "Get dimensions information",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions",
+                  "children": []
+                },
+                {
+                  "name": "Update dimension",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete dimension",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Rules",
+              "slug": "rules",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create dimension rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                  "children": []
+                },
+                {
+                  "name": "Update all dimension rules",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                  "children": []
+                },
+                {
+                  "name": "Update dimension rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete dimension rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Manual authorization",
+              "slug": "manual-authorization",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Accept or deny rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/commercial-authorizations/-orderAuthId-/callback",
                   "children": []
                 }
               ]
@@ -4289,6 +4725,325 @@
                   "origin": "",
                   "endpoint": "/api/catalog_system/pvt/skuseller/changenotification/-skuId-",
                   "children": []
+                }
+              ]
+            },
+            {
+              "name": "Multi-language beta",
+              "slug": "catalog-api-multi-language-beta",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get product translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/product/-productId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Create or update product translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/product/-productId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Get product specification translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/products/-productId-/specification/-specificationId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Create or update product specification translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/products/-productId-/specification/-specificationId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Multi-language SKU beta",
+                  "slug": "catalog-api-multi-language-sku-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get SKU translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU attribute translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU attribute translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU file translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU file translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-/language",
+                      "children": []  
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language specification beta",
+                  "slug": "catalog-api-multi-language-specification-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get specification group translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specificationgroup/-specificationGroupId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update specification group translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specificationgroup/-specificationGroupId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get specification translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-specificationId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update specification translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-specificationId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get specification value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update specification value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language category beta",
+                  "slug": "catalog-api-multi-language-category-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get category translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/category/-categoryId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update category translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/category/-categoryId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language brand beta",
+                  "slug": "catalog-api-multi-language-brand-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get brand translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/brand/-brandId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update brand translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/brand/-brandId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language attachment and service beta",
+                  "slug": "catalog-api-multi-language-attachment-and-service-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get attachment translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/attachment/-attachmentId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update attachment translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/attachment/-attachmentId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU service type translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU service type translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU service translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservice/-skuserviceId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU service translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservice/-skuserviceId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU service value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU service value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language collection beta",
+                  "slug": "catalog-api-multi-language-collection-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get collection translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/collection/-collectionId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update collection translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/collection/-collectionId-/language",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -7851,6 +8606,49 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Shopper data",
+              "slug": "master-data-api-v2-shopper-data",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get shopper schema",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/schemas/v1",
+                  "children": []
+                },
+                {
+                  "name": "Create shopper document",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get shopper document by user ID",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents/-shopperId-",
+                  "children": []
+                },
+                {
+                  "name": "Search shopper document by user ID",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/search",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -8052,6 +8850,33 @@
                   "origin": "",
                   "endpoint": "/api/dataentities/AD/documents/-id-",
                   "children": []
+                },
+                {
+                  "name": "Get address by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Update address by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete address by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
                 }
               ]
             },
@@ -8151,6 +8976,65 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/dataentities/-acronym-/documents/-id-/versions/-versionId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Contracts",
+              "slug": "masterdata-api-contracts",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Update contract by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                  "children": []
+                },
+                {
+                  "name": "Get contract by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete contract by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Contact information",
+              "slug": "masterdata-api-contact-information",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create new contact information",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents",
+                  "children": []
+                },
+                {
+                  "name": "Search contact information",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/search",
                   "children": []
                 }
               ]
@@ -9110,6 +9994,15 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/pvt/merchants/payment-systems",
+                  "children": []
+                },
+                {
+                  "name": "Get card data",
+                  "slug": "payments-gateway-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/account/-cardId-",
                   "children": []
                 }
               ]
@@ -13049,13 +13942,6 @@
               "children": []
             },
             {
-              "name": "Google One-Tap Login",
-              "slug": "guides/google-one-tap-login",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Header",
               "slug": "apps/vtex.store-header",
               "origin": "",
@@ -14251,7 +15137,22 @@
               "slug": "faststore/webops-dashboard",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Configuring production and preview branches in WebOps",
+                  "slug": "faststore/webops-configuring-production-and-preview-branches",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing Secrets",
+                  "slug": "faststore/webops-managing-secrets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Headless CMS",
@@ -15294,10 +16195,18 @@
                 },
                 {
                   "name": "Session",
-                  "slug": "faststore/sdk-session",
+                  "slug": "faststore/session-overview",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "Enabling refresh token on FastStore",
+                      "slug": "faststore/session-enabling-refresh-token",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -15464,28 +16373,6 @@
                       "children": []
                     }
                   ]
-                }
-              ]
-            },
-            {
-              "name": "Security",
-              "slug": "faststore/security-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Enabling refresh token on FastStore",
-                  "slug": "faststore/security-enabling-refresh-token",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing Secrets",
-                  "slug": "faststore/security-managing-secrets",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
@@ -16243,6 +17130,20 @@
               ]
             },
             {
+              "name": "Implementing Google One-tap login",
+              "slug": "vtex-io-documentation-implementing-google-one-tap-login",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Improving store accessibility with semantic HTML migration",
+              "slug": "vtex-io-documentation-semantic-html-migration",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Going live",
               "slug": "vtex-io-documentation-go-live",
               "origin": "",
@@ -16635,6 +17536,41 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 3.95.0",
+                  "slug": "2025-12-17-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: New parameter for custom analytics events",
+                  "slug": "2025-12-17-faststore-custom-event-parameter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Activity Flow: Monitoring Headless stores and mobile apps",
+                  "slug": "2025-12-11-activity-flow-monitoring-headless-stores-and-mobile-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Custom branch configuration for production and preview",
+                  "slug": "2025-12-05-faststore-webops-custom-branch-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Framework: Improve store accessibility with semantic HTML",
+                  "slug": "2025-12-05-store-framework-improve-store-accessibility-with-semantic-html",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore Release Notes — Version 3.93.0",
                   "slug": "2025-12-03-faststore-release-notes-version",
                   "origin": "",
@@ -16643,7 +17579,7 @@
                 }
               ]
             },
-           {
+            {
               "name": "November",
               "slug": "november-2025",
               "origin": "",
@@ -16707,8 +17643,8 @@
                   "children": []
                 },
                 {
-                  "name": "FastStore Release Notes — Version 3.90.0",
-                  "slug": "2025-10-13-faststore-release-notes-version",
+                  "name": "FastStore Release Notes — Version 3.91.0",
+                  "slug": "2025-10-24-faststore-release-notes-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -16721,8 +17657,8 @@
                   "children": []
                 },
                 {
-                  "name": "FastStore Release Notes — Version 3.91.0",
-                  "slug": "2025-10-24-faststore-release-notes-version",
+                  "name": "FastStore Release Notes — Version 3.90.0",
+                  "slug": "2025-10-13-faststore-release-notes-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []

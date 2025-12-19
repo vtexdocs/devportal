@@ -1,6 +1,6 @@
 {
   "name": "devportal",
-  "version": "1.31.0",
+  "version": "1.31.1",
   "private": true,
   "engines": {
     "npm": "please-use-yarn",
@@ -40,7 +40,7 @@
     "@types/react-svg-pan-zoom": "^3.3.5",
     "@types/uuid": "^9.0.0",
     "@vtex/brand-ui": "^0.46.1",
-    "@vtexdocs/components": "https://github.com/vtexdocs/components.git#v6.0.31",
+    "@vtexdocs/components": "https://github.com/vtexdocs/components.git#v6.0.33",
     "algoliasearch": "^4.14.2",
     "chalk": "^5.2.0",
     "copy-text-to-clipboard": "^3.0.1",
