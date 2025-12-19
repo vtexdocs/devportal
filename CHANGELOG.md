@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.32.1](https://github.com/vtexdocs/devportal/compare/v1.32.0...v1.32.1) (2025-12-19)
+
+
+### Bug Fixes
+
+* correct endpoint path ([b58f7eb](https://github.com/vtexdocs/devportal/commit/b58f7eb7d78f16bf115c43b3163ef8eac078f04d))
+* update endpoints paths ([8e31e92](https://github.com/vtexdocs/devportal/commit/8e31e92b1bda6d6122609e7152d9c2872a65d1be))
+
 ## [1.32.0](https://github.com/vtexdocs/devportal/compare/v1.31.1...v1.32.0) (2025-12-19)
 
 
