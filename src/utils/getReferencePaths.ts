@@ -74,6 +74,7 @@ const fileSlugMap: { [key: string]: string } = {
   'VTEX - Organization Units API': 'organization-units-api',
   'VTEX - Card Token Vault API': 'card-token-vault-api',
   'VTEX - Budgets API': 'budgets-api',
+  'VTEX - Default Values API': 'default-values-api',
 }
 
 export default async function getReferencePaths(
