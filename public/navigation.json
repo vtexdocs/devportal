@@ -6244,7 +6244,7 @@
                     "type": "openapi",
                     "method": "PUT",
                     "origin": "",
-                    "endpoint":"/api/checkout/pub/orderForm/{orderFormId}/customFields/{linkedEntity.type}/{linkedEntity.id}",
+                    "endpoint":"/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-",
                     "children": []
                   },
                   {
@@ -6253,7 +6253,7 @@
                     "type": "openapi",
                     "method": "PUT",
                     "origin": "",
-                    "endpoint":"/api/checkout/pub/orderForm/{orderFormId}/customFields",
+                    "endpoint":"/api/checkout/pub/orderForm/-orderFormId-/customFields",
                     "children": []
                   },
                   {
@@ -6262,7 +6262,7 @@
                     "type": "openapi",
                     "method": "DELETE",
                     "origin": "",
-                    "endpoint":"/api/checkout/pub/orderForm/{orderFormId}/customFields/{linkedEntity.type}/{linkedEntity.id}/{fieldName}",
+                    "endpoint":"/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-/-fieldName-",
                     "children": []
                   }
                 ]
