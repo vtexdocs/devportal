@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.32.0](https://github.com/vtexdocs/devportal/compare/v1.31.1...v1.32.0) (2025-12-19)
+
+
+### Features
+
+* add to navigation ([c0f1075](https://github.com/vtexdocs/devportal/commit/c0f1075b222946eee1439df40c2d37ee4ed457ba))
+* adding new api ([bc376f1](https://github.com/vtexdocs/devportal/commit/bc376f1f75783332188aa6b8101577452b3920e3))
+* adding new API ([f971de3](https://github.com/vtexdocs/devportal/commit/f971de35e776ec5e0ed296a390ace4af2c198549))
+* navigation ([d940b5d](https://github.com/vtexdocs/devportal/commit/d940b5de18ba8772349411a90d0f17b544dbc4d4))
+* **skumatrixusage.tsx:** add the new faststore component ([8757a0f](https://github.com/vtexdocs/devportal/commit/8757a0f0440591228d6dcd52a9897d19751970fb))
+
+
+### Bug Fixes
+
+* **skumatrixusage.tsx:** fix the component logic ([abf5ca7](https://github.com/vtexdocs/devportal/commit/abf5ca7d3e86f87e075effd404299b0e53557b0c))
+* **skus.ts:** fix prettier issues ([03cee5e](https://github.com/vtexdocs/devportal/commit/03cee5efbb279933678fd8de35078b0979b90823))
+
+
+### Docs
+
+* **navigation.json:** new parameter for custom analytics events ([0eb3011](https://github.com/vtexdocs/devportal/commit/0eb3011d4ddeb5cc61bdf66d1da8ebb3134a8dae))
+
 ### [1.31.1](https://github.com/vtexdocs/devportal/compare/v1.31.0...v1.31.1) (2025-12-11)
 
 
