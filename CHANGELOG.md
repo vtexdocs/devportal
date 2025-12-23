@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.32.2](https://github.com/vtexdocs/devportal/compare/v1.32.1...v1.32.2) (2025-12-23)
+
+
+### Chore
+
+* upgrade sharp and update netlify.toml for Ubuntu Noble 24.04 migration ([faae503](https://github.com/vtexdocs/devportal/commit/faae503398d8275abc9dee6167f97a6ceba11110))
+
 ### [1.32.1](https://github.com/vtexdocs/devportal/compare/v1.32.0...v1.32.1) (2025-12-19)
 
 
