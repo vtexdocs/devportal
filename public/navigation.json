@@ -5721,7 +5721,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Set multiple custom fields values",
+                  "name": "Set multiple custom field values",
                   "slug": "checkout-api",
                   "type": "openapi",
                   "method": "PUT",
@@ -6153,7 +6153,7 @@
                   "children": []
                 },
                 {
-                  "name": "Get custom fields settings",
+                  "name": "Get custom field settings",
                   "slug": "custom-fields-api",
                   "type": "openapi",
                   "method": "GET",
