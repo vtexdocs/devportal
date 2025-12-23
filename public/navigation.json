@@ -791,6 +791,20 @@
                   "children": []
                 },
                 {
+                  "name": "PPP Versioning",
+                  "slug": "ppp-versioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing payments tokenization",
+                  "slug": "implementing-payments-tokenization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Managing tokenized cards",
                   "slug": "managing-tokenized-cards",
                   "origin": "",
@@ -6119,7 +6133,7 @@
           ]
         },
         {
-          "name": "Custom fields API",
+          "name": "Custom Fields API",
           "slug": "custom-fields-api",
           "origin": "",
           "type": "openapi",
@@ -6200,8 +6214,8 @@
                     "children": []
                   },
                   {
-                    "name": "Delete custom field value",
-                    "slug": "custom-field-api",
+                    "name": "Delete custom fields value",
+                    "slug": "custom-fields-api",
                     "type": "openapi",
                     "method": "DELETE",
                     "origin": "",
@@ -6282,6 +6296,57 @@
                   "method": "PATCH",
                   "origin": "",
                   "endpoint": "/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Default Values API",
+          "slug": "default-values-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Default values",
+              "slug": "default-values",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                },
+                {
+                  "name": "Update default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
                   "children": []
                 }
               ]
