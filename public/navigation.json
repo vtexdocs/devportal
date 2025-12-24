@@ -6133,19 +6133,19 @@
           ]
         },
         {
-          "name": "Custom field API",
-          "slug": "custom-field-api",
+          "name": "Custom Fields API",
+          "slug": "custom-fields-api",
           "origin": "",
           "type": "openapi",
           "children": [
             {
-              "name": "Custom field settings",
-              "slug": "custom-field-api-custom-field-settings",
+              "name": "Custom fields settings",
+              "slug": "custom-fields-api-custom-fields-settings",
               "type": "category",
               "children": [
                 {
                   "name": "Create custom field settings",
-                  "slug": "custom-field-api",
+                  "slug": "custom-fields-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -6154,7 +6154,7 @@
                 },
                 {
                   "name": "Get custom field settings",
-                  "slug": "custom-field-api",
+                  "slug": "custom-fields-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -6163,7 +6163,7 @@
                 },
                 {
                   "name": "Update custom field settings",
-                  "slug": "custom-field-api",
+                  "slug": "custom-fields-api",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
@@ -6172,7 +6172,7 @@
                 },
                 {
                   "name": "Delete custom field settings",
-                  "slug": "custom-field-api",
+                  "slug": "custom-fields-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
@@ -6182,13 +6182,13 @@
               ]
             },
               {
-                "name": "Custom field values",
-                "slug": "custom-field-api-custom-field-values",
+                "name": "Custom fields values",
+                "slug": "custom-fields-api-custom-fields-values",
                 "type": "category",
                 "children": [
                   {
-                    "name": "Get custom field values",
-                    "slug": "custom-field-api",
+                    "name": "Get custom field value",
+                    "slug": "custom-fields-api",
                     "type": "openapi",
                     "method": "GET",
                     "origin": "",
@@ -6197,7 +6197,7 @@
                   },
                   {
                     "name": "Create custom field value",
-                    "slug": "custom-field-api",
+                    "slug": "custom-fields-api",
                     "type": "openapi",
                     "method": "POST",
                     "origin": "",
@@ -6206,7 +6206,7 @@
                   },
                   {
                     "name": "Update custom field value",
-                    "slug": "custom-field-api",
+                    "slug": "custom-fields-api",
                     "type": "openapi",
                     "method": "PATCH",
                     "origin": "",
@@ -6215,7 +6215,7 @@
                   },
                   {
                     "name": "Delete custom field value",
-                    "slug": "custom-field-api",
+                    "slug": "custom-fields-api",
                     "type": "openapi",
                     "method": "DELETE",
                     "origin": "",
@@ -6223,8 +6223,8 @@
                     "children": []
                   },
                   {
-                    "name": "Search custom field values",
-                    "slug": "custom-field-api",
+                    "name": "Search custom fields values",
+                    "slug": "custom-fields-api",
                     "type": "openapi",
                     "method": "GET",
                     "origin": "",
@@ -6235,12 +6235,12 @@
               },
               {
                 "name": "OrderForm management",
-                "slug": "custom-field-api-orderform-management",
+                "slug": "custom-fields-api-orderform-management",
                 "type": "category",
                 "children": [
                   {
-                    "name": "Create or update custom field in orderForm",
-                    "slug": "custom-field-api",
+                    "name": "Create or update custom fields in orderForm",
+                    "slug": "custom-fields-api",
                     "type": "openapi",
                     "method": "PUT",
                     "origin": "",
@@ -6249,7 +6249,7 @@
                   },
                   {
                     "name": "Create or update custom fields in orderForm in batch",
-                    "slug": "custom-field-api",
+                    "slug": "custom-fields-api",
                     "type": "openapi",
                     "method": "PUT",
                     "origin": "",
@@ -6258,7 +6258,7 @@
                   },
                   {
                     "name": "Delete custom field in orderForm",
-                    "slug": "custom-field-api",
+                    "slug": "custom-fields-api",
                     "type": "openapi",
                     "method": "DELETE",
                     "origin": "",
