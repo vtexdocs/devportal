@@ -1,6 +1,6 @@
 [functions]
 external_node_modules = ["sharp"]
-included_files = ["node_modules/sharp/**/*", "./github.pem"]
+included_files = ["node_modules/sharp/**/*", "node_modules/@img/**/*", "./github.pem"]
 
 [[redirects]]
 force = true

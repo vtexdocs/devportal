@@ -6133,6 +6133,143 @@
           ]
         },
         {
+          "name": "Custom Fields API",
+          "slug": "custom-fields-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Custom fields settings",
+              "slug": "custom-fields-api-custom-fields-settings",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create custom field settings",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get custom field settings",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/search",
+                  "children": []
+                },
+                {
+                  "name": "Update custom field settings",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete custom field settings",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
+                  "children": []
+                }
+              ]
+            },
+              {
+                "name": "Custom fields values",
+                "slug": "custom-fields-api-custom-fields-values",
+                "type": "category",
+                "children": [
+                  {
+                    "name": "Get custom field value",
+                    "slug": "custom-fields-api",
+                    "type": "openapi",
+                    "method": "GET",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                    "children": []
+                  },
+                  {
+                    "name": "Create custom field value",
+                    "slug": "custom-fields-api",
+                    "type": "openapi",
+                    "method": "POST",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/documents",
+                    "children": []
+                  },
+                  {
+                    "name": "Update custom field value",
+                    "slug": "custom-fields-api",
+                    "type": "openapi",
+                    "method": "PATCH",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                    "children": []
+                  },
+                  {
+                    "name": "Delete custom field value",
+                    "slug": "custom-fields-api",
+                    "type": "openapi",
+                    "method": "DELETE",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                    "children": []
+                  },
+                  {
+                    "name": "Search custom fields values",
+                    "slug": "custom-fields-api",
+                    "type": "openapi",
+                    "method": "GET",
+                    "origin": "",
+                    "endpoint":"/api/dataentities/customFieldValues/search",
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "name": "OrderForm management",
+                "slug": "custom-fields-api-orderform-management",
+                "type": "category",
+                "children": [
+                  {
+                    "name": "Create or update custom fields in orderForm",
+                    "slug": "custom-fields-api",
+                    "type": "openapi",
+                    "method": "PUT",
+                    "origin": "",
+                    "endpoint":"/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-",
+                    "children": []
+                  },
+                  {
+                    "name": "Create or update custom fields in orderForm in batch",
+                    "slug": "custom-fields-api",
+                    "type": "openapi",
+                    "method": "PUT",
+                    "origin": "",
+                    "endpoint":"/api/checkout/pub/orderForm/-orderFormId-/customFields",
+                    "children": []
+                  },
+                  {
+                    "name": "Delete custom field in orderForm",
+                    "slug": "custom-fields-api",
+                    "type": "openapi",
+                    "method": "DELETE",
+                    "origin": "",
+                    "endpoint":"/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-/-fieldName-",
+                    "children": []
+                  }
+                ]
+              }
+              ]
+        },
+        {
           "name": "Delivery Promise Notification API",
           "slug": "delivery-promise-notification-api",
           "origin": "",
@@ -6159,6 +6296,57 @@
                   "method": "PATCH",
                   "origin": "",
                   "endpoint": "/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Default Values API",
+          "slug": "default-values-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Default values",
+              "slug": "default-values",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                },
+                {
+                  "name": "Update default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
                   "children": []
                 }
               ]
@@ -17484,6 +17672,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Granular permissions for Seller Marketplace API",
+                  "slug": "2025-12-23-granular-permissions-seller-marketplace-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore Release Notes — Version 3.95.0",
                   "slug": "2025-12-17-faststore-release-notes-version",
