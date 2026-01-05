@@ -59,9 +59,3 @@ export function getLogger(name: string) {
     },
   }
 }
-
-export type LoggerType = {
-  error: (msg: string) => void
-  info: (msg: string) => void
-  warn: (msg: string) => void
-}
