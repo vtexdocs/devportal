@@ -2419,6 +2419,57 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "VTEX Ads JavaScript SDK",
+              "slug": "vtex-ads-javascript-sdk",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "VTEX Ads Core Package Quickstart",
+                  "slug": "vtex-ads-core-package-quickstart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "VTEX Ads Core Package Basic Usage",
+                      "slug": "vtex-ads-core-package-basic-usage",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Core Package Custom Hydration",
+                      "slug": "vtex-ads-core-package-custom-hydration",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Core Package Examples",
+                      "slug": "vtex-ads-core-package-examples",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Core Package Quickstart",
+                      "slug": "vtex-ads-core-package-quickstart",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "VTEX Ads React Package Quickstart",
+                  "slug": "vtex-ads-react-package-quickstart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -3078,7 +3129,7 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/status",
-                  "children": [] 
+                  "children": []
                 }
               ]
             }
@@ -4826,7 +4877,7 @@
                       "method": "PUT",
                       "origin": "",
                       "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-/language",
-                      "children": []  
+                      "children": []
                     }
                   ]
                 },
@@ -6181,93 +6232,93 @@
                 }
               ]
             },
-              {
-                "name": "Custom fields values",
-                "slug": "custom-fields-api-custom-fields-values",
-                "type": "category",
-                "children": [
-                  {
-                    "name": "Get custom field value",
-                    "slug": "custom-fields-api",
-                    "type": "openapi",
-                    "method": "GET",
-                    "origin": "",
-                    "endpoint":"/api/dataentities/customFieldValues/documents/-customFieldValueId-",
-                    "children": []
-                  },
-                  {
-                    "name": "Create custom field value",
-                    "slug": "custom-fields-api",
-                    "type": "openapi",
-                    "method": "POST",
-                    "origin": "",
-                    "endpoint":"/api/dataentities/customFieldValues/documents",
-                    "children": []
-                  },
-                  {
-                    "name": "Update custom field value",
-                    "slug": "custom-fields-api",
-                    "type": "openapi",
-                    "method": "PATCH",
-                    "origin": "",
-                    "endpoint":"/api/dataentities/customFieldValues/documents/-customFieldValueId-",
-                    "children": []
-                  },
-                  {
-                    "name": "Delete custom field value",
-                    "slug": "custom-fields-api",
-                    "type": "openapi",
-                    "method": "DELETE",
-                    "origin": "",
-                    "endpoint":"/api/dataentities/customFieldValues/documents/-customFieldValueId-",
-                    "children": []
-                  },
-                  {
-                    "name": "Search custom fields values",
-                    "slug": "custom-fields-api",
-                    "type": "openapi",
-                    "method": "GET",
-                    "origin": "",
-                    "endpoint":"/api/dataentities/customFieldValues/search",
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "name": "OrderForm management",
-                "slug": "custom-fields-api-orderform-management",
-                "type": "category",
-                "children": [
-                  {
-                    "name": "Create or update custom fields in orderForm",
-                    "slug": "custom-fields-api",
-                    "type": "openapi",
-                    "method": "PUT",
-                    "origin": "",
-                    "endpoint":"/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-",
-                    "children": []
-                  },
-                  {
-                    "name": "Create or update custom fields in orderForm in batch",
-                    "slug": "custom-fields-api",
-                    "type": "openapi",
-                    "method": "PUT",
-                    "origin": "",
-                    "endpoint":"/api/checkout/pub/orderForm/-orderFormId-/customFields",
-                    "children": []
-                  },
-                  {
-                    "name": "Delete custom field in orderForm",
-                    "slug": "custom-fields-api",
-                    "type": "openapi",
-                    "method": "DELETE",
-                    "origin": "",
-                    "endpoint":"/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-/-fieldName-",
-                    "children": []
-                  }
-                ]
-              }
+            {
+              "name": "Custom fields values",
+              "slug": "custom-fields-api-custom-fields-values",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get custom field value",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                  "children": []
+                },
+                {
+                  "name": "Create custom field value",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents",
+                  "children": []
+                },
+                {
+                  "name": "Update custom field value",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete custom field value",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                  "children": []
+                },
+                {
+                  "name": "Search custom fields values",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/search",
+                  "children": []
+                }
               ]
+            },
+            {
+              "name": "OrderForm management",
+              "slug": "custom-fields-api-orderform-management",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create or update custom fields in orderForm",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-",
+                  "children": []
+                },
+                {
+                  "name": "Create or update custom fields in orderForm in batch",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields",
+                  "children": []
+                },
+                {
+                  "name": "Delete custom field in orderForm",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-/-fieldName-",
+                  "children": []
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Delivery Promise Notification API",
