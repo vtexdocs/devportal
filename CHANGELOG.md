@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.32.4](https://github.com/vtexdocs/devportal/compare/v1.32.3...v1.32.4) (2026-01-09)
+
+
+### Features
+
+* add new custom fields checkout endpoints to navigation ([ba8e8d5](https://github.com/vtexdocs/devportal/commit/ba8e8d52b67d5c7e235038fc67529071c0305b0b))
+
+
+### Bug Fixes
+
+* correct endpoint path ([fa4b044](https://github.com/vtexdocs/devportal/commit/fa4b0449a0a08a4b1ca3e5b05614d727b49505ea))
+* update endpoints paths ([f427eb4](https://github.com/vtexdocs/devportal/commit/f427eb4eaf9c7ca6a5d8dbf627bb97ea7cc94839))
+
+
+### Refactoring
+
+* **constants:** remove dead code and consolidate openapi mapping into a single file ([d969bf2](https://github.com/vtexdocs/devportal/commit/d969bf2bf7821f0687752eca41480754825187c9))
+
+
+### Chore
+
+* add recommendations headless guide to navigation ([62e377d](https://github.com/vtexdocs/devportal/commit/62e377dcbe9606d20189469ca0dd3bc8d7846791))
+* add vtex ads guides to navigation + fix linting ([9d9bffe](https://github.com/vtexdocs/devportal/commit/9d9bffe064a48cb2abfa6f0a4fc8301df6741110))
+* **getreferencepaths.ts:** use value from constants ([fb19132](https://github.com/vtexdocs/devportal/commit/fb19132829488a2f5cfac5895a667495e8571d76))
+
 ### [1.32.3](https://github.com/vtexdocs/devportal/compare/v1.32.2...v1.32.3) (2025-12-23)
 
 ### [1.32.2](https://github.com/vtexdocs/devportal/compare/v1.32.1...v1.32.2) (2025-12-23)
