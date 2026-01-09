@@ -2268,3 +2268,9 @@ force = true
 from = "/docs/guides/google-one-tap-login"
 status = 308
 to = "/docs/guides/vtex-io-documentation-implementing-google-one-tap-login"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/webops-managing-secrets"
+status = 308
+to = "/docs/guides/faststore/webops-managing-variables-and-secrets"
