@@ -5812,6 +5812,51 @@
                   "origin": "",
                   "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-/-appFieldName-",
                   "children": []
+                },
+                {
+                  "name": "Batch add custom fields",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields",
+                  "children": []
+                },
+                {
+                  "name": "Add order custom field",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/order",
+                  "children": []
+                },
+                {
+                  "name": "Add item custom field",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/item/-itemId-",
+                  "children": []
+                },
+                {
+                  "name": "Remove item custom field",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/item/-itemId-",
+                  "children": []
+                },
+                {
+                  "name": "Add address custom field",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/address/-addressId-",
+                  "children": []
                 }
               ]
             },
