@@ -17772,6 +17772,29 @@
       "slugPrefix": "updates/release-notes",
       "categories": [
         {
+          "name": "2026",
+          "slug": "2026-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "January",
+              "slug": "january-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore WebOps: Enhanced security for variables and secrets",
+                  "slug": "2026-01-12-faststore-webops-enhanced-security-for-variables-and-secrets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }, 
+        {
           "name": "2025",
           "slug": "2025-category",
           "origin": "",
