@@ -15403,8 +15403,8 @@
                   "children": []
                 },
                 {
-                  "name": "Managing Secrets",
-                  "slug": "faststore/webops-managing-secrets",
+                  "name": "Managing variables and secrets",
+                  "slug": "faststore/webops-managing-variables-and-secrets",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -17792,6 +17792,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore WebOps: Rerun failed builds without new commits",
+                  "slug": "2026-01-16-faststore-webops-rerun-failed-builds-without-new-commits",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore WebOps: Enhanced security for variables and secrets",
                   "slug": "2026-01-12-faststore-webops-enhanced-security-for-variables-and-secrets",
