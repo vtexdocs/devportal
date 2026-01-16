@@ -2274,3 +2274,9 @@ force = true
 from = "/docs/guides/faststore/webops-managing-secrets"
 status = 308
 to = "/docs/guides/faststore/webops-managing-variables-and-secrets"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-login"
+status = 308
+to = "/docs/apps/vtex.login"
