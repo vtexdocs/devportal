@@ -17793,6 +17793,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Improved SEO and data reliability with EAN-based GTIN in product structured data",
+                  "slug": "2026-01-30-faststore-gtin-ean",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore WebOps: Rerun failed builds without new commits",
                   "slug": "2026-01-16-faststore-webops-rerun-failed-builds-without-new-commits",
                   "origin": "",
