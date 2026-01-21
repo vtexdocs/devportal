@@ -17793,13 +17793,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "FastStore: Improved SEO and data reliability with EAN-based GTIN in product structured data",
-                  "slug": "2026-01-30-faststore-gtin-ean",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "FastStore WebOps: Rerun failed builds without new commits",
                   "slug": "2026-01-16-faststore-webops-rerun-failed-builds-without-new-commits",
                   "origin": "",
@@ -17982,6 +17975,13 @@
                 {
                   "name": "Payment connector homologation freeze in preparation for Black Friday 2025",
                   "slug": "2025-09-29-payment-connector-homologation-freeze-in-preparation-for-black-friday-2025",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Improved SEO and data reliability with EAN-based GTIN in product structured data",
+                  "slug": "2025-09-19-faststore-gtin-ean",
                   "origin": "",
                   "type": "markdown",
                   "children": []
