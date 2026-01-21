@@ -1913,8 +1913,8 @@
           "type": "category",
           "children": [
             {
-              "name": "Buyer Portal",
-              "slug": "buyer-portal-category",
+              "name": "B2B Buyer Portal",
+              "slug": "b2b-buyer-portal-category",
               "origin": "",
               "type": "category",
               "children": [
