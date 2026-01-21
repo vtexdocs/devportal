@@ -1920,18 +1920,10 @@
               "children": [
                 {
                   "name": "Buying Policies",
-                  "slug": "buying-policies-category",
+                  "slug": "buying-policies",
                   "origin": "",
-                  "type": "category",
-                  "children": [
-                    {
-                      "name": "Buying Policies",
-                      "slug": "buying-policies",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
