@@ -40,7 +40,8 @@ const nextConfig = {
     return config
   },
   env: {
-    navigationJsonUrl: 'https://developers.vtex.com/navigation.json',
+    navigationJsonUrl:
+      'https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/navigation.json',
     contentOrg: '',
     contentRepo: '',
     contentBranch: '',
