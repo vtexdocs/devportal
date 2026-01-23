@@ -15331,7 +15331,15 @@
               "slug": "faststore/getting-started-faststore-versions-and-support-levels",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Upgrading from FastStore v2 to v3",
+                  "slug": "faststore/getting-started-faststore-v2-to-v3",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Getting Started",
@@ -15428,6 +15436,13 @@
                 {
                   "name": "Managing variables and secrets",
                   "slug": "faststore/webops-managing-variables-and-secrets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Moving your FastStore project to a new GitHub repository",
+                  "slug": "faststore/webops-moving-your-faststore-project-to-a-new-github-repository",
                   "origin": "",
                   "type": "markdown",
                   "children": []
