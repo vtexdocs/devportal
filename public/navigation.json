@@ -2295,6 +2295,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Implementing product recommendations in Faststore",
+              "slug": "implementing-product-recommendations-in-faststore",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
