@@ -2938,7 +2938,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents/{contractId}",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
                   "children": []
                 },
                 {
@@ -2947,7 +2947,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents/{contractId}",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
                   "children": []
                 },
                 {
@@ -2956,7 +2956,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents/{contractId}",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
                   "children": []
                 }
               ]
@@ -2998,7 +2998,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/{buyerId}",
+                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
                   "children": []
                 },
                 {
@@ -3007,7 +3007,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/{buyerId}",
+                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
                   "children": []
                 },
                 {
@@ -3016,7 +3016,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/{buyerId}",
+                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
                   "children": []
                 },
                 {
@@ -3059,7 +3059,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/{id}",
+                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
                   "children": []
                 },
                 {
@@ -3068,7 +3068,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/{id}",
+                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
                   "children": []
                 },
                 {
@@ -3077,7 +3077,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/{id}",
+                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
                   "children": []
                 }
               ]
