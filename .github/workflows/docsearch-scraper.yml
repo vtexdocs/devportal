@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run Devportal Scraper
-      uses: vtexdocs/devportal-docsearch-action@main
+      uses: vtexdocs/devportal-docsearch-action@test-index-config-fix
       with:
         algolia_application_id: '${{ secrets.ALGOLIA_APP_ID }}'
         algolia_api_key: ${{ secrets.ALGOLIA_WRITE_KEY }}
