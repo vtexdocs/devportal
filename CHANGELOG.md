@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.32.6](https://github.com/vtexdocs/devportal/compare/v1.32.5...v1.32.6) (2026-01-27)
+
+
+### Docs
+
+* add B2B Contracts and Personas API navigation ([e36a4c7](https://github.com/vtexdocs/devportal/commit/e36a4c77e0036ab8bd880e9eb11b1a23f96c5865))
+
+
+### CI
+
+* update docsearch action to test-index-config-fix branch ([2973b26](https://github.com/vtexdocs/devportal/commit/2973b260c4ee5975976a0f028ee9022f8b1885d6))
+
 ### [1.32.5](https://github.com/vtexdocs/devportal/compare/v1.32.4...v1.32.5) (2026-01-27)
 
 
