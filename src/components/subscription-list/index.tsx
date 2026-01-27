@@ -133,7 +133,7 @@ const SubscriptionList: React.FC = () => {
           </Text>
           <Flex sx={styles.inputContainer}>
             <Input
-              label="Email address"
+              label="Email"
               size="regular"
               id="email"
               value={email}
