@@ -2913,6 +2913,178 @@
           ]
         },
         {
+          "name": "B2B Contracts",
+          "slug": "b2b-contracts-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Contract management",
+              "slug": "contract-management",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create contract",
+                  "slug": "b2b-contracts-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get contract by ID",
+                  "slug": "b2b-contracts-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/{contractId}",
+                  "children": []
+                },
+                {
+                  "name": "Update contract by ID",
+                  "slug": "b2b-contracts-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/{contractId}",
+                  "children": []
+                },
+                {
+                  "name": "Delete contract by ID",
+                  "slug": "b2b-contracts-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/{contractId}",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B2B Personas",
+          "slug": "b2b-personas-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "B2B buyers",
+              "slug": "b2b-buyers",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get buyer schema",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/schemas/v1",
+                  "children": []
+                },
+                {
+                  "name": "Create buyer",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get buyer by ID",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents/{buyerId}",
+                  "children": []
+                },
+                {
+                  "name": "Update buyer",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents/{buyerId}",
+                  "children": []
+                },
+                {
+                  "name": "Delete buyer",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents/{buyerId}",
+                  "children": []
+                },
+                {
+                  "name": "Search buyers",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/search",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "B2B contact information",
+              "slug": "b2b-contact-information",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create new contact information",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents",
+                  "children": []
+                },
+                {
+                  "name": "Search contact information",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/search",
+                  "children": []
+                },
+                {
+                  "name": "Get contact information by ID",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents/{id}",
+                  "children": []
+                },
+                {
+                  "name": "Update contact information",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents/{id}",
+                  "children": []
+                },
+                {
+                  "name": "Delete contact information",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents/{id}",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Budgets API",
           "slug": "budgets-api",
           "origin": "",
@@ -8893,49 +9065,6 @@
                   "children": []
                 }
               ]
-            },
-            {
-              "name": "Shopper data",
-              "slug": "master-data-api-v2-shopper-data",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get shopper schema",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/schemas/v1",
-                  "children": []
-                },
-                {
-                  "name": "Create shopper document",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents",
-                  "children": []
-                },
-                {
-                  "name": "Get shopper document by user ID",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-shopperId-",
-                  "children": []
-                },
-                {
-                  "name": "Search shopper document by user ID",
-                  "slug": "master-data-api-v2",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/search",
-                  "children": []
-                }
-              ]
             }
           ]
         },
@@ -9263,65 +9392,6 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/dataentities/-acronym-/documents/-id-/versions/-versionId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Contracts",
-              "slug": "masterdata-api-contracts",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Update contract by ID",
-                  "slug": "masterdata-api",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
-                  "children": []
-                },
-                {
-                  "name": "Get contract by ID",
-                  "slug": "masterdata-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete contract by ID",
-                  "slug": "masterdata-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Contact information",
-              "slug": "masterdata-api-contact-information",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create new contact information",
-                  "slug": "masterdata-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents",
-                  "children": []
-                },
-                {
-                  "name": "Search contact information",
-                  "slug": "masterdata-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/search",
                   "children": []
                 }
               ]

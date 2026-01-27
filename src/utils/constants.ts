@@ -495,4 +495,7 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Budgets API': 'budgets-api',
   'VTEX - Custom Fields API': 'custom-fields-api',
   'VTEX - Default Values API': 'default-values-api',
+  'VTEX - B2B Buyer Data API': 'b2b-buyer-data-api',
+  'VTEX - B2B Contact Information API': 'b2b-contact-information-api',
+  'VTEX - B2B Contracts API': 'b2b-contracts-api',
 }
