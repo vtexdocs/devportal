@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.32.5](https://github.com/vtexdocs/devportal/compare/v1.32.4...v1.32.5) (2026-01-27)
+
+
+### Features
+
+* add to navigation ([d24c402](https://github.com/vtexdocs/devportal/commit/d24c40236bd208c02b866da024b29d239b608afe))
+* remove a category level ([cc24dc2](https://github.com/vtexdocs/devportal/commit/cc24dc2ac65ad333717591065a4a0251e201fe7a))
+* update navigation ([b35aa7b](https://github.com/vtexdocs/devportal/commit/b35aa7bada693c6ab4a72b5f5f2be34ce99403f9))
+
+
+### Chore
+
+* add redirect for vtex login doc ([9aa1a1e](https://github.com/vtexdocs/devportal/commit/9aa1a1e445b0d41916504db6a72401020b20937a))
+
+
+### Docs
+
+* **navigation.json:** add new doc to navigation ([4437d50](https://github.com/vtexdocs/devportal/commit/4437d5065957746cbceb0330a374b96f265f1405))
+
+
+### Refactoring
+
+* **language.json:** add localization review ([41d6432](https://github.com/vtexdocs/devportal/commit/41d6432fc512217fd06a8bea8c09aa57a13be20c))
+
 ### [1.32.4](https://github.com/vtexdocs/devportal/compare/v1.32.3...v1.32.4) (2026-01-09)
 
 
