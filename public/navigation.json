@@ -1095,6 +1095,28 @@
               ]
             },
             {
+              "name": "Custom checkout fields settings",
+              "slug": "custom-checkout-fields-settings",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Custom fields integration",
+                  "slug": "custom-fields-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Default values integration",
+                  "slug": "default-values-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Discounts",
               "slug": "discounts",
               "origin": "",
@@ -1921,6 +1943,13 @@
                 {
                   "name": "Buying Policies",
                   "slug": "buying-policies",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Budgets and allocations",
+                  "slug": "budgets-and-allocations",
                   "origin": "",
                   "type": "markdown",
                   "children": []
