@@ -2996,7 +2996,7 @@
           "name": "B2B Personas",
           "slug": "b2b-personas-api",
           "origin": "",
-          "type": "openapi",
+          "type": "category",
           "children": [
             {
               "name": "B2B buyers",
@@ -6475,10 +6475,10 @@
           ]
         },
         {
-          "name": "Custom Fields API",
-          "slug": "custom-fields-api",
+          "name": "Custom Checkout Fields",
+          "slug": "custom-checkout-fields",
           "origin": "",
-          "type": "openapi",
+          "type": "category",
           "children": [
             {
               "name": "Custom fields settings",
@@ -6576,81 +6576,6 @@
               ]
             },
             {
-              "name": "OrderForm management",
-              "slug": "custom-fields-api-orderform-management",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create or update custom fields in orderForm",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-",
-                  "children": []
-                },
-                {
-                  "name": "Create or update custom fields in orderForm in batch",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields",
-                  "children": []
-                },
-                {
-                  "name": "Delete custom field in orderForm",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/-linkedEntityType-/-linkedEntityId-/-fieldName-",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Delivery Promise Notification API",
-          "slug": "delivery-promise-notification-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Delivery Promise",
-              "slug": "delivery-promise-notification-api-delivery-promise",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Update external product availability",
-                  "slug": "delivery-promise-notification-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
-                  "children": []
-                },
-                {
-                  "name": "Update delivery promises for an external seller’s item",
-                  "slug": "delivery-promise-notification-api",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Default Values API",
-          "slug": "default-values-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
               "name": "Default values",
               "slug": "default-values",
               "type": "category",
@@ -6689,6 +6614,39 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Delivery Promise Notification API",
+          "slug": "delivery-promise-notification-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Delivery Promise",
+              "slug": "delivery-promise-notification-api-delivery-promise",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Update external product availability",
+                  "slug": "delivery-promise-notification-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
+                  "children": []
+                },
+                {
+                  "name": "Update delivery promises for an external seller’s item",
+                  "slug": "delivery-promise-notification-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
                   "children": []
                 }
               ]
