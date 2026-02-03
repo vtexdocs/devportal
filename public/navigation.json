@@ -17895,8 +17895,8 @@
               "type": "category",
               "children": [
                 {
-                  "name": "FastStore WebOps: Rerun failed builds without new commits",
-                  "slug": "2026-01-16-faststore-webops-rerun-failed-builds-without-new-commits",
+                  "name": "FastStore: Cart and session management fixes",
+                  "slug": "2026-02-04-faststore-cart-and-session-management-fixes",
                   "origin": "",
                   "type": "markdown",
                   "children": []
