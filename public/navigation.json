@@ -3308,6 +3308,15 @@
                   "children": []
                 },
                 {
+                  "name": "Update allocation linked entity",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/linked-entity",
+                  "children": []
+                },
+                {
                   "name": "Query allocations",
                   "slug": "budgets-api",
                   "type": "openapi",
