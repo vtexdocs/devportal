@@ -6230,6 +6230,166 @@
           ]
         },
         {
+          "name": "Checkout Custom Card Payment API",
+          "slug": "checkout-custom-card-payment-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Profile management",
+              "slug": "profile-management",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create profile",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/profile-system/pvt/profiles",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Get profile cards",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/profile-system/pvt/profiles/-profileId-/vcs-checkout",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Delete profile",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/profile-system/pvt/profiles/-profileId-/personalData",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Card token vault",
+              "slug": "card-token-vault",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Save card token",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/card-token-vault/tokens",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Checkout operations",
+              "slug": "checkout-operations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Add items to cart",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Add client profile data",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/clientProfileData",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Add payment data",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/paymentData",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Place order",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/transaction",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Authentication",
+              "slug": "authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Start client login",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/vtexid/pub/authentication/startlogin",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Validate client login",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/vtexid/pub/authentication/classic/validate",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment gateway",
+              "slug": "payment-gateway",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get transaction details",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/pvt/transactions/-transactionId-",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "List payments",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/pvt/transactions/-transactionId-/payments",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Get card",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/pvt/accounts/-accountId-",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Customer Credit API",
           "slug": "customer-credit-api",
           "origin": "",
