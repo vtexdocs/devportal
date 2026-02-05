@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.32.7](https://github.com/vtexdocs/devportal/compare/v1.32.6...v1.32.7) (2026-02-05)
+
+
+### Features
+
+* add Checkout Custom Card Payment API to navigation ([32bfe50](https://github.com/vtexdocs/devportal/commit/32bfe5096b3ab94e224cd98051afe5a4bca28ca4))
+* **navigation.json:** add february category ([2be1dcd](https://github.com/vtexdocs/devportal/commit/2be1dcdd0d402ae4f1da8079134d7987e3a71301))
+* **navigation.json:** fix entry content ([4ed9e0f](https://github.com/vtexdocs/devportal/commit/4ed9e0fbf6a2df7ac1a5295b46036c03e09bb8ed))
+
+
+### Bug Fixes
+
+* correct URL parameter placeholders in B2B API navigation ([2128491](https://github.com/vtexdocs/devportal/commit/2128491657ca1375018a3518832f7afe4a7102a7))
+
+
+### Docs
+
+* add custom checkout fields and budgets nav entries ([8187940](https://github.com/vtexdocs/devportal/commit/8187940aefbbaac5e9017ed4618be14649152f4d))
+* **budgets-api:** add update allocation linked entity endpoint [EDU-17265] ([c7529ef](https://github.com/vtexdocs/devportal/commit/c7529ef9a7d837437d276df7cf3d1f7fc0bca5d2))
+
+
+### Refactoring
+
+* **navigation:** group Custom Fields and Default Values under Custom Checkout Fields ([ebba823](https://github.com/vtexdocs/devportal/commit/ebba823d1a39aaf07f7b52e08f4ecea9f76c2c9e))
+
 ### [1.32.6](https://github.com/vtexdocs/devportal/compare/v1.32.5...v1.32.6) (2026-01-27)
 
 
