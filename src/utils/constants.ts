@@ -431,6 +431,7 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Catalog API Seller Portal': 'catalog-api-seller-portal',
   'VTEX - Catalog API': 'catalog-api',
   'VTEX - Checkout API': 'checkout-api',
+  'VTEX - Checkout Custom Card Payment API': 'checkout-custom-card-payment-api',
   'VTEX - Checkout Configuration API': 'checkout-configuration-api',
   'VTEX - Customer Credit API': 'customer-credit-api',
   'VTEX - Delivery Promise Notification API':
