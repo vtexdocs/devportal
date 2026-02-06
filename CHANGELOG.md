@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.32.8](https://github.com/vtexdocs/devportal/compare/v1.32.7...v1.32.8) (2026-02-06)
+
+
+### Features
+
+* add new api ([c30789d](https://github.com/vtexdocs/devportal/commit/c30789de30928bcedd3d0db87ea6fef79720bc11))
+
 ### [1.32.7](https://github.com/vtexdocs/devportal/compare/v1.32.6...v1.32.7) (2026-02-05)
 
 
