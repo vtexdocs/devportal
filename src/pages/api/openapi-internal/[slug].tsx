@@ -186,8 +186,7 @@ export default async function handler(
       path: path,
     })
   } catch (error) {
-    const errorMessage =
-      error instanceof Error ? error.message : String(error)
+    const errorMessage = error instanceof Error ? error.message : String(error)
 
     // Check for 404 errors (file not found)
     if (errorMessage.includes('404') || errorMessage.includes('Not Found')) {
