@@ -24,8 +24,7 @@ export const githubConfig = {
   openapiInternalOrg: process.env.GITHUB_OPENAPI_INTERNAL_ORG || 'vtex',
   openapiInternalRepo:
     process.env.GITHUB_OPENAPI_INTERNAL_REPO || 'openapi-schemas-internal',
-  openapiInternalBranch:
-    process.env.GITHUB_OPENAPI_INTERNAL_BRANCH || 'master',
+  openapiInternalBranch: process.env.GITHUB_OPENAPI_INTERNAL_BRANCH || 'master',
 
   // API configuration
   appId: process.env.GITHUB_APPID,
