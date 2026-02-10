@@ -15,10 +15,17 @@ export const githubConfig = {
   defaultRepo: process.env.GITHUB_DEFAULT_REPO || 'devportal',
   defaultBranch: process.env.GITHUB_DEFAULT_BRANCH || 'main',
 
-  // OpenAPI schemas repository configuration
+  // OpenAPI schemas repository configuration (public)
   openapiOrg: process.env.GITHUB_OPENAPI_ORG || 'vtex',
   openapiRepo: process.env.GITHUB_OPENAPI_REPO || 'openapi-schemas',
   openapiBranch: process.env.GITHUB_OPENAPI_BRANCH || 'master',
+
+  // OpenAPI schemas repository configuration (internal/private)
+  openapiInternalOrg: process.env.GITHUB_OPENAPI_INTERNAL_ORG || 'vtex',
+  openapiInternalRepo:
+    process.env.GITHUB_OPENAPI_INTERNAL_REPO || 'openapi-schemas-internal',
+  openapiInternalBranch:
+    process.env.GITHUB_OPENAPI_INTERNAL_BRANCH || 'master',
 
   // API configuration
   appId: process.env.GITHUB_APPID,
