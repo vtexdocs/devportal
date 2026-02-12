@@ -18064,6 +18064,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Faststore: Improved cookie handling for session and cart persistence in preview environments",
+                  "slug": "2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Cart and session management fixes",
                   "slug": "2026-02-04-faststore-cart-and-session-management-fixes",
                   "origin": "",
