@@ -18064,6 +18064,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 3.96.0",
+                  "slug": "2026-02-13-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Faststore: Improved cookie handling for session and cart persistence in preview environments",
                   "slug": "2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments",
                   "origin": "",
