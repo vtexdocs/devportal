@@ -7352,6 +7352,22 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Delivery Promise",
+              "slug": "intelligent-search-api-delivery-promise",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get pickup point availability for Delivery Promise",
+                  "slug": "intelligent-search-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-",
+                  "children": []
+                }
+              ]
             }
           ]
         },
