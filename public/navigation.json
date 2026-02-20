@@ -18087,6 +18087,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 3.97.0",
+                  "slug": "2026-02-20-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore Release Notes — Version 3.96.0",
                   "slug": "2026-02-13-faststore-release-notes-version",
                   "origin": "",
