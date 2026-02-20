@@ -2891,7 +2891,7 @@
           ]
         },
         {
-          "name": "Buyer organizations",
+          "name": "Buyer organizations (B2B Suite)",
           "slug": "buyer-organizations",
           "origin": "",
           "type": "openapi",
