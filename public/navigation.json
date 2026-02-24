@@ -14993,35 +14993,6 @@
           ]
         },
         {
-          "name": "B2B components",
-          "slug": "guides/b2b-components",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Order Configuration",
-              "slug": "apps/vtex.order-configuration",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Quickorder",
-              "slug": "apps/vtex.quickorder",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "SKU List",
-              "slug": "apps/vtex.sku-list",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
           "name": "B2B Suite",
           "slug": "apps/vtex.b2b-suite",
           "origin": "",
@@ -15071,6 +15042,35 @@
                 {
                   "name": "B2B Quotes GraphQL API",
                   "slug": "apps/vtex.b2b-quotes-graphql/b2bquotes-graphql-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "B2B components",
+              "slug": "guides/b2b-components",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Order Configuration",
+                  "slug": "apps/vtex.order-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Quickorder",
+                  "slug": "apps/vtex.quickorder",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "SKU List",
+                  "slug": "apps/vtex.sku-list",
                   "origin": "",
                   "type": "markdown",
                   "children": []
