@@ -12345,15 +12345,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Assign storefront roles or create user with storefront roles",
-                  "slug": "storefront-permissions-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/users",
-                  "children": []
-                },
-                {
                   "name": "Assign one storefront role",
                   "slug": "storefront-permissions-api",
                   "type": "openapi",
@@ -12363,12 +12354,21 @@
                   "children": []
                 },
                 {
-                  "name": "Revoke storefront role from user",
+                  "name": "Assign storefront roles",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/user/roles",
+                  "children": []
+                },
+                {
+                  "name": "Revoke storefront roles",
                   "slug": "storefront-permissions-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/license-manager/storefront/roles/revoke",
+                  "endpoint": "/api/license-manager/storefront/user/roles",
                   "children": []
                 },
                 {
@@ -12390,7 +12390,7 @@
                   "children": []
                 },
                 {
-                  "name": "Fetch storefront user roles by ID",
+                  "name": "Get storefront user roles",
                   "slug": "storefront-permissions-api",
                   "type": "openapi",
                   "method": "GET",
