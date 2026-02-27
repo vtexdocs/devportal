@@ -2712,6 +2712,59 @@
               ]
             }
           ]
+        },
+        {
+          "name": "CMS",
+          "slug": "cms",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Integrations",
+              "slug": "integrations",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore v3",
+                  "slug": "faststore-v3",
+                  "origin": "",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Content plugin",
+                      "slug": "content-plugin",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Upgrading from Headless CMS to CMS",
+              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Comparing Headless CMS (legacy) and CMS features",
+                  "slug": "comparing-headless-cms-legacy-and-cms-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Understanding CMS architecture and schema declarations",
+                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
         }
       ]
     },
