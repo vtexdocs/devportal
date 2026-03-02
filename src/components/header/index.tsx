@@ -9,9 +9,11 @@ import { useContext, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/router'
 
 import DropdownMenu from 'components/dropdown-menu'
-import VTEXDevportalIcon from 'components/icons/vtex-devportal-icon'
-import GridIcon from 'components/icons/grid-icon'
-import LongArrowIcon from 'components/icons/long-arrow-icon'
+import {
+  VTEXDevPortalIcon,
+  GridIcon,
+  LongArrowIcon,
+} from '@vtexdocs/components'
 
 import { getFeedbackURL } from 'utils/get-url'
 import { getMessages } from 'utils/get-messages'
@@ -122,7 +124,7 @@ const Header = ({ isEditor }: Props) => {
           href="/"
           sx={styles.headerBrandLink}
         >
-          <VTEXDevportalIcon sx={styles.logoSize} />
+          <VTEXDevPortalIcon sx={styles.logoSize} />
         </VtexLink>
 
         <Box sx={styles.searchContainer}>

@@ -2,7 +2,7 @@ import { CSSProperties, PropsWithChildren, ReactNode } from 'react'
 
 import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
-import ArrowRightIcon from 'components/icons/arrow-right-icon'
+import { ArrowRightIcon } from '@vtexdocs/components'
 import { Text } from '@vtex/brand-ui'
 
 export type SectionItemProps = {

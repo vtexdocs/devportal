@@ -1,6 +1,6 @@
 import styles from './styles'
 import { Flex, Box, Button, IconCaret } from '@vtex/brand-ui'
-import CheckboxIcon from 'components/icons/checkbox'
+import { CheckboxIcon } from '@vtexdocs/components'
 import { useState } from 'react'
 import { messages } from 'utils/constants'
 import { SelectOption } from 'utils/typings/types'

@@ -1,7 +1,5 @@
 import { Box, Button, Checkbox, Flex, Text } from '@vtex/brand-ui'
-import CloseIcon from 'components/icons/close-icon'
-import FilterIcon from 'components/icons/filter-icon'
-import TrashcanIcon from 'components/icons/trashcan-icon'
+import { FilterIcon, TrashcanIcon, CloseIcon } from '@vtexdocs/components'
 import Tag from 'components/tag'
 import { useState } from 'react'
 import styles from './styles'

@@ -16,7 +16,7 @@ import TroubleshootingCard from 'components/troubleshooting-card'
 import Pagination from 'components/pagination'
 import { resourceTroubleshooting } from 'utils/constants'
 import { Input } from '@vtexdocs/components'
-import searchIcon from 'components/icons/search-icon'
+import { SearchIcon } from '@vtexdocs/components'
 import Filter from 'components/filter'
 
 interface Props {
@@ -111,7 +111,7 @@ const TroubleshootingPage: NextPage<Props> = ({
           />
           <Input
             placeholder="Search for identified issues, diagnostics, and fixes..."
-            Icon={searchIcon}
+            Icon={SearchIcon}
             value={search}
             onChange={(value: string) => setSearch(value)}
           />

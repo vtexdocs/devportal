@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Box, Flex, TooltipProps, SxStyleProp } from '@vtex/brand-ui'
 
-import CaretIcon from 'components/icons/caret'
+import { CaretIcon } from '@vtexdocs/components'
 
 import styles from './styles'
 interface Props extends Pick<TooltipProps, 'children' | 'label' | 'placement'> {

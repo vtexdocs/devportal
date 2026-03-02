@@ -789,6 +789,27 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "PPP Versioning",
+                  "slug": "ppp-versioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing payments tokenization",
+                  "slug": "implementing-payments-tokenization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing tokenized cards",
+                  "slug": "managing-tokenized-cards",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -1074,6 +1095,28 @@
               ]
             },
             {
+              "name": "Custom checkout fields settings",
+              "slug": "custom-checkout-fields-settings",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Custom fields integration",
+                  "slug": "custom-fields-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Default values integration",
+                  "slug": "default-values-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Discounts",
               "slug": "discounts",
               "origin": "",
@@ -1131,8 +1174,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Create a regular order using the Checkout API",
-                  "slug": "create-a-regular-order-using-the-checkout-api",
+                  "name": "Creating a regular order with the Checkout API",
+                  "slug": "creating-a-regular-order-with-the-checkout-api",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1886,37 +1929,67 @@
           ]
         },
         {
-          "name": "B2B Suite",
-          "slug": "b2b-suite-category",
+          "name": "B2B",
+          "slug": "b2b-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "B2B Organizations",
-              "slug": "b2b-organizations",
+              "name": "B2B Buyer Portal",
+              "slug": "b2b-buyer-portal-category",
               "origin": "",
               "type": "category",
               "children": [
                 {
-                  "name": "Bulk Import Buyer Organizations Spreadsheet",
-                  "slug": "bulk-import-buyer-organizations-spreadsheet",
+                  "name": "Buying Policies",
+                  "slug": "buying-policies",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "How to configure tradeName to use in the organization search field",
-                  "slug": "how-to-configure-tradename-to-use-in-the-organization-search-field",
+                  "name": "Budgets and allocations",
+                  "slug": "budgets-and-allocations",
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
+                }
+              ]
+            },
+            {
+              "name": "B2B Suite",
+              "slug": "b2b-suite-category",
+              "origin": "",
+              "type": "category",
+              "children": [
                 {
-                  "name": "Enabling an access control list ACL in B2B Suite",
-                  "slug": "enabling-an-access-control-list-acl-in-b2b-suite",
+                  "name": "B2B Organizations",
+                  "slug": "b2b-organizations",
                   "origin": "",
-                  "type": "markdown",
-                  "children": []
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Bulk Import Buyer Organizations Spreadsheet",
+                      "slug": "bulk-import-buyer-organizations-spreadsheet",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "How to configure tradeName to use in the organization search field",
+                      "slug": "how-to-configure-tradename-to-use-in-the-organization-search-field",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Enabling an access control list ACL in B2B Suite",
+                      "slug": "enabling-an-access-control-list-acl-in-b2b-suite",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -2240,6 +2313,28 @@
           ]
         },
         {
+          "name": "Recommendations",
+          "slug": "recommendations",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Integrating product recommendations in headless stores",
+              "slug": "integrating-product-recommendations-in-headless-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Implementing product recommendations in Faststore",
+              "slug": "implementing-product-recommendations-in-faststore",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Storefront Permissions",
           "slug": "storefront-permissions-category",
           "origin": "",
@@ -2251,6 +2346,43 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            }
+          ]
+        },
+        {
+          "name": "VTEX Activity Flow",
+          "slug": "activity-flow",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Installing Activity Flow in Headless stores",
+              "slug": "installing-activity-flow-in-headless-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Installing Activity Flow in mobile apps",
+              "slug": "installing-activity-flow-in-mobile-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Installing Activity Flow in Flutter apps",
+                  "slug": "installing-activity-flow-in-flutter-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Installing Activity Flow in React Native apps",
+                  "slug": "installing-activity-flow-in-react-native-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -2361,6 +2493,57 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "VTEX Ads JavaScript SDK",
+              "slug": "vtex-ads-javascript-sdk",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "VTEX Ads Core Package Quickstart",
+                  "slug": "vtex-ads-core-package-quickstart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "VTEX Ads Core Package Basic Usage",
+                      "slug": "vtex-ads-core-package-basic-usage",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Core Package Custom Hydration",
+                      "slug": "vtex-ads-core-package-custom-hydration",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Core Package Examples",
+                      "slug": "vtex-ads-core-package-examples",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Core Package Quickstart",
+                      "slug": "vtex-ads-core-package-quickstart",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "VTEX Ads React Package Quickstart",
+                  "slug": "vtex-ads-react-package-quickstart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -2455,6 +2638,131 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            }
+          ]
+        },
+        {
+          "name": "Weni by VTEX",
+          "slug": "weni-by-vtex",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Weni by VTEX CLI",
+              "slug": "weni-by-vtex-cli",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Using the Weni by VTEX CLI",
+                  "slug": "using-the-weni-by-vtex-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Weni by VTEX CLI Command Reference",
+                  "slug": "weni-by-vtex-cli-command-reference",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Authenticating with your Weni by VTEX account",
+                  "slug": "authenticating-with-your-weni-by-vtex-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing your Weni by VTEX projects",
+                  "slug": "managing-your-weni-by-vtex-projects",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Understanding the core concepts",
+                  "slug": "weni-by-vtex-understanding-the-core-concepts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Working with Weni by VTEX agents",
+                  "slug": "working-with-weni-by-vtex-agents",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Fetching and filtering logs",
+                  "slug": "weni-by-vtex-fetching-and-filtering-logs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using Weni Run to execute tool tests",
+                  "slug": "using-weni-run-to-execute-tool-tests",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "CMS",
+          "slug": "cms",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Integrations",
+              "slug": "integrations",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore v3",
+                  "slug": "faststore-v3",
+                  "origin": "",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Content plugin",
+                      "slug": "content-plugin",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Upgrading from Headless CMS to CMS",
+              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Comparing Headless CMS (legacy) and CMS features",
+                  "slug": "comparing-headless-cms-legacy-and-cms-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Understanding CMS architecture and schema declarations",
+                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         }
@@ -2636,7 +2944,7 @@
           ]
         },
         {
-          "name": "Buyer organizations",
+          "name": "Buyer organizations (B2B Suite)",
           "slug": "buyer-organizations",
           "origin": "",
           "type": "openapi",
@@ -2687,6 +2995,565 @@
           ]
         },
         {
+          "name": "B2B Contracts",
+          "slug": "b2b-contracts-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Contract management",
+              "slug": "contract-management",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create contract",
+                  "slug": "b2b-contracts-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get contract by ID",
+                  "slug": "b2b-contracts-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                  "children": []
+                },
+                {
+                  "name": "Update contract by ID",
+                  "slug": "b2b-contracts-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete contract by ID",
+                  "slug": "b2b-contracts-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B2B Personas",
+          "slug": "b2b-personas-api",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "B2B buyers",
+              "slug": "b2b-buyers",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get buyer schema",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/schemas/v1",
+                  "children": []
+                },
+                {
+                  "name": "Create buyer",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get buyer by ID",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                  "children": []
+                },
+                {
+                  "name": "Update buyer",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete buyer",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                  "children": []
+                },
+                {
+                  "name": "Search buyers",
+                  "slug": "b2b-buyer-data-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/shopper/search",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "B2B contact information",
+              "slug": "b2b-contact-information",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create new contact information",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents",
+                  "children": []
+                },
+                {
+                  "name": "Search contact information",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/search",
+                  "children": []
+                },
+                {
+                  "name": "Get contact information by ID",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Update contact information",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete contact information",
+                  "slug": "b2b-contact-information-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Budgets API",
+          "slug": "budgets-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Statements",
+              "slug": "statements",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get Budget Statements",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/statements",
+                  "children": []
+                },
+                {
+                  "name": "Get Allocation Statements",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/statements",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Transactions",
+              "slug": "transactions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Transaction",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions",
+                  "children": []
+                },
+                {
+                  "name": "Refund Transaction",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-/refund",
+                  "children": []
+                },
+                {
+                  "name": "Get Transaction",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Reservations",
+              "slug": "reservations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
+                  "children": []
+                },
+                {
+                  "name": "List Reservations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
+                  "children": []
+                },
+                {
+                  "name": "Get Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                  "children": []
+                },
+                {
+                  "name": "Confirmation Reservation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-/confirmation",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Allocations",
+              "slug": "allocations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                  "children": []
+                },
+                {
+                  "name": "List Budget Allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                  "children": []
+                },
+                {
+                  "name": "Create Batch of Allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/batch",
+                  "children": []
+                },
+                {
+                  "name": "Get Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Update Allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete allocation",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                  "children": []
+                },
+                {
+                  "name": "Change allocation status",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/status",
+                  "children": []
+                },
+                {
+                  "name": "Update allocation usage",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/usage",
+                  "children": []
+                },
+                {
+                  "name": "Update allocation linked entity",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/linked-entity",
+                  "children": []
+                },
+                {
+                  "name": "Query allocations",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/allocations/query",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Budgets",
+              "slug": "budgets",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-",
+                  "children": []
+                },
+                {
+                  "name": "List budgets",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-",
+                  "children": []
+                },
+                {
+                  "name": "Get budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Update budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete budget",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                  "children": []
+                },
+                {
+                  "name": "Update budget status",
+                  "slug": "budgets-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/status",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Buying Policies API",
+          "slug": "buying-policies-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Dimensions",
+              "slug": "dimensions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create dimension",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions",
+                  "children": []
+                },
+                {
+                  "name": "Get dimensions information",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions",
+                  "children": []
+                },
+                {
+                  "name": "Update dimension",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete dimension",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Rules",
+              "slug": "rules",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create dimension rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                  "children": []
+                },
+                {
+                  "name": "Update all dimension rules",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                  "children": []
+                },
+                {
+                  "name": "Update dimension rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete dimension rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Manual authorization",
+              "slug": "manual-authorization",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Accept or deny rule",
+                  "slug": "buying-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/commercial-authorizations/-orderAuthId-/callback",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Legacy CMS Portal API",
           "slug": "legacy-cms-portal-api",
           "origin": "",
@@ -2713,6 +3580,91 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/catalog_system/pvt/virtualfolder/site/-websiteId-/changeurischema/-protocol-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Card Token Vault API",
+          "slug": "card-token-vault-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Card tokens operations",
+              "slug": "card-tokens-operations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create card token",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens",
+                  "children": []
+                },
+                {
+                  "name": "Update card token",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Get card token by ID",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/accounts/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete card token",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/accounts/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Card tokens import",
+              "slug": "card-tokens-import",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Import card tokens",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/import",
+                  "children": []
+                },
+                {
+                  "name": "Get card token import status",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/import/-importId-",
+                  "children": []
+                },
+                {
+                  "name": "Get card token import report",
+                  "slug": "card-token-vault-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/card-token-vault/tokens/import/-importId-/report",
                   "children": []
                 }
               ]
@@ -4136,6 +5088,325 @@
               ]
             },
             {
+              "name": "Multi-language beta",
+              "slug": "catalog-api-multi-language-beta",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get product translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/product/-productId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Create or update product translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/product/-productId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Get product specification translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/products/-productId-/specification/-specificationId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Create or update product specification translation by product ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/products/-productId-/specification/-specificationId-/language",
+                  "children": []
+                },
+                {
+                  "name": "Multi-language SKU beta",
+                  "slug": "catalog-api-multi-language-sku-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get SKU translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU attribute translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU attribute translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU file translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU file translation by SKU ID",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language specification beta",
+                  "slug": "catalog-api-multi-language-specification-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get specification group translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specificationgroup/-specificationGroupId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update specification group translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specificationgroup/-specificationGroupId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get specification translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-specificationId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update specification translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specification/-specificationId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get specification value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update specification value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language category beta",
+                  "slug": "catalog-api-multi-language-category-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get category translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/category/-categoryId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update category translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/category/-categoryId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language brand beta",
+                  "slug": "catalog-api-multi-language-brand-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get brand translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/brand/-brandId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update brand translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/brand/-brandId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language attachment and service beta",
+                  "slug": "catalog-api-multi-language-attachment-and-service-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get attachment translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/attachment/-attachmentId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update attachment translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/attachment/-attachmentId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU service type translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU service type translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU service translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservice/-skuserviceId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU service translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservice/-skuserviceId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Get SKU service value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update SKU service value translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-/language",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Multi-language collection beta",
+                  "slug": "catalog-api-multi-language-collection-beta",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get collection translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/collection/-collectionId-/language",
+                      "children": []
+                    },
+                    {
+                      "name": "Create or update collection translation",
+                      "slug": "catalog-api",
+                      "type": "openapi",
+                      "method": "PUT",
+                      "origin": "",
+                      "endpoint": "/api/catalog/pvt/collection/-collectionId-/language",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "name": "Similar Category",
               "slug": "catalog-api-similar-category",
               "type": "category",
@@ -4834,6 +6105,51 @@
                   "origin": "",
                   "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customData/-appId-/-appFieldName-",
                   "children": []
+                },
+                {
+                  "name": "Batch add custom fields",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields",
+                  "children": []
+                },
+                {
+                  "name": "Add order custom field",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/order",
+                  "children": []
+                },
+                {
+                  "name": "Add item custom field",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/item/-itemId-",
+                  "children": []
+                },
+                {
+                  "name": "Remove item custom field",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/item/-itemId-",
+                  "children": []
+                },
+                {
+                  "name": "Add address custom field",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/customFields/address/-addressId-",
+                  "children": []
                 }
               ]
             },
@@ -4960,6 +6276,166 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/checkout/pub/regions/-regionId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Checkout Custom Card Payment API",
+          "slug": "checkout-custom-card-payment-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Profile management",
+              "slug": "profile-management",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create profile",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/profile-system/pvt/profiles",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Get profile cards",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/profile-system/pvt/profiles/-profileId-/vcs-checkout",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Delete profile",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/profile-system/pvt/profiles/-profileId-/personalData",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Card token vault",
+              "slug": "card-token-vault",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Save card token",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/card-token-vault/tokens",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Checkout operations",
+              "slug": "checkout-operations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Add items to cart",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Add client profile data",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/clientProfileData",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Add payment data",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/paymentData",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Place order",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/transaction",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Authentication",
+              "slug": "authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Start client login",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/vtexid/pub/authentication/startlogin",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Validate client login",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/vtexid/pub/authentication/classic/validate",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment gateway",
+              "slug": "payment-gateway",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get transaction details",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/pvt/transactions/-transactionId-",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "List payments",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/pvt/transactions/-transactionId-/payments",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "children": []
+                },
+                {
+                  "name": "Get card",
+                  "slug": "checkout-custom-card-payment-api",
+                  "endpoint": "/api/pvt/accounts/-accountId-",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
                   "children": []
                 }
               ]
@@ -5214,6 +6690,152 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/creditcontrol/storeconfig",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Custom Checkout Fields",
+          "slug": "custom-checkout-fields",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Custom fields settings",
+              "slug": "custom-fields-api-custom-fields-settings",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create custom field settings",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get custom field settings",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/search",
+                  "children": []
+                },
+                {
+                  "name": "Update custom field settings",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete custom field settings",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Custom fields values",
+              "slug": "custom-fields-api-custom-fields-values",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get custom field value",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                  "children": []
+                },
+                {
+                  "name": "Create custom field value",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents",
+                  "children": []
+                },
+                {
+                  "name": "Update custom field value",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete custom field value",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                  "children": []
+                },
+                {
+                  "name": "Search custom fields values",
+                  "slug": "custom-fields-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/search",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Default values",
+              "slug": "default-values",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents",
+                  "children": []
+                },
+                {
+                  "name": "Get default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                },
+                {
+                  "name": "Update default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete default values",
+                  "slug": "default-values-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
                   "children": []
                 }
               ]
@@ -5780,6 +7402,22 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/facets/-facets-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Delivery Promise",
+              "slug": "intelligent-search-api-delivery-promise",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get pickup point availability for Delivery Promise",
+                  "slug": "intelligent-search-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-",
                   "children": []
                 }
               ]
@@ -7253,6 +8891,15 @@
                   "origin": "",
                   "endpoint": "/pvt/orders/-marketplaceOrderId-/cancel",
                   "children": []
+                },
+                {
+                  "name": "Send agreement for order modifications",
+                  "slug": "marketplace-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/pvt/orders/-participantOrderId-/changes/-changeRequestId-/send-agreement",
+                  "children": []
                 }
               ]
             },
@@ -7844,6 +9491,33 @@
                   "origin": "",
                   "endpoint": "/api/dataentities/AD/documents/-id-",
                   "children": []
+                },
+                {
+                  "name": "Get address by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Update address by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete address by ID",
+                  "slug": "masterdata-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
                 }
               ]
             },
@@ -8173,7 +9847,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/orders/pvt/document/-changeOrderId-/change-summary",
+                  "endpoint": "/api/orders/pvt/document/-orderId-/change-summary",
                   "children": []
                 },
                 {
@@ -8476,6 +10150,215 @@
           ]
         },
         {
+          "name": "Organization Units API",
+          "slug": "organization-units-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Users",
+              "slug": "organization-units-api-users",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get user scopes",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/users/-userId-/scopes",
+                  "children": []
+                },
+                {
+                  "name": "Get user's organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-userId-/unit",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Organization Units",
+              "slug": "organization-units-api-organization-units",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1",
+                  "children": []
+                },
+                {
+                  "name": "Search organization units",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1",
+                  "children": []
+                },
+                {
+                  "name": "Get organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                  "children": []
+                },
+                {
+                  "name": "Rename organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                  "children": []
+                },
+                {
+                  "name": "Get all children organization units",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/children",
+                  "children": []
+                },
+                {
+                  "name": "Get root organization units",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/roots",
+                  "children": []
+                },
+                {
+                  "name": "Move organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/path",
+                  "children": []
+                },
+                {
+                  "name": "Add user to organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "children": []
+                },
+                {
+                  "name": "Remove users from organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "children": []
+                },
+                {
+                  "name": "List users from organization unit",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "children": []
+                },
+                {
+                  "name": "Find all organization units with scope value",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/scope/-scope-/value/-scopeValue-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Scopes",
+              "slug": "organization-units-api-scopes",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get organization unit scopes",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
+                  "children": []
+                },
+                {
+                  "name": "Delete all scopes",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
+                  "children": []
+                },
+                {
+                  "name": "Create organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                  "children": []
+                },
+                {
+                  "name": "Update organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                  "children": []
+                },
+                {
+                  "name": "Remove values from organization unit scope",
+                  "slug": "organization-units-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-/remove",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Payment Provider Protocol API",
           "slug": "payment-provider-protocol",
           "origin": "",
@@ -8693,6 +10576,15 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/pvt/merchants/payment-systems",
+                  "children": []
+                },
+                {
+                  "name": "Get card data",
+                  "slug": "payments-gateway-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payments/pvt/account/-cardId-",
                   "children": []
                 }
               ]
@@ -10506,15 +12398,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Assign storefront roles or create user with storefront roles",
-                  "slug": "storefront-permissions-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/users",
-                  "children": []
-                },
-                {
                   "name": "Assign one storefront role",
                   "slug": "storefront-permissions-api",
                   "type": "openapi",
@@ -10524,12 +12407,21 @@
                   "children": []
                 },
                 {
-                  "name": "Revoke storefront role from user",
+                  "name": "Assign storefront roles",
+                  "slug": "storefront-permissions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/user/roles",
+                  "children": []
+                },
+                {
+                  "name": "Revoke storefront roles",
                   "slug": "storefront-permissions-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/license-manager/storefront/roles/revoke",
+                  "endpoint": "/api/license-manager/storefront/user/roles",
                   "children": []
                 },
                 {
@@ -10551,7 +12443,7 @@
                   "children": []
                 },
                 {
-                  "name": "Fetch storefront user roles by ID",
+                  "name": "Get storefront user roles",
                   "slug": "storefront-permissions-api",
                   "type": "openapi",
                   "method": "GET",
@@ -12339,6 +14231,20 @@
           "type": "markdown",
           "children": [
             {
+              "name": "Accessing external resources within a VTEX IO app",
+              "slug": "accessing-external-resources-within-a-vtex-io-app",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Controlling access to app resources",
+              "slug": "controlling-access-to-app-resources",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Roles",
               "slug": "vtex-io-documentation-roles",
               "origin": "",
@@ -13692,7 +15598,15 @@
               "slug": "faststore/getting-started-faststore-versions-and-support-levels",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Upgrading from FastStore v2 to v3",
+                  "slug": "faststore/getting-started-faststore-v2-to-v3",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Getting Started",
@@ -13778,7 +15692,29 @@
               "slug": "faststore/webops-dashboard",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Configuring production and preview branches in WebOps",
+                  "slug": "faststore/webops-configuring-production-and-preview-branches",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing variables and secrets",
+                  "slug": "faststore/webops-managing-variables-and-secrets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Moving your FastStore project to a new GitHub repository",
+                  "slug": "faststore/webops-moving-your-faststore-project-to-a-new-github-repository",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Headless CMS",
@@ -14821,10 +16757,18 @@
                 },
                 {
                   "name": "Session",
-                  "slug": "faststore/sdk-session",
+                  "slug": "faststore/session-overview",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "Enabling refresh token on FastStore",
+                      "slug": "faststore/session-enabling-refresh-token",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -14995,28 +16939,6 @@
               ]
             },
             {
-              "name": "Security",
-              "slug": "faststore/security-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Enabling refresh token on FastStore",
-                  "slug": "faststore/security-enabling-refresh-token",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing Secrets",
-                  "slug": "faststore/security-managing-secrets",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Managing URLs with redirects and rewrite paths",
               "slug": "faststore/routing-managing-urls-with-redirects-and-rewrite-paths",
               "origin": "",
@@ -15054,6 +16976,13 @@
                 {
                   "name": "Configuring SEO for PLPs and PDPs",
                   "slug": "faststore/seo-configuring-seo-for-plp-and-pdp",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Configuring product price meta tag formatting on PDP",
+                  "slug": "faststore/seo-configuring-product-price-meta-tag-on-pdp",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -15777,6 +17706,20 @@
               ]
             },
             {
+              "name": "Implementing Google One-tap login",
+              "slug": "vtex-io-documentation-implementing-google-one-tap-login",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Improving store accessibility with semantic HTML migration",
+              "slug": "vtex-io-documentation-semantic-html-migration",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Going live",
               "slug": "vtex-io-documentation-go-live",
               "origin": "",
@@ -16157,17 +18100,161 @@
       "slugPrefix": "updates/release-notes",
       "categories": [
         {
+          "name": "2026",
+          "slug": "2026-category",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "February",
+              "slug": "february-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore Release Notes — Version 3.97.0",
+                  "slug": "2026-02-20-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 3.96.0",
+                  "slug": "2026-02-13-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Faststore: Improved cookie handling for session and cart persistence in preview environments",
+                  "slug": "2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Cart and session management fixes",
+                  "slug": "2026-02-04-faststore-cart-and-session-management-fixes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "January",
+              "slug": "january-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore WebOps: Rerun failed builds without new commits",
+                  "slug": "2026-01-16-faststore-webops-rerun-failed-builds-without-new-commits",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Enhanced security for variables and secrets",
+                  "slug": "2026-01-12-faststore-webops-enhanced-security-for-variables-and-secrets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }, 
+        {
           "name": "2025",
           "slug": "2025-category",
           "origin": "",
           "type": "category",
           "children": [
-           {
+            {
+              "name": "December",
+              "slug": "december-2025",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Granular permissions for Seller Marketplace API",
+                  "slug": "2025-12-23-granular-permissions-seller-marketplace-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 3.95.0",
+                  "slug": "2025-12-17-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: New parameter for custom analytics events",
+                  "slug": "2025-12-17-faststore-custom-event-parameter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Activity Flow: Monitoring Headless stores and mobile apps",
+                  "slug": "2025-12-11-activity-flow-monitoring-headless-stores-and-mobile-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Custom branch configuration for production and preview",
+                  "slug": "2025-12-05-faststore-webops-custom-branch-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Framework: Improve store accessibility with semantic HTML",
+                  "slug": "2025-12-05-store-framework-improve-store-accessibility-with-semantic-html",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 3.93.0",
+                  "slug": "2025-12-03-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "November",
               "slug": "november-2025",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore Release Notes — Version 3.92.0",
+                  "slug": "2025-11-26-faststore-release-notes-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Simplified domain configuration",
+                  "slug": "2025-11-14-faststore-single-domain-configuration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Updates to the Delivery Promise API",
+                  "slug": "2025-11-11-updates-delivery-promise-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "VTEX Help Center: Improved interface and new features",
                   "slug": "2025-11-07-vtex-help-center-improved-interface-and-new-features",
@@ -16205,8 +18292,8 @@
                   "children": []
                 },
                 {
-                  "name": "FastStore Release Notes — Version 3.90.0",
-                  "slug": "2025-10-13-faststore-release-notes-version",
+                  "name": "FastStore Release Notes — Version 3.91.0",
+                  "slug": "2025-10-24-faststore-release-notes-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -16219,8 +18306,8 @@
                   "children": []
                 },
                 {
-                  "name": "FastStore Release Notes — Version 3.91.0",
-                  "slug": "2025-10-24-faststore-release-notes-version",
+                  "name": "FastStore Release Notes — Version 3.90.0",
+                  "slug": "2025-10-13-faststore-release-notes-version",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -16243,6 +18330,13 @@
                 {
                   "name": "Payment connector homologation freeze in preparation for Black Friday 2025",
                   "slug": "2025-09-29-payment-connector-homologation-freeze-in-preparation-for-black-friday-2025",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Improved SEO and data reliability with EAN-based GTIN in product structured data",
+                  "slug": "2025-09-19-faststore-gtin-ean",
                   "origin": "",
                   "type": "markdown",
                   "children": []

@@ -38,6 +38,7 @@ const ReleaseNote = ({
   isFirst,
 }: ReleaseNoteProps) => {
   const actionValue = actionType ? getAction(actionType) : null
+  const ActionIcon = actionValue?.Icon
   const [releaseElementStatus, toggleReleaseElementStatus] = useState(isFirst)
   const [onHover, setOnHover] = useState(false)
 
@@ -75,9 +76,9 @@ const ReleaseNote = ({
         sx={styles.timeLineBar}
         title={<Text sx={styles.actionType}>{actionValue?.title}</Text>}
         icon={
-          actionValue ? (
+          ActionIcon ? (
             <Box>
-              <actionValue.Icon sx={styles.actionIcon} />
+              <ActionIcon sx={styles.actionIcon} />
             </Box>
           ) : null
         }

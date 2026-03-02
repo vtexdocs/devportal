@@ -34,10 +34,11 @@ export const getDate = (currentUpdate: string, dataGroup: boolean) => {
   const monthIndex = current.getMonth()
   const year = current.getFullYear()
   const day = current.getDate()
+  const fullDate = `${month[monthIndex]} ${day}, ${year}`
 
   return (
     <Text sx={dataGroup ? styles.releaseMonth : styles.releaseDate}>
-      {month[monthIndex] + ', ' + (dataGroup ? year : day)}
+      {dataGroup ? `${month[monthIndex]}, ${year}` : fullDate}
     </Text>
   )
 }
