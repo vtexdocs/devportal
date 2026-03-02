@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.33.0](https://github.com/vtexdocs/devportal/compare/v1.32.8...v1.33.0) (2026-03-02)
+
+
+### Features
+
+* **navigation.json:** add configuration for product price meta tag on pdp ([473c0dd](https://github.com/vtexdocs/devportal/commit/473c0dd8ec1c0d999f617d99279df9a2f9404d05))
+* **navigation.json:** add new release note ([8f399e6](https://github.com/vtexdocs/devportal/commit/8f399e6e48a13d1dd4a5fe218ea5a56c03d298db))
+* **navigation.json:** add release notes for faststore version ([acc211d](https://github.com/vtexdocs/devportal/commit/acc211d4281883c006b37ac36f2c94a09fa5e66b))
+
+
+### Bug Fixes
+
+* improve date formatting in release section ([c8e45bb](https://github.com/vtexdocs/devportal/commit/c8e45bb9cfe49270063e6b09d89383c7aa5ebc44))
+
+
+### Refactoring
+
+* nest B2B components under B2B Suite in navigation ([297c492](https://github.com/vtexdocs/devportal/commit/297c49228513e7c9dcf4c66ed919b2f499a0836c))
+
+
+### Chore
+
+* update storefront permissions api navigation ([fe9e66c](https://github.com/vtexdocs/devportal/commit/fe9e66c511ad4a4a4c9d6c98bbc60c999b6767a9))
+
+
+### Docs
+
+* **navigation.json:** add cms category ([5f8520e](https://github.com/vtexdocs/devportal/commit/5f8520eb3fff78cc71cba2294e36fb0c2158ffea))
+* update buyer organizations navigation label ([5eb916f](https://github.com/vtexdocs/devportal/commit/5eb916f36e6ad730f2d609430202e7c2bc247c2e))
+
 ### [1.32.8](https://github.com/vtexdocs/devportal/compare/v1.32.7...v1.32.8) (2026-02-06)
 
 
