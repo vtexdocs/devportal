@@ -1953,6 +1953,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Storefront Permissions Overview",
+                  "slug": "storefront-permissions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2328,21 +2335,6 @@
             {
               "name": "Implementing product recommendations in Faststore",
               "slug": "implementing-product-recommendations-in-faststore",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Storefront Permissions",
-          "slug": "storefront-permissions-category",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Storefront Permissions Overview",
-              "slug": "storefront-permissions",
               "origin": "",
               "type": "markdown",
               "children": []
