@@ -25,19 +25,6 @@ const internalOpenapiMappings: { [key: string]: string } = {
   'seller-portal-api': 'VTEX - Seller Portal',
 }
 
-const referencePaths = objectFlip(internalOpenapiMappings)
-
-interface ReferencePathsMapping {
-  [key: string]: string
-}
-
-function objectFlip(obj: { [x: string]: string }): ReferencePathsMapping {
-  return Object.keys(obj).reduce((ret: ReferencePathsMapping, key) => {
-    ret[obj[key]] = key
-    return ret
-  }, {})
-}
-
 /**
  * Fetches internal OpenAPI spec using the authenticated Octokit client
  * This uses the GitHub App authentication already configured in the devportal
@@ -132,8 +119,8 @@ export default async function handler(
   const slugParam = req.query.slug
   const slug = Array.isArray(slugParam) ? slugParam[0] : slugParam || ''
 
-  // Look up the path from the mapping, or use slug directly as the path
-  const path = referencePaths[slug] || slug
+  // Look up the path from the mapping - slug maps to filename
+  const path = internalOpenapiMappings[slug]
 
   if (!path) {
     return res
