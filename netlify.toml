@@ -2280,3 +2280,9 @@ force = true
 from = "/docs/guides/vtex-login"
 status = 308
 to = "/docs/apps/vtex.login"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-shopper-location"
+status = 308
+to = "/docs/apps/vtex.shopper-location"
