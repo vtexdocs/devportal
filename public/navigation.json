@@ -977,7 +977,15 @@
               "slug": "products",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "How to implement product color variation",
+                  "slug": "how-to-implement-product-color-variation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Specifications",
@@ -1031,13 +1039,6 @@
             {
               "name": "Alternative API requests",
               "slug": "alternative-api-requests",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "How to implement product color variation",
-              "slug": "how-to-implement-product-color-variation",
               "origin": "",
               "type": "markdown",
               "children": []
