@@ -959,6 +959,35 @@
           "type": "markdown",
           "children": [
             {
+              "name": "Products",
+              "slug": "products",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Implementing product color variation",
+                  "slug": "how-to-implement-product-color-variation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Alternative API requests",
+                  "slug": "alternative-api-requests",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "SKUs",
+              "slug": "skus",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Categories",
               "slug": "categories",
               "origin": "",
@@ -973,46 +1002,33 @@
               "children": []
             },
             {
-              "name": "Products",
-              "slug": "products",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "Specifications",
               "slug": "specifications",
               "origin": "",
               "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Product specifications",
-              "slug": "product-specifications",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "SKU specifications",
-              "slug": "sku-specifications",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Updating SKU Specifications with Catalog API",
-              "slug": "updating-sku-specifications-with-catalog-api",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "SKUs",
-              "slug": "skus",
-              "origin": "",
-              "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Product specifications",
+                  "slug": "product-specifications",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "SKU specifications",
+                  "slug": "sku-specifications",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Updating SKU Specifications with Catalog API",
+                  "slug": "updating-sku-specifications-with-catalog-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Images",
@@ -1022,15 +1038,8 @@
               "children": []
             },
             {
-              "name": "Alternative API requests",
-              "slug": "alternative-api-requests",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "How to implement product color variation",
-              "slug": "how-to-implement-product-color-variation",
+              "name": "Catalog multi-language integration guide",
+              "slug": "catalog-multi-language-integration-guide",
               "origin": "",
               "type": "markdown",
               "children": []
