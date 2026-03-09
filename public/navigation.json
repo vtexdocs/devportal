@@ -13728,6 +13728,13 @@
               "type": "markdown",
               "children": [
                 {
+                  "name": "Builder version statuses",
+                  "slug": "vtex-io-documentation-builder-version-statuses",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Admin Builder",
                   "slug": "vtex-io-documentation-admin-builder",
                   "origin": "",
@@ -18106,6 +18113,21 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "March",
+              "slug": "march-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "VTEX IO Builder statuses and decommissioning",
+                  "slug": "2026-03-09-vtex-io-builder-statuses-and-decommissioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "February",
               "slug": "february-2026",
