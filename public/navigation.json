@@ -11227,6 +11227,15 @@
                   "children": []
                 },
                 {
+                  "name": "Get computed prices for all price tables",
+                  "slug": "pricing-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/pricing/prices/-itemId-/computed",
+                  "children": []
+                },
+                {
                   "name": "Get Computed Price by price table or trade policy",
                   "slug": "pricing-api",
                   "type": "openapi",
