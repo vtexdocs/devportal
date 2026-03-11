@@ -1964,8 +1964,8 @@
                   "children": []
                 },
                 {
-                  "name": "Storefront Permissions Overview",
-                  "slug": "storefront-permissions",
+                  "name": "Storefront Roles",
+                  "slug": "storefront-roles",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -12388,19 +12388,19 @@
           ]
         },
         {
-          "name": "Storefront Permissions API",
-          "slug": "storefront-permissions-api",
+          "name": "Storefront Roles API",
+          "slug": "storefront-roles-api",
           "origin": "",
           "type": "openapi",
           "children": [
             {
-              "name": "Storefront Permissions",
-              "slug": "storefront-permissions-api-category",
+              "name": "Storefront Roles",
+              "slug": "storefront-roles-api-category",
               "type": "category",
               "children": [
                 {
                   "name": "Assign one storefront role",
-                  "slug": "storefront-permissions-api",
+                  "slug": "storefront-roles-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -12409,7 +12409,7 @@
                 },
                 {
                   "name": "Assign storefront roles",
-                  "slug": "storefront-permissions-api",
+                  "slug": "storefront-roles-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -12418,7 +12418,7 @@
                 },
                 {
                   "name": "Revoke storefront roles",
-                  "slug": "storefront-permissions-api",
+                  "slug": "storefront-roles-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
@@ -12427,7 +12427,7 @@
                 },
                 {
                   "name": "Check storefront user resource access",
-                  "slug": "storefront-permissions-api",
+                  "slug": "storefront-roles-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -12436,7 +12436,7 @@
                 },
                 {
                   "name": "Remove storefront user",
-                  "slug": "storefront-permissions-api",
+                  "slug": "storefront-roles-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
@@ -12445,7 +12445,7 @@
                 },
                 {
                   "name": "Get storefront user roles",
-                  "slug": "storefront-permissions-api",
+                  "slug": "storefront-roles-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -12454,7 +12454,7 @@
                 },
                 {
                   "name": "Fetch storefront user roles by email",
-                  "slug": "storefront-permissions-api",
+                  "slug": "storefront-roles-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -12463,7 +12463,7 @@
                 },
                 {
                   "name": "Fetch storefront user details",
-                  "slug": "storefront-permissions-api",
+                  "slug": "storefront-roles-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",

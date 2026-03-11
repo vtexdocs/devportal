@@ -2286,3 +2286,21 @@ force = true
 from = "/docs/guides/vtex-shopper-location"
 status = 308
 to = "/docs/apps/vtex.shopper-location"
+
+[[redirects]]
+force = true
+from = "/docs/guides/storefront-permissions"
+status = 308
+to = "/docs/guides/storefront-roles"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/storefront-permissions-api"
+status = 308
+to = "/docs/api-reference/storefront-roles-api"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/storefront-permissions-api/*"
+status = 308
+to = "/docs/api-reference/storefront-roles-api/:splat"
