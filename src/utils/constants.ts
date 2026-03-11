@@ -489,7 +489,7 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Punchout API': 'punchout-api',
   'VTEX - mTLS API': 'mtls-api',
   'VTEX - Ads API': 'vtex-ads-api',
-  'VTEX - Storefront Permissions API': 'storefront-permissions-api',
+  'VTEX - Storefront Roles API': 'storefront-roles-api',
   'VTEX - Recommendations BFF API': 'recommendations-bff-api',
   'VTEX - Organization Units API': 'organization-units-api',
   'VTEX - Card Token Vault API': 'card-token-vault-api',
