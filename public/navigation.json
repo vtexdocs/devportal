@@ -9058,6 +9058,46 @@
           ]
         },
         {
+          "name": "VTEX Shopee Integration API",
+          "slug": "vtex-shopee-integration-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Shopee orders",
+              "slug": "vtex-shopee-integration-api-shopee-orders",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Download legacy shipping label",
+                  "slug": "vtex-shopee-integration-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/shopeeintegration/order/shipping/label/legacy",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "VTEX order callbacks",
+              "slug": "vtex-shopee-integration-api-vtex-order-callbacks",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Cancel marketplace delivery",
+                  "slug": "vtex-shopee-integration-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/shopeeintegration/-accountName-/pub/orders/-mktplaceOrderId-/cancelDelivery",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Master Data API - v2",
           "slug": "master-data-api-v2",
           "origin": "",
@@ -18122,6 +18162,13 @@
                 {
                   "name": "VTEX IO Builder statuses and decommissioning",
                   "slug": "2026-03-09-vtex-io-builder-statuses-and-decommissioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Shopee public shipment label route now returns accurate HTTP status codes",
+                  "slug": "2026-03-13-shopee-public-shipment-label-route-status-codes",
                   "origin": "",
                   "type": "markdown",
                   "children": []
