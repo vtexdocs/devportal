@@ -467,6 +467,7 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Pick and Pack Order Changes API': 'pick-and-pack-order-changes-api',
   'VTEX - Policies System API': 'policies-system-api',
   'VTEX - Pricing API': 'pricing-api',
+  'VTEX - Bulk Pricing API': 'bulk-pricing-api',
   'VTEX - Pricing Hub': 'pricing-hub',
   'VTEX - Profile System': 'profile-system',
   'VTEX - Promotions & Taxes API': 'promotions-and-taxes-api',

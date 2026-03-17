@@ -11326,6 +11326,55 @@
           ]
         },
         {
+          "name": "Bulk Pricing API",
+          "slug": "bulk-pricing-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Batch imports",
+              "slug": "bulk-pricing-api-batch-imports",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Import prices",
+                  "slug": "bulk-pricing-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/price-importer/pvt/import/-importType-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Batch status",
+              "slug": "bulk-pricing-api-batch-status",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get batch status",
+                  "slug": "bulk-pricing-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/price-importer/pvt/batches/-batchId-",
+                  "children": []
+                },
+                {
+                  "name": "Get batch errors",
+                  "slug": "bulk-pricing-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/price-importer/pvt/batches/-batchId-/errors",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Pricing Hub",
           "slug": "pricing-hub",
           "origin": "",
