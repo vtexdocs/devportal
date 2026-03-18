@@ -7418,7 +7418,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-",
+                  "endpoint": "/pickup-point-availability/-facets-",
                   "children": []
                 }
               ]
