@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.33.1](https://github.com/vtexdocs/devportal/compare/v1.33.0...v1.33.1) (2026-03-19)
+
+
+### Chore
+
+* move storefront permissions guide ([533311f](https://github.com/vtexdocs/devportal/commit/533311fa79603b3ea70bd80a585306829a172925))
+
+
+### Refactoring
+
+* rename storefront permissions to storefront roles ([9414095](https://github.com/vtexdocs/devportal/commit/9414095e00263de52a50d6979d455aae02224b01))
+
+
+### Docs
+
+* add B2B Buyer Portal integration overview to navigation ([fdcfb75](https://github.com/vtexdocs/devportal/commit/fdcfb75068f885fb420ca7490d3bbf6fc5782368))
+* add redirects for removed B2B suite guides ([ba9f3a4](https://github.com/vtexdocs/devportal/commit/ba9f3a41c07bb47098f598c3a783f4c9d4e9e497))
+* **navigation.json:** add Builder version statuses to navigation ([8bf4027](https://github.com/vtexdocs/devportal/commit/8bf4027c1c2763239a601fdd22af1e477588d9fc))
+* update B2B suite navigation ([bf56800](https://github.com/vtexdocs/devportal/commit/bf568003118b91681dda3567e92e4c854ebf21f2))
+
 ## [1.33.0](https://github.com/vtexdocs/devportal/compare/v1.32.8...v1.33.0) (2026-03-02)
 
 
