@@ -14500,8 +14500,8 @@
       "slugPrefix": "docs/",
       "categories": [
         {
-          "name": "B2B",
-          "slug": "guides/b2b-apps",
+          "name": "B2B Suite",
+          "slug": "guides/b2b-suite",
           "origin": "",
           "type": "category",
           "children": [
@@ -14529,11 +14529,18 @@
               ]
             },
             {
-              "name": "B2B Suite",
+              "name": "B2B Suite Apps",
               "slug": "apps/vtex.b2b-suite",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "B2B Organizations",
+                  "slug": "apps/vtex.b2b-organizations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Storefront Permissions",
                   "slug": "apps/vtex.storefront-permissions",
