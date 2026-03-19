@@ -13539,6 +13539,30 @@
               ]
             }
           ]
+        },
+        { 
+          "name": "Weni by VTEX API",
+          "slug": "weni-by-vtex",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+          {
+              "name": "Events API",
+              "slug": "weni-by-vtex-events-api",
+              "type": "category",
+              "children": [
+              {
+                  "name": "Retrieve events",
+                  "slug": "weni-by-vtex-events-api-retrieve-events",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "https://flows.weni.ai/api/v2/events.json",
+                  "children": []
+              }
+              ]
+              }
+            ]
         }
       ]
     },
