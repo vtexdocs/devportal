@@ -1950,6 +1950,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "B2B Buyer Portal Integration Overview",
+                  "slug": "b2b-buyer-portal-integration-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Buying Policies",
                   "slug": "buying-policies",
                   "origin": "",
