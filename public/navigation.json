@@ -2718,6 +2718,21 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Events API",
+              "slug": "weni-by-vtex-events-api",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Using the Events API",
+                  "slug": "using-the-weni-by-vtex-events-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
