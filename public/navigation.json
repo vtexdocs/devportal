@@ -5096,6 +5096,67 @@
               ]
             },
             {
+              "name": "SKU attribute",
+              "slug": "catalog-api-sku-attribute",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create SKU attribute",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute",
+                  "children": []
+                },
+                {
+                  "name": "Update SKU attribute",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-",
+                  "children": []
+                },
+                {
+                  "name": "Get SKU attribute by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-",
+                  "children": []
+                },
+                {
+                  "name": "Get all SKU attributes",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute",
+                  "children": []
+                },
+                {
+                  "name": "Delete SKU attribute",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete all SKU attributes",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Multi-language beta",
               "slug": "catalog-api-multi-language-beta",
               "type": "category",
