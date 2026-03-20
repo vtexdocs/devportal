@@ -1065,6 +1065,42 @@ to = '/docs/apps/vtex.b2b-suite'
 
 [[redirects]]
 force = true
+from = '/docs/guides/vtex-b2b-checkout-settings'
+status = 308
+to = '/docs/apps/vtex.b2b-checkout-settings'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-b2b-orders-history'
+status = 308
+to = '/docs/apps/vtex.b2b-orders-history'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-b2b-organizations'
+status = 308
+to = '/docs/apps/vtex.b2b-organizations'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-b2b-quotes'
+status = 308
+to = '/docs/apps/vtex.b2b-quotes'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-storefront-permissions-ui'
+status = 308
+to = '/docs/apps/vtex.storefront-permissions-ui'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-storefront-permissions'
+status = 308
+to = '/docs/apps/vtex.storefront-permissions'
+
+[[redirects]]
+force = true
 from = '/docs/guides/vtex-shelf'
 status = 308
 to = '/docs/apps/vtex.shelf'
