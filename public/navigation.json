@@ -18014,21 +18014,28 @@
               "children": []
             },
             {
-              "name": "Issues during extending the FastStore API schema",
-              "slug": "issues-during-extending-the-faststore-api-schema",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can’t access the Headless CMS",
+              "name": "I can't access the Headless CMS",
               "slug": "unable-to-access-headless-cms",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I can’t install the Headless CMS plugins in my account",
+              "name": "I can't create a new workspace",
+              "slug": "i-cant-create-a-new-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I can't install an app with a major other than 0.x",
+              "slug": "i-cant-install-an-app-with-a-major-other-than-0x",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I can't install the Headless CMS plugins in my account",
               "slug": "i-cant-install-the-headless-cms-plugins-in-my-account",
               "origin": "",
               "type": "markdown",
@@ -18042,8 +18049,36 @@
               "children": []
             },
             {
-              "name": "I can’t integrate my external Search Provider",
+              "name": "I can't integrate my external Search Provider",
               "slug": "i-cant-integrate-my-external-search-provider",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I can't publish my theme due to app dependency",
+              "slug": "i-cant-publish-my-theme-due-to-app-dependency",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I don't see my Store Theme changes",
+              "slug": "i-dont-see-my-store-theme-changes",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Issues during extending the FastStore API schema",
+              "slug": "issues-during-extending-the-faststore-api-schema",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Modal Layout closes when I click a SKU",
+              "slug": "modal-layout-closes-when-i-click-a-sku",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18056,13 +18091,6 @@
               "children": []
             },
             {
-              "name": "My store catalog does not display the price range filter",
-              "slug": "my-store-catalog-does-not-show-the-price-range-filter",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "My pages are taking too long to be published on Headless CMS",
               "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
               "origin": "",
@@ -18070,15 +18098,15 @@
               "children": []
             },
             {
-              "name": "My store does not reflect the overrides I created",
-              "slug": "my-store-does-not-reflect-the-overrides-i-created",
+              "name": "My store catalog does not display the price range filter",
+              "slug": "my-store-catalog-does-not-show-the-price-range-filter",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Modal Layout closes when I click a SKU",
-              "slug": "modal-layout-closes-when-i-click-a-sku",
+              "name": "My store does not reflect the overrides I created",
+              "slug": "my-store-does-not-reflect-the-overrides-i-created",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18103,28 +18131,7 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            },
-            {
-              "name": "I can't create a new workspace",
-              "slug": "i-cant-create-a-new-workspace",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't install an app with a major other than 0.x",
-              "slug": "i-cant-install-an-app-with-a-major-other-than-0x",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I don't see my Store Theme changes",
-              "slug": "i-dont-see-my-store-theme-changes",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
+            }            
           ]
         },
         {
