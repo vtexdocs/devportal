@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.33.2](https://github.com/vtexdocs/devportal/compare/v1.33.1...v1.33.2) (2026-03-23)
+
+
+### Docs
+
+* new endpoints to navigation ([7ba5e85](https://github.com/vtexdocs/devportal/commit/7ba5e8542c96d2dc6be51839fb81b25063a32ae3))
+
 ### [1.33.1](https://github.com/vtexdocs/devportal/compare/v1.33.0...v1.33.1) (2026-03-19)
 
 
