@@ -1863,21 +1863,6 @@
               ]
             },
             {
-              "name": "VTEX Tracking",
-              "slug": "vtex-tracking",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integrating external orders via API to be used with VTEX Tracking",
-                  "slug": "integrate-external-orders-vtex-tracking",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "VTEX Pick and Pack",
               "slug": "vtex-pick-and-pack",
               "origin": "",
@@ -12907,28 +12892,6 @@
           ]
         },
         {
-          "name": "VTEX Tracking APIs",
-          "slug": "tracking",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Authentication",
-              "slug": "tracking-authentication",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Asynchronous Login",
-                  "slug": "tracking",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/auth",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Delivery Services",
               "slug": "tracking-delivery-services",
               "type": "category",
@@ -20367,13 +20330,6 @@
                 {
                   "name": "Additional validation when creating and updating an SKU",
                   "slug": "additional-validation-when-creating-and-updating-an-sku",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "VTEX Tracking API: changes in all paths",
-                  "slug": "vtex-tracking-api-changes-in-all-paths",
                   "origin": "",
                   "type": "markdown",
                   "children": []
