@@ -475,7 +475,6 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Search API': 'search-api',
   'VTEX - Session Manager API': 'session-manager-api',
   'VTEX - Subscriptions API v3': 'subscriptions-api-v3',
-  'VTEX - Tracking': 'tracking',
   'VTEX - VTEX Do API': 'vtex-do-api',
   'VTEX - VTEX ID API': 'vtex-id-api',
   'VTEX - VTEX Shipping Network API': 'vtex-shipping-network-api',
