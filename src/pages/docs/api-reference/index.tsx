@@ -214,19 +214,6 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/vtex-do-api',
   },
-  {
-    title: 'VTEX Shipping Network API',
-    description: 'Integrate your carrier with VTEX Shipping Network’s Hub.',
-    linkTitle: 'See more',
-    linkTo: '/docs/api-reference/vtex-shipping-network-api',
-  },
-  {
-    title: 'VTEX Tracking',
-    description:
-      'Manage all delivery solutions powered by VTEX Tracking service.',
-    linkTitle: 'See more',
-    linkTo: '/docs/api-reference/tracking',
-  },
 ]
 
 const APIReferencePage: NextPage<Props> = () => {
