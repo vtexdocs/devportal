@@ -5816,12 +5816,30 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Get sales channel by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pub/saleschannel/-salesChannelId-",
+                  "children": []
+                },
+                {
                   "name": "Get sales channel by product ID",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/product/-productId-/salespolicy",
+                  "children": []
+                },
+                {
+                  "name": "Get sales channel list",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pvt/saleschannel/list",
                   "children": []
                 },
                 {
@@ -5850,31 +5868,6 @@
                   "origin": "",
                   "endpoint": "/api/catalog_system/pvt/sku/stockkeepingunitidsbysaleschannel",
                   "children": []
-                },
-                {
-                  "name": "Sales Channel",
-                  "slug": "catalog-api-sales-channel",
-                  "type": "category",
-                  "children": [
-                    {
-                      "name": "Get Sales Channel List",
-                      "slug": "catalog-api",
-                      "type": "openapi",
-                      "method": "GET",
-                      "origin": "",
-                      "endpoint": "/api/catalog_system/pvt/saleschannel/list",
-                      "children": []
-                    },
-                    {
-                      "name": "Get Sales Channel by ID",
-                      "slug": "catalog-api",
-                      "type": "openapi",
-                      "method": "GET",
-                      "origin": "",
-                      "endpoint": "/api/catalog_system/pub/saleschannel/-salesChannelId-",
-                      "children": []
-                    }
-                  ]
                 }
               ]
             },
