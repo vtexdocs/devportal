@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.33.3](https://github.com/vtexdocs/devportal/compare/v1.33.2...v1.33.3) (2026-03-25)
+
+
+### Features
+
+* add release note ([ee6d1ec](https://github.com/vtexdocs/devportal/commit/ee6d1ec6c0e33469ab0cc3af800bff780845df6b))
+
 ### [1.33.2](https://github.com/vtexdocs/devportal/compare/v1.33.1...v1.33.2) (2026-03-23)
 
 
