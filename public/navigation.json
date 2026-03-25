@@ -18102,6 +18102,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Cart simulation: New allowedOutdatedData parameter",
+                  "slug": "2026-03-11-cart-simulation-new-allowedoutdateddata-parameter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX IO Builder statuses and decommissioning",
                   "slug": "2026-03-09-vtex-io-builder-statuses-and-decommissioning",
                   "origin": "",
