@@ -2720,9 +2720,9 @@
               "children": [
                 {
                   "name": "FastStore v3",
-                  "slug": "faststore-v3",
+                  "slug": "cms-for-faststore-storefronts",
                   "origin": "",
-                  "type": "category",
+                  "type": "markdown",
                   "children": [
                     {
                       "name": "Content plugin",
