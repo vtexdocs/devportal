@@ -3106,13 +3106,13 @@
               ]
             },
             {
-              "name": "B2B contact information",
-              "slug": "b2b-contact-information",
+              "name": "B2B recipients",
+              "slug": "b2b-recipients",
               "type": "category",
               "children": [
                 {
-                  "name": "Create new contact information",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Create new recipient",
+                  "slug": "b2b-recipients-api",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -3120,8 +3120,8 @@
                   "children": []
                 },
                 {
-                  "name": "Search contact information",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Search recipients",
+                  "slug": "b2b-recipients-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -3129,8 +3129,8 @@
                   "children": []
                 },
                 {
-                  "name": "Get contact information by ID",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Get recipient by ID",
+                  "slug": "b2b-recipients-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -3138,8 +3138,8 @@
                   "children": []
                 },
                 {
-                  "name": "Update contact information",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Update recipient",
+                  "slug": "b2b-recipients-api",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
@@ -3147,8 +3147,8 @@
                   "children": []
                 },
                 {
-                  "name": "Delete contact information",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Delete recipient",
+                  "slug": "b2b-recipients-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
