@@ -17029,13 +17029,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Debugging Partytown and analytics issues",
-                  "slug": "faststore/troubleshooting-analytics-and-partytown",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Identifying development errors and Starter bugs",
                   "slug": "faststore/troubleshooting-identifying-development-errors-and-starter-bugs",
                   "origin": "",
@@ -18017,6 +18010,13 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "My Google Tag Assistant is not working with Partytown",
+              "slug": "my-google-tag-assistant-is-not-working-with-partytown",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "I can't complete a purchase on a FastStore website",
               "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
