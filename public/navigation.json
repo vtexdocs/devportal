@@ -640,6 +640,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Punchout cart integration",
+                  "slug": "punchout-cart-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2632,10 +2639,32 @@
               "type": "markdown",
               "children": []
             }
-          ]
-        },
-        {
-          "name": "Weni by VTEX",
+           ]
+         },
+         {
+           "name": "AI-Assisted Development",
+           "slug": "ai-assisted-development-overview",
+           "origin": "",
+           "type": "markdown",
+           "children": [
+             {
+               "name": "VTEX Developer MCP",
+               "slug": "vtex-developer-mcp",
+               "origin": "",
+               "type": "markdown",
+               "children": []
+             },
+             {
+               "name": "VTEX Skills",
+               "slug": "vtex-skills",
+               "origin": "",
+               "type": "markdown",
+               "children": []
+             }
+           ]
+         },
+         {
+           "name": "Weni by VTEX",
           "slug": "weni-by-vtex",
           "origin": "",
           "type": "category",
