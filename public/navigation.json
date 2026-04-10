@@ -2639,10 +2639,32 @@
               "type": "markdown",
               "children": []
             }
-          ]
-        },
-        {
-          "name": "Weni by VTEX",
+           ]
+         },
+         {
+           "name": "AI-assisted development",
+           "slug": "ai-assisted-development-overview",
+           "origin": "",
+           "type": "markdown",
+           "children": [
+             {
+               "name": "VTEX Developer MCP",
+               "slug": "vtex-developer-mcp",
+               "origin": "",
+               "type": "markdown",
+               "children": []
+             },
+             {
+               "name": "VTEX Skills",
+               "slug": "vtex-skills",
+               "origin": "",
+               "type": "markdown",
+               "children": []
+             }
+           ]
+         },
+         {
+           "name": "Weni by VTEX",
           "slug": "weni-by-vtex",
           "origin": "",
           "type": "category",
@@ -18088,6 +18110,21 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "April",
+              "slug": "april-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Introducing VTEX Developer MCP and Skills for AI-assisted development",
+                  "slug": "2026-04-09-vtex-developer-mcp-and-skills",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "March",
               "slug": "march-2026",
