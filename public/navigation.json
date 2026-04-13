@@ -15011,8 +15011,8 @@
                   "children": []
                 },
                 {
-                  "name": "Shipping Option Components",
-                  "slug": "apps/vtex.shipping-option-components",
+                  "name": "Delivery Promise Components",
+                  "slug": "apps/vtex.delivery-promise-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
