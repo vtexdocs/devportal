@@ -18122,6 +18122,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Support for GitHub Enterprise accounts with a custom domain",
+                  "slug": "2026-04-02-faststore-webops-support-for-github-enterprise-accounts-with-a-custom-domain",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
