@@ -10328,7 +10328,7 @@
                   "name": "Move organization unit",
                   "slug": "organization-units-api",
                   "type": "openapi",
-                  "method": "POST",
+                  "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/organization-units/v1/-organizationUnitId-/path",
                   "children": []
@@ -10339,7 +10339,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "endpoint": "/api/vtexid/organization-units/v1/-organizationUnitId-/users",
                   "children": []
                 },
                 {
@@ -10348,7 +10348,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "endpoint": "/api/vtexid/organization-units/v1/-organizationUnitId-/users",
                   "children": []
                 },
                 {
@@ -10357,7 +10357,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "endpoint": "/api/vtexid/organization-units/v1/-organizationUnitId-/users",
                   "children": []
                 },
                 {
