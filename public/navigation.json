@@ -15921,13 +15921,6 @@
                       "children": []
                     },
                     {
-                      "name": "Styling a section",
-                      "slug": "faststore/using-themes-pages",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
                       "name": "Importing FastStore UI component styles",
                       "slug": "faststore/using-themes-importing-ui-components-styles",
                       "origin": "",
