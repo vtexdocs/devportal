@@ -5171,8 +5171,8 @@
               ]
             },
             {
-              "name": "Multi-language beta",
-              "slug": "catalog-api-multi-language-beta",
+              "name": "Multi-language",
+              "slug": "catalog-api-multi-language",
               "type": "category",
               "children": [
                 {
@@ -5212,8 +5212,8 @@
                   "children": []
                 },
                 {
-                  "name": "Multi-language SKU beta",
-                  "slug": "catalog-api-multi-language-sku-beta",
+                  "name": "Multi-language SKU",
+                  "slug": "catalog-api-multi-language-sku",
                   "type": "category",
                   "children": [
                     {
@@ -5273,8 +5273,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language specification beta",
-                  "slug": "catalog-api-multi-language-specification-beta",
+                  "name": "Multi-language specification",
+                  "slug": "catalog-api-multi-language-specification",
                   "type": "category",
                   "children": [
                     {
@@ -5334,8 +5334,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language category beta",
-                  "slug": "catalog-api-multi-language-category-beta",
+                  "name": "Multi-language category",
+                  "slug": "catalog-api-multi-language-category",
                   "type": "category",
                   "children": [
                     {
@@ -5359,8 +5359,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language brand beta",
-                  "slug": "catalog-api-multi-language-brand-beta",
+                  "name": "Multi-language brand",
+                  "slug": "catalog-api-multi-language-brand",
                   "type": "category",
                   "children": [
                     {
@@ -5384,8 +5384,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language attachment and service beta",
-                  "slug": "catalog-api-multi-language-attachment-and-service-beta",
+                  "name": "Multi-language attachment and service",
+                  "slug": "catalog-api-multi-language-attachment-and-service",
                   "type": "category",
                   "children": [
                     {
@@ -5463,8 +5463,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language collection beta",
-                  "slug": "catalog-api-multi-language-collection-beta",
+                  "name": "Multi-language collection",
+                  "slug": "catalog-api-multi-language-collection",
                   "type": "category",
                   "children": [
                     {
