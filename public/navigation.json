@@ -11861,6 +11861,39 @@
           ]
         },
         {
+          "name": "External Promotions Protocol API",
+          "slug": "external-promotions-protocol-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "External promotions",
+              "slug": "external-promotions-protocol-api-external-promotions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Calculate promotions",
+                  "slug": "external-promotions-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/calculatePromotion",
+                  "children": []
+                },
+                {
+                  "name": "Notify promotion usage",
+                  "slug": "external-promotions-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/notifyUsage",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Punchout API",
           "slug": "punchout-api",
           "origin": "",
