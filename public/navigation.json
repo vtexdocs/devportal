@@ -817,6 +817,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Processing DPAN cards in external connectors",
+                  "slug": "processing-dpan-cards-in-external-connectors",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
