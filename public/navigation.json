@@ -6959,6 +6959,64 @@
           ]
         },
         {
+          "name": "Delivery Promise Suggestions API",
+          "slug": "delivery-promise-suggestions-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Logistics shipping",
+              "slug": "delivery-promise-suggestions-api-logistics-shipping",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Search delivery zones",
+                  "slug": "delivery-promise-suggestions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/logistics-shipping/delivery-zones/_search/v2",
+                  "children": []
+                },
+                {
+                  "name": "Search pickup points",
+                  "slug": "delivery-promise-suggestions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/logistics-shipping/pickuppoints/_search",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Delivery suggestions",
+              "slug": "delivery-promise-suggestions-api-delivery-suggestions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Search delivery suggestions",
+                  "slug": "delivery-promise-suggestions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/delivery-promise-suggestions/_search",
+                  "children": []
+                },
+                {
+                  "name": "Get delivery suggestions",
+                  "slug": "delivery-promise-suggestions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/delivery-promise-suggestions",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "GiftCard API",
           "slug": "giftcard-api",
           "origin": "",
