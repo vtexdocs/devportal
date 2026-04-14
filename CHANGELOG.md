@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.33.4](https://github.com/vtexdocs/devportal/compare/v1.33.3...v1.33.4) (2026-04-14)
+
+
+### Features
+
+* add Delivery Promise Suggestion API ([709890a](https://github.com/vtexdocs/devportal/commit/709890a4c6bd1d03562dca8b59bb1123e93731a3))
+
+
+### Bug Fixes
+
+* add space ([20e9b54](https://github.com/vtexdocs/devportal/commit/20e9b54e0f45d1934dfdabd90d9dfb8346826b35))
+* format file ([4694181](https://github.com/vtexdocs/devportal/commit/4694181b2a23653aca7e59cc07465dc49315e4db))
+
+
+### Chore
+
+* update pickup point availability route ([e90a514](https://github.com/vtexdocs/devportal/commit/e90a5146cf7fffc2460c2fd57e78a55e411fd376))
+
+
+### CI
+
+* use main branch for devportal docsearch action ([ade31d4](https://github.com/vtexdocs/devportal/commit/ade31d4efe7ee8eeeac613d19b8ffaa8735c961a))
+
+
+### Docs
+
+* add AI-Assisted Development category to navigation ([4c7d6ad](https://github.com/vtexdocs/devportal/commit/4c7d6adc95d05bcc5b30e11335ec19c567a773d8))
+* add punchout cart integration to navigation ([6a27228](https://github.com/vtexdocs/devportal/commit/6a272285657f67d268508787f5d233c595f927de))
+* fixing dev portal building errors ([cdb84b9](https://github.com/vtexdocs/devportal/commit/cdb84b99cd9c9139cf2450a325a55ae9f2182f59))
+* **navigation.json:** add new cms for faststore guide ([421924d](https://github.com/vtexdocs/devportal/commit/421924db8ec11fd984f397e0240c974efe26d7d8))
+* **navigation.json:** remove styling a section guide ([d5635e6](https://github.com/vtexdocs/devportal/commit/d5635e6751c005eac2771f4318080d86673cdc8d))
+* **navigation:** add section for shopping assistant ([34342c6](https://github.com/vtexdocs/devportal/commit/34342c6bc2bb49378794e092f174629c83b135d9))
+* remove multi-language beta mentions from navigation ([41c1dc9](https://github.com/vtexdocs/devportal/commit/41c1dc95d3a2b16efe626f15f71575210d8f1cd1))
+* rename B2B Contact Information to B2B Recipients API ([1e63a6c](https://github.com/vtexdocs/devportal/commit/1e63a6c38421804c05730b621ebc57517e335beb))
+* update navigation ([548f9d0](https://github.com/vtexdocs/devportal/commit/548f9d092577d2cd9962ccdc9fc02add428da9ca))
+* update sales channel subcategory ([db73d28](https://github.com/vtexdocs/devportal/commit/db73d280474d6cc362c4d0bea7034381c2586c66))
+
 ### [1.33.3](https://github.com/vtexdocs/devportal/compare/v1.33.2...v1.33.3) (2026-03-25)
 
 
