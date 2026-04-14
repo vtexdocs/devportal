@@ -15921,13 +15921,6 @@
                       "children": []
                     },
                     {
-                      "name": "Styling a section",
-                      "slug": "faststore/using-themes-pages",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
                       "name": "Importing FastStore UI component styles",
                       "slug": "faststore/using-themes-importing-ui-components-styles",
                       "origin": "",
@@ -16553,6 +16546,13 @@
                 {
                   "name": "Implementing search features",
                   "slug": "faststore/storefront-features-implementing-search-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing Shopping Assistant in FastStore",
+                  "slug": "faststore/storefront-features-implementing-shopping-assistant-in-faststore",
                   "origin": "",
                   "type": "markdown",
                   "children": []
