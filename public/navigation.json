@@ -2739,6 +2739,21 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "VTEX CX Platform MCP",
+              "slug": "vtex-cx-platform-mcp",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Connect the VTEX CX Platform MCP",
+                  "slug": "connect-the-vtex-cx-platform-mcp",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
