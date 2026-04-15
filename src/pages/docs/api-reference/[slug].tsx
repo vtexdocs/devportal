@@ -7,13 +7,14 @@ import SwaggerParser from '@apidevtools/swagger-parser'
 import ArticlePagination from 'components/article-pagination'
 import { Box } from '@vtex/brand-ui'
 import jp from 'jsonpath'
+import { marked } from 'marked'
 
 import getReferencePaths from 'utils/getReferencePaths'
 import getNavigation from 'utils/getNavigation'
 import { MethodType, isMethodType } from 'utils/typings/unionTypes'
-import '../../../../RapiDoc/src/rapidoc.js'
 import { flattenWithChildren } from 'utils/navigation-utils'
 import { getLogger } from 'utils/logging/log-util'
+import getSiteUrl from 'utils/getSiteUrl'
 
 // Client-side logger
 const clientLogger = {
@@ -25,6 +26,12 @@ const clientLogger = {
 interface Endpoint {
   title: string
   description: string
+}
+
+interface OverviewEndpoint {
+  method: string
+  path: string
+  summary: string
 }
 
 interface Pagination {
@@ -42,8 +49,10 @@ interface Pagination {
 
 interface Props {
   slug: string
-  doc: string
+  descriptionHtml: string
   endpoints: { [key: string]: Endpoint }
+  overviewEndpoints: OverviewEndpoint[]
+  overviewTitle: string
   pagination: { [key: string]: Pagination }
   endpointNames: { [key: string]: string }
 }
@@ -128,6 +137,159 @@ function getDescription(description: string) {
   )
 }
 
+function normalizeWhitespace(content: string) {
+  return content.replace(/\s+/g, ' ').trim()
+}
+
+function stripHtml(content: string) {
+  return normalizeWhitespace(content.replace(/<[^>]+>/g, ' '))
+}
+
+function getFirstSentence(content: string) {
+  const normalizedContent = normalizeWhitespace(content)
+
+  if (!normalizedContent) {
+    return ''
+  }
+
+  const match = normalizedContent.match(/^.*?[.!?](?=\s|$)/)
+
+  return match ? match[0].trim() : normalizedContent
+}
+
+function trimToLength(content: string, maxLength: number) {
+  if (maxLength <= 0 || !content) {
+    return ''
+  }
+
+  if (content.length <= maxLength) {
+    return content
+  }
+
+  const truncated = content.slice(0, maxLength - 1)
+  const lastSpaceIndex = truncated.lastIndexOf(' ')
+
+  if (lastSpaceIndex > 0) {
+    return `${truncated.slice(0, lastSpaceIndex)}…`
+  }
+
+  return `${truncated}…`
+}
+
+function removeTitlePrefix(content: string, title: string) {
+  const escapedTitle = title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+  return content
+    .replace(new RegExp(`^${escapedTitle}\\s*[:\\-.]?\\s*`, 'i'), '')
+    .trim()
+}
+
+function buildOverviewMetaDescription(
+  apiTitle: string,
+  descriptionText: string,
+  overviewEndpoints: OverviewEndpoint[]
+) {
+  const descriptionSentence = removeTitlePrefix(
+    getFirstSentence(descriptionText),
+    apiTitle
+  )
+
+  const uniqueSummaries = overviewEndpoints.reduce<string[]>(
+    (summaries, { summary }) => {
+      const cleanedSummary = normalizeWhitespace(summary).replace(/[.!?]+$/, '')
+
+      if (!cleanedSummary) {
+        return summaries
+      }
+
+      const isDuplicate = summaries.some(
+        (existingSummary) =>
+          existingSummary.toLowerCase() === cleanedSummary.toLowerCase()
+      )
+
+      if (isDuplicate) {
+        return summaries
+      }
+
+      summaries.push(cleanedSummary)
+      return summaries
+    },
+    []
+  )
+
+  const maxSummaryCount = Math.min(uniqueSummaries.length, 5)
+
+  for (let summaryCount = maxSummaryCount; summaryCount >= 0; summaryCount--) {
+    const summaryText = uniqueSummaries.slice(0, summaryCount).join(', ')
+    const suffix = summaryText ? `${summaryText}.` : ''
+    const availableDescriptionLength =
+      160 - apiTitle.length - 3 - (suffix ? suffix.length + 1 : 0)
+    const trimmedDescription = trimToLength(
+      descriptionSentence,
+      availableDescriptionLength
+    )
+
+    const candidate = normalizeWhitespace(
+      `${apiTitle} - ${trimmedDescription}${
+        trimmedDescription && suffix ? ' ' : ''
+      }${suffix}`
+    )
+
+    if (candidate.length <= 160) {
+      return candidate
+    }
+  }
+
+  if (uniqueSummaries.length) {
+    return trimToLength(`${apiTitle} - ${uniqueSummaries.join(', ')}.`, 160)
+  }
+
+  return trimToLength(`${apiTitle} - ${descriptionSentence}`, 160)
+}
+
+const overviewContentStyles = {
+  '& h2': {
+    fontSize: ['1.5rem', '1.75rem'],
+    mt: '2rem',
+    mb: '1rem',
+  },
+  '& h3, & h4': {
+    fontSize: ['1.25rem', '1.5rem'],
+    mt: '1.5rem',
+    mb: '0.75rem',
+  },
+  '& p': {
+    lineHeight: '1.7',
+    mb: '1rem',
+  },
+  '& ul, & ol': {
+    lineHeight: '1.7',
+    mb: '1rem',
+    pl: '1.5rem',
+  },
+  '& li + li': {
+    mt: '0.5rem',
+  },
+  '& a': {
+    color: '#0C389F',
+  },
+  '& code': {
+    fontFamily: 'mono',
+    fontSize: '0.95em',
+  },
+  '& pre': {
+    bg: '#F5F7FA',
+    border: '1px solid #E7E9ED',
+    borderRadius: '4px',
+    overflowX: 'auto',
+    p: '1rem',
+    mb: '1.5rem',
+  },
+  '& pre code': {
+    fontSize: '0.875rem',
+  },
+}
+
 // Ensure the URL has a proper protocol during build time
 function getAbsoluteUrl(path: string): string {
   // During SSR
@@ -136,9 +298,7 @@ function getAbsoluteUrl(path: string): string {
     if (process.env.NODE_ENV === 'development') {
       return `http://localhost:3000${path}`
     }
-    const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
-    return `${baseUrl}${path}`
+    return `${getSiteUrl()}${path}`
   }
   // In browser
   return path
@@ -149,8 +309,10 @@ const slugs = Object.keys(await getReferencePaths())
 
 const APIPage: NextPage<Props> = ({
   slug,
-  doc,
+  descriptionHtml,
   endpoints,
+  overviewEndpoints,
+  overviewTitle,
   pagination,
   endpointNames,
 }) => {
@@ -164,6 +326,7 @@ const APIPage: NextPage<Props> = ({
   // State for client-side resolved spec
   const [resolvedSpec, setResolvedSpec] = useState<string | null>(null)
   const [isLoadingSpec, setIsLoadingSpec] = useState<boolean>(false)
+  const [isRapiDocReady, setIsRapiDocReady] = useState<boolean>(false)
   const [errorLoadingSpec, setErrorLoadingSpec] = useState<string | null>(null)
 
   const pageTitle =
@@ -180,6 +343,10 @@ const APIPage: NextPage<Props> = ({
 
   const httpMethod: MethodType | '' = getMethod()
   const endpointPath = cleanPath ? `#${cleanPath}` : slug
+  const headTitle =
+    endpointPath === slug
+      ? `${overviewTitle} - VTEX API Reference`
+      : endpointNames[endpointPath]
   const pag: Pagination = {
     previousDoc: {
       name: null,
@@ -194,6 +361,30 @@ const APIPage: NextPage<Props> = ({
 
   // Generate the absolute spec URL
   const specUrl = getAbsoluteUrl(`/api/openapi/${slug}`)
+
+  useEffect(() => {
+    let isMounted = true
+
+    const loadRapiDoc = async () => {
+      try {
+        await import('../../../../RapiDoc/src/rapidoc.js')
+        if (isMounted) {
+          setIsRapiDocReady(true)
+        }
+      } catch (error) {
+        if (isMounted) {
+          setErrorLoadingSpec('Failed to load the interactive API viewer')
+        }
+        clientLogger.error(`Failed to load RapiDoc: ${error}`)
+      }
+    }
+
+    loadRapiDoc()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   // Effect to handle client-side fetching and reference resolution
   useEffect(() => {
@@ -255,25 +446,14 @@ const APIPage: NextPage<Props> = ({
     )
   }, [endpointPath])
 
-  // Display an error message if the spec couldn't be loaded
-  if (errorLoadingSpec && !doc) {
-    return (
-      <Box sx={{ mx: 'auto', p: '2em', maxWidth: '90%' }}>
-        <h2>Error Loading API Reference</h2>
-        <p>{errorLoadingSpec}</p>
-        <p>
-          Please try refreshing the page. If the problem persists, contact
-          support.
-        </p>
-      </Box>
-    )
-  }
-
   return (
     <>
       <Head>
-        <title>{endpointNames[endpointPath]}</title>
-        {endpointPath === slug && <meta name="robots" content="noindex" />}
+        <title>{headTitle}</title>
+        <link
+          rel="canonical"
+          href={`${getSiteUrl()}/docs/api-reference/${slug}`}
+        />
         {endpoints && (
           <>
             <meta
@@ -291,39 +471,171 @@ const APIPage: NextPage<Props> = ({
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
-        {isLoadingSpec && !doc && (
+        <Box as="article" sx={{ mb: '2.5rem' }}>
+          <Box as="header" sx={{ mb: '1.5rem' }}>
+            <h1>{overviewTitle}</h1>
+          </Box>
+          {descriptionHtml && (
+            <Box
+              sx={overviewContentStyles}
+              dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+            />
+          )}
+          {!!overviewEndpoints.length && (
+            <Box as="section" sx={{ mt: '2rem' }}>
+              <h2>Endpoints</h2>
+              <Box
+                sx={{
+                  overflowX: 'auto',
+                  border: '1px solid #E7E9ED',
+                  borderRadius: '4px',
+                }}
+              >
+                <table
+                  style={{
+                    width: '100%',
+                    borderCollapse: 'collapse',
+                    minWidth: '640px',
+                  }}
+                >
+                  <thead>
+                    <tr>
+                      <th
+                        style={{
+                          textAlign: 'left',
+                          padding: '0.75rem 1rem',
+                          borderBottom: '1px solid #E7E9ED',
+                        }}
+                      >
+                        Method
+                      </th>
+                      <th
+                        style={{
+                          textAlign: 'left',
+                          padding: '0.75rem 1rem',
+                          borderBottom: '1px solid #E7E9ED',
+                        }}
+                      >
+                        Path
+                      </th>
+                      <th
+                        style={{
+                          textAlign: 'left',
+                          padding: '0.75rem 1rem',
+                          borderBottom: '1px solid #E7E9ED',
+                        }}
+                      >
+                        Summary
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {overviewEndpoints.map(({ method, path, summary }) => (
+                      <tr key={`${method}-${path}`}>
+                        <td
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderBottom: '1px solid #E7E9ED',
+                            verticalAlign: 'top',
+                            whiteSpace: 'nowrap',
+                          }}
+                        >
+                          <Box
+                            as="span"
+                            sx={{
+                              bg: '#E9F2FF',
+                              borderRadius: '999px',
+                              color: '#0C389F',
+                              display: 'inline-block',
+                              fontSize: '0.75rem',
+                              fontWeight: 600,
+                              letterSpacing: '0.04em',
+                              px: '0.625rem',
+                              py: '0.25rem',
+                            }}
+                          >
+                            {method}
+                          </Box>
+                        </td>
+                        <td
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderBottom: '1px solid #E7E9ED',
+                            verticalAlign: 'top',
+                            wordBreak: 'break-word',
+                          }}
+                        >
+                          <code>{path}</code>
+                        </td>
+                        <td
+                          style={{
+                            padding: '0.75rem 1rem',
+                            borderBottom: '1px solid #E7E9ED',
+                            verticalAlign: 'top',
+                            wordBreak: 'break-word',
+                          }}
+                        >
+                          {summary || ' '}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </Box>
+            </Box>
+          )}
+        </Box>
+        {errorLoadingSpec && (
+          <Box
+            role="alert"
+            sx={{
+              bg: '#FFF4E5',
+              border: '1px solid #FFD7A3',
+              borderRadius: '4px',
+              color: '#7A4B00',
+              mb: '1.5rem',
+              p: '1rem',
+            }}
+          >
+            <strong>Interactive API reference unavailable.</strong>
+            <p>{errorLoadingSpec}</p>
+          </Box>
+        )}
+        {(isLoadingSpec || !isRapiDocReady) && (
           <Box sx={{ textAlign: 'center', p: '2em' }}>
             <p>Loading API specification...</p>
           </Box>
         )}
-        <rapi-doc
-          ref={rapidoc}
-          spec-url={specUrl}
-          postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
-          spec={resolvedSpec}
-          layout="column"
-          render-style="focused"
-          show-header="false"
-          show-side-nav="false"
-          default-schema-tab="schema"
-          fill-request-fields-with-example={true}
-          theme="light"
-          bg-color="#FFFFFF"
-          primary-color="#142032"
-          regular-font="VTEX Trust Regular"
-          mono-font="Consolas,monaco,monospace"
-          medium-font="VTEX Trust Medium"
-          load-fonts={false}
-          schema-style="table"
-          schema-description-expanded={true}
-          schema-expand-level="2"
-          id="the-doc"
-          allow-spec-file-download={true}
-          allow-server-selection={true}
-          allow-spec-url-load={false}
-          allow-spec-file-load={false}
-          persist-auth="true"
-        />
+        {isRapiDocReady && (
+          <rapi-doc
+            ref={rapidoc}
+            spec-url={specUrl}
+            postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
+            spec={resolvedSpec}
+            layout="column"
+            render-style="focused"
+            show-header="false"
+            show-side-nav="false"
+            default-schema-tab="schema"
+            fill-request-fields-with-example={true}
+            theme="light"
+            bg-color="#FFFFFF"
+            primary-color="#142032"
+            regular-font="VTEX Trust Regular"
+            mono-font="Consolas,monaco,monospace"
+            medium-font="VTEX Trust Medium"
+            load-fonts={false}
+            schema-style="table"
+            schema-description-expanded={true}
+            schema-expand-level="2"
+            id="the-doc"
+            allow-spec-file-download={true}
+            allow-server-selection={true}
+            allow-spec-url-load={false}
+            allow-spec-file-load={false}
+            persist-auth="true"
+          />
+        )}
         <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
           <ArticlePagination
             hidePaginationNext={false}
@@ -348,15 +660,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug || ''
-  const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()
   const logger = getLogger('API Reference')
 
   if (slugs.includes(slug as string)) {
     // Use the production URL for fetching specs during build time
-    const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
-    const url = `${baseUrl}/api/openapi/${slug}`
+    const url = `${getSiteUrl()}/api/openapi/${slug}`
 
     let apiSpec: string
     try {
@@ -413,13 +722,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     // Use Oas to process the spec string
     const endpointFile = new Oas(apiSpec)
     const { info, paths } = endpointFile.getDefinition()
+    const overviewTitle = info?.title || (slug as string)
+    const descriptionHtml = await marked.parse(info?.description || '')
+    const overviewEndpoints: OverviewEndpoint[] = []
     const endpoints: {
       [key: string]: Endpoint
     } = {}
 
     endpoints[slug as string] = {
-      title: info?.title || (slug as string),
-      description: getDescription(info?.description || ''),
+      title: overviewTitle,
+      description: '',
     }
 
     if (paths) {
@@ -428,14 +740,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           Object.entries(value).forEach(
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             ([endpointKey, endpointValue]: any) => {
-              if (
-                isMethodType(endpointKey.toUpperCase()) &&
-                endpointValue &&
-                endpointValue.description
-              ) {
+              if (isMethodType(endpointKey.toUpperCase()) && endpointValue) {
+                overviewEndpoints.push({
+                  method: endpointKey.toUpperCase(),
+                  path: key,
+                  summary: endpointValue.summary || '',
+                })
                 endpoints[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] = {
                   title: endpointValue.summary || '',
-                  description: getDescription(endpointValue.description),
+                  description: getDescription(
+                    endpointValue.description || endpointValue.summary || ''
+                  ),
                 }
               }
             }
@@ -443,6 +758,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         }
       })
     }
+
+    endpoints[slug as string].description = buildOverviewMetaDescription(
+      overviewTitle,
+      stripHtml(descriptionHtml),
+      overviewEndpoints
+    )
     const docsListEndpoint = jp.query(
       sidebarfallback,
       `$..[?(@.type=='openapi')]`
@@ -480,6 +801,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
       endpointNames[`${endpoint}`] = currentEndpointObject?.name
         ? currentEndpointObject.name
+        : endpoint === slug
+        ? overviewTitle
         : ''
       pagination[`${endpoint}`] = {
         previousDoc: {
@@ -517,13 +840,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         slug,
-        doc: apiSpec,
-        sectionSelected,
-        sidebarfallback,
+        descriptionHtml,
         endpoints,
+        overviewEndpoints,
+        overviewTitle,
         pagination,
         endpointNames,
       },
+      revalidate: 86400,
     }
   } else {
     const readmeSlugDict = new Map<string, ReadmeSlugObj>()
