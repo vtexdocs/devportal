@@ -18189,6 +18189,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "VTEX CX Platform: Connect the MCP to your AI tool",
+                  "slug": "2026-04-15-vtex-cx-platform-mcp-connection-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+                ,{
                   "name": "Introducing VTEX Developer MCP and Skills for AI-assisted development",
                   "slug": "2026-04-09-vtex-developer-mcp-and-skills",
                   "origin": "",
