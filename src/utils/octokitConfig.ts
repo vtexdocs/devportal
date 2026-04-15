@@ -1,8 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/ban-ts-comment */
+import fs from 'fs'
+import path from 'path'
 import { Octokit } from 'octokit'
 import { createAppAuth } from '@octokit/auth-app'
 import { throttling } from '@octokit/plugin-throttling'
-import { config } from 'utils/config'
 import { githubConfig } from 'utils/github-config'
 
 const MyOctokit = Octokit.plugin(throttling)
@@ -32,71 +33,90 @@ const handleRateLimitExhaustion = () => {
   return error
 }
 
-const octokitConfig = {
-  authStrategy: createAppAuth,
-  auth: {
-    appId: config.GITHUB_APPID || githubConfig.appId,
-    privateKey: config.GITHUB_PRIVATEKEY || githubConfig.privateKey,
-    installationId: config.GITHUB_INSTALLATIONID || githubConfig.installationId,
+function getPrivateKey() {
+  const pemPath = path.join(process.cwd(), 'github.pem')
+
+  if (fs.existsSync(pemPath)) {
+    return fs.readFileSync(pemPath, 'utf8')
+  }
+
+  return githubConfig.privateKey?.replace(/\\n/g, '\n')
+}
+
+const privateKey = getPrivateKey()
+const hasGithubAppAuth = Boolean(
+  githubConfig.appId && privateKey && githubConfig.installationId
+)
+
+const throttleConfig = {
+  onRateLimit: (retryAfter: number, options: any, octokit: any) => {
+    const retryCount = options.request.retryCount || 0
+    const delay = calculateRetryDelay(retryCount, retryAfter)
+
+    if (retryCount < MAX_RETRIES && delay !== null) {
+      octokit.log.warn(
+        `Rate limit exceeded for request ${options.method} ${options.url}`
+      )
+      octokit.log.warn(
+        `Retrying after ${
+          delay / 1000
+        } seconds with exponential backoff! (Attempt ${
+          retryCount + 1
+        }/${MAX_RETRIES})`
+      )
+      return true
+    }
+
+    octokit.log.warn(
+      `Rate limit exceeded for request ${options.method} ${options.url}. ${
+        delay === null
+          ? 'Required delay exceeds maximum allowed time.'
+          : 'Max retries reached.'
+      }`
+    )
+    throw handleRateLimitExhaustion()
   },
-  throttle: {
-    onRateLimit: (retryAfter: number, options: any, octokit: any) => {
-      const retryCount = options.request.retryCount || 0
-      const delay = calculateRetryDelay(retryCount, retryAfter)
+  onSecondaryRateLimit: (retryAfter: number, options: any, octokit: any) => {
+    const retryCount = options.request.retryCount || 0
+    const delay = calculateRetryDelay(retryCount, retryAfter)
 
-      if (retryCount < MAX_RETRIES && delay !== null) {
-        octokit.log.warn(
-          `Rate limit exceeded for request ${options.method} ${options.url}`
-        )
-        octokit.log.warn(
-          `Retrying after ${
-            delay / 1000
-          } seconds with exponential backoff! (Attempt ${
-            retryCount + 1
-          }/${MAX_RETRIES})`
-        )
-        return true
-      }
-
+    if (retryCount < MAX_RETRIES && delay !== null) {
       octokit.log.warn(
-        `Rate limit exceeded for request ${options.method} ${options.url}. ${
-          delay === null
-            ? 'Required delay exceeds maximum allowed time.'
-            : 'Max retries reached.'
-        }`
+        `Secondary rate limit hit for request ${options.method} ${options.url}`
       )
-      throw handleRateLimitExhaustion()
-    },
-    onSecondaryRateLimit: (retryAfter: number, options: any, octokit: any) => {
-      const retryCount = options.request.retryCount || 0
-      const delay = calculateRetryDelay(retryCount, retryAfter)
-
-      if (retryCount < MAX_RETRIES && delay !== null) {
-        octokit.log.warn(
-          `Secondary rate limit hit for request ${options.method} ${options.url}`
-        )
-        octokit.log.warn(
-          `Retrying after ${
-            delay / 1000
-          } seconds with exponential backoff! (Attempt ${
-            retryCount + 1
-          }/${MAX_RETRIES})`
-        )
-        return true
-      }
-
       octokit.log.warn(
-        `Secondary rate limit hit for request ${options.method} ${
-          options.url
-        }. ${
-          delay === null
-            ? 'Required delay exceeds maximum allowed time.'
-            : 'Max retries reached.'
-        }`
+        `Retrying after ${
+          delay / 1000
+        } seconds with exponential backoff! (Attempt ${
+          retryCount + 1
+        }/${MAX_RETRIES})`
       )
-      throw handleRateLimitExhaustion()
-    },
+      return true
+    }
+
+    octokit.log.warn(
+      `Secondary rate limit hit for request ${options.method} ${options.url}. ${
+        delay === null
+          ? 'Required delay exceeds maximum allowed time.'
+          : 'Max retries reached.'
+      }`
+    )
+    throw handleRateLimitExhaustion()
   },
 }
+
+const octokitConfig = hasGithubAppAuth
+  ? {
+      authStrategy: createAppAuth,
+      auth: {
+        appId: githubConfig.appId,
+        privateKey,
+        installationId: githubConfig.installationId,
+      },
+      throttle: throttleConfig,
+    }
+  : {
+      throttle: throttleConfig,
+    }
 
 export default new MyOctokit(octokitConfig)
