@@ -2671,40 +2671,40 @@
            ]
          },
          {
-           "name": "Weni by VTEX",
+           "name": "VTEX CX Platform (Weni)",
           "slug": "weni-by-vtex",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "Weni by VTEX CLI",
+              "name": "VTEX CX Platform (Weni) CLI",
               "slug": "weni-by-vtex-cli",
               "origin": "",
               "type": "category",
               "children": [
                 {
-                  "name": "Using the Weni by VTEX CLI",
+                  "name": "Using the VTEX CX Platform (Weni) CLI",
                   "slug": "using-the-weni-by-vtex-cli",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Weni by VTEX CLI Command Reference",
+                  "name": "VTEX CX Platform (Weni) CLI Command Reference",
                   "slug": "weni-by-vtex-cli-command-reference",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Authenticating with your Weni by VTEX account",
+                  "name": "Authenticating with your VTEX CX Platform (Weni) account",
                   "slug": "authenticating-with-your-weni-by-vtex-account",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Managing your Weni by VTEX projects",
+                  "name": "Managing your VTEX CX Platform (Weni) projects",
                   "slug": "managing-your-weni-by-vtex-projects",
                   "origin": "",
                   "type": "markdown",
@@ -2718,7 +2718,7 @@
                   "children": []
                 },
                 {
-                  "name": "Working with Weni by VTEX agents",
+                  "name": "Working with VTEX CX Platform (Weni) agents",
                   "slug": "working-with-weni-by-vtex-agents",
                   "origin": "",
                   "type": "markdown",
@@ -2739,6 +2739,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "VTEX CX Platform MCP",
+              "slug": "connect-the-vtex-cx-platform-mcp",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -18182,6 +18189,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "VTEX CX Platform: Connect the MCP to your AI tool",
+                  "slug": "2026-04-15-vtex-cx-platform-mcp-connection-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+                ,{
                   "name": "Introducing VTEX Developer MCP and Skills for AI-assisted development",
                   "slug": "2026-04-09-vtex-developer-mcp-and-skills",
                   "origin": "",
