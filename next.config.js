@@ -59,7 +59,10 @@ const nextConfig = {
   experimental: {
     largePageDataBytes: 500 * 1000,
     workerThreads: false,
-    cpus: 4,
+    // Next 13 writes build traces into `.next/trace`; Windows can hit EPERM
+    // when multiple build workers race on that file, so keep local Windows
+    // builds single-threaded while preserving the current Linux/CI behavior.
+    cpus: process.platform === 'win32' ? 1 : 4,
   },
   reactStrictMode: true,
   swcMinify: true,
