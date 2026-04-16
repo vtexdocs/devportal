@@ -247,47 +247,192 @@ function buildOverviewMetaDescription(
   return trimToLength(`${apiTitle} - ${descriptionSentence}`, 160)
 }
 
+function getOverviewEndpointHash(method: string, path: string) {
+  return `${method.toLowerCase()}-${path.replaceAll(/{|}/g, '-')}`
+}
+
+const overviewArticleStyles = {
+  maxWidth: '960px',
+  mx: 'auto',
+  mb: '2.5rem',
+  color: '#4A596B',
+  fontSize: '0.95em',
+  lineHeight: '1.5em',
+}
+
+const overviewHeaderStyles = {
+  mt: 0,
+  mb: '1.5rem',
+  '*': {
+    margin: '0px',
+  },
+  '& h1': {
+    fontSize: ['20px', '28px'],
+    lineHeight: ['30px', '38px'],
+    fontWeight: '400',
+    color: '#142032',
+  },
+}
+
 const overviewContentStyles = {
-  '& h2': {
-    fontSize: ['1.5rem', '1.75rem'],
-    mt: '2rem',
-    mb: '1rem',
-  },
-  '& h3, & h4': {
-    fontSize: ['1.25rem', '1.5rem'],
-    mt: '1.5rem',
-    mb: '0.75rem',
-  },
+  color: '#4A596B',
   '& p': {
-    lineHeight: '1.7',
+    lineHeight: '1.5em',
     mb: '1rem',
   },
   '& ul, & ol': {
-    lineHeight: '1.7',
     mb: '1rem',
     pl: '1.5rem',
   },
-  '& li + li': {
-    mt: '0.5rem',
+  '& ul li, & ol li': {
+    mt: '0.5em',
+    mb: '0.5em',
+  },
+  '& h2': {
+    fontSize: '1.375em',
+    lineHeight: '2em',
+    fontWeight: '400',
+    mt: '1.3em',
+    mb: '0.875em',
+    color: '#142032',
+  },
+  '& h3': {
+    fontSize: ['1.125rem', '1.25rem'],
+    lineHeight: '1.75rem',
+    fontWeight: '600',
+    mt: '1.5rem',
+    mb: '0.75rem',
+    color: '#142032',
+  },
+  '& h4': {
+    fontSize: '1rem',
+    lineHeight: '1.5rem',
+    fontWeight: '600',
+    mt: '1.25rem',
+    mb: '0.75rem',
+    color: '#142032',
   },
   '& a': {
-    color: '#0C389F',
+    color: '#E31C58',
+    textDecoration: 'underline',
+    textUnderlineOffset: '0.18em',
+  },
+  '& strong': {
+    fontWeight: '600',
+  },
+  '& blockquote': {
+    borderLeft: '4px solid #E7E9EE',
+    color: '#4A596B',
+    ml: 0,
+    my: '1.5rem',
+    pl: '1rem',
   },
   '& code': {
     fontFamily: 'mono',
-    fontSize: '0.95em',
+    fontSize: '0.875rem',
+    bg: '#F7F8FA',
+    borderRadius: '4px',
+    px: '0.25rem',
+    py: '0.125rem',
   },
   '& pre': {
-    bg: '#F5F7FA',
-    border: '1px solid #E7E9ED',
+    bg: '#F7F8FA',
+    border: '1px solid #E7E9EE',
     borderRadius: '4px',
     overflowX: 'auto',
     p: '1rem',
     mb: '1.5rem',
   },
   '& pre code': {
-    fontSize: '0.875rem',
+    bg: 'transparent',
+    px: 0,
+    py: 0,
   },
+  '& table': {
+    width: '100%',
+    borderCollapse: 'collapse',
+    mb: '1.5rem',
+  },
+  '& th, & td': {
+    borderBottom: '1px solid #E7E9EE',
+    px: '0.75rem',
+    py: '0.625rem',
+    textAlign: 'left',
+    verticalAlign: 'top',
+  },
+}
+
+const overviewTableWrapperStyles = {
+  overflowX: 'auto',
+  border: '1px solid #E7E9EE',
+  borderRadius: '4px',
+  bg: '#FFFFFF',
+}
+
+const overviewTableStyles = {
+  width: '100%',
+  minWidth: '640px',
+  borderCollapse: 'collapse',
+  '& th': {
+    textAlign: 'left',
+    padding: '0.875rem 1rem',
+    borderBottom: '1px solid #E7E9EE',
+    bg: '#F7F8FA',
+    color: '#4A596B',
+    fontSize: '0.75rem',
+    fontWeight: '600',
+    letterSpacing: '0.04em',
+    textTransform: 'uppercase',
+  },
+  '& td': {
+    padding: '0.875rem 1rem',
+    borderBottom: '1px solid #E7E9EE',
+    verticalAlign: 'top',
+    color: '#4A596B',
+  },
+  '& td:first-of-type': {
+    whiteSpace: 'nowrap',
+  },
+  '& td:nth-of-type(2), & td:nth-of-type(3)': {
+    wordBreak: 'break-word',
+  },
+  '& tbody tr:last-of-type td': {
+    borderBottom: 'none',
+  },
+}
+
+const endpointMethodBadgeStyles = {
+  bg: '#F2F4F7',
+  borderRadius: '999px',
+  color: '#142032',
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: '0.75rem',
+  fontWeight: '600',
+  letterSpacing: '0.04em',
+  minWidth: '3.25rem',
+  px: '0.625rem',
+  py: '0.25rem',
+  textTransform: 'uppercase',
+  whiteSpace: 'nowrap',
+}
+
+const endpointPathStyles = {
+  fontFamily: 'mono',
+  fontSize: '0.875rem',
+  bg: '#F7F8FA',
+  borderRadius: '4px',
+  px: '0.25rem',
+  py: '0.125rem',
+  wordBreak: 'break-word',
+}
+
+const endpointLinkStyles = {
+  color: '#E31C58',
+  textDecoration: 'underline',
+  textUnderlineOffset: '0.18em',
+  fontWeight: '500',
 }
 
 // Ensure the URL has a proper protocol during build time
@@ -471,8 +616,8 @@ const APIPage: NextPage<Props> = ({
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
-        <Box as="article" sx={{ mb: '2.5rem' }}>
-          <Box as="header" sx={{ mb: '1.5rem' }}>
+        <Box as="article" sx={overviewArticleStyles}>
+          <Box as="header" sx={overviewHeaderStyles}>
             <h1>{overviewTitle}</h1>
           </Box>
           {descriptionHtml && (
@@ -484,103 +629,41 @@ const APIPage: NextPage<Props> = ({
           {!!overviewEndpoints.length && (
             <Box as="section" sx={{ mt: '2rem' }}>
               <h2>Endpoints</h2>
-              <Box
-                sx={{
-                  overflowX: 'auto',
-                  border: '1px solid #E7E9ED',
-                  borderRadius: '4px',
-                }}
-              >
-                <table
-                  style={{
-                    width: '100%',
-                    borderCollapse: 'collapse',
-                    minWidth: '640px',
-                  }}
-                >
+              <Box sx={overviewTableWrapperStyles}>
+                <Box as="table" sx={overviewTableStyles}>
                   <thead>
                     <tr>
-                      <th
-                        style={{
-                          textAlign: 'left',
-                          padding: '0.75rem 1rem',
-                          borderBottom: '1px solid #E7E9ED',
-                        }}
-                      >
-                        Method
-                      </th>
-                      <th
-                        style={{
-                          textAlign: 'left',
-                          padding: '0.75rem 1rem',
-                          borderBottom: '1px solid #E7E9ED',
-                        }}
-                      >
-                        Path
-                      </th>
-                      <th
-                        style={{
-                          textAlign: 'left',
-                          padding: '0.75rem 1rem',
-                          borderBottom: '1px solid #E7E9ED',
-                        }}
-                      >
-                        Summary
-                      </th>
+                      <th>Method</th>
+                      <th>Path</th>
+                      <th>Summary</th>
                     </tr>
                   </thead>
                   <tbody>
                     {overviewEndpoints.map(({ method, path, summary }) => (
                       <tr key={`${method}-${path}`}>
-                        <td
-                          style={{
-                            padding: '0.75rem 1rem',
-                            borderBottom: '1px solid #E7E9ED',
-                            verticalAlign: 'top',
-                            whiteSpace: 'nowrap',
-                          }}
-                        >
-                          <Box
-                            as="span"
-                            sx={{
-                              bg: '#E9F2FF',
-                              borderRadius: '999px',
-                              color: '#0C389F',
-                              display: 'inline-block',
-                              fontSize: '0.75rem',
-                              fontWeight: 600,
-                              letterSpacing: '0.04em',
-                              px: '0.625rem',
-                              py: '0.25rem',
-                            }}
-                          >
+                        <td>
+                          <Box as="span" sx={endpointMethodBadgeStyles}>
                             {method}
                           </Box>
                         </td>
-                        <td
-                          style={{
-                            padding: '0.75rem 1rem',
-                            borderBottom: '1px solid #E7E9ED',
-                            verticalAlign: 'top',
-                            wordBreak: 'break-word',
-                          }}
-                        >
-                          <code>{path}</code>
+                        <td>
+                          <Box as="code" sx={endpointPathStyles}>
+                            {path}
+                          </Box>
                         </td>
-                        <td
-                          style={{
-                            padding: '0.75rem 1rem',
-                            borderBottom: '1px solid #E7E9ED',
-                            verticalAlign: 'top',
-                            wordBreak: 'break-word',
-                          }}
-                        >
-                          {summary || ' '}
+                        <td>
+                          <Box
+                            as="a"
+                            href={`#${getOverviewEndpointHash(method, path)}`}
+                            sx={endpointLinkStyles}
+                          >
+                            {summary || `Open ${method} ${path}`}
+                          </Box>
                         </td>
                       </tr>
                     ))}
                   </tbody>
-                </table>
+                </Box>
               </Box>
             </Box>
           )}
@@ -615,6 +698,7 @@ const APIPage: NextPage<Props> = ({
             layout="column"
             render-style="focused"
             show-header="false"
+            show-info="false"
             show-side-nav="false"
             default-schema-tab="schema"
             fill-request-fields-with-example={true}
@@ -746,7 +830,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
                   path: key,
                   summary: endpointValue.summary || '',
                 })
-                endpoints[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] = {
+                endpoints[`#${getOverviewEndpointHash(endpointKey, key)}`] = {
                   title: endpointValue.summary || '',
                   description: getDescription(
                     endpointValue.description || endpointValue.summary || ''
@@ -775,9 +859,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     docsList.map((doc) => {
       const path = doc.method
-        ? `/docs/api-reference/${doc.slug}#${doc.method.toLowerCase()}-${
-            doc.endpoint
-          }`
+        ? `/docs/api-reference/${doc.slug}#${getOverviewEndpointHash(
+            doc.method,
+            doc.endpoint ?? ''
+          )}`
         : `/docs/api-reference/${doc.slug}`
       doc['route'] = path
     })
