@@ -251,6 +251,19 @@ function getOverviewEndpointHash(method: string, path: string) {
   return `${method.toLowerCase()}-${path.replaceAll(/{|}/g, '-')}`
 }
 
+function getEndpointPathFromLocation() {
+  if (typeof window === 'undefined') {
+    return ''
+  }
+
+  const hash = window.location.hash.slice(1)
+  if (hash) {
+    return hash
+  }
+
+  return new URLSearchParams(window.location.search).get('endpoint') || ''
+}
+
 const overviewArticleStyles = {
   maxWidth: '960px',
   mx: 'auto',
@@ -470,16 +483,13 @@ const APIPage: NextPage<Props> = ({
   }>(null)
   // State for client-side resolved spec
   const [resolvedSpec, setResolvedSpec] = useState<string | null>(null)
+  const [cleanPath, setCleanPath] = useState('')
   const [isLoadingSpec, setIsLoadingSpec] = useState<boolean>(false)
   const [isRapiDocReady, setIsRapiDocReady] = useState<boolean>(false)
   const [errorLoadingSpec, setErrorLoadingSpec] = useState<string | null>(null)
 
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
-  const hasHashTag = router.asPath.indexOf('#') > -1
-  const cleanPath = hasHashTag
-    ? router.asPath.split('#')[1]
-    : router.asPath.split('?endpoint=')[1] || ''
 
   const getMethod = () => {
     const method = cleanPath.split('/')[0].replace('-', '').toUpperCase()
@@ -488,8 +498,9 @@ const APIPage: NextPage<Props> = ({
 
   const httpMethod: MethodType | '' = getMethod()
   const endpointPath = cleanPath ? `#${cleanPath}` : slug
+  const isOverview = endpointPath === slug
   const headTitle =
-    endpointPath === slug
+    isOverview
       ? `${overviewTitle} - VTEX API Reference`
       : endpointNames[endpointPath]
   const defaultFocusedEndpointId = overviewEndpoints[0]
@@ -565,31 +576,33 @@ const APIPage: NextPage<Props> = ({
   }, [specUrl])
 
   useEffect(() => {
-    const scrollDoc = () => {
-      if (rapidoc.current) {
-        rapidoc.current.scrollToPath(
-          window.location.hash.slice(1) || 'overview'
-        )
-      }
+    if (typeof window === 'undefined') {
+      return
     }
 
-    router.events.on('hashChangeComplete', scrollDoc)
-    return () => {
-      router.events.off('hashChangeComplete', scrollDoc)
+    const syncEndpointPath = () => {
+      setCleanPath(getEndpointPathFromLocation())
     }
-  }, [])
+
+    syncEndpointPath()
+    window.addEventListener('hashchange', syncEndpointPath)
+
+    return () => {
+      window.removeEventListener('hashchange', syncEndpointPath)
+    }
+  }, [slug])
 
   useEffect(() => {
-    const handleHashChange = () => {
-      router.push(window.location.href)
+    setCleanPath(getEndpointPathFromLocation())
+  }, [router.asPath])
+
+  useEffect(() => {
+    if (!cleanPath || !isRapiDocReady || !rapidoc.current) {
+      return
     }
 
-    window.addEventListener('hashchange', handleHashChange)
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange)
-    }
-  }, [router])
+    rapidoc.current.scrollToPath(cleanPath)
+  }, [cleanPath, isRapiDocReady])
 
   useEffect(() => {
     setEndpointPagination(
@@ -622,114 +635,118 @@ const APIPage: NextPage<Props> = ({
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
-        <Box as="article" sx={overviewArticleStyles}>
-          <Box as="header" sx={overviewHeaderStyles}>
-            <h1>{overviewTitle}</h1>
-          </Box>
-          {descriptionHtml && (
-            <Box
-              sx={overviewContentStyles}
-              dangerouslySetInnerHTML={{ __html: descriptionHtml }}
-            />
-          )}
-          {!!overviewEndpoints.length && (
-            <Box as="section" sx={{ mt: '2rem' }}>
-              <h2>Endpoints</h2>
-              <Box sx={overviewTableWrapperStyles}>
-                <Box as="table" sx={overviewTableStyles}>
-                  <thead>
-                    <tr>
-                      <th>Method</th>
-                      <th>Path</th>
-                      <th>Summary</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {overviewEndpoints.map(({ method, path, summary }) => (
-                      <tr key={`${method}-${path}`}>
-                        <td>
-                          <Box as="span" sx={endpointMethodBadgeStyles}>
-                            {method}
-                          </Box>
-                        </td>
-                        <td>
-                          <Box as="code" sx={endpointPathStyles}>
-                            {path}
-                          </Box>
-                        </td>
-                        <td>
-                          <Box
-                            as="a"
-                            href={`#${getOverviewEndpointHash(method, path)}`}
-                            sx={endpointLinkStyles}
-                          >
-                            {summary || `Open ${method} ${path}`}
-                          </Box>
-                        </td>
+        <Box sx={{ display: isOverview ? 'block' : 'none' }}>
+          <Box as="article" sx={overviewArticleStyles}>
+            <Box as="header" sx={overviewHeaderStyles}>
+              <h1>{overviewTitle}</h1>
+            </Box>
+            {descriptionHtml && (
+              <Box
+                sx={overviewContentStyles}
+                dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+              />
+            )}
+            {!!overviewEndpoints.length && (
+              <Box as="section" sx={{ mt: '2rem' }}>
+                <h2>Endpoints</h2>
+                <Box sx={overviewTableWrapperStyles}>
+                  <Box as="table" sx={overviewTableStyles}>
+                    <thead>
+                      <tr>
+                        <th>Method</th>
+                        <th>Path</th>
+                        <th>Summary</th>
                       </tr>
-                    ))}
-                  </tbody>
+                    </thead>
+                    <tbody>
+                      {overviewEndpoints.map(({ method, path, summary }) => (
+                        <tr key={`${method}-${path}`}>
+                          <td>
+                            <Box as="span" sx={endpointMethodBadgeStyles}>
+                              {method}
+                            </Box>
+                          </td>
+                          <td>
+                            <Box as="code" sx={endpointPathStyles}>
+                              {path}
+                            </Box>
+                          </td>
+                          <td>
+                            <Box
+                              as="a"
+                              href={`#${getOverviewEndpointHash(method, path)}`}
+                              sx={endpointLinkStyles}
+                            >
+                              {summary || `Open ${method} ${path}`}
+                            </Box>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </Box>
                 </Box>
               </Box>
+            )}
+          </Box>
+        </Box>
+        <Box sx={{ display: isOverview ? 'none' : 'block' }}>
+          {errorLoadingSpec && (
+            <Box
+              role="alert"
+              sx={{
+                bg: '#FFF4E5',
+                border: '1px solid #FFD7A3',
+                borderRadius: '4px',
+                color: '#7A4B00',
+                mb: '1.5rem',
+                p: '1rem',
+              }}
+            >
+              <strong>Interactive API reference unavailable.</strong>
+              <p>{errorLoadingSpec}</p>
             </Box>
           )}
+          {(isLoadingSpec || !isRapiDocReady) && (
+            <Box sx={{ textAlign: 'center', p: '2em' }}>
+              <p>Loading API specification...</p>
+            </Box>
+          )}
+          {isRapiDocReady && (
+            <rapi-doc
+              ref={rapidoc}
+              spec-url={specUrl}
+              postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
+              spec={resolvedSpec}
+              layout="column"
+              render-style="focused"
+              // RapiDoc focused mode crashes when show-info is false and no
+              // explicit goto-path is provided, because it tries to scroll using
+              // the first path object instead of its elementId.
+              goto-path={defaultFocusedEndpointId}
+              show-header="false"
+              show-info="false"
+              show-side-nav="false"
+              default-schema-tab="schema"
+              fill-request-fields-with-example={true}
+              theme="light"
+              bg-color="#FFFFFF"
+              primary-color="#142032"
+              regular-font="VTEX Trust Regular"
+              mono-font="Consolas,monaco,monospace"
+              medium-font="VTEX Trust Medium"
+              load-fonts={false}
+              schema-style="table"
+              schema-description-expanded={true}
+              schema-expand-level="2"
+              id="the-doc"
+              allow-spec-file-download={true}
+              allow-server-selection={true}
+              allow-spec-url-load={false}
+              allow-spec-file-load={false}
+              persist-auth="true"
+            />
+          )}
         </Box>
-        {errorLoadingSpec && (
-          <Box
-            role="alert"
-            sx={{
-              bg: '#FFF4E5',
-              border: '1px solid #FFD7A3',
-              borderRadius: '4px',
-              color: '#7A4B00',
-              mb: '1.5rem',
-              p: '1rem',
-            }}
-          >
-            <strong>Interactive API reference unavailable.</strong>
-            <p>{errorLoadingSpec}</p>
-          </Box>
-        )}
-        {(isLoadingSpec || !isRapiDocReady) && (
-          <Box sx={{ textAlign: 'center', p: '2em' }}>
-            <p>Loading API specification...</p>
-          </Box>
-        )}
-        {isRapiDocReady && (
-          <rapi-doc
-            ref={rapidoc}
-            spec-url={specUrl}
-            postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
-            spec={resolvedSpec}
-            layout="column"
-            render-style="focused"
-            // RapiDoc focused mode crashes when show-info is false and no
-            // explicit goto-path is provided, because it tries to scroll using
-            // the first path object instead of its elementId.
-            goto-path={defaultFocusedEndpointId}
-            show-header="false"
-            show-info="false"
-            show-side-nav="false"
-            default-schema-tab="schema"
-            fill-request-fields-with-example={true}
-            theme="light"
-            bg-color="#FFFFFF"
-            primary-color="#142032"
-            regular-font="VTEX Trust Regular"
-            mono-font="Consolas,monaco,monospace"
-            medium-font="VTEX Trust Medium"
-            load-fonts={false}
-            schema-style="table"
-            schema-description-expanded={true}
-            schema-expand-level="2"
-            id="the-doc"
-            allow-spec-file-download={true}
-            allow-server-selection={true}
-            allow-spec-url-load={false}
-            allow-spec-file-load={false}
-            persist-auth="true"
-          />
-        )}
         <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
           <ArticlePagination
             hidePaginationNext={false}
