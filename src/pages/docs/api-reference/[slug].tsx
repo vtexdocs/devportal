@@ -47,6 +47,8 @@ interface OverviewTagDefinition {
   name: string
 }
 
+type OverviewCalloutType = 'info' | 'warning' | 'danger' | 'success'
+
 interface Pagination {
   previousDoc: {
     slug: string | null
@@ -266,6 +268,118 @@ function getOverviewEndpointHash(method: string, path: string) {
 }
 
 const GENERAL_OVERVIEW_TAG_NAME = 'General'
+const overviewCalloutIconByType: Record<OverviewCalloutType, string> = {
+  info: '\u2139\uFE0F',
+  warning: '\u26A0\uFE0F',
+  danger: '\u2757',
+  success: '\u2705',
+}
+const overviewCalloutPatternByType: Record<OverviewCalloutType, RegExp> = {
+  info: /^(?:<p>)?\s*(?:\u2139\uFE0F|\u2139)\s*/u,
+  warning: /^(?:<p>)?\s*(?:\u26A0\uFE0F?|\u26A0)\s*/u,
+  danger: /^(?:<p>)?\s*(?:\u2757\uFE0F?|\u2757)\s*/u,
+  success: /^(?:<p>)?\s*(?:\u2705)\s*/u,
+}
+
+function isOverviewCalloutType(value: unknown): value is OverviewCalloutType {
+  return (
+    value === 'info' ||
+    value === 'warning' ||
+    value === 'danger' ||
+    value === 'success'
+  )
+}
+
+function getOverviewCalloutType(value: string): OverviewCalloutType | null {
+  const matchingType = (
+    Object.entries(overviewCalloutPatternByType) as [
+      OverviewCalloutType,
+      RegExp,
+    ][]
+  ).find(([, pattern]) => pattern.test(value))
+
+  return matchingType ? matchingType[0] : null
+}
+
+function replaceOverviewCalloutBlocks(markdown: string) {
+  return markdown.replace(
+    /\[block:callout\]\s*([\s\S]*?)\s*\[\/block\]/g,
+    (match, blockContent: string) => {
+      try {
+        const parsedBlock = JSON.parse(blockContent) as {
+          type?: unknown
+          title?: unknown
+          body?: unknown
+        }
+        const calloutType = isOverviewCalloutType(parsedBlock.type)
+          ? parsedBlock.type
+          : 'info'
+        const title =
+          typeof parsedBlock.title === 'string' ? parsedBlock.title.trim() : ''
+        const body =
+          typeof parsedBlock.body === 'string' ? parsedBlock.body.trim() : ''
+        const calloutLines: string[] = []
+
+        if (title) {
+          calloutLines.push(
+            `> ${overviewCalloutIconByType[calloutType]} **${title}**`
+          )
+        }
+
+        if (body) {
+          const bodyLines = body.split(/\r?\n/)
+
+          if (title) {
+            calloutLines.push('>')
+          } else {
+            const firstNonEmptyLineIndex = bodyLines.findIndex((line) =>
+              line.trim()
+            )
+
+            if (firstNonEmptyLineIndex > -1) {
+              bodyLines[firstNonEmptyLineIndex] = `${
+                overviewCalloutIconByType[calloutType]
+              } ${bodyLines[firstNonEmptyLineIndex].trimStart()}`
+            }
+          }
+
+          bodyLines.forEach((line) => {
+            calloutLines.push(line ? `> ${line}` : '>')
+          })
+        }
+
+        if (!calloutLines.length) {
+          return match
+        }
+
+        return `${calloutLines.join('\n')}\n`
+      } catch {
+        return match
+      }
+    }
+  )
+}
+
+function enhanceOverviewCalloutHtml(content: string) {
+  return content.replace(
+    /<blockquote>\s*([\s\S]*?)<\/blockquote>/g,
+    (blockquote, innerContent: string) => {
+      const trimmedInnerContent = innerContent.trim()
+      const calloutType = getOverviewCalloutType(trimmedInnerContent)
+
+      if (!calloutType) {
+        return blockquote
+      }
+
+      const normalizedInnerContent = trimmedInnerContent.replace(
+        overviewCalloutPatternByType[calloutType],
+        '<p>'
+      )
+
+      return `<blockquote class="overview-callout overview-callout--${calloutType}">${normalizedInnerContent}</blockquote>`
+    }
+  )
+}
 
 function buildOverviewEndpointGroups(
   tagDefinitions: OverviewTagDefinition[],
@@ -397,6 +511,86 @@ const overviewContentStyles = {
     ml: 0,
     my: '1.5rem',
     pl: '1rem',
+  },
+  '& .overview-callout': {
+    display: 'grid',
+    gap: '20px',
+    width: '100%',
+    pl: 0,
+    ml: 0,
+    mt: '1rem',
+    mb: '1.5rem',
+    p: '20px',
+    borderRadius: '4px',
+    alignItems: 'center',
+    gridTemplateColumns: '20px 1fr',
+    gridTemplateRows: '1fr',
+    wordBreak: 'break-word',
+    border: '1px solid #CCCED8',
+    '&::before': {
+      display: 'inline-block',
+      height: '20px',
+      width: '20px',
+      content: '""',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: '0 0',
+      backgroundSize: '20px 20px',
+    },
+  },
+  '& .overview-callout p, & .overview-callout div': {
+    m: 0,
+    gridColumn: '2 / -1',
+    gridRow: '1 / 1',
+  },
+  '& .overview-callout p + p': {
+    mt: '0.75rem',
+  },
+  '& .overview-callout a': {
+    wordBreak: 'break-word',
+    overflowWrap: 'break-word',
+  },
+  '& .overview-callout > p:first-of-type strong:first-child': {
+    display: 'block',
+    color: '#142032',
+    fontWeight: '600',
+  },
+  '& .overview-callout--info': {
+    bg: '#F8F7FC',
+    borderColor: '#CCCED8',
+    '&::before': {
+      backgroundImage:
+        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg)',
+    },
+    '& code': {
+      bg: '#ECEBF3',
+    },
+  },
+  '& .overview-callout--warning': {
+    bg: '#FFF2D4',
+    borderColor: '#FFB100',
+    '&::before': {
+      backgroundImage:
+        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/warning.svg)',
+    },
+    '& code': {
+      bg: '#FFE5B5',
+    },
+  },
+  '& .overview-callout--danger': {
+    bg: '#FDEFEF',
+    borderColor: '#DC5A41',
+    '&::before': {
+      backgroundImage:
+        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/danger.svg)',
+    },
+  },
+  '& .overview-callout--success': {
+    bg: '#F3F8F3',
+    borderColor: '#80BE80',
+    '&::before': {
+      backgroundImage:
+        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/success.svg)',
+    },
   },
   '& code': {
     fontFamily: 'mono',
@@ -952,7 +1146,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const specDefinition = endpointFile.getDefinition()
     const { info, paths } = specDefinition
     const overviewTitle = info?.title || (slug as string)
-    const descriptionHtml = await marked.parse(info?.description || '')
+    const normalizedDescription = replaceOverviewCalloutBlocks(
+      info?.description || ''
+    )
+    const descriptionHtml = enhanceOverviewCalloutHtml(
+      await marked.parse(normalizedDescription)
+    )
     const overviewEndpoints: OverviewEndpoint[] = []
     const overviewEndpointsWithTags: OverviewEndpointWithTags[] = []
     const overviewTagDefinitions = Array.isArray(specDefinition.tags)
