@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
 import SwaggerParser from '@apidevtools/swagger-parser'
@@ -34,6 +34,19 @@ interface OverviewEndpoint {
   summary: string
 }
 
+interface OverviewEndpointGroup {
+  tagName: string
+  endpoints: OverviewEndpoint[]
+}
+
+interface OverviewEndpointWithTags extends OverviewEndpoint {
+  tags: string[]
+}
+
+interface OverviewTagDefinition {
+  name: string
+}
+
 interface Pagination {
   previousDoc: {
     slug: string | null
@@ -52,6 +65,7 @@ interface Props {
   descriptionHtml: string
   endpoints: { [key: string]: Endpoint }
   overviewEndpoints: OverviewEndpoint[]
+  overviewEndpointGroups: OverviewEndpointGroup[]
   overviewTitle: string
   pagination: { [key: string]: Pagination }
   endpointNames: { [key: string]: string }
@@ -249,6 +263,50 @@ function buildOverviewMetaDescription(
 
 function getOverviewEndpointHash(method: string, path: string) {
   return `${method.toLowerCase()}-${path.replaceAll(/{|}/g, '-')}`
+}
+
+const GENERAL_OVERVIEW_TAG_NAME = 'General'
+
+function buildOverviewEndpointGroups(
+  tagDefinitions: OverviewTagDefinition[],
+  overviewEndpoints: OverviewEndpointWithTags[]
+) {
+  const groupedEndpoints = new Map<string, OverviewEndpointGroup>()
+  const definedTagNames = new Set(tagDefinitions.map(({ name }) => name))
+
+  overviewEndpoints.forEach(({ tags, ...endpoint }) => {
+    const tagName = tags[0] || GENERAL_OVERVIEW_TAG_NAME
+    const existingGroup = groupedEndpoints.get(tagName)
+
+    if (existingGroup) {
+      existingGroup.endpoints.push(endpoint)
+      return
+    }
+
+    groupedEndpoints.set(tagName, {
+      tagName,
+      endpoints: [endpoint],
+    })
+  })
+
+  const orderedTagNames = [
+    ...tagDefinitions
+      .map(({ name }) => name)
+      .filter((name) => groupedEndpoints.has(name)),
+    ...Array.from(groupedEndpoints.keys()).filter(
+      (name) =>
+        !definedTagNames.has(name) && name !== GENERAL_OVERVIEW_TAG_NAME
+    ),
+  ]
+
+  if (
+    groupedEndpoints.has(GENERAL_OVERVIEW_TAG_NAME) &&
+    !orderedTagNames.includes(GENERAL_OVERVIEW_TAG_NAME)
+  ) {
+    orderedTagNames.push(GENERAL_OVERVIEW_TAG_NAME)
+  }
+
+  return orderedTagNames.map((tagName) => groupedEndpoints.get(tagName)!)
 }
 
 function getEndpointPathFromLocation() {
@@ -470,6 +528,7 @@ const APIPage: NextPage<Props> = ({
   descriptionHtml,
   endpoints,
   overviewEndpoints,
+  overviewEndpointGroups,
   overviewTitle,
   pagination,
   endpointNames,
@@ -499,9 +558,7 @@ const APIPage: NextPage<Props> = ({
   const httpMethod: MethodType | '' = getMethod()
   const endpointPath = cleanPath ? `#${cleanPath}` : slug
   const isOverview = endpointPath === slug
-  const headTitle = isOverview
-    ? `${overviewTitle} - VTEX API Reference`
-    : endpointNames[endpointPath]
+  const headTitle = isOverview ? overviewTitle : endpointNames[endpointPath]
   const defaultFocusedEndpointId = overviewEndpoints[0]
     ? getOverviewEndpointHash(
         overviewEndpoints[0].method,
@@ -596,6 +653,24 @@ const APIPage: NextPage<Props> = ({
   }, [router.asPath])
 
   useEffect(() => {
+    if (typeof window === 'undefined' || !window.location.hash) {
+      return
+    }
+
+    const searchParams = new URLSearchParams(window.location.search)
+    if (!searchParams.has('endpoint')) {
+      return
+    }
+
+    // Preserve the active endpoint hash while stripping stale legacy query state.
+    window.history.replaceState(
+      window.history.state,
+      document.title,
+      `${window.location.pathname}${window.location.hash}`
+    )
+  }, [slug])
+
+  useEffect(() => {
     if (!cleanPath || !isRapiDocReady || !rapidoc.current) {
       return
     }
@@ -608,6 +683,28 @@ const APIPage: NextPage<Props> = ({
       pagination[endpointPath] ? pagination[endpointPath] : pag
     )
   }, [endpointPath])
+
+  const handleOverviewEndpointLinkClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    endpointHash: string
+  ) => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const searchParams = new URLSearchParams(window.location.search)
+    if (!searchParams.has('endpoint')) {
+      return
+    }
+
+    event.preventDefault()
+    window.history.replaceState(
+      window.history.state,
+      document.title,
+      window.location.pathname
+    )
+    window.location.hash = endpointHash
+  }
 
   return (
     <>
@@ -645,45 +742,65 @@ const APIPage: NextPage<Props> = ({
                 dangerouslySetInnerHTML={{ __html: descriptionHtml }}
               />
             )}
-            {!!overviewEndpoints.length && (
+            {!!overviewEndpointGroups.length && (
               <Box as="section" sx={{ mt: '2rem' }}>
                 <h2>Endpoints</h2>
-                <Box sx={overviewTableWrapperStyles}>
-                  <Box as="table" sx={overviewTableStyles}>
-                    <thead>
-                      <tr>
-                        <th>Method</th>
-                        <th>Path</th>
-                        <th>Summary</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {overviewEndpoints.map(({ method, path, summary }) => (
-                        <tr key={`${method}-${path}`}>
-                          <td>
-                            <Box as="span" sx={endpointMethodBadgeStyles}>
-                              {method}
-                            </Box>
-                          </td>
-                          <td>
-                            <Box as="code" sx={endpointPathStyles}>
-                              {path}
-                            </Box>
-                          </td>
-                          <td>
-                            <Box
-                              as="a"
-                              href={`#${getOverviewEndpointHash(method, path)}`}
-                              sx={endpointLinkStyles}
-                            >
-                              {summary || `Open ${method} ${path}`}
-                            </Box>
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
+                {overviewEndpointGroups.map(({ tagName, endpoints }) => (
+                  <Box key={tagName} sx={{ mt: '1.5rem' }}>
+                    <h3>{tagName}</h3>
+                    <Box sx={overviewTableWrapperStyles}>
+                      <Box as="table" sx={overviewTableStyles}>
+                        <thead>
+                          <tr>
+                            <th>Method</th>
+                            <th>Path</th>
+                            <th>Summary</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {endpoints.map(({ method, path, summary }) => {
+                            const endpointHash = getOverviewEndpointHash(
+                              method,
+                              path
+                            )
+
+                            return (
+                              <tr key={`${method}-${path}`}>
+                                <td>
+                                  <Box as="span" sx={endpointMethodBadgeStyles}>
+                                    {method}
+                                  </Box>
+                                </td>
+                                <td>
+                                  <Box as="code" sx={endpointPathStyles}>
+                                    {path}
+                                  </Box>
+                                </td>
+                                <td>
+                                  <Box
+                                    as="a"
+                                    href={`#${endpointHash}`}
+                                    onClick={(
+                                      event: MouseEvent<HTMLAnchorElement>
+                                    ) =>
+                                      handleOverviewEndpointLinkClick(
+                                        event,
+                                        endpointHash
+                                      )
+                                    }
+                                    sx={endpointLinkStyles}
+                                  >
+                                    {summary || `Open ${method} ${path}`}
+                                  </Box>
+                                </td>
+                              </tr>
+                            )
+                          })}
+                        </tbody>
+                      </Box>
+                    </Box>
                   </Box>
-                </Box>
+                ))}
               </Box>
             )}
           </Box>
@@ -771,6 +888,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug || ''
   const sidebarfallback = await getNavigation()
+  const sectionSelected = 'API Reference'
   const logger = getLogger('API Reference')
 
   if (slugs.includes(slug as string)) {
@@ -831,10 +949,33 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     // Use Oas to process the spec string
     const endpointFile = new Oas(apiSpec)
-    const { info, paths } = endpointFile.getDefinition()
+    const specDefinition = endpointFile.getDefinition()
+    const { info, paths } = specDefinition
     const overviewTitle = info?.title || (slug as string)
     const descriptionHtml = await marked.parse(info?.description || '')
     const overviewEndpoints: OverviewEndpoint[] = []
+    const overviewEndpointsWithTags: OverviewEndpointWithTags[] = []
+    const overviewTagDefinitions = Array.isArray(specDefinition.tags)
+      ? specDefinition.tags.reduce(
+          (
+            tagDefinitions: OverviewTagDefinition[],
+            tagDefinition: { name?: unknown }
+          ) => {
+            if (
+              tagDefinition &&
+              typeof tagDefinition.name === 'string' &&
+              tagDefinition.name.trim()
+            ) {
+              tagDefinitions.push({
+                name: tagDefinition.name.trim(),
+              })
+            }
+
+            return tagDefinitions
+          },
+          [] as OverviewTagDefinition[]
+        )
+      : []
     const endpoints: {
       [key: string]: Endpoint
     } = {}
@@ -851,10 +992,28 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             ([endpointKey, endpointValue]: any) => {
               if (isMethodType(endpointKey.toUpperCase()) && endpointValue) {
-                overviewEndpoints.push({
+                const operationTags = Array.isArray(endpointValue.tags)
+                  ? endpointValue.tags.reduce(
+                      (tags: string[], tag: unknown) => {
+                        if (typeof tag === 'string' && tag.trim()) {
+                          tags.push(tag.trim())
+                        }
+
+                        return tags
+                      },
+                      [] as string[]
+                    )
+                  : []
+                const overviewEndpoint = {
                   method: endpointKey.toUpperCase(),
                   path: key,
                   summary: endpointValue.summary || '',
+                }
+
+                overviewEndpoints.push(overviewEndpoint)
+                overviewEndpointsWithTags.push({
+                  ...overviewEndpoint,
+                  tags: operationTags,
                 })
                 endpoints[`#${getOverviewEndpointHash(endpointKey, key)}`] = {
                   title: endpointValue.summary || '',
@@ -868,6 +1027,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         }
       })
     }
+
+    const overviewEndpointGroups = buildOverviewEndpointGroups(
+      overviewTagDefinitions,
+      overviewEndpointsWithTags
+    )
 
     endpoints[slug as string].description = buildOverviewMetaDescription(
       overviewTitle,
@@ -954,9 +1118,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         descriptionHtml,
         endpoints,
         overviewEndpoints,
+        overviewEndpointGroups,
         overviewTitle,
         pagination,
         endpointNames,
+        sectionSelected,
       },
       revalidate: 86400,
     }
