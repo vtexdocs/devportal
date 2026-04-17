@@ -499,10 +499,9 @@ const APIPage: NextPage<Props> = ({
   const httpMethod: MethodType | '' = getMethod()
   const endpointPath = cleanPath ? `#${cleanPath}` : slug
   const isOverview = endpointPath === slug
-  const headTitle =
-    isOverview
-      ? `${overviewTitle} - VTEX API Reference`
-      : endpointNames[endpointPath]
+  const headTitle = isOverview
+    ? `${overviewTitle} - VTEX API Reference`
+    : endpointNames[endpointPath]
   const defaultFocusedEndpointId = overviewEndpoints[0]
     ? getOverviewEndpointHash(
         overviewEndpoints[0].method,
