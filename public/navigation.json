@@ -1471,10 +1471,24 @@
         },
         {
           "name": "Payments",
-          "slug": "payments-category",
+          "slug": "payments-integration-guide",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
+            {
+              "name": "Purchase Flows",
+              "slug": "payments-integration-purchase-flows",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Payment Methods",
+              "slug": "payments-integration-payment-methods",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "Anti-fraud",
               "slug": "payments-antifraud-category",
@@ -1555,13 +1569,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Configuration Guides",
-                  "slug": "payments-configuration-guides",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Custom Auto Capture Feature",
                   "slug": "custom-auto-capture-feature",
                   "origin": "",
@@ -1613,8 +1620,22 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Google Pay: processing information for payment providers and anti-fraud",
+                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Pix: Instant Payments in Brazil",
                   "slug": "payments-integration-pix-instant-payments-in-brazil",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Processing DPAN cards in external connectors",
+                  "slug": "processing-dpan-cards-in-external-connectors",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1629,42 +1650,6 @@
                 {
                   "name": "Setting up Merchant ID in Apple Pay",
                   "slug": "setting-up-merchant-id-in-apple-pay",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Google Pay: processing information for payment providers and anti-fraud",
-                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Processing DPAN cards in external connectors",
-                  "slug": "processing-dpan-cards-in-external-connectors",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Payments integration guide",
-              "slug": "payments-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Purchase Flows",
-                  "slug": "payments-integration-purchase-flows",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Methods",
-                  "slug": "payments-integration-payment-methods",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1711,11 +1696,18 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Split Payouts on Payment Provider Protocol",
+                  "slug": "split-payouts-on-payment-provider-protocol",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
             {
-              "name": "Security and Going Live",
+              "name": "Security",
               "slug": "payments-security-category",
               "origin": "",
               "type": "category",
@@ -1730,21 +1722,6 @@
                 {
                   "name": "Secure Proxy",
                   "slug": "payments-integration-secure-proxy",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Split Payouts",
-              "slug": "payments-split-payouts-category",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Split Payouts on Payment Provider Protocol",
-                  "slug": "split-payouts-on-payment-provider-protocol",
                   "origin": "",
                   "type": "markdown",
                   "children": []
