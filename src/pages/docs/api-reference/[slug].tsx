@@ -294,7 +294,7 @@ function getOverviewCalloutType(value: string): OverviewCalloutType | null {
   const matchingType = (
     Object.entries(overviewCalloutPatternByType) as [
       OverviewCalloutType,
-      RegExp,
+      RegExp
     ][]
   ).find(([, pattern]) => pattern.test(value))
 
@@ -408,8 +408,7 @@ function buildOverviewEndpointGroups(
       .map(({ name }) => name)
       .filter((name) => groupedEndpoints.has(name)),
     ...Array.from(groupedEndpoints.keys()).filter(
-      (name) =>
-        !definedTagNames.has(name) && name !== GENERAL_OVERVIEW_TAG_NAME
+      (name) => !definedTagNames.has(name) && name !== GENERAL_OVERVIEW_TAG_NAME
     ),
   ]
 
@@ -420,7 +419,15 @@ function buildOverviewEndpointGroups(
     orderedTagNames.push(GENERAL_OVERVIEW_TAG_NAME)
   }
 
-  return orderedTagNames.map((tagName) => groupedEndpoints.get(tagName)!)
+  return orderedTagNames.reduce<OverviewEndpointGroup[]>((groups, tagName) => {
+    const group = groupedEndpoints.get(tagName)
+
+    if (group) {
+      groups.push(group)
+    }
+
+    return groups
+  }, [])
 }
 
 function getEndpointPathFromLocation() {
