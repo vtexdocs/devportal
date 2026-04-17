@@ -492,6 +492,12 @@ const APIPage: NextPage<Props> = ({
     endpointPath === slug
       ? `${overviewTitle} - VTEX API Reference`
       : endpointNames[endpointPath]
+  const defaultFocusedEndpointId = overviewEndpoints[0]
+    ? getOverviewEndpointHash(
+        overviewEndpoints[0].method,
+        overviewEndpoints[0].path
+      )
+    : undefined
   const pag: Pagination = {
     previousDoc: {
       name: null,
@@ -697,6 +703,10 @@ const APIPage: NextPage<Props> = ({
             spec={resolvedSpec}
             layout="column"
             render-style="focused"
+            // RapiDoc focused mode crashes when show-info is false and no
+            // explicit goto-path is provided, because it tries to scroll using
+            // the first path object instead of its elementId.
+            goto-path={defaultFocusedEndpointId}
             show-header="false"
             show-info="false"
             show-side-nav="false"
