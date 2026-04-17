@@ -349,28 +349,6 @@
               ]
             },
             {
-              "name": "Customer Credit",
-              "slug": "customer-credit-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Managing a Customer Credit account",
-                  "slug": "managing-a-customer-credit-account",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing a Customer Credit invoice",
-                  "slug": "managing-a-customer-credit-invoice",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "External Marketplace",
               "slug": "external-marketplace-integration-guide",
               "origin": "",
@@ -556,28 +534,6 @@
               ]
             },
             {
-              "name": "Gift Card",
-              "slug": "gift-card-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Gift Card system architecture",
-                  "slug": "gift-card-integration-guide-system-architecture",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing VTEX gift cards",
-                  "slug": "managing-vtex-gift-cards",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Headless commerce",
               "slug": "headless-commerce",
               "origin": "",
@@ -659,168 +615,6 @@
                 {
                   "name": "Offer Management SDK",
                   "slug": "offer-management-sdk",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Payments",
-              "slug": "payments-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integrating a new payment provider on VTEX",
-                  "slug": "integrating-a-new-payment-provider-on-vtex",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Protocol",
-                  "slug": "payments-integration-payment-provider-protocol",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App",
-                  "slug": "payments-integration-ppp-applied-to-pos",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Implementing a Payment Provider",
-                  "slug": "payments-integration-implementing-a-payment-provider",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Framework",
-                  "slug": "payments-integration-payment-provider-framework",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Purchase Flows",
-                  "slug": "payments-integration-purchase-flows",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment App",
-                  "slug": "payments-integration-payment-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Methods",
-                  "slug": "payments-integration-payment-methods",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Homologation",
-                  "slug": "payments-integration-payment-provider-homologation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Antifraud Provider Protocol",
-                  "slug": "how-the-integration-protocol-between-vtex-and-antifraud-companies-works",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PCI - DSS Compliance",
-                  "slug": "payments-integration-pci-dss-compliance",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Secure Proxy",
-                  "slug": "payments-integration-secure-proxy",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Split Payouts on Payment Provider Protocol",
-                  "slug": "split-payouts-on-payment-provider-protocol",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
-                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Custom Auto Capture Feature",
-                  "slug": "custom-auto-capture-feature",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Pix: Instant Payments in Brazil",
-                  "slug": "payments-integration-pix-instant-payments-in-brazil",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PSE Payment Method",
-                  "slug": "pse-payment-method",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Google Pay: processing information for payment providers and anti-fraud",
-                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PPP Versioning",
-                  "slug": "ppp-versioning",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Implementing payments tokenization",
-                  "slug": "implementing-payments-tokenization",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing tokenized cards",
-                  "slug": "managing-tokenized-cards",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Processing DPAN cards in external connectors",
-                  "slug": "processing-dpan-cards-in-external-connectors",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1682,21 +1476,14 @@
           "type": "category",
           "children": [
             {
-              "name": "Configuration Guides",
-              "slug": "payments-configuration-guides",
+              "name": "Anti-fraud",
+              "slug": "payments-antifraud-category",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
-                  "name": "Setting up the type of interest rate",
-                  "slug": "setting-up-the-type-of-interest-rate",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up Merchant ID in Apple Pay",
-                  "slug": "setting-up-merchant-id-in-apple-pay",
+                  "name": "Anti-fraud Provider Protocol",
+                  "slug": "how-the-integration-protocol-between-vtex-and-antifraud-companies-works",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1714,10 +1501,287 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                }
+              ]
+            },
+            {
+              "name": "Customer Credit",
+              "slug": "customer-credit-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Managing a Customer Credit account",
+                  "slug": "managing-a-customer-credit-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing a Customer Credit invoice",
+                  "slug": "managing-a-customer-credit-invoice",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Gift Cards",
+              "slug": "gift-card-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Gift Card system architecture",
+                  "slug": "gift-card-integration-guide-system-architecture",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing VTEX gift cards",
+                  "slug": "managing-vtex-gift-cards",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Operations and Configuration",
+              "slug": "payments-operations-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Configuration Guides",
+                  "slug": "payments-configuration-guides",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Custom Auto Capture Feature",
+                  "slug": "custom-auto-capture-feature",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
                   "name": "Metadata information in payment transactions",
                   "slug": "metadata-information-in-payment-transactions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up the type of interest rate",
+                  "slug": "setting-up-the-type-of-interest-rate",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment App and Checkout UI",
+              "slug": "payments-checkout-ui-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Payment App",
+                  "slug": "payments-integration-payment-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
+                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment methods and Wallets",
+              "slug": "payments-methods-wallets-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Pix: Instant Payments in Brazil",
+                  "slug": "payments-integration-pix-instant-payments-in-brazil",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "PSE Payment Method",
+                  "slug": "pse-payment-method",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up Merchant ID in Apple Pay",
+                  "slug": "setting-up-merchant-id-in-apple-pay",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Google Pay: processing information for payment providers and anti-fraud",
+                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Processing DPAN cards in external connectors",
+                  "slug": "processing-dpan-cards-in-external-connectors",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payments integration guide",
+              "slug": "payments-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Purchase Flows",
+                  "slug": "payments-integration-purchase-flows",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment Methods",
+                  "slug": "payments-integration-payment-methods",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment Provider Protocol",
+              "slug": "payments-integration-payment-provider-protocol",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integrating a new payment provider on VTEX",
+                  "slug": "integrating-a-new-payment-provider-on-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing a Payment Provider",
+                  "slug": "payments-integration-implementing-a-payment-provider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment Provider Framework",
+                  "slug": "payments-integration-payment-provider-framework",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "PPP Versioning",
+                  "slug": "ppp-versioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App",
+                  "slug": "payments-integration-ppp-applied-to-pos",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Security and Going Live",
+              "slug": "payments-security-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "PCI - DSS Compliance",
+                  "slug": "payments-integration-pci-dss-compliance",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Secure Proxy",
+                  "slug": "payments-integration-secure-proxy",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Split Payouts",
+              "slug": "payments-split-payouts-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Split Payouts on Payment Provider Protocol",
+                  "slug": "split-payouts-on-payment-provider-protocol",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Testing and Homologation",
+              "slug": "payments-testing-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Payment Provider Homologation",
+                  "slug": "payments-integration-payment-provider-homologation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Tokenization and Card Vault",
+              "slug": "payments-tokenization-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Implementing payments tokenization",
+                  "slug": "implementing-payments-tokenization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing tokenized cards",
+                  "slug": "managing-tokenized-cards",
                   "origin": "",
                   "type": "markdown",
                   "children": []
