@@ -1329,6 +1329,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         pagination,
         endpointNames,
         sectionSelected,
+        sidebarfallback,
       },
       revalidate: 86400,
     }
