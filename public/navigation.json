@@ -3123,80 +3123,133 @@
           ]
         },
         {
-          "name": "B2B Personas",
-          "slug": "b2b-personas-api",
+          "name": "B2B Buyers",
+          "slug": "b2b-buyer-data-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
-              "name": "B2B buyers",
-              "slug": "b2b-buyers",
+              "name": "Get buyer schema",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/schemas/v1",
+              "children": []
+            },
+            {
+              "name": "Create buyer",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "POST",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents",
+              "children": []
+            },
+            {
+              "name": "Get buyer by ID",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+              "children": []
+            },
+            {
+              "name": "Update buyer",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "PATCH",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+              "children": []
+            },
+            {
+              "name": "Delete buyer",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "DELETE",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+              "children": []
+            },
+            {
+              "name": "Search buyers",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/search",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "B2B Addresses",
+          "slug": "b2b-addresses",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Addresses",
+              "slug": "addresses",
               "type": "category",
               "children": [
                 {
-                  "name": "Get buyer schema",
-                  "slug": "b2b-buyer-data-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/schemas/v1",
-                  "children": []
-                },
-                {
-                  "name": "Create buyer",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Create B2B address",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents",
+                  "endpoint": "/api/dataentities/AD/documents",
                   "children": []
                 },
                 {
-                  "name": "Get buyer by ID",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Search B2B addresses",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                  "endpoint": "/api/dataentities/AD/search",
                   "children": []
                 },
                 {
-                  "name": "Update buyer",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Get B2B address by ID",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Update B2B address",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
                   "children": []
                 },
                 {
-                  "name": "Delete buyer",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Delete B2B address",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
-                  "children": []
-                },
-                {
-                  "name": "Search buyers",
-                  "slug": "b2b-buyer-data-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/search",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
                   "children": []
                 }
               ]
             },
             {
-              "name": "B2B recipients",
-              "slug": "b2b-recipients",
+              "name": "Recipients",
+              "slug": "recipients",
               "type": "category",
               "children": [
                 {
-                  "name": "Create new recipient",
-                  "slug": "b2b-recipients-api",
+                  "name": "Create recipient",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -3205,7 +3258,7 @@
                 },
                 {
                   "name": "Search recipients",
-                  "slug": "b2b-recipients-api",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -3214,29 +3267,81 @@
                 },
                 {
                   "name": "Get recipient by ID",
-                  "slug": "b2b-recipients-api",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
                   "children": []
                 },
                 {
                   "name": "Update recipient",
-                  "slug": "b2b-recipients-api",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
                   "children": []
                 },
                 {
                   "name": "Delete recipient",
-                  "slug": "b2b-recipients-api",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Locations",
+              "slug": "locations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents",
+                  "children": []
+                },
+                {
+                  "name": "Search locations",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/search",
+                  "children": []
+                },
+                {
+                  "name": "Get location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                  "children": []
+                },
+                {
+                  "name": "Update location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
                   "children": []
                 }
               ]
