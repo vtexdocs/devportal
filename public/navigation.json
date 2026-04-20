@@ -18335,13 +18335,27 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components",
+                  "slug": "2026-04-20-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Choose your storefront build Node.js version",
+                  "slug": "2026-04-20-faststore-webops-choose-your-storefront-build-nodejs-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX CX Platform: Connect the MCP to your AI tool",
                   "slug": "2026-04-15-vtex-cx-platform-mcp-connection-guide",
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
-                ,{
+                },
+                {
                   "name": "Introducing VTEX Developer MCP and Skills for AI-assisted development",
                   "slug": "2026-04-09-vtex-developer-mcp-and-skills",
                   "origin": "",
