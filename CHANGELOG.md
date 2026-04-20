@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.33.5](https://github.com/vtexdocs/devportal/compare/v1.33.4...v1.33.5) (2026-04-20)
+
+
+### Features
+
+* align B2B buyer data and addresses API navigation ([25b4c88](https://github.com/vtexdocs/devportal/commit/25b4c882cf9cbb70105a61bb0e2000000db3d8cd))
+
+
+### Bug Fixes
+
+* align B2B Addresses API slug to b2b-addresses ([79d2bf5](https://github.com/vtexdocs/devportal/commit/79d2bf5f3109f58297cae319f7ccf3d01d4d1c8c))
+
+
+### Refactoring
+
+* **navigation:** flatten B2B Buyers and group B2B Addresses ([98e940c](https://github.com/vtexdocs/devportal/commit/98e940cc763eec8367d6ddde0e57de072a6900dd))
+
 ### [1.33.4](https://github.com/vtexdocs/devportal/compare/v1.33.3...v1.33.4) (2026-04-14)
 
 
