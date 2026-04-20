@@ -3191,7 +3191,7 @@
             },
             {
               "name": "B2B Addresses",
-              "slug": "b2b-addresses-api",
+              "slug": "b2b-addresses",
               "origin": "",
               "type": "openapi",
               "children": [
@@ -3202,7 +3202,7 @@
                   "children": [
                     {
                       "name": "Create B2B address",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "POST",
                       "origin": "",
@@ -3211,7 +3211,7 @@
                     },
                     {
                       "name": "Search B2B addresses",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -3220,7 +3220,7 @@
                     },
                     {
                       "name": "Get B2B address by ID",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -3229,7 +3229,7 @@
                     },
                     {
                       "name": "Update B2B address",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "PATCH",
                       "origin": "",
@@ -3238,7 +3238,7 @@
                     },
                     {
                       "name": "Delete B2B address",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "DELETE",
                       "origin": "",
@@ -3254,7 +3254,7 @@
                   "children": [
                     {
                       "name": "Create recipient",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "POST",
                       "origin": "",
@@ -3263,7 +3263,7 @@
                     },
                     {
                       "name": "Search recipients",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -3272,7 +3272,7 @@
                     },
                     {
                       "name": "Get recipient by ID",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -3281,7 +3281,7 @@
                     },
                     {
                       "name": "Update recipient",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "PATCH",
                       "origin": "",
@@ -3290,7 +3290,7 @@
                     },
                     {
                       "name": "Delete recipient",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "DELETE",
                       "origin": "",
@@ -3306,7 +3306,7 @@
                   "children": [
                     {
                       "name": "Create location",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "POST",
                       "origin": "",
@@ -3315,7 +3315,7 @@
                     },
                     {
                       "name": "Search locations",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -3324,7 +3324,7 @@
                     },
                     {
                       "name": "Get location",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
@@ -3333,7 +3333,7 @@
                     },
                     {
                       "name": "Update location",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "PATCH",
                       "origin": "",
@@ -3342,7 +3342,7 @@
                     },
                     {
                       "name": "Delete location",
-                      "slug": "b2b-addresses-api",
+                      "slug": "b2b-addresses",
                       "type": "openapi",
                       "method": "DELETE",
                       "origin": "",
