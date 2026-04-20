@@ -18231,7 +18231,7 @@
               "children": [
                 {
                   "name": "Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components",
-                  "slug": "https://developers.vtex.com/updates/release-notes/2026-04-20-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components",
+                  "slug": "2026-04-20-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
