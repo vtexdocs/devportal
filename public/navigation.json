@@ -16018,6 +16018,13 @@
                   "children": []
                 },
                 {
+                  "name": "Debug logging for third-party scripts",
+                  "slug": "faststore/developer-tools-enable-scripts-logs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore CLI",
                   "slug": "faststore/developer-tools-faststore-cli",
                   "origin": "",
@@ -18416,6 +18423,13 @@
                 {
                   "name": "Faststore: Improved cookie handling for session and cart persistence in preview environments",
                   "slug": "2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Debug logging for third-party scripts",
+                  "slug": "2026-02-11-faststore-debug-logging",
                   "origin": "",
                   "type": "markdown",
                   "children": []
