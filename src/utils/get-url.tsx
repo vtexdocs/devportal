@@ -1,5 +1,5 @@
 export const getFeedbackURL = () => {
-  return `https://docs.google.com/forms/d/e/1FAIpQLSfmnotPvPjw-SjiE7lt2Nt3RQgNUe10ixXZmuO2v9enOJReoQ/viewform?entry.1972292648=developers.vtex.com&entry.1799503232=`
+  return `https://docs.google.com/forms/d/e/1FAIpQLSejjkI4aRPadDn0C9EKa-_mESUWPjwoS6yMTN8KA9PPCLfcfA/viewform?usp=pp_url&entry.1077155995=`
 }
 
 export const getGithubURL = () => {
