@@ -15,6 +15,7 @@ import { MethodType, isMethodType } from 'utils/typings/unionTypes'
 import { flattenWithChildren } from 'utils/navigation-utils'
 import { getLogger } from 'utils/logging/log-util'
 import getSiteUrl from 'utils/getSiteUrl'
+import { methodsColors } from 'components/method-category/functions'
 
 // Client-side logger
 const clientLogger = {
@@ -663,9 +664,13 @@ const overviewTableStyles = {
     color: '#4A596B',
   },
   '& td:first-of-type': {
+    wordBreak: 'break-word',
+    whiteSpace: 'normal',
+  },
+  '& td:nth-of-type(2)': {
     whiteSpace: 'nowrap',
   },
-  '& td:nth-of-type(2), & td:nth-of-type(3)': {
+  '& td:nth-of-type(3)': {
     wordBreak: 'break-word',
   },
   '& tbody tr:last-of-type td': {
@@ -673,21 +678,30 @@ const overviewTableStyles = {
   },
 }
 
-const endpointMethodBadgeStyles = {
-  bg: '#F2F4F7',
-  borderRadius: '999px',
-  color: '#142032',
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  fontSize: '0.75rem',
-  fontWeight: '600',
-  letterSpacing: '0.04em',
-  minWidth: '3.25rem',
-  px: '0.625rem',
-  py: '0.25rem',
-  textTransform: 'uppercase',
-  whiteSpace: 'nowrap',
+function getOverviewEndpointMethodBadgeSx(method: string) {
+  const upper = method.toUpperCase()
+  const palette =
+    isMethodType(upper) && methodsColors[upper]
+      ? methodsColors[upper]
+      : {
+          border: '1px solid #F49494',
+          color: '#CC3D3D',
+          background: '#F8E3E3',
+        }
+
+  return {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '2px',
+    fontSize: '12px',
+    fontWeight: '600',
+    minHeight: '24px',
+    px: '6px',
+    textTransform: 'uppercase',
+    whiteSpace: 'nowrap',
+    ...palette,
+  }
 }
 
 const endpointPathStyles = {
@@ -953,9 +967,9 @@ const APIPage: NextPage<Props> = ({
                       <Box as="table" sx={overviewTableStyles}>
                         <thead>
                           <tr>
+                            <th>Summary</th>
                             <th>Method</th>
                             <th>Path</th>
-                            <th>Summary</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -967,16 +981,6 @@ const APIPage: NextPage<Props> = ({
 
                             return (
                               <tr key={`${method}-${path}`}>
-                                <td>
-                                  <Box as="span" sx={endpointMethodBadgeStyles}>
-                                    {method}
-                                  </Box>
-                                </td>
-                                <td>
-                                  <Box as="code" sx={endpointPathStyles}>
-                                    {path}
-                                  </Box>
-                                </td>
                                 <td>
                                   <Box
                                     as="a"
@@ -992,6 +996,21 @@ const APIPage: NextPage<Props> = ({
                                     sx={endpointLinkStyles}
                                   >
                                     {summary || `Open ${method} ${path}`}
+                                  </Box>
+                                </td>
+                                <td>
+                                  <Box
+                                    as="span"
+                                    sx={getOverviewEndpointMethodBadgeSx(
+                                      method
+                                    )}
+                                  >
+                                    {method.toUpperCase()}
+                                  </Box>
+                                </td>
+                                <td>
+                                  <Box as="code" sx={endpointPathStyles}>
+                                    {path}
                                   </Box>
                                 </td>
                               </tr>
