@@ -1970,17 +1970,10 @@
             },
             {
               "name": "Delivery Promise",
-              "slug": "delivery-promise-category",
+              "slug": "delivery-promise",
               "origin": "",
               "type": "markdown",
               "children": [
-                {
-                  "name": "Delivery Promise",
-                  "slug": "delivery-promise",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
                 {
                   "name": "Delivery Promise Suggestions API headless integration",
                   "slug": "delivery-promise-suggestions-api-headless-integration",
