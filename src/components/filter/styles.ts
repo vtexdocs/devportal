@@ -99,9 +99,7 @@ const filterContainer: SxStyleProp = {
 
 const tagContainer: SxStyleProp = {
   gap: '16px',
-  overflowX: 'auto',
-  overflowY: 'hidden',
-  height: '24px',
+  flexWrap: 'wrap',
 }
 
 const tag: SxStyleProp = {
