@@ -1973,7 +1973,22 @@
               "slug": "delivery-promise",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Delivery Promise Suggestions API headless integration",
+                  "slug": "delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Gathering delivery promise information",
+                  "slug": "gathering-delivery-promise-information",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -18341,6 +18356,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Delivery Promise Suggestions API: New headless integration guide and API",
+                  "slug": "2026-04-10-delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components",
                   "slug": "2026-04-20-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components",
