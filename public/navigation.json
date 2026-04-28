@@ -18351,6 +18351,21 @@
           "type": "category",
           "children": [
             {
+              "name": "May",
+              "slug": "may-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Marketplace payment data can now be shared with sellers",
+                  "slug": "2026-05-01-marketplace-payment-data-can-now-be-shared-with-sellers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "April",
               "slug": "april-2026",
               "origin": "",
