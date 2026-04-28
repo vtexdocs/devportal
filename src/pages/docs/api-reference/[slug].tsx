@@ -1,19 +1,21 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, type MouseEvent } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
 import SwaggerParser from '@apidevtools/swagger-parser'
 import ArticlePagination from 'components/article-pagination'
 import { Box } from '@vtex/brand-ui'
 import jp from 'jsonpath'
+import { marked } from 'marked'
 
 import getReferencePaths from 'utils/getReferencePaths'
 import getNavigation from 'utils/getNavigation'
 import { MethodType, isMethodType } from 'utils/typings/unionTypes'
-import '../../../../RapiDoc/src/rapidoc.js'
 import { flattenWithChildren } from 'utils/navigation-utils'
 import { getLogger } from 'utils/logging/log-util'
+import getSiteUrl from 'utils/getSiteUrl'
+import { methodsColors } from 'components/method-category/functions'
 
 // Client-side logger
 const clientLogger = {
@@ -26,6 +28,27 @@ interface Endpoint {
   title: string
   description: string
 }
+
+interface OverviewEndpoint {
+  method: string
+  path: string
+  summary: string
+}
+
+interface OverviewEndpointGroup {
+  tagName: string
+  endpoints: OverviewEndpoint[]
+}
+
+interface OverviewEndpointWithTags extends OverviewEndpoint {
+  tags: string[]
+}
+
+interface OverviewTagDefinition {
+  name: string
+}
+
+type OverviewCalloutType = 'info' | 'warning' | 'danger' | 'success'
 
 interface Pagination {
   previousDoc: {
@@ -42,8 +65,11 @@ interface Pagination {
 
 interface Props {
   slug: string
-  doc: string
+  descriptionHtml: string
   endpoints: { [key: string]: Endpoint }
+  overviewEndpoints: OverviewEndpoint[]
+  overviewEndpointGroups: OverviewEndpointGroup[]
+  overviewTitle: string
   pagination: { [key: string]: Pagination }
   endpointNames: { [key: string]: string }
 }
@@ -128,6 +154,573 @@ function getDescription(description: string) {
   )
 }
 
+function normalizeWhitespace(content: string) {
+  return content.replace(/\s+/g, ' ').trim()
+}
+
+function stripHtml(content: string) {
+  return normalizeWhitespace(content.replace(/<[^>]+>/g, ' '))
+}
+
+function getFirstSentence(content: string) {
+  const normalizedContent = normalizeWhitespace(content)
+
+  if (!normalizedContent) {
+    return ''
+  }
+
+  const match = normalizedContent.match(/^.*?[.!?](?=\s|$)/)
+
+  return match ? match[0].trim() : normalizedContent
+}
+
+function trimToLength(content: string, maxLength: number) {
+  if (maxLength <= 0 || !content) {
+    return ''
+  }
+
+  if (content.length <= maxLength) {
+    return content
+  }
+
+  const truncated = content.slice(0, maxLength - 1)
+  const lastSpaceIndex = truncated.lastIndexOf(' ')
+
+  if (lastSpaceIndex > 0) {
+    return `${truncated.slice(0, lastSpaceIndex)}…`
+  }
+
+  return `${truncated}…`
+}
+
+function removeTitlePrefix(content: string, title: string) {
+  const escapedTitle = title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+  return content
+    .replace(new RegExp(`^${escapedTitle}\\s*[:\\-.]?\\s*`, 'i'), '')
+    .trim()
+}
+
+function buildOverviewMetaDescription(
+  apiTitle: string,
+  descriptionText: string,
+  overviewEndpoints: OverviewEndpoint[]
+) {
+  const descriptionSentence = removeTitlePrefix(
+    getFirstSentence(descriptionText),
+    apiTitle
+  )
+
+  const uniqueSummaries = overviewEndpoints.reduce<string[]>(
+    (summaries, { summary }) => {
+      const cleanedSummary = normalizeWhitespace(summary).replace(/[.!?]+$/, '')
+
+      if (!cleanedSummary) {
+        return summaries
+      }
+
+      const isDuplicate = summaries.some(
+        (existingSummary) =>
+          existingSummary.toLowerCase() === cleanedSummary.toLowerCase()
+      )
+
+      if (isDuplicate) {
+        return summaries
+      }
+
+      summaries.push(cleanedSummary)
+      return summaries
+    },
+    []
+  )
+
+  const maxSummaryCount = Math.min(uniqueSummaries.length, 5)
+
+  for (let summaryCount = maxSummaryCount; summaryCount >= 0; summaryCount--) {
+    const summaryText = uniqueSummaries.slice(0, summaryCount).join(', ')
+    const suffix = summaryText ? `${summaryText}.` : ''
+    const availableDescriptionLength =
+      160 - apiTitle.length - 3 - (suffix ? suffix.length + 1 : 0)
+    const trimmedDescription = trimToLength(
+      descriptionSentence,
+      availableDescriptionLength
+    )
+
+    const candidate = normalizeWhitespace(
+      `${apiTitle} - ${trimmedDescription}${
+        trimmedDescription && suffix ? ' ' : ''
+      }${suffix}`
+    )
+
+    if (candidate.length <= 160) {
+      return candidate
+    }
+  }
+
+  if (uniqueSummaries.length) {
+    return trimToLength(`${apiTitle} - ${uniqueSummaries.join(', ')}.`, 160)
+  }
+
+  return trimToLength(`${apiTitle} - ${descriptionSentence}`, 160)
+}
+
+function getOverviewEndpointHash(method: string, path: string) {
+  return `${method.toLowerCase()}-${path.replaceAll(/{|}/g, '-')}`
+}
+
+const GENERAL_OVERVIEW_TAG_NAME = 'General'
+const overviewCalloutIconByType: Record<OverviewCalloutType, string> = {
+  info: '\u2139\uFE0F',
+  warning: '\u26A0\uFE0F',
+  danger: '\u2757',
+  success: '\u2705',
+}
+const overviewCalloutPatternByType: Record<OverviewCalloutType, RegExp> = {
+  info: /^(?:<p>)?\s*(?:\u2139\uFE0F|\u2139)\s*/u,
+  warning: /^(?:<p>)?\s*(?:\u26A0\uFE0F?|\u26A0)\s*/u,
+  danger: /^(?:<p>)?\s*(?:\u2757\uFE0F?|\u2757)\s*/u,
+  success: /^(?:<p>)?\s*(?:\u2705)\s*/u,
+}
+
+function isOverviewCalloutType(value: unknown): value is OverviewCalloutType {
+  return (
+    value === 'info' ||
+    value === 'warning' ||
+    value === 'danger' ||
+    value === 'success'
+  )
+}
+
+function getOverviewCalloutType(value: string): OverviewCalloutType | null {
+  const matchingType = (
+    Object.entries(overviewCalloutPatternByType) as [
+      OverviewCalloutType,
+      RegExp
+    ][]
+  ).find(([, pattern]) => pattern.test(value))
+
+  return matchingType ? matchingType[0] : null
+}
+
+function replaceOverviewCalloutBlocks(markdown: string) {
+  return markdown.replace(
+    /\[block:callout\]\s*([\s\S]*?)\s*\[\/block\]/g,
+    (match, blockContent: string) => {
+      try {
+        const parsedBlock = JSON.parse(blockContent) as {
+          type?: unknown
+          title?: unknown
+          body?: unknown
+        }
+        const calloutType = isOverviewCalloutType(parsedBlock.type)
+          ? parsedBlock.type
+          : 'info'
+        const title =
+          typeof parsedBlock.title === 'string' ? parsedBlock.title.trim() : ''
+        const body =
+          typeof parsedBlock.body === 'string' ? parsedBlock.body.trim() : ''
+        const calloutLines: string[] = []
+
+        if (title) {
+          calloutLines.push(
+            `> ${overviewCalloutIconByType[calloutType]} **${title}**`
+          )
+        }
+
+        if (body) {
+          const bodyLines = body.split(/\r?\n/)
+
+          if (title) {
+            calloutLines.push('>')
+          } else {
+            const firstNonEmptyLineIndex = bodyLines.findIndex((line) =>
+              line.trim()
+            )
+
+            if (firstNonEmptyLineIndex > -1) {
+              bodyLines[firstNonEmptyLineIndex] = `${
+                overviewCalloutIconByType[calloutType]
+              } ${bodyLines[firstNonEmptyLineIndex].trimStart()}`
+            }
+          }
+
+          bodyLines.forEach((line) => {
+            calloutLines.push(line ? `> ${line}` : '>')
+          })
+        }
+
+        if (!calloutLines.length) {
+          return match
+        }
+
+        return `${calloutLines.join('\n')}\n`
+      } catch {
+        return match
+      }
+    }
+  )
+}
+
+function enhanceOverviewCalloutHtml(content: string) {
+  return content.replace(
+    /<blockquote>\s*([\s\S]*?)<\/blockquote>/g,
+    (blockquote, innerContent: string) => {
+      const trimmedInnerContent = innerContent.trim()
+      const calloutType = getOverviewCalloutType(trimmedInnerContent)
+
+      if (!calloutType) {
+        return blockquote
+      }
+
+      const normalizedInnerContent = trimmedInnerContent.replace(
+        overviewCalloutPatternByType[calloutType],
+        '<p>'
+      )
+
+      return `<blockquote class="overview-callout overview-callout--${calloutType}">${normalizedInnerContent}</blockquote>`
+    }
+  )
+}
+
+function buildOverviewEndpointGroups(
+  tagDefinitions: OverviewTagDefinition[],
+  overviewEndpoints: OverviewEndpointWithTags[]
+) {
+  const groupedEndpoints = new Map<string, OverviewEndpointGroup>()
+  const definedTagNames = new Set(tagDefinitions.map(({ name }) => name))
+
+  overviewEndpoints.forEach(({ tags, ...endpoint }) => {
+    const tagName = tags[0] || GENERAL_OVERVIEW_TAG_NAME
+    const existingGroup = groupedEndpoints.get(tagName)
+
+    if (existingGroup) {
+      existingGroup.endpoints.push(endpoint)
+      return
+    }
+
+    groupedEndpoints.set(tagName, {
+      tagName,
+      endpoints: [endpoint],
+    })
+  })
+
+  const orderedTagNames = [
+    ...tagDefinitions
+      .map(({ name }) => name)
+      .filter((name) => groupedEndpoints.has(name)),
+    ...Array.from(groupedEndpoints.keys()).filter(
+      (name) => !definedTagNames.has(name) && name !== GENERAL_OVERVIEW_TAG_NAME
+    ),
+  ]
+
+  if (
+    groupedEndpoints.has(GENERAL_OVERVIEW_TAG_NAME) &&
+    !orderedTagNames.includes(GENERAL_OVERVIEW_TAG_NAME)
+  ) {
+    orderedTagNames.push(GENERAL_OVERVIEW_TAG_NAME)
+  }
+
+  return orderedTagNames.reduce<OverviewEndpointGroup[]>((groups, tagName) => {
+    const group = groupedEndpoints.get(tagName)
+
+    if (group) {
+      groups.push(group)
+    }
+
+    return groups
+  }, [])
+}
+
+function getEndpointPathFromLocation() {
+  if (typeof window === 'undefined') {
+    return ''
+  }
+
+  const hash = window.location.hash.slice(1)
+  if (hash) {
+    return hash
+  }
+
+  return new URLSearchParams(window.location.search).get('endpoint') || ''
+}
+
+const overviewArticleStyles = {
+  maxWidth: '960px',
+  mx: 'auto',
+  mb: '2.5rem',
+  color: '#4A596B',
+  fontSize: '0.95em',
+  lineHeight: '1.5em',
+}
+
+const overviewHeaderStyles = {
+  mt: 0,
+  mb: '1.5rem',
+  '*': {
+    margin: '0px',
+  },
+  '& h1': {
+    fontSize: ['20px', '28px'],
+    lineHeight: ['30px', '38px'],
+    fontWeight: '400',
+    color: '#142032',
+  },
+}
+
+const overviewContentStyles = {
+  color: '#4A596B',
+  '& p': {
+    lineHeight: '1.5em',
+    mb: '1rem',
+  },
+  '& ul, & ol': {
+    mb: '1rem',
+    pl: '1.5rem',
+  },
+  '& ul li, & ol li': {
+    mt: '0.5em',
+    mb: '0.5em',
+  },
+  '& h2': {
+    fontSize: '1.375em',
+    lineHeight: '2em',
+    fontWeight: '400',
+    mt: '1.3em',
+    mb: '0.875em',
+    color: '#142032',
+  },
+  '& h3': {
+    fontSize: ['1.125rem', '1.25rem'],
+    lineHeight: '1.75rem',
+    fontWeight: '600',
+    mt: '1.5rem',
+    mb: '0.75rem',
+    color: '#142032',
+  },
+  '& h4': {
+    fontSize: '1rem',
+    lineHeight: '1.5rem',
+    fontWeight: '600',
+    mt: '1.25rem',
+    mb: '0.75rem',
+    color: '#142032',
+  },
+  '& a': {
+    color: '#E31C58',
+    textDecoration: 'underline',
+    textUnderlineOffset: '0.18em',
+  },
+  '& strong': {
+    fontWeight: '600',
+  },
+  '& blockquote': {
+    borderLeft: '4px solid #E7E9EE',
+    color: '#4A596B',
+    ml: 0,
+    my: '1.5rem',
+    pl: '1rem',
+  },
+  '& .overview-callout': {
+    display: 'grid',
+    gap: '20px',
+    width: '100%',
+    pl: 0,
+    ml: 0,
+    mt: '1rem',
+    mb: '1.5rem',
+    p: '20px',
+    borderRadius: '4px',
+    alignItems: 'center',
+    gridTemplateColumns: '20px 1fr',
+    gridTemplateRows: '1fr',
+    wordBreak: 'break-word',
+    border: '1px solid #CCCED8',
+    '&::before': {
+      display: 'inline-block',
+      height: '20px',
+      width: '20px',
+      content: '""',
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: '0 0',
+      backgroundSize: '20px 20px',
+    },
+  },
+  '& .overview-callout p, & .overview-callout div': {
+    m: 0,
+    gridColumn: '2 / -1',
+    gridRow: '1 / 1',
+  },
+  '& .overview-callout p + p': {
+    mt: '0.75rem',
+  },
+  '& .overview-callout a': {
+    wordBreak: 'break-word',
+    overflowWrap: 'break-word',
+  },
+  '& .overview-callout > p:first-of-type strong:first-child': {
+    display: 'block',
+    color: '#142032',
+    fontWeight: '600',
+  },
+  '& .overview-callout--info': {
+    bg: '#F8F7FC',
+    borderColor: '#CCCED8',
+    '&::before': {
+      backgroundImage:
+        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg)',
+    },
+    '& code': {
+      bg: '#ECEBF3',
+    },
+  },
+  '& .overview-callout--warning': {
+    bg: '#FFF2D4',
+    borderColor: '#FFB100',
+    '&::before': {
+      backgroundImage:
+        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/warning.svg)',
+    },
+    '& code': {
+      bg: '#FFE5B5',
+    },
+  },
+  '& .overview-callout--danger': {
+    bg: '#FDEFEF',
+    borderColor: '#DC5A41',
+    '&::before': {
+      backgroundImage:
+        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/danger.svg)',
+    },
+  },
+  '& .overview-callout--success': {
+    bg: '#F3F8F3',
+    borderColor: '#80BE80',
+    '&::before': {
+      backgroundImage:
+        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/success.svg)',
+    },
+  },
+  '& code': {
+    fontFamily: 'mono',
+    fontSize: '0.875rem',
+    bg: '#F7F8FA',
+    borderRadius: '4px',
+    px: '0.25rem',
+    py: '0.125rem',
+  },
+  '& pre': {
+    bg: '#F7F8FA',
+    border: '1px solid #E7E9EE',
+    borderRadius: '4px',
+    overflowX: 'auto',
+    p: '1rem',
+    mb: '1.5rem',
+  },
+  '& pre code': {
+    bg: 'transparent',
+    px: 0,
+    py: 0,
+  },
+  '& table': {
+    width: '100%',
+    borderCollapse: 'collapse',
+    mb: '1.5rem',
+  },
+  '& th, & td': {
+    borderBottom: '1px solid #E7E9EE',
+    px: '0.75rem',
+    py: '0.625rem',
+    textAlign: 'left',
+    verticalAlign: 'top',
+  },
+}
+
+const overviewTableWrapperStyles = {
+  overflowX: 'auto',
+  border: '1px solid #E7E9EE',
+  borderRadius: '4px',
+  bg: '#FFFFFF',
+}
+
+const overviewTableStyles = {
+  width: '100%',
+  minWidth: '640px',
+  borderCollapse: 'collapse',
+  '& th': {
+    textAlign: 'left',
+    padding: '0.875rem 1rem',
+    borderBottom: '1px solid #E7E9EE',
+    bg: '#F7F8FA',
+    color: '#4A596B',
+    fontSize: '0.75rem',
+    fontWeight: '600',
+    letterSpacing: '0.04em',
+    textTransform: 'uppercase',
+  },
+  '& td': {
+    padding: '0.875rem 1rem',
+    borderBottom: '1px solid #E7E9EE',
+    verticalAlign: 'top',
+    color: '#4A596B',
+  },
+  '& td:first-of-type': {
+    wordBreak: 'break-word',
+    whiteSpace: 'normal',
+  },
+  '& td:nth-of-type(2)': {
+    whiteSpace: 'nowrap',
+  },
+  '& td:nth-of-type(3)': {
+    wordBreak: 'break-word',
+  },
+  '& tbody tr:last-of-type td': {
+    borderBottom: 'none',
+  },
+}
+
+function getOverviewEndpointMethodBadgeSx(method: string) {
+  const upper = method.toUpperCase()
+  const palette =
+    isMethodType(upper) && methodsColors[upper]
+      ? methodsColors[upper]
+      : {
+          border: '1px solid #F49494',
+          color: '#CC3D3D',
+          background: '#F8E3E3',
+        }
+
+  return {
+    display: 'inline-flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '2px',
+    fontSize: '12px',
+    fontWeight: '600',
+    minHeight: '24px',
+    px: '6px',
+    textTransform: 'uppercase',
+    whiteSpace: 'nowrap',
+    ...palette,
+  }
+}
+
+const endpointPathStyles = {
+  fontFamily: 'mono',
+  fontSize: '0.875rem',
+  bg: '#F7F8FA',
+  borderRadius: '4px',
+  px: '0.25rem',
+  py: '0.125rem',
+  wordBreak: 'break-word',
+}
+
+const endpointLinkStyles = {
+  color: '#E31C58',
+  textDecoration: 'underline',
+  textUnderlineOffset: '0.18em',
+  fontWeight: '500',
+}
+
 // Ensure the URL has a proper protocol during build time
 function getAbsoluteUrl(path: string): string {
   // During SSR
@@ -136,9 +729,7 @@ function getAbsoluteUrl(path: string): string {
     if (process.env.NODE_ENV === 'development') {
       return `http://localhost:3000${path}`
     }
-    const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
-    return `${baseUrl}${path}`
+    return `${getSiteUrl()}${path}`
   }
   // In browser
   return path
@@ -149,8 +740,11 @@ const slugs = Object.keys(await getReferencePaths())
 
 const APIPage: NextPage<Props> = ({
   slug,
-  doc,
+  descriptionHtml,
   endpoints,
+  overviewEndpoints,
+  overviewEndpointGroups,
+  overviewTitle,
   pagination,
   endpointNames,
 }) => {
@@ -163,15 +757,13 @@ const APIPage: NextPage<Props> = ({
   }>(null)
   // State for client-side resolved spec
   const [resolvedSpec, setResolvedSpec] = useState<string | null>(null)
+  const [cleanPath, setCleanPath] = useState('')
   const [isLoadingSpec, setIsLoadingSpec] = useState<boolean>(false)
+  const [isRapiDocReady, setIsRapiDocReady] = useState<boolean>(false)
   const [errorLoadingSpec, setErrorLoadingSpec] = useState<string | null>(null)
 
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
-  const hasHashTag = router.asPath.indexOf('#') > -1
-  const cleanPath = hasHashTag
-    ? router.asPath.split('#')[1]
-    : router.asPath.split('?endpoint=')[1] || ''
 
   const getMethod = () => {
     const method = cleanPath.split('/')[0].replace('-', '').toUpperCase()
@@ -180,6 +772,14 @@ const APIPage: NextPage<Props> = ({
 
   const httpMethod: MethodType | '' = getMethod()
   const endpointPath = cleanPath ? `#${cleanPath}` : slug
+  const isOverview = endpointPath === slug
+  const headTitle = isOverview ? overviewTitle : endpointNames[endpointPath]
+  const defaultFocusedEndpointId = overviewEndpoints[0]
+    ? getOverviewEndpointHash(
+        overviewEndpoints[0].method,
+        overviewEndpoints[0].path
+      )
+    : undefined
   const pag: Pagination = {
     previousDoc: {
       name: null,
@@ -194,6 +794,30 @@ const APIPage: NextPage<Props> = ({
 
   // Generate the absolute spec URL
   const specUrl = getAbsoluteUrl(`/api/openapi/${slug}`)
+
+  useEffect(() => {
+    let isMounted = true
+
+    const loadRapiDoc = async () => {
+      try {
+        await import('../../../../RapiDoc/src/rapidoc.js')
+        if (isMounted) {
+          setIsRapiDocReady(true)
+        }
+      } catch (error) {
+        if (isMounted) {
+          setErrorLoadingSpec('Failed to load the interactive API viewer')
+        }
+        clientLogger.error(`Failed to load RapiDoc: ${error}`)
+      }
+    }
+
+    loadRapiDoc()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   // Effect to handle client-side fetching and reference resolution
   useEffect(() => {
@@ -223,31 +847,51 @@ const APIPage: NextPage<Props> = ({
   }, [specUrl])
 
   useEffect(() => {
-    const scrollDoc = () => {
-      if (rapidoc.current) {
-        rapidoc.current.scrollToPath(
-          window.location.hash.slice(1) || 'overview'
-        )
-      }
+    if (typeof window === 'undefined') {
+      return
     }
 
-    router.events.on('hashChangeComplete', scrollDoc)
-    return () => {
-      router.events.off('hashChangeComplete', scrollDoc)
+    const syncEndpointPath = () => {
+      setCleanPath(getEndpointPathFromLocation())
     }
-  }, [])
+
+    syncEndpointPath()
+    window.addEventListener('hashchange', syncEndpointPath)
+
+    return () => {
+      window.removeEventListener('hashchange', syncEndpointPath)
+    }
+  }, [slug])
 
   useEffect(() => {
-    const handleHashChange = () => {
-      router.push(window.location.href)
+    setCleanPath(getEndpointPathFromLocation())
+  }, [router.asPath])
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.location.hash) {
+      return
     }
 
-    window.addEventListener('hashchange', handleHashChange)
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange)
+    const searchParams = new URLSearchParams(window.location.search)
+    if (!searchParams.has('endpoint')) {
+      return
     }
-  }, [router])
+
+    // Preserve the active endpoint hash while stripping stale legacy query state.
+    window.history.replaceState(
+      window.history.state,
+      document.title,
+      `${window.location.pathname}${window.location.hash}`
+    )
+  }, [slug])
+
+  useEffect(() => {
+    if (!cleanPath || !isRapiDocReady || !rapidoc.current) {
+      return
+    }
+
+    rapidoc.current.scrollToPath(cleanPath)
+  }, [cleanPath, isRapiDocReady])
 
   useEffect(() => {
     setEndpointPagination(
@@ -255,25 +899,36 @@ const APIPage: NextPage<Props> = ({
     )
   }, [endpointPath])
 
-  // Display an error message if the spec couldn't be loaded
-  if (errorLoadingSpec && !doc) {
-    return (
-      <Box sx={{ mx: 'auto', p: '2em', maxWidth: '90%' }}>
-        <h2>Error Loading API Reference</h2>
-        <p>{errorLoadingSpec}</p>
-        <p>
-          Please try refreshing the page. If the problem persists, contact
-          support.
-        </p>
-      </Box>
+  const handleOverviewEndpointLinkClick = (
+    event: MouseEvent<HTMLAnchorElement>,
+    endpointHash: string
+  ) => {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    const searchParams = new URLSearchParams(window.location.search)
+    if (!searchParams.has('endpoint')) {
+      return
+    }
+
+    event.preventDefault()
+    window.history.replaceState(
+      window.history.state,
+      document.title,
+      window.location.pathname
     )
+    window.location.hash = endpointHash
   }
 
   return (
     <>
       <Head>
-        <title>{endpointNames[endpointPath]}</title>
-        {endpointPath === slug && <meta name="robots" content="noindex" />}
+        <title>{headTitle}</title>
+        <link
+          rel="canonical"
+          href={`${getSiteUrl()}/docs/api-reference/${slug}`}
+        />
         {endpoints && (
           <>
             <meta
@@ -291,39 +946,143 @@ const APIPage: NextPage<Props> = ({
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
-        {isLoadingSpec && !doc && (
-          <Box sx={{ textAlign: 'center', p: '2em' }}>
-            <p>Loading API specification...</p>
+        <Box sx={{ display: isOverview ? 'block' : 'none' }}>
+          <Box as="article" sx={overviewArticleStyles}>
+            <Box as="header" sx={overviewHeaderStyles}>
+              <h1>{overviewTitle}</h1>
+            </Box>
+            {descriptionHtml && (
+              <Box
+                sx={overviewContentStyles}
+                dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+              />
+            )}
+            {!!overviewEndpointGroups.length && (
+              <Box as="section" sx={{ mt: '2rem' }}>
+                <h2>Endpoints</h2>
+                {overviewEndpointGroups.map(({ tagName, endpoints }) => (
+                  <Box key={tagName} sx={{ mt: '1.5rem' }}>
+                    <h3>{tagName}</h3>
+                    <Box sx={overviewTableWrapperStyles}>
+                      <Box as="table" sx={overviewTableStyles}>
+                        <thead>
+                          <tr>
+                            <th>Summary</th>
+                            <th>Method</th>
+                            <th>Path</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {endpoints.map(({ method, path, summary }) => {
+                            const endpointHash = getOverviewEndpointHash(
+                              method,
+                              path
+                            )
+
+                            return (
+                              <tr key={`${method}-${path}`}>
+                                <td>
+                                  <Box
+                                    as="a"
+                                    href={`#${endpointHash}`}
+                                    onClick={(
+                                      event: MouseEvent<HTMLAnchorElement>
+                                    ) =>
+                                      handleOverviewEndpointLinkClick(
+                                        event,
+                                        endpointHash
+                                      )
+                                    }
+                                    sx={endpointLinkStyles}
+                                  >
+                                    {summary || `Open ${method} ${path}`}
+                                  </Box>
+                                </td>
+                                <td>
+                                  <Box
+                                    as="span"
+                                    sx={getOverviewEndpointMethodBadgeSx(
+                                      method
+                                    )}
+                                  >
+                                    {method.toUpperCase()}
+                                  </Box>
+                                </td>
+                                <td>
+                                  <Box as="code" sx={endpointPathStyles}>
+                                    {path}
+                                  </Box>
+                                </td>
+                              </tr>
+                            )
+                          })}
+                        </tbody>
+                      </Box>
+                    </Box>
+                  </Box>
+                ))}
+              </Box>
+            )}
           </Box>
-        )}
-        <rapi-doc
-          ref={rapidoc}
-          spec-url={specUrl}
-          postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
-          spec={resolvedSpec}
-          layout="column"
-          render-style="focused"
-          show-header="false"
-          show-side-nav="false"
-          default-schema-tab="schema"
-          fill-request-fields-with-example={true}
-          theme="light"
-          bg-color="#FFFFFF"
-          primary-color="#142032"
-          regular-font="VTEX Trust Regular"
-          mono-font="Consolas,monaco,monospace"
-          medium-font="VTEX Trust Medium"
-          load-fonts={false}
-          schema-style="table"
-          schema-description-expanded={true}
-          schema-expand-level="2"
-          id="the-doc"
-          allow-spec-file-download={true}
-          allow-server-selection={true}
-          allow-spec-url-load={false}
-          allow-spec-file-load={false}
-          persist-auth="true"
-        />
+        </Box>
+        <Box sx={{ display: isOverview ? 'none' : 'block' }}>
+          {errorLoadingSpec && (
+            <Box
+              role="alert"
+              sx={{
+                bg: '#FFF4E5',
+                border: '1px solid #FFD7A3',
+                borderRadius: '4px',
+                color: '#7A4B00',
+                mb: '1.5rem',
+                p: '1rem',
+              }}
+            >
+              <strong>Interactive API reference unavailable.</strong>
+              <p>{errorLoadingSpec}</p>
+            </Box>
+          )}
+          {(isLoadingSpec || !isRapiDocReady) && (
+            <Box sx={{ textAlign: 'center', p: '2em' }}>
+              <p>Loading API specification...</p>
+            </Box>
+          )}
+          {isRapiDocReady && (
+            <rapi-doc
+              ref={rapidoc}
+              spec-url={specUrl}
+              postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
+              spec={resolvedSpec}
+              layout="column"
+              render-style="focused"
+              // RapiDoc focused mode crashes when show-info is false and no
+              // explicit goto-path is provided, because it tries to scroll using
+              // the first path object instead of its elementId.
+              goto-path={defaultFocusedEndpointId}
+              show-header="false"
+              show-info="false"
+              show-side-nav="false"
+              default-schema-tab="schema"
+              fill-request-fields-with-example={true}
+              theme="light"
+              bg-color="#FFFFFF"
+              primary-color="#142032"
+              regular-font="VTEX Trust Regular"
+              mono-font="Consolas,monaco,monospace"
+              medium-font="VTEX Trust Medium"
+              load-fonts={false}
+              schema-style="table"
+              schema-description-expanded={true}
+              schema-expand-level="2"
+              id="the-doc"
+              allow-spec-file-download={true}
+              allow-server-selection={true}
+              allow-spec-url-load={false}
+              allow-spec-file-load={false}
+              persist-auth="true"
+            />
+          )}
+        </Box>
         <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
           <ArticlePagination
             hidePaginationNext={false}
@@ -348,15 +1107,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug || ''
-  const sectionSelected = 'API Reference'
   const sidebarfallback = await getNavigation()
+  const sectionSelected = 'API Reference'
   const logger = getLogger('API Reference')
 
   if (slugs.includes(slug as string)) {
     // Use the production URL for fetching specs during build time
-    const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
-    const url = `${baseUrl}/api/openapi/${slug}`
+    const url = `${getSiteUrl()}/api/openapi/${slug}`
 
     let apiSpec: string
     try {
@@ -412,14 +1169,45 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     // Use Oas to process the spec string
     const endpointFile = new Oas(apiSpec)
-    const { info, paths } = endpointFile.getDefinition()
+    const specDefinition = endpointFile.getDefinition()
+    const { info, paths } = specDefinition
+    const overviewTitle = info?.title || (slug as string)
+    const normalizedDescription = replaceOverviewCalloutBlocks(
+      info?.description || ''
+    )
+    const descriptionHtml = enhanceOverviewCalloutHtml(
+      await marked.parse(normalizedDescription)
+    )
+    const overviewEndpoints: OverviewEndpoint[] = []
+    const overviewEndpointsWithTags: OverviewEndpointWithTags[] = []
+    const overviewTagDefinitions = Array.isArray(specDefinition.tags)
+      ? specDefinition.tags.reduce(
+          (
+            tagDefinitions: OverviewTagDefinition[],
+            tagDefinition: { name?: unknown }
+          ) => {
+            if (
+              tagDefinition &&
+              typeof tagDefinition.name === 'string' &&
+              tagDefinition.name.trim()
+            ) {
+              tagDefinitions.push({
+                name: tagDefinition.name.trim(),
+              })
+            }
+
+            return tagDefinitions
+          },
+          [] as OverviewTagDefinition[]
+        )
+      : []
     const endpoints: {
       [key: string]: Endpoint
     } = {}
 
     endpoints[slug as string] = {
-      title: info?.title || (slug as string),
-      description: getDescription(info?.description || ''),
+      title: overviewTitle,
+      description: '',
     }
 
     if (paths) {
@@ -428,14 +1216,35 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           Object.entries(value).forEach(
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             ([endpointKey, endpointValue]: any) => {
-              if (
-                isMethodType(endpointKey.toUpperCase()) &&
-                endpointValue &&
-                endpointValue.description
-              ) {
-                endpoints[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] = {
+              if (isMethodType(endpointKey.toUpperCase()) && endpointValue) {
+                const operationTags = Array.isArray(endpointValue.tags)
+                  ? endpointValue.tags.reduce(
+                      (tags: string[], tag: unknown) => {
+                        if (typeof tag === 'string' && tag.trim()) {
+                          tags.push(tag.trim())
+                        }
+
+                        return tags
+                      },
+                      [] as string[]
+                    )
+                  : []
+                const overviewEndpoint = {
+                  method: endpointKey.toUpperCase(),
+                  path: key,
+                  summary: endpointValue.summary || '',
+                }
+
+                overviewEndpoints.push(overviewEndpoint)
+                overviewEndpointsWithTags.push({
+                  ...overviewEndpoint,
+                  tags: operationTags,
+                })
+                endpoints[`#${getOverviewEndpointHash(endpointKey, key)}`] = {
                   title: endpointValue.summary || '',
-                  description: getDescription(endpointValue.description),
+                  description: getDescription(
+                    endpointValue.description || endpointValue.summary || ''
+                  ),
                 }
               }
             }
@@ -443,6 +1252,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         }
       })
     }
+
+    const overviewEndpointGroups = buildOverviewEndpointGroups(
+      overviewTagDefinitions,
+      overviewEndpointsWithTags
+    )
+
+    endpoints[slug as string].description = buildOverviewMetaDescription(
+      overviewTitle,
+      stripHtml(descriptionHtml),
+      overviewEndpoints
+    )
     const docsListEndpoint = jp.query(
       sidebarfallback,
       `$..[?(@.type=='openapi')]`
@@ -454,9 +1274,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     docsList.map((doc) => {
       const path = doc.method
-        ? `/docs/api-reference/${doc.slug}#${doc.method.toLowerCase()}-${
-            doc.endpoint
-          }`
+        ? `/docs/api-reference/${doc.slug}#${getOverviewEndpointHash(
+            doc.method,
+            doc.endpoint ?? ''
+          )}`
         : `/docs/api-reference/${doc.slug}`
       doc['route'] = path
     })
@@ -480,6 +1301,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
       endpointNames[`${endpoint}`] = currentEndpointObject?.name
         ? currentEndpointObject.name
+        : endpoint === slug
+        ? overviewTitle
         : ''
       pagination[`${endpoint}`] = {
         previousDoc: {
@@ -517,13 +1340,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         slug,
-        doc: apiSpec,
-        sectionSelected,
-        sidebarfallback,
+        descriptionHtml,
         endpoints,
+        overviewEndpoints,
+        overviewEndpointGroups,
+        overviewTitle,
         pagination,
         endpointNames,
+        sectionSelected,
+        sidebarfallback,
       },
+      revalidate: 86400,
     }
   } else {
     const readmeSlugDict = new Map<string, ReadmeSlugObj>()
