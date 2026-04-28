@@ -1970,10 +1970,32 @@
             },
             {
               "name": "Delivery Promise",
-              "slug": "delivery-promise",
+              "slug": "delivery-promise-category",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Delivery Promise",
+                  "slug": "delivery-promise",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Delivery Promise Suggestions API headless integration",
+                  "slug": "delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Gathering delivery promise information",
+                  "slug": "gathering-delivery-promise-information",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
