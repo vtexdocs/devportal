@@ -8,7 +8,11 @@ export default async function getTroubleshootingPaths(branch = 'main') {
   repoTree.tree.forEach((node: { path: string; type: string }) => {
     const path = node.path
     const re = /^(?<path>.+\/)*(?<filename>.+)\.(?<filetype>.+)$/
-    if (path.startsWith('docs/troubleshooting')) {
+    const pathParts = path.split('/')
+    const isTroubleshootingArticle =
+      path.startsWith('docs/troubleshooting') && pathParts.length > 3
+
+    if (isTroubleshootingArticle) {
       const match = path.match(re)
       const filename = match?.groups?.filename ? match?.groups?.filename : ''
       const filetype = match?.groups?.filetype ? match?.groups?.filetype : ''

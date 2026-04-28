@@ -59,13 +59,19 @@ const link: SxStyleProp = {
 const tag: SxStyleProp = {
   width: 'max-content',
   px: '8px',
-  margin: '4px',
 }
 
 const tagsContainer: SxStyleProp = {
   display: 'flex',
   flexWrap: 'wrap',
   mt: '12px',
+  gap: '16px',
+}
+
+const tagGroup: SxStyleProp = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  gap: '8px',
 }
 
 export default {
@@ -76,4 +82,5 @@ export default {
   link,
   tag,
   tagsContainer,
+  tagGroup,
 }

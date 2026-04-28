@@ -17991,8 +17991,8 @@
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
-          "name": "API",
-          "slug": "api",
+          "name": "API and integrations",
+          "slug": "api-and-integrations",
           "origin": "",
           "type": "category",
           "children": [
@@ -18006,11 +18006,18 @@
           ]
         },
         {
-          "name": "Development",
-          "slug": "development",
+          "name": "VTEX IO and app development",
+          "slug": "vtex-io-and-app-development",
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "`vtex release` CLI command returns an EBADF message",
+              "slug": "vtex-release-cli-command-returns-ebadf-message",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "I am getting 500 errors in VTEX IO CLI",
               "slug": "i-am-getting-500-errors-in-vtex-io-cli",
@@ -18021,13 +18028,6 @@
             {
               "name": "I am getting errors with my service configuration app",
               "slug": "i-am-getting-errors-with-my-service-configuration-app",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't access the Headless CMS",
-              "slug": "unable-to-access-headless-cms",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18047,22 +18047,8 @@
               "children": []
             },
             {
-              "name": "I can't install the Headless CMS plugins in my account",
-              "slug": "i-cant-install-the-headless-cms-plugins-in-my-account",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
               "name": "I can't install VTEX IO CLI",
               "slug": "i-cant-install-vtex-io-cli",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't integrate my external Search Provider",
-              "slug": "i-cant-integrate-my-external-search-provider",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18077,6 +18063,21 @@
             {
               "name": "I don't see my Store Theme changes",
               "slug": "i-dont-see-my-store-theme-changes",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Storefront",
+          "slug": "storefront",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "I can’t integrate my external Search Provider",
+              "slug": "i-cant-integrate-my-external-search-provider",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18096,15 +18097,15 @@
               "children": []
             },
             {
-              "name": "My multi-language store is not functioning in the development workspace",
+              "name": "My multi-language store is not working in the development workspace",
               "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My pages are taking too long to be published on Headless CMS",
-              "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
+              "name": "My routes are not behaving as expected",
+              "slug": "my-routes-are-not-behaving-as-expected",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18117,8 +18118,22 @@
               "children": []
             },
             {
-              "name": "My store does not reflect the overrides I created",
-              "slug": "my-store-does-not-reflect-the-overrides-i-created",
+              "name": "My store is presenting price inconsistencies",
+              "slug": "my-store-is-presenting-price-inconsistencies",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store is slow or unavailable",
+              "slug": "my-store-is-slow-or-unavailable",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store translation is not behaving as expected",
+              "slug": "my-store-translation-is-not-behaving-as-expected",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18136,46 +18151,54 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            },
-            {
-              "name": "vtex release CLI command returns an EBADF message",
-              "slug": "vtex-release-cli-command-returns-ebadf-message",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }            
+            }
           ]
         },
         {
-          "name": "Store performance",
-          "slug": "store-performance",
+          "name": "Content Management (CMS)",
+          "slug": "content-management-cms",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "My Google Tag Assistant is not working with Partytown",
-              "slug": "my-google-tag-assistant-is-not-working-with-partytown",
+              "name": "I can't access the Headless CMS",
+              "slug": "unable-to-access-headless-cms",
               "origin": "",
               "type": "markdown",
               "children": []
             },
+            {
+              "name": "I can’t install the Headless CMS plugins in my account",
+              "slug": "error-installing-headless-cms-plugins-on-windows",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My pages are taking too long to be published on Headless CMS",
+              "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store does not reflect the overrides I created",
+              "slug": "my-store-does-not-reflect-the-overrides-i-created",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Checkout and shopping experience",
+          "slug": "checkout-and-shopping-experience",
+          "origin": "",
+          "type": "category",
+          "children": [
             {
               "name": "I can't complete a purchase on a FastStore website",
               "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "My store is slow or unavailable",
-              "slug": "my-store-is-slow-or-unavailable",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Google Analytics 4 is tracking inconsistent data from my store",
-              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18186,24 +18209,25 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            },
+            }
+          ]
+        },
+        {
+          "name": "Analytics and data collection",
+          "slug": "analytics-and-data-collection",
+          "origin": "",
+          "type": "category",
+          "children": [
             {
-              "name": "My routes are not behaving as expected",
-              "slug": "my-routes-are-not-behaving-as-expected",
+              "name": "Google Analytics 4 is tracking inconsistent data from my store",
+              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My store is presenting price inconsistencies",
-              "slug": "my-store-is-presenting-price-inconsistencies",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "My store translation is not behaving as expected",
-              "slug": "my-store-translation-is-not-behaving-as-expected",
+              "name": "My Google Tag Assistant is not working with Partytown",
+              "slug": "my-google-tag-assistant-is-not-working-with-partytown",
               "origin": "",
               "type": "markdown",
               "children": []

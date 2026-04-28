@@ -13,6 +13,8 @@ export type ITroubleshootingFrontmatter = {
   createdAt: string
   excerpt: string
   tags?: string[]
+  domainFilters?: string[]
+  symptomFilters?: string[]
 }
 
 async function getFrontmatter(releaseContent: string) {
@@ -22,7 +24,7 @@ async function getFrontmatter(releaseContent: string) {
       format: 'mdx',
     },
   })
-  return response.frontmatter as Record<string, string>
+  return response.frontmatter as Record<string, unknown>
 }
 
 export default async function getTroubleshootingData(branch = 'main') {
@@ -56,7 +58,7 @@ export default async function getTroubleshootingData(branch = 'main') {
 
   await Promise.all(
     troubleshootingContent.map(async (releaseContent) => {
-      const response: Record<string, string> | undefined = await getFrontmatter(
+      const response: Record<string, unknown> | undefined = await getFrontmatter(
         releaseContent
       )
       troubleshootingFrontmatter.push(
@@ -66,13 +68,20 @@ export default async function getTroubleshootingData(branch = 'main') {
   )
 
   troubleshootingFrontmatter.map((frontmatter) => {
+    const domainFilters = frontmatter?.domainFilters ?? []
+    const symptomFilters = frontmatter?.symptomFilters ?? []
+    const tags =
+      frontmatter?.tags ?? Array.from(new Set([...symptomFilters, ...domainFilters]))
+
     troubleshootingData.push({
       slug: frontmatter?.slug,
       title: frontmatter?.title,
       createdAt: frontmatter?.createdAt,
       description: frontmatter?.excerpt,
       linkTitle: frontmatter?.linkTitle,
-      tags: frontmatter?.tags,
+      tags,
+      domainFilters,
+      symptomFilters,
     })
   })
 
