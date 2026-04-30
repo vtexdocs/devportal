@@ -1,5 +1,47 @@
 export const removeHTML = (str: string) => str.replace(/<\/?[^>]+>/g, '')
 
+export const normalizeWhitespace = (str: string) =>
+  str.replace(/\s+/g, ' ').trim()
+
+// Like removeHTML, but replaces tags with a single space and collapses
+// surrounding whitespace, so adjacent inline elements don't get glued together.
+export const stripHTML = (str: string) =>
+  normalizeWhitespace(str.replace(/<[^>]+>/g, ' '))
+
+export const getFirstSentence = (str: string) => {
+  const normalized = normalizeWhitespace(str)
+  if (!normalized) return ''
+
+  const match = normalized.match(/^.*?[.!?](?=\s|$)/)
+  return match ? match[0].trim() : normalized
+}
+
+// Truncates `str` to at most `maxLength` characters, breaking on the last
+// whole word when possible and appending an ellipsis when truncation occurs.
+export const trimToLength = (str: string, maxLength: number) => {
+  if (maxLength <= 0 || !str) return ''
+  if (str.length <= maxLength) return str
+
+  const truncated = str.slice(0, maxLength - 1)
+  const lastSpaceIndex = truncated.lastIndexOf(' ')
+
+  if (lastSpaceIndex > 0) {
+    return `${truncated.slice(0, lastSpaceIndex)}…`
+  }
+
+  return `${truncated}…`
+}
+
+// Strips a leading "Title", "Title:", "Title -", or "Title." prefix from `str`,
+// case-insensitively, so a value like "Foo API: does X" becomes "does X".
+export const removeTitlePrefix = (str: string, title: string) => {
+  const escapedTitle = title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+
+  return str
+    .replace(new RegExp(`^${escapedTitle}\\s*[:\\-.]?\\s*`, 'i'), '')
+    .trim()
+}
+
 export const capitalizeFirstLetter = (str: string) => {
   return str.charAt(0).toUpperCase() + str.slice(1)
 }

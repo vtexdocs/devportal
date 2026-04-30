@@ -15,7 +15,24 @@ import { MethodType, isMethodType } from 'utils/typings/unionTypes'
 import { flattenWithChildren } from 'utils/navigation-utils'
 import { getLogger } from 'utils/logging/log-util'
 import getSiteUrl from 'utils/getSiteUrl'
-import { methodsColors } from 'components/method-category/functions'
+import { stripHTML } from 'utils/string-utils'
+import {
+  enhanceCalloutHtml,
+  replaceCalloutBlocks,
+} from 'utils/replaceCalloutBlocks'
+import {
+  buildOverviewEndpointGroups,
+  buildOverviewMetaDescription,
+  getEndpointPathFromLocation,
+  getOverviewEndpointHash,
+  type OverviewEndpoint,
+  type OverviewEndpointGroup,
+  type OverviewEndpointWithTags,
+  type OverviewTagDefinition,
+} from 'utils/api-reference-overview'
+import apiReferenceStyles, {
+  getOverviewEndpointMethodBadgeSx,
+} from 'styles/api-reference'
 
 // Client-side logger
 const clientLogger = {
@@ -28,27 +45,6 @@ interface Endpoint {
   title: string
   description: string
 }
-
-interface OverviewEndpoint {
-  method: string
-  path: string
-  summary: string
-}
-
-interface OverviewEndpointGroup {
-  tagName: string
-  endpoints: OverviewEndpoint[]
-}
-
-interface OverviewEndpointWithTags extends OverviewEndpoint {
-  tags: string[]
-}
-
-interface OverviewTagDefinition {
-  name: string
-}
-
-type OverviewCalloutType = 'info' | 'warning' | 'danger' | 'success'
 
 interface Pagination {
   previousDoc: {
@@ -152,573 +148,6 @@ function getDescription(description: string) {
           line && line[0].toLowerCase() !== line[0].toUpperCase()
       ) || ''
   )
-}
-
-function normalizeWhitespace(content: string) {
-  return content.replace(/\s+/g, ' ').trim()
-}
-
-function stripHtml(content: string) {
-  return normalizeWhitespace(content.replace(/<[^>]+>/g, ' '))
-}
-
-function getFirstSentence(content: string) {
-  const normalizedContent = normalizeWhitespace(content)
-
-  if (!normalizedContent) {
-    return ''
-  }
-
-  const match = normalizedContent.match(/^.*?[.!?](?=\s|$)/)
-
-  return match ? match[0].trim() : normalizedContent
-}
-
-function trimToLength(content: string, maxLength: number) {
-  if (maxLength <= 0 || !content) {
-    return ''
-  }
-
-  if (content.length <= maxLength) {
-    return content
-  }
-
-  const truncated = content.slice(0, maxLength - 1)
-  const lastSpaceIndex = truncated.lastIndexOf(' ')
-
-  if (lastSpaceIndex > 0) {
-    return `${truncated.slice(0, lastSpaceIndex)}…`
-  }
-
-  return `${truncated}…`
-}
-
-function removeTitlePrefix(content: string, title: string) {
-  const escapedTitle = title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-
-  return content
-    .replace(new RegExp(`^${escapedTitle}\\s*[:\\-.]?\\s*`, 'i'), '')
-    .trim()
-}
-
-function buildOverviewMetaDescription(
-  apiTitle: string,
-  descriptionText: string,
-  overviewEndpoints: OverviewEndpoint[]
-) {
-  const descriptionSentence = removeTitlePrefix(
-    getFirstSentence(descriptionText),
-    apiTitle
-  )
-
-  const uniqueSummaries = overviewEndpoints.reduce<string[]>(
-    (summaries, { summary }) => {
-      const cleanedSummary = normalizeWhitespace(summary).replace(/[.!?]+$/, '')
-
-      if (!cleanedSummary) {
-        return summaries
-      }
-
-      const isDuplicate = summaries.some(
-        (existingSummary) =>
-          existingSummary.toLowerCase() === cleanedSummary.toLowerCase()
-      )
-
-      if (isDuplicate) {
-        return summaries
-      }
-
-      summaries.push(cleanedSummary)
-      return summaries
-    },
-    []
-  )
-
-  const maxSummaryCount = Math.min(uniqueSummaries.length, 5)
-
-  for (let summaryCount = maxSummaryCount; summaryCount >= 0; summaryCount--) {
-    const summaryText = uniqueSummaries.slice(0, summaryCount).join(', ')
-    const suffix = summaryText ? `${summaryText}.` : ''
-    const availableDescriptionLength =
-      160 - apiTitle.length - 3 - (suffix ? suffix.length + 1 : 0)
-    const trimmedDescription = trimToLength(
-      descriptionSentence,
-      availableDescriptionLength
-    )
-
-    const candidate = normalizeWhitespace(
-      `${apiTitle} - ${trimmedDescription}${
-        trimmedDescription && suffix ? ' ' : ''
-      }${suffix}`
-    )
-
-    if (candidate.length <= 160) {
-      return candidate
-    }
-  }
-
-  if (uniqueSummaries.length) {
-    return trimToLength(`${apiTitle} - ${uniqueSummaries.join(', ')}.`, 160)
-  }
-
-  return trimToLength(`${apiTitle} - ${descriptionSentence}`, 160)
-}
-
-function getOverviewEndpointHash(method: string, path: string) {
-  return `${method.toLowerCase()}-${path.replaceAll(/{|}/g, '-')}`
-}
-
-const GENERAL_OVERVIEW_TAG_NAME = 'General'
-const overviewCalloutIconByType: Record<OverviewCalloutType, string> = {
-  info: '\u2139\uFE0F',
-  warning: '\u26A0\uFE0F',
-  danger: '\u2757',
-  success: '\u2705',
-}
-const overviewCalloutPatternByType: Record<OverviewCalloutType, RegExp> = {
-  info: /^(?:<p>)?\s*(?:\u2139\uFE0F|\u2139)\s*/u,
-  warning: /^(?:<p>)?\s*(?:\u26A0\uFE0F?|\u26A0)\s*/u,
-  danger: /^(?:<p>)?\s*(?:\u2757\uFE0F?|\u2757)\s*/u,
-  success: /^(?:<p>)?\s*(?:\u2705)\s*/u,
-}
-
-function isOverviewCalloutType(value: unknown): value is OverviewCalloutType {
-  return (
-    value === 'info' ||
-    value === 'warning' ||
-    value === 'danger' ||
-    value === 'success'
-  )
-}
-
-function getOverviewCalloutType(value: string): OverviewCalloutType | null {
-  const matchingType = (
-    Object.entries(overviewCalloutPatternByType) as [
-      OverviewCalloutType,
-      RegExp
-    ][]
-  ).find(([, pattern]) => pattern.test(value))
-
-  return matchingType ? matchingType[0] : null
-}
-
-function replaceOverviewCalloutBlocks(markdown: string) {
-  return markdown.replace(
-    /\[block:callout\]\s*([\s\S]*?)\s*\[\/block\]/g,
-    (match, blockContent: string) => {
-      try {
-        const parsedBlock = JSON.parse(blockContent) as {
-          type?: unknown
-          title?: unknown
-          body?: unknown
-        }
-        const calloutType = isOverviewCalloutType(parsedBlock.type)
-          ? parsedBlock.type
-          : 'info'
-        const title =
-          typeof parsedBlock.title === 'string' ? parsedBlock.title.trim() : ''
-        const body =
-          typeof parsedBlock.body === 'string' ? parsedBlock.body.trim() : ''
-        const calloutLines: string[] = []
-
-        if (title) {
-          calloutLines.push(
-            `> ${overviewCalloutIconByType[calloutType]} **${title}**`
-          )
-        }
-
-        if (body) {
-          const bodyLines = body.split(/\r?\n/)
-
-          if (title) {
-            calloutLines.push('>')
-          } else {
-            const firstNonEmptyLineIndex = bodyLines.findIndex((line) =>
-              line.trim()
-            )
-
-            if (firstNonEmptyLineIndex > -1) {
-              bodyLines[firstNonEmptyLineIndex] = `${
-                overviewCalloutIconByType[calloutType]
-              } ${bodyLines[firstNonEmptyLineIndex].trimStart()}`
-            }
-          }
-
-          bodyLines.forEach((line) => {
-            calloutLines.push(line ? `> ${line}` : '>')
-          })
-        }
-
-        if (!calloutLines.length) {
-          return match
-        }
-
-        return `${calloutLines.join('\n')}\n`
-      } catch {
-        return match
-      }
-    }
-  )
-}
-
-function enhanceOverviewCalloutHtml(content: string) {
-  return content.replace(
-    /<blockquote>\s*([\s\S]*?)<\/blockquote>/g,
-    (blockquote, innerContent: string) => {
-      const trimmedInnerContent = innerContent.trim()
-      const calloutType = getOverviewCalloutType(trimmedInnerContent)
-
-      if (!calloutType) {
-        return blockquote
-      }
-
-      const normalizedInnerContent = trimmedInnerContent.replace(
-        overviewCalloutPatternByType[calloutType],
-        '<p>'
-      )
-
-      return `<blockquote class="overview-callout overview-callout--${calloutType}">${normalizedInnerContent}</blockquote>`
-    }
-  )
-}
-
-function buildOverviewEndpointGroups(
-  tagDefinitions: OverviewTagDefinition[],
-  overviewEndpoints: OverviewEndpointWithTags[]
-) {
-  const groupedEndpoints = new Map<string, OverviewEndpointGroup>()
-  const definedTagNames = new Set(tagDefinitions.map(({ name }) => name))
-
-  overviewEndpoints.forEach(({ tags, ...endpoint }) => {
-    const tagName = tags[0] || GENERAL_OVERVIEW_TAG_NAME
-    const existingGroup = groupedEndpoints.get(tagName)
-
-    if (existingGroup) {
-      existingGroup.endpoints.push(endpoint)
-      return
-    }
-
-    groupedEndpoints.set(tagName, {
-      tagName,
-      endpoints: [endpoint],
-    })
-  })
-
-  const orderedTagNames = [
-    ...tagDefinitions
-      .map(({ name }) => name)
-      .filter((name) => groupedEndpoints.has(name)),
-    ...Array.from(groupedEndpoints.keys()).filter(
-      (name) => !definedTagNames.has(name) && name !== GENERAL_OVERVIEW_TAG_NAME
-    ),
-  ]
-
-  if (
-    groupedEndpoints.has(GENERAL_OVERVIEW_TAG_NAME) &&
-    !orderedTagNames.includes(GENERAL_OVERVIEW_TAG_NAME)
-  ) {
-    orderedTagNames.push(GENERAL_OVERVIEW_TAG_NAME)
-  }
-
-  return orderedTagNames.reduce<OverviewEndpointGroup[]>((groups, tagName) => {
-    const group = groupedEndpoints.get(tagName)
-
-    if (group) {
-      groups.push(group)
-    }
-
-    return groups
-  }, [])
-}
-
-function getEndpointPathFromLocation() {
-  if (typeof window === 'undefined') {
-    return ''
-  }
-
-  const hash = window.location.hash.slice(1)
-  if (hash) {
-    return hash
-  }
-
-  return new URLSearchParams(window.location.search).get('endpoint') || ''
-}
-
-const overviewArticleStyles = {
-  maxWidth: '960px',
-  mx: 'auto',
-  mb: '2.5rem',
-  color: '#4A596B',
-  fontSize: '0.95em',
-  lineHeight: '1.5em',
-}
-
-const overviewHeaderStyles = {
-  mt: 0,
-  mb: '1.5rem',
-  '*': {
-    margin: '0px',
-  },
-  '& h1': {
-    fontSize: ['20px', '28px'],
-    lineHeight: ['30px', '38px'],
-    fontWeight: '400',
-    color: '#142032',
-  },
-}
-
-const overviewContentStyles = {
-  color: '#4A596B',
-  '& p': {
-    lineHeight: '1.5em',
-    mb: '1rem',
-  },
-  '& ul, & ol': {
-    mb: '1rem',
-    pl: '1.5rem',
-  },
-  '& ul li, & ol li': {
-    mt: '0.5em',
-    mb: '0.5em',
-  },
-  '& h2': {
-    fontSize: '1.375em',
-    lineHeight: '2em',
-    fontWeight: '400',
-    mt: '1.3em',
-    mb: '0.875em',
-    color: '#142032',
-  },
-  '& h3': {
-    fontSize: ['1.125rem', '1.25rem'],
-    lineHeight: '1.75rem',
-    fontWeight: '600',
-    mt: '1.5rem',
-    mb: '0.75rem',
-    color: '#142032',
-  },
-  '& h4': {
-    fontSize: '1rem',
-    lineHeight: '1.5rem',
-    fontWeight: '600',
-    mt: '1.25rem',
-    mb: '0.75rem',
-    color: '#142032',
-  },
-  '& a': {
-    color: '#E31C58',
-    textDecoration: 'underline',
-    textUnderlineOffset: '0.18em',
-  },
-  '& strong': {
-    fontWeight: '600',
-  },
-  '& blockquote': {
-    borderLeft: '4px solid #E7E9EE',
-    color: '#4A596B',
-    ml: 0,
-    my: '1.5rem',
-    pl: '1rem',
-  },
-  '& .overview-callout': {
-    display: 'grid',
-    gap: '20px',
-    width: '100%',
-    pl: 0,
-    ml: 0,
-    mt: '1rem',
-    mb: '1.5rem',
-    p: '20px',
-    borderRadius: '4px',
-    alignItems: 'center',
-    gridTemplateColumns: '20px 1fr',
-    gridTemplateRows: '1fr',
-    wordBreak: 'break-word',
-    border: '1px solid #CCCED8',
-    '&::before': {
-      display: 'inline-block',
-      height: '20px',
-      width: '20px',
-      content: '""',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: '0 0',
-      backgroundSize: '20px 20px',
-    },
-  },
-  '& .overview-callout p, & .overview-callout div': {
-    m: 0,
-    gridColumn: '2 / -1',
-    gridRow: '1 / 1',
-  },
-  '& .overview-callout p + p': {
-    mt: '0.75rem',
-  },
-  '& .overview-callout a': {
-    wordBreak: 'break-word',
-    overflowWrap: 'break-word',
-  },
-  '& .overview-callout > p:first-of-type strong:first-child': {
-    display: 'block',
-    color: '#142032',
-    fontWeight: '600',
-  },
-  '& .overview-callout--info': {
-    bg: '#F8F7FC',
-    borderColor: '#CCCED8',
-    '&::before': {
-      backgroundImage:
-        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg)',
-    },
-    '& code': {
-      bg: '#ECEBF3',
-    },
-  },
-  '& .overview-callout--warning': {
-    bg: '#FFF2D4',
-    borderColor: '#FFB100',
-    '&::before': {
-      backgroundImage:
-        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/warning.svg)',
-    },
-    '& code': {
-      bg: '#FFE5B5',
-    },
-  },
-  '& .overview-callout--danger': {
-    bg: '#FDEFEF',
-    borderColor: '#DC5A41',
-    '&::before': {
-      backgroundImage:
-        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/danger.svg)',
-    },
-  },
-  '& .overview-callout--success': {
-    bg: '#F3F8F3',
-    borderColor: '#80BE80',
-    '&::before': {
-      backgroundImage:
-        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/success.svg)',
-    },
-  },
-  '& code': {
-    fontFamily: 'mono',
-    fontSize: '0.875rem',
-    bg: '#F7F8FA',
-    borderRadius: '4px',
-    px: '0.25rem',
-    py: '0.125rem',
-  },
-  '& pre': {
-    bg: '#F7F8FA',
-    border: '1px solid #E7E9EE',
-    borderRadius: '4px',
-    overflowX: 'auto',
-    p: '1rem',
-    mb: '1.5rem',
-  },
-  '& pre code': {
-    bg: 'transparent',
-    px: 0,
-    py: 0,
-  },
-  '& table': {
-    width: '100%',
-    borderCollapse: 'collapse',
-    mb: '1.5rem',
-  },
-  '& th, & td': {
-    borderBottom: '1px solid #E7E9EE',
-    px: '0.75rem',
-    py: '0.625rem',
-    textAlign: 'left',
-    verticalAlign: 'top',
-  },
-}
-
-const overviewTableWrapperStyles = {
-  overflowX: 'auto',
-  border: '1px solid #E7E9EE',
-  borderRadius: '4px',
-  bg: '#FFFFFF',
-}
-
-const overviewTableStyles = {
-  width: '100%',
-  minWidth: '640px',
-  borderCollapse: 'collapse',
-  '& th': {
-    textAlign: 'left',
-    padding: '0.875rem 1rem',
-    borderBottom: '1px solid #E7E9EE',
-    bg: '#F7F8FA',
-    color: '#4A596B',
-    fontSize: '0.75rem',
-    fontWeight: '600',
-    letterSpacing: '0.04em',
-    textTransform: 'uppercase',
-  },
-  '& td': {
-    padding: '0.875rem 1rem',
-    borderBottom: '1px solid #E7E9EE',
-    verticalAlign: 'top',
-    color: '#4A596B',
-  },
-  '& td:first-of-type': {
-    wordBreak: 'break-word',
-    whiteSpace: 'normal',
-  },
-  '& td:nth-of-type(2)': {
-    whiteSpace: 'nowrap',
-  },
-  '& td:nth-of-type(3)': {
-    wordBreak: 'break-word',
-  },
-  '& tbody tr:last-of-type td': {
-    borderBottom: 'none',
-  },
-}
-
-function getOverviewEndpointMethodBadgeSx(method: string) {
-  const upper = method.toUpperCase()
-  const palette =
-    isMethodType(upper) && methodsColors[upper]
-      ? methodsColors[upper]
-      : {
-          border: '1px solid #F49494',
-          color: '#CC3D3D',
-          background: '#F8E3E3',
-        }
-
-  return {
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '2px',
-    fontSize: '12px',
-    fontWeight: '600',
-    minHeight: '24px',
-    px: '6px',
-    textTransform: 'uppercase',
-    whiteSpace: 'nowrap',
-    ...palette,
-  }
-}
-
-const endpointPathStyles = {
-  fontFamily: 'mono',
-  fontSize: '0.875rem',
-  bg: '#F7F8FA',
-  borderRadius: '4px',
-  px: '0.25rem',
-  py: '0.125rem',
-  wordBreak: 'break-word',
-}
-
-const endpointLinkStyles = {
-  color: '#E31C58',
-  textDecoration: 'underline',
-  textUnderlineOffset: '0.18em',
-  fontWeight: '500',
 }
 
 // Ensure the URL has a proper protocol during build time
@@ -947,13 +376,13 @@ const APIPage: NextPage<Props> = ({
       </Head>
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
         <Box sx={{ display: isOverview ? 'block' : 'none' }}>
-          <Box as="article" sx={overviewArticleStyles}>
-            <Box as="header" sx={overviewHeaderStyles}>
+          <Box as="article" sx={apiReferenceStyles.overviewArticleStyles}>
+            <Box as="header" sx={apiReferenceStyles.overviewHeaderStyles}>
               <h1>{overviewTitle}</h1>
             </Box>
             {descriptionHtml && (
               <Box
-                sx={overviewContentStyles}
+                sx={apiReferenceStyles.overviewContentStyles}
                 dangerouslySetInnerHTML={{ __html: descriptionHtml }}
               />
             )}
@@ -963,8 +392,11 @@ const APIPage: NextPage<Props> = ({
                 {overviewEndpointGroups.map(({ tagName, endpoints }) => (
                   <Box key={tagName} sx={{ mt: '1.5rem' }}>
                     <h3>{tagName}</h3>
-                    <Box sx={overviewTableWrapperStyles}>
-                      <Box as="table" sx={overviewTableStyles}>
+                    <Box sx={apiReferenceStyles.overviewTableWrapperStyles}>
+                      <Box
+                        as="table"
+                        sx={apiReferenceStyles.overviewTableStyles}
+                      >
                         <thead>
                           <tr>
                             <th>Summary</th>
@@ -993,7 +425,7 @@ const APIPage: NextPage<Props> = ({
                                         endpointHash
                                       )
                                     }
-                                    sx={endpointLinkStyles}
+                                    sx={apiReferenceStyles.endpointLinkStyles}
                                   >
                                     {summary || `Open ${method} ${path}`}
                                   </Box>
@@ -1009,7 +441,10 @@ const APIPage: NextPage<Props> = ({
                                   </Box>
                                 </td>
                                 <td>
-                                  <Box as="code" sx={endpointPathStyles}>
+                                  <Box
+                                    as="code"
+                                    sx={apiReferenceStyles.endpointPathStyles}
+                                  >
                                     {path}
                                   </Box>
                                 </td>
@@ -1172,10 +607,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     const specDefinition = endpointFile.getDefinition()
     const { info, paths } = specDefinition
     const overviewTitle = info?.title || (slug as string)
-    const normalizedDescription = replaceOverviewCalloutBlocks(
-      info?.description || ''
-    )
-    const descriptionHtml = enhanceOverviewCalloutHtml(
+    const normalizedDescription = replaceCalloutBlocks(info?.description || '')
+    const descriptionHtml = enhanceCalloutHtml(
       await marked.parse(normalizedDescription)
     )
     const overviewEndpoints: OverviewEndpoint[] = []
@@ -1260,7 +693,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     endpoints[slug as string].description = buildOverviewMetaDescription(
       overviewTitle,
-      stripHtml(descriptionHtml),
+      stripHTML(descriptionHtml),
       overviewEndpoints
     )
     const docsListEndpoint = jp.query(
