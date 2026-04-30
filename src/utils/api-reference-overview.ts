@@ -162,19 +162,3 @@ export function buildOverviewEndpointGroups(
     return groups
   }, [])
 }
-
-// Reads the active endpoint identifier from `window.location`. Prefers the URL
-// hash (the canonical form) and falls back to the legacy `?endpoint=` query
-// param so old deep links keep working.
-export function getEndpointPathFromLocation() {
-  if (typeof window === 'undefined') {
-    return ''
-  }
-
-  const hash = window.location.hash.slice(1)
-  if (hash) {
-    return hash
-  }
-
-  return new URLSearchParams(window.location.search).get('endpoint') || ''
-}

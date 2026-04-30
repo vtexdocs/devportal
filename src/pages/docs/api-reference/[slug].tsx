@@ -23,7 +23,6 @@ import {
 import {
   buildOverviewEndpointGroups,
   buildOverviewMetaDescription,
-  getEndpointPathFromLocation,
   getOverviewEndpointHash,
   type OverviewEndpoint,
   type OverviewEndpointGroup,
@@ -186,13 +185,21 @@ const APIPage: NextPage<Props> = ({
   }>(null)
   // State for client-side resolved spec
   const [resolvedSpec, setResolvedSpec] = useState<string | null>(null)
-  const [cleanPath, setCleanPath] = useState('')
   const [isLoadingSpec, setIsLoadingSpec] = useState<boolean>(false)
   const [isRapiDocReady, setIsRapiDocReady] = useState<boolean>(false)
   const [errorLoadingSpec, setErrorLoadingSpec] = useState<string | null>(null)
 
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
+
+  // Derive the active endpoint identifier from the current Next route. Hash
+  // navigation pushes the URL back through `router.push` (see effects below),
+  // so `router.asPath` stays in sync with `window.location` and this stays
+  // truthful on every render.
+  const hasHashTag = router.asPath.indexOf('#') > -1
+  const cleanPath = hasHashTag
+    ? router.asPath.split('#')[1]
+    : router.asPath.split('?endpoint=')[1] || ''
 
   const getMethod = () => {
     const method = cleanPath.split('/')[0].replace('-', '').toUpperCase()
@@ -276,25 +283,35 @@ const APIPage: NextPage<Props> = ({
   }, [specUrl])
 
   useEffect(() => {
-    if (typeof window === 'undefined') {
-      return
+    const scrollDoc = () => {
+      if (rapidoc.current) {
+        rapidoc.current.scrollToPath(
+          window.location.hash.slice(1) || 'overview'
+        )
+      }
     }
 
-    const syncEndpointPath = () => {
-      setCleanPath(getEndpointPathFromLocation())
+    router.events.on('hashChangeComplete', scrollDoc)
+    return () => {
+      router.events.off('hashChangeComplete', scrollDoc)
+    }
+  }, [])
+
+  // Mirror non-router hash changes (back/forward, raw <a href="#…"> clicks,
+  // RapiDoc's internal scroll-spy mutating window.location.hash) back into the
+  // Next router so `router.asPath` — and the derived `cleanPath` above — stay
+  // in sync with the URL the browser is actually showing.
+  useEffect(() => {
+    const handleHashChange = () => {
+      router.push(window.location.href)
     }
 
-    syncEndpointPath()
-    window.addEventListener('hashchange', syncEndpointPath)
+    window.addEventListener('hashchange', handleHashChange)
 
     return () => {
-      window.removeEventListener('hashchange', syncEndpointPath)
+      window.removeEventListener('hashchange', handleHashChange)
     }
-  }, [slug])
-
-  useEffect(() => {
-    setCleanPath(getEndpointPathFromLocation())
-  }, [router.asPath])
+  }, [router])
 
   useEffect(() => {
     if (typeof window === 'undefined' || !window.location.hash) {
@@ -313,14 +330,6 @@ const APIPage: NextPage<Props> = ({
       `${window.location.pathname}${window.location.hash}`
     )
   }, [slug])
-
-  useEffect(() => {
-    if (!cleanPath || !isRapiDocReady || !rapidoc.current) {
-      return
-    }
-
-    rapidoc.current.scrollToPath(cleanPath)
-  }, [cleanPath, isRapiDocReady])
 
   useEffect(() => {
     setEndpointPagination(
