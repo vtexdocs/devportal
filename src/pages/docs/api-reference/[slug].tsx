@@ -460,6 +460,7 @@ const APIPage: NextPage<Props> = ({
               show-header="false"
               show-info="false"
               show-side-nav="false"
+              update-route="false"
               default-schema-tab="schema"
               fill-request-fields-with-example={true}
               theme="light"
