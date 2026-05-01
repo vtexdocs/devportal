@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useEffect, useRef, useState, type MouseEvent } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
 import SwaggerParser from '@apidevtools/swagger-parser'
@@ -314,50 +314,10 @@ const APIPage: NextPage<Props> = ({
   }, [router])
 
   useEffect(() => {
-    if (typeof window === 'undefined' || !window.location.hash) {
-      return
-    }
-
-    const searchParams = new URLSearchParams(window.location.search)
-    if (!searchParams.has('endpoint')) {
-      return
-    }
-
-    // Preserve the active endpoint hash while stripping stale legacy query state.
-    window.history.replaceState(
-      window.history.state,
-      document.title,
-      `${window.location.pathname}${window.location.hash}`
-    )
-  }, [slug])
-
-  useEffect(() => {
     setEndpointPagination(
       pagination[endpointPath] ? pagination[endpointPath] : pag
     )
   }, [endpointPath])
-
-  const handleOverviewEndpointLinkClick = (
-    event: MouseEvent<HTMLAnchorElement>,
-    endpointHash: string
-  ) => {
-    if (typeof window === 'undefined') {
-      return
-    }
-
-    const searchParams = new URLSearchParams(window.location.search)
-    if (!searchParams.has('endpoint')) {
-      return
-    }
-
-    event.preventDefault()
-    window.history.replaceState(
-      window.history.state,
-      document.title,
-      window.location.pathname
-    )
-    window.location.hash = endpointHash
-  }
 
   return (
     <>
@@ -426,14 +386,6 @@ const APIPage: NextPage<Props> = ({
                                   <Box
                                     as="a"
                                     href={`#${endpointHash}`}
-                                    onClick={(
-                                      event: MouseEvent<HTMLAnchorElement>
-                                    ) =>
-                                      handleOverviewEndpointLinkClick(
-                                        event,
-                                        endpointHash
-                                      )
-                                    }
                                     sx={apiReferenceStyles.endpointLinkStyles}
                                   >
                                     {summary || `Open ${method} ${path}`}
