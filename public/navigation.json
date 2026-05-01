@@ -349,28 +349,6 @@
               ]
             },
             {
-              "name": "Customer Credit",
-              "slug": "customer-credit-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Managing a Customer Credit account",
-                  "slug": "managing-a-customer-credit-account",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing a Customer Credit invoice",
-                  "slug": "managing-a-customer-credit-invoice",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "External Marketplace",
               "slug": "external-marketplace-integration-guide",
               "origin": "",
@@ -556,28 +534,6 @@
               ]
             },
             {
-              "name": "Gift Card",
-              "slug": "gift-card-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Gift Card system architecture",
-                  "slug": "gift-card-integration-guide-system-architecture",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing VTEX gift cards",
-                  "slug": "managing-vtex-gift-cards",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Headless commerce",
               "slug": "headless-commerce",
               "origin": "",
@@ -659,168 +615,6 @@
                 {
                   "name": "Offer Management SDK",
                   "slug": "offer-management-sdk",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Payments",
-              "slug": "payments-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integrating a new payment provider on VTEX",
-                  "slug": "integrating-a-new-payment-provider-on-vtex",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Protocol",
-                  "slug": "payments-integration-payment-provider-protocol",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App",
-                  "slug": "payments-integration-ppp-applied-to-pos",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Implementing a Payment Provider",
-                  "slug": "payments-integration-implementing-a-payment-provider",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Framework",
-                  "slug": "payments-integration-payment-provider-framework",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Purchase Flows",
-                  "slug": "payments-integration-purchase-flows",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment App",
-                  "slug": "payments-integration-payment-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Methods",
-                  "slug": "payments-integration-payment-methods",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Homologation",
-                  "slug": "payments-integration-payment-provider-homologation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Antifraud Provider Protocol",
-                  "slug": "how-the-integration-protocol-between-vtex-and-antifraud-companies-works",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PCI - DSS Compliance",
-                  "slug": "payments-integration-pci-dss-compliance",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Secure Proxy",
-                  "slug": "payments-integration-secure-proxy",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Split Payouts on Payment Provider Protocol",
-                  "slug": "split-payouts-on-payment-provider-protocol",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
-                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Custom Auto Capture Feature",
-                  "slug": "custom-auto-capture-feature",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Pix: Instant Payments in Brazil",
-                  "slug": "payments-integration-pix-instant-payments-in-brazil",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PSE Payment Method",
-                  "slug": "pse-payment-method",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Google Pay: processing information for payment providers and anti-fraud",
-                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PPP Versioning",
-                  "slug": "ppp-versioning",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Implementing payments tokenization",
-                  "slug": "implementing-payments-tokenization",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing tokenized cards",
-                  "slug": "managing-tokenized-cards",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Processing DPAN cards in external connectors",
-                  "slug": "processing-dpan-cards-in-external-connectors",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1677,26 +1471,33 @@
         },
         {
           "name": "Payments",
-          "slug": "payments-category",
+          "slug": "payments-integration-guide",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
-              "name": "Configuration Guides",
-              "slug": "payments-configuration-guides",
+              "name": "Purchase Flows",
+              "slug": "payments-integration-purchase-flows",
               "origin": "",
               "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Payment Methods",
+              "slug": "payments-integration-payment-methods",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Anti-fraud",
+              "slug": "payments-antifraud-category",
+              "origin": "",
+              "type": "category",
               "children": [
                 {
-                  "name": "Setting up the type of interest rate",
-                  "slug": "setting-up-the-type-of-interest-rate",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up Merchant ID in Apple Pay",
-                  "slug": "setting-up-merchant-id-in-apple-pay",
+                  "name": "Anti-fraud Provider Protocol",
+                  "slug": "how-the-integration-protocol-between-vtex-and-antifraud-companies-works",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1714,10 +1515,250 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                }
+              ]
+            },
+            {
+              "name": "Customer Credit",
+              "slug": "customer-credit-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Managing a Customer Credit account",
+                  "slug": "managing-a-customer-credit-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing a Customer Credit invoice",
+                  "slug": "managing-a-customer-credit-invoice",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Gift Cards",
+              "slug": "gift-card-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Gift Card system architecture",
+                  "slug": "gift-card-integration-guide-system-architecture",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing VTEX gift cards",
+                  "slug": "managing-vtex-gift-cards",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Operations and Configuration",
+              "slug": "payments-operations-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Custom Auto Capture Feature",
+                  "slug": "custom-auto-capture-feature",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
                   "name": "Metadata information in payment transactions",
                   "slug": "metadata-information-in-payment-transactions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up the type of interest rate",
+                  "slug": "setting-up-the-type-of-interest-rate",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment App and Checkout UI",
+              "slug": "payments-checkout-ui-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Payment App",
+                  "slug": "payments-integration-payment-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
+                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment methods and Wallets",
+              "slug": "payments-methods-wallets-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Google Pay: processing information for payment providers and anti-fraud",
+                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Pix: Instant Payments in Brazil",
+                  "slug": "payments-integration-pix-instant-payments-in-brazil",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Processing DPAN cards in external connectors",
+                  "slug": "processing-dpan-cards-in-external-connectors",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "PSE Payment Method",
+                  "slug": "pse-payment-method",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up Merchant ID in Apple Pay",
+                  "slug": "setting-up-merchant-id-in-apple-pay",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment Provider Protocol",
+              "slug": "payments-integration-payment-provider-protocol",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integrating a new payment provider on VTEX",
+                  "slug": "integrating-a-new-payment-provider-on-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing a Payment Provider",
+                  "slug": "payments-integration-implementing-a-payment-provider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment Provider Framework",
+                  "slug": "payments-integration-payment-provider-framework",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "PPP Versioning",
+                  "slug": "ppp-versioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App",
+                  "slug": "payments-integration-ppp-applied-to-pos",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Split Payouts on Payment Provider Protocol",
+                  "slug": "split-payouts-on-payment-provider-protocol",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Security",
+              "slug": "payments-security-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "PCI - DSS Compliance",
+                  "slug": "payments-integration-pci-dss-compliance",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Secure Proxy",
+                  "slug": "payments-integration-secure-proxy",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Testing and Homologation",
+              "slug": "payments-testing-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Payment Provider Homologation",
+                  "slug": "payments-integration-payment-provider-homologation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Tokenization and Card Vault",
+              "slug": "payments-tokenization-category",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Implementing payments tokenization",
+                  "slug": "implementing-payments-tokenization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing tokenized cards",
+                  "slug": "managing-tokenized-cards",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1932,7 +1973,22 @@
               "slug": "delivery-promise",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Delivery Promise Suggestions API headless integration",
+                  "slug": "delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Gathering delivery promise information",
+                  "slug": "gathering-delivery-promise-information",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -3082,80 +3138,133 @@
           ]
         },
         {
-          "name": "B2B Personas",
-          "slug": "b2b-personas-api",
+          "name": "B2B Buyers",
+          "slug": "b2b-buyer-data-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
-              "name": "B2B buyers",
-              "slug": "b2b-buyers",
+              "name": "Get buyer schema",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/schemas/v1",
+              "children": []
+            },
+            {
+              "name": "Create buyer",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "POST",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents",
+              "children": []
+            },
+            {
+              "name": "Get buyer by ID",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+              "children": []
+            },
+            {
+              "name": "Update buyer",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "PATCH",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+              "children": []
+            },
+            {
+              "name": "Delete buyer",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "DELETE",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+              "children": []
+            },
+            {
+              "name": "Search buyers",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/search",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "B2B Addresses",
+          "slug": "b2b-addresses",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Addresses",
+              "slug": "addresses",
               "type": "category",
               "children": [
                 {
-                  "name": "Get buyer schema",
-                  "slug": "b2b-buyer-data-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/schemas/v1",
-                  "children": []
-                },
-                {
-                  "name": "Create buyer",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Create B2B address",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents",
+                  "endpoint": "/api/dataentities/AD/documents",
                   "children": []
                 },
                 {
-                  "name": "Get buyer by ID",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Search B2B addresses",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                  "endpoint": "/api/dataentities/AD/search",
                   "children": []
                 },
                 {
-                  "name": "Update buyer",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Get B2B address by ID",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Update B2B address",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
                   "children": []
                 },
                 {
-                  "name": "Delete buyer",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Delete B2B address",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
-                  "children": []
-                },
-                {
-                  "name": "Search buyers",
-                  "slug": "b2b-buyer-data-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/search",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
                   "children": []
                 }
               ]
             },
             {
-              "name": "B2B recipients",
-              "slug": "b2b-recipients",
+              "name": "Recipients",
+              "slug": "recipients",
               "type": "category",
               "children": [
                 {
-                  "name": "Create new recipient",
-                  "slug": "b2b-recipients-api",
+                  "name": "Create recipient",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -3164,7 +3273,7 @@
                 },
                 {
                   "name": "Search recipients",
-                  "slug": "b2b-recipients-api",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -3173,29 +3282,81 @@
                 },
                 {
                   "name": "Get recipient by ID",
-                  "slug": "b2b-recipients-api",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
                   "children": []
                 },
                 {
                   "name": "Update recipient",
-                  "slug": "b2b-recipients-api",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
                   "children": []
                 },
                 {
                   "name": "Delete recipient",
-                  "slug": "b2b-recipients-api",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Locations",
+              "slug": "locations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents",
+                  "children": []
+                },
+                {
+                  "name": "Search locations",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/search",
+                  "children": []
+                },
+                {
+                  "name": "Get location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                  "children": []
+                },
+                {
+                  "name": "Update location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
                   "children": []
                 }
               ]
@@ -15872,6 +16033,13 @@
                   "children": []
                 },
                 {
+                  "name": "Debug logging for third-party scripts",
+                  "slug": "faststore/developer-tools-enable-scripts-logs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore CLI",
                   "slug": "faststore/developer-tools-faststore-cli",
                   "origin": "",
@@ -18189,13 +18357,34 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Delivery Promise Suggestions API: New headless integration guide and API",
+                  "slug": "2026-04-10-delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components",
+                  "slug": "2026-04-20-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Choose your storefront build Node.js version",
+                  "slug": "2026-04-20-faststore-webops-choose-your-storefront-build-nodejs-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX CX Platform: Connect the MCP to your AI tool",
                   "slug": "2026-04-15-vtex-cx-platform-mcp-connection-guide",
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
-                ,{
+                },
+                {
                   "name": "Introducing VTEX Developer MCP and Skills for AI-assisted development",
                   "slug": "2026-04-09-vtex-developer-mcp-and-skills",
                   "origin": "",
@@ -18256,6 +18445,13 @@
                 {
                   "name": "Faststore: Improved cookie handling for session and cart persistence in preview environments",
                   "slug": "2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Debug logging for third-party scripts",
+                  "slug": "2026-02-11-faststore-debug-logging",
                   "origin": "",
                   "type": "markdown",
                   "children": []
