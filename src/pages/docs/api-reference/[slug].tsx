@@ -329,10 +329,12 @@ const APIPage: NextPage<Props> = ({
         />
         {endpoints && (
           <>
-            <meta
-              name="description"
-              content={endpoints[endpointPath]?.description}
-            />
+            {endpoints[endpointPath]?.description && (
+              <meta
+                name="description"
+                content={endpoints[endpointPath].description}
+              />
+            )}
             <meta
               name="docsearch:doctitle"
               content={endpoints[endpointPath]?.title}
@@ -454,7 +456,7 @@ const APIPage: NextPage<Props> = ({
               // RapiDoc focused mode crashes when show-info is false and no
               // explicit goto-path is provided, because it tries to scroll using
               // the first path object instead of its elementId.
-              goto-path={defaultFocusedEndpointId}
+              goto-path={cleanPath || defaultFocusedEndpointId}
               show-header="false"
               show-info="false"
               show-side-nav="false"
