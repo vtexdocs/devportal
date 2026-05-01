@@ -551,8 +551,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug || ''
-  const sidebarfallback = await getNavigation()
   const sectionSelected = 'API Reference'
+  const sidebarfallback = await getNavigation()
   const logger = getLogger('API Reference')
 
   if (slugs.includes(slug as string)) {
