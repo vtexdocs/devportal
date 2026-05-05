@@ -1,13 +1,30 @@
 /// <reference types="cypress" />
 
 import { writeLog } from '../support/functions'
-import { selectRandomPages } from '../../utils/select-pages.js'
+import { getPageSample, NAVIGATION_SOURCE } from '../../utils/select-pages.js'
+
+const { pages, seed, seedLabel } = getPageSample({
+  prob: Cypress.env('testProbability') || 1.0,
+  seed: Cypress.env('sampleSeed'),
+})
 
 describe('Status of documentation pages', () => {
   before(() => {
     cy.writeFile('cypress.log', `#Status of documentation pages#\n`, {
       flag: 'a+',
     })
+    cy.writeFile(
+      'cypress-sample.json',
+      {
+        seed,
+        seedLabel,
+        navigationSource: NAVIGATION_SOURCE,
+        pages,
+      },
+      {
+        log: false,
+      }
+    )
 
     // Handle React hydration errors and other expected errors
     Cypress.on('uncaught:exception', (err) => {
@@ -26,10 +43,6 @@ describe('Status of documentation pages', () => {
     if (this.currentTest.state === 'failed') {
       writeLog(this.currentTest.title)
     }
-  })
-
-  const pages = selectRandomPages({
-    prob: Cypress.env('testProbability') || 1.0,
   })
 
   pages.forEach((page) =>
