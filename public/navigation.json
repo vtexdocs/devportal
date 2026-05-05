@@ -15843,6 +15843,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Upgrading FastStore v4",
+                  "slug": "faststore/getting-started-upgrading-faststore-to-v4",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
