@@ -9074,7 +9074,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/shopeeintegration/order/shipping/label/legacy",
+                  "endpoint": "/api/shopeeintegration/order/shipping/label",
                   "children": []
                 }
               ]
@@ -9090,7 +9090,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/shopeeintegration/-accountName-/pub/orders/-mktplaceOrderId-/cancelDelivery",
+                  "endpoint": "/api/shopeeintegration/{accountName}/pub/orders/{mktplaceOrderId}/cancelDelivery",
                   "children": []
                 }
               ]
