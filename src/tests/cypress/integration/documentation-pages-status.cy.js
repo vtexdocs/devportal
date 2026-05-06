@@ -3,10 +3,37 @@
 import { writeLog } from '../support/functions'
 import { getPageSample, NAVIGATION_SOURCE } from '../../utils/select-pages.js'
 
+const MAX_INFRA_REQUEST_RETRIES = 3
+
 const { pages, seed, seedLabel } = getPageSample({
   prob: Cypress.env('testProbability') || 1.0,
   seed: Cypress.env('sampleSeed'),
 })
+
+const isRetryableInfraStatus = (status) =>
+  status >= 500 || status === 408 || status === 429
+
+const requestPage = (page, attempt = 0) =>
+  cy
+    .request({
+      failOnStatusCode: false,
+      retryOnNetworkFailure: true,
+      url: Cypress.config().baseUrl + page,
+    })
+    .then((response) => {
+      if (
+        isRetryableInfraStatus(response.status) &&
+        attempt < MAX_INFRA_REQUEST_RETRIES
+      ) {
+        cy.log(
+          `Retrying infrastructure failure for ${page} (${response.status})`
+        )
+
+        return requestPage(page, attempt + 1)
+      }
+
+      return response
+    })
 
 describe('Status of documentation pages', () => {
   before(() => {
@@ -46,33 +73,26 @@ describe('Status of documentation pages', () => {
   })
 
   pages.forEach((page) =>
-    it(
-      `Checks page ${page}`,
-      {
-        retries: {
-          runMode: 3,
-          openMode: 3,
-        },
-      },
-      () => {
-        // Handle PDF content-type gracefully
-        cy.request(Cypress.config().baseUrl + page).then((response) => {
-          // If it's a PDF, consider it a valid response and skip further checks
-          if (response.headers['content-type']?.includes('application/pdf')) {
-            return
-          }
+    it(`Checks page ${page}`, () => {
+      requestPage(page).then((response) => {
+        expect(
+          response.status,
+          `Expected a successful response for ${page}`
+        ).to.be.within(200, 399)
 
-          // For HTML content, proceed with page navigation and checks
-          cy.visit(page)
-          // Wait for page to be fully hydrated
-          cy.wait(2000) // Give time for initial hydration
-          cy.get('body').should('be.visible')
-          // Wait for any dynamic content to load
-          cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should(
-            'exist'
-          )
+        // If it's a PDF, consider it a valid response and skip further checks
+        if (response.headers['content-type']?.includes('application/pdf')) {
+          return
+        }
+
+        cy.visit(page, {
+          retryOnNetworkFailure: true,
+          retryOnStatusCodeFailure: true,
         })
-      }
-    )
+        cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should(
+          'be.visible'
+        )
+      })
+    })
   )
 })
