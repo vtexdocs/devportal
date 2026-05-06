@@ -2026,6 +2026,13 @@
                   "children": []
                 },
                 {
+                  "name": "B2B addresses integration",
+                  "slug": "b2b-addresses-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Storefront Roles",
                   "slug": "storefront-roles",
                   "origin": "",
