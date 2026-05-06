@@ -35,7 +35,7 @@ let count = 0
 const errors = []
 const sampleMetadata = loadSampleMetadata()
 
-printSampleMetadata(sampleMetadata)
+console.log('# End-to-end tests\n')
 
 log.split('\n').forEach((line) => {
   if (line.startsWith('#') || line.endsWith('#')) {
@@ -63,3 +63,5 @@ if (!count) {
 
   console.log('For more information, open the cypress action summary page.')
 }
+
+printSampleMetadata(sampleMetadata)
