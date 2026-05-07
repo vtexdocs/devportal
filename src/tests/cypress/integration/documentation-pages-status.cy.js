@@ -35,6 +35,10 @@ const requestPage = (page, attempt = 0) =>
       return response
     })
 
+// Tracks the failure classification for the current test, consumed by afterEach.
+let failureType = 'dom'
+let failureMessage = ''
+
 describe('Status of documentation pages', () => {
   before(() => {
     cy.writeFile(
@@ -63,13 +67,19 @@ describe('Status of documentation pages', () => {
     })
   })
 
+  beforeEach(() => {
+    failureType = 'dom'
+    failureMessage = ''
+  })
+
   afterEach(function () {
     if (this.currentTest.state === 'failed') {
       writeLog({
         spec: Cypress.spec.name,
         title: this.currentTest.title,
         attempt: this.currentTest.currentRetry(),
-        type: 'dom',
+        type: failureType,
+        message: failureMessage,
       })
     }
   })
@@ -77,19 +87,26 @@ describe('Status of documentation pages', () => {
   pages.forEach((page) =>
     it(`Checks page ${page}`, () => {
       requestPage(page).then((response) => {
-        expect(
-          response.status,
-          `Expected a successful response for ${page}`
-        ).to.be.within(200, 399)
+        if (response.status < 200 || response.status > 399) {
+          failureType = 'http'
+          failureMessage = `HTTP ${response.status}`
+          throw new Error(`HTTP ${response.status} for ${page}`)
+        }
 
         // If it's a PDF, consider it a valid response and skip further checks
         if (response.headers['content-type']?.includes('application/pdf')) {
           return
         }
 
+        // Set type to load_timeout before cy.visit; reset to dom once visit
+        // succeeds so that a subsequent sidebar failure is correctly classified.
+        failureType = 'load_timeout'
         cy.visit(page, {
           retryOnNetworkFailure: true,
           retryOnStatusCodeFailure: true,
+        })
+        cy.then(() => {
+          failureType = 'dom'
         })
         cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should(
           'be.visible'
