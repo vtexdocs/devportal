@@ -17,7 +17,7 @@ jobs:
       - name: Summary report
         if: always()
         run: |
-          if [[ -f "cypress.log" ]]; then
+          if [[ -f "cypress-failures.jsonl" ]]; then
             node src/tests/utils/summary-report.js > $GITHUB_STEP_SUMMARY
           fi
-          rm -f cypress.log cypress-sample.json
+          rm -f cypress-failures.jsonl cypress-sample.json

@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const fs = require('fs')
 
-const logPath = './cypress.log'
+const jsonlPath = './cypress-failures.jsonl'
 const samplePath = './cypress-sample.json'
-const log = fs.readFileSync(logPath, { encoding: 'utf8' })
 
 const loadSampleMetadata = () => {
   if (!fs.existsSync(samplePath)) return null
@@ -31,37 +30,82 @@ const printSampleMetadata = (sampleMetadata) => {
   console.log()
 }
 
-let count = 0
-const errors = []
-const sampleMetadata = loadSampleMetadata()
+const loadFailures = (path = jsonlPath) => {
+  if (!fs.existsSync(path)) return []
 
-console.log('# End-to-end tests\n')
-
-log.split('\n').forEach((line) => {
-  if (line.startsWith('#') || line.endsWith('#')) {
-    const title = line.substring(1, line.length - 1)
-    errors.push({ title, tests: [] })
-  } else if (line) {
-    count++
-    errors[errors.length - 1].tests.push(line)
-  }
-})
-
-if (!count) {
-  console.log('All tests were successful!')
-} else {
-  console.log(`A total of **${count} tests failed**!\n`)
-
-  errors.forEach(({ title, tests }) => {
-    if (tests.length) {
-      console.log(`## ${title}\n`)
-      console.log(`**${tests.length} failing tests**:\n`)
-      tests.forEach((test) => console.log(` * ${test}`))
-      console.log()
+  const lines = fs.readFileSync(path, { encoding: 'utf8' }).split('\n')
+  const records = []
+  for (const line of lines) {
+    const trimmed = line.trim()
+    if (!trimmed) continue
+    try {
+      records.push(JSON.parse(trimmed))
+    } catch {
+      // skip malformed lines
     }
-  })
-
-  console.log('For more information, open the cypress action summary page.')
+  }
+  return records
 }
 
-printSampleMetadata(sampleMetadata)
+// Groups records by spec then title, tracking the max attempt per title.
+// Returns Map<spec, Map<title, maxAttempt>>.
+const collapseFailures = (records) => {
+  const specs = new Map()
+  for (const record of records) {
+    const spec = record.spec ?? 'unknown'
+    const title = record.title ?? 'unknown'
+    const attempt = record.attempt ?? 0
+    if (!specs.has(spec)) specs.set(spec, new Map())
+    const specMap = specs.get(spec)
+    const current = specMap.get(title) ?? -1
+    if (attempt > current) specMap.set(title, attempt)
+  }
+  return specs
+}
+
+const countDistinct = (collapsed) => {
+  let total = 0
+  for (const tests of collapsed.values()) total += tests.size
+  return total
+}
+
+const specDisplayName = (spec) => {
+  const basename = spec.split(/[\\/]/).pop() ?? spec
+  return basename.replace(/\.cy\.(js|ts|tsx)$/, '')
+}
+
+module.exports = {
+  loadFailures,
+  collapseFailures,
+  countDistinct,
+  specDisplayName,
+}
+
+if (require.main === module) {
+  const sampleMetadata = loadSampleMetadata()
+  const records = loadFailures()
+  const collapsed = collapseFailures(records)
+  const total = countDistinct(collapsed)
+
+  console.log('# End-to-end tests\n')
+
+  if (total === 0) {
+    console.log('All tests were successful!')
+  } else {
+    console.log(`A total of **${total} tests failed**!\n`)
+
+    for (const [spec, tests] of collapsed) {
+      console.log(`## ${specDisplayName(spec)}\n`)
+      console.log(`**${tests.size} failing tests**:\n`)
+      for (const [title, maxAttempt] of tests) {
+        const suffix = maxAttempt > 0 ? ` (retried ${maxAttempt}x)` : ''
+        console.log(` * ${title}${suffix}`)
+      }
+      console.log()
+    }
+
+    console.log('For more information, open the cypress action summary page.')
+  }
+
+  printSampleMetadata(sampleMetadata)
+}

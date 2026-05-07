@@ -21,12 +21,12 @@ jobs:
           browser: chrome
           component: true
 
-      # Ensure component test results are included in the log file
+      # Preserve component test failures before integration tests overwrite the file
       - name: Preserve component test results
         if: always()
         run: |
-          if [[ -f "./cypress.log" ]]; then
-            cp cypress.log component-tests.log
+          if [[ -f "./cypress-failures.jsonl" ]]; then
+            cp cypress-failures.jsonl component-failures.jsonl
           fi
 
       # Then run integration tests after preview is ready
@@ -66,14 +66,12 @@ jobs:
         if: always()
         run: |
           touch src/tests/summary.md
-          # Merge component test results if they exist
-          if [[ -f "./component-tests.log" ]]; then
-            cat component-tests.log >> cypress.log
+          # Merge component test failures if they exist
+          if [[ -f "./component-failures.jsonl" ]]; then
+            cat component-failures.jsonl >> cypress-failures.jsonl
           fi
-          if [[ -f "./cypress.log" ]]; then
-            node src/tests/utils/summary-report.js > src/tests/summary.md
-          fi
-          rm -f cypress.log component-tests.log cypress-sample.json
+          node src/tests/utils/summary-report.js > src/tests/summary.md
+          rm -f cypress-failures.jsonl component-failures.jsonl cypress-sample.json
 
       - name: Comment PR with summary report
         if: always()
