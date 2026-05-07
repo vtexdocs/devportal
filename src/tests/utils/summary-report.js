@@ -47,18 +47,22 @@ const loadFailures = (path = jsonlPath) => {
   return records
 }
 
-// Groups records by spec then title, tracking the max attempt per title.
-// Returns Map<spec, Map<title, maxAttempt>>.
+// Groups records by spec then title, keeping the highest-attempt record per title.
+// Returns Map<spec, Map<title, { maxAttempt, type, message }>>.
 const collapseFailures = (records) => {
   const specs = new Map()
   for (const record of records) {
     const spec = record.spec ?? 'unknown'
     const title = record.title ?? 'unknown'
     const attempt = record.attempt ?? 0
+    const type = record.type ?? 'dom'
+    const message = record.message ?? ''
     if (!specs.has(spec)) specs.set(spec, new Map())
     const specMap = specs.get(spec)
-    const current = specMap.get(title) ?? -1
-    if (attempt > current) specMap.set(title, attempt)
+    const current = specMap.get(title)
+    if (!current || attempt > current.maxAttempt) {
+      specMap.set(title, { maxAttempt: attempt, type, message })
+    }
   }
   return specs
 }
@@ -74,36 +78,83 @@ const specDisplayName = (spec) => {
   return basename.replace(/\.cy\.(js|ts|tsx)$/, '')
 }
 
+// Splits collapsed failures into content regressions, infra failures, and other.
+// Each bucket is Map<spec, Map<title, { maxAttempt, type, message }>>.
+const partitionByType = (collapsed) => {
+  const content = new Map()
+  const infra = new Map()
+  const other = new Map()
+
+  for (const [spec, tests] of collapsed) {
+    for (const [title, entry] of tests) {
+      let bucket
+      if (entry.type === 'dom') bucket = content
+      else if (entry.type === 'http' || entry.type === 'load_timeout')
+        bucket = infra
+      else bucket = other
+
+      if (!bucket.has(spec)) bucket.set(spec, new Map())
+      bucket.get(spec).set(title, entry)
+    }
+  }
+
+  return { content, infra, other }
+}
+
+const renderSpecTests = (specMap, showMessage = false) => {
+  for (const [spec, tests] of specMap) {
+    console.log(`### ${specDisplayName(spec)}\n`)
+    console.log(`**${tests.size} failing tests**:\n`)
+    for (const [title, { maxAttempt, message }] of tests) {
+      let suffix = maxAttempt > 0 ? ` (retried ${maxAttempt}x)` : ''
+      if (showMessage && message) suffix += ` — ${message}`
+      console.log(` * ${title}${suffix}`)
+    }
+    console.log()
+  }
+}
+
 module.exports = {
   loadFailures,
   collapseFailures,
   countDistinct,
   specDisplayName,
+  partitionByType,
 }
 
 if (require.main === module) {
   const sampleMetadata = loadSampleMetadata()
   const records = loadFailures()
   const collapsed = collapseFailures(records)
-  const total = countDistinct(collapsed)
+  const { content, infra, other } = partitionByType(collapsed)
+
+  const contentCount = countDistinct(content)
+  const infraCount = countDistinct(infra)
+  const otherCount = countDistinct(other)
 
   console.log('# End-to-end tests\n')
 
-  if (total === 0) {
+  if (contentCount === 0) {
     console.log('All tests were successful!')
   } else {
-    console.log(`A total of **${total} tests failed**!\n`)
+    console.log(`A total of **${contentCount} tests failed**!\n`)
+    console.log('## Content regressions\n')
+    renderSpecTests(content)
+  }
 
-    for (const [spec, tests] of collapsed) {
-      console.log(`## ${specDisplayName(spec)}\n`)
-      console.log(`**${tests.size} failing tests**:\n`)
-      for (const [title, maxAttempt] of tests) {
-        const suffix = maxAttempt > 0 ? ` (retried ${maxAttempt}x)` : ''
-        console.log(` * ${title}${suffix}`)
-      }
-      console.log()
-    }
+  if (infraCount > 0) {
+    console.log(
+      `## Preview infrastructure\n\n**${infraCount} infrastructure failures** (HTTP errors and load timeouts — not content regressions)\n`
+    )
+    renderSpecTests(infra, true)
+  }
 
+  if (otherCount > 0) {
+    console.log(`## Other\n`)
+    renderSpecTests(other, true)
+  }
+
+  if (contentCount > 0 || infraCount > 0 || otherCount > 0) {
     console.log('For more information, open the cypress action summary page.')
   }
 
