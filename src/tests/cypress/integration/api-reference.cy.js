@@ -5,9 +5,6 @@ import { writeLog } from '../support/functions'
 describe('API reference documentation page', () => {
   before(() => {
     cy.task('setUrl', '/docs/api-reference')
-    cy.writeFile('cypress.log', `#API reference documentation page#\n`, {
-      flag: 'a+',
-    })
   })
 
   beforeEach(() => {
@@ -19,7 +16,13 @@ describe('API reference documentation page', () => {
   afterEach(function () {
     if (this.currentTest.state === 'failed') {
       cy.task('getUrl').then((url) => {
-        writeLog(`${this.currentTest.title} (${url})`)
+        writeLog({
+          spec: Cypress.spec.name,
+          title: this.currentTest.title,
+          attempt: this.currentTest.currentRetry(),
+          type: 'dom',
+          message: url,
+        })
       })
     }
   })

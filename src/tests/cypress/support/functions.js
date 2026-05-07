@@ -5,7 +5,13 @@ export function filterSidebarItems(index, sidebarElement) {
   )
 }
 
-export function writeLog(title) {
-  const errorLog = `${title}\n`
-  cy.writeFile('cypress.log', errorLog, { flag: 'a+' })
+export function writeLog({
+  spec,
+  title,
+  attempt = 0,
+  type = 'dom',
+  message = '',
+} = {}) {
+  const record = JSON.stringify({ spec, title, attempt, type, message })
+  cy.writeFile('cypress-failures.jsonl', record + '\n', { flag: 'a+' })
 }

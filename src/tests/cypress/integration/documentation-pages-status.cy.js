@@ -37,9 +37,6 @@ const requestPage = (page, attempt = 0) =>
 
 describe('Status of documentation pages', () => {
   before(() => {
-    cy.writeFile('cypress.log', `#Status of documentation pages#\n`, {
-      flag: 'a+',
-    })
     cy.writeFile(
       'cypress-sample.json',
       {
@@ -68,7 +65,12 @@ describe('Status of documentation pages', () => {
 
   afterEach(function () {
     if (this.currentTest.state === 'failed') {
-      writeLog(this.currentTest.title)
+      writeLog({
+        spec: Cypress.spec.name,
+        title: this.currentTest.title,
+        attempt: this.currentTest.currentRetry(),
+        type: 'dom',
+      })
     }
   })
 

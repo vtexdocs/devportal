@@ -6,9 +6,6 @@ const messages = getMessages()
 describe('API guides documentation page', () => {
   before(() => {
     cy.task('setUrl', '/docs/guides')
-    cy.writeFile('cypress.log', `#API guides documentation page#\n`, {
-      flag: 'a+',
-    })
   })
 
   beforeEach(() => {
@@ -20,7 +17,13 @@ describe('API guides documentation page', () => {
   afterEach(function () {
     if (this.currentTest.state === 'failed') {
       cy.task('getUrl').then((url) => {
-        writeLog(`${this.currentTest.title} (${url})`)
+        writeLog({
+          spec: Cypress.spec.name,
+          title: this.currentTest.title,
+          attempt: this.currentTest.currentRetry(),
+          type: 'dom',
+          message: url,
+        })
       })
     }
   })
