@@ -18405,6 +18405,21 @@
           "type": "category",
           "children": [
             {
+              "name": "May",
+              "slug": "may-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore v4: New major version with performance, localization, and architectural updates",
+                  "slug": "2026-05-05-faststore-v4",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "April",
               "slug": "april-2026",
               "origin": "",
