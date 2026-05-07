@@ -36,7 +36,7 @@ export default function FeedbackModal({
     const formData = new FormData(form)
     const name = String(formData.get('name') || '')
     const email = String(formData.get('email') || '')
-    const type = String(formData.get('type') || 'Comment')
+    const type = String(formData.get('type') || 'Other documentation feedback')
     const url = String(formData.get('url') || '')
     const feedback = String(formData.get('feedback') || '')
 
@@ -115,10 +115,15 @@ export default function FeedbackModal({
             <Flex sx={styles.labelContainer}>
               <Text sx={styles.label}>Feedback type</Text>
               <select name="type" style={styles.dropdownMenu}>
-                <option value="Comment">Comment</option>
-                <option value="Question">Question</option>
-                <option value="Error">Error</option>
-                <option value="Improvement">Improvement</option>
+                <option value="Incorrect information">
+                  Incorrect information
+                </option>
+                <option value="Page not found">Page not found</option>
+                <option value="Content improvement">Content improvement</option>
+                <option value="New documentation">New documentation</option>
+                <option value="Other documentation feedback">
+                  Other documentation feedback
+                </option>
               </select>
             </Flex>
 
