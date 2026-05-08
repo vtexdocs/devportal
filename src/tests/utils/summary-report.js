@@ -14,22 +14,6 @@ const loadSampleMetadata = () => {
   }
 }
 
-const printSampleMetadata = (sampleMetadata) => {
-  if (!sampleMetadata?.pages?.length) return
-
-  const seedLabel = sampleMetadata.seedLabel || sampleMetadata.seed?.slice(0, 7)
-  console.log(`## Sampled pages (seed \`${seedLabel}\`)\n`)
-
-  if (sampleMetadata.navigationSource) {
-    console.log(
-      `Navigation source: \`${sampleMetadata.navigationSource}\` from this branch.\n`
-    )
-  }
-
-  sampleMetadata.pages.forEach((page) => console.log(`- \`${page}\``))
-  console.log()
-}
-
 const loadFailures = (path = jsonlPath) => {
   if (!fs.existsSync(path)) return []
 
@@ -134,31 +118,51 @@ if (require.main === module) {
   const infraCount = countDistinct(infra)
   const otherCount = countDistinct(other)
 
-  console.log('# End-to-end tests\n')
+  const seedLabel =
+    sampleMetadata?.seedLabel || sampleMetadata?.seed?.slice(0, 7)
+  console.log(
+    seedLabel
+      ? `# End-to-end tests (seed \`${seedLabel}\`)\n`
+      : '# End-to-end tests\n'
+  )
 
+  console.log('## Content regressions\n')
   if (contentCount === 0) {
-    console.log('All tests were successful!')
+    console.log('No content regressions.\n')
   } else {
-    console.log(`A total of **${contentCount} tests failed**!\n`)
-    console.log('## Content regressions\n')
+    console.log(`**${contentCount} tests failed**:\n`)
     renderSpecTests(content)
   }
 
-  if (infraCount > 0) {
+  console.log('## Preview infrastructure\n')
+  if (infraCount === 0) {
+    console.log('No infrastructure failures.\n')
+  } else {
     console.log(
-      `## Preview infrastructure\n\n**${infraCount} infrastructure failures** (HTTP errors and load timeouts — not content regressions)\n`
+      `**${infraCount} infrastructure failures** (HTTP errors and load timeouts — not content regressions)\n`
     )
     renderSpecTests(infra, true)
   }
 
-  if (otherCount > 0) {
-    console.log(`## Other\n`)
+  console.log('## Other\n')
+  if (otherCount === 0) {
+    console.log('None.\n')
+  } else {
     renderSpecTests(other, true)
   }
 
   if (contentCount > 0 || infraCount > 0 || otherCount > 0) {
-    console.log('For more information, open the cypress action summary page.')
+    console.log('For more information, open the cypress action summary page.\n')
   }
 
-  printSampleMetadata(sampleMetadata)
+  if (sampleMetadata?.pages?.length) {
+    console.log('## Sampled pages\n')
+    if (sampleMetadata.navigationSource) {
+      console.log(
+        `Navigation source: \`${sampleMetadata.navigationSource}\` from this branch.\n`
+      )
+    }
+    sampleMetadata.pages.forEach((page) => console.log(`- \`${page}\``))
+    console.log()
+  }
 }
