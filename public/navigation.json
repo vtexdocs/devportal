@@ -18412,7 +18412,12 @@
               "children": [
                 {
                   "name": "Marketplace payment data can now be shared with sellers",
-                  "slug": "2026-05-01-marketplace-payment-data-can-now-be-shared-with-sellers",
+                  "slug": "2026-05-08-marketplace-payment-data-can-now-be-shared-with-sellers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore v4: New major version with performance, localization, and architectural updates",
                   "slug": "2026-05-05-faststore-v4",
                   "origin": "",
