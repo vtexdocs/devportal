@@ -16,6 +16,7 @@ jobs:
 
       # Run component tests first since they don't need the preview deployment
       - name: Cypress component tests
+        id: cypress-component
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
@@ -70,7 +71,15 @@ jobs:
           if [[ -f "./component-failures.jsonl" ]]; then
             cat component-failures.jsonl >> cypress-failures.jsonl
           fi
-          node src/tests/utils/summary-report.js > src/tests/summary.md
+          # Only run the report if there are recorded failures OR the component
+          # tests actually completed (success means no failures, not a crash).
+          # Without this guard, a Cypress crash produces no JSONL file and the
+          # report would incorrectly say "All tests were successful!".
+          if [[ -f "./cypress-failures.jsonl" ]] || [[ "${{ steps.cypress-component.outcome }}" == "success" ]]; then
+            node src/tests/utils/summary-report.js > src/tests/summary.md
+          else
+            printf "# End-to-end tests\n\nCypress failed to run — no test results available.\n" > src/tests/summary.md
+          fi
           rm -f cypress-failures.jsonl component-failures.jsonl cypress-sample.json
 
       - name: Comment PR with summary report
