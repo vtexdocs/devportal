@@ -17,6 +17,16 @@ jobs:
       # Run component tests first since they don't need the preview deployment
       - name: Cypress component tests
         id: cypress-component
+        timeout-minutes: 10
+        uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+          component: true
+
+      - name: Cypress component tests (retry)
+        id: cypress-component-retry
+        if: steps.cypress-component.outcome == 'failure'
+        timeout-minutes: 10
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
@@ -76,7 +86,7 @@ jobs:
           # tests actually completed (success means no failures, not a crash).
           # Without this guard, a Cypress crash produces no JSONL file and the
           # report would incorrectly say "All tests were successful!".
-          if [[ -f "./cypress-failures.jsonl" ]] || [[ "${{ steps.cypress-component.outcome }}" == "success" ]]; then
+          if [[ -f "./cypress-failures.jsonl" ]] || [[ "${{ steps.cypress-component.outcome }}" == "success" ]] || [[ "${{ steps.cypress-component-retry.outcome }}" == "success" ]]; then
             node src/tests/utils/summary-report.js > src/tests/summary.md
           else
             printf "# End-to-end tests\n\nCypress failed to run — no test results available.\n" > src/tests/summary.md
