@@ -54,6 +54,7 @@ jobs:
       # PR comment reflects the same navigation data shipped by this preview.
       - name: Cypress integration tests
         uses: cypress-io/github-action@v5
+        timeout-minutes: 60
         with:
           browser: chrome
           headed: true
