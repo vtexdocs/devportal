@@ -18411,6 +18411,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Orders: Custom data now visible in the VTEX Admin",
+                  "slug": "2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Marketplace payment data can now be shared with sellers",
                   "slug": "2026-05-08-marketplace-payment-data-can-now-be-shared-with-sellers",
                   "origin": "",
