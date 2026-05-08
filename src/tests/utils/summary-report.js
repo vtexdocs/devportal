@@ -85,16 +85,28 @@ const partitionByType = (collapsed) => {
   return { content, infra, other }
 }
 
+const PREVIEW_COUNT = 5
+
 const renderSpecTests = (specMap, showMessage = false) => {
   for (const [spec, tests] of specMap) {
     console.log(`### ${specDisplayName(spec)}\n`)
     console.log(`**${tests.size} failing tests**:\n`)
-    for (const [title, { maxAttempt, type, message }] of tests) {
+    const entries = [...tests.entries()]
+    const renderEntry = ([title, { maxAttempt, type, message }]) => {
       let suffix = maxAttempt > 0 ? ` (retried ${maxAttempt}x)` : ''
       if (showMessage) {
         suffix += message ? ` — ${message}` : ` — ${type.replace('_', ' ')}`
       }
       console.log(` * ${title}${suffix}`)
+    }
+    entries.slice(0, PREVIEW_COUNT).forEach(renderEntry)
+    const rest = entries.slice(PREVIEW_COUNT)
+    if (rest.length > 0) {
+      console.log(
+        `\n<details>\n<summary>see more (${rest.length} more)</summary>\n`
+      )
+      rest.forEach(renderEntry)
+      console.log('\n</details>')
     }
     console.log()
   }
