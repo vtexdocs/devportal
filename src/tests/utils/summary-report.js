@@ -105,9 +105,11 @@ const renderSpecTests = (specMap, showMessage = false) => {
   for (const [spec, tests] of specMap) {
     console.log(`### ${specDisplayName(spec)}\n`)
     console.log(`**${tests.size} failing tests**:\n`)
-    for (const [title, { maxAttempt, message }] of tests) {
+    for (const [title, { maxAttempt, type, message }] of tests) {
       let suffix = maxAttempt > 0 ? ` (retried ${maxAttempt}x)` : ''
-      if (showMessage && message) suffix += ` — ${message}`
+      if (showMessage) {
+        suffix += message ? ` — ${message}` : ` — ${type.replace('_', ' ')}`
+      }
       console.log(` * ${title}${suffix}`)
     }
     console.log()
