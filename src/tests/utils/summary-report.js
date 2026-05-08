@@ -156,13 +156,16 @@ if (require.main === module) {
   }
 
   if (sampleMetadata?.pages?.length) {
+    const count = sampleMetadata.pages.length
     console.log('## Sampled pages\n')
+    console.log('<details>')
+    console.log(`<summary>${count} pages</summary>\n`)
     if (sampleMetadata.navigationSource) {
       console.log(
         `Navigation source: \`${sampleMetadata.navigationSource}\` from this branch.\n`
       )
     }
     sampleMetadata.pages.forEach((page) => console.log(`- \`${page}\``))
-    console.log()
+    console.log('\n</details>')
   }
 }
