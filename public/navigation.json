@@ -1973,7 +1973,22 @@
               "slug": "delivery-promise",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Delivery Promise Suggestions API headless integration",
+                  "slug": "delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Gathering delivery promise information",
+                  "slug": "gathering-delivery-promise-information",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -2006,6 +2021,13 @@
                 {
                   "name": "Budgets and allocations",
                   "slug": "budgets-and-allocations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B addresses integration",
+                  "slug": "b2b-addresses-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -9351,6 +9373,46 @@
           ]
         },
         {
+          "name": "VTEX Shopee Integration API",
+          "slug": "vtex-shopee-integration-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Shopee orders",
+              "slug": "vtex-shopee-integration-api-shopee-orders",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Download legacy shipping label",
+                  "slug": "vtex-shopee-integration-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/shopeeintegration/order/shipping/label",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "VTEX order callbacks",
+              "slug": "vtex-shopee-integration-api-vtex-order-callbacks",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Cancel marketplace delivery",
+                  "slug": "vtex-shopee-integration-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/shopeeintegration/{accountName}/pub/orders/{mktplaceOrderId}/cancelDelivery",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Master Data API - v2",
           "slug": "master-data-api-v2",
           "origin": "",
@@ -15828,6 +15890,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Upgrading FastStore to v4",
+                  "slug": "faststore/getting-started-upgrading-faststore-to-v4",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -16013,6 +16082,13 @@
                 {
                   "name": "Custom Cypress integration",
                   "slug": "faststore/developer-tools-custom-cypress",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Debug logging for third-party scripts",
+                  "slug": "faststore/developer-tools-enable-scripts-logs",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -18337,6 +18413,8 @@
                 {
                   "name": "Marketplace payment data can now be shared with sellers",
                   "slug": "2026-05-01-marketplace-payment-data-can-now-be-shared-with-sellers",
+                  "name": "FastStore v4: New major version with performance, localization, and architectural updates",
+                  "slug": "2026-05-05-faststore-v4",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -18349,6 +18427,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Delivery Promise Suggestions API: New headless integration guide and API",
+                  "slug": "2026-04-10-delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components",
                   "slug": "2026-04-20-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components",
@@ -18405,6 +18490,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Shopee public shipment label route now returns accurate HTTP status codes",
+                  "slug": "2026-03-13-shopee-public-shipment-label-route-status-codes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -18431,6 +18523,13 @@
                 {
                   "name": "Faststore: Improved cookie handling for session and cart persistence in preview environments",
                   "slug": "2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Debug logging for third-party scripts",
+                  "slug": "2026-02-11-faststore-debug-logging",
                   "origin": "",
                   "type": "markdown",
                   "children": []
