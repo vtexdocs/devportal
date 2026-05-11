@@ -14,6 +14,9 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Unit tests (utils)
+        run: yarn test:utils
+
       # Run component tests first since they don't need the preview deployment
       - name: Cypress component tests
         id: cypress-component
