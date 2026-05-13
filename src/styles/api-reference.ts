@@ -114,11 +114,6 @@ const overviewContentStyles: SxStyleProp = {
     wordBreak: 'break-word',
     overflowWrap: 'break-word',
   },
-  '& .overview-callout > p:first-of-type strong:first-child': {
-    display: 'block',
-    color: '#142032',
-    fontWeight: '600',
-  },
   '& .overview-callout--info': {
     bg: '#F8F7FC',
     borderColor: '#CCCED8',
