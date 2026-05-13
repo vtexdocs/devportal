@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { getServerSideSitemap } from 'next-sitemap'
 import getNavigation from 'utils/getNavigation'
+import getSiteUrl from 'utils/getSiteUrl'
 
-const DOMAIN_URL = 'https://developers.vtex.com/docs/api-reference'
+const API_REFERENCE_PATH = '/docs/api-reference'
+const apiReferenceUrl = `${getSiteUrl()}${API_REFERENCE_PATH}`
 
 function getEndpoint(element: any) {
   let urls: any = []
@@ -13,14 +15,9 @@ function getEndpoint(element: any) {
     urls = children
   }
 
-  if (element.type === 'openapi') {
+  if (element.type === 'openapi' && !element.method) {
     const url: any = {}
-    const pathSuffix = element.method
-      ? `?endpoint=${element.method.toLowerCase()}-${element.endpoint
-          .replaceAll('{', '-')
-          .replaceAll('}', '-')}`
-      : ''
-    url.loc = `${DOMAIN_URL}/${element.slug}${pathSuffix}`
+    url.loc = `${apiReferenceUrl}/${element.slug}`
     url.lastmod = new Date().toISOString()
     urls.push(url)
   }
