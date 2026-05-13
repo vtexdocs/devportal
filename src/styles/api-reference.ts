@@ -80,7 +80,8 @@ const overviewContentStyles: SxStyleProp = {
   },
   '& .overview-callout': {
     display: 'grid',
-    gap: '20px',
+    columnGap: '20px',
+    rowGap: '0.75rem',
     width: '100%',
     pl: 0,
     ml: 0,
@@ -88,9 +89,8 @@ const overviewContentStyles: SxStyleProp = {
     mb: '1.5rem',
     p: '20px',
     borderRadius: '4px',
-    alignItems: 'center',
+    alignItems: 'start',
     gridTemplateColumns: '20px 1fr',
-    gridTemplateRows: '1fr',
     wordBreak: 'break-word',
     border: '1px solid #CCCED8',
     '&::before': {
@@ -101,15 +101,14 @@ const overviewContentStyles: SxStyleProp = {
       backgroundRepeat: 'no-repeat',
       backgroundPosition: '0 0',
       backgroundSize: '20px 20px',
+      gridColumn: '1',
+      gridRow: '1',
+      mt: '2px',
     },
   },
   '& .overview-callout p, & .overview-callout div': {
     m: 0,
     gridColumn: '2 / -1',
-    gridRow: '1 / 1',
-  },
-  '& .overview-callout p + p': {
-    mt: '0.75rem',
   },
   '& .overview-callout a': {
     wordBreak: 'break-word',
