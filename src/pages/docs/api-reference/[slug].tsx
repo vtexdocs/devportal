@@ -192,14 +192,26 @@ const APIPage: NextPage<Props> = ({
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
 
-  // Derive the active endpoint identifier from the current Next route. Hash
-  // navigation pushes the URL back through `router.push` (see effects below),
-  // so `router.asPath` stays in sync with `window.location` and this stays
-  // truthful on every render.
-  const hasHashTag = router.asPath.indexOf('#') > -1
-  const cleanPath = hasHashTag
-    ? router.asPath.split('#')[1]
-    : router.asPath.split('?endpoint=')[1] || ''
+  // Track the URL hash from `window.location` directly. `router.asPath` does
+  // not include the hash on SSR or on the initial client hydration of a
+  // directly-loaded URL, so relying on it alone would force the overview view
+  // for every deep link like `/docs/api-reference/foo#get--endpoint`.
+  const [clientHash, setClientHash] = useState('')
+
+  useEffect(() => {
+    const syncHash = () =>
+      setClientHash(decodeURIComponent(window.location.hash.slice(1)))
+
+    syncHash()
+    window.addEventListener('hashchange', syncHash)
+    return () => window.removeEventListener('hashchange', syncHash)
+  }, [])
+
+  const routerHash =
+    router.asPath.indexOf('#') > -1
+      ? router.asPath.split('#')[1]
+      : router.asPath.split('?endpoint=')[1] || ''
+  const cleanPath = clientHash || routerHash
 
   const getMethod = () => {
     const method = cleanPath.split('/')[0].replace('-', '').toUpperCase()
