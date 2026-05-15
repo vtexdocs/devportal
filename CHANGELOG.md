@@ -2,6 +2,76 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.34.1](https://github.com/vtexdocs/devportal/compare/v1.34.0...v1.34.1) (2026-05-15)
+
+
+### Chore
+
+* add User Rights API to openapi slug mapping ([37897a3](https://github.com/vtexdocs/devportal/commit/37897a31b76e49439ee0b7dd90b7ff68687d9d67))
+
+
+### Docs
+
+* **navigation:** add intelligent search negative filters release note ([06cbe55](https://github.com/vtexdocs/devportal/commit/06cbe5569c16bc6942fabf99c7c80bc0805c60c5))
+
+## [1.34.0](https://github.com/vtexdocs/devportal/compare/v1.33.6...v1.34.0) (2026-05-13)
+
+
+### Features
+
+* add release note to navigation ([0ec2bb3](https://github.com/vtexdocs/devportal/commit/0ec2bb3f29a2df8e4182a833c078997c54e3357e))
+* add shared getSiteUrl helper and unify URL base ([1aa43fe](https://github.com/vtexdocs/devportal/commit/1aa43fe5d9285f46037a236eff4421ab8599c248))
+* **api-reference:** reorder endpoint table columns and align method badges ([cf5f2a7](https://github.com/vtexdocs/devportal/commit/cf5f2a72e0d1985ef2543ef21f91fd8f11b84300))
+* **docs:** update navigation and OpenAPI mapping for VTEX Shopee Integration API ([fd58a1d](https://github.com/vtexdocs/devportal/commit/fd58a1d7cab4112b149d548bb9971b075c9b747a))
+* improve API reference overview SEO and rendering ([78f689b](https://github.com/vtexdocs/devportal/commit/78f689b5965b1fda8e074cfeecfd7c3b6e376cea))
+* render api overview callouts ([119240b](https://github.com/vtexdocs/devportal/commit/119240ba42b06447a0bb7b28bcd24ea55843576c))
+
+
+### Bug Fixes
+
+* **api-reference:** disable RapiDoc URL writer ([b025ddf](https://github.com/vtexdocs/devportal/commit/b025ddff2470098d683b6176cd66d115481ca9bb))
+* **api-reference:** keep inline bold inside overview callouts on one line ([b914525](https://github.com/vtexdocs/devportal/commit/b914525cb4f91af4554c9eea59219864ac3c911d))
+* **api-reference:** stop overview callout paragraphs from overlapping ([42e2f81](https://github.com/vtexdocs/devportal/commit/42e2f8154016aa442a528c85730c9bb8b5dea0a3))
+* **api-reference:** tighten overview meta description and RapiDoc focus ([301a165](https://github.com/vtexdocs/devportal/commit/301a16585a9992c4dba22e44732d8cc27c0f45fc))
+* **feedback-modal:** update feedback types ([62ff88f](https://github.com/vtexdocs/devportal/commit/62ff88f6908e24f012d6a3d78da16e1146531b5c))
+* improve api reference overview navigation ([72da2ac](https://github.com/vtexdocs/devportal/commit/72da2ac0f69caa80ef939ad01304d5a0565d7f2e))
+* make Octokit GitHub App auth conditional ([0ab3804](https://github.com/vtexdocs/devportal/commit/0ab3804cf8b8947958b41d405ca31ac8cfb7d7ae))
+* **navbar:** adjust release notes inside the category ([0cc9ab3](https://github.com/vtexdocs/devportal/commit/0cc9ab319f4f2bbd5cef4354ffbda809c87661b4))
+* patch Lit SSR path normalization for Windows builds ([cea21b5](https://github.com/vtexdocs/devportal/commit/cea21b5d983e1f233a0d7e4dc461841d13a8877c))
+* restore API reference overview hash navigation ([fe760cc](https://github.com/vtexdocs/devportal/commit/fe760cc49ab3f599e39da4c885188d17746b6e5e))
+* restore api reference sidebar fallback ([7a5f63f](https://github.com/vtexdocs/devportal/commit/7a5f63f863c19359c9608a67db22fbae69941069))
+* satisfy api reference lint checks ([188bdad](https://github.com/vtexdocs/devportal/commit/188bdad98b0e195246797ba6c842a2c84564dc47))
+* satisfy prettier in api reference page ([746863d](https://github.com/vtexdocs/devportal/commit/746863dc4aeabc928fccb87fb7ab0e241a519f6b))
+
+
+### Chore
+
+* add plans directory to gitignore ([5400f0a](https://github.com/vtexdocs/devportal/commit/5400f0abe1685ee40f04a3a6184585aa5fa59a22))
+* remove plans/ directory from tracking ([29c679f](https://github.com/vtexdocs/devportal/commit/29c679fc2ba4f4aaf4e192068e9f718b61fcaa67))
+
+
+### Refactoring
+
+* **api-reference:** extract overview helpers, types, and styles into dedicated modules ([af6d72c](https://github.com/vtexdocs/devportal/commit/af6d72ca69da9f23894a1b7e236df06d49bd1dc0))
+
+
+### Revert Changes
+
+* **api-reference:** drop legacy ?endpoint= query cleanup ([772ca93](https://github.com/vtexdocs/devportal/commit/772ca93fb9184194f730c1bf4dcbba947a665217))
+* **api-reference:** restore main's getStaticProps const order ([b54df1a](https://github.com/vtexdocs/devportal/commit/b54df1a537c7ebc0ceff943383190e7622f5b579))
+* **api-reference:** restore main's hash-handling pattern ([7bf2abc](https://github.com/vtexdocs/devportal/commit/7bf2abc7a5e6e58c7a2859599acdbc2c3ea27631))
+* **octokit:** restore main's GitHub App auth config ([eb033b2](https://github.com/vtexdocs/devportal/commit/eb033b222dea2d022b992ee05a7bc6c5616f28ed))
+
+
+### Docs
+
+* add B2B addresses integration to navigation ([b859480](https://github.com/vtexdocs/devportal/commit/b859480611f92bddce2379eb408eb34b6debc7f4))
+* **navigation.json:** add entry for upgrading faststore to v4 ([3ea55a6](https://github.com/vtexdocs/devportal/commit/3ea55a640caf5adbdc185f46c8b9a780c91dc85c))
+* **navigation.json:** add may category and release note to navbar ([ca3c08b](https://github.com/vtexdocs/devportal/commit/ca3c08b813e54d1773ae32852f938003dfb8ca90))
+* **navigation.json:** fix guide name ([1e41bdc](https://github.com/vtexdocs/devportal/commit/1e41bdcb70d856a00fcd2f856019613d6b22dd0e))
+* **navigation.json:** update slug date for faststore v4 ([7ff231f](https://github.com/vtexdocs/devportal/commit/7ff231f546d7efd1f04b9a0d76bdad0111c7c7fd))
+* **navigations.json:** add faststore v4 release notes ([9ca846c](https://github.com/vtexdocs/devportal/commit/9ca846c39dae18db1e2a5a1c34ffa5d7a8093744))
+
 ### [1.33.6](https://github.com/vtexdocs/devportal/compare/v1.33.5...v1.33.6) (2026-04-28)
 
 

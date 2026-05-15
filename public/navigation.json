@@ -18411,13 +18411,27 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Updated vtexvault.com route for Send Payments request",
+                  "slug": "2026-05-15-updated-vtexvaultcom-route-for-send-payments-request",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Intelligent Search: Negative filters (NOT operator)",
+                  "slug": "2026-05-14-intelligent-search-negative-filters-not-operator",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore WebOps: Password protection for preview and production environments",
                   "slug": "2026-05-11-faststore-webops-password-protection-for-preview-and-production-environments",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
-                {
+                                {
                   "name": "Orders: Custom data now visible in the VTEX Admin",
                   "slug": "2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin",
                   "origin": "",
