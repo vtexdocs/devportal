@@ -18411,6 +18411,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Updated vtexvault.com route for Send Payments request",
+                  "slug": "2026-05-15-updated-vtexvaultcom-route-for-send-payments-request",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Intelligent Search: Negative filters (NOT operator)",
                   "slug": "2026-05-14-intelligent-search-negative-filters-not-operator",
                   "origin": "",
