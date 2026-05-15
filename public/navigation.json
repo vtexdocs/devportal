@@ -2404,15 +2404,15 @@
           "type": "category",
           "children": [
             {
-              "name": "Integrating product recommendations in headless stores",
-              "slug": "integrating-product-recommendations-in-headless-stores",
+              "name": "Integrating product recommendations in headless or FastStore web stores",
+              "slug": "integrating-product-recommendations-in-headless-or-faststore-web-stores",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Implementing product recommendations in Faststore",
-              "slug": "implementing-product-recommendations-in-faststore",
+              "name": "Integrating product recommendations in mobile stores",
+              "slug": "integrating-product-recommendations-in-mobile-stores",
               "origin": "",
               "type": "markdown",
               "children": []
