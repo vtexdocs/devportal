@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.34.1](https://github.com/vtexdocs/devportal/compare/v1.34.0...v1.34.1) (2026-05-15)
+
+
+### Chore
+
+* add User Rights API to openapi slug mapping ([37897a3](https://github.com/vtexdocs/devportal/commit/37897a31b76e49439ee0b7dd90b7ff68687d9d67))
+
+
+### Docs
+
+* **navigation:** add intelligent search negative filters release note ([06cbe55](https://github.com/vtexdocs/devportal/commit/06cbe5569c16bc6942fabf99c7c80bc0805c60c5))
+
 ## [1.34.0](https://github.com/vtexdocs/devportal/compare/v1.33.6...v1.34.0) (2026-05-13)
 
 
