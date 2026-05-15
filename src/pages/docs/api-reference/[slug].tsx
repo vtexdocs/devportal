@@ -759,6 +759,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         sectionSelected,
         sidebarfallback,
       },
+      revalidate: 86400,
     }
   } else {
     const readmeSlugDict = new Map<string, ReadmeSlugObj>()
