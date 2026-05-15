@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs')
-const siteUrl = process.env.NEXT_PUBLIC_DOMAIN_URL
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
+).replace(/\/+$/, '')
 
 module.exports = {
   transform: async (config, path) => {
@@ -37,6 +39,6 @@ module.exports = {
       },
       { userAgent: '*', allow: '/' },
     ],
-    additionalSitemaps: [`${siteUrl}server-sitemap.xml`],
+    additionalSitemaps: [`${siteUrl}/server-sitemap.xml`],
   },
 }
