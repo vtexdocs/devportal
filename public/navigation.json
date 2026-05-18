@@ -2175,15 +2175,15 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Integration VTEX Sales App Local stock sale",
-                  "slug": "integration-vtex-sales-app-local-stock-sale",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
+            },
+            {
+              "name": "Integration VTEX Sales App Local stock sale",
+              "slug": "integration-vtex-sales-app-local-stock-sale",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
