@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.34.2](https://github.com/vtexdocs/devportal/compare/v1.34.1...v1.34.2) (2026-05-18)
+
+
+### Bug Fixes
+
+* **api-reference:** detect URL hash from window.location to restore endpoint deep links ([5b96d20](https://github.com/vtexdocs/devportal/commit/5b96d20359cde4ee64ad49a1ffb2f7b396e57866))
+
+
+### Chore
+
+* **api-reference:** drop ISR revalidate to stop emitting ODB handler ([a734b2c](https://github.com/vtexdocs/devportal/commit/a734b2ce3e31da86078c2ac03389612daf3c81b9)), closes [#1226](https://github.com/vtexdocs/devportal/issues/1226)
+
+
+### Tests
+
+* re-add revalidate to confirm root cause hypothesis ([f3364bb](https://github.com/vtexdocs/devportal/commit/f3364bb4619402bc55625ce2c04de85741ca4903))
+
+
+### Revert Changes
+
+* Revert "test: re-add revalidate to confirm root cause hypothesis" ([abd8f79](https://github.com/vtexdocs/devportal/commit/abd8f793c3ee9224820a7274e34955f3721bd0fd))
+
+
+### Docs
+
+* update recommendations nav and create redirects ([6a4c6ac](https://github.com/vtexdocs/devportal/commit/6a4c6ac75c08045f20ec01b030d539c50b3c8924))
+
 ### [1.34.1](https://github.com/vtexdocs/devportal/compare/v1.34.0...v1.34.1) (2026-05-15)
 
 
