@@ -192,26 +192,85 @@ const APIPage: NextPage<Props> = ({
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
 
-  // Track the URL hash from `window.location` directly. `router.asPath` does
-  // not include the hash on SSR or on the initial client hydration of a
-  // directly-loaded URL, so relying on it alone would force the overview view
-  // for every deep link like `/docs/api-reference/foo#get--endpoint`.
+  // ---------------------------------------------------------------------------
+  // HASH NAVIGATION — see plans/api-navitagion-bug/.
+  // ---------------------------------------------------------------------------
+  // The page is statically generated once per slug but renders TWO views:
+  //   - overview  (URL has NO hash) -> server-rendered HTML, indexable
+  //   - endpoint  (URL has #method-path) -> RapiDoc focused viewer
+  //
+  // Since the hash is the only thing that distinguishes the two, the toggle
+  // must be client-side. We use ONE source of truth: `window.location.hash`,
+  // mirrored into `clientHash` React state by the `syncHash` effect below.
+  //
+  // RapiDoc has its own capture-phase `hashchange` listener
+  // (`RapiDoc/src/rapidoc.js:540`) that calls `scrollToPath(...)` to focus
+  // the matching endpoint inside its shadow DOM, and it also reads the hash
+  // directly when its spec finishes loading (`rapidoc.js:791-797`). So
+  // RapiDoc owns its own scroll behavior inside its shadow DOM — this page
+  // only owns the overview/endpoint visibility toggle and the window scroll.
+  // ---------------------------------------------------------------------------
+
+  // Mirrors `window.location.hash` (and the legacy `?endpoint=` query) into
+  // React state, AND forwards the new path to RapiDoc explicitly.
+  //
+  // `router.asPath` does NOT include the hash on SSR or on the initial client
+  // hydration of a directly-loaded URL, so we read `window.location` directly.
+  //
+  // We trigger `syncHash` on three signals:
+  //   - native `hashchange` (browser back/forward, raw `<a href="#…">` clicks)
+  //   - Next router `hashChangeComplete` and `routeChangeComplete` (Next
+  //     `<Link>` clicks navigate via `history.pushState`, which does NOT
+  //     fire `hashchange`; sidebar links in this app are Next Links)
+  //
+  // The same effect re-runs when `slug` changes because Next.js reuses this
+  // page component across `[slug]` param changes, so `clientHash` state
+  // persists across slug navigations and would otherwise stay stale.
+  //
+  // Why we call `rapidoc.current.scrollToPath(...)` manually: RapiDoc has
+  // its own `hashchange` listener (`rapidoc.js:540`) that handles native
+  // browser hash changes, but `history.pushState` does NOT fire `hashchange`,
+  // so Next-Link navigations bypass that listener entirely. Likewise,
+  // RapiDoc only reads `goto-path` once at init (`rapidoc.js:584`) — prop
+  // changes after the spec is loaded are ignored. Forwarding the new path
+  // here is the only way to keep RapiDoc in sync on same-slug Next-Link
+  // navigation between two endpoints. It's a no-op when the ref isn't ready
+  // yet (initial hydration) or when the target matches the current focus.
   const [clientHash, setClientHash] = useState('')
 
   useEffect(() => {
-    const syncHash = () =>
-      setClientHash(decodeURIComponent(window.location.hash.slice(1)))
+    const syncHash = () => {
+      const hash = decodeURIComponent(window.location.hash.slice(1))
+      let newHash = ''
+      if (hash) {
+        newHash = hash
+      } else {
+        // Fallback for legacy `/foo?endpoint=method-path` URLs that older
+        // sitemaps and external links still use. New navigation always uses
+        // hash fragments; this only matters on initial load.
+        const legacyEndpoint = new URLSearchParams(window.location.search).get(
+          'endpoint'
+        )
+        if (legacyEndpoint) newHash = decodeURIComponent(legacyEndpoint)
+      }
+      setClientHash(newHash)
+      if (newHash && rapidoc.current?.scrollToPath) {
+        rapidoc.current.scrollToPath(newHash)
+      }
+    }
 
     syncHash()
     window.addEventListener('hashchange', syncHash)
-    return () => window.removeEventListener('hashchange', syncHash)
-  }, [])
+    router.events.on('hashChangeComplete', syncHash)
+    router.events.on('routeChangeComplete', syncHash)
+    return () => {
+      window.removeEventListener('hashchange', syncHash)
+      router.events.off('hashChangeComplete', syncHash)
+      router.events.off('routeChangeComplete', syncHash)
+    }
+  }, [router.events, slug])
 
-  const routerHash =
-    router.asPath.indexOf('#') > -1
-      ? router.asPath.split('#')[1]
-      : router.asPath.split('?endpoint=')[1] || ''
-  const cleanPath = clientHash || routerHash
+  const cleanPath = clientHash
 
   const getMethod = () => {
     const method = cleanPath.split('/')[0].replace('-', '').toUpperCase()
@@ -295,41 +354,23 @@ const APIPage: NextPage<Props> = ({
   }, [specUrl])
 
   useEffect(() => {
-    const scrollDoc = () => {
-      if (rapidoc.current) {
-        rapidoc.current.scrollToPath(
-          window.location.hash.slice(1) || 'overview'
-        )
-      }
-    }
-
-    router.events.on('hashChangeComplete', scrollDoc)
-    return () => {
-      router.events.off('hashChangeComplete', scrollDoc)
-    }
-  }, [])
-
-  // Mirror non-router hash changes (back/forward, raw <a href="#…"> clicks,
-  // RapiDoc's internal scroll-spy mutating window.location.hash) back into the
-  // Next router so `router.asPath` — and the derived `cleanPath` above — stay
-  // in sync with the URL the browser is actually showing.
-  useEffect(() => {
-    const handleHashChange = () => {
-      router.push(window.location.href)
-    }
-
-    window.addEventListener('hashchange', handleHashChange)
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange)
-    }
-  }, [router])
-
-  useEffect(() => {
     setEndpointPagination(
       pagination[endpointPath] ? pagination[endpointPath] : pag
     )
   }, [endpointPath])
+
+  // When transitioning from overview to endpoint view, reset the window
+  // scroll. The user typically clicks an endpoint link from somewhere down
+  // the overview's endpoint table, and the browser does not auto-scroll
+  // because there is no element with an id matching the hash in the light
+  // DOM (RapiDoc renders that element inside its shadow DOM). We intentionally
+  // do NOT scroll on the inverse transition (endpoint -> overview) so that
+  // browser-managed back/forward scroll restoration keeps working.
+  useEffect(() => {
+    if (!isOverview && typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'auto' })
+    }
+  }, [isOverview])
 
   return (
     <>
@@ -358,6 +399,14 @@ const APIPage: NextPage<Props> = ({
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
+        {/*
+          View toggle. Both subtrees are mounted at all times so that
+          RapiDoc's spec stays loaded across overview/endpoint transitions.
+          Only one is visible. isOverview is true at SSG time (no hash on
+          the server), so the static HTML always serves the overview
+          content -- this is what makes overview pages indexable. On the
+          client, `clientHash` flips the toggle.
+        */}
         <Box sx={{ display: isOverview ? 'block' : 'none' }}>
           <Box as="article" sx={apiReferenceStyles.overviewArticleStyles}>
             <Box as="header" sx={apiReferenceStyles.overviewHeaderStyles}>
@@ -465,13 +514,31 @@ const APIPage: NextPage<Props> = ({
               spec={resolvedSpec}
               layout="column"
               render-style="focused"
+              // Force RapiDoc's `routePrefix` to `#` regardless of whether the
+              // current URL has a hash. RapiDoc's default initialization
+              // (`rapidoc.js:500`) picks `?endpoint=` when the page loads on
+              // the bare slug (overview, no hash). With that wrong prefix,
+              // `getElementIDFromURL()` returns the full URL on every spec
+              // (re)load and the focused template falls back to the first
+              // endpoint, ignoring our `scrollToPath()` calls.
+              route-prefix="#"
               // RapiDoc focused mode crashes when show-info is false and no
               // explicit goto-path is provided, because it tries to scroll using
               // the first path object instead of its elementId.
+              //
+              // NOTE: `goto-path` is consulted by RapiDoc only when
+              // `window.location.hash` is empty (`rapidoc.js:584`). If the URL
+              // has a hash, RapiDoc uses `getElementIDFromURL()` instead. So
+              // for deep links, the hash wins; `goto-path` only matters for
+              // bare-slug URLs to avoid the focused-mode crash.
               goto-path={cleanPath || defaultFocusedEndpointId}
               show-header="false"
               show-info="false"
               show-side-nav="false"
+              // `update-route="false"` disables RapiDoc's `replaceHistoryState`
+              // calls (`rapidoc.js:1010`, 875, 915, endpoint-template.js:17).
+              // Without this, RapiDoc would append `?endpoint=…` to the URL on
+              // init and on every scroll-spy event, polluting the URL.
               update-route="false"
               default-schema-tab="schema"
               fill-request-fields-with-example={true}
