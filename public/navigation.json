@@ -1973,7 +1973,22 @@
               "slug": "delivery-promise",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Delivery Promise Suggestions API headless integration",
+                  "slug": "delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Gathering delivery promise information",
+                  "slug": "gathering-delivery-promise-information",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -2006,6 +2021,13 @@
                 {
                   "name": "Budgets and allocations",
                   "slug": "budgets-and-allocations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B addresses integration",
+                  "slug": "b2b-addresses-integration",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2153,15 +2175,15 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Integration VTEX Sales App Local stock sale",
-                  "slug": "integration-vtex-sales-app-local-stock-sale",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
+            },
+            {
+              "name": "Integration VTEX Sales App Local stock sale",
+              "slug": "integration-vtex-sales-app-local-stock-sale",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -2382,15 +2404,15 @@
           "type": "category",
           "children": [
             {
-              "name": "Integrating product recommendations in headless stores",
-              "slug": "integrating-product-recommendations-in-headless-stores",
+              "name": "Integrating product recommendations in headless or FastStore web stores",
+              "slug": "integrating-product-recommendations-in-headless-or-faststore-web-stores",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Implementing product recommendations in Faststore",
-              "slug": "implementing-product-recommendations-in-faststore",
+              "name": "Integrating product recommendations in mobile stores",
+              "slug": "integrating-product-recommendations-in-mobile-stores",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -9351,6 +9373,46 @@
           ]
         },
         {
+          "name": "VTEX Shopee Integration API",
+          "slug": "vtex-shopee-integration-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Shopee orders",
+              "slug": "vtex-shopee-integration-api-shopee-orders",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Download legacy shipping label",
+                  "slug": "vtex-shopee-integration-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/shopeeintegration/order/shipping/label",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "VTEX order callbacks",
+              "slug": "vtex-shopee-integration-api-vtex-order-callbacks",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Cancel marketplace delivery",
+                  "slug": "vtex-shopee-integration-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/shopeeintegration/{accountName}/pub/orders/{mktplaceOrderId}/cancelDelivery",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Master Data API - v2",
           "slug": "master-data-api-v2",
           "origin": "",
@@ -15828,6 +15890,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Upgrading FastStore to v4",
+                  "slug": "faststore/getting-started-upgrading-faststore-to-v4",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -18360,11 +18429,68 @@
           "type": "category",
           "children": [
             {
+              "name": "May",
+              "slug": "may-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Updated vtexvault.com route for Send Payments request",
+                  "slug": "2026-05-15-updated-vtexvaultcom-route-for-send-payments-request",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Intelligent Search: Negative filters (NOT operator)",
+                  "slug": "2026-05-14-intelligent-search-negative-filters-not-operator",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Password protection for preview and production environments",
+                  "slug": "2026-05-11-faststore-webops-password-protection-for-preview-and-production-environments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                                {
+                  "name": "Orders: Custom data now visible in the VTEX Admin",
+                  "slug": "2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Marketplace payment data can now be shared with sellers",
+                  "slug": "2026-05-08-marketplace-payment-data-can-now-be-shared-with-sellers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore v4: New major version with performance, localization, and architectural updates",
+                  "slug": "2026-05-07-faststore-v4",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "April",
               "slug": "april-2026",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Delivery Promise Suggestions API: New headless integration guide and API",
+                  "slug": "2026-04-10-delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components",
                   "slug": "2026-04-20-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components",
@@ -18418,6 +18544,13 @@
                 {
                   "name": "VTEX IO Builder statuses and decommissioning",
                   "slug": "2026-03-09-vtex-io-builder-statuses-and-decommissioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Shopee public shipment label route now returns accurate HTTP status codes",
+                  "slug": "2026-03-13-shopee-public-shipment-label-route-status-codes",
                   "origin": "",
                   "type": "markdown",
                   "children": []
