@@ -58,9 +58,8 @@ export default async function getTroubleshootingData(branch = 'main') {
 
   await Promise.all(
     troubleshootingContent.map(async (releaseContent) => {
-      const response: Record<string, unknown> | undefined = await getFrontmatter(
-        releaseContent
-      )
+      const response: Record<string, unknown> | undefined =
+        await getFrontmatter(releaseContent)
       troubleshootingFrontmatter.push(
         response as unknown as ITroubleshootingFrontmatter
       )
@@ -71,7 +70,8 @@ export default async function getTroubleshootingData(branch = 'main') {
     const domainFilters = frontmatter?.domainFilters ?? []
     const symptomFilters = frontmatter?.symptomFilters ?? []
     const tags =
-      frontmatter?.tags ?? Array.from(new Set([...symptomFilters, ...domainFilters]))
+      frontmatter?.tags ??
+      Array.from(new Set([...symptomFilters, ...domainFilters]))
 
     troubleshootingData.push({
       slug: frontmatter?.slug,
