@@ -2825,7 +2825,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "FastStore v3",
+                  "name": "FastStore",
                   "slug": "cms-for-faststore-storefronts",
                   "origin": "",
                   "type": "markdown",
