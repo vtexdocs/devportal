@@ -1996,6 +1996,21 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Inventory",
+              "slug": "inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Batch inventory updates (Beta)",
+                  "slug": "batch-inventory-updates",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
