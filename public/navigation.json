@@ -8347,7 +8347,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/availability/v1/inventory/batch/{batchId}/status",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/status",
                   "children": []
                 },
                 {
@@ -8356,7 +8356,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/availability/v1/inventory/batch/{batchId}/errors",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/errors",
                   "children": []
                 }
               ]
