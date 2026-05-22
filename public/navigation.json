@@ -1559,6 +1559,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Configuring an external gift card provider",
+                  "slug": "configuring-an-external-gift-card-provider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
