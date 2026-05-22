@@ -18468,6 +18468,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New batch inventory endpoints (Beta) in the Logistics API",
+                  "slug": "2026-05-19-logistics-api-new-batch-inventory-endpoints",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Updated vtexvault.com route for Send Payments request",
                   "slug": "2026-05-15-updated-vtexvaultcom-route-for-send-payments-request",
                   "origin": "",
