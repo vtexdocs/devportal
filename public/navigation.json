@@ -16108,6 +16108,13 @@
                   "children": []
                 },
                 {
+                  "name": "Handling gift items in the cart",
+                  "slug": "faststore/developer-tools-use-is-gift-from-order-form",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Updating the @fastore/cli package version",
                   "slug": "faststore/developer-tools-updating-the-cli-package-version",
                   "origin": "",
