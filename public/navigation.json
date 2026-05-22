@@ -18425,6 +18425,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Gift detection with useIsGiftFromOrderForm",
+                  "slug": "2026-05-25-faststore-use-is-gift-from-order-form",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Updated vtexvault.com route for Send Payments request",
                   "slug": "2026-05-15-updated-vtexvaultcom-route-for-send-payments-request",
                   "origin": "",
