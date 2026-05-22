@@ -8304,6 +8304,49 @@
               ]
             },
             {
+              "name": "Batch operations",
+              "slug": "logistics-api-inventory",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create batch inventory job",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch",
+                  "children": []
+                },
+                {
+                  "name": "Commit batch inventory",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/commit",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory status",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/{batchId}/status",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory errors",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/{batchId}/errors",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Holidays",
               "slug": "logistics-api-holidays",
               "type": "category",
