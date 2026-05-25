@@ -1996,6 +1996,21 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Inventory",
+              "slug": "inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Batch inventory updates (Beta)",
+                  "slug": "batch-inventory-updates",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -8299,6 +8314,49 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-/transfer",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Batch operations",
+              "slug": "logistics-api-inventory",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create batch inventory job",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch",
+                  "children": []
+                },
+                {
+                  "name": "Commit batch inventory",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/commit",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory status",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/status",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory errors",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/errors",
                   "children": []
                 }
               ]
@@ -18424,7 +18482,8 @@
               "origin": "",
               "type": "category",
               "children": [
-                {
+                {                  "name": "New batch inventory endpoints (Beta) in the Logistics API",
+                  "slug": "2026-05-19-logistics-api-new-batch-inventory-endpoints",
                   "name": "FastStore: Gift detection with useIsGiftFromOrderForm",
                   "slug": "2026-05-25-faststore-use-is-gift-from-order-form",
                   "origin": "",
