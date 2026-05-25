@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.34.3](https://github.com/vtexdocs/devportal/compare/v1.34.2...v1.34.3) (2026-05-25)
+
+
+### Features
+
+* **nav:** add new batch endpoints ([fa1a21a](https://github.com/vtexdocs/devportal/commit/fa1a21ac5a306b92a5ee4dc796618b8a7d2b95a3))
+* **nav:** add new guide ([4805588](https://github.com/vtexdocs/devportal/commit/4805588dc3058f734bb05592298ba40c89329c99))
+* **nav:** add release note ([cd43efa](https://github.com/vtexdocs/devportal/commit/cd43efa5c3e2108bb6f6be07304ad7744feaf56c))
+* **navigation.json:** add faststore gift detection entry in navigation ([edcd7ee](https://github.com/vtexdocs/devportal/commit/edcd7ee25274d115c030c498a1d22efecdd36d5f))
+
+
+### Docs
+
+* **navigation.json:** add new guide entry for faststore ([ec5d7df](https://github.com/vtexdocs/devportal/commit/ec5d7dfd8070fd914aae666ba9bca5ac88568d67))
+* **navigation.json:** fix faststore category name ([c095751](https://github.com/vtexdocs/devportal/commit/c0957511bf157208f735a97c58da0034534d8851))
+* update navigation ([dbcff46](https://github.com/vtexdocs/devportal/commit/dbcff465c8eac46f91b0f3a104a332dab491da21))
+
 ### [1.34.2](https://github.com/vtexdocs/devportal/compare/v1.34.1...v1.34.2) (2026-05-18)
 
 
