@@ -54,6 +54,8 @@ export type TroubleshootingItem = {
   title: string
   description: string
   tags?: string[]
+  domainFilters?: string[]
+  symptomFilters?: string[]
 }
 export interface TroubleshootingCardsElements extends TroubleshootingItem {
   createdAt?: string

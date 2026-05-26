@@ -9,7 +9,13 @@ const TroubleshootingCard = ({
   description,
   slug,
   tags,
+  domainFilters,
+  symptomFilters,
 }: TroubleshootingItem) => {
+  const resolvedSymptomFilters = symptomFilters?.filter(Boolean) ?? []
+  const resolvedDomainFilters = domainFilters?.filter(Boolean) ?? []
+  const fallbackTags = tags?.filter(Boolean) ?? []
+
   return (
     <Link href={`/docs/troubleshooting/${slug}`} sx={styles.container}>
       <Box>
@@ -20,14 +26,31 @@ const TroubleshootingCard = ({
           {description}
         </Text>
         <Box sx={styles.tagsContainer}>
-          {tags &&
-            tags
-              .filter((moduleTag: string) => moduleTag !== '')
-              .map((moduleTag: string, index) => (
-                <Tag sx={styles.tag} color={'Gray'} key={`tags-${tags[index]}`}>
-                  {moduleTag}
+          {resolvedSymptomFilters.length > 0 && (
+            <Box sx={styles.tagGroup}>
+              {resolvedSymptomFilters.map((filter) => (
+                <Tag sx={styles.tag} color="Blue" key={`symptom-${filter}`}>
+                  {filter}
                 </Tag>
               ))}
+            </Box>
+          )}
+          {resolvedDomainFilters.length > 0 && (
+            <Box sx={styles.tagGroup}>
+              {resolvedDomainFilters.map((filter) => (
+                <Tag sx={styles.tag} color="Gray" key={`domain-${filter}`}>
+                  {filter}
+                </Tag>
+              ))}
+            </Box>
+          )}
+          {!resolvedSymptomFilters.length &&
+            !resolvedDomainFilters.length &&
+            fallbackTags.map((moduleTag) => (
+              <Tag sx={styles.tag} color="Gray" key={`tags-${moduleTag}`}>
+                {moduleTag}
+              </Tag>
+            ))}
         </Box>
       </Box>
     </Link>
