@@ -1559,6 +1559,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Configuring an external gift card provider",
+                  "slug": "configuring-an-external-gift-card-provider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -1984,6 +1991,21 @@
                 {
                   "name": "Gathering delivery promise information",
                   "slug": "gathering-delivery-promise-information",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Inventory",
+              "slug": "inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Batch inventory updates (Beta)",
+                  "slug": "batch-inventory-updates",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -8292,6 +8314,49 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-/transfer",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Batch operations",
+              "slug": "logistics-api-inventory",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create batch inventory job",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch",
+                  "children": []
+                },
+                {
+                  "name": "Commit batch inventory",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/commit",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory status",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/status",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory errors",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/errors",
                   "children": []
                 }
               ]
@@ -16101,6 +16166,13 @@
                   "children": []
                 },
                 {
+                  "name": "Handling gift items in the cart",
+                  "slug": "faststore/developer-tools-use-is-gift-from-order-form",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Updating the @fastore/cli package version",
                   "slug": "faststore/developer-tools-updating-the-cli-package-version",
                   "origin": "",
@@ -18434,6 +18506,14 @@
               "origin": "",
               "type": "category",
               "children": [
+                {                  "name": "New batch inventory endpoints (Beta) in the Logistics API",
+                  "slug": "2026-05-19-logistics-api-new-batch-inventory-endpoints",
+                  "name": "FastStore: Gift detection with useIsGiftFromOrderForm",
+                  "slug": "2026-05-25-faststore-use-is-gift-from-order-form",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Updated vtexvault.com route for Send Payments request",
                   "slug": "2026-05-15-updated-vtexvaultcom-route-for-send-payments-request",
