@@ -43,3 +43,35 @@ Cypress.Commands.add('anyWithIndex', { prevSubject: 'element' }, (subject) => {
       })
   })
 })
+
+Cypress.Commands.add(
+  'waitForRapiDocReady',
+  { prevSubject: 'optional' },
+  (subject, { timeout = 20000 } = {}) => {
+    const start = Date.now()
+
+    function getRapiDocElement() {
+      if (subject) {
+        return cy.wrap(subject).then((wrappedSubject) => {
+          return wrappedSubject.jquery ? wrappedSubject.get(0) : wrappedSubject
+        })
+      }
+
+      return cy.document().then((doc) => doc.querySelector('rapi-doc'))
+    }
+
+    function poll() {
+      return getRapiDocElement().then((el) => {
+        if (el && el.resolvedSpec && typeof el.scrollToPath === 'function') {
+          return cy.wrap(el)
+        }
+        if (Date.now() - start >= timeout) {
+          throw new Error(`rapi-doc did not become ready within ${timeout}ms`)
+        }
+        return cy.wait(200).then(poll)
+      })
+    }
+
+    return poll()
+  }
+)
