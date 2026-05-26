@@ -18506,10 +18506,16 @@
               "origin": "",
               "type": "category",
               "children": [
-                {                  "name": "New batch inventory endpoints (Beta) in the Logistics API",
-                  "slug": "2026-05-19-logistics-api-new-batch-inventory-endpoints",
+                {
                   "name": "FastStore: Gift detection with useIsGiftFromOrderForm",
                   "slug": "2026-05-25-faststore-use-is-gift-from-order-form",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New batch inventory endpoints (Beta) in the Logistics API",
+                  "slug": "2026-05-19-logistics-api-new-batch-inventory-endpoints",
                   "origin": "",
                   "type": "markdown",
                   "children": []
