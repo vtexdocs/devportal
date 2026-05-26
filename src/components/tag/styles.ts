@@ -12,7 +12,7 @@ const tag: SxStyleProp = {
 }
 
 const statusColors: {
-  [status in 'Default' | 'Selected' | 'New' | 'Gray']: SxStyleProp
+  [status in 'Default' | 'Selected' | 'New' | 'Gray' | 'Blue']: SxStyleProp
 } = {
   Default: {
     border: '1px solid #A1AAB7',
@@ -41,6 +41,10 @@ const statusColors: {
   Gray: {
     color: '#4A596B',
     background: '#E7E9EE',
+  },
+  Blue: {
+    color: '#32587A',
+    background: '#DFEAF5',
   },
 }
 
