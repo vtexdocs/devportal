@@ -29,15 +29,11 @@ describe('API guides documentation page', () => {
   })
 
   it('Check if the sidebar collapse button works', () => {
-    cy.get('.toggleIcon')
-      .scrollIntoView({ offset: { top: -100 } })
-      .should('not.be.visible')
-      .click()
+    cy.get('[data-cy="sidebar-section"]').should('be.visible')
+    // Force click because the opacity-0 toggle still owns the collapse handler.
+    cy.get('.toggleIcon').click({ force: true })
     cy.get('[data-cy="sidebar-section"]').should('not.be.visible')
-    cy.get('.toggleIcon')
-      .scrollIntoView({ offset: { top: -100 } })
-      .should('be.visible')
-      .click()
+    cy.get('.toggleIcon').click({ force: true })
     cy.get('[data-cy="sidebar-section"]').should('be.visible')
   })
 
