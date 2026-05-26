@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.34.4](https://github.com/vtexdocs/devportal/compare/v1.34.3...v1.34.4) (2026-05-26)
+
+
+### Features
+
+* **navigation.json:** fix release notes entries ([509409b](https://github.com/vtexdocs/devportal/commit/509409bb81914a03c1eceb33e76f6135db3444a5))
+* update troubleshooting filters and navigation ([36bb307](https://github.com/vtexdocs/devportal/commit/36bb3070dd7ff3a68373a261f3c801cbfa8f73a2))
+
+
+### Bug Fixes
+
+* keep RapiDoc focused viewer in sync with URL hash on Next-Link navigations ([f890155](https://github.com/vtexdocs/devportal/commit/f8901552ffefbd2c8f43b337ae53b40ce06b15e9))
+
+
+### Style
+
+* run prettier on getTroubleshootingData ([150fa52](https://github.com/vtexdocs/devportal/commit/150fa5296b54e4380f221d584a2dd7b7662deaee))
+
+
+### Chore
+
+* re-pin RapiDoc submodule to master after [#47](https://github.com/vtexdocs/devportal/issues/47) merged ([180bf85](https://github.com/vtexdocs/devportal/commit/180bf858bd598687163bbca2304e6906fadd24f8))
+* tighten hash-navigation comments ([abf1135](https://github.com/vtexdocs/devportal/commit/abf11354ca559cf1c8dc512f8d3eeb0e78ca1484))
+
 ### [1.34.3](https://github.com/vtexdocs/devportal/compare/v1.34.2...v1.34.3) (2026-05-25)
 
 
