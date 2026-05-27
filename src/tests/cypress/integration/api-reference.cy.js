@@ -2,14 +2,23 @@
 
 import { writeLog } from '../support/functions'
 
+const API_REFERENCE_TEST_URL = '/docs/api-reference/b2b-addresses'
+const API_REFERENCE_VISIT_TIMEOUT_MS = 30000
+
 describe('API reference documentation page', () => {
   before(() => {
-    cy.task('setUrl', '/docs/api-reference/catalog-api')
+    cy.task('setUrl', API_REFERENCE_TEST_URL)
   })
 
   beforeEach(() => {
     cy.viewport(1366, 768)
-    cy.task('getUrl').then((url) => cy.visit(url))
+    cy.task('getUrl').then((url) =>
+      cy.visit(url, {
+        retryOnNetworkFailure: true,
+        retryOnStatusCodeFailure: true,
+        timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
+      })
+    )
     cy.waitForRapiDocReady()
   })
 

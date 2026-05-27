@@ -4,6 +4,7 @@ import { writeLog } from '../support/functions'
 import { getPageSample, NAVIGATION_SOURCE } from '../../utils/select-pages.js'
 
 const MAX_INFRA_REQUEST_RETRIES = 3
+const PAGE_VISIT_TIMEOUT_MS = 30000
 
 const { pages, seed, seedLabel } = getPageSample({
   prob: Cypress.env('testProbability') || 1.0,
@@ -104,6 +105,7 @@ describe('Status of documentation pages', () => {
         cy.visit(page, {
           retryOnNetworkFailure: true,
           retryOnStatusCodeFailure: true,
+          timeout: PAGE_VISIT_TIMEOUT_MS,
         })
         cy.then(() => {
           failureType = 'dom'

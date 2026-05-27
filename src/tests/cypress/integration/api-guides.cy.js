@@ -127,7 +127,7 @@ describe('API guides documentation page', () => {
   })
 
   it('try to click on the last element of table of contents', () => {
-    visitGuidePage('/docs/guides/brands')
+    visitGuidePage(GUIDE_TEST_URL)
 
     cy.get('[data-cy="table-of-contents"]:visible')
       .find('a[href^="#"]')
