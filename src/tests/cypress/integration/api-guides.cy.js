@@ -4,6 +4,7 @@ import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
 const GUIDE_VISIT_TIMEOUT_MS = 30000
+const GUIDE_TEST_URL = '/docs/guides/order-modifications'
 
 const visitGuidePage = (url) => {
   // Netlify previews sometimes never fire `load`; 30 s keeps this spec under the CI fail-fast budget.
@@ -24,7 +25,7 @@ const getDesktopSidebarToggle = () =>
 
 describe('API guides documentation page', () => {
   before(() => {
-    cy.task('setUrl', '/docs/guides/brands')
+    cy.task('setUrl', GUIDE_TEST_URL)
   })
 
   beforeEach(() => {
@@ -108,7 +109,7 @@ describe('API guides documentation page', () => {
   })
 
   it('try to send feedback', () => {
-    visitGuidePage('/docs/guides/brands')
+    visitGuidePage(GUIDE_TEST_URL)
 
     cy.get('[data-cy="table-of-contents"]:visible')
       .scrollIntoView()
