@@ -21,6 +21,7 @@ jobs:
       - name: Cypress component tests
         id: cypress-component
         timeout-minutes: 10
+        continue-on-error: true
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
@@ -30,6 +31,7 @@ jobs:
         id: cypress-component-retry
         if: steps.cypress-component.outcome == 'failure'
         timeout-minutes: 10
+        continue-on-error: true
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
@@ -103,3 +105,11 @@ jobs:
           comment_tag: tests-summary
           filePath: src/tests/summary.md
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fail if component tests never recovered
+        if: always()
+        run: |
+          if [[ "${{ steps.cypress-component.outcome }}" == "failure" && "${{ steps.cypress-component-retry.outcome }}" != "success" ]]; then
+            echo "Component tests failed before integration verification could complete."
+            exit 1
+          fi
