@@ -18244,6 +18244,28 @@
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
+          "name": "Analytics and data collection",
+          "slug": "analytics-and-data-collection",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Google Analytics 4 is tracking inconsistent data from my store",
+              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My Google Tag Assistant is not working with Partytown",
+              "slug": "my-google-tag-assistant-is-not-working-with-partytown",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "API and integrations",
           "slug": "api-and-integrations",
           "origin": "",
@@ -18259,63 +18281,57 @@
           ]
         },
         {
-          "name": "VTEX IO and app development",
-          "slug": "vtex-io-and-app-development",
+          "name": "Checkout and shopping experience",
+          "slug": "checkout-and-shopping-experience",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "`vtex release` CLI command returns an EBADF message",
-              "slug": "vtex-release-cli-command-returns-ebadf-message",
+              "name": "I can't complete a purchase on a FastStore website",
+              "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I am getting 500 errors in VTEX IO CLI",
-              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
+              "name": "UTMs are not being applied to the cart at Checkout",
+              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "Content Management (CMS)",
+          "slug": "content-management-cms",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "I can't access the Headless CMS",
+              "slug": "unable-to-access-headless-cms",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I am getting errors with my service configuration app",
-              "slug": "i-am-getting-errors-with-my-service-configuration-app",
+              "name": "I can’t install the Headless CMS plugins in my account",
+              "slug": "error-installing-headless-cms-plugins-on-windows",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I can't create a new workspace",
-              "slug": "i-cant-create-a-new-workspace",
+              "name": "My pages are taking too long to be published on Headless CMS",
+              "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I can't install an app with a major other than 0.x",
-              "slug": "i-cant-install-an-app-with-a-major-other-than-0x",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't install VTEX IO CLI",
-              "slug": "i-cant-install-vtex-io-cli",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't publish my theme due to app dependency",
-              "slug": "i-cant-publish-my-theme-due-to-app-dependency",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I don't see my Store Theme changes",
-              "slug": "i-dont-see-my-store-theme-changes",
+              "name": "My store does not reflect the overrides I created",
+              "slug": "my-store-does-not-reflect-the-overrides-i-created",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18408,79 +18424,63 @@
           ]
         },
         {
-          "name": "Content Management (CMS)",
-          "slug": "content-management-cms",
+          "name": "VTEX IO and app development",
+          "slug": "vtex-io-and-app-development",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "I can't access the Headless CMS",
-              "slug": "unable-to-access-headless-cms",
+              "name": "`vtex release` CLI command returns an EBADF message",
+              "slug": "vtex-release-cli-command-returns-ebadf-message",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I can’t install the Headless CMS plugins in my account",
-              "slug": "error-installing-headless-cms-plugins-on-windows",
+              "name": "I am getting 500 errors in VTEX IO CLI",
+              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My pages are taking too long to be published on Headless CMS",
-              "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
+              "name": "I am getting errors with my service configuration app",
+              "slug": "i-am-getting-errors-with-my-service-configuration-app",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My store does not reflect the overrides I created",
-              "slug": "my-store-does-not-reflect-the-overrides-i-created",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Checkout and shopping experience",
-          "slug": "checkout-and-shopping-experience",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "I can't complete a purchase on a FastStore website",
-              "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
+              "name": "I can't create a new workspace",
+              "slug": "i-cant-create-a-new-workspace",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "UTMs are not being applied to the cart at Checkout",
-              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Analytics and data collection",
-          "slug": "analytics-and-data-collection",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Google Analytics 4 is tracking inconsistent data from my store",
-              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
+              "name": "I can't install an app with a major other than 0.x",
+              "slug": "i-cant-install-an-app-with-a-major-other-than-0x",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My Google Tag Assistant is not working with Partytown",
-              "slug": "my-google-tag-assistant-is-not-working-with-partytown",
+              "name": "I can't install VTEX IO CLI",
+              "slug": "i-cant-install-vtex-io-cli",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I can't publish my theme due to app dependency",
+              "slug": "i-cant-publish-my-theme-due-to-app-dependency",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I don't see my Store Theme changes",
+              "slug": "i-dont-see-my-store-theme-changes",
               "origin": "",
               "type": "markdown",
               "children": []
