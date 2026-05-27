@@ -4,7 +4,7 @@ import { writeLog } from '../support/functions'
 
 describe('API reference documentation page', () => {
   before(() => {
-    cy.task('setUrl', '/docs/api-reference')
+    cy.task('setUrl', '/docs/api-reference/catalog-api')
   })
 
   beforeEach(() => {

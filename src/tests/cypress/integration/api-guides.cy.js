@@ -24,7 +24,7 @@ const getDesktopSidebarToggle = () =>
 
 describe('API guides documentation page', () => {
   before(() => {
-    cy.task('setUrl', '/docs/guides')
+    cy.task('setUrl', '/docs/guides/brands')
   })
 
   beforeEach(() => {
