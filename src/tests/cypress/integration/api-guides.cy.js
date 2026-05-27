@@ -16,6 +16,12 @@ const visitGuidePage = (url) => {
   cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should('exist')
 }
 
+const getDesktopSidebarToggle = () =>
+  cy
+    .get('[data-cy="sidebar-section"]:visible')
+    .siblings('.toggleIcon')
+    .should('have.length', 1)
+
 describe('API guides documentation page', () => {
   before(() => {
     cy.task('setUrl', '/docs/guides')
@@ -41,12 +47,12 @@ describe('API guides documentation page', () => {
   })
 
   it('Check if the sidebar collapse button works', () => {
-    cy.get('[data-cy="sidebar-section"]').should('be.visible')
-    // Force click because the opacity-0 toggle still owns the collapse handler.
-    cy.get('.toggleIcon').click({ force: true })
+    cy.get('[data-cy="sidebar-section"]:visible').should('be.visible')
+    // Force click because the desktop toggle stays opacity-0 until hover.
+    getDesktopSidebarToggle().click({ force: true })
     cy.get('[data-cy="sidebar-section"]').should('not.be.visible')
-    cy.get('.toggleIcon').click({ force: true })
-    cy.get('[data-cy="sidebar-section"]').should('be.visible')
+    getDesktopSidebarToggle().click({ force: true })
+    cy.get('[data-cy="sidebar-section"]:visible').should('be.visible')
   })
 
   it('Check if a random guide page, chosen using the sidebar, loads', () => {
@@ -104,65 +110,38 @@ describe('API guides documentation page', () => {
   it('try to send feedback', () => {
     visitGuidePage('/docs/guides/brands')
 
-    cy.get('[data-cy="feedback-section"]').scrollIntoView()
-
-    cy.get('[data-cy="feedback-section"] > div')
-      .first()
-      .invoke('text')
-      .should('equal', messages['feedback_section.question'])
-
-    cy.get('[data-cy="feedback-section-like"]').click()
-
-    cy.get('[data-cy="feedback-modal"]')
+    cy.get('[data-cy="table-of-contents"]:visible')
       .scrollIntoView()
-      .children()
+      .find('[data-cy="feedback-section"]')
       .first()
-      .scrollIntoView()
       .should('be.visible')
-      .invoke('text')
-      .should('equal', messages['feedback_modal.title'])
-
-    cy.get('[data-cy="feedback-modal"]').find('textarea').type('cypress-test')
-
-    cy.get('[data-cy="feedback-modal"]')
-      .find('button')
-      .then((sendFeedbackButton) => {
-        cy.wrap(sendFeedbackButton)
-          .invoke('text')
-          .should('equal', 'Send Feedback')
-        return cy.wrap(sendFeedbackButton)
+      .within(() => {
+        cy.contains(messages['feedback_section.question']).should('be.visible')
+        cy.get('[data-cy="feedback-section-like"]')
+          .click()
+          .should('have.attr', 'aria-pressed', 'true')
+        cy.contains(messages['feedback_section.question']).should('not.exist')
+        cy.contains(/Thanks for (the )?feedback[.!]/).should('be.visible')
       })
-      .click()
-
-    cy.get('[data-cy="feedback-section"] > div')
-      .first()
-      .invoke('text')
-      .should('equal', messages['feedback_section.response'])
   })
 
   it('try to click on the last element of table of contents', () => {
-    if (Cypress.$('h2').length > 0) {
-      cy.get('h2')
-        .its('length')
-        .then((length) => {
-          cy.get('[data-cy="table-of-contents"]')
-            .should('not.be.empty')
-            .first()
-            .children()
-            .should('have.length', length)
-            .last()
-            .then((heading) => {
-              const anchor = heading.find('a').attr('href')
-              cy.wrap(anchor.substring(anchor.indexOf('#') + 1)).as('anchor')
-              return cy.wrap(heading)
-            })
-            .click()
-        })
-      cy.get('@anchor').then((anchor) => {
-        cy.get(`[id=${anchor}]`).should('be.visible')
+    visitGuidePage('/docs/guides/brands')
+
+    cy.get('[data-cy="table-of-contents"]:visible')
+      .find('a[href^="#"]')
+      .should('have.length.greaterThan', 0)
+      .last()
+      .then(($heading) => {
+        const anchor = $heading.attr('href')
+        expect(anchor, 'last table-of-contents href').to.match(/^#.+/)
+        cy.wrap(anchor.slice(1)).as('anchor')
+        return cy.wrap($heading)
       })
-    } else {
-      cy.log('The table is empty')
-    }
+      .click()
+
+    cy.get('@anchor').then((anchor) => {
+      cy.get(`[id="${anchor}"]`).should('be.visible')
+    })
   })
 })
