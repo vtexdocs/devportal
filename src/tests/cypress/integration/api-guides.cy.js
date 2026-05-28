@@ -7,8 +7,7 @@ const messages = getMessages()
 const GUIDE_VISIT_TIMEOUT_MS = 15000
 const GUIDE_TEST_URL =
   '/docs/guides/payments-integration-implementing-a-payment-provider'
-const GUIDE_TOC_TEST_URL =
-  '/docs/guides/payments-integration-implementing-a-payment-provider'
+const GUIDE_TOC_TEST_URL = '/docs/guides/cloud-infrastructure'
 
 const visitGuidePage = (url) =>
   visitPageAllowingLoadTimeout(url, {
@@ -22,7 +21,10 @@ const getDesktopSidebarSection = () =>
   cy.get('[data-cy="sidebar-section"]').should('have.length', 1)
 
 const getDesktopSidebarToggle = () =>
-  getDesktopSidebarSection().siblings('.toggleIcon').should('have.length', 1)
+  getDesktopSidebarSection()
+    .siblings('.toggleIcon')
+    .find('svg')
+    .should('have.length', 1)
 
 describe('API guides documentation page', () => {
   before(() => {

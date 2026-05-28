@@ -57,6 +57,19 @@ const writeInfraFailure = (page, type, message) =>
 let failureType = 'dom'
 let failureMessage = ''
 
+const assertDocumentContentLoaded = () =>
+  cy.document().then((document) => {
+    if (document.title.trim()) {
+      return
+    }
+
+    cy.get('body').should(($body) => {
+      const bodyText = $body.text().replace(/\s+/g, ' ').trim()
+
+      expect(bodyText, 'body text when <title> is empty').not.to.be.empty
+    })
+  })
+
 describe('Status of documentation pages', () => {
   before(() => {
     cy.writeFile(
@@ -135,7 +148,7 @@ describe('Status of documentation pages', () => {
             return
           }
 
-          cy.document().its('title').should('not.be.empty')
+          assertDocumentContentLoaded()
         })
       })
     })

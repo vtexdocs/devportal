@@ -8,6 +8,19 @@ const API_REFERENCE_TEST_URL =
 const API_REFERENCE_VISIT_TIMEOUT_MS = 15000
 const API_REFERENCE_READY_TIMEOUT_MS = 30000
 
+const normalizeRoute = (pathname = '', hash = '') => {
+  const normalizedPath =
+    pathname === '/' ? pathname : pathname.replace(/\/+$/, '')
+
+  return `${normalizedPath}${decodeURIComponent(hash || '')}`
+}
+
+const normalizeHrefRoute = (href) => {
+  const { pathname, hash } = new URL(href, Cypress.config('baseUrl'))
+
+  return normalizeRoute(pathname, hash)
+}
+
 const assertRapiDocReady = () => {
   cy.get('rapi-doc', {
     timeout: API_REFERENCE_READY_TIMEOUT_MS,
@@ -24,7 +37,10 @@ const getDesktopSidebarSection = () =>
   cy.get('[data-cy="sidebar-section"]').should('have.length', 1)
 
 const getDesktopSidebarToggle = () =>
-  getDesktopSidebarSection().siblings('.toggleIcon').should('have.length', 1)
+  getDesktopSidebarSection()
+    .siblings('.toggleIcon')
+    .find('svg')
+    .should('have.length', 1)
 
 const visitApiReferencePage = (url) =>
   visitPageAllowingLoadTimeout(url, {
@@ -69,40 +85,43 @@ describe('API reference documentation page', () => {
 
   it('Check if a random guide page, chosen using the sidebar, loads', () => {
     cy.location().then(({ pathname, hash }) => {
-      const currentRoute = `${pathname}${hash}`
+      const currentRoute = normalizeRoute(pathname, hash)
 
       cy.get('[data-cy="sidebar-section"] a[href*="/docs/api-reference/"]')
         .then(($links) => {
-          const candidateLinks = $links.toArray().filter((link) => {
+          const candidateLinks = $links.toArray().reduce((candidates, link) => {
             const href = link.getAttribute('href')
-            const normalizedHref = href
-              ? new URL(href, Cypress.config('baseUrl'))
-              : null
+            const nextRoute = href ? normalizeHrefRoute(href) : null
 
-            return (
-              Boolean(normalizedHref) &&
+            if (
+              nextRoute &&
               Cypress.$(link).is(':visible') &&
-              `${normalizedHref.pathname}${normalizedHref.hash}` !==
-                currentRoute
-            )
-          })
+              nextRoute !== currentRoute
+            ) {
+              candidates.push({ element: link, route: nextRoute })
+            }
+
+            return candidates
+          }, [])
 
           expect(
             candidateLinks,
             'visible API reference links different from the current page'
           ).to.have.length.greaterThan(0)
 
-          return cy.wrap(Cypress._.sample(candidateLinks))
+          const selectedLink = Cypress._.sample(candidateLinks)
+
+          cy.wrap(selectedLink.route).as('targetRoute')
+          return cy.wrap(selectedLink.element)
         })
         .scrollIntoView()
         .click({ force: true })
 
-      cy.location().then(({ pathname: nextPathname, hash: nextHash }) => {
-        const nextRoute = `${nextPathname}${nextHash}`
-
-        expect(nextRoute).to.match(/\/docs\/api-reference\/./)
-        expect(nextRoute).not.to.eq(currentRoute)
-        cy.task('setUrl', nextRoute)
+      cy.get('@targetRoute').then((targetRoute) => {
+        cy.location({ timeout: 10000 }).should(({ pathname, hash }) => {
+          expect(normalizeRoute(pathname, hash)).to.eq(targetRoute)
+        })
+        cy.task('setUrl', targetRoute)
       })
     })
   })
