@@ -4,7 +4,7 @@ import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
 const GUIDE_VISIT_TIMEOUT_MS = 30000
-const GUIDE_TEST_URL = '/docs/guides/order-modifications'
+const GUIDE_TEST_URL = '/docs/guides/integration-flow'
 
 const visitGuidePage = (url) => {
   // Netlify previews sometimes never fire `load`; 30 s keeps this spec under the CI fail-fast budget.

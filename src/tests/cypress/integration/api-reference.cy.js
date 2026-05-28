@@ -2,7 +2,8 @@
 
 import { writeLog } from '../support/functions'
 
-const API_REFERENCE_TEST_URL = '/docs/api-reference/b2b-addresses'
+const API_REFERENCE_TEST_URL =
+  '/docs/api-reference/b2b-addresses#post-/api/dataentities/contact_information/documents'
 const API_REFERENCE_VISIT_TIMEOUT_MS = 30000
 
 describe('API reference documentation page', () => {

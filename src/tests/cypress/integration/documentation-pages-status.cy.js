@@ -69,6 +69,7 @@ describe('Status of documentation pages', () => {
   })
 
   beforeEach(() => {
+    cy.viewport(1366, 768)
     failureType = 'dom'
     failureMessage = ''
   })

@@ -4,6 +4,7 @@ const NON_ESSENTIAL_THIRD_PARTY_GETS = [
   'https://docs.google.com/**',
   'https://avatars.githubusercontent.com/**',
   'https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/**',
+  '/_next/image*',
 ]
 
 beforeEach(() => {
