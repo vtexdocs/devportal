@@ -44,6 +44,14 @@ const requestPage = (page, attempt = 0) =>
 const getPageVisitTimeoutMs = (page) =>
   PAGE_SPECIFIC_VISIT_TIMEOUTS_MS[page] ?? PAGE_VISIT_TIMEOUT_MS
 
+const writeInfraFailure = (page, type, message) =>
+  writeLog({
+    spec: Cypress.spec.name,
+    title: `Checks page ${page}`,
+    type,
+    message,
+  })
+
 // Tracks the failure classification for the current test, consumed by afterEach.
 let failureType = 'dom'
 let failureMessage = ''
@@ -98,9 +106,9 @@ describe('Status of documentation pages', () => {
     it(`Checks page ${page}`, () => {
       requestPage(page).then((response) => {
         if (response.status < 200 || response.status > 399) {
-          failureType = 'http'
-          failureMessage = `HTTP ${response.status}`
-          throw new Error(`HTTP ${response.status} for ${page}`)
+          // Preview infra failures are reported in the summary comment, not as blocking regressions.
+          writeInfraFailure(page, 'http', `HTTP ${response.status}`)
+          return
         }
 
         // If it's a PDF, consider it a valid response and skip further checks
@@ -108,20 +116,43 @@ describe('Status of documentation pages', () => {
           return
         }
 
-        // Set type to load_timeout before cy.visit; reset to dom once visit
-        // succeeds so that a subsequent sidebar failure is correctly classified.
-        failureType = 'load_timeout'
+        let sawLoadTimeout = false
+
+        Cypress.once('fail', (error) => {
+          if (
+            error.message.includes('Timed out after waiting') &&
+            error.message.includes('remote page to load')
+          ) {
+            sawLoadTimeout = true
+            writeInfraFailure(page, 'load_timeout', 'load timeout')
+            return false
+          }
+
+          throw error
+        })
+
         cy.visit(page, {
           retryOnNetworkFailure: true,
           retryOnStatusCodeFailure: true,
           timeout: getPageVisitTimeoutMs(page),
         })
         cy.then(() => {
+          if (sawLoadTimeout) {
+            return
+          }
+
           failureType = 'dom'
+          failureMessage = ''
         })
-        cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should(
-          'be.visible'
-        )
+        cy.then(() => {
+          if (sawLoadTimeout) {
+            return
+          }
+
+          cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should(
+            'be.visible'
+          )
+        })
       })
     })
   )

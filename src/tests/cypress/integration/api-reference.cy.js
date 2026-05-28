@@ -3,7 +3,7 @@
 import { writeLog } from '../support/functions'
 
 const API_REFERENCE_TEST_URL =
-  '/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation'
+  '/docs/api-reference/punchout-api#post-/api/authenticator/punchout/start'
 const API_REFERENCE_VISIT_TIMEOUT_MS = 60000
 
 const assertRapiDocReady = () => {
@@ -65,31 +65,34 @@ describe('API reference documentation page', () => {
   })
 
   it('Check if a random guide page, chosen using the sidebar, loads', () => {
-    cy.get('.css-1450tp')
-      .anyWithIndex()
-      .then(([category, index]) => {
-        cy.wrap(index).as('idx')
-        return cy.wrap(category)
-      })
-      .scrollIntoView()
-      .find('button')
-      .click({ force: true })
+    cy.url().then((currentUrl) => {
+      cy.get('[data-cy="sidebar-section"] a[href*="/docs/api-reference/"]')
+        .then(($links) => {
+          const candidateLinks = $links.toArray().filter((link) => {
+            const href = link.getAttribute('href')
 
-    cy.get('@idx').then((idx) => {
-      cy.get('.css-1450tp')
-        .eq(idx + 1)
-        .find('button')
+            return (
+              Boolean(href) &&
+              Cypress.$(link).is(':visible') &&
+              href !== currentUrl
+            )
+          })
+
+          expect(
+            candidateLinks,
+            'visible API reference links different from the current page'
+          ).to.have.length.greaterThan(0)
+
+          return cy.wrap(Cypress._.sample(candidateLinks))
+        })
+        .scrollIntoView()
         .click({ force: true })
 
-      cy.get('.css-1450tp')
-        .eq(idx + 2)
-        .find('a')
-        .click({ force: true })
+      cy.url()
+        .should('match', /\/docs\/api-reference\/./)
+        .and('not.eq', currentUrl)
+        .then((url) => cy.task('setUrl', url))
     })
-
-    cy.url()
-      .should('match', /(\/api-reference\/.)/)
-      .then((url) => cy.task('setUrl', url))
   })
 
   it('Check if it has a title', () => {

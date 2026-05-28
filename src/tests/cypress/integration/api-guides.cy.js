@@ -4,7 +4,7 @@ import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
 const GUIDE_VISIT_TIMEOUT_MS = 60000
-const GUIDE_TEST_URL = '/docs/guides/integration-flow'
+const GUIDE_TEST_URL = '/docs/guides/making-your-first-request'
 const GUIDE_TOC_TEST_URL = '/docs/guides/cloud-infrastructure'
 
 const visitGuidePage = (url) => {
