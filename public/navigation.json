@@ -2884,6 +2884,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Understanding components and sections",
+              "slug": "understanding-components-and-sections",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
