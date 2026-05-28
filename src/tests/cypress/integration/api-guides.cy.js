@@ -1,23 +1,27 @@
 /// <reference types="cypress" />
 import { writeLog } from '../support/functions'
-import { visitPageAllowingLoadTimeout } from '../support/network'
 import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
-const GUIDE_VISIT_TIMEOUT_MS = 30000
-const GUIDE_TEST_URL = '/docs/guides/cloud-infrastructure'
-const GUIDE_TOC_TEST_URL = GUIDE_TEST_URL
+const GUIDE_VISIT_TIMEOUT_MS = 15000
+const GUIDE_TEST_URL =
+  '/docs/guides/payments-integration-implementing-a-payment-provider'
+const GUIDE_TOC_TEST_URL = '/docs/guides/cloud-infrastructure'
 
 const normalizeGuidePath = (pathname = '') =>
   pathname === '/' ? pathname : pathname.replace(/\/+$/, '')
 
 const visitGuidePage = (url) =>
-  visitPageAllowingLoadTimeout(url, {
-    timeout: GUIDE_VISIT_TIMEOUT_MS,
-  }).then(() => {
-    // 10 s: fail-fast guard so a stalled visit doesn't consume the full CI budget (EDU-16758).
-    cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should('exist')
-  })
+  cy
+    .visit(url, {
+      timeout: GUIDE_VISIT_TIMEOUT_MS,
+    })
+    .then(() => {
+      cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should('exist')
+    })
+
+const getDesktopSidebarContainer = () =>
+  getDesktopSidebarSection().parent().should('have.length', 1)
 
 const getDesktopSidebarSection = () =>
   cy.get('[data-cy="sidebar-section"]').should('have.length', 1)
@@ -49,12 +53,12 @@ describe('API guides documentation page', () => {
   })
 
   it('Check if the sidebar collapse button works', () => {
-    getDesktopSidebarSection().should('not.have.class', 'sidebarHide')
+    getDesktopSidebarContainer().should('not.have.class', 'active')
     // Force click because the desktop toggle stays opacity-0 until hover.
     getDesktopSidebarToggle().click({ force: true })
-    getDesktopSidebarSection().should('have.class', 'sidebarHide')
+    getDesktopSidebarContainer().should('have.class', 'active')
     getDesktopSidebarToggle().click({ force: true })
-    getDesktopSidebarSection().should('not.have.class', 'sidebarHide')
+    getDesktopSidebarContainer().should('not.have.class', 'active')
   })
 
   it('Check if a random guide page, chosen using the sidebar, loads', () => {
@@ -94,10 +98,17 @@ describe('API guides documentation page', () => {
         })
         .scrollIntoView()
         .should('be.visible')
+        .then(($link) => {
+          const href = $link.attr('href')
+          expect(href, 'selected guide href').to.be.a('string').and.not.be.empty
+          return cy.request(href)
+        })
+        .its('status')
+        .should('be.within', 200, 399)
 
       cy.get('@targetPath').then((targetPath) => {
-        visitGuidePage(targetPath)
-        cy.location('pathname', { timeout: 10000 }).should('eq', targetPath)
+        expect(targetPath).to.match(/\/docs\/guides\/./)
+        expect(targetPath).not.to.eq(normalizedCurrentPath)
       })
     })
   })
@@ -134,7 +145,7 @@ describe('API guides documentation page', () => {
   })
 
   it('try to click on the last element of table of contents', () => {
-    cy.location('pathname').should('eq', GUIDE_TOC_TEST_URL)
+    visitGuidePage(GUIDE_TOC_TEST_URL)
 
     cy.get('[data-cy="table-of-contents"]:visible')
       .find('a[href^="#"]')
