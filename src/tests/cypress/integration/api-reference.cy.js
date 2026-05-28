@@ -4,7 +4,19 @@ import { writeLog } from '../support/functions'
 
 const API_REFERENCE_TEST_URL =
   '/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation'
-const API_REFERENCE_VISIT_TIMEOUT_MS = 30000
+const API_REFERENCE_VISIT_TIMEOUT_MS = 60000
+
+const assertRapiDocReady = () => {
+  cy.get('rapi-doc', {
+    timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
+  }).should(($rapiDoc) => {
+    const rapiDoc = $rapiDoc.get(0)
+
+    expect(rapiDoc, 'rapi-doc element').to.exist
+    expect(rapiDoc?.resolvedSpec, 'resolved OpenAPI spec').to.exist
+    expect(rapiDoc?.scrollToPath, 'scrollToPath method').to.be.a('function')
+  })
+}
 
 const getDesktopSidebarSection = () =>
   cy.get('[data-cy="sidebar-section"]').should('have.length', 1)
@@ -26,11 +38,7 @@ describe('API reference documentation page', () => {
         timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
       })
     )
-    cy.get('rapi-doc', {
-      timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
-    }).waitForRapiDocReady({
-      timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
-    })
+    assertRapiDocReady()
   })
 
   afterEach(function () {

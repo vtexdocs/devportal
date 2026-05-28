@@ -1,8 +1,13 @@
 const NON_ESSENTIAL_THIRD_PARTY_GETS = [
   'https://www.googletagmanager.com/**',
   'https://www.google-analytics.com/**',
+  'https://cdn.jsdelivr.net/**',
+  'https://community.vtex.com/**',
+  'https://developers.vtex.com/**',
   'https://docs.google.com/**',
   'https://avatars.githubusercontent.com/**',
+  'https://github.com/**',
+  'https://help.vtex.com/**',
   'https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/**',
   '/_next/image*',
 ]

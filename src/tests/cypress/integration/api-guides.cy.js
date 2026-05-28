@@ -3,12 +3,12 @@ import { writeLog } from '../support/functions'
 import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
-const GUIDE_VISIT_TIMEOUT_MS = 30000
+const GUIDE_VISIT_TIMEOUT_MS = 60000
 const GUIDE_TEST_URL = '/docs/guides/integration-flow'
 const GUIDE_TOC_TEST_URL = '/docs/guides/cloud-infrastructure'
 
 const visitGuidePage = (url) => {
-  // Netlify previews sometimes never fire `load`; 30 s keeps this spec under the CI fail-fast budget.
+  // Netlify previews can take longer than 30 s to finish loading shared app assets.
   cy.visit(url, {
     retryOnNetworkFailure: true,
     retryOnStatusCodeFailure: true,
