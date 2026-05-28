@@ -24,6 +24,20 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('searchFor', (query) => {
+  cy.get('[data-testid="search-input"]').clear().type(query)
+})
+
+Cypress.Commands.add('submitSearch', (query, via = 'enter') => {
+  cy.searchFor(query)
+  if (via === 'enter') {
+    cy.get('[data-testid="search-input"]').type('{enter}')
+  } else {
+    cy.get('[data-testid="search-button"]').click()
+  }
+  cy.url().should('include', '/search')
+})
+
 Cypress.Commands.add('any', { prevSubject: 'element' }, (subject, size = 1) => {
   cy.wrap(subject).then((elementList) => {
     elementList = elementList.jquery ? elementList.get() : elementList
