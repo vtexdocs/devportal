@@ -3,8 +3,14 @@
 import { writeLog } from '../support/functions'
 
 const API_REFERENCE_TEST_URL =
-  '/docs/api-reference/b2b-addresses#post-/api/dataentities/contact_information/documents'
+  '/docs/api-reference/checkout-api#post-/api/checkout/pub/orderForms/simulation'
 const API_REFERENCE_VISIT_TIMEOUT_MS = 30000
+
+const getDesktopSidebarSection = () =>
+  cy.get('[data-cy="sidebar-section"]').should('have.length', 1)
+
+const getDesktopSidebarToggle = () =>
+  getDesktopSidebarSection().siblings('.toggleIcon').should('have.length', 1)
 
 describe('API reference documentation page', () => {
   before(() => {
@@ -20,7 +26,11 @@ describe('API reference documentation page', () => {
         timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
       })
     )
-    cy.waitForRapiDocReady()
+    cy.get('rapi-doc', {
+      timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
+    }).waitForRapiDocReady({
+      timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
+    })
   })
 
   afterEach(function () {
@@ -38,12 +48,12 @@ describe('API reference documentation page', () => {
   })
 
   it('Check if the sidebar collapse button works', () => {
-    cy.get('[data-cy="sidebar-section"]').should('be.visible')
+    getDesktopSidebarSection().should('not.have.class', 'sidebarHide')
     // Force click because the opacity-0 toggle still owns the collapse handler.
-    cy.get('.toggleIcon').click({ force: true })
-    cy.get('[data-cy="sidebar-section"]').should('not.be.visible')
-    cy.get('.toggleIcon').click({ force: true })
-    cy.get('[data-cy="sidebar-section"]').should('be.visible')
+    getDesktopSidebarToggle().click({ force: true })
+    getDesktopSidebarSection().should('have.class', 'sidebarHide')
+    getDesktopSidebarToggle().click({ force: true })
+    getDesktopSidebarSection().should('not.have.class', 'sidebarHide')
   })
 
   it('Check if a random guide page, chosen using the sidebar, loads', () => {

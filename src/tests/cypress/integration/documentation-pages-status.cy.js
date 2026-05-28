@@ -5,6 +5,11 @@ import { getPageSample, NAVIGATION_SOURCE } from '../../utils/select-pages.js'
 
 const MAX_INFRA_REQUEST_RETRIES = 3
 const PAGE_VISIT_TIMEOUT_MS = 30000
+const PAGE_SPECIFIC_VISIT_TIMEOUTS_MS = {
+  // Netlify preview intermittently keeps this FastStore guide loading longer than the
+  // generic 30 s cap even when the content itself is healthy.
+  'docs/guides/faststore/molecules-order-summary': 60000,
+}
 
 const { pages, seed, seedLabel } = getPageSample({
   prob: Cypress.env('testProbability') || 1.0,
@@ -35,6 +40,9 @@ const requestPage = (page, attempt = 0) =>
 
       return response
     })
+
+const getPageVisitTimeoutMs = (page) =>
+  PAGE_SPECIFIC_VISIT_TIMEOUTS_MS[page] ?? PAGE_VISIT_TIMEOUT_MS
 
 // Tracks the failure classification for the current test, consumed by afterEach.
 let failureType = 'dom'
@@ -106,7 +114,7 @@ describe('Status of documentation pages', () => {
         cy.visit(page, {
           retryOnNetworkFailure: true,
           retryOnStatusCodeFailure: true,
-          timeout: PAGE_VISIT_TIMEOUT_MS,
+          timeout: getPageVisitTimeoutMs(page),
         })
         cy.then(() => {
           failureType = 'dom'

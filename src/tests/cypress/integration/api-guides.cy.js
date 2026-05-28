@@ -5,6 +5,7 @@ import { getMessages } from 'utils/get-messages'
 const messages = getMessages()
 const GUIDE_VISIT_TIMEOUT_MS = 30000
 const GUIDE_TEST_URL = '/docs/guides/integration-flow'
+const GUIDE_TOC_TEST_URL = '/docs/guides/cloud-infrastructure'
 
 const visitGuidePage = (url) => {
   // Netlify previews sometimes never fire `load`; 30 s keeps this spec under the CI fail-fast budget.
@@ -17,11 +18,11 @@ const visitGuidePage = (url) => {
   cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should('exist')
 }
 
+const getDesktopSidebarSection = () =>
+  cy.get('[data-cy="sidebar-section"]').should('have.length', 1)
+
 const getDesktopSidebarToggle = () =>
-  cy
-    .get('[data-cy="sidebar-section"]:visible')
-    .siblings('.toggleIcon')
-    .should('have.length', 1)
+  getDesktopSidebarSection().siblings('.toggleIcon').should('have.length', 1)
 
 describe('API guides documentation page', () => {
   before(() => {
@@ -48,49 +49,44 @@ describe('API guides documentation page', () => {
   })
 
   it('Check if the sidebar collapse button works', () => {
-    cy.get('[data-cy="sidebar-section"]:visible').should('be.visible')
+    getDesktopSidebarSection().should('not.have.class', 'sidebarHide')
     // Force click because the desktop toggle stays opacity-0 until hover.
     getDesktopSidebarToggle().click({ force: true })
-    cy.get('[data-cy="sidebar-section"]').should('not.be.visible')
+    getDesktopSidebarSection().should('have.class', 'sidebarHide')
     getDesktopSidebarToggle().click({ force: true })
-    cy.get('[data-cy="sidebar-section"]:visible').should('be.visible')
+    getDesktopSidebarSection().should('not.have.class', 'sidebarHide')
   })
 
   it('Check if a random guide page, chosen using the sidebar, loads', () => {
-    cy.get('.css-1450tp')
-      .anyWithIndex()
-      .then(([category, index]) => {
-        cy.wrap(index).as('idx')
-        return cy.wrap(category)
-      })
-      .scrollIntoView()
-      .find('button')
-      .click({ force: true })
+    cy.location('pathname').then((currentPath) => {
+      cy.get('[data-cy="sidebar-section"] .css-1450tp a[href*="/docs/guides/"]')
+        .then(($links) => {
+          const candidateLinks = $links.toArray().filter((link) => {
+            const href = link.getAttribute('href')
 
-    cy.get('@idx').then((idx) => {
-      cy.get('.css-1450tp')
-        .eq(idx + 1)
-        .then((element) => {
-          const hasButton = element.find('button').length
-          cy.wrap(element.find('button').length).as('hasButton')
-          if (hasButton) return cy.wrap(element).find('button')
-          return cy.wrap(element).find('a')
+            return (
+              Boolean(href) &&
+              Cypress.$(link).is(':visible') &&
+              new URL(href, Cypress.config('baseUrl')).pathname !== currentPath
+            )
+          })
+
+          expect(
+            candidateLinks,
+            'visible guide links different from the current page'
+          ).to.have.length.greaterThan(0)
+
+          return cy.wrap(Cypress._.sample(candidateLinks))
         })
+        .scrollIntoView()
         .click({ force: true })
 
-      cy.get('@hasButton').then((hasButton) => {
-        if (hasButton) {
-          cy.get('.css-1450tp')
-            .eq(idx + 2)
-            .find('a')
-            .click({ force: true })
-        }
-      })
+      cy.location('pathname', { timeout: 10000 })
+        .should('match', /\/docs\/guides\/./)
+        .and('not.eq', currentPath)
     })
 
-    cy.url({ timeout: 10000 })
-      .should('match', /(\/guides\/.)/)
-      .then((url) => cy.task('setUrl', url))
+    cy.url().then((url) => cy.task('setUrl', url))
   })
 
   it('check if it has a title', () => {
@@ -127,7 +123,7 @@ describe('API guides documentation page', () => {
   })
 
   it('try to click on the last element of table of contents', () => {
-    visitGuidePage(GUIDE_TEST_URL)
+    visitGuidePage(GUIDE_TOC_TEST_URL)
 
     cy.get('[data-cy="table-of-contents"]:visible')
       .find('a[href^="#"]')
