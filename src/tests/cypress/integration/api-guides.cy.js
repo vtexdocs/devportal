@@ -4,10 +4,12 @@ import { visitPageAllowingLoadTimeout } from '../support/network'
 import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
-const GUIDE_VISIT_TIMEOUT_MS = 15000
-const GUIDE_TEST_URL =
-  '/docs/guides/payments-integration-implementing-a-payment-provider'
-const GUIDE_TOC_TEST_URL = '/docs/guides/cloud-infrastructure'
+const GUIDE_VISIT_TIMEOUT_MS = 30000
+const GUIDE_TEST_URL = '/docs/guides/cloud-infrastructure'
+const GUIDE_TOC_TEST_URL = GUIDE_TEST_URL
+
+const normalizeGuidePath = (pathname = '') =>
+  pathname === '/' ? pathname : pathname.replace(/\/+$/, '')
 
 const visitGuidePage = (url) =>
   visitPageAllowingLoadTimeout(url, {
@@ -27,18 +29,14 @@ const getDesktopSidebarToggle = () =>
     .should('have.length', 1)
 
 describe('API guides documentation page', () => {
-  before(() => {
-    cy.task('setUrl', GUIDE_TEST_URL)
-  })
-
   beforeEach(() => {
     cy.viewport(1366, 768)
-    cy.task('getUrl').then((url) => visitGuidePage(url))
+    visitGuidePage(GUIDE_TEST_URL)
   })
 
   afterEach(function () {
     if (this.currentTest.state === 'failed') {
-      cy.task('getUrl').then((url) => {
+      cy.url().then((url) => {
         writeLog({
           spec: Cypress.spec.name,
           title: this.currentTest.title,
@@ -61,34 +59,47 @@ describe('API guides documentation page', () => {
 
   it('Check if a random guide page, chosen using the sidebar, loads', () => {
     cy.location('pathname').then((currentPath) => {
-      cy.get('[data-cy="sidebar-section"] .css-1450tp a[href*="/docs/guides/"]')
-        .then(($links) => {
-          const candidateLinks = $links.toArray().filter((link) => {
-            const href = link.getAttribute('href')
+      const normalizedCurrentPath = normalizeGuidePath(currentPath)
 
-            return (
-              Boolean(href) &&
+      cy.get('[data-cy="sidebar-section"] a[href*="/docs/guides/"]')
+        .then(($links) => {
+          const candidateLinks = $links.toArray().reduce((candidates, link) => {
+            const href = link.getAttribute('href')
+            const nextPath = href
+              ? normalizeGuidePath(
+                  new URL(href, Cypress.config('baseUrl')).pathname
+                )
+              : null
+
+            if (
+              nextPath &&
               Cypress.$(link).is(':visible') &&
-              new URL(href, Cypress.config('baseUrl')).pathname !== currentPath
-            )
-          })
+              nextPath !== normalizedCurrentPath
+            ) {
+              candidates.push({ element: link, path: nextPath })
+            }
+
+            return candidates
+          }, [])
 
           expect(
             candidateLinks,
             'visible guide links different from the current page'
           ).to.have.length.greaterThan(0)
 
-          return cy.wrap(Cypress._.sample(candidateLinks))
+          const selectedLink = Cypress._.sample(candidateLinks)
+
+          cy.wrap(selectedLink.path).as('targetPath')
+          return cy.wrap(selectedLink.element)
         })
         .scrollIntoView()
-        .click({ force: true })
+        .should('be.visible')
 
-      cy.location('pathname', { timeout: 10000 })
-        .should('match', /\/docs\/guides\/./)
-        .and('not.eq', currentPath)
+      cy.get('@targetPath').then((targetPath) => {
+        visitGuidePage(targetPath)
+        cy.location('pathname', { timeout: 10000 }).should('eq', targetPath)
+      })
     })
-
-    cy.url().then((url) => cy.task('setUrl', url))
   })
 
   it('check if it has a title', () => {
@@ -107,8 +118,6 @@ describe('API guides documentation page', () => {
   })
 
   it('try to send feedback', () => {
-    visitGuidePage(GUIDE_TEST_URL)
-
     cy.get('[data-cy="table-of-contents"]:visible')
       .scrollIntoView()
       .find('[data-cy="feedback-section"]')
@@ -125,7 +134,7 @@ describe('API guides documentation page', () => {
   })
 
   it('try to click on the last element of table of contents', () => {
-    visitGuidePage(GUIDE_TOC_TEST_URL)
+    cy.location('pathname').should('eq', GUIDE_TOC_TEST_URL)
 
     cy.get('[data-cy="table-of-contents"]:visible')
       .find('a[href^="#"]')

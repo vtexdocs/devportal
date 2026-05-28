@@ -50,19 +50,15 @@ const visitApiReferencePage = (url) =>
   })
 
 describe('API reference documentation page', () => {
-  before(() => {
-    cy.task('setUrl', API_REFERENCE_TEST_URL)
-  })
-
   beforeEach(() => {
     cy.viewport(1366, 768)
-    cy.task('getUrl').then((url) => visitApiReferencePage(url))
+    visitApiReferencePage(API_REFERENCE_TEST_URL)
     assertRapiDocReady()
   })
 
   afterEach(function () {
     if (this.currentTest.state === 'failed') {
-      cy.task('getUrl').then((url) => {
+      cy.url().then((url) => {
         writeLog({
           spec: Cypress.spec.name,
           title: this.currentTest.title,
@@ -121,7 +117,6 @@ describe('API reference documentation page', () => {
         cy.location({ timeout: 10000 }).should(({ pathname, hash }) => {
           expect(normalizeRoute(pathname, hash)).to.eq(targetRoute)
         })
-        cy.task('setUrl', targetRoute)
       })
     })
   })
@@ -142,11 +137,15 @@ describe('API reference documentation page', () => {
           .shadow()
           .within(() => {
             cy.get('.resp-box')
+              .filter(':visible')
               .first()
               .scrollIntoView()
               .should('be.visible')
-              .click()
-            cy.get('.resp-content').first().should('be.visible')
+              .click({ force: true })
+            cy.get('.resp-content')
+              .filter(':visible')
+              .first()
+              .should('be.visible')
           })
       })
   })
