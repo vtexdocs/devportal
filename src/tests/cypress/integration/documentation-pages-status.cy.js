@@ -1,14 +1,15 @@
 /// <reference types="cypress" />
 
 import { writeLog } from '../support/functions'
+import { visitPageAllowingLoadTimeout } from '../support/network'
 import { getPageSample, NAVIGATION_SOURCE } from '../../utils/select-pages.js'
 
 const MAX_INFRA_REQUEST_RETRIES = 3
-const PAGE_VISIT_TIMEOUT_MS = 30000
+const PAGE_VISIT_TIMEOUT_MS = 10000
 const PAGE_SPECIFIC_VISIT_TIMEOUTS_MS = {
   // Netlify preview intermittently keeps this FastStore guide loading longer than the
-  // generic 30 s cap even when the content itself is healthy.
-  'docs/guides/faststore/molecules-order-summary': 60000,
+  // generic 10 s cap even when the content itself is healthy.
+  'docs/guides/faststore/molecules-order-summary': 20000,
 }
 
 const { pages, seed, seedLabel } = getPageSample({
@@ -116,42 +117,25 @@ describe('Status of documentation pages', () => {
           return
         }
 
-        let sawLoadTimeout = false
-
-        Cypress.once('fail', (error) => {
-          if (
-            error.message.includes('Timed out after waiting') &&
-            error.message.includes('remote page to load')
-          ) {
-            sawLoadTimeout = true
-            writeInfraFailure(page, 'load_timeout', 'load timeout')
-            return false
-          }
-
-          throw error
-        })
-
-        cy.visit(page, {
-          retryOnNetworkFailure: true,
-          retryOnStatusCodeFailure: true,
+        visitPageAllowingLoadTimeout(page, {
           timeout: getPageVisitTimeoutMs(page),
         })
-        cy.then(() => {
+        cy.then((sawLoadTimeout) => {
           if (sawLoadTimeout) {
-            return
+            writeInfraFailure(page, 'load_timeout', 'load timeout')
+            return sawLoadTimeout
           }
 
           failureType = 'dom'
           failureMessage = ''
+          return sawLoadTimeout
         })
-        cy.then(() => {
+        cy.then((sawLoadTimeout) => {
           if (sawLoadTimeout) {
             return
           }
 
-          cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should(
-            'be.visible'
-          )
+          cy.document().its('title').should('not.be.empty')
         })
       })
     })

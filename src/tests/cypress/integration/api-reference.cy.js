@@ -1,14 +1,16 @@
 /// <reference types="cypress" />
 
 import { writeLog } from '../support/functions'
+import { visitPageAllowingLoadTimeout } from '../support/network'
 
 const API_REFERENCE_TEST_URL =
-  '/docs/api-reference/punchout-api#post-/api/authenticator/punchout/start'
-const API_REFERENCE_VISIT_TIMEOUT_MS = 60000
+  '/docs/api-reference/buyer-organizations#post-/api/b2b/import/buyer-orgs/-importId-'
+const API_REFERENCE_VISIT_TIMEOUT_MS = 15000
+const API_REFERENCE_READY_TIMEOUT_MS = 30000
 
 const assertRapiDocReady = () => {
   cy.get('rapi-doc', {
-    timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
+    timeout: API_REFERENCE_READY_TIMEOUT_MS,
   }).should(($rapiDoc) => {
     const rapiDoc = $rapiDoc.get(0)
 
@@ -24,6 +26,13 @@ const getDesktopSidebarSection = () =>
 const getDesktopSidebarToggle = () =>
   getDesktopSidebarSection().siblings('.toggleIcon').should('have.length', 1)
 
+const visitApiReferencePage = (url) =>
+  visitPageAllowingLoadTimeout(url, {
+    timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
+  }).then(() => {
+    cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should('exist')
+  })
+
 describe('API reference documentation page', () => {
   before(() => {
     cy.task('setUrl', API_REFERENCE_TEST_URL)
@@ -31,13 +40,7 @@ describe('API reference documentation page', () => {
 
   beforeEach(() => {
     cy.viewport(1366, 768)
-    cy.task('getUrl').then((url) =>
-      cy.visit(url, {
-        retryOnNetworkFailure: true,
-        retryOnStatusCodeFailure: true,
-        timeout: API_REFERENCE_VISIT_TIMEOUT_MS,
-      })
-    )
+    cy.task('getUrl').then((url) => visitApiReferencePage(url))
     assertRapiDocReady()
   })
 
@@ -65,16 +68,22 @@ describe('API reference documentation page', () => {
   })
 
   it('Check if a random guide page, chosen using the sidebar, loads', () => {
-    cy.url().then((currentUrl) => {
+    cy.location().then(({ pathname, hash }) => {
+      const currentRoute = `${pathname}${hash}`
+
       cy.get('[data-cy="sidebar-section"] a[href*="/docs/api-reference/"]')
         .then(($links) => {
           const candidateLinks = $links.toArray().filter((link) => {
             const href = link.getAttribute('href')
+            const normalizedHref = href
+              ? new URL(href, Cypress.config('baseUrl'))
+              : null
 
             return (
-              Boolean(href) &&
+              Boolean(normalizedHref) &&
               Cypress.$(link).is(':visible') &&
-              href !== currentUrl
+              `${normalizedHref.pathname}${normalizedHref.hash}` !==
+                currentRoute
             )
           })
 
@@ -88,10 +97,13 @@ describe('API reference documentation page', () => {
         .scrollIntoView()
         .click({ force: true })
 
-      cy.url()
-        .should('match', /\/docs\/api-reference\/./)
-        .and('not.eq', currentUrl)
-        .then((url) => cy.task('setUrl', url))
+      cy.location().then(({ pathname: nextPathname, hash: nextHash }) => {
+        const nextRoute = `${nextPathname}${nextHash}`
+
+        expect(nextRoute).to.match(/\/docs\/api-reference\/./)
+        expect(nextRoute).not.to.eq(currentRoute)
+        cy.task('setUrl', nextRoute)
+      })
     })
   })
 

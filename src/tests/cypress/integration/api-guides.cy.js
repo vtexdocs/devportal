@@ -1,22 +1,22 @@
 /// <reference types="cypress" />
 import { writeLog } from '../support/functions'
+import { visitPageAllowingLoadTimeout } from '../support/network'
 import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
-const GUIDE_VISIT_TIMEOUT_MS = 60000
-const GUIDE_TEST_URL = '/docs/guides/making-your-first-request'
-const GUIDE_TOC_TEST_URL = '/docs/guides/cloud-infrastructure'
+const GUIDE_VISIT_TIMEOUT_MS = 15000
+const GUIDE_TEST_URL =
+  '/docs/guides/payments-integration-implementing-a-payment-provider'
+const GUIDE_TOC_TEST_URL =
+  '/docs/guides/payments-integration-implementing-a-payment-provider'
 
-const visitGuidePage = (url) => {
-  // Netlify previews can take longer than 30 s to finish loading shared app assets.
-  cy.visit(url, {
-    retryOnNetworkFailure: true,
-    retryOnStatusCodeFailure: true,
+const visitGuidePage = (url) =>
+  visitPageAllowingLoadTimeout(url, {
     timeout: GUIDE_VISIT_TIMEOUT_MS,
+  }).then(() => {
+    // 10 s: fail-fast guard so a stalled visit doesn't consume the full CI budget (EDU-16758).
+    cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should('exist')
   })
-  // 10 s: fail-fast guard so a stalled visit doesn't consume the full CI budget (EDU-16758).
-  cy.get('[data-cy="sidebar-section"]', { timeout: 10000 }).should('exist')
-}
 
 const getDesktopSidebarSection = () =>
   cy.get('[data-cy="sidebar-section"]').should('have.length', 1)

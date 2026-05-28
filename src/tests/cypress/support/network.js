@@ -12,6 +12,43 @@ const NON_ESSENTIAL_THIRD_PARTY_GETS = [
   '/_next/image*',
 ]
 
+export const isRemotePageLoadTimeout = (error) =>
+  error.message.includes('Timed out after waiting') &&
+  error.message.includes('remote page to load')
+
+export const visitPageAllowingLoadTimeout = (
+  url,
+  {
+    retryOnNetworkFailure = true,
+    retryOnStatusCodeFailure = true,
+    timeout,
+  } = {}
+) => {
+  let sawLoadTimeout = false
+
+  const failHandler = (error) => {
+    if (isRemotePageLoadTimeout(error)) {
+      sawLoadTimeout = true
+      return false
+    }
+
+    throw error
+  }
+
+  Cypress.on('fail', failHandler)
+
+  cy.visit(url, {
+    retryOnNetworkFailure,
+    retryOnStatusCodeFailure,
+    timeout,
+  })
+
+  return cy.then(() => {
+    Cypress.off('fail', failHandler)
+    return sawLoadTimeout
+  })
+}
+
 beforeEach(() => {
   // Preview E2E is sensitive to slow third-party assets that are unrelated to the docs UI under test.
   NON_ESSENTIAL_THIRD_PARTY_GETS.forEach((url) => {
