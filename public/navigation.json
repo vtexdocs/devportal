@@ -2109,6 +2109,85 @@
           "type": "category",
           "children": [
             {
+              "name": "VTEX Sales App Extensibility",
+              "slug": "vtex-sales-app-extensibility",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "VTEX Sales App Extensions Skill",
+                  "slug": "vtex-sales-app-extensions-skill",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Sales App extensions implementation",
+                  "slug": "sales-app-extensions-implementation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Exploring Sales App extensions",
+                      "slug": "exploring-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Installing WebOps for Sales App extensions",
+                      "slug": "installing-webops-for-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Setting up Sales App extensions",
+                      "slug": "setting-up-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Creating Sales App extensions",
+                      "slug": "creating-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Deploying Sales App extensions",
+                      "slug": "deploying-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Sales App extension hooks and types",
+                      "slug": "sales-app-extension-hooks-and-types",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "CSS styling in VTEX Sales App Extensibility",
+                  "slug": "css-styling-in-vtex-sales-app-extensibility",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Data layer and data fetching in VTEX Sales App Extensibility",
+                  "slug": "data-layer-and-data-fetching-in-vtex-sales-app-extensibility",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }                
+              ]
+            },
+            {
               "name": "How to customize VTEX Sales App",
               "slug": "how-to-customize-vtex-sales-app",
               "origin": "",
