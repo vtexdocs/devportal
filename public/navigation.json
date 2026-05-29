@@ -5814,6 +5814,94 @@
               ]
             },
             {
+              "name": "Assortment",
+              "slug": "catalog-api-assortment",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment",
+                  "children": []
+                },
+                {
+                  "name": "Get all product assortments",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment",
+                  "children": []
+                },
+                {
+                  "name": "Get product assortment by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-",
+                  "children": []
+                },
+                {
+                  "name": "Update product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-",
+                  "children": []
+                },
+                {
+                  "name": "Delete product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-",
+                  "children": []
+                },
+                {
+                  "name": "Add included collection to product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/included-collections/-collectionID-",
+                  "children": []
+                },
+                {
+                  "name": "Remove included collection from product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/included-collections/-collectionID-",
+                  "children": []
+                },
+                {
+                  "name": "Add excluded collection to product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/excluded-collections/-collectionID-",
+                  "children": []
+                },
+                {
+                  "name": "Remove excluded collection from product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/excluded-collections/-collectionID-",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Collection",
               "slug": "catalog-api-collection",
               "type": "category",
