@@ -17039,6 +17039,13 @@
                       "children": []
                     },
                     {
+                      "name": "SKUMatrix",
+                      "slug": "faststore/organisms-sku-matrix",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "SlideOver",
                       "slug": "faststore/organisms-slide-over",
                       "origin": "",
@@ -17072,6 +17079,13 @@
                 {
                   "name": "Displaying content for authenticated users",
                   "slug": "faststore/storefront-features-displaying-content-for-authenticated-users",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Enabling product purchase from search with QuickOrder",
+                  "slug": "faststore/storefront-features-enabling-product-purchase-from-search-with-quick-order",
                   "origin": "",
                   "type": "markdown",
                   "children": []
