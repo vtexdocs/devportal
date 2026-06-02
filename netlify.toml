@@ -2358,3 +2358,15 @@ force = true
 from = "/docs/guides/implementing-product-recommendations-in-faststore"
 status = 308
 to = "/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores"
+
+[[redirects]]
+force = true
+from = "/docs/apps/vtex.affiliates-program-app"
+status = 308
+to = "/docs/apps/vtex.affiliates"
+
+[[redirects]]
+force = true
+from = "/docs/guides/affiliates-program-app"
+status = 308
+to = "/docs/apps/vtex.affiliates"
