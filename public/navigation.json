@@ -13676,6 +13676,49 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Organization account authentication",
+              "slug": "vtex-id-api-organization-account-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Set organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Update organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit authentication setting",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                }
+              ]
             }
           ]
         },
