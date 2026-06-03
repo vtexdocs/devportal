@@ -23,36 +23,54 @@ interface Props {
   sidebarfallback: any //eslint-disable-line
   sectionSelected?: DocumentationTitle | UpdatesTitle | ''
   troubleshootingData: TroubleshootingCardsElements[]
-  availableTags: string[]
+  availableDomainFilters: string[]
+  availableSymptomFilters: string[]
 }
 
 const TroubleshootingPage: NextPage<Props> = ({
   troubleshootingData,
-  availableTags,
+  availableDomainFilters,
+  availableSymptomFilters,
 }) => {
   const [search, setSearch] = useState<string>('')
-
-  const [tagFilters, setTagFilters] = useState<string[]>([])
+  const [domainFilters, setDomainFilters] = useState<string[]>([])
+  const [symptomFilters, setSymptomFilters] = useState<string[]>([])
 
   const filteredResult = useMemo(() => {
-    const selectedLower = new Set(tagFilters.map((t) => t.toLowerCase()))
-    const hasTagFilters = selectedLower.size > 0
+    const selectedDomainFilters = new Set(
+      domainFilters.map((filter) => filter.toLowerCase())
+    )
+    const selectedSymptomFilters = new Set(
+      symptomFilters.map((filter) => filter.toLowerCase())
+    )
+    const hasDomainFilters = selectedDomainFilters.size > 0
+    const hasSymptomFilters = selectedSymptomFilters.size > 0
 
     return troubleshootingData.filter((troubleshooting) => {
       const matchesSearch = troubleshooting.title
         .toLowerCase()
         .includes(search.toLowerCase())
 
-      if (!hasTagFilters) return matchesSearch
-
-      const itemTagsLower = (troubleshooting.tags || []).map((t) =>
-        t.toLowerCase()
+      const itemDomainFiltersLower = (troubleshooting.domainFilters || []).map(
+        (filter) => filter.toLowerCase()
       )
-      const matchesTags = itemTagsLower.some((t) => selectedLower.has(t))
+      const itemSymptomFiltersLower = (
+        troubleshooting.symptomFilters || []
+      ).map((filter) => filter.toLowerCase())
+      const matchesDomainFilters =
+        !hasDomainFilters ||
+        itemDomainFiltersLower.some((filter) =>
+          selectedDomainFilters.has(filter)
+        )
+      const matchesSymptomFilters =
+        !hasSymptomFilters ||
+        itemSymptomFiltersLower.some((filter) =>
+          selectedSymptomFilters.has(filter)
+        )
 
-      return matchesSearch && matchesTags
+      return matchesSearch && matchesDomainFilters && matchesSymptomFilters
     })
-  }, [search, troubleshootingData, tagFilters])
+  }, [domainFilters, search, symptomFilters, troubleshootingData])
 
   const messages = getMessages()
   const itemsPerPage = 4
@@ -104,10 +122,16 @@ const TroubleshootingPage: NextPage<Props> = ({
         />
         <Box sx={styles.contentContainer}>
           <Filter
-            filterName="Products"
-            checkBoxFilter={availableTags}
-            onApply={(newFilters) => setTagFilters(newFilters.checklist)}
-            selectedCheckboxes={tagFilters}
+            tagFilterName="Type"
+            tagFilter={availableSymptomFilters}
+            filterName="Area"
+            checkBoxFilter={availableDomainFilters}
+            onApply={(newFilters) => {
+              setSymptomFilters(newFilters.tag)
+              setDomainFilters(newFilters.checklist)
+            }}
+            selectedCheckboxes={domainFilters}
+            selectedTags={symptomFilters}
           />
           <Input
             placeholder="Search for identified issues, diagnostics, and fixes..."
@@ -123,6 +147,8 @@ const TroubleshootingPage: NextPage<Props> = ({
                   description={item.description}
                   slug={item.slug}
                   tags={item?.tags}
+                  domainFilters={item?.domainFilters}
+                  symptomFilters={item?.symptomFilters}
                 />
               </Flex>
             ))
@@ -177,14 +203,20 @@ export const getStaticProps: GetStaticProps = async ({
   const branch = preview ? previewBranch : 'main'
   const troubleshootingData = await getTroubleshootingData(branch)
 
-  const allTags = new Set<string>()
+  const allDomainFilters = new Set<string>()
+  const allSymptomFilters = new Set<string>()
   troubleshootingData.forEach(
     (troubleshooting: ITroubleshootingFrontmatter) => {
-      const tags = troubleshooting.tags
-      tags?.forEach((tag) => allTags.add(tag))
+      troubleshooting.domainFilters?.forEach((filter) =>
+        allDomainFilters.add(filter)
+      )
+      troubleshooting.symptomFilters?.forEach((filter) =>
+        allSymptomFilters.add(filter)
+      )
     }
   )
-  const availableTags = Array.from(allTags).sort()
+  const availableDomainFilters = Array.from(allDomainFilters).sort()
+  const availableSymptomFilters = Array.from(allSymptomFilters).sort()
 
   return {
     props: {
@@ -192,7 +224,8 @@ export const getStaticProps: GetStaticProps = async ({
       sectionSelected,
       troubleshootingData,
       branch,
-      availableTags,
+      availableDomainFilters,
+      availableSymptomFilters,
     },
   }
 }

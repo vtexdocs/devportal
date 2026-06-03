@@ -11,6 +11,7 @@ interface Filter {
 
 interface Props {
   tagFilter?: string[]
+  tagFilterName?: string
   checkBoxFilter?: string[]
   selectedCheckboxes?: string[]
   selectedTags?: string[]
@@ -25,6 +26,7 @@ interface SelectedFilters {
 
 const Filter = ({
   tagFilter,
+  tagFilterName,
   checkBoxFilter,
   onApply,
   selectedCheckboxes,
@@ -102,7 +104,7 @@ const Filter = ({
     if (!tagFilter) return <></>
     return (
       <Box sx={styles.filterContainer}>
-        <Text sx={styles.filterTitle}>{tagFilter}</Text>
+        <Text sx={styles.filterTitle}>{tagFilterName}</Text>
         <Flex sx={styles.tagContainer}>
           {tagFilter.map((option, index) => (
             <Tag

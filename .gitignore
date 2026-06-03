@@ -56,3 +56,6 @@ cypress.log
 src/tests/cypress/screenshots
 src/tests/cypress/videos
 RapiDoc
+
+# Planning docs (versioned separately)
+/plans
