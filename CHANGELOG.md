@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.35.0](https://github.com/vtexdocs/devportal/compare/v1.34.4...v1.35.0) (2026-06-08)
+
+
+### Features
+
+* add Organization account authentication endpoints to VTEX ID navigation ([b1a2b37](https://github.com/vtexdocs/devportal/commit/b1a2b37034779fb5dcba322f752bcb2e58a45c22))
+* **navigation.json:** add B2B Buyer Portal Master Data architecture guide ([7c17e72](https://github.com/vtexdocs/devportal/commit/7c17e7265a3e9355d97e994eb588bf59f2a9cb50))
+* **navigation.json:** add new cms guide entry ([2a878a6](https://github.com/vtexdocs/devportal/commit/2a878a660110636ce4de4683357662c88b5dcb37))
+* **navigation.json:** add new entries for faststore ui guides ([113a697](https://github.com/vtexdocs/devportal/commit/113a697f8899cbb9f54c50e133249bb303be46a2))
+
+
+### Docs
+
+* navigation update ([b436445](https://github.com/vtexdocs/devportal/commit/b43644516ca6d7640fd61ee0159bcb46fb04edb7))
+* update navigation ([a2cac62](https://github.com/vtexdocs/devportal/commit/a2cac622fc505cfd81c06a9bf65d43e85e5ae284))
+
 ### [1.34.4](https://github.com/vtexdocs/devportal/compare/v1.34.3...v1.34.4) (2026-05-26)
 
 
