@@ -272,6 +272,28 @@
           ]
         },
         {
+          "name": "VTEX AI Developer Toolkit",
+          "slug": "vtex-ai-developer-toolkit-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "VTEX Developer MCP",
+              "slug": "vtex-developer-mcp",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX Skills",
+              "slug": "vtex-skills",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Integration Guides",
           "slug": "integration-guides-category",
           "origin": "",
@@ -2813,28 +2835,6 @@
             {
               "name": "Limitations of the PII data architecture during closed beta",
               "slug": "limitations-of-the-pii-data-architecture-during-closed-beta",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "AI-assisted development",
-          "slug": "ai-assisted-development-overview",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "VTEX Developer MCP",
-              "slug": "vtex-developer-mcp",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "VTEX Skills",
-              "slug": "vtex-skills",
               "origin": "",
               "type": "markdown",
               "children": []
