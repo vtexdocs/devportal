@@ -2358,3 +2358,9 @@ force = true
 from = "/docs/guides/implementing-product-recommendations-in-faststore"
 status = 308
 to = "/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores"
+
+[[redirects]]
+force = true
+from = "/docs/guides/ai-assisted-development-overview"
+status = 308
+to = "/docs/guides/vtex-ai-developer-toolkit-overview"
