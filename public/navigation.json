@@ -13339,6 +13339,23 @@
               ]
             },
             {
+              "name": "Audiences",
+              "slug": "vtex-ads-api-audiences",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate audience upload URL",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/audience/upload-url",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Ads events notification",
               "slug": "vtex-ads-api-events-notification",
               "type": "category",
