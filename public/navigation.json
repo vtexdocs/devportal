@@ -272,6 +272,28 @@
           ]
         },
         {
+          "name": "VTEX AI Developer Toolkit",
+          "slug": "vtex-ai-developer-toolkit-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "VTEX Developer MCP",
+              "slug": "vtex-developer-mcp",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX Skills",
+              "slug": "vtex-skills",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Integration Guides",
           "slug": "integration-guides-category",
           "origin": "",
@@ -2060,6 +2082,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "B2B Buyer Portal Master Data architecture",
+                  "slug": "b2b-buyer-portal-master-data-architecture",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2184,7 +2213,7 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }                
+                }
               ]
             },
             {
@@ -2810,32 +2839,10 @@
               "type": "markdown",
               "children": []
             }
-           ]
-         },
-         {
-           "name": "AI-assisted development",
-           "slug": "ai-assisted-development-overview",
-           "origin": "",
-           "type": "markdown",
-           "children": [
-             {
-               "name": "VTEX Developer MCP",
-               "slug": "vtex-developer-mcp",
-               "origin": "",
-               "type": "markdown",
-               "children": []
-             },
-             {
-               "name": "VTEX Skills",
-               "slug": "vtex-skills",
-               "origin": "",
-               "type": "markdown",
-               "children": []
-             }
-           ]
-         },
-         {
-           "name": "VTEX CX Platform (Weni)",
+          ]
+        },
+        {
+          "name": "VTEX CX Platform (Weni)",
           "slug": "weni-by-vtex",
           "origin": "",
           "type": "category",
@@ -13676,6 +13683,49 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Organization account authentication",
+              "slug": "vtex-id-api-organization-account-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Set organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Update organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit authentication setting",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -15024,7 +15074,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-
                 }
               ]
             },
@@ -15233,7 +15282,7 @@
                   "type": "markdown",
                   "children": []
                 },
-                { 
+                {
                   "name": "Personal Shopper",
                   "slug": "apps/vtexventures.personal-shopper-free",
                   "origin": "",
@@ -18729,7 +18778,7 @@
                   "type": "markdown",
                   "children": []
                 },
-                                {
+                {
                   "name": "Orders: Custom data now visible in the VTEX Admin",
                   "slug": "2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin",
                   "origin": "",
@@ -18904,7 +18953,7 @@
               ]
             }
           ]
-        }, 
+        },
         {
           "name": "2025",
           "slug": "2025-category",
