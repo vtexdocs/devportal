@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.36.0](https://github.com/vtexdocs/devportal/compare/v1.35.1...v1.36.0) (2026-06-09)
+
+
+### Features
+
+* **constants.tsx:** add new text size constants for larger font sizes ([a1d5815](https://github.com/vtexdocs/devportal/commit/a1d5815fe9b0de2c9e824b26aa2f2bae640579da))
+
+
+### Bug Fixes
+
+* **constants.tsx:** update text size constants ([34253c1](https://github.com/vtexdocs/devportal/commit/34253c1c6ccdf69fbbbd340f3aee871bb3c9a825))
+
 ### [1.35.1](https://github.com/vtexdocs/devportal/compare/v1.35.0...v1.35.1) (2026-06-09)
 
 
