@@ -18738,6 +18738,21 @@
           "type": "category",
           "children": [
             {
+              "name": "June",
+              "slug": "june-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Orders: Custom data in the VTEX Admin is now generally available",
+                  "slug": "2026-06-12-orders-custom-data-now-generally-available",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "May",
               "slug": "may-2026",
               "origin": "",
