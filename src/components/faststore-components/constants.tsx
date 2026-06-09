@@ -509,6 +509,7 @@ export const constants = {
     { size: 32, token: 'var(--fs-text-size-6)' },
     { size: 40, token: 'var(--fs-text-size-7)' },
     { size: 48, token: 'var(--fs-text-size-8)' },
+    { size: 56, token: 'var(--fs-text-size-9)' },
   ],
   mobileList: [
     { size: 12, token: 'var(--fs-text-size-0)' },
@@ -520,6 +521,7 @@ export const constants = {
     { size: 24, token: 'var(--fs-text-size-6)' },
     { size: 28, token: 'var(--fs-text-size-7)' },
     { size: 32, token: 'var(--fs-text-size-8)' },
+    { size: 36, token: 'var(--fs-text-size-9)' },
   ],
   outOfStock:
     product.offers.offers[0].availability === 'https://schema.org/InStock',
