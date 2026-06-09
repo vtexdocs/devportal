@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.35.1](https://github.com/vtexdocs/devportal/compare/v1.35.0...v1.35.1) (2026-06-09)
+
+
+### Bug Fixes
+
+* **propsSection.ts:** update component folder mapping to prefer frontmatter component filename ([f543a37](https://github.com/vtexdocs/devportal/commit/f543a376062f5a91e6f7aa03dd933e6d3b03fe31))
+
+
+### Chore
+
+* add new redirect for AI-assisted development guide ([1260e8f](https://github.com/vtexdocs/devportal/commit/1260e8f11de66f7c01ce3e28bb57ef0bcdabb4b7))
+
 ## [1.35.0](https://github.com/vtexdocs/devportal/compare/v1.34.4...v1.35.0) (2026-06-08)
 
 
