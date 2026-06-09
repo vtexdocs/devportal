@@ -1515,7 +1515,7 @@
               "name": "Anti-fraud",
               "slug": "payments-antifraud-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Anti-fraud Provider Protocol",
@@ -1595,7 +1595,7 @@
               "name": "Operations and Configuration",
               "slug": "payments-operations-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Custom Auto Capture Feature",
@@ -1624,7 +1624,7 @@
               "name": "Payment App and Checkout UI",
               "slug": "payments-checkout-ui-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Payment App",
@@ -1646,7 +1646,7 @@
               "name": "Payment methods and Wallets",
               "slug": "payments-methods-wallets-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Google Pay: processing information for payment providers and anti-fraud",
@@ -1739,7 +1739,7 @@
               "name": "Security",
               "slug": "payments-security-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "PCI - DSS Compliance",
@@ -1761,7 +1761,7 @@
               "name": "Testing and Homologation",
               "slug": "payments-testing-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Payment Provider Homologation",
@@ -1776,7 +1776,7 @@
               "name": "Tokenization and Card Vault",
               "slug": "payments-tokenization-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Implementing payments tokenization",
