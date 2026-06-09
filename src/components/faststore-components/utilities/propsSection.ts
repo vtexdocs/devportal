@@ -32,7 +32,10 @@ export function mapComponentFromMdxPath(
 
   const atomicDesignType = dirs[0] // atoms, molecules, organisms
   const componentNameWithoutExtension = dirs[1]?.split('.')[0] // e.g. accordion.mdx -> accordion
-  const componentFolder = toPascalCase(componentNameWithoutExtension) // e.g. Accordion
+  // Prefer the first frontmatter component filename (e.g. SKUMatrix.tsx -> SKUMatrix)
+  const componentFolder =
+    components?.[0]?.replace(/\.tsx$/i, '') ??
+    toPascalCase(componentNameWithoutExtension)
 
   // e.g. <user-path>/faststore/node_modules/@faststore/components/src/molecules/Accordion/Accordion.tsx
   return components?.map((component: string) => {
