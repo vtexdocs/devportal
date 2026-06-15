@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.37.0](https://github.com/vtexdocs/devportal/compare/v1.36.0...v1.37.0) (2026-06-15)
+
+
+### Features
+
+* add June category and customdata release note to navigation ([af910a8](https://github.com/vtexdocs/devportal/commit/af910a8338a467746145caab32992b0d92d5ecad))
+
+
+### Bug Fixes
+
+* **navigation.json:** Update slug for Affiliates Program ([b44b9a1](https://github.com/vtexdocs/devportal/commit/b44b9a1e30e654aa8d7f98fd67d44357da6a61ba))
+
+
+### Chore
+
+* add B2B Password Migration Protocol API reference and navigation entries ([ba904be](https://github.com/vtexdocs/devportal/commit/ba904bea1b654f980d1981fc4f3efa298464b0c2))
+* change date ([caffe14](https://github.com/vtexdocs/devportal/commit/caffe14f5ccba9a9cf511b6ffb754843f165af4a))
+* **nav:** add Audiences group to VTEX Ads API sidebar ([29fe45e](https://github.com/vtexdocs/devportal/commit/29fe45eb9cc68df80b2404ea5b56d7ef9882bc5a))
+* **nav:** sync VTEX Ads API navigation with OpenAPI spec ([743343d](https://github.com/vtexdocs/devportal/commit/743343dffc3828a79933472f63f331b9bcdc5004))
+* resolve merge conflict keeping organization account auth and password migration categories ([dd81a4c](https://github.com/vtexdocs/devportal/commit/dd81a4c6e230d3f77abe8d958b21bbbeaccb8123))
+
 ## [1.36.0](https://github.com/vtexdocs/devportal/compare/v1.35.1...v1.36.0) (2026-06-09)
 
 
