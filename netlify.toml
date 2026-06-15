@@ -2361,6 +2361,18 @@ to = "/docs/guides/integrating-product-recommendations-in-headless-or-faststore-
 
 [[redirects]]
 force = true
+from = "/docs/apps/vtex.affiliates-program-app"
+status = 308
+to = "/docs/apps/vtex.affiliates"
+
+[[redirects]]
+force = true
+from = "/docs/guides/affiliates-program-app"
+status = 308
+to = "/docs/apps/vtex.affiliates"
+
+[[redirects]]
+force = true
 from = "/docs/guides/ai-assisted-development-overview"
 status = 308
 to = "/docs/guides/vtex-ai-developer-toolkit-overview"
