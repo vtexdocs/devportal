@@ -3493,6 +3493,46 @@
           ]
         },
         {
+          "name": "B2B Password Migration Protocol",
+          "slug": "b2b-password-migration-protocol",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Client registration",
+              "slug": "b2b-password-migration-protocol-client-registration",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Register client",
+                  "slug": "b2b-password-migration-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/register",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Authentication flow",
+              "slug": "b2b-password-migration-protocol-authentication-flow",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Validate legacy credentials",
+                  "slug": "b2b-password-migration-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/authentication",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Budgets API",
           "slug": "budgets-api",
           "origin": "",
@@ -13861,6 +13901,40 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Password migration",
+              "slug": "vtex-id-api-password-migration",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Upsert password migration configuration",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "children": []
+                },
+                {
+                  "name": "Enable or disable password migration",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "children": []
+                },
+                {
+                  "name": "Delete password migration configuration",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
                   "children": []
                 }
               ]
