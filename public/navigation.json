@@ -18869,21 +18869,6 @@
           "type": "category",
           "children": [
             {
-              "name": "June",
-              "slug": "june-2026",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "FastStore Release Notes — Version 4.2.0",
-                  "slug": "2026-06-19-faststore-release-notes-4-2-0",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "May",
               "slug": "may-2026",
               "origin": "",
