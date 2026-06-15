@@ -15475,7 +15475,7 @@
             },
             {
               "name": "Affiliates Program",
-              "slug": "/apps/vtex.affiliates",
+              "slug": "apps/vtex.affiliates",
               "origin": "",
               "type": "markdown",
               "children": []
