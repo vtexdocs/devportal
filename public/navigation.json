@@ -272,6 +272,28 @@
           ]
         },
         {
+          "name": "VTEX AI Developer Toolkit",
+          "slug": "vtex-ai-developer-toolkit-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "VTEX Developer MCP",
+              "slug": "vtex-developer-mcp",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX Skills",
+              "slug": "vtex-skills",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Integration Guides",
           "slug": "integration-guides-category",
           "origin": "",
@@ -1493,7 +1515,7 @@
               "name": "Anti-fraud",
               "slug": "payments-antifraud-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Anti-fraud Provider Protocol",
@@ -1559,6 +1581,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Configuring an external gift card provider",
+                  "slug": "configuring-an-external-gift-card-provider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -1566,7 +1595,7 @@
               "name": "Operations and Configuration",
               "slug": "payments-operations-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Custom Auto Capture Feature",
@@ -1595,7 +1624,7 @@
               "name": "Payment App and Checkout UI",
               "slug": "payments-checkout-ui-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Payment App",
@@ -1617,7 +1646,7 @@
               "name": "Payment methods and Wallets",
               "slug": "payments-methods-wallets-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Google Pay: processing information for payment providers and anti-fraud",
@@ -1710,7 +1739,7 @@
               "name": "Security",
               "slug": "payments-security-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "PCI - DSS Compliance",
@@ -1732,7 +1761,7 @@
               "name": "Testing and Homologation",
               "slug": "payments-testing-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Payment Provider Homologation",
@@ -1747,7 +1776,7 @@
               "name": "Tokenization and Card Vault",
               "slug": "payments-tokenization-category",
               "origin": "",
-              "type": "category",
+              "type": "markdown",
               "children": [
                 {
                   "name": "Implementing payments tokenization",
@@ -1989,6 +2018,21 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Inventory",
+              "slug": "inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Batch inventory updates (Beta)",
+                  "slug": "batch-inventory-updates",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -2035,6 +2079,13 @@
                 {
                   "name": "Storefront Roles",
                   "slug": "storefront-roles",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B Buyer Portal Master Data architecture",
+                  "slug": "b2b-buyer-portal-master-data-architecture",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2086,6 +2137,85 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "VTEX Sales App Extensibility",
+              "slug": "vtex-sales-app-extensibility",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "VTEX Sales App Extensions Skill",
+                  "slug": "vtex-sales-app-extensions-skill",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Sales App extensions implementation",
+                  "slug": "sales-app-extensions-implementation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Exploring Sales App extensions",
+                      "slug": "exploring-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Installing WebOps for Sales App extensions",
+                      "slug": "installing-webops-for-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Setting up Sales App extensions",
+                      "slug": "setting-up-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Creating Sales App extensions",
+                      "slug": "creating-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Deploying Sales App extensions",
+                      "slug": "deploying-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Sales App extension hooks and types",
+                      "slug": "sales-app-extension-hooks-and-types",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "CSS styling in VTEX Sales App Extensibility",
+                  "slug": "css-styling-in-vtex-sales-app-extensibility",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Data layer and data fetching in VTEX Sales App Extensibility",
+                  "slug": "data-layer-and-data-fetching-in-vtex-sales-app-extensibility",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "How to customize VTEX Sales App",
               "slug": "how-to-customize-vtex-sales-app",
@@ -2175,15 +2305,15 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Integration VTEX Sales App Local stock sale",
-                  "slug": "integration-vtex-sales-app-local-stock-sale",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
+            },
+            {
+              "name": "Integration VTEX Sales App Local stock sale",
+              "slug": "integration-vtex-sales-app-local-stock-sale",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -2404,15 +2534,15 @@
           "type": "category",
           "children": [
             {
-              "name": "Integrating product recommendations in headless stores",
-              "slug": "integrating-product-recommendations-in-headless-stores",
+              "name": "Integrating product recommendations in headless or FastStore web stores",
+              "slug": "integrating-product-recommendations-in-headless-or-faststore-web-stores",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Implementing product recommendations in Faststore",
-              "slug": "implementing-product-recommendations-in-faststore",
+              "name": "Integrating product recommendations in mobile stores",
+              "slug": "integrating-product-recommendations-in-mobile-stores",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -2709,32 +2839,10 @@
               "type": "markdown",
               "children": []
             }
-           ]
-         },
-         {
-           "name": "AI-assisted development",
-           "slug": "ai-assisted-development-overview",
-           "origin": "",
-           "type": "markdown",
-           "children": [
-             {
-               "name": "VTEX Developer MCP",
-               "slug": "vtex-developer-mcp",
-               "origin": "",
-               "type": "markdown",
-               "children": []
-             },
-             {
-               "name": "VTEX Skills",
-               "slug": "vtex-skills",
-               "origin": "",
-               "type": "markdown",
-               "children": []
-             }
-           ]
-         },
-         {
-           "name": "VTEX CX Platform (Weni)",
+          ]
+        },
+        {
+          "name": "VTEX CX Platform (Weni)",
           "slug": "weni-by-vtex",
           "origin": "",
           "type": "category",
@@ -2825,7 +2933,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "FastStore v3",
+                  "name": "FastStore",
                   "slug": "cms-for-faststore-storefronts",
                   "origin": "",
                   "type": "markdown",
@@ -2862,6 +2970,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Understanding components and sections",
+              "slug": "understanding-components-and-sections",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
@@ -5746,6 +5861,94 @@
               ]
             },
             {
+              "name": "Assortment",
+              "slug": "catalog-api-assortment",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment",
+                  "children": []
+                },
+                {
+                  "name": "Get all product assortments",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment",
+                  "children": []
+                },
+                {
+                  "name": "Get product assortment by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-",
+                  "children": []
+                },
+                {
+                  "name": "Update product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-",
+                  "children": []
+                },
+                {
+                  "name": "Delete product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-",
+                  "children": []
+                },
+                {
+                  "name": "Add included collection to product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/included-collections/-collectionID-",
+                  "children": []
+                },
+                {
+                  "name": "Remove included collection from product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/included-collections/-collectionID-",
+                  "children": []
+                },
+                {
+                  "name": "Add excluded collection to product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/excluded-collections/-collectionID-",
+                  "children": []
+                },
+                {
+                  "name": "Remove excluded collection from product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/excluded-collections/-collectionID-",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Collection",
               "slug": "catalog-api-collection",
               "type": "category",
@@ -8332,6 +8535,49 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-/transfer",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Batch operations",
+              "slug": "logistics-api-inventory",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create batch inventory job",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch",
+                  "children": []
+                },
+                {
+                  "name": "Commit batch inventory",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/commit",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory status",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/status",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory errors",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/errors",
                   "children": []
                 }
               ]
@@ -13133,12 +13379,29 @@
               ]
             },
             {
+              "name": "Audiences",
+              "slug": "vtex-ads-api-audiences",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate audience upload URL",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/audience/upload-url",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Ads events notification",
               "slug": "vtex-ads-api-events-notification",
               "type": "category",
               "children": [
                 {
-                  "name": "Tracking ad impressions",
+                  "name": "Track ad impressions",
                   "slug": "vtex-ads-api",
                   "type": "openapi",
                   "method": "POST",
@@ -13187,6 +13450,120 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/v1/rma/-publisher_id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Reports",
+              "slug": "vtex-ads-api-reports",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get advertisers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/v2/advertisers",
+                  "children": []
+                },
+                {
+                  "name": "Get publishers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/v2/publishers",
+                  "children": []
+                },
+                {
+                  "name": "Get network publishers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/network/publishers",
+                  "children": []
+                },
+                {
+                  "name": "List campaigns",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/campaign/v2",
+                  "children": []
+                },
+                {
+                  "name": "Get campaign details",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/campaign/-campaign_id-",
+                  "children": []
+                },
+                {
+                  "name": "Get advertiser campaigns detailed report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/advertisers/campaigns-detailed",
+                  "children": []
+                },
+                {
+                  "name": "Get advertiser ads detailed report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/advertisers/ads-detailed",
+                  "children": []
+                },
+                {
+                  "name": "Get ads performance report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/ad/results/v2",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Credit transfer",
+              "slug": "vtex-ads-api-credit-transfer",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Notify credit transfer status",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/webhook/marketplace/transfers/-publisher_id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Single sign-on",
+              "slug": "vtex-ads-api-single-sign-on",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate seller single sign-on URL",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/sso/marketplace",
                   "children": []
                 }
               ]
@@ -13474,6 +13851,49 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/vtexid/refreshtoken/webstore",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Organization account authentication",
+              "slug": "vtex-id-api-organization-account-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Set organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Update organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit authentication setting",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
                   "children": []
                 }
               ]
@@ -14859,7 +15279,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-
                 }
               ]
             },
@@ -15068,7 +15487,7 @@
                   "type": "markdown",
                   "children": []
                 },
-                { 
+                {
                   "name": "Personal Shopper",
                   "slug": "apps/vtexventures.personal-shopper-free",
                   "origin": "",
@@ -15310,7 +15729,7 @@
             },
             {
               "name": "Affiliates Program",
-              "slug": "apps/vtex.affiliates-program-app",
+              "slug": "apps/vtex.affiliates",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -16175,6 +16594,13 @@
                   "children": []
                 },
                 {
+                  "name": "Handling gift items in the cart",
+                  "slug": "faststore/developer-tools-use-is-gift-from-order-form",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Updating the @fastore/cli package version",
                   "slug": "faststore/developer-tools-updating-the-cli-package-version",
                   "origin": "",
@@ -16867,6 +17293,13 @@
                       "children": []
                     },
                     {
+                      "name": "SKUMatrix",
+                      "slug": "faststore/organisms-sku-matrix",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "SlideOver",
                       "slug": "faststore/organisms-slide-over",
                       "origin": "",
@@ -16900,6 +17333,13 @@
                 {
                   "name": "Displaying content for authenticated users",
                   "slug": "faststore/storefront-features-displaying-content-for-authenticated-users",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Enabling product purchase from search with QuickOrder",
+                  "slug": "faststore/storefront-features-enabling-product-purchase-from-search-with-quick-order",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -18246,8 +18686,30 @@
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
-          "name": "API",
-          "slug": "api",
+          "name": "Analytics and data collection",
+          "slug": "analytics-and-data-collection",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Google Analytics 4 is tracking inconsistent data from my store",
+              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My Google Tag Assistant is not working with Partytown",
+              "slug": "my-google-tag-assistant-is-not-working-with-partytown",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "API and integrations",
+          "slug": "api-and-integrations",
           "origin": "",
           "type": "category",
           "children": [
@@ -18261,25 +18723,33 @@
           ]
         },
         {
-          "name": "Development",
-          "slug": "development",
+          "name": "Checkout and shopping experience",
+          "slug": "checkout-and-shopping-experience",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "I am getting 500 errors in VTEX IO CLI",
-              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
+              "name": "I can't complete a purchase on a FastStore website",
+              "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I am getting errors with my service configuration app",
-              "slug": "i-am-getting-errors-with-my-service-configuration-app",
+              "name": "UTMs are not being applied to the cart at Checkout",
+              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
               "origin": "",
               "type": "markdown",
               "children": []
-            },
+            }
+          ]
+        },
+        {
+          "name": "Content Management (CMS)",
+          "slug": "content-management-cms",
+          "origin": "",
+          "type": "category",
+          "children": [
             {
               "name": "I can't access the Headless CMS",
               "slug": "unable-to-access-headless-cms",
@@ -18288,50 +18758,37 @@
               "children": []
             },
             {
-              "name": "I can't create a new workspace",
-              "slug": "i-cant-create-a-new-workspace",
+              "name": "I can’t install the Headless CMS plugins in my account",
+              "slug": "error-installing-headless-cms-plugins-on-windows",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I can't install an app with a major other than 0.x",
-              "slug": "i-cant-install-an-app-with-a-major-other-than-0x",
+              "name": "My pages are taking too long to be published on Headless CMS",
+              "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I can't install the Headless CMS plugins in my account",
-              "slug": "i-cant-install-the-headless-cms-plugins-in-my-account",
+              "name": "My store does not reflect the overrides I created",
+              "slug": "my-store-does-not-reflect-the-overrides-i-created",
               "origin": "",
               "type": "markdown",
               "children": []
-            },
+            }
+          ]
+        },
+        {
+          "name": "Storefront",
+          "slug": "storefront",
+          "origin": "",
+          "type": "category",
+          "children": [
             {
-              "name": "I can't install VTEX IO CLI",
-              "slug": "i-cant-install-vtex-io-cli",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't integrate my external Search Provider",
+              "name": "I can’t integrate my external Search Provider",
               "slug": "i-cant-integrate-my-external-search-provider",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't publish my theme due to app dependency",
-              "slug": "i-cant-publish-my-theme-due-to-app-dependency",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I don't see my Store Theme changes",
-              "slug": "i-dont-see-my-store-theme-changes",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18351,15 +18808,15 @@
               "children": []
             },
             {
-              "name": "My multi-language store is not functioning in the development workspace",
+              "name": "My multi-language store is not working in the development workspace",
               "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My pages are taking too long to be published on Headless CMS",
-              "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
+              "name": "My routes are not behaving as expected",
+              "slug": "my-routes-are-not-behaving-as-expected",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18372,8 +18829,22 @@
               "children": []
             },
             {
-              "name": "My store does not reflect the overrides I created",
-              "slug": "my-store-does-not-reflect-the-overrides-i-created",
+              "name": "My store is presenting price inconsistencies",
+              "slug": "my-store-is-presenting-price-inconsistencies",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store is slow or unavailable",
+              "slug": "my-store-is-slow-or-unavailable",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store translation is not behaving as expected",
+              "slug": "my-store-translation-is-not-behaving-as-expected",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18391,74 +18862,67 @@
               "origin": "",
               "type": "markdown",
               "children": []
-            },
-            {
-              "name": "vtex release CLI command returns an EBADF message",
-              "slug": "vtex-release-cli-command-returns-ebadf-message",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }            
+            }
           ]
         },
         {
-          "name": "Store performance",
-          "slug": "store-performance",
+          "name": "VTEX IO and app development",
+          "slug": "vtex-io-and-app-development",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "My Google Tag Assistant is not working with Partytown",
-              "slug": "my-google-tag-assistant-is-not-working-with-partytown",
+              "name": "`vtex release` CLI command returns an EBADF message",
+              "slug": "vtex-release-cli-command-returns-ebadf-message",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I can't complete a purchase on a FastStore website",
-              "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
+              "name": "I am getting 500 errors in VTEX IO CLI",
+              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My store is slow or unavailable",
-              "slug": "my-store-is-slow-or-unavailable",
+              "name": "I am getting errors with my service configuration app",
+              "slug": "i-am-getting-errors-with-my-service-configuration-app",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Google Analytics 4 is tracking inconsistent data from my store",
-              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
+              "name": "I can't create a new workspace",
+              "slug": "i-cant-create-a-new-workspace",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "UTMs are not being applied to the cart at Checkout",
-              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
+              "name": "I can't install an app with a major other than 0.x",
+              "slug": "i-cant-install-an-app-with-a-major-other-than-0x",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My routes are not behaving as expected",
-              "slug": "my-routes-are-not-behaving-as-expected",
+              "name": "I can't install VTEX IO CLI",
+              "slug": "i-cant-install-vtex-io-cli",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My store is presenting price inconsistencies",
-              "slug": "my-store-is-presenting-price-inconsistencies",
+              "name": "I can't publish my theme due to app dependency",
+              "slug": "i-cant-publish-my-theme-due-to-app-dependency",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "My store translation is not behaving as expected",
-              "slug": "my-store-translation-is-not-behaving-as-expected",
+              "name": "I don't see my Store Theme changes",
+              "slug": "i-dont-see-my-store-theme-changes",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18479,11 +18943,40 @@
           "type": "category",
           "children": [
             {
+              "name": "June",
+              "slug": "june-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Orders: Custom data in the VTEX Admin is now generally available",
+                  "slug": "2026-06-15-orders-custom-data-now-generally-available",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "May",
               "slug": "may-2026",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore: Gift detection with useIsGiftFromOrderForm",
+                  "slug": "2026-05-25-faststore-use-is-gift-from-order-form",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New batch inventory endpoints (Beta) in the Logistics API",
+                  "slug": "2026-05-19-logistics-api-new-batch-inventory-endpoints",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Updated vtexvault.com route for Send Payments request",
                   "slug": "2026-05-15-updated-vtexvaultcom-route-for-send-payments-request",
@@ -18505,7 +18998,7 @@
                   "type": "markdown",
                   "children": []
                 },
-                                {
+                {
                   "name": "Orders: Custom data now visible in the VTEX Admin",
                   "slug": "2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin",
                   "origin": "",
@@ -18680,7 +19173,7 @@
               ]
             }
           ]
-        }, 
+        },
         {
           "name": "2025",
           "slug": "2025-category",
