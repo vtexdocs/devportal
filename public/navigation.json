@@ -13339,12 +13339,29 @@
               ]
             },
             {
+              "name": "Audiences",
+              "slug": "vtex-ads-api-audiences",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate audience upload URL",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/audience/upload-url",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Ads events notification",
               "slug": "vtex-ads-api-events-notification",
               "type": "category",
               "children": [
                 {
-                  "name": "Tracking ad impressions",
+                  "name": "Track ad impressions",
                   "slug": "vtex-ads-api",
                   "type": "openapi",
                   "method": "POST",
@@ -13393,6 +13410,120 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/v1/rma/-publisher_id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Reports",
+              "slug": "vtex-ads-api-reports",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get advertisers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/v2/advertisers",
+                  "children": []
+                },
+                {
+                  "name": "Get publishers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/v2/publishers",
+                  "children": []
+                },
+                {
+                  "name": "Get network publishers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/network/publishers",
+                  "children": []
+                },
+                {
+                  "name": "List campaigns",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/campaign/v2",
+                  "children": []
+                },
+                {
+                  "name": "Get campaign details",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/campaign/-campaign_id-",
+                  "children": []
+                },
+                {
+                  "name": "Get advertiser campaigns detailed report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/advertisers/campaigns-detailed",
+                  "children": []
+                },
+                {
+                  "name": "Get advertiser ads detailed report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/advertisers/ads-detailed",
+                  "children": []
+                },
+                {
+                  "name": "Get ads performance report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/ad/results/v2",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Credit transfer",
+              "slug": "vtex-ads-api-credit-transfer",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Notify credit transfer status",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/webhook/marketplace/transfers/-publisher_id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Single sign-on",
+              "slug": "vtex-ads-api-single-sign-on",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate seller single sign-on URL",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/sso/marketplace",
                   "children": []
                 }
               ]
@@ -15524,7 +15655,7 @@
             },
             {
               "name": "Affiliates Program",
-              "slug": "apps/vtex.affiliates-program-app",
+              "slug": "apps/vtex.affiliates",
               "origin": "",
               "type": "markdown",
               "children": []
