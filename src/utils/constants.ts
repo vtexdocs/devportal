@@ -500,5 +500,6 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - B2B Buyer Data API': 'b2b-buyer-data-api',
   'VTEX - B2B Addresses API': 'b2b-addresses',
   'VTEX - B2B Contracts API': 'b2b-contracts-api',
+  'VTEX - B2B Password Migration Protocol': 'b2b-password-migration-protocol',
   'VTEX - User Rights API': 'user-rights-api',
 }
