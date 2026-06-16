@@ -18557,13 +18557,13 @@
           ]
         },
         {
-          "name": "(Legacy) CMS Portal",
+          "name": "CMS Portal (Legacy)",
           "slug": "legacy-cms-portal-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "Migrating your storefront from Legacy CMS Portal to Store Framework",
+              "name": "Migrating your storefront from CMS Portal (Legacy) to Store Framework",
               "slug": "vtex-io-documentation-migrating-storefront-from-legacy-to-io",
               "origin": "",
               "type": "markdown",
@@ -20325,7 +20325,7 @@
                   "children": []
                 },
                 {
-                  "name": "Facebook Business Extension Available for Legacy CMS Portal",
+                  "name": "Facebook Business Extension Available for CMS Portal (Legacy)",
                   "slug": "facebook-business-extension-available-for-legacy-cms-portal",
                   "origin": "",
                   "type": "markdown",
