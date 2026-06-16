@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.38.0](https://github.com/vtexdocs/devportal/compare/v1.37.0...v1.38.0) (2026-06-16)
+
+
+### Features
+
+* **cms-creating-a-new-section.md:** add new CMS section for creating a new section ([36cd9c9](https://github.com/vtexdocs/devportal/commit/36cd9c9e0e7db84a7cab1b83e549e8d552f02ca4))
+* **navigation.json:** add faststore entry ([d52b5f9](https://github.com/vtexdocs/devportal/commit/d52b5f99f63111828e3fea321a42f1dd963522ab))
+
+
+### Refactoring
+
+* update naming for Legacy CMS Portal to CMS Portal (Legacy) in navigation and documentation ([483db38](https://github.com/vtexdocs/devportal/commit/483db38a2bc0287a768b41a400e299986629755e))
+
+
+### Docs
+
+* **nav:** add Integrating audiences entry to VTEX Ads navigation ([dcc0329](https://github.com/vtexdocs/devportal/commit/dcc03298291a196db13c4240c1671270ed80d185))
+
 ## [1.37.0](https://github.com/vtexdocs/devportal/compare/v1.36.0...v1.37.0) (2026-06-15)
 
 
