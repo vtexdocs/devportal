@@ -2084,6 +2084,13 @@
                   "children": []
                 },
                 {
+                  "name": "Custom Storefront Roles and Resources",
+                  "slug": "custom-storefront-roles-and-resources",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "B2B Buyer Portal Master Data architecture",
                   "slug": "b2b-buyer-portal-master-data-architecture",
                   "origin": "",
@@ -13132,6 +13139,92 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/license-manager/storefront/users/-userId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Custom Storefront Roles",
+              "slug": "storefront-roles-api-custom-roles-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List storefront roles",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role",
+                  "children": []
+                },
+                {
+                  "name": "Create storefront role",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role",
+                  "children": []
+                },
+                {
+                  "name": "Fetch storefront role by ID",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                  "children": []
+                },
+                {
+                  "name": "Edit storefront role resources",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete storefront role",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Custom Storefront Resources",
+              "slug": "storefront-roles-api-custom-resources-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List storefront resources",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/resource",
+                  "children": []
+                },
+                {
+                  "name": "Create custom storefront resource",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/resource",
+                  "children": []
+                },
+                {
+                  "name": "Delete custom storefront resource",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/resource/-id-",
                   "children": []
                 }
               ]
