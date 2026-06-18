@@ -10915,7 +10915,7 @@
                   "name": "Move organization unit",
                   "slug": "organization-units-api",
                   "type": "openapi",
-                  "method": "POST",
+                  "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/organization-units/v1/-organizationUnitId-/path",
                   "children": []
