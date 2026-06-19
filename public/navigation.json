@@ -1251,14 +1251,14 @@
               ]
             },
             {
-              "name": "Checkout Extensibility",
+              "name": "Buyer Checkout Extensibility",
               "slug": "buyer-portal-checkout-extensibility",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Buyer Portal Checkout Extensibility",
-                  "slug": "buyer-portal-checkout-extensibility",
+                  "name": "Checkout extension points",
+                  "slug": "checkout-extension-points",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1273,13 +1273,6 @@
                 {
                   "name": "Getting started with Checkout extensions",
                   "slug": "getting-started-with-checkout-extensions",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Checkout extension points",
-                  "slug": "checkout-extension-points",
                   "origin": "",
                   "type": "markdown",
                   "children": []
