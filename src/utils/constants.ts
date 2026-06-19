@@ -455,6 +455,7 @@ export const openapiMappings: { [key: string]: string } = {
     'marketplace-protocol-external-seller-fulfillment',
   'VTEX - Marketplace Protocol - External Seller Marketplace':
     'marketplace-protocol',
+  'VTEX - Shopee Integration API': 'vtex-shopee-integration-api',
   'VTEX - Master Data API - v2': 'master-data-api-v2',
   'VTEX - MasterData API - v10.2': 'masterdata-api',
   'VTEX - Message Center API': 'message-center-api',
@@ -499,4 +500,6 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - B2B Buyer Data API': 'b2b-buyer-data-api',
   'VTEX - B2B Addresses API': 'b2b-addresses',
   'VTEX - B2B Contracts API': 'b2b-contracts-api',
+  'VTEX - B2B Password Migration Protocol': 'b2b-password-migration-protocol',
+  'VTEX - User Rights API': 'user-rights-api',
 }

@@ -2,6 +2,223 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.38.0](https://github.com/vtexdocs/devportal/compare/v1.37.0...v1.38.0) (2026-06-16)
+
+
+### Features
+
+* **cms-creating-a-new-section.md:** add new CMS section for creating a new section ([36cd9c9](https://github.com/vtexdocs/devportal/commit/36cd9c9e0e7db84a7cab1b83e549e8d552f02ca4))
+* **navigation.json:** add faststore entry ([d52b5f9](https://github.com/vtexdocs/devportal/commit/d52b5f99f63111828e3fea321a42f1dd963522ab))
+
+
+### Refactoring
+
+* update naming for Legacy CMS Portal to CMS Portal (Legacy) in navigation and documentation ([483db38](https://github.com/vtexdocs/devportal/commit/483db38a2bc0287a768b41a400e299986629755e))
+
+
+### Docs
+
+* **nav:** add Integrating audiences entry to VTEX Ads navigation ([dcc0329](https://github.com/vtexdocs/devportal/commit/dcc03298291a196db13c4240c1671270ed80d185))
+
+## [1.37.0](https://github.com/vtexdocs/devportal/compare/v1.36.0...v1.37.0) (2026-06-15)
+
+
+### Features
+
+* add June category and customdata release note to navigation ([af910a8](https://github.com/vtexdocs/devportal/commit/af910a8338a467746145caab32992b0d92d5ecad))
+
+
+### Bug Fixes
+
+* **navigation.json:** Update slug for Affiliates Program ([b44b9a1](https://github.com/vtexdocs/devportal/commit/b44b9a1e30e654aa8d7f98fd67d44357da6a61ba))
+
+
+### Chore
+
+* add B2B Password Migration Protocol API reference and navigation entries ([ba904be](https://github.com/vtexdocs/devportal/commit/ba904bea1b654f980d1981fc4f3efa298464b0c2))
+* change date ([caffe14](https://github.com/vtexdocs/devportal/commit/caffe14f5ccba9a9cf511b6ffb754843f165af4a))
+* **nav:** add Audiences group to VTEX Ads API sidebar ([29fe45e](https://github.com/vtexdocs/devportal/commit/29fe45eb9cc68df80b2404ea5b56d7ef9882bc5a))
+* **nav:** sync VTEX Ads API navigation with OpenAPI spec ([743343d](https://github.com/vtexdocs/devportal/commit/743343dffc3828a79933472f63f331b9bcdc5004))
+* resolve merge conflict keeping organization account auth and password migration categories ([dd81a4c](https://github.com/vtexdocs/devportal/commit/dd81a4c6e230d3f77abe8d958b21bbbeaccb8123))
+
+## [1.36.0](https://github.com/vtexdocs/devportal/compare/v1.35.1...v1.36.0) (2026-06-09)
+
+
+### Features
+
+* **constants.tsx:** add new text size constants for larger font sizes ([a1d5815](https://github.com/vtexdocs/devportal/commit/a1d5815fe9b0de2c9e824b26aa2f2bae640579da))
+
+
+### Bug Fixes
+
+* **constants.tsx:** update text size constants ([34253c1](https://github.com/vtexdocs/devportal/commit/34253c1c6ccdf69fbbbd340f3aee871bb3c9a825))
+
+### [1.35.1](https://github.com/vtexdocs/devportal/compare/v1.35.0...v1.35.1) (2026-06-09)
+
+
+### Bug Fixes
+
+* **propsSection.ts:** update component folder mapping to prefer frontmatter component filename ([f543a37](https://github.com/vtexdocs/devportal/commit/f543a376062f5a91e6f7aa03dd933e6d3b03fe31))
+
+
+### Chore
+
+* add new redirect for AI-assisted development guide ([1260e8f](https://github.com/vtexdocs/devportal/commit/1260e8f11de66f7c01ce3e28bb57ef0bcdabb4b7))
+
+## [1.35.0](https://github.com/vtexdocs/devportal/compare/v1.34.4...v1.35.0) (2026-06-08)
+
+
+### Features
+
+* add Organization account authentication endpoints to VTEX ID navigation ([b1a2b37](https://github.com/vtexdocs/devportal/commit/b1a2b37034779fb5dcba322f752bcb2e58a45c22))
+* **navigation.json:** add B2B Buyer Portal Master Data architecture guide ([7c17e72](https://github.com/vtexdocs/devportal/commit/7c17e7265a3e9355d97e994eb588bf59f2a9cb50))
+* **navigation.json:** add new cms guide entry ([2a878a6](https://github.com/vtexdocs/devportal/commit/2a878a660110636ce4de4683357662c88b5dcb37))
+* **navigation.json:** add new entries for faststore ui guides ([113a697](https://github.com/vtexdocs/devportal/commit/113a697f8899cbb9f54c50e133249bb303be46a2))
+
+
+### Docs
+
+* navigation update ([b436445](https://github.com/vtexdocs/devportal/commit/b43644516ca6d7640fd61ee0159bcb46fb04edb7))
+* update navigation ([a2cac62](https://github.com/vtexdocs/devportal/commit/a2cac622fc505cfd81c06a9bf65d43e85e5ae284))
+
+### [1.34.4](https://github.com/vtexdocs/devportal/compare/v1.34.3...v1.34.4) (2026-05-26)
+
+
+### Features
+
+* **navigation.json:** fix release notes entries ([509409b](https://github.com/vtexdocs/devportal/commit/509409bb81914a03c1eceb33e76f6135db3444a5))
+* update troubleshooting filters and navigation ([36bb307](https://github.com/vtexdocs/devportal/commit/36bb3070dd7ff3a68373a261f3c801cbfa8f73a2))
+
+
+### Bug Fixes
+
+* keep RapiDoc focused viewer in sync with URL hash on Next-Link navigations ([f890155](https://github.com/vtexdocs/devportal/commit/f8901552ffefbd2c8f43b337ae53b40ce06b15e9))
+
+
+### Style
+
+* run prettier on getTroubleshootingData ([150fa52](https://github.com/vtexdocs/devportal/commit/150fa5296b54e4380f221d584a2dd7b7662deaee))
+
+
+### Chore
+
+* re-pin RapiDoc submodule to master after [#47](https://github.com/vtexdocs/devportal/issues/47) merged ([180bf85](https://github.com/vtexdocs/devportal/commit/180bf858bd598687163bbca2304e6906fadd24f8))
+* tighten hash-navigation comments ([abf1135](https://github.com/vtexdocs/devportal/commit/abf11354ca559cf1c8dc512f8d3eeb0e78ca1484))
+
+### [1.34.3](https://github.com/vtexdocs/devportal/compare/v1.34.2...v1.34.3) (2026-05-25)
+
+
+### Features
+
+* **nav:** add new batch endpoints ([fa1a21a](https://github.com/vtexdocs/devportal/commit/fa1a21ac5a306b92a5ee4dc796618b8a7d2b95a3))
+* **nav:** add new guide ([4805588](https://github.com/vtexdocs/devportal/commit/4805588dc3058f734bb05592298ba40c89329c99))
+* **nav:** add release note ([cd43efa](https://github.com/vtexdocs/devportal/commit/cd43efa5c3e2108bb6f6be07304ad7744feaf56c))
+* **navigation.json:** add faststore gift detection entry in navigation ([edcd7ee](https://github.com/vtexdocs/devportal/commit/edcd7ee25274d115c030c498a1d22efecdd36d5f))
+
+
+### Docs
+
+* **navigation.json:** add new guide entry for faststore ([ec5d7df](https://github.com/vtexdocs/devportal/commit/ec5d7dfd8070fd914aae666ba9bca5ac88568d67))
+* **navigation.json:** fix faststore category name ([c095751](https://github.com/vtexdocs/devportal/commit/c0957511bf157208f735a97c58da0034534d8851))
+* update navigation ([dbcff46](https://github.com/vtexdocs/devportal/commit/dbcff465c8eac46f91b0f3a104a332dab491da21))
+
+### [1.34.2](https://github.com/vtexdocs/devportal/compare/v1.34.1...v1.34.2) (2026-05-18)
+
+
+### Bug Fixes
+
+* **api-reference:** detect URL hash from window.location to restore endpoint deep links ([5b96d20](https://github.com/vtexdocs/devportal/commit/5b96d20359cde4ee64ad49a1ffb2f7b396e57866))
+
+
+### Chore
+
+* **api-reference:** drop ISR revalidate to stop emitting ODB handler ([a734b2c](https://github.com/vtexdocs/devportal/commit/a734b2ce3e31da86078c2ac03389612daf3c81b9)), closes [#1226](https://github.com/vtexdocs/devportal/issues/1226)
+
+
+### Tests
+
+* re-add revalidate to confirm root cause hypothesis ([f3364bb](https://github.com/vtexdocs/devportal/commit/f3364bb4619402bc55625ce2c04de85741ca4903))
+
+
+### Revert Changes
+
+* Revert "test: re-add revalidate to confirm root cause hypothesis" ([abd8f79](https://github.com/vtexdocs/devportal/commit/abd8f793c3ee9224820a7274e34955f3721bd0fd))
+
+
+### Docs
+
+* update recommendations nav and create redirects ([6a4c6ac](https://github.com/vtexdocs/devportal/commit/6a4c6ac75c08045f20ec01b030d539c50b3c8924))
+
+### [1.34.1](https://github.com/vtexdocs/devportal/compare/v1.34.0...v1.34.1) (2026-05-15)
+
+
+### Chore
+
+* add User Rights API to openapi slug mapping ([37897a3](https://github.com/vtexdocs/devportal/commit/37897a31b76e49439ee0b7dd90b7ff68687d9d67))
+
+
+### Docs
+
+* **navigation:** add intelligent search negative filters release note ([06cbe55](https://github.com/vtexdocs/devportal/commit/06cbe5569c16bc6942fabf99c7c80bc0805c60c5))
+
+## [1.34.0](https://github.com/vtexdocs/devportal/compare/v1.33.6...v1.34.0) (2026-05-13)
+
+
+### Features
+
+* add release note to navigation ([0ec2bb3](https://github.com/vtexdocs/devportal/commit/0ec2bb3f29a2df8e4182a833c078997c54e3357e))
+* add shared getSiteUrl helper and unify URL base ([1aa43fe](https://github.com/vtexdocs/devportal/commit/1aa43fe5d9285f46037a236eff4421ab8599c248))
+* **api-reference:** reorder endpoint table columns and align method badges ([cf5f2a7](https://github.com/vtexdocs/devportal/commit/cf5f2a72e0d1985ef2543ef21f91fd8f11b84300))
+* **docs:** update navigation and OpenAPI mapping for VTEX Shopee Integration API ([fd58a1d](https://github.com/vtexdocs/devportal/commit/fd58a1d7cab4112b149d548bb9971b075c9b747a))
+* improve API reference overview SEO and rendering ([78f689b](https://github.com/vtexdocs/devportal/commit/78f689b5965b1fda8e074cfeecfd7c3b6e376cea))
+* render api overview callouts ([119240b](https://github.com/vtexdocs/devportal/commit/119240ba42b06447a0bb7b28bcd24ea55843576c))
+
+
+### Bug Fixes
+
+* **api-reference:** disable RapiDoc URL writer ([b025ddf](https://github.com/vtexdocs/devportal/commit/b025ddff2470098d683b6176cd66d115481ca9bb))
+* **api-reference:** keep inline bold inside overview callouts on one line ([b914525](https://github.com/vtexdocs/devportal/commit/b914525cb4f91af4554c9eea59219864ac3c911d))
+* **api-reference:** stop overview callout paragraphs from overlapping ([42e2f81](https://github.com/vtexdocs/devportal/commit/42e2f8154016aa442a528c85730c9bb8b5dea0a3))
+* **api-reference:** tighten overview meta description and RapiDoc focus ([301a165](https://github.com/vtexdocs/devportal/commit/301a16585a9992c4dba22e44732d8cc27c0f45fc))
+* **feedback-modal:** update feedback types ([62ff88f](https://github.com/vtexdocs/devportal/commit/62ff88f6908e24f012d6a3d78da16e1146531b5c))
+* improve api reference overview navigation ([72da2ac](https://github.com/vtexdocs/devportal/commit/72da2ac0f69caa80ef939ad01304d5a0565d7f2e))
+* make Octokit GitHub App auth conditional ([0ab3804](https://github.com/vtexdocs/devportal/commit/0ab3804cf8b8947958b41d405ca31ac8cfb7d7ae))
+* **navbar:** adjust release notes inside the category ([0cc9ab3](https://github.com/vtexdocs/devportal/commit/0cc9ab319f4f2bbd5cef4354ffbda809c87661b4))
+* patch Lit SSR path normalization for Windows builds ([cea21b5](https://github.com/vtexdocs/devportal/commit/cea21b5d983e1f233a0d7e4dc461841d13a8877c))
+* restore API reference overview hash navigation ([fe760cc](https://github.com/vtexdocs/devportal/commit/fe760cc49ab3f599e39da4c885188d17746b6e5e))
+* restore api reference sidebar fallback ([7a5f63f](https://github.com/vtexdocs/devportal/commit/7a5f63f863c19359c9608a67db22fbae69941069))
+* satisfy api reference lint checks ([188bdad](https://github.com/vtexdocs/devportal/commit/188bdad98b0e195246797ba6c842a2c84564dc47))
+* satisfy prettier in api reference page ([746863d](https://github.com/vtexdocs/devportal/commit/746863dc4aeabc928fccb87fb7ab0e241a519f6b))
+
+
+### Chore
+
+* add plans directory to gitignore ([5400f0a](https://github.com/vtexdocs/devportal/commit/5400f0abe1685ee40f04a3a6184585aa5fa59a22))
+* remove plans/ directory from tracking ([29c679f](https://github.com/vtexdocs/devportal/commit/29c679fc2ba4f4aaf4e192068e9f718b61fcaa67))
+
+
+### Refactoring
+
+* **api-reference:** extract overview helpers, types, and styles into dedicated modules ([af6d72c](https://github.com/vtexdocs/devportal/commit/af6d72ca69da9f23894a1b7e236df06d49bd1dc0))
+
+
+### Revert Changes
+
+* **api-reference:** drop legacy ?endpoint= query cleanup ([772ca93](https://github.com/vtexdocs/devportal/commit/772ca93fb9184194f730c1bf4dcbba947a665217))
+* **api-reference:** restore main's getStaticProps const order ([b54df1a](https://github.com/vtexdocs/devportal/commit/b54df1a537c7ebc0ceff943383190e7622f5b579))
+* **api-reference:** restore main's hash-handling pattern ([7bf2abc](https://github.com/vtexdocs/devportal/commit/7bf2abc7a5e6e58c7a2859599acdbc2c3ea27631))
+* **octokit:** restore main's GitHub App auth config ([eb033b2](https://github.com/vtexdocs/devportal/commit/eb033b222dea2d022b992ee05a7bc6c5616f28ed))
+
+
+### Docs
+
+* add B2B addresses integration to navigation ([b859480](https://github.com/vtexdocs/devportal/commit/b859480611f92bddce2379eb408eb34b6debc7f4))
+* **navigation.json:** add entry for upgrading faststore to v4 ([3ea55a6](https://github.com/vtexdocs/devportal/commit/3ea55a640caf5adbdc185f46c8b9a780c91dc85c))
+* **navigation.json:** add may category and release note to navbar ([ca3c08b](https://github.com/vtexdocs/devportal/commit/ca3c08b813e54d1773ae32852f938003dfb8ca90))
+* **navigation.json:** fix guide name ([1e41bdc](https://github.com/vtexdocs/devportal/commit/1e41bdcb70d856a00fcd2f856019613d6b22dd0e))
+* **navigation.json:** update slug date for faststore v4 ([7ff231f](https://github.com/vtexdocs/devportal/commit/7ff231f546d7efd1f04b9a0d76bdad0111c7c7fd))
+* **navigations.json:** add faststore v4 release notes ([9ca846c](https://github.com/vtexdocs/devportal/commit/9ca846c39dae18db1e2a5a1c34ffa5d7a8093744))
+
 ### [1.33.6](https://github.com/vtexdocs/devportal/compare/v1.33.5...v1.33.6) (2026-04-28)
 
 

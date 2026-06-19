@@ -7,13 +7,31 @@ import SwaggerParser from '@apidevtools/swagger-parser'
 import ArticlePagination from 'components/article-pagination'
 import { Box } from '@vtex/brand-ui'
 import jp from 'jsonpath'
+import { marked } from 'marked'
 
 import getReferencePaths from 'utils/getReferencePaths'
 import getNavigation from 'utils/getNavigation'
 import { MethodType, isMethodType } from 'utils/typings/unionTypes'
-import '../../../../RapiDoc/src/rapidoc.js'
 import { flattenWithChildren } from 'utils/navigation-utils'
 import { getLogger } from 'utils/logging/log-util'
+import getSiteUrl from 'utils/getSiteUrl'
+import { stripHTML } from 'utils/string-utils'
+import {
+  enhanceCalloutHtml,
+  replaceCalloutBlocks,
+} from 'utils/replaceCalloutBlocks'
+import {
+  buildOverviewEndpointGroups,
+  buildOverviewMetaDescription,
+  getOverviewEndpointHash,
+  type OverviewEndpoint,
+  type OverviewEndpointGroup,
+  type OverviewEndpointWithTags,
+  type OverviewTagDefinition,
+} from 'utils/api-reference-overview'
+import apiReferenceStyles, {
+  getOverviewEndpointMethodBadgeSx,
+} from 'styles/api-reference'
 
 // Client-side logger
 const clientLogger = {
@@ -42,8 +60,11 @@ interface Pagination {
 
 interface Props {
   slug: string
-  doc: string
+  descriptionHtml: string
   endpoints: { [key: string]: Endpoint }
+  overviewEndpoints: OverviewEndpoint[]
+  overviewEndpointGroups: OverviewEndpointGroup[]
+  overviewTitle: string
   pagination: { [key: string]: Pagination }
   endpointNames: { [key: string]: string }
 }
@@ -136,9 +157,7 @@ function getAbsoluteUrl(path: string): string {
     if (process.env.NODE_ENV === 'development') {
       return `http://localhost:3000${path}`
     }
-    const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
-    return `${baseUrl}${path}`
+    return `${getSiteUrl()}${path}`
   }
   // In browser
   return path
@@ -149,8 +168,11 @@ const slugs = Object.keys(await getReferencePaths())
 
 const APIPage: NextPage<Props> = ({
   slug,
-  doc,
+  descriptionHtml,
   endpoints,
+  overviewEndpoints,
+  overviewEndpointGroups,
+  overviewTitle,
   pagination,
   endpointNames,
 }) => {
@@ -164,14 +186,47 @@ const APIPage: NextPage<Props> = ({
   // State for client-side resolved spec
   const [resolvedSpec, setResolvedSpec] = useState<string | null>(null)
   const [isLoadingSpec, setIsLoadingSpec] = useState<boolean>(false)
+  const [isRapiDocReady, setIsRapiDocReady] = useState<boolean>(false)
   const [errorLoadingSpec, setErrorLoadingSpec] = useState<string | null>(null)
 
   const pageTitle =
     capitalize(slug.replaceAll('-', ' ').replace('api', '')) + ' API'
-  const hasHashTag = router.asPath.indexOf('#') > -1
-  const cleanPath = hasHashTag
-    ? router.asPath.split('#')[1]
-    : router.asPath.split('?endpoint=')[1] || ''
+
+  // The page renders two views per slug: overview (no hash, SSG, indexable)
+  // and endpoint (hash, RapiDoc focused viewer). `clientHash` mirrors
+  // `window.location.hash` and toggles between them on the client.
+  const [clientHash, setClientHash] = useState('')
+
+  // Forwards the current hash to RapiDoc on every navigation. Next-Link
+  // clicks (sidebar) use `history.pushState`, which doesn't fire `hashchange`,
+  // so we also listen to the Next router events. We call `scrollToPath`
+  // explicitly because `goto-path` is only read once at RapiDoc init.
+  useEffect(() => {
+    const syncHash = () => {
+      const hash = decodeURIComponent(window.location.hash.slice(1))
+      // Legacy `?endpoint=method-path` fallback for old sitemap URLs.
+      const legacyEndpoint =
+        !hash && new URLSearchParams(window.location.search).get('endpoint')
+      const newHash =
+        hash || (legacyEndpoint ? decodeURIComponent(legacyEndpoint) : '')
+      setClientHash(newHash)
+      if (newHash && rapidoc.current?.scrollToPath) {
+        rapidoc.current.scrollToPath(newHash)
+      }
+    }
+
+    syncHash()
+    window.addEventListener('hashchange', syncHash)
+    router.events.on('hashChangeComplete', syncHash)
+    router.events.on('routeChangeComplete', syncHash)
+    return () => {
+      window.removeEventListener('hashchange', syncHash)
+      router.events.off('hashChangeComplete', syncHash)
+      router.events.off('routeChangeComplete', syncHash)
+    }
+  }, [router.events, slug])
+
+  const cleanPath = clientHash
 
   const getMethod = () => {
     const method = cleanPath.split('/')[0].replace('-', '').toUpperCase()
@@ -180,6 +235,14 @@ const APIPage: NextPage<Props> = ({
 
   const httpMethod: MethodType | '' = getMethod()
   const endpointPath = cleanPath ? `#${cleanPath}` : slug
+  const isOverview = endpointPath === slug
+  const headTitle = isOverview ? overviewTitle : endpointNames[endpointPath]
+  const defaultFocusedEndpointId = overviewEndpoints[0]
+    ? getOverviewEndpointHash(
+        overviewEndpoints[0].method,
+        overviewEndpoints[0].path
+      )
+    : undefined
   const pag: Pagination = {
     previousDoc: {
       name: null,
@@ -194,6 +257,30 @@ const APIPage: NextPage<Props> = ({
 
   // Generate the absolute spec URL
   const specUrl = getAbsoluteUrl(`/api/openapi/${slug}`)
+
+  useEffect(() => {
+    let isMounted = true
+
+    const loadRapiDoc = async () => {
+      try {
+        await import('../../../../RapiDoc/src/rapidoc.js')
+        if (isMounted) {
+          setIsRapiDocReady(true)
+        }
+      } catch (error) {
+        if (isMounted) {
+          setErrorLoadingSpec('Failed to load the interactive API viewer')
+        }
+        clientLogger.error(`Failed to load RapiDoc: ${error}`)
+      }
+    }
+
+    loadRapiDoc()
+
+    return () => {
+      isMounted = false
+    }
+  }, [])
 
   // Effect to handle client-side fetching and reference resolution
   useEffect(() => {
@@ -223,63 +310,36 @@ const APIPage: NextPage<Props> = ({
   }, [specUrl])
 
   useEffect(() => {
-    const scrollDoc = () => {
-      if (rapidoc.current) {
-        rapidoc.current.scrollToPath(
-          window.location.hash.slice(1) || 'overview'
-        )
-      }
-    }
-
-    router.events.on('hashChangeComplete', scrollDoc)
-    return () => {
-      router.events.off('hashChangeComplete', scrollDoc)
-    }
-  }, [])
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      router.push(window.location.href)
-    }
-
-    window.addEventListener('hashchange', handleHashChange)
-
-    return () => {
-      window.removeEventListener('hashchange', handleHashChange)
-    }
-  }, [router])
-
-  useEffect(() => {
     setEndpointPagination(
       pagination[endpointPath] ? pagination[endpointPath] : pag
     )
   }, [endpointPath])
 
-  // Display an error message if the spec couldn't be loaded
-  if (errorLoadingSpec && !doc) {
-    return (
-      <Box sx={{ mx: 'auto', p: '2em', maxWidth: '90%' }}>
-        <h2>Error Loading API Reference</h2>
-        <p>{errorLoadingSpec}</p>
-        <p>
-          Please try refreshing the page. If the problem persists, contact
-          support.
-        </p>
-      </Box>
-    )
-  }
+  // Reset scroll on overview→endpoint: the hash target lives inside RapiDoc's
+  // shadow DOM, so the browser can't auto-scroll to it. Skipped on the
+  // inverse transition to preserve back/forward scroll restoration.
+  useEffect(() => {
+    if (!isOverview && typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'auto' })
+    }
+  }, [isOverview])
 
   return (
     <>
       <Head>
-        <title>{endpointNames[endpointPath]}</title>
-        {endpointPath === slug && <meta name="robots" content="noindex" />}
+        <title>{headTitle}</title>
+        <link
+          rel="canonical"
+          href={`${getSiteUrl()}/docs/api-reference/${slug}`}
+        />
         {endpoints && (
           <>
-            <meta
-              name="description"
-              content={endpoints[endpointPath]?.description}
-            />
+            {endpoints[endpointPath]?.description && (
+              <meta
+                name="description"
+                content={endpoints[endpointPath].description}
+              />
+            )}
             <meta
               name="docsearch:doctitle"
               content={endpoints[endpointPath]?.title}
@@ -291,39 +351,151 @@ const APIPage: NextPage<Props> = ({
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
-        {isLoadingSpec && !doc && (
-          <Box sx={{ textAlign: 'center', p: '2em' }}>
-            <p>Loading API specification...</p>
+        {/* Both views stay mounted so RapiDoc keeps its spec loaded. SSG
+            renders with isOverview=true, which is what makes overviews
+            indexable; `clientHash` flips the toggle on the client. */}
+        <Box sx={{ display: isOverview ? 'block' : 'none' }}>
+          <Box as="article" sx={apiReferenceStyles.overviewArticleStyles}>
+            <Box as="header" sx={apiReferenceStyles.overviewHeaderStyles}>
+              <h1>{overviewTitle}</h1>
+            </Box>
+            {descriptionHtml && (
+              <Box
+                sx={apiReferenceStyles.overviewContentStyles}
+                dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+              />
+            )}
+            {!!overviewEndpointGroups.length && (
+              <Box as="section" sx={{ mt: '2rem' }}>
+                <h2>Endpoints</h2>
+                {overviewEndpointGroups.map(({ tagName, endpoints }) => (
+                  <Box key={tagName} sx={{ mt: '1.5rem' }}>
+                    <h3>{tagName}</h3>
+                    <Box sx={apiReferenceStyles.overviewTableWrapperStyles}>
+                      <Box
+                        as="table"
+                        sx={apiReferenceStyles.overviewTableStyles}
+                      >
+                        <thead>
+                          <tr>
+                            <th>Summary</th>
+                            <th>Method</th>
+                            <th>Path</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {endpoints.map(({ method, path, summary }) => {
+                            const endpointHash = getOverviewEndpointHash(
+                              method,
+                              path
+                            )
+
+                            return (
+                              <tr key={`${method}-${path}`}>
+                                <td>
+                                  <Box
+                                    as="a"
+                                    href={`#${endpointHash}`}
+                                    sx={apiReferenceStyles.endpointLinkStyles}
+                                  >
+                                    {summary || `Open ${method} ${path}`}
+                                  </Box>
+                                </td>
+                                <td>
+                                  <Box
+                                    as="span"
+                                    sx={getOverviewEndpointMethodBadgeSx(
+                                      method
+                                    )}
+                                  >
+                                    {method.toUpperCase()}
+                                  </Box>
+                                </td>
+                                <td>
+                                  <Box
+                                    as="code"
+                                    sx={apiReferenceStyles.endpointPathStyles}
+                                  >
+                                    {path}
+                                  </Box>
+                                </td>
+                              </tr>
+                            )
+                          })}
+                        </tbody>
+                      </Box>
+                    </Box>
+                  </Box>
+                ))}
+              </Box>
+            )}
           </Box>
-        )}
-        <rapi-doc
-          ref={rapidoc}
-          spec-url={specUrl}
-          postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
-          spec={resolvedSpec}
-          layout="column"
-          render-style="focused"
-          show-header="false"
-          show-side-nav="false"
-          default-schema-tab="schema"
-          fill-request-fields-with-example={true}
-          theme="light"
-          bg-color="#FFFFFF"
-          primary-color="#142032"
-          regular-font="VTEX Trust Regular"
-          mono-font="Consolas,monaco,monospace"
-          medium-font="VTEX Trust Medium"
-          load-fonts={false}
-          schema-style="table"
-          schema-description-expanded={true}
-          schema-expand-level="2"
-          id="the-doc"
-          allow-spec-file-download={true}
-          allow-server-selection={true}
-          allow-spec-url-load={false}
-          allow-spec-file-load={false}
-          persist-auth="true"
-        />
+        </Box>
+        <Box sx={{ display: isOverview ? 'none' : 'block' }}>
+          {errorLoadingSpec && (
+            <Box
+              role="alert"
+              sx={{
+                bg: '#FFF4E5',
+                border: '1px solid #FFD7A3',
+                borderRadius: '4px',
+                color: '#7A4B00',
+                mb: '1.5rem',
+                p: '1rem',
+              }}
+            >
+              <strong>Interactive API reference unavailable.</strong>
+              <p>{errorLoadingSpec}</p>
+            </Box>
+          )}
+          {(isLoadingSpec || !isRapiDocReady) && (
+            <Box sx={{ textAlign: 'center', p: '2em' }}>
+              <p>Loading API specification...</p>
+            </Box>
+          )}
+          {isRapiDocReady && (
+            <rapi-doc
+              ref={rapidoc}
+              spec-url={specUrl}
+              postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
+              spec={resolvedSpec}
+              layout="column"
+              render-style="focused"
+              // Pin RapiDoc's routePrefix to `#`. Without this it auto-picks
+              // `?endpoint=` on bare-slug loads, which makes
+              // `getElementIDFromURL()` return the full URL and the focused
+              // template fall back to the first endpoint.
+              route-prefix="#"
+              // Required to avoid a focused-mode crash when show-info is
+              // false. Only consulted when there's no hash in the URL.
+              goto-path={cleanPath || defaultFocusedEndpointId}
+              show-header="false"
+              show-info="false"
+              show-side-nav="false"
+              // Prevents RapiDoc from appending `?endpoint=…` to the URL on
+              // init and on every scroll-spy event.
+              update-route="false"
+              default-schema-tab="schema"
+              fill-request-fields-with-example={true}
+              theme="light"
+              bg-color="#FFFFFF"
+              primary-color="#142032"
+              regular-font="VTEX Trust Regular"
+              mono-font="Consolas,monaco,monospace"
+              medium-font="VTEX Trust Medium"
+              load-fonts={false}
+              schema-style="table"
+              schema-description-expanded={true}
+              schema-expand-level="2"
+              id="the-doc"
+              allow-spec-file-download={true}
+              allow-server-selection={true}
+              allow-spec-url-load={false}
+              allow-spec-file-load={false}
+              persist-auth="true"
+            />
+          )}
+        </Box>
         <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
           <ArticlePagination
             hidePaginationNext={false}
@@ -354,9 +526,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   if (slugs.includes(slug as string)) {
     // Use the production URL for fetching specs during build time
-    const baseUrl =
-      process.env.NEXT_PUBLIC_SITE_URL || 'https://developers.vtex.com'
-    const url = `${baseUrl}/api/openapi/${slug}`
+    const url = `${getSiteUrl()}/api/openapi/${slug}`
 
     let apiSpec: string
     try {
@@ -412,14 +582,43 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     // Use Oas to process the spec string
     const endpointFile = new Oas(apiSpec)
-    const { info, paths } = endpointFile.getDefinition()
+    const specDefinition = endpointFile.getDefinition()
+    const { info, paths } = specDefinition
+    const overviewTitle = info?.title || (slug as string)
+    const normalizedDescription = replaceCalloutBlocks(info?.description || '')
+    const descriptionHtml = enhanceCalloutHtml(
+      await marked.parse(normalizedDescription)
+    )
+    const overviewEndpoints: OverviewEndpoint[] = []
+    const overviewEndpointsWithTags: OverviewEndpointWithTags[] = []
+    const overviewTagDefinitions = Array.isArray(specDefinition.tags)
+      ? specDefinition.tags.reduce(
+          (
+            tagDefinitions: OverviewTagDefinition[],
+            tagDefinition: { name?: unknown }
+          ) => {
+            if (
+              tagDefinition &&
+              typeof tagDefinition.name === 'string' &&
+              tagDefinition.name.trim()
+            ) {
+              tagDefinitions.push({
+                name: tagDefinition.name.trim(),
+              })
+            }
+
+            return tagDefinitions
+          },
+          [] as OverviewTagDefinition[]
+        )
+      : []
     const endpoints: {
       [key: string]: Endpoint
     } = {}
 
     endpoints[slug as string] = {
-      title: info?.title || (slug as string),
-      description: getDescription(info?.description || ''),
+      title: overviewTitle,
+      description: '',
     }
 
     if (paths) {
@@ -428,14 +627,35 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
           Object.entries(value).forEach(
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             ([endpointKey, endpointValue]: any) => {
-              if (
-                isMethodType(endpointKey.toUpperCase()) &&
-                endpointValue &&
-                endpointValue.description
-              ) {
-                endpoints[`#${endpointKey}-${key.replaceAll(/{|}/g, '-')}`] = {
+              if (isMethodType(endpointKey.toUpperCase()) && endpointValue) {
+                const operationTags = Array.isArray(endpointValue.tags)
+                  ? endpointValue.tags.reduce(
+                      (tags: string[], tag: unknown) => {
+                        if (typeof tag === 'string' && tag.trim()) {
+                          tags.push(tag.trim())
+                        }
+
+                        return tags
+                      },
+                      [] as string[]
+                    )
+                  : []
+                const overviewEndpoint = {
+                  method: endpointKey.toUpperCase(),
+                  path: key,
+                  summary: endpointValue.summary || '',
+                }
+
+                overviewEndpoints.push(overviewEndpoint)
+                overviewEndpointsWithTags.push({
+                  ...overviewEndpoint,
+                  tags: operationTags,
+                })
+                endpoints[`#${getOverviewEndpointHash(endpointKey, key)}`] = {
                   title: endpointValue.summary || '',
-                  description: getDescription(endpointValue.description),
+                  description: getDescription(
+                    endpointValue.description || endpointValue.summary || ''
+                  ),
                 }
               }
             }
@@ -443,6 +663,17 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
         }
       })
     }
+
+    const overviewEndpointGroups = buildOverviewEndpointGroups(
+      overviewTagDefinitions,
+      overviewEndpointsWithTags
+    )
+
+    endpoints[slug as string].description = buildOverviewMetaDescription(
+      overviewTitle,
+      stripHTML(descriptionHtml),
+      overviewEndpoints
+    )
     const docsListEndpoint = jp.query(
       sidebarfallback,
       `$..[?(@.type=='openapi')]`
@@ -454,9 +685,10 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
     docsList.map((doc) => {
       const path = doc.method
-        ? `/docs/api-reference/${doc.slug}#${doc.method.toLowerCase()}-${
-            doc.endpoint
-          }`
+        ? `/docs/api-reference/${doc.slug}#${getOverviewEndpointHash(
+            doc.method,
+            doc.endpoint ?? ''
+          )}`
         : `/docs/api-reference/${doc.slug}`
       doc['route'] = path
     })
@@ -480,6 +712,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
       endpointNames[`${endpoint}`] = currentEndpointObject?.name
         ? currentEndpointObject.name
+        : endpoint === slug
+        ? overviewTitle
         : ''
       pagination[`${endpoint}`] = {
         previousDoc: {
@@ -517,12 +751,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return {
       props: {
         slug,
-        doc: apiSpec,
-        sectionSelected,
-        sidebarfallback,
+        descriptionHtml,
         endpoints,
+        overviewEndpoints,
+        overviewEndpointGroups,
+        overviewTitle,
         pagination,
         endpointNames,
+        sectionSelected,
+        sidebarfallback,
       },
     }
   } else {
