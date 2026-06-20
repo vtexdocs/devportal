@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.38.1](https://github.com/vtexdocs/devportal/compare/v1.38.0...v1.38.1) (2026-06-20)
+
+
+### Bug Fixes
+
+* change http method in move org unit endpoint navigation ([69e2d65](https://github.com/vtexdocs/devportal/commit/69e2d65f226549d787e12840daf5d238efaa12b3))
+* **navigation.json:** rename slug for cms section on creating new section ([f7b3974](https://github.com/vtexdocs/devportal/commit/f7b39747f2735da38b21e2d0c716eb51a5960ac9))
+
+
+### Chore
+
+* add custom-storefront-roles-and-resources nav and missing Storefront Roles API endpoints ([62d0845](https://github.com/vtexdocs/devportal/commit/62d0845e1711c07d785138b0ed4fb7949bc4bc4c))
+
+
+### Docs
+
+* add VTEX Ads guide entries to Developers Portal navigation ([9d15c60](https://github.com/vtexdocs/devportal/commit/9d15c60f1b04ed28ddb0e7cd527c461a224fb263))
+
 ## [1.38.0](https://github.com/vtexdocs/devportal/compare/v1.37.0...v1.38.0) (2026-06-16)
 
 
