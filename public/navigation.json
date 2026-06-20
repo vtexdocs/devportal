@@ -2653,6 +2653,13 @@
                       "origin": "",
                       "type": "markdown",
                       "children": []
+                    },
+                    {
+                      "name": "Placement naming conventions",
+                      "slug": "placement-naming-conventions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
                     }
                   ]
                 },
@@ -2703,8 +2710,22 @@
                       "origin": "",
                       "type": "markdown",
                       "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Script Agent",
+                      "slug": "vtex-ads-script-agent",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
                     }
                   ]
+                },
+                {
+                  "name": "VTEX Ads best practices",
+                  "slug": "vtex-ads-best-practices",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2753,6 +2774,57 @@
                 {
                   "name": "VTEX Ads React Package Quickstart",
                   "slug": "vtex-ads-react-package-quickstart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Exporting data from VTEX Ads",
+              "slug": "exporting-data-from-vtex-ads",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Exporting ads events",
+                  "slug": "exporting-ads-events",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Exporting ads reports",
+                  "slug": "exporting-ads-reports",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Exporting aggregated data from VTEX Ads",
+                  "slug": "exporting-aggregated-data-from-vtex-ads",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Integrating VTEX Ads with external marketplaces",
+              "slug": "integrating-vtex-ads-with-external-marketplaces",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Transferring credit",
+                  "slug": "transferring-credit",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Ads Single Sign On (SSO)",
+                  "slug": "vtex-ads-single-sign-on-sso",
                   "origin": "",
                   "type": "markdown",
                   "children": []
