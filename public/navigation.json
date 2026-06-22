@@ -2176,7 +2176,7 @@
                   "children": []
                 },
                 {
-                  "name": "B2B Password Migration",
+                  "name": "B2B password migration",
                   "slug": "b2b-password-migration",
                   "origin": "",
                   "type": "markdown",
