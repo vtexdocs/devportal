@@ -1273,6 +1273,119 @@
               ]
             },
             {
+              "name": "Buyer Portal Checkout Extensibility",
+              "slug": "buyer-portal-checkout-extensibility",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Checkout extension points",
+                  "slug": "checkout-extension-points",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up Buyer Portal Checkout",
+                  "slug": "setting-up-buyer-portal-checkout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Getting started with Checkout extensions",
+                  "slug": "getting-started-with-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Deploying Checkout extensions",
+                  "slug": "deploying-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using CSS in Checkout extensions",
+                  "slug": "using-css-in-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "CSS variables in Checkout extensions",
+                  "slug": "css-variables-in-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Data layer and data fetching in Checkout extensions",
+                  "slug": "data-layer-and-data-fetching-in-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Checkout CLI",
+                  "slug": "checkout-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "CartItem type",
+                  "slug": "cartitem-type",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useCart hook",
+                  "slug": "usecart-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useCartItem hook",
+                  "slug": "usecartitem-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useCartPunchout hook",
+                  "slug": "usecartpunchout-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useRedirect hook",
+                  "slug": "useredirect-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useSettings hook",
+                  "slug": "usesettings-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useExtension hook",
+                  "slug": "useextension-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Checkout error codes",
               "slug": "checkout-error-codes",
               "origin": "",
