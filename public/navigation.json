@@ -2169,6 +2169,20 @@
                   "children": []
                 },
                 {
+                  "name": "B2B user provisioning",
+                  "slug": "b2b-user-provisioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B Password Migration",
+                  "slug": "b2b-password-migration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Buying Policies",
                   "slug": "buying-policies",
                   "origin": "",
