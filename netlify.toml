@@ -2376,3 +2376,9 @@ force = true
 from = "/docs/guides/ai-assisted-development-overview"
 status = 308
 to = "/docs/guides/vtex-ai-developer-toolkit-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/rewriter"
+status = 308
+to = "/docs/apps/vtex.rewriter"
