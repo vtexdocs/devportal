@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.38.2](https://github.com/vtexdocs/devportal/compare/v1.38.1...v1.38.2) (2026-06-22)
+
+
+### Chore
+
+* **navigation.json:** add new section for Checkout Extensibility with multiple guides ([336902c](https://github.com/vtexdocs/devportal/commit/336902c847b0877032acb4ebf0653c8cdc6925e3))
+* **navigation.json:** rename section to Buyer Checkout Extensibility and update child guide names ([2edd0ab](https://github.com/vtexdocs/devportal/commit/2edd0ab65be8b9b77063927493af54f9815452c6))
+* **navigation.json:** update section name from Buyer Checkout Extensibility to Buyer Portal Checkout Extensibility ([1970e9a](https://github.com/vtexdocs/devportal/commit/1970e9ad57b81a3193d17e9870265f6f9a0caee5))
+
 ### [1.38.1](https://github.com/vtexdocs/devportal/compare/v1.38.0...v1.38.1) (2026-06-20)
 
 
