@@ -16786,7 +16786,7 @@
               ]
             },
             {
-              "name": "Headless CMS",
+              "name": "Headless CMS (legacy)",
               "slug": "faststore/headless-cms-overview",
               "origin": "",
               "type": "markdown",
