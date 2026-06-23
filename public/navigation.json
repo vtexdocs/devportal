@@ -19255,6 +19255,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 4.3.0",
+                  "slug": "2026-06-23-faststore-release-notes-4-3-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Orders: Custom data in the VTEX Admin is now generally available",
                   "slug": "2026-06-15-orders-custom-data-now-generally-available",
                   "origin": "",
