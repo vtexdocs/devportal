@@ -94,6 +94,13 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/intelligent-search-api',
   },
   {
+    title: 'Intelligent Search API v1',
+    description:
+      'New version of the Intelligent Search API with HTTP caching, lower latency, and explicit context parameters for headless integrations.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/intelligent-search-api-v1',
+  },
+  {
     title: 'License Manager API',
     description:
       'Manage users, roles, hosts, AppKeys and AppTokens from a VTEX store.',
