@@ -1,0 +1,5499 @@
+{
+  "meta": {
+    "generatedAt": "2026-06-24",
+    "repo": "devportal",
+    "filesScanned": 271,
+    "totalComponents": 334,
+    "countsByOrigin": {
+      "external": 179,
+      "local": 146,
+      "third-party": 9
+    },
+    "countsByRepository": {
+      "github.com/vtexdocs/faststore": 109,
+      "github.com/vtexdocs/brand-ui": 21,
+      "github.com/vtexdocs/components (v6.0.33)": 49,
+      "github.com/vtexdocs/devportal (este repo)": 146,
+      "npm: next": 4,
+      "npm: react-animate-height": 1,
+      "npm: react-markdown": 1,
+      "npm: react-paginate": 1,
+      "npm: react-toastify": 1,
+      "npm: reakit": 1
+    },
+    "localUnusedCount": 48,
+    "caveat": "Uso medido apenas dentro de devportal/src (imports + JSX). O conteúdo MDX real vive no repo externo vtexdocs/dev-portal-content e NÃO foi verificado — componentes marcados como não usados podem ser consumidos por esse conteúdo.",
+    "packageRepositoryMap": {
+      "@vtex/brand-ui": "github.com/vtexdocs/brand-ui",
+      "@vtexdocs/components": "github.com/vtexdocs/components (v6.0.33)",
+      "@faststore/ui": "github.com/vtexdocs/faststore",
+      "@faststore/sdk": "github.com/vtexdocs/faststore",
+      "@faststore/api": "github.com/vtexdocs/faststore",
+      "@faststore/components": "github.com/vtexdocs/faststore"
+    }
+  },
+  "components": [
+    {
+      "name": "IStoreSelectedFacet",
+      "kind": "type",
+      "origin": "external",
+      "package": "@faststore/api",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/api",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/useFilter.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ImageElementData",
+      "kind": "type",
+      "origin": "external",
+      "package": "@faststore/components",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/ImageGallery/ImageGalleryUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ToastProps",
+      "kind": "type",
+      "origin": "external",
+      "package": "@faststore/components",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Toast/ToastUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchProvider",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/sdk",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/sdk",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/markdown-renderer/fastStoreComponents.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "useSearch",
+      "kind": "hook",
+      "origin": "external",
+      "package": "@faststore/sdk",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/sdk",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx",
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx",
+        "src/components/faststore-components/Filter/useFilter.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Accordion",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Accordion/UsageAccordion.tsx",
+        "src/components/faststore-components/Accordion/UsageAccordionMultiple.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AccordionButton",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Accordion/UsageAccordion.tsx",
+        "src/components/faststore-components/Accordion/UsageAccordionMultiple.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AccordionItem",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Accordion/UsageAccordion.tsx",
+        "src/components/faststore-components/Accordion/UsageAccordionMultiple.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AccordionPanel",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Accordion/UsageAccordion.tsx",
+        "src/components/faststore-components/Accordion/UsageAccordionMultiple.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Button",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 14,
+      "usedInFiles": [
+        "src/components/faststore-components/Button/ButtonLoading.tsx",
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+        "src/components/faststore-components/Filter/FilterUsage.tsx",
+        "src/components/faststore-components/Modal/ModalBase.tsx",
+        "src/components/faststore-components/Navigation/NavbarLinksUsage.tsx",
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx",
+        "src/components/faststore-components/Newsletter/NewsletterUsage.tsx",
+        "src/components/faststore-components/Popover/PopoverUsage.tsx",
+        "src/components/faststore-components/RegionModal/RegionModalUsage.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverFullLeft.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverFullRight.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverPartialLeft.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverPartialRight.tsx",
+        "src/components/faststore-components/Toast/ToastUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Carousel",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Carousel/CarouselSimpleUsage.tsx",
+        "src/components/faststore-components/Carousel/CarouselUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfCarouselUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CartItem",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/CartItem/CartItemExample.tsx",
+        "src/components/faststore-components/CartItem/CartItemExampleUnavailable.tsx",
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CartItemImage",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/CartItem/CartItemExample.tsx",
+        "src/components/faststore-components/CartItem/CartItemExampleUnavailable.tsx",
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CartItemSummary",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/CartItem/CartItemExample.tsx",
+        "src/components/faststore-components/CartItem/CartItemExampleUnavailable.tsx",
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CartSidebar",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CartSidebarFooter",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CartSidebarList",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Filter",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FilterFacetBoolean",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FilterFacetBooleanItem",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FilterFacetRange",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FilterFacets",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Gift",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 5,
+      "usedInFiles": [
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+        "src/components/faststore-components/Gift/GiftTemplate.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateIcon.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutBadge.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutIcon.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "GiftContent",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 5,
+      "usedInFiles": [
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+        "src/components/faststore-components/Gift/GiftTemplate.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateIcon.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutBadge.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutIcon.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "GiftImage",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 5,
+      "usedInFiles": [
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+        "src/components/faststore-components/Gift/GiftTemplate.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateIcon.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutBadge.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutIcon.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Icon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 10,
+      "usedInFiles": [
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+        "src/components/faststore-components/Gift/GiftTemplate.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateIcon.tsx",
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx",
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx",
+        "src/components/faststore-components/Newsletter/NewsletterUsage.tsx",
+        "src/components/faststore-components/Rating/RatingActionable.tsx",
+        "src/components/faststore-components/RegionBar/RegionBarEditUsage.tsx",
+        "src/components/faststore-components/RegionBar/RegionBarUsage.tsx",
+        "src/components/faststore-components/constants.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "IconButton",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx",
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ImageGallery",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/ImageGallery/ImageGalleryUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ImageGalleryViewer",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/ImageGallery/ImageGalleryUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "InputField",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Newsletter/NewsletterUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Label",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Link",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarLinksUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "LinkButton",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "List",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Accordion/UsageAccordion.tsx",
+        "src/components/faststore-components/Accordion/UsageAccordionMultiple.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Modal",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Modal/ModalBase.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ModalBody",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Modal/ModalBase.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ModalFooter",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Modal/ModalBase.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ModalHeader",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Modal/ModalBase.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Navbar",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NavbarButtons",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NavbarHeader",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NavbarLinks",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarLinksUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NavbarLinksList",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarLinksUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NavbarLinksListItem",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarLinksUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NavbarRow",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Newsletter",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Newsletter/NewsletterUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NewsletterAddendum",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Newsletter/NewsletterUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NewsletterContent",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Newsletter/NewsletterUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NewsletterForm",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Newsletter/NewsletterUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NewsletterHeader",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Newsletter/NewsletterUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "OrderSummary",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Popover",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Popover/PopoverUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Price",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Table/UsageTableBordered.tsx",
+        "src/components/faststore-components/Table/UsageTableColored.tsx",
+        "src/components/faststore-components/Table/UsageTableExample.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "PriceRange",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/PriceRange/PriceRangeUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ProductCard",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 5,
+      "usedInFiles": [
+        "src/components/faststore-components/Carousel/CarouselUsage.tsx",
+        "src/components/faststore-components/ProductGrid/ProductGridUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfCarouselUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfUsage.tsx",
+        "src/components/faststore-components/Tiles/TilesTemplate.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ProductCardContent",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 5,
+      "usedInFiles": [
+        "src/components/faststore-components/Carousel/CarouselUsage.tsx",
+        "src/components/faststore-components/ProductGrid/ProductGridUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfCarouselUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfUsage.tsx",
+        "src/components/faststore-components/Tiles/TilesTemplate.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ProductCardImage",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 5,
+      "usedInFiles": [
+        "src/components/faststore-components/Carousel/CarouselUsage.tsx",
+        "src/components/faststore-components/ProductGrid/ProductGridUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfCarouselUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfUsage.tsx",
+        "src/components/faststore-components/Tiles/TilesTemplate.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ProductGrid",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/ProductGrid/ProductGridUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ProductGridItem",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/ProductGrid/ProductGridUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ProductShelf",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/ProductShelf/ProductShelfCarouselUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ProductShelfItem",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/ProductShelf/ProductShelfUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ProductShelfItems",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/ProductShelf/ProductShelfUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Rating",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Rating/RatingActionable.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "RatingProps",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Rating/RatingActionable.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "RegionBar",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/RegionBar/RegionBarEditUsage.tsx",
+        "src/components/faststore-components/RegionBar/RegionBarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "RegionModal",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/RegionBar/RegionBarEditUsage.tsx",
+        "src/components/faststore-components/RegionBar/RegionBarUsage.tsx",
+        "src/components/faststore-components/RegionModal/RegionModalUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchAutoComplete",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchAutoCompleteTerm",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchDropdown",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchHistory",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchHistoryTerm",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchInput",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchInputUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchInputField",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchInputUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchProductItem",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchProductItemContent",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchProductItemImage",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchProducts",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchProvider",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx",
+        "src/components/faststore-components/Search/SearchInputUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchTop",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchTopTerm",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ShippingSimulation",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/ShippingSimulation/ShippingSimulationUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SKUMatrix",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/SKUMatrix/SKUMatrixUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SKUMatrixSidebar",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/SKUMatrix/SKUMatrixUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SKUMatrixTrigger",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/SKUMatrix/SKUMatrixUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SkuSelector",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/SkuSelector/SkuSelectorColor.tsx",
+        "src/components/faststore-components/SkuSelector/SkuSelectorImage.tsx",
+        "src/components/faststore-components/SkuSelector/SkuSelectorLabel.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SlideOver",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/SlideOver/SlideOverUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SlideOverHeader",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/SlideOver/SlideOverUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SlideOverProps",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/SlideOver/SlideOverUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Table",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Table/UsageTableBordered.tsx",
+        "src/components/faststore-components/Table/UsageTableColored.tsx",
+        "src/components/faststore-components/Table/UsageTableExample.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TableBody",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Table/UsageTableBordered.tsx",
+        "src/components/faststore-components/Table/UsageTableColored.tsx",
+        "src/components/faststore-components/Table/UsageTableExample.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TableCell",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Table/UsageTableBordered.tsx",
+        "src/components/faststore-components/Table/UsageTableColored.tsx",
+        "src/components/faststore-components/Table/UsageTableExample.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TableHead",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Table/UsageTableBordered.tsx",
+        "src/components/faststore-components/Table/UsageTableColored.tsx",
+        "src/components/faststore-components/Table/UsageTableExample.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TableRow",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Table/UsageTableBordered.tsx",
+        "src/components/faststore-components/Table/UsageTableColored.tsx",
+        "src/components/faststore-components/Table/UsageTableExample.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Toast",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Toast/ToastUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UIFilter",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UIFilterFacetBoolean",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UIFilterFacetBooleanItem",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UIFilterFacetRange",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UIFilterFacets",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UIFilterSlider",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UINavbarSlider",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UINavbarSliderContent",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UINavbarSliderFooter",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UINavbarSliderHeader",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UIProvider",
+      "kind": "component",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Modal/ModalTemplate.tsx",
+        "src/components/faststore-components/SKUMatrix/SKUMatrixUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "useFadeEffect",
+      "kind": "hook",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "useScrollDirection",
+      "kind": "hook",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "useSKUMatrix",
+      "kind": "hook",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/SKUMatrix/SKUMatrixUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "useUI",
+      "kind": "hook",
+      "origin": "external",
+      "package": "@faststore/ui",
+      "repository": "github.com/vtexdocs/faststore",
+      "declarationFile": null,
+      "importSource": "@faststore/ui",
+      "used": true,
+      "usageCount": 15,
+      "usedInFiles": [
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+        "src/components/faststore-components/Filter/FilterUsage.tsx",
+        "src/components/faststore-components/Modal/ModalBase.tsx",
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx",
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx",
+        "src/components/faststore-components/Popover/PopoverUsage.tsx",
+        "src/components/faststore-components/RegionBar/RegionBarEditUsage.tsx",
+        "src/components/faststore-components/RegionBar/RegionBarUsage.tsx",
+        "src/components/faststore-components/RegionModal/RegionModalUsage.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverFullLeft.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverFullRight.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverPartialLeft.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverPartialRight.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverUsage.tsx",
+        "src/components/faststore-components/Toast/ToastUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Box",
+      "kind": "primitive",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 54,
+      "usedInFiles": [
+        "src/components/JsonEditorComponent/index.tsx",
+        "src/components/JsonEditorIndex/index.tsx",
+        "src/components/announcement-bar/index.tsx",
+        "src/components/article-pagination/index.tsx",
+        "src/components/article-render/index.tsx",
+        "src/components/ask-ai/index.tsx",
+        "src/components/auth/index.tsx",
+        "src/components/chip-filter/index.tsx",
+        "src/components/code-sample-card/index.tsx",
+        "src/components/code-sample-section/index.tsx",
+        "src/components/contributors/index.tsx",
+        "src/components/copy-button/index.tsx",
+        "src/components/documentation-card/index.tsx",
+        "src/components/documentation-section/index.tsx",
+        "src/components/dropdown-menu/index.tsx",
+        "src/components/education-section/index.tsx",
+        "src/components/faststore-components/markdown-renderer/fastStoreComponents.tsx",
+        "src/components/feedback-modal/index.tsx",
+        "src/components/filter/index.tsx",
+        "src/components/footer/index.tsx",
+        "src/components/header/index.tsx",
+        "src/components/last-updates-card/index.tsx",
+        "src/components/last-updates-section/index.tsx",
+        "src/components/layout.tsx",
+        "src/components/modal/index.tsx",
+        "src/components/multiselect/index.tsx",
+        "src/components/newsletter-section/index.tsx",
+        "src/components/on-this-page/index.tsx",
+        "src/components/overview-section/index.tsx",
+        "src/components/page-header/index.tsx",
+        "src/components/pagination/index.tsx",
+        "src/components/release-note/index.tsx",
+        "src/components/release-section/index.tsx",
+        "src/components/see-also-section/index.tsx",
+        "src/components/subscription-list/index.tsx",
+        "src/components/tooltip/index.tsx",
+        "src/components/troubleshooting-card/index.tsx",
+        "src/components/whats-next-card/index.tsx",
+        "src/pages/404.tsx",
+        "src/pages/500.tsx",
+        "src/pages/docs/api-reference/[slug].tsx",
+        "src/pages/docs/api-reference/index.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/docs/troubleshooting/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx",
+        "src/pages/editor/api-index.tsx",
+        "src/pages/editor/markdown-preview.tsx",
+        "src/pages/editor/openapi-preview.tsx",
+        "src/pages/editor/sidebar.tsx",
+        "src/pages/updates/release-notes/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Button",
+      "kind": "primitive",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 13,
+      "usedInFiles": [
+        "src/components/JsonEditorComponent/index.tsx",
+        "src/components/JsonEditorIndex/index.tsx",
+        "src/components/announcement-bar/index.tsx",
+        "src/components/auth/index.tsx",
+        "src/components/chip-filter/index.tsx",
+        "src/components/copy-button/index.tsx",
+        "src/components/filter/index.tsx",
+        "src/components/modal/index.tsx",
+        "src/components/multiselect/index.tsx",
+        "src/components/release-note/index.tsx",
+        "src/components/release-section/index.tsx",
+        "src/pages/404.tsx",
+        "src/pages/500.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Checkbox",
+      "kind": "primitive",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/filter/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Flex",
+      "kind": "primitive",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 44,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/components/auth/index.tsx",
+        "src/components/breadcrumb/index.tsx",
+        "src/components/chip-filter/index.tsx",
+        "src/components/code-sample-card/index.tsx",
+        "src/components/code-sample-section/index.tsx",
+        "src/components/contributors/index.tsx",
+        "src/components/documentation-card/index.tsx",
+        "src/components/documentation-section-card/index.tsx",
+        "src/components/documentation-section/index.tsx",
+        "src/components/education-channel/index.tsx",
+        "src/components/education-section/index.tsx",
+        "src/components/faststore-components/markdown-renderer/fastStoreComponents.tsx",
+        "src/components/feedback-modal/index.tsx",
+        "src/components/filter/index.tsx",
+        "src/components/header/index.tsx",
+        "src/components/last-updates-card/index.tsx",
+        "src/components/layout.tsx",
+        "src/components/method-category/index.tsx",
+        "src/components/multiselect/index.tsx",
+        "src/components/newsletter-section/index.tsx",
+        "src/components/on-this-page/index.tsx",
+        "src/components/overview-section/index.tsx",
+        "src/components/page-header/index.tsx",
+        "src/components/release-note/index.tsx",
+        "src/components/subscription-list/index.tsx",
+        "src/components/tooltip/index.tsx",
+        "src/components/whats-next-card/index.tsx",
+        "src/pages/404.tsx",
+        "src/pages/500.tsx",
+        "src/pages/docs/api-reference/index.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/docs/troubleshooting/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx",
+        "src/pages/editor/api-index.tsx",
+        "src/pages/editor/markdown-preview.tsx",
+        "src/pages/editor/sidebar.tsx",
+        "src/pages/updates/documentation-updates/index.tsx",
+        "src/pages/updates/release-notes/[slug].tsx",
+        "src/pages/updates/release-notes/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FooterLanding",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/footer/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Grid",
+      "kind": "primitive",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/article-pagination/index.tsx",
+        "src/components/contributors/index.tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "HeaderBrand",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/header/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Icon",
+      "kind": "primitive",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/announcement-bar/IconClose.tsx",
+        "src/components/copy-button/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "IconCaret",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 10,
+      "usedInFiles": [
+        "src/components/ask-ai/index.tsx",
+        "src/components/breadcrumb/index.tsx",
+        "src/components/code-sample-card/index.tsx",
+        "src/components/contributors/index.tsx",
+        "src/components/multiselect/index.tsx",
+        "src/components/overview-section/index.tsx",
+        "src/components/release-note/index.tsx",
+        "src/components/whats-next-card/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "IconGlobe",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "IconProps",
+      "kind": "type",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/announcement-bar/IconClose.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/utils/typings/types.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "IconVTEXSymbol",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Input",
+      "kind": "primitive",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/subscription-list/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Link",
+      "kind": "primitive",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 15,
+      "usedInFiles": [
+        "src/components/announcement-bar/index.tsx",
+        "src/components/article-pagination/index.tsx",
+        "src/components/article-render/index.tsx",
+        "src/components/code-sample-card/index.tsx",
+        "src/components/overview-section/index.tsx",
+        "src/components/subscription-list/index.tsx",
+        "src/components/troubleshooting-card/index.tsx",
+        "src/components/whats-next-card/index.tsx",
+        "src/pages/404.tsx",
+        "src/pages/500.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/docs/troubleshooting/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SxProps",
+      "kind": "type",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/announcement-bar/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SxStyleProp",
+      "kind": "type",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 59,
+      "usedInFiles": [
+        "src/components/JsonEditorComponent/styles.ts",
+        "src/components/JsonEditorIndex/styles.ts",
+        "src/components/announcement-bar/styles.ts",
+        "src/components/article-pagination/styles.ts",
+        "src/components/ask-ai/styles.ts",
+        "src/components/auth/styles.ts",
+        "src/components/breadcrumb/styles.ts",
+        "src/components/chip-filter/styles.ts",
+        "src/components/code-sample-card/styles.ts",
+        "src/components/contributors/styles.ts",
+        "src/components/copy-button/index.tsx",
+        "src/components/copy-button/styles.ts",
+        "src/components/documentation-card/functions.ts",
+        "src/components/documentation-card/styles.ts",
+        "src/components/documentation-section-card/styles.ts",
+        "src/components/documentation-section/styles.ts",
+        "src/components/dropdown-menu/styles.ts",
+        "src/components/education-channel/styles.ts",
+        "src/components/education-section/styles.ts",
+        "src/components/faststore-components/markdown-renderer/fastStoreComponentsStyle.ts",
+        "src/components/feedback-modal/styles.ts",
+        "src/components/filter/styles.ts",
+        "src/components/footer/styles.ts",
+        "src/components/header/styles.ts",
+        "src/components/last-updates-card/styles.ts",
+        "src/components/last-updates-section/styles.ts",
+        "src/components/method-category/functions.ts",
+        "src/components/method-category/index.tsx",
+        "src/components/method-category/styles.ts",
+        "src/components/modal/styles.ts",
+        "src/components/multiselect/styles.ts",
+        "src/components/newsletter-section/styles.ts",
+        "src/components/on-this-page/styles.ts",
+        "src/components/overview-section/index.tsx",
+        "src/components/page-header/styles.ts",
+        "src/components/pagination/styles.ts",
+        "src/components/release-note/styles.ts",
+        "src/components/release-section/styles.tsx",
+        "src/components/see-also-section/styles.ts",
+        "src/components/subscription-list/styles.ts",
+        "src/components/tag/index.tsx",
+        "src/components/tag/styles.ts",
+        "src/components/tooltip/index.tsx",
+        "src/components/tooltip/styles.ts",
+        "src/components/troubleshooting-card/styles.ts",
+        "src/components/whats-next-card/styles.ts",
+        "src/styles/api-guides.ts",
+        "src/styles/api-reference.ts",
+        "src/styles/apps-page.ts",
+        "src/styles/core-services-styles.ts",
+        "src/styles/document-editor.ts",
+        "src/styles/documentation-landing-page.ts",
+        "src/styles/documentation-page.ts",
+        "src/styles/documentation-updates.ts",
+        "src/styles/error-page.ts",
+        "src/styles/landing-page.ts",
+        "src/styles/openapi-preview.ts",
+        "src/styles/release-notes.ts",
+        "src/styles/search-page.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Text",
+      "kind": "primitive",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 49,
+      "usedInFiles": [
+        "src/components/announcement-bar/index.tsx",
+        "src/components/article-pagination/index.tsx",
+        "src/components/article-render/index.tsx",
+        "src/components/ask-ai/index.tsx",
+        "src/components/auth/index.tsx",
+        "src/components/breadcrumb/index.tsx",
+        "src/components/chip-filter/index.tsx",
+        "src/components/code-sample-card/index.tsx",
+        "src/components/contributors/index.tsx",
+        "src/components/documentation-card/index.tsx",
+        "src/components/documentation-section-card/index.tsx",
+        "src/components/documentation-section/index.tsx",
+        "src/components/education-channel/index.tsx",
+        "src/components/education-section/index.tsx",
+        "src/components/faststore-components/CardList/CardItem.tsx",
+        "src/components/faststore-components/SectionItem/SectionItem.tsx",
+        "src/components/feedback-modal/index.tsx",
+        "src/components/filter/index.tsx",
+        "src/components/header/index.tsx",
+        "src/components/last-updates-card/index.tsx",
+        "src/components/last-updates-section/index.tsx",
+        "src/components/method-category/index.tsx",
+        "src/components/modal/index.tsx",
+        "src/components/newsletter-section/index.tsx",
+        "src/components/on-this-page/index.tsx",
+        "src/components/overview-section/index.tsx",
+        "src/components/page-header/index.tsx",
+        "src/components/release-note/functions.tsx",
+        "src/components/release-note/index.tsx",
+        "src/components/release-section/functions.tsx",
+        "src/components/release-section/index.tsx",
+        "src/components/see-also-section/index.tsx",
+        "src/components/subscription-list/index.tsx",
+        "src/components/tag/index.tsx",
+        "src/components/troubleshooting-card/index.tsx",
+        "src/components/whats-next-card/index.tsx",
+        "src/pages/404.tsx",
+        "src/pages/500.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/docs/troubleshooting/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx",
+        "src/pages/editor/markdown-preview.tsx",
+        "src/pages/editor/sidebar.tsx",
+        "src/pages/updates/documentation-updates/index.tsx",
+        "src/pages/updates/release-notes/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ThemeProvider",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/layout.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Timeline",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/release-note/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TooltipProps",
+      "kind": "type",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/tooltip/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "VtexLink",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtex/brand-ui",
+      "repository": "github.com/vtexdocs/brand-ui",
+      "declarationFile": null,
+      "importSource": "@vtex/brand-ui",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/header/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AddedIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/last-updates-card/functions.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "APIGuidesIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "APIReferenceIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AppDevelopmentIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ArrowLeftIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/pagination/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ArrowRightIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/education-channel/index.tsx",
+        "src/components/faststore-components/SectionItem/SectionItem.tsx",
+        "src/components/pagination/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CaretIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/tooltip/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ChatGPTIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/ask-ai/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CheckboxIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/multiselect/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ClaudeIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/ask-ai/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CloseFilterIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/method-category/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CloseIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/filter/index.tsx",
+        "src/components/on-this-page/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CommunityIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/education-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CopilotIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/ask-ai/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DeprecatedIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/last-updates-card/functions.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DocumentationUpdatesIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/last-updates-card/functions.ts",
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "EditIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FeedbackSectionComponent",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/feedback-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FilterIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/filter/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FixedIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/last-updates-card/functions.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "GeminiIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/ask-ai/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "GithubIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/education-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "GridIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/header/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "HamburgerMenu",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/header/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "HelpCenterIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/education-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ImprovedIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/last-updates-card/functions.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "InfoIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/last-updates-card/functions.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Input",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/troubleshooting/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Item",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 10,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx",
+        "src/pages/docs/guides/[slug].tsx",
+        "src/pages/docs/guides/faststore/[slug].tsx",
+        "src/pages/docs/troubleshooting/[slug].tsx",
+        "src/pages/updates/release-notes/[slug].tsx",
+        "src/utils/contexts/api-guide.tsx",
+        "src/utils/getHeadings.ts",
+        "src/utils/serializeWithFallback.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "LibraryContext",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 5,
+      "usedInFiles": [
+        "src/components/JsonEditorComponent/index.tsx",
+        "src/pages/docs/guides/[slug].tsx",
+        "src/pages/docs/guides/faststore/[slug].tsx",
+        "src/pages/docs/troubleshooting/[slug].tsx",
+        "src/pages/editor/sidebar.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "LibraryContextProvider",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/layout.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "LongArrowIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/ask-ai/index.tsx",
+        "src/components/header/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "MarkdownRenderer",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 5,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx",
+        "src/pages/editor/markdown-preview.tsx",
+        "src/pages/updates/release-notes/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "MarkdownRenderer2",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/markdown-renderer/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "MenuIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/on-this-page/index.tsx",
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ReleaseNotesIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/last-updates-card/functions.ts",
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "RemovedIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/last-updates-card/functions.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ResizeIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/editor/markdown-preview.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Search",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/search/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchConfig",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/libraryConfig.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/troubleshooting/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchInput",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/header/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Sidebar",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/layout.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "StorefrontDevelopmentIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TableOfContents",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/components/on-this-page/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TrashcanIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/filter/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TroubleshootingIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "VTEXDevPortalIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/header/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "VTEXIOAppsIcon",
+      "kind": "component",
+      "origin": "external",
+      "package": "@vtexdocs/components",
+      "repository": "github.com/vtexdocs/components (v6.0.33)",
+      "declarationFile": null,
+      "importSource": "@vtexdocs/components",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Action",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/last-updates-card/functions.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/chip-filter/index.tsx",
+        "src/components/release-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ActionType",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/last-updates-card/functions.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 7,
+      "usedInFiles": [
+        "src/components/chip-filter/index.tsx",
+        "src/components/chip-filter/styles.ts",
+        "src/components/last-updates-card/index.tsx",
+        "src/components/last-updates-section/index.tsx",
+        "src/pages/updates/release-notes/[slug].tsx",
+        "src/utils/getReleasesData.ts",
+        "src/utils/typings/types.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "activeVariations",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "AdminDataElement",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AdminTitle",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/unionTypes.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/typings/types.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AnnouncementBar",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/announcement-bar/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/header/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "APIGuideContext",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/contexts/api-guide.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/on-this-page/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "APIGuideContextProvider",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/contexts/api-guide.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx",
+        "src/pages/updates/release-notes/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ArticlePagination",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/article-pagination/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 5,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/pages/docs/api-reference/[slug].tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx",
+        "src/pages/updates/release-notes/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ArticleRender",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/article-render/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/pages/docs/guides/[slug].tsx",
+        "src/pages/docs/guides/faststore/[slug].tsx",
+        "src/pages/docs/troubleshooting/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AskAi",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/ask-ai/index.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": ""
+    },
+    {
+      "name": "AskAIMenu",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/ask-ai/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Auth",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/auth/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/pages/editor/api-index.tsx",
+        "src/pages/editor/markdown-preview.tsx",
+        "src/pages/editor/sidebar.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AuthProvider",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/contexts/auth.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/_app.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Breadcrumb",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/breadcrumb/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ButtonLoading",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Button/ButtonLoading.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "CardItem",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/CardList/CardItem.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "CardList",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/CardList/CardList.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "CardProps",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/last-updates-card/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/last-updates-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CarouselSimpleUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Carousel/CarouselSimpleUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "CarouselUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Carousel/CarouselUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "CartItemExample",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/CartItem/CartItemExample.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "CartItemExampleUnavailable",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/CartItem/CartItemExampleUnavailable.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "CartSidebarUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "ChipFilter",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/chip-filter/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/release-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CodeSampleCard",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/code-sample-card/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/code-sample-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CodeSampleSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/code-sample-section/index.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": ""
+    },
+    {
+      "name": "CodeSamplesElement",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/code-sample-card/index.tsx",
+        "src/pages/docs/guides/code-samples.tsx",
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CodeSamplesSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/code-sample-section/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/guides/code-samples.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Contributors",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/contributors/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ContributorsType",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/getFileContributors.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/components/contributors/index.tsx",
+        "src/pages/docs/guides/[slug].tsx",
+        "src/pages/docs/troubleshooting/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "CopyButton",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/copy-button/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/editor/markdown-preview.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DataElement",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/documentation-card/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DocDataElement",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/documentation-section-card/index.tsx",
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DocumentationCard",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/documentation-card/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/dropdown-menu/index.tsx",
+        "src/components/see-also-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DocumentationSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/documentation-section/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DocumentationSectionCard",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/documentation-section-card/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/documentation-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DocumentationTitle",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/unionTypes.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 10,
+      "usedInFiles": [
+        "src/components/layout.tsx",
+        "src/pages/docs/api-reference/index.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/guides/code-samples.tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/docs/troubleshooting/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx",
+        "src/pages/updates/release-notes/index.tsx",
+        "src/utils/typings/types.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DocumentProps",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/documentation-card/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/see-also-section/functions.ts",
+        "src/components/see-also-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "DropdownMenu",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/dropdown-menu/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/header/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "EducationChannel",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/education-channel/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/education-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "EducationSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/education-section/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FeedbackModal",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/feedback-modal/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FeedbackSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/feedback-section/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx",
+        "src/pages/updates/release-notes/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Filter",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/filter/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx",
+        "src/components/release-section/index.tsx",
+        "src/pages/docs/troubleshooting/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FilterDesktopUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Filter/FilterDesktopUsage.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FilterFacet",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Filter/FilterUsage.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx",
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx",
+        "src/components/faststore-components/Filter/useFilter.ts",
+        "src/components/faststore-components/mocks/facets.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FilterSliderUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Filter/FilterSliderUsage.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FilterUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Filter/FilterUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "Footer",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/footer/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/layout.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "FSMarkdownRenderer",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/markdown-renderer/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "GiftTemplate",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Gift/GiftTemplate.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "GiftTemplateIcon",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Gift/GiftTemplateIcon.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "GiftTemplateWithoutBadge",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Gift/GiftTemplateWithoutBadge.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "GiftTemplateWithoutIcon",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Gift/GiftTemplateWithoutIcon.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "GitHubErrorResponse",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/github-utils.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/getGithubFileWithFallback.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Header",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/header/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/layout.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "IconClose",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/announcement-bar/IconClose.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/announcement-bar/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "IconComponent",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Icon/index.ts",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "IconComponent",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/education-channel/index.tsx",
+        "src/components/last-updates-card/functions.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "IconList",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Icon/index.ts",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "ImageGalleryUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/ImageGallery/ImageGalleryUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "ITroubleshootingFrontmatter",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/getTroubleshootingData.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/troubleshooting/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "JsonEditorComponent",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/JsonEditorComponent/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/editor/sidebar.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "JsonEditorIndex",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/JsonEditorIndex/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/editor/api-index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "LastUpdatesCard",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/last-updates-card/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/last-updates-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "LastUpdatesSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/last-updates-section/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Layout",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/layout.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/_app.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "MarkDownProps",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/article-render/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/guides/faststore/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "MethodCategory",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/method-category/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/article-pagination/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "MethodType",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/unionTypes.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/article-pagination/index.tsx",
+        "src/components/method-category/functions.ts",
+        "src/components/method-category/index.tsx",
+        "src/pages/docs/api-reference/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Modal",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/modal/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Modal/ModalBase.tsx",
+        "src/components/feedback-modal/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ModalBase",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Modal/ModalBase.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Modal/ModalTemplate.tsx"
+      ],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "ModalTemplate",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Modal/ModalTemplate.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "Multiselect",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/multiselect/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/code-sample-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NavbarLinksUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Navigation/NavbarLinksUsage.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx",
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "NavbarSliderUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Navigation/NavbarSliderUsage.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "NavbarUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Navigation/NavbarUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "NewsletterSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/newsletter-section/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "NewsletterUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Newsletter/NewsletterUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "OnThisPage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/on-this-page/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/pages/updates/release-notes/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "OverviewEndpoint",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/api-reference-overview.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/api-reference/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "OverviewEndpointGroup",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/api-reference-overview.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/api-reference/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "OverviewEndpointWithTags",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/api-reference-overview.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/api-reference/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "OverviewSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/overview-section/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/storefront-development/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "OverviewTagDefinition",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/api-reference-overview.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/api-reference/[slug].tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Page",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 8,
+      "usedInFiles": [
+        "src/pages/404.tsx",
+        "src/pages/500.tsx",
+        "src/pages/_app.tsx",
+        "src/pages/editor/api-index.tsx",
+        "src/pages/editor/markdown-preview.tsx",
+        "src/pages/editor/openapi-preview.tsx",
+        "src/pages/editor/sidebar.tsx",
+        "src/pages/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "PageHeader",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/page-header/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 11,
+      "usedInFiles": [
+        "src/pages/docs/api-reference/index.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/guides/code-samples.tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/docs/troubleshooting/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx",
+        "src/pages/editor/api-index.tsx",
+        "src/pages/editor/markdown-preview.tsx",
+        "src/pages/editor/openapi-preview.tsx",
+        "src/pages/editor/sidebar.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Pagination",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/pagination/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/troubleshooting/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "PEM",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/../../github.pem",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": ""
+    },
+    {
+      "name": "PopoverUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Popover/PopoverUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "PreviewContext",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/contexts/preview.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 14,
+      "usedInFiles": [
+        "src/components/header/index.tsx",
+        "src/pages/404.tsx",
+        "src/pages/500.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/guides/[slug].tsx",
+        "src/pages/docs/guides/code-samples.tsx",
+        "src/pages/docs/guides/faststore/[slug].tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/docs/troubleshooting/[slug].tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx",
+        "src/pages/index.tsx",
+        "src/pages/updates/release-notes/[slug].tsx",
+        "src/pages/updates/release-notes/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "PreviewContextProvider",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/contexts/preview.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/_app.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "PriceRangeUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/PriceRange/PriceRangeUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "ProductGridUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/ProductGrid/ProductGridUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "ProductShelfCarouselUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/ProductShelf/ProductShelfCarouselUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "ProductShelfUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/ProductShelf/ProductShelfUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "propsPriceDefinition",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/PriceDefinitionProps/PriceDefinitionProps.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "PropsSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/PropsSection/index.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/markdown-renderer/index.tsx"
+      ],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "PropsSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/index.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/markdown-renderer/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "RatingActionable",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Rating/RatingActionable.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "RegionBarEditUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/RegionBar/RegionBarEditUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "RegionBarUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/RegionBar/RegionBarUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "RegionModalUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/RegionModal/RegionModalUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "ReleaseNote",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/release-note/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/release-section/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ReleaseSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/release-section/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/updates/release-notes/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ResourceDataElement",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ResourceDataTroubleshooting",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ResourceTitle",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/unionTypes.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/typings/types.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ResourceTitleTroubleshooting",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/unionTypes.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/typings/types.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "RowItem",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/PropsSection/PropsSection.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/components/faststore-components/markdown-renderer/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SearchDropdownUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Search/SearchDropdownUsage.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Search/SearchInputUsage.tsx"
+      ],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "SearchInputUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Search/SearchInputUsage.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/faststore-components/Navigation/NavbarUsage.tsx"
+      ],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "SeeAlsoSection",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/see-also-section/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "SelectOption",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/code-sample-section/index.tsx",
+        "src/components/multiselect/index.tsx",
+        "src/pages/docs/guides/code-samples.tsx",
+        "src/pages/updates/release-notes/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ShippingSimulationUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/ShippingSimulation/ShippingSimulationUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "skuActiveVariants",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "SKUMatrixUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/SKUMatrix/SKUMatrixUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "SlideOverFullLeft",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/SlideOver/SlideOverFullLeft.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "SlideOverFullRight",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/SlideOver/SlideOverFullRight.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "SlideOverPartialLeft",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/SlideOver/SlideOverPartialLeft.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "SlideOverPartialRight",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/SlideOver/SlideOverPartialRight.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "SlideOverUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/SlideOver/SlideOverUsage.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/faststore-components/SlideOver/SlideOverFullLeft.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverFullRight.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverPartialLeft.tsx",
+        "src/components/faststore-components/SlideOver/SlideOverPartialRight.tsx"
+      ],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "SubscriptionList",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/subscription-list/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Tag",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/tag/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/filter/index.tsx",
+        "src/components/troubleshooting-card/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TilesTemplate",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Tiles/TilesTemplate.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "ToastUsage",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Toast/ToastUsage.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "Tooltip",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/tooltip/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/contributors/index.tsx",
+        "src/components/documentation-section-card/index.tsx",
+        "src/pages/docs/guides/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TroubleshootingCard",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/troubleshooting-card/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/pages/docs/troubleshooting/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TroubleshootingCardsElements",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/pages/docs/troubleshooting/index.tsx",
+        "src/utils/getTroubleshootingData.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "TroubleshootingItem",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/troubleshooting-card/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UpdateElement",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 6,
+      "usedInFiles": [
+        "src/components/last-updates-section/index.tsx",
+        "src/components/release-note/index.tsx",
+        "src/components/release-section/index.tsx",
+        "src/pages/index.tsx",
+        "src/pages/updates/release-notes/index.tsx",
+        "src/utils/getReleasesData.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UpdatesDataElement",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UpdatesTitle",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/unionTypes.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 10,
+      "usedInFiles": [
+        "src/components/layout.tsx",
+        "src/pages/docs/api-reference/index.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/guides/code-samples.tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/docs/troubleshooting/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx",
+        "src/pages/updates/release-notes/index.tsx",
+        "src/utils/typings/types.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UpdateType",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/last-updates-card/functions.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/last-updates-card/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "UsageAccordion",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Accordion/UsageAccordion.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "UsageAccordionMultiple",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Accordion/UsageAccordionMultiple.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "UsageTableBordered",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Table/UsageTableBordered.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "UsageTableColored",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Table/UsageTableColored.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "UsageTableExample",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Table/UsageTableExample.tsx",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "useAuth",
+      "kind": "hook",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/contexts/auth.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/auth/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "useFilter",
+      "kind": "hook",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/Filter/useFilter.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx",
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx",
+        "src/components/faststore-components/Filter/FilterUsage.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "useFormattedPrice",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/utilities/usePriceFormatter.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 20,
+      "usedInFiles": [
+        "src/components/faststore-components/Carousel/CarouselUsage.tsx",
+        "src/components/faststore-components/CartItem/CartItemExample.tsx",
+        "src/components/faststore-components/CartItem/CartItemExampleUnavailable.tsx",
+        "src/components/faststore-components/CartSidebar/CartSidebarUsage.tsx",
+        "src/components/faststore-components/Filter/FilterDesktopUsage.tsx",
+        "src/components/faststore-components/Filter/FilterSliderUsage.tsx",
+        "src/components/faststore-components/Gift/GiftTemplate.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateIcon.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutBadge.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutIcon.tsx",
+        "src/components/faststore-components/PriceRange/PriceRangeUsage.tsx",
+        "src/components/faststore-components/ProductGrid/ProductGridUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfCarouselUsage.tsx",
+        "src/components/faststore-components/ProductShelf/ProductShelfUsage.tsx",
+        "src/components/faststore-components/Search/SearchDropdownUsage.tsx",
+        "src/components/faststore-components/Table/UsageTableBordered.tsx",
+        "src/components/faststore-components/Table/UsageTableColored.tsx",
+        "src/components/faststore-components/Table/UsageTableExample.tsx",
+        "src/components/faststore-components/Tiles/TilesTemplate.tsx",
+        "src/components/faststore-components/constants.tsx"
+      ],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "usePriceFormatter",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/faststore-components/utilities/usePriceFormatter.ts",
+      "importSource": null,
+      "used": false,
+      "usageCount": 0,
+      "usedInFiles": [],
+      "notes": "Exportado por src/components/faststore-components/index.ts"
+    },
+    {
+      "name": "WhatsNextCard",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/components/whats-next-card/index.tsx",
+      "importSource": null,
+      "used": true,
+      "usageCount": 3,
+      "usedInFiles": [
+        "src/pages/docs/api-reference/index.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "WhatsNextDataElement",
+      "kind": "component",
+      "origin": "local",
+      "package": null,
+      "repository": "github.com/vtexdocs/devportal (este repo)",
+      "declarationFile": "src/utils/typings/types.ts",
+      "importSource": null,
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/whats-next-card/index.tsx",
+        "src/pages/docs/api-reference/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx",
+        "src/utils/constants.ts"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Head",
+      "kind": "component",
+      "origin": "third-party",
+      "package": "next",
+      "repository": "npm: next",
+      "declarationFile": null,
+      "importSource": "next/head",
+      "used": true,
+      "usageCount": 21,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/pages/404.tsx",
+        "src/pages/500.tsx",
+        "src/pages/docs/api-reference/[slug].tsx",
+        "src/pages/docs/api-reference/index.tsx",
+        "src/pages/docs/app-development/index.tsx",
+        "src/pages/docs/apps/[slug]/[child].tsx",
+        "src/pages/docs/apps/[slug]/index.tsx",
+        "src/pages/docs/guides/code-samples.tsx",
+        "src/pages/docs/guides/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/docs/troubleshooting/index.tsx",
+        "src/pages/docs/vtex-io-apps/index.tsx",
+        "src/pages/editor/api-index.tsx",
+        "src/pages/editor/markdown-preview.tsx",
+        "src/pages/editor/openapi-preview.tsx",
+        "src/pages/editor/sidebar.tsx",
+        "src/pages/index.tsx",
+        "src/pages/search/index.tsx",
+        "src/pages/updates/release-notes/[slug].tsx",
+        "src/pages/updates/release-notes/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Image",
+      "kind": "component",
+      "origin": "third-party",
+      "package": "next",
+      "repository": "npm: next",
+      "declarationFile": null,
+      "importSource": "next/image",
+      "used": true,
+      "usageCount": 11,
+      "usedInFiles": [
+        "src/components/contributors/index.tsx",
+        "src/components/faststore-components/Gift/GiftTemplate.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateIcon.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutBadge.tsx",
+        "src/components/faststore-components/Gift/GiftTemplateWithoutIcon.tsx",
+        "src/components/faststore-components/SKUMatrix/SKUMatrixUsage.tsx",
+        "src/components/newsletter-section/index.tsx",
+        "src/components/page-header/index.tsx",
+        "src/pages/404.tsx",
+        "src/pages/500.tsx",
+        "src/pages/docs/guides/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Link",
+      "kind": "component",
+      "origin": "third-party",
+      "package": "next",
+      "repository": "npm: next",
+      "declarationFile": null,
+      "importSource": "next/link",
+      "used": true,
+      "usageCount": 9,
+      "usedInFiles": [
+        "src/components/breadcrumb/index.tsx",
+        "src/components/documentation-card/index.tsx",
+        "src/components/documentation-section-card/index.tsx",
+        "src/components/education-channel/index.tsx",
+        "src/components/faststore-components/SectionItem/SectionItem.tsx",
+        "src/components/last-updates-card/index.tsx",
+        "src/components/release-note/index.tsx",
+        "src/pages/docs/storefront-development/index.tsx",
+        "src/pages/editor/sidebar.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Script",
+      "kind": "component",
+      "origin": "third-party",
+      "package": "next",
+      "repository": "npm: next",
+      "declarationFile": null,
+      "importSource": "next/script",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/layout.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "AnimateHeight",
+      "kind": "component",
+      "origin": "third-party",
+      "package": "react-animate-height",
+      "repository": "npm: react-animate-height",
+      "declarationFile": null,
+      "importSource": "react-animate-height",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/on-this-page/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ReactMarkdown",
+      "kind": "component",
+      "origin": "third-party",
+      "package": "react-markdown",
+      "repository": "npm: react-markdown",
+      "declarationFile": null,
+      "importSource": "react-markdown",
+      "used": true,
+      "usageCount": 4,
+      "usedInFiles": [
+        "src/components/article-render/index.tsx",
+        "src/components/faststore-components/CardList/CardItem.tsx",
+        "src/components/faststore-components/SectionItem/SectionItem.tsx",
+        "src/components/release-note/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ReactPaginate",
+      "kind": "component",
+      "origin": "third-party",
+      "package": "react-paginate",
+      "repository": "npm: react-paginate",
+      "declarationFile": null,
+      "importSource": "react-paginate",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/pagination/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "ToastContainer",
+      "kind": "component",
+      "origin": "third-party",
+      "package": "react-toastify",
+      "repository": "npm: react-toastify",
+      "declarationFile": null,
+      "importSource": "react-toastify",
+      "used": true,
+      "usageCount": 2,
+      "usedInFiles": [
+        "src/components/JsonEditorComponent/index.tsx",
+        "src/components/JsonEditorIndex/index.tsx"
+      ],
+      "notes": ""
+    },
+    {
+      "name": "Dialog",
+      "kind": "component",
+      "origin": "third-party",
+      "package": "reakit",
+      "repository": "npm: reakit",
+      "declarationFile": null,
+      "importSource": "reakit/Dialog",
+      "used": true,
+      "usageCount": 1,
+      "usedInFiles": [
+        "src/components/announcement-bar/index.tsx"
+      ],
+      "notes": ""
+    }
+  ]
+}
