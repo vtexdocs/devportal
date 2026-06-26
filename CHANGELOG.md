@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.38.3](https://github.com/vtexdocs/devportal/compare/v1.38.2...v1.38.3) (2026-06-26)
+
+
+### Features
+
+* migrate troubleshooting UI to @vtexdocs/components ([ac0ecf5](https://github.com/vtexdocs/devportal/commit/ac0ecf58dbf7645b86202b671b7b5a96832d472f))
+* **navigation.json:** add faststore release notes ([466a9f0](https://github.com/vtexdocs/devportal/commit/466a9f0cef59448a87f43327d41ab6d7b114f480))
+* **navigation.json:** add new API endpoints for managing SKU prices and attachments in the cart ([5c54c43](https://github.com/vtexdocs/devportal/commit/5c54c4338caca61549ece495e2f6be2cf35b2d03))
+
+
+### Bug Fixes
+
+* capitalization ([7760f44](https://github.com/vtexdocs/devportal/commit/7760f44433da402263fe6a17498cd07b3a0ab49b))
+
+
+### Chore
+
+* add B2B user provisioning and password migration entries to navigation ([f7afc16](https://github.com/vtexdocs/devportal/commit/f7afc165a20ee43f293a3480d535713d607edcb1))
+
 ### [1.38.2](https://github.com/vtexdocs/devportal/compare/v1.38.1...v1.38.2) (2026-06-22)
 
 
