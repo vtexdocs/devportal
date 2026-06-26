@@ -4,6 +4,30 @@ included_files = ["node_modules/sharp/**/*", "node_modules/@img/**/*", "./github
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/getting-started-promoting-your-headless-cms-changes"
+status = 308
+to = "/docs/guides/faststore/integration-promoting-your-headless-cms-changes"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-structuring-content-types-and-sections"
+status = 308
+to = "/docs/guides/faststore/integration-structuring-content-types-and-sections"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-setting-up-the-headless-cms"
+status = 308
+to = "/docs/guides/faststore/integration-setting-up-the-headless-cms"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-5-integrating-your-project-with-the-headless-cms"
+status = 308
+to = "/docs/guides/faststore/integration-integrating-your-storefront-with-headless-cms-legacy"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/1-onboarding-dashboard"
 status = 308
 to = "/docs/guides/faststore/webops-dashboard"

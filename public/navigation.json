@@ -16779,33 +16779,11 @@
                   "children": []
                 },
                 {
-                  "name": "5. Integrating your project with the Headless CMS",
-                  "slug": "faststore/getting-started-5-integrating-your-project-with-the-headless-cms",
+                  "name": "5. Working with CMS",
+                  "slug": "faststore/getting-started-5-working-with-cms",
                   "origin": "",
                   "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Setting up the Headless CMS",
-                      "slug": "faststore/getting-started-setting-up-the-headless-cms",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Structuring Content Types and Sections",
-                      "slug": "faststore/getting-started-structuring-content-types-and-sections",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Promoting your changes",
-                      "slug": "faststore/getting-started-promoting-your-headless-cms-changes",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
+                  "children": []
                 },
                 {
                   "name": "6. Next steps",
@@ -16853,11 +16831,40 @@
               ]
             },
             {
-              "name": "Headless CMS",
+              "name": "Headless CMS (legacy)",
               "slug": "faststore/headless-cms-overview",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "Integration",
+                  "slug": "faststore/integration-overview",
+                  "origin": "",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Setting up the Headless CMS (legacy)",
+                      "slug": "faststore/integration-setting-up-the-headless-cms",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Structuring Content Types and Sections",
+                      "slug": "faststore/integration-structuring-content-types-and-sections",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Promoting your Headless CMS (legacy) changes",
+                      "slug": "faststore/integration-promoting-your-headless-cms-changes",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
                 {
                   "name": "Managing content with 'scopes' and 'requiredScopes'",
                   "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
