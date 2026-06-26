@@ -87,11 +87,11 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/headless-cms-api',
   },
   {
-    title: 'Intelligent Search API',
+    title: 'Intelligent Search API v1',
     description:
-      'Assist your customers in their purchase journey, presenting results from search bar interactions.',
+      'New version of the Intelligent Search API with HTTP caching, lower latency, and explicit context parameters for headless integrations.',
     linkTitle: 'See more',
-    linkTo: '/docs/api-reference/intelligent-search-api',
+    linkTo: '/docs/api-reference/intelligent-search-api-v1',
   },
   {
     title: 'License Manager API',
