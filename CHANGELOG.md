@@ -2,6 +2,72 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.38.2](https://github.com/vtexdocs/devportal/compare/v1.38.1...v1.38.2) (2026-06-22)
+
+
+### Chore
+
+* **navigation.json:** add new section for Checkout Extensibility with multiple guides ([336902c](https://github.com/vtexdocs/devportal/commit/336902c847b0877032acb4ebf0653c8cdc6925e3))
+* **navigation.json:** rename section to Buyer Checkout Extensibility and update child guide names ([2edd0ab](https://github.com/vtexdocs/devportal/commit/2edd0ab65be8b9b77063927493af54f9815452c6))
+* **navigation.json:** update section name from Buyer Checkout Extensibility to Buyer Portal Checkout Extensibility ([1970e9a](https://github.com/vtexdocs/devportal/commit/1970e9ad57b81a3193d17e9870265f6f9a0caee5))
+
+### [1.38.1](https://github.com/vtexdocs/devportal/compare/v1.38.0...v1.38.1) (2026-06-20)
+
+
+### Bug Fixes
+
+* change http method in move org unit endpoint navigation ([69e2d65](https://github.com/vtexdocs/devportal/commit/69e2d65f226549d787e12840daf5d238efaa12b3))
+* **navigation.json:** rename slug for cms section on creating new section ([f7b3974](https://github.com/vtexdocs/devportal/commit/f7b39747f2735da38b21e2d0c716eb51a5960ac9))
+
+
+### Chore
+
+* add custom-storefront-roles-and-resources nav and missing Storefront Roles API endpoints ([62d0845](https://github.com/vtexdocs/devportal/commit/62d0845e1711c07d785138b0ed4fb7949bc4bc4c))
+
+
+### Docs
+
+* add VTEX Ads guide entries to Developers Portal navigation ([9d15c60](https://github.com/vtexdocs/devportal/commit/9d15c60f1b04ed28ddb0e7cd527c461a224fb263))
+
+## [1.38.0](https://github.com/vtexdocs/devportal/compare/v1.37.0...v1.38.0) (2026-06-16)
+
+
+### Features
+
+* **cms-creating-a-new-section.md:** add new CMS section for creating a new section ([36cd9c9](https://github.com/vtexdocs/devportal/commit/36cd9c9e0e7db84a7cab1b83e549e8d552f02ca4))
+* **navigation.json:** add faststore entry ([d52b5f9](https://github.com/vtexdocs/devportal/commit/d52b5f99f63111828e3fea321a42f1dd963522ab))
+
+
+### Refactoring
+
+* update naming for Legacy CMS Portal to CMS Portal (Legacy) in navigation and documentation ([483db38](https://github.com/vtexdocs/devportal/commit/483db38a2bc0287a768b41a400e299986629755e))
+
+
+### Docs
+
+* **nav:** add Integrating audiences entry to VTEX Ads navigation ([dcc0329](https://github.com/vtexdocs/devportal/commit/dcc03298291a196db13c4240c1671270ed80d185))
+
+## [1.37.0](https://github.com/vtexdocs/devportal/compare/v1.36.0...v1.37.0) (2026-06-15)
+
+
+### Features
+
+* add June category and customdata release note to navigation ([af910a8](https://github.com/vtexdocs/devportal/commit/af910a8338a467746145caab32992b0d92d5ecad))
+
+
+### Bug Fixes
+
+* **navigation.json:** Update slug for Affiliates Program ([b44b9a1](https://github.com/vtexdocs/devportal/commit/b44b9a1e30e654aa8d7f98fd67d44357da6a61ba))
+
+
+### Chore
+
+* add B2B Password Migration Protocol API reference and navigation entries ([ba904be](https://github.com/vtexdocs/devportal/commit/ba904bea1b654f980d1981fc4f3efa298464b0c2))
+* change date ([caffe14](https://github.com/vtexdocs/devportal/commit/caffe14f5ccba9a9cf511b6ffb754843f165af4a))
+* **nav:** add Audiences group to VTEX Ads API sidebar ([29fe45e](https://github.com/vtexdocs/devportal/commit/29fe45eb9cc68df80b2404ea5b56d7ef9882bc5a))
+* **nav:** sync VTEX Ads API navigation with OpenAPI spec ([743343d](https://github.com/vtexdocs/devportal/commit/743343dffc3828a79933472f63f331b9bcdc5004))
+* resolve merge conflict keeping organization account auth and password migration categories ([dd81a4c](https://github.com/vtexdocs/devportal/commit/dd81a4c6e230d3f77abe8d958b21bbbeaccb8123))
+
 ## [1.36.0](https://github.com/vtexdocs/devportal/compare/v1.35.1...v1.36.0) (2026-06-09)
 
 

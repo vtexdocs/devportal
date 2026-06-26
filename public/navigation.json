@@ -1273,6 +1273,119 @@
               ]
             },
             {
+              "name": "Buyer Portal Checkout Extensibility",
+              "slug": "buyer-portal-checkout-extensibility",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Checkout extension points",
+                  "slug": "checkout-extension-points",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up Buyer Portal Checkout",
+                  "slug": "setting-up-buyer-portal-checkout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Getting started with Checkout extensions",
+                  "slug": "getting-started-with-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Deploying Checkout extensions",
+                  "slug": "deploying-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using CSS in Checkout extensions",
+                  "slug": "using-css-in-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "CSS variables in Checkout extensions",
+                  "slug": "css-variables-in-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Data layer and data fetching in Checkout extensions",
+                  "slug": "data-layer-and-data-fetching-in-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Checkout CLI",
+                  "slug": "checkout-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "CartItem type",
+                  "slug": "cartitem-type",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useCart hook",
+                  "slug": "usecart-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useCartItem hook",
+                  "slug": "usecartitem-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useCartPunchout hook",
+                  "slug": "usecartpunchout-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useRedirect hook",
+                  "slug": "useredirect-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useSettings hook",
+                  "slug": "usesettings-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useExtension hook",
+                  "slug": "useextension-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Checkout error codes",
               "slug": "checkout-error-codes",
               "origin": "",
@@ -2056,6 +2169,20 @@
                   "children": []
                 },
                 {
+                  "name": "B2B user provisioning",
+                  "slug": "b2b-user-provisioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B password migration",
+                  "slug": "b2b-password-migration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Buying Policies",
                   "slug": "buying-policies",
                   "origin": "",
@@ -2079,6 +2206,13 @@
                 {
                   "name": "Storefront Roles",
                   "slug": "storefront-roles",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Custom Storefront Roles and Resources",
+                  "slug": "custom-storefront-roles-and-resources",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2634,8 +2768,22 @@
                       "children": []
                     },
                     {
+                      "name": "Integrating audiences",
+                      "slug": "integrating-audiences",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Digital Signage",
                       "slug": "digital-signage",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Placement naming conventions",
+                      "slug": "placement-naming-conventions",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -2689,8 +2837,22 @@
                       "origin": "",
                       "type": "markdown",
                       "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Script Agent",
+                      "slug": "vtex-ads-script-agent",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
                     }
                   ]
+                },
+                {
+                  "name": "VTEX Ads best practices",
+                  "slug": "vtex-ads-best-practices",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2739,6 +2901,57 @@
                 {
                   "name": "VTEX Ads React Package Quickstart",
                   "slug": "vtex-ads-react-package-quickstart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Exporting data from VTEX Ads",
+              "slug": "exporting-data-from-vtex-ads",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Exporting ads events",
+                  "slug": "exporting-ads-events",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Exporting ads reports",
+                  "slug": "exporting-ads-reports",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Exporting aggregated data from VTEX Ads",
+                  "slug": "exporting-aggregated-data-from-vtex-ads",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Integrating VTEX Ads with external marketplaces",
+              "slug": "integrating-vtex-ads-with-external-marketplaces",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Transferring credit",
+                  "slug": "transferring-credit",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Ads Single Sign On (SSO)",
+                  "slug": "vtex-ads-single-sign-on-sso",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2941,6 +3154,13 @@
                     {
                       "name": "Content plugin",
                       "slug": "content-plugin",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Creating a new section in the CMS",
+                      "slug": "creating-a-new-section",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -3479,6 +3699,46 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B2B Password Migration Protocol",
+          "slug": "b2b-password-migration-protocol",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Client registration",
+              "slug": "b2b-password-migration-protocol-client-registration",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Register client",
+                  "slug": "b2b-password-migration-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/register",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Authentication flow",
+              "slug": "b2b-password-migration-protocol-authentication-flow",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Validate legacy credentials",
+                  "slug": "b2b-password-migration-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/authentication",
                   "children": []
                 }
               ]
@@ -10854,7 +11114,7 @@
                   "name": "Move organization unit",
                   "slug": "organization-units-api",
                   "type": "openapi",
-                  "method": "POST",
+                  "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/organization-units/v1/-organizationUnitId-/path",
                   "children": []
@@ -13081,6 +13341,92 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Custom Storefront Roles",
+              "slug": "storefront-roles-api-custom-roles-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List storefront roles",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role",
+                  "children": []
+                },
+                {
+                  "name": "Create storefront role",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role",
+                  "children": []
+                },
+                {
+                  "name": "Fetch storefront role by ID",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                  "children": []
+                },
+                {
+                  "name": "Edit storefront role resources",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete storefront role",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Custom Storefront Resources",
+              "slug": "storefront-roles-api-custom-resources-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List storefront resources",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/resource",
+                  "children": []
+                },
+                {
+                  "name": "Create custom storefront resource",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/resource",
+                  "children": []
+                },
+                {
+                  "name": "Delete custom storefront resource",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/resource/-id-",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -13361,7 +13707,7 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Tracking ad impressions",
+                  "name": "Track ad impressions",
                   "slug": "vtex-ads-api",
                   "type": "openapi",
                   "method": "POST",
@@ -13410,6 +13756,120 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/v1/rma/-publisher_id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Reports",
+              "slug": "vtex-ads-api-reports",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get advertisers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/v2/advertisers",
+                  "children": []
+                },
+                {
+                  "name": "Get publishers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/v2/publishers",
+                  "children": []
+                },
+                {
+                  "name": "Get network publishers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/network/publishers",
+                  "children": []
+                },
+                {
+                  "name": "List campaigns",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/campaign/v2",
+                  "children": []
+                },
+                {
+                  "name": "Get campaign details",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/campaign/-campaign_id-",
+                  "children": []
+                },
+                {
+                  "name": "Get advertiser campaigns detailed report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/advertisers/campaigns-detailed",
+                  "children": []
+                },
+                {
+                  "name": "Get advertiser ads detailed report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/advertisers/ads-detailed",
+                  "children": []
+                },
+                {
+                  "name": "Get ads performance report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/ad/results/v2",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Credit transfer",
+              "slug": "vtex-ads-api-credit-transfer",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Notify credit transfer status",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/webhook/marketplace/transfers/-publisher_id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Single sign-on",
+              "slug": "vtex-ads-api-single-sign-on",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate seller single sign-on URL",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/sso/marketplace",
                   "children": []
                 }
               ]
@@ -13740,6 +14200,40 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Password migration",
+              "slug": "vtex-id-api-password-migration",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Upsert password migration configuration",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "children": []
+                },
+                {
+                  "name": "Enable or disable password migration",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "children": []
+                },
+                {
+                  "name": "Delete password migration configuration",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
                   "children": []
                 }
               ]
@@ -15541,7 +16035,7 @@
             },
             {
               "name": "Affiliates Program",
-              "slug": "apps/vtex.affiliates-program-app",
+              "slug": "apps/vtex.affiliates",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18362,13 +18856,13 @@
           ]
         },
         {
-          "name": "(Legacy) CMS Portal",
+          "name": "CMS Portal (Legacy)",
           "slug": "legacy-cms-portal-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "Migrating your storefront from Legacy CMS Portal to Store Framework",
+              "name": "Migrating your storefront from CMS Portal (Legacy) to Store Framework",
               "slug": "vtex-io-documentation-migrating-storefront-from-legacy-to-io",
               "origin": "",
               "type": "markdown",
@@ -18754,6 +19248,35 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "June",
+              "slug": "june-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore Release Notes — Version 4.3.0",
+                  "slug": "2026-06-23-faststore-release-notes-4-3-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Orders: Custom data in the VTEX Admin is now generally available",
+                  "slug": "2026-06-15-orders-custom-data-now-generally-available",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 4.2.0",
+                  "slug": "2026-06-19-faststore-release-notes-4-2-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "May",
               "slug": "may-2026",
@@ -20108,7 +20631,7 @@
                   "children": []
                 },
                 {
-                  "name": "Facebook Business Extension Available for Legacy CMS Portal",
+                  "name": "Facebook Business Extension Available for CMS Portal (Legacy)",
                   "slug": "facebook-business-extension-available-for-legacy-cms-portal",
                   "origin": "",
                   "type": "markdown",
