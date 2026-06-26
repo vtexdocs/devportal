@@ -6688,6 +6688,15 @@
                   "children": []
                 },
                 {
+                  "name": "Delete manual price of an SKU in a cart",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemIndex-/price",
+                  "children": []
+                },
+                {
                   "name": "Cart installments",
                   "slug": "checkout-api",
                   "type": "openapi",
@@ -6791,6 +6800,42 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/coupons",
+                  "children": []
+                },
+                {
+                  "name": "Add item attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemIndex-/attachments/-attachmentName-",
+                  "children": []
+                },
+                {
+                  "name": "Remove item attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemIndex-/attachments/-attachmentName-",
+                  "children": []
+                },
+                {
+                  "name": "Add item subscription attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/subscriptionData",
+                  "children": []
+                },
+                {
+                  "name": "Remove item subscription attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/subscriptionData",
                   "children": []
                 }
               ]
