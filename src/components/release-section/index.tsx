@@ -7,7 +7,7 @@ import { getMessages } from 'utils/get-messages'
 import { UpdateElement } from 'utils/typings/types'
 import ChipFilter from 'components/chip-filter'
 import { Action, actions } from 'components/last-updates-card/functions'
-import Filter from 'components/filter'
+import { ListingFilter } from '@vtexdocs/components'
 
 const messages = getMessages()
 
@@ -123,7 +123,7 @@ const ReleaseSection = ({
         <hr aria-hidden="true" />
       </Box>
 
-      <Filter
+      <ListingFilter
         filterName="Products"
         checkBoxFilter={availableTags}
         onApply={(newFilters) => setTagFilters(newFilters.checklist)}
