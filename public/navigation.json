@@ -17001,6 +17001,13 @@
                   "children": []
                 },
                 {
+                  "name": "Using data attributes with FastStore UI",
+                  "slug": "faststore/styling-data-attributes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Using themes",
                   "slug": "faststore/using-themes-overview",
                   "origin": "",
