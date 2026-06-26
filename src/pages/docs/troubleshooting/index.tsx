@@ -9,15 +9,17 @@ import image from '../../../../public/images/troubleshooting-image-header.png'
 import styles from 'styles/documentation-landing-page'
 import { TroubleshootingCardsElements } from 'utils/typings/types'
 import Head from 'next/head'
-import getTroubleshootingData, {
-  ITroubleshootingFrontmatter,
-} from 'utils/getTroubleshootingData'
-import TroubleshootingCard from 'components/troubleshooting-card'
+import getTroubleshootingData from 'utils/getTroubleshootingData'
 import Pagination from 'components/pagination'
 import { resourceTroubleshooting } from 'utils/constants'
-import { Input } from '@vtexdocs/components'
-import { SearchIcon } from '@vtexdocs/components'
-import Filter from 'components/filter'
+import {
+  Input,
+  SearchIcon,
+  ListingFilter,
+  TroubleshootingCard,
+  filterTroubleshootingItems,
+  collectTroubleshootingFilterOptions,
+} from '@vtexdocs/components'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -36,41 +38,15 @@ const TroubleshootingPage: NextPage<Props> = ({
   const [domainFilters, setDomainFilters] = useState<string[]>([])
   const [symptomFilters, setSymptomFilters] = useState<string[]>([])
 
-  const filteredResult = useMemo(() => {
-    const selectedDomainFilters = new Set(
-      domainFilters.map((filter) => filter.toLowerCase())
-    )
-    const selectedSymptomFilters = new Set(
-      symptomFilters.map((filter) => filter.toLowerCase())
-    )
-    const hasDomainFilters = selectedDomainFilters.size > 0
-    const hasSymptomFilters = selectedSymptomFilters.size > 0
-
-    return troubleshootingData.filter((troubleshooting) => {
-      const matchesSearch = troubleshooting.title
-        .toLowerCase()
-        .includes(search.toLowerCase())
-
-      const itemDomainFiltersLower = (troubleshooting.domainFilters || []).map(
-        (filter) => filter.toLowerCase()
-      )
-      const itemSymptomFiltersLower = (
-        troubleshooting.symptomFilters || []
-      ).map((filter) => filter.toLowerCase())
-      const matchesDomainFilters =
-        !hasDomainFilters ||
-        itemDomainFiltersLower.some((filter) =>
-          selectedDomainFilters.has(filter)
-        )
-      const matchesSymptomFilters =
-        !hasSymptomFilters ||
-        itemSymptomFiltersLower.some((filter) =>
-          selectedSymptomFilters.has(filter)
-        )
-
-      return matchesSearch && matchesDomainFilters && matchesSymptomFilters
-    })
-  }, [domainFilters, search, symptomFilters, troubleshootingData])
+  const filteredResult = useMemo(
+    () =>
+      filterTroubleshootingItems(troubleshootingData, {
+        search,
+        domainFilters,
+        symptomFilters,
+      }),
+    [domainFilters, search, symptomFilters, troubleshootingData]
+  )
 
   const messages = getMessages()
   const itemsPerPage = 4
@@ -121,11 +97,12 @@ const TroubleshootingPage: NextPage<Props> = ({
           imageAlt={messages['troubleshooting.title']}
         />
         <Box sx={styles.contentContainer}>
-          <Filter
+          <ListingFilter
             tagFilterName="Type"
             tagFilter={availableSymptomFilters}
             filterName="Area"
             checkBoxFilter={availableDomainFilters}
+            buttonSx={{ mt: '16px', mb: '12px' }}
             onApply={(newFilters) => {
               setSymptomFilters(newFilters.tag)
               setDomainFilters(newFilters.checklist)
@@ -203,20 +180,10 @@ export const getStaticProps: GetStaticProps = async ({
   const branch = preview ? previewBranch : 'main'
   const troubleshootingData = await getTroubleshootingData(branch)
 
-  const allDomainFilters = new Set<string>()
-  const allSymptomFilters = new Set<string>()
-  troubleshootingData.forEach(
-    (troubleshooting: ITroubleshootingFrontmatter) => {
-      troubleshooting.domainFilters?.forEach((filter) =>
-        allDomainFilters.add(filter)
-      )
-      troubleshooting.symptomFilters?.forEach((filter) =>
-        allSymptomFilters.add(filter)
-      )
-    }
-  )
-  const availableDomainFilters = Array.from(allDomainFilters).sort()
-  const availableSymptomFilters = Array.from(allSymptomFilters).sort()
+  const {
+    domainFilters: availableDomainFilters,
+    symptomFilters: availableSymptomFilters,
+  } = collectTroubleshootingFilterOptions(troubleshootingData)
 
   return {
     props: {
