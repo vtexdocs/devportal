@@ -2169,6 +2169,20 @@
                   "children": []
                 },
                 {
+                  "name": "B2B user provisioning",
+                  "slug": "b2b-user-provisioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B password migration",
+                  "slug": "b2b-password-migration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Buying Policies",
                   "slug": "buying-policies",
                   "origin": "",
@@ -6674,6 +6688,15 @@
                   "children": []
                 },
                 {
+                  "name": "Delete manual price of an SKU in a cart",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemIndex-/price",
+                  "children": []
+                },
+                {
                   "name": "Cart installments",
                   "slug": "checkout-api",
                   "type": "openapi",
@@ -6777,6 +6800,42 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/coupons",
+                  "children": []
+                },
+                {
+                  "name": "Add item attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemIndex-/attachments/-attachmentName-",
+                  "children": []
+                },
+                {
+                  "name": "Remove item attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemIndex-/attachments/-attachmentName-",
+                  "children": []
+                },
+                {
+                  "name": "Add item subscription attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/subscriptionData",
+                  "children": []
+                },
+                {
+                  "name": "Remove item subscription attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/subscriptionData",
                   "children": []
                 }
               ]
@@ -16735,33 +16794,11 @@
                   "children": []
                 },
                 {
-                  "name": "5. Integrating your project with the Headless CMS",
-                  "slug": "faststore/getting-started-5-integrating-your-project-with-the-headless-cms",
+                  "name": "5. Working with CMS",
+                  "slug": "faststore/getting-started-5-working-with-cms",
                   "origin": "",
                   "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Setting up the Headless CMS",
-                      "slug": "faststore/getting-started-setting-up-the-headless-cms",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Structuring Content Types and Sections",
-                      "slug": "faststore/getting-started-structuring-content-types-and-sections",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Promoting your changes",
-                      "slug": "faststore/getting-started-promoting-your-headless-cms-changes",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
+                  "children": []
                 },
                 {
                   "name": "6. Next steps",
@@ -16809,11 +16846,40 @@
               ]
             },
             {
-              "name": "Headless CMS",
+              "name": "Headless CMS (legacy)",
               "slug": "faststore/headless-cms-overview",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "Integration",
+                  "slug": "faststore/integration-overview",
+                  "origin": "",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Setting up the Headless CMS (legacy)",
+                      "slug": "faststore/integration-setting-up-the-headless-cms",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Structuring Content Types and Sections",
+                      "slug": "faststore/integration-structuring-content-types-and-sections",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Promoting your Headless CMS (legacy) changes",
+                      "slug": "faststore/integration-promoting-your-headless-cms-changes",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
                 {
                   "name": "Managing content with 'scopes' and 'requiredScopes'",
                   "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
@@ -16997,6 +17063,13 @@
                 {
                   "name": "Iconography",
                   "slug": "faststore/styling-icons",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using data attributes with FastStore UI",
+                  "slug": "faststore/styling-data-attributes",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -19255,6 +19328,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore Release Notes — Version 4.3.0",
+                  "slug": "2026-06-23-faststore-release-notes-4-3-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Orders: Custom data in the VTEX Admin is now generally available",
                   "slug": "2026-06-15-orders-custom-data-now-generally-available",
