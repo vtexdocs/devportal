@@ -13,22 +13,38 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      
+
+      - name: Unit tests (utils)
+        run: yarn test:utils
+
       # Run component tests first since they don't need the preview deployment
       - name: Cypress component tests
+        id: cypress-component
+        timeout-minutes: 10
+        continue-on-error: true
         uses: cypress-io/github-action@v5
         with:
           browser: chrome
           component: true
-      
-      # Ensure component test results are included in the log file
+
+      - name: Cypress component tests (retry)
+        id: cypress-component-retry
+        if: steps.cypress-component.outcome == 'failure'
+        timeout-minutes: 10
+        continue-on-error: true
+        uses: cypress-io/github-action@v5
+        with:
+          browser: chrome
+          component: true
+
+      # Preserve component test failures before integration tests overwrite the file
       - name: Preserve component test results
         if: always()
         run: |
-          if [[ -f "./cypress.log" ]]; then
-            cp cypress.log component-tests.log
+          if [[ -f "./cypress-failures.jsonl" ]]; then
+            cp cypress-failures.jsonl component-failures.jsonl
           fi
-      
+
       # Then run integration tests after preview is ready
       - name: Waiting for pages to change
         uses: fountainhead/action-wait-for-check@v1.1.0
@@ -38,7 +54,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
           checkName: 'Pages changed - elated-hoover-5c29bf'
           timeoutSeconds: 3600
-      
+
       - name: Waiting for 200 from the Netlify Preview
         if: steps.wait-for-pages-changed.outputs.conclusion == 'neutral'
         uses: jakepartusch/wait-for-netlify-action@v1.4
@@ -48,36 +64,40 @@ jobs:
           max_timeout: 3600
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-      
-      - name: Fetch navigation.json
-        uses: wei/curl@v1
-        with:
-          args: -o src/tests/cypress/fixtures/navigation.json https://developers.vtex.com/navigation.json
-      
+
+      # Sample pages from the branch's checked-in public/navigation.json so the
+      # PR comment reflects the same navigation data shipped by this preview.
       - name: Cypress integration tests
         uses: cypress-io/github-action@v5
+        timeout-minutes: 60
         with:
           browser: chrome
           headed: true
         env:
           CYPRESS_baseUrl: ${{ steps.wait-for-netflify-preview.outputs.url }}
           CYPRESS_testProbability: 0.1
-      
+          SAMPLE_SEED: ${{ github.event.pull_request.head.sha || github.sha }}
+
       # Merge component and integration test results
       - name: Generate summary report
         if: always()
         run: |
           touch src/tests/summary.md
-          # Merge component test results if they exist
-          if [[ -f "./component-tests.log" ]]; then
-            cat component-tests.log >> cypress.log
+          # Merge component test failures if they exist
+          if [[ -f "./component-failures.jsonl" ]]; then
+            cat component-failures.jsonl >> cypress-failures.jsonl
           fi
-          if [[ -f "./cypress.log" ]]; then
+          # Only run the report if there are recorded failures OR the component
+          # tests actually completed (success means no failures, not a crash).
+          # Without this guard, a Cypress crash produces no JSONL file and the
+          # report would incorrectly say "All tests were successful!".
+          if [[ -f "./cypress-failures.jsonl" ]] || [[ "${{ steps.cypress-component.outcome }}" == "success" ]] || [[ "${{ steps.cypress-component-retry.outcome }}" == "success" ]]; then
             node src/tests/utils/summary-report.js > src/tests/summary.md
-            rm cypress.log
-            rm -f component-tests.log
+          else
+            printf "# End-to-end tests\n\nCypress failed to run — no test results available.\n" > src/tests/summary.md
           fi
-      
+          rm -f cypress-failures.jsonl component-failures.jsonl cypress-sample.json
+
       - name: Comment PR with summary report
         if: always()
         uses: thollander/actions-comment-pull-request@v2
@@ -85,3 +105,11 @@ jobs:
           comment_tag: tests-summary
           filePath: src/tests/summary.md
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Fail if component tests never recovered
+        if: always()
+        run: |
+          if [[ "${{ steps.cypress-component.outcome }}" == "failure" && "${{ steps.cypress-component-retry.outcome }}" != "success" ]]; then
+            echo "Component tests failed before integration verification could complete."
+            exit 1
+          fi

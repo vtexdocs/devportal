@@ -16,6 +16,9 @@ export default defineConfig({
   chromeWebSecurity: false,
   numTestsKeptInMemory: 10,
   experimentalMemoryManagement: true,
+  env: {
+    sampleSeed: process.env.SAMPLE_SEED,
+  },
   component: {
     devServer: {
       framework: 'next',
