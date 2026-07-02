@@ -9949,14 +9949,7 @@
                   "origin": "",
                   "endpoint": "/api/shopeeintegration/order/shipping/label",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "VTEX order callbacks",
-              "slug": "vtex-shopee-integration-api-vtex-order-callbacks",
-              "type": "category",
-              "children": [
+                },
                 {
                   "name": "Cancel marketplace delivery",
                   "slug": "vtex-shopee-integration-api",
