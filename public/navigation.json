@@ -16974,6 +16974,13 @@
                   "children": []
                 },
                 {
+                  "name": "FastStore hooks",
+                  "slug": "faststore/developer-tools-hooks-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Handling gift items in the cart",
                   "slug": "faststore/developer-tools-use-is-gift-from-order-form",
                   "origin": "",
