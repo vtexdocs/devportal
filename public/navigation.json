@@ -19195,6 +19195,13 @@
               "children": []
             },
             {
+              "name": "Issues when using FastStore hooks",
+              "slug": "issues-when-using-faststore-hooks",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Modal Layout closes when I click a SKU",
               "slug": "modal-layout-closes-when-i-click-a-sku",
               "origin": "",
