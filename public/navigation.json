@@ -19209,6 +19209,13 @@
               "children": []
             },
             {
+              "name": "Issues when customizing FastStore icons",
+              "slug": "issues-when-customizing-faststore-icons",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Issues when using FastStore hooks",
               "slug": "issues-when-using-faststore-hooks",
               "origin": "",
