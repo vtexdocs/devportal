@@ -2443,6 +2443,13 @@
               ]
             },
             {
+              "name": "Sales Team Management integration guide",
+              "slug": "sales-team-management-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Integration VTEX Sales App Local stock sale",
               "slug": "integration-vtex-sales-app-local-stock-sale",
               "origin": "",
@@ -16967,6 +16974,13 @@
                   "children": []
                 },
                 {
+                  "name": "FastStore hooks",
+                  "slug": "faststore/developer-tools-hooks-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Handling gift items in the cart",
                   "slug": "faststore/developer-tools-use-is-gift-from-order-form",
                   "origin": "",
@@ -17061,11 +17075,33 @@
                   ]
                 },
                 {
-                  "name": "Iconography",
-                  "slug": "faststore/styling-icons",
+                  "name": "Managing icons",
+                  "slug": "faststore/managing-icons-overview",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "Iconography",
+                      "slug": "faststore/managing-icons-iconography",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Adding custom icons",
+                      "slug": "faststore/managing-icons-adding-custom-icons",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Overriding native icons",
+                      "slug": "faststore/managing-icons-overriding-native-icons",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "Using data attributes with FastStore UI",
@@ -19176,6 +19212,20 @@
             {
               "name": "Issues during extending the FastStore API schema",
               "slug": "issues-during-extending-the-faststore-api-schema",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Issues when customizing FastStore icons",
+              "slug": "issues-when-customizing-faststore-icons",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Issues when using FastStore hooks",
+              "slug": "issues-when-using-faststore-hooks",
               "origin": "",
               "type": "markdown",
               "children": []
