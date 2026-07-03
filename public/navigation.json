@@ -17089,6 +17089,13 @@
                   "children": []
                 },
                 {
+                  "name": "Overriding native icons",
+                  "slug": "faststore/managing-icons-overriding-native-icons",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Using data attributes with FastStore UI",
                   "slug": "faststore/styling-data-attributes",
                   "origin": "",
