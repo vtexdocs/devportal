@@ -2,6 +2,131 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.38.3](https://github.com/vtexdocs/devportal/compare/v1.38.2...v1.38.3) (2026-06-26)
+
+
+### Features
+
+* migrate troubleshooting UI to @vtexdocs/components ([ac0ecf5](https://github.com/vtexdocs/devportal/commit/ac0ecf58dbf7645b86202b671b7b5a96832d472f))
+* **navigation.json:** add faststore release notes ([466a9f0](https://github.com/vtexdocs/devportal/commit/466a9f0cef59448a87f43327d41ab6d7b114f480))
+* **navigation.json:** add new API endpoints for managing SKU prices and attachments in the cart ([5c54c43](https://github.com/vtexdocs/devportal/commit/5c54c4338caca61549ece495e2f6be2cf35b2d03))
+
+
+### Bug Fixes
+
+* capitalization ([7760f44](https://github.com/vtexdocs/devportal/commit/7760f44433da402263fe6a17498cd07b3a0ab49b))
+
+
+### Chore
+
+* add B2B user provisioning and password migration entries to navigation ([f7afc16](https://github.com/vtexdocs/devportal/commit/f7afc165a20ee43f293a3480d535713d607edcb1))
+
+### [1.38.2](https://github.com/vtexdocs/devportal/compare/v1.38.1...v1.38.2) (2026-06-22)
+
+
+### Chore
+
+* **navigation.json:** add new section for Checkout Extensibility with multiple guides ([336902c](https://github.com/vtexdocs/devportal/commit/336902c847b0877032acb4ebf0653c8cdc6925e3))
+* **navigation.json:** rename section to Buyer Checkout Extensibility and update child guide names ([2edd0ab](https://github.com/vtexdocs/devportal/commit/2edd0ab65be8b9b77063927493af54f9815452c6))
+* **navigation.json:** update section name from Buyer Checkout Extensibility to Buyer Portal Checkout Extensibility ([1970e9a](https://github.com/vtexdocs/devportal/commit/1970e9ad57b81a3193d17e9870265f6f9a0caee5))
+
+### [1.38.1](https://github.com/vtexdocs/devportal/compare/v1.38.0...v1.38.1) (2026-06-20)
+
+
+### Bug Fixes
+
+* change http method in move org unit endpoint navigation ([69e2d65](https://github.com/vtexdocs/devportal/commit/69e2d65f226549d787e12840daf5d238efaa12b3))
+* **navigation.json:** rename slug for cms section on creating new section ([f7b3974](https://github.com/vtexdocs/devportal/commit/f7b39747f2735da38b21e2d0c716eb51a5960ac9))
+
+
+### Chore
+
+* add custom-storefront-roles-and-resources nav and missing Storefront Roles API endpoints ([62d0845](https://github.com/vtexdocs/devportal/commit/62d0845e1711c07d785138b0ed4fb7949bc4bc4c))
+
+
+### Docs
+
+* add VTEX Ads guide entries to Developers Portal navigation ([9d15c60](https://github.com/vtexdocs/devportal/commit/9d15c60f1b04ed28ddb0e7cd527c461a224fb263))
+
+## [1.38.0](https://github.com/vtexdocs/devportal/compare/v1.37.0...v1.38.0) (2026-06-16)
+
+
+### Features
+
+* **cms-creating-a-new-section.md:** add new CMS section for creating a new section ([36cd9c9](https://github.com/vtexdocs/devportal/commit/36cd9c9e0e7db84a7cab1b83e549e8d552f02ca4))
+* **navigation.json:** add faststore entry ([d52b5f9](https://github.com/vtexdocs/devportal/commit/d52b5f99f63111828e3fea321a42f1dd963522ab))
+
+
+### Refactoring
+
+* update naming for Legacy CMS Portal to CMS Portal (Legacy) in navigation and documentation ([483db38](https://github.com/vtexdocs/devportal/commit/483db38a2bc0287a768b41a400e299986629755e))
+
+
+### Docs
+
+* **nav:** add Integrating audiences entry to VTEX Ads navigation ([dcc0329](https://github.com/vtexdocs/devportal/commit/dcc03298291a196db13c4240c1671270ed80d185))
+
+## [1.37.0](https://github.com/vtexdocs/devportal/compare/v1.36.0...v1.37.0) (2026-06-15)
+
+
+### Features
+
+* add June category and customdata release note to navigation ([af910a8](https://github.com/vtexdocs/devportal/commit/af910a8338a467746145caab32992b0d92d5ecad))
+
+
+### Bug Fixes
+
+* **navigation.json:** Update slug for Affiliates Program ([b44b9a1](https://github.com/vtexdocs/devportal/commit/b44b9a1e30e654aa8d7f98fd67d44357da6a61ba))
+
+
+### Chore
+
+* add B2B Password Migration Protocol API reference and navigation entries ([ba904be](https://github.com/vtexdocs/devportal/commit/ba904bea1b654f980d1981fc4f3efa298464b0c2))
+* change date ([caffe14](https://github.com/vtexdocs/devportal/commit/caffe14f5ccba9a9cf511b6ffb754843f165af4a))
+* **nav:** add Audiences group to VTEX Ads API sidebar ([29fe45e](https://github.com/vtexdocs/devportal/commit/29fe45eb9cc68df80b2404ea5b56d7ef9882bc5a))
+* **nav:** sync VTEX Ads API navigation with OpenAPI spec ([743343d](https://github.com/vtexdocs/devportal/commit/743343dffc3828a79933472f63f331b9bcdc5004))
+* resolve merge conflict keeping organization account auth and password migration categories ([dd81a4c](https://github.com/vtexdocs/devportal/commit/dd81a4c6e230d3f77abe8d958b21bbbeaccb8123))
+
+## [1.36.0](https://github.com/vtexdocs/devportal/compare/v1.35.1...v1.36.0) (2026-06-09)
+
+
+### Features
+
+* **constants.tsx:** add new text size constants for larger font sizes ([a1d5815](https://github.com/vtexdocs/devportal/commit/a1d5815fe9b0de2c9e824b26aa2f2bae640579da))
+
+
+### Bug Fixes
+
+* **constants.tsx:** update text size constants ([34253c1](https://github.com/vtexdocs/devportal/commit/34253c1c6ccdf69fbbbd340f3aee871bb3c9a825))
+
+### [1.35.1](https://github.com/vtexdocs/devportal/compare/v1.35.0...v1.35.1) (2026-06-09)
+
+
+### Bug Fixes
+
+* **propsSection.ts:** update component folder mapping to prefer frontmatter component filename ([f543a37](https://github.com/vtexdocs/devportal/commit/f543a376062f5a91e6f7aa03dd933e6d3b03fe31))
+
+
+### Chore
+
+* add new redirect for AI-assisted development guide ([1260e8f](https://github.com/vtexdocs/devportal/commit/1260e8f11de66f7c01ce3e28bb57ef0bcdabb4b7))
+
+## [1.35.0](https://github.com/vtexdocs/devportal/compare/v1.34.4...v1.35.0) (2026-06-08)
+
+
+### Features
+
+* add Organization account authentication endpoints to VTEX ID navigation ([b1a2b37](https://github.com/vtexdocs/devportal/commit/b1a2b37034779fb5dcba322f752bcb2e58a45c22))
+* **navigation.json:** add B2B Buyer Portal Master Data architecture guide ([7c17e72](https://github.com/vtexdocs/devportal/commit/7c17e7265a3e9355d97e994eb588bf59f2a9cb50))
+* **navigation.json:** add new cms guide entry ([2a878a6](https://github.com/vtexdocs/devportal/commit/2a878a660110636ce4de4683357662c88b5dcb37))
+* **navigation.json:** add new entries for faststore ui guides ([113a697](https://github.com/vtexdocs/devportal/commit/113a697f8899cbb9f54c50e133249bb303be46a2))
+
+
+### Docs
+
+* navigation update ([b436445](https://github.com/vtexdocs/devportal/commit/b43644516ca6d7640fd61ee0159bcb46fb04edb7))
+* update navigation ([a2cac62](https://github.com/vtexdocs/devportal/commit/a2cac622fc505cfd81c06a9bf65d43e85e5ae284))
+
 ### [1.34.4](https://github.com/vtexdocs/devportal/compare/v1.34.3...v1.34.4) (2026-05-26)
 
 
