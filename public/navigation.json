@@ -17075,25 +17075,33 @@
                   ]
                 },
                 {
-                  "name": "Iconography",
-                  "slug": "faststore/styling-icons",
+                  "name": "Managing icons",
+                  "slug": "faststore/managing-icons-overview",
                   "origin": "",
                   "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Adding custom icons",
-                  "slug": "faststore/managing-icons-adding-custom-icons",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Overriding native icons",
-                  "slug": "faststore/managing-icons-overriding-native-icons",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
+                  "children": [
+                    {
+                      "name": "Iconography",
+                      "slug": "faststore/managing-icons-iconography",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Adding custom icons",
+                      "slug": "faststore/managing-icons-adding-custom-icons",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Overriding native icons",
+                      "slug": "faststore/managing-icons-overriding-native-icons",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "Using data attributes with FastStore UI",
