@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "node_modules/@img/**/*", "./github
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/styling-icons"
+status = 308
+to = "/docs/guides/faststore/managing-icons-iconography"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/getting-started-promoting-your-headless-cms-changes"
 status = 308
 to = "/docs/guides/faststore/integration-promoting-your-headless-cms-changes"
