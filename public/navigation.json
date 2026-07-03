@@ -17082,6 +17082,13 @@
                   "children": []
                 },
                 {
+                  "name": "Adding custom icons",
+                  "slug": "faststore/managing-icons-adding-custom-icons",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Using data attributes with FastStore UI",
                   "slug": "faststore/styling-data-attributes",
                   "origin": "",
