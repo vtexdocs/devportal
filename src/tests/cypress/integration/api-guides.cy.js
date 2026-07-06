@@ -42,6 +42,14 @@ const getDesktopTableOfContents = () =>
     )
     .should('have.length', 1)
 
+const getTocAnchorId = (href = '') => {
+  const hashIndex = href.lastIndexOf('#')
+  return hashIndex === -1 ? '' : href.slice(hashIndex + 1)
+}
+
+const getDesktopTocEntryLinks = () =>
+  getDesktopTableOfContents().find('a[href*="#"]')
+
 describe('API guides documentation page', () => {
   beforeEach(() => {
     cy.viewport(1366, 768)
@@ -168,14 +176,13 @@ describe('API guides documentation page', () => {
         cy.log('skipped — preview load timeout (PIV-003)')
         return
       }
-      getDesktopTableOfContents()
-        .find('a[href^="#"]')
+      getDesktopTocEntryLinks()
         .should('have.length.greaterThan', 0)
         .last()
         .then(($heading) => {
-          const anchor = $heading.attr('href')
-          expect(anchor, 'last table-of-contents href').to.match(/^#.+/)
-          cy.wrap(anchor.slice(1)).as('anchor')
+          const anchor = getTocAnchorId($heading.attr('href'))
+          expect(anchor, 'last table-of-contents href').to.match(/^.+/)
+          cy.wrap(anchor).as('anchor')
           return cy.wrap($heading)
         })
         .click()
