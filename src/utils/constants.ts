@@ -442,6 +442,7 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Giftcard Provider Protocol': 'giftcard-provider-protocol',
   'VTEX - Headless CMS API': 'headless-cms-api',
   'VTEX - Intelligent Search API': 'intelligent-search-api',
+  'VTEX - Intelligent Search API - v1': 'intelligent-search-api-v1',
   'VTEX - License Manager API': 'license-manager-api',
   'VTEX - Logistics API': 'logistics-api',
   'VTEX - Marketplace APIs': 'marketplace-apis',

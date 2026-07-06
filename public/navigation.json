@@ -8256,6 +8256,123 @@
           ]
         },
         {
+          "name": "Intelligent Search API v1",
+          "slug": "intelligent-search-api-v1",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Product List Page",
+              "slug": "intelligent-search-api-v1-product-list-page",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Search products (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/product-search/-facets-",
+                  "children": []
+                },
+                {
+                  "name": "List filters for a search (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/facets/-facets-",
+                  "children": []
+                },
+                {
+                  "name": "Get attempt of correction of a misspelled term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/correction-search",
+                  "children": []
+                },
+                {
+                  "name": "Get list of banners registered for query (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/banners/-facets-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Product Detail Page",
+              "slug": "intelligent-search-api-v1-product-detail-page",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get product (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/products",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Autocomplete",
+              "slug": "intelligent-search-api-v1-autocomplete",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get list of the 10 most searched terms (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/top-searches",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms and attributes similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/autocomplete-suggestions",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/search-suggestions",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Delivery Promise",
+              "slug": "intelligent-search-api-v1-delivery-promise",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get pickup point availability for Delivery Promise (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/pickup-point-availability/-facets-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Intelligent Search Events API - Headless",
           "slug": "intelligent-search-events-api-headless",
           "origin": "",
