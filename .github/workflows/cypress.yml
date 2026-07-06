@@ -69,10 +69,9 @@ jobs:
       # PR comment reflects the same navigation data shipped by this preview.
       - name: Cypress integration tests
         uses: cypress-io/github-action@v5
-        timeout-minutes: 60
+        timeout-minutes: 25
         with:
           browser: chrome
-          headed: true
         env:
           CYPRESS_baseUrl: ${{ steps.wait-for-netflify-preview.outputs.url }}
           CYPRESS_testProbability: 0.1
