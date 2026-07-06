@@ -19373,6 +19373,21 @@
           "type": "category",
           "children": [
             {
+              "name": "July",
+              "slug": "july-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {                  
+                  "name": "FastStore WebOps: Self-service Git provider management",
+                  "slug": "2026-07-06-faststore-webops-self-service-git-provider-management",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "June",
               "slug": "june-2026",
               "origin": "",
