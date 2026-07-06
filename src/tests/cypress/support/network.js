@@ -26,7 +26,12 @@ export const visitPageAllowingLoadTimeout = (
 ) => {
   let sawLoadTimeout = false
 
+  // Detaching inside the handler is what prevents a leak: a swallowed load
+  // timeout aborts the command queue, so the happy-path cleanup below never
+  // runs. Removing the handler here guarantees it can't bleed into later tests.
   const failHandler = (error) => {
+    Cypress.off('fail', failHandler)
+
     if (isRemotePageLoadTimeout(error)) {
       sawLoadTimeout = true
       return false
