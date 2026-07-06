@@ -34,6 +34,14 @@ const getDesktopSidebarToggle = () =>
     .find('svg')
     .should('have.length', 1)
 
+const getDesktopTableOfContents = () =>
+  cy
+    .get('[data-cy="table-of-contents"]')
+    .filter((_index, element) =>
+      Boolean(element.querySelector('[data-cy="feedback-section"]'))
+    )
+    .should('have.length', 1)
+
 describe('API guides documentation page', () => {
   beforeEach(() => {
     cy.viewport(1366, 768)
@@ -136,7 +144,7 @@ describe('API guides documentation page', () => {
         cy.log('skipped — preview load timeout (PIV-003)')
         return
       }
-      cy.get('[data-cy="table-of-contents"]:visible')
+      getDesktopTableOfContents()
         .scrollIntoView()
         .find('[data-cy="feedback-section"]')
         .first()
@@ -160,7 +168,7 @@ describe('API guides documentation page', () => {
         cy.log('skipped — preview load timeout (PIV-003)')
         return
       }
-      cy.get('[data-cy="table-of-contents"]:visible')
+      getDesktopTableOfContents()
         .find('a[href^="#"]')
         .should('have.length.greaterThan', 0)
         .last()
