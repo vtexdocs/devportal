@@ -92,7 +92,7 @@
     "unist-builder": "^3.0.1",
     "unist-util-visit": "^4.1.1",
     "use-yarn": "^2.4.0",
-    "uuid": "^9.0.0"
+    "uuid": "^14.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.26.9",
