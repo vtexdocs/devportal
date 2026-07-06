@@ -180,8 +180,10 @@ describe('API guides documentation page', () => {
         return
       }
       getDesktopTocEntryLinks()
+        .filter(':visible')
         .should('have.length.greaterThan', 0)
         .last()
+        .scrollIntoView()
         .then(($heading) => {
           const anchor = getTocAnchorId($heading.attr('href'))
           expect(anchor, 'last table-of-contents href').to.match(/^.+/)
