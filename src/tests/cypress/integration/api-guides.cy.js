@@ -53,7 +53,10 @@ const getDesktopTocEntryLinks = () =>
 describe('API guides documentation page', () => {
   beforeEach(() => {
     cy.viewport(1366, 768)
-    visitGuidePage(GUIDE_TEST_URL).as('guideLoadTimeout')
+    cy.wrap(false).as('guideLoadTimeout')
+    visitGuidePage(GUIDE_TEST_URL).then((sawLoadTimeout) => {
+      cy.wrap(sawLoadTimeout).as('guideLoadTimeout')
+    })
   })
 
   afterEach(function () {
