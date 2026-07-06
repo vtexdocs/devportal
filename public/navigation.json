@@ -8210,62 +8210,10 @@
           "type": "openapi",
           "children": [
             {
-              "name": "Autocomplete",
-              "slug": "intelligent-search-api-v1-autocomplete",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get list of the 10 most searched terms (v1)",
-                  "slug": "intelligent-search-api-v1",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/top-searches",
-                  "children": []
-                },
-                {
-                  "name": "Get list of suggested terms and attributes similar to the search term (v1)",
-                  "slug": "intelligent-search-api-v1",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/autocomplete-suggestions",
-                  "children": []
-                },
-                {
-                  "name": "Get list of suggested terms similar to the search term (v1)",
-                  "slug": "intelligent-search-api-v1",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/search-suggestions",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Product List Page",
               "slug": "intelligent-search-api-v1-product-list-page",
               "type": "category",
               "children": [
-                {
-                  "name": "Get attempt of correction of a misspelled term (v1)",
-                  "slug": "intelligent-search-api-v1",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/correction-search",
-                  "children": []
-                },
-                {
-                  "name": "Get list of banners registered for query (v1)",
-                  "slug": "intelligent-search-api-v1",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/banners/-facets-",
-                  "children": []
-                },
                 {
                   "name": "Search products (v1)",
                   "slug": "intelligent-search-api-v1",
@@ -8298,6 +8246,58 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/products",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Autocomplete",
+              "slug": "intelligent-search-api-v1-autocomplete",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get list of the 10 most searched terms (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/top-searches",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms and attributes similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/autocomplete-suggestions",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/search-suggestions",
+                  "children": []
+                },
+                {
+                  "name": "Get attempt of correction of a misspelled term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/correction-search",
+                  "children": []
+                },
+                {
+                  "name": "Get list of banners registered for query (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/banners/-facets-",
                   "children": []
                 }
               ]
