@@ -8231,6 +8231,24 @@
                   "origin": "",
                   "endpoint": "/facets/-facets-",
                   "children": []
+                },
+                {
+                  "name": "Get attempt of correction of a misspelled term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/correction-search",
+                  "children": []
+                },
+                {
+                  "name": "Get list of banners registered for query (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/banners/-facets-",
+                  "children": []
                 }
               ]
             },
@@ -8280,24 +8298,6 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/search-suggestions",
-                  "children": []
-                },
-                {
-                  "name": "Get attempt of correction of a misspelled term (v1)",
-                  "slug": "intelligent-search-api-v1",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/correction-search",
-                  "children": []
-                },
-                {
-                  "name": "Get list of banners registered for query (v1)",
-                  "slug": "intelligent-search-api-v1",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/banners/-facets-",
                   "children": []
                 }
               ]
