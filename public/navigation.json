@@ -19490,6 +19490,21 @@
           "type": "category",
           "children": [
             {
+              "name": "July",
+              "slug": "july-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New Intelligent Search API v1",
+                  "slug": "2026-07-08-new-intelligent-search-api-v1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "June",
               "slug": "june-2026",
               "origin": "",
