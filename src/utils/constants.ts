@@ -463,6 +463,7 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Operational Capacity API': 'operational-capacity-api',
   'VTEX - Orders API PII version': 'orders-api-pii-version',
   'VTEX - Orders API': 'orders-api',
+  'VTEX - Payment Policies API': 'payment-policies-api',
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
   'VTEX - Payments Gateway API': 'payments-gateway-api',
   'VTEX - Pick and Pack API': 'pick-and-pack-api',

@@ -11390,6 +11390,82 @@
           ]
         },
         {
+          "name": "Payment Policies API",
+          "slug": "payment-policies-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Payment policy rules",
+              "slug": "payment-policy-rules",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "List policy rules",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "Get policy rule by ID",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Update policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment policy evaluation",
+              "slug": "payment-policy-evaluation",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Evaluate payment policies",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/pvt/payment-systems/search",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Payment Provider Protocol API",
           "slug": "payment-provider-protocol",
           "origin": "",
