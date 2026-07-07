@@ -19496,6 +19496,13 @@
               "type": "category",
               "children": [
                 {                  
+                  "name": "Activity Flow: Customer interaction event tracking for mobile apps",
+                  "slug": "2026-07-07-activity-flow-customer-interaction-event-tracking-for-mobile-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {                  
                   "name": "FastStore WebOps: Self-service Git provider management",
                   "slug": "2026-07-06-faststore-webops-self-service-git-provider-management",
                   "origin": "",
