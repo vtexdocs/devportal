@@ -1395,6 +1395,95 @@
           ]
         },
         {
+          "name": "CMS",
+          "slug": "cms",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Getting started with CMS",
+              "slug": "getting-started-with-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Understanding CMS architecture and schema declarations",
+                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Local setup and development",
+                  "slug": "local-setup-and-development",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Troubleshooting",
+                  "slug": "cms-troubleshooting",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Integrations",
+              "slug": "integrations",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore",
+                  "slug": "cms-for-faststore-storefronts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Content plugin",
+                      "slug": "content-plugin",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Creating a new section in the CMS",
+                      "slug": "creating-a-new-section",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Upgrading from Headless CMS to CMS",
+              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Comparing Headless CMS (legacy) and CMS features",
+                  "slug": "comparing-headless-cms-legacy-and-cms-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Understanding components and sections",
+              "slug": "understanding-components-and-sections",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Master Data",
           "slug": "master-data",
           "origin": "",
@@ -3141,95 +3230,6 @@
             {
               "name": "VTEX CX Platform MCP",
               "slug": "connect-the-vtex-cx-platform-mcp",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "CMS",
-          "slug": "cms",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Getting started with CMS",
-              "slug": "getting-started-with-cms",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Understanding CMS architecture and schema declarations",
-                  "slug": "understanding-cms-architecture-and-schema-declarations",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Local setup and development",
-                  "slug": "local-development-and-setup",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Troubleshooting",
-                  "slug": "cms-troubleshooting",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Integrations",
-              "slug": "integrations",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "FastStore",
-                  "slug": "cms-for-faststore-storefronts",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Content plugin",
-                      "slug": "content-plugin",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Creating a new section in the CMS",
-                      "slug": "creating-a-new-section",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Upgrading from Headless CMS to CMS",
-              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Comparing Headless CMS (legacy) and CMS features",
-                  "slug": "comparing-headless-cms-legacy-and-cms-features",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Understanding components and sections",
-              "slug": "understanding-components-and-sections",
               "origin": "",
               "type": "markdown",
               "children": []
