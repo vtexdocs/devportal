@@ -1730,6 +1730,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Using payment policies",
+                  "slug": "using-payment-policies",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -11390,6 +11397,82 @@
           ]
         },
         {
+          "name": "Payment Policies API",
+          "slug": "payment-policies-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Payment policy rules",
+              "slug": "payment-policy-rules",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "List policy rules",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "Get policy rule by ID",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Update policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment policy evaluation",
+              "slug": "payment-policy-evaluation",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Evaluate payment policies",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/pvt/payment-systems/search",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Payment Provider Protocol API",
           "slug": "payment-provider-protocol",
           "origin": "",
@@ -19498,6 +19581,20 @@
                 {
                   "name": "New Intelligent Search API v1",
                   "slug": "2026-07-08-new-intelligent-search-api-v1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {                  
+                  "name": "Activity Flow: Customer interaction event tracking for mobile apps",
+                  "slug": "2026-07-07-activity-flow-customer-interaction-event-tracking-for-mobile-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {                  
+                  "name": "FastStore WebOps: Self-service Git provider management",
+                  "slug": "2026-07-06-faststore-webops-self-service-git-provider-management",
                   "origin": "",
                   "type": "markdown",
                   "children": []

@@ -128,6 +128,13 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/orders-api',
   },
   {
+    title: 'Payment Policies API',
+    description:
+      'Configure rules that include or exclude payment systems for specific cart items.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/payment-policies-api',
+  },
+  {
     title: 'Payments Provider Protocol API',
     description:
       'Integrate your payment processing API into the VTEX platform,',
