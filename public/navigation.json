@@ -3154,6 +3154,35 @@
           "type": "category",
           "children": [
             {
+              "name": "Getting started with CMS",
+              "slug": "getting-started-with-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Understanding CMS architecture and schema declarations",
+                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Local setup and development",
+                  "slug": "local-development-and-setup",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Troubleshooting",
+                  "slug": "cms-troubleshooting",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Integrations",
               "slug": "integrations",
               "origin": "",
@@ -3192,13 +3221,6 @@
                 {
                   "name": "Comparing Headless CMS (legacy) and CMS features",
                   "slug": "comparing-headless-cms-legacy-and-cms-features",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Understanding CMS architecture and schema declarations",
-                  "slug": "understanding-cms-architecture-and-schema-declarations",
                   "origin": "",
                   "type": "markdown",
                   "children": []
