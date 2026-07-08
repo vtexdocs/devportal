@@ -19578,6 +19578,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "New Intelligent Search API v1",
+                  "slug": "2026-07-08-new-intelligent-search-api-v1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {                  
                   "name": "Activity Flow: Customer interaction event tracking for mobile apps",
                   "slug": "2026-07-07-activity-flow-customer-interaction-event-tracking-for-mobile-apps",
