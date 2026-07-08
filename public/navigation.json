@@ -1730,6 +1730,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Using payment policies",
+                  "slug": "using-payment-policies",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
