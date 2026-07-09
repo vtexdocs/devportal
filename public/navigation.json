@@ -19608,6 +19608,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 4.4.0",
+                  "slug": "2026-07-09-faststore-release-notes-4-4-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "New Intelligent Search API v1",
                   "slug": "2026-07-08-new-intelligent-search-api-v1",
                   "origin": "",
