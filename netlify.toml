@@ -2418,9 +2418,3 @@ force = true
 from = "/docs/guides/assembly-options-app"
 status = 308
 to = "/docs/apps/vtex.admin-assembly-options"
-
-[[redirects]]
-force = true
-from = "https://apps.vtex.com/vtex-admin-assembly-options/p"
-status = 308
-to = "/docs/apps/vtex.admin-assembly-options"
