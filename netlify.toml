@@ -2418,3 +2418,9 @@ force = true
 from = "/docs/guides/assembly-options-app"
 status = 308
 to = "/docs/apps/vtex.admin-assembly-options"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-faststore-v1-to-v3"
+status = 308
+to = "/docs/guides/faststore/getting-started-faststore-v1-to-v4"
