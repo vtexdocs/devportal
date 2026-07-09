@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.39.0](https://github.com/vtexdocs/devportal/compare/v1.38.3...v1.39.0) (2026-07-06)
+
+
+### Features
+
+* add Intelligent Search API v1 card to api-reference index ([a9be40a](https://github.com/vtexdocs/devportal/commit/a9be40ab45a78942e29014df3115d10f9e562f81))
+* add Intelligent Search API v1 navigation entries ([730e9d3](https://github.com/vtexdocs/devportal/commit/730e9d3dbd1cbf4b7b23ac9e3b0b5e4fa3158c7f))
+* add Intelligent Search API v1 slug mapping ([35b9f42](https://github.com/vtexdocs/devportal/commit/35b9f423e5b576af31e36d901de8eefa776ddbff))
+* **navigation.json:** add entry for new faststore styling guide ([575b278](https://github.com/vtexdocs/devportal/commit/575b278e2aae20e12ef749d8f874952e298395e3))
+* **navigation.json:** add new new entry for faststore ([f8a0cd9](https://github.com/vtexdocs/devportal/commit/f8a0cd972b720c448cb372c45b62cf89b8ca6d76))
+* **navigation.json:** add Rewriter section with GraphQL API documentation ([eb51f9a](https://github.com/vtexdocs/devportal/commit/eb51f9ab42cda349f397ba9d5eed7eabb0895e58))
+* **navigation.json:** add section for customizing faststore icons issues ([3014301](https://github.com/vtexdocs/devportal/commit/3014301ac56304c961903b655773bba75291906d))
+* **navigation.json:** add section for overriding native icons in navigation ([53b8c22](https://github.com/vtexdocs/devportal/commit/53b8c2299850663abd8a3ba35ce4e1b19a8e7ff4))
+* **navigations.json:** add custom icons section to navigation.json ([b189498](https://github.com/vtexdocs/devportal/commit/b189498937fd9765cb49dabf5417dda44f3ca8bc))
+* **netlify.toml:** Add new redirect for vtex.rewriter documentation ([44204a7](https://github.com/vtexdocs/devportal/commit/44204a7eb74be1f620316e7c5f9fd4ffa2f6a46a))
+* **netlify.toml:** add redirects for faststore icons guide ([9325dac](https://github.com/vtexdocs/devportal/commit/9325dac057c081cded99c6d3280b100c35ccd182))
+* remove legacy Intelligent Search API card from api-reference index ([13047a3](https://github.com/vtexdocs/devportal/commit/13047a32441d69cb555f360df9b01ad8cfadaea0))
+* reorder Intelligent Search API v1 navigation categories ([928c149](https://github.com/vtexdocs/devportal/commit/928c1494f92ef22e62916203e060eee9d4b5accd))
+
+
+### Bug Fixes
+
+* move correction-search and banners to Product List Page in IS API v1 nav ([196d720](https://github.com/vtexdocs/devportal/commit/196d720f7b44c07a577109cc7a394071d935dea6))
+* **navigation.json:** cms entries ([064c229](https://github.com/vtexdocs/devportal/commit/064c229877145c6f23049861ddbb3c7b436a939a))
+* **navigation.json:** hcms name entry ([9a20750](https://github.com/vtexdocs/devportal/commit/9a20750a9476c124f98c47e84f9b3d238e31a364))
+* redirects and entries for cms and headless cms (legacy) ([4b37237](https://github.com/vtexdocs/devportal/commit/4b37237d2a6b2544befa4ab65ca9de6e5b4e3614))
+
+
+### Docs
+
+* adding Sales Team Management guide ([c807e4c](https://github.com/vtexdocs/devportal/commit/c807e4ccb49a4909e442d03d9b0b652c122ccd6e))
+
+
+### Chore
+
+* add temp/ to gitignore ([af6540e](https://github.com/vtexdocs/devportal/commit/af6540e7814dbfe2624ff99a47ebe33c7fde766d))
+
 ### [1.38.3](https://github.com/vtexdocs/devportal/compare/v1.38.2...v1.38.3) (2026-06-26)
 
 

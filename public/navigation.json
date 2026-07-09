@@ -1395,6 +1395,95 @@
           ]
         },
         {
+          "name": "CMS",
+          "slug": "cms",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Getting started with CMS",
+              "slug": "getting-started-with-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Understanding CMS architecture and schema declarations",
+                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Local setup and development",
+                  "slug": "local-setup-and-development",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Troubleshooting",
+                  "slug": "cms-troubleshooting",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Integrations",
+              "slug": "integrations",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore",
+                  "slug": "cms-for-faststore-storefronts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Content plugin",
+                      "slug": "content-plugin",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Creating a new section in the CMS",
+                      "slug": "creating-a-new-section",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Upgrading from Headless CMS to CMS",
+              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Comparing Headless CMS (legacy) and CMS features",
+                  "slug": "comparing-headless-cms-legacy-and-cms-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Understanding components and sections",
+              "slug": "understanding-components-and-sections",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Master Data",
           "slug": "master-data",
           "origin": "",
@@ -1580,6 +1669,13 @@
                   "children": []
                 },
                 {
+                  "name": "Deleting documents in Master Data v1",
+                  "slug": "deleting-documents-in-master-data-v1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Implementing newletter opt-in with Master Data v1",
                   "slug": "implementing-newsletter-opt-in-with-master-data-v1",
                   "origin": "",
@@ -1727,6 +1823,13 @@
                 {
                   "name": "Setting up the type of interest rate",
                   "slug": "setting-up-the-type-of-interest-rate",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using payment policies",
+                  "slug": "using-payment-policies",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -3134,73 +3237,6 @@
             {
               "name": "VTEX CX Platform MCP",
               "slug": "connect-the-vtex-cx-platform-mcp",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "CMS",
-          "slug": "cms",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Integrations",
-              "slug": "integrations",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "FastStore",
-                  "slug": "cms-for-faststore-storefronts",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Content plugin",
-                      "slug": "content-plugin",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Creating a new section in the CMS",
-                      "slug": "creating-a-new-section",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Upgrading from Headless CMS to CMS",
-              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Comparing Headless CMS (legacy) and CMS features",
-                  "slug": "comparing-headless-cms-legacy-and-cms-features",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Understanding CMS architecture and schema declarations",
-                  "slug": "understanding-cms-architecture-and-schema-declarations",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Understanding components and sections",
-              "slug": "understanding-components-and-sections",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -8256,6 +8292,123 @@
           ]
         },
         {
+          "name": "Intelligent Search API v1",
+          "slug": "intelligent-search-api-v1",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Product List Page",
+              "slug": "intelligent-search-api-v1-product-list-page",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Search products (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/product-search/-facets-",
+                  "children": []
+                },
+                {
+                  "name": "List filters for a search (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/facets/-facets-",
+                  "children": []
+                },
+                {
+                  "name": "Get attempt of correction of a misspelled term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/correction-search",
+                  "children": []
+                },
+                {
+                  "name": "Get list of banners registered for query (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/banners/-facets-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Product Detail Page",
+              "slug": "intelligent-search-api-v1-product-detail-page",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get product (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/products",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Autocomplete",
+              "slug": "intelligent-search-api-v1-autocomplete",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get list of the 10 most searched terms (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/top-searches",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms and attributes similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/autocomplete-suggestions",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/search-suggestions",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Delivery Promise",
+              "slug": "intelligent-search-api-v1-delivery-promise",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get pickup point availability for Delivery Promise (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/pickup-point-availability/-facets-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Intelligent Search Events API - Headless",
           "slug": "intelligent-search-events-api-headless",
           "origin": "",
@@ -11266,6 +11419,82 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-/remove",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Payment Policies API",
+          "slug": "payment-policies-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Payment policy rules",
+              "slug": "payment-policy-rules",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "List policy rules",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "Get policy rule by ID",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Update policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment policy evaluation",
+              "slug": "payment-policy-evaluation",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Evaluate payment policies",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/pvt/payment-systems/search",
                   "children": []
                 }
               ]
@@ -19372,6 +19601,35 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "July",
+              "slug": "july-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New Intelligent Search API v1",
+                  "slug": "2026-07-08-new-intelligent-search-api-v1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Activity Flow: Customer interaction event tracking for mobile apps",
+                  "slug": "2026-07-07-activity-flow-customer-interaction-event-tracking-for-mobile-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Self-service Git provider management",
+                  "slug": "2026-07-06-faststore-webops-self-service-git-provider-management",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "June",
               "slug": "june-2026",
