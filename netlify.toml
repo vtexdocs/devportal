@@ -2412,3 +2412,9 @@ force = true
 from = "/docs/guides/rewriter"
 status = 308
 to = "/docs/apps/vtex.rewriter"
+
+[[redirects]]
+force = true
+from = "/docs/guides/assembly-options-app"
+status = 308
+to = "/docs/apps/vtex.admin-assembly-options"
