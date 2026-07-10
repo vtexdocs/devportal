@@ -12944,7 +12944,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/authenticator/punchout/start",
+                  "endpoint": "/api/authenticator/v1/punchout/start",
                   "children": []
                 },
                 {
@@ -12953,7 +12953,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/authenticator/punchout/authenticated/start",
+                  "endpoint": "/api/authenticator/v1/punchout/authenticated/start",
                   "children": []
                 },
                 {
@@ -12962,7 +12962,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/authenticator/punchout/finish",
+                  "endpoint": "/api/authenticator/v1/punchout/finish",
                   "children": []
                 }
               ]
@@ -14360,7 +14360,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/authenticator/storefront/users",
+                  "endpoint": "/api/authenticator/v1/storefront/users",
                   "children": []
                 },
                 {
