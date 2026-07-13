@@ -4479,9 +4479,9 @@
   resolved "https://registry.yarnpkg.com/@vtex/tsconfig/-/tsconfig-0.6.0.tgz#c9dfffc95d2ef55195237411f9c15269ca30b2a5"
   integrity sha512-SVQBxaSdEVdpJFja1aVTIiZBgpQKePyYOUWGzcYq6LYkSWqSbz2LoC7TuLUsmfweYmVkv8+4eVuxcDpQVEpq1A==
 
-"@vtexdocs/components@https://github.com/vtexdocs/components.git#feat/EDU-18208-troubleshooting-shared-components":
-  version "6.0.35"
-  resolved "https://github.com/vtexdocs/components.git#560e9b2ed96b6b55142968d9ec5d5f961a50c061"
+"@vtexdocs/components@https://github.com/vtexdocs/components.git#v6.1.3":
+  version "6.1.3"
+  resolved "https://github.com/vtexdocs/components.git#61ef8155f04b9f2dc16e08fa790ce5b44f8a0844"
   dependencies:
     "@code-hike/mdx" "^0.9.0"
     "@vtex/brand-ui" "^0.46.1"
