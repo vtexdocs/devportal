@@ -23,7 +23,8 @@
     "cypress:component": "cypress open --component",
     "cypress:component:headless": "cypress run --component",
     "cypress:e2e": "cypress open --e2e",
-    "cypress:e2e:headless": "cypress run --e2e"
+    "cypress:e2e:headless": "cypress run --e2e",
+    "test:utils": "node --test src/tests/utils/__tests__/summary-report.test.js"
   },
   "dependencies": {
     "@code-hike/mdx": "^0.9.0",
