@@ -437,6 +437,7 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Delivery Promise Notification API':
     'delivery-promise-notification-api',
   'VTEX - Delivery Promise Suggestions API': 'delivery-promise-suggestions-api',
+  'VTEX - External Promotions Protocol API': 'external-promotions-protocol-api',
   'VTEX - GiftCard Hub API': 'giftcard-hub-api',
   'VTEX - Giftcard API': 'giftcard-api',
   'VTEX - Giftcard Provider Protocol': 'giftcard-provider-protocol',
