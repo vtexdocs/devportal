@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.40.0](https://github.com/vtexdocs/devportal/compare/v1.39.0...v1.40.0) (2026-07-13)
+
+
+### Features
+
+* add Intelligent Search API v1 release note to navigation ([7e3c42a](https://github.com/vtexdocs/devportal/commit/7e3c42a683535bf6a02f4c309d33c289dba78edc))
+* add July 2026 category with FastStore WebOps entry ([cec6774](https://github.com/vtexdocs/devportal/commit/cec6774dd1be1ce1a4983b93a17a7a836e049f90))
+* **navigation.json:** add deleting documents in Master Data v1 entry ([961dbb1](https://github.com/vtexdocs/devportal/commit/961dbb13a109830997902ba8ef0f73082d86001d))
+* **navigation.json:** add faststore release notes entry to navigation ([dcc5802](https://github.com/vtexdocs/devportal/commit/dcc58023b7e4b08abba34b125f1faf842d91a2b5))
+* **navigation.json:** add new CMS entries ([92b199b](https://github.com/vtexdocs/devportal/commit/92b199b04aafc8664805f9d2a751e993b011d5ce))
+
+
+### Bug Fixes
+
+* **navigation.json:** slug for cms local setup and development entry ([75be7a0](https://github.com/vtexdocs/devportal/commit/75be7a08093cb92f9f0a03ff66130bad3342172e))
+* point RapiDoc submodule at latest master (with callout icon fix) ([2496050](https://github.com/vtexdocs/devportal/commit/2496050b893929f10b0b900dc779390d665f2316)), closes [#48](https://github.com/vtexdocs/devportal/issues/48) [#49](https://github.com/vtexdocs/devportal/issues/49)
+* remove redirect for vtex-admin-assembly-options ([089bf95](https://github.com/vtexdocs/devportal/commit/089bf95c8a6717ae1f11f75ab369c7930a35fdef))
+* render API reference overview callout icons as inline SVG ([7b5e327](https://github.com/vtexdocs/devportal/commit/7b5e3272fc9bde10dc000cac061471933373f63c))
+* update authenticator routes to v1 in navigation ([fcfb931](https://github.com/vtexdocs/devportal/commit/fcfb93178f9cc84c2f6ba47b274dfc094a438eae)), closes [vtex/openapi-schemas#1741](https://github.com/vtex/openapi-schemas/issues/1741)
+
+
+### Chore
+
+* bump vtex/components version to fix callout issues ([13838c1](https://github.com/vtexdocs/devportal/commit/13838c1fa6261d5dd4ad369d79ad7c30da7c5e07))
+* **navigation.json:** move cms section ([f8e02eb](https://github.com/vtexdocs/devportal/commit/f8e02ebef1c80375f17784c77974c7c351cd1a9e))
+* update @vtexdocs/components to version 6.1.3 and refresh RapiDoc subproject commit ([7fc8cbd](https://github.com/vtexdocs/devportal/commit/7fc8cbd33e5772363f9ba864068a06a88693fa9b))
+
 ## [1.39.0](https://github.com/vtexdocs/devportal/compare/v1.38.3...v1.39.0) (2026-07-06)
 
 
