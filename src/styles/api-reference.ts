@@ -93,18 +93,12 @@ const overviewContentStyles: SxStyleProp = {
     gridTemplateColumns: '20px 1fr',
     wordBreak: 'break-word',
     border: '1px solid #CCCED8',
-    '&::before': {
-      display: 'inline-block',
-      height: '20px',
-      width: '20px',
-      content: '""',
-      backgroundRepeat: 'no-repeat',
-      backgroundPosition: '0 0',
-      backgroundSize: '20px 20px',
-      gridColumn: '1',
-      gridRow: '1',
-      mt: '2px',
-    },
+  },
+  '& .overview-callout-icon': {
+    display: 'inline-block',
+    gridColumn: '1',
+    gridRow: '1',
+    mt: '2px',
   },
   '& .overview-callout p, & .overview-callout div': {
     m: 0,
@@ -117,10 +111,6 @@ const overviewContentStyles: SxStyleProp = {
   '& .overview-callout--info': {
     bg: '#F8F7FC',
     borderColor: '#CCCED8',
-    '&::before': {
-      backgroundImage:
-        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/info.svg)',
-    },
     '& code': {
       bg: '#ECEBF3',
     },
@@ -128,10 +118,6 @@ const overviewContentStyles: SxStyleProp = {
   '& .overview-callout--warning': {
     bg: '#FFF2D4',
     borderColor: '#FFB100',
-    '&::before': {
-      backgroundImage:
-        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/warning.svg)',
-    },
     '& code': {
       bg: '#FFE5B5',
     },
@@ -139,18 +125,10 @@ const overviewContentStyles: SxStyleProp = {
   '& .overview-callout--danger': {
     bg: '#FDEFEF',
     borderColor: '#DC5A41',
-    '&::before': {
-      backgroundImage:
-        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/danger.svg)',
-    },
   },
   '& .overview-callout--success': {
     bg: '#F3F8F3',
     borderColor: '#80BE80',
-    '&::before': {
-      backgroundImage:
-        'url(https://vtex-dev-portal-navigation.fra1.digitaloceanspaces.com/success.svg)',
-    },
   },
   '& code': {
     fontFamily: 'mono',

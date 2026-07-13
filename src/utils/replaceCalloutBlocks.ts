@@ -31,6 +31,25 @@ export const calloutPatternByType: Record<CalloutType, RegExp> = {
   success: /^(?:<p>)?\s*(?:\u2705)\s*/u,
 }
 
+const calloutIconColorByType: Record<CalloutType, string> = {
+  info: '#8C929D',
+  warning: '#FFB100',
+  danger: '#DC5A41',
+  success: '#80BE80',
+}
+
+export function calloutIconSvg(calloutType: CalloutType) {
+  const fill = calloutIconColorByType[calloutType]
+  const glyph =
+    calloutType === 'success'
+      ? '<path d="M5.5 10.3L8.3 13L14.5 6.8" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>'
+      : calloutType === 'info'
+      ? '<rect x="9.1" y="5" width="1.8" height="1.8" rx="0.9" fill="white"/><rect x="9.1" y="8.2" width="1.8" height="6.8" rx="0.9" fill="white"/>'
+      : '<rect x="9.1" y="5" width="1.8" height="7" rx="0.9" fill="white"/><rect x="9.1" y="13.5" width="1.8" height="1.8" rx="0.9" fill="white"/>'
+
+  return `<svg class="overview-callout-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="10" fill="${fill}"/>${glyph}</svg>`
+}
+
 export function isCalloutType(value: unknown): value is CalloutType {
   return (
     value === 'info' ||
@@ -121,7 +140,9 @@ export function enhanceCalloutHtml(content: string) {
         '<p>'
       )
 
-      return `<blockquote class="overview-callout overview-callout--${calloutType}">${normalizedInnerContent}</blockquote>`
+      return `<blockquote class="overview-callout overview-callout--${calloutType}">${calloutIconSvg(
+        calloutType
+      )}${normalizedInnerContent}</blockquote>`
     }
   )
 }
