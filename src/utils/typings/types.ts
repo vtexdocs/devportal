@@ -1,6 +1,8 @@
 import { NextPage } from 'next'
 import { IconProps } from '@vtex/brand-ui'
 
+import type { TroubleshootingItem } from '@vtexdocs/components'
+
 import { ActionType } from 'components/last-updates-card/functions'
 import {
   DocumentationTitle,
@@ -49,12 +51,7 @@ export type UpdateElement = {
   type?: ActionType
   tags?: string[]
 }
-export type TroubleshootingItem = {
-  slug: string
-  title: string
-  description: string
-  tags?: string[]
-}
+export type { TroubleshootingItem }
 export interface TroubleshootingCardsElements extends TroubleshootingItem {
   createdAt?: string
   linkTitle: string

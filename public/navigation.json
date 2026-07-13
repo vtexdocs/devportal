@@ -272,6 +272,28 @@
           ]
         },
         {
+          "name": "VTEX AI Developer Toolkit",
+          "slug": "vtex-ai-developer-toolkit-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "VTEX Developer MCP",
+              "slug": "vtex-developer-mcp",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "VTEX Skills",
+              "slug": "vtex-skills",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Integration Guides",
           "slug": "integration-guides-category",
           "origin": "",
@@ -342,28 +364,6 @@
                 {
                   "name": "FAQ: ERP Integration",
                   "slug": "faq-erp-integration",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Customer Credit",
-              "slug": "customer-credit-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Managing a Customer Credit account",
-                  "slug": "managing-a-customer-credit-account",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing a Customer Credit invoice",
-                  "slug": "managing-a-customer-credit-invoice",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -556,28 +556,6 @@
               ]
             },
             {
-              "name": "Gift Card",
-              "slug": "gift-card-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Gift Card system architecture",
-                  "slug": "gift-card-integration-guide-system-architecture",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing VTEX gift cards",
-                  "slug": "managing-vtex-gift-cards",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Headless commerce",
               "slug": "headless-commerce",
               "origin": "",
@@ -640,6 +618,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Punchout cart integration",
+                  "slug": "punchout-cart-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -652,161 +637,6 @@
                 {
                   "name": "Offer Management SDK",
                   "slug": "offer-management-sdk",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Payments",
-              "slug": "payments-integration-guide",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integrating a new payment provider on VTEX",
-                  "slug": "integrating-a-new-payment-provider-on-vtex",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Protocol",
-                  "slug": "payments-integration-payment-provider-protocol",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App",
-                  "slug": "payments-integration-ppp-applied-to-pos",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Implementing a Payment Provider",
-                  "slug": "payments-integration-implementing-a-payment-provider",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Framework",
-                  "slug": "payments-integration-payment-provider-framework",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Purchase Flows",
-                  "slug": "payments-integration-purchase-flows",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment App",
-                  "slug": "payments-integration-payment-app",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Methods",
-                  "slug": "payments-integration-payment-methods",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Payment Provider Homologation",
-                  "slug": "payments-integration-payment-provider-homologation",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Antifraud Provider Protocol",
-                  "slug": "how-the-integration-protocol-between-vtex-and-antifraud-companies-works",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PCI - DSS Compliance",
-                  "slug": "payments-integration-pci-dss-compliance",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Secure Proxy",
-                  "slug": "payments-integration-secure-proxy",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Split Payouts on Payment Provider Protocol",
-                  "slug": "split-payouts-on-payment-provider-protocol",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
-                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Custom Auto Capture Feature",
-                  "slug": "custom-auto-capture-feature",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Pix: Instant Payments in Brazil",
-                  "slug": "payments-integration-pix-instant-payments-in-brazil",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PSE Payment Method",
-                  "slug": "pse-payment-method",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Google Pay: processing information for payment providers and anti-fraud",
-                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "PPP Versioning",
-                  "slug": "ppp-versioning",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Implementing payments tokenization",
-                  "slug": "implementing-payments-tokenization",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing tokenized cards",
-                  "slug": "managing-tokenized-cards",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1443,8 +1273,210 @@
               ]
             },
             {
+              "name": "Buyer Portal Checkout Extensibility",
+              "slug": "buyer-portal-checkout-extensibility",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Checkout extension points",
+                  "slug": "checkout-extension-points",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up Buyer Portal Checkout",
+                  "slug": "setting-up-buyer-portal-checkout",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Getting started with Checkout extensions",
+                  "slug": "getting-started-with-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Deploying Checkout extensions",
+                  "slug": "deploying-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using CSS in Checkout extensions",
+                  "slug": "using-css-in-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "CSS variables in Checkout extensions",
+                  "slug": "css-variables-in-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Data layer and data fetching in Checkout extensions",
+                  "slug": "data-layer-and-data-fetching-in-checkout-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Checkout CLI",
+                  "slug": "checkout-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "CartItem type",
+                  "slug": "cartitem-type",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useCart hook",
+                  "slug": "usecart-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useCartItem hook",
+                  "slug": "usecartitem-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useCartPunchout hook",
+                  "slug": "usecartpunchout-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useRedirect hook",
+                  "slug": "useredirect-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useSettings hook",
+                  "slug": "usesettings-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "useExtension hook",
+                  "slug": "useextension-hook",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Checkout error codes",
               "slug": "checkout-error-codes",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "CMS",
+          "slug": "cms",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Getting started with CMS",
+              "slug": "getting-started-with-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Understanding CMS architecture and schema declarations",
+                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Local setup and development",
+                  "slug": "local-setup-and-development",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Troubleshooting",
+                  "slug": "cms-troubleshooting",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Integrations",
+              "slug": "integrations",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore",
+                  "slug": "cms-for-faststore-storefronts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Content plugin",
+                      "slug": "content-plugin",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Creating a new section in the CMS",
+                      "slug": "creating-a-new-section",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Upgrading from Headless CMS to CMS",
+              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Comparing Headless CMS (legacy) and CMS features",
+                  "slug": "comparing-headless-cms-legacy-and-cms-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Understanding components and sections",
+              "slug": "understanding-components-and-sections",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -1637,6 +1669,13 @@
                   "children": []
                 },
                 {
+                  "name": "Deleting documents in Master Data v1",
+                  "slug": "deleting-documents-in-master-data-v1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Implementing newletter opt-in with Master Data v1",
                   "slug": "implementing-newsletter-opt-in-with-master-data-v1",
                   "origin": "",
@@ -1663,26 +1702,33 @@
         },
         {
           "name": "Payments",
-          "slug": "payments-category",
+          "slug": "payments-integration-guide",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
-              "name": "Configuration Guides",
-              "slug": "payments-configuration-guides",
+              "name": "Purchase Flows",
+              "slug": "payments-integration-purchase-flows",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Payment Methods",
+              "slug": "payments-integration-payment-methods",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Anti-fraud",
+              "slug": "payments-antifraud-category",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Setting up the type of interest rate",
-                  "slug": "setting-up-the-type-of-interest-rate",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up Merchant ID in Apple Pay",
-                  "slug": "setting-up-merchant-id-in-apple-pay",
+                  "name": "Anti-fraud Provider Protocol",
+                  "slug": "how-the-integration-protocol-between-vtex-and-antifraud-companies-works",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1700,10 +1746,264 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                }
+              ]
+            },
+            {
+              "name": "Customer Credit",
+              "slug": "customer-credit-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Managing a Customer Credit account",
+                  "slug": "managing-a-customer-credit-account",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing a Customer Credit invoice",
+                  "slug": "managing-a-customer-credit-invoice",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Gift Cards",
+              "slug": "gift-card-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Gift Card system architecture",
+                  "slug": "gift-card-integration-guide-system-architecture",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing VTEX gift cards",
+                  "slug": "managing-vtex-gift-cards",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Configuring an external gift card provider",
+                  "slug": "configuring-an-external-gift-card-provider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Operations and Configuration",
+              "slug": "payments-operations-category",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Custom Auto Capture Feature",
+                  "slug": "custom-auto-capture-feature",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 },
                 {
                   "name": "Metadata information in payment transactions",
                   "slug": "metadata-information-in-payment-transactions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up the type of interest rate",
+                  "slug": "setting-up-the-type-of-interest-rate",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using payment policies",
+                  "slug": "using-payment-policies",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment App and Checkout UI",
+              "slug": "payments-checkout-ui-category",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Payment App",
+                  "slug": "payments-integration-payment-app",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Layout Development Guide for payment methods in Smart Checkout VTEX",
+                  "slug": "layout-development-guide-for-payment-methods-in-smart-checkout-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment methods and Wallets",
+              "slug": "payments-methods-wallets-category",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Google Pay: processing information for payment providers and anti-fraud",
+                  "slug": "google-pay-processing-information-for-payment-providers-and-anti-fraud",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Pix: Instant Payments in Brazil",
+                  "slug": "payments-integration-pix-instant-payments-in-brazil",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Processing DPAN cards in external connectors",
+                  "slug": "processing-dpan-cards-in-external-connectors",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "PSE Payment Method",
+                  "slug": "pse-payment-method",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Setting up Merchant ID in Apple Pay",
+                  "slug": "setting-up-merchant-id-in-apple-pay",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment Provider Protocol",
+              "slug": "payments-integration-payment-provider-protocol",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integrating a new payment provider on VTEX",
+                  "slug": "integrating-a-new-payment-provider-on-vtex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing a Payment Provider",
+                  "slug": "payments-integration-implementing-a-payment-provider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment Provider Framework",
+                  "slug": "payments-integration-payment-provider-framework",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "PPP Versioning",
+                  "slug": "ppp-versioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment Provider Protocol for Point of Sale (POS) - VTEX Sales App",
+                  "slug": "payments-integration-ppp-applied-to-pos",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Split Payouts on Payment Provider Protocol",
+                  "slug": "split-payouts-on-payment-provider-protocol",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Security",
+              "slug": "payments-security-category",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "PCI - DSS Compliance",
+                  "slug": "payments-integration-pci-dss-compliance",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Secure Proxy",
+                  "slug": "payments-integration-secure-proxy",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Testing and Homologation",
+              "slug": "payments-testing-category",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Payment Provider Homologation",
+                  "slug": "payments-integration-payment-provider-homologation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Tokenization and Card Vault",
+              "slug": "payments-tokenization-category",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Implementing payments tokenization",
+                  "slug": "implementing-payments-tokenization",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing tokenized cards",
+                  "slug": "managing-tokenized-cards",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1863,21 +2163,6 @@
               ]
             },
             {
-              "name": "VTEX Tracking",
-              "slug": "vtex-tracking",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integrating external orders via API to be used with VTEX Tracking",
-                  "slug": "integrate-external-orders-vtex-tracking",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "VTEX Pick and Pack",
               "slug": "vtex-pick-and-pack",
               "origin": "",
@@ -1933,7 +2218,37 @@
               "slug": "delivery-promise",
               "origin": "",
               "type": "markdown",
-              "children": []
+              "children": [
+                {
+                  "name": "Delivery Promise Suggestions API headless integration",
+                  "slug": "delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Gathering delivery promise information",
+                  "slug": "gathering-delivery-promise-information",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Inventory",
+              "slug": "inventory",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Batch inventory updates (Beta)",
+                  "slug": "batch-inventory-updates",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -1950,6 +2265,27 @@
               "type": "category",
               "children": [
                 {
+                  "name": "B2B Buyer Portal Integration Overview",
+                  "slug": "b2b-buyer-portal-integration-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B user provisioning",
+                  "slug": "b2b-user-provisioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B password migration",
+                  "slug": "b2b-password-migration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Buying Policies",
                   "slug": "buying-policies",
                   "origin": "",
@@ -1964,8 +2300,29 @@
                   "children": []
                 },
                 {
+                  "name": "B2B addresses integration",
+                  "slug": "b2b-addresses-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Storefront Roles",
                   "slug": "storefront-roles",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Custom Storefront Roles and Resources",
+                  "slug": "custom-storefront-roles-and-resources",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B Buyer Portal Master Data architecture",
+                  "slug": "b2b-buyer-portal-master-data-architecture",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2017,6 +2374,85 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "VTEX Sales App Extensibility",
+              "slug": "vtex-sales-app-extensibility",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "VTEX Sales App Extensions Skill",
+                  "slug": "vtex-sales-app-extensions-skill",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Sales App extensions implementation",
+                  "slug": "sales-app-extensions-implementation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Exploring Sales App extensions",
+                      "slug": "exploring-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Installing WebOps for Sales App extensions",
+                      "slug": "installing-webops-for-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Setting up Sales App extensions",
+                      "slug": "setting-up-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Creating Sales App extensions",
+                      "slug": "creating-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Deploying Sales App extensions",
+                      "slug": "deploying-sales-app-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Sales App extension hooks and types",
+                      "slug": "sales-app-extension-hooks-and-types",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "CSS styling in VTEX Sales App Extensibility",
+                  "slug": "css-styling-in-vtex-sales-app-extensibility",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Data layer and data fetching in VTEX Sales App Extensibility",
+                  "slug": "data-layer-and-data-fetching-in-vtex-sales-app-extensibility",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "How to customize VTEX Sales App",
               "slug": "how-to-customize-vtex-sales-app",
@@ -2106,15 +2542,22 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Integration VTEX Sales App Local stock sale",
-                  "slug": "integration-vtex-sales-app-local-stock-sale",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
+            },
+            {
+              "name": "Sales Team Management integration guide",
+              "slug": "sales-team-management-integration-guide",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Integration VTEX Sales App Local stock sale",
+              "slug": "integration-vtex-sales-app-local-stock-sale",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -2335,15 +2778,15 @@
           "type": "category",
           "children": [
             {
-              "name": "Integrating product recommendations in headless stores",
-              "slug": "integrating-product-recommendations-in-headless-stores",
+              "name": "Integrating product recommendations in headless or FastStore web stores",
+              "slug": "integrating-product-recommendations-in-headless-or-faststore-web-stores",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "Implementing product recommendations in Faststore",
-              "slug": "implementing-product-recommendations-in-faststore",
+              "name": "Integrating product recommendations in mobile stores",
+              "slug": "integrating-product-recommendations-in-mobile-stores",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -2435,8 +2878,22 @@
                       "children": []
                     },
                     {
+                      "name": "Integrating audiences",
+                      "slug": "integrating-audiences",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Digital Signage",
                       "slug": "digital-signage",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Placement naming conventions",
+                      "slug": "placement-naming-conventions",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -2490,8 +2947,22 @@
                       "origin": "",
                       "type": "markdown",
                       "children": []
+                    },
+                    {
+                      "name": "VTEX Ads Script Agent",
+                      "slug": "vtex-ads-script-agent",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
                     }
                   ]
+                },
+                {
+                  "name": "VTEX Ads best practices",
+                  "slug": "vtex-ads-best-practices",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2540,6 +3011,57 @@
                 {
                   "name": "VTEX Ads React Package Quickstart",
                   "slug": "vtex-ads-react-package-quickstart",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Exporting data from VTEX Ads",
+              "slug": "exporting-data-from-vtex-ads",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Exporting ads events",
+                  "slug": "exporting-ads-events",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Exporting ads reports",
+                  "slug": "exporting-ads-reports",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Exporting aggregated data from VTEX Ads",
+                  "slug": "exporting-aggregated-data-from-vtex-ads",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Integrating VTEX Ads with external marketplaces",
+              "slug": "integrating-vtex-ads-with-external-marketplaces",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Transferring credit",
+                  "slug": "transferring-credit",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Ads Single Sign On (SSO)",
+                  "slug": "vtex-ads-single-sign-on-sso",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2643,40 +3165,40 @@
           ]
         },
         {
-          "name": "Weni by VTEX",
+          "name": "VTEX CX Platform (Weni)",
           "slug": "weni-by-vtex",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "Weni by VTEX CLI",
+              "name": "VTEX CX Platform (Weni) CLI",
               "slug": "weni-by-vtex-cli",
               "origin": "",
               "type": "category",
               "children": [
                 {
-                  "name": "Using the Weni by VTEX CLI",
+                  "name": "Using the VTEX CX Platform (Weni) CLI",
                   "slug": "using-the-weni-by-vtex-cli",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Weni by VTEX CLI Command Reference",
+                  "name": "VTEX CX Platform (Weni) CLI Command Reference",
                   "slug": "weni-by-vtex-cli-command-reference",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Authenticating with your Weni by VTEX account",
+                  "name": "Authenticating with your VTEX CX Platform (Weni) account",
                   "slug": "authenticating-with-your-weni-by-vtex-account",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Managing your Weni by VTEX projects",
+                  "name": "Managing your VTEX CX Platform (Weni) projects",
                   "slug": "managing-your-weni-by-vtex-projects",
                   "origin": "",
                   "type": "markdown",
@@ -2690,7 +3212,7 @@
                   "children": []
                 },
                 {
-                  "name": "Working with Weni by VTEX agents",
+                  "name": "Working with VTEX CX Platform (Weni) agents",
                   "slug": "working-with-weni-by-vtex-agents",
                   "origin": "",
                   "type": "markdown",
@@ -2711,59 +3233,13 @@
                   "children": []
                 }
               ]
-            }
-          ]
-        },
-        {
-          "name": "CMS",
-          "slug": "cms",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Integrations",
-              "slug": "integrations",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "FastStore v3",
-                  "slug": "faststore-v3",
-                  "origin": "",
-                  "type": "category",
-                  "children": [
-                    {
-                      "name": "Content plugin",
-                      "slug": "content-plugin",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
-                }
-              ]
             },
             {
-              "name": "Upgrading from Headless CMS to CMS",
-              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
+              "name": "VTEX CX Platform MCP",
+              "slug": "connect-the-vtex-cx-platform-mcp",
               "origin": "",
               "type": "markdown",
-              "children": [
-                {
-                  "name": "Comparing Headless CMS (legacy) and CMS features",
-                  "slug": "comparing-headless-cms-legacy-and-cms-features",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Understanding CMS architecture and schema declarations",
-                  "slug": "understanding-cms-architecture-and-schema-declarations",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
+              "children": []
             }
           ]
         }
@@ -3047,80 +3523,133 @@
           ]
         },
         {
-          "name": "B2B Personas",
-          "slug": "b2b-personas-api",
+          "name": "B2B Buyers",
+          "slug": "b2b-buyer-data-api",
           "origin": "",
-          "type": "category",
+          "type": "openapi",
           "children": [
             {
-              "name": "B2B buyers",
-              "slug": "b2b-buyers",
+              "name": "Get buyer schema",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/schemas/v1",
+              "children": []
+            },
+            {
+              "name": "Create buyer",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "POST",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents",
+              "children": []
+            },
+            {
+              "name": "Get buyer by ID",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+              "children": []
+            },
+            {
+              "name": "Update buyer",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "PATCH",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+              "children": []
+            },
+            {
+              "name": "Delete buyer",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "DELETE",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+              "children": []
+            },
+            {
+              "name": "Search buyers",
+              "slug": "b2b-buyer-data-api",
+              "type": "openapi",
+              "method": "GET",
+              "origin": "",
+              "endpoint": "/api/dataentities/shopper/search",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "B2B Addresses",
+          "slug": "b2b-addresses",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Addresses",
+              "slug": "addresses",
               "type": "category",
               "children": [
                 {
-                  "name": "Get buyer schema",
-                  "slug": "b2b-buyer-data-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/schemas/v1",
-                  "children": []
-                },
-                {
-                  "name": "Create buyer",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Create B2B address",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents",
+                  "endpoint": "/api/dataentities/AD/documents",
                   "children": []
                 },
                 {
-                  "name": "Get buyer by ID",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Search B2B addresses",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                  "endpoint": "/api/dataentities/AD/search",
                   "children": []
                 },
                 {
-                  "name": "Update buyer",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Get B2B address by ID",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                  "children": []
+                },
+                {
+                  "name": "Update B2B address",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
                   "children": []
                 },
                 {
-                  "name": "Delete buyer",
-                  "slug": "b2b-buyer-data-api",
+                  "name": "Delete B2B address",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
-                  "children": []
-                },
-                {
-                  "name": "Search buyers",
-                  "slug": "b2b-buyer-data-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/shopper/search",
+                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
                   "children": []
                 }
               ]
             },
             {
-              "name": "B2B contact information",
-              "slug": "b2b-contact-information",
+              "name": "Recipients",
+              "slug": "recipients",
               "type": "category",
               "children": [
                 {
-                  "name": "Create new contact information",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Create recipient",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
@@ -3128,8 +3657,8 @@
                   "children": []
                 },
                 {
-                  "name": "Search contact information",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Search recipients",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
@@ -3137,30 +3666,122 @@
                   "children": []
                 },
                 {
-                  "name": "Get contact information by ID",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Get recipient by ID",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
                   "children": []
                 },
                 {
-                  "name": "Update contact information",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Update recipient",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
                   "children": []
                 },
                 {
-                  "name": "Delete contact information",
-                  "slug": "b2b-contact-information-api",
+                  "name": "Delete recipient",
+                  "slug": "b2b-addresses",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-id-",
+                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Locations",
+              "slug": "locations",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents",
+                  "children": []
+                },
+                {
+                  "name": "Search locations",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/search",
+                  "children": []
+                },
+                {
+                  "name": "Get location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                  "children": []
+                },
+                {
+                  "name": "Update location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete location",
+                  "slug": "b2b-addresses",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B2B Password Migration Protocol",
+          "slug": "b2b-password-migration-protocol",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Client registration",
+              "slug": "b2b-password-migration-protocol-client-registration",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Register client",
+                  "slug": "b2b-password-migration-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/register",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Authentication flow",
+              "slug": "b2b-password-migration-protocol-authentication-flow",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Validate legacy credentials",
+                  "slug": "b2b-password-migration-protocol",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/authentication",
                   "children": []
                 }
               ]
@@ -5089,8 +5710,69 @@
               ]
             },
             {
-              "name": "Multi-language beta",
-              "slug": "catalog-api-multi-language-beta",
+              "name": "SKU attribute",
+              "slug": "catalog-api-sku-attribute",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create SKU attribute",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute",
+                  "children": []
+                },
+                {
+                  "name": "Update SKU attribute",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-",
+                  "children": []
+                },
+                {
+                  "name": "Get SKU attribute by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-",
+                  "children": []
+                },
+                {
+                  "name": "Get all SKU attributes",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute",
+                  "children": []
+                },
+                {
+                  "name": "Delete SKU attribute",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete all SKU attributes",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Multi-language",
+              "slug": "catalog-api-multi-language",
               "type": "category",
               "children": [
                 {
@@ -5130,8 +5812,8 @@
                   "children": []
                 },
                 {
-                  "name": "Multi-language SKU beta",
-                  "slug": "catalog-api-multi-language-sku-beta",
+                  "name": "Multi-language SKU",
+                  "slug": "catalog-api-multi-language-sku",
                   "type": "category",
                   "children": [
                     {
@@ -5191,8 +5873,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language specification beta",
-                  "slug": "catalog-api-multi-language-specification-beta",
+                  "name": "Multi-language specification",
+                  "slug": "catalog-api-multi-language-specification",
                   "type": "category",
                   "children": [
                     {
@@ -5252,8 +5934,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language category beta",
-                  "slug": "catalog-api-multi-language-category-beta",
+                  "name": "Multi-language category",
+                  "slug": "catalog-api-multi-language-category",
                   "type": "category",
                   "children": [
                     {
@@ -5277,8 +5959,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language brand beta",
-                  "slug": "catalog-api-multi-language-brand-beta",
+                  "name": "Multi-language brand",
+                  "slug": "catalog-api-multi-language-brand",
                   "type": "category",
                   "children": [
                     {
@@ -5302,8 +5984,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language attachment and service beta",
-                  "slug": "catalog-api-multi-language-attachment-and-service-beta",
+                  "name": "Multi-language attachment and service",
+                  "slug": "catalog-api-multi-language-attachment-and-service",
                   "type": "category",
                   "children": [
                     {
@@ -5381,8 +6063,8 @@
                   ]
                 },
                 {
-                  "name": "Multi-language collection beta",
-                  "slug": "catalog-api-multi-language-collection-beta",
+                  "name": "Multi-language collection",
+                  "slug": "catalog-api-multi-language-collection",
                   "type": "category",
                   "children": [
                     {
@@ -5437,6 +6119,94 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/catalog/pvt/product/-productId-/similarcategory/-categoryId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Assortment",
+              "slug": "catalog-api-assortment",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment",
+                  "children": []
+                },
+                {
+                  "name": "Get all product assortments",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment",
+                  "children": []
+                },
+                {
+                  "name": "Get product assortment by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-",
+                  "children": []
+                },
+                {
+                  "name": "Update product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-",
+                  "children": []
+                },
+                {
+                  "name": "Delete product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-",
+                  "children": []
+                },
+                {
+                  "name": "Add included collection to product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/included-collections/-collectionID-",
+                  "children": []
+                },
+                {
+                  "name": "Remove included collection from product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/included-collections/-collectionID-",
+                  "children": []
+                },
+                {
+                  "name": "Add excluded collection to product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/excluded-collections/-collectionID-",
+                  "children": []
+                },
+                {
+                  "name": "Remove excluded collection from product assortment",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/catalog/pvt/assortment/-productAssortmentID-/excluded-collections/-collectionID-",
                   "children": []
                 }
               ]
@@ -5758,12 +6528,21 @@
               ]
             },
             {
-              "name": "Trade Policy",
-              "slug": "catalog-api-trade-policy",
+              "name": "Sales channel",
+              "slug": "catalog-api-sales-channel",
               "type": "category",
               "children": [
                 {
-                  "name": "Get Trade Policies by Product ID",
+                  "name": "Get sales channel by ID",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pub/saleschannel/-salesChannelId-",
+                  "children": []
+                },
+                {
+                  "name": "Get sales channel by product ID",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
@@ -5772,7 +6551,16 @@
                   "children": []
                 },
                 {
-                  "name": "Associate Product with Trade Policy",
+                  "name": "Get sales channel list",
+                  "slug": "catalog-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/catalog_system/pvt/saleschannel/list",
+                  "children": []
+                },
+                {
+                  "name": "Associate product with sales channel",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "POST",
@@ -5781,7 +6569,7 @@
                   "children": []
                 },
                 {
-                  "name": "Remove Product from Trade Policy",
+                  "name": "Remove product from sales channel",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "DELETE",
@@ -5790,38 +6578,13 @@
                   "children": []
                 },
                 {
-                  "name": "List all SKUs of a Trade Policy",
+                  "name": "List all SKUs in a sales channel",
                   "slug": "catalog-api",
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/catalog_system/pvt/sku/stockkeepingunitidsbysaleschannel",
                   "children": []
-                },
-                {
-                  "name": "Sales Channel",
-                  "slug": "catalog-api-sales-channel",
-                  "type": "category",
-                  "children": [
-                    {
-                      "name": "Get Sales Channel List",
-                      "slug": "catalog-api",
-                      "type": "openapi",
-                      "method": "GET",
-                      "origin": "",
-                      "endpoint": "/api/catalog_system/pvt/saleschannel/list",
-                      "children": []
-                    },
-                    {
-                      "name": "Get Sales Channel by ID",
-                      "slug": "catalog-api",
-                      "type": "openapi",
-                      "method": "GET",
-                      "origin": "",
-                      "endpoint": "/api/catalog_system/pub/saleschannel/-salesChannelId-",
-                      "children": []
-                    }
-                  ]
                 }
               ]
             },
@@ -5968,6 +6731,15 @@
                   "children": []
                 },
                 {
+                  "name": "Delete manual price of an SKU in a cart",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemIndex-/price",
+                  "children": []
+                },
+                {
                   "name": "Cart installments",
                   "slug": "checkout-api",
                   "type": "openapi",
@@ -6071,6 +6843,42 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/coupons",
+                  "children": []
+                },
+                {
+                  "name": "Add item attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemIndex-/attachments/-attachmentName-",
+                  "children": []
+                },
+                {
+                  "name": "Remove item attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemIndex-/attachments/-attachmentName-",
+                  "children": []
+                },
+                {
+                  "name": "Add item subscription attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/subscriptionData",
+                  "children": []
+                },
+                {
+                  "name": "Remove item subscription attachment",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/attachments/subscriptionData",
                   "children": []
                 }
               ]
@@ -6877,6 +7685,64 @@
           ]
         },
         {
+          "name": "Delivery Promise Suggestions API",
+          "slug": "delivery-promise-suggestions-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Logistics shipping",
+              "slug": "delivery-promise-suggestions-api-logistics-shipping",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Search delivery zones",
+                  "slug": "delivery-promise-suggestions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/logistics-shipping/delivery-zones/_search/v2",
+                  "children": []
+                },
+                {
+                  "name": "Search pickup points",
+                  "slug": "delivery-promise-suggestions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/logistics-shipping/pickuppoints/_search",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Delivery suggestions",
+              "slug": "delivery-promise-suggestions-api-delivery-suggestions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Search delivery suggestions",
+                  "slug": "delivery-promise-suggestions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/delivery-promise-suggestions/_search",
+                  "children": []
+                },
+                {
+                  "name": "Get delivery suggestions",
+                  "slug": "delivery-promise-suggestions-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/delivery-promise-suggestions",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "GiftCard API",
           "slug": "giftcard-api",
           "origin": "",
@@ -7418,7 +8284,124 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/pickup-point-availability/productClusterIds/-productClusterIds-/trade-policy/-tradePolicy-",
+                  "endpoint": "/pickup-point-availability/-facets-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Intelligent Search API v1",
+          "slug": "intelligent-search-api-v1",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Product List Page",
+              "slug": "intelligent-search-api-v1-product-list-page",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Search products (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/product-search/-facets-",
+                  "children": []
+                },
+                {
+                  "name": "List filters for a search (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/facets/-facets-",
+                  "children": []
+                },
+                {
+                  "name": "Get attempt of correction of a misspelled term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/correction-search",
+                  "children": []
+                },
+                {
+                  "name": "Get list of banners registered for query (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/banners/-facets-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Product Detail Page",
+              "slug": "intelligent-search-api-v1-product-detail-page",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get product (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/products",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Autocomplete",
+              "slug": "intelligent-search-api-v1-autocomplete",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get list of the 10 most searched terms (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/top-searches",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms and attributes similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/autocomplete-suggestions",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/search-suggestions",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Delivery Promise",
+              "slug": "intelligent-search-api-v1-delivery-promise",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get pickup point availability for Delivery Promise (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/pickup-point-availability/-facets-",
                   "children": []
                 }
               ]
@@ -7977,6 +8960,49 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/logistics/pvt/inventory/items/-skuId-/warehouses/-warehouseId-/supplyLots/-supplyLotId-/transfer",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Batch operations",
+              "slug": "logistics-api-inventory",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create batch inventory job",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch",
+                  "children": []
+                },
+                {
+                  "name": "Commit batch inventory",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/commit",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory status",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/status",
+                  "children": []
+                },
+                {
+                  "name": "Get batch inventory errors",
+                  "slug": "logistics-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/errors",
                   "children": []
                 }
               ]
@@ -9051,6 +10077,46 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/checkout/pub/orderForms/simulation",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "VTEX Shopee Integration API",
+          "slug": "vtex-shopee-integration-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Shopee orders",
+              "slug": "vtex-shopee-integration-api-shopee-orders",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Download legacy shipping label",
+                  "slug": "vtex-shopee-integration-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/shopeeintegration/order/shipping/label",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "VTEX order callbacks",
+              "slug": "vtex-shopee-integration-api-vtex-order-callbacks",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Cancel marketplace delivery",
+                  "slug": "vtex-shopee-integration-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/shopeeintegration/{accountName}/pub/orders/{mktplaceOrderId}/cancelDelivery",
                   "children": []
                 }
               ]
@@ -10253,7 +11319,7 @@
                   "name": "Move organization unit",
                   "slug": "organization-units-api",
                   "type": "openapi",
-                  "method": "POST",
+                  "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/organization-units/v1/-organizationUnitId-/path",
                   "children": []
@@ -10353,6 +11419,82 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-/remove",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Payment Policies API",
+          "slug": "payment-policies-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Payment policy rules",
+              "slug": "payment-policy-rules",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "List policy rules",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "Get policy rule by ID",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Update policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment policy evaluation",
+              "slug": "payment-policy-evaluation",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Evaluate payment policies",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/pvt/payment-systems/search",
                   "children": []
                 }
               ]
@@ -11835,7 +12977,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/authenticator/punchout/start",
+                  "endpoint": "/api/authenticator/v1/punchout/start",
                   "children": []
                 },
                 {
@@ -11844,7 +12986,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/authenticator/punchout/authenticated/start",
+                  "endpoint": "/api/authenticator/v1/punchout/authenticated/start",
                   "children": []
                 },
                 {
@@ -11853,7 +12995,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/authenticator/punchout/finish",
+                  "endpoint": "/api/authenticator/v1/punchout/finish",
                   "children": []
                 }
               ]
@@ -12513,6 +13655,92 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Custom Storefront Roles",
+              "slug": "storefront-roles-api-custom-roles-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List storefront roles",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role",
+                  "children": []
+                },
+                {
+                  "name": "Create storefront role",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role",
+                  "children": []
+                },
+                {
+                  "name": "Fetch storefront role by ID",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                  "children": []
+                },
+                {
+                  "name": "Edit storefront role resources",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                  "children": []
+                },
+                {
+                  "name": "Delete storefront role",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Custom Storefront Resources",
+              "slug": "storefront-roles-api-custom-resources-category",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List storefront resources",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/resource",
+                  "children": []
+                },
+                {
+                  "name": "Create custom storefront resource",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/resource",
+                  "children": []
+                },
+                {
+                  "name": "Delete custom storefront resource",
+                  "slug": "storefront-roles-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/license-manager/storefront/resource/-id-",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -12771,12 +13999,29 @@
               ]
             },
             {
+              "name": "Audiences",
+              "slug": "vtex-ads-api-audiences",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate audience upload URL",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/audience/upload-url",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Ads events notification",
               "slug": "vtex-ads-api-events-notification",
               "type": "category",
               "children": [
                 {
-                  "name": "Tracking ad impressions",
+                  "name": "Track ad impressions",
                   "slug": "vtex-ads-api",
                   "type": "openapi",
                   "method": "POST",
@@ -12828,6 +14073,120 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Reports",
+              "slug": "vtex-ads-api-reports",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get advertisers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/v2/advertisers",
+                  "children": []
+                },
+                {
+                  "name": "Get publishers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/v2/publishers",
+                  "children": []
+                },
+                {
+                  "name": "Get network publishers report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/network/publishers",
+                  "children": []
+                },
+                {
+                  "name": "List campaigns",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/campaign/v2",
+                  "children": []
+                },
+                {
+                  "name": "Get campaign details",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/campaign/-campaign_id-",
+                  "children": []
+                },
+                {
+                  "name": "Get advertiser campaigns detailed report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/advertisers/campaigns-detailed",
+                  "children": []
+                },
+                {
+                  "name": "Get advertiser ads detailed report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/report/advertisers/ads-detailed",
+                  "children": []
+                },
+                {
+                  "name": "Get ads performance report",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/ad/results/v2",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Credit transfer",
+              "slug": "vtex-ads-api-credit-transfer",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Notify credit transfer status",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/webhook/marketplace/transfers/-publisher_id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Single sign-on",
+              "slug": "vtex-ads-api-single-sign-on",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Generate seller single sign-on URL",
+                  "slug": "vtex-ads-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/sso/marketplace",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -12865,100 +14224,6 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/-app_name-/v-app_version-/-account-/-workspace-/tracking",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "VTEX Tracking APIs",
-          "slug": "tracking",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Authentication",
-              "slug": "tracking-authentication",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Asynchronous Login",
-                  "slug": "tracking",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/auth",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Delivery Services",
-              "slug": "tracking-delivery-services",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Remove Packing List",
-                  "slug": "tracking",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/services",
-                  "children": []
-                },
-                {
-                  "name": "Post Delivery Service",
-                  "slug": "tracking",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/services",
-                  "children": []
-                },
-                {
-                  "name": "Get Delivery Services List",
-                  "slug": "tracking",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/services",
-                  "children": []
-                },
-                {
-                  "name": "Get Delivery Service by ID",
-                  "slug": "tracking",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/services/-idDeliveryService-",
-                  "children": []
-                },
-                {
-                  "name": "Post Delivery Service With Route Scheduling",
-                  "slug": "tracking",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/services/routes",
-                  "children": []
-                },
-                {
-                  "name": "Get Delivery Services List by Route",
-                  "slug": "tracking",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/services/routes",
-                  "children": []
-                },
-                {
-                  "name": "Get Delivery Service by Invoice",
-                  "slug": "tracking",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/services/invoice",
                   "children": []
                 }
               ]
@@ -13128,7 +14393,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/authenticator/storefront/users",
+                  "endpoint": "/api/authenticator/v1/storefront/users",
                   "children": []
                 },
                 {
@@ -13206,6 +14471,83 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/vtexid/refreshtoken/webstore",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Organization account authentication",
+              "slug": "vtex-id-api-organization-account-authentication",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Set organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Update organization unit authentication settings",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                },
+                {
+                  "name": "Delete organization unit authentication setting",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/organization-units/-unitId-/settings",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Password migration",
+              "slug": "vtex-id-api-password-migration",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Upsert password migration configuration",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "children": []
+                },
+                {
+                  "name": "Enable or disable password migration",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "children": []
+                },
+                {
+                  "name": "Delete password migration configuration",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
                   "children": []
                 }
               ]
@@ -14533,8 +15875,8 @@
       "slugPrefix": "docs/",
       "categories": [
         {
-          "name": "B2B",
-          "slug": "guides/b2b-apps",
+          "name": "B2B Suite",
+          "slug": "guides/b2b-suite",
           "origin": "",
           "type": "category",
           "children": [
@@ -14557,16 +15899,22 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-
                 }
               ]
             },
             {
-              "name": "B2B Suite",
+              "name": "B2B Suite Apps",
               "slug": "apps/vtex.b2b-suite",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "B2B Organizations",
+                  "slug": "apps/vtex.b2b-organizations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "Storefront Permissions",
                   "slug": "apps/vtex.storefront-permissions",
@@ -14759,7 +16107,7 @@
                   "type": "markdown",
                   "children": []
                 },
-                { 
+                {
                   "name": "Personal Shopper",
                   "slug": "apps/vtexventures.personal-shopper-free",
                   "origin": "",
@@ -15001,7 +16349,7 @@
             },
             {
               "name": "Affiliates Program",
-              "slug": "apps/vtex.affiliates-program-app",
+              "slug": "apps/vtex.affiliates",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -15056,8 +16404,8 @@
                   "children": []
                 },
                 {
-                  "name": "Shipping Option Components",
-                  "slug": "apps/vtex.shipping-option-components",
+                  "name": "Delivery Promise Components",
+                  "slug": "apps/vtex.delivery-promise-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -15089,7 +16437,7 @@
               "name": "Layout and interaction patterns",
               "slug": "guides/layout-and-interacion-patterns",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Icon Pack list",
@@ -15181,7 +16529,7 @@
               "name": "Navigation and search",
               "slug": "guides/navigation-and-search",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Autocomplete",
@@ -15266,6 +16614,21 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Rewriter",
+                  "slug": "apps/vtex.rewriter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Rewriter GraphQL API",
+                      "slug": "apps/vtex.rewriter/rewriter-graphql-api",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 },
                 {
                   "name": "Store Sitemap",
@@ -15655,6 +17018,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Upgrading FastStore to v4",
+                  "slug": "faststore/getting-started-upgrading-faststore-to-v4",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -15693,33 +17063,11 @@
                   "children": []
                 },
                 {
-                  "name": "5. Integrating your project with the Headless CMS",
-                  "slug": "faststore/getting-started-5-integrating-your-project-with-the-headless-cms",
+                  "name": "5. Working with CMS",
+                  "slug": "faststore/getting-started-5-working-with-cms",
                   "origin": "",
                   "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Setting up the Headless CMS",
-                      "slug": "faststore/getting-started-setting-up-the-headless-cms",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Structuring Content Types and Sections",
-                      "slug": "faststore/getting-started-structuring-content-types-and-sections",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Promoting your changes",
-                      "slug": "faststore/getting-started-promoting-your-headless-cms-changes",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
+                  "children": []
                 },
                 {
                   "name": "6. Next steps",
@@ -15767,11 +17115,40 @@
               ]
             },
             {
-              "name": "Headless CMS",
+              "name": "Headless CMS (legacy)",
               "slug": "faststore/headless-cms-overview",
               "origin": "",
               "type": "markdown",
               "children": [
+                {
+                  "name": "Integration",
+                  "slug": "faststore/integration-overview",
+                  "origin": "",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Setting up the Headless CMS (legacy)",
+                      "slug": "faststore/integration-setting-up-the-headless-cms",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Structuring Content Types and Sections",
+                      "slug": "faststore/integration-structuring-content-types-and-sections",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Promoting your Headless CMS (legacy) changes",
+                      "slug": "faststore/integration-promoting-your-headless-cms-changes",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
                 {
                   "name": "Managing content with 'scopes' and 'requiredScopes'",
                   "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
@@ -15845,8 +17222,29 @@
                   "children": []
                 },
                 {
+                  "name": "Debug logging for third-party scripts",
+                  "slug": "faststore/developer-tools-enable-scripts-logs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore CLI",
                   "slug": "faststore/developer-tools-faststore-cli",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore hooks",
+                  "slug": "faststore/developer-tools-hooks-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Handling gift items in the cart",
+                  "slug": "faststore/developer-tools-use-is-gift-from-order-form",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -15939,8 +17337,37 @@
                   ]
                 },
                 {
-                  "name": "Iconography",
-                  "slug": "faststore/styling-icons",
+                  "name": "Managing icons",
+                  "slug": "faststore/managing-icons-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Iconography",
+                      "slug": "faststore/managing-icons-iconography",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Adding custom icons",
+                      "slug": "faststore/managing-icons-adding-custom-icons",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Overriding native icons",
+                      "slug": "faststore/managing-icons-overriding-native-icons",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Using data attributes with FastStore UI",
+                  "slug": "faststore/styling-data-attributes",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -15961,13 +17388,6 @@
                     {
                       "name": "Styling a component",
                       "slug": "faststore/using-themes-components",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Styling a section",
-                      "slug": "faststore/using-themes-pages",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -16551,6 +17971,13 @@
                       "children": []
                     },
                     {
+                      "name": "SKUMatrix",
+                      "slug": "faststore/organisms-sku-matrix",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "SlideOver",
                       "slug": "faststore/organisms-slide-over",
                       "origin": "",
@@ -16589,6 +18016,13 @@
                   "children": []
                 },
                 {
+                  "name": "Enabling product purchase from search with QuickOrder",
+                  "slug": "faststore/storefront-features-enabling-product-purchase-from-search-with-quick-order",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Implementing regionalization features",
                   "slug": "faststore/storefront-features-implementing-regionalization-features",
                   "origin": "",
@@ -16598,6 +18032,13 @@
                 {
                   "name": "Implementing search features",
                   "slug": "faststore/storefront-features-implementing-search-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Implementing Shopping Assistant in FastStore",
+                  "slug": "faststore/storefront-features-implementing-shopping-assistant-in-faststore",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -17103,13 +18544,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Debugging Partytown and analytics issues",
-                  "slug": "faststore/troubleshooting-analytics-and-partytown",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Identifying development errors and Starter bugs",
                   "slug": "faststore/troubleshooting-identifying-development-errors-and-starter-bugs",
                   "origin": "",
@@ -17484,13 +18918,6 @@
               ]
             },
             {
-              "name": "Implementing Google One-Tap Login",
-              "slug": "guides/google-one-tap-login",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-             },
-             {
               "name": "Dealing with events",
               "slug": "store-framework-dealing-with-events",
               "origin": "",
@@ -17801,13 +19228,13 @@
           ]
         },
         {
-          "name": "(Legacy) CMS Portal",
+          "name": "CMS Portal (Legacy)",
           "slug": "legacy-cms-portal-category",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "Migrating your storefront from Legacy CMS Portal to Store Framework",
+              "name": "Migrating your storefront from CMS Portal (Legacy) to Store Framework",
               "slug": "vtex-io-documentation-migrating-storefront-from-legacy-to-io",
               "origin": "",
               "type": "markdown",
@@ -17937,8 +19364,30 @@
       "slugPrefix": "docs/troubleshooting",
       "categories": [
         {
-          "name": "API",
-          "slug": "api",
+          "name": "Analytics and data collection",
+          "slug": "analytics-and-data-collection",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Google Analytics 4 is tracking inconsistent data from my store",
+              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My Google Tag Assistant is not working with Partytown",
+              "slug": "my-google-tag-assistant-is-not-working-with-partytown",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "API and integrations",
+          "slug": "api-and-integrations",
           "origin": "",
           "type": "category",
           "children": [
@@ -17952,34 +19401,35 @@
           ]
         },
         {
-          "name": "Development",
-          "slug": "development",
+          "name": "Checkout and shopping experience",
+          "slug": "checkout-and-shopping-experience",
           "origin": "",
           "type": "category",
           "children": [
             {
-              "name": "I am getting 500 errors in VTEX IO CLI",
-              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
+              "name": "I can't complete a purchase on a FastStore website",
+              "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
               "origin": "",
               "type": "markdown",
               "children": []
             },
             {
-              "name": "I am getting errors with my service configuration app",
-              "slug": "i-am-getting-errors-with-my-service-configuration-app",
+              "name": "UTMs are not being applied to the cart at Checkout",
+              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
               "origin": "",
               "type": "markdown",
               "children": []
-            },
+            }
+          ]
+        },
+        {
+          "name": "Content Management (CMS)",
+          "slug": "content-management-cms",
+          "origin": "",
+          "type": "category",
+          "children": [
             {
-              "name": "Issues during extending the FastStore API schema",
-              "slug": "issues-during-extending-the-faststore-api-schema",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can’t access the Headless CMS",
+              "name": "I can't access the Headless CMS",
               "slug": "unable-to-access-headless-cms",
               "origin": "",
               "type": "markdown",
@@ -17987,35 +19437,7 @@
             },
             {
               "name": "I can’t install the Headless CMS plugins in my account",
-              "slug": "i-cant-install-the-headless-cms-plugins-in-my-account",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can't install VTEX IO CLI",
-              "slug": "i-cant-install-vtex-io-cli",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "I can’t integrate my external Search Provider",
-              "slug": "i-cant-integrate-my-external-search-provider",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "My multi-language store is not functioning in the development workspace",
-              "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "My store catalog does not display the price range filter",
-              "slug": "my-store-catalog-does-not-show-the-price-range-filter",
+              "slug": "error-installing-headless-cms-plugins-on-windows",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18033,10 +19455,88 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            }
+          ]
+        },
+        {
+          "name": "Storefront",
+          "slug": "storefront",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "I can’t integrate my external Search Provider",
+              "slug": "i-cant-integrate-my-external-search-provider",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Issues during extending the FastStore API schema",
+              "slug": "issues-during-extending-the-faststore-api-schema",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Issues when customizing FastStore icons",
+              "slug": "issues-when-customizing-faststore-icons",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Issues when using FastStore hooks",
+              "slug": "issues-when-using-faststore-hooks",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             },
             {
               "name": "Modal Layout closes when I click a SKU",
               "slug": "modal-layout-closes-when-i-click-a-sku",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My multi-language store is not working in the development workspace",
+              "slug": "my-multi-language-store-is-not-working-in-the-development-workspace",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My routes are not behaving as expected",
+              "slug": "my-routes-are-not-behaving-as-expected",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store catalog does not display the price range filter",
+              "slug": "my-store-catalog-does-not-show-the-price-range-filter",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store is presenting price inconsistencies",
+              "slug": "my-store-is-presenting-price-inconsistencies",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store is slow or unavailable",
+              "slug": "my-store-is-slow-or-unavailable",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "My store translation is not behaving as expected",
+              "slug": "my-store-translation-is-not-behaving-as-expected",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18054,10 +19554,32 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            }
+          ]
+        },
+        {
+          "name": "VTEX IO and app development",
+          "slug": "vtex-io-and-app-development",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "`vtex release` CLI command returns an EBADF message",
+              "slug": "vtex-release-cli-command-returns-ebadf-message",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             },
             {
-              "name": "vtex release CLI command returns an EBADF message",
-              "slug": "vtex-release-cli-command-returns-ebadf-message",
+              "name": "I am getting 500 errors in VTEX IO CLI",
+              "slug": "i-am-getting-500-errors-in-vtex-io-cli",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I am getting errors with my service configuration app",
+              "slug": "i-am-getting-errors-with-my-service-configuration-app",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18077,65 +19599,22 @@
               "children": []
             },
             {
+              "name": "I can't install VTEX IO CLI",
+              "slug": "i-cant-install-vtex-io-cli",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "I can't publish my theme due to app dependency",
+              "slug": "i-cant-publish-my-theme-due-to-app-dependency",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "I don't see my Store Theme changes",
               "slug": "i-dont-see-my-store-theme-changes",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Store performance",
-          "slug": "store-performance",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "I can't complete a purchase on a FastStore website",
-              "slug": "i-cant-complete-a-purchase-on-a-faststore-website",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "My store is slow or unavailable",
-              "slug": "my-store-is-slow-or-unavailable",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Google Analytics 4 is tracking inconsistent data from my store",
-              "slug": "google-analytics-4-is-tracking-inconsistent-data-from-my-store",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "UTMs are not being applied to the cart at Checkout",
-              "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "My routes are not behaving as expected",
-              "slug": "my-routes-are-not-behaving-as-expected",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "My store is presenting price inconsistencies",
-              "slug": "my-store-is-presenting-price-inconsistencies",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "My store translation is not behaving as expected",
-              "slug": "my-store-translation-is-not-behaving-as-expected",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -18156,14 +19635,207 @@
           "type": "category",
           "children": [
             {
+              "name": "July",
+              "slug": "july-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore Release Notes — Version 4.4.0",
+                  "slug": "2026-07-09-faststore-release-notes-4-4-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New Intelligent Search API v1",
+                  "slug": "2026-07-08-new-intelligent-search-api-v1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Activity Flow: Customer interaction event tracking for mobile apps",
+                  "slug": "2026-07-07-activity-flow-customer-interaction-event-tracking-for-mobile-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Self-service Git provider management",
+                  "slug": "2026-07-06-faststore-webops-self-service-git-provider-management",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "June",
+              "slug": "june-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore Release Notes — Version 4.3.0",
+                  "slug": "2026-06-23-faststore-release-notes-4-3-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Orders: Custom data in the VTEX Admin is now generally available",
+                  "slug": "2026-06-15-orders-custom-data-now-generally-available",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 4.2.0",
+                  "slug": "2026-06-19-faststore-release-notes-4-2-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "May",
+              "slug": "may-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Gift detection with useIsGiftFromOrderForm",
+                  "slug": "2026-05-25-faststore-use-is-gift-from-order-form",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New batch inventory endpoints (Beta) in the Logistics API",
+                  "slug": "2026-05-19-logistics-api-new-batch-inventory-endpoints",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Updated vtexvault.com route for Send Payments request",
+                  "slug": "2026-05-15-updated-vtexvaultcom-route-for-send-payments-request",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Intelligent Search: Negative filters (NOT operator)",
+                  "slug": "2026-05-14-intelligent-search-negative-filters-not-operator",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Password protection for preview and production environments",
+                  "slug": "2026-05-11-faststore-webops-password-protection-for-preview-and-production-environments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Orders: Custom data now visible in the VTEX Admin",
+                  "slug": "2026-05-08-orders-custom-data-now-visible-in-the-vtex-admin",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Marketplace payment data can now be shared with sellers",
+                  "slug": "2026-05-08-marketplace-payment-data-can-now-be-shared-with-sellers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore v4: New major version with performance, localization, and architectural updates",
+                  "slug": "2026-05-07-faststore-v4",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "April",
+              "slug": "april-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Delivery Promise Suggestions API: New headless integration guide and API",
+                  "slug": "2026-04-10-delivery-promise-suggestions-api-headless-integration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Store Framework: Shipping Option Components deprecated in favor of Delivery Promise Components",
+                  "slug": "2026-04-20-store-framework-shipping-option-components-deprecated-in-favor-of-delivery-promise-components",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Choose your storefront build Node.js version",
+                  "slug": "2026-04-20-faststore-webops-choose-your-storefront-build-nodejs-version",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX CX Platform: Connect the MCP to your AI tool",
+                  "slug": "2026-04-15-vtex-cx-platform-mcp-connection-guide",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Introducing VTEX Developer MCP and Skills for AI-assisted development",
+                  "slug": "2026-04-09-vtex-developer-mcp-and-skills",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Support for GitHub Enterprise accounts with a custom domain",
+                  "slug": "2026-04-02-faststore-webops-support-for-github-enterprise-accounts-with-a-custom-domain",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "March",
               "slug": "march-2026",
               "origin": "",
               "type": "category",
               "children": [
                 {
+                  "name": "Cart simulation: New allowedOutdatedData parameter",
+                  "slug": "2026-03-11-cart-simulation-new-allowedoutdateddata-parameter",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX IO Builder statuses and decommissioning",
                   "slug": "2026-03-09-vtex-io-builder-statuses-and-decommissioning",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Shopee public shipment label route now returns accurate HTTP status codes",
+                  "slug": "2026-03-13-shopee-public-shipment-label-route-status-codes",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -18193,6 +19865,13 @@
                 {
                   "name": "Faststore: Improved cookie handling for session and cart persistence in preview environments",
                   "slug": "2026-02-12-faststore-improved-cookie-handling-session-and-cart-persistence-preview-environments",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Debug logging for third-party scripts",
+                  "slug": "2026-02-11-faststore-debug-logging",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -18236,7 +19915,7 @@
               ]
             }
           ]
-        }, 
+        },
         {
           "name": "2025",
           "slug": "2025-category",
@@ -19374,7 +21053,7 @@
                   "children": []
                 },
                 {
-                  "name": "Facebook Business Extension Available for Legacy CMS Portal",
+                  "name": "Facebook Business Extension Available for CMS Portal (Legacy)",
                   "slug": "facebook-business-extension-available-for-legacy-cms-portal",
                   "origin": "",
                   "type": "markdown",
@@ -20321,13 +22000,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "VTEX Tracking API: changes in all paths",
-                  "slug": "vtex-tracking-api-changes-in-all-paths",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
                 }
               ]
             },
@@ -21087,527 +22759,6 @@
                   "children": []
                 }
               ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "documentation": "Learning Center",
-      "name": "Learning Center",
-      "slugPrefix": "learn",
-      "categories": [
-        {
-          "name": "Onboarding",
-          "slug": "course-onboarding-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "Setting up your environment for VTEX IO",
-              "slug": "course-onboarding-step01introduction-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Requirements",
-              "slug": "course-onboarding-step02technical-requirements-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "Learning flow",
-              "slug": "course-onboarding-step03learning-flow-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Getting started with basic Store Framework blocks",
-          "slug": "course-basic-blocks-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "1. Set up",
-              "slug": "course-basic-blocks-step00setup-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "2. Introduction and Boilerplate",
-              "slug": "course-basic-blocks-step01intro-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "3. Getting started with Rich Text",
-              "slug": "course-basic-blocks-step02richtext-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "4. Info Card: Store Framework's call to action",
-              "slug": "course-basic-blocks-step03infocard-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "5. Product page",
-              "slug": "course-basic-blocks-step04pdp-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "6. Evolving your product page",
-              "slug": "course-basic-blocks-step05pdp2-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "7. Search page",
-              "slug": "course-basic-blocks-step06search-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Designing Advanced Layouts with Composition Blocks",
-          "slug": "course-layout-blocks-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "1. Introducing Layout Blocks",
-              "slug": "course-layout-blocks-step01introducing-layout-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "2. Flex layout",
-              "slug": "course-layout-blocks-step02flexlayout-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "3. Carousel blocks",
-              "slug": "course-layout-blocks-step03slider-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "4. Making Responsive Content",
-              "slug": "course-layout-blocks-step04responsive-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "5. Tab Layout",
-              "slug": "course-layout-blocks-step05tab-layout-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "6. Modal Layout",
-              "slug": "course-layout-blocks-step06modal-layout-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "7. Quick View",
-              "slug": "course-layout-blocks-step07quick-view-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "8. Stack Layout",
-              "slug": "course-layout-blocks-step08stack-layout-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            },
-            {
-              "name": "9. Conditional Layout",
-              "slug": "course-layout-blocks-step09conditional-layout-lang-en",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Developing Custom Blocks in VTEX IO",
-          "slug": "course-store-block-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "1. Introduction",
-              "slug": "course-store-block-step00introduction-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "2. Getting to know an app on VTEX IO",
-              "slug": "course-store-block-step01manifest-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "3. Linking an app and using it on a store's theme",
-              "slug": "course-store-block-step02component-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "4. Making the countdown block customizable",
-              "slug": "course-store-block-step03props-implementation-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "5. Creating the countdown block feature",
-              "slug": "course-store-block-step04countdown-implementation-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "6. Modifying the countdown block to have configurable styles",
-              "slug": "course-store-block-step05css-handles-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "7. Internationalization practices in VTEX IO",
-              "slug": "course-store-block-step06messages-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "8. Componentizing the countdown block",
-              "slug": "course-store-block-step07separating-title-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "9. Connecting backend and frontend",
-              "slug": "course-store-block-step08react-apollo-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Customizing Stores with VTEX IO CLI and Site Editor",
-          "slug": "course-content-workflow-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "1. Getting to know about workspaces",
-              "slug": "course-content-workflow-step01workspaces-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "2. Publishing an app on VTEX IO",
-              "slug": "course-content-workflow-step02publishing-app-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "3. Installing an app on a VTEX account",
-              "slug": "course-content-workflow-step03installing-app-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "4. Changing the store front through Site Editor",
-              "slug": "course-content-workflow-step04site-editor-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Styling Your Store for a Unique Brand Experience",
-          "slug": "course-styles-course-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "1. Introduction",
-              "slug": "course-styles-course-step00introduction-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "2. CSS Handles and the power of customizing blocks",
-              "slug": "course-styles-course-step01csshandles-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "3. Global styles",
-              "slug": "course-styles-course-step02styles-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "4. Creating custom templates",
-              "slug": "course-styles-course-step03custom-template-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "5. Exploring the power behind rich text",
-              "slug": "course-styles-course-step04richtextmarkdown-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "6. Building a custom search landing page",
-              "slug": "course-styles-course-step05landing-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Optimizing Storefront Performance",
-          "slug": "course-store-performance-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "1. Improving Initial Load",
-              "slug": "course-store-performance-step01fold-block-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "2. Menu's Optimization",
-              "slug": "course-store-performance-step02menu-items-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "3. Submenu's Optimization",
-              "slug": "course-store-performance-step03submenu-optimization-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "4. Images",
-              "slug": "course-store-performance-step04images-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "5. Search Improvements",
-              "slug": "course-store-performance-step05searching-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "6. Refactoring Blocks",
-              "slug": "course-store-performance-step06blocks-refact-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Creating Backend Services in VTEX IO",
-          "slug": "course-service-course-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "1. Services in VTEX IO",
-              "slug": "course-service-course-step01services-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "2. Overview: Understanding the Boilerplate",
-              "slug": "course-service-course-step02boilerplate-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "3. Events: handling and receiving events",
-              "slug": "course-service-course-step03events-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "4. Getting to know more about clients",
-              "slug": "course-service-course-step04clients-analytics-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "5. Using events as triggers",
-              "slug": "course-service-course-step05events-triggers-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "6. Clients: Using Master Data",
-              "slug": "course-service-course-step06clients-masterdata-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "7. GraphQL: Retrieving data from Masterdata",
-              "slug": "course-service-course-step07graphql-implementation-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "8. GraphQL: Using GraphiQL",
-              "slug": "course-service-course-step08graphiql-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Using VTEX core commerce APIs in your apps",
-          "slug": "course-calling-commerce-apis-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "1. Course Introduction",
-              "type": "markdown",
-              "slug": "course-calling-commerce-apis-step01introduction-lang-en",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "2. Discovering VTEX Commerce APIs",
-              "type": "markdown",
-              "slug": "course-calling-commerce-apis-step02references-lang-en",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "3. Importing Clients from VTEX package",
-              "type": "markdown",
-              "slug": "course-calling-commerce-apis-step03importing-client-lang-en",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "4. Using Catalog Client to make requests",
-              "type": "markdown",
-              "slug": "course-calling-commerce-apis-step04using-client-lang-en",
-              "origin": "",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "Extending VTEX Admin with custom apps",
-          "slug": "course-admin-lang-en",
-          "origin": "",
-          "type": "markdown",
-          "children": [
-            {
-              "name": "1. Admin framework",
-              "slug": "course-admin-step01-introduction-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "2. Navigation and routes",
-              "slug": "course-admin-step02-navigation-routes-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "3. Improving navigation",
-              "slug": "course-admin-step03-enhancing-navigation-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "4. Sub sections",
-              "slug": "course-admin-step04-sub-sections-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "5. Look and feel",
-              "slug": "course-admin-step05-look-n-feel-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
-            },
-            {
-              "name": "6. Connecting to a service",
-              "slug": "course-admin-step06-connecting-to-service-lang-en",
-              "type": "markdown",
-              "origin": "",
-              "children": []
             }
           ]
         }

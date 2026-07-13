@@ -87,11 +87,11 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/headless-cms-api',
   },
   {
-    title: 'Intelligent Search API',
+    title: 'Intelligent Search API v1',
     description:
-      'Assist your customers in their purchase journey, presenting results from search bar interactions.',
+      'New version of the Intelligent Search API with HTTP caching, lower latency, and explicit context parameters for headless integrations.',
     linkTitle: 'See more',
-    linkTo: '/docs/api-reference/intelligent-search-api',
+    linkTo: '/docs/api-reference/intelligent-search-api-v1',
   },
   {
     title: 'License Manager API',
@@ -126,6 +126,13 @@ const whatsNextData: WhatsNextDataElement[] = [
     description: 'Receive, process, and manage every order through our APIs.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/orders-api',
+  },
+  {
+    title: 'Payment Policies API',
+    description:
+      'Configure rules that include or exclude payment systems for specific cart items.',
+    linkTitle: 'See more',
+    linkTo: '/docs/api-reference/payment-policies-api',
   },
   {
     title: 'Payments Provider Protocol API',
@@ -213,19 +220,6 @@ const whatsNextData: WhatsNextDataElement[] = [
       'Manage and retrieve notes or tasks related to orders from the VTEX DO task manager.',
     linkTitle: 'See more',
     linkTo: '/docs/api-reference/vtex-do-api',
-  },
-  {
-    title: 'VTEX Shipping Network API',
-    description: 'Integrate your carrier with VTEX Shipping Network’s Hub.',
-    linkTitle: 'See more',
-    linkTo: '/docs/api-reference/vtex-shipping-network-api',
-  },
-  {
-    title: 'VTEX Tracking',
-    description:
-      'Manage all delivery solutions powered by VTEX Tracking service.',
-    linkTitle: 'See more',
-    linkTo: '/docs/api-reference/tracking',
   },
 ]
 

@@ -4,6 +4,36 @@ included_files = ["node_modules/sharp/**/*", "node_modules/@img/**/*", "./github
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/styling-icons"
+status = 308
+to = "/docs/guides/faststore/managing-icons-iconography"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-promoting-your-headless-cms-changes"
+status = 308
+to = "/docs/guides/faststore/integration-promoting-your-headless-cms-changes"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-structuring-content-types-and-sections"
+status = 308
+to = "/docs/guides/faststore/integration-structuring-content-types-and-sections"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-setting-up-the-headless-cms"
+status = 308
+to = "/docs/guides/faststore/integration-setting-up-the-headless-cms"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-5-integrating-your-project-with-the-headless-cms"
+status = 308
+to = "/docs/guides/faststore/integration-integrating-your-storefront-with-headless-cms-legacy"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/1-onboarding-dashboard"
 status = 308
 to = "/docs/guides/faststore/webops-dashboard"
@@ -306,12 +336,6 @@ force = true
 from = "/docs/guides/vtexbr-buybox-context"
 status = 308
 to = "/docs/apps/vtexbr.buybox-context"
-
-[[redirects]]
-force = true
-from = "/docs/apps/vtex.store-icons/iconpack"
-status = 308
-to = "/docs/guides/vtex-store-icons-iconpack"
 
 [[redirects]]
 force = true
@@ -1062,6 +1086,42 @@ force = true
 from = '/docs/guides/vtex-b2b-suite'
 status = 308
 to = '/docs/apps/vtex.b2b-suite'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-b2b-checkout-settings'
+status = 308
+to = '/docs/apps/vtex.b2b-checkout-settings'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-b2b-orders-history'
+status = 308
+to = '/docs/apps/vtex.b2b-orders-history'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-b2b-organizations'
+status = 308
+to = '/docs/apps/vtex.b2b-organizations'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-b2b-quotes'
+status = 308
+to = '/docs/apps/vtex.b2b-quotes'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-storefront-permissions-ui'
+status = 308
+to = '/docs/apps/vtex.storefront-permissions-ui'
+
+[[redirects]]
+force = true
+from = '/docs/guides/vtex-storefront-permissions'
+status = 308
+to = '/docs/apps/vtex.storefront-permissions'
 
 [[redirects]]
 force = true
@@ -2304,3 +2364,63 @@ force = true
 from = "/docs/api-reference/storefront-permissions-api/*"
 status = 308
 to = "/docs/api-reference/storefront-roles-api/:splat"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-store-icons-iconpack"
+status = 308
+to = "/docs/apps/vtex.store-icons/iconpack"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-store-icons"
+status = 308
+to = "/docs/apps/vtex.store-icons"
+
+[[redirects]]
+force = true
+from = "/docs/guides/integrating-product-recommendations-in-headless-stores"
+status = 308
+to = "/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores"
+
+[[redirects]]
+force = true
+from = "/docs/guides/implementing-product-recommendations-in-faststore"
+status = 308
+to = "/docs/guides/integrating-product-recommendations-in-headless-or-faststore-web-stores"
+
+[[redirects]]
+force = true
+from = "/docs/apps/vtex.affiliates-program-app"
+status = 308
+to = "/docs/apps/vtex.affiliates"
+
+[[redirects]]
+force = true
+from = "/docs/guides/affiliates-program-app"
+status = 308
+to = "/docs/apps/vtex.affiliates"
+
+[[redirects]]
+force = true
+from = "/docs/guides/ai-assisted-development-overview"
+status = 308
+to = "/docs/guides/vtex-ai-developer-toolkit-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/rewriter"
+status = 308
+to = "/docs/apps/vtex.rewriter"
+
+[[redirects]]
+force = true
+from = "/docs/guides/assembly-options-app"
+status = 308
+to = "/docs/apps/vtex.admin-assembly-options"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-faststore-v1-to-v3"
+status = 308
+to = "/docs/guides/faststore/getting-started-faststore-v1-to-v4"

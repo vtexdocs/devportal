@@ -280,9 +280,9 @@ const StorefrontDevelopmentPage: NextPage<Props> = ({ branch }) => {
           ))}
           <Link href="/docs/guides/vtex-io-documentation-migrating-storefront-from-legacy-to-io">
             <Box sx={styles.boxTip}>
-              <Text sx={styles.boxTitle}>Legacy CMS Portal</Text>
+              <Text sx={styles.boxTitle}>CMS Portal (Legacy)</Text>
               <Text>
-                If your store runs with the Legacy CMS Portal, we strongly
+                If your store runs with the CMS Portal (Legacy), we strongly
                 recommend migrating it to FastStore or Store Framework.
               </Text>
               <Flex sx={styles.linkContainer}>
