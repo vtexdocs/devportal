@@ -8972,7 +8972,7 @@
                   "children": []
                 },
                 {
-                  "name": "Commit batch inventory",
+                  "name": "Confirm batch inventory",
                   "slug": "logistics-api",
                   "type": "openapi",
                   "method": "POST",
