@@ -2126,13 +2126,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
-                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Integration flow",
                   "slug": "integration-flow",
                   "origin": "",
