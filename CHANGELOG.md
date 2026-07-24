@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.41.0](https://github.com/vtexdocs/devportal/compare/v1.40.2...v1.41.0) (2026-07-24)
+
+
+### Features
+
+* **navigation.json:** add 'Migrating Store Framework to FastStore' guide to navigation ([558189d](https://github.com/vtexdocs/devportal/commit/558189dae5fb94f054149948658a05321d3e8524))
+
+
+### Docs
+
+* adding release note to navigation ([0ed0475](https://github.com/vtexdocs/devportal/commit/0ed0475a37aa0c60a32e8f2af764ad516d4a7635))
+
+
+### Chore
+
+* **index.tsx:** remove subscription list component and related styles and messages ([5072331](https://github.com/vtexdocs/devportal/commit/5072331a05d84a5314703a8c99e53d73025a3414))
+
 ### [1.40.2](https://github.com/vtexdocs/devportal/compare/v1.40.1...v1.40.2) (2026-07-16)
 
 ### [1.40.1](https://github.com/vtexdocs/devportal/compare/v1.40.0...v1.40.1) (2026-07-16)
