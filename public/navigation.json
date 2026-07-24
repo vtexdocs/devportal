@@ -19217,6 +19217,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Migrating your storefront from Store Framework to FastStore",
+              "slug": "migrating-store-framework-to-faststore",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -19633,6 +19640,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "New VTEX Sales App Extensibility",
+                  "slug": "2026-07-23-new-vtex-sales-app-extensibility",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore Release Notes — Version 4.4.0",
                   "slug": "2026-07-09-faststore-release-notes-4-4-0",
