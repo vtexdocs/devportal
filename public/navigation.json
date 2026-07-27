@@ -1463,6 +1463,20 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "name": "Headless stores",
+                  "slug": "cms-for-headless-stores",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Defining Content Types for Headless stores",
+                      "slug": "defining-content-types",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
                 }
               ]
             },
