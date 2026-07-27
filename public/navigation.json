@@ -1478,7 +1478,9 @@
                       "children": []
                     }
                   ]
-              },
+                }
+              ]
+            },
             {
               "name": "Upgrading from Headless CMS to CMS",
               "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
