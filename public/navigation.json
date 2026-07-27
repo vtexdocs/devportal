@@ -19648,6 +19648,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Activity Flow: Flexible cart event capture in the dataLayer",
+                  "slug": "2026-07-28-activity-flow-flexible-cart-event-capture-in-the-datalayer",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "New VTEX Sales App Extensibility",
                   "slug": "2026-07-23-new-vtex-sales-app-extensibility",
                   "origin": "",
