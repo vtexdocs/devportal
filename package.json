@@ -52,7 +52,7 @@
     "httpsnippet": "^2.0.0",
     "jsonpath": "^1.1.1",
     "marked": "^4.3.0",
-    "mermaid": "^10.1.0",
+    "mermaid": "^10.9.6",
     "next": "13.2.4",
     "next-auth": "^4.22.1",
     "next-mdx-remote": "^4.1.0",
