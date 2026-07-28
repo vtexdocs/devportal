@@ -6740,6 +6740,15 @@
                   "children": []
                 },
                 {
+                  "name": "Split a cart item",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split",
+                  "children": []
+                },
+                {
                   "name": "Cart installments",
                   "slug": "checkout-api",
                   "type": "openapi",
