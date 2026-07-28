@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.41.1](https://github.com/vtexdocs/devportal/compare/v1.41.0...v1.41.1) (2026-07-28)
+
+
+### Features
+
+* **navigation.json:** add guide on adapting headless storefronts to Google regional pricing and availability ([8e78abf](https://github.com/vtexdocs/devportal/commit/8e78abfbc3a0b7d3084735695654a7d495dad017))
+
+
+### Chore
+
+* **nav:** add split cart item endpoint ([ab84b7c](https://github.com/vtexdocs/devportal/commit/ab84b7c79494922a9023db5cbcda209e50f971ea))
+
 ## [1.41.0](https://github.com/vtexdocs/devportal/compare/v1.40.2...v1.41.0) (2026-07-24)
 
 
