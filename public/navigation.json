@@ -3082,6 +3082,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Installing the offsite capture web script",
+              "slug": "installing-the-offsite-capture-web-script",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
