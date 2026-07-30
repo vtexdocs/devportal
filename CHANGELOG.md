@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.41.2](https://github.com/vtexdocs/devportal/compare/v1.41.1...v1.41.2) (2026-07-30)
+
+
+### Features
+
+* **navigation.json:** add new entry to include headless stores for cms ([c164c73](https://github.com/vtexdocs/devportal/commit/c164c738424319f3f435bea192d642473966a4a3))
+
+
+### Bug Fixes
+
+* **navigation.json:** json structure ([0d2db17](https://github.com/vtexdocs/devportal/commit/0d2db174a39e7400cb297699de5ed19c7df78251))
+
+
+### Chore
+
+* **nav:** add offsite capture web script guide to navigation ([d119827](https://github.com/vtexdocs/devportal/commit/d119827c7125896da092d2af8de189221b9cfb6c))
+* **nav:** add split cart item release note to navigation ([1477f23](https://github.com/vtexdocs/devportal/commit/1477f234fc63935b73923b918d571a280408d2d9))
+
 ### [1.41.1](https://github.com/vtexdocs/devportal/compare/v1.41.0...v1.41.1) (2026-07-28)
 
 
