@@ -19679,6 +19679,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "New Split cart item endpoint in the Checkout API",
+                  "slug": "2026-07-28-new-split-cart-item-endpoint-in-the-checkout-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "New VTEX Sales App Extensibility",
                   "slug": "2026-07-23-new-vtex-sales-app-extensibility",
                   "origin": "",
