@@ -7699,7 +7699,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
+                  "endpoint": "/api/delivery-promises/external-sellers/-sellerId-/products",
                   "children": []
                 },
                 {
@@ -7708,7 +7708,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
+                  "endpoint": "/api/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
                   "children": []
                 }
               ]
