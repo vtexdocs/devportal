@@ -2341,6 +2341,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "B2B session data",
+                  "slug": "b2b-session-data",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
