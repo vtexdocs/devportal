@@ -2448,3 +2448,21 @@ force = true
 from = "/docs/api-reference/vtex-id-api#delete-/api/authenticator/v1/tenants/features/-name-"
 status = 308
 to = "/docs/api-reference/authenticator-api#delete-/api/authenticator/v1/tenants/features/-name-"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/organization-units-api#post-/api/organization-units/v1/-organizationUnitId-/users"
+status = 308
+to = "/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-organizationUnitId-/users"
+status = 308
+to = "/docs/api-reference/organization-units-api#delete-/api/vtexid/organization-units/-organizationUnitId-/users"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/users"
+status = 308
+to = "/docs/api-reference/organization-units-api#get-/api/vtexid/organization-units/-organizationUnitId-/users"
