@@ -11368,7 +11368,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
                   "children": []
                 },
                 {
@@ -11377,7 +11377,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
                   "children": []
                 },
                 {
@@ -11386,7 +11386,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
                   "children": []
                 },
                 {
@@ -14426,15 +14426,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Create storefront user with username",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/authenticator/v1/storefront/users",
-                  "children": []
-                },
-                {
                   "name": "Get storefront user by identifier",
                   "slug": "vtex-id-api",
                   "type": "openapi",
@@ -14582,6 +14573,64 @@
                 {
                   "name": "Delete password migration configuration",
                   "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Authenticator",
+          "slug": "authenticator-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Storefront users",
+              "slug": "authenticator-api-storefront-users",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create storefront user with username",
+                  "slug": "authenticator-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/storefront/users",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Password migration",
+              "slug": "authenticator-api-password-migration",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Upsert password migration configuration",
+                  "slug": "authenticator-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "children": []
+                },
+                {
+                  "name": "Enable or disable password migration",
+                  "slug": "authenticator-api",
+                  "type": "openapi",
+                  "method": "PATCH",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "children": []
+                },
+                {
+                  "name": "Delete password migration configuration",
+                  "slug": "authenticator-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
