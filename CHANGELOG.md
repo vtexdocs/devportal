@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.42.1](https://github.com/vtexdocs/devportal/compare/v1.42.0...v1.42.1) (2026-08-05)
+
+
+### Features
+
+* add new activity flow entry to navigation JSON ([b05de55](https://github.com/vtexdocs/devportal/commit/b05de553c983e12a4947df163505ead17cde9780))
+
+
+### Bug Fixes
+
+* **netlify:** restore redirect block header lost in merge ([02c1c2d](https://github.com/vtexdocs/devportal/commit/02c1c2dda541595eb88cd600fd64859059bc2bfc))
+* remove password migration endpoints from vtex-id-api navigation ([79e5d3c](https://github.com/vtexdocs/devportal/commit/79e5d3ccd3146e8ff03387e8b8ad2f0c74eee145))
+* remove trailing comma from navigation.json after password migration removal ([19ad71f](https://github.com/vtexdocs/devportal/commit/19ad71f392ed72fcb284ef9efe5c1cfa64a7f82d))
+* replace {name} with -name- in authenticator endpoint navigation ([7c2e0ee](https://github.com/vtexdocs/devportal/commit/7c2e0eec3f71ae66f4d1942437801d39e9f194d5))
+
+
+### Docs
+
+* **redirects:** add fastcheckout to buyer portal checkout migration redirect ([8bcc8f9](https://github.com/vtexdocs/devportal/commit/8bcc8f9867c8beabf1ef8ac625b9a2dbcd793a20))
+
 ## [1.42.0](https://github.com/vtexdocs/devportal/compare/v1.41.3...v1.42.0) (2026-08-05)
 
 
