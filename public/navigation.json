@@ -1471,6 +1471,13 @@
                   "type": "markdown",
                   "children": [
                     {
+                      "name": "Content modeling and architecture for headless stores",
+                      "slug": "content-modeling-and-architecture-for-headless-stores",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Defining Content Types for Headless stores",
                       "slug": "defining-content-types",
                       "origin": "",
