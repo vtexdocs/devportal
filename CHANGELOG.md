@@ -2,6 +2,56 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.42.0](https://github.com/vtexdocs/devportal/compare/v1.41.3...v1.42.0) (2026-08-05)
+
+
+### Features
+
+* add Authenticator API to navigation, mappings, and redirects ([2b6d40b](https://github.com/vtexdocs/devportal/commit/2b6d40b52000f676b67a4e8da725740219d25132))
+* add redirects for organization unit users path rename ([8b5868c](https://github.com/vtexdocs/devportal/commit/8b5868c89c8321d013539f95b11c908db4c98e7c))
+
+
+### Bug Fixes
+
+* remove trailing comma ([9657fc1](https://github.com/vtexdocs/devportal/commit/9657fc1644a370e07031e6fbbbf4f2ec011aa13c))
+
+
+### Chore
+
+* add B2B session data entry to navigation JSON ([513eb2c](https://github.com/vtexdocs/devportal/commit/513eb2cad5e5e9f6f927f8d06abee2a4bf8952f5))
+
+### [1.41.3](https://github.com/vtexdocs/devportal/compare/v1.41.2...v1.41.3) (2026-07-31)
+
+### [1.41.2](https://github.com/vtexdocs/devportal/compare/v1.41.1...v1.41.2) (2026-07-30)
+
+
+### Features
+
+* **navigation.json:** add new entry to include headless stores for cms ([c164c73](https://github.com/vtexdocs/devportal/commit/c164c738424319f3f435bea192d642473966a4a3))
+
+
+### Bug Fixes
+
+* **navigation.json:** json structure ([0d2db17](https://github.com/vtexdocs/devportal/commit/0d2db174a39e7400cb297699de5ed19c7df78251))
+
+
+### Chore
+
+* **nav:** add offsite capture web script guide to navigation ([d119827](https://github.com/vtexdocs/devportal/commit/d119827c7125896da092d2af8de189221b9cfb6c))
+* **nav:** add split cart item release note to navigation ([1477f23](https://github.com/vtexdocs/devportal/commit/1477f234fc63935b73923b918d571a280408d2d9))
+
+### [1.41.1](https://github.com/vtexdocs/devportal/compare/v1.41.0...v1.41.1) (2026-07-28)
+
+
+### Features
+
+* **navigation.json:** add guide on adapting headless storefronts to Google regional pricing and availability ([8e78abf](https://github.com/vtexdocs/devportal/commit/8e78abfbc3a0b7d3084735695654a7d495dad017))
+
+
+### Chore
+
+* **nav:** add split cart item endpoint ([ab84b7c](https://github.com/vtexdocs/devportal/commit/ab84b7c79494922a9023db5cbcda209e50f971ea))
+
 ## [1.41.0](https://github.com/vtexdocs/devportal/compare/v1.40.2...v1.41.0) (2026-07-24)
 
 
