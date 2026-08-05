@@ -2424,3 +2424,9 @@ force = true
 from = "/docs/guides/faststore/getting-started-faststore-v1-to-v3"
 status = 308
 to = "/docs/guides/faststore/getting-started-faststore-v1-to-v4"
+
+[[redirects]]
+force = true
+from = "/docs/guides/fastcheckout-setting-up"
+status = 308
+to = "/docs/guides/setting-up-buyer-portal-checkout"
