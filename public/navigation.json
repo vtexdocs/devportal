@@ -14558,7 +14558,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
                   "children": []
                 },
                 {
@@ -14567,7 +14567,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
                   "children": []
                 },
                 {
@@ -14576,7 +14576,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
                   "children": []
                 }
               ]
@@ -14616,7 +14616,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
                   "children": []
                 },
                 {
@@ -14625,7 +14625,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
                   "children": []
                 },
                 {
@@ -14634,7 +14634,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
                   "children": []
                 }
               ]
