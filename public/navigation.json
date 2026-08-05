@@ -19695,6 +19695,21 @@
           "type": "category",
           "children": [
             {
+              "name": "August",
+              "slug": "august-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "VTEX IO: VBase deprecation and Master Data migration",
+                  "slug": "2026-08-24-vtex-io-vbase-deprecation-master-data-migration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "July",
               "slug": "july-2026",
               "origin": "",
