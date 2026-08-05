@@ -2430,6 +2430,9 @@ force = true
 from = "/docs/guides/fastcheckout-setting-up"
 status = 308
 to = "/docs/guides/setting-up-buyer-portal-checkout"
+
+[[redirects]]
+force = true
 from = "/docs/api-reference/vtex-id-api#post-/api/authenticator/v1/storefront/users"
 status = 308
 to = "/docs/api-reference/authenticator-api#post-/api/authenticator/v1/storefront/users"
