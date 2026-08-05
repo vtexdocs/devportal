@@ -14547,40 +14547,6 @@
                 }
               ]
             },
-            {
-              "name": "Password migration",
-              "slug": "vtex-id-api-password-migration",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Upsert password migration configuration",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
-                  "children": []
-                },
-                {
-                  "name": "Enable or disable password migration",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
-                  "children": []
-                },
-                {
-                  "name": "Delete password migration configuration",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
-                  "children": []
-                }
-              ]
-            }
           ]
         },
         {
