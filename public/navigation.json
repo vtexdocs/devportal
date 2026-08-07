@@ -1478,6 +1478,13 @@
                       "children": []
                     },
                     {
+                      "name": "Defining components",
+                      "slug": "defining-components",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
                       "name": "Defining Content Types for Headless stores",
                       "slug": "defining-content-types",
                       "origin": "",
