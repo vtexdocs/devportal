@@ -19709,6 +19709,21 @@
           "type": "category",
           "children": [
             {
+              "name": "August",
+              "slug": "august-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore Release Notes — Version 4.5.0",
+                  "slug": "2026-08-10-faststore-release-notes-4-5-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "July",
               "slug": "july-2026",
               "origin": "",
