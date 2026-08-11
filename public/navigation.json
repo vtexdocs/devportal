@@ -19517,6 +19517,13 @@
               "children": []
             },
             {
+              "name": "I can't sync my store CMS schema",
+              "slug": "issues-during-cms-schema-sync",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "My pages are taking too long to be published on Headless CMS",
               "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
               "origin": "",
