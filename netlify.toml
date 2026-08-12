@@ -2472,3 +2472,9 @@ force = true
 from = "/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/users"
 status = 308
 to = "/docs/api-reference/organization-units-api#get-/api/vtexid/organization-units/-organizationUnitId-/users"
+
+[[redirects]]
+force = true
+from = "/docs/guides/how-to-configure-tradename-to-use-in-the-organization-search-field"
+status = 308
+to = "/docs/guides/configure-tradename"
