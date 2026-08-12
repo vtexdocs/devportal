@@ -18083,6 +18083,13 @@
                   "children": []
                 },
                 {
+                  "name": "Displaying product recommendations with the Recommendation Shelf",
+                  "slug": "faststore/storefront-features-displaying-product-recommendations-with-recommendation-shelf",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Enabling product purchase from search with QuickOrder",
                   "slug": "faststore/storefront-features-enabling-product-purchase-from-search-with-quick-order",
                   "origin": "",
