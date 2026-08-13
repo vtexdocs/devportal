@@ -10,15 +10,14 @@ import {
 import { writeLog } from '../support/functions'
 
 describe('DropdownMenu Component', () => {
-  before(() => {
-    cy.writeFile('cypress.log', `#Component Tests - DropdownMenu#\n`, {
-      flag: 'a+',
-    })
-  })
-
   afterEach(function () {
     if (this.currentTest.state === 'failed') {
-      writeLog(this.currentTest.title)
+      writeLog({
+        spec: Cypress.spec.name,
+        title: this.currentTest.title,
+        attempt: this.currentTest.currentRetry(),
+        type: 'dom',
+      })
     }
   })
 
