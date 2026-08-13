@@ -581,6 +581,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "How to adapt headless storefronts to Google regional price and availability",
+                  "slug": "adapting-headless-storefronts-to-google-raap",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -1395,6 +1402,124 @@
           ]
         },
         {
+          "name": "CMS",
+          "slug": "cms",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Getting started with CMS",
+              "slug": "getting-started-with-cms",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Understanding CMS architecture and schema declarations",
+                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Local setup and development",
+                  "slug": "local-setup-and-development",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Troubleshooting",
+                  "slug": "cms-troubleshooting",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Integrations",
+              "slug": "integrations",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore",
+                  "slug": "cms-for-faststore-storefronts",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Content plugin",
+                      "slug": "content-plugin",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Creating a new section in the CMS",
+                      "slug": "creating-a-new-section",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Headless stores",
+                  "slug": "cms-for-headless-stores",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Content modeling and architecture for headless stores",
+                      "slug": "content-modeling-and-architecture-for-headless-stores",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Defining components",
+                      "slug": "defining-components",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Defining Content Types for Headless stores",
+                      "slug": "defining-content-types",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Upgrading from Headless CMS to CMS",
+              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Comparing Headless CMS (legacy) and CMS features",
+                  "slug": "comparing-headless-cms-legacy-and-cms-features",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Understanding components and sections",
+              "slug": "understanding-components-and-sections",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Master Data",
           "slug": "master-data",
           "origin": "",
@@ -1580,6 +1705,13 @@
                   "children": []
                 },
                 {
+                  "name": "Deleting documents in Master Data v1",
+                  "slug": "deleting-documents-in-master-data-v1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Implementing newletter opt-in with Master Data v1",
                   "slug": "implementing-newsletter-opt-in-with-master-data-v1",
                   "origin": "",
@@ -1727,6 +1859,13 @@
                 {
                   "name": "Setting up the type of interest rate",
                   "slug": "setting-up-the-type-of-interest-rate",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Using payment policies",
+                  "slug": "using-payment-policies",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2023,13 +2162,6 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Getting started with VTEX IO for VTEX Shipping Network",
-                  "slug": "getting-started-with-vtex-io-for-vtex-shipping-network",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "Integration flow",
                   "slug": "integration-flow",
                   "origin": "",
@@ -2223,6 +2355,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "B2B session data",
+                  "slug": "b2b-session-data",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2247,7 +2386,7 @@
                     },
                     {
                       "name": "How to configure tradeName to use in the organization search field",
-                      "slug": "how-to-configure-tradename-to-use-in-the-organization-search-field",
+                      "slug": "configure-tradename",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -2964,6 +3103,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Installing the offsite capture web script",
+              "slug": "installing-the-offsite-capture-web-script",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -3134,73 +3280,6 @@
             {
               "name": "VTEX CX Platform MCP",
               "slug": "connect-the-vtex-cx-platform-mcp",
-              "origin": "",
-              "type": "markdown",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "CMS",
-          "slug": "cms",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Integrations",
-              "slug": "integrations",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "FastStore",
-                  "slug": "cms-for-faststore-storefronts",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Content plugin",
-                      "slug": "content-plugin",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Creating a new section in the CMS",
-                      "slug": "creating-a-new-section",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "Upgrading from Headless CMS to CMS",
-              "slug": "upgrading-from-headless-cms-legacy-to-cms-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Comparing Headless CMS (legacy) and CMS features",
-                  "slug": "comparing-headless-cms-legacy-and-cms-features",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Understanding CMS architecture and schema declarations",
-                  "slug": "understanding-cms-architecture-and-schema-declarations",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Understanding components and sections",
-              "slug": "understanding-components-and-sections",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -6704,6 +6783,15 @@
                   "children": []
                 },
                 {
+                  "name": "Split a cart item",
+                  "slug": "checkout-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/checkout/pub/orderForm/-orderFormId-/items/-itemUniqueId-/split",
+                  "children": []
+                },
+                {
                   "name": "Cart installments",
                   "slug": "checkout-api",
                   "type": "openapi",
@@ -7632,7 +7720,7 @@
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/products",
+                  "endpoint": "/api/delivery-promises/external-sellers/-sellerId-/products",
                   "children": []
                 },
                 {
@@ -7641,7 +7729,7 @@
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
+                  "endpoint": "/api/delivery-promises/external-sellers/-sellerId-/items/-itemId-",
                   "children": []
                 }
               ]
@@ -8256,6 +8344,123 @@
           ]
         },
         {
+          "name": "Intelligent Search API v1",
+          "slug": "intelligent-search-api-v1",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Product List Page",
+              "slug": "intelligent-search-api-v1-product-list-page",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Search products (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/product-search/-facets-",
+                  "children": []
+                },
+                {
+                  "name": "List filters for a search (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/facets/-facets-",
+                  "children": []
+                },
+                {
+                  "name": "Get attempt of correction of a misspelled term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/correction-search",
+                  "children": []
+                },
+                {
+                  "name": "Get list of banners registered for query (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/banners/-facets-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Product Detail Page",
+              "slug": "intelligent-search-api-v1-product-detail-page",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get product (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/products",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Autocomplete",
+              "slug": "intelligent-search-api-v1-autocomplete",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get list of the 10 most searched terms (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/top-searches",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms and attributes similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/autocomplete-suggestions",
+                  "children": []
+                },
+                {
+                  "name": "Get list of suggested terms similar to the search term (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/search-suggestions",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Delivery Promise",
+              "slug": "intelligent-search-api-v1-delivery-promise",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get pickup point availability for Delivery Promise (v1)",
+                  "slug": "intelligent-search-api-v1",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/pickup-point-availability/-facets-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Intelligent Search Events API - Headless",
           "slug": "intelligent-search-events-api-headless",
           "origin": "",
@@ -8826,7 +9031,7 @@
                   "children": []
                 },
                 {
-                  "name": "Commit batch inventory",
+                  "name": "Confirm batch inventory",
                   "slug": "logistics-api",
                   "type": "openapi",
                   "method": "POST",
@@ -11177,7 +11382,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
                   "children": []
                 },
                 {
@@ -11186,7 +11391,7 @@
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
                   "children": []
                 },
                 {
@@ -11195,7 +11400,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/users",
+                  "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
                   "children": []
                 },
                 {
@@ -11266,6 +11471,82 @@
                   "method": "DELETE",
                   "origin": "",
                   "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-/remove",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Payment Policies API",
+          "slug": "payment-policies-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Payment policy rules",
+              "slug": "payment-policy-rules",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "List policy rules",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules",
+                  "children": []
+                },
+                {
+                  "name": "Get policy rule by ID",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Update policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                },
+                {
+                  "name": "Delete policy rule",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "DELETE",
+                  "origin": "",
+                  "endpoint": "/api/payment-configuration-service/policy-rules/-id-",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Payment policy evaluation",
+              "slug": "payment-policy-evaluation",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Evaluate payment policies",
+                  "slug": "payment-policies-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/pvt/payment-systems/search",
                   "children": []
                 }
               ]
@@ -12699,6 +12980,39 @@
           ]
         },
         {
+          "name": "External Promotions Protocol API",
+          "slug": "external-promotions-protocol-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "External promotions",
+              "slug": "external-promotions-protocol-api-external-promotions",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Calculate promotions",
+                  "slug": "external-promotions-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/calculatePromotion",
+                  "children": []
+                },
+                {
+                  "name": "Notify promotion usage",
+                  "slug": "external-promotions-protocol-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/notifyUsage",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Punchout API",
           "slug": "punchout-api",
           "origin": "",
@@ -12715,7 +13029,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/authenticator/punchout/start",
+                  "endpoint": "/api/authenticator/v1/punchout/start",
                   "children": []
                 },
                 {
@@ -12724,7 +13038,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/api/authenticator/punchout/authenticated/start",
+                  "endpoint": "/api/authenticator/v1/punchout/authenticated/start",
                   "children": []
                 },
                 {
@@ -12733,7 +13047,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/authenticator/punchout/finish",
+                  "endpoint": "/api/authenticator/v1/punchout/finish",
                   "children": []
                 }
               ]
@@ -14126,15 +14440,6 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Create storefront user with username",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/authenticator/storefront/users",
-                  "children": []
-                },
-                {
                   "name": "Get storefront user by identifier",
                   "slug": "vtex-id-api",
                   "type": "openapi",
@@ -14255,37 +14560,61 @@
                   "children": []
                 }
               ]
+            }
+          ]
+        },
+        {
+          "name": "Authenticator",
+          "slug": "authenticator-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Storefront users",
+              "slug": "authenticator-api-storefront-users",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create storefront user with username",
+                  "slug": "authenticator-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/storefront/users",
+                  "children": []
+                }
+              ]
             },
             {
               "name": "Password migration",
-              "slug": "vtex-id-api-password-migration",
+              "slug": "authenticator-api-password-migration",
               "type": "category",
               "children": [
                 {
                   "name": "Upsert password migration configuration",
-                  "slug": "vtex-id-api",
+                  "slug": "authenticator-api",
                   "type": "openapi",
                   "method": "PUT",
                   "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
                   "children": []
                 },
                 {
                   "name": "Enable or disable password migration",
-                  "slug": "vtex-id-api",
+                  "slug": "authenticator-api",
                   "type": "openapi",
                   "method": "PATCH",
                   "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
                   "children": []
                 },
                 {
                   "name": "Delete password migration configuration",
-                  "slug": "vtex-id-api",
+                  "slug": "authenticator-api",
                   "type": "openapi",
                   "method": "DELETE",
                   "origin": "",
-                  "endpoint": "/api/authenticator/v1/tenants/features/{name}",
+                  "endpoint": "/api/authenticator/v1/tenants/features/-name-",
                   "children": []
                 }
               ]
@@ -17754,6 +18083,13 @@
                   "children": []
                 },
                 {
+                  "name": "Displaying product recommendations with the Recommendation Shelf",
+                  "slug": "faststore/storefront-features-displaying-product-recommendations-with-recommendation-shelf",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Enabling product purchase from search with QuickOrder",
                   "slug": "faststore/storefront-features-enabling-product-purchase-from-search-with-quick-order",
                   "origin": "",
@@ -18962,6 +19298,13 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "Migrating your storefront from Store Framework to FastStore",
+              "slug": "migrating-store-framework-to-faststore",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -19181,6 +19524,13 @@
               "children": []
             },
             {
+              "name": "I can't sync my store CMS schema",
+              "slug": "issues-during-cms-schema-sync",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "My pages are taking too long to be published on Headless CMS",
               "slug": "my-pages-are-taking-too-long-to-be-published-on-headless-cms",
               "origin": "",
@@ -19372,6 +19722,78 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "August",
+              "slug": "august-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore Release Notes — Version 4.5.0",
+                  "slug": "2026-08-10-faststore-release-notes-4-5-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "July",
+              "slug": "july-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New Split cart item endpoint in the Checkout API",
+                  "slug": "2026-07-28-new-split-cart-item-endpoint-in-the-checkout-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Activity Flow: Flexible cart event capture in the dataLayer",
+                  "slug": "2026-07-28-activity-flow-flexible-cart-event-capture-in-the-datalayer",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New VTEX Sales App Extensibility",
+                  "slug": "2026-07-23-new-vtex-sales-app-extensibility",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 4.4.0",
+                  "slug": "2026-07-09-faststore-release-notes-4-4-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "New Intelligent Search API v1",
+                  "slug": "2026-07-08-new-intelligent-search-api-v1",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Activity Flow: Customer interaction event tracking for mobile apps",
+                  "slug": "2026-07-07-activity-flow-customer-interaction-event-tracking-for-mobile-apps",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore WebOps: Self-service Git provider management",
+                  "slug": "2026-07-06-faststore-webops-self-service-git-provider-management",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "June",
               "slug": "june-2026",

@@ -2412,3 +2412,69 @@ force = true
 from = "/docs/guides/rewriter"
 status = 308
 to = "/docs/apps/vtex.rewriter"
+
+[[redirects]]
+force = true
+from = "/docs/guides/assembly-options-app"
+status = 308
+to = "/docs/apps/vtex.admin-assembly-options"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-faststore-v1-to-v3"
+status = 308
+to = "/docs/guides/faststore/getting-started-faststore-v1-to-v4"
+
+[[redirects]]
+force = true
+from = "/docs/guides/fastcheckout-setting-up"
+status = 308
+to = "/docs/guides/setting-up-buyer-portal-checkout"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/vtex-id-api#post-/api/authenticator/v1/storefront/users"
+status = 308
+to = "/docs/api-reference/authenticator-api#post-/api/authenticator/v1/storefront/users"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/vtex-id-api#put-/api/authenticator/v1/tenants/features/-name-"
+status = 308
+to = "/docs/api-reference/authenticator-api#put-/api/authenticator/v1/tenants/features/-name-"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/vtex-id-api#patch-/api/authenticator/v1/tenants/features/-name-"
+status = 308
+to = "/docs/api-reference/authenticator-api#patch-/api/authenticator/v1/tenants/features/-name-"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/vtex-id-api#delete-/api/authenticator/v1/tenants/features/-name-"
+status = 308
+to = "/docs/api-reference/authenticator-api#delete-/api/authenticator/v1/tenants/features/-name-"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/organization-units-api#post-/api/organization-units/v1/-organizationUnitId-/users"
+status = 308
+to = "/docs/api-reference/organization-units-api#post-/api/vtexid/organization-units/-organizationUnitId-/users"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/organization-units-api#delete-/api/organization-units/v1/-organizationUnitId-/users"
+status = 308
+to = "/docs/api-reference/organization-units-api#delete-/api/vtexid/organization-units/-organizationUnitId-/users"
+
+[[redirects]]
+force = true
+from = "/docs/api-reference/organization-units-api#get-/api/organization-units/v1/-organizationUnitId-/users"
+status = 308
+to = "/docs/api-reference/organization-units-api#get-/api/vtexid/organization-units/-organizationUnitId-/users"
+
+[[redirects]]
+force = true
+from = "/docs/guides/how-to-configure-tradename-to-use-in-the-organization-search-field"
+status = 308
+to = "/docs/guides/configure-tradename"

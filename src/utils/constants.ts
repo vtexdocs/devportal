@@ -437,11 +437,13 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Delivery Promise Notification API':
     'delivery-promise-notification-api',
   'VTEX - Delivery Promise Suggestions API': 'delivery-promise-suggestions-api',
+  'VTEX - External Promotions Protocol API': 'external-promotions-protocol-api',
   'VTEX - GiftCard Hub API': 'giftcard-hub-api',
   'VTEX - Giftcard API': 'giftcard-api',
   'VTEX - Giftcard Provider Protocol': 'giftcard-provider-protocol',
   'VTEX - Headless CMS API': 'headless-cms-api',
   'VTEX - Intelligent Search API': 'intelligent-search-api',
+  'VTEX - Intelligent Search API - v1': 'intelligent-search-api-v1',
   'VTEX - License Manager API': 'license-manager-api',
   'VTEX - Logistics API': 'logistics-api',
   'VTEX - Marketplace APIs': 'marketplace-apis',
@@ -462,6 +464,7 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - Operational Capacity API': 'operational-capacity-api',
   'VTEX - Orders API PII version': 'orders-api-pii-version',
   'VTEX - Orders API': 'orders-api',
+  'VTEX - Payment Policies API': 'payment-policies-api',
   'VTEX - Payment Provider Protocol': 'payment-provider-protocol',
   'VTEX - Payments Gateway API': 'payments-gateway-api',
   'VTEX - Pick and Pack API': 'pick-and-pack-api',
@@ -502,4 +505,5 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - B2B Contracts API': 'b2b-contracts-api',
   'VTEX - B2B Password Migration Protocol': 'b2b-password-migration-protocol',
   'VTEX - User Rights API': 'user-rights-api',
+  'VTEX - Authenticator API': 'authenticator-api',
 }
