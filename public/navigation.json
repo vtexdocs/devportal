@@ -3464,761 +3464,6 @@
           ]
         },
         {
-          "name": "Buyer organizations (B2B Suite)",
-          "slug": "buyer-organizations",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Bulk Import",
-              "slug": "bulk-import",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Upload file",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs",
-                  "children": []
-                },
-                {
-                  "name": "Check progress",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
-                  "children": []
-                },
-                {
-                  "name": "Start import",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
-                  "children": []
-                },
-                {
-                  "name": "Validate file",
-                  "slug": "buyer-organizations",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "B2B Contracts",
-          "slug": "b2b-contracts-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Contract management",
-              "slug": "contract-management",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create contract",
-                  "slug": "b2b-contracts-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents",
-                  "children": []
-                },
-                {
-                  "name": "Get contract by ID",
-                  "slug": "b2b-contracts-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
-                  "children": []
-                },
-                {
-                  "name": "Update contract by ID",
-                  "slug": "b2b-contracts-api",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete contract by ID",
-                  "slug": "b2b-contracts-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/CL/documents/-contractId-",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "B2B Buyers",
-          "slug": "b2b-buyer-data-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Get buyer schema",
-              "slug": "b2b-buyer-data-api",
-              "type": "openapi",
-              "method": "GET",
-              "origin": "",
-              "endpoint": "/api/dataentities/shopper/schemas/v1",
-              "children": []
-            },
-            {
-              "name": "Create buyer",
-              "slug": "b2b-buyer-data-api",
-              "type": "openapi",
-              "method": "POST",
-              "origin": "",
-              "endpoint": "/api/dataentities/shopper/documents",
-              "children": []
-            },
-            {
-              "name": "Get buyer by ID",
-              "slug": "b2b-buyer-data-api",
-              "type": "openapi",
-              "method": "GET",
-              "origin": "",
-              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
-              "children": []
-            },
-            {
-              "name": "Update buyer",
-              "slug": "b2b-buyer-data-api",
-              "type": "openapi",
-              "method": "PATCH",
-              "origin": "",
-              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
-              "children": []
-            },
-            {
-              "name": "Delete buyer",
-              "slug": "b2b-buyer-data-api",
-              "type": "openapi",
-              "method": "DELETE",
-              "origin": "",
-              "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
-              "children": []
-            },
-            {
-              "name": "Search buyers",
-              "slug": "b2b-buyer-data-api",
-              "type": "openapi",
-              "method": "GET",
-              "origin": "",
-              "endpoint": "/api/dataentities/shopper/search",
-              "children": []
-            }
-          ]
-        },
-        {
-          "name": "B2B Addresses",
-          "slug": "b2b-addresses",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Addresses",
-              "slug": "addresses",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create B2B address",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/AD/documents",
-                  "children": []
-                },
-                {
-                  "name": "Search B2B addresses",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/AD/search",
-                  "children": []
-                },
-                {
-                  "name": "Get B2B address by ID",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
-                  "children": []
-                },
-                {
-                  "name": "Update B2B address",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete B2B address",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/AD/documents/-addressId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Recipients",
-              "slug": "recipients",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create recipient",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents",
-                  "children": []
-                },
-                {
-                  "name": "Search recipients",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/search",
-                  "children": []
-                },
-                {
-                  "name": "Get recipient by ID",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
-                  "children": []
-                },
-                {
-                  "name": "Update recipient",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete recipient",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Locations",
-              "slug": "locations",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create location",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/documents",
-                  "children": []
-                },
-                {
-                  "name": "Search locations",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/search",
-                  "children": []
-                },
-                {
-                  "name": "Get location",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
-                  "children": []
-                },
-                {
-                  "name": "Update location",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete location",
-                  "slug": "b2b-addresses",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "B2B Password Migration Protocol",
-          "slug": "b2b-password-migration-protocol",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Client registration",
-              "slug": "b2b-password-migration-protocol-client-registration",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Register client",
-                  "slug": "b2b-password-migration-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/register",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Authentication flow",
-              "slug": "b2b-password-migration-protocol-authentication-flow",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Validate legacy credentials",
-                  "slug": "b2b-password-migration-protocol",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/authentication",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Budgets API",
-          "slug": "budgets-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Statements",
-              "slug": "statements",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get Budget Statements",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/statements",
-                  "children": []
-                },
-                {
-                  "name": "Get Allocation Statements",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/statements",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Transactions",
-              "slug": "transactions",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create Transaction",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions",
-                  "children": []
-                },
-                {
-                  "name": "Refund Transaction",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-/refund",
-                  "children": []
-                },
-                {
-                  "name": "Get Transaction",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Reservations",
-              "slug": "reservations",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create Reservation",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
-                  "children": []
-                },
-                {
-                  "name": "List Reservations",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
-                  "children": []
-                },
-                {
-                  "name": "Get Reservation",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete Reservation",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
-                  "children": []
-                },
-                {
-                  "name": "Confirmation Reservation",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-/confirmation",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Allocations",
-              "slug": "allocations",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create Allocation",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
-                  "children": []
-                },
-                {
-                  "name": "List Budget Allocations",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
-                  "children": []
-                },
-                {
-                  "name": "Create Batch of Allocations",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/batch",
-                  "children": []
-                },
-                {
-                  "name": "Get Allocation",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
-                  "children": []
-                },
-                {
-                  "name": "Update Allocation",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete allocation",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
-                  "children": []
-                },
-                {
-                  "name": "Change allocation status",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/status",
-                  "children": []
-                },
-                {
-                  "name": "Update allocation usage",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/usage",
-                  "children": []
-                },
-                {
-                  "name": "Update allocation linked entity",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/linked-entity",
-                  "children": []
-                },
-                {
-                  "name": "Query allocations",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/allocations/query",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Budgets",
-              "slug": "budgets",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create budget",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-",
-                  "children": []
-                },
-                {
-                  "name": "List budgets",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-",
-                  "children": []
-                },
-                {
-                  "name": "Get budget",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
-                  "children": []
-                },
-                {
-                  "name": "Update budget",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete budget",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
-                  "children": []
-                },
-                {
-                  "name": "Update budget status",
-                  "slug": "budgets-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/status",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Buying Policies API",
-          "slug": "buying-policies-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Dimensions",
-              "slug": "dimensions",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create dimension",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions",
-                  "children": []
-                },
-                {
-                  "name": "Get dimensions information",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions",
-                  "children": []
-                },
-                {
-                  "name": "Update dimension",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete dimension",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Rules",
-              "slug": "rules",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create dimension rule",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
-                  "children": []
-                },
-                {
-                  "name": "Update all dimension rules",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
-                  "children": []
-                },
-                {
-                  "name": "Update dimension rule",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete dimension rule",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Manual authorization",
-              "slug": "manual-authorization",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Accept or deny rule",
-                  "slug": "buying-policies-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/commercial-authorizations/-orderAuthId-/callback",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "Legacy CMS Portal API",
           "slug": "legacy-cms-portal-api",
           "origin": "",
@@ -7551,152 +6796,6 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/creditcontrol/storeconfig",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Custom Checkout Fields",
-          "slug": "custom-checkout-fields",
-          "origin": "",
-          "type": "category",
-          "children": [
-            {
-              "name": "Custom fields settings",
-              "slug": "custom-fields-api-custom-fields-settings",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create custom field settings",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldSettings/documents",
-                  "children": []
-                },
-                {
-                  "name": "Get custom field settings",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldSettings/search",
-                  "children": []
-                },
-                {
-                  "name": "Update custom field settings",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete custom field settings",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Custom fields values",
-              "slug": "custom-fields-api-custom-fields-values",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get custom field value",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
-                  "children": []
-                },
-                {
-                  "name": "Create custom field value",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/documents",
-                  "children": []
-                },
-                {
-                  "name": "Update custom field value",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete custom field value",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
-                  "children": []
-                },
-                {
-                  "name": "Search custom fields values",
-                  "slug": "custom-fields-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/customFieldValues/search",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Default values",
-              "slug": "default-values",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create default values",
-                  "slug": "default-values-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/defaultValues/documents",
-                  "children": []
-                },
-                {
-                  "name": "Get default values",
-                  "slug": "default-values-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
-                  "children": []
-                },
-                {
-                  "name": "Update default values",
-                  "slug": "default-values-api",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete default values",
-                  "slug": "default-values-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
                   "children": []
                 }
               ]
@@ -11269,215 +10368,6 @@
           ]
         },
         {
-          "name": "Organization Units API",
-          "slug": "organization-units-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Users",
-              "slug": "organization-units-api-users",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get user scopes",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/users/-userId-/scopes",
-                  "children": []
-                },
-                {
-                  "name": "Get user's organization unit",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-userId-/unit",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Organization Units",
-              "slug": "organization-units-api-organization-units",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Create organization unit",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1",
-                  "children": []
-                },
-                {
-                  "name": "Search organization units",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1",
-                  "children": []
-                },
-                {
-                  "name": "Get organization unit",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete organization unit",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
-                  "children": []
-                },
-                {
-                  "name": "Rename organization unit",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "PATCH",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-",
-                  "children": []
-                },
-                {
-                  "name": "Get all children organization units",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/children",
-                  "children": []
-                },
-                {
-                  "name": "Get root organization units",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/roots",
-                  "children": []
-                },
-                {
-                  "name": "Move organization unit",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/path",
-                  "children": []
-                },
-                {
-                  "name": "Add user to organization unit",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
-                  "children": []
-                },
-                {
-                  "name": "Remove users from organization unit",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
-                  "children": []
-                },
-                {
-                  "name": "List users from organization unit",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
-                  "children": []
-                },
-                {
-                  "name": "Find all organization units with scope value",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/scope/-scope-/value/-scopeValue-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Scopes",
-              "slug": "organization-units-api-scopes",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Get organization unit scopes",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
-                  "children": []
-                },
-                {
-                  "name": "Delete all scopes",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
-                  "children": []
-                },
-                {
-                  "name": "Create organization unit scope",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
-                  "children": []
-                },
-                {
-                  "name": "Update organization unit scope",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
-                  "children": []
-                },
-                {
-                  "name": "Delete organization unit scope",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
-                  "children": []
-                },
-                {
-                  "name": "Remove values from organization unit scope",
-                  "slug": "organization-units-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-/remove",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "Payment Policies API",
           "slug": "payment-policies-api",
           "origin": "",
@@ -13013,48 +11903,6 @@
           ]
         },
         {
-          "name": "Punchout API",
-          "slug": "punchout-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Punchout login",
-              "slug": "punchout-login",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Start VTEX user punchout flow",
-                  "slug": "punchout-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/authenticator/v1/punchout/start",
-                  "children": []
-                },
-                {
-                  "name": "Start pre-authenticated user punchout flow",
-                  "slug": "punchout-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/authenticator/v1/punchout/authenticated/start",
-                  "children": []
-                },
-                {
-                  "name": "Finish punchout login flow (headless)",
-                  "slug": "punchout-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/authenticator/v1/punchout/finish",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "Reviews and Ratings API",
           "slug": "reviews-and-ratings-api",
           "origin": "",
@@ -13617,179 +12465,6 @@
                   "method": "PUT",
                   "origin": "",
                   "endpoint": "/api/edge/certificates",
-                  "children": []
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "Storefront Roles API",
-          "slug": "storefront-roles-api",
-          "origin": "",
-          "type": "openapi",
-          "children": [
-            {
-              "name": "Storefront Roles",
-              "slug": "storefront-roles-api-category",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Assign one storefront role",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/roles/assign",
-                  "children": []
-                },
-                {
-                  "name": "Assign storefront roles",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/user/roles",
-                  "children": []
-                },
-                {
-                  "name": "Revoke storefront roles",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/user/roles",
-                  "children": []
-                },
-                {
-                  "name": "Check storefront user resource access",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/users/-userId-/resources/-resourceKey-/granted",
-                  "children": []
-                },
-                {
-                  "name": "Remove storefront user",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/remove/users/-userId-",
-                  "children": []
-                },
-                {
-                  "name": "Get storefront user roles",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/users/-userId-/roles",
-                  "children": []
-                },
-                {
-                  "name": "Fetch storefront user roles by email",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/users/-email-/roles",
-                  "children": []
-                },
-                {
-                  "name": "Fetch storefront user details",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/users/-userId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Custom Storefront Roles",
-              "slug": "storefront-roles-api-custom-roles-category",
-              "type": "category",
-              "children": [
-                {
-                  "name": "List storefront roles",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/role",
-                  "children": []
-                },
-                {
-                  "name": "Create storefront role",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/role",
-                  "children": []
-                },
-                {
-                  "name": "Fetch storefront role by ID",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
-                  "children": []
-                },
-                {
-                  "name": "Edit storefront role resources",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "PUT",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
-                  "children": []
-                },
-                {
-                  "name": "Delete storefront role",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/role/-roleId-",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Custom Storefront Resources",
-              "slug": "storefront-roles-api-custom-resources-category",
-              "type": "category",
-              "children": [
-                {
-                  "name": "List storefront resources",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/resource",
-                  "children": []
-                },
-                {
-                  "name": "Create custom storefront resource",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/resource",
-                  "children": []
-                },
-                {
-                  "name": "Delete custom storefront resource",
-                  "slug": "storefront-roles-api",
-                  "type": "openapi",
-                  "method": "DELETE",
-                  "origin": "",
-                  "endpoint": "/api/license-manager/storefront/resource/-id-",
                   "children": []
                 }
               ]
@@ -14955,6 +13630,1363 @@
                   "origin": "",
                   "endpoint": "/api/orders/pvt/document/-orderId-/payment/-paymentId-/notify-payment",
                   "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B2B Buyer Portal",
+          "slug": "b2b-buyer-portal",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Buyer Organizations",
+              "slug": "b2b-buyer-organizations",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Organization Units API",
+                  "slug": "organization-units-api",
+                  "origin": "",
+                  "type": "openapi",
+                  "children": [
+                    {
+                      "name": "Users",
+                      "slug": "organization-units-api-users",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Get user scopes",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/users/-userId-/scopes",
+                          "children": []
+                        },
+                        {
+                          "name": "Get user's organization unit",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-userId-/unit",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Organization Units",
+                      "slug": "organization-units-api-organization-units",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create organization unit",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1",
+                          "children": []
+                        },
+                        {
+                          "name": "Search organization units",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1",
+                          "children": []
+                        },
+                        {
+                          "name": "Get organization unit",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete organization unit",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Rename organization unit",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "PATCH",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Get all children organization units",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-/children",
+                          "children": []
+                        },
+                        {
+                          "name": "Get root organization units",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/roots",
+                          "children": []
+                        },
+                        {
+                          "name": "Move organization unit",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-/path",
+                          "children": []
+                        },
+                        {
+                          "name": "Add user to organization unit",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
+                          "children": []
+                        },
+                        {
+                          "name": "Remove users from organization unit",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
+                          "children": []
+                        },
+                        {
+                          "name": "List users from organization unit",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/vtexid/organization-units/-organizationUnitId-/users",
+                          "children": []
+                        },
+                        {
+                          "name": "Find all organization units with scope value",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/scope/-scope-/value/-scopeValue-",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Scopes",
+                      "slug": "organization-units-api-scopes",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Get organization unit scopes",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete all scopes",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes",
+                          "children": []
+                        },
+                        {
+                          "name": "Create organization unit scope",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                          "children": []
+                        },
+                        {
+                          "name": "Update organization unit scope",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete organization unit scope",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-",
+                          "children": []
+                        },
+                        {
+                          "name": "Remove values from organization unit scope",
+                          "slug": "organization-units-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/organization-units/v1/-organizationUnitId-/scopes/-scope-/remove",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Storefront Roles API",
+                  "slug": "storefront-roles-api",
+                  "origin": "",
+                  "type": "openapi",
+                  "children": [
+                    {
+                      "name": "Storefront Roles",
+                      "slug": "storefront-roles-api-category",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Assign one storefront role",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/roles/assign",
+                          "children": []
+                        },
+                        {
+                          "name": "Assign storefront roles",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/user/roles",
+                          "children": []
+                        },
+                        {
+                          "name": "Revoke storefront roles",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/user/roles",
+                          "children": []
+                        },
+                        {
+                          "name": "Check storefront user resource access",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/users/-userId-/resources/-resourceKey-/granted",
+                          "children": []
+                        },
+                        {
+                          "name": "Remove storefront user",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/remove/users/-userId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Get storefront user roles",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/users/-userId-/roles",
+                          "children": []
+                        },
+                        {
+                          "name": "Fetch storefront user roles by email",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/users/-email-/roles",
+                          "children": []
+                        },
+                        {
+                          "name": "Fetch storefront user details",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/users/-userId-",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Custom Storefront Roles",
+                      "slug": "storefront-roles-api-custom-roles-category",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "List storefront roles",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/role",
+                          "children": []
+                        },
+                        {
+                          "name": "Create storefront role",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/role",
+                          "children": []
+                        },
+                        {
+                          "name": "Fetch storefront role by ID",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Edit storefront role resources",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete storefront role",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/role/-roleId-",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Custom Storefront Resources",
+                      "slug": "storefront-roles-api-custom-resources-category",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "List storefront resources",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/resource",
+                          "children": []
+                        },
+                        {
+                          "name": "Create custom storefront resource",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/resource",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete custom storefront resource",
+                          "slug": "storefront-roles-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/license-manager/storefront/resource/-id-",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "B2B Addresses",
+                  "slug": "b2b-addresses",
+                  "origin": "",
+                  "type": "openapi",
+                  "children": [
+                    {
+                      "name": "Addresses",
+                      "slug": "addresses",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create B2B address",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/AD/documents",
+                          "children": []
+                        },
+                        {
+                          "name": "Search B2B addresses",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/AD/search",
+                          "children": []
+                        },
+                        {
+                          "name": "Get B2B address by ID",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Update B2B address",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "PATCH",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete B2B address",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/AD/documents/-addressId-",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Recipients",
+                      "slug": "recipients",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create recipient",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/contact_information/documents",
+                          "children": []
+                        },
+                        {
+                          "name": "Search recipients",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/contact_information/search",
+                          "children": []
+                        },
+                        {
+                          "name": "Get recipient by ID",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Update recipient",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "PATCH",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete recipient",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/contact_information/documents/-recipientId-",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Locations",
+                      "slug": "locations",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create location",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/customFieldValues/documents",
+                          "children": []
+                        },
+                        {
+                          "name": "Search locations",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/customFieldValues/search",
+                          "children": []
+                        },
+                        {
+                          "name": "Get location",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Update location",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "PATCH",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete location",
+                          "slug": "b2b-addresses",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/customFieldValues/documents/-locationId-",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "B2B Buyers",
+                  "slug": "b2b-buyer-data-api",
+                  "origin": "",
+                  "type": "openapi",
+                  "children": [
+                    {
+                      "name": "Get buyer schema",
+                      "slug": "b2b-buyer-data-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/shopper/schemas/v1",
+                      "children": []
+                    },
+                    {
+                      "name": "Create buyer",
+                      "slug": "b2b-buyer-data-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/shopper/documents",
+                      "children": []
+                    },
+                    {
+                      "name": "Get buyer by ID",
+                      "slug": "b2b-buyer-data-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Update buyer",
+                      "slug": "b2b-buyer-data-api",
+                      "type": "openapi",
+                      "method": "PATCH",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Delete buyer",
+                      "slug": "b2b-buyer-data-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/shopper/documents/-buyerId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Search buyers",
+                      "slug": "b2b-buyer-data-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/shopper/search",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Commercial Terms (B2B)",
+              "slug": "b2b-commercial-terms",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "B2B Contracts",
+                  "slug": "b2b-contracts-api",
+                  "origin": "",
+                  "type": "openapi",
+                  "children": [
+                    {
+                      "name": "Contract management",
+                      "slug": "contract-management",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create contract",
+                          "slug": "b2b-contracts-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/CL/documents",
+                          "children": []
+                        },
+                        {
+                          "name": "Get contract by ID",
+                          "slug": "b2b-contracts-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Update contract by ID",
+                          "slug": "b2b-contracts-api",
+                          "type": "openapi",
+                          "method": "PATCH",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete contract by ID",
+                          "slug": "b2b-contracts-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/dataentities/CL/documents/-contractId-",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Buying Controls (B2B)",
+              "slug": "b2b-buying-controls",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Budgets API",
+                  "slug": "budgets-api",
+                  "origin": "",
+                  "type": "openapi",
+                  "children": [
+                    {
+                      "name": "Statements",
+                      "slug": "statements",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Get Budget Statements",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/statements",
+                          "children": []
+                        },
+                        {
+                          "name": "Get Allocation Statements",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/statements",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Transactions",
+                      "slug": "transactions",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create Transaction",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions",
+                          "children": []
+                        },
+                        {
+                          "name": "Refund Transaction",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-/refund",
+                          "children": []
+                        },
+                        {
+                          "name": "Get Transaction",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/transactions/-transactionId-",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Reservations",
+                      "slug": "reservations",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create Reservation",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
+                          "children": []
+                        },
+                        {
+                          "name": "List Reservations",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations",
+                          "children": []
+                        },
+                        {
+                          "name": "Get Reservation",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete Reservation",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Confirmation Reservation",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/reservations/-reservationId-/confirmation",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Allocations",
+                      "slug": "allocations",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create Allocation",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                          "children": []
+                        },
+                        {
+                          "name": "List Budget Allocations",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations",
+                          "children": []
+                        },
+                        {
+                          "name": "Create Batch of Allocations",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/batch",
+                          "children": []
+                        },
+                        {
+                          "name": "Get Allocation",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Update Allocation",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete allocation",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Change allocation status",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/status",
+                          "children": []
+                        },
+                        {
+                          "name": "Update allocation usage",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/usage",
+                          "children": []
+                        },
+                        {
+                          "name": "Update allocation linked entity",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/allocations/-allocationId-/linked-entity",
+                          "children": []
+                        },
+                        {
+                          "name": "Query allocations",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/allocations/query",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Budgets",
+                      "slug": "budgets",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create budget",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-",
+                          "children": []
+                        },
+                        {
+                          "name": "List budgets",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Get budget",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Update budget",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete budget",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Update budget status",
+                          "slug": "budgets-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/api/budgets/-contextType-/-contextId-/-budgetId-/status",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Buying Policies API",
+                  "slug": "buying-policies-api",
+                  "origin": "",
+                  "type": "openapi",
+                  "children": [
+                    {
+                      "name": "Dimensions",
+                      "slug": "dimensions",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create dimension",
+                          "slug": "buying-policies-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/-accountName-/authorization-dimensions",
+                          "children": []
+                        },
+                        {
+                          "name": "Get dimensions information",
+                          "slug": "buying-policies-api",
+                          "type": "openapi",
+                          "method": "GET",
+                          "origin": "",
+                          "endpoint": "/-accountName-/authorization-dimensions",
+                          "children": []
+                        },
+                        {
+                          "name": "Update dimension",
+                          "slug": "buying-policies-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete dimension",
+                          "slug": "buying-policies-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Rules",
+                      "slug": "rules",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Create dimension rule",
+                          "slug": "buying-policies-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                          "children": []
+                        },
+                        {
+                          "name": "Update all dimension rules",
+                          "slug": "buying-policies-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules",
+                          "children": []
+                        },
+                        {
+                          "name": "Update dimension rule",
+                          "slug": "buying-policies-api",
+                          "type": "openapi",
+                          "method": "PUT",
+                          "origin": "",
+                          "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
+                          "children": []
+                        },
+                        {
+                          "name": "Delete dimension rule",
+                          "slug": "buying-policies-api",
+                          "type": "openapi",
+                          "method": "DELETE",
+                          "origin": "",
+                          "endpoint": "/-accountName-/authorization-dimensions/-dimensionId-/rules/-ruleId-",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "name": "Manual authorization",
+                      "slug": "manual-authorization",
+                      "type": "category",
+                      "children": [
+                        {
+                          "name": "Accept or deny rule",
+                          "slug": "buying-policies-api",
+                          "type": "openapi",
+                          "method": "POST",
+                          "origin": "",
+                          "endpoint": "/commercial-authorizations/-orderAuthId-/callback",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "Custom fields settings",
+                  "slug": "custom-fields-api-custom-fields-settings",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Create custom field settings",
+                      "slug": "custom-fields-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/customFieldSettings/documents",
+                      "children": []
+                    },
+                    {
+                      "name": "Get custom field settings",
+                      "slug": "custom-fields-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/customFieldSettings/search",
+                      "children": []
+                    },
+                    {
+                      "name": "Update custom field settings",
+                      "slug": "custom-fields-api",
+                      "type": "openapi",
+                      "method": "PATCH",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Delete custom field settings",
+                      "slug": "custom-fields-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/customFieldSettings/documents/-documentId-",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Custom fields values",
+                  "slug": "custom-fields-api-custom-fields-values",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Get custom field value",
+                      "slug": "custom-fields-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Create custom field value",
+                      "slug": "custom-fields-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/customFieldValues/documents",
+                      "children": []
+                    },
+                    {
+                      "name": "Update custom field value",
+                      "slug": "custom-fields-api",
+                      "type": "openapi",
+                      "method": "PATCH",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Delete custom field value",
+                      "slug": "custom-fields-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/customFieldValues/documents/-customFieldValueId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Search custom fields values",
+                      "slug": "custom-fields-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/customFieldValues/search",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Default Values API",
+                  "slug": "default-values",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Create default values",
+                      "slug": "default-values-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/defaultValues/documents",
+                      "children": []
+                    },
+                    {
+                      "name": "Get default values",
+                      "slug": "default-values-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Update default values",
+                      "slug": "default-values-api",
+                      "type": "openapi",
+                      "method": "PATCH",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Delete default values",
+                      "slug": "default-values-api",
+                      "type": "openapi",
+                      "method": "DELETE",
+                      "origin": "",
+                      "endpoint": "/api/dataentities/defaultValues/documents/-unitId-",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "B2B Password Migration Protocol",
+              "slug": "b2b-password-migration-protocol",
+              "origin": "",
+              "type": "openapi",
+              "children": [
+                {
+                  "name": "Client registration",
+                  "slug": "b2b-password-migration-protocol-client-registration",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Register client",
+                      "slug": "b2b-password-migration-protocol",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/register",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Authentication flow",
+                  "slug": "b2b-password-migration-protocol-authentication-flow",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Validate legacy credentials",
+                      "slug": "b2b-password-migration-protocol",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/authentication",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Punchout API",
+              "slug": "punchout-api",
+              "origin": "",
+              "type": "openapi",
+              "children": [
+                {
+                  "name": "Punchout login",
+                  "slug": "punchout-login",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Start VTEX user punchout flow",
+                      "slug": "punchout-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/authenticator/v1/punchout/start",
+                      "children": []
+                    },
+                    {
+                      "name": "Start pre-authenticated user punchout flow",
+                      "slug": "punchout-api",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/authenticator/v1/punchout/authenticated/start",
+                      "children": []
+                    },
+                    {
+                      "name": "Finish punchout login flow (headless)",
+                      "slug": "punchout-api",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/authenticator/v1/punchout/finish",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "B2B Suite",
+          "slug": "b2b-suite",
+          "origin": "",
+          "type": "category",
+          "children": [
+            {
+              "name": "Buyer organizations (B2B Suite)",
+              "slug": "buyer-organizations",
+              "origin": "",
+              "type": "openapi",
+              "children": [
+                {
+                  "name": "Bulk Import",
+                  "slug": "bulk-import",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Upload file",
+                      "slug": "buyer-organizations",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/b2b/import/buyer-orgs",
+                      "children": []
+                    },
+                    {
+                      "name": "Check progress",
+                      "slug": "buyer-organizations",
+                      "type": "openapi",
+                      "method": "GET",
+                      "origin": "",
+                      "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Start import",
+                      "slug": "buyer-organizations",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/b2b/import/buyer-orgs/-importId-",
+                      "children": []
+                    },
+                    {
+                      "name": "Validate file",
+                      "slug": "buyer-organizations",
+                      "type": "openapi",
+                      "method": "POST",
+                      "origin": "",
+                      "endpoint": "/api/b2b/import/buyer-orgs/validate/-importId-",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
