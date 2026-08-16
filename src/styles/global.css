@@ -1,5 +1,14 @@
 @import '../components/faststore-components/faststore.module.css';
 
+/* Offset in-page anchors (#hash) below the sticky site header */
+:root {
+  --layout-sticky-header-offset: 3rem;
+}
+
+html {
+  scroll-padding-top: var(--layout-sticky-header-offset);
+}
+
 html,
 body,
 *:not(i) {
@@ -8,6 +17,15 @@ body,
   font-variation-settings: 'wght' 92;
   -webkit-font-smoothing: antialiased;
   letter-spacing: 0.16px;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  scroll-margin-top: var(--layout-sticky-header-offset);
 }
 
 body.modal-open {
@@ -53,29 +71,53 @@ code {
   font-size: 0.875em;
 }
 
-table:not([data-fs-table]) {
-  border-collapse: collapse;
-  max-width: 100%;
-  overflow-x: auto;
-  display: inline-block;
-  margin: 16px 0;
-  border-radius: 4px;
-}
 
-table thead:not([data-fs-table-head]) {
-  border: 1px solid #e7e9ef;
-  font-weight: 500;
-}
-
-table td:not([data-fs-table-cell]),
-table th:not([data-fs-table-cell]) {
+table {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin: 1.5em 0;
   font-size: 0.875em;
-  border: 1px solid #e7e9ef;
-  padding: 0.5em;
+  line-height: 1.7em;
+  border-collapse: collapse; 
 }
 
-table tbody tr:nth-of-type(even):not([data-fs-table-row]) {
-  background-color: #f8f7fc;
+table thead {
+  border-bottom: 1px solid #cbd5e1; 
+}
+
+table thead th {
+  font-weight: 600;
+  color: rgb(15, 23, 42); 
+  text-align: left;
+  vertical-align: bottom;
+  padding: 0 0.75em 0.75em 0.75em;
+}
+
+table thead th:first-of-type {
+  padding-left: 0;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: none; 
+}
+
+table tbody td {
+  vertical-align: baseline;
+  padding: 0.75em;
+}
+
+table tbody td:first-of-type {
+  padding-left: 0;
+}
+
+table td,
+table th {
+  min-width: 60px;
 }
 
 .api {
