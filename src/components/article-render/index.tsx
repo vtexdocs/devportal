@@ -3,14 +3,19 @@ import { Box, Text, Flex, Link } from '@vtex/brand-ui'
 import Breadcrumb from 'components/breadcrumb'
 
 import FeedbackSection from 'components/feedback-section'
-import OnThisPage from 'components/on-this-page'
 import SeeAlsoSection from 'components/see-also-section'
-import { Item, MarkdownRenderer, TableOfContents } from '@vtexdocs/components'
+import {
+  Contributors,
+  EditIcon,
+  Item,
+  MarkdownRenderer,
+  OnThisPage,
+  TableOfContents,
+} from '@vtexdocs/components'
 import FSMarkdownRenderer from 'components/faststore-components/markdown-renderer'
 
 import styles from 'styles/documentation-page'
 import ArticlePagination from 'components/article-pagination'
-import Contributors from 'components/contributors'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { ContributorsType } from 'utils/getFileContributors'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
@@ -19,7 +24,6 @@ import { RowItem } from 'components/faststore-components/PropsSection/PropsSecti
 import FeedbackModal from 'components/feedback-modal'
 import { useState } from 'react'
 import AskAIMenu from 'components/ask-ai'
-import { EditIcon } from '@vtexdocs/components'
 
 export interface MarkDownProps {
   slug: string
@@ -199,7 +203,7 @@ const ArticleRender = ({
               </TableOfContents>
             </Box>
           )}
-          <OnThisPage />
+          <OnThisPage headingList={headingList} />
         </Flex>
       </APIGuideContextProvider>
     </>
