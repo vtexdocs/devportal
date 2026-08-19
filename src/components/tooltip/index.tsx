@@ -33,9 +33,10 @@ const Tooltip = ({ children, label, placement, sx, isCard }: Props) => {
   ])
 
   return (
-    <Box>
+    <Box sx={{ height: '100%' }}>
       <Box
         ref={box}
+        sx={{ height: '100%' }}
         onMouseEnter={() => setVisible(true)}
         onMouseLeave={() => setVisible(false)}
       >

@@ -2,15 +2,17 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const cardContainer: SxStyleProp = {
   flexDirection: 'column',
-  margin: ['8px', '12px', '12px', '16px'],
-  width: ['151px', '282px'],
-  height: ['120px', '225px', '225px'],
-  boxSizing: 'initial',
+  width: '100%',
+  height: '100%',
+  minHeight: ['148px', '200px'],
+  boxSizing: 'border-box',
   borderRadius: '8px',
   border: '1px solid #E7E9EE',
+  overflow: 'hidden',
+  backgroundColor: '#FFFFFF',
   transition: 'all 0.3s ease-out',
 
-  '.title, .description, .quickStartedContainer': {
+  '.title, .description, .quickStartedContainer, .learnMoreText': {
     transition: 'all 0.3s ease-out',
   },
 
@@ -18,12 +20,9 @@ const cardContainer: SxStyleProp = {
     cursor: 'pointer',
     backgroundColor: 'white',
     borderColor: 'muted.2',
-    boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0px 8px 24px rgba(20, 32, 50, 0.08)',
+    transform: 'translateY(-2px)',
     transition: 'all 0.3s ease-out',
-
-    '.title': {
-      color: '#000711',
-    },
 
     '.description': {
       color: 'muted.0',
@@ -33,46 +32,54 @@ const cardContainer: SxStyleProp = {
       borderColor: 'muted.2',
     },
 
-    '.title, .description, .quickStartedContainer': {
-      transition: 'all 0.3s ease-out',
+    '.learnMoreText': {
+      color: '#000711',
     },
   },
 }
 
 const infoContainer: SxStyleProp = {
-  py: ['8px', '16px', '24px'],
-  px: '16px',
+  py: ['16px', '20px'],
+  px: ['16px', '20px'],
   flexDirection: 'column',
+  alignItems: 'flex-start',
+  justifyContent: 'flex-start',
+  textAlign: 'left',
+  backgroundColor: '#FEFEFE',
+  flex: 1,
+}
+
+const iconWrapper: SxStyleProp = {
+  width: ['40px', '44px'],
+  height: ['40px', '44px'],
+  borderRadius: '50%',
+  backgroundColor: '#f8f7fc',
   alignItems: 'center',
   justifyContent: 'center',
-  textAlign: 'center',
-  backgroundColor: '#FEFEFE',
-  borderTopLeftRadius: '8px',
-  borderTopRightRadius: '8px',
-  height: '100%',
+  flexShrink: 0,
 }
 
 const icon: SxStyleProp = {
-  width: ['24px', '32px'],
+  width: ['20px', '24px'],
   height: 'auto',
 }
 
 const title: SxStyleProp = {
-  mt: ['8px'],
-  mb: ['0px', '8px'],
-  fontSize: ['16px', '22px'],
-  lineHeight: ['22px', '32px'],
+  mt: ['10px', '12px'],
+  mb: ['4px', '8px'],
+  fontSize: ['16px', '18px'],
+  lineHeight: ['22px', '24px'],
   fontWeight: '400',
-  color: 'muted.0',
+  color: '#142032',
 }
 
 const description: SxStyleProp = {
-  display: ['none', '-webkit-box'],
-  fontSize: '16px',
-  lineHeight: '22px',
+  display: '-webkit-box',
+  fontSize: ['14px', '16px'],
+  lineHeight: ['20px', '22px'],
   fontWeight: '400',
   color: 'muted.1',
-  minHeight: '44px',
+  minHeight: ['40px', '44px'],
   overflow: 'hidden',
   WebkitLineClamp: 2,
   WebkitBoxOrient: 'vertical',
@@ -80,32 +87,18 @@ const description: SxStyleProp = {
 }
 
 const quickStartedContainer: SxStyleProp = {
-  height: ['34px', '68px'],
-  justifyContent: 'center',
+  minHeight: ['40px', '48px'],
+  justifyContent: 'flex-start',
   alignItems: 'center',
+  px: ['16px', '20px'],
   borderTop: '1px solid #E7E9EE',
-  borderBottomLeftRadius: '8px',
-  borderBottomRightRadius: '8px',
+  backgroundColor: '#f8f7fc',
   transition: 'all 0.3s ease-out',
-
-  '.learnMoreText': {
-    transition: 'all 0.3s ease-out',
-  },
-
-  ':active, :hover': {
-    backgroundColor: '#F8F7FC',
-    transition: 'all 0.3s ease-out',
-
-    '.learnMoreText': {
-      color: '#000711',
-      transition: 'all 0.3s ease-out',
-    },
-  },
 }
 
 const learnMoreText: SxStyleProp = {
-  fontSize: ['12px', '16px'],
-  lineHeight: ['16px', '22px'],
+  fontSize: ['14px', '16px'],
+  lineHeight: ['20px', '22px'],
   fontWeight: '400',
   color: 'muted.0',
 }
@@ -114,6 +107,7 @@ export default {
   cardContainer,
   description,
   icon,
+  iconWrapper,
   infoContainer,
   quickStartedContainer,
   learnMoreText,
