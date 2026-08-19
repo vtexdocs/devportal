@@ -23,7 +23,11 @@ const EducationChannel = ({
   Icon,
 }: props) => {
   return (
-    <Link href={link} target="_blank">
+    <Link
+      href={link}
+      target="_blank"
+      style={{ display: 'block', height: '100%' }}
+    >
       <Flex sx={styles.channelBox}>
         <Icon className="channelIcon" sx={styles.channelIcon} />
         <Text className="channelTitle" sx={styles.channelTitle}>

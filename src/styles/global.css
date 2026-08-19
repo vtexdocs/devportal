@@ -43,11 +43,6 @@ a:hover {
   color: #c81e51;
 }
 
-footer > div {
-  margin-inline: 0 !important;
-  max-width: 100% !important;
-}
-
 .searchComponent:focus {
   outline: none;
 }

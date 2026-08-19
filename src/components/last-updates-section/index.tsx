@@ -8,17 +8,18 @@ import { ActionType } from 'components/last-updates-card/functions'
 import { UpdateElement } from 'utils/typings/types'
 
 interface LastUpdatesSectionProps {
-  releaseData: UpdateElement
+  releasesData: UpdateElement[]
 }
 
-const LastUpdatesSection = ({ releaseData }: LastUpdatesSectionProps) => {
+const LastUpdatesSection = ({ releasesData }: LastUpdatesSectionProps) => {
   const messages = getMessages()
-  const lastReleaseNote: CardProps = {
-    action: {
+  const lastReleaseNotes: CardProps = {
+    actions: (releasesData ?? []).map((releaseData) => ({
       type: releaseData?.type as ActionType,
       description: releaseData?.title || '',
       date: new Date(releaseData?.createdAt ?? new Date()),
-    },
+      slug: releaseData?.slug,
+    })),
     updateType: 'release-notes',
   }
 
@@ -28,7 +29,7 @@ const LastUpdatesSection = ({ releaseData }: LastUpdatesSectionProps) => {
         {messages['landing_page_last_updates.title']}
       </Text>
       <Box sx={styles.cardsContainer}>
-        <LastUpdatesCard {...lastReleaseNote} />
+        <LastUpdatesCard {...lastReleaseNotes} />
       </Box>
     </Box>
   )

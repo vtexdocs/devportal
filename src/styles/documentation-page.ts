@@ -147,7 +147,28 @@ const documentationExcerpt: SxStyleProp = {
 }
 
 const bottomContributorsContainer: SxStyleProp = {
-  display: ['initial', 'initial', 'initial', 'initial', 'none'],
+  display: ['flex', 'flex', 'flex', 'flex', 'none'],
+  flexDirection: 'column',
+  alignItems: 'center',
+  px: ['1.125em', 'initial'],
+}
+
+const bottomContributors: SxStyleProp = {
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  '& > div': {
+    alignItems: 'center !important',
+    width: 'auto !important',
+  },
+  '[data-cy="contributors-container"]': {
+    display: 'flex !important',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    width: 'auto !important',
+    maxWidth: '232px',
+  },
 }
 
 const bottomContributorsDivider: SxStyleProp = {
@@ -221,6 +242,7 @@ export default {
   contentContainer,
   documentationTitle,
   bottomContributorsContainer,
+  bottomContributors,
   bottomContributorsDivider,
   rightContainer,
   releaseAction,

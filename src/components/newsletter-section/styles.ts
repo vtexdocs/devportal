@@ -2,52 +2,96 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const section: SxStyleProp = {
   width: '100%',
+  overflow: 'hidden',
+  backgroundColor: '#FFFFFF',
   borderBottom: '1px solid #E7E9EE',
 }
 
-const newsletter: SxStyleProp = {
+const container: SxStyleProp = {
   width: '100%',
-  margin: 'auto',
+  display: 'grid',
+  gridTemplateColumns: ['1fr', '1fr', 'minmax(300px, 42%) minmax(0, 1fr)'],
+  alignItems: ['start', 'start', 'center'],
+  columnGap: 0,
+  rowGap: ['28px', '32px', '0px'],
+  pt: ['40px', '48px', '48px'],
+  pb: 0,
+  minHeight: ['auto', 'auto', '420px', '480px'],
 }
 
-const newsletterContainer: SxStyleProp = {
-  position: 'relative',
-  display: ['flex', 'flex', 'flex', 'block', 'flex'],
-  zIndex: '3',
+const titleContent: SxStyleProp = {
+  width: '100%',
+  display: 'flex',
   flexDirection: 'column',
-  overflow: 'hidden',
-  width: ['100%', '100%', '100%', 'auto'],
   justifyContent: 'center',
+  alignItems: ['center', 'center', 'flex-start'],
+  textAlign: ['center', 'center', 'left'],
+  px: ['24px', '32px', '48px', '80px'],
+  pr: ['24px', '32px', '40px', '48px'],
+  py: ['0px', '0px', '56px'],
+}
+
+const newsletterTitle: SxStyleProp = {
+  fontSize: ['28px', '36px', '40px', '48px'],
+  lineHeight: ['36px', '44px', '48px', '56px'],
+  fontWeight: '400',
+  color: '#142032',
+  letterSpacing: '-0.03em',
+  maxWidth: ['320px', '420px', 'none'],
+}
+
+const newsletterTitleAccent: SxStyleProp = {
+  color: '#2953E8',
+}
+
+const shortcuts: SxStyleProp = {
+  mt: ['24px', '28px'],
+  gap: '8px',
+  flexWrap: 'wrap',
+  justifyContent: ['center', 'center', 'flex-start'],
+  a: {
+    color: '#142032',
+    ':hover': {
+      color: '#E31C58',
+    },
+  },
+}
+
+const shortcut: SxStyleProp = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  px: ['12px', '16px'],
+  py: ['8px', '10px'],
+  borderRadius: '100px',
+  border: '1px solid #E7E9EE',
+  backgroundColor: '#FFFFFF',
+  fontSize: ['14px', '16px'],
+  lineHeight: ['20px', '22px'],
+  color: 'inherit',
+  transition: 'all 0.2s ease-out',
+  ':hover': {
+    borderColor: '#E31C58',
+    backgroundColor: '#FEF4F6',
+  },
 }
 
 const imageContainer: SxStyleProp = {
   position: 'relative',
-  zIndex: '1',
-}
-
-const titleGradient: SxStyleProp = {
   width: '100%',
-  zIndex: 4,
-  paddingBottom: ['0px', '46px', '86px', '86px', '72px'],
-  background:
-    'linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);',
-}
-
-const newsletterTitle: SxStyleProp = {
-  maxWidth: ['auto', '434px', '650px', '650px', '650px', '650px', '868px'],
-  px: ['16px', '32px', '0px'],
-  width: ['auto', '434px', '100%'],
-  mx: ['0px', 'auto'],
-  textAlign: 'center',
-  fontSize: ['24px', '40px', '40px', '52px'],
-  lineHeight: ['34px', '50px', '50px', '62px'],
+  minWidth: 0,
+  height: ['240px', '300px', '420px', '480px'],
+  overflow: 'hidden',
+  justifySelf: 'stretch',
+  alignSelf: 'end',
 }
 
 export default {
   section,
-  newsletter,
-  newsletterContainer,
-  imageContainer,
-  titleGradient,
+  container,
+  titleContent,
   newsletterTitle,
+  newsletterTitleAccent,
+  shortcuts,
+  shortcut,
+  imageContainer,
 }

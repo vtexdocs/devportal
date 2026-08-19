@@ -146,7 +146,9 @@ const ArticleRender = ({
 
             <Box sx={styles.bottomContributorsContainer}>
               <Box sx={styles.bottomContributorsDivider} />
-              <Contributors contributors={contributors} />
+              <Box sx={styles.bottomContributors}>
+                <Contributors contributors={contributors} />
+              </Box>
               <FeedbackSection docPath={filePath} slug={slug} />
             </Box>
             {hideTOC && <FeedbackSection docPath={filePath} slug={slug} />}
