@@ -294,6 +294,57 @@
           ]
         },
         {
+          "name": "VTEX Business models",
+          "slug": "business-models-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Implementing marketplaces",
+              "slug": "implementing-marketplaces",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integrating VTEX stores",
+                  "slug": "integrating-vtex-stores",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integrating with non-VTEX sellers",
+                  "slug": "integrating-with-non-vtex-sellers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integrating with non-VTEX marketplaces",
+                  "slug": "integrating-with-non-vtex-marketplaces",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Implementing cross-border stores",
+              "slug": "implementing-cross-border-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Implementing internationalization",
+              "slug": "implementing-internationalization",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Integration Guides",
           "slug": "integration-guides-category",
           "origin": "",
