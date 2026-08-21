@@ -19342,9 +19342,9 @@
         },
         {
           "name": "CMS Portal (Legacy)",
-          "slug": "legacy-cms-portal-category",
+          "slug": "cms-portal-legacy",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
               "name": "Migrating your storefront from CMS Portal (Legacy) to Store Framework",
