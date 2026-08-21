@@ -164,7 +164,9 @@ const Header = ({ isEditor }: Props) => {
             </Text>
           </VtexLink>
         </HeaderBrand.RightLinks>
-        <HamburgerMenu />
+        <Box sx={styles.hamburgerMenuToggle}>
+          <HamburgerMenu />
+        </Box>
       </HeaderBrand>
     </Box>
   )

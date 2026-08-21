@@ -1,4 +1,4 @@
-import { Box, Text, Flex } from '@vtex/brand-ui'
+import { Box, Text } from '@vtex/brand-ui'
 
 import EducationChannel from 'components/education-channel'
 import { CommunityIcon, HelpCenterIcon, GithubIcon } from '@vtexdocs/components'
@@ -37,7 +37,7 @@ const EducationSection = () => {
   return (
     <Box sx={styles.container}>
       <Text sx={styles.title}>{messages['landing_page_education.title']}</Text>
-      <Flex sx={styles.channelsContainer}>
+      <Box sx={styles.channelsContainer}>
         {educationChannels.map((channel) => (
           <EducationChannel
             title={channel.title}
@@ -48,7 +48,7 @@ const EducationSection = () => {
             key={channel.title}
           />
         ))}
-      </Flex>
+      </Box>
     </Box>
   )
 }

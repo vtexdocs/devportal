@@ -1,27 +1,31 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const sectionContainer: SxStyleProp = {
-  px: ['18px', '32px'],
-  py: ['32px', '64px'],
+  px: ['16px', '24px', '32px'],
+  py: ['40px', '48px', '64px'],
   backgroundColor: 'muted.4',
-  textAlign: ['center', 'center', 'initial'],
-  borderTop: '1px solid #e7e9ef',
-  borderBottom: '1px solid #e7e9ef',
+  textAlign: 'center',
+  borderTop: '1px solid #E7E9EE',
+  borderBottom: '1px solid #E7E9EE',
 }
 
 const title: SxStyleProp = {
-  fontSize: ['20px', '28px', '28px', '40px'],
-  lineHeight: ['30px', '38px', '38px', '50px'],
+  fontSize: ['22px', '26px', '28px', '32px'],
+  lineHeight: ['28px', '34px', '36px', '40px'],
   fontWeight: '400',
-  color: '#4A4A4A',
+  color: '#132032',
   textAlign: 'center',
+  letterSpacing: '-0.02em',
+  mb: ['8px', '8px', '8px'],
 }
 
 const cardsContainer: SxStyleProp = {
+  display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  display: ['inline-block', 'inline-block', 'flex'],
-  width: ['auto', 'auto', '100%'],
+  width: '100%',
+  maxWidth: '1035px',
+  mx: 'auto',
 }
 
 export default {

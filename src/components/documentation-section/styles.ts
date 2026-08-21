@@ -1,26 +1,35 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const sectionContainer: SxStyleProp = {
-  px: ['8px', '12px', '96px', '38px'],
-  paddingTop: ['0px', '32px'],
-  paddingBottom: ['24px', '52px', '52px', '48px'],
-  margin: 'auto',
+  px: ['16px', '24px', '32px'],
+  pt: ['40px', '48px', '64px'],
+  pb: ['40px', '48px', '64px'],
+  width: '100%',
+  maxWidth: '1100px',
+  mx: 'auto',
 }
 
 const title: SxStyleProp = {
-  fontSize: ['20px', '28px', '28px', '40px'],
-  lineHeight: ['30px', '38px', '38px', '50px'],
+  fontSize: ['22px', '26px', '28px', '32px'],
+  lineHeight: ['28px', '34px', '36px', '40px'],
   fontWeight: '400',
-  color: '#4A4A4A',
+  color: '#132032',
   textAlign: 'center',
-  mt: ['32px'],
-  mb: ['24px', '52px', '52px', '48px', '32px'],
+  letterSpacing: '-0.02em',
+  mb: ['24px', '32px', '40px'],
 }
 
 const cardsContainer: SxStyleProp = {
-  width: ['100%', '100%', '100%', '100%', '1000px', '100%'],
-  justifyContent: 'center',
-  flexWrap: 'wrap',
+  display: 'grid',
+  gridTemplateColumns: [
+    '1fr',
+    'repeat(2, minmax(0, 1fr))',
+    'repeat(2, minmax(0, 1fr))',
+    'repeat(3, minmax(0, 1fr))',
+  ],
+  gap: ['12px', '16px', '20px'],
+  width: '100%',
+  alignItems: 'stretch',
 }
 
 export default {

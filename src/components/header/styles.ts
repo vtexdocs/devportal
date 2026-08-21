@@ -48,6 +48,18 @@ const headerBrand: SxStyleProp = {
   width: '100%',
   position: 'relative',
   transition: 'top 0.3s',
+  'button[role="presentation"]': {
+    borderLeft: 'none',
+    svg: {
+      rect: {
+        fill: '#4A596B',
+      },
+    },
+  },
+}
+
+const hamburgerMenuToggle: SxStyleProp = {
+  display: ['contents', 'contents', 'none', 'none'],
 }
 
 const headerBrandLink: SxStyleProp = {
@@ -67,13 +79,14 @@ const logoSize: SxStyleProp = {
 }
 
 const rightLinks: SxStyleProp = {
-  display: ['none', 'none', 'none', 'flex !important'],
+  display: ['none', 'none', 'flex !important', 'flex !important'],
   width: 'auto',
   height: '100%',
   pr: '48px',
 }
 
 const rightLinksItem: SxStyleProp = {
+  display: ['none', 'none', 'none', 'flex'],
   alignItems: 'center',
   padding: '0 !important',
   margin: '0 0 0 32px !important',
@@ -116,7 +129,7 @@ const dropdownButton: (active: boolean) => SxStyleProp = (active: boolean) => ({
 
 const rightButtonsText: SxStyleProp = {
   fontWeight: 'normal',
-  fontSize: '16px',
+  fontSize: '13px',
   lineHeight: '22px',
   fontFamily: 'VTEX Trust Medium !important',
   textTransform: 'none',
@@ -125,7 +138,7 @@ const rightButtonsText: SxStyleProp = {
 const iconContainer: SxStyleProp = { paddingLeft: 3, color: 'primary.base' }
 
 const searchContainer: SxStyleProp = {
-  display: ['none', 'none', 'none', 'flex'],
+  display: ['none', 'none', 'flex', 'flex'],
   justifyContent: 'center',
   paddingBlock: '18px',
   height: 'auto',
@@ -203,6 +216,7 @@ export default {
   documentationContainer,
   updatesContainer,
   hamburgerContainer,
+  hamburgerMenuToggle,
   innerHambugerContainer,
   innerCardContainer,
   arrowIcon,

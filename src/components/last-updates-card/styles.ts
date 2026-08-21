@@ -1,56 +1,40 @@
 import { SxStyleProp } from '@vtex/brand-ui'
 
 const cardContainer: SxStyleProp = {
-  mt: ['16px', '24px', '24px', '32px'],
-  paddingLeft: ['16px', '32px', '24px', '32px'],
-  paddingRight: ['16px', '32px', '24px', '32px', '24px'],
-  py: ['16px', '40px', '64px'],
+  mt: ['16px', '24px', '32px'],
+  px: ['16px', '24px', '32px'],
+  py: ['20px', '32px', '40px'],
   width: '100%',
-  justifyContent: 'space-between',
   maxWidth: '1035px',
+  flexDirection: ['column', 'column', 'row'],
+  alignItems: ['flex-start', 'flex-start', 'center'],
+  justifyContent: 'space-between',
+  gap: ['16px', '20px', '32px'],
   backgroundColor: 'white',
   borderRadius: '8px',
   border: '1px solid #E7E9EE',
-  transition: 'all 0.3s ease-out',
+  boxSizing: 'border-box',
+  textAlign: 'left',
+}
+
+const updateContainer: SxStyleProp = {
+  width: ['100%', '100%', '40%'],
+  minWidth: 0,
+  alignItems: 'center',
+  flexShrink: 0,
+  cursor: 'pointer',
 
   '.updateTitle, .updateDescription': {
     transition: 'all 0.3s ease-out',
   },
 
-  ':active, :hover': {
-    cursor: 'pointer',
-    borderColor: '#CCCED8',
-    transition: 'all 0.3s ease-out',
-
-    '.updateTitle, .updateDescription': {
-      transition: 'all 0.3s ease-out',
-    },
-
-    '.updateDescription': {
-      color: 'muted.0',
-    },
+  ':hover .updateTitle': {
+    color: '#000711',
   },
 
-  ':active': {
-    boxShadow: '0px 0px 0px 1px #FFFFFF, 0px 0px 0px 3px #96B2F2',
-    '.updateTitle': {
-      color: '#0C1522',
-    },
+  ':hover .updateDescription': {
+    color: 'muted.0',
   },
-
-  ':hover': {
-    boxShadow: '0px 0px 16px rgba(0, 0, 0, 0.1)',
-    '.updateTitle': {
-      color: '#000711',
-    },
-  },
-}
-
-const updateContainer: SxStyleProp = {
-  mr: ['0px', '0px', '16px'],
-  width: ['100%', '100%', '427px', '427px', '41%'],
-  minWidth: ['0', '0', '427px', '427px', '41%'],
-  alignItems: 'center',
 }
 
 const updateIcon: SxStyleProp = {
@@ -62,16 +46,17 @@ const updateIcon: SxStyleProp = {
 }
 
 const updateTitle: SxStyleProp = {
-  fontSize: ['16px', '18px', '18px', '18px', '22px'],
-  lineHeight: ['22px', '24px', '24px', '24px', '32px'],
+  fontSize: ['16px', '18px'],
+  lineHeight: ['22px', '24px'],
   fontWeight: '400',
   color: 'muted.0',
   display: 'flex',
+  alignItems: 'center',
 }
 
 const updateDescription: SxStyleProp = {
-  fontSize: ['12px', '16px'],
-  lineHeight: ['16px', '22px'],
+  fontSize: ['14px', '16px'],
+  lineHeight: ['20px', '22px'],
   pl: ['22px', '32px'],
   fontWeight: '400',
   color: 'muted.1',
@@ -79,8 +64,27 @@ const updateDescription: SxStyleProp = {
 
 const actionContainer: SxStyleProp = {
   alignItems: 'flex-start',
-  display: ['none', 'none', 'block'],
-  width: ['277px', '277px', '100%', '100%', '580px'],
+  display: 'flex',
+  flexDirection: 'column',
+  gap: ['16px', '20px'],
+  width: '100%',
+  pt: ['16px', '16px', 0],
+  borderTop: ['1px solid #E7E9EE', '1px solid #E7E9EE', 'none'],
+}
+
+const actionItem: SxStyleProp = {
+  display: 'block',
+  width: '100%',
+  cursor: 'pointer',
+  textAlign: 'left',
+
+  '.actionDescription': {
+    transition: 'all 0.3s ease-out',
+  },
+
+  ':hover .actionDescription': {
+    color: '#E31C58',
+  },
 }
 
 const actionTypeContainer: SxStyleProp = {
@@ -96,8 +100,8 @@ const actionIcon: SxStyleProp = {
 
 const actionType: SxStyleProp = {
   ml: '8px',
-  fontSize: '16px',
-  lineHeight: '18px',
+  fontSize: ['14px', '16px'],
+  lineHeight: ['18px', '22px'],
   fontWeight: '400',
   color: '#4A4A4A',
 }
@@ -110,15 +114,15 @@ const actionDescriptionContainer: SxStyleProp = {
 }
 
 const actionDescription: SxStyleProp = {
-  fontSize: ['16px', '16px', '16px', '16px', '18px'],
-  lineHeight: ['22px', '22px', '22px', '22px', '24px'],
+  fontSize: ['14px', '16px'],
+  lineHeight: ['20px', '22px'],
   fontWeight: '400',
   color: 'muted.0',
 }
 
 const actionTime: SxStyleProp = {
-  fontSize: '16px',
-  lineHeight: '22px',
+  fontSize: ['14px', '16px'],
+  lineHeight: ['20px', '22px'],
   fontWeight: '400',
   color: 'muted.1',
 }
@@ -128,6 +132,7 @@ export default {
   actionDescription,
   actionDescriptionContainer,
   actionIcon,
+  actionItem,
   actionTime,
   actionType,
   actionTypeContainer,

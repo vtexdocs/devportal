@@ -1,100 +1,68 @@
 import { Box, Flex, Text } from '@vtex/brand-ui'
-
+import Link from 'next/link'
 import Image from 'next/image'
-import parallaxOne from '../../../public/images/parallax/parallax-one.png'
-import parallaxTwo from '../../../public/images/parallax/parallax-two.png'
-import parallaxThree from '../../../public/images/parallax/parallax-three.png'
+
+import heroImage from '../../../public/images/hero.png'
 import styles from 'components/newsletter-section/styles'
-import imgStyle from './styles.module.css'
 
 import { getMessages } from 'utils/get-messages'
-import { useEffect, useRef, useState } from 'react'
+
+const shortcuts = [
+  {
+    href: '/docs/guides',
+    labelKey: 'landing_page_newsletter.shortcut_guides' as const,
+  },
+  {
+    href: '/docs/api-reference',
+    labelKey: 'landing_page_newsletter.shortcut_api' as const,
+  },
+  {
+    href: '/updates/release-notes',
+    labelKey: 'landing_page_newsletter.shortcut_releases' as const,
+  },
+]
 
 const NewsletterSection = () => {
   const messages = getMessages()
-  const imageContainer = useRef<HTMLDivElement>(null)
-  const [imageIntersect, setImageIntersect] = useState(false)
-  const [scrollAnimY, setScrollAnimY] = useState(0)
-  const [overImage, setOverImage] = useState(-1)
-
-  function onImageIntersection(entries: IntersectionObserverEntry[]) {
-    entries.forEach((entry) => {
-      setImageIntersect(entry.isIntersecting)
-    })
-  }
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(onImageIntersection, {
-      threshold: 0.5,
-    })
-
-    if (imageContainer.current) observer.observe(imageContainer.current)
-    return () => {
-      observer.disconnect()
-    }
-  }, [imageContainer])
-
-  useEffect(() => {
-    if (!imageIntersect || !imageContainer.current) {
-      return
-    }
-
-    const onScroll = () => {
-      setScrollAnimY(window.scrollY)
-    }
-
-    window.removeEventListener('scroll', onScroll)
-    window.addEventListener('scroll', onScroll, { passive: true })
-
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [imageIntersect])
 
   return (
     <Box sx={styles.section}>
-      <Box sx={styles.newsletter}>
-        <Flex sx={styles.newsletterContainer}>
-          <Box
-            ref={imageContainer}
-            sx={styles.imageContainer}
-            className={imgStyle.container}
-          >
-            <Image
-              src={parallaxOne}
-              style={{
-                top: `calc(40% + ${scrollAnimY * 0.7}px)`,
-                scale: overImage === 1 ? '1.2' : 'none',
-              }}
-              alt=""
-              onMouseOver={() => setOverImage(1)}
-              onMouseLeave={() => setOverImage(-1)}
-            />
-            <Image
-              src={parallaxTwo}
-              style={{
-                top: `calc(40% + ${scrollAnimY * 0.85}px)`,
-                scale: overImage === 2 ? '1.2' : 'none',
-              }}
-              alt=""
-              onMouseOver={() => setOverImage(2)}
-              onMouseLeave={() => setOverImage(-1)}
-            />
-            <Image
-              src={parallaxThree}
-              style={{
-                top: `calc(40% + ${scrollAnimY}px)`,
-                scale: overImage === 3 ? '1.2' : 'none',
-              }}
-              onMouseOver={() => setOverImage(3)}
-              onMouseLeave={() => setOverImage(-1)}
-              alt=""
-            />
-          </Box>
-          <Box sx={styles.titleGradient}>
-            <Text sx={styles.newsletterTitle}>
-              {messages['landing_page_newsletter.title']}
+      <Box sx={styles.container}>
+        <Box sx={styles.titleContent}>
+          <Text sx={styles.newsletterTitle}>
+            {messages['landing_page_newsletter.title']}{' '}
+            <Text as="span" sx={styles.newsletterTitleAccent}>
+              {messages['landing_page_newsletter.title_accent']}
             </Text>
-          </Box>
-        </Flex>
+          </Text>
+          <Flex sx={styles.shortcuts}>
+            {shortcuts.map((shortcut) => (
+              <Link
+                key={shortcut.href}
+                href={shortcut.href}
+                style={{ textDecoration: 'none' }}
+              >
+                <Text sx={styles.shortcut}>{messages[shortcut.labelKey]}</Text>
+              </Link>
+            ))}
+          </Flex>
+        </Box>
+        <Box sx={styles.imageContainer}>
+          <Image
+            src={heroImage}
+            alt=""
+            priority
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              width: '118%',
+              height: '118%',
+              objectFit: 'cover',
+              objectPosition: 'left top',
+            }}
+          />
+        </Box>
       </Box>
     </Box>
   )

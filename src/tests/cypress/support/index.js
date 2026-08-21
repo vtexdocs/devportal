@@ -16,6 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 import './events'
+import './network'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

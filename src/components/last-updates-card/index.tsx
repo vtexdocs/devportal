@@ -7,17 +7,19 @@ import { getDaysElapsed } from './../../utils/get-days-elapsed'
 
 import styles from './styles'
 
+export interface CardAction {
+  type: ActionType
+  description: string
+  date: Date
+  slug?: string
+}
+
 export interface CardProps {
-  action: {
-    type: ActionType
-    description: string
-    date: Date
-  }
+  actions: CardAction[]
   updateType: UpdateType
 }
 
-const LastUpdatesCard = ({ action, updateType }: CardProps) => {
-  const { title: actionTitle, Icon: ActionIcon } = getAction(action.type)
+const LastUpdatesCard = ({ actions, updateType }: CardProps) => {
   const {
     title: updateTitle,
     description: updateDescription,
@@ -25,12 +27,12 @@ const LastUpdatesCard = ({ action, updateType }: CardProps) => {
   } = getUpdate(updateType)
 
   return (
-    <Link
-      href={`/updates/${updateType}`}
-      style={{ display: 'flex', justifyContent: 'center', width: '100%' }}
-    >
-      <Flex sx={styles.cardContainer}>
-        <Flex sx={styles.updateContainer}>
+    <Flex sx={styles.cardContainer}>
+      <Box sx={styles.updateContainer}>
+        <Link
+          href={`/updates/${updateType}`}
+          style={{ textDecoration: 'none' }}
+        >
           <Box>
             <Text className="updateTitle" sx={styles.updateTitle}>
               <UpdateIcon sx={styles.updateIcon} />
@@ -40,21 +42,46 @@ const LastUpdatesCard = ({ action, updateType }: CardProps) => {
               {updateDescription}
             </Text>
           </Box>
-        </Flex>
-        <Box sx={styles.actionContainer}>
-          <Flex sx={styles.actionTypeContainer}>
-            <ActionIcon sx={styles.actionIcon} />
-            <Text sx={styles.actionType}>{actionTitle}</Text>
-          </Flex>
-          <Box sx={styles.actionDescriptionContainer}>
-            <Text sx={styles.actionDescription}>{action.description}</Text>
-            <Text sx={styles.actionTime}>
-              {`${getDaysElapsed(action.date)} days ago`}
-            </Text>
-          </Box>
-        </Box>
-      </Flex>
-    </Link>
+        </Link>
+      </Box>
+      <Box sx={styles.actionContainer}>
+        {actions.map((action) => {
+          const actionValue = getAction(action.type)
+          if (!actionValue) return null
+
+          const { title: actionTitle, Icon: ActionIcon } = actionValue
+          const href = action.slug
+            ? `/updates/${updateType}/${action.slug}`
+            : `/updates/${updateType}`
+
+          return (
+            <Link
+              key={action.slug || action.description}
+              href={href}
+              style={{ textDecoration: 'none', width: '100%' }}
+            >
+              <Box sx={styles.actionItem}>
+                <Flex sx={styles.actionTypeContainer}>
+                  <ActionIcon sx={styles.actionIcon} />
+                  <Text sx={styles.actionType}>{actionTitle}</Text>
+                </Flex>
+                <Box sx={styles.actionDescriptionContainer}>
+                  <Text
+                    className="actionDescription"
+                    sx={styles.actionDescription}
+                  >
+                    {action.description}
+                  </Text>
+                  <Text sx={styles.actionTime}>
+                    {`${getDaysElapsed(action.date)} days ago`}
+                  </Text>
+                </Box>
+              </Box>
+            </Link>
+          )
+        })}
+      </Box>
+    </Flex>
   )
 }
 

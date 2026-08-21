@@ -21,20 +21,38 @@ const innerContainer: SxStyleProp = {
 }
 
 const articleBox: SxStyleProp = {
-  fontSize: '0.95em',
-  lineHeight: '1.5em',
-  width: '100%',
+  fontSize: '1em',
+  lineHeight: '1.75em',
+  width: ['100%'],
+  color: 'rgb(51, 65, 85)',
   a: {
     color: '#E31C58',
+    textDecoration: 'none',
+    fontWeight: '500',
   },
   ul: {
+    pl: '1.5em',
+    mt: '1.25em',
+    mb: '1.25em',
     li: {
+      mt: '0.5em',
+      mb: '0.5em',
+    },
+    listStyleType: 'disc',
+    'ul, ol': {
       mt: '0.5em',
       mb: '0.5em',
     },
   },
   ol: {
+    pl: '1.5em',
+    mt: '1.25em',
+    mb: '1.25em',
     li: {
+      mt: '0.5em',
+      mb: '0.5em',
+    },
+    'ul, ol': {
       mt: '0.5em',
       mb: '0.5em',
     },
@@ -46,13 +64,55 @@ const articleBox: SxStyleProp = {
   },
   h2: {
     fontSize: '1.375em',
-    lineHeight: '2em',
-    fontWeight: '400',
-    mt: '1.3em',
-    mb: '0.875em',
+    lineHeight: '1.3em',
+    fontWeight: '700',
+    mt: ['1.5em', '2em'],
+    mb: ['0.75em', '1em'],
+    overflowWrap: 'anywhere',
+    color: 'rgb(15, 23, 42)',
+  },
+  h3: {
+    fontSize: '1.125em',
+    fontWeight: '600',
+    lineHeight: '1.6em',
+    mt: '1.6em',
+    mb: '0.6em',
+    overflowWrap: 'anywhere',
+  },
+  h4: {
+    fontSize: '1em',
+    fontWeight: '600',
+    lineHeight: '1.5em',
+    mt: '1.5em',
+    mb: '0.5em',
+    color: 'rgb(15, 23, 42)',
+    overflowWrap: 'anywhere',
+  },
+  h5: {
+    fontSize: '0.9375em',
+    fontWeight: '600',
+    lineHeight: '1.5em',
+    mt: '1.25em',
+    mb: '0.5em',
+    color: 'rgb(71, 85, 105)',
+    overflowWrap: 'anywhere',
+  },
+  h6: {
+    fontSize: '0.9375em',
+    fontWeight: '600',
+    lineHeight: '1.5em',
+    mt: '1.25em',
+    mb: '0.5em',
+    color: 'rgb(100, 116, 139)',
+    overflowWrap: 'anywhere',
   },
   strong: {
     fontWeight: '600',
+    overflowWrap: 'break-word',
+  },
+  hr: {
+    border: '0.5px solid #E7E9EE',
+    my: ['2em', '3em'],
   },
 }
 
@@ -87,7 +147,28 @@ const documentationExcerpt: SxStyleProp = {
 }
 
 const bottomContributorsContainer: SxStyleProp = {
-  display: ['initial', 'initial', 'initial', 'initial', 'none'],
+  display: ['flex', 'flex', 'flex', 'flex', 'none'],
+  flexDirection: 'column',
+  alignItems: 'center',
+  px: ['1.125em', 'initial'],
+}
+
+const bottomContributors: SxStyleProp = {
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  '& > div': {
+    alignItems: 'center !important',
+    width: 'auto !important',
+  },
+  '[data-cy="contributors-container"]': {
+    display: 'flex !important',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    width: 'auto !important',
+    maxWidth: '232px',
+  },
 }
 
 const bottomContributorsDivider: SxStyleProp = {
@@ -161,6 +242,7 @@ export default {
   contentContainer,
   documentationTitle,
   bottomContributorsContainer,
+  bottomContributors,
   bottomContributorsDivider,
   rightContainer,
   releaseAction,

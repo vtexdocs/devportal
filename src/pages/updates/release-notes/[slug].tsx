@@ -13,9 +13,8 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from '@vtexdocs/components'
-import { MarkdownRenderer } from '@vtexdocs/components'
+import { MarkdownRenderer, OnThisPage } from '@vtexdocs/components'
 import FeedbackSection from 'components/feedback-section'
-import OnThisPage from 'components/on-this-page'
 import ArticlePagination from 'components/article-pagination'
 
 import { removeHTML } from 'utils/string-utils'
@@ -137,7 +136,7 @@ const DocumentationPage: NextPage<Props> = ({
               />
             )}
           </Box>
-          <OnThisPage />
+          <OnThisPage headingList={headings} />
         </Flex>
       </APIGuideContextProvider>
     </>
