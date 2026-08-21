@@ -2308,6 +2308,13 @@
                   "children": []
                 },
                 {
+                  "name": "B2B first login",
+                  "slug": "b2b-first-login",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "B2B password migration",
                   "slug": "b2b-password-migration",
                   "origin": "",
@@ -13256,6 +13263,40 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/authenticator/v1/storefront/users",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "First login",
+              "slug": "authenticator-api-first-login",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Start login attempt",
+                  "slug": "authenticator-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/pub/authentication/start",
+                  "children": []
+                },
+                {
+                  "name": "Sign in",
+                  "slug": "authenticator-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/bff/storefront/signin",
+                  "children": []
+                },
+                {
+                  "name": "Set password",
+                  "slug": "authenticator-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/pub/authentication/classic/setpassword",
                   "children": []
                 }
               ]
