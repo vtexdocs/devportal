@@ -7881,7 +7881,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/logistics/pvt/configuration/freights/-carrierId-/-cep-/values",
+                  "endpoint": "/api/logistics/pvt/configuration/freights/-carrierId-/-postalcode-/values",
                   "children": []
                 }
               ]
