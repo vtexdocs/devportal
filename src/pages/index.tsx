@@ -1,4 +1,4 @@
-import { Grid } from '@vtex/brand-ui'
+import { Box, Grid } from '@vtex/brand-ui'
 import type { Page, UpdateElement } from 'utils/typings/types'
 
 import NewsletterSection from 'components/newsletter-section'
@@ -19,10 +19,10 @@ import { serialize } from 'next-mdx-remote/serialize'
 
 interface Props {
   branch: string
-  releaseData: UpdateElement
+  releasesData: UpdateElement[]
 }
 
-const Home: Page<Props> = ({ branch, releaseData }) => {
+const Home: Page<Props> = ({ branch, releasesData }) => {
   const { setBranchPreview } = useContext(PreviewContext)
   setBranchPreview(branch)
 
@@ -44,9 +44,11 @@ const Home: Page<Props> = ({ branch, releaseData }) => {
       <Grid sx={styles.grid}>
         <NewsletterSection />
         <DocumentationSection />
-        <LastUpdatesSection releaseData={releaseData} />
+        <LastUpdatesSection releasesData={releasesData} />
         <EducationSection />
-        <SubscriptionList />
+        <Box sx={styles.subscriptionList}>
+          <SubscriptionList />
+        </Box>
       </Grid>
     </>
   )
@@ -65,25 +67,35 @@ export const getStaticProps: GetStaticProps = async ({
       : 'main'
   const branch = preview ? previewBranch : 'main'
   const releasePaths = await getReleasePaths()
-  const lastReleaseSlug = Object.keys(releasePaths)
+  const latestReleaseSlugs = Object.keys(releasePaths)
     .filter((slug) => slug.startsWith('20'))
-    .sort((a, b) => b.localeCompare(a))[0]
+    .sort((a, b) => b.localeCompare(a))
+    .slice(0, 3)
 
-  const releaseContent = await getGithubFile(
-    'vtexdocs',
-    'dev-portal-content',
-    'main',
-    releasePaths[lastReleaseSlug]
+  const releasesData = await Promise.all(
+    latestReleaseSlugs.map(async (slug) => {
+      const releaseContent = await getGithubFile(
+        'vtexdocs',
+        'dev-portal-content',
+        'main',
+        releasePaths[slug]
+      )
+      const serialized = await serialize(releaseContent, {
+        parseFrontmatter: true,
+      })
+
+      return {
+        ...serialized.frontmatter,
+        slug: serialized.frontmatter?.slug || slug,
+      }
+    })
   )
-  const releaseData = await serialize(releaseContent, {
-    parseFrontmatter: true,
-  })
 
   return {
     props: {
       sidebarfallback,
       branch,
-      releaseData: releaseData.frontmatter,
+      releasesData,
     },
   }
 }

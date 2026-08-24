@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Flex, Text } from '@vtex/brand-ui'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import { getMessages } from 'utils/get-messages'
 import type { DocDataElement } from 'utils/typings/types'
@@ -36,37 +36,41 @@ const DocumentationSectionCard = ({
   }, [descriptionRef.current])
 
   return (
-    <Tooltip placement="top" label={tooltipDescription} isCard={tooltipState}>
-      <Link href={link}>
-        <Flex sx={styles.cardContainer}>
-          <Flex sx={styles.infoContainer}>
-            <Icon sx={styles.icon} />
-            <Text className="title" sx={styles.title}>
-              {title}
-            </Text>
-            <Text
-              ref={descriptionRef}
-              className="description"
-              sx={styles.description}
+    <Box sx={{ height: '100%' }}>
+      <Tooltip placement="top" label={tooltipDescription} isCard={tooltipState}>
+        <Link href={link} style={{ display: 'block', height: '100%' }}>
+          <Flex sx={styles.cardContainer}>
+            <Flex sx={styles.infoContainer}>
+              <Flex sx={styles.iconWrapper}>
+                <Icon sx={styles.icon} />
+              </Flex>
+              <Text className="title" sx={styles.title}>
+                {title}
+              </Text>
+              <Text
+                ref={descriptionRef}
+                className="description"
+                sx={styles.description}
+              >
+                {description}
+              </Text>
+            </Flex>
+            <Flex
+              className="quickStartedContainer"
+              sx={styles.quickStartedContainer}
             >
-              {description}
-            </Text>
+              <Text className="learnMoreText" sx={styles.learnMoreText}>
+                {
+                  messages[
+                    'landing_page_documentation_documentation_card.learnMoreText'
+                  ]
+                }
+              </Text>
+            </Flex>
           </Flex>
-          <Flex
-            className="quickStartedContainer"
-            sx={styles.quickStartedContainer}
-          >
-            <Text className="learnMoreText" sx={styles.learnMoreText}>
-              {
-                messages[
-                  'landing_page_documentation_documentation_card.learnMoreText'
-                ]
-              }
-            </Text>
-          </Flex>
-        </Flex>
-      </Link>
-    </Tooltip>
+        </Link>
+      </Tooltip>
+    </Box>
   )
 }
 

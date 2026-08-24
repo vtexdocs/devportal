@@ -2,6 +2,122 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.43.0](https://github.com/vtexdocs/devportal/compare/v1.42.1...v1.43.0) (2026-08-22)
+
+
+### Features
+
+* **navigation.json:** add entry for august 2026 category ([c97285d](https://github.com/vtexdocs/devportal/commit/c97285d60e061865647c71a427554d0b947343ee))
+* **navigation.json:** add entry for cms content modeling for headless stores ([271d772](https://github.com/vtexdocs/devportal/commit/271d77268856aef91c11cd8cbe4aa0c8d1af4e4a))
+* **navigation.json:** add entry for defining components for headless stores ([3480baf](https://github.com/vtexdocs/devportal/commit/3480bafa277d390a154b28359204767b1c96edff))
+* **navigation.json:** add new section for VTEX Business models with detailed implementation guides ([8a8dbfa](https://github.com/vtexdocs/devportal/commit/8a8dbfa6a06bf5051576aab7a40b8ed6ca171355))
+* **navigation.json:** add product recommendations section entry to navigation ([2896684](https://github.com/vtexdocs/devportal/commit/28966848206182830cf25abb717832c015c93afd))
+* seed in header, always emit all three section headers, sampled pages section ([f77e94e](https://github.com/vtexdocs/devportal/commit/f77e94e6c5798921c1d5b32b03b8f47ff3662cad))
+
+
+### Bug Fixes
+
+* add timeout and retry to component tests step ([df7aa4a](https://github.com/vtexdocs/devportal/commit/df7aa4ab4bb72b1d735094695bb0b2183ecac135))
+* cap integration test step at 60 minutes to prevent job timeout ([8768931](https://github.com/vtexdocs/devportal/commit/87689317df5ecf8e08f7a1ab7556a9a8fd2f7965))
+* **ci:** tighten Cypress job timeout and run headless ([a14cd43](https://github.com/vtexdocs/devportal/commit/a14cd430b8ee9ce179a40b8c3117d0620cc4a518))
+* classify http and load_timeout failures separately in doc-pages spec ([1216a33](https://github.com/vtexdocs/devportal/commit/1216a334c1a6a7ed52a5aad4279da30a6f497e5a))
+* count distinct failing tests in summary report ([8b8bf2d](https://github.com/vtexdocs/devportal/commit/8b8bf2d634ca8fd839589b26c7fecfd6309f251f))
+* **cypress:** fail fast on stalled api guides visits ([c7dd0bf](https://github.com/vtexdocs/devportal/commit/c7dd0bf4705bdb2dc1115e114bc89abe9fb66986))
+* guard summary report against Cypress crash producing false success ([6daa63b](https://github.com/vtexdocs/devportal/commit/6daa63b2df6ade0c4294f7ea56fd060f0a5ff8f1))
+* make documentation page sampling deterministic ([979fef2](https://github.com/vtexdocs/devportal/commit/979fef20eadb37d6abe831ad6acbbc4cb2156b3c))
+* **netlify.toml:** add redirects for custom newsletter analytics ([2da41b3](https://github.com/vtexdocs/devportal/commit/2da41b3bfd539bf49d193d72e4a019101e62e4e2))
+* reduce cypress docs test retries ([afdae60](https://github.com/vtexdocs/devportal/commit/afdae60b2fc045a55d487d325316f3a95cd0b02f))
+* rename tradename nav slug and add redirect ([9e8a93f](https://github.com/vtexdocs/devportal/commit/9e8a93f30b58aee0b5d9250f2ae7a9ef0fecb752))
+* reorder tests summary comment ([2cc0302](https://github.com/vtexdocs/devportal/commit/2cc0302ba6cb16a8a8d48ecd5cfd34207077b088))
+* replace writeLog with structured JSONL failure records ([d496b31](https://github.com/vtexdocs/devportal/commit/d496b31f1e639a3887ab54cc3268b301761ce8bb))
+* show failure type label when message is empty in infra section ([17af4fe](https://github.com/vtexdocs/devportal/commit/17af4fe4caf6a2235b712e6ba62930e1a9c54869))
+* split summary into content regressions and preview infrastructure ([d790bee](https://github.com/vtexdocs/devportal/commit/d790beeb7f2a95bcfac09ecbf464882414516b61))
+* **tests:** always register guideLoadTimeout alias in beforeEach ([b3b776e](https://github.com/vtexdocs/devportal/commit/b3b776e91e58b6c8a5a2c7d3998e539598a5b27c))
+* **tests:** click last visible desktop TOC entry ([bc362c5](https://github.com/vtexdocs/devportal/commit/bc362c5644e4d9e109d14a236619cc933e9e03c0))
+* **tests:** detach Cypress load-timeout fail handler to prevent leak ([d176b69](https://github.com/vtexdocs/devportal/commit/d176b693ed54a74546619e230bbb857b371fccd0))
+* **tests:** match Next.js TOC links with hash in path ([738584c](https://github.com/vtexdocs/devportal/commit/738584c2bbf4f154ecf800119134e35fdfd21652))
+* **tests:** target desktop table of contents in api-guides spec ([0cd3e83](https://github.com/vtexdocs/devportal/commit/0cd3e831232795c0dd03d03570cd3c24a8225690))
+* truncate test lists to 5 items with collapsible overflow ([2ffe296](https://github.com/vtexdocs/devportal/commit/2ffe29607d6568f64682f0642b9d21be5fcdbf38))
+* wrap sampled pages list in collapsible details block ([ba1acf8](https://github.com/vtexdocs/devportal/commit/ba1acf82fc95106ebc3dfeebc18b142f1f225518))
+
+
+### CI
+
+* **cypress:** run integration after component retries ([34898f5](https://github.com/vtexdocs/devportal/commit/34898f5e5e57876d5022e015c64ac3a66a526d38))
+
+
+### Tests
+
+* add cypress search helpers ([3e47ac3](https://github.com/vtexdocs/devportal/commit/3e47ac3e2b984d5b1a63380dec239ace204c96cf))
+* add unit tests for summary-report utils and wire into CI ([fc66c96](https://github.com/vtexdocs/devportal/commit/fc66c9697738042975c48453711f7171d4c5922b))
+* **cypress:** fix sidebar collapse assertions in api-guides spec ([3d00a62](https://github.com/vtexdocs/devportal/commit/3d00a62c813a91662ff0f60e7061213227aee2e2))
+* **cypress:** harden api docs spec startup ([8d02285](https://github.com/vtexdocs/devportal/commit/8d02285fc3d5f1d4996da9d908a2f298f493a83f))
+* **cypress:** reduce deploy preview load stalls ([6f98b39](https://github.com/vtexdocs/devportal/commit/6f98b396f9780cff6051396c10489c60b2940c7a))
+* **cypress:** reduce docs preview false failures ([af1c095](https://github.com/vtexdocs/devportal/commit/af1c095db6b0a03b64628f34f1bf1d968f35fe68))
+* **cypress:** replace cy.wait(10000) with waitForRapiDocReady() in api-reference spec ([017a661](https://github.com/vtexdocs/devportal/commit/017a6616a3de99bd88a5bc8fd3083ad5004cab4e))
+* **cypress:** stabilize api docs regression specs ([e430c25](https://github.com/vtexdocs/devportal/commit/e430c25c169c2c5d6220dbf58b7532274566c8cb))
+* **cypress:** start api docs specs on document routes ([432a936](https://github.com/vtexdocs/devportal/commit/432a936a52f30c76e0aebc4f463b3315ce0eb40e))
+* harden remaining cypress nav checks ([fe3568d](https://github.com/vtexdocs/devportal/commit/fe3568dffc06d95fe9e267dcf731b45c975a442b))
+* reduce preview flake in cypress specs ([2ab3014](https://github.com/vtexdocs/devportal/commit/2ab3014cd6318388215c0045a3e0b751ff596449))
+* relax preview load waits for cypress ([2066e66](https://github.com/vtexdocs/devportal/commit/2066e6652a1c03c7c8212e1c53e8464c0b2270ad))
+* remove hanging guide navigation path ([e644dd7](https://github.com/vtexdocs/devportal/commit/e644dd776dd6a26bd0f4b50fcb14b49d27964db6))
+* reset cypress bootstrap routes ([6b06208](https://github.com/vtexdocs/devportal/commit/6b06208fcfb268a7172493635191153eee7685da))
+* shorten cypress preview waits ([af9064f](https://github.com/vtexdocs/devportal/commit/af9064fbdf68c4e1f4506db9379ab5b60a736657))
+* stabilize remaining nav-bug cypress checks ([df0eccc](https://github.com/vtexdocs/devportal/commit/df0eccc4766a45736f30fcc6f69318514e77e452))
+* wrap visitGuidePage with visitPageAllowingLoadTimeout (PIV-003) ([892f966](https://github.com/vtexdocs/devportal/commit/892f9665a3f80d61fc81904809905bbeb67cea83))
+
+
+### Chore
+
+* ignore local claude settings file ([130c4c7](https://github.com/vtexdocs/devportal/commit/130c4c7d3c7780baacee3136caeeaf934634fd5c))
+* **package.json:** update components package and improve styles ([235637d](https://github.com/vtexdocs/devportal/commit/235637d2feb7a20401d939c6323fad85455873f5))
+* remove task plan from pr ([dc58f07](https://github.com/vtexdocs/devportal/commit/dc58f076496b1cf81147c041213139a296135e7f))
+* reorder API Reference navigation for B2B taxonomy alignment ([e30da76](https://github.com/vtexdocs/devportal/commit/e30da76e81f4a701805bcc8eeb684a3d01f72e22))
+* sync yarn.lock with @vtexdocs/components v6.1.1 from main ([3971f88](https://github.com/vtexdocs/devportal/commit/3971f88cec3198bac913f1c4958b99639d8ed017))
+
+
+### Style
+
+* **index.tsx:** update landing page and styles ([45677a0](https://github.com/vtexdocs/devportal/commit/45677a04e979849fc65e1ba4ba3305244a397f92))
+
+### [1.42.1](https://github.com/vtexdocs/devportal/compare/v1.42.0...v1.42.1) (2026-08-05)
+
+
+### Features
+
+* add new activity flow entry to navigation JSON ([b05de55](https://github.com/vtexdocs/devportal/commit/b05de553c983e12a4947df163505ead17cde9780))
+
+
+### Bug Fixes
+
+* **netlify:** restore redirect block header lost in merge ([02c1c2d](https://github.com/vtexdocs/devportal/commit/02c1c2dda541595eb88cd600fd64859059bc2bfc))
+* remove password migration endpoints from vtex-id-api navigation ([79e5d3c](https://github.com/vtexdocs/devportal/commit/79e5d3ccd3146e8ff03387e8b8ad2f0c74eee145))
+* remove trailing comma from navigation.json after password migration removal ([19ad71f](https://github.com/vtexdocs/devportal/commit/19ad71f392ed72fcb284ef9efe5c1cfa64a7f82d))
+* replace {name} with -name- in authenticator endpoint navigation ([7c2e0ee](https://github.com/vtexdocs/devportal/commit/7c2e0eec3f71ae66f4d1942437801d39e9f194d5))
+
+
+### Docs
+
+* **redirects:** add fastcheckout to buyer portal checkout migration redirect ([8bcc8f9](https://github.com/vtexdocs/devportal/commit/8bcc8f9867c8beabf1ef8ac625b9a2dbcd793a20))
+
+## [1.42.0](https://github.com/vtexdocs/devportal/compare/v1.41.3...v1.42.0) (2026-08-05)
+
+
+### Features
+
+* add Authenticator API to navigation, mappings, and redirects ([2b6d40b](https://github.com/vtexdocs/devportal/commit/2b6d40b52000f676b67a4e8da725740219d25132))
+* add redirects for organization unit users path rename ([8b5868c](https://github.com/vtexdocs/devportal/commit/8b5868c89c8321d013539f95b11c908db4c98e7c))
+
+
+### Bug Fixes
+
+* remove trailing comma ([9657fc1](https://github.com/vtexdocs/devportal/commit/9657fc1644a370e07031e6fbbbf4f2ec011aa13c))
+
+
+### Chore
+
+* add B2B session data entry to navigation JSON ([513eb2c](https://github.com/vtexdocs/devportal/commit/513eb2cad5e5e9f6f927f8d06abee2a4bf8952f5))
+
 ### [1.41.3](https://github.com/vtexdocs/devportal/compare/v1.41.2...v1.41.3) (2026-07-31)
 
 ### [1.41.2](https://github.com/vtexdocs/devportal/compare/v1.41.1...v1.41.2) (2026-07-30)

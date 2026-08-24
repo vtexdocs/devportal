@@ -24,6 +24,20 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+Cypress.Commands.add('searchFor', (query) => {
+  cy.get('[data-testid="search-input"]').clear().type(query)
+})
+
+Cypress.Commands.add('submitSearch', (query, via = 'enter') => {
+  cy.searchFor(query)
+  if (via === 'enter') {
+    cy.get('[data-testid="search-input"]').type('{enter}')
+  } else {
+    cy.get('[data-testid="search-button"]').click()
+  }
+  cy.url().should('include', '/search')
+})
+
 Cypress.Commands.add('any', { prevSubject: 'element' }, (subject, size = 1) => {
   cy.wrap(subject).then((elementList) => {
     elementList = elementList.jquery ? elementList.get() : elementList
@@ -43,3 +57,35 @@ Cypress.Commands.add('anyWithIndex', { prevSubject: 'element' }, (subject) => {
       })
   })
 })
+
+Cypress.Commands.add(
+  'waitForRapiDocReady',
+  { prevSubject: 'optional' },
+  (subject, { timeout = 20000 } = {}) => {
+    const start = Date.now()
+
+    function getRapiDocElement() {
+      if (subject) {
+        return cy.wrap(subject).then((wrappedSubject) => {
+          return wrappedSubject.jquery ? wrappedSubject.get(0) : wrappedSubject
+        })
+      }
+
+      return cy.document().then((doc) => doc.querySelector('rapi-doc'))
+    }
+
+    function poll() {
+      return getRapiDocElement().then((el) => {
+        if (el && el.resolvedSpec && typeof el.scrollToPath === 'function') {
+          return cy.wrap(el)
+        }
+        if (Date.now() - start >= timeout) {
+          throw new Error(`rapi-doc did not become ready within ${timeout}ms`)
+        }
+        return cy.wait(200).then(poll)
+      })
+    }
+
+    return poll()
+  }
+)

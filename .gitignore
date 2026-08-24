@@ -13,6 +13,9 @@ sitemap.xml
 sitemap-0.xml
 robots.txt
 
+# Local configs
+.claude/settings.local.json
+
 # Local Scraping
 /docsearch-scraper
 
