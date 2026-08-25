@@ -19812,6 +19812,20 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 4.6.0",
+                  "slug": "2026-08-25-faststore-release-notes-4-6-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX IO: VBase deprecation and Master Data migration",
+                  "slug": "2026-08-24-vtex-io-vbase-deprecation-master-data-migration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore Release Notes — Version 4.5.0",
                   "slug": "2026-08-10-faststore-release-notes-4-5-0",
                   "origin": "",
