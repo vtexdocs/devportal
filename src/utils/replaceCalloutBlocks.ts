@@ -127,13 +127,9 @@ export function replaceCalloutBlocks(markdown: string) {
 export function enhanceCalloutHtml(content: string) {
   return content.replace(
     /<blockquote>\s*([\s\S]*?)<\/blockquote>/g,
-    (blockquote, innerContent: string) => {
+    (_blockquote, innerContent: string) => {
       const trimmedInnerContent = innerContent.trim()
-      const calloutType = getCalloutType(trimmedInnerContent)
-
-      if (!calloutType) {
-        return blockquote
-      }
+      const calloutType = getCalloutType(trimmedInnerContent) ?? 'info'
 
       const normalizedInnerContent = trimmedInnerContent.replace(
         calloutPatternByType[calloutType],
@@ -142,7 +138,7 @@ export function enhanceCalloutHtml(content: string) {
 
       return `<blockquote class="overview-callout overview-callout--${calloutType}">${calloutIconSvg(
         calloutType
-      )}${normalizedInnerContent}</blockquote>`
+      )}<div>${normalizedInnerContent}</div></blockquote>`
     }
   )
 }

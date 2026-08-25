@@ -22,6 +22,9 @@ rapi-doc::part(section-navbar-scroll) {
 
 rapi-doc::part(section-main-content) {
   background: #ffffff;
+  height: auto;
+  overflow: visible;
+  width: 100%;
 }
 
 rapi-doc::part(textbox),
@@ -47,18 +50,18 @@ rapi-doc::part(textarea-param) {
 rapi-doc::part(anchor-endpoint) {
   position: relative;
   top: -220px;
-  visibility:hidden;
+  visibility: hidden;
 }
 
-rapi-doc::part(section-operation-summary){
+rapi-doc::part(section-operation-summary) {
   padding-top: 0px;
 }
 
-rapi-doc::part(section-overview){
+rapi-doc::part(section-overview) {
   padding: 0px;
 }
 
-rapi-doc::part(section-overview-title){
+rapi-doc::part(section-overview-title) {
   padding-top: 32px;
   line-height: 38px;
 }
@@ -67,7 +70,7 @@ rapi-doc::part(section-operation-summary),
 rapi-doc::part(section-overview-title) {
   font-size: 28px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #E7E9EE;
+  border-bottom: 1px solid #e7e9ee;
   margin-top: 16px;
   line-height: 38px;
 }

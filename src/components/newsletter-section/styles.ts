@@ -2,7 +2,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const section: SxStyleProp = {
   width: '100%',
-  overflow: 'hidden',
+  overflow: 'visible',
   backgroundColor: '#FFFFFF',
   borderBottom: '1px solid #E7E9EE',
 }
@@ -75,6 +75,68 @@ const shortcut: SxStyleProp = {
   },
 }
 
+const moreMenu: SxStyleProp = {
+  position: 'relative',
+  zIndex: 2,
+}
+
+const moreButton: SxStyleProp = {
+  ...shortcut,
+  gap: '4px',
+  cursor: 'pointer',
+  fontFamily: 'inherit',
+  appearance: 'none',
+  WebkitAppearance: 'none',
+  color: '#142032',
+  ':hover': {
+    borderColor: '#E31C58',
+    backgroundColor: '#FEF4F6',
+    color: '#E31C58',
+  },
+  '&[aria-expanded="true"]': {
+    borderColor: '#E31C58',
+    backgroundColor: '#FEF4F6',
+    color: '#E31C58',
+  },
+  svg: {
+    flexShrink: 0,
+  },
+}
+
+const dropdown: SxStyleProp = {
+  position: 'absolute',
+  top: 'calc(100% + 8px)',
+  right: 0,
+  minWidth: '220px',
+  zIndex: 20,
+  backgroundColor: '#FFFFFF',
+  border: '1px solid #E7E9EE',
+  borderRadius: '8px',
+  boxShadow:
+    '0 8px 24px rgba(18, 21, 26, 0.12), 0 2px 6px rgba(18, 21, 26, 0.08)',
+  overflow: 'hidden',
+  py: '4px',
+  a: {
+    display: 'block',
+    textDecoration: 'none',
+    color: '#142032',
+    ':hover': {
+      color: '#E31C58',
+      backgroundColor: '#FEF4F6',
+    },
+  },
+}
+
+const dropdownItem: SxStyleProp = {
+  display: 'block',
+  px: '16px',
+  py: '10px',
+  fontSize: ['14px', '16px'],
+  lineHeight: ['20px', '22px'],
+  whiteSpace: 'nowrap',
+  color: 'inherit',
+}
+
 const imageContainer: SxStyleProp = {
   position: 'relative',
   width: '100%',
@@ -93,5 +155,9 @@ export default {
   newsletterTitleAccent,
   shortcuts,
   shortcut,
+  moreMenu,
+  moreButton,
+  dropdown,
+  dropdownItem,
   imageContainer,
 }
