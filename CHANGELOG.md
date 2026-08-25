@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.44.0](https://github.com/vtexdocs/devportal/compare/v1.43.0...v1.44.0) (2026-08-25)
+
+
+### Features
+
+* **navigation.json:** add faststore release notes entry for version 4.6.0 ([7f44c09](https://github.com/vtexdocs/devportal/commit/7f44c0982fb82cdd379672d2ee1b7506dd518614))
+* **rapidoc:** update rapidoc to improve api reference rendering ([f35ee2f](https://github.com/vtexdocs/devportal/commit/f35ee2f51eb5b9c113ad495b84489fd3b832dd37))
+
+
+### Chore
+
+* **nav:** update release note slug/date ([3a26906](https://github.com/vtexdocs/devportal/commit/3a2690676034fc53d9e9cb869c1360b6f0363f9e))
+
 ## [1.43.0](https://github.com/vtexdocs/devportal/compare/v1.42.1...v1.43.0) (2026-08-22)
 
 
