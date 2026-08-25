@@ -25,6 +25,14 @@ const overviewHeaderStyles: SxStyleProp = {
 }
 
 const overviewContentStyles: SxStyleProp = {
+  img: {
+    maxWidth: '100%',
+    display: 'block',
+    padding: '0',
+    margin: '0',
+    border: '1px solid #e7e9ed',
+    borderRadius: '4px',
+  },
   '& blockquote': {
     borderLeft: '4px solid #E7E9EE',
     ml: 0,
