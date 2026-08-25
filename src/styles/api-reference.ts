@@ -3,8 +3,7 @@ import { isMethodType } from 'utils/typings/unionTypes'
 import { methodsColors } from 'components/method-category/functions'
 
 const overviewArticleStyles: SxStyleProp = {
-  maxWidth: '960px',
-  mx: 'auto',
+  ml: 'auto',
   mb: '2.5rem',
   color: '#4A596B',
   fontSize: '0.95em',
@@ -26,54 +25,8 @@ const overviewHeaderStyles: SxStyleProp = {
 }
 
 const overviewContentStyles: SxStyleProp = {
-  color: '#4A596B',
-  '& p': {
-    lineHeight: '1.5em',
-    mb: '1rem',
-  },
-  '& ul, & ol': {
-    mb: '1rem',
-    pl: '1.5rem',
-  },
-  '& ul li, & ol li': {
-    mt: '0.5em',
-    mb: '0.5em',
-  },
-  '& h2': {
-    fontSize: '1.375em',
-    lineHeight: '2em',
-    fontWeight: '400',
-    mt: '1.3em',
-    mb: '0.875em',
-    color: '#142032',
-  },
-  '& h3': {
-    fontSize: ['1.125rem', '1.25rem'],
-    lineHeight: '1.75rem',
-    fontWeight: '600',
-    mt: '1.5rem',
-    mb: '0.75rem',
-    color: '#142032',
-  },
-  '& h4': {
-    fontSize: '1rem',
-    lineHeight: '1.5rem',
-    fontWeight: '600',
-    mt: '1.25rem',
-    mb: '0.75rem',
-    color: '#142032',
-  },
-  '& a': {
-    color: '#E31C58',
-    textDecoration: 'underline',
-    textUnderlineOffset: '0.18em',
-  },
-  '& strong': {
-    fontWeight: '600',
-  },
   '& blockquote': {
     borderLeft: '4px solid #E7E9EE',
-    color: '#4A596B',
     ml: 0,
     my: '1.5rem',
     pl: '1rem',
@@ -89,20 +42,28 @@ const overviewContentStyles: SxStyleProp = {
     mb: '1.5rem',
     p: '20px',
     borderRadius: '4px',
-    alignItems: 'start',
+    alignItems: 'center',
     gridTemplateColumns: '20px 1fr',
     wordBreak: 'break-word',
+    bg: '#F8F7FC',
     border: '1px solid #CCCED8',
+    '& code': {
+      bg: '#ECEBF3',
+    },
   },
   '& .overview-callout-icon': {
-    display: 'inline-block',
+    display: 'block',
     gridColumn: '1',
-    gridRow: '1',
-    mt: '2px',
   },
-  '& .overview-callout p, & .overview-callout div': {
+  '& .overview-callout > div': {
     m: 0,
     gridColumn: '2 / -1',
+    display: 'grid',
+    rowGap: '0.75rem',
+    minWidth: 0,
+  },
+  '& .overview-callout p': {
+    m: 0,
   },
   '& .overview-callout a': {
     wordBreak: 'break-word',
@@ -129,82 +90,6 @@ const overviewContentStyles: SxStyleProp = {
   '& .overview-callout--success': {
     bg: '#F3F8F3',
     borderColor: '#80BE80',
-  },
-  '& code': {
-    fontFamily: 'mono',
-    fontSize: '0.875rem',
-    bg: '#F7F8FA',
-    borderRadius: '4px',
-    px: '0.25rem',
-    py: '0.125rem',
-  },
-  '& pre': {
-    bg: '#F7F8FA',
-    border: '1px solid #E7E9EE',
-    borderRadius: '4px',
-    overflowX: 'auto',
-    p: '1rem',
-    mb: '1.5rem',
-  },
-  '& pre code': {
-    bg: 'transparent',
-    px: 0,
-    py: 0,
-  },
-  '& table': {
-    width: '100%',
-    borderCollapse: 'collapse',
-    mb: '1.5rem',
-  },
-  '& th, & td': {
-    borderBottom: '1px solid #E7E9EE',
-    px: '0.75rem',
-    py: '0.625rem',
-    textAlign: 'left',
-    verticalAlign: 'top',
-  },
-}
-
-const overviewTableWrapperStyles: SxStyleProp = {
-  overflowX: 'auto',
-  border: '1px solid #E7E9EE',
-  borderRadius: '4px',
-  bg: '#FFFFFF',
-}
-
-const overviewTableStyles: SxStyleProp = {
-  width: '100%',
-  minWidth: '640px',
-  borderCollapse: 'collapse',
-  '& th': {
-    textAlign: 'left',
-    padding: '0.875rem 1rem',
-    borderBottom: '1px solid #E7E9EE',
-    bg: '#F7F8FA',
-    color: '#4A596B',
-    fontSize: '0.75rem',
-    fontWeight: '600',
-    letterSpacing: '0.04em',
-    textTransform: 'uppercase',
-  },
-  '& td': {
-    padding: '0.875rem 1rem',
-    borderBottom: '1px solid #E7E9EE',
-    verticalAlign: 'top',
-    color: '#4A596B',
-  },
-  '& td:first-of-type': {
-    wordBreak: 'break-word',
-    whiteSpace: 'normal',
-  },
-  '& td:nth-of-type(2)': {
-    whiteSpace: 'nowrap',
-  },
-  '& td:nth-of-type(3)': {
-    wordBreak: 'break-word',
-  },
-  '& tbody tr:last-of-type td': {
-    borderBottom: 'none',
   },
 }
 
@@ -257,8 +142,6 @@ const apiReferenceStyles = {
   overviewArticleStyles,
   overviewHeaderStyles,
   overviewContentStyles,
-  overviewTableWrapperStyles,
-  overviewTableStyles,
   endpointPathStyles,
   endpointLinkStyles,
 }

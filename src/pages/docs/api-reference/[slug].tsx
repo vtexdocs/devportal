@@ -32,6 +32,7 @@ import {
 import apiReferenceStyles, {
   getOverviewEndpointMethodBadgeSx,
 } from 'styles/api-reference'
+import styles from 'styles/documentation-page'
 
 // Client-side logger
 const clientLogger = {
@@ -350,15 +351,19 @@ const APIPage: NextPage<Props> = ({
         <meta name="docsearch:doccategory" content={pageTitle} />
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
-      <Box sx={{ mx: 'auto', pt: '1em', maxWidth: '90%' }}>
+      <Box sx={{ mx: 'auto' }}>
         {/* Both views stay mounted so RapiDoc keeps its spec loaded. SSG
             renders with isOverview=true, which is what makes overviews
             indexable; `clientHash` flips the toggle on the client. */}
-        <Box sx={{ display: isOverview ? 'block' : 'none' }}>
-          <Box as="article" sx={apiReferenceStyles.overviewArticleStyles}>
-            <Box as="header" sx={apiReferenceStyles.overviewHeaderStyles}>
-              <h1>{overviewTitle}</h1>
-            </Box>
+        <Box
+          sx={{
+            display: isOverview ? 'block' : 'none',
+            px: ['1em', '3em', '5em', '5em', '5em', '5em', '20em'],
+            pt: '1em',
+          }}
+        >
+          <Box as="article" sx={styles.articleBox}>
+            <h1 sx={styles.documentationTitle}>{overviewTitle}</h1>
             {descriptionHtml && (
               <Box
                 sx={apiReferenceStyles.overviewContentStyles}
@@ -371,67 +376,60 @@ const APIPage: NextPage<Props> = ({
                 {overviewEndpointGroups.map(({ tagName, endpoints }) => (
                   <Box key={tagName} sx={{ mt: '1.5rem' }}>
                     <h3>{tagName}</h3>
-                    <Box sx={apiReferenceStyles.overviewTableWrapperStyles}>
-                      <Box
-                        as="table"
-                        sx={apiReferenceStyles.overviewTableStyles}
-                      >
-                        <thead>
-                          <tr>
-                            <th>Summary</th>
-                            <th>Method</th>
-                            <th>Path</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {endpoints.map(({ method, path, summary }) => {
-                            const endpointHash = getOverviewEndpointHash(
-                              method,
-                              path
-                            )
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Summary</th>
+                          <th>Method</th>
+                          <th>Path</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {endpoints.map(({ method, path, summary }) => {
+                          const endpointHash = getOverviewEndpointHash(
+                            method,
+                            path
+                          )
 
-                            return (
-                              <tr key={`${method}-${path}`}>
-                                <td>
-                                  <Box
-                                    as="a"
-                                    href={`#${endpointHash}`}
-                                    sx={apiReferenceStyles.endpointLinkStyles}
-                                  >
-                                    {summary || `Open ${method} ${path}`}
-                                  </Box>
-                                </td>
-                                <td>
-                                  <Box
-                                    as="span"
-                                    sx={getOverviewEndpointMethodBadgeSx(
-                                      method
-                                    )}
-                                  >
-                                    {method.toUpperCase()}
-                                  </Box>
-                                </td>
-                                <td>
-                                  <Box
-                                    as="code"
-                                    sx={apiReferenceStyles.endpointPathStyles}
-                                  >
-                                    {path}
-                                  </Box>
-                                </td>
-                              </tr>
-                            )
-                          })}
-                        </tbody>
-                      </Box>
-                    </Box>
+                          return (
+                            <tr key={`${method}-${path}`}>
+                              <td>
+                                <Box
+                                  as="a"
+                                  href={`#${endpointHash}`}
+                                  sx={apiReferenceStyles.endpointLinkStyles}
+                                >
+                                  {summary || `Open ${method} ${path}`}
+                                </Box>
+                              </td>
+                              <td>
+                                <Box
+                                  as="span"
+                                  sx={getOverviewEndpointMethodBadgeSx(method)}
+                                >
+                                  {method.toUpperCase()}
+                                </Box>
+                              </td>
+                              <td>
+                                <code>{path}</code>
+                              </td>
+                            </tr>
+                          )
+                        })}
+                      </tbody>
+                    </table>
                   </Box>
                 ))}
               </Box>
             )}
           </Box>
         </Box>
-        <Box sx={{ display: isOverview ? 'none' : 'block' }}>
+        <Box
+          sx={{
+            display: isOverview ? 'none' : 'block',
+            pl: ['0px', '0px', '0px', '0px', '32px'],
+          }}
+        >
           {errorLoadingSpec && (
             <Box
               role="alert"
@@ -496,7 +494,7 @@ const APIPage: NextPage<Props> = ({
             />
           )}
         </Box>
-        <Box sx={{ mx: ['0', '0', '80px'], borderTop: '1px solid #e7e9ed' }}>
+        <Box sx={{ mx: ['0', '0', '80px'] }}>
           <ArticlePagination
             hidePaginationNext={false}
             hidePaginationPrevious={false}
