@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.44.1](https://github.com/vtexdocs/devportal/compare/v1.44.0...v1.44.1) (2026-08-26)
+
+
+### Bug Fixes
+
+* **netlify.toml:** add redirects for faststore migration ([9788916](https://github.com/vtexdocs/devportal/commit/9788916505e8ca6fc3503e99ee1ba7b3dc9b357f))
+
+
+### Style
+
+* **api-reference.ts:** update image size ([7a123eb](https://github.com/vtexdocs/devportal/commit/7a123ebcb38d46ebde1681217c424e563a59bd23))
+
+
+### Chore
+
+* **navigation.json:** update navigation ([c29230a](https://github.com/vtexdocs/devportal/commit/c29230a41122949b121e027adbb3a13f073c6e48))
+
 ## [1.44.0](https://github.com/vtexdocs/devportal/compare/v1.43.0...v1.44.0) (2026-08-25)
 
 
