@@ -2855,6 +2855,20 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Tracking search analytics events in headless web stores",
+              "slug": "tracking-search-analytics-events-in-headless-web-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Tracking search analytics events in mobile apps",
+              "slug": "tracking-search-analytics-events-in-mobile-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
