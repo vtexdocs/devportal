@@ -25,7 +25,7 @@ export const calloutIconByType: Record<CalloutType, string> = {
 }
 
 export const calloutPatternByType: Record<CalloutType, RegExp> = {
-  info: /^(?:<p>)?\s*(?:\u2139\uFE0F|\u2139)\s*/u,
+  info: /^(?:<p>)?\s*(?:\u2139\uFE0F|\u2139|\u{1F4D8})\s*/u,
   warning: /^(?:<p>)?\s*(?:\u26A0\uFE0F?|\u26A0)\s*/u,
   danger: /^(?:<p>)?\s*(?:\u2757\uFE0F?|\u2757)\s*/u,
   success: /^(?:<p>)?\s*(?:\u2705)\s*/u,
@@ -124,12 +124,39 @@ export function replaceCalloutBlocks(markdown: string) {
   )
 }
 
+function getCalloutTypeFromAttrs(attrs: string): CalloutType | null {
+  if (/warning-blockquote|\boverview-callout--warning\b/.test(attrs)) {
+    return 'warning'
+  }
+  if (/danger-blockquote|\boverview-callout--danger\b/.test(attrs)) {
+    return 'danger'
+  }
+  if (/success-blockquote|\boverview-callout--success\b/.test(attrs)) {
+    return 'success'
+  }
+  if (/info-blockquote|\boverview-callout--info\b/.test(attrs)) {
+    return 'info'
+  }
+
+  return null
+}
+
 export function enhanceCalloutHtml(content: string) {
   return content.replace(
-    /<blockquote>\s*([\s\S]*?)<\/blockquote>/g,
-    (_blockquote, innerContent: string) => {
+    /<blockquote([^>]*)>\s*([\s\S]*?)<\/blockquote>/gi,
+    (fullMatch, attrs: string, innerContent: string) => {
+      if (
+        /\boverview-callout\b/.test(attrs) &&
+        innerContent.includes('overview-callout-icon')
+      ) {
+        return fullMatch
+      }
+
       const trimmedInnerContent = innerContent.trim()
-      const calloutType = getCalloutType(trimmedInnerContent) ?? 'info'
+      const calloutType =
+        getCalloutTypeFromAttrs(attrs) ??
+        getCalloutType(trimmedInnerContent) ??
+        'info'
 
       const normalizedInnerContent = trimmedInnerContent.replace(
         calloutPatternByType[calloutType],

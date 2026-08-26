@@ -366,6 +366,7 @@ const APIPage: NextPage<Props> = ({
             <h1 sx={styles.documentationTitle}>{overviewTitle}</h1>
             {descriptionHtml && (
               <Box
+                className="overview-markdown"
                 sx={apiReferenceStyles.overviewContentStyles}
                 dangerouslySetInnerHTML={{ __html: descriptionHtml }}
               />

@@ -290,3 +290,71 @@ details[open] > summary::before {
   height: 1.2em;
   width: 1.2em;
 }
+
+/* API reference overview callouts. Applied via real CSS because these nodes
+   are injected with dangerouslySetInnerHTML and Theme UI descendant selectors
+   were not reliably laying out the icon beside the text. */
+.overview-markdown blockquote {
+  display: grid;
+  box-sizing: border-box;
+  padding: 20px;
+  column-gap: 20px;
+  row-gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  margin: 16px 0 24px;
+  border-radius: 4px;
+  align-items: start;
+  grid-template-columns: 20px minmax(0, 1fr);
+  grid-template-rows: auto;
+  word-break: break-word;
+  background: #f8f7fc;
+  border: 1px solid #ccced8;
+}
+
+.overview-markdown .overview-callout-icon {
+  display: inline-block;
+  flex-shrink: 0;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.overview-markdown blockquote > :not(.overview-callout-icon) {
+  grid-column: 2 / -1;
+  min-width: 0;
+  overflow-wrap: break-word;
+  margin: 0;
+}
+
+.overview-markdown blockquote p {
+  margin: 0;
+}
+
+.overview-markdown blockquote > div {
+  display: grid;
+  row-gap: 0.75rem;
+  min-width: 0;
+}
+
+.overview-markdown .overview-callout--info code {
+  background: #ecebf3;
+}
+
+.overview-markdown .overview-callout--warning {
+  background: #fff2d4;
+  border-color: #ffb100;
+}
+
+.overview-markdown .overview-callout--warning code {
+  background: #ffe5b5;
+}
+
+.overview-markdown .overview-callout--danger {
+  background: #fdefef;
+  border-color: #dc5a41;
+}
+
+.overview-markdown .overview-callout--success {
+  background: #f3f8f3;
+  border-color: #80be80;
+}
