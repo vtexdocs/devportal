@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "node_modules/@img/**/*", "./github
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/getting-started-faststore-v1-to-v4"
+status = 308
+to = "/docs/guides/faststore/getting-started-upgrading-faststore-to-v4"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/implementing-custom-newsletter-analytics-events"
 status = 308
 to = "/docs/guides/faststore/analytics-implementing-custom-newsletter-analytics-events"
