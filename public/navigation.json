@@ -5120,7 +5120,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/product/-productId-/language",
+                  "endpoint": "/api/catalog/pvt/product/-productId-/language/-locale-",
                   "children": []
                 },
                 {
