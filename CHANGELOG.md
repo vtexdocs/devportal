@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.45.0](https://github.com/vtexdocs/devportal/compare/v1.44.1...v1.45.0) (2026-08-27)
+
+
+### Features
+
+* **package.json:** upgrade components package to improve search ([3ba3a79](https://github.com/vtexdocs/devportal/commit/3ba3a79e5cd060b17926d55cf1b8561eb1db974b))
+
+
+### Chore
+
+* add search analytics tracking guides to Search category nav ([9870454](https://github.com/vtexdocs/devportal/commit/98704546af25717b3d5e3b6cc8aa2ab2e0a8c5a4))
+
 ### [1.44.1](https://github.com/vtexdocs/devportal/compare/v1.44.0...v1.44.1) (2026-08-26)
 
 
