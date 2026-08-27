@@ -118,6 +118,12 @@ const endpointLinkStyles: SxStyleProp = {
   fontWeight: '500',
 }
 
+const endpointFallbackStyles: SxStyleProp = {
+  px: ['1em', '1.5em', '2em'],
+  pt: '1em',
+  pb: '0.5rem',
+}
+
 // Style factory for the per-endpoint method badge. Returns a method-specific
 // palette when available, or a sensible red fallback for unknown HTTP verbs.
 export function getOverviewEndpointMethodBadgeSx(method: string): SxStyleProp {
@@ -146,24 +152,13 @@ export function getOverviewEndpointMethodBadgeSx(method: string): SxStyleProp {
   }
 }
 
-const docsearchFallbackStyles: SxStyleProp = {
-  border: 0,
-  clip: 'rect(0 0 0 0)',
-  height: '1px',
-  margin: '-1px',
-  overflow: 'hidden',
-  padding: 0,
-  position: 'absolute',
-  width: '1px',
-}
-
 const apiReferenceStyles = {
   overviewArticleStyles,
   overviewHeaderStyles,
   overviewContentStyles,
   endpointPathStyles,
   endpointLinkStyles,
-  docsearchFallbackStyles,
+  endpointFallbackStyles,
 }
 
 export default apiReferenceStyles
