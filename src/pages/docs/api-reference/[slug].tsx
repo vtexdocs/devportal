@@ -356,6 +356,8 @@ const APIPage: NextPage<Props> = ({
             renders with isOverview=true, which is what makes overviews
             indexable; `clientHash` flips the toggle on the client. */}
         <Box
+          data-api-reference-overview
+          data-docsearch-exclude={isOverview ? undefined : true}
           sx={{
             display: isOverview ? 'block' : 'none',
             px: ['1em', '3em', '5em', '5em', '5em', '5em', '20em'],
@@ -425,11 +427,25 @@ const APIPage: NextPage<Props> = ({
           </Box>
         </Box>
         <Box
+          data-api-reference-endpoint
+          data-docsearch-exclude={isOverview ? true : undefined}
           sx={{
             display: isOverview ? 'none' : 'block',
             pl: ['0px', '0px', '0px', '0px', '32px'],
           }}
         >
+          {!isOverview && (isLoadingSpec || !isRapiDocReady) && (
+            <Box
+              as="article"
+              aria-hidden="true"
+              sx={apiReferenceStyles.docsearchFallbackStyles}
+            >
+              <h1>{headTitle}</h1>
+              {endpoints[endpointPath]?.description && (
+                <p>{endpoints[endpointPath].description}</p>
+              )}
+            </Box>
+          )}
           {errorLoadingSpec && (
             <Box
               role="alert"
