@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.46.0](https://github.com/vtexdocs/devportal/compare/v1.45.0...v1.46.0) (2026-08-27)
+
+
+### Features
+
+* **algolia-openapi-sitemap.xml:** index hash api reference ([e65b5ac](https://github.com/vtexdocs/devportal/commit/e65b5ac062a7aac2895e104423ed9c8715661777))
+* **api-reference:** improve rendering time ([110b539](https://github.com/vtexdocs/devportal/commit/110b539192f8a0332dcd43269b6f31284c439f62))
+
+
+### Bug Fixes
+
+* **api-reference:** fix overview links ([a254b80](https://github.com/vtexdocs/devportal/commit/a254b80bbbaa09a0d74113b306923b85af0c354e))
+
+
+### Chore
+
+* **package.json:** update vtexdocs/components version ([4912b8a](https://github.com/vtexdocs/devportal/commit/4912b8af5733585b4f79d22236b8b6ca7c9ec1d6))
+
 ## [1.45.0](https://github.com/vtexdocs/devportal/compare/v1.44.1...v1.45.0) (2026-08-27)
 
 
