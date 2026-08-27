@@ -34,6 +34,7 @@ import apiReferenceStyles, {
   getOverviewEndpointMethodBadgeSx,
 } from 'styles/api-reference'
 import styles from 'styles/documentation-page'
+import Link from 'next/link.js'
 
 // Client-side logger
 const clientLogger = {
@@ -489,13 +490,12 @@ const APIPage: NextPage<Props> = ({
                           return (
                             <tr key={`${method}-${path}`}>
                               <td>
-                                <Box
-                                  as="a"
-                                  href={`#${endpointHash}`}
+                                <Link
+                                  href={`/docs/api-reference/${slug}#${endpointHash}`}
                                   sx={apiReferenceStyles.endpointLinkStyles}
                                 >
                                   {summary || `Open ${method} ${path}`}
-                                </Box>
+                                </Link>
                               </td>
                               <td>
                                 <Box
