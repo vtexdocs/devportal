@@ -71,7 +71,7 @@ export default function Layout({
           {!hideSidebar && <Sidebar parentsArray={parentsArray} />}
           <Box sx={styles.mainContainer}>{children}</Box>
         </Flex>
-        <Footer />
+        <Footer variant="devportal" />
       </LibraryContextProvider>
     </ThemeProvider>
   )
