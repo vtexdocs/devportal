@@ -2879,6 +2879,13 @@
           "type": "category",
           "children": [
             {
+              "name": "Product recommendations",
+              "slug": "product-recommendations",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Integrating product recommendations in headless or FastStore web stores",
               "slug": "integrating-product-recommendations-in-headless-or-faststore-web-stores",
               "origin": "",
@@ -16312,7 +16319,7 @@
           "children": [
             {
               "name": "My Account",
-              "slug": "vtex.mmy-account",
+              "slug": "apps/vtex.my-account",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -16530,7 +16537,7 @@
               "name": "Cart and checkout",
               "slug": "guides/cart-and-checkout",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Add to cart button",
@@ -16697,7 +16704,7 @@
               "children": [
                 {
                   "name": "Autocomplete",
-                  "slug": "apps/vtex.vtex.search/autocomplete",
+                  "slug": "apps/vtex.search/autocomplete",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -16731,8 +16738,15 @@
                   "children": []
                 },
                 {
+                  "name": "Recommendation Shelf",
+                  "slug": "apps/vtex.recommendation-shelf",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Suggestions",
-                  "slug": "apps/vtex.vtex.search/suggestions",
+                  "slug": "apps/vtex.search/suggestions",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -16807,7 +16821,7 @@
               "name": "Product display",
               "slug": "guides/product-display",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Product Customizer",
