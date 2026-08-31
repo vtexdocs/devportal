@@ -19606,6 +19606,13 @@
               "children": []
             },
             {
+              "name": "My store's login page is not displaying correctly",
+              "slug": "my-store-login-page-is-not-displaying-correctly",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "UTMs are not being applied to the cart at Checkout",
               "slug": "utms-are-not-being-applied-to-the-cart-at-checkout",
               "origin": "",
