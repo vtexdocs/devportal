@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
 import SwaggerParser from '@apidevtools/swagger-parser'
@@ -23,6 +23,7 @@ import {
 import {
   buildOverviewEndpointGroups,
   buildOverviewMetaDescription,
+  filterOpenApiSpecToEndpoint,
   getOverviewEndpointHash,
   type OverviewEndpoint,
   type OverviewEndpointGroup,
@@ -33,6 +34,7 @@ import apiReferenceStyles, {
   getOverviewEndpointMethodBadgeSx,
 } from 'styles/api-reference'
 import styles from 'styles/documentation-page'
+import Link from 'next/link.js'
 
 // Client-side logger
 const clientLogger = {
@@ -76,55 +78,66 @@ interface ReadmeSlugObj {
   apiMethod: string
 }
 
+type FetchedOpenApiSpec = {
+  spec: string
+  alreadyResolved: boolean
+}
+
+const specCache = new Map<string, Promise<FetchedOpenApiSpec>>()
+
 /**
- * Fetches OpenAPI spec and performs client-side reference resolution if needed
- * @param url The URL to fetch the OpenAPI spec from
- * @returns The OpenAPI spec with resolved references
+ * Fetches OpenAPI spec and only dereferences client-side when the API did not
+ * already resolve references. The `/api/openapi` handler sets
+ * `X-References-Resolved: true` after SwaggerParser runs on the server, so
+ * repeating that work in the browser (Catalog/Checkout are 0.5–1MB) is the
+ * main cost of hash-link endpoint renders.
  */
-async function fetchWithClientSideResolution(url: string): Promise<string> {
-  try {
+async function fetchOpenApiSpec(url: string): Promise<FetchedOpenApiSpec> {
+  const cached = specCache.get(url)
+  if (cached) {
+    return cached
+  }
+
+  const request = (async (): Promise<FetchedOpenApiSpec> => {
     const response = await fetch(url)
 
     if (!response.ok) {
       throw new Error(`Failed to fetch OpenAPI spec: ${response.status}`)
     }
 
-    // Get the spec text first
     const specText = await response.text()
+    const alreadyResolved =
+      response.headers.get('X-References-Resolved') === 'true'
 
-    // Always try to resolve references client-side in production
-    // This ensures references are properly handled even if server-side resolution fails
-    if (typeof window !== 'undefined') {
-      try {
-        // Validate it's proper JSON first
-        JSON.parse(specText)
-
-        clientLogger.info('Resolving references client-side')
-
-        // Use dereference instead of bundle to fully resolve all references
-        const parser = new SwaggerParser()
-        const dereferenced = await parser.dereference(JSON.parse(specText), {
-          dereference: {
-            circular: true, // Allow circular references
-          },
-        })
-
-        // Return the fully dereferenced spec
-        return JSON.stringify(dereferenced)
-      } catch (error) {
-        clientLogger.error(
-          `Failed to resolve references client-side: ${
-            error instanceof Error ? error.message : String(error)
-          }`
-        )
-        // If client-side resolution fails, return the original spec
-        return specText
-      }
+    if (alreadyResolved || typeof window === 'undefined') {
+      return { spec: specText, alreadyResolved }
     }
 
-    // If we're not in the browser or client-side resolution fails, return the original spec
-    return specText
+    try {
+      clientLogger.info('Resolving references client-side')
+      const parser = new SwaggerParser()
+      const dereferenced = await parser.dereference(JSON.parse(specText), {
+        dereference: {
+          circular: true,
+        },
+      })
+      return { spec: JSON.stringify(dereferenced), alreadyResolved: true }
+    } catch (error) {
+      clientLogger.error(
+        `Failed to resolve references client-side: ${
+          error instanceof Error ? error.message : String(error)
+        }`
+      )
+      return { spec: specText, alreadyResolved: false }
+    }
+  })()
+
+  specCache.set(url, request)
+
+  try {
+    return await request
   } catch (error) {
+    specCache.delete(url)
     clientLogger.error(
       `Error fetching OpenAPI spec: ${
         error instanceof Error ? error.message : String(error)
@@ -184,8 +197,10 @@ const APIPage: NextPage<Props> = ({
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     resolvedSpec: any
   }>(null)
+  const hasOpenedEndpoint = useRef(false)
   // State for client-side resolved spec
   const [resolvedSpec, setResolvedSpec] = useState<string | null>(null)
+  const [specAlreadyResolved, setSpecAlreadyResolved] = useState(false)
   const [isLoadingSpec, setIsLoadingSpec] = useState<boolean>(false)
   const [isRapiDocReady, setIsRapiDocReady] = useState<boolean>(false)
   const [errorLoadingSpec, setErrorLoadingSpec] = useState<string | null>(null)
@@ -237,11 +252,20 @@ const APIPage: NextPage<Props> = ({
   const httpMethod: MethodType | '' = getMethod()
   const endpointPath = cleanPath ? `#${cleanPath}` : slug
   const isOverview = endpointPath === slug
+  if (!isOverview) {
+    hasOpenedEndpoint.current = true
+  }
   const headTitle = isOverview ? overviewTitle : endpointNames[endpointPath]
   const defaultFocusedEndpointId = overviewEndpoints[0]
     ? getOverviewEndpointHash(
         overviewEndpoints[0].method,
         overviewEndpoints[0].path
+      )
+    : undefined
+  const activeEndpoint = cleanPath
+    ? overviewEndpoints.find(
+        ({ method, path }) =>
+          getOverviewEndpointHash(method, path) === cleanPath
       )
     : undefined
   const pag: Pagination = {
@@ -256,10 +280,40 @@ const APIPage: NextPage<Props> = ({
   }
   const [endpointPagination, setEndpointPagination] = useState(pag)
 
-  // Generate the absolute spec URL
   const specUrl = getAbsoluteUrl(`/api/openapi/${slug}`)
+  const parsedSpec = useMemo(() => {
+    if (!resolvedSpec) {
+      return null
+    }
+
+    try {
+      return JSON.parse(resolvedSpec)
+    } catch {
+      return null
+    }
+  }, [resolvedSpec])
+  const focusedSpec = useMemo(() => {
+    if (!parsedSpec || !cleanPath) {
+      return null
+    }
+
+    const focused = filterOpenApiSpecToEndpoint(
+      parsedSpec,
+      cleanPath,
+      specAlreadyResolved
+    )
+    return JSON.stringify(focused ?? parsedSpec)
+  }, [parsedSpec, cleanPath, specAlreadyResolved])
+  const shouldMountRapiDoc =
+    hasOpenedEndpoint.current && isRapiDocReady && Boolean(focusedSpec)
+  const isEndpointViewerLoading =
+    !isOverview && (isLoadingSpec || !isRapiDocReady || !focusedSpec)
 
   useEffect(() => {
+    if (isOverview) {
+      return
+    }
+
     let isMounted = true
 
     const loadRapiDoc = async () => {
@@ -281,34 +335,73 @@ const APIPage: NextPage<Props> = ({
     return () => {
       isMounted = false
     }
-  }, [])
+  }, [isOverview])
 
-  // Effect to handle client-side fetching and reference resolution
+  // Fetch the spec as soon as an endpoint is open. On overview, prefetch
+  // during idle time so the first hash click does not wait on the network.
   useEffect(() => {
-    // Only run in the browser, not during SSR
-    if (typeof window !== 'undefined') {
-      const fetchAndResolveSpec = async () => {
-        try {
+    if (typeof window === 'undefined') {
+      return
+    }
+
+    let isCancelled = false
+    let idleCallbackId: number | undefined
+    let timeoutId: number | undefined
+
+    const fetchAndResolveSpec = async () => {
+      try {
+        if (!isCancelled) {
           setIsLoadingSpec(true)
           setErrorLoadingSpec(null)
+        }
 
-          const resolvedSpecText = await fetchWithClientSideResolution(specUrl)
-          setResolvedSpec(resolvedSpecText)
-        } catch (error) {
+        const fetchedSpec = await fetchOpenApiSpec(specUrl)
+        if (!isCancelled) {
+          setResolvedSpec(fetchedSpec.spec)
+          setSpecAlreadyResolved(fetchedSpec.alreadyResolved)
+        }
+      } catch (error) {
+        if (!isCancelled) {
           setErrorLoadingSpec(
             error instanceof Error
               ? error.message
               : 'Failed to load API specification'
           )
           clientLogger.error(`Failed to fetch and resolve spec: ${error}`)
-        } finally {
+        }
+      } finally {
+        if (!isCancelled) {
           setIsLoadingSpec(false)
         }
       }
-
-      fetchAndResolveSpec()
     }
-  }, [specUrl])
+
+    if (!isOverview) {
+      fetchAndResolveSpec()
+    } else if (typeof window.requestIdleCallback === 'function') {
+      idleCallbackId = window.requestIdleCallback(
+        () => {
+          fetchAndResolveSpec()
+        },
+        { timeout: 2000 }
+      )
+    } else {
+      timeoutId = window.setTimeout(fetchAndResolveSpec, 1)
+    }
+
+    return () => {
+      isCancelled = true
+      if (
+        idleCallbackId !== undefined &&
+        typeof window.cancelIdleCallback === 'function'
+      ) {
+        window.cancelIdleCallback(idleCallbackId)
+      }
+      if (timeoutId !== undefined) {
+        window.clearTimeout(timeoutId)
+      }
+    }
+  }, [specUrl, isOverview])
 
   useEffect(() => {
     setEndpointPagination(
@@ -352,9 +445,10 @@ const APIPage: NextPage<Props> = ({
         {httpMethod && <meta name="docsearch:method" content={httpMethod} />}
       </Head>
       <Box sx={{ mx: 'auto' }}>
-        {/* Both views stay mounted so RapiDoc keeps its spec loaded. SSG
-            renders with isOverview=true, which is what makes overviews
-            indexable; `clientHash` flips the toggle on the client. */}
+        {/* Both views stay in the tree so SSG can emit the overview HTML.
+            `clientHash` flips visibility on the client. RapiDoc is mounted
+            only after the first hash navigation, with a spec filtered to
+            that operation. */}
         <Box
           data-api-reference-overview
           data-docsearch-exclude={isOverview ? undefined : true}
@@ -396,13 +490,12 @@ const APIPage: NextPage<Props> = ({
                           return (
                             <tr key={`${method}-${path}`}>
                               <td>
-                                <Box
-                                  as="a"
-                                  href={`#${endpointHash}`}
+                                <Link
+                                  href={`/docs/api-reference/${slug}#${endpointHash}`}
                                   sx={apiReferenceStyles.endpointLinkStyles}
                                 >
                                   {summary || `Open ${method} ${path}`}
-                                </Box>
+                                </Link>
                               </td>
                               <td>
                                 <Box
@@ -434,16 +527,34 @@ const APIPage: NextPage<Props> = ({
             pl: ['0px', '0px', '0px', '0px', '32px'],
           }}
         >
-          {!isOverview && (isLoadingSpec || !isRapiDocReady) && (
-            <Box
-              as="article"
-              aria-hidden="true"
-              sx={apiReferenceStyles.docsearchFallbackStyles}
-            >
-              <h1>{headTitle}</h1>
+          {isEndpointViewerLoading && (
+            <Box as="article" sx={apiReferenceStyles.endpointFallbackStyles}>
+              <h1 sx={styles.documentationTitle}>{headTitle}</h1>
+              {activeEndpoint && (
+                <Box
+                  sx={{
+                    alignItems: 'center',
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '0.75rem',
+                    mb: '1rem',
+                  }}
+                >
+                  <Box
+                    as="span"
+                    sx={getOverviewEndpointMethodBadgeSx(activeEndpoint.method)}
+                  >
+                    {activeEndpoint.method.toUpperCase()}
+                  </Box>
+                  <Box as="code" sx={apiReferenceStyles.endpointPathStyles}>
+                    {activeEndpoint.path}
+                  </Box>
+                </Box>
+              )}
               {endpoints[endpointPath]?.description && (
                 <p>{endpoints[endpointPath].description}</p>
               )}
+              {!errorLoadingSpec && <p>Loading interactive API explorer...</p>}
             </Box>
           )}
           {errorLoadingSpec && (
@@ -462,17 +573,12 @@ const APIPage: NextPage<Props> = ({
               <p>{errorLoadingSpec}</p>
             </Box>
           )}
-          {(isLoadingSpec || !isRapiDocReady) && (
-            <Box sx={{ textAlign: 'center', p: '2em' }}>
-              <p>Loading API specification...</p>
-            </Box>
-          )}
-          {isRapiDocReady && (
+          {shouldMountRapiDoc && (
             <rapi-doc
+              key={cleanPath}
               ref={rapidoc}
-              spec-url={specUrl}
+              spec={focusedSpec}
               postman-url={getAbsoluteUrl(`/api/postman/${slug}`)}
-              spec={resolvedSpec}
               layout="column"
               render-style="focused"
               // Pin RapiDoc's routePrefix to `#`. Without this it auto-picks

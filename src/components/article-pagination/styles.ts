@@ -2,6 +2,7 @@ import { SxStyleProp } from '@vtex/brand-ui'
 
 const mainContainer: SxStyleProp = {
   width: '100%',
+  minWidth: 0,
   mt: '32px',
   mb: '52px',
   maxWidth: '100%',
@@ -10,10 +11,11 @@ const mainContainer: SxStyleProp = {
 }
 const flexContainer: SxStyleProp = {
   fontWeight: 'bold',
-  gridAutoFlow: 'column',
+  width: '100%',
+  minWidth: 0,
+  gridTemplateColumns: ['minmax(0, 1fr)', 'repeat(2, minmax(0, 1fr))'],
   px: ['18px', 'initial'],
-  gap: ['16px', '20%'],
-  gridAutoColumns: '1fr',
+  gap: ['16px', '24px'],
 }
 
 const paginationBox: SxStyleProp = {
@@ -23,6 +25,8 @@ const paginationBox: SxStyleProp = {
     color: '#000711',
   },
   width: '100%',
+  minWidth: 0,
+  maxWidth: '100%',
   padding: '16px',
   borderRadius: '4px',
   border: '1px solid #E7E9EE',
@@ -31,13 +35,16 @@ const paginationBox: SxStyleProp = {
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
+  overflow: 'hidden',
 }
 
 const paginationText: SxStyleProp = {
-  whiteSpace: 'nowrap',
+  whiteSpace: ['normal', 'nowrap'],
   overflow: 'hidden',
   textOverflow: 'ellipsis',
+  overflowWrap: 'anywhere',
   width: '100%',
+  minWidth: 0,
 }
 
 const subTitle: SxStyleProp = {
@@ -47,19 +54,20 @@ const subTitle: SxStyleProp = {
 
 const paginationLink: SxStyleProp = {
   width: '100%',
-  display: 'inline-flex',
+  minWidth: 0,
+  maxWidth: '100%',
+  display: 'flex',
 }
 
 const paginationLinkNext: SxStyleProp = {
   ...paginationLink,
-  justifySelf: 'flex-end',
   textAlign: 'right',
-  gridColumnStart: '2',
+  gridColumn: ['auto', 2],
 }
 
 const paginationLinkPrevious: SxStyleProp = {
   ...paginationLink,
-  justifySelf: 'flex-start',
+  gridColumn: ['auto', 1],
 }
 
 export default {
