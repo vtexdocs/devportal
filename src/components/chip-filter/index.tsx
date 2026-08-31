@@ -1,9 +1,10 @@
 import styles from './styles'
 
 import { Box, Flex, Button, Text } from '@vtex/brand-ui'
-import { Action, ActionType } from 'components/last-updates-card/functions'
+import { Action } from 'components/last-updates-card/functions'
+import type { IconComponent } from 'utils/typings/types'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface ChipFilterProps {
   filters: string[]
@@ -27,7 +28,12 @@ export default function ChipFilter({
   const [shouldDisplayArrows, setShouldDisplayArrows] = useState<{
     left: boolean
     right: boolean
-  }>({ left: false, right: true })
+  }>({ left: false, right: false })
+
+  const totalCount = categories.reduce(
+    (sum, category) => sum + getCategoryAmount(category.type),
+    0
+  )
 
   function handleLeftArrowClick() {
     if (containerRef.current) {
@@ -46,31 +52,31 @@ export default function ChipFilter({
   }
 
   function handleContainerScroll() {
-    if (containerRef.current) {
-      const offsetWidth = 20
+    if (!containerRef.current) return
 
-      const isLeftmostScroll: boolean = containerRef.current.scrollLeft === 0
-      const isRightmostScroll: boolean =
-        containerRef.current.scrollLeft +
-          containerRef.current.clientWidth +
-          offsetWidth >=
-        containerRef.current.scrollWidth
+    const offsetWidth = 20
+    const { scrollLeft, clientWidth, scrollWidth } = containerRef.current
+    const isLeftmostScroll = scrollLeft <= 0
+    const isRightmostScroll =
+      scrollLeft + clientWidth + offsetWidth >= scrollWidth
+    const hasOverflow = scrollWidth > clientWidth + offsetWidth
 
-      if (isLeftmostScroll) {
-        return setShouldDisplayArrows({ ...shouldDisplayArrows, left: false })
-      }
-      if (isRightmostScroll) {
-        return setShouldDisplayArrows({ ...shouldDisplayArrows, right: false })
-      }
-
-      return setShouldDisplayArrows({ right: true, left: true })
-    }
+    setShouldDisplayArrows({
+      left: hasOverflow && !isLeftmostScroll,
+      right: hasOverflow && !isRightmostScroll,
+    })
   }
 
+  useEffect(() => {
+    handleContainerScroll()
+    window.addEventListener('resize', handleContainerScroll)
+    return () => window.removeEventListener('resize', handleContainerScroll)
+  }, [categories, filters])
+
   return (
-    <Flex style={styles.chipButtonWrapper}>
+    <Flex sx={styles.chipButtonWrapper}>
       {shouldDisplayArrows.left && (
-        <Box style={styles.leftArrowContainer}>
+        <Box sx={styles.leftArrowContainer}>
           <Button
             variant="tertiary"
             size="small"
@@ -79,106 +85,76 @@ export default function ChipFilter({
           >
             {`‹`}
           </Button>
-          <Box style={styles.leftArrowBlur}></Box>
+          <Box sx={styles.leftArrowBlur} />
         </Box>
       )}
       <Box
-        style={styles.chipsContainer}
+        sx={styles.chipsContainer}
         ref={containerRef}
         onScroll={handleContainerScroll}
       >
-        <Box style={styles.optionsContainer}>
-          <MainChip
-            value={'All results'}
+        <Box sx={styles.optionsContainer}>
+          <FilterChip
+            value="All results"
             isActive={!filters.length}
+            count={totalCount}
             applyCategory={() => resetFilters()}
           />
           {categories.map((category) => (
-            <Chip
+            <FilterChip
               key={category.type}
-              removeCategory={() => removeCategory(category.type)}
               value={category.title}
-              categoryAmount={getCategoryAmount(category.type)}
-              applyCategory={() => applyCategory(category.type)}
+              count={getCategoryAmount(category.type)}
+              applyCategory={() =>
+                isCategoryActive(category.type)
+                  ? removeCategory(category.type)
+                  : applyCategory(category.type)
+              }
               isActive={isCategoryActive(category.type)}
-              category={category.type}
+              Icon={category.Icon}
             />
           ))}
         </Box>
       </Box>
-      <Box style={styles.rightArrowContainer}>
-        <Button
-          variant="tertiary"
-          size="small"
-          sx={{
-            ...styles.arrowButton,
-            opacity: shouldDisplayArrows.right ? [1, 1, 1, 1, 0] : 0,
-            pointerEvents: shouldDisplayArrows.right ? 'auto' : 'none',
-          }}
-          onClick={handleRightArrowClick}
-        >{`›`}</Button>{' '}
-        <Box style={styles.rightArrowBlur}></Box>
-      </Box>
+      {shouldDisplayArrows.right && (
+        <Box sx={styles.rightArrowContainer}>
+          <Button
+            variant="tertiary"
+            size="small"
+            sx={styles.arrowButton}
+            onClick={handleRightArrowClick}
+          >
+            {`›`}
+          </Button>
+          <Box sx={styles.rightArrowBlur} />
+        </Box>
+      )}
     </Flex>
   )
 }
 
-interface ChipProps {
+interface FilterChipProps {
   value: string
   isActive: boolean
+  count: number
   applyCategory: () => void
-  categoryAmount: number
-  removeCategory: () => void
-  category: ActionType
+  Icon?: IconComponent
 }
 
-function Chip({
+function FilterChip({
   value,
   isActive,
+  count,
   applyCategory,
-  categoryAmount,
-  removeCategory,
-  category,
-}: ChipProps) {
-  function handleChipClick(active: boolean) {
-    if (active) {
-      return removeCategory()
-    }
-    applyCategory()
-  }
-
+  Icon,
+}: FilterChipProps) {
   return (
-    <Button
-      variant="tertiary"
-      size="small"
-      type="button"
-      sx={styles.getCategoryStyles(category, isActive)}
-      onClick={() => handleChipClick(isActive)}
-    >
-      {value}
-      {isActive && categoryAmount !== undefined && (
-        <Text style={styles.articlesAmount}>{categoryAmount}</Text>
-      )}
-    </Button>
-  )
-}
-
-interface MainChipProps {
-  value: string
-  isActive: boolean
-  applyCategory: () => void
-}
-
-function MainChip({ value, isActive, applyCategory }: MainChipProps) {
-  return (
-    <Button
-      variant="tertiary"
-      size="small"
-      type="button"
-      sx={isActive ? styles.activeChip : styles.inactiveChip}
-      onClick={() => applyCategory()}
-    >
-      {value}
-    </Button>
+    <Flex sx={styles.chip(isActive)} onClick={applyCategory}>
+      {Icon ? <Icon sx={styles.chipIcon} /> : null}
+      <Text className="filter-chip-title" sx={styles.chipTitle(isActive)}>
+        {value}
+      </Text>
+      <Text sx={styles.chipCount}>{count}</Text>
+    </Flex>
   )
 }

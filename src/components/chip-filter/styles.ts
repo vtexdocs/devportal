@@ -1,50 +1,86 @@
 import { SxStyleProp } from '@vtex/brand-ui'
-import { ActionType } from 'components/last-updates-card/functions'
 
 const chipButtonWrapper: SxStyleProp = {
   display: 'flex',
+  position: 'relative',
   userSelect: 'none',
   width: '100%',
+  minWidth: 0,
   alignItems: 'center',
-  marginBottom: '32px',
 }
 
 const chipsContainer: SxStyleProp = {
   scrollbarWidth: 'none',
-  '-ms-overflow-style': 'none',
-  overflow: 'scroll',
+  msOverflowStyle: 'none',
+  overflowX: 'auto',
+  overflowY: 'hidden',
   scrollBehavior: 'smooth',
   display: 'flex',
   alignItems: 'center',
+  width: '100%',
+  minWidth: 0,
+  '&::-webkit-scrollbar': {
+    display: 'none',
+  },
 }
 
 const optionsContainer: SxStyleProp = {
   display: 'flex',
+  flexWrap: 'nowrap',
   gap: '8px',
 }
 
-const chip: SxStyleProp = {
-  fontSize: '12px',
-  height: '24px',
-  textWrap: 'nowrap',
-  padding: '3px 7px',
-  borderRadius: '24px',
-  textTransform: 'none',
+const chip: (active: boolean) => SxStyleProp = (active) => ({
+  display: 'inline-flex',
+  alignItems: 'center',
+  gap: '6px',
+  height: '32px',
+  minHeight: '32px',
+  px: '12px',
+  py: 0,
+  borderRadius: '16px',
+  border: `1px solid ${active ? '#D8D8E3' : '#E7E9EE'}`,
+  backgroundColor: active ? '#F8F7FC' : '#FFFFFF',
+  cursor: 'pointer',
+  minWidth: 'max-content',
   ':hover': {
-    textDecoration: 'none',
+    borderColor: '#3A4F66',
+    '.filter-chip-title': {
+      color: '#4A596B',
+    },
   },
+})
+
+const chipIcon: SxStyleProp = {
+  width: '14px',
+  height: '14px',
+  minWidth: '14px',
+  minHeight: '14px',
+  flexShrink: 0,
 }
 
-const activeChip: SxStyleProp = {
-  ...chip,
-  backgroundColor: 'rgb(218, 218, 218)',
-  border: '1px solid rgb(160, 160, 160)',
-}
+const chipTitle: (active: boolean) => SxStyleProp = (active) => ({
+  fontSize: '13px',
+  fontWeight: active ? '600' : '500',
+  lineHeight: '16px',
+  whiteSpace: 'nowrap',
+  color: '#4A596B',
+  transition: 'color 0.15s ease-out',
+})
 
-const inactiveChip: SxStyleProp = {
-  ...chip,
-  backgroundColor: '#f4f4f4',
-  border: '1px solid #dddddd',
+const chipCount: SxStyleProp = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  px: '6px',
+  minWidth: '20px',
+  height: '18px',
+  fontSize: '11px',
+  fontWeight: '500',
+  lineHeight: '16px',
+  borderRadius: '24px',
+  backgroundColor: '#EDEAF6',
+  color: '#4A596B',
 }
 
 const arrowButton: SxStyleProp = {
@@ -78,128 +114,45 @@ const leftArrowBlur: SxStyleProp = {
 }
 
 const leftArrowContainer: SxStyleProp = {
-  position: 'relative',
+  position: 'absolute',
   display: 'flex',
-  flexShrink: '0',
-  left: 'clamp(20px, 2.5vw, 30px)',
-  zIndex: '2000',
+  alignItems: 'center',
+  left: 0,
+  top: 0,
+  bottom: 0,
+  zIndex: 2,
+  pointerEvents: 'none',
+  button: {
+    pointerEvents: 'auto',
+  },
 }
 
 const rightArrowContainer: SxStyleProp = {
-  position: 'relative',
+  position: 'absolute',
   display: 'flex',
   flexDirection: 'row-reverse',
-  flexShrink: '0',
-  right: 'clamp(20px, 2.5vw, 30px)',
-  zIndex: '2000',
-}
-
-const articlesAmount: SxStyleProp = {
-  backgroundColor: '#fff',
-  padding: '2px 8px',
-  margin: '0 2px 0 8px',
-  borderRadius: '8px',
-  fontSize: '0.8rem',
-}
-
-// Estilos personalizados para cada categoria
-const getCategoryStyles = (
-  category: ActionType,
-  isActive: boolean
-): SxStyleProp => {
-  const categoryColors = {
-    added: {
-      active: {
-        color: '#3A6E32',
-        backgroundColor: '#DFF5DB',
-        border: '1px solid #9FCDB4',
-      },
-      inactive: {
-        ...inactiveChip,
-        color: '#3A6E32',
-      },
-    },
-    deprecated: {
-      active: {
-        color: '#979797',
-        backgroundColor: '#E9E9E9',
-        border: '1px solid #979797',
-      },
-      inactive: {
-        ...inactiveChip,
-        color: '#979797',
-      },
-    },
-    fixed: {
-      active: {
-        backgroundColor: '#DEE8FE',
-        color: '#2953B2',
-        border: '1px solid #2953B2',
-      },
-      inactive: {
-        ...inactiveChip,
-        color: '#2953B2',
-      },
-    },
-    improved: {
-      active: {
-        backgroundColor: '#FFF3DA',
-        color: '#F5781E',
-        border: '1px solid #FAB42B',
-      },
-      inactive: {
-        ...inactiveChip,
-        color: '#F5781E',
-      },
-    },
-    removed: {
-      active: {
-        backgroundColor: '#FFDFDB',
-        color: '#F83D24',
-        border: '1px solid #F83D24',
-      },
-      inactive: {
-        ...inactiveChip,
-        color: '#F83D24',
-      },
-    },
-    info: {
-      active: {
-        backgroundColor: '#E0F2F1',
-        color: '#3A6E32',
-        border: '1px solid #3A6E32',
-      },
-      inactive: {
-        ...inactiveChip,
-        color: '#3A6E32',
-      },
-    },
-  }
-
-  type CategoryColorKey = keyof typeof categoryColors
-  const effectiveCategory: CategoryColorKey =
-    category in categoryColors ? (category as CategoryColorKey) : 'info'
-
-  const categoryStyle = categoryColors[effectiveCategory]
-  const style = isActive ? categoryStyle.active : categoryStyle.inactive
-
-  return {
-    ...chip,
-    ...style,
-  }
+  alignItems: 'center',
+  right: 0,
+  top: 0,
+  bottom: 0,
+  zIndex: 2,
+  pointerEvents: 'none',
+  button: {
+    pointerEvents: 'auto',
+  },
 }
 
 export default {
   leftArrowBlur,
   rightArrowBlur,
-  inactiveChip,
-  activeChip,
   arrowButton,
   chipsContainer,
   optionsContainer,
   chipButtonWrapper,
   leftArrowContainer,
   rightArrowContainer,
-  articlesAmount,
-  getCategoryStyles,
+  chip,
+  chipIcon,
+  chipTitle,
+  chipCount,
 }
