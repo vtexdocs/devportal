@@ -1,14 +1,20 @@
-import { Flex, Box } from '@vtex/brand-ui'
-import type { ReactElement } from 'react'
-import { ThemeProvider } from '@vtex/brand-ui'
+import { Flex, Box, ThemeProvider } from '@vtex/brand-ui'
+import { useContext, type ReactElement } from 'react'
+import { useRouter } from 'next/router'
 
 import styles from 'styles/documentation-page'
-import Header from 'components/header'
 
-import { Sidebar, LibraryContextProvider, Footer } from '@vtexdocs/components'
+import {
+  Sidebar,
+  LibraryContextProvider,
+  Footer,
+  Header,
+  AnnouncementBar,
+} from '@vtexdocs/components'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
-import { documentationData, updatesData } from 'utils/constants'
+import { documentationData, updatesData, adminData } from 'utils/constants'
+import { PreviewContext } from 'utils/contexts/preview'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -29,6 +35,9 @@ export default function Layout({
   sectionSelected,
   parentsArray,
 }: Props) {
+  const router = useRouter()
+  const { branchPreview } = useContext(PreviewContext)
+
   return (
     <ThemeProvider>
       <LibraryContextProvider
@@ -66,7 +75,25 @@ export default function Layout({
 					`}
           </Script>
         </div>
-        <Header isEditor={isEditor ? true : false} />
+        <Header
+          variant="devportal"
+          isEditor={isEditor ? true : false}
+          editorSections={adminData}
+          announcement={
+            router.isPreview ? (
+              <AnnouncementBar
+                closable={false}
+                type="warning"
+                label={`🚧 You are currently using branch ${branchPreview} in preview mode. This content may differ from the published version.`}
+                action={{
+                  button: 'EXIT PREVIEW MODE',
+                  href: '/api/disable-preview',
+                  target: '_self',
+                }}
+              />
+            ) : undefined
+          }
+        />
         <Flex sx={styles.container}>
           {!hideSidebar && <Sidebar parentsArray={parentsArray} />}
           <Box sx={styles.mainContainer}>{children}</Box>

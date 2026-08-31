@@ -2,7 +2,6 @@
 CustomDownloaderMiddleware
 """
 
-import time
 import requests
 
 from scrapy.http import HtmlResponse
@@ -34,7 +33,16 @@ inlineShadow(document);
 return document.documentElement.outerHTML;
 """
 
+# arguments[0] is the expected hash (without #). Require the remounted
+# rapi-doc to match so we don't flatten the previous endpoint.
 WAIT_FOR_ENDPOINT_JS = """
+var expected = arguments[0];
+if (expected) {
+  var hash = decodeURIComponent((window.location.hash || '').slice(1));
+  if (hash !== expected) {
+    return false;
+  }
+}
 var endpoint = document.querySelector('[data-api-reference-endpoint]');
 if (!endpoint) {
   return false;
@@ -45,6 +53,12 @@ if (window.getComputedStyle(endpoint).display === 'none') {
 var rapi = endpoint.querySelector('rapi-doc');
 if (!rapi || !rapi.shadowRoot) {
   return false;
+}
+if (expected) {
+  var gotoPath = rapi.getAttribute('goto-path') || '';
+  if (gotoPath && gotoPath !== expected) {
+    return false;
+  }
 }
 return !!rapi.shadowRoot.querySelector(
   'h2[part="section-operation-summary"], [part="section-operation-summary"]'
@@ -79,8 +93,6 @@ class CustomDownloaderMiddleware:
                 encoding='utf8'
             )
 
-        print("Getting " + request.url + " from selenium")
-
         body, url = self._fetch_endpoint_page(request.url, spider)
         if not urlparse(url).fragment:
             url = request.url
@@ -91,12 +103,36 @@ class CustomDownloaderMiddleware:
             encoding='utf8'
         )
 
+    def _same_document(self, parsed):
+        try:
+            current = urlparse(self.driver.current_url)
+        except (WebDriverException, InvalidSessionIdException):
+            return False
+        return (
+            current.scheme == parsed.scheme
+            and current.netloc == parsed.netloc
+            and current.path == parsed.path
+        )
+
+    def _navigate_to_endpoint(self, url):
+        parsed = urlparse(unquote_plus(url))
+        fragment = parsed.fragment
+        if fragment and self._same_document(parsed):
+            print("Hash-nav " + url + " from selenium")
+            self.driver.execute_script(
+                "window.location.hash = arguments[0]", fragment
+            )
+            return fragment, True
+        print("Getting " + url + " from selenium")
+        self.driver.get(unquote_plus(url))
+        return fragment, False
+
     def _fetch_endpoint_page(self, url, spider):
         last_error = None
         for _ in range(2):
             try:
-                self.driver.get(unquote_plus(url))
-                self._wait_for_endpoint_view(spider)
+                fragment, reused = self._navigate_to_endpoint(url)
+                self._wait_for_endpoint_view(spider, fragment, reused)
                 body = self.driver.execute_script(FLATTEN_SHADOW_DOM_JS)
                 return body, self.driver.current_url
             except (InvalidSessionIdException, WebDriverException) as err:
@@ -110,15 +146,17 @@ class CustomDownloaderMiddleware:
         self.driver = BrowserHandler.restart()
         CustomDownloaderMiddleware.driver = self.driver
 
-    def _wait_for_endpoint_view(self, spider):
-        timeout = max(int(spider.js_wait or 1), 8)
+    def _wait_for_endpoint_view(self, spider, fragment, reused_document):
+        # Spec is already in memory on hash-nav; don't sit on js_wait (12s).
+        timeout = 3 if reused_document else int(spider.js_wait or 8)
         try:
             WebDriverWait(self.driver, timeout).until(
-                lambda driver: driver.execute_script(WAIT_FOR_ENDPOINT_JS)
+                lambda driver: driver.execute_script(
+                    WAIT_FOR_ENDPOINT_JS, fragment
+                )
             )
-            time.sleep(0.5)
         except TimeoutException:
-            time.sleep(min(timeout, 3))
+            pass
 
     def process_response(self, request, response, spider):
         # Since scrappy use start_urls and stop_urls before creating the request
