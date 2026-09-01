@@ -5,9 +5,8 @@ import ReleaseNote from '../release-note'
 import styles from 'components/release-section/styles'
 import { getMessages } from 'utils/get-messages'
 import { UpdateElement } from 'utils/typings/types'
-import ChipFilter from 'components/chip-filter'
 import { Action, actions } from 'components/last-updates-card/functions'
-import { ListingFilter } from '@vtexdocs/components'
+import { ChipFilter, ListingFilter } from '@vtexdocs/components'
 
 const messages = getMessages()
 

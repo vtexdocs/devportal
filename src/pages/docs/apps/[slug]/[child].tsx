@@ -3,7 +3,6 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { serializeWithFallback } from 'utils/serializeWithFallback'
 import type { Item } from '@vtexdocs/components'
-import Breadcrumb from 'components/breadcrumb'
 import ArticlePagination from 'components/article-pagination'
 import jp from 'jsonpath'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
@@ -13,7 +12,11 @@ import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
 import getChildDocApp from 'utils/getChildDocApp'
 import { getLogger } from 'utils/logging/log-util'
 
-import { MarkdownRenderer } from '@vtexdocs/components'
+import {
+  MarkdownRenderer,
+  Breadcrumb,
+  FeedbackSection,
+} from '@vtexdocs/components'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 import {
@@ -32,7 +35,7 @@ import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { officialVendors } from 'utils/constants'
-import FeedbackSection from 'components/feedback-section'
+import getSiteUrl from 'utils/getSiteUrl'
 
 interface IParams extends ParsedUrlQuery {
   slug: string
@@ -103,7 +106,7 @@ const AppChildPage: NextPage<Props> = ({
             <Box sx={styles.articleBox}>
               <Box sx={styles.contentContainer}>
                 <header>
-                  <Breadcrumb breadcumbList={breadcumbList} />
+                  <Breadcrumb breadcrumbList={breadcumbList} />
                   <Text sx={styles.documentationTitle} className="title">
                     {title}
                   </Text>
@@ -149,9 +152,9 @@ const AppChildPage: NextPage<Props> = ({
               <TableOfContents headingList={headingList}>
                 <FeedbackSection
                   slug={slug}
-                  small={true}
+                  small
                   suggestEdits={false}
-                  sectionSelected="apps"
+                  pageUrl={`${getSiteUrl()}/docs/apps/${slug}`}
                 />
               </TableOfContents>
             </Box>

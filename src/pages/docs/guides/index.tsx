@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Fragment, useContext } from 'react'
 import { Box, Text, Grid, Flex, Link } from '@vtex/brand-ui'
-import Tooltip from 'components/tooltip'
+import { Tooltip } from '@vtexdocs/components'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
