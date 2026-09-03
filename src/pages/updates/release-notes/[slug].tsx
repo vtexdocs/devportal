@@ -13,8 +13,11 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from '@vtexdocs/components'
-import { MarkdownRenderer, OnThisPage } from '@vtexdocs/components'
-import FeedbackSection from 'components/feedback-section'
+import {
+  FeedbackSection,
+  MarkdownRenderer,
+  OnThisPage,
+} from '@vtexdocs/components'
 import ArticlePagination from 'components/article-pagination'
 
 import { removeHTML } from 'utils/string-utils'

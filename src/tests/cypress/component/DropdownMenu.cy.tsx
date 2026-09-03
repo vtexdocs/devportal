@@ -1,6 +1,6 @@
 import React from 'react'
 import { mount } from 'cypress/react18'
-import DropdownMenu from '../../../components/dropdown-menu'
+import { DropdownMenu } from '@vtexdocs/components'
 import { ThemeProvider } from '@vtex/brand-ui'
 import {
   documentationData,
@@ -24,7 +24,7 @@ describe('DropdownMenu Component', () => {
   it('renders documentation and updates sections when not in editor mode', () => {
     mount(
       <ThemeProvider>
-        <DropdownMenu isEditor={false} />
+        <DropdownMenu sections={[documentationData, updatesData]} />
       </ThemeProvider>
     )
 
@@ -51,7 +51,7 @@ describe('DropdownMenu Component', () => {
   it('renders only admin section when in editor mode', () => {
     mount(
       <ThemeProvider>
-        <DropdownMenu isEditor={true} />
+        <DropdownMenu sections={[adminData]} />
       </ThemeProvider>
     )
 
@@ -73,7 +73,7 @@ describe('DropdownMenu Component', () => {
   it('applies correct styles to containers', () => {
     mount(
       <ThemeProvider>
-        <DropdownMenu isEditor={false} />
+        <DropdownMenu sections={[documentationData, updatesData]} />
       </ThemeProvider>
     )
 
@@ -92,7 +92,7 @@ describe('DropdownMenu Component', () => {
   it('renders DocumentationCard components with correct props', () => {
     mount(
       <ThemeProvider>
-        <DropdownMenu isEditor={false} />
+        <DropdownMenu sections={[documentationData, updatesData]} />
       </ThemeProvider>
     )
 

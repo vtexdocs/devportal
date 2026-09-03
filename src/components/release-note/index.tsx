@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { Flex, Timeline, Text, Box, Button, IconCaret } from '@vtex/brand-ui'
+import { Flex, Timeline, Text, Box, IconCaret } from '@vtex/brand-ui'
 
 import type { UpdateElement } from 'utils/typings/types'
 import { getAction } from './../last-updates-card/functions'
@@ -52,9 +52,9 @@ const ReleaseNote = ({
 
   return (
     <Flex sx={styles.releaseContainer}>
-      <Button
-        size="regular"
-        variant="tertiary"
+      <Box
+        as="button"
+        type="button"
         onMouseOver={handleMouseOver}
         onMouseLeave={handleMouseOut}
         sx={
@@ -62,22 +62,25 @@ const ReleaseNote = ({
             ? styles.arrowIconActive
             : styles.arrowIcon
         }
-        icon={() => (
-          <IconCaret
-            direction={releaseElementStatus ? 'down' : 'right'}
-            size={24}
-          />
-        )}
+        aria-expanded={releaseElementStatus}
+        aria-label={
+          releaseElementStatus ? 'Collapse release note' : 'Expand release note'
+        }
         onClick={() => {
           toggleReleaseElementStatus(!releaseElementStatus)
         }}
-      />
+      >
+        <IconCaret
+          direction={releaseElementStatus ? 'down' : 'right'}
+          size={16}
+        />
+      </Box>
       <Timeline.Event
         sx={styles.timeLineBar}
         title={<Text sx={styles.actionType}>{actionValue?.title}</Text>}
         icon={
           ActionIcon ? (
-            <Box>
+            <Box sx={styles.actionIconWrapper}>
               <ActionIcon sx={styles.actionIcon} />
             </Box>
           ) : null
@@ -86,10 +89,11 @@ const ReleaseNote = ({
         <Flex sx={styles.content}>
           <Link href={`release-notes/${slug}`}>
             <Text
+              className="release-title"
               onMouseOver={handleMouseOver}
               onMouseLeave={handleMouseOut}
               sx={
-                releaseElementStatus || onHover
+                releaseElementStatus
                   ? styles.releaseTitleActive
                   : styles.releaseTitle
               }

@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import { Box, Text, Flex, Link } from '@vtex/brand-ui'
-import Breadcrumb from 'components/breadcrumb'
 
-import FeedbackSection from 'components/feedback-section'
 import SeeAlsoSection from 'components/see-also-section'
 import {
+  AskAIMenu,
+  Breadcrumb,
   Contributors,
   EditIcon,
+  FeedbackModal,
+  FeedbackSection,
   Item,
   MarkdownRenderer,
   OnThisPage,
@@ -21,9 +23,8 @@ import { ContributorsType } from 'utils/getFileContributors'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
 import ReactMarkdown from 'react-markdown'
 import { RowItem } from 'components/faststore-components/PropsSection/PropsSection'
-import FeedbackModal from 'components/feedback-modal'
 import { useState } from 'react'
-import AskAIMenu from 'components/ask-ai'
+import getSiteUrl from 'utils/getSiteUrl'
 
 export interface MarkDownProps {
   slug: string
@@ -72,6 +73,7 @@ const ArticleRender = ({
   const pagePath =
     sectionSelected === 'Troubleshooting' ? 'troubleshooting' : 'guides'
   const urlToEdit = `https://github.com/vtexdocs/dev-portal-content/edit/main/${filePath}`
+  const pageUrl = `${getSiteUrl()}/docs/${pagePath}/${slug}`
 
   return (
     <>
@@ -97,7 +99,7 @@ const ArticleRender = ({
               <article>
                 <header>
                   <Flex sx={{ justifyContent: 'space-between' }}>
-                    <Breadcrumb breadcumbList={breadcumbList} />
+                    <Breadcrumb breadcrumbList={breadcumbList} />
                   </Flex>
                   <Box sx={styles.documentationTitle}>
                     <ReactMarkdown
@@ -149,9 +151,19 @@ const ArticleRender = ({
               <Box sx={styles.bottomContributors}>
                 <Contributors contributors={contributors} />
               </Box>
-              <FeedbackSection docPath={filePath} slug={slug} />
+              <FeedbackSection
+                slug={slug}
+                urlToEdit={urlToEdit}
+                pageUrl={pageUrl}
+              />
             </Box>
-            {hideTOC && <FeedbackSection docPath={filePath} slug={slug} />}
+            {hideTOC && (
+              <FeedbackSection
+                slug={slug}
+                urlToEdit={urlToEdit}
+                pageUrl={pageUrl}
+              />
+            )}
             {isListed && (
               <ArticlePagination
                 hidePaginationNext={
@@ -171,11 +183,10 @@ const ArticleRender = ({
               <TableOfContents headingList={headingList}>
                 <Box sx={styles.divider}>
                   <FeedbackSection
-                    sectionSelected={pagePath}
-                    docPath={filePath}
                     slug={slug}
-                    small={true}
+                    small
                     suggestEdits={false}
+                    pageUrl={pageUrl}
                   />
                   <Box
                     as="button"
@@ -189,7 +200,7 @@ const ArticleRender = ({
                   <FeedbackModal
                     isOpen={isModalOpen}
                     onClose={() => setIsModalOpen(false)}
-                    initialMessage={`https://developers.vtex.com/docs/${pagePath}/${slug}`}
+                    pageUrl={pageUrl}
                   />
                   <Link
                     target="_blank"
@@ -200,7 +211,11 @@ const ArticleRender = ({
                     <EditIcon size={18} />
                     <Text>Suggest edits (GitHub)</Text>
                   </Link>
-                  <AskAIMenu slug={slug} filePath={filePath} />
+                  <AskAIMenu
+                    filePath={filePath}
+                    pageUrl={`https://developers.vtex.com/docs/${pagePath}/${slug}`}
+                    rawContentBaseUrl="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/"
+                  />
                 </Box>
               </TableOfContents>
             </Box>

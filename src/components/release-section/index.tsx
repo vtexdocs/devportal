@@ -5,9 +5,8 @@ import ReleaseNote from '../release-note'
 import styles from 'components/release-section/styles'
 import { getMessages } from 'utils/get-messages'
 import { UpdateElement } from 'utils/typings/types'
-import ChipFilter from 'components/chip-filter'
 import { Action, actions } from 'components/last-updates-card/functions'
-import { ListingFilter } from '@vtexdocs/components'
+import { ChipFilter, ListingFilter } from '@vtexdocs/components'
 
 const messages = getMessages()
 
@@ -112,52 +111,67 @@ const ReleaseSection = ({
 
   return (
     <Box sx={styles.outerContainer}>
-      <Text sx={styles.sectionTitle}>
-        {messages['release_notes_page.title']}
-      </Text>
-      <Text sx={styles.sectionSubtitle}>
-        {messages['release_notes_page.subtitle']}
-      </Text>
+      <Box sx={styles.header}>
+        <Text as="h1" sx={styles.sectionTitle}>
+          {messages['release_notes_page.title']}
+        </Text>
+        <Text sx={styles.sectionSubtitle}>
+          {messages['release_notes_page.subtitle']}
+        </Text>
+      </Box>
 
       <Box sx={styles.sectionDivider} role="separator" aria-hidden="true">
         <hr aria-hidden="true" />
       </Box>
 
-      <ListingFilter
-        filterName="Products"
-        checkBoxFilter={availableTags}
-        onApply={(newFilters) => setTagFilters(newFilters.checklist)}
-        selectedCheckboxes={tagFilters}
-      />
+      <Box sx={styles.filtersContainer}>
+        <ListingFilter
+          filterName="Products"
+          checkBoxFilter={availableTags}
+          onApply={(newFilters) => setTagFilters(newFilters.checklist)}
+          selectedCheckboxes={tagFilters}
+        />
 
-      <ChipFilter
-        removeCategory={handleFilterRemoval}
-        resetFilters={handleFilterReset}
-        filters={actionTypeFilters}
-        getCategoryAmount={getCategoryAmount}
-        categories={chipCategories}
-        applyCategory={handleCategoriesSelection}
-      />
+        <Box sx={styles.chipsWrapper}>
+          <ChipFilter
+            removeCategory={handleFilterRemoval}
+            resetFilters={handleFilterReset}
+            filters={actionTypeFilters}
+            getCategoryAmount={getCategoryAmount}
+            categories={chipCategories}
+            applyCategory={handleCategoriesSelection}
+          />
+        </Box>
+      </Box>
 
-      {visibleGroups.map((group, gIdx) => (
-        <React.Fragment key={group.label}>
-          <Text sx={styles.releaseMonth}>{group.label}</Text>
+      {visibleGroups.length === 0 ? (
+        <Text sx={styles.noResults}>No results found</Text>
+      ) : (
+        <Box sx={styles.timeline}>
+          {visibleGroups.map((group, gIdx) => (
+            <Box key={group.label} sx={styles.monthGroup}>
+              <Text as="h2" sx={styles.releaseMonth}>
+                {group.label}
+              </Text>
 
-          {group.items.map((release, idx) => (
-            <ReleaseNote
-              key={release.slug}
-              isFirst={gIdx === 0 && idx === 0}
-              {...release}
-            />
+              {group.items.map((release, idx) => (
+                <ReleaseNote
+                  key={release.slug}
+                  isFirst={gIdx === 0 && idx === 0}
+                  {...release}
+                />
+              ))}
+            </Box>
           ))}
-        </React.Fragment>
-      ))}
+        </Box>
+      )}
 
       {visibleCount < totalItems && (
-        <Box sx={{ textAlign: 'center', mt: 4 }}>
+        <Box sx={styles.seeMoreContainer}>
           <Button
             onClick={handleSeeMore}
             variant="tertiary"
+            sx={styles.seeMoreButton}
             aria-label={`See more ${totalItems - visibleCount} items`}
           >
             See more ({totalItems - visibleCount} more)

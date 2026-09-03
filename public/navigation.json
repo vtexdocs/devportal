@@ -19848,6 +19848,21 @@
           "type": "category",
           "children": [
             {
+              "name": "September",
+              "slug": "september-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "VTEX Ads API: New endpoint for product results by campaign",
+                  "slug": "2026-09-02-vtex-ads-api-new-endpoint-for-product-results-by-campaign",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "August",
               "slug": "august-2026",
               "origin": "",
@@ -19868,8 +19883,22 @@
                   "children": []
                 },
                 {
+                  "name": "B2B Organizations GraphQL: optional status on create mutations",
+                  "slug": "2026-08-24-b2b-organizations-graphql-optional-status-on-create-mutations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore Release Notes — Version 4.5.0",
                   "slug": "2026-08-10-faststore-release-notes-4-5-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Ads API: Rate limit on Reports endpoints",
+                  "slug": "2026-08-04-vtex-ads-api-reports-rate-limit",
                   "origin": "",
                   "type": "markdown",
                   "children": []

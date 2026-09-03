@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Head from 'next/head'
 import { Box, Text, Flex } from '@vtex/brand-ui'
-import CopyButton from 'components/copy-button'
 import { ResizeIcon } from '@vtexdocs/components'
 import Auth from 'components/auth'
 import PageHeader from 'components/page-header'
 import type { Page } from 'utils/typings/types'
 import image from '../../../public/images/editor.png'
 
-import { MarkdownRenderer } from '@vtexdocs/components'
+import { MarkdownRenderer, CopyButton } from '@vtexdocs/components'
 import { serialize } from 'next-mdx-remote/serialize'
 
 import remarkGFM from 'remark-gfm'
