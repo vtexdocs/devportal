@@ -3355,6 +3355,20 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Integrating with the abandoned cart webhook",
+              "slug": "integrating-with-the-abandoned-cart-webhook",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Troubleshooting: Abandoned cart webhook",
+              "slug": "troubleshooting-abandoned-cart-webhook",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         }
