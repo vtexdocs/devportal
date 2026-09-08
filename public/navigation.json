@@ -19854,6 +19854,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 4.7.0",
+                  "slug": "2026-09-08-faststore-release-notes-4-7-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "VTEX Ads API: New endpoint for product results by campaign",
                   "slug": "2026-09-02-vtex-ads-api-new-endpoint-for-product-results-by-campaign",
                   "origin": "",
