@@ -1,11 +1,10 @@
 import { Fragment, useContext } from 'react'
-import { Box, Flex, Link, Text } from '@vtex/brand-ui'
+import { Box, Link, Text } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import getNavigation from 'utils/getNavigation'
 import PageHeader from 'components/page-header'
-
-import WhatsNextCard from 'components/whats-next-card'
+import { WhatsNextCard } from '@vtexdocs/components'
 
 import { getMessages } from 'utils/get-messages'
 import { whatsNextData, resources } from 'utils/constants'
@@ -50,11 +49,11 @@ const AppDevelopmentPage: NextPage<Props> = ({ branch }) => {
           imageAlt={messages['app_development_page.title']}
         />
         <Box sx={styles.contentContainer}>
-          <Flex sx={styles.cardsContainer}>
+          <Box sx={styles.cardsContainer}>
             {whatsNextData.map((whatsNext) => (
               <WhatsNextCard {...whatsNext} key={whatsNext.title} />
             ))}
-          </Flex>
+          </Box>
           <Box sx={styles.resourcesSectionContainer}>
             <Text sx={styles.contentDescription}>
               Learn more about our resources for developers in the{' '}

@@ -14,11 +14,11 @@ import APIGuideContextProvider from 'utils/contexts/api-guide'
 
 import type { Item } from '@vtexdocs/components'
 import {
+  ArticlePagination,
   FeedbackSection,
   MarkdownRenderer,
   OnThisPage,
 } from '@vtexdocs/components'
-import ArticlePagination from 'components/article-pagination'
 
 import { removeHTML } from 'utils/string-utils'
 import {
@@ -33,7 +33,10 @@ import getReleasePaths from 'utils/getReleasePaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
-import { getReleaseDate } from 'components/release-note/functions'
+import {
+  getReleaseDate,
+  getReleaseNoteDateFromSlug,
+} from 'components/release-note/functions'
 import { ActionType, getAction } from 'components/last-updates-card/functions'
 
 import styles from 'styles/documentation-page'
@@ -48,8 +51,16 @@ interface Props {
   branch: string
   isListed: boolean
   pagination: {
-    previousDoc: { slug: string | null; name: string | null }
-    nextDoc: { slug: string | null; name: string | null }
+    previousDoc: {
+      slug: string | null
+      name: string | null
+      createdAt?: string | null
+    }
+    nextDoc: {
+      slug: string | null
+      name: string | null
+      createdAt?: string | null
+    }
   }
 }
 
@@ -222,18 +233,18 @@ export const getStaticProps: GetStaticProps = async ({
     const entryIndex = entries.findIndex(
       (entry) => entry.slug === `/updates/release-notes/${slug}`
     )
+    const previousEntry = entries[entryIndex + 1]
+    const nextEntry = entries[entryIndex - 1]
     const pagination = {
       previousDoc: {
-        slug: entries[entryIndex + 1]
-          ? `/${entries[entryIndex + 1].slug}`
-          : null,
-        name: entries[entryIndex + 1] ? entries[entryIndex + 1].name : null,
+        slug: previousEntry ? previousEntry.slug : null,
+        name: previousEntry ? previousEntry.name : null,
+        createdAt: getReleaseNoteDateFromSlug(previousEntry?.slug),
       },
       nextDoc: {
-        slug: entries[entryIndex - 1]
-          ? `/${entries[entryIndex - 1].slug}`
-          : null,
-        name: entries[entryIndex - 1] ? entries[entryIndex - 1].name : null,
+        slug: nextEntry ? nextEntry.slug : null,
+        name: nextEntry ? nextEntry.name : null,
+        createdAt: getReleaseNoteDateFromSlug(nextEntry?.slug),
       },
     }
     /****/

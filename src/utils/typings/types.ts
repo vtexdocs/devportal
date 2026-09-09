@@ -1,7 +1,12 @@
 import { NextPage } from 'next'
 import { IconProps } from '@vtex/brand-ui'
 
-import type { TroubleshootingItem } from '@vtexdocs/components'
+import type {
+  ContributorsType,
+  Item,
+  TroubleshootingItem,
+  WhatsNextDataElement,
+} from '@vtexdocs/components'
 
 import { ActionType } from 'components/last-updates-card/functions'
 import {
@@ -11,6 +16,9 @@ import {
   AdminTitle,
   ResourceTitleTroubleshooting,
 } from './unionTypes'
+import { ReactNode } from 'react'
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
+import { RowItem } from 'components/faststore-components/PropsSection/PropsSection'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type Page<P = {}, IP = P> = NextPage<P, IP> & {
@@ -51,17 +59,10 @@ export type UpdateElement = {
   type?: ActionType
   tags?: string[]
 }
-export type { TroubleshootingItem }
+export type { TroubleshootingItem, WhatsNextDataElement }
 export interface TroubleshootingCardsElements extends TroubleshootingItem {
   createdAt?: string
   linkTitle: string
-}
-
-export type WhatsNextDataElement = {
-  title: string
-  description: string
-  linkTitle: string
-  linkTo: string
 }
 
 export type CodeSamplesElement = {
@@ -88,4 +89,46 @@ export type ResourceDataTroubleshooting = {
 export type SelectOption = {
   id: string
   label: string
+}
+
+export type SeeAlsoDoc = {
+  url: string
+  title: string
+  category: string
+}
+
+export interface MarkDownProps {
+  slug: string
+  branch: string
+  serialized: MDXRemoteSerializeResult
+  contributors: ContributorsType[]
+  headingList: Item[]
+  seeAlsoData: SeeAlsoDoc[]
+  pagination: {
+    previousDoc: { slug: string | null; name: string | null }
+    nextDoc: { slug: string | null; name: string | null }
+  }
+  breadcumbList: { slug: string; name: string; type: string }[]
+  sectionSelected: string
+  filePath: string
+  hideTOC: boolean
+  mdxProps?: {
+    componentName: string
+    componentAttributes: RowItem[]
+  }[]
+  isListed: boolean
+  hidden?: boolean
+}
+
+export interface ArticleRenderProps extends MarkDownProps {
+  children?: ReactNode
+  showReadingTime?: boolean
+  showAskAIMenu?: boolean
+  showAuthor?: boolean
+  showContributors?: boolean
+  showFeedbackSection?: boolean
+  showSuggestEdits?: boolean
+  showArticlePagination?: boolean
+  showTableOfContents?: boolean
+  showDateText?: boolean
 }

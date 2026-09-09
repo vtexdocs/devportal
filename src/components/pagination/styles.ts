@@ -24,14 +24,15 @@ const container: SxStyleProp = {
   '.pagination': {
     listStyle: 'none',
     display: 'flex',
-    gap: '15px',
-    fontSize: '18px',
+    gap: ['8px', '15px'],
+    fontSize: ['14px', '18px'],
     lineHeight: '24px',
     alignItems: 'center',
     justifyContent: 'center',
     padding: '0',
     flexWrap: 'wrap',
-    mx: '24px',
+    mx: ['0', '24px'],
+    my: '16px',
   },
   '.active': {
     backgroundColor: '#FFE0EF',

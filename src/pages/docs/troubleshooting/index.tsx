@@ -1,5 +1,5 @@
 import { Fragment, useState, useMemo, useEffect } from 'react'
-import { Box, Flex, Link, Text } from '@vtex/brand-ui'
+import { Box, Link, Text } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
@@ -102,7 +102,7 @@ const TroubleshootingPage: NextPage<Props> = ({
             tagFilter={availableSymptomFilters}
             filterName="Area"
             checkBoxFilter={availableDomainFilters}
-            buttonSx={{ mt: '16px', mb: '12px' }}
+            buttonSx={{ mt: ['8px', '16px'], mb: '12px' }}
             onApply={(newFilters) => {
               setSymptomFilters(newFilters.tag)
               setDomainFilters(newFilters.checklist)
@@ -118,7 +118,7 @@ const TroubleshootingPage: NextPage<Props> = ({
           />
           {paginatedResult.length > 0 ? (
             paginatedResult.map((item: TroubleshootingCardsElements) => (
-              <Flex key={item.slug}>
+              <Box key={item.slug} sx={{ width: '100%', minWidth: 0 }}>
                 <TroubleshootingCard
                   title={item.title}
                   description={item.description}
@@ -127,7 +127,7 @@ const TroubleshootingPage: NextPage<Props> = ({
                   domainFilters={item?.domainFilters}
                   symptomFilters={item?.symptomFilters}
                 />
-              </Flex>
+              </Box>
             ))
           ) : (
             <Text sx={styles.noResultsText}>No results found</Text>

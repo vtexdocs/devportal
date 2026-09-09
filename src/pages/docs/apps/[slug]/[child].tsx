@@ -3,7 +3,6 @@ import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { serializeWithFallback } from 'utils/serializeWithFallback'
 import type { Item } from '@vtexdocs/components'
-import ArticlePagination from 'components/article-pagination'
 import jp from 'jsonpath'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
@@ -13,9 +12,12 @@ import getChildDocApp from 'utils/getChildDocApp'
 import { getLogger } from 'utils/logging/log-util'
 
 import {
+  ArticlePagination,
   MarkdownRenderer,
   Breadcrumb,
   FeedbackSection,
+  SeeAlsoSection,
+  TableOfContents,
 } from '@vtexdocs/components'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import APIGuideContextProvider from 'utils/contexts/api-guide'
@@ -29,9 +31,7 @@ import {
 } from '@vtex/brand-ui'
 import styles from 'styles/documentation-page'
 import stylesApps from 'styles/apps-page'
-import { TableOfContents } from '@vtexdocs/components'
 import Head from 'next/head'
-import SeeAlsoSection from 'components/see-also-section'
 import { ParsedUrlQuery } from 'querystring'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import { officialVendors } from 'utils/constants'
