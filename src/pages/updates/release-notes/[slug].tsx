@@ -237,12 +237,12 @@ export const getStaticProps: GetStaticProps = async ({
     const nextEntry = entries[entryIndex - 1]
     const pagination = {
       previousDoc: {
-        slug: previousEntry ? `/${previousEntry.slug}` : null,
+        slug: previousEntry ? previousEntry.slug : null,
         name: previousEntry ? previousEntry.name : null,
         createdAt: getReleaseNoteDateFromSlug(previousEntry?.slug),
       },
       nextDoc: {
-        slug: nextEntry ? `/${nextEntry.slug}` : null,
+        slug: nextEntry ? nextEntry.slug : null,
         name: nextEntry ? nextEntry.name : null,
         createdAt: getReleaseNoteDateFromSlug(nextEntry?.slug),
       },
