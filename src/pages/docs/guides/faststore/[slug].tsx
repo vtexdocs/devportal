@@ -1,13 +1,6 @@
 import { useContext, useEffect } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
-import remarkGFM from 'remark-gfm'
-import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
-import remarkMermaid from 'utils/remark_plugins/mermaid'
-import remarkImages from 'utils/remark_plugins/plaiceholder'
-import rehypeHighlight from 'rehype-highlight'
-import hljsCurl from 'highlightjs-curl'
-import path from 'path'
 import jp from 'jsonpath'
 
 import { getComponentPropsFrom } from 'components/faststore-components/utilities/propsSection'
@@ -15,18 +8,17 @@ import { getComponentPropsFrom } from 'components/faststore-components/utilities
 import { PreviewContext } from 'utils/contexts/preview'
 import getFastStorePaths from 'utils/getFastStorePaths'
 import getGithubFile from 'utils/getGithubFile'
-import getHeadings from 'utils/getHeadings'
 import { flattenJSON, getKeyByValue, getParents } from 'utils/navigation-utils'
 import getFileContributors from 'utils/getFileContributors'
 import getNavigation from 'utils/getNavigation'
+import { serializeWithFallback } from 'utils/serializeWithFallback'
+import { MarkDownProps } from 'utils/typings/types'
 
 import { visit } from 'unist-util-visit'
 import { Node } from 'unist-util-visit/lib'
-import { serialize } from 'next-mdx-remote/serialize'
 import { getLogger } from 'utils/logging/log-util'
 import { Item, LibraryContext } from '@vtexdocs/components'
-import { remarkCodeHike } from '@code-hike/mdx'
-import ArticleRender, { MarkDownProps } from 'components/article-render'
+import ArticleRender from 'components/article-render'
 
 const docsPathsGLOBAL = await getFastStorePaths()
 
@@ -66,6 +58,7 @@ const FastStorePage: NextPage<MarkDownProps> = ({
       pagination={pagination}
       isListed={isListed}
       branch={branch}
+      showReadingTime
     />
   )
 }
@@ -179,36 +172,20 @@ export const getStaticProps: GetStaticProps = async ({
     logger.info(`Processing ${slug}`)
 
     const headingList: Item[] = []
-    let serialized = await serialize(documentationContent, {
-      parseFrontmatter: true,
-      mdxOptions: {
-        remarkPlugins: [
-          [
-            remarkCodeHike,
-            {
-              autoImport: false,
-              showCopyButton: true,
-              lineNumbers: true,
-              skipLanguages: ['mermaid'],
-              staticMediaQuery: 'not screen, (max-width: 850px)',
-              theme: 'poimandres',
-            },
-          ],
-          remarkGFM,
-          remarkImages,
-          [getHeadings, { headingList }],
-          remarkBlockquote,
-          remarkMermaid,
-        ],
-        rehypePlugins: [
-          [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
-          changeParagraphTag,
-        ],
-        useDynamicImport: true,
-        format: 'mdx',
-      },
+    const serializedResult = await serializeWithFallback({
+      content: documentationContent,
+      headingList,
+      logger,
+      path: filePath,
+      extraRehypePlugins: [changeParagraphTag],
     })
-    serialized = JSON.parse(JSON.stringify(serialized))
+
+    if (!serializedResult) {
+      logger.warn(`Serialized result is null/invalid for ${slug} (${filePath})`)
+      return { notFound: true }
+    }
+
+    const serialized = JSON.parse(JSON.stringify(serializedResult))
     const componentsFiles = serialized.frontmatter?.components
       ? JSON.parse(JSON.stringify(serialized.frontmatter.components as string))
       : []
@@ -315,7 +292,7 @@ export const getStaticProps: GetStaticProps = async ({
       },
     }
   } catch (error) {
-    logger.error(`Error while processing ${path}\n${error}`)
+    logger.error(`Error while processing ${filePath}\n${error}`)
     return {
       notFound: true,
     }

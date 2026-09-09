@@ -15,28 +15,39 @@ interface Props {
   }[]
 }
 
-const MarkdownRenderer = ({ serialized, mdxProps }: Props) => {
-  if (mdxProps) {
-    const ComponentPropsSection = ({ component }: { component: string }) => {
-      const mdxComponents: { [componentName: string]: JSX.Element } = {}
-      for (const props of mdxProps) {
-        mdxComponents[props.componentName] = (
-          <PropsSection propsList={props.componentAttributes} />
-        )
-      }
-      return mdxComponents[component]
-    }
+export const getFastStoreMarkdownExtras = (
+  mdxProps?: Props['mdxProps']
+): { customComponents?: any; scope?: typeof constants } => {
+  if (!mdxProps) return {}
 
-    const updatedComponents: any = {
+  const ComponentPropsSection = ({ component }: { component: string }) => {
+    const mdxComponents: { [componentName: string]: JSX.Element } = {}
+    for (const props of mdxProps) {
+      mdxComponents[props.componentName] = (
+        <PropsSection propsList={props.componentAttributes} />
+      )
+    }
+    return mdxComponents[component]
+  }
+
+  return {
+    customComponents: {
       ...fastStoreComponents,
       ComponentPropsSection,
-    }
+    },
+    scope: constants,
+  }
+}
 
+const MarkdownRenderer = ({ serialized, mdxProps }: Props) => {
+  const extras = getFastStoreMarkdownExtras(mdxProps)
+
+  if (extras.customComponents) {
     return (
       <MarkdownRenderer2
-        customComponents={updatedComponents}
+        customComponents={extras.customComponents}
         serialized={serialized}
-        scope={constants}
+        scope={extras.scope}
       />
     )
   }

@@ -201,6 +201,7 @@ const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
             style={{
               maxWidth: '100%',
               height: 'auto',
+              display: 'block',
             }}
           />
           <Text sx={styles.contentDescription}>
@@ -223,6 +224,7 @@ const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
             style={{
               maxWidth: '100%',
               height: 'auto',
+              display: 'block',
             }}
           />
           <Box sx={styles.divider}></Box>
@@ -236,7 +238,9 @@ const ApiGuidesPage: NextPage<Props> = ({ branch }) => {
             For details about customizing and composing each service, see our
             <Link href="/docs/guides/composability"> Composability</Link> guide.
           </Text>
-          <Image2 />
+          <Box sx={{ overflowX: 'auto', maxWidth: '100%', minWidth: 0 }}>
+            <Image2 />
+          </Box>
         </Box>
       </Fragment>
     </>

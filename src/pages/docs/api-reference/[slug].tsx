@@ -4,8 +4,12 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import Oas from 'oas'
 import SwaggerParser from '@apidevtools/swagger-parser'
-import ArticlePagination from 'components/article-pagination'
-import { Box } from '@vtex/brand-ui'
+import {
+  ArticlePagination,
+  Breadcrumb,
+  CopyHeadingLink,
+} from '@vtexdocs/components'
+import { Box, Flex, Text } from '@vtex/brand-ui'
 import jp from 'jsonpath'
 import { marked } from 'marked'
 
@@ -52,13 +56,30 @@ interface Pagination {
   previousDoc: {
     slug: string | null
     name: string | null
-    method?: string
+    method?: string | null
   }
   nextDoc: {
     slug: string | null
     name: string | null
-    method?: string
+    method?: string | null
   }
+}
+
+const getPaginationMethodBadge = (method?: string | null) => {
+  if (!method) {
+    return undefined
+  }
+
+  const upperMethod = method.toUpperCase()
+  if (!isMethodType(upperMethod)) {
+    return undefined
+  }
+
+  return (
+    <Box as="span" sx={getOverviewEndpointMethodBadgeSx(upperMethod)}>
+      {upperMethod}
+    </Box>
+  )
 }
 
 interface Props {
@@ -453,69 +474,108 @@ const APIPage: NextPage<Props> = ({
           data-api-reference-overview
           data-docsearch-exclude={isOverview ? undefined : true}
           sx={{
-            display: isOverview ? 'block' : 'none',
-            px: ['1em', '3em', '5em', '5em', '5em', '5em', '20em'],
-            pt: '1em',
+            ...apiReferenceStyles.overviewInnerContainer,
+            display: isOverview ? 'flex' : 'none !important',
           }}
         >
-          <Box as="article" sx={styles.articleBox}>
-            <h1 sx={styles.documentationTitle}>{overviewTitle}</h1>
-            {descriptionHtml && (
-              <Box
-                sx={apiReferenceStyles.overviewContentStyles}
-                dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+          <Box as="article" sx={apiReferenceStyles.overviewArticleBox}>
+            <Flex sx={apiReferenceStyles.overviewBreadcrumbRow}>
+              <Breadcrumb
+                breadcrumbList={[
+                  {
+                    slug: '/docs/api-reference',
+                    name: 'API Reference',
+                    type: 'markdown',
+                  },
+                  {
+                    slug,
+                    name: overviewTitle,
+                    type: 'openapi',
+                  },
+                ]}
               />
-            )}
-            {!!overviewEndpointGroups.length && (
-              <Box as="section" sx={{ mt: '2rem' }}>
-                <h2>Endpoints</h2>
-                {overviewEndpointGroups.map(({ tagName, endpoints }) => (
-                  <Box key={tagName} sx={{ mt: '1.5rem' }}>
-                    <h3>{tagName}</h3>
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Summary</th>
-                          <th>Method</th>
-                          <th>Path</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {endpoints.map(({ method, path, summary }) => {
-                          const endpointHash = getOverviewEndpointHash(
-                            method,
-                            path
-                          )
+            </Flex>
+            <Box sx={apiReferenceStyles.overviewTextContainer}>
+              <header>
+                <Text
+                  as="h1"
+                  sx={apiReferenceStyles.overviewTitle}
+                  className="title"
+                >
+                  {overviewTitle}
+                  <CopyHeadingLink />
+                </Text>
+              </header>
+              {descriptionHtml && (
+                <Box
+                  sx={apiReferenceStyles.overviewContentStyles}
+                  dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+                />
+              )}
+              {!!overviewEndpointGroups.length && (
+                <Box as="section">
+                  <h2>Endpoints</h2>
+                  {overviewEndpointGroups.map(({ tagName, endpoints }) => (
+                    <Box key={tagName}>
+                      <h3>{tagName}</h3>
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>Summary</th>
+                            <th>Method</th>
+                            <th>Path</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {endpoints.map(({ method, path, summary }) => {
+                            const endpointHash = getOverviewEndpointHash(
+                              method,
+                              path
+                            )
 
-                          return (
-                            <tr key={`${method}-${path}`}>
-                              <td>
-                                <Link
-                                  href={`/docs/api-reference/${slug}#${endpointHash}`}
-                                  sx={apiReferenceStyles.endpointLinkStyles}
-                                >
-                                  {summary || `Open ${method} ${path}`}
-                                </Link>
-                              </td>
-                              <td>
-                                <Box
-                                  as="span"
-                                  sx={getOverviewEndpointMethodBadgeSx(method)}
-                                >
-                                  {method.toUpperCase()}
-                                </Box>
-                              </td>
-                              <td>
-                                <code>{path}</code>
-                              </td>
-                            </tr>
-                          )
-                        })}
-                      </tbody>
-                    </table>
-                  </Box>
-                ))}
-              </Box>
+                            return (
+                              <tr key={`${method}-${path}`}>
+                                <td>
+                                  <Link
+                                    href={`/docs/api-reference/${slug}#${endpointHash}`}
+                                    sx={apiReferenceStyles.endpointLinkStyles}
+                                  >
+                                    {summary || `Open ${method} ${path}`}
+                                  </Link>
+                                </td>
+                                <td>
+                                  <Box
+                                    as="span"
+                                    sx={getOverviewEndpointMethodBadgeSx(
+                                      method
+                                    )}
+                                  >
+                                    {method.toUpperCase()}
+                                  </Box>
+                                </td>
+                                <td>
+                                  <code>{path}</code>
+                                </td>
+                              </tr>
+                            )
+                          })}
+                        </tbody>
+                      </table>
+                    </Box>
+                  ))}
+                </Box>
+              )}
+            </Box>
+            {isOverview && (
+              <ArticlePagination
+                pagination={endpointPagination}
+                previousChildren={getPaginationMethodBadge(
+                  endpointPagination.previousDoc.method
+                )}
+                nextChildren={getPaginationMethodBadge(
+                  endpointPagination.nextDoc.method
+                )}
+              />
             )}
           </Box>
         </Box>
@@ -616,13 +676,19 @@ const APIPage: NextPage<Props> = ({
             />
           )}
         </Box>
-        <Box sx={{ mx: ['0', '0', '80px'] }}>
-          <ArticlePagination
-            hidePaginationNext={false}
-            hidePaginationPrevious={false}
-            pagination={endpointPagination}
-          />
-        </Box>
+        {!isOverview && (
+          <Box sx={{ mx: ['0', '0', '80px'], px: ['1em', '1em', 0] }}>
+            <ArticlePagination
+              pagination={endpointPagination}
+              previousChildren={getPaginationMethodBadge(
+                endpointPagination.previousDoc.method
+              )}
+              nextChildren={getPaginationMethodBadge(
+                endpointPagination.nextDoc.method
+              )}
+            />
+          </Box>
+        )}
       </Box>
     </>
   )
@@ -847,8 +913,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               : null,
           method:
             indexOfEndpoint > 0
-              ? `${docsList[indexOfEndpoint - 1].method}`
-              : 'undefined',
+              ? docsList[indexOfEndpoint - 1].method ?? null
+              : null,
         },
         nextDoc: {
           name:
@@ -861,8 +927,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               : null,
           method:
             indexOfEndpoint < docsList.length - 1
-              ? `${docsList[indexOfEndpoint + 1].method}`
-              : 'undefined',
+              ? docsList[indexOfEndpoint + 1].method ?? null
+              : null,
         },
       }
     })

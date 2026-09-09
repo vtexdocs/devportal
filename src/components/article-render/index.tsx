@@ -1,57 +1,11 @@
-import Head from 'next/head'
-import { Box, Text, Flex, Link } from '@vtex/brand-ui'
+import { ArticleRender as PackageArticleRender } from '@vtexdocs/components'
+import { ArticleRenderProps } from 'utils/typings/types'
 
-import SeeAlsoSection from 'components/see-also-section'
-import {
-  AskAIMenu,
-  Breadcrumb,
-  Contributors,
-  EditIcon,
-  FeedbackModal,
-  FeedbackSection,
-  Item,
-  MarkdownRenderer,
-  OnThisPage,
-  TableOfContents,
-} from '@vtexdocs/components'
-import FSMarkdownRenderer from 'components/faststore-components/markdown-renderer'
-
-import styles from 'styles/documentation-page'
-import ArticlePagination from 'components/article-pagination'
-import { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import { ContributorsType } from 'utils/getFileContributors'
-import APIGuideContextProvider from 'utils/contexts/api-guide'
-import ReactMarkdown from 'react-markdown'
-import { RowItem } from 'components/faststore-components/PropsSection/PropsSection'
-import { useState } from 'react'
+import { getFastStoreMarkdownExtras } from 'components/faststore-components/markdown-renderer'
 import getSiteUrl from 'utils/getSiteUrl'
 
-export interface MarkDownProps {
-  slug: string
-  branch: string
-  serialized: MDXRemoteSerializeResult
-  contributors: ContributorsType[]
-  headingList: Item[]
-  seeAlsoData: {
-    url: string
-    title: string
-    category: string
-  }[]
-  pagination: {
-    previousDoc: { slug: string | null; name: string | null }
-    nextDoc: { slug: string | null; name: string | null }
-  }
-  breadcumbList: { slug: string; name: string; type: string }[]
-  sectionSelected: string
-  filePath: string
-  hideTOC: boolean
-  mdxProps?: {
-    componentName: string
-    componentAttributes: RowItem[]
-  }[]
-  isListed: boolean
-  hidden?: boolean
-}
+const RAW_CONTENT_BASE_URL =
+  'https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/'
 
 const ArticleRender = ({
   sectionSelected,
@@ -67,163 +21,39 @@ const ArticleRender = ({
   mdxProps,
   hidden = false,
   isListed,
-}: MarkDownProps) => {
-  const { frontmatter } = serialized
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  showReadingTime,
+}: ArticleRenderProps) => {
   const pagePath =
     sectionSelected === 'Troubleshooting' ? 'troubleshooting' : 'guides'
   const urlToEdit = `https://github.com/vtexdocs/dev-portal-content/edit/main/${filePath}`
   const pageUrl = `${getSiteUrl()}/docs/${pagePath}/${slug}`
+  const serializedWithHidden = {
+    ...serialized,
+    frontmatter: {
+      ...serialized.frontmatter,
+      hidden: hidden || Boolean(serialized.frontmatter?.hidden),
+    },
+  }
 
   return (
-    <>
-      <Head>
-        <title>{frontmatter?.title}</title>
-        <meta name="docsearch:doctype" content={sectionSelected} />
-        <meta
-          name="docsearch:doctitle"
-          content={frontmatter?.title as string}
-        />
-        {hidden && <meta name="robots" content="noindex" />}
-        {frontmatter?.excerpt && (
-          <meta
-            property="og:description"
-            content={frontmatter?.excerpt as string}
-          />
-        )}
-      </Head>
-      <APIGuideContextProvider headings={headingList}>
-        <Flex sx={styles.innerContainer}>
-          <Box sx={styles.articleBox}>
-            <Box sx={styles.contentContainer}>
-              <article>
-                <header>
-                  <Flex sx={{ justifyContent: 'space-between' }}>
-                    <Breadcrumb breadcrumbList={breadcumbList} />
-                  </Flex>
-                  <Box sx={styles.documentationTitle}>
-                    <ReactMarkdown
-                      components={{
-                        ol: ({
-                          node,
-                          children,
-                        }: {
-                          node: import('hast').Element
-                          children: React.ReactNode
-                        }) => {
-                          const start = node.properties?.start as
-                            | number
-                            | undefined
-                          return (
-                            <p>
-                              {start ? `${start}. ` : ''}
-                              {children}
-                            </p>
-                          )
-                        },
-                        li: ({ children }: { children: React.ReactNode }) => (
-                          <>{children}</>
-                        ),
-                      }}
-                    >
-                      {frontmatter?.title as string}
-                    </ReactMarkdown>
-                  </Box>
-                  <Box sx={styles.documentationExcerpt}>
-                    <ReactMarkdown>
-                      {frontmatter?.excerpt as string}
-                    </ReactMarkdown>
-                  </Box>
-                </header>
-                {mdxProps ? (
-                  <FSMarkdownRenderer
-                    serialized={serialized}
-                    mdxProps={mdxProps}
-                  />
-                ) : (
-                  <MarkdownRenderer serialized={serialized} />
-                )}
-              </article>
-            </Box>
-
-            <Box sx={styles.bottomContributorsContainer}>
-              <Box sx={styles.bottomContributorsDivider} />
-              <Box sx={styles.bottomContributors}>
-                <Contributors contributors={contributors} />
-              </Box>
-              <FeedbackSection
-                slug={slug}
-                urlToEdit={urlToEdit}
-                pageUrl={pageUrl}
-              />
-            </Box>
-            {hideTOC && (
-              <FeedbackSection
-                slug={slug}
-                urlToEdit={urlToEdit}
-                pageUrl={pageUrl}
-              />
-            )}
-            {isListed && (
-              <ArticlePagination
-                hidePaginationNext={
-                  Boolean(frontmatter?.hidePaginationNext) || false
-                }
-                hidePaginationPrevious={
-                  Boolean(frontmatter?.hidePaginationPrevious) || false
-                }
-                pagination={pagination}
-              />
-            )}
-            {frontmatter?.seeAlso && <SeeAlsoSection docs={seeAlsoData} />}
-          </Box>
-          {!hideTOC && (
-            <Box sx={styles.rightContainer}>
-              <Contributors contributors={contributors} />
-              <TableOfContents headingList={headingList}>
-                <Box sx={styles.divider}>
-                  <FeedbackSection
-                    slug={slug}
-                    small
-                    suggestEdits={false}
-                    pageUrl={pageUrl}
-                  />
-                  <Box
-                    as="button"
-                    onClick={() => setIsModalOpen(true)}
-                    sx={styles.button}
-                  >
-                    <i className="fa-regular fa-comment"></i> Send feedback
-                  </Box>
-                </Box>
-                <Box sx={styles.divider}>
-                  <FeedbackModal
-                    isOpen={isModalOpen}
-                    onClose={() => setIsModalOpen(false)}
-                    pageUrl={pageUrl}
-                  />
-                  <Link
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={urlToEdit}
-                    sx={styles.editContainer}
-                  >
-                    <EditIcon size={18} />
-                    <Text>Suggest edits (GitHub)</Text>
-                  </Link>
-                  <AskAIMenu
-                    filePath={filePath}
-                    pageUrl={`https://developers.vtex.com/docs/${pagePath}/${slug}`}
-                    rawContentBaseUrl="https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/"
-                  />
-                </Box>
-              </TableOfContents>
-            </Box>
-          )}
-          <OnThisPage headingList={headingList} />
-        </Flex>
-      </APIGuideContextProvider>
-    </>
+    <PackageArticleRender
+      serialized={serializedWithHidden}
+      breadcrumbList={breadcumbList}
+      slug={slug}
+      path={filePath}
+      type={sectionSelected}
+      pageUrl={pageUrl}
+      urlToEdit={urlToEdit}
+      rawContentBaseUrl={RAW_CONTENT_BASE_URL}
+      contributors={contributors}
+      headingList={headingList}
+      pagination={pagination}
+      seeAlso={seeAlsoData}
+      showReadingTime={showReadingTime}
+      hideTOC={hideTOC}
+      showArticlePagination={isListed}
+      {...getFastStoreMarkdownExtras(mdxProps)}
+    />
   )
 }
 
