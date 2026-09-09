@@ -2,6 +2,40 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/vtexdocs/devportal/compare/v1.46.0...v2.0.0) (2026-09-09)
+
+
+### Features
+
+* **components:** refactoring ([efc7f54](https://github.com/vtexdocs/devportal/commit/efc7f544c8c2549dbb820b73c75fa68a98a77c24))
+* **navigation.json:** add faststore release notes for v4.7.0 ([8399501](https://github.com/vtexdocs/devportal/commit/83995011073801db1a3c23bcc650080f15405ad1))
+* **navigation.json:** add missing release notes entries for August and September 2026 ([e741b32](https://github.com/vtexdocs/devportal/commit/e741b32e769ef188a9d7747be66c2cc4bc04c723))
+* **navigation.json:** add section for working with development branches ([2ab964c](https://github.com/vtexdocs/devportal/commit/2ab964c09dfb0196a36b286fba114ff5ef2ad219))
+* **package.json:** improve sidebar and release notes page responsiviness ([be3d377](https://github.com/vtexdocs/devportal/commit/be3d377415dbb9a8401eb7c6cf7ae585d7a96c55))
+
+
+### Bug Fixes
+
+* **netlify.toml:** add redirects for custom newsletter analytics events ([43ea741](https://github.com/vtexdocs/devportal/commit/43ea7410f636be6d32df16a388324ab7f42222e0))
+* **netlify.toml:** add redirects for faststore getting started ([1ac404c](https://github.com/vtexdocs/devportal/commit/1ac404cab5be6b50174ba15375e08221ef7e9056))
+* pagination format ([30429f1](https://github.com/vtexdocs/devportal/commit/30429f1bf282fd416f0e3671030fb5caecc9b49c))
+
+
+### Chore
+
+* add product recommendations to nav, fix search app slug typos ([66795db](https://github.com/vtexdocs/devportal/commit/66795db7c4a596c13bee0a6629401b731a5d423e))
+* move Checkout Extensibility nav entries under B2B Buyer Portal ([1e11a51](https://github.com/vtexdocs/devportal/commit/1e11a51929cfa84e8d1686ea7ab5cb5f4f59af65))
+
+
+### Docs
+
+* **navigation.json:** add new articles to navigation ([eedd06d](https://github.com/vtexdocs/devportal/commit/eedd06d4766efa26f4189f7c343243d4a6db654d))
+
+
+### Refactoring
+
+* **pages:** use unified components from @vtexdocs/components ([7ae7667](https://github.com/vtexdocs/devportal/commit/7ae7667e8649ed266dd917a4a7d7e5ee8cb0374c))
+
 ## [1.46.0](https://github.com/vtexdocs/devportal/compare/v1.45.0...v1.46.0) (2026-08-27)
 
 
