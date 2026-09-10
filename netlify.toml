@@ -184,6 +184,30 @@ to = "/docs/guides/faststore/developing-and-overriding-components-overview"
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/developing-and-overriding-components-overview"
+status = 308
+to = "/docs/guides/faststore/developing-and-customizing-components-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/developing-and-overriding-components-list-of-native-sections"
+status = 308
+to = "/docs/guides/faststore/developing-and-customizing-components-list-of-native-sections"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components"
+status = 308
+to = "/docs/guides/faststore/developing-and-customizing-components-experimental-exports-hooks-and-components"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section"
+status = 308
+to = "/docs/guides/faststore/headless-cms-creating-a-new-section-legacy"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/project-structure-updating-the-cli-package-version"
 status = 308
 to = "/docs/guides/faststore/developer-tools-updating-the-cli-package-version"
