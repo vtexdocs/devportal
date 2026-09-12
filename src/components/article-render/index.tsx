@@ -7,6 +7,16 @@ import getSiteUrl from 'utils/getSiteUrl'
 const RAW_CONTENT_BASE_URL =
   'https://raw.githubusercontent.com/vtexdocs/dev-portal-content/main/'
 
+const getPageUrl = (sectionSelected: string, slug: string) => {
+  if (sectionSelected === 'Release Notes') {
+    return `${getSiteUrl()}/updates/release-notes/${slug}`
+  }
+
+  const pagePath =
+    sectionSelected === 'Troubleshooting' ? 'troubleshooting' : 'guides'
+  return `${getSiteUrl()}/docs/${pagePath}/${slug}`
+}
+
 const ArticleRender = ({
   sectionSelected,
   serialized,
@@ -22,11 +32,19 @@ const ArticleRender = ({
   hidden = false,
   isListed,
   showReadingTime,
+  showAskAIMenu,
+  showAuthor,
+  showContributors,
+  showFeedbackSection,
+  showSuggestEdits,
+  showTableOfContents,
+  showDateText,
+  showCreatedAt,
+  createdAtFormat,
+  children,
 }: ArticleRenderProps) => {
-  const pagePath =
-    sectionSelected === 'Troubleshooting' ? 'troubleshooting' : 'guides'
   const urlToEdit = `https://github.com/vtexdocs/dev-portal-content/edit/main/${filePath}`
-  const pageUrl = `${getSiteUrl()}/docs/${pagePath}/${slug}`
+  const pageUrl = getPageUrl(sectionSelected, slug)
   const serializedWithHidden = {
     ...serialized,
     frontmatter: {
@@ -50,10 +68,20 @@ const ArticleRender = ({
       pagination={pagination}
       seeAlso={seeAlsoData}
       showReadingTime={showReadingTime}
+      showAskAIMenu={showAskAIMenu}
+      showAuthor={showAuthor}
+      showContributors={showContributors}
+      showFeedbackSection={showFeedbackSection}
+      showSuggestEdits={showSuggestEdits}
+      showTableOfContents={showTableOfContents}
+      showCreatedAt={showCreatedAt ?? showDateText}
+      createdAtFormat={createdAtFormat}
       hideTOC={hideTOC}
       showArticlePagination={isListed}
       {...getFastStoreMarkdownExtras(mdxProps)}
-    />
+    >
+      {children}
+    </PackageArticleRender>
   )
 }
 
