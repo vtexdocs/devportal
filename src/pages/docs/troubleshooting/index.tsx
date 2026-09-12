@@ -111,7 +111,7 @@ const TroubleshootingPage: NextPage<Props> = ({
             selectedTags={symptomFilters}
           />
           <Input
-            placeholder="Search for identified issues, diagnostics, and fixes..."
+            placeholder="Filter by keyword"
             Icon={SearchIcon}
             value={search}
             onChange={(value: string) => setSearch(value)}

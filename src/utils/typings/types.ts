@@ -105,8 +105,16 @@ export interface MarkDownProps {
   headingList: Item[]
   seeAlsoData: SeeAlsoDoc[]
   pagination: {
-    previousDoc: { slug: string | null; name: string | null }
-    nextDoc: { slug: string | null; name: string | null }
+    previousDoc: {
+      slug: string | null
+      name: string | null
+      createdAt?: string | null
+    }
+    nextDoc: {
+      slug: string | null
+      name: string | null
+      createdAt?: string | null
+    }
   }
   breadcumbList: { slug: string; name: string; type: string }[]
   sectionSelected: string
@@ -131,4 +139,6 @@ export interface ArticleRenderProps extends MarkDownProps {
   showArticlePagination?: boolean
   showTableOfContents?: boolean
   showDateText?: boolean
+  showCreatedAt?: boolean
+  createdAtFormat?: 'long' | 'published'
 }

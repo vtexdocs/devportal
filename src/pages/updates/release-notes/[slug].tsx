@@ -1,28 +1,20 @@
 import Head from 'next/head'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 import { PHASE_PRODUCTION_BUILD } from 'next/constants'
+import { Box, Text } from '@vtex/brand-ui'
 
 import { serializeWithFallback } from 'utils/serializeWithFallback'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 import { getLogger } from 'utils/logging/log-util'
 
-import { Box, Flex, Text } from '@vtex/brand-ui'
-
-import APIGuideContextProvider from 'utils/contexts/api-guide'
-
 import type { Item } from '@vtexdocs/components'
-import {
-  ArticlePagination,
-  FeedbackSection,
-  MarkdownRenderer,
-  OnThisPage,
-} from '@vtexdocs/components'
+import { LibraryContext } from '@vtexdocs/components'
 
-import { removeHTML } from 'utils/string-utils'
 import {
   extractMarkdownEntries,
+  findBreadcrumbTrail,
   flattenJSON,
   getKeyByValue,
   getParents,
@@ -33,23 +25,26 @@ import getReleasePaths from 'utils/getReleasePaths'
 import replaceMagicBlocks from 'utils/replaceMagicBlocks'
 import escapeCurlyBraces from 'utils/escapeCurlyBraces'
 import replaceHTMLBlocks from 'utils/replaceHTMLBlocks'
-import {
-  getReleaseDate,
-  getReleaseNoteDateFromSlug,
-} from 'components/release-note/functions'
+import { getReleaseNoteDateFromSlug } from 'components/release-note/functions'
 import { ActionType, getAction } from 'components/last-updates-card/functions'
+import getFileContributors, {
+  ContributorsType,
+} from 'utils/getFileContributors'
+import { PreviewContext } from 'utils/contexts/preview'
+import ArticleRender from 'components/article-render'
 
 import styles from 'styles/documentation-page'
-import { PreviewContext } from 'utils/contexts/preview'
 
 const docsPathsGLOBAL = await getReleasePaths()
 
 interface Props {
-  content: string
+  sectionSelected: string
+  breadcumbList: { slug: string; name: string; type: string }[]
   serialized: MDXRemoteSerializeResult
   sidebarfallback: any //eslint-disable-line
-  branch: string
-  isListed: boolean
+  contributors: ContributorsType[]
+  path: string
+  headingList: Item[]
   pagination: {
     previousDoc: {
       slug: string | null
@@ -62,106 +57,71 @@ interface Props {
       createdAt?: string | null
     }
   }
+  isListed: boolean
+  branch: string
+  hideTOC: boolean
+  slug: string
 }
 
 const DocumentationPage: NextPage<Props> = ({
+  slug,
   serialized,
-  branch,
-  isListed,
+  path,
+  headingList,
+  contributors,
   pagination,
+  isListed,
+  breadcumbList,
+  branch,
+  sectionSelected,
+  hideTOC,
 }) => {
-  const [headings, setHeadings] = useState<Item[]>([])
   const { setBranchPreview } = useContext(PreviewContext)
-  setBranchPreview(branch)
+  const { setActiveSidebarElement } = useContext(LibraryContext)
   useEffect(() => {
-    if (headings) setHeadings([])
-    document.querySelectorAll('h2, h3').forEach((heading) => {
-      const item = {
-        title: removeHTML(heading.innerHTML).replace(':', ''),
-        slug: heading.id,
-      }
+    setActiveSidebarElement(slug)
+    setBranchPreview(branch)
+  }, [serialized.frontmatter])
 
-      setHeadings((headings) => {
-        if (heading.tagName === 'H2') {
-          return [...headings, { ...item, children: [] }]
-        }
-
-        const { title, slug, children } = headings[headings.length - 1] || {
-          title: '',
-          slug: '',
-          children: [],
-        }
-
-        return [
-          ...headings.slice(0, -1),
-          { title, slug, children: [...children, item] },
-        ]
-      })
-    })
-  }, [])
   const actionType: ActionType = serialized.frontmatter?.type as ActionType
   const actionValue = actionType ? getAction(actionType) : null
 
   return (
     <>
-      <Head>
-        <title>{serialized.frontmatter?.title as string}</title>
-        <meta name="docsearch:doctype" content="Release Notes" />
-        <meta
-          name="docsearch:doctitle"
-          content={serialized.frontmatter?.title as string}
-        />
-        <meta name="docsearch:actiontype" content={actionType} />
-      </Head>
-      <APIGuideContextProvider headings={headings}>
-        <Flex sx={styles.innerContainer}>
-          <Box sx={styles.articleBox}>
-            <Box sx={styles.contentContainer}>
-              <article>
-                {actionValue ? (
-                  <Box sx={styles.releaseAction}>
-                    <actionValue.Icon />
-                    <Text>{actionValue?.title}</Text>
-                  </Box>
-                ) : null}
-                <Text sx={styles.documentationTitle}>
-                  {serialized.frontmatter?.title}
-                </Text>
-                <Text sx={{ marginTop: '10px' }}>
-                  {getReleaseDate(
-                    (serialized.frontmatter?.createdAt as string) || ''
-                  )}
-                </Text>
-                <Box sx={styles.divider}></Box>
-                <MarkdownRenderer serialized={serialized} />
-              </article>
-            </Box>
-            <FeedbackSection suggestEdits={false} />
-            {isListed && (
-              <ArticlePagination
-                hidePaginationNext={
-                  Boolean(serialized.frontmatter?.hidePaginationNext) || false
-                }
-                hidePaginationPrevious={
-                  Boolean(serialized.frontmatter?.hidePaginationPrevious) ||
-                  false
-                }
-                pagination={pagination}
-              />
-            )}
+      {actionType && (
+        <Head>
+          <meta name="docsearch:actiontype" content={actionType} />
+        </Head>
+      )}
+      <ArticleRender
+        serialized={serialized}
+        breadcumbList={breadcumbList}
+        sectionSelected={sectionSelected}
+        filePath={path}
+        hideTOC={hideTOC}
+        contributors={contributors}
+        headingList={headingList}
+        seeAlsoData={[]}
+        slug={slug}
+        pagination={pagination}
+        isListed={isListed}
+        branch={branch}
+        showCreatedAt
+        showSuggestEdits={false}
+        showContributors={false}
+      >
+        {actionValue ? (
+          <Box sx={styles.releaseAction}>
+            <actionValue.Icon />
+            <Text>{actionValue.title}</Text>
           </Box>
-          <OnThisPage headingList={headings} />
-        </Flex>
-      </APIGuideContextProvider>
+        ) : null}
+      </ArticleRender>
     </>
   )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  // const slugs = Object.keys(await getReleasePaths())
-  // const paths = slugs.map((slug) => ({
-  //   params: { slug },
-  // }))
   const paths: never[] = []
   return {
     paths,
@@ -198,6 +158,12 @@ export const getStaticProps: GetStaticProps = async ({
     branch,
     path
   )
+  const contributors = await getFileContributors(
+    'vtexdocs',
+    'dev-portal-content',
+    branch,
+    path
+  )
   const logger = getLogger('Release-Notes')
 
   try {
@@ -208,15 +174,23 @@ export const getStaticProps: GetStaticProps = async ({
       documentationContent = await replaceMagicBlocks(documentationContent)
     }
 
+    const headingList: Item[] = []
     let serialized = await serializeWithFallback({
       content: documentationContent,
-      headingList: [],
+      headingList,
       logger,
-      path: slug,
+      path,
     })
 
+    if (!serialized) {
+      logger.warn(`Serialized result is null/invalid for ${slug} (${path})`)
+      return { notFound: true }
+    }
+
     const sidebarfallback = await getNavigation()
-    serialized = JSON.parse(JSON.stringify(serialized))
+    serialized = JSON.parse(
+      JSON.stringify(serialized)
+    ) as MDXRemoteSerializeResult
 
     const sectionSelected = 'Release Notes'
     const flattenedSidebar = flattenJSON(sidebarfallback)
@@ -227,9 +201,35 @@ export const getStaticProps: GetStaticProps = async ({
       parentsArray.push(slug)
     }
     const isListed: boolean = keyPath ? true : false
+    const hideTOC = serialized?.frontmatter?.hideTOC === true
+
+    const sidebarIndex = sidebarfallback.findIndex(
+      (item: { documentation: string }) =>
+        item.documentation === sectionSelected
+    )
+    const releaseNotesNav =
+      sidebarIndex >= 0 ? sidebarfallback[sidebarIndex] : sidebarfallback[6]
+
+    const breadcumbList: { slug: string; name: string; type: string }[] = [
+      {
+        slug: '/updates/release-notes',
+        name: 'Release Notes',
+        type: 'markdown',
+      },
+    ]
+    if (isListed && releaseNotesNav) {
+      const breadcrumbs = findBreadcrumbTrail(releaseNotesNav.categories, slug)
+      breadcumbList.push(...(breadcrumbs ?? []))
+    } else {
+      breadcumbList.push({
+        slug: `/updates/release-notes/${slug}`,
+        name: (serialized.frontmatter?.title as string) || slug,
+        type: 'markdown',
+      })
+    }
 
     /* Pagination */
-    const entries = extractMarkdownEntries(sidebarfallback[6])
+    const entries = extractMarkdownEntries(releaseNotesNav)
     const entryIndex = entries.findIndex(
       (entry) => entry.slug === `/updates/release-notes/${slug}`
     )
@@ -258,6 +258,12 @@ export const getStaticProps: GetStaticProps = async ({
         sidebarfallback,
         sectionSelected,
         branch,
+        slug,
+        path,
+        headingList,
+        contributors,
+        breadcumbList,
+        hideTOC,
       },
       revalidate: 600,
     }
