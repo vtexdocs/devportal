@@ -19886,6 +19886,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore WebOps: Previews now deactivate after inactivity and reactivate automatically",
+                  "slug": "2026-09-17-faststore-webops-previews-now-deactivate-after-inactivity-and-reactivate-automatically",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore Release Notes — Version 4.7.0",
                   "slug": "2026-09-08-faststore-release-notes-4-7-0",
                   "origin": "",
