@@ -5221,7 +5221,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5300,7 +5300,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language",
+                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language/-locale-",
                       "children": []
                     },
                     {
