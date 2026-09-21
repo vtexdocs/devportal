@@ -2526,3 +2526,9 @@ force = true
 from = "/docs/guides/how-to-configure-tradename-to-use-in-the-organization-search-field"
 status = 308
 to = "/docs/guides/configure-tradename"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-migrating-store-framework-to-faststore"
+status = 308
+to = "/docs/guides/migrating-store-framework-to-faststore"
