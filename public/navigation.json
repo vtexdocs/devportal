@@ -294,6 +294,28 @@
           ]
         },
         {
+          "name": "FastStore monorepo",
+          "slug": "faststore-monorepo-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Creating new projects",
+              "slug": "monorepo-creating-new-projects",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Monorepo use cases",
+              "slug": "monorepo-use-cases",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "VTEX Business models",
           "slug": "business-models-overview",
           "origin": "",

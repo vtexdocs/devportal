@@ -2532,3 +2532,21 @@ force = true
 from = "/docs/guides/faststore/getting-started-migrating-store-framework-to-faststore"
 status = 308
 to = "/docs/guides/migrating-store-framework-to-faststore"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/monorepo-overview"
+status = 308
+to = "/docs/guides/faststore-monorepo-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/monorepo-creating-new-projects"
+status = 308
+to = "/docs/guides/monorepo-creating-new-projects"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/monorepo-use-cases"
+status = 308
+to = "/docs/guides/monorepo-use-cases"
