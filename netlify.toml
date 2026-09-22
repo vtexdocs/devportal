@@ -2529,6 +2529,12 @@ to = "/docs/guides/configure-tradename"
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/getting-started-migrating-store-framework-to-faststore"
+status = 308
+to = "/docs/guides/migrating-store-framework-to-faststore"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/monorepo-overview"
 status = 308
 to = "/docs/guides/faststore-monorepo-overview"
