@@ -1422,6 +1422,13 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "name": "Using GraphQL API for querying CMS content",
+                  "slug": "using-graphql-api-for-querying-cms-content",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
