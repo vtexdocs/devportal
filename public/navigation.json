@@ -2238,6 +2238,13 @@
                   "children": []
                 },
                 {
+                  "name": "Managing B2B prospects",
+                  "slug": "b2b-prospect-management",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "B2B user provisioning",
                   "slug": "b2b-user-provisioning",
                   "origin": "",
