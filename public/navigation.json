@@ -18494,6 +18494,13 @@
                   "children": []
                 },
                 {
+                  "name": "Authentication in API extensions",
+                  "slug": "faststore/api-extensions-authentication-in-api-extensions",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "API extensions - Use cases",
                   "slug": "faststore/api-extensions-use-cases-overview",
                   "origin": "",
@@ -18509,6 +18516,13 @@
                     {
                       "name": "Adding available installment information in PDP",
                       "slug": "faststore/api-extensions-use-cases-adding-installment-information-in-the-product-details-page",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Displaying an order summary for the signed-in shopper",
+                      "slug": "faststore/api-extensions-use-cases-displaying-an-order-summary-for-the-signed-in-shopper",
                       "origin": "",
                       "type": "markdown",
                       "children": []
