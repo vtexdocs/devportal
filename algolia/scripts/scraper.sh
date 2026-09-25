@@ -25,6 +25,7 @@ git clone https://github.com/vtexdocs/docsearch-scraper.git
 
 cp ./algolia/scraper_md.json ./docsearch-scraper/configs
 cp ./algolia/scraper_openapi.json ./docsearch-scraper/configs
+cp ./algolia/scripts/custom_downloader_middleware.py ./docsearch-scraper/scraper/src/custom_downloader_middleware.py
 
 cd docsearch-scraper/
 

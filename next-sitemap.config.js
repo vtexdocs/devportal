@@ -29,7 +29,13 @@ module.exports = {
     }
   },
   siteUrl,
-  exclude: ['/404', '/500', '/docs/api-reference*', '/server-sitemap.xml'],
+  exclude: [
+    '/404',
+    '/500',
+    '/docs/api-reference*',
+    '/server-sitemap.xml',
+    '/algolia-openapi-sitemap.xml',
+  ],
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [

@@ -10,6 +10,8 @@ const container: SxStyleProp = {
 const mainContainer: SxStyleProp = {
   justifyContent: 'center',
   width: '100%',
+  minWidth: 0,
+  overflowX: 'clip',
 }
 
 const innerContainer: SxStyleProp = {
@@ -25,6 +27,15 @@ const articleBox: SxStyleProp = {
   lineHeight: '1.75em',
   width: ['100%'],
   color: 'rgb(51, 65, 85)',
+  table: {
+    overflowWrap: 'normal',
+    wordBreak: 'normal',
+  },
+  'th, td': {
+    overflowWrap: 'normal',
+    wordBreak: 'normal',
+    hyphens: 'none',
+  },
   a: {
     color: '#E31C58',
     textDecoration: 'none',

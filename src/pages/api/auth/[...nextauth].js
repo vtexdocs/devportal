@@ -8,6 +8,8 @@ export const authOptions = {
     GithubProvider({
       clientId: process.env.AUTH_GITHUB_ID,
       clientSecret: process.env.AUTH_GITHUB_SECRET,
+      // GitHub now returns RFC 9207 `iss` on OAuth callbacks.
+      issuer: 'https://github.com/login/oauth',
     }),
   ],
   callbacks: {

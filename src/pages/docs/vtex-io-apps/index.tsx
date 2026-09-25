@@ -1,5 +1,5 @@
 import { Fragment, useContext } from 'react'
-import { Box, Text, Flex, Link, IconCaret } from '@vtex/brand-ui'
+import { Box, Text, Link, IconCaret } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import getNavigation from 'utils/getNavigation'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
@@ -14,7 +14,7 @@ interface Props {
   branch: string
 }
 import { WhatsNextDataElement } from 'utils/typings/types'
-import WhatsNextCard from 'components/whats-next-card'
+import { WhatsNextCard } from '@vtexdocs/components'
 import Head from 'next/head'
 import { PreviewContext } from 'utils/contexts/preview'
 
@@ -50,11 +50,11 @@ const AppsListing = ({ category }: ICategoryListing) => {
   return (
     <>
       <Text sx={styles.contentTitle}>{category.name}</Text>
-      <Flex sx={styles.cardsContainer}>
+      <Box sx={styles.cardsContainer}>
         {whatsNextData.map((whatsNext) => (
           <WhatsNextCard {...whatsNext} key={whatsNext.title} />
         ))}
-      </Flex>
+      </Box>
       <Link sx={styles.seeMoreLink} href={`/docs/${category.slug}`}>
         See more
         <IconCaret

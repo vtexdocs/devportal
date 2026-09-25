@@ -2,78 +2,152 @@ import type { SxStyleProp } from '@vtex/brand-ui'
 import { isMethodType } from 'utils/typings/unionTypes'
 import { methodsColors } from 'components/method-category/functions'
 
-const overviewArticleStyles: SxStyleProp = {
-  maxWidth: '960px',
+const overviewInnerContainer: SxStyleProp = {
+  justifyContent: 'center',
+  width: '100%',
+  minWidth: 0,
+  boxSizing: 'border-box',
+  pt: ['24px', '32px', '3em'],
   mx: 'auto',
-  mb: '2.5rem',
-  color: '#4A596B',
-  fontSize: '0.95em',
-  lineHeight: '1.5em',
+  px: ['18px', '24px', '32px', '40px', '48px', '64px', '20em'],
+  pb: ['48px', '64px', '72px'],
 }
 
-const overviewHeaderStyles: SxStyleProp = {
-  mt: 0,
-  mb: '1.5rem',
-  '*': {
-    margin: '0px',
+const overviewArticleBox: SxStyleProp = {
+  fontSize: '1em',
+  lineHeight: '1.75em',
+  fontWeight: '400',
+  flex: '1 1 auto',
+  width: '100%',
+  minWidth: 0,
+  maxWidth: '100%',
+  color: 'rgb(51, 65, 85)',
+  overflowWrap: 'anywhere',
+  table: {
+    overflowWrap: 'normal',
+    wordBreak: 'normal',
   },
-  '& h1': {
-    fontSize: ['20px', '28px'],
-    lineHeight: ['30px', '38px'],
-    fontWeight: '400',
-    color: '#142032',
+  'th, td': {
+    overflowWrap: 'normal',
+    wordBreak: 'normal',
+    hyphens: 'none',
   },
+  img: {
+    maxWidth: '100%',
+    height: 'auto',
+  },
+  a: {
+    color: '#E31C58',
+    textDecoration: 'none',
+    fontWeight: '500',
+  },
+  ul: {
+    pl: '1.5em',
+    mt: '1.25em',
+    mb: '1.25em',
+    li: {
+      mt: '0.5em',
+      mb: '0.5em',
+    },
+    listStyleType: 'disc',
+    'ul, ol': {
+      mt: '0.5em',
+      mb: '0.5em',
+    },
+  },
+  ol: {
+    pl: '1.5em',
+    mt: '1.25em',
+    mb: '1.25em',
+    li: {
+      mt: '0.5em',
+      mb: '0.5em',
+    },
+    'ul, ol': {
+      mt: '0.5em',
+      mb: '0.5em',
+    },
+  },
+  header: {
+    marginTop: ['8px', '16px'],
+    borderBottom: '1px solid #E7E9EE',
+    marginBottom: ['8px', '12px'],
+    pb: ['12px', '16px'],
+  },
+  h2: {
+    fontSize: '1.375em',
+    lineHeight: '1.3em',
+    fontWeight: '700',
+    mt: ['1.5em', '2em'],
+    mb: ['0.75em', '1em'],
+    overflowWrap: 'anywhere',
+    color: 'rgb(15, 23, 42)',
+  },
+  h3: {
+    fontSize: '1.125em',
+    fontWeight: '600',
+    lineHeight: '1.6em',
+    mt: '1.6em',
+    mb: '0.6em',
+    overflowWrap: 'anywhere',
+  },
+  h4: {
+    fontSize: '1em',
+    fontWeight: '600',
+    lineHeight: '1.5em',
+    mt: '1.5em',
+    mb: '0.5em',
+    color: 'rgb(15, 23, 42)',
+    overflowWrap: 'anywhere',
+  },
+  strong: {
+    fontWeight: '600',
+    overflowWrap: 'break-word',
+  },
+}
+
+const overviewBreadcrumbRow: SxStyleProp = {
+  justifyContent: 'space-between',
+  alignItems: 'flex-start',
+  flexWrap: 'wrap',
+  gap: '8px',
+  width: '100%',
+  minWidth: 0,
+}
+
+const overviewTitle: SxStyleProp = {
+  display: 'block',
+  marginTop: ['16px', '16px', '24px'],
+  marginBottom: 0,
+  fontSize: ['28px', '28px', '30px'],
+  lineHeight: ['36px', '36px', '38px'],
+  fontWeight: '400',
+  color: '#142032',
+  overflowWrap: 'anywhere',
+}
+
+const overviewTextContainer: SxStyleProp = {
+  width: '100%',
+  minWidth: 0,
+  maxWidth: '100%',
+  pb: ['16px', '24px', '32px'],
+  mb: ['8px', '24px', '48px'],
 }
 
 const overviewContentStyles: SxStyleProp = {
-  color: '#4A596B',
-  '& p': {
-    lineHeight: '1.5em',
-    mb: '1rem',
+  '& > *:first-child': {
+    mt: 0,
   },
-  '& ul, & ol': {
-    mb: '1rem',
-    pl: '1.5rem',
-  },
-  '& ul li, & ol li': {
-    mt: '0.5em',
-    mb: '0.5em',
-  },
-  '& h2': {
-    fontSize: '1.375em',
-    lineHeight: '2em',
-    fontWeight: '400',
-    mt: '1.3em',
-    mb: '0.875em',
-    color: '#142032',
-  },
-  '& h3': {
-    fontSize: ['1.125rem', '1.25rem'],
-    lineHeight: '1.75rem',
-    fontWeight: '600',
-    mt: '1.5rem',
-    mb: '0.75rem',
-    color: '#142032',
-  },
-  '& h4': {
-    fontSize: '1rem',
-    lineHeight: '1.5rem',
-    fontWeight: '600',
-    mt: '1.25rem',
-    mb: '0.75rem',
-    color: '#142032',
-  },
-  '& a': {
-    color: '#E31C58',
-    textDecoration: 'underline',
-    textUnderlineOffset: '0.18em',
-  },
-  '& strong': {
-    fontWeight: '600',
+  img: {
+    maxWidth: '100%',
+    display: 'block',
+    padding: '0',
+    margin: '0',
+    border: '1px solid #e7e9ed',
+    borderRadius: '4px',
   },
   '& blockquote': {
     borderLeft: '4px solid #E7E9EE',
-    color: '#4A596B',
     ml: 0,
     my: '1.5rem',
     pl: '1rem',
@@ -89,20 +163,28 @@ const overviewContentStyles: SxStyleProp = {
     mb: '1.5rem',
     p: '20px',
     borderRadius: '4px',
-    alignItems: 'start',
+    alignItems: 'center',
     gridTemplateColumns: '20px 1fr',
     wordBreak: 'break-word',
+    bg: '#F8F7FC',
     border: '1px solid #CCCED8',
+    '& code': {
+      bg: '#ECEBF3',
+    },
   },
   '& .overview-callout-icon': {
-    display: 'inline-block',
+    display: 'block',
     gridColumn: '1',
-    gridRow: '1',
-    mt: '2px',
   },
-  '& .overview-callout p, & .overview-callout div': {
+  '& .overview-callout > div': {
     m: 0,
     gridColumn: '2 / -1',
+    display: 'grid',
+    rowGap: '0.75rem',
+    minWidth: 0,
+  },
+  '& .overview-callout p': {
+    m: 0,
   },
   '& .overview-callout a': {
     wordBreak: 'break-word',
@@ -130,82 +212,6 @@ const overviewContentStyles: SxStyleProp = {
     bg: '#F3F8F3',
     borderColor: '#80BE80',
   },
-  '& code': {
-    fontFamily: 'mono',
-    fontSize: '0.875rem',
-    bg: '#F7F8FA',
-    borderRadius: '4px',
-    px: '0.25rem',
-    py: '0.125rem',
-  },
-  '& pre': {
-    bg: '#F7F8FA',
-    border: '1px solid #E7E9EE',
-    borderRadius: '4px',
-    overflowX: 'auto',
-    p: '1rem',
-    mb: '1.5rem',
-  },
-  '& pre code': {
-    bg: 'transparent',
-    px: 0,
-    py: 0,
-  },
-  '& table': {
-    width: '100%',
-    borderCollapse: 'collapse',
-    mb: '1.5rem',
-  },
-  '& th, & td': {
-    borderBottom: '1px solid #E7E9EE',
-    px: '0.75rem',
-    py: '0.625rem',
-    textAlign: 'left',
-    verticalAlign: 'top',
-  },
-}
-
-const overviewTableWrapperStyles: SxStyleProp = {
-  overflowX: 'auto',
-  border: '1px solid #E7E9EE',
-  borderRadius: '4px',
-  bg: '#FFFFFF',
-}
-
-const overviewTableStyles: SxStyleProp = {
-  width: '100%',
-  minWidth: '640px',
-  borderCollapse: 'collapse',
-  '& th': {
-    textAlign: 'left',
-    padding: '0.875rem 1rem',
-    borderBottom: '1px solid #E7E9EE',
-    bg: '#F7F8FA',
-    color: '#4A596B',
-    fontSize: '0.75rem',
-    fontWeight: '600',
-    letterSpacing: '0.04em',
-    textTransform: 'uppercase',
-  },
-  '& td': {
-    padding: '0.875rem 1rem',
-    borderBottom: '1px solid #E7E9EE',
-    verticalAlign: 'top',
-    color: '#4A596B',
-  },
-  '& td:first-of-type': {
-    wordBreak: 'break-word',
-    whiteSpace: 'normal',
-  },
-  '& td:nth-of-type(2)': {
-    whiteSpace: 'nowrap',
-  },
-  '& td:nth-of-type(3)': {
-    wordBreak: 'break-word',
-  },
-  '& tbody tr:last-of-type td': {
-    borderBottom: 'none',
-  },
 }
 
 const endpointPathStyles: SxStyleProp = {
@@ -223,6 +229,12 @@ const endpointLinkStyles: SxStyleProp = {
   textDecoration: 'underline',
   textUnderlineOffset: '0.18em',
   fontWeight: '500',
+}
+
+const endpointFallbackStyles: SxStyleProp = {
+  px: ['1em', '1.5em', '2em'],
+  pt: '1em',
+  pb: '0.5rem',
 }
 
 // Style factory for the per-endpoint method badge. Returns a method-specific
@@ -254,13 +266,15 @@ export function getOverviewEndpointMethodBadgeSx(method: string): SxStyleProp {
 }
 
 const apiReferenceStyles = {
-  overviewArticleStyles,
-  overviewHeaderStyles,
+  overviewInnerContainer,
+  overviewArticleBox,
+  overviewBreadcrumbRow,
+  overviewTitle,
+  overviewTextContainer,
   overviewContentStyles,
-  overviewTableWrapperStyles,
-  overviewTableStyles,
   endpointPathStyles,
   endpointLinkStyles,
+  endpointFallbackStyles,
 }
 
 export default apiReferenceStyles

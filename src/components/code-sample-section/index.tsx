@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box } from '@vtex/brand-ui'
 
 import { codeSamples } from 'utils/constants'
 
@@ -28,11 +28,11 @@ const CodeSamplesSection = ({ builders }: ICodeSamplesSection) => {
           setFilter(selection)
         }}
       />
-      <Flex sx={styles.cardsContainer}>
+      <Box sx={styles.cardsContainer}>
         {filteredCodeSamples.map((codeSample) => (
           <CodeSampleCard {...codeSample} key={codeSample.title} />
         ))}
-      </Flex>
+      </Box>
     </Box>
   )
 }

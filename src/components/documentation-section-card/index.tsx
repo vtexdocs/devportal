@@ -3,7 +3,7 @@ import { Box, Flex, Text } from '@vtex/brand-ui'
 
 import { getMessages } from 'utils/get-messages'
 import type { DocDataElement } from 'utils/typings/types'
-import Tooltip from 'components/tooltip'
+import { Tooltip } from '@vtexdocs/components'
 import styles from './styles'
 import { useEffect, useRef, useState } from 'react'
 
@@ -37,7 +37,15 @@ const DocumentationSectionCard = ({
 
   return (
     <Box sx={{ height: '100%' }}>
-      <Tooltip placement="top" label={tooltipDescription} isCard={tooltipState}>
+      <Tooltip
+        placement="top"
+        label={tooltipDescription}
+        isCard={tooltipState}
+        wrapperSx={{
+          height: '100%',
+          '& > div:first-of-type': { height: '100%' },
+        }}
+      >
         <Link href={link} style={{ display: 'block', height: '100%' }}>
           <Flex sx={styles.cardContainer}>
             <Flex sx={styles.infoContainer}>

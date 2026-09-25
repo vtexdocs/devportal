@@ -4,10 +4,13 @@ const container: SxStyleProp = {
   flexDirection: 'column',
   justifyContent: 'space-between',
   fontSize: '14px',
-  mt: '16px',
+  mt: 0,
   borderRadius: '4px',
   border: '1px solid #E7E9EE',
-  width: ['100%', '49%'],
+  width: '100%',
+  maxWidth: '100%',
+  minWidth: 0,
+  boxSizing: 'border-box',
   transition: 'all 0.3s ease-out',
   ':active, :hover': {
     borderColor: 'muted.2',
@@ -45,6 +48,7 @@ const title: SxStyleProp = {
   fontWeight: 'bold',
   lineHeight: '22px',
   color: 'muted.0',
+  overflowWrap: 'break-word',
 }
 
 const description: SxStyleProp = {

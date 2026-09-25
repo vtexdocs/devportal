@@ -4,6 +4,24 @@ included_files = ["node_modules/sharp/**/*", "node_modules/@img/**/*", "./github
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/2-starting-the-project"
+status = 308
+to = "/docs/guides/faststore/getting-started-2-starting-the-project"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-faststore-v1-to-v4"
+status = 308
+to = "/docs/guides/faststore/getting-started-upgrading-faststore-to-v4"
+
+[[redirects]]
+force = true
+from = "/docs/faststore/implementing-custom-newsletter-analytics-events"
+status = 308
+to = "/docs/guides/faststore/analytics-implementing-custom-newsletter-analytics-events"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/implementing-custom-newsletter-analytics-events"
 status = 308
 to = "/docs/guides/faststore/analytics-implementing-custom-newsletter-analytics-events"
@@ -163,6 +181,30 @@ force = true
 from = "/docs/guides/faststore/building-sections-overview"
 status = 308
 to = "/docs/guides/faststore/developing-and-overriding-components-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/developing-and-overriding-components-overview"
+status = 308
+to = "/docs/guides/faststore/developing-and-customizing-components-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/developing-and-overriding-components-list-of-native-sections"
+status = 308
+to = "/docs/guides/faststore/developing-and-customizing-components-list-of-native-sections"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/developing-and-overriding-components-experimental-exports-hooks-and-components"
+status = 308
+to = "/docs/guides/faststore/developing-and-customizing-components-experimental-exports-hooks-and-components"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/developing-and-overriding-components-creating-a-new-section"
+status = 308
+to = "/docs/guides/faststore/headless-cms-creating-a-new-section-legacy"
 
 [[redirects]]
 force = true
@@ -2484,3 +2526,27 @@ force = true
 from = "/docs/guides/how-to-configure-tradename-to-use-in-the-organization-search-field"
 status = 308
 to = "/docs/guides/configure-tradename"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/getting-started-migrating-store-framework-to-faststore"
+status = 308
+to = "/docs/guides/migrating-store-framework-to-faststore"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/monorepo-overview"
+status = 308
+to = "/docs/guides/faststore-monorepo-overview"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/monorepo-creating-new-projects"
+status = 308
+to = "/docs/guides/monorepo-creating-new-projects"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/monorepo-use-cases"
+status = 308
+to = "/docs/guides/monorepo-use-cases"

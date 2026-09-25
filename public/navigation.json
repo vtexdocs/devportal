@@ -294,6 +294,79 @@
           ]
         },
         {
+          "name": "FastStore monorepo",
+          "slug": "faststore-monorepo-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Creating new projects",
+              "slug": "monorepo-creating-new-projects",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Monorepo use cases",
+              "slug": "monorepo-use-cases",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
+          "name": "VTEX Business models",
+          "slug": "business-models-overview",
+          "origin": "",
+          "type": "markdown",
+          "children": [
+            {
+              "name": "Implementing marketplaces",
+              "slug": "implementing-marketplaces",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integrating VTEX stores",
+                  "slug": "integrating-vtex-stores",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integrating with non-VTEX sellers",
+                  "slug": "integrating-with-non-vtex-sellers",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Integrating with non-VTEX marketplaces",
+                  "slug": "integrating-with-non-vtex-marketplaces",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Implementing cross-border stores",
+              "slug": "implementing-cross-border-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Implementing internationalization",
+              "slug": "implementing-internationalization",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            }
+          ]
+        },
+        {
           "name": "Integration Guides",
           "slug": "integration-guides-category",
           "origin": "",
@@ -389,21 +462,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                },
-                {
-                  "name": "Creating an integration app from a Template",
-                  "slug": "external-marketplace-integration-app-template",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": [
-                    {
-                      "name": "External Marketplace Integration app GraphQL API",
-                      "slug": "external-marketplace-integration-app-graphql-api",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
                 },
                 {
                   "name": "Catalog Integration",
@@ -941,28 +999,6 @@
               ]
             },
             {
-              "name": "Custom checkout fields settings",
-              "slug": "custom-checkout-fields-settings",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Custom fields integration",
-                  "slug": "custom-fields-integration",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Default values integration",
-                  "slug": "default-values-integration",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Discounts",
               "slug": "discounts",
               "origin": "",
@@ -1280,119 +1316,6 @@
               ]
             },
             {
-              "name": "Buyer Portal Checkout Extensibility",
-              "slug": "buyer-portal-checkout-extensibility",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Checkout extension points",
-                  "slug": "checkout-extension-points",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Setting up Buyer Portal Checkout",
-                  "slug": "setting-up-buyer-portal-checkout",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Getting started with Checkout extensions",
-                  "slug": "getting-started-with-checkout-extensions",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Deploying Checkout extensions",
-                  "slug": "deploying-checkout-extensions",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Using CSS in Checkout extensions",
-                  "slug": "using-css-in-checkout-extensions",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "CSS variables in Checkout extensions",
-                  "slug": "css-variables-in-checkout-extensions",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Data layer and data fetching in Checkout extensions",
-                  "slug": "data-layer-and-data-fetching-in-checkout-extensions",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Checkout CLI",
-                  "slug": "checkout-cli",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "CartItem type",
-                  "slug": "cartitem-type",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "useCart hook",
-                  "slug": "usecart-hook",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "useCartItem hook",
-                  "slug": "usecartitem-hook",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "useCartPunchout hook",
-                  "slug": "usecartpunchout-hook",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "useRedirect hook",
-                  "slug": "useredirect-hook",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "useSettings hook",
-                  "slug": "usesettings-hook",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "useExtension hook",
-                  "slug": "useextension-hook",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Checkout error codes",
               "slug": "checkout-error-codes",
               "origin": "",
@@ -1423,6 +1346,13 @@
                 {
                   "name": "Local setup and development",
                   "slug": "local-setup-and-development",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Working with development branches",
+                  "slug": "working-with-development-branches",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1492,6 +1422,13 @@
                       "children": []
                     }
                   ]
+                },
+                {
+                  "name": "Using GraphQL API for querying CMS content",
+                  "slug": "using-graphql-api-for-querying-cms-content",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -2362,6 +2299,141 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Buyer Portal Checkout Extensibility",
+                  "slug": "buyer-portal-checkout-extensibility",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Checkout extension points",
+                      "slug": "checkout-extension-points",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Setting up Buyer Portal Checkout",
+                      "slug": "setting-up-buyer-portal-checkout",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Getting started with Checkout extensions",
+                      "slug": "getting-started-with-checkout-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Deploying Checkout extensions",
+                      "slug": "deploying-checkout-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Using CSS in Checkout extensions",
+                      "slug": "using-css-in-checkout-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "CSS variables in Checkout extensions",
+                      "slug": "css-variables-in-checkout-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Data layer and data fetching in Checkout extensions",
+                      "slug": "data-layer-and-data-fetching-in-checkout-extensions",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Checkout CLI",
+                      "slug": "checkout-cli",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "CartItem type",
+                      "slug": "cartitem-type",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useCart hook",
+                      "slug": "usecart-hook",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useCartItem hook",
+                      "slug": "usecartitem-hook",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useCartPunchout hook",
+                      "slug": "usecartpunchout-hook",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useRedirect hook",
+                      "slug": "useredirect-hook",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useSettings hook",
+                      "slug": "usesettings-hook",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "useExtension hook",
+                      "slug": "useextension-hook",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Custom checkout fields settings",
+                  "slug": "custom-checkout-fields-settings",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Custom fields integration",
+                      "slug": "custom-fields-integration",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Default values integration",
+                      "slug": "default-values-integration",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             },
@@ -2804,6 +2876,20 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "Tracking search analytics events in headless web stores",
+              "slug": "tracking-search-analytics-events-in-headless-web-stores",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Tracking search analytics events in mobile apps",
+              "slug": "tracking-search-analytics-events-in-mobile-apps",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -2813,6 +2899,13 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "Product recommendations",
+              "slug": "product-recommendations",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
             {
               "name": "Integrating product recommendations in headless or FastStore web stores",
               "slug": "integrating-product-recommendations-in-headless-or-faststore-web-stores",
@@ -3280,6 +3373,20 @@
             {
               "name": "VTEX CX Platform MCP",
               "slug": "connect-the-vtex-cx-platform-mcp",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Integrating with the abandoned cart webhook",
+              "slug": "integrating-with-the-abandoned-cart-webhook",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "Troubleshooting: Abandoned cart webhook",
+              "slug": "troubleshooting-abandoned-cart-webhook",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -5069,7 +5176,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/product/-productId-/language",
+                  "endpoint": "/api/catalog/pvt/product/-productId-/language/-locale-",
                   "children": []
                 },
                 {
@@ -5087,7 +5194,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/catalog/pvt/products/-productId-/specification/-specificationId-/language",
+                  "endpoint": "/api/catalog/pvt/products/-productId-/specification/-specificationId-/language/-locale-",
                   "children": []
                 },
                 {
@@ -5110,7 +5217,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/language",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5128,7 +5235,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/attribute/-skuAttributeId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5146,7 +5253,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-/language",
+                      "endpoint": "/api/catalog/pvt/stockkeepingunit/-skuId-/file/-skuFileId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5171,7 +5278,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/specificationgroup/-specificationGroupId-/language",
+                      "endpoint": "/api/catalog/pvt/specificationgroup/-specificationGroupId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5189,7 +5296,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/specification/-specificationId-/language",
+                      "endpoint": "/api/catalog/pvt/specification/-specificationId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5207,7 +5314,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language",
+                      "endpoint": "/api/catalog/pvt/specificationvalue/-valueId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5232,7 +5339,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/category/-categoryId-/language",
+                      "endpoint": "/api/catalog/pvt/category/-categoryId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5257,7 +5364,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/brand/-brandId-/language",
+                      "endpoint": "/api/catalog/pvt/brand/-brandId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5282,7 +5389,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/attachment/-attachmentId-/language",
+                      "endpoint": "/api/catalog/pvt/attachment/-attachmentId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5300,7 +5407,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-/language",
+                      "endpoint": "/api/catalog/pvt/skuservicetype/-skuServiceTypeId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5318,7 +5425,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/skuservice/-skuserviceId-/language",
+                      "endpoint": "/api/catalog/pvt/skuservice/-skuserviceId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5336,7 +5443,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-/language",
+                      "endpoint": "/api/catalog/pvt/skuservicevalue/-skuServiceValueId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -5361,7 +5468,7 @@
                       "type": "openapi",
                       "method": "GET",
                       "origin": "",
-                      "endpoint": "/api/catalog/pvt/collection/-collectionId-/language",
+                      "endpoint": "/api/catalog/pvt/collection/-collectionId-/language/-locale-",
                       "children": []
                     },
                     {
@@ -7830,7 +7937,7 @@
                   "type": "openapi",
                   "method": "GET",
                   "origin": "",
-                  "endpoint": "/api/logistics/pvt/configuration/freights/-carrierId-/-cep-/values",
+                  "endpoint": "/api/logistics/pvt/configuration/freights/-carrierId-/-postalcode-/values",
                   "children": []
                 }
               ]
@@ -13257,6 +13364,24 @@
                   "origin": "",
                   "endpoint": "/api/authenticator/v1/storefront/users",
                   "children": []
+                },
+                {
+                  "name": "Get storefront user by user ID",
+                  "slug": "authenticator-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/users/-userId-",
+                  "children": []
+                },
+                {
+                  "name": "Get storefront user by identifier",
+                  "slug": "authenticator-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/authenticator/v1/users/info",
+                  "children": []
                 }
               ]
             },
@@ -16247,7 +16372,7 @@
           "children": [
             {
               "name": "My Account",
-              "slug": "vtex.mmy-account",
+              "slug": "apps/vtex.my-account",
               "origin": "",
               "type": "markdown",
               "children": [
@@ -16465,7 +16590,7 @@
               "name": "Cart and checkout",
               "slug": "guides/cart-and-checkout",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Add to cart button",
@@ -16632,7 +16757,7 @@
               "children": [
                 {
                   "name": "Autocomplete",
-                  "slug": "apps/vtex.vtex.search/autocomplete",
+                  "slug": "apps/vtex.search/autocomplete",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -16666,8 +16791,15 @@
                   "children": []
                 },
                 {
+                  "name": "Recommendation Shelf",
+                  "slug": "apps/vtex.recommendation-shelf",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Suggestions",
-                  "slug": "apps/vtex.vtex.search/suggestions",
+                  "slug": "apps/vtex.search/suggestions",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -16742,7 +16874,7 @@
               "name": "Product display",
               "slug": "guides/product-display",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Product Customizer",
@@ -17210,93 +17342,6 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
-                }
-              ]
-            },
-            {
-              "name": "Headless CMS (legacy)",
-              "slug": "faststore/headless-cms-overview",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Integration",
-                  "slug": "faststore/integration-overview",
-                  "origin": "",
-                  "type": "category",
-                  "children": [
-                    {
-                      "name": "Setting up the Headless CMS (legacy)",
-                      "slug": "faststore/integration-setting-up-the-headless-cms",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Structuring Content Types and Sections",
-                      "slug": "faststore/integration-structuring-content-types-and-sections",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Promoting your Headless CMS (legacy) changes",
-                      "slug": "faststore/integration-promoting-your-headless-cms-changes",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
-                },
-                {
-                  "name": "Managing content with 'scopes' and 'requiredScopes'",
-                  "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Multiple page templates",
-                  "slug": "faststore/headless-cms-multiple-page-template",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Previewing Headless CMS in development mode",
-                  "slug": "faststore/headless-cms-previewing-changes-in-development-mode",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Widgets for Headless CMS",
-                  "slug": "faststore/headless-cms-widgets",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Customizing pages with Dynamic Content",
-                  "slug": "faststore/dynamic-content-overview",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Step 1 - Setting up the store code for Dynamic Content",
-                      "slug": "faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Step 2 - Handling Dynamic Content in custom sections",
-                      "slug": "faststore/dynamic-content-step-2-handling-the-dynamic-content-in-custom-sections",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
                 }
               ]
             },
@@ -18370,107 +18415,28 @@
               ]
             },
             {
-              "name": "Developing and overriding UI components",
-              "slug": "faststore/developing-and-overriding-components-overview",
+              "name": "Developing and customizing FastStore components",
+              "slug": "faststore/developing-and-customizing-components-overview",
               "origin": "",
               "type": "markdown",
               "children": [
                 {
-                  "name": "Section override",
-                  "slug": "faststore/overrides-overview",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Overriding native component's props",
-                      "slug": "faststore/overrides-component-props",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Overriding a native component",
-                      "slug": "faststore/overrides-native-component",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Overriding section styles",
-                      "slug": "faststore/overrides-section-styles",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "`getOverriddenSection` function",
-                      "slug": "faststore/overrides-getoverriddensection-function",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Syncing components with the Headless CMS",
-                      "slug": "faststore/overrides-syncing-components-with-the-headless-cms",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Migrating Overrides v1 to v2",
-                      "slug": "faststore/overrides-migrating-v1-to-v2",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Overriding native components and props (v1)",
-                      "slug": "faststore/overrides-components-and-props-v1",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
-                },
-                {
-                  "name": "Section override - Use cases",
-                  "slug": "faststore/override-use-cases-overview",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": [
-                    {
-                      "name": "Adding more icon options to the Alert component",
-                      "slug": "faststore/override-use-cases-adding-more-icon-options-to-the-alert-component",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Adding an image to the Alert component",
-                      "slug": "/faststore/override-use-cases-adding-an-image-to-the-alert-component",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    }
-                  ]
-                },
-                {
-                  "name": "Creating a new section",
-                  "slug": "faststore/developing-and-overriding-components-creating-a-new-section",
+                  "name": "Creating a new section (CMS)",
+                  "slug": "faststore/developing-and-customizing-components-creating-a-new-section-cms",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "List of native sections and overridable components",
-                  "slug": "faststore/developing-and-overriding-components-list-of-native-sections",
+                  "slug": "faststore/developing-and-customizing-components-list-of-native-sections",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
                   "name": "Experimental exports - Hooks and Components",
-                  "slug": "faststore/developing-and-overriding-components-experimental-exports-hooks-and-components",
+                  "slug": "faststore/developing-and-customizing-components-experimental-exports-hooks-and-components",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -18662,6 +18628,179 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                }
+              ]
+            },
+            {
+              "name": "Headless CMS (legacy)",
+              "slug": "faststore/headless-cms-overview",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Integration",
+                  "slug": "faststore/integration-overview",
+                  "origin": "",
+                  "type": "category",
+                  "children": [
+                    {
+                      "name": "Setting up the Headless CMS (legacy)",
+                      "slug": "faststore/integration-setting-up-the-headless-cms",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Structuring Content Types and Sections",
+                      "slug": "faststore/integration-structuring-content-types-and-sections",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Promoting your Headless CMS (legacy) changes",
+                      "slug": "faststore/integration-promoting-your-headless-cms-changes",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Creating a new section (Headless CMS legacy)",
+                  "slug": "faststore/headless-cms-creating-a-new-section-legacy",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Section override",
+                  "slug": "faststore/overrides-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Overriding native component's props",
+                      "slug": "faststore/overrides-component-props",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Overriding a native component",
+                      "slug": "faststore/overrides-native-component",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Overriding section styles",
+                      "slug": "faststore/overrides-section-styles",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "`getOverriddenSection` function",
+                      "slug": "faststore/overrides-getoverriddensection-function",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Syncing components with the Headless CMS",
+                      "slug": "faststore/overrides-syncing-components-with-the-headless-cms",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Migrating Overrides v1 to v2",
+                      "slug": "faststore/overrides-migrating-v1-to-v2",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Overriding native components and props (v1)",
+                      "slug": "faststore/overrides-components-and-props-v1",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Section override - Use cases",
+                  "slug": "faststore/override-use-cases-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Adding more icon options to the Alert component",
+                      "slug": "faststore/override-use-cases-adding-more-icon-options-to-the-alert-component",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Adding an image to the Alert component",
+                      "slug": "faststore/override-use-cases-adding-an-image-to-the-alert-component",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "name": "Managing content with 'scopes' and 'requiredScopes'",
+                  "slug": "faststore/headless-cms-managing-content-with-scopes-and-requiredscopes",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Multiple page templates",
+                  "slug": "faststore/headless-cms-multiple-page-template",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Previewing Headless CMS in development mode",
+                  "slug": "faststore/headless-cms-previewing-changes-in-development-mode",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Widgets for Headless CMS",
+                  "slug": "faststore/headless-cms-widgets",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Customizing pages with Dynamic Content",
+                  "slug": "faststore/dynamic-content-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": [
+                    {
+                      "name": "Step 1 - Setting up the store code for Dynamic Content",
+                      "slug": "faststore/dynamic-content-step-1-setting-up-the-store-code-for-dynamic-content",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Step 2 - Handling Dynamic Content in custom sections",
+                      "slug": "faststore/dynamic-content-step-2-handling-the-dynamic-content-in-custom-sections",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    }
+                  ]
                 }
               ]
             }
@@ -19332,7 +19471,7 @@
               ]
             },
             {
-              "name": "Migrating your storefront from Store Framework to FastStore",
+              "name": "Migrating from Store Framework to FastStore",
               "slug": "migrating-store-framework-to-faststore",
               "origin": "",
               "type": "markdown",
@@ -19342,9 +19481,9 @@
         },
         {
           "name": "CMS Portal (Legacy)",
-          "slug": "legacy-cms-portal-category",
+          "slug": "cms-portal-legacy",
           "origin": "",
-          "type": "category",
+          "type": "markdown",
           "children": [
             {
               "name": "Migrating your storefront from CMS Portal (Legacy) to Store Framework",
@@ -19755,14 +19894,78 @@
           "type": "category",
           "children": [
             {
+              "name": "September",
+              "slug": "september-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore WebOps: Previews now deactivate after inactivity and reactivate automatically",
+                  "slug": "2026-09-17-faststore-webops-previews-now-deactivate-after-inactivity-and-reactivate-automatically",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 4.8.0",
+                  "slug": "2026-09-15-faststore-release-notes-4-8-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 4.7.0",
+                  "slug": "2026-09-08-faststore-release-notes-4-7-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Ads API: New endpoint for product results by campaign",
+                  "slug": "2026-09-02-vtex-ads-api-new-endpoint-for-product-results-by-campaign",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "August",
               "slug": "august-2026",
               "origin": "",
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 4.6.0",
+                  "slug": "2026-08-25-faststore-release-notes-4-6-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX IO: VBase deprecation and Master Data migration",
+                  "slug": "2026-08-24-vtex-io-vbase-deprecation-master-data-migration",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "B2B Organizations GraphQL: optional status on create mutations",
+                  "slug": "2026-08-24-b2b-organizations-graphql-optional-status-on-create-mutations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore Release Notes — Version 4.5.0",
                   "slug": "2026-08-10-faststore-release-notes-4-5-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "VTEX Ads API: Rate limit on Reports endpoints",
+                  "slug": "2026-08-04-vtex-ads-api-reports-rate-limit",
                   "origin": "",
                   "type": "markdown",
                   "children": []

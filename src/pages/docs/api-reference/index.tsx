@@ -1,10 +1,10 @@
 import { Fragment } from 'react'
-import { Box, Flex } from '@vtex/brand-ui'
+import { Box } from '@vtex/brand-ui'
 import { GetStaticProps, NextPage } from 'next'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import getNavigation from 'utils/getNavigation'
 import PageHeader from 'components/page-header'
-import WhatsNextCard from 'components/whats-next-card'
+import { WhatsNextCard } from '@vtexdocs/components'
 import { getMessages } from 'utils/get-messages'
 
 import image from '../../../../public/images/api-reference.png'
@@ -243,11 +243,11 @@ const APIReferencePage: NextPage<Props> = () => {
           imageAlt={messages['api_reference_page.title']}
         />
         <Box sx={styles.contentContainer}>
-          <Flex sx={styles.cardsContainer}>
+          <Box sx={styles.cardsContainer}>
             {whatsNextData.map((whatsNext) => (
               <WhatsNextCard {...whatsNext} key={whatsNext.title} />
             ))}
-          </Flex>
+          </Box>
         </Box>
       </Fragment>
     </>

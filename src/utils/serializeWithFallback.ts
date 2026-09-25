@@ -2,14 +2,17 @@ import { remarkCodeHike } from '@code-hike/mdx'
 import remarkGFM from 'remark-gfm'
 import rehypeHighlight from 'rehype-highlight'
 import hljsCurl from 'highlightjs-curl'
-import remarkBlockquote from 'utils/remark_plugins/rehypeBlockquote'
 import remarkImages from 'utils/remark_plugins/plaiceholder'
 import getHeadings from './getHeadings'
 import { Item } from '@vtexdocs/components'
+import {
+  remarkBlockquote,
+  remarkReadingTime,
+  remarkMermaid,
+} from '@vtexdocs/components/remark'
 import { type CompileOptions as OriginalCompileOptions } from '@mdx-js/mdx'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemoteSerializeResult } from 'next-mdx-remote'
-import remarkMermaid from './remark_plugins/mermaid'
 
 export type SerializeMdxOptions = Omit<
   OriginalCompileOptions,
@@ -21,12 +24,19 @@ export async function serializeWithFallback({
   headingList = [],
   logger,
   path,
+  extraRehypePlugins = [],
 }: {
   content: string
   headingList?: Item[]
   logger: { warn: (msg: string) => void; error: (msg: string) => void }
   path: string
+  extraRehypePlugins?: unknown[]
 }) {
+  const highlightPlugin = [
+    rehypeHighlight,
+    { languages: { hljsCurl }, ignoreMissing: true },
+  ]
+
   const mdxOptions = (headingList: Item[] = []) => ({
     remarkPlugins: [
       [
@@ -45,11 +55,10 @@ export async function serializeWithFallback({
       [getHeadings, { headingList }],
       remarkBlockquote,
       remarkMermaid,
+      remarkReadingTime,
     ],
     useDynamicImport: true,
-    rehypePlugins: [
-      [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
-    ],
+    rehypePlugins: [highlightPlugin, ...extraRehypePlugins],
     format: 'mdx',
   })
 
@@ -60,10 +69,9 @@ export async function serializeWithFallback({
       [getHeadings, { headingList }],
       remarkBlockquote,
       remarkMermaid,
+      remarkReadingTime,
     ],
-    rehypePlugins: [
-      [rehypeHighlight, { languages: { hljsCurl }, ignoreMissing: true }],
-    ],
+    rehypePlugins: [highlightPlugin, ...extraRehypePlugins],
     format: 'md',
   })
 

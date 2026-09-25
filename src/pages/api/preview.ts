@@ -71,27 +71,35 @@ export default async function handler(
 
   if (isAuthenticated) {
     if (req.query.branch) {
-      let branchExists
+      let branchExists = false
       try {
-        branchExists = await getGithubBranch(
+        branchExists = !!(await getGithubBranch(
           'vtexdocs',
           'dev-portal-content',
           branch
+        ))
+      } catch (error) {
+        console.error(
+          `Preview branch "${branch}" was not found or is inaccessible:`,
+          error
         )
-      } catch {
-        branchExists = false
       }
-      if (branchExists) {
-        const customPreviewData = {
-          branch: `${branch}`,
-        }
-        res.setPreviewData(customPreviewData)
+      if (!branchExists) {
+        return res.status(404).json({
+          error: `Branch "${branch}" was not found in vtexdocs/dev-portal-content`,
+        })
       }
+      res.setPreviewData({
+        branch: `${branch}`,
+      })
     }
     res.redirect('/')
   } else {
-    const protocol = process.env.BUILD_ENV === 'dev' ? 'http' : 'https'
-    const callbackUrl = `${protocol}://${req.headers.host}${req.url}`
-    res.redirect(`/api/auth/signin?callbackUrl=${callbackUrl}`)
+    // Relative callback keeps http/https aligned with NEXTAUTH_URL.
+    // Encoding preserves ?branch= so it is not parsed as a separate query param.
+    const callbackUrl = req.url ?? '/'
+    res.redirect(
+      `/api/auth/signin?callbackUrl=${encodeURIComponent(callbackUrl)}`
+    )
   }
 }

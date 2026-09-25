@@ -11,11 +11,11 @@ export async function getServerSideProps(ctx: any) {
 
   const references = collectApiReferenceSitemapUrls(
     referenceCategories?.categories,
-    { includeOverviews: true, includeEndpointHashes: false }
+    { includeOverviews: false, includeEndpointHashes: true }
   )
 
   return await getServerSideSitemap(ctx, references)
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
-export default function SitemapIndex() {}
+export default function AlgoliaOpenapiSitemap() {}

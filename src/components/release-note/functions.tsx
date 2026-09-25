@@ -7,6 +7,16 @@ import { getMessages } from 'utils/get-messages'
 
 const messages = getMessages()
 
+export const getReleaseNoteDateFromSlug = (slug?: string | null) => {
+  if (!slug) return null
+  return (
+    slug
+      .split('/')
+      .pop()
+      ?.match(/^(\d{4}-\d{2}-\d{2})/)?.[1] ?? null
+  )
+}
+
 export const getReleaseDate = (createdAt: string) => {
   const daysElapsed = getDaysElapsed(new Date(createdAt))
   return daysElapsed < 1 ? (

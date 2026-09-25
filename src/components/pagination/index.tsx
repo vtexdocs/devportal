@@ -21,8 +21,8 @@ const Pagination = ({ forcePage, pageCount, onPageChange }: Props) => {
         }}
         previousLabel={<ArrowLeftIcon />}
         nextLabel={<ArrowRightIcon />}
-        pageRangeDisplayed={3}
-        marginPagesDisplayed={2}
+        pageRangeDisplayed={1}
+        marginPagesDisplayed={1}
         pageClassName="page-item"
         pageLinkClassName="page-link"
         previousClassName="page-item"
