@@ -2,6 +2,41 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.1](https://github.com/vtexdocs/devportal/compare/v2.0.0...v2.0.1) (2026-09-25)
+
+
+### Features
+
+* add FastStore monorepo section to navigation ([e25da01](https://github.com/vtexdocs/devportal/commit/e25da01bae0c41ceedee48cb377da2a163bae9e4))
+* add FastStore WebOps preview note to navigation ([b330e5b](https://github.com/vtexdocs/devportal/commit/b330e5bd540fb3d6b96ca347f61591f6db4b462c))
+* add redirects for Faststore monorepo documentation ([e9a2eb5](https://github.com/vtexdocs/devportal/commit/e9a2eb583bdc09f31959b174295781957512d033))
+* **navigation.json:** add checkout ui settings guide ([3c3ecd0](https://github.com/vtexdocs/devportal/commit/3c3ecd065ba3bad9734e5197ec33c7b00f4973f7))
+* **navigation.json:** add delivery and pickup hashes endpoint and release note ([42493bb](https://github.com/vtexdocs/devportal/commit/42493bbb0b2ed5805383d0133b4c2f311f97fe38))
+* **navigation.json:** add faststore release notes for version 4.8.0 ([537220b](https://github.com/vtexdocs/devportal/commit/537220b9322a793e36739eb663a9f83f5bfb23a1))
+* **navigation.json:** add section for cms graphql api ([e4693eb](https://github.com/vtexdocs/devportal/commit/e4693eb33d9b074995f6876717da586e79dbcb0a))
+* **netlifly.toml:** add redirect for migrating store framework to Faststore ([d6999ab](https://github.com/vtexdocs/devportal/commit/d6999abd7f4fd68da6ee1402305b95091d018082))
+
+
+### Bug Fixes
+
+* **nav:** update API endpoints in navigation.json to include '/api' prefix ([9c4ea0c](https://github.com/vtexdocs/devportal/commit/9c4ea0cc31df0a73a2af86f5703aea2fb343aee7))
+* **netlify.toml:** add redirects for developing and customizing components ([6731500](https://github.com/vtexdocs/devportal/commit/6731500c44f5ff67641b46c2857edca3ba77391b))
+* **preview.ts:** update auth flow ([2c27e8b](https://github.com/vtexdocs/devportal/commit/2c27e8b942999edf8db0950447600a770bc32d62))
+* title of storefront migration guide ([778c7ab](https://github.com/vtexdocs/devportal/commit/778c7ab64296277e1919a659e0021f0a06af73c0))
+
+
+### Refactoring
+
+* **navigation.json:** organize legacy headles cms section and component customization ([4818d67](https://github.com/vtexdocs/devportal/commit/4818d6703e7e1b678bbecd96db4c8c7587d2790d))
+* **navigation.json:** remove outdated integration app template section ([c996513](https://github.com/vtexdocs/devportal/commit/c996513940e9a10e3e5e4e956432589481187a19))
+* **package.json:** update vtexdocs/components and release page ([93e7c72](https://github.com/vtexdocs/devportal/commit/93e7c722a399c89f3b2d764dec40c61d658f1a96))
+
+
+### Docs
+
+* add Authenticator user lookup endpoints to nav ([9171e04](https://github.com/vtexdocs/devportal/commit/9171e04f2f3a43db43ae2e34495ca08f6d625cc0))
+* fixing multi-language urls indexing ([2b1191b](https://github.com/vtexdocs/devportal/commit/2b1191b8af04e40cf5250e10e2f64f35e6e13bc8))
+
 ## [2.0.0](https://github.com/vtexdocs/devportal/compare/v1.46.0...v2.0.0) (2026-09-09)
 
 
