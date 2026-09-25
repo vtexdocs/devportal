@@ -976,6 +976,13 @@
                   "children": []
                 },
                 {
+                  "name": "Checkout UI Settings",
+                  "slug": "vtex-checkout-ui-settings",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Customize checkout confirmation pages",
                   "slug": "customize-checkout-confirmation-pages",
                   "origin": "",
@@ -6953,6 +6960,15 @@
               "slug": "delivery-promise-suggestions-api-logistics-shipping",
               "type": "category",
               "children": [
+                {
+                  "name": "Get delivery zones and pickup points hashes",
+                  "slug": "delivery-promise-suggestions-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/logistics-shipping/zones/_search",
+                  "children": []
+                },
                 {
                   "name": "Search delivery zones",
                   "slug": "delivery-promise-suggestions-api",
@@ -19909,6 +19925,13 @@
                 {
                   "name": "FastStore Release Notes — Version 4.8.0",
                   "slug": "2026-09-15-faststore-release-notes-4-8-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Delivery Promise Suggestions API: New endpoint to generate delivery and pickup hashes",
+                  "slug": "2026-09-11-delivery-promise-suggestions-api-new-endpoint-to-generate-delivery-and-pickup-hashes",
                   "origin": "",
                   "type": "markdown",
                   "children": []
