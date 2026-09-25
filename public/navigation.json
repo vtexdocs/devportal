@@ -976,6 +976,13 @@
                   "children": []
                 },
                 {
+                  "name": "Checkout UI Settings",
+                  "slug": "vtex-checkout-ui-settings",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Customize checkout confirmation pages",
                   "slug": "customize-checkout-confirmation-pages",
                   "origin": "",
