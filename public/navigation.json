@@ -1393,8 +1393,8 @@
                       "children": []
                     },
                     {
-                      "name": "Creating a new section in the CMS",
-                      "slug": "creating-a-new-section",
+                      "name": "Customizing FastStore storefronts with the CMS",
+                      "slug": "customizing-faststore-with-cms",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -18439,6 +18439,13 @@
                 {
                   "name": "Creating a new section (CMS)",
                   "slug": "faststore/developing-and-customizing-components-creating-a-new-section-cms",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Overriding a native component in the CMS",
+                  "slug": "faststore/developing-and-customizing-components-overriding-a-native-component-cms",
                   "origin": "",
                   "type": "markdown",
                   "children": []
