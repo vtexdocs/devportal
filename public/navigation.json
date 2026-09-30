@@ -8258,7 +8258,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/availability/v1/inventory/batch/-batchId-/commit",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/confirm",
                   "children": []
                 },
                 {
