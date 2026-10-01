@@ -8240,7 +8240,7 @@
             },
             {
               "name": "Batch operations",
-              "slug": "logistics-api-inventory",
+              "slug": "logistics-api-batch-operations",
               "type": "category",
               "children": [
                 {
@@ -8258,7 +8258,7 @@
                   "type": "openapi",
                   "method": "POST",
                   "origin": "",
-                  "endpoint": "/availability/v1/inventory/batch/-batchId-/commit",
+                  "endpoint": "/availability/v1/inventory/batch/-batchId-/confirm",
                   "children": []
                 },
                 {
@@ -19943,6 +19943,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Master Data API v2: schema saves are blocked while a reindex is in progress",
+                  "slug": "2026-09-30-master-data-api-v2-schema-saves-blocked-during-reindex",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore WebOps: Previews now deactivate after inactivity and reactivate automatically",
                   "slug": "2026-09-17-faststore-webops-previews-now-deactivate-after-inactivity-and-reactivate-automatically",
