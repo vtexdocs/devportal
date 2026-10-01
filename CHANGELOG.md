@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/vtexdocs/devportal/compare/v2.0.1...v2.0.2) (2026-10-01)
+
+
+### Features
+
+* **navigation.json:** add authentication section to api extensions navigation ([e566c4b](https://github.com/vtexdocs/devportal/commit/e566c4bc4bc2b33a57f787e21cc4324533ae6a8a))
+* **navigation.json:** add entry for overriding native component ([a91997c](https://github.com/vtexdocs/devportal/commit/a91997cadadb9e58cddd50da118cd8280c63c635))
+* **navigation.json:** add Master Data API v2 reindex announcement ([a3af3d6](https://github.com/vtexdocs/devportal/commit/a3af3d63c28c8c06b3525b41a9ea6954cd1bb189))
+* **navigation.json:** update name for overriding native component ([09629cf](https://github.com/vtexdocs/devportal/commit/09629cfed4a5d487df061149a07eb2e6e19a04d4))
+* **navigation.json:** update navigation for cms section ([e0616fa](https://github.com/vtexdocs/devportal/commit/e0616fac80f1cfc0b20cf278be198e1b6b22dff9))
+* **netlify.toml:** add redirects for cms and faststore guides ([7bc2e21](https://github.com/vtexdocs/devportal/commit/7bc2e21cdf027473ea0f545ae9012ff8ece3cccc))
+
+
+### Bug Fixes
+
+* **navigation.json:** fix confirm batch inventory endpoint path ([cd55305](https://github.com/vtexdocs/devportal/commit/cd55305dcb8b91100ed96b61bf08333dbe9c9a12))
+* **navigation.json:** use unique slug for batch operations category ([2f6f0cd](https://github.com/vtexdocs/devportal/commit/2f6f0cdab29f36de729b8e4726307d42a65dbf83))
+
 ### [2.0.1](https://github.com/vtexdocs/devportal/compare/v2.0.0...v2.0.1) (2026-09-25)
 
 
