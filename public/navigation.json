@@ -1082,7 +1082,7 @@
               "name": "Security",
               "slug": "checkout-security",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "SSL/TLS Security Protocols and Ciphers at Checkout",
@@ -2212,7 +2212,7 @@
               "name": "Inventory",
               "slug": "inventory",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Batch inventory updates (Beta)",
@@ -2424,7 +2424,7 @@
                   "name": "Custom checkout fields settings",
                   "slug": "custom-checkout-fields-settings",
                   "origin": "",
-                  "type": "markdown",
+                  "type": "category",
                   "children": [
                     {
                       "name": "Custom fields integration",
@@ -17097,7 +17097,7 @@
                 },
                 {
                   "name": "Assembly Options",
-                  "slug": "guides/vtex.assembly-options-app",
+                  "slug": "apps/vtex.admin-assembly-options",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -20583,13 +20583,6 @@
                   "children": []
                 },
                 {
-                  "name": "VTEX Shield: New SSL Certificates API",
-                  "slug": "2025-06-03-vtex-shield-new-ssl-certificates-api",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "VTEX IO Apps: End of official support for legacy apps",
                   "slug": "2025-06-06-vtex-io-apps-end-of-official-support-for-legacy-apps",
                   "origin": "",
@@ -21694,7 +21687,7 @@
               "children": [
                 {
                   "name": "Cardholder Document Configuration",
-                  "slug": "cardholder-document-configuration",
+                  "slug": "cardholder-document-configuration-release",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -22703,7 +22696,7 @@
                 },
                 {
                   "name": "List price presentation on product selling price",
-                  "slug": "xxx",
+                  "slug": "2020-14-08-list-price-presentation-on-product-selling-price",
                   "origin": "",
                   "type": "markdown",
                   "children": []
