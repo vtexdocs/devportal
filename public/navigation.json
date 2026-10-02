@@ -19945,6 +19945,21 @@
           "type": "category",
           "children": [
             {
+              "name": "October",
+              "slug": "october-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Restored the original product release date format",
+                  "slug": "2026-10-02-faststore-restored-original-product-release-date-format",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "September",
               "slug": "september-2026",
               "origin": "",
