@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.3](https://github.com/vtexdocs/devportal/compare/v2.0.2...v2.0.3) (2026-10-02)
+
+
+### Bug Fixes
+
+* **navigation.json:** fix ([c3321fb](https://github.com/vtexdocs/devportal/commit/c3321fb5afb49379b968ae8e4f6d57cef5fb5011))
+
+
+### Docs
+
+* add Managing B2B prospects to navigation ([46cdca7](https://github.com/vtexdocs/devportal/commit/46cdca75f5b9752032091a1b48edbc05ae7c9206))
+* **navigation.json:** add orderForm fields reference to Checkout ([5cfe21b](https://github.com/vtexdocs/devportal/commit/5cfe21b4b07c2541e3b75966078fa53abb4df919))
+
 ### [2.0.2](https://github.com/vtexdocs/devportal/compare/v2.0.1...v2.0.2) (2026-10-01)
 
 
