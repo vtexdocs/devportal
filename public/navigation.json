@@ -19958,6 +19958,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore: Fixed session and cart validation after region changes",
+                  "slug": "2026-10-05-faststore-session-and-cart-validation-fix",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Restored the original product release date format",
                   "slug": "2026-10-02-faststore-restored-original-product-release-date-format",
                   "origin": "",
