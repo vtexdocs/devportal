@@ -948,6 +948,13 @@
           "type": "markdown",
           "children": [
             {
+              "name": "orderForm fields reference",
+              "slug": "orderform-fields",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Custom Data",
               "slug": "custom-data-1",
               "origin": "",
@@ -2240,6 +2247,13 @@
                 {
                   "name": "B2B Buyer Portal Integration Overview",
                   "slug": "b2b-buyer-portal-integration-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing B2B prospects",
+                  "slug": "b2b-prospect-management",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -19937,6 +19951,28 @@
           "origin": "",
           "type": "category",
           "children": [
+            {
+              "name": "October",
+              "slug": "october-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore: Fixed session and cart validation after region changes",
+                  "slug": "2026-10-05-faststore-session-and-cart-validation-fix",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Restored the original product release date format",
+                  "slug": "2026-10-02-faststore-restored-original-product-release-date-format",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
             {
               "name": "September",
               "slug": "september-2026",
