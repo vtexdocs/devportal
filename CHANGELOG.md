@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/vtexdocs/devportal/compare/v2.1.0...v2.1.1) (2026-10-06)
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components version to 7.0.14 ([66fb972](https://github.com/vtexdocs/devportal/commit/66fb97299476cedc3cf882d4a25c9bf340c50f46))
+
 ## [2.1.0](https://github.com/vtexdocs/devportal/compare/v2.0.3...v2.1.0) (2026-10-06)
 
 
