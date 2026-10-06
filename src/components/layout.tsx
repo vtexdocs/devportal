@@ -13,7 +13,12 @@ import {
 } from '@vtexdocs/components'
 import { DocumentationTitle, UpdatesTitle } from 'utils/typings/unionTypes'
 import Script from 'next/script'
-import { documentationData, updatesData, adminData } from 'utils/constants'
+import {
+  documentationData,
+  updatesData,
+  adminData,
+  askAssistantExamples,
+} from 'utils/constants'
 import { PreviewContext } from 'utils/contexts/preview'
 
 interface Props {
@@ -93,6 +98,11 @@ export default function Layout({
               />
             ) : undefined
           }
+          showAssistant
+          assistant={{
+            streamUrl: '/api/assistant/stream',
+            examples: askAssistantExamples,
+          }}
         />
         <Flex sx={styles.container}>
           {!hideSidebar && <Sidebar parentsArray={parentsArray} />}

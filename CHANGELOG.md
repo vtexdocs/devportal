@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/vtexdocs/devportal/compare/v2.0.3...v2.1.0) (2026-10-06)
+
+
+### Features
+
+* **layout.tsx:** add ai assistant ([33403c3](https://github.com/vtexdocs/devportal/commit/33403c3d1e05494a3649ef63b74592409364ef79))
+* **navigation.json:** add faststore session and cart validation fix entry ([5339ce6](https://github.com/vtexdocs/devportal/commit/5339ce6b0f556ec24b803568b638b17d35001264))
+* **navigation.json:** add october category with faststore release entry ([4893699](https://github.com/vtexdocs/devportal/commit/48936990c3a01ce58303627c1ecece427e636f38))
+
+
+### Style
+
+* **page-header:** update page header styles ([c33796e](https://github.com/vtexdocs/devportal/commit/c33796e982ee5595bb5ed277dd816b8e617b8c1e))
+
+
+### Chore
+
+* **package.json:** bump components version ([cc1a646](https://github.com/vtexdocs/devportal/commit/cc1a6463b5476a5b4e12fd320d309c39ae6ae0d3))
+* **package.json:** update vtexdocs/components package ([bea91d7](https://github.com/vtexdocs/devportal/commit/bea91d72ff5531636294aba80f0bab7dac05e957))
+
 ### [2.0.3](https://github.com/vtexdocs/devportal/compare/v2.0.2...v2.0.3) (2026-10-02)
 
 

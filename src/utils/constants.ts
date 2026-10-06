@@ -9,6 +9,7 @@ import {
   DocumentationUpdatesIcon,
   EditIcon,
   MenuIcon,
+  type AskAssistantExampleCategory,
 } from '@vtexdocs/components'
 
 import { getMessages } from 'utils/get-messages'
@@ -77,6 +78,49 @@ export const documentationData: DocDataElement[] = [
     title: 'Troubleshooting',
     description: messages['troubleshooting.description'],
     link: '/docs/troubleshooting',
+  },
+]
+
+export const askAssistantExamples: AskAssistantExampleCategory[] = [
+  {
+    id: 'api-reference',
+    title: 'API Reference',
+    Icon: APIReferenceIcon,
+    questions: [
+      'How do I authenticate VTEX API requests?',
+      'How do I make my first API request?',
+      'How do I use VTEX APIs with Postman?',
+    ],
+  },
+  {
+    id: 'app-development',
+    title: 'App Development',
+    Icon: AppDevelopmentIcon,
+    questions: [
+      'How do I create my first VTEX IO app?',
+      'How do I create a development workspace?',
+      'How do I deploy a VTEX IO app?',
+    ],
+  },
+  {
+    id: 'storefront-development',
+    title: 'Storefront Development',
+    Icon: StorefrontDevelopmentIcon,
+    questions: [
+      'How do I get started with FastStore?',
+      'How do I customize a FastStore storefront?',
+      'How do I create a Store Framework storefront?',
+    ],
+  },
+  {
+    id: 'vtex-io-apps',
+    title: 'VTEX IO Apps',
+    Icon: VTEXIOAppsIcon,
+    questions: [
+      'How do I install a VTEX IO app?',
+      'How do I check which apps are installed in my account?',
+      'How do I find an app for my use case?',
+    ],
   },
 ]
 
