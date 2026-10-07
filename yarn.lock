@@ -4479,9 +4479,9 @@
   resolved "https://registry.yarnpkg.com/@vtex/tsconfig/-/tsconfig-0.6.0.tgz#c9dfffc95d2ef55195237411f9c15269ca30b2a5"
   integrity sha512-SVQBxaSdEVdpJFja1aVTIiZBgpQKePyYOUWGzcYq6LYkSWqSbz2LoC7TuLUsmfweYmVkv8+4eVuxcDpQVEpq1A==
 
-"@vtexdocs/components@https://github.com/vtexdocs/components.git#update/feedback-component":
+"@vtexdocs/components@https://github.com/vtexdocs/components.git#f4e084a0dd2c25eab79b8fd125a7b4cf3c65b2d7":
   version "7.0.14"
-  resolved "https://github.com/vtexdocs/components.git#b54bb78684205b77a3c92aab7ea37ee5f072d056"
+  resolved "https://github.com/vtexdocs/components.git#f4e084a0dd2c25eab79b8fd125a7b4cf3c65b2d7"
   dependencies:
     "@code-hike/mdx" "^0.9.0"
     "@vtex/brand-ui" "^0.46.1"
