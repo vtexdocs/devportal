@@ -19980,6 +19980,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 4.9.0",
+                  "slug": "2026-09-30-faststore-release-notes-4-9-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Master Data API v2: schema saves are blocked while a reindex is in progress",
                   "slug": "2026-09-30-master-data-api-v2-schema-saves-blocked-during-reindex",
                   "origin": "",
