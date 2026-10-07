@@ -36,6 +36,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       headers: { Accept: 'text/event-stream' },
     },
     (upstreamRes) => {
+      const rawRequestId = upstreamRes.headers['x-request-id']
+      const requestId = Array.isArray(rawRequestId)
+        ? rawRequestId[0]
+        : rawRequestId
+
       res.writeHead(upstreamRes.statusCode || 502, {
         'Content-Type':
           String(upstreamRes.headers['content-type'] || '') ||
@@ -43,6 +48,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         'Cache-Control': 'no-store',
         Connection: 'keep-alive',
         'X-Accel-Buffering': 'no',
+        ...(requestId && !/[\r\n]/.test(requestId)
+          ? { 'X-Request-Id': requestId }
+          : {}),
       })
       upstreamRes.pipe(res)
     }

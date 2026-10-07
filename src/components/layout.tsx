@@ -101,6 +101,7 @@ export default function Layout({
           showAssistant
           assistant={{
             streamUrl: '/api/assistant/stream',
+            feedbackUrl: '/api/assistant/feedback',
             examples: askAssistantExamples,
           }}
         />
