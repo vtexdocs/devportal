@@ -148,6 +148,12 @@ to = "/docs/guides/faststore/storefront-features-handling-third-party-scripts"
 
 [[redirects]]
 force = true
+from = "/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature"
+status = 308
+to = "/docs/guides/faststore/localization-feature-handling-internationalization-with-the-localization-feature"
+
+[[redirects]]
+force = true
 from = "/docs/guides/faststore/developer-tools-enablecypressextension"
 status = 308
 to = "/docs/guides/faststore/developer-tools-custom-cypress"
