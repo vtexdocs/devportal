@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/vtexdocs/devportal/compare/v2.1.1...v2.1.2) (2026-10-07)
+
+
+### Bug Fixes
+
+* pin components preview to rebuilt commit ([4ef4089](https://github.com/vtexdocs/devportal/commit/4ef4089c93296beaa3f348e3c5b94edae8b9ff12))
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components version to 7.0.15 ([a46acaa](https://github.com/vtexdocs/devportal/commit/a46acaad85535441b04f411bb0a5bf4346979268))
+* **package.json:** update @vtexdocs/components version to a specific branch for feedback component ([7d5e9e0](https://github.com/vtexdocs/devportal/commit/7d5e9e0906c334dab795a2c81ec08c6e19f43f39))
+* **yarn.lock:** update @vtexdocs/components ([2b0289c](https://github.com/vtexdocs/devportal/commit/2b0289cf1a4b258c9a85e1f155a9dc192e906aaa))
+
 ### [2.1.1](https://github.com/vtexdocs/devportal/compare/v2.1.0...v2.1.1) (2026-10-06)
 
 
