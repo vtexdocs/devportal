@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "node_modules/@img/**/*", "./github
 
 [[redirects]]
 force = true
+from = "/updates/release-notes/2026-09-30-faststore-release-notes-4-9-0"
+status = 308
+to = "/updates/release-notes/2026-10-01-faststore-release-notes-4-9-0"
+
+[[redirects]]
+force = true
 from = "/docs/guides/cms-creating-a-new-section"
 status = 308
 to = "/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms"
