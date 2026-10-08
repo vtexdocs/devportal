@@ -1538,6 +1538,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Deleting documents in bulk in Master Data",
+                  "slug": "deleting-documents-in-bulk-in-master-data",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -19957,6 +19964,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Master Data API: Bulk document deletion for v1 and v2 entities",
+                  "slug": "2026-10-08-master-data-api-bulk-document-deletion",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore: Fixed session and cart validation after region changes",
                   "slug": "2026-10-05-faststore-session-and-cart-validation-fix",
