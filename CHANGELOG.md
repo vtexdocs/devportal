@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.3](https://github.com/vtexdocs/devportal/compare/v2.1.2...v2.1.3) (2026-10-08)
+
+
+### Features
+
+* **feedback.ts:** enable feedback - ask assistant ([2afccc3](https://github.com/vtexdocs/devportal/commit/2afccc3a030bf1e02aee1356a3732ff53186e5a7))
+* **navigation.json:** update faststore release notes from navigation.json ([f554b08](https://github.com/vtexdocs/devportal/commit/f554b080d79550965ff94d391b24011a84025099))
+* **netlify.toml:** add 308 redirect for faststore release notes update ([d5725e3](https://github.com/vtexdocs/devportal/commit/d5725e3f8faa385d570044966a036055d80faac9))
+* **netlify.toml:** add redirect for internationalization feature documentation ([96357e3](https://github.com/vtexdocs/devportal/commit/96357e316f816bf56d8e6350bf7674be8cb58915))
+
+
+### Bug Fixes
+
+* **navigation.json:** update slug for faststore release notes version 4.9.0 ([0a66bf0](https://github.com/vtexdocs/devportal/commit/0a66bf01becc554f6c77d9e172bd24f8fc4a0f54))
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components to version 7.0.17 ([c46b33a](https://github.com/vtexdocs/devportal/commit/c46b33a7e89cb8afd4d863ef49b6fc5d72f66cfc))
+
 ### [2.1.2](https://github.com/vtexdocs/devportal/compare/v2.1.1...v2.1.2) (2026-10-07)
 
 
