@@ -3318,6 +3318,13 @@
               "origin": "",
               "type": "markdown",
               "children": []
+            },
+            {
+              "name": "User Rights: Automating data erasure requests",
+              "slug": "user-rights-data-erasure",
+              "origin": "",
+              "type": "markdown",
+              "children": []
             }
           ]
         },
@@ -13722,6 +13729,39 @@
           ]
         },
         {
+          "name": "User Rights API",
+          "slug": "user-rights-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Data erasure",
+              "slug": "user-rights-api-data-erasure",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create data erasure job",
+                  "slug": "user-rights-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/user-rights/forget/jobs",
+                  "children": []
+                },
+                {
+                  "name": "Get data erasure job status",
+                  "slug": "user-rights-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/user-rights/forget/jobs/-jobId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Orders API - PII Data Architecture (Data Protection Plus)",
           "slug": "orders-api-pii-version",
           "origin": "",
@@ -19957,6 +19997,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "User Rights API: Automated personal data erasure",
+                  "slug": "2026-10-08-user-rights-api-automated-personal-data-erasure",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore: Fixed session and cart validation after region changes",
                   "slug": "2026-10-05-faststore-session-and-cart-validation-fix",
