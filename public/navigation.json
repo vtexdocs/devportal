@@ -1646,6 +1646,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Managing personal data in Master Data v2",
+                  "slug": "managing-personal-data-in-master-data-v2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -20004,6 +20011,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Master Data v2: Personal data fields with encryption and masking",
+                  "slug": "2026-10-14-master-data-v2-personal-data-fields-with-encryption-and-masking",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "User Rights API: Automated personal data erasure",
                   "slug": "2026-10-09-user-rights-api-automated-personal-data-erasure",
