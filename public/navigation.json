@@ -1405,6 +1405,13 @@
                       "origin": "",
                       "type": "markdown",
                       "children": []
+                    },
+                    {
+                      "name": "Using rich text widgets with FastStore",
+                      "slug": "using-rich-text-widgets-with-faststore",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
                     }
                   ]
                 },
