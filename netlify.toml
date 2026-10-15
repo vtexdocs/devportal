@@ -2634,3 +2634,15 @@ force = true
 from = "/docs/guides/search-api-overview"
 status = 308
 to = "/docs/api-reference/search-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/rates-and-benefits-api-overview"
+status = 308
+to = "/docs/api-reference/promotions-and-taxes-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-shipping-network-api-overview"
+status = 308
+to = "/docs/api-reference/vtex-shipping-network-api"
