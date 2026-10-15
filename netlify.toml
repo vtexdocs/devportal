@@ -2568,3 +2568,69 @@ force = true
 from = "/docs/guides/faststore/monorepo-use-cases"
 status = 308
 to = "/docs/guides/monorepo-use-cases"
+
+[[redirects]]
+force = true
+from = "/docs/guides/buyer-organizations-api-overview"
+status = 308
+to = "/docs/api-reference/buyer-organizations"
+
+[[redirects]]
+force = true
+from = "/docs/guides/catalog-api-overview"
+status = 308
+to = "/docs/api-reference/catalog-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/checkout-api-overview"
+status = 308
+to = "/docs/api-reference/checkout-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/logistics-api-overview"
+status = 308
+to = "/docs/api-reference/logistics-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/marketplace-api-overview"
+status = 308
+to = "/docs/api-reference/marketplace-apis"
+
+[[redirects]]
+force = true
+from = "/docs/guides/orders-api-overview"
+status = 308
+to = "/docs/api-reference/orders-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/policy-engine-api-overview"
+status = 308
+to = "/docs/api-reference/policies-system-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/price-simulations-api-overview"
+status = 308
+to = "/docs/api-reference/price-simulations"
+
+[[redirects]]
+force = true
+from = "/docs/guides/pricing-api-overview"
+status = 308
+to = "/docs/api-reference/pricing-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/reviews-and-ratings-api-overview"
+status = 308
+to = "/docs/api-reference/reviews-and-ratings-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-api-overview"
+status = 308
+to = "/docs/api-reference/search-api"
