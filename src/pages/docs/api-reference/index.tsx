@@ -162,12 +162,6 @@ const whatsNextData: WhatsNextDataElement[] = [
     linkTo: '/docs/api-reference/pricing-api',
   },
   {
-    title: 'Price Simulations API',
-    description: 'Configure custom price selectors for B2B stores.',
-    linkTitle: 'See more',
-    linkTo: '/docs/api-reference/price-simulations',
-  },
-  {
     title: 'Pricing Hub API',
     description:
       'Intermediary between VTEX and external pricing systems for B2B context.',
