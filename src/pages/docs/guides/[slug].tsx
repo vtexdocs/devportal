@@ -24,10 +24,14 @@ import {
   extractMarkdownEntries,
   getKeyByValue,
   flattenJSON,
+  findNavEntryBySlug,
+  buildNavUrl,
+  CategoryNavEntry,
 } from 'utils/navigation-utils'
 import { LibraryContext } from '@vtexdocs/components'
 import { slugify } from 'utils/string-utils'
 import ArticleRender from 'components/article-render'
+import ArticleIndexing from 'components/article-indexing'
 import { serialize } from 'next-mdx-remote/serialize'
 
 const docsPathsGLOBAL = await getDocsPaths()
@@ -53,6 +57,8 @@ interface Props {
   isListed: boolean
   branch: string
   hideTOC: boolean
+  isCategoryCover?: boolean
+  category?: CategoryNavEntry
 }
 
 const DocumentationPage: NextPage<Props> = ({
@@ -70,15 +76,24 @@ const DocumentationPage: NextPage<Props> = ({
   branch,
   sectionSelected,
   hideTOC,
+  isCategoryCover,
+  category,
 }) => {
-  const hidden =
-    sectionSelected === '' || serialized.frontmatter.hidden === true
   const { setBranchPreview } = useContext(PreviewContext)
   const { setActiveSidebarElement } = useContext(LibraryContext)
   useEffect(() => {
-    setActiveSidebarElement(slug)
+    setActiveSidebarElement(isCategoryCover && category ? category.slug : slug)
     setBranchPreview(branch)
-  }, [serialized.frontmatter])
+  }, [slug, serialized?.frontmatter])
+
+  if (isCategoryCover && category) {
+    return (
+      <ArticleIndexing category={category} breadcrumbList={breadcrumbList} />
+    )
+  }
+
+  const hidden =
+    sectionSelected === '' || serialized.frontmatter.hidden === true
   return (
     <ArticleRender
       serialized={serialized}
@@ -109,6 +124,79 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const getSidebarContext = (sidebarfallback: any, slug: string) => {
+  const flattenedSidebar = flattenJSON(sidebarfallback)
+
+  const keyPath =
+    getKeyByValue(flattenedSidebar, slug) ||
+    getKeyByValue(flattenedSidebar, `guides/${slug}`)
+  const navigationSlug = keyPath ? flattenedSidebar[keyPath] : ''
+  const isListed = Boolean(keyPath)
+
+  /* Section Selected */
+  const sectionSelected = keyPath
+    ? flattenedSidebar[`${keyPath[0]}.documentation`]
+    : []
+
+  const sidebarIndex = isListed
+    ? sidebarfallback.findIndex(
+        (item: { documentation: string }) =>
+          item.documentation === sectionSelected
+      )
+    : 0
+  /****/
+
+  const { breadcrumbList, parentsArray } = buildBreadcrumbs(
+    sidebarfallback,
+    sidebarIndex,
+    sectionSelected,
+    isListed ? navigationSlug : null
+  )
+
+  return {
+    sectionSelected,
+    sidebarIndex,
+    isListed,
+    breadcrumbList,
+    parentsArray,
+  }
+}
+
+const buildBreadcrumbs = (
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  sidebarfallback: any,
+  sidebarIndex: number,
+  sectionSelected: string,
+  navigationSlug: string | null
+) => {
+  const breadcrumbList: { slug: string; name: string; type: string }[] = [
+    {
+      slug: sidebarIndex
+        ? `/docs/${slugify(sidebarfallback[sidebarIndex].documentation)}`
+        : '/docs/guides',
+      name: sectionSelected,
+      type: 'markdown',
+    },
+  ]
+
+  if (navigationSlug !== null) {
+    const breadcrumbs = findBreadcrumbTrail(
+      sidebarfallback[sidebarIndex].categories,
+      navigationSlug
+    )
+    breadcrumbList.push(...(breadcrumbs ?? []))
+  }
+
+  /* Navigation */
+  const parentsArray: string[] =
+    navigationSlug !== null
+      ? breadcrumbList?.map((item) => item.slug) ?? []
+      : []
+
+  return { breadcrumbList, parentsArray }
+}
+
 export const getStaticProps: GetStaticProps = async ({
   params,
   preview,
@@ -129,8 +217,48 @@ export const getStaticProps: GetStaticProps = async ({
 
   const path = docsPaths[slug]
   if (!path) {
+    const sidebarfallback = await getNavigation()
+    const category = findNavEntryBySlug(sidebarfallback, slug)
+
+    if (!category || category.children.length === 0) {
+      return {
+        notFound: true,
+      }
+    }
+
+    const sectionSelected: string =
+      sidebarfallback[category.sectionIndex].documentation
+    const { breadcrumbList, parentsArray } = buildBreadcrumbs(
+      sidebarfallback,
+      category.sectionIndex,
+      sectionSelected,
+      category.slug
+    )
+
+    // Breadcrumb only links items typed as markdown, and every ancestor of a
+    // category cover is itself a category with its own cover page.
+    const slugPrefix = sidebarfallback[category.sectionIndex].slugPrefix ?? ''
+    const coverBreadcrumbList = breadcrumbList.map((item, index) =>
+      index === 0
+        ? item
+        : {
+            ...item,
+            slug: buildNavUrl(slugPrefix, item.slug),
+            type: 'markdown',
+          }
+    )
+
     return {
-      notFound: true,
+      props: {
+        isCategoryCover: true,
+        category,
+        sectionSelected,
+        parentsArray,
+        slug,
+        sidebarfallback,
+        breadcrumbList: coverBreadcrumbList,
+        branch,
+      },
     }
   }
 
@@ -221,51 +349,13 @@ export const getStaticProps: GetStaticProps = async ({
 
     const hideTOC = serialized?.frontmatter?.hideTOC === true
 
-    const flattenedSidebar = flattenJSON(sidebarfallback)
-
-    const keyPath =
-      getKeyByValue(flattenedSidebar, slug) ||
-      getKeyByValue(flattenedSidebar, `guides/${slug}`)
-    const navigationSlug = keyPath ? flattenedSidebar[keyPath] : ''
-    const isListed = Boolean(keyPath)
-
-    /* Section Selected */
-    const sectionSelected = keyPath
-      ? flattenedSidebar[`${keyPath[0]}.documentation`]
-      : []
-
-    const sidebarIndex = isListed
-      ? sidebarfallback.findIndex(
-          (item: { documentation: string }) =>
-            item.documentation === sectionSelected
-        )
-      : 0
-    /****/
-
-    /* Breadcrumbs */
-    const breadcrumbList: { slug: string; name: string; type: string }[] = [
-      {
-        slug: sidebarIndex
-          ? `/docs/${slugify(sidebarfallback[sidebarIndex].documentation)}`
-          : '/docs/guides',
-        name: sectionSelected,
-        type: 'markdown',
-      },
-    ]
-
-    if (isListed) {
-      const breadcrumbs = findBreadcrumbTrail(
-        sidebarfallback[sidebarIndex].categories,
-        navigationSlug
-      )
-      breadcrumbList.push(...(breadcrumbs ?? []))
-    }
-    /****/
-
-    /* Navigation */
-    const parentsArray: string[] = isListed
-      ? breadcrumbList?.map((item) => item.slug) ?? []
-      : []
+    const {
+      sectionSelected,
+      sidebarIndex,
+      isListed,
+      breadcrumbList,
+      parentsArray,
+    } = getSidebarContext(sidebarfallback, slug)
 
     /* Pagination */
     const entries = extractMarkdownEntries(sidebarfallback[sidebarIndex])
