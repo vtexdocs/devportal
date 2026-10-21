@@ -20005,6 +20005,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 4.10.0",
+                  "slug": "2026-10-21-faststore-release-notes-4-10-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "User Rights API: Automated personal data erasure",
                   "slug": "2026-10-09-user-rights-api-automated-personal-data-erasure",
                   "origin": "",
