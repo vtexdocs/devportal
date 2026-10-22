@@ -1351,8 +1351,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Understanding CMS architecture and schema declarations",
-                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "name": "Setting up your CMS environment",
+                  "slug": "setting-up-your-cms-environment",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1360,6 +1360,27 @@
                 {
                   "name": "Local setup and development",
                   "slug": "local-setup-and-development",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Media gallery",
+                  "slug": "media-gallery",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Understanding CMS architecture and schema declarations",
+                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Schema versioning",
+                  "slug": "schema-versioning",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1402,6 +1423,13 @@
                     {
                       "name": "Customizing FastStore storefronts with the CMS",
                       "slug": "customizing-faststore-with-cms",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Using rich text widgets with FastStore",
+                      "slug": "using-rich-text-widgets-with-faststore",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -1636,13 +1664,6 @@
                 {
                   "name": "Setting up an auto increment field in Master Data v2",
                   "slug": "setting-up-an-auto-increment-field-in-master-data-v2",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Managing personal data in Master Data v2",
-                  "slug": "managing-personal-data-in-master-data-v2",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -20005,8 +20026,8 @@
               "type": "category",
               "children": [
                 {
-                  "name": "Master Data v2: Personal data fields with encryption and masking",
-                  "slug": "2026-10-14-master-data-v2-personal-data-fields-with-encryption-and-masking",
+                  "name": "FastStore Release Notes — Version 4.10.0",
+                  "slug": "2026-10-21-faststore-release-notes-4-10-0",
                   "origin": "",
                   "type": "markdown",
                   "children": []
