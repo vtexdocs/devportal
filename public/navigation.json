@@ -1667,6 +1667,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "Managing personal data in Master Data v2",
+                  "slug": "managing-personal-data-in-master-data-v2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -9541,6 +9548,24 @@
                   "method": "GET",
                   "origin": "",
                   "endpoint": "/api/dataentities/-dataEntityName-/scroll",
+                  "children": []
+                },
+                {
+                  "name": "Get personal data configuration",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/-dataEntityName-/personalData",
+                  "children": []
+                },
+                {
+                  "name": "Configure personal data fields",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/-dataEntityName-/personalData",
                   "children": []
                 }
               ]
@@ -20025,6 +20050,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "Master Data v2: Personal data fields with encryption and masking",
+                  "slug": "2026-10-22-master-data-v2-personal-data-fields-with-encryption-and-masking",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore Release Notes — Version 4.10.0",
                   "slug": "2026-10-21-faststore-release-notes-4-10-0",
