@@ -9549,7 +9549,14 @@
                   "origin": "",
                   "endpoint": "/api/dataentities/-dataEntityName-/scroll",
                   "children": []
-                },
+                }
+              ]
+            },
+            {
+              "name": "Personal data",
+              "slug": "master-data-api-v2-personal-data",
+              "type": "category",
+              "children": [
                 {
                   "name": "Get personal data configuration",
                   "slug": "master-data-api-v2",
