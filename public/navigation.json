@@ -9549,6 +9549,24 @@
                   "origin": "",
                   "endpoint": "/api/dataentities/-dataEntityName-/scroll",
                   "children": []
+                },
+                {
+                  "name": "Get personal data configuration",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/-dataEntityName-/personalData",
+                  "children": []
+                },
+                {
+                  "name": "Configure personal data fields",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/-dataEntityName-/personalData",
+                  "children": []
                 }
               ]
             },
