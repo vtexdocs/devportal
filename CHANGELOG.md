@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/vtexdocs/devportal/compare/v2.1.3...v2.2.0) (2026-10-23)
+
+
+### Features
+
+* **navigation.json:** add faststore release notes for version 4.10.0 ([5bc76ab](https://github.com/vtexdocs/devportal/commit/5bc76abd189133bf78b98532302373eb273494e4))
+* **navigation.json:** add Master Data v2 personal data guide and release note ([27bf0fd](https://github.com/vtexdocs/devportal/commit/27bf0fd9a293d6c861eb6d66691064abc178caf7))
+* **navigation.json:** add User Rights API to navigation ([37296e1](https://github.com/vtexdocs/devportal/commit/37296e1e9fecf68a11bad4505175e45f44edabd4))
+* **navigation:** add navigation entries for cms rich text ([4d33912](https://github.com/vtexdocs/devportal/commit/4d33912f23511f1aa6dde5309c0a6ebfbb2b1d59))
+
+
+### Bug Fixes
+
+* **navigation.json:** date the User Rights release note to 2026-10-09 ([ece9c34](https://github.com/vtexdocs/devportal/commit/ece9c34295aa47d5a20fcbe89944d359a3fc979a))
+
+
+### Docs
+
+* add redirects for rates-and-benefits and vtex shipping network overviews ([01bdcec](https://github.com/vtexdocs/devportal/commit/01bdcec50d5115ca8bed8e6f2c5ce0f222ea6896))
+* add redirects for removed api overview guides ([f16b083](https://github.com/vtexdocs/devportal/commit/f16b083f49b18b1caf8803656e5e0beaf6445252))
+* adding to navigation ([7759d7d](https://github.com/vtexdocs/devportal/commit/7759d7dd3a1be817fa03eb77941f97d1b7b67f46))
+* adding two new endpoints ([4828ff5](https://github.com/vtexdocs/devportal/commit/4828ff5e6bbe536e72da7cb1ed22d1d23b6972f7))
+* create personal data category in api reference ([2a7ad2e](https://github.com/vtexdocs/devportal/commit/2a7ad2ec8dcbb519de22facaf436dd03824bd3ae))
+* remove price simulations api card and its overview redirect ([1c4ddc3](https://github.com/vtexdocs/devportal/commit/1c4ddc394601e1fc409351edb71e4c0ca8937090))
+* update Master Data v2 personal data release note slug to 2026-10-14 (EDU-17349) ([bfe6981](https://github.com/vtexdocs/devportal/commit/bfe6981b89d10365cc30c1dfb4c3a5bda277c381))
+
+
+### Chore
+
+* **navigation.json:** update nav ([8415241](https://github.com/vtexdocs/devportal/commit/8415241911ce0fc9bf098375aeebbacd2263da78))
+* **navigation.json:** update navigation'' ([76f18bf](https://github.com/vtexdocs/devportal/commit/76f18bf0e179f283ba24a1420cded8dcf9f9a2c2))
+* remove dead readme-api-md paths from readmeAPIS.json ([18cbb18](https://github.com/vtexdocs/devportal/commit/18cbb18f1aa9031b7319499a7b7d2d14c509e566))
+
 ### [2.1.3](https://github.com/vtexdocs/devportal/compare/v2.1.2...v2.1.3) (2026-10-08)
 
 
