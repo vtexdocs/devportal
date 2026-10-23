@@ -20058,6 +20058,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Master Data: Temporary restriction on public fields",
+                  "slug": "2026-10-23-master-data-temporary-restriction-on-public-fields",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Master Data v2: Personal data fields with encryption and masking",
                   "slug": "2026-10-22-master-data-v2-personal-data-fields-with-encryption-and-masking",
                   "origin": "",
