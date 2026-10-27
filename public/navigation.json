@@ -948,6 +948,13 @@
           "type": "markdown",
           "children": [
             {
+              "name": "orderForm fields reference",
+              "slug": "orderform-fields",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
               "name": "Custom Data",
               "slug": "custom-data-1",
               "origin": "",
@@ -1082,7 +1089,7 @@
               "name": "Security",
               "slug": "checkout-security",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "SSL/TLS Security Protocols and Ciphers at Checkout",
@@ -1344,8 +1351,8 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Understanding CMS architecture and schema declarations",
-                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "name": "Setting up your CMS environment",
+                  "slug": "setting-up-your-cms-environment",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1353,6 +1360,27 @@
                 {
                   "name": "Local setup and development",
                   "slug": "local-setup-and-development",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Media gallery",
+                  "slug": "media-gallery",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Understanding CMS architecture and schema declarations",
+                  "slug": "understanding-cms-architecture-and-schema-declarations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Schema versioning",
+                  "slug": "schema-versioning",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -1395,6 +1423,13 @@
                     {
                       "name": "Customizing FastStore storefronts with the CMS",
                       "slug": "customizing-faststore-with-cms",
+                      "origin": "",
+                      "type": "markdown",
+                      "children": []
+                    },
+                    {
+                      "name": "Using rich text widgets with FastStore",
+                      "slug": "using-rich-text-widgets-with-faststore",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -1629,6 +1664,13 @@
                 {
                   "name": "Setting up an auto increment field in Master Data v2",
                   "slug": "setting-up-an-auto-increment-field-in-master-data-v2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing personal data in Master Data v2",
+                  "slug": "managing-personal-data-in-master-data-v2",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2212,7 +2254,7 @@
               "name": "Inventory",
               "slug": "inventory",
               "origin": "",
-              "type": "markdown",
+              "type": "category",
               "children": [
                 {
                   "name": "Batch inventory updates (Beta)",
@@ -2240,6 +2282,13 @@
                 {
                   "name": "B2B Buyer Portal Integration Overview",
                   "slug": "b2b-buyer-portal-integration-overview",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Managing B2B prospects",
+                  "slug": "b2b-prospect-management",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -2424,7 +2473,7 @@
                   "name": "Custom checkout fields settings",
                   "slug": "custom-checkout-fields-settings",
                   "origin": "",
-                  "type": "markdown",
+                  "type": "category",
                   "children": [
                     {
                       "name": "Custom fields integration",
@@ -3301,6 +3350,13 @@
             {
               "name": "Limitations of the PII data architecture during closed beta",
               "slug": "limitations-of-the-pii-data-architecture-during-closed-beta",
+              "origin": "",
+              "type": "markdown",
+              "children": []
+            },
+            {
+              "name": "User Rights: Automating data erasure requests",
+              "slug": "user-rights-data-erasure",
               "origin": "",
               "type": "markdown",
               "children": []
@@ -9497,6 +9553,31 @@
               ]
             },
             {
+              "name": "Personal data",
+              "slug": "master-data-api-v2-personal-data",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get personal data configuration",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/-dataEntityName-/personalData",
+                  "children": []
+                },
+                {
+                  "name": "Configure personal data fields",
+                  "slug": "master-data-api-v2",
+                  "type": "openapi",
+                  "method": "PUT",
+                  "origin": "",
+                  "endpoint": "/api/dataentities/-dataEntityName-/personalData",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "Schemas",
               "slug": "master-data-api-v2-schemas",
               "type": "category",
@@ -13708,6 +13789,39 @@
           ]
         },
         {
+          "name": "User Rights API",
+          "slug": "user-rights-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Data erasure",
+              "slug": "user-rights-api-data-erasure",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Create data erasure job",
+                  "slug": "user-rights-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/user-rights/forget/jobs",
+                  "children": []
+                },
+                {
+                  "name": "Get data erasure job status",
+                  "slug": "user-rights-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/user-rights/forget/jobs/-jobId-",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Orders API - PII Data Architecture (Data Protection Plus)",
           "slug": "orders-api-pii-version",
           "origin": "",
@@ -17097,7 +17211,7 @@
                 },
                 {
                   "name": "Assembly Options",
-                  "slug": "guides/vtex.assembly-options-app",
+                  "slug": "apps/vtex.admin-assembly-options",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -18068,13 +18182,6 @@
                       "children": []
                     },
                     {
-                      "name": "Newsletter",
-                      "slug": "faststore/organisms-newsletter",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
                       "name": "OutOfStock",
                       "slug": "faststore/organisms-out-of-stock",
                       "origin": "",
@@ -18349,13 +18456,6 @@
                     {
                       "name": "Extending and customizing native types",
                       "slug": "faststore/analytics-extending-and-customizing-native-types",
-                      "origin": "",
-                      "type": "markdown",
-                      "children": []
-                    },
-                    {
-                      "name": "Use case: Implementing custom newsletter analytics events",
-                      "slug": "faststore/analytics-implementing-custom-newsletter-analytics-events",
                       "origin": "",
                       "type": "markdown",
                       "children": []
@@ -19938,6 +20038,70 @@
           "type": "category",
           "children": [
             {
+              "name": "October",
+              "slug": "october-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "New Catalog multi-language API",
+                  "slug": "2026-10-27-new-catalog-multi-language-api",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Master Data: Temporary restriction on public fields",
+                  "slug": "2026-10-23-master-data-temporary-restriction-on-public-fields",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Master Data v2: Personal data fields with encryption and masking",
+                  "slug": "2026-10-22-master-data-v2-personal-data-fields-with-encryption-and-masking",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 4.10.0",
+                  "slug": "2026-10-21-faststore-release-notes-4-10-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "User Rights API: Automated personal data erasure",
+                  "slug": "2026-10-09-user-rights-api-automated-personal-data-erasure",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Fixed session and cart validation after region changes",
+                  "slug": "2026-10-05-faststore-session-and-cart-validation-fix",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore: Restored the original product release date format",
+                  "slug": "2026-10-02-faststore-restored-original-product-release-date-format",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "FastStore Release Notes — Version 4.9.0",
+                  "slug": "2026-10-01-faststore-release-notes-4-9-0",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "September",
               "slug": "september-2026",
               "origin": "",
@@ -20578,13 +20742,6 @@
                 {
                   "name": "FastStore: Supports B2B Price Tables and personalized promotions",
                   "slug": "2025-06-23-faststore-b2b-price-tables-session-cookies",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "VTEX Shield: New SSL Certificates API",
-                  "slug": "2025-06-03-vtex-shield-new-ssl-certificates-api",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -21694,7 +21851,7 @@
               "children": [
                 {
                   "name": "Cardholder Document Configuration",
-                  "slug": "cardholder-document-configuration",
+                  "slug": "cardholder-document-configuration-release",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -22703,7 +22860,7 @@
                 },
                 {
                   "name": "List price presentation on product selling price",
-                  "slug": "xxx",
+                  "slug": "2020-14-08-list-price-presentation-on-product-selling-price",
                   "origin": "",
                   "type": "markdown",
                   "children": []

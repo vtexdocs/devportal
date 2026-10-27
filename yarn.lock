@@ -4479,14 +4479,15 @@
   resolved "https://registry.yarnpkg.com/@vtex/tsconfig/-/tsconfig-0.6.0.tgz#c9dfffc95d2ef55195237411f9c15269ca30b2a5"
   integrity sha512-SVQBxaSdEVdpJFja1aVTIiZBgpQKePyYOUWGzcYq6LYkSWqSbz2LoC7TuLUsmfweYmVkv8+4eVuxcDpQVEpq1A==
 
-"@vtexdocs/components@https://github.com/vtexdocs/components.git#v6.1.3":
-  version "6.1.3"
-  resolved "https://github.com/vtexdocs/components.git#61ef8155f04b9f2dc16e08fa790ce5b44f8a0844"
+"@vtexdocs/components@https://github.com/vtexdocs/components.git#7.0.15":
+  version "7.0.15"
+  resolved "https://github.com/vtexdocs/components.git#0f2ae73388b84830cda6ec6e2a95e97ca29cc969"
   dependencies:
     "@code-hike/mdx" "^0.9.0"
     "@vtex/brand-ui" "^0.46.1"
     copy-text-to-clipboard "^3.0.1"
     html-react-parser "^3.0.15"
+    mdast-util-to-string "^3.2.0"
     mermaid "^10.1.0"
     next "13.2.4"
     next-mdx-remote "^4.1.0"
@@ -4498,9 +4499,12 @@
     react-router-dom "^6.15.0"
     react-share "^5.1.0"
     react-svg-pan-zoom "^3.12.1"
+    reading-time "^1.5.0"
     search-insights "^2.3.0"
     standard-version "^9.5.0"
     swr "^1.3.0"
+    unist-builder "^3.0.1"
+    unist-util-visit "^4.1.1"
 
 "@webassemblyjs/ast@1.11.6", "@webassemblyjs/ast@^1.11.5":
   version "1.11.6"
@@ -10126,7 +10130,7 @@ mdast-util-to-markdown@^1.0.0, mdast-util-to-markdown@^1.3.0:
     unist-util-visit "^4.0.0"
     zwitch "^2.0.0"
 
-mdast-util-to-string@^3.0.0, mdast-util-to-string@^3.1.0:
+mdast-util-to-string@^3.0.0, mdast-util-to-string@^3.1.0, mdast-util-to-string@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/mdast-util-to-string/-/mdast-util-to-string-3.2.0.tgz#66f7bb6324756741c5f47a53557f0cbf16b6f789"
   integrity sha512-V4Zn/ncyN1QNSqSBxTrMOLpjr+IKdHl2v3KVLoWmDPscP4r9GcCi71gjgvUV1SFSKh92AjAG4peFuBl2/YgCJg==
@@ -12142,6 +12146,11 @@ readdirp@~3.6.0:
   integrity sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==
   dependencies:
     picomatch "^2.2.1"
+
+reading-time@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/reading-time/-/reading-time-1.5.0.tgz#d2a7f1b6057cb2e169beaf87113cc3411b5bc5bb"
+  integrity sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==
 
 reakit-system@^0.14.3:
   version "0.14.5"

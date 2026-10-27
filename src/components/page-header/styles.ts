@@ -5,7 +5,8 @@ const welcomeHeader: SxStyleProp = {
   position: ['initial', 'absolute'],
   mb: ['32px', 'initial'],
   zIndex: '1000',
-  width: ['320px', '345px', '345px', '345px', '345px', '720px'],
+  width: ['320px', 'calc(100% - 48px)'],
+  maxWidth: ['320px', '345px', '345px', '345px', '345px', '720px'],
 }
 
 const welcomeSubtitle: SxStyleProp = {
@@ -20,18 +21,15 @@ const welcomeOuterContainer: SxStyleProp = {
   overflow: 'hidden',
 }
 
+// Mirrors `contentContainer` in styles/documentation-landing-page so the title
+// stays aligned with the body text and nothing is clipped when the main area shrinks.
 const welcomeInnerContainer: SxStyleProp = {
   flexDirection: ['column-reverse', 'row'],
   position: ['initial', 'relative'],
-  left: [
-    'initial',
-    'calc(50% - 544px / 2)',
-    'calc(50% - 544px / 2)',
-    'calc(50% - 544px / 2)',
-    'calc(50% - 720px / 2)',
-    'calc(50% - 720px / 2)',
-    'calc(50% - 1400px / 2)',
-  ],
+  mx: 'auto',
+  px: [0, '24px'],
+  maxWidth: ['none', '544px', '544px', '544px', '720px', '720px', '1400px'],
+  boxSizing: 'content-box',
   justifyContent: 'space-between',
   alignItems: ['center', 'initial'],
 }
@@ -46,9 +44,12 @@ const welcomeText: SxStyleProp = {
   color: '#142032',
 }
 
+// On desktop the art bleeds past the column and is clipped by
+// `welcomeOuterContainer` at the edge of the main area instead.
 const welcomeImageOuterContainer: SxStyleProp = {
   width: '100%',
-  overflow: 'hidden',
+  minWidth: 0,
+  overflow: ['hidden', 'visible'],
 }
 
 const welcomeImageInnerContainer: SxStyleProp = {

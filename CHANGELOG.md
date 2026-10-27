@@ -2,6 +2,113 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/vtexdocs/devportal/compare/v2.1.3...v2.2.0) (2026-10-23)
+
+
+### Features
+
+* **navigation.json:** add faststore release notes for version 4.10.0 ([5bc76ab](https://github.com/vtexdocs/devportal/commit/5bc76abd189133bf78b98532302373eb273494e4))
+* **navigation.json:** add Master Data v2 personal data guide and release note ([27bf0fd](https://github.com/vtexdocs/devportal/commit/27bf0fd9a293d6c861eb6d66691064abc178caf7))
+* **navigation.json:** add User Rights API to navigation ([37296e1](https://github.com/vtexdocs/devportal/commit/37296e1e9fecf68a11bad4505175e45f44edabd4))
+* **navigation:** add navigation entries for cms rich text ([4d33912](https://github.com/vtexdocs/devportal/commit/4d33912f23511f1aa6dde5309c0a6ebfbb2b1d59))
+
+
+### Bug Fixes
+
+* **navigation.json:** date the User Rights release note to 2026-10-09 ([ece9c34](https://github.com/vtexdocs/devportal/commit/ece9c34295aa47d5a20fcbe89944d359a3fc979a))
+
+
+### Docs
+
+* add redirects for rates-and-benefits and vtex shipping network overviews ([01bdcec](https://github.com/vtexdocs/devportal/commit/01bdcec50d5115ca8bed8e6f2c5ce0f222ea6896))
+* add redirects for removed api overview guides ([f16b083](https://github.com/vtexdocs/devportal/commit/f16b083f49b18b1caf8803656e5e0beaf6445252))
+* adding to navigation ([7759d7d](https://github.com/vtexdocs/devportal/commit/7759d7dd3a1be817fa03eb77941f97d1b7b67f46))
+* adding two new endpoints ([4828ff5](https://github.com/vtexdocs/devportal/commit/4828ff5e6bbe536e72da7cb1ed22d1d23b6972f7))
+* create personal data category in api reference ([2a7ad2e](https://github.com/vtexdocs/devportal/commit/2a7ad2ec8dcbb519de22facaf436dd03824bd3ae))
+* remove price simulations api card and its overview redirect ([1c4ddc3](https://github.com/vtexdocs/devportal/commit/1c4ddc394601e1fc409351edb71e4c0ca8937090))
+* update Master Data v2 personal data release note slug to 2026-10-14 (EDU-17349) ([bfe6981](https://github.com/vtexdocs/devportal/commit/bfe6981b89d10365cc30c1dfb4c3a5bda277c381))
+
+
+### Chore
+
+* **navigation.json:** update nav ([8415241](https://github.com/vtexdocs/devportal/commit/8415241911ce0fc9bf098375aeebbacd2263da78))
+* **navigation.json:** update navigation'' ([76f18bf](https://github.com/vtexdocs/devportal/commit/76f18bf0e179f283ba24a1420cded8dcf9f9a2c2))
+* remove dead readme-api-md paths from readmeAPIS.json ([18cbb18](https://github.com/vtexdocs/devportal/commit/18cbb18f1aa9031b7319499a7b7d2d14c509e566))
+
+### [2.1.3](https://github.com/vtexdocs/devportal/compare/v2.1.2...v2.1.3) (2026-10-08)
+
+
+### Features
+
+* **feedback.ts:** enable feedback - ask assistant ([2afccc3](https://github.com/vtexdocs/devportal/commit/2afccc3a030bf1e02aee1356a3732ff53186e5a7))
+* **navigation.json:** update faststore release notes from navigation.json ([f554b08](https://github.com/vtexdocs/devportal/commit/f554b080d79550965ff94d391b24011a84025099))
+* **netlify.toml:** add 308 redirect for faststore release notes update ([d5725e3](https://github.com/vtexdocs/devportal/commit/d5725e3f8faa385d570044966a036055d80faac9))
+* **netlify.toml:** add redirect for internationalization feature documentation ([96357e3](https://github.com/vtexdocs/devportal/commit/96357e316f816bf56d8e6350bf7674be8cb58915))
+
+
+### Bug Fixes
+
+* **navigation.json:** update slug for faststore release notes version 4.9.0 ([0a66bf0](https://github.com/vtexdocs/devportal/commit/0a66bf01becc554f6c77d9e172bd24f8fc4a0f54))
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components to version 7.0.17 ([c46b33a](https://github.com/vtexdocs/devportal/commit/c46b33a7e89cb8afd4d863ef49b6fc5d72f66cfc))
+
+### [2.1.2](https://github.com/vtexdocs/devportal/compare/v2.1.1...v2.1.2) (2026-10-07)
+
+
+### Bug Fixes
+
+* pin components preview to rebuilt commit ([4ef4089](https://github.com/vtexdocs/devportal/commit/4ef4089c93296beaa3f348e3c5b94edae8b9ff12))
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components version to 7.0.15 ([a46acaa](https://github.com/vtexdocs/devportal/commit/a46acaad85535441b04f411bb0a5bf4346979268))
+* **package.json:** update @vtexdocs/components version to a specific branch for feedback component ([7d5e9e0](https://github.com/vtexdocs/devportal/commit/7d5e9e0906c334dab795a2c81ec08c6e19f43f39))
+* **yarn.lock:** update @vtexdocs/components ([2b0289c](https://github.com/vtexdocs/devportal/commit/2b0289cf1a4b258c9a85e1f155a9dc192e906aaa))
+
+### [2.1.1](https://github.com/vtexdocs/devportal/compare/v2.1.0...v2.1.1) (2026-10-06)
+
+
+### Chore
+
+* **package.json:** update @vtexdocs/components version to 7.0.14 ([66fb972](https://github.com/vtexdocs/devportal/commit/66fb97299476cedc3cf882d4a25c9bf340c50f46))
+
+## [2.1.0](https://github.com/vtexdocs/devportal/compare/v2.0.3...v2.1.0) (2026-10-06)
+
+
+### Features
+
+* **layout.tsx:** add ai assistant ([33403c3](https://github.com/vtexdocs/devportal/commit/33403c3d1e05494a3649ef63b74592409364ef79))
+* **navigation.json:** add faststore session and cart validation fix entry ([5339ce6](https://github.com/vtexdocs/devportal/commit/5339ce6b0f556ec24b803568b638b17d35001264))
+* **navigation.json:** add october category with faststore release entry ([4893699](https://github.com/vtexdocs/devportal/commit/48936990c3a01ce58303627c1ecece427e636f38))
+
+
+### Style
+
+* **page-header:** update page header styles ([c33796e](https://github.com/vtexdocs/devportal/commit/c33796e982ee5595bb5ed277dd816b8e617b8c1e))
+
+
+### Chore
+
+* **package.json:** bump components version ([cc1a646](https://github.com/vtexdocs/devportal/commit/cc1a6463b5476a5b4e12fd320d309c39ae6ae0d3))
+* **package.json:** update vtexdocs/components package ([bea91d7](https://github.com/vtexdocs/devportal/commit/bea91d72ff5531636294aba80f0bab7dac05e957))
+
+### [2.0.3](https://github.com/vtexdocs/devportal/compare/v2.0.2...v2.0.3) (2026-10-02)
+
+
+### Bug Fixes
+
+* **navigation.json:** fix ([c3321fb](https://github.com/vtexdocs/devportal/commit/c3321fb5afb49379b968ae8e4f6d57cef5fb5011))
+
+
+### Docs
+
+* add Managing B2B prospects to navigation ([46cdca7](https://github.com/vtexdocs/devportal/commit/46cdca75f5b9752032091a1b48edbc05ae7c9206))
+* **navigation.json:** add orderForm fields reference to Checkout ([5cfe21b](https://github.com/vtexdocs/devportal/commit/5cfe21b4b07c2541e3b75966078fa53abb4df919))
+
 ### [2.0.2](https://github.com/vtexdocs/devportal/compare/v2.0.1...v2.0.2) (2026-10-01)
 
 

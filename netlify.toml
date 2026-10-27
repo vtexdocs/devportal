@@ -4,6 +4,12 @@ included_files = ["node_modules/sharp/**/*", "node_modules/@img/**/*", "./github
 
 [[redirects]]
 force = true
+from = "/updates/release-notes/2026-09-30-faststore-release-notes-4-9-0"
+status = 308
+to = "/updates/release-notes/2026-10-01-faststore-release-notes-4-9-0"
+
+[[redirects]]
+force = true
 from = "/docs/guides/cms-creating-a-new-section"
 status = 308
 to = "/docs/guides/faststore/developing-and-customizing-components-creating-a-new-section-cms"
@@ -145,6 +151,12 @@ force = true
 from = "/docs/guides/faststore/storefront-feature-handling-third-party-scripts"
 status = 308
 to = "/docs/guides/faststore/storefront-features-handling-third-party-scripts"
+
+[[redirects]]
+force = true
+from = "/docs/guides/faststore/storefront-features-handling-internationalization-with-the-localization-feature"
+status = 308
+to = "/docs/guides/faststore/localization-feature-handling-internationalization-with-the-localization-feature"
 
 [[redirects]]
 force = true
@@ -2556,3 +2568,75 @@ force = true
 from = "/docs/guides/faststore/monorepo-use-cases"
 status = 308
 to = "/docs/guides/monorepo-use-cases"
+
+[[redirects]]
+force = true
+from = "/docs/guides/buyer-organizations-api-overview"
+status = 308
+to = "/docs/api-reference/buyer-organizations"
+
+[[redirects]]
+force = true
+from = "/docs/guides/catalog-api-overview"
+status = 308
+to = "/docs/api-reference/catalog-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/checkout-api-overview"
+status = 308
+to = "/docs/api-reference/checkout-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/logistics-api-overview"
+status = 308
+to = "/docs/api-reference/logistics-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/marketplace-api-overview"
+status = 308
+to = "/docs/api-reference/marketplace-apis"
+
+[[redirects]]
+force = true
+from = "/docs/guides/orders-api-overview"
+status = 308
+to = "/docs/api-reference/orders-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/policy-engine-api-overview"
+status = 308
+to = "/docs/api-reference/policies-system-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/pricing-api-overview"
+status = 308
+to = "/docs/api-reference/pricing-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/reviews-and-ratings-api-overview"
+status = 308
+to = "/docs/api-reference/reviews-and-ratings-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/search-api-overview"
+status = 308
+to = "/docs/api-reference/search-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/rates-and-benefits-api-overview"
+status = 308
+to = "/docs/api-reference/promotions-and-taxes-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-shipping-network-api-overview"
+status = 308
+to = "/docs/api-reference/vtex-shipping-network-api"
