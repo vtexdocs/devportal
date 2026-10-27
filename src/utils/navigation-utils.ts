@@ -64,6 +64,20 @@ export type CategoryNavEntry = Omit<NavEntryChild, 'url'> & {
 export const buildNavUrl = (slugPrefix: string, slug: string) =>
   `/${slugPrefix}/${slug}`.replace(/\/+/g, '/')
 
+/** Must stay in sync with the URLs that `findNavEntryBySlug` resolves. */
+const CATEGORY_COVER_URL = /^\/docs\/guides\/[^/]+$/
+
+export const getCategoryCoverHref = ({
+  slug,
+  slugPrefix,
+}: {
+  slug: string
+  slugPrefix: string
+}): string | null => {
+  const url = buildNavUrl(slugPrefix, slug)
+  return CATEGORY_COVER_URL.test(url) ? url : null
+}
+
 export const findNavEntryBySlug = (
   navigation: NavEntry[],
   slug: string

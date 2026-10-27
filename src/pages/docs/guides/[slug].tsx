@@ -28,10 +28,9 @@ import {
   buildNavUrl,
   CategoryNavEntry,
 } from 'utils/navigation-utils'
-import { LibraryContext } from '@vtexdocs/components'
+import { ArticleIndexing, LibraryContext } from '@vtexdocs/components'
 import { slugify } from 'utils/string-utils'
 import ArticleRender from 'components/article-render'
-import ArticleIndexing from 'components/article-indexing'
 import { serialize } from 'next-mdx-remote/serialize'
 
 const docsPathsGLOBAL = await getDocsPaths()
@@ -88,7 +87,11 @@ const DocumentationPage: NextPage<Props> = ({
 
   if (isCategoryCover && category) {
     return (
-      <ArticleIndexing category={category} breadcrumbList={breadcrumbList} />
+      <ArticleIndexing
+        title={category.name}
+        items={category.children}
+        breadcrumbList={breadcrumbList}
+      />
     )
   }
 
