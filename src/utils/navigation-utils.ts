@@ -49,6 +49,76 @@ type DocEntry = {
   children: DocEntry[]
 }
 
+export type NavEntryChild = {
+  name: string
+  slug: string
+  type: string
+  url: string
+}
+
+export type CategoryNavEntry = Omit<NavEntryChild, 'url'> & {
+  sectionIndex: number
+  children: NavEntryChild[]
+}
+
+export const buildNavUrl = (slugPrefix: string, slug: string) =>
+  `/${slugPrefix}/${slug}`.replace(/\/+/g, '/')
+
+/** Must stay in sync with the URLs that `findNavEntryBySlug` resolves. */
+const CATEGORY_COVER_URL = /^\/docs\/guides\/[^/]+$/
+
+export const getCategoryCoverHref = ({
+  slug,
+  slugPrefix,
+}: {
+  slug: string
+  slugPrefix: string
+}): string | null => {
+  const url = buildNavUrl(slugPrefix, slug)
+  return CATEGORY_COVER_URL.test(url) ? url : null
+}
+
+export const findNavEntryBySlug = (
+  navigation: NavEntry[],
+  slug: string
+): CategoryNavEntry | null => {
+  const targetUrl = buildNavUrl('docs/guides', slug)
+
+  const search = (items: DocEntry[], slugPrefix: string): DocEntry | null => {
+    for (const item of items) {
+      if (item.slug && buildNavUrl(slugPrefix, item.slug) === targetUrl) {
+        return item
+      }
+      if (item.children && item.children.length > 0) {
+        const found = search(item.children, slugPrefix)
+        if (found) return found
+      }
+    }
+    return null
+  }
+
+  for (let sectionIndex = 0; sectionIndex < navigation.length; sectionIndex++) {
+    const section = navigation[sectionIndex]
+    const entry = search(section.categories ?? [], section.slugPrefix ?? '')
+    if (!entry) continue
+
+    return {
+      name: entry.name,
+      slug: entry.slug,
+      type: entry.type ?? '',
+      sectionIndex,
+      children: (entry.children ?? []).map((child) => ({
+        name: child.name,
+        slug: child.slug,
+        type: child.type ?? '',
+        url: buildNavUrl(section.slugPrefix ?? '', child.slug),
+      })),
+    }
+  }
+
+  return null
+}
+
 export const extractMarkdownEntries = (navItems: NavEntry): MarkdownEntry[] => {
   const basePath = navItems.slugPrefix
   const markdownEntries: MarkdownEntry[] = []

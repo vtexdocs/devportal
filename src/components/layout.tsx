@@ -20,6 +20,7 @@ import {
   askAssistantExamples,
 } from 'utils/constants'
 import { PreviewContext } from 'utils/contexts/preview'
+import { getCategoryCoverHref } from 'utils/navigation-utils'
 
 interface Props {
   sidebarfallback: any //eslint-disable-line
@@ -51,6 +52,7 @@ export default function Layout({
         isPreview={isPreview}
         fallback={sidebarfallback}
         sectionSelected={sectionSelected ?? ''}
+        getCategoryHref={getCategoryCoverHref}
       >
         <iframe
           src="https://www.googletagmanager.com/ns.html?id=GTM-WGQQ964"
