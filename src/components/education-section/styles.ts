@@ -1,19 +1,19 @@
 import { SxStyleProp } from '@vtex/brand-ui'
+import { landingTokens } from '@vtexdocs/components'
 
 const container: SxStyleProp = {
-  px: ['16px', '24px', '32px'],
-  pt: ['40px', '48px', '64px'],
-  pb: ['40px', '48px', '64px'],
+  px: [...landingTokens.sectionPaddingX],
+  py: [...landingTokens.sectionPaddingY],
   width: '100%',
-  maxWidth: '1100px',
+  maxWidth: landingTokens.contentMaxWidth,
   mx: 'auto',
 }
 
 const title: SxStyleProp = {
-  fontSize: ['22px', '26px', '28px', '32px'],
-  lineHeight: ['28px', '34px', '36px', '40px'],
+  fontSize: [...landingTokens.type.sectionTitle],
+  lineHeight: [...landingTokens.type.sectionTitleLine],
   fontWeight: '400',
-  color: '#132032',
+  color: landingTokens.ink,
   textAlign: 'center',
   letterSpacing: '-0.02em',
   mb: ['24px', '32px', '40px'],
@@ -21,8 +21,13 @@ const title: SxStyleProp = {
 
 const channelsContainer: SxStyleProp = {
   display: 'grid',
-  gridTemplateColumns: ['1fr', '1fr', '1fr', 'repeat(3, minmax(0, 1fr))'],
-  gap: ['12px', '16px', '20px'],
+  gridTemplateColumns: [
+    '1fr',
+    '1fr',
+    '1fr',
+    `repeat(${landingTokens.cardsPerRow}, minmax(0, 1fr))`,
+  ],
+  gap: [...landingTokens.cardGap],
   width: '100%',
   alignItems: 'stretch',
 }
