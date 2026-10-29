@@ -20044,6 +20044,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "Payment connector homologation freeze in preparation for Black Friday 2026",
+                  "slug": "2026-10-28-payment-connector-homologation-freeze-in-preparation-for-black-friday-2026",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "New Catalog multi-language API",
                   "slug": "2026-10-27-new-catalog-multi-language-api",
                   "origin": "",
