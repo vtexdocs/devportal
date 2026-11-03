@@ -20038,6 +20038,21 @@
           "type": "category",
           "children": [
             {
+              "name": "November",
+              "slug": "november-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore Release Notes — Version 4.10.2",
+                  "slug": "2026-11-03-faststore-release-notes-4-10-2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "October",
               "slug": "october-2026",
               "origin": "",
