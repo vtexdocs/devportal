@@ -20038,11 +20038,40 @@
           "type": "category",
           "children": [
             {
+              "name": "November",
+              "slug": "november-2026",
+              "origin": "",
+              "type": "category",
+              "children": [
+                {
+                  "name": "FastStore Release Notes — Version 4.10.2",
+                  "slug": "2026-11-03-faststore-release-notes-4-10-2",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
               "name": "October",
               "slug": "october-2026",
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "FastStore WebOps: Skipped status for superseded builds",
+                  "slug": "2026-10-30-faststore-webops-skipped-build-status",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Payment connector homologation freeze in preparation for Black Friday 2026",
+                  "slug": "2026-10-28-payment-connector-homologation-freeze-in-preparation-for-black-friday-2026",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "New Catalog multi-language API",
                   "slug": "2026-10-27-new-catalog-multi-language-api",
@@ -20074,6 +20103,13 @@
                 {
                   "name": "User Rights API: Automated personal data erasure",
                   "slug": "2026-10-09-user-rights-api-automated-personal-data-erasure",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Master Data API: Bulk document deletion for v1 and v2 entities",
+                  "slug": "2026-10-08-master-data-api-bulk-document-deletion",
                   "origin": "",
                   "type": "markdown",
                   "children": []
