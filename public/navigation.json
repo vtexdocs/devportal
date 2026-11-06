@@ -17524,6 +17524,13 @@
                   "children": []
                 },
                 {
+                  "name": "Keeping split cart lines",
+                  "slug": "faststore/keeping-split-cart-lines",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Updating the @fastore/cli package version",
                   "slug": "faststore/developer-tools-updating-the-cli-package-version",
                   "origin": "",
