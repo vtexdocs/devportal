@@ -20056,6 +20056,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "FastStore: Keep split cart lines with `preserveCartLines`",
+                  "slug": "2026-11-09-faststore-preserve-cart-lines",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
