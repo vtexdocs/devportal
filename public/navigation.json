@@ -13471,15 +13471,6 @@
                   "children": []
                 },
                 {
-                  "name": "Get JSON Web Key Set",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/.well-known/jwks.json",
-                  "children": []
-                },
-                {
                   "name": "Register client",
                   "slug": "vtex-id-api",
                   "type": "openapi",
@@ -13522,42 +13513,6 @@
                   "method": "POST",
                   "origin": "",
                   "endpoint": "/api/vtexid/v1/oauth/revoke",
-                  "children": []
-                },
-                {
-                  "name": "Allow consent",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/vtexid/v1/oauth/consent/allow",
-                  "children": []
-                },
-                {
-                  "name": "Deny consent",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/vtexid/v1/oauth/consent/deny",
-                  "children": []
-                },
-                {
-                  "name": "Start federated login",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "GET",
-                  "origin": "",
-                  "endpoint": "/api/vtexid/v1/oauth/-provider-/login",
-                  "children": []
-                },
-                {
-                  "name": "Exchange access token for another account",
-                  "slug": "vtex-id-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/vtexid/v1/oauth/token/exchange",
                   "children": []
                 }
               ]
