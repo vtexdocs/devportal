@@ -550,4 +550,5 @@ export const openapiMappings: { [key: string]: string } = {
   'VTEX - B2B Password Migration Protocol': 'b2b-password-migration-protocol',
   'VTEX - User Rights API': 'user-rights-api',
   'VTEX - Authenticator API': 'authenticator-api',
+  'VTEX - Release Status Log API': 'release-status-log-api',
 }
