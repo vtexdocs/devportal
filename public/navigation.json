@@ -12107,6 +12107,46 @@
           ]
         },
         {
+          "name": "Release Status Log API",
+          "slug": "release-status-log-api",
+          "origin": "",
+          "type": "openapi",
+          "children": [
+            {
+              "name": "Releases",
+              "slug": "release-status-log-api-releases",
+              "type": "category",
+              "children": [
+                {
+                  "name": "List releases",
+                  "slug": "release-status-log-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/releases",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Release history",
+              "slug": "release-status-log-api-release-history",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get release history",
+                  "slug": "release-status-log-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/releases/history",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
           "name": "Reviews and Ratings API",
           "slug": "reviews-and-ratings-api",
           "origin": "",
