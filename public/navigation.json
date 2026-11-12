@@ -159,6 +159,13 @@
                   "origin": "",
                   "type": "markdown",
                   "children": []
+                },
+                {
+                  "name": "VTEX OAuth provider",
+                  "slug": "vtex-oauth-provider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
                 }
               ]
             },
@@ -656,14 +663,14 @@
               "type": "markdown",
               "children": [
                 {
-                  "name": "Admin (SAML 2.0)",
+                  "name": "Admin login with an external SAML 2.0 provider",
                   "slug": "login-integration-guide-admin-saml2",
                   "origin": "",
                   "type": "markdown",
                   "children": []
                 },
                 {
-                  "name": "Webstore (OAuth 2.0)",
+                  "name": "Webstore login with an external OAuth 2.0 provider",
                   "slug": "login-integration-guide-webstore-oauth2",
                   "origin": "",
                   "type": "markdown",
@@ -13486,6 +13493,76 @@
                   "children": []
                 }
               ]
+            },
+            {
+              "name": "OAuth provider",
+              "slug": "vtex-id-api-oauth-provider",
+              "type": "category",
+              "children": [
+                {
+                  "name": "Get authorization server metadata",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/.well-known/oauth-authorization-server/-tenant-",
+                  "children": []
+                },
+                {
+                  "name": "Get OpenID Connect discovery document",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/.well-known/openid-configuration",
+                  "children": []
+                },
+                {
+                  "name": "Register client",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/v1/oauth/register",
+                  "children": []
+                },
+                {
+                  "name": "Request authorization code",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "GET",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/v1/oauth/authorize",
+                  "children": []
+                },
+                {
+                  "name": "Get access token",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/v1/oauth/token",
+                  "children": []
+                },
+                {
+                  "name": "Introspect access token",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/v1/oauth/introspect",
+                  "children": []
+                },
+                {
+                  "name": "Revoke token",
+                  "slug": "vtex-id-api",
+                  "type": "openapi",
+                  "method": "POST",
+                  "origin": "",
+                  "endpoint": "/api/vtexid/v1/oauth/revoke",
+                  "children": []
+                }
+              ]
             }
           ]
         },
@@ -20097,6 +20174,13 @@
               "origin": "",
               "type": "category",
               "children": [
+                {
+                  "name": "VTEX OAuth provider",
+                  "slug": "2026-11-06-vtex-oauth-provider",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
                 {
                   "name": "FastStore Release Notes — Version 4.10.2",
                   "slug": "2026-11-03-faststore-release-notes-4-10-2",
