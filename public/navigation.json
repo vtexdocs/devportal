@@ -471,8 +471,8 @@
                   "children": []
                 },
                 {
-                  "name": "Catalog logs",
-                  "slug": "external-marketplace-integration-logs",
+                  "name": "Product and Category Mappings",
+                  "slug": "external-marketplace-integration-catalog-mapping",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -480,6 +480,13 @@
                 {
                   "name": "Get product list for an initial load",
                   "slug": "external-marketplace-integration-product-load",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Recommendations",
+                  "slug": "external-marketplace-integration-recommendations",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -499,13 +506,6 @@
                   "children": []
                 },
                 {
-                  "name": "Product and Category Mappings",
-                  "slug": "external-marketplace-integration-catalog-mapping",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "How to keep prices updated",
                   "slug": "external-marketplace-integration-price-update",
                   "origin": "",
@@ -520,29 +520,15 @@
                   "children": []
                 },
                 {
+                  "name": "Catalog logs",
+                  "slug": "external-marketplace-integration-logs",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Order Integration overview",
                   "slug": "external-marketplace-integration-orders",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Recommendations",
-                  "slug": "external-marketplace-integration-recommendations",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "New Order Integration",
-                  "slug": "external-marketplace-integration-collect-orders",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Update Order Status",
-                  "slug": "external-marketplace-update-order-status",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -555,8 +541,22 @@
                   "children": []
                 },
                 {
+                  "name": "New Order Integration",
+                  "slug": "external-marketplace-integration-collect-orders",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "Sending invoice and tracking code to the marketplace",
                   "slug": "external-marketplace-integration-invoice-tracking",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "Update Order Status",
+                  "slug": "external-marketplace-update-order-status",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -591,13 +591,6 @@
                   "children": []
                 },
                 {
-                  "name": "External seller processing payments",
-                  "slug": "external-seller-processing-payments",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
                   "name": "External seller connector",
                   "slug": "external-seller-integration-connector",
                   "origin": "",
@@ -607,6 +600,13 @@
                 {
                   "name": "Catalog management for VTEX Marketplace",
                   "slug": "external-seller-integration-vtex-marketplace-operation",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
+                  "name": "External seller processing payments",
+                  "slug": "external-seller-processing-payments",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -687,21 +687,6 @@
                 {
                   "name": "Punchout cart integration",
                   "slug": "punchout-cart-integration",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
-              "name": "Offer Management Integration Guide",
-              "slug": "sent-offers-integration-guide-connectors",
-              "origin": "",
-              "type": "markdown",
-              "children": [
-                {
-                  "name": "Offer Management SDK",
-                  "slug": "offer-management-sdk",
                   "origin": "",
                   "type": "markdown",
                   "children": []
@@ -839,6 +824,21 @@
                 {
                   "name": "Implementing reCAPTCHA in integrations",
                   "slug": "implementing-recaptcha-in-integrations",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "name": "Offer Management Integration Guide",
+              "slug": "sent-offers-integration-guide-connectors",
+              "origin": "",
+              "type": "markdown",
+              "children": [
+                {
+                  "name": "Offer Management SDK",
+                  "slug": "offer-management-sdk",
                   "origin": "",
                   "type": "markdown",
                   "children": []
