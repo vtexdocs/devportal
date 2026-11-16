@@ -20098,6 +20098,13 @@
               "type": "category",
               "children": [
                 {
+                  "name": "FastStore Release Notes — Version 4.11.3",
+                  "slug": "2026-11-17-faststore-release-notes-4-11-3",
+                  "origin": "",
+                  "type": "markdown",
+                  "children": []
+                },
+                {
                   "name": "FastStore: Fixed cart validation for assembly options hidden from search",
                   "slug": "2026-11-16-faststore-cart-validation-hidden-assembly-skus",
                   "origin": "",
