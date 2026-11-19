@@ -10977,24 +10977,6 @@
                   "origin": "",
                   "endpoint": "/api/pvt/transactions/-transactionId-/settlement-request",
                   "children": []
-                },
-                {
-                  "name": "Refund the transaction",
-                  "slug": "payments-gateway-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/pvt/transactions/-transactionId-/refunding-request",
-                  "children": []
-                },
-                {
-                  "name": "Cancel the transaction",
-                  "slug": "payments-gateway-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/api/pvt/transactions/-transactionId-/cancellation-request",
-                  "children": []
                 }
               ]
             },
