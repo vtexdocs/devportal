@@ -2640,3 +2640,9 @@ force = true
 from = "/docs/guides/vtex-shipping-network-api-overview"
 status = 308
 to = "/docs/api-reference/vtex-shipping-network-api"
+
+[[redirects]]
+force = true
+from = "/docs/guides/vtex-my-account"
+status = 308
+to = "/docs/apps/vtex.my-account"
