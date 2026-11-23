@@ -1481,7 +1481,7 @@
                     {
                         "type": "TEMPLATE",
                         "key": "eventName",
-                        "value": "refund"
+                        "value": "add_to_wishlist"
                     },
                     {
                         "type": "TEMPLATE",
