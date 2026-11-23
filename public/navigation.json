@@ -19082,42 +19082,6 @@
               ]
             },
             {
-              "name": "Concepts",
-              "slug": "concepts-storefront",
-              "origin": "",
-              "type": "category",
-              "children": [
-                {
-                  "name": "Composition",
-                  "slug": "vtex-io-documentation-composition",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Interfaces",
-                  "slug": "vtex-io-documentation-interface",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Properties",
-                  "slug": "vtex-io-documentation-properties",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                },
-                {
-                  "name": "Slots",
-                  "slug": "vtex-io-documentation-slots",
-                  "origin": "",
-                  "type": "markdown",
-                  "children": []
-                }
-              ]
-            },
-            {
               "name": "Building pages",
               "slug": "store-framework-building-pages",
               "origin": "",
