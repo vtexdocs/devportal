@@ -11308,15 +11308,6 @@
                   "origin": "",
                   "endpoint": "/orders/-orderId-/deadline",
                   "children": []
-                },
-                {
-                  "name": "Update items of the order",
-                  "slug": "pick-and-pack-order-changes-api",
-                  "type": "openapi",
-                  "method": "POST",
-                  "origin": "",
-                  "endpoint": "/order/changes",
-                  "children": []
                 }
               ]
             },
